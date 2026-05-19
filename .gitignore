@@ -2,6 +2,5 @@ charts/joby/
 charts/aur/
 charts/lth/
 charts/zm/
-*-memo__v999__refactored.pdf
 __pycache__/
 *.pyc

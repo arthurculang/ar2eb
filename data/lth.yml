@@ -417,3 +417,24 @@ appendix:
       body: "FY27 revenue growth > 9%  ·  EBITDA margin > 30%  ·  In-center revenue per member > $1,250  ·  P/E multiple expands above 18x"
     - label: "Reframe needed"
       body: "If Equinox or comparable luxury operator IPOs at premium multiple — establishes valuation comparable for LTH multiple expansion"
+
+# ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-05-17_12-00
+  canonical_jsx: lth-dcf-valuation__v003__2026-05-17_10-00.jsx
+  pdf_version: '021'
+  pdf_timestamp: 2026-05-18_04-00
+glossary:
+- term: SLB
+  definition: Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent.
+- term: Athletic Country Club
+  definition: LTH's positioning — luxury multi-discipline format combining fitness, racquet sports, pools, kids, dining and recovery.
+- term: Dynamic PT
+  definition: Personalized training program. Highest-margin in-center revenue stream and a key ARPU driver as the luxury mix grows.
+- term: MIORA
+  definition: Hormone optimization and longevity service line. New higher-margin in-center revenue category, central to the bull ARPU thesis.
+- term: In-center revenue
+  definition: 'Revenue beyond membership dues: PT, classes, spa, cafe, retail. Currently ~30% of total; compounds faster than dues.'
+- term: Lease-adjusted leverage
+  definition: Per ASC 842, capitalized operating lease liabilities included in total obligations. Adds ~$2.5B+ to $1.29B net debt.

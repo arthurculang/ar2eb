@@ -203,17 +203,4 @@ plt.tight_layout()
 plt.savefig(f"{ZM_OUT}/06_sotp.png", dpi=200, bbox_inches='tight', facecolor='white')
 plt.close()
 
-# Symlink to expected names
-import os
-for src, dst in [
-    ('02_segments.png',   '02_path_to_profit.png'),
-    ('03_margins.png',    '03_cash_dilution.png'),
-    ('04_net_debt.png',   '04_fleet.png'),
-    ('05_ev_multiples.png', '05_valuation.png'),
-    ('06_sotp.png',       '06_tam.png'),
-]:
-    full_dst = f'{ZM_OUT}/{dst}'
-    if os.path.exists(full_dst): os.remove(full_dst)
-    os.symlink(src, full_dst)
-
-print("ZM charts generated and symlinked.")
+print("ZM charts generated.")

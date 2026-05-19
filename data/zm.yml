@@ -435,3 +435,24 @@ appendix:
       body: "FY27 revenue re-accelerates > 5%  ·  AI Companion attach > 10%  ·  Anthropic IPO at $1T+  ·  Contact Center crosses $500M ARR"
     - label: "Reframe needed"
       body: "If Eric Yuan executes major M&A (>$3B deal) — repurposing cash from optionality to platform expansion; both bear and bull theses get rewritten"
+
+# ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-05-17_13-00
+  canonical_jsx: zm-dcf-valuation__v006__2026-05-17_10-00.jsx
+  pdf_version: '020'
+  pdf_timestamp: 2026-05-18_04-00
+glossary:
+- term: AI Companion / Pro
+  definition: ZM's AI assistant. Bundled free into paid plans (Companion) with a premium SKU (Pro). Bundle-not-separate-SKU strategy.
+- term: Phone
+  definition: ZM's cloud PBX product. ~9M seats currently, growing 25%+. Cross-sells off the meetings install base; a third-leg growth driver.
+- term: Contact Center
+  definition: ZM's CCaaS product (cloud-based customer service). ~$200M ARR currently, growing fast; bull case crosses $500M ARR.
+- term: Anthropic stake
+  definition: ZM invested in Anthropic 2023. Carrying value disclosed at ~$1.5B; market value $4-9B across scenarios pending the IPO mark.
+- term: SOTP
+  definition: 'Sum-of-the-parts: operating EV + cash + special assets - debt. Used when material balance-sheet value sits outside operations.'
+- term: Buyback flywheel
+  definition: ZM generates $1.7-2.4B FCF/yr. Buybacks at $1-1.5B/yr retire shares; lower share count compounds per-share value.

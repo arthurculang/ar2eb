@@ -419,3 +419,24 @@ appendix:
       body: "Type Cert achieved by Q3 2026  ·  Dayton facility hits 4 aircraft/month  ·  Second exclusive country contract signed"
     - label: "Reframe needed"
       body: "If Archer achieves Type Cert first — Joby's first-mover advantage in US erodes; share-of-TAM math compresses"
+
+# ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
+stamp:
+  footer_version: '006'
+  footer_timestamp: 2026-05-17_14-00
+  canonical_jsx: joby-dcf-valuation__v007__2026-05-17_14-00.jsx
+  pdf_version: 028
+  pdf_timestamp: 2026-05-18_04-00
+glossary:
+- term: eVTOL
+  definition: Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range.
+- term: Type Certification
+  definition: FAA approval to operate a new aircraft design commercially. Joby is in Stage 4 (final) of 4-stage process.
+- term: eIPP
+  definition: eVTOL Integration Pilot Program. White House-backed initiative letting Joby fly in US states pre-Type Cert.
+- term: Dubai RTA
+  definition: Roads & Transport Authority. Awarded Joby exclusive eVTOL air-taxi rights in Dubai through 2032.
+- term: Toyota partnership
+  definition: $894M total investment. Joint manufacturing program at Dayton, Ohio facility for production scale.
+- term: Blade
+  definition: Helicopter-based mobility business acquired in 2024 — gives Joby existing routes (NYC-airport) for early ops.

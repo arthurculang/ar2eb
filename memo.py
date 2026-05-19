@@ -38,6 +38,7 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import stringWidth
 
+import os
 import sys
 import yaml
 from pathlib import Path
@@ -66,6 +67,12 @@ def load_data(ticker):
 TICKER = parse_args()
 DATA = load_data(TICKER)
 DCF_TYPE = DATA['dcf_type']
+
+# Footer in-file stamp (memo-spec §10) — per-ticker, sourced from
+# data/{ticker}.yml `stamp` block so each memo cites its own canonical JSX.
+_ST = DATA['stamp']
+FOOTER_STAMP = (f"v{_ST['footer_version']} · {_ST['footer_timestamp']} · "
+                f"derived from {_ST['canonical_jsx']} (canonical)")
 
 # ═════════════════════════════════════════════════════════════════════════════
 # DCF-TYPE DISPATCH — handles per-type display + math differences
@@ -270,11 +277,17 @@ LOGO_MONO_AR     = LOGO_UNIFIED_AR  # back-compat alias
 # Backward-compatibility alias; some sections still reference LOGO_PATH
 LOGO_PATH = LOGO_COLORFUL
 CHARTS_DIR = str(_REPO / "charts" / TICKER)
-# v999__refactored is a non-canonical sentinel for Setup-phase compare runs:
-# it never collides with real versions and keeps the immutable canonical
-# PDFs pristine. The real version-stamp convention is a workflow decision
-# (migration prompt v005 step 7) — surfaced separately, not codified here.
-OUT_PATH = str(_REPO / "public" / "memos" / f"{TICKER}-memo__v999__refactored.pdf")
+# Output naming (memo-spec §10): {ticker}-memo__v{NNN}__{YYYY-MM-DD_HH-MM}.pdf,
+# version + timestamp from data/{ticker}.yml `stamp`. Old versions are never
+# overwritten — bump with scripts/bump_pdf_version.py before regenerating.
+# MEMO_OUT_DIR overrides the directory (used for non-destructive verify runs).
+_OUT_DIR = Path(os.environ.get("MEMO_OUT_DIR", str(_REPO / "public" / "memos")))
+_OUT_DIR.mkdir(parents=True, exist_ok=True)
+OUT_PATH = str(_OUT_DIR / f"{TICKER}-memo__v{_ST['pdf_version']}__{_ST['pdf_timestamp']}.pdf")
+if os.path.exists(OUT_PATH) and not os.environ.get("MEMO_FORCE"):
+    raise FileExistsError(
+        f"{OUT_PATH} exists — memo-spec §10 forbids overwriting a version. "
+        f"Run scripts/bump_pdf_version.py {TICKER} first (or set MEMO_FORCE=1).")
 SPOT = DATA['spot']
 c = canvas.Canvas(OUT_PATH, pagesize=(PAGE_W, PAGE_H))
 
@@ -395,8 +408,7 @@ def page_footer(page_label, show_disclaimer_pointer=True):
     text(MARGIN_L, fy + 6, disclaimer_text,
          font="Inter-SB", size=6.5, color=INK)
     # Version stamp + page label below
-    text(MARGIN_L, fy - 4,
-         "v006 · 2026-05-17_14-00 · derived from joby-dcf-valuation__v007__2026-05-17_14-00.jsx (canonical)",
+    text(MARGIN_L, fy - 4, FOOTER_STAMP,
          font="Mono", size=6, color=MUTED)
     text(PAGE_W - MARGIN_R, fy - 4,
          f"Alameda Research 2: Electric Boogaloo (AR2EB)  ·  arthur@culang.co  ·  {page_label}",
@@ -456,20 +468,8 @@ PW_FFV = [(T, _prob_weighted_at_year(T)) for T in PW_YEARS]
 _p_sum = sum(s["probability"] for s in SCENARIOS.values())
 assert abs(_p_sum - 1.0) < 0.001, f"Probabilities sum to {_p_sum}, not 1.0"
 
-GLOSSARY = [
-    ("eVTOL",
-     "Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range."),
-    ("Type Certification",
-     "FAA approval to operate a new aircraft design commercially. Joby is in Stage 4 (final) of 4-stage process."),
-    ("eIPP",
-     "eVTOL Integration Pilot Program. White House-backed initiative letting Joby fly in US states pre-Type Cert."),
-    ("Dubai RTA",
-     "Roads & Transport Authority. Awarded Joby exclusive eVTOL air-taxi rights in Dubai through 2032."),
-    ("Toyota partnership",
-     "$894M total investment. Joint manufacturing program at Dayton, Ohio facility for production scale."),
-    ("Blade",
-     "Helicopter-based mobility business acquired in 2024 — gives Joby existing routes (NYC-airport) for early ops."),
-]
+# Page 5 glossary — per-ticker, sourced from data/{ticker}.yml `glossary`.
+GLOSSARY = [(g["term"], g["definition"]) for g in DATA["glossary"]]
 
 
 # ═════════════════════════════════════════════════════════════════════════════
@@ -1128,14 +1128,23 @@ row2_y_top = y - CHART_H - CHART_GAP_Y
 # Charts laid out as:
 #   Row 1: revenue · segments · margins
 #   Row 2: net cash · EV/Revenue · geographic
+# The per-ticker build_{ticker}_charts.py emits exactly six PNGs named
+# 01_*..06_* in the spec §7 slot order for that dcf_type (the builder is
+# the per-variant chart dispatch — Young: revenue/path-to-profit/cash/
+# fleet/valuation/TAM; Mature: revenue/segments/margins/net-debt/EV/SOTP-
+# or-clubs). Discover them in slot order rather than hardcoding one
+# variant's filenames.
+_chart_files = {}
+for _p in sorted(Path(CHARTS_DIR).glob("0[1-6]_*.png")):
+    _chart_files.setdefault(_p.name[:2], _p)
+_missing = [f"{i:02d}" for i in range(1, 7) if f"{i:02d}" not in _chart_files]
+if _missing:
+    raise FileNotFoundError(
+        f"{TICKER}: {CHARTS_DIR} missing chart slots {_missing} — "
+        f"run charts/build_{TICKER}_charts.py first")
 chart_layout = [
-    # (row, col, filename)
-    (0, 0, "01_revenue.png"),
-    (0, 1, "02_path_to_profit.png"),
-    (0, 2, "03_cash_dilution.png"),
-    (1, 0, "04_fleet.png"),
-    (1, 1, "05_valuation.png"),
-    (1, 2, "06_tam.png"),
+    (r, c, _chart_files[f"{i + 1:02d}"].name)
+    for i, (r, c) in enumerate([(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2)])
 ]
 
 for row, col, fname in chart_layout:
@@ -1489,7 +1498,7 @@ DISCLAIMERS_FULL = [
     ("Forward-looking statements.",
      "Scenarios, valuations, projections, and any forward-looking statements involve substantial assumptions and uncertainty. Actual results may differ materially from those projected. Past performance is not indicative of future results. The model is a model; reality is not."),
     ("Author may hold positions.",
-     "The author may own, intend to acquire, or hold short exposure to $JOBY or related securities at any time. Positions may change without notice and without an update to this document. Do not assume the author's positions match the tone of the analysis."),
+     f"The author may own, intend to acquire, or hold short exposure to ${DATA['ticker']} or related securities at any time. Positions may change without notice and without an update to this document. Do not assume the author's positions match the tone of the analysis."),
     ("Do your own research.",
      "Do not make investment decisions on the basis of this document. Consult a licensed financial professional and read the company's official SEC filings (10-K, 10-Q, 8-K, proxy) before forming any investment view. If you wouldn't trust your retirement to a chatbot, don't trust this either."),
 ]

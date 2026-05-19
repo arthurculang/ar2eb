@@ -395,3 +395,24 @@ appendix:
       body: "Driverless commercial launches by Q3 2027  ·  Fleet > 500 trucks by EOY 2028  ·  Second OEM software-take-rate deal signed"
     - label: "Reframe needed"
       body: "If Kodiak achieves at-scale commercial first — Aurora's first-mover advantage in long-haul erodes; TAM-share math compresses"
+
+# ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
+stamp:
+  footer_version: '002'
+  footer_timestamp: 2026-05-17_14-45
+  canonical_jsx: aur-dcf-valuation__v003__2026-05-17_10-00.jsx
+  pdf_version: '022'
+  pdf_timestamp: 2026-05-18_04-00
+glossary:
+- term: Aurora Driver
+  definition: Aurora's autonomy software + hardware stack. Currently runs supervised on highway pilots with PACCAR, Volvo, and FedEx.
+- term: Driverless commercial
+  definition: Operation with no human driver in the truck, generating per-mile or per-load revenue. Aurora's 2027 launch milestone.
+- term: S2C (sales-to-capital)
+  definition: Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. Higher = more capital-efficient growth.
+- term: Hub-to-hub
+  definition: Highway-only routes between terminals (e.g., Dallas-Houston). Aurora's commercial focus. Easier autonomy domain than urban streets.
+- term: OEM partners
+  definition: Volvo VNL Autonomous and PACCAR (Peterbilt, Kenworth). OEM integration gives Aurora a manufacturing path competitors lack.
+- term: Take-rate model
+  definition: Revenue per autonomy-mile on OEM-built trucks (vs Aurora-owned fleet). Software-like margins; the bull terminal-margin driver.
