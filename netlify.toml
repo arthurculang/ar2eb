@@ -1,0 +1,4 @@
+# AR2EB site — static, no build step. Serve public/ as the site root.
+# Hash-routed SPA (#/memo/joby …), so no redirect/rewrite rules are needed.
+[build]
+  publish = "public"
