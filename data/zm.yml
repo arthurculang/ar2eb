@@ -1,0 +1,437 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# zm.yml — Zoom Communications (NASDAQ: ZM)
+# Canonical data file per memo-spec §6c.16 (proposed)
+# Schema v003 · 2026-05-18_07-00
+# ═════════════════════════════════════════════════════════════════════════════
+#
+# SCHEMA NOTE — differences from joby.yml that revealed schema gaps:
+#
+# 1. dcf_type = mature_company_sotp (new value alongside young_company)
+# 2. dcf_path arrays are length-5 (5-year explicit DCF), NOT length-10
+# 3. dcf_path.rev_path stores GROWTH RATES (e.g. 0.04 = 4%), not absolute revenue.
+#    A starting revenue (`rev_b`) is the anchor; year-1 revenue = rev_b * (1+rev_path[0]).
+#    For young_company tickers (JOBY/AUR), rev_path is ABSOLUTE $B values.
+#    Semantics differ by dcf_type — generator must dispatch.
+# 4. dcf_metrics block has different keys: cagr_5y, wacc, anthropic_stake
+#    (instead of JOBY's tam_share, p_fail, s2c).
+# 5. ZM has no shim fields (the prior Python code had bogus tam_share/p_fail/s2c
+#    values to make ribbon code "work" — schema cleans these out entirely).
+# 6. dcf_path includes `special_assets` (Anthropic stake at SOTP scenario value)
+#    used in equity decomposition equation. JOBY has no special_assets.
+# 7. market.extras populated: "Anthropic stake (carried)" appears in masthead.
+# ═════════════════════════════════════════════════════════════════════════════
+
+# ── Ticker identity ─────────────────────────────────────────────────────────
+ticker: ZM
+company: Zoom Communications
+exchange: NASDAQ
+dcf_type: mature_company_sotp   # young_company | mature_company | mature_company_sotp
+date: 2026-05-16
+spot: 100.01
+
+# ── Market data ─────────────────────────────────────────────────────────────
+market:
+  market_cap_billion: 30.8
+  shares_outstanding_million: 308
+  cash_billion: 7.8           # ZM cash & marketable securities
+  net_debt_billion: 0.0
+  extras:
+    - "Anthropic stake (carried)"   # ZM-specific masthead extra; SOTP non-operating asset
+
+# ── Page 1 narrative content ────────────────────────────────────────────────
+
+central_question: >
+  Is Zoom a melting ice cube with locked-up optionality — or a stable cash
+  machine sitting on a $7B Anthropic stake the market hasn't yet marked to
+  public?
+
+thesis: >
+  Zoom trades at $100.01 ($30.8B mkt cap) on TTM revenue of $4.87B, $1.7B FCF,
+  and $7.8B cash & marketable securities — roughly 25% of market cap is just
+  cash. On top of that sits an Anthropic equity stake carried at cost but
+  worth $4-9B across scenarios, pending the public mark from Anthropic's
+  expected IPO. The operating business is a stable cash machine (35-40% FCF
+  margin) facing real but slow competition from Teams and Workspace.
+  Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show
+  your work.
+
+# ── Page 3 chart-level reference data ───────────────────────────────────────
+chart_reference:
+  # ZM has 5 years of history on Page 3 charts (FY21-25), not 3 like JOBY
+  history_years: [2021, 2022, 2023, 2024, 2025]
+  history_revenue: [2.65, 4.10, 4.39, 4.53, 4.66]  # $B fiscal-year actuals
+  history_fcf: [1.466, 1.605, 1.292, 1.470, 1.706]  # $B FCF
+
+# ═════════════════════════════════════════════════════════════════════════════
+# SCENARIOS
+# ═════════════════════════════════════════════════════════════════════════════
+# Mature-Company DCF: 5-year explicit period (FY26 → FY30).
+# All dcf_path arrays are length-5.
+# ═════════════════════════════════════════════════════════════════════════════
+
+scenarios:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.30
+    expected_per_share: 91.94
+    headline: "Zoom without a core market."
+    narrative:
+      - >
+        The pessimistic case is harsh and worth taking seriously: video
+        conferencing has commoditized. Microsoft Teams ships with every E3 and
+        E5 license — well north of 400M enterprise seats globally. Google Meet
+        ships with Workspace. Webex, Slack Huddles, Discord, FaceTime —
+        everyone has video. The product Zoom invented and dominated is now
+        table stakes inside the productivity bundles customers are already
+        paying for.
+      - >
+        In this world Zoom's revenue stagnates and then declines. Enterprise
+        renewals come at lower seat counts as IT teams quietly migrate to
+        Teams. Online (consumer + SMB) erodes faster as free alternatives
+        become good enough. Phone and Contact Center continue growing 20-25%+
+        but on too small a base to offset the core decline. Revenue drifts
+        from $4.87B in FY26 to ~$4.7B by FY30. Margins compress as Zoom
+        spends to defend.
+      - >
+        Even Anthropic disappoints: the AI capex cycle moderates, IPO prices
+        at the low end, and the stake marks closer to $4B than $9B. SOTP math
+        still gives some floor — $14.4B op EV + $7.8B cash + $4B Anthropic =
+        $26.2B equity, ~$92/share. Below today's $100 spot but not
+        catastrophically — the cash + stake provide a real downside cushion.
+        Bear isn't bankruptcy; it's structural erosion of the operating
+        business.
+    probability_rationale: >
+      Bearish thesis is competitive commoditization: Teams (Microsoft's
+      bundled play) and Google Meet (free for Workspace customers) continue
+      to take seats from ZM's enterprise base; AI Companion Pro fails to
+      differentiate or monetize meaningfully (Microsoft Copilot integration
+      into Teams is the obvious competitive response); Phone seats stagnate;
+      Contact Center fails to reach scale; Anthropic stake gets compressed
+      if AI valuations correct or Anthropic does an underwhelming IPO. The
+      30% weight reflects that Teams/Workspace competition is real, ongoing,
+      and structurally favored — but ZM has shown unexpected resilience
+      through 2024-25 (stable revenue, growing FCF, $1B+ buyback program).
+      Not bankruptcy risk; share-loss-with-margin-compression risk.
+
+    # Mature-Company SOTP DCF metrics (for Page 1 ribbon — no shims)
+    dcf_metrics:
+      cagr_5y: -0.7           # 5y revenue CAGR (%)
+      wacc: 0.100             # discount rate (decimal)
+      anthropic_stake: 4.0    # Anthropic equity at SOTP mark ($B)
+
+    # 5-year DCF path (FY26 → FY30) — length-5 arrays, NOT zero-padded
+    dcf_path:
+      rev_b: 4.87                                  # starting revenue ($B FY25 actual)
+      rev_path:    [0.01, 0.00, -0.01, -0.02, -0.02]    # growth rates per year
+      op_margin:   [0.385, 0.370, 0.355, 0.340, 0.320]  # operating margin
+      wacc_path:   [0.100, 0.100, 0.100, 0.100, 0.100]
+      fcf:         [1.722, 1.672, 1.607, 1.479, 1.356]  # $B
+      pv_fcf:      [1.566, 1.382, 1.207, 1.010, 0.842]
+      term_g: 0.0
+      sum_pv_fcf: 6.01
+      terminal_value: 13.56
+      pv_terminal: 8.42
+      op_ev: 14.43
+      cash: 7.8
+      net_debt: 0.0
+      special_assets: 4.0      # Anthropic stake $B contribution to SOTP equity
+      total_equity: 26.23      # = op_ev + cash - net_debt + special_assets
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 285
+      dcf_per_share: 91.94
+      distress: 0.0
+
+    chart_data:
+      # ZM doesn't use raises/raise_prices/rev_per_aircraft (those are
+      # young-company concepts). ZM-specific Page 3 chart auxiliaries:
+      ev_rev_multiple: [3.8, 3.5, 3.3, 3.0, 2.8]      # for EV/Rev chart
+      ev_fcf_multiple: [10.0, 9.0, 8.0, 7.0, 6.0]     # for EV/FCF chart (right axis)
+
+  # ───────────────────────────────────────────────────────────────────────────
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.50
+    expected_per_share: 163.44
+    headline: "Stable cash machine with a visible kicker."
+    narrative:
+      - >
+        The middle path. Zoom continues as a stable mid-single-digit growth
+        business. Enterprise revenue grows 6-7%, Online stays flat to
+        slightly down, Phone and Contact Center add 25%+ on smaller bases.
+        Blended revenue grows 3-4% — exactly what FY27 guidance is calling
+        for and consistent with the last two years.
+      - >
+        AI Companion stays bundled into paid plans and helps justify price
+        increases at renewal. The strategic logic is right: make AI a feature
+        of the bundle rather than try to monetize it as a separate SKU
+        customers can decline. Margins hold in the mid-30s after a near-term
+        CapEx step-up for the post-pandemic data center refresh. Cash builds
+        at $1.7-1.9B/year. Some funds buybacks (current $1B+ authorization),
+        some sits.
+      - >
+        The big mid-term catalyst lands: Anthropic IPOs in late 2026 at
+        $700B-1T and Zoom's stake gets marked publicly for the first time.
+        The hidden asset on Zoom's balance sheet becomes visible to every
+        screener. SOTP math: $28.1B op EV + $7.8B cash + $7B Anthropic =
+        $42.9B equity ÷ 263M FY30 shares = $163/share. Multiple expands
+        from ~10x FCF on the core business to ~13-15x as the cash and
+        Anthropic carry stop being discounted heuristically.
+    probability_rationale: >
+      Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27
+      guidance holds; AI Companion Pro is a meaningful contributor but not
+      a category-defining product; Anthropic stake gets a public mark via
+      Anthropic's IPO at $700B-1T valuation; ZM multiple expands modestly
+      as the market gives credit for the Anthropic stake AND for stable
+      cash generation. Buyback compounds shares-out reduction at attractive
+      prices. The 50% weight reflects that this requires the least faith —
+      sequential execution on plans already in motion.
+
+    dcf_metrics:
+      cagr_5y: 3.1
+      wacc: 0.085
+      anthropic_stake: 7.0
+
+    dcf_path:
+      rev_b: 4.87
+      rev_path:    [0.04, 0.035, 0.03, 0.025, 0.025]
+      op_margin:   [0.395, 0.395, 0.395, 0.395, 0.395]
+      wacc_path:   [0.085, 0.085, 0.085, 0.085, 0.085]
+      fcf:         [1.773, 1.835, 1.890, 1.937, 1.985]
+      pv_fcf:      [1.634, 1.560, 1.482, 1.401, 1.323]
+      term_g: 0.02
+      sum_pv_fcf: 7.39
+      terminal_value: 31.16
+      pv_terminal: 20.72
+      op_ev: 28.11
+      cash: 7.8
+      net_debt: 0.0
+      special_assets: 7.0
+      total_equity: 42.91
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 263
+      dcf_per_share: 163.44
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [4.5, 4.7, 4.8, 4.9, 5.0]
+      ev_fcf_multiple: [12.0, 13.5, 14.5, 15.0, 15.5]
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.15   # reduced from 0.20 to make room for ultra_bull (15+5=20)
+    expected_per_share: 252.63
+    headline: "AI monetization + Anthropic re-rating."
+    narrative:
+      - >
+        The bull case requires Zoom to convert AI Companion into a meaningful
+        per-seat upsell while Anthropic IPOs at $1T+. AI Companion Pro
+        reaches material adoption — call it 15% attach on paid seats at
+        $5-8/month uplift — adds ~$300M ARR by FY28. Phone scales to 16M
+        seats with margin expansion. Contact Center crosses $500M ARR and
+        becomes a real third leg of growth. Blended revenue growth
+        re-accelerates to 5-8%.
+      - >
+        FCF margin expands toward 40%+ as the AI Companion uplift drops to
+        the bottom line at ~80% gross margin. Cash generation hits
+        $2.2-2.5B/yr. Aggressive buybacks at $130-150 retire 70M+ shares
+        over 5 years. SOTP math: $43.8B op EV + $7.8B cash + $9B Anthropic
+        = $60.6B equity ÷ 240M FY30 shares = $253/share.
+      - >
+        The two engines run independently. AI monetization is one bet;
+        Anthropic appreciation is another. They can both succeed without
+        each other. Bull doesn't require Zoom to become Salesforce or
+        Anthropic to become OpenAI — it requires both to perform reasonably
+        well in their categories. The 20% probability weight reflects that
+        this is a real possibility, not the modal outcome.
+    probability_rationale: >
+      AI Companion Pro monetizes (per-seat add-on becomes meaningful
+      contributor); Phone scales to 16M+ seats with margin expansion;
+      Contact Center crosses $500M ARR and becomes a real third leg of
+      growth; Anthropic IPOs at $1T+ with stake getting full mark (vs
+      current discount carrying value); the operating business multiple
+      expands AND the Anthropic stake appreciates. The 20% weight is higher
+      than JOBY/AUR's bull weight because ZM's bull case is less compound —
+      AI monetization and Anthropic appreciation are somewhat independent
+      bets that can succeed without each other. But the conjunction still
+      requires multiple things at once: product success on three new SKUs
+      (Companion Pro, Phone scale, Contact Center scale) plus a favorable
+      AI capital markets backdrop for Anthropic's IPO.
+
+    dcf_metrics:
+      cagr_5y: 6.4
+      wacc: 0.080
+      anthropic_stake: 9.0
+
+    dcf_path:
+      rev_b: 4.87
+      rev_path:    [0.05, 0.07, 0.08, 0.07, 0.05]
+      op_margin:   [0.380, 0.390, 0.400, 0.410, 0.410]
+      wacc_path:   [0.080, 0.080, 0.080, 0.080, 0.080]
+      fcf:         [1.943, 2.134, 2.364, 2.592, 2.722]
+      pv_fcf:      [1.799, 1.829, 1.877, 1.905, 1.852]
+      term_g: 0.025
+      sum_pv_fcf: 9.26
+      terminal_value: 50.72
+      pv_terminal: 34.52
+      op_ev: 43.79
+      cash: 7.8
+      net_debt: 0.0
+      special_assets: 9.0
+      total_equity: 60.59
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 240
+      dcf_per_share: 252.63
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [5.5, 6.5, 7.5, 8.0, 8.5]
+      ev_fcf_multiple: [14.0, 17.0, 20.0, 22.0, 23.0]
+
+  # ───────────────────────────────────────────────────────────────────────────
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.05
+    expected_per_share: 400.00
+    headline: "Anthropic $2T+; full re-rating."
+    narrative:
+      - >
+        The ultra-bull case is that the two engines BOTH fire and the market
+        re-rates the equity to growth-software multiples. Anthropic IPOs at
+        $2T+ valuation (vs $1T base bull), marking the Anthropic stake at
+        $14-18B — 2× the bull-case carry value. Simultaneously, AI Companion
+        Pro becomes a real revenue engine: 30%+ paid-seat attach at $8-12/mo,
+        hitting $1B+ ARR by FY29 and reaccelerating core revenue growth to
+        8-10%. Phone, Contact Center, and Workvivo each become $500M+ ARR
+        contributors.
+      - >
+        Multiple expands from current 15x P/FCF to 30x+ as the growth story
+        consolidates. SOTP math: $80B+ operating EV + $7.8B cash + $16B
+        Anthropic (mid-case mark) = $103B equity ÷ 250M FY30 shares =
+        $412/share. The ultra-bull is materially different from bull: not
+        just AI works AND Anthropic works, but BOTH inflect AT THE SAME
+        TIME and the market rerates accordingly.
+    probability_rationale: >
+      Joint conditional: Anthropic IPO above $2T (60% conditional on IPO)
+      AND AI Companion crosses $1B ARR (40% conditional on existing
+      trajectory) AND multiple re-rates from 15x to 30x P/FCF (50%
+      conditional on growth + AI both firing). Joint at 5-7%, reflected
+      here at 5%. This is the scenario where ZM stops being a 'value with
+      AI optionality' name and becomes a growth-software name with an
+      emerging-leader AI partner. Tail of tails.
+
+    dcf_metrics:
+      cagr_5y: 9.5
+      wacc: 0.075
+      anthropic_stake: 16.0
+
+    dcf_path:
+      rev_b: 4.87
+      rev_path:    [0.08, 0.10, 0.12, 0.10, 0.08]
+      op_margin:   [0.420, 0.430, 0.440, 0.450, 0.450]
+      wacc_path:   [0.075, 0.075, 0.075, 0.075, 0.075]
+      fcf:         [2.143, 2.564, 3.020, 3.350, 3.580]
+      pv_fcf:      [1.994, 2.213, 2.420, 2.498, 2.481]
+      term_g: 0.030
+      sum_pv_fcf: 11.61
+      terminal_value: 91.0
+      pv_terminal: 63.40
+      op_ev: 80.05
+      cash: 7.8
+      net_debt: 0.0
+      special_assets: 16.0
+      total_equity: 103.85
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 250
+      dcf_per_share: 412.00      # raw DCF
+      distress: 0.0
+      # Note: expected_per_share ($400.00) ≠ dcf_per_share ($412.00) — manual
+      # rounding to a cleaner number for display. Generator should use
+      # expected_per_share for weighted math; dcf_per_share is informational.
+
+    chart_data:
+      ev_rev_multiple: [6.0, 7.5, 9.0, 10.0, 11.0]
+      ev_fcf_multiple: [16.0, 22.0, 28.0, 30.0, 32.0]
+
+# ── Historical price data ───────────────────────────────────────────────────
+# Quarterly closes since IPO. Generator appends (0.0, spot) as final point.
+# x = years offset from today (negative = past).
+historical_prices:
+  ipo_marker: "IPO Apr '19"
+  x_min: -7.5            # years of history to show in chart
+  points:
+    - [-7.08, 36.0]
+    - [-6.83, 85.0]
+    - [-6.58, 68.0]
+    - [-6.33, 160.0]
+    - [-6.08, 260.0]
+    - [-5.83, 500.0]
+    - [-5.58, 410.0]
+    - [-5.33, 320.0]
+    - [-5.08, 360.0]
+    - [-4.83, 270.0]
+    - [-4.58, 185.0]
+    - [-4.33, 110.0]
+    - [-4.08, 110.0]
+    - [-3.83, 78.0]
+    - [-3.58, 68.0]
+    - [-3.33, 77.0]
+    - [-3.08, 70.0]
+    - [-2.83, 70.0]
+    - [-2.58, 72.0]
+    - [-2.33, 64.0]
+    - [-2.08, 60.0]
+    - [-1.83, 65.0]
+    - [-1.58, 85.0]
+    - [-1.33, 76.0]
+    - [-1.08, 82.0]
+    - [-0.83, 85.0]
+    - [-0.58, 93.0]
+    - [-0.33, 95.0]
+
+# ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
+weighting_rationale:
+  - label: "Bear 30%"
+    body: "Teams/Workspace structurally favored; AI Companion fails to monetize; Anthropic stake compressed."
+  - label: "Base 50%"
+    body: "Modal outcome: stable mid-single-digit growth, Anthropic IPOs at $700B-1T, multiple modest expand."
+  - label: "Bull 15%"
+    body: "AI Companion monetizes + Anthropic at $1T+; two engines succeed independently."
+  - label: "Ultra Bull 5%"
+    body: "Both engines fire simultaneously; Anthropic at $2T+; multiple re-rates to growth-software premium."
+
+# ── Page 3 / Page 4 ticker-specific text ────────────────────────────────────
+page3:
+  subtitle: "FY21–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Jan 31  ·  10-K FY26, Q1 2026 10-Q, Anthropic press releases"
+  sources:  "Sources: ZM 10-K FY26, Q1 2026 10-Q, Anthropic financial press, AI infrastructure peer set. "
+
+# ── Page 4 appendix sections ────────────────────────────────────────────────
+appendix:
+  pushback:
+    - label: "Operating business has resilience."
+      body: "ZM revenue stable through 2024-25 despite Teams competition. Phone + Contact Center grew 25%+. Resilience visible, not theoretical."
+    - label: "AI Companion strategy is right."
+      body: "Bundle AI into existing plans rather than separate SKU. Microsoft Copilot's $30/seat model is the cautionary tale — adoption underwhelmed."
+    - label: "$7.8B cash is a real floor."
+      body: "25% of market cap is liquid. T-bills earn ~4%. Optionality for M&A, buybacks, or capital return. Hard to lose money against this."
+    - label: "Anthropic stake is asymmetric."
+      body: "Carried at cost ($1.5B); worth $4-9B today; could mark to $15B+ post-IPO. Hidden asset most screeners ignore."
+    - label: "Capital allocation track record."
+      body: "$1B+ buyback authorization announced 2024. Avg buyback price below $80. Eric Yuan personally aligned (15%+ owner)."
+  triggers:
+    - label: "Bear validation"
+      body: "FY27 revenue declines  ·  AI Companion attach < 5% on paid seats  ·  Anthropic IPO marks stake below $5B  ·  Phone seat growth < 15%"
+    - label: "Bull validation"
+      body: "FY27 revenue re-accelerates > 5%  ·  AI Companion attach > 10%  ·  Anthropic IPO at $1T+  ·  Contact Center crosses $500M ARR"
+    - label: "Reframe needed"
+      body: "If Eric Yuan executes major M&A (>$3B deal) — repurposing cash from optionality to platform expansion; both bear and bull theses get rewritten"

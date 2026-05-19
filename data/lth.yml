@@ -1,0 +1,419 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# lth.yml — Life Time Group Holdings (NYSE: LTH)
+# Canonical data file per memo-spec §6c.16 (proposed)
+# Schema v003 · 2026-05-18_07-00
+# ═════════════════════════════════════════════════════════════════════════════
+#
+# Mature-Company DCF (standard — no SOTP framing). Same length-5 DCF arrays
+# as ZM, but `dcf_metrics` third metric is `slb_total_5y` (cumulative
+# sale-leaseback proceeds over 5 years) instead of ZM's `anthropic_stake`.
+# No `special_assets` field in dcf_path — straight op_ev + cash - net_debt
+# equity equation.
+#
+# This is the test case for "Mature-Company DCF where third ribbon metric is
+# ticker-specific (SLB for LTH, Anthropic for ZM)." Generator dispatches on
+# `dcf_type` + checks for known third-metric keys.
+# ═════════════════════════════════════════════════════════════════════════════
+
+# ── Ticker identity ─────────────────────────────────────────────────────────
+ticker: LTH
+company: Life Time Group Holdings
+exchange: NYSE
+dcf_type: mature_company          # young_company | mature_company | mature_company_sotp
+date: 2026-05-16
+spot: 33.61
+
+# ── Market data ─────────────────────────────────────────────────────────────
+market:
+  market_cap_billion: 7.46
+  shares_outstanding_million: 222
+  cash_billion: 0.232
+  net_debt_billion: 1.29
+  extras:
+    - "BB- credit"                 # LTH-specific masthead extra (credit rating)
+
+# ── Page 1 narrative content ────────────────────────────────────────────────
+
+central_question: >
+  Is Life Time a premium wellness platform with durable luxury economics —
+  or a leveraged real estate vehicle whose positive FCF depends on perpetual
+  $400M/year sale-leasebacks?
+
+thesis: >
+  LTH trades at $33.61 ($7.5B mkt cap) on TTM revenue $3.0B and Adj EBITDA
+  $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14
+  luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback
+  proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear:
+  capital recycling unsustainable, leveraged real estate vehicle. Bull:
+  luxury wellness category-of-one, SLB is smart financing. Today's price
+  requires bull-case execution. Three scenarios, weighted; show your work.
+
+# ── Page 3 chart-level reference data ───────────────────────────────────────
+chart_reference:
+  history_years: [2021, 2022, 2023, 2024, 2025]
+  history_revenue: [1.318, 1.822, 2.217, 2.621, 2.995]            # $B
+  history_ent_revenue_m: [907, 1276, 1551, 1853, 2118]            # $M membership dues
+  history_onl_revenue_m: [380, 524, 638, 740, 845]                # $M in-center
+  history_gross_margin: [29.4, 35.6, 37.8, 38.4, 39.0]            # %
+  history_op_margin: [2.5, 9.2, 12.5, 15.5, 18.0]                 # %
+  history_fcf_margin: [-8.3, -7.5, -4.9, 10.4, 6.9]                # %
+  history_net_debt: [1.51, 1.62, 1.51, 1.34, 1.29]                 # $B
+  history_ev_rev: [null, 5.8, 4.7, 3.8, 3.2]                       # × (FY21 N/A — IPO Oct '21)
+  history_ev_ebitda: [null, 28.0, 16.5, 12.5, 10.5]                # ×
+  # Club count history (3 years only, charts show FY23 → FY30E)
+  club_history_years: ["FY23", "FY24", "FY25"]
+  club_history_luxury: [22, 30, 42]
+  club_history_standard: [149, 144, 148]
+  club_standard_proj_fy30: 148      # standard count stays flat in all scenarios
+
+# ═════════════════════════════════════════════════════════════════════════════
+# SCENARIOS
+# ═════════════════════════════════════════════════════════════════════════════
+
+scenarios:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.20
+    expected_per_share: -0.36
+    headline: "Capital recycling, not earnings."
+    narrative:
+      - >
+        The pessimistic case is straightforward. LTH only delivers 'positive
+        FCF' after $400M/year of sale-leaseback proceeds. Strip those out and
+        operating FCF is barely positive — FY25 OCF $870M minus capex ~$870M
+        equals zero before SLB. The reported $206M FY25 FCF is essentially
+        $400M of real estate proceeds offset against expansion capex. This
+        is capital recycling reported as cash generation.
+      - >
+        The SLB program is finite. LTH has ~190 clubs, of which perhaps 40-50
+        remain owned outright after cumulative SLB transactions. At $40M
+        average per club, that's roughly $2B of remaining real estate
+        runway. At the planned $400M/year pace, the tap closes in 4-5 years
+        — exactly the DCF horizon. Meanwhile rent obligations from prior
+        SLBs (~$300M/yr and growing) compound — every SLB trades a one-time
+        cash inflow for a permanent operating expense increase.
+      - >
+        Net debt is $1.3B financial plus $2.5B+ of capitalized lease
+        liabilities. Total enterprise obligations near $4B. If macro slows
+        and luxury fitness spending compresses, FCF margin drops to 2-3%,
+        undoing the recent S&P upgrade. Net debt builds back. Stock works
+        to $20-25 as the market re-applies a higher discount rate to the
+        operating business.
+    probability_rationale: >
+      Bearish thesis is structurally coherent: LTH's headline FCF is
+      dependent on SLB proceeds (~$400M/yr); strip those out and operating
+      FCF is barely positive. Cumulative SLB program is finite (~$2B
+      remaining); each SLB trades one-time cash for permanent rent increase.
+      Net debt + capitalized lease obligations near $4B. If macro slows and
+      luxury fitness spend compresses, FCF margin drops, stock works to
+      $20-25. The 20% weight reflects that this thesis bumps against LTH's
+      actual track record: FY24/25 execution strong, recent S&P upgrade
+      validates the credit story, and new luxury club economics ($25-35M
+      revenue vs $15-20M legacy) genuinely change the unit math.
+
+    # Mature-Company DCF metrics (LTH variant: third metric is SLB total)
+    dcf_metrics:
+      cagr_5y: 5.1
+      wacc: 0.110
+      slb_total_5y: 0.95          # cumulative SLB proceeds over 5y ($B)
+
+    # 5-year DCF path (FY26 → FY30) — length-5 arrays, NOT zero-padded
+    dcf_path:
+      rev_b: 2.995                 # starting revenue ($B FY25 actual)
+      rev_path:    [0.11, 0.06, 0.04, 0.03, 0.02]    # growth rates
+      op_margin:   [0.175, 0.170, 0.160, 0.150, 0.140]
+      wacc_path:   [0.110, 0.110, 0.110, 0.110, 0.110]
+      fcf:         [0.133, 0.176, 0.147, 0.113, 0.077]
+      pv_fcf:      [0.120, 0.143, 0.107, 0.075, 0.046]
+      term_g: 0.015
+      sum_pv_fcf: 0.49
+      terminal_value: 0.82
+      pv_terminal: 0.49
+      op_ev: 0.98
+      cash: 0.232
+      net_debt: 1.29
+      total_equity: -0.08           # = op_ev + cash - net_debt (negative for bear)
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 222
+      dcf_per_share: -0.36
+      distress: 0.0
+
+    chart_data:
+      # LTH chart auxiliaries — no raises (LTH doesn't issue equity),
+      # SLB cadence + luxury club count instead
+      slb_per_year:           [0.30, 0.25, 0.20, 0.10, 0.10]    # $B SLB proceeds (sums to slb_total_5y)
+      luxury_club_count_fy30: 77                                 # 42 + 5×7 (5 years × 7 luxury openings)
+      fcf_to_ebitda_ratio:    0.10                               # for terminal EV/EBITDA computation
+
+  # ───────────────────────────────────────────────────────────────────────────
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.55
+    expected_per_share: 14.99
+    headline: "Premium platform, leveraged structure."
+    narrative:
+      - >
+        The middle path takes LTH's recent execution at face value. Revenue
+        grows 11% in FY26 per guidance, decelerating to mid-single-digits as
+        the base builds. Adjusted EBITDA margin holds in the 28-30% range —
+        top quartile for consumer services. Average revenue per membership
+        grows from $3,531 toward $4,000 as new luxury clubs ramp at higher
+        price points.
+      - >
+        New club economics are unique: 1.2M sq ft of 2026 openings is
+        concentrated in resort-style luxury formats generating $25-35M
+        annual revenue at maturity vs $15-20M for legacy. Maturation takes
+        3-4 years; 2026 openings contribute meaningfully only by 2028-29.
+        SLB cadence holds at $300-400M for 2-3 years then tapers. Net debt
+        leverage stays in the 1.5-2.0x EBITDA target.
+      - >
+        The math: $4.39B op EV + $0.23B cash − $1.29B net debt = $3.33B
+        equity ÷ 222M sh = $15.0/share. Materially below today's $33.61 —
+        meaning the current price requires bull-case assumptions. The base
+        case is well-run but priced for steady-state execution. Modest
+        upside requires the bull narrative to convert.
+    probability_rationale: >
+      Modal outcome. LTH executes guidance: revenue grows 11% FY26,
+      decelerating to mid-single-digits. EBITDA margin holds 28-30% (top
+      quartile for consumer services). New 2026 club openings (1.2M sq ft,
+      mostly luxury) mature over 3-4 years. SLB cadence holds for 2-3 more
+      years then tapers. Net debt leverage stays in the 1.5-2.0x EBITDA
+      target. The 55% weight reflects that this requires the least faith —
+      sequential execution on plans already in motion. The base case is
+      well-run but priced for steady-state execution; the multiple stays
+      compressed.
+
+    dcf_metrics:
+      cagr_5y: 7.8
+      wacc: 0.095
+      slb_total_5y: 1.70
+
+    dcf_path:
+      rev_b: 2.995
+      rev_path:    [0.11, 0.09, 0.08, 0.06, 0.05]
+      op_margin:   [0.180, 0.185, 0.188, 0.190, 0.190]
+      wacc_path:   [0.095, 0.095, 0.095, 0.095, 0.095]
+      fcf:         [0.233, 0.290, 0.313, 0.332, 0.348]
+      pv_fcf:      [0.213, 0.242, 0.238, 0.231, 0.221]
+      term_g: 0.025
+      sum_pv_fcf: 1.14
+      terminal_value: 5.10
+      pv_terminal: 3.24
+      op_ev: 4.39
+      cash: 0.232
+      net_debt: 1.29
+      total_equity: 3.33
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 222
+      dcf_per_share: 14.99
+      distress: 0.0
+
+    chart_data:
+      slb_per_year:           [0.40, 0.40, 0.35, 0.30, 0.25]    # sums to ~1.70
+      luxury_club_count_fy30: 97                                 # 42 + 5×11
+      fcf_to_ebitda_ratio:    0.30
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.20   # reduced from 0.25 for ultra_bull (20+5=25)
+    expected_per_share: 46.04
+    headline: "Luxury wellness platform compounds."
+    narrative:
+      - >
+        The bull case is that Life Time is a category of one. There is no
+        other US operator at the premium luxury athletic country club scale
+        — Equinox is private and smaller, gym chains are budget-positioned,
+        boutique concepts are single-discipline. LTH's 'Country Club'
+        positioning combines fitness, racquet sports, kids, pools, dining,
+        work-from-club spaces, and recovery in a single membership.
+      - >
+        In-center revenue compounds faster than membership dues — Dynamic
+        Personal Training, swim lessons, pickleball clinics, MIORA hormone
+        optimization, Life Spa, Life Cafe. In-center revenue per member
+        grows from $1,050 toward $1,400-1,500. SLB program sustains: as LTH
+        opens 12-14 new luxury clubs/year, each becomes future SLB inventory
+        5-7 years later. The flywheel: build → operate → SLB → recycle.
+      - >
+        EBITDA margin expands toward 30%+ as new-club mix shifts to
+        higher-revenue luxury formats. Operating FCF ex-SLB turns
+        meaningfully positive by FY28. Stock works to $46+ as the market
+        gives LTH credit for a premium consumer franchise, re-rating from
+        ~15x P/E toward 22-25x.
+    probability_rationale: >
+      Multi-decade luxury wellness platform compounding. LTH is genuinely a
+      category-of-one — no other US operator at premium luxury athletic
+      country club scale (Equinox is private and smaller; gym chains are
+      budget-positioned; boutique concepts are single-discipline). In-center
+      revenue (Dynamic PT, MIORA hormone optimization, swim lessons,
+      pickleball clinics, spa, cafe) compounds faster than dues. EBITDA
+      margin expands toward 30%+ as new-club mix shifts to higher-revenue
+      luxury formats. The SLB flywheel sustains: 12-14 new luxury clubs/year
+      become future SLB inventory 5-7 years later. The 25% weight reflects
+      that multiple expansion (15x P/E to 22-25x) is plausible but requires
+      both execution AND market re-rating — the conjunction is demanding.
+
+    dcf_metrics:
+      cagr_5y: 9.8
+      wacc: 0.080
+      slb_total_5y: 2.00
+
+    dcf_path:
+      rev_b: 2.995
+      rev_path:    [0.12, 0.11, 0.10, 0.09, 0.07]
+      op_margin:   [0.185, 0.195, 0.205, 0.215, 0.220]
+      wacc_path:   [0.080, 0.080, 0.080, 0.080, 0.080]
+      fcf:         [0.302, 0.410, 0.491, 0.580, 0.669]
+      pv_fcf:      [0.280, 0.351, 0.390, 0.427, 0.455]
+      term_g: 0.030
+      sum_pv_fcf: 1.90
+      terminal_value: 13.78
+      pv_terminal: 9.38
+      op_ev: 11.28
+      cash: 0.232
+      net_debt: 1.29
+      total_equity: 10.22
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 222
+      dcf_per_share: 46.04
+      distress: 0.0
+
+    chart_data:
+      slb_per_year:           [0.45, 0.45, 0.40, 0.40, 0.30]    # sums to ~2.00
+      luxury_club_count_fy30: 107                                # 42 + 5×13
+      fcf_to_ebitda_ratio:    0.50
+
+  # ───────────────────────────────────────────────────────────────────────────
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.05
+    expected_per_share: 90.00
+    headline: "Luxury category-of-one; 15x re-rate."
+    narrative:
+      - >
+        The ultra-bull case is that LTH compounds as the dominant luxury
+        wellness platform AND the market re-rates. Network grows 191 → 250
+        clubs by 2030 at 15+ new clubs/year (vs 12-14 base). Average member
+        spend rises from $4,500 to $6,500 annually as ultra-luxury services
+        (medspa, nutrition science, recovery) drive ARPU. SLB program
+        self-funds at 6% cap rate with bank financing. EBITDA grows to
+        $1.5B+ by 2030.
+      - >
+        Multiple expands from 9x EV/EBITDA (current) to 15x as growth story
+        consolidates and capital structure de-risks. Result: $22.5B EV -
+        $1.3B net debt = $21.2B equity ÷ 235M FY30 shares = $90/share. The
+        ultra-bull case requires BOTH operational excellence AND multiple
+        re-rating — most LTH bulls only price one of these.
+    probability_rationale: >
+      Joint conditional: 250+ clubs by 2030 (40%) AND ARPU $6,500+ achieved
+      via medspa/recovery upsell (50% conditional on club growth) AND SLB
+      self-funded with bank capital (60%) AND multiple expansion to 15x
+      EV/EBITDA (50%). Joint at 4-6%, reflected here at 5%. Tail of tails:
+      LTH stops being a 'leveraged real estate compounder' and becomes a
+      'luxury wellness software-like compounder.'
+
+    dcf_metrics:
+      cagr_5y: 12.0
+      wacc: 0.075
+      slb_total_5y: 3.00
+
+    dcf_path:
+      rev_b: 3.0
+      rev_path:    [0.12, 0.13, 0.13, 0.12, 0.10]
+      op_margin:   [0.290, 0.300, 0.310, 0.320, 0.330]
+      wacc_path:   [0.075, 0.075, 0.075, 0.075, 0.075]
+      fcf:         [0.350, 0.500, 0.700, 0.900, 1.100]
+      pv_fcf:      [0.326, 0.434, 0.560, 0.669, 0.760]
+      term_g: 0.035
+      sum_pv_fcf: 2.749
+      terminal_value: 30.0
+      pv_terminal: 20.90
+      op_ev: 23.65
+      cash: 0.23
+      net_debt: 1.29
+      total_equity: 22.59
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 235
+      dcf_per_share: 96.10        # raw DCF
+      distress: 0.0
+      # expected_per_share ($90.00) ≠ dcf_per_share ($96.10) — manual rounding
+      # for display. Generator uses expected_per_share for weighted math.
+
+    chart_data:
+      slb_per_year:           [0.60, 0.60, 0.60, 0.60, 0.60]    # sums to ~3.00 (steady)
+      luxury_club_count_fy30: 117                                # 42 + 5×15
+      fcf_to_ebitda_ratio:    0.65
+
+# ── Historical price data ───────────────────────────────────────────────────
+# Quarterly closes since IPO. Generator appends (0.0, spot) as final point.
+# x = years offset from today (negative = past).
+historical_prices:
+  ipo_marker: "IPO Oct '21"
+  x_min: -5.0            # years of history to show in chart
+  points:
+    - [-4.58, 18.0]
+    - [-4.42, 14.0]
+    - [-4.17, 13.0]
+    - [-3.92, 14.5]
+    - [-3.67, 16.0]
+    - [-3.42, 13.0]
+    - [-3.17, 17.0]
+    - [-2.92, 16.5]
+    - [-2.67, 14.0]
+    - [-2.42, 15.5]
+    - [-2.17, 18.0]
+    - [-1.92, 17.0]
+    - [-1.67, 18.5]
+    - [-1.42, 26.0]
+    - [-1.17, 29.0]
+    - [-0.92, 28.5]
+    - [-0.67, 31.0]
+    - [-0.42, 32.5]
+    - [-0.17, 33.0]
+
+# ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
+weighting_rationale:
+  - label: "Bear 20%"
+    body: "SLB-as-capital-recycling thesis structurally coherent but lacks traction vs FY24/25 execution."
+  - label: "Base 55%"
+    body: "Modal outcome: LTH executes guidance, leverage stays in target."
+  - label: "Bull 20%"
+    body: "Luxury wellness platform compounds; category-of-one; multiple expansion requires execution AND re-rating."
+  - label: "Ultra Bull 5%"
+    body: "250+ clubs by 2030 + ARPU $6,500 + SLB self-funded + multiple re-rates to 15x EV/EBITDA."
+
+# ── Page 3 / Page 4 ticker-specific text ────────────────────────────────────
+page3:
+  subtitle: "FY23–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q1 2026 10-Q, S&P credit reports"
+  sources:  "Sources: LTH 10-K FY25, Q1 2026 10-Q, S&P / Moody's credit reports, REIT comparables for SLB cap rates. "
+
+# ── Page 4 appendix sections ────────────────────────────────────────────────
+appendix:
+  pushback:
+    - label: "Track record is strong."
+      body: "FY24-25 execution delivered guidance; S&P upgrade validates credit. Removes the leveraged-real-estate-vehicle framing."
+    - label: "New club economics shift mix."
+      body: "1.2M sq ft of 2026 luxury openings generate $25-35M revenue vs $15-20M legacy. Unit economics improving, not deteriorating."
+    - label: "Category-of-one positioning."
+      body: "No US operator at LTH's premium luxury athletic country club scale. Equinox private + smaller; gym chains budget; boutiques single-discipline."
+    - label: "In-center monetization compounds."
+      body: "Dynamic PT, MIORA, pickleball, spa, cafe — in-center revenue per member growing from $1,050 toward $1,400-1,500. High-margin, recurring."
+    - label: "SLB flywheel sustains."
+      body: "New clubs become future SLB inventory in 5-7 years. Cadence of $400M/yr can persist as long as new construction continues."
+  triggers:
+    - label: "Bear validation"
+      body: "FY27 revenue growth < 5%  ·  SLB cadence < $300M/yr  ·  Net debt / EBITDA > 2.5x  ·  Credit rating downgraded below BB-"
+    - label: "Bull validation"
+      body: "FY27 revenue growth > 9%  ·  EBITDA margin > 30%  ·  In-center revenue per member > $1,250  ·  P/E multiple expands above 18x"
+    - label: "Reframe needed"
+      body: "If Equinox or comparable luxury operator IPOs at premium multiple — establishes valuation comparable for LTH multiple expansion"

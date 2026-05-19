@@ -1,0 +1,421 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# joby.yml — Joby Aviation (NYSE: JOBY)
+# Canonical data file per memo-spec §6c.16 (proposed)
+# Schema v003 · 2026-05-18_07-00
+# ═════════════════════════════════════════════════════════════════════════════
+#
+# This file is the single source of truth for everything ticker-specific.
+# The generator reads from here; chart builders read from here; future
+# website pages read from here. No data is duplicated elsewhere.
+#
+# Schema documented in /spec/data-schema__v001.md (to be written).
+# ═════════════════════════════════════════════════════════════════════════════
+
+# ── Ticker identity ─────────────────────────────────────────────────────────
+ticker: JOBY
+company: Joby Aviation
+exchange: NYSE
+dcf_type: young_company  # young_company | mature_company
+date: 2026-05-16
+spot: 10.50
+
+# ── Market data ─────────────────────────────────────────────────────────────
+# Structured, not formatted. Generator formats per layout rules.
+market:
+  market_cap_billion: 10.3
+  shares_outstanding_million: 984
+  cash_billion: 2.5
+  net_debt_billion: 0.0
+  # Additional facts for masthead strip (free-form, ticker-specific extras)
+  # JOBY has no special items. ZM would have anthropic_stake here.
+  extras: []
+
+# ── Page 1 narrative content ────────────────────────────────────────────────
+
+central_question: >
+  Will Joby capture meaningful share of a $250B global UAM TAM by 2036 —
+  or is today's $10B market cap pricing certainty that competitive eVTOL
+  economics don't support?
+
+thesis: >
+  Joby trades at ~$10.3B against $24M of Q1 2026 revenue and $700M
+  annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise)
+  provides ~3 years of runway. FAA Type Certification is in Stage 4 (final),
+  Dubai exclusive operations begin in 2026, and the Toyota manufacturing
+  partnership unlocks scale. Pre-revenue category-defining companies present
+  a Damodaran problem: the standard 5-year DCF generates nonsense. The
+  young-company framework asks what mature TAM share is plausible, what
+  terminal margins look like at scale, and what probability of outright
+  failure. Three scenarios, weighted; show your work.
+
+# ── Page 3 chart-level reference data ───────────────────────────────────────
+# Ticker-constant data the Page 3 chart builder needs.
+# (Per-scenario chart data lives inside each scenario's chart_data block.)
+
+chart_reference:
+  tam_billion: 250  # global UAM TAM at FY36
+  history_years: [2024, 2025, 2026]  # FY24-26 actuals on Page 3 charts
+  history_revenue: [0.080, 0.150, 0.240]  # $B actuals
+  history_fleet: [12, 28, 50]  # cumulative aircraft delivered
+
+# ═════════════════════════════════════════════════════════════════════════════
+# SCENARIOS
+# ═════════════════════════════════════════════════════════════════════════════
+# Four scenarios; probabilities must sum to 1.0.
+# Generator validates probability sum on load.
+# ═════════════════════════════════════════════════════════════════════════════
+
+scenarios:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bear:
+    label: Bear
+    short_label: Bear           # for charts at small font (chart builder uses this)
+    probability: 0.30
+    expected_per_share: 0.32    # weighted by within-scenario p_fail; not raw DCF
+    headline: "Cert delays; mfg stumbles; China wins."
+    narrative:
+      - >
+        The pessimistic case is brutal for eVTOL economics. FAA Type Certification
+        slips from 2026 into 2027 or later — the SR3 audit is complete but Stage 4
+        final testing has historically taken longer than companies project. The
+        Dubai launch is real but on a single route; volume builds slowly.
+        Manufacturing in Dayton scales below the 4-aircraft/month target.
+      - >
+        Cash burn continues at $700M+ annualized. The $2.5B cash position lasts
+        ~3 years, but commercial scaling requires far more capital. By FY30 Joby
+        has raised another $2-3B at progressively lower prices, diluting holders
+        50%+. Aerospace economics don't reach software-like margins — at scale
+        operating margin tops out around 5%, similar to legacy regional aviation
+        operators.
+      - >
+        Competition compounds. EHang dominates China and Asia, Airbus enters with
+        credibility advantage. Joby reaches just 0.6% of $250B global UAM TAM by
+        FY36 — $1.5B revenue, 5% margin. With 35% probability of bankruptcy,
+        expected per-share is near-zero.
+    probability_rationale: >
+      Aerospace startups historically fail at high rates even with funding. SR3
+      audit timing has slipped industry-wide; Stage 4 final testing routinely
+      extends 12-24 months beyond projections. Manufacturing scaling at Dayton
+      is the hardest unproven part — Tesla took years on Model 3 with mature
+      automotive suppliers. The 30% weight acknowledges that the $2.5B cash +
+      Toyota manufacturing partnership materially reduce execution risk relative
+      to a typical aerospace startup, but eVTOL unit economics remain
+      fundamentally unproven at fleet scale. Even with strong execution, the
+      category itself could fail to generate profitable demand. Within-scenario
+      35% p_fail captures Joby-specific bankruptcy; the 30% scenario weight
+      captures the broader 'bear world' where eVTOL economics don't scale even
+      if Joby executes.
+
+    # Young-Company DCF metrics
+    dcf_metrics:
+      tam_share: 0.6           # % of global UAM TAM at FY36 maturity
+      p_fail: 35               # within-scenario bankruptcy probability (%)
+      s2c: 0.8                 # sales-to-capital ratio (Damodaran)
+
+    # 10-year DCF path (FY27 → FY36)
+    dcf_path:
+      rev_path:    [0.150, 0.250, 0.400, 0.600, 0.800, 0.950, 1.100, 1.250, 1.400, 1.500]
+      op_margin:   [-3.0, -2.0, -1.2, -0.60, -0.20, 0.00, 0.02, 0.04, 0.05, 0.05]
+      wacc_path:   [0.140, 0.135, 0.130, 0.125, 0.120, 0.115, 0.110, 0.105, 0.100, 0.095]
+      term_g: 0.020
+      nopat:       [-0.450, -0.500, -0.480, -0.360, -0.160, 0.000, 0.022, 0.050, 0.070, 0.075]
+      reinvest:    [0.050, 0.125, 0.188, 0.250, 0.250, 0.188, 0.188, 0.188, 0.188, 0.125]
+      fcf:         [-0.500, -0.625, -0.668, -0.610, -0.410, -0.188, -0.166, -0.138, -0.118, -0.050]
+      pv_fcf:      [-0.439, -0.483, -0.457, -0.371, -0.222, -0.091, -0.072, -0.054, -0.042, -0.016]
+      sum_pv_fcf: -2.247
+      terminal_value: 1.0
+      pv_terminal: 0.32
+      op_ev: -1.93
+      cash: 2.50
+      net_debt: 0.0
+      total_equity: 0.57
+      raise_total: 2.75
+      dilution_pct: 53
+      final_shares: 1508
+      dcf_per_share: 0.22
+      distress: 0.50
+
+    # Page 3 chart-specific auxiliary data
+    chart_data:
+      raises:           [0.00, 0.50, 0.75, 0.75, 0.75, 0.00, 0.00, 0.00, 0.00, 0.00]
+      raise_prices:     [10.00, 8.00, 6.00, 4.00, 3.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      rev_per_aircraft: [3.0, 3.2, 3.5, 3.7, 4.0, 4.2, 4.4, 4.5, 4.5, 4.5]
+      tam_competitor_share: 40.0  # $B competitor share at FY36 (TAM chart stack)
+
+  # ───────────────────────────────────────────────────────────────────────────
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.55
+    expected_per_share: 2.00
+    headline: "Joby + Archer split US; 13% margin."
+    narrative:
+      - >
+        The middle path. FAA Type Certification comes through in late 2026 /
+        early 2027. Joby's Dubai exclusivity through 2032 anchors Middle East
+        revenue, US operations via the eIPP program scale through 2027-28, and
+        the Toyota partnership delivers manufacturing scale at the Dayton
+        facility. By FY36, ~1,400 aircraft and $7B revenue at 13% operating
+        margin.
+      - >
+        But the market splinters. Archer is the credible #2 in the US. EHang
+        dominates China. Joby captures 2.8% of $250B global UAM TAM —
+        meaningful but not dominant. Mature 13% operating margin reflects
+        aerospace economics: better than legacy carriers (5-8%) but well below
+        software (25%+). This is what the Damodaran framework produces with
+        defensible peer-set anchors.
+      - >
+        The math: $8.5B operating EV, $2.5B cash, 1.28B FY36 fully-diluted
+        shares (31% dilution from $3.75B raises). DCF $2.33 per share. With 18%
+        failure probability, expected per-share $2.00 — materially below today's
+        $10.50. The current price requires substantially more bullish
+        assumptions to hold.
+    probability_rationale: >
+      Modal outcome given de-risking factors already in place. FAA Type Cert
+      progresses on schedule or slightly delayed; Toyota manufacturing scales
+      incrementally rather than to full 500-aircraft/year; Dubai launches
+      commercially but stays limited in scope; Joby and Archer effectively
+      split the US market based on funding/partnership advantages. The 55%
+      weight reflects that the base case requires the LEAST faith — no
+      breakthrough business model, no dominant competitive position, no
+      breakthrough regulatory cooperation. Just sequential execution on plans
+      largely in motion. Result: real revenue with aerospace-blend operating
+      margins (~13%, peer-set median between regional aviation at 8% and ADAS
+      software at 30%), well below the software-economics framing implicit in
+      today's market cap. Joby reaches commercial scale; the open question is
+      at what margin.
+
+    dcf_metrics:
+      tam_share: 2.8
+      p_fail: 18
+      s2c: 1.2
+
+    dcf_path:
+      rev_path:    [0.180, 0.400, 0.900, 1.600, 2.500, 3.500, 4.500, 5.500, 6.300, 7.000]
+      op_margin:   [-2.5, -1.2, -0.50, -0.10, 0.05, 0.08, 0.10, 0.12, 0.13, 0.13]
+      wacc_path:   [0.130, 0.125, 0.120, 0.115, 0.110, 0.105, 0.100, 0.095, 0.090, 0.085]
+      term_g: 0.025
+      nopat:       [-0.450, -0.480, -0.450, -0.160, 0.125, 0.221, 0.356, 0.521, 0.647, 0.719]
+      reinvest:    [0.058, 0.183, 0.417, 0.583, 0.750, 0.833, 0.833, 0.833, 0.667, 0.583]
+      fcf:         [-0.508, -0.663, -0.867, -0.743, -0.625, -0.612, -0.478, -0.312, -0.020, 0.136]
+      pv_fcf:      [-0.450, -0.522, -0.609, -0.468, -0.355, -0.314, -0.223, -0.133, -0.008, 0.049]
+      sum_pv_fcf: -3.033
+      terminal_value: 21.5
+      pv_terminal: 6.10
+      op_ev: 3.07
+      cash: 2.50
+      net_debt: 0.0
+      total_equity: 5.57
+      raise_total: 3.75
+      dilution_pct: 31
+      final_shares: 1284
+      dcf_per_share: 2.33
+      distress: 0.50
+
+    chart_data:
+      raises:           [0.00, 0.75, 1.00, 1.00, 1.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      raise_prices:     [10.00, 9.00, 8.00, 7.00, 6.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      rev_per_aircraft: [3.5, 3.8, 4.0, 4.2, 4.5, 4.8, 5.0, 5.0, 5.0, 5.0]
+      tam_competitor_share: 60.0
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.12   # reduced from 0.15 to make room for ultra_bull (12+3=15)
+    expected_per_share: 32.61
+    headline: "Western eVTOL leader; SaaS margins."
+    narrative:
+      - >
+        The bull case is that Joby becomes the dominant Western eVTOL operator
+        and manufacturer. FAA Type Certification on schedule in 2026 unlocks
+        rapid scaling. The Toyota manufacturing partnership delivers the Dayton
+        facility at full 500-aircraft/year capacity by FY28-29. Dubai
+        exclusivity becomes a template — Joby wins similar long-term operating
+        contracts in Saudi Arabia, India, and Southeast Asia.
+      - >
+        Competition narrows. Archer ships but at lower volumes. EHang remains
+        regional to China. By FY36 Joby operates 4,000 aircraft, generates $20B
+        revenue, and captures 8% of $250B global UAM TAM. As autonomous flight
+        capability matures (5-7 years away), Joby pivots to a software-take-rate
+        model on partner-operated aircraft, reaching software-like margins.
+        Mature operating margin reaches 28%.
+      - >
+        The math: $34B operating EV, $2.5B cash, 1.09B FY36 shares (11%
+        dilution). DCF $35.35/share. With 8% failure probability, expected
+        per-share $32.61. The bull case implies today's $10.50 undervalues the
+        trajectory — but only with meaningful probability weight on dominance.
+    probability_rationale: >
+      The bull case requires a chain of conditional events: FAA Type Cert on
+      schedule by end-2026 AND Toyota Dayton scales to full 500-aircraft/year
+      capacity by 2028-29 AND Dubai exclusivity template replicates in 3+
+      countries (Saudi Arabia, India, SE Asia) AND competition narrows (Archer
+      ships meaningfully lower volumes, EHang stays regional to China) AND
+      autonomous flight matures within 5-7 years AND Joby successfully pivots
+      to software-take-rate model on partner aircraft. Even granting 60-70%
+      probability per condition with correlation (i.e., if cert works Toyota
+      probably scales), joint probability lands closer to 10-15%. Conjunctive
+      probability is one of the most reliably underestimated quantities in
+      forecasting — the bull case isn't blocked by any single piece looking
+      unlikely, but by compound dependency. 15% reflects that this is a real
+      possibility, just not central.
+
+    dcf_metrics:
+      tam_share: 8.0
+      p_fail: 8
+      s2c: 1.6
+
+    dcf_path:
+      rev_path:    [0.200, 0.500, 1.200, 2.500, 4.500, 7.500, 11.00, 15.00, 18.00, 20.00]
+      op_margin:   [-2.0, -0.80, -0.20, 0.05, 0.12, 0.18, 0.22, 0.25, 0.27, 0.28]
+      wacc_path:   [0.120, 0.115, 0.110, 0.105, 0.100, 0.095, 0.090, 0.085, 0.080, 0.075]
+      term_g: 0.030
+      nopat:       [-0.400, -0.400, -0.240, 0.125, 0.540, 1.350, 2.420, 3.750, 4.860, 5.600]
+      reinvest:    [0.056, 0.188, 0.438, 0.813, 1.250, 1.875, 2.188, 2.500, 1.875, 1.250]
+      fcf:         [-0.456, -0.588, -0.678, -0.688, -0.710, -0.525, 0.232, 1.250, 2.985, 4.350]
+      pv_fcf:      [-0.407, -0.464, -0.477, -0.435, -0.404, -0.262, 0.105, 0.527, 1.169, 1.586]
+      sum_pv_fcf: 0.938
+      terminal_value: 88.0
+      pv_terminal: 32.10
+      op_ev: 33.04
+      cash: 2.50
+      net_debt: 0.0
+      total_equity: 35.54
+      raise_total: 2.05
+      dilution_pct: 11
+      final_shares: 1091
+      dcf_per_share: 35.35
+      distress: 1.00
+
+    chart_data:
+      raises:           [0.30, 0.50, 0.75, 0.50, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      raise_prices:     [12.00, 16.00, 22.00, 30.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      rev_per_aircraft: [4.0, 4.3, 4.5, 4.8, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]
+      tam_competitor_share: 70.0
+
+  # ───────────────────────────────────────────────────────────────────────────
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull        # chart-builder uses this — fits at 7pt label
+    probability: 0.03
+    expected_per_share: 90.00
+    headline: "Global UAM dominance; SaaS-take-rate."
+    narrative:
+      - >
+        The ultra-bull case is that Joby becomes the dominant global UAM
+        platform — not just Western leader. FAA cert on schedule + Toyota
+        Dayton scales + Dubai template replicates in 5+ countries + autonomous
+        flight matures within 5-7 years + Joby pivots successfully to a
+        software-take-rate model on partner-operated aircraft + multiple
+        expansion to aerospace/software-hybrid premium. By FY36 Joby operates
+        8,000+ aircraft globally, captures 16% of $250B UAM TAM, and
+        software-take-rate revenue dominates with 35%+ mature margins.
+      - >
+        Compound conditional: each piece individually plausible at 60-75%;
+        joint at 3-5%. Reflected here at 3%. This is the genuine tail — not a
+        'mild upside,' but the scenario where Joby joins the aerospace/software
+        giants club. Contributes $2.70 to the $7.81 weighted expected
+        ($90 × 3%).
+    probability_rationale: >
+      Tail of tails: requires every Bull condition to hit AND multiple
+      expansion AND replicate internationally AND early autonomous pivot. Each
+      individually 60-75% probable; joint at 3-5%. Genuine tail captures the
+      scenario where Joby joins the software-aerospace-hybrid giants club.
+
+    dcf_metrics:
+      tam_share: 16.0
+      p_fail: 4
+      s2c: 1.8
+
+    dcf_path:
+      rev_path:    [0.250, 0.700, 1.800, 3.800, 7.000, 11.50, 17.00, 23.00, 28.00, 32.00]
+      op_margin:   [-1.8, -0.60, -0.10, 0.10, 0.18, 0.24, 0.28, 0.30, 0.32, 0.34]
+      wacc_path:   [0.110, 0.105, 0.100, 0.095, 0.090, 0.085, 0.080, 0.075, 0.072, 0.070]
+      term_g: 0.035
+      nopat:       [-0.450, -0.420, -0.180, 0.380, 1.260, 2.760, 4.760, 6.900, 8.960, 10.880]
+      reinvest:    [0.070, 0.260, 0.660, 1.260, 1.950, 2.700, 2.870, 2.800, 2.000, 1.250]
+      fcf:         [-0.520, -0.680, -0.840, -0.880, -0.690, 0.060, 1.890, 4.100, 6.960, 9.630]
+      pv_fcf:      [-0.468, -0.547, -0.616, -0.584, -0.418, 0.033, 0.929, 1.852, 2.880, 3.665]
+      sum_pv_fcf: 6.726
+      terminal_value: 252.0
+      pv_terminal: 95.83
+      op_ev: 102.56
+      cash: 2.50
+      net_debt: 0.0
+      total_equity: 105.06
+      raise_total: 2.05
+      dilution_pct: 11
+      final_shares: 1121
+      dcf_per_share: 93.72
+      distress: 0.96
+
+    chart_data:
+      raises:           [0.30, 0.50, 0.50, 0.30, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00]
+      raise_prices:     [16.00, 28.00, 50.00, 80.00, 120.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      rev_per_aircraft: [4.5, 4.8, 5.0, 5.2, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5]
+      tam_competitor_share: 75.0
+
+# ── Historical price data ───────────────────────────────────────────────────
+# Quarterly closes since IPO. Generator appends (0.0, spot) as final point.
+# x = years offset from today (negative = past).
+historical_prices:
+  ipo_marker: "IPO Aug '21"
+  x_min: -5.0            # years of history to show in chart
+  points:
+    - [-4.67, 9.5]
+    - [-4.42, 8.0]
+    - [-4.17, 5.0]
+    - [-3.92, 3.5]
+    - [-3.67, 4.0]
+    - [-3.42, 3.0]
+    - [-3.17, 5.0]
+    - [-2.92, 9.0]
+    - [-2.67, 7.5]
+    - [-2.42, 6.0]
+    - [-2.17, 5.5]
+    - [-1.92, 5.5]
+    - [-1.67, 5.5]
+    - [-1.42, 9.0]
+    - [-1.17, 8.0]
+    - [-0.92, 7.0]
+    - [-0.67, 7.5]
+    - [-0.42, 9.5]
+    - [-0.17, 9.0]
+
+# ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
+weighting_rationale:
+  - label: "Bear 30%"
+    body: "Aerospace startups historically fail at high rates; SR3 timing slipped industry-wide."
+  - label: "Base 55%"
+    body: "Modal outcome: Joby + Archer split US with aerospace-blend margins."
+  - label: "Bull 12%"
+    body: "Compound conditional chain; joint probability lands at 10-15% despite individually plausible pieces."
+  - label: "Ultra Bull 3%"
+    body: "Tail of tails: dominant global UAM + early autonomous pivot + software-take-rate multiple expansion."
+
+# ── Page 3 / Page 4 ticker-specific text ────────────────────────────────────
+page3:
+  subtitle: "FY24–FY26 history + FY27–FY36 scenario projections  ·  fiscal years end Dec 31  ·  10-K, Q1 2026 10-Q, Morgan Stanley UAM"
+  sources:  "Sources: JOBY 10-K FY25, Q1 2026 10-Q, Morgan Stanley UAM TAM Update (Global $1T by 2040; ~$250B FY36 interpolation). "
+
+# ── Page 4 appendix sections ────────────────────────────────────────────────
+appendix:
+  pushback:
+    - label: "Type Cert is imminent."
+      body: "Stage 4 in progress, SR3 audit complete Q1'26. Conforming aircraft already flying. Removes the largest single bear risk."
+    - label: "Best capitalized eVTOL."
+      body: "$2.5B cash exceeds Archer ($1.8B) and Vertical (+$850M raise). Multi-year runway through commercial scaling."
+    - label: "Partnership stack is unique."
+      body: "Toyota ($894M, mfg), Delta ($200M, US distribution), Dubai RTA (exclusive 2032). No other eVTOL has this stack."
+    - label: "Operator + mfg = wider moat."
+      body: "Joby owns/operates fleet rather than selling aircraft. Captures full revenue per flight, not just OEM margin."
+    - label: "Mature margin may be conservative."
+      body: "Base case 13% reflects aerospace blend. If software-take-rate on partner aircraft scales, terminal margin could be 20%+."
+  triggers:
+    - label: "Bear validation"
+      body: "Type Cert slips to 2027+  ·  Cash < $1.5B by EOY 2026  ·  Dubai passenger volume disappoints (< 50K rides FY27)"
+    - label: "Bull validation"
+      body: "Type Cert achieved by Q3 2026  ·  Dayton facility hits 4 aircraft/month  ·  Second exclusive country contract signed"
+    - label: "Reframe needed"
+      body: "If Archer achieves Type Cert first — Joby's first-mover advantage in US erodes; share-of-TAM math compresses"

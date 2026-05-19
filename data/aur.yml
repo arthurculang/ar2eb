@@ -1,0 +1,397 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# aur.yml — Aurora Innovation (NASDAQ: AUR)
+# Canonical data file per memo-spec §6c.16 (proposed)
+# Schema v003 · 2026-05-18_07-00
+# ═════════════════════════════════════════════════════════════════════════════
+#
+# Young-Company DCF (Damodaran) — same schema shape as joby.yml. Mature-state
+# share assumption, 10-year explicit DCF, terminal value, distress weighting.
+# ═════════════════════════════════════════════════════════════════════════════
+
+# ── Ticker identity ─────────────────────────────────────────────────────────
+ticker: AUR
+company: Aurora Innovation
+exchange: NASDAQ
+dcf_type: young_company
+date: 2026-05-16
+spot: 7.74
+
+# ── Market data ─────────────────────────────────────────────────────────────
+market:
+  market_cap_billion: 13.2
+  shares_outstanding_million: 1710        # 1.71B sh
+  cash_billion: 1.28
+  net_debt_billion: 0.65                  # AUR has $0.65B debt (unlike JOBY)
+  extras: []
+
+# ── Page 1 narrative content ────────────────────────────────────────────────
+
+central_question: >
+  Will Aurora capture meaningful share of a $160B US autonomous trucking TAM
+  by 2036 — or is today's $13B market cap pricing certainty about driverless
+  commercial economics that hasn't been proven?
+
+thesis: >
+  Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M
+  annualized cash burn. The $1.28B liquidity position needs replenishment by
+  mid-2027 absent commercial conversion. Driverless commercial launch slipped
+  from 2024 to now 2027; the Driver runs supervised highway pilots with
+  PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin,
+  P(failure). Three scenarios, weighted; show your work.
+
+# ── Page 3 chart-level reference data ───────────────────────────────────────
+chart_reference:
+  tam_billion: 160                        # US autonomous trucking TAM at FY36
+  history_years: [2024, 2025, 2026]
+  history_revenue: [0.069, 0.106, 0.044]  # $B actuals (Q1 2026 = $11M annualized)
+  history_fleet: [6, 20, 50]              # cumulative trucks deployed
+
+# ═════════════════════════════════════════════════════════════════════════════
+# SCENARIOS
+# ═════════════════════════════════════════════════════════════════════════════
+
+scenarios:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.35
+    expected_per_share: 0.06
+    headline: "Tech doesn't scale, capital exhausts."
+    narrative:
+      - >
+        The pessimistic case is brutal. Highway autonomy is harder than demos
+        suggest — five years of 'next year' promises (launch was 2025, then
+        2026, now 2027), and the long tail of edge cases (night construction,
+        weather, urban surface streets) proves more durable than current
+        systems handle. Commercial routes stay limited to highway-only,
+        daytime, sunbelt-only operation.
+      - >
+        Cash burn doesn't moderate. Q1 2026's $640M annualized outflow keeps
+        rising. The $1.28B liquidity needs replenishment by mid-2027.
+        Successive raises come at lower prices — cumulative ~74% dilution by
+        FY36, issuance averaging below $3, destroying per-share value even
+        when the business survives.
+      - >
+        By FY36 Aurora reaches just 1.5% of the US autonomous trucking TAM —
+        $2.5B revenue, 8% margin. With 45% probability of bankruptcy and zero
+        distress recovery, expected per-share is essentially zero. Aurora
+        ends up the WeWork of autonomy — first mover, market-defining, but
+        unable to convert that into durable economics.
+    probability_rationale: >
+      Bearish thesis is compound: tech doesn't scale from supervised highway
+      pilots to driverless at necessary safety thresholds; capital exhausts
+      before commercial validation; dilution at falling prices accelerates as
+      capital needs persist; competitive losses to Kodiak (cargo-focused,
+      well-funded) and Waabi (smaller but capital-efficient). Within-scenario
+      45% p_fail captures Aurora-specific failure; the 35% scenario weight
+      reflects category-level risk — autonomous trucking economics may not
+      scale for Western operators. Waymo Via's 2023 shutdown was a credible
+      signal of category difficulty. The 35% weight is slightly above JOBY's
+      30% bear because AUR is earlier-stage (pre-commercial), more
+      capital-dependent, and faces more direct competition.
+
+    dcf_metrics:
+      tam_share: 1.5
+      p_fail: 45
+      s2c: 1.2
+
+    dcf_path:
+      rev_path:    [0.015, 0.040, 0.080, 0.150, 0.300, 0.600, 1.000, 1.500, 2.000, 2.500]
+      op_margin:   [-8.0, -4.0, -2.0, -1.0, -0.50, -0.20, -0.10, 0.00, 0.05, 0.08]
+      wacc_path:   [0.140, 0.140, 0.135, 0.130, 0.125, 0.120, 0.115, 0.110, 0.105, 0.100]
+      term_g: 0.020
+      nopat:       [-0.120, -0.160, -0.160, -0.150, -0.150, -0.120, -0.100, 0.000, 0.100, 0.200]
+      reinvest:    [0.009, 0.021, 0.033, 0.058, 0.125, 0.250, 0.333, 0.417, 0.417, 0.417]
+      fcf:         [-0.129, -0.181, -0.193, -0.208, -0.275, -0.370, -0.433, -0.417, -0.317, -0.217]
+      pv_fcf:      [-0.113, -0.139, -0.131, -0.124, -0.146, -0.175, -0.184, -0.159, -0.109, -0.068]
+      sum_pv_fcf: -1.348
+      terminal_value: 2.3
+      pv_terminal: 0.72
+      op_ev: -0.63
+      cash: 1.28
+      net_debt: 0.0
+      total_equity: 0.65
+      raise_total: 4.25
+      dilution_pct: 74
+      final_shares: 3401
+      dcf_per_share: 0.11
+      distress: 0.00
+
+    chart_data:
+      raises:           [0.50, 0.75, 0.75, 0.75, 0.75, 0.50, 0.25, 0.00, 0.00, 0.00]
+      raise_prices:     [5.00, 4.00, 3.50, 3.00, 2.50, 2.00, 1.75, 0.00, 0.00, 0.00]
+      rev_per_truck:    [100, 110, 120, 130, 140, 150, 155, 160, 160, 165]   # $K/year per truck
+      tam_competitor_share: 25.0   # $B competitor share at FY36 (Kodiak + Waabi + PlusAI + others)
+
+  # ───────────────────────────────────────────────────────────────────────────
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.50
+    expected_per_share: 3.03
+    headline: "Commercial scale works at limited share."
+    narrative:
+      - >
+        The Aurora Driver works at commercial scale. By FY28 the company
+        operates 1,000–2,000 driverless trucks on commercial highways.
+        McLane (Berkshire) expands beyond Texas. FedEx, Schneider, Werner
+        pilots convert to multi-year volume commitments. Hirschbach's
+        500-truck order ships through 2027–28.
+      - >
+        But the market splinters. Kodiak owns industrial off-highway. Waabi
+        grows through the Volvo OEM channel. PlusAI lands legacy retrofits.
+        Aurora becomes one of 2–3 'winners' in US for-hire long-haul,
+        capturing ~7.5% of the $160B TAM by FY36 — $12B revenue. Mature
+        margin settles around 20% — a blend of software-licensing and
+        own-fleet operations.
+      - >
+        The math: $8.3B operating EV + $1.3B cash, divided by 2.48B FY36
+        fully-diluted shares (27% dilution). Apply 25% failure haircut.
+        Expected per-share $3.03 — materially below today's $7.74. The model
+        says the current price requires bull-case assumptions to hold; the
+        base case implies meaningful downside.
+    probability_rationale: >
+      Modal outcome. Aurora launches commercial Driverless service on
+      schedule (2027), proves cost-per-mile advantage on a single route
+      (Dallas-Houston initially), expands to 2-3 routes by 2029, secures
+      pilot partnerships with major carriers (Werner, Schneider, FedEx).
+      Reaches ~7-8% share of $160B addressable autonomous trucking TAM by
+      2036 — meaningful but not dominant. Mature operating margin lands at
+      ~20% (tech-auto blend, well below software economics). The 50% weight
+      reflects that this is the modal outcome — most realistic for a strong
+      technical team executing on a long technical-commercial timeline, but
+      not requiring breakthrough commercial dominance.
+
+    dcf_metrics:
+      tam_share: 7.5
+      p_fail: 25
+      s2c: 1.5
+
+    dcf_path:
+      rev_path:    [0.030, 0.100, 0.250, 0.600, 1.200, 2.500, 4.500, 7.000, 9.500, 12.00]
+      op_margin:   [-6.0, -2.5, -1.0, -0.40, -0.10, 0.05, 0.10, 0.15, 0.18, 0.20]
+      wacc_path:   [0.120, 0.120, 0.115, 0.110, 0.105, 0.100, 0.095, 0.090, 0.090, 0.085]
+      term_g: 0.025
+      nopat:       [-0.180, -0.250, -0.250, -0.240, -0.120, 0.099, 0.356, 0.830, 1.351, 1.896]
+      reinvest:    [0.017, 0.047, 0.100, 0.233, 0.400, 0.867, 1.333, 1.667, 1.667, 1.667]
+      fcf:         [-0.197, -0.297, -0.350, -0.473, -0.520, -0.768, -0.978, -0.837, -0.316, 0.229]
+      pv_fcf:      [-0.176, -0.237, -0.250, -0.305, -0.303, -0.407, -0.473, -0.372, -0.129, 0.086]
+      sum_pv_fcf: -2.566
+      terminal_value: 41.7
+      pv_terminal: 9.59
+      op_ev: 8.32
+      cash: 1.28
+      net_debt: 0.0
+      total_equity: 9.60
+      raise_total: 4.50
+      dilution_pct: 27
+      final_shares: 2480
+      dcf_per_share: 3.87
+      distress: 0.50
+
+    chart_data:
+      raises:           [0.50, 0.75, 1.00, 1.00, 0.75, 0.50, 0.00, 0.00, 0.00, 0.00]
+      raise_prices:     [7.00, 7.50, 8.00, 9.00, 10.00, 12.00, 0.00, 0.00, 0.00, 0.00]
+      rev_per_truck:    [120, 135, 150, 165, 180, 195, 205, 215, 220, 225]
+      tam_competitor_share: 35.0
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.12   # reduced from 0.15 for ultra_bull (12+3=15)
+    expected_per_share: 37.31
+    headline: "Dominant US platform, software-like margins."
+    narrative:
+      - >
+        Aurora becomes the dominant US autonomous trucking platform. FY27
+        driverless commercial launch proceeds on schedule, unlocking
+        follow-on orders from major carriers (Werner, Schneider, FedEx,
+        Hirschbach). By FY28 fleet exceeds 5,000 trucks; by FY31, 50,000+.
+        Network effects compound — lane data, edge cases, regulatory
+        relationships in TX/OK/NM/AZ.
+      - >
+        The competitive set narrows. Kodiak stays viable but smaller. Waabi
+        struggles. PlusAI runs out of SPAC capital. By FY32 only Aurora and
+        one other player operate at-scale driverless commercial fleets.
+        Aurora captures 22.5% of the $160B TAM — $36B FY36 revenue. Pivot to
+        software-take-rate on OEM trucks (Volvo VNL, PACCAR). Mature margin
+        reaches 35% — similar to Mobileye's ADAS economics.
+      - >
+        The math: $89.4B operating EV, $1.3B cash, 2.14B FY36 shares (10%
+        dilution only). DCF $42.26 per share. With 12% failure probability,
+        expected per-share $37.31. The bull case implies today's $7.74 is
+        significantly undervaluing the trajectory — but only if you assign
+        meaningful probability to the dominant-platform outcome.
+    probability_rationale: >
+      Compound bet: Driverless commercial launches on schedule AND scaled
+      trucking fleet ramps to 5,000+ trucks by 2028 AND software-take-rate
+      model emerges (Aurora-as-platform on partner-operated fleet) AND
+      competitive narrowing (Kodiak underperforms, Waabi stays niche) AND
+      autonomous trucking proves uniquely viable. Each condition
+      independently plausible at 40-60% probability; conjunctive probability
+      lands at 15%. The asymmetric venture-bet pattern characteristic of
+      autonomous-platform investments — bull case pays multiples-of-current-
+      valuation if it converges, but requires conditions to align over 5-10
+      years.
+
+    dcf_metrics:
+      tam_share: 22.5
+      p_fail: 12
+      s2c: 1.8
+
+    dcf_path:
+      rev_path:    [0.040, 0.180, 0.500, 1.200, 2.500, 5.000, 10.00, 18.00, 27.00, 36.00]
+      op_margin:   [-5.0, -1.5, -0.30, 0.05, 0.15, 0.22, 0.28, 0.32, 0.34, 0.35]
+      wacc_path:   [0.110, 0.110, 0.105, 0.100, 0.095, 0.090, 0.085, 0.080, 0.080, 0.075]
+      term_g: 0.030
+      nopat:       [-0.200, -0.270, -0.150, 0.060, 0.375, 1.100, 2.800, 5.760, 9.180, 12.60]
+      reinvest:    [0.020, 0.078, 0.178, 0.389, 0.722, 1.389, 2.778, 4.444, 5.000, 5.000]
+      fcf:         [-0.220, -0.348, -0.328, -0.329, -0.347, -0.289, 0.022, 1.316, 4.180, 7.600]
+      pv_fcf:      [-0.198, -0.282, -0.243, -0.220, -0.211, -0.161, 0.011, 0.598, 1.756, 2.974]
+      sum_pv_fcf: 4.024
+      terminal_value: 173.8
+      pv_terminal: 85.38
+      op_ev: 89.40
+      cash: 1.28
+      net_debt: 0.0
+      total_equity: 90.68
+      raise_total: 2.80
+      dilution_pct: 10
+      final_shares: 2145
+      dcf_per_share: 42.26
+      distress: 1.00
+
+    chart_data:
+      raises:           [0.30, 0.50, 0.75, 0.75, 0.50, 0.00, 0.00, 0.00, 0.00, 0.00]
+      raise_prices:     [9.00, 12.00, 15.00, 18.00, 22.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      rev_per_truck:    [150, 175, 200, 225, 240, 250, 250, 250, 250, 250]
+      tam_competitor_share: 50.0
+
+  # ───────────────────────────────────────────────────────────────────────────
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.03
+    expected_per_share: 100.00
+    headline: "Dominant US; software-take-rate."
+    narrative:
+      - >
+        The ultra-bull case is that Aurora becomes the dominant US autonomous
+        trucking platform AND wins the software-take-rate game. Commercial
+        launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous
+        miles by 2028 + 25%+ TAM share by 2036 + software-take-rate model
+        wins (Aurora monetizes via per-mile revenue share with PACCAR/Volvo/
+        FedEx fleet partners rather than capex-heavy direct ownership). By
+        FY36 Aurora generates $8B+ revenue at 40%+ software-like margins.
+      - >
+        Compound conditional: each piece individually plausible at 50-65%;
+        joint at 3-4%. Reflected here at 3%. This is the scenario where
+        Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but
+        'Aurora wins the autonomy market.' Contributes $3.00 to weighted
+        ($100 × 3%) — the asymmetric tail.
+    probability_rationale: >
+      Tail of tails: commercial launch on schedule (50%) AND 25%+ TAM share
+      by 2036 (30% conditional on launch) AND software-take-rate model wins
+      (40%) AND multiple expansion to software/aerospace-hybrid premium
+      (50%). Each individually plausible; joint at 3-4%. Captures the
+      scenario where Aurora becomes a category-defining Big Tech-tier
+      company.
+
+    dcf_metrics:
+      tam_share: 25.0
+      p_fail: 3
+      s2c: 2.5
+
+    dcf_path:
+      rev_path:    [0.030, 0.150, 0.500, 1.500, 3.000, 5.000, 7.000, 8.500, 9.500, 10.500]
+      op_margin:   [-2.5, -0.80, -0.30, 0.00, 0.15, 0.25, 0.32, 0.36, 0.38, 0.40]
+      wacc_path:   [0.125, 0.120, 0.115, 0.110, 0.105, 0.100, 0.095, 0.090, 0.085, 0.080]
+      term_g: 0.035
+      nopat:       [-0.075, -0.120, -0.150, 0.000, 0.450, 1.250, 2.240, 3.060, 3.610, 4.200]
+      reinvest:    [0.030, 0.120, 0.350, 0.750, 1.200, 1.500, 1.400, 1.250, 1.000, 0.750]
+      fcf:         [-0.105, -0.240, -0.500, -0.750, -0.750, -0.250, 0.840, 1.810, 2.610, 3.450]
+      pv_fcf:      [-0.093, -0.191, -0.357, -0.488, -0.444, -0.135, 0.413, 0.815, 1.082, 1.327]
+      sum_pv_fcf: 1.929
+      terminal_value: 105.0
+      pv_terminal: 40.40
+      op_ev: 42.33
+      cash: 1.28
+      net_debt: 0.65        # AUR ultra_bull is the only AUR scenario with net debt (rounding)
+      total_equity: 42.96
+      raise_total: 2.0
+      dilution_pct: 18
+      final_shares: 2010
+      dcf_per_share: 102.50
+      distress: 0.98
+
+    chart_data:
+      raises:           [0.30, 0.50, 0.50, 0.50, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00]
+      raise_prices:     [11.00, 16.00, 25.00, 40.00, 60.00, 0.00, 0.00, 0.00, 0.00, 0.00]
+      rev_per_truck:    [180, 210, 240, 260, 275, 280, 280, 280, 280, 280]
+      tam_competitor_share: 55.0
+
+# ── Historical price data ───────────────────────────────────────────────────
+# Quarterly closes since IPO. Generator appends (0.0, spot) as final point.
+# x = years offset from today (negative = past).
+historical_prices:
+  ipo_marker: "IPO Nov '21"
+  x_min: -5.0            # years of history to show in chart
+  points:
+    - [-4.5, 10.0]
+    - [-4.25, 7.0]
+    - [-4.0, 4.0]
+    - [-3.75, 2.5]
+    - [-3.5, 1.5]
+    - [-3.25, 2.0]
+    - [-3.0, 3.5]
+    - [-2.75, 3.0]
+    - [-2.5, 2.5]
+    - [-2.25, 3.0]
+    - [-2.0, 4.5]
+    - [-1.75, 4.0]
+    - [-1.5, 5.5]
+    - [-1.25, 6.0]
+    - [-1.0, 4.5]
+    - [-0.75, 5.0]
+    - [-0.5, 6.5]
+    - [-0.25, 7.0]
+
+# ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
+weighting_rationale:
+  - label: "Bear 35%"
+    body: "Autonomous trucking unproven at scale; Waymo Via shutdown signal still recent."
+  - label: "Base 50%"
+    body: "Modal outcome: Aurora is one of 2-3 winners, 7-8% TAM share, tech-auto blend margins."
+  - label: "Bull 12%"
+    body: "Compound conditional chain; software-take-rate platform thesis requires multiple alignments."
+  - label: "Ultra Bull 3%"
+    body: "Tail of tails: dominant US autonomous + early software-take-rate + multiple expansion."
+
+# ── Page 3 / Page 4 ticker-specific text ────────────────────────────────────
+page3:
+  subtitle: "FY24–FY26 history + FY27–FY36 scenario projections  ·  fiscal years end Dec 31  ·  10-K, Q1 2026 10-Q, ATA/FTR Tonnage Index"
+  sources:  "Sources: AUR 10-K FY25, Q1 2026 10-Q, ATA/FTR Tonnage Index (US for-hire long-haul $300B; autonomy-addressable $160B). "
+
+# ── Page 4 appendix sections ────────────────────────────────────────────────
+appendix:
+  pushback:
+    - label: "Commercial operation is real."
+      body: "Aurora Driver runs supervised highway pilots with McLane (Berkshire), PACCAR, Volvo. Removes 'science project' bear framing."
+    - label: "Partnership stack across OEMs."
+      body: "Volvo VNL Autonomous and PACCAR Peterbilt/Kenworth integrations. Unlike Kodiak (cargo-only) or Waabi (Volvo-only), Aurora spans both."
+    - label: "$1.28B liquidity + capital flexibility."
+      body: "Q1 2026 raise extended runway. Strategic options (M&A interest from majors) provide downside floor."
+    - label: "First-mover regulatory moat."
+      body: "Aurora has logged the most miles in commercial operation. Lane data, TX/OK/NM regulatory relationships compound."
+    - label: "Mature margin may be conservative."
+      body: "Base 20% reflects tech-auto blend. If software-take-rate on OEM trucks scales (Mobileye analog), terminal could be 30%+."
+  triggers:
+    - label: "Bear validation"
+      body: "Driverless launch slips to 2028+  ·  Cash < $500M by mid-2027  ·  Commercial volume disappoints (< 100 trucks by EOY 2028)"
+    - label: "Bull validation"
+      body: "Driverless commercial launches by Q3 2027  ·  Fleet > 500 trucks by EOY 2028  ·  Second OEM software-take-rate deal signed"
+    - label: "Reframe needed"
+      body: "If Kodiak achieves at-scale commercial first — Aurora's first-mover advantage in long-haul erodes; TAM-share math compresses"
