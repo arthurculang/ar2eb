@@ -48,7 +48,13 @@ def main() -> None:
             skipped.append(t)
             continue
         print(f"[{t}] charts + memo -> {pdf.name}")
-        run([sys.executable, f"charts/build_{t}_charts.py"])
+        # Parameterized chart builders dispatch on dcf_type (spec §7 variant):
+        #   young_company       -> charts/young_company.py (JOBY, AUR)
+        #   mature_company / _sotp -> charts/mature_company.py (LTH, ZM)
+        dcf_type = yaml.safe_load(
+            (REPO / "data" / f"{t}.yml").read_text())["dcf_type"]
+        builder = "young_company.py" if dcf_type == "young_company" else "mature_company.py"
+        run([sys.executable, f"charts/{builder}", t])
         env = {**os.environ, "MEMO_FORCE": "1"} if FORCE else None
         run([sys.executable, "memo.py", t], env=env)
         built.append(t)
