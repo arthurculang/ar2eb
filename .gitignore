@@ -1,6 +1,3 @@
-charts/joby/
-charts/aur/
-charts/lth/
-charts/zm/
+charts/*/
 __pycache__/
 *.pyc
