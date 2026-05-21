@@ -22,7 +22,7 @@ DATA = REPO / "data"
 MEMOS_DIR = REPO / "public" / "memos"
 OUT = REPO / "public" / "data.js"
 
-TICKERS = ["joby", "aur", "lth", "zm"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut"]
 SCEN_ORDER = ["bear", "base", "bull", "ultra_bull"]
 SITE_KEY = {"bear": "bear", "base": "base", "bull": "bull", "ultra_bull": "ultra"}
 
@@ -41,10 +41,13 @@ def fmt_shares(m: float) -> str:
     return f"{m / 1000:.2f}B" if m >= 1000 else f"{m:.0f}M"
 
 
+def _fmt_b(b: float) -> str:
+    return f"${b:g}B" if b >= 1 else f"${b * 1000:.0f}M"
+
 def fmt_cash(mk: dict) -> str:
     cash = mk["cash_billion"]
     nd = mk["net_debt_billion"]
-    s = f"${cash:g}B cash, " + ("zero debt" if nd == 0 else f"${nd:g}B net debt")
+    s = f"{_fmt_b(cash)} cash, " + ("zero debt" if nd == 0 else f"{_fmt_b(nd)} net debt")
     extras = [e for e in mk.get("extras", []) if e]
     if extras:
         s += " · " + "; ".join(extras)
@@ -123,7 +126,7 @@ def build_memo(ticker: str) -> dict:
         "publishedLabel": lbl,
         "pdf": {"file": pdf_file, "size": human_size(pdf_path)},
         "metrics": {
-            "mktCap": f"${mk['market_cap_billion']:g}B",
+            "mktCap": _fmt_b(mk['market_cap_billion']),
             "shares": fmt_shares(mk["shares_outstanding_million"]),
             "cash": fmt_cash(mk),
         },

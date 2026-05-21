@@ -50,6 +50,7 @@ FY_PROJ = ["FY27", "FY28", "FY29", "FY30", "FY31", "FY32", "FY33", "FY34", "FY35
 # ── Per-ticker chart-only config (historical reference series + labels) ─────
 CONFIG = {
     "joby": {
+        "rpu_key":           "rev_per_aircraft",
         "fy_hist":           ["FY24", "FY25", "FY26"],
         "rev_history":       [0.000136, 0.053, 0.110],  # $B
         "cash_history":      [1.10, 1.40, 2.50],
@@ -69,6 +70,7 @@ CONFIG = {
         "rev_zero_label":    "$0",   # FY24 ≈ $136K → label as $0 on log axis
     },
     "aur": {
+        "rpu_key":           "rev_per_truck",
         "fy_hist":           ["FY24", "FY25", "FY26"],
         "rev_history":       [0.000, 0.003, 0.004],
         "cash_history":      [1.22, 1.45, 1.28],
@@ -85,6 +87,26 @@ CONFIG = {
         "tam_title":         "$160B US autonomous trucking TAM (FY36) — Aurora's share by scenario",
         "tam_legend":        ("AUR", "Competitors", "Non-autonomous (legacy)"),
         "fleet_reference":   {"value": 750000, "label": "US Class 8 long-haul fleet ~750K"},
+        "rev_zero_label":    "$0",
+    },
+    "naut": {
+        "rpu_key":           "rev_per_instrument",
+        "fy_hist":           ["FY24", "FY25", "FY26"],
+        "rev_history":       [0.000, 0.000, 0.001],     # pre-revenue (FY26 grant only)
+        "cash_history":      [0.200, 0.160, 0.143],     # cash drawdown into Q1 26
+        "shares_history":    [120, 124, 126],
+        "fleet_history":     [0, 0, 0],                  # no commercial Voyager instruments yet
+        "fleet_anchor":      1,                          # log-scale floor; first commercial installs early FY27
+        "fleet_chart_title": "Voyager instruments deployed (log scale)",
+        "peer_text":         "Mature life-science-tools peer median ~20%",
+        "peer_y":            20,
+        "valn_anchor_text":  "Mature tools P/S ~4-7×",
+        "valn_anchor_y":     5,
+        "valn_caption":      ("Bear, base = stretched on FY36 niche-rev; "
+                              "bull/ultbull = cheap on platform-scale rev."),
+        "tam_title":         "$130B global proteomics TAM (FY36) — Nautilus' share by scenario",
+        "tam_legend":        ("NAUT", "Competitors (Olink/SomaScan/MS)", "Other proteomics"),
+        "fleet_reference":   None,
         "rev_zero_label":    "$0",
     },
 }
@@ -104,7 +126,7 @@ def load(ticker):
     d = yaml.safe_load((REPO / "data" / f"{ticker}.yml").read_text())
     assert d["dcf_type"] == "young_company", \
         f"{ticker}: dcf_type={d['dcf_type']}, expected young_company"
-    rpu_key = "rev_per_aircraft" if ticker == "joby" else "rev_per_truck"
+    rpu_key = CONFIG[ticker]["rpu_key"]
     scenarios = {}
     for k in SCEN_ORDER:
         s = d["scenarios"][k]

@@ -23,7 +23,7 @@ from pathlib import Path
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-TICKERS = ["joby", "aur", "lth", "zm"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut"]
 FORCE = bool(os.environ.get("MEMO_FORCE"))
 
 

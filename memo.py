@@ -84,19 +84,23 @@ def subtitle_for(dcf_type):
         'mature_company_sotp':  'Mature-Company DCF (SOTP)',
     }[dcf_type]
 
+def _fmt_b(b):
+    # $X.XB if >=1B, else $XXXm — switches at the $1B threshold so sub-$1B
+    # tickers (e.g. NAUT at $0.302B) render as "$302M" not "$0.3B".
+    return f"${b:.1f}B" if b >= 1 else f"${b * 1000:.0f}M"
+
 def format_masthead_extras(data):
     m = data['market']
-    parts = [f"${m['market_cap_billion']:.1f}B mkt cap"]
+    parts = [f"{_fmt_b(m['market_cap_billion'])} mkt cap"]
     sh = m['shares_outstanding_million']
-    sh_str = f"{sh/1000:.2f}B sh" if sh >= 1000 else f"{sh:.0f}M sh"
-    parts.append(sh_str)
+    parts.append(f"{sh / 1000:.2f}B sh" if sh >= 1000 else f"{sh:.0f}M sh")
     cash = m['cash_billion']
     debt = m['net_debt_billion']
     if debt > 0:
-        parts.append(f"${cash:.2f}B cash, ${debt:.2f}B net debt")
+        parts.append(f"{_fmt_b(cash)} cash, {_fmt_b(debt)} net debt")
     else:
-        parts.append(f"${cash:.1f}B cash, zero debt" if cash >= 1
-                     else f"${cash:.2f}B cash, no debt")
+        parts.append(f"{_fmt_b(cash)} cash, zero debt" if cash >= 1
+                     else f"{_fmt_b(cash)} cash, no debt")
     parts.extend(data['market'].get('extras', []))
     return "   ·   ".join(parts)
 
