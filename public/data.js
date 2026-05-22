@@ -102,7 +102,78 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 30 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 30 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "print": {
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Type Cert is imminent.",
+            "body": "Stage 4 in progress, SR3 audit complete Q1'26. Conforming aircraft already flying. Removes the largest single bear risk."
+          },
+          {
+            "label": "Best capitalized eVTOL.",
+            "body": "$2.5B cash exceeds Archer ($1.8B) and Vertical (+$850M raise). Multi-year runway through commercial scaling."
+          },
+          {
+            "label": "Partnership stack is unique.",
+            "body": "Toyota ($894M, mfg), Delta ($200M, US distribution), Dubai RTA (exclusive 2032). No other eVTOL has this stack."
+          },
+          {
+            "label": "Operator + mfg = wider moat.",
+            "body": "Joby owns/operates fleet rather than selling aircraft. Captures full revenue per flight, not just OEM margin."
+          },
+          {
+            "label": "Mature margin may be conservative.",
+            "body": "Base case 13% reflects aerospace blend. If software-take-rate on partner aircraft scales, terminal margin could be 20%+."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Type Cert slips to 2027+ · Cash < $1.5B by EOY 2026 · Dubai passenger volume disappoints (< 50K rides FY27)"
+          },
+          {
+            "label": "Bull validation",
+            "body": "Type Cert achieved by Q3 2026 · Dayton facility hits 4 aircraft/month · Second exclusive country contract signed"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Archer achieves Type Cert first — Joby's first-mover advantage in US erodes; share-of-TAM math compresses"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "eVTOL",
+          "definition": "Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range."
+        },
+        {
+          "term": "Type Certification",
+          "definition": "FAA approval to operate a new aircraft design commercially. Joby is in Stage 4 (final) of 4-stage process."
+        },
+        {
+          "term": "eIPP",
+          "definition": "eVTOL Integration Pilot Program. White House-backed initiative letting Joby fly in US states pre-Type Cert."
+        },
+        {
+          "term": "Dubai RTA",
+          "definition": "Roads & Transport Authority. Awarded Joby exclusive eVTOL air-taxi rights in Dubai through 2032."
+        },
+        {
+          "term": "Toyota partnership",
+          "definition": "$894M total investment. Joint manufacturing program at Dayton, Ohio facility for production scale."
+        },
+        {
+          "term": "Blade",
+          "definition": "Helicopter-based mobility business acquired in 2024 — gives Joby existing routes (NYC-airport) for early ops."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "006",
+        "footerTimestamp": "2026-05-17_14-00",
+        "canonicalJsx": "joby-dcf-valuation__v007__2026-05-17_14-00.jsx"
+      }
+    }
   },
   {
     "ticker": "AUR",
@@ -203,7 +274,78 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "print": {
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Commercial operation is real.",
+            "body": "Aurora Driver runs supervised highway pilots with McLane (Berkshire), PACCAR, Volvo. Removes 'science project' bear framing."
+          },
+          {
+            "label": "Partnership stack across OEMs.",
+            "body": "Volvo VNL Autonomous and PACCAR Peterbilt/Kenworth integrations. Unlike Kodiak (cargo-only) or Waabi (Volvo-only), Aurora spans both."
+          },
+          {
+            "label": "$1.28B liquidity + capital flexibility.",
+            "body": "Q1 2026 raise extended runway. Strategic options (M&A interest from majors) provide downside floor."
+          },
+          {
+            "label": "First-mover regulatory moat.",
+            "body": "Aurora has logged the most miles in commercial operation. Lane data, TX/OK/NM regulatory relationships compound."
+          },
+          {
+            "label": "Mature margin may be conservative.",
+            "body": "Base 20% reflects tech-auto blend. If software-take-rate on OEM trucks scales (Mobileye analog), terminal could be 30%+."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Driverless launch slips to 2028+ · Cash < $500M by mid-2027 · Commercial volume disappoints (< 100 trucks by EOY 2028)"
+          },
+          {
+            "label": "Bull validation",
+            "body": "Driverless commercial launches by Q3 2027 · Fleet > 500 trucks by EOY 2028 · Second OEM software-take-rate deal signed"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Kodiak achieves at-scale commercial first — Aurora's first-mover advantage in long-haul erodes; TAM-share math compresses"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Aurora Driver",
+          "definition": "Aurora's autonomy software + hardware stack. Currently runs supervised on highway pilots with PACCAR, Volvo, and FedEx."
+        },
+        {
+          "term": "Driverless commercial",
+          "definition": "Operation with no human driver in the truck, generating per-mile or per-load revenue. Aurora's 2027 launch milestone."
+        },
+        {
+          "term": "S2C (sales-to-capital)",
+          "definition": "Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. Higher = more capital-efficient growth."
+        },
+        {
+          "term": "Hub-to-hub",
+          "definition": "Highway-only routes between terminals (e.g., Dallas-Houston). Aurora's commercial focus. Easier autonomy domain than urban streets."
+        },
+        {
+          "term": "OEM partners",
+          "definition": "Volvo VNL Autonomous and PACCAR (Peterbilt, Kenworth). OEM integration gives Aurora a manufacturing path competitors lack."
+        },
+        {
+          "term": "Take-rate model",
+          "definition": "Revenue per autonomy-mile on OEM-built trucks (vs Aurora-owned fleet). Software-like margins; the bull terminal-margin driver."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "002",
+        "footerTimestamp": "2026-05-17_14-45",
+        "canonicalJsx": "aur-dcf-valuation__v003__2026-05-17_10-00.jsx"
+      }
+    }
   },
   {
     "ticker": "LTH",
@@ -304,7 +446,78 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Bear 20 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Bear 20 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
+    "print": {
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Track record is strong.",
+            "body": "FY24-25 execution delivered guidance; S&P upgrade validates credit. Removes the leveraged-real-estate-vehicle framing."
+          },
+          {
+            "label": "New club economics shift mix.",
+            "body": "1.2M sq ft of 2026 luxury openings generate $25-35M revenue vs $15-20M legacy. Unit economics improving, not deteriorating."
+          },
+          {
+            "label": "Category-of-one positioning.",
+            "body": "No US operator at LTH's premium luxury athletic country club scale. Equinox private + smaller; gym chains budget; boutiques single-discipline."
+          },
+          {
+            "label": "In-center monetization compounds.",
+            "body": "Dynamic PT, MIORA, pickleball, spa, cafe — in-center revenue per member growing from $1,050 toward $1,400-1,500. High-margin, recurring."
+          },
+          {
+            "label": "SLB flywheel sustains.",
+            "body": "New clubs become future SLB inventory in 5-7 years. Cadence of $400M/yr can persist as long as new construction continues."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "FY27 revenue growth < 5% · SLB cadence < $300M/yr · Net debt / EBITDA > 2.5x · Credit rating downgraded below BB-"
+          },
+          {
+            "label": "Bull validation",
+            "body": "FY27 revenue growth > 9% · EBITDA margin > 30% · In-center revenue per member > $1,250 · P/E multiple expands above 18x"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Equinox or comparable luxury operator IPOs at premium multiple — establishes valuation comparable for LTH multiple expansion"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "SLB",
+          "definition": "Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent."
+        },
+        {
+          "term": "Athletic Country Club",
+          "definition": "LTH's positioning — luxury multi-discipline format combining fitness, racquet sports, pools, kids, dining and recovery."
+        },
+        {
+          "term": "Dynamic PT",
+          "definition": "Personalized training program. Highest-margin in-center revenue stream and a key ARPU driver as the luxury mix grows."
+        },
+        {
+          "term": "MIORA",
+          "definition": "Hormone optimization and longevity service line. New higher-margin in-center revenue category, central to the bull ARPU thesis."
+        },
+        {
+          "term": "In-center revenue",
+          "definition": "Revenue beyond membership dues: PT, classes, spa, cafe, retail. Currently ~30% of total; compounds faster than dues."
+        },
+        {
+          "term": "Lease-adjusted leverage",
+          "definition": "Per ASC 842, capitalized operating lease liabilities included in total obligations. Adds ~$2.5B+ to $1.29B net debt."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-17_12-00",
+        "canonicalJsx": "lth-dcf-valuation__v003__2026-05-17_10-00.jsx"
+      }
+    }
   },
   {
     "ticker": "ZM",
@@ -405,7 +618,78 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
+    "print": {
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Operating business has resilience.",
+            "body": "ZM revenue stable through 2024-25 despite Teams competition. Phone + Contact Center grew 25%+. Resilience visible, not theoretical."
+          },
+          {
+            "label": "AI Companion strategy is right.",
+            "body": "Bundle AI into existing plans rather than separate SKU. Microsoft Copilot's $30/seat model is the cautionary tale — adoption underwhelmed."
+          },
+          {
+            "label": "$7.8B cash is a real floor.",
+            "body": "25% of market cap is liquid. T-bills earn ~4%. Optionality for M&A, buybacks, or capital return. Hard to lose money against this."
+          },
+          {
+            "label": "Anthropic stake is asymmetric.",
+            "body": "Carried at cost ($1.5B); worth $4-9B today; could mark to $15B+ post-IPO. Hidden asset most screeners ignore."
+          },
+          {
+            "label": "Capital allocation track record.",
+            "body": "$1B+ buyback authorization announced 2024. Avg buyback price below $80. Eric Yuan personally aligned (15%+ owner)."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "FY27 revenue declines · AI Companion attach < 5% on paid seats · Anthropic IPO marks stake below $5B · Phone seat growth < 15%"
+          },
+          {
+            "label": "Bull validation",
+            "body": "FY27 revenue re-accelerates > 5% · AI Companion attach > 10% · Anthropic IPO at $1T+ · Contact Center crosses $500M ARR"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Eric Yuan executes major M&A (>$3B deal) — repurposing cash from optionality to platform expansion; both bear and bull theses get rewritten"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "AI Companion / Pro",
+          "definition": "ZM's AI assistant. Bundled free into paid plans (Companion) with a premium SKU (Pro). Bundle-not-separate-SKU strategy."
+        },
+        {
+          "term": "Phone",
+          "definition": "ZM's cloud PBX product. ~9M seats currently, growing 25%+. Cross-sells off the meetings install base; a third-leg growth driver."
+        },
+        {
+          "term": "Contact Center",
+          "definition": "ZM's CCaaS product (cloud-based customer service). ~$200M ARR currently, growing fast; bull case crosses $500M ARR."
+        },
+        {
+          "term": "Anthropic stake",
+          "definition": "ZM invested in Anthropic 2023. Carrying value disclosed at ~$1.5B; market value $4-9B across scenarios pending the IPO mark."
+        },
+        {
+          "term": "SOTP",
+          "definition": "Sum-of-the-parts: operating EV + cash + special assets - debt. Used when material balance-sheet value sits outside operations."
+        },
+        {
+          "term": "Buyback flywheel",
+          "definition": "ZM generates $1.7-2.4B FCF/yr. Buybacks at $1-1.5B/yr retire shares; lower share count compounds per-share value."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-17_13-00",
+        "canonicalJsx": "zm-dcf-valuation__v006__2026-05-17_10-00.jsx"
+      }
+    }
   },
   {
     "ticker": "NAUT",
@@ -418,7 +702,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "naut-memo__v002__2026-05-22_02-09.pdf",
-      "size": "414 KB"
+      "size": "429 KB"
     },
     "metrics": {
       "mktCap": "$302M",
@@ -506,7 +790,78 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "print": {
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Best-funded single-molecule platform.",
+            "body": "$143M cash + zero debt + cost discipline (16% headcount cut, lowered Q1 burn to $12.8M). Real runway to mid-2029 absent commercial scale-up. Quantum-Si and other peers are less funded relative to runway needs."
+          },
+          {
+            "label": "Early Access is real, not vaporware.",
+            "body": "Tau proteoforms EAP live since Jan 2026 with academic + biopharma partners. NAUT is post-tech-risk (instrument works), pre-commercial-scale. Tech demos at US HUPO 2026 reportedly well-received."
+          },
+          {
+            "label": "First-mover in proteoform single-molecule.",
+            "body": "Quantum-Si is parallel single-molecule but sequencing-focused; affinity platforms (Olink/SomaScan) target different modality. NAUT has time-to-market lead specifically in proteoforms."
+          },
+          {
+            "label": "Tau strategic positioning.",
+            "body": "Alzheimer's biomarker market $10B+; proteoform analysis is exactly what makes Tau actionable as a biomarker. Single-product launch anchors adoption in a large research market."
+          },
+          {
+            "label": "Cash floor is real downside protection.",
+            "body": "$1.13/share cash vs $2.40 spot = 47% of market cap is liquid. Operating EV per share ~$1.27 for a real platform. Hard to lose money permanently against this floor."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP customer count flat YoY"
+          },
+          {
+            "label": "Bull validation",
+            "body": "Voyager pre-orders > $30M by Q1 2027 · 100+ instruments installed by EOY 2027 · Second pharma/OEM partnership signed · Multi-year subscription/take-rate deal disclosed"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Quantum-Si or a new entrant achieves single-molecule resolution at lower cost or higher throughput first — NAUT's first-mover positioning erodes; share-of-TAM math compresses"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Voyager",
+          "definition": "NAUT's single-molecule proteomics platform — instrument + reagents + assays + software for high-resolution proteoform analysis."
+        },
+        {
+          "term": "Proteoforms",
+          "definition": "Protein variants from a single gene (post-translational modifications, splice variants). Single-molecule readout is uniquely positioned to resolve these vs ensemble methods."
+        },
+        {
+          "term": "Tau",
+          "definition": "Microtubule-associated protein; key Alzheimer's biomarker. Tau proteoform analysis is NAUT's first commercial assay, live in Early Access since Jan 2026."
+        },
+        {
+          "term": "Early Access Program",
+          "definition": "Limited release to select academic and biopharma partners ahead of general availability. Live since Jan 2026 with the Tau proteoforms assay; expands to Broadscale H1 2027."
+        },
+        {
+          "term": "Broadscale",
+          "definition": "Voyager's planned 10-billion-protein-mapping capability for general proteomics applications, scheduled for general availability in H1 2027."
+        },
+        {
+          "term": "S2C (sales-to-capital)",
+          "definition": "Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. NAUT young-company case ranges 0.7-1.7 (hardware-software blend, capital-light vs eVTOL/trucking)."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "002",
+        "footerTimestamp": "2026-05-22_02-09",
+        "canonicalJsx": "naut-dcf-valuation__v001__2026-05-21_18-00.jsx"
+      }
+    }
   }
 ];
 
@@ -550,4 +905,31 @@ const DISCLAIMER_BLOCKS = [
   }
 ];
 
-window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS };
+const PDF_DISCLAIMERS = [
+  {
+    "h": "Not investment advice.",
+    "p": "This document is produced for entertainment and educational purposes only by an individual amateur investor. \"Alameda Research 2: Electric Boogaloo\" is the unincorporated personal concept of one person and is not a registered investment management entity. Nothing herein constitutes investment advice, a recommendation, or a solicitation to buy or sell any security."
+  },
+  {
+    "h": "Not a professional.",
+    "p": "The author is not a registered investment advisor, broker-dealer, CFA charterholder, certified financial planner, or licensed financial professional of any kind. The author has no formal training in equity research or capital markets. No fiduciary relationship is created by reading this document."
+  },
+  {
+    "h": "AI-assisted analysis.",
+    "p": "Substantial portions of this analysis were produced with the assistance of large language models. LLMs are known to fabricate facts, miscalculate numbers, hallucinate sources, and present incorrect information with high apparent confidence. Every figure, claim, and projection in this document should be independently verified before acting on it."
+  },
+  {
+    "h": "Forward-looking statements.",
+    "p": "Scenarios, valuations, projections, and any forward-looking statements involve substantial assumptions and uncertainty. Actual results may differ materially from those projected. Past performance is not indicative of future results. The model is a model; reality is not."
+  },
+  {
+    "h": "Author may hold positions.",
+    "p": "The author may own, intend to acquire, or hold short exposure to ${TICKER} or related securities at any time. Positions may change without notice and without an update to this document. Do not assume the author's positions match the tone of the analysis."
+  },
+  {
+    "h": "Do your own research.",
+    "p": "Do not make investment decisions on the basis of this document. Consult a licensed financial professional and read the company's official SEC filings (10-K, 10-Q, 8-K, proxy) before forming any investment view. If you wouldn't trust your retirement to a chatbot, don't trust this either."
+  }
+];
+
+window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS, PDF_DISCLAIMERS };

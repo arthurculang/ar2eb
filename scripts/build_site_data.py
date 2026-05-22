@@ -141,6 +141,23 @@ def build_memo(ticker: str) -> dict:
             f"Bear {probs['bear']} / Base {probs['base']} / "
             f"Bull {probs['bull']} / Ultra Bull {probs['ultra_bull']}. "
             f"Spot price reference: {lbl} close."),
+        # PDF-only payload — fields the print harness (public/print.html +
+        # public/memo_pdf.jsx) needs that the site doesn't.
+        "print": {
+            "appendix": {
+                "pushback": [{"label": p["label"], "body": collapse(p["body"])}
+                             for p in d["appendix"]["pushback"]],
+                "triggers": [{"label": t["label"], "body": collapse(t["body"])}
+                             for t in d["appendix"]["triggers"]],
+            },
+            "glossary": [{"term": g["term"], "definition": collapse(g["definition"])}
+                         for g in d["glossary"]],
+            "stamp": {
+                "footerVersion": st["footer_version"],
+                "footerTimestamp": st["footer_timestamp"],
+                "canonicalJsx": st["canonical_jsx"],
+            },
+        },
     }
 
 
@@ -200,6 +217,51 @@ DISCLAIMER_BLOCKS = [
           "investment decision."},
 ]
 
+# Disclaimers rendered on PDF Page 5. These mirror memo.py's hardcoded
+# DISCLAIMERS_FULL list (6 items, fuller treatment than the site's
+# DISCLAIMER_BLOCKS). Kept here so the JSX print harness has a single
+# source of truth.
+PDF_DISCLAIMERS = [
+    {"h": "Not investment advice.",
+     "p": "This document is produced for entertainment and educational "
+          "purposes only by an individual amateur investor. "
+          "\"Alameda Research 2: Electric Boogaloo\" is the unincorporated "
+          "personal concept of one person and is not a registered investment "
+          "management entity. Nothing herein constitutes investment advice, "
+          "a recommendation, or a solicitation to buy or sell any security."},
+    {"h": "Not a professional.",
+     "p": "The author is not a registered investment advisor, broker-dealer, "
+          "CFA charterholder, certified financial planner, or licensed "
+          "financial professional of any kind. The author has no formal "
+          "training in equity research or capital markets. No fiduciary "
+          "relationship is created by reading this document."},
+    {"h": "AI-assisted analysis.",
+     "p": "Substantial portions of this analysis were produced with the "
+          "assistance of large language models. LLMs are known to fabricate "
+          "facts, miscalculate numbers, hallucinate sources, and present "
+          "incorrect information with high apparent confidence. Every figure, "
+          "claim, and projection in this document should be independently "
+          "verified before acting on it."},
+    {"h": "Forward-looking statements.",
+     "p": "Scenarios, valuations, projections, and any forward-looking "
+          "statements involve substantial assumptions and uncertainty. Actual "
+          "results may differ materially from those projected. Past "
+          "performance is not indicative of future results. The model is a "
+          "model; reality is not."},
+    {"h": "Author may hold positions.",
+     # Ticker token replaced at render time so the JSX can swap per memo.
+     "p": "The author may own, intend to acquire, or hold short exposure to "
+          "${TICKER} or related securities at any time. Positions may change "
+          "without notice and without an update to this document. Do not "
+          "assume the author's positions match the tone of the analysis."},
+    {"h": "Do your own research.",
+     "p": "Do not make investment decisions on the basis of this document. "
+          "Consult a licensed financial professional and read the company's "
+          "official SEC filings (10-K, 10-Q, 8-K, proxy) before forming any "
+          "investment view. If you wouldn't trust your retirement to a "
+          "chatbot, don't trust this either."},
+]
+
 
 def main() -> None:
     memos = [build_memo(t) for t in TICKERS]
@@ -211,7 +273,8 @@ def main() -> None:
         f"const MEMOS = {dump(memos)};\n\n"
         f"const CATEGORIES = {dump(CATEGORIES)};\n\n"
         f"const DISCLAIMER_BLOCKS = {dump(DISCLAIMER_BLOCKS)};\n\n"
-        "window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS };\n"
+        f"const PDF_DISCLAIMERS = {dump(PDF_DISCLAIMERS)};\n\n"
+        "window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS, PDF_DISCLAIMERS };\n"
     )
     OUT.write_text(js, encoding="utf-8")
     print(f"wrote {OUT.relative_to(REPO)}  ({len(memos)} memos, {OUT.stat().st_size:,} bytes)")
