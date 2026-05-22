@@ -40,6 +40,13 @@ function fmtDollars(n, decimals = 2) {
   return '$' + n.toFixed(decimals);
 }
 
+// "May 16, 2026" → "16 May 2026" (matches memo.py's date stamp style).
+function fmtDayMonthYear(isoDate) {
+  const d = new Date(isoDate + 'T00:00:00Z');
+  const month = d.toLocaleString('en-GB', { month: 'long', timeZone: 'UTC' });
+  return `${d.getUTCDate()} ${month} ${d.getUTCFullYear()}`;
+}
+
 // ── Shared building blocks ─────────────────────────────────────────────
 function Eyebrow({ children, color = PALETTE.accent }) {
   return (
@@ -73,11 +80,12 @@ function PageFooter({ memo, pageLabel, showDisclaimerPointer = true }) {
     : "NOT INVESTMENT ADVICE  ·  Not from a registered investment advisor  ·  AI-assisted analysis  ·  Author may hold positions";
   const footerStamp = `v${stamp.footerVersion} · ${stamp.footerTimestamp} · derived from ${stamp.canonicalJsx} (canonical)`;
   return (
+    // Page bottom margin matches memo.py's MARGIN_B = 0.55in.
     <div style={{
       position: 'absolute',
       left: '1in',
       right: '1in',
-      bottom: '0.20in',
+      bottom: '0.40in',
     }}>
       <div style={{
         borderTop: `0.4pt solid ${PALETTE.rule}`,
@@ -160,10 +168,13 @@ function Page5BackMatter({ memo }) {
 
   return (
     <div className="memo-page">
-      {/* Header strip */}
-      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '20pt' }}>
-        <img src="assets/logo-mark.png" alt=""
-             style={{ width: '110pt', height: 'auto', marginTop: '2pt' }} />
+      {/* Header strip. Logo is 150pt wide (memo.py LOGO_W_P3). The text
+          column starts 28pt to the right of the logo. The logo TOP sits
+          22pt below the page-content top so the header has breathing room. */}
+      <div style={{ display: 'flex', alignItems: 'flex-start', gap: '28pt',
+                    paddingTop: '22pt' }}>
+        <img src="assets/ar2eb-logo-v3-cropped.png" alt=""
+             style={{ width: '150pt', height: 'auto', flexShrink: 0 }} />
         <div style={{ flex: 1 }}>
           <div style={{
             display: 'flex',
@@ -178,7 +189,7 @@ function Page5BackMatter({ memo }) {
               fontSize: '7.5pt',
               color: PALETTE.muted,
             }}>
-              {memo.publishedLabel}  ·  the back matter
+              {fmtDayMonthYear(memo.publishedISO)}  ·  the back matter
             </div>
           </div>
           <div style={{
@@ -225,7 +236,7 @@ function Page5BackMatter({ memo }) {
       <SectionHeader label="PUSHBACK  ·  WHY THE BASE CASE IS TOO HARSH" marginTop="14pt" />
       <ThreeColGrid
         items={appendix.pushback}
-        rowGap="10pt"
+        rowGap="18pt"
         renderItem={(item, i) => (
           <div style={{ display: 'flex', gap: '6pt' }}>
             <div style={{
@@ -293,7 +304,7 @@ function Page5BackMatter({ memo }) {
       <SectionHeader label="DISCLAIMERS  ·  PLEASE READ BEFORE USING THIS DOCUMENT" />
       <ThreeColGrid
         items={disclaimers.map(renderDisclaimer)}
-        rowGap="14pt"
+        rowGap="22pt"
         renderItem={(d) => (
           <div>
             <div style={{
@@ -321,7 +332,7 @@ function Page5BackMatter({ memo }) {
       <SectionHeader label="GLOSSARY  ·  CONCEPTS REFERENCED IN THE NARRATIVE" />
       <ThreeColGrid
         items={glossary}
-        rowGap="8pt"
+        rowGap="10pt"
         renderItem={(g) => (
           <div style={{
             fontFamily: FONT_SANS,
