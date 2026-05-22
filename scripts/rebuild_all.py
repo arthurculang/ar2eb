@@ -39,6 +39,21 @@ def target_pdf(ticker: str) -> Path:
 
 
 def main() -> None:
+    # Math QC (spec §3.5) — run validator first. Non-blocking for now while
+    # legacy data is cleaned up; pass --strict-validate to enforce. Hard-blocks
+    # on ERROR-class invariants (probability sum, cash<0, op_ev mismatch).
+    strict = "--strict-validate" in sys.argv
+    print("[validate] running Math QC")
+    rc = subprocess.run(
+        [sys.executable, "scripts/validate.py"], cwd=REPO,
+    ).returncode
+    if rc != 0:
+        if strict:
+            print("[validate] ERRORs found; --strict-validate set — aborting")
+            sys.exit(rc)
+        print("[validate] ERRORs found — continuing anyway (drop --strict-validate "
+              "behavior planned once data is cleaned)")
+
     built, skipped = [], []
     for t in TICKERS:
         pdf = target_pdf(t)
