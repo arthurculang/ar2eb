@@ -284,14 +284,19 @@ def chart_cash_dilution(scn, cfg, out):
         ax2.plot(x, _shares_path(s, cfg), color=s["color"], linewidth=1.0,
                  linestyle=":", marker="s", markersize=2, markerfacecolor=s["color"],
                  markeredgecolor="white", markeredgewidth=0.4, zorder=2, alpha=0.75)
-    # Right-axis range follows shares history scale (joby ~900-1500, aur ~1800-3600)
-    sh = cfg["shares_history"][-1]
-    if sh < 1500:
-        ax2.set_ylim(900, 1600); ax2.set_yticks([900, 1100, 1300, 1500])
-        ax2.set_yticklabels(["900M", "1.1K", "1.3K", "1.5K"])
-    else:
-        ax2.set_ylim(1800, 3600); ax2.set_yticks([1800, 2200, 2600, 3000, 3400])
-        ax2.set_yticklabels(["1.8K", "2.2K", "2.6K", "3.0K", "3.4K"])
+    # Right-axis range auto-scales from starting shares to peak across scenarios
+    # (NAUT bear dilutes from 126M to ~1.78B; JOBY ~984M→1.5B; AUR ~1.9B→3.4B).
+    sh0 = cfg["shares_history"][-1]
+    peak = max(_shares_path(scn[k], cfg)[-1] for k in SCEN_ORDER)
+    ax2.set_ylim(sh0 * 0.85, peak * 1.10)
+    # Pick a clean tick step based on the range
+    span = peak * 1.10 - sh0 * 0.85
+    step = 500 if span > 2500 else 200 if span > 1000 else 100 if span > 400 else 50
+    ticks, t = [], int(sh0 * 0.85 / step + 1) * step
+    while t < peak * 1.10:
+        ticks.append(t); t += step
+    ax2.set_yticks(ticks)
+    ax2.set_yticklabels([f"{t}M" if t < 1000 else f"{t / 1000:.1f}K" for t in ticks])
     ax2.spines["top"].set_visible(False)
     ax2.spines["right"].set_color(MUTED)
     ax2.spines["left"].set_visible(False)

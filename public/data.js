@@ -417,8 +417,8 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "naut-memo__v001__2026-05-21_18-00.pdf",
-      "size": "405 KB"
+      "file": "naut-memo__v002__2026-05-22_02-09.pdf",
+      "size": "414 KB"
     },
     "metrics": {
       "mktCap": "$302M",
@@ -430,29 +430,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 7.02,
-      "deltaPct": 192.5
+      "fair": 5.72,
+      "deltaPct": 138.4
     },
     "compound": [
       {
         "y": 5,
-        "value": 10.32,
-        "mult": 4.3
+        "value": 8.38,
+        "mult": 3.49
       },
       {
         "y": 10,
-        "value": 15.18,
-        "mult": 6.33
+        "value": 12.29,
+        "mult": 5.12
       },
       {
         "y": 15,
-        "value": 22.35,
-        "mult": 9.31
+        "value": 18.02,
+        "mult": 7.51
       },
       {
         "y": 20,
-        "value": 32.94,
-        "mult": 13.72
+        "value": 26.45,
+        "mult": 11.02
       }
     ],
     "question": "Will Nautilus capture meaningful share of a $130B global proteomics TAM by 2036 with its Voyager single-molecule platform — or is today's $302M market cap pricing certainty about commercial economics that the late-2026 launch and early-2027 instrument installations haven't yet earned?",
@@ -461,44 +461,44 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 35,
-        "price": 0.12,
-        "headline": "Tech doesn't scale, capital exhausts.",
+        "price": 0.0,
+        "headline": "Capital exhausts; equity wiped.",
         "why": "Pre-revenue single-molecule platforms face a stack of risks the public market knows well — IPO'd peers demonstrate the path is hard (Olink acquired by Thermo at a premium; SomaLogic merged into Standard BioTools at a discount; Quantum-Si still pre-revenue). NAUT-specific: Voyager's late-2026 commercial launch already slipped from earlier guidance; the Jan 2026 Early Access Program is real but narrow (Tau proteoforms first); $143M cash extends operations to mid-2029 but commercial scale-up requires a 2027-2028 dilutive raise. Bear case is structural — tech doesn't scale beyond niche, or proteoform analysis stays a research curiosity rather than a diagnostic/clinical workhorse. 35% scenario weight (vs JOBY's 30%) reflects: NAUT is one stage earlier than JOBY (fully pre-revenue vs commercial pilot operations), smaller cash buffer relative to capital needs, more direct established competition. Within-scenario 40% p_fail captures Nautilus-specific bankruptcy risk; the 35% scenario weight captures the broader bear world where single-molecule proteomics economics don't scale even with execution.",
         "what": [
           "The pessimistic case is structural. Voyager's single-molecule resolution doesn't deliver at commercial scale: Tau Early Access data through 2026-27 surfaces reproducibility or throughput limitations that cap broader adoption. Broadscale (H1 2027) slips or underwhelms. Customers default to affinity platforms (Olink at Thermo, SomaScan at SBT) for routine proteomics and to mass spec for high-end research, leaving single-molecule proteomics as a research-niche curiosity.",
-          "Cash burns at $50M+/yr through 2027, then accelerates into commercial-launch investment. The $143M Q1 2026 position exhausts by mid-2028. Successive dilutive raises come at $1.00-2.00/share — eventually below cash-per-share. Cumulative ~$450M raised, total dilution 80%+. By FY36, NAUT reaches just 0.5% of the $130B proteomics TAM — $600M revenue, 8% margin, profitable but tiny relative to a 7×-diluted share count."
+          "To maintain solvency through commercial launch, NAUT raises ~$1.1B cumulatively at $0.40-2.00/share — successive dilutive rounds at falling prices as the equity story deteriorates. Share count balloons from 126M to ~1.78B (93% dilution). By FY36 NAUT reaches just 0.5% of the $130B proteomics TAM — $600M revenue at 8% margin, profitable but tiny relative to the diluted share count."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 50,
-        "price": 2.74,
-        "headline": "Voyager scales to niche-but-real platform.",
-        "why": "Modal outcome. Voyager launches on or near schedule (late 2026 pre-orders, early 2027 installations); proteoform assay portfolio expands to 5-10 assays by 2030; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% share of the $130B FY36 proteomics TAM — meaningful but not dominant. Mature operating margin ~15-18% — between commodity tools (~10%) and high-margin specialty diagnostics (~25%). Dilution from ~$400M of 2027-2028 raises at $3-10/share lands at ~40% total. The 50% weight reflects that this is the modal outcome — most realistic for a strong technical team executing on a long timeline, but not requiring breakthrough commercial dominance against entrenched affinity-platform competitors (Olink/Thermo, SomaScan/SBT). Base case is well-executed but stays a niche player; multiple stays compressed.",
+        "price": 1.87,
+        "headline": "Niche-but-real proteomics player.",
+        "why": "Modal outcome. Voyager launches on or near schedule (late 2026 pre-orders, early 2027 installations); proteoform assay portfolio expands to 5-10 assays by 2030; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% share of the $130B FY36 proteomics TAM — meaningful but not dominant. Mature operating margin ~15-18% — between commodity tools (~10%) and high-margin specialty diagnostics (~25%). Dilution from ~$1.08B of 2027-2029 raises at $3-14/share lands at ~57% total. The 50% weight reflects that this is the modal outcome — most realistic for a strong technical team executing on a long timeline, but not requiring breakthrough commercial dominance against entrenched affinity-platform competitors (Olink/Thermo, SomaScan/SBT). Base case is well-executed but stays a niche player; multiple stays compressed.",
         "what": [
           "The middle path. Voyager launches on or near the late-2026 schedule; pre-orders convert to $5-15M of revenue in 2027 from early adopters (academic + select biopharma). The Tau proteoforms assay drives Alzheimer's research adoption — a credible biomarker hook into a large neuroscience research market. A second proteoform assay extends utility. Broadscale (H1 2027) opens the addressable market beyond niche use cases without yet displacing affinity platforms for routine work.",
-          "Through 2028-2030, the installed base grows from ~100 instruments to ~500. Average revenue per instrument settles at $250-400K/yr (instrument + consumables + assay subscriptions). NAUT raises ~$400M cumulatively at $3-10/share to fund commercial scale-up, lifting share count to ~210M (40% dilution). Operating margin crosses zero by 2030 and scales toward 16% by 2036 — between commodity tools and specialty diagnostics."
+          "Through 2028-2030, the installed base grows from ~100 instruments to ~500. Average revenue per instrument settles at $250-400K/yr (instrument + consumables + assay subscriptions). NAUT raises ~$1.08B cumulatively at $3-14/share to fund commercial scale-up, lifting share count to ~293M (57% dilution). Operating margin crosses zero by 2030 and scales toward 16% by 2036 — between commodity tools and specialty diagnostics."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 22.2,
-        "headline": "Single-molecule wins the proteoform race.",
+        "price": 17.6,
+        "headline": "Single-molecule wins proteoforms.",
         "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands successfully to 10-15+ proteoforms by 2030 (60% conditional on platform success) AND mature margins reach 20-25% (40% conditional) AND market gives NAUT credit for platform position via acquisition or independent re-rating (50%). Joint at 10-15%, reflected at 12%. The bull case isn't blocked by any single piece looking unlikely — it requires conjunctive execution AND a favorable competitive backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single- molecule frontier into their existing reach. 12% (vs JOBY's 12%) reflects that NAUT's category is structurally similar to JOBY's (compound conditional venture-bet) but the path is somewhat clearer (commercial launch ~6 months out vs JOBY's still-pending Type Certification).",
         "what": [
-          "The bull case is that single-molecule resolution becomes the new gold standard for proteoform analysis. Tau success — FDA biomarker validation, mainstream adoption in Alzheimer's drug development — catalyzes broader category acceptance. Broadscale (H1 2027) delivers on the 10B-protein-mapping promise; customers adopt Voyager as the routine high-resolution workhorse alongside (not replacing) Olink and SomaScan. The single-molecule modality establishes itself as complementary-but-essential to affinity proteomics, not as a substitute.",
-          "By 2030, NAUT operates 2,000+ instruments globally at $300-500K/yr each (instrument + reagents + assay subscriptions). The assay catalog expands from 2 to 15+ proteoform assays. Pharma partnerships drive multi-year recurring revenue. Operating margin reaches 22% by FY36 as software/assay mix shifts to higher-margin recurring revenue. NAUT becomes an obvious acquisition target for Thermo / Danaher / Bruker at premium multiples — or remains independent at platform-tools scale."
+          "The bull case is that single-molecule resolution becomes the new gold standard for proteoform analysis. Tau success — FDA biomarker validation, mainstream adoption in Alzheimer's drug development — catalyzes broader category acceptance. Broadscale (H1 2027) delivers on the 10B-protein-mapping promise; customers adopt Voyager as the routine high-resolution workhorse alongside (not replacing) Olink and SomaScan.",
+          "By 2030, NAUT operates 2,000+ instruments globally at $300-500K/yr each (instrument + reagents + assay subscriptions). Assay catalog expands from 2 to 15+ proteoform assays. Pharma partnerships drive multi-year recurring revenue. Operating margin reaches 22% by FY36 as software/assay mix shifts to higher-margin recurring revenue. NAUT becomes an obvious acquisition target for Thermo / Danaher / Bruker at premium multiples — or remains independent at platform-tools scale."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 98.14,
-        "headline": "Dominant platform + multiomics + take-rate.",
+        "price": 89.17,
+        "headline": "Dominant + multiomics + take-rate.",
         "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 3%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
         "what": [
           "The ultra-bull case requires Voyager to become the dominant single-molecule proteomics platform AND for multiomics integration (proteomics + sequencing + cell biology) to emerge as the standard for both research and diagnostics. By 2030 NAUT operates 5,000+ instruments globally. By 2034, an instrument-as-a-service / assay-take-rate model emerges with software-economics on a meaningful fraction of revenue — the Mobileye/Illumina platform-take-rate analog.",
