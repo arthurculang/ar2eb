@@ -234,6 +234,12 @@ const MEMOS = [
         "expected": 7.81,
         "upsidePct": -25.6
       },
+      "market": {
+        "marketCapBillion": 10.3,
+        "sharesOutstandingMillion": 984.0,
+        "cashBillion": 2.5,
+        "netDebtBillion": 0.0
+      },
       "scenarios": {
         "bear": {
           "probability": 0.3,
@@ -343,6 +349,45 @@ const MEMOS = [
             "final_shares": 1508,
             "dcf_per_share": 0.22,
             "distress": 0.5
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.5,
+              0.75,
+              0.75,
+              0.75,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              10.0,
+              8.0,
+              6.0,
+              4.0,
+              3.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              3.0,
+              3.2,
+              3.5,
+              3.7,
+              4.0,
+              4.2,
+              4.4,
+              4.5,
+              4.5,
+              4.5
+            ],
+            "tam_competitor_share": 40.0
           }
         },
         "base": {
@@ -453,6 +498,45 @@ const MEMOS = [
             "final_shares": 1284,
             "dcf_per_share": 2.33,
             "distress": 0.5
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.75,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              10.0,
+              9.0,
+              8.0,
+              7.0,
+              6.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              3.5,
+              3.8,
+              4.0,
+              4.2,
+              4.5,
+              4.8,
+              5.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "tam_competitor_share": 60.0
           }
         },
         "bull": {
@@ -563,6 +647,45 @@ const MEMOS = [
             "final_shares": 1091,
             "dcf_per_share": 35.35,
             "distress": 1.0
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.75,
+              0.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              12.0,
+              16.0,
+              22.0,
+              30.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              4.0,
+              4.3,
+              4.5,
+              4.8,
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "tam_competitor_share": 70.0
           }
         },
         "ultra_bull": {
@@ -673,6 +796,45 @@ const MEMOS = [
             "final_shares": 1121,
             "dcf_per_share": 93.72,
             "distress": 0.96
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.5,
+              0.3,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              16.0,
+              28.0,
+              50.0,
+              80.0,
+              120.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              4.5,
+              4.8,
+              5.0,
+              5.2,
+              5.5,
+              5.5,
+              5.5,
+              5.5,
+              5.5,
+              5.5
+            ],
+            "tam_competitor_share": 75.0
           }
         }
       },
@@ -974,6 +1136,12 @@ const MEMOS = [
         "expected": 9.01,
         "upsidePct": 16.4
       },
+      "market": {
+        "marketCapBillion": 13.2,
+        "sharesOutstandingMillion": 1710.0,
+        "cashBillion": 1.28,
+        "netDebtBillion": 0.65
+      },
       "scenarios": {
         "bear": {
           "probability": 0.35,
@@ -1083,6 +1251,45 @@ const MEMOS = [
             "final_shares": 3401,
             "dcf_per_share": 0.11,
             "distress": 0.0
+          },
+          "chartData": {
+            "raises": [
+              0.5,
+              0.75,
+              0.75,
+              0.75,
+              0.75,
+              0.5,
+              0.25,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              5.0,
+              4.0,
+              3.5,
+              3.0,
+              2.5,
+              2.0,
+              1.75,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              100,
+              110,
+              120,
+              130,
+              140,
+              150,
+              155,
+              160,
+              160,
+              165
+            ],
+            "tam_competitor_share": 25.0
           }
         },
         "base": {
@@ -1193,6 +1400,45 @@ const MEMOS = [
             "final_shares": 2480,
             "dcf_per_share": 3.87,
             "distress": 0.5
+          },
+          "chartData": {
+            "raises": [
+              0.5,
+              0.75,
+              1.0,
+              1.0,
+              0.75,
+              0.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              7.0,
+              7.5,
+              8.0,
+              9.0,
+              10.0,
+              12.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              120,
+              135,
+              150,
+              165,
+              180,
+              195,
+              205,
+              215,
+              220,
+              225
+            ],
+            "tam_competitor_share": 35.0
           }
         },
         "bull": {
@@ -1303,6 +1549,45 @@ const MEMOS = [
             "final_shares": 2145,
             "dcf_per_share": 42.26,
             "distress": 1.0
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.75,
+              0.75,
+              0.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              9.0,
+              12.0,
+              15.0,
+              18.0,
+              22.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              150,
+              175,
+              200,
+              225,
+              240,
+              250,
+              250,
+              250,
+              250,
+              250
+            ],
+            "tam_competitor_share": 50.0
           }
         },
         "ultra_bull": {
@@ -1413,6 +1698,45 @@ const MEMOS = [
             "final_shares": 2010,
             "dcf_per_share": 102.5,
             "distress": 0.98
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.5,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              11.0,
+              16.0,
+              25.0,
+              40.0,
+              60.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              180,
+              210,
+              240,
+              260,
+              275,
+              280,
+              280,
+              280,
+              280,
+              280
+            ],
+            "tam_competitor_share": 55.0
           }
         }
       },
@@ -1718,6 +2042,12 @@ const MEMOS = [
         "expected": 21.88,
         "upsidePct": -34.9
       },
+      "market": {
+        "marketCapBillion": 7.46,
+        "sharesOutstandingMillion": 222.0,
+        "cashBillion": 0.232,
+        "netDebtBillion": 1.29
+      },
       "scenarios": {
         "bear": {
           "probability": 0.2,
@@ -1779,6 +2109,17 @@ const MEMOS = [
             "final_shares": 222,
             "dcf_per_share": -0.36,
             "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.3,
+              0.25,
+              0.2,
+              0.1,
+              0.1
+            ],
+            "luxury_club_count_fy30": 77,
+            "fcf_to_ebitda_ratio": 0.1
           }
         },
         "base": {
@@ -1841,6 +2182,17 @@ const MEMOS = [
             "final_shares": 222,
             "dcf_per_share": 14.99,
             "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.4,
+              0.4,
+              0.35,
+              0.3,
+              0.25
+            ],
+            "luxury_club_count_fy30": 97,
+            "fcf_to_ebitda_ratio": 0.3
           }
         },
         "bull": {
@@ -1903,6 +2255,17 @@ const MEMOS = [
             "final_shares": 222,
             "dcf_per_share": 46.04,
             "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.45,
+              0.45,
+              0.4,
+              0.4,
+              0.3
+            ],
+            "luxury_club_count_fy30": 107,
+            "fcf_to_ebitda_ratio": 0.5
           }
         },
         "ultra_bull": {
@@ -1965,6 +2328,17 @@ const MEMOS = [
             "final_shares": 235,
             "dcf_per_share": 96.1,
             "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.6,
+              0.6,
+              0.6,
+              0.6,
+              0.6
+            ],
+            "luxury_club_count_fy30": 117,
+            "fcf_to_ebitda_ratio": 0.65
           }
         }
       },
@@ -2306,6 +2680,12 @@ const MEMOS = [
         "expected": 167.2,
         "upsidePct": 67.2
       },
+      "market": {
+        "marketCapBillion": 30.8,
+        "sharesOutstandingMillion": 308.0,
+        "cashBillion": 7.8,
+        "netDebtBillion": 0.0
+      },
       "scenarios": {
         "bear": {
           "probability": 0.3,
@@ -2368,6 +2748,22 @@ const MEMOS = [
             "final_shares": 285,
             "dcf_per_share": 91.94,
             "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.8,
+              3.5,
+              3.3,
+              3.0,
+              2.8
+            ],
+            "ev_fcf_multiple": [
+              10.0,
+              9.0,
+              8.0,
+              7.0,
+              6.0
+            ]
           }
         },
         "base": {
@@ -2431,6 +2827,22 @@ const MEMOS = [
             "final_shares": 263,
             "dcf_per_share": 163.44,
             "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.5,
+              4.7,
+              4.8,
+              4.9,
+              5.0
+            ],
+            "ev_fcf_multiple": [
+              12.0,
+              13.5,
+              14.5,
+              15.0,
+              15.5
+            ]
           }
         },
         "bull": {
@@ -2494,6 +2906,22 @@ const MEMOS = [
             "final_shares": 240,
             "dcf_per_share": 252.63,
             "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.5,
+              6.5,
+              7.5,
+              8.0,
+              8.5
+            ],
+            "ev_fcf_multiple": [
+              14.0,
+              17.0,
+              20.0,
+              22.0,
+              23.0
+            ]
           }
         },
         "ultra_bull": {
@@ -2557,6 +2985,22 @@ const MEMOS = [
             "final_shares": 250,
             "dcf_per_share": 412.0,
             "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.0,
+              7.5,
+              9.0,
+              10.0,
+              11.0
+            ],
+            "ev_fcf_multiple": [
+              16.0,
+              22.0,
+              28.0,
+              30.0,
+              32.0
+            ]
           }
         }
       },
@@ -2870,6 +3314,12 @@ const MEMOS = [
         "expected": 5.72,
         "upsidePct": 138.4
       },
+      "market": {
+        "marketCapBillion": 0.302,
+        "sharesOutstandingMillion": 126.0,
+        "cashBillion": 0.143,
+        "netDebtBillion": 0.0
+      },
       "scenarios": {
         "bear": {
           "probability": 0.35,
@@ -2979,6 +3429,45 @@ const MEMOS = [
             "final_shares": 1777,
             "dcf_per_share": -0.25,
             "distress": 0.15
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.1,
+              0.2,
+              0.25,
+              0.25,
+              0.2,
+              0.1,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              2.0,
+              1.4,
+              1.0,
+              0.8,
+              0.6,
+              0.5,
+              0.4,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              150,
+              160,
+              175,
+              190,
+              210,
+              225,
+              240,
+              250,
+              255,
+              260
+            ],
+            "tam_competitor_share": 70.0
           }
         },
         "base": {
@@ -3089,6 +3578,45 @@ const MEMOS = [
             "final_shares": 293,
             "dcf_per_share": 2.22,
             "distress": 0.3
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.12,
+              0.18,
+              0.22,
+              0.18,
+              0.15,
+              0.15,
+              0.08,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              3.0,
+              3.5,
+              4.5,
+              6.0,
+              8.0,
+              10.0,
+              12.0,
+              14.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              200,
+              220,
+              250,
+              280,
+              310,
+              340,
+              370,
+              390,
+              400,
+              400
+            ],
+            "tam_competitor_share": 55.0
           }
         },
         "bull": {
@@ -3199,6 +3727,45 @@ const MEMOS = [
             "final_shares": 196,
             "dcf_per_share": 19.0,
             "distress": 1.5
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.12,
+              0.2,
+              0.2,
+              0.15,
+              0.08,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              3.5,
+              5.5,
+              9.0,
+              14.0,
+              18.0,
+              22.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              250,
+              290,
+              330,
+              370,
+              410,
+              450,
+              480,
+              500,
+              510,
+              510
+            ],
+            "tam_competitor_share": 45.0
           }
         },
         "ultra_bull": {
@@ -3309,6 +3876,45 @@ const MEMOS = [
             "final_shares": 153,
             "dcf_per_share": 91.83,
             "distress": 3.0
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.1,
+              0.15,
+              0.2,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              4.0,
+              9.0,
+              22.0,
+              35.0,
+              55.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              300,
+              380,
+              460,
+              540,
+              620,
+              680,
+              720,
+              740,
+              750,
+              750
+            ],
+            "tam_competitor_share": 35.0
           }
         }
       },

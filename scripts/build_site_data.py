@@ -176,6 +176,12 @@ def build_memo(ticker: str) -> dict:
                 "expected": round(pw_expected, 2),
                 "upsidePct": round((pw_expected / spot - 1) * 100, 1),
             },
+            "market": {
+                "marketCapBillion": float(mk["market_cap_billion"]),
+                "sharesOutstandingMillion": float(mk["shares_outstanding_million"]),
+                "cashBillion": float(mk["cash_billion"]),
+                "netDebtBillion": float(mk["net_debt_billion"]),
+            },
             "scenarios": {
                 k: {
                     "probability": float(scn[k]["probability"]),
@@ -184,6 +190,7 @@ def build_memo(ticker: str) -> dict:
                     "shortLabel": scn[k]["short_label"],
                     "dcfMetrics": dict(scn[k]["dcf_metrics"]),
                     "dcfPath": dict(scn[k]["dcf_path"]),
+                    "chartData": dict(scn[k].get("chart_data", {})),
                 }
                 for k in SCEN_ORDER
             },

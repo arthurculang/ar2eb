@@ -1294,6 +1294,192 @@ function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
   );
 }
 
+// --- Young-company Chart 3: cash runway + dilution (dual Y axis) ---
+// LEFT axis: cumulative cash in $B (auto-fit range, not hardcoded — this
+// was the §6c.6 axis-clipping bug that v002 surfaced).
+// RIGHT axis: shares (M) — dotted lines, scaled separately.
+// Cash path mirrors charts/young_company.py::_cash_path; shares path
+// mirrors _shares_path. Both computed in JS from raw dcfPath inputs.
+
+const cashPathSeries = (scn, startCash) => {
+  // _cash_path: out[0] = startCash; per-year cash += raises[i] + fcf where
+  // fcf = rev*op_margin - (rev - prev_rev)/s2c; prev_rev starts at 0 (young
+  // company assumed pre-revenue at history end — matches memo.py's use of
+  // cfg["rev_history"][-1] which is near-zero for the three young tickers).
+  const { rev_path, op_margin } = scn.dcfPath;
+  const s2c = scn.dcfMetrics.s2c;
+  const raises = scn.chartData.raises;
+  const out = [startCash];
+  let cash = startCash, prevRev = 0;
+  for (let i = 0; i < rev_path.length; i++) {
+    const delta = rev_path[i] - prevRev;
+    const nopat = rev_path[i] * op_margin[i];
+    const reinv = s2c ? delta / s2c : 0;
+    cash = cash + raises[i] + (nopat - reinv);
+    out.push(cash);
+    prevRev = rev_path[i];
+  }
+  return out;
+};
+
+const sharesPathSeries = (scn, startShares) => {
+  const raises = scn.chartData.raises;
+  const prices = scn.chartData.raise_prices;
+  const out = [startShares];
+  let shares = startShares;
+  for (let i = 0; i < raises.length; i++) {
+    const newSh = prices[i] > 0 ? (raises[i] * 1000 / prices[i]) : 0;
+    shares += newSh;
+    out.push(shares);
+  }
+  return out;
+};
+
+function YoungCashDilutionChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const startCash = memo.print.market.cashBillion;
+  const startShares = memo.print.market.sharesOutstandingMillion;
+
+  const cashByScn = Object.fromEntries(
+    scnKeys.map(k => [k, cashPathSeries(memo.print.scenarios[k], startCash)])
+  );
+  const sharesByScn = Object.fromEntries(
+    scnKeys.map(k => [k, sharesPathSeries(memo.print.scenarios[k], startShares)])
+  );
+
+  // 11 x positions: FY26 (start) + FY27-FY36 projection.
+  const fyLabels = ['26', ...Array.from({ length: 10 }, (_, i) => `${27 + i}`)];
+
+  // Margins — right side needs more room because shares labels live there.
+  const m = { left: 26, right: 36, top: 16, bottom: 14 };
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+
+  const xScale = mkLinearScale([-0.4, 10.4], [plotL, plotR]);
+
+  // LEFT Y axis (cash): auto-fit. Floor at 0 because cash<0 means equity
+  // wipeout — the spec §6c.6 rule. Top: max observed + 10% headroom,
+  // rounded up to a clean tick.
+  const allCash = Object.values(cashByScn).flat();
+  const cashMax = Math.max(...allCash);
+  // Pick a clean ceiling (1, 2, 3, 5, 10 etc).
+  const ceilCash = (v) => {
+    if (v <= 1) return 1;
+    if (v <= 2) return 2;
+    if (v <= 3) return 3;
+    if (v <= 5) return 5;
+    if (v <= 10) return 10;
+    return Math.ceil(v / 5) * 5;
+  };
+  const yMaxCash = ceilCash(cashMax * 1.05);
+  const yScaleCash = mkLinearScale([0, yMaxCash], [plotB, plotT]);
+  const cashTickStep = yMaxCash <= 2 ? 0.5 : yMaxCash <= 5 ? 1 : 2;
+  const cashTickVals = [];
+  for (let v = 0; v <= yMaxCash + 0.001; v += cashTickStep) cashTickVals.push(v);
+  const cashTicks = cashTickVals.map(v => [
+    v, v === 0 ? '$0' : v >= 1 ? `$${v.toFixed(0)}B` : `$${(v * 1000).toFixed(0)}M`,
+  ]);
+
+  // RIGHT Y axis (shares): auto-fit from start-shares × 0.9 to peak × 1.10.
+  const allShares = Object.values(sharesByScn).flat();
+  const sharesMax = Math.max(...allShares);
+  const sharesLo = startShares * 0.85;
+  const sharesHi = sharesMax * 1.10;
+  const yScaleShares = mkLinearScale([sharesLo, sharesHi], [plotB, plotT]);
+  // Clean tick step
+  const sharesSpan = sharesHi - sharesLo;
+  const sharesStep = sharesSpan > 2500 ? 500 : sharesSpan > 1000 ? 200 :
+                     sharesSpan > 400 ? 100 : sharesSpan > 200 ? 50 : 25;
+  const sharesTickVals = [];
+  for (let v = Math.ceil(sharesLo / sharesStep) * sharesStep;
+       v < sharesHi; v += sharesStep) sharesTickVals.push(v);
+  const sharesTickLabel = (v) => v >= 1000 ? `${(v / 1000).toFixed(1)}K` : `${v.toFixed(0)}M`;
+
+  const xTicks = fyLabels.map((l, i) => [i, l]);
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>Cash + dilution (FY26 → FY36)</ChartTitle>
+
+      {/* LEFT axis: cash gridlines + labels */}
+      {cashTicks.map(([v, lbl]) => (
+        <g key={`l-${v}`}>
+          <line x1={plotL} x2={plotR} y1={yScaleCash(v)} y2={yScaleCash(v)}
+                stroke={PALETTE.rule} strokeWidth="0.3" />
+          <text x={plotL - 3} y={yScaleCash(v) + 2}
+                fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.accent}
+                textAnchor="end">
+            {lbl}
+          </text>
+        </g>
+      ))}
+
+      {/* RIGHT axis: shares labels (no gridlines — keep them quiet) */}
+      {sharesTickVals.map(v => (
+        <text key={`r-${v}`} x={plotR + 3} y={yScaleShares(v) + 2}
+              fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.muted}
+              textAnchor="start">
+          {sharesTickLabel(v)}
+        </text>
+      ))}
+
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+
+      {/* "Today" divider at start of projection (between FY26 and FY27) */}
+      <line x1={xScale(0.5)} x2={xScale(0.5)} y1={plotT} y2={plotB}
+            stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
+
+      {/* Cash paths — dashed, scenario-colored */}
+      {scnKeys.map(key => {
+        const pts = cashByScn[key].map((v, i) => [i, Math.max(v, 0)]);
+        return (
+          <g key={`c-${key}`}>
+            <path d={pathD(pts, xScale, yScaleCash)}
+                  stroke={SCN_COLORS[key]} strokeWidth="1.2" fill="none"
+                  strokeDasharray="3,2" />
+            {pts.map(([t, v], i) => (
+              <circle key={`cp-${key}-${i}`} cx={xScale(t)} cy={yScaleCash(v)}
+                      r="1.4" fill={SCN_COLORS[key]} stroke="white"
+                      strokeWidth="0.4" />
+            ))}
+          </g>
+        );
+      })}
+
+      {/* Shares paths — dotted, lighter opacity to keep cash dominant */}
+      {scnKeys.map(key => {
+        const pts = sharesByScn[key].map((v, i) => [i, v]);
+        return (
+          <g key={`s-${key}`} opacity="0.75">
+            <path d={pathD(pts, xScale, yScaleShares)}
+                  stroke={SCN_COLORS[key]} strokeWidth="0.7" fill="none"
+                  strokeDasharray="1,2" />
+            {pts.map(([t, v], i) => (
+              <rect key={`sp-${key}-${i}`} x={xScale(t) - 0.9}
+                    y={yScaleShares(v) - 0.9} width="1.8" height="1.8"
+                    fill={SCN_COLORS[key]} stroke="white" strokeWidth="0.3" />
+            ))}
+          </g>
+        );
+      })}
+
+      {/* Axis-direction hints — just below the title band so they don't
+          collide with the title text on either side. */}
+      <text x={plotL} y={plotT - 2}
+            fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.accent}>
+        Cash + investments ↓
+      </text>
+      <text x={plotR} y={plotT - 2}
+            fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted}
+            textAnchor="end">
+        ↓ Shares (M, dotted)
+      </text>
+    </svg>
+  );
+}
+
 // --- Young-company Chart 2: path to profitability (op margin) ---
 // 10 projected years FY27-FY36, op margin %, linear Y -100% to +50% with
 // a zero line + a horizontal peer-median reference. Per-ticker peer text +
@@ -1402,7 +1588,7 @@ function Page3Snapshot({ memo }) {
   const slots = isYoung ? [
     <YoungRevenueChart memo={memo} />,
     <YoungProfitabilityChart memo={memo} />,
-    placeholder('03', 'Cash runway + dilution'),
+    <YoungCashDilutionChart memo={memo} />,
     placeholder('04', 'Fleet / unit growth'),
     placeholder('05', 'Valuation: P/S on FY36 rev'),
     placeholder('06', 'TAM positioning at FY36'),
