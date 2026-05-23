@@ -435,11 +435,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: '006'
-  footer_timestamp: 2026-05-17_14-00
-  canonical_jsx: joby-dcf-valuation__v007__2026-05-17_14-00.jsx
-  pdf_version: 028
-  pdf_timestamp: 2026-05-18_04-00
+  footer_version: "029"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "029"
+  pdf_timestamp: "2026-05-23_21-14"
 glossary:
 - term: eVTOL
   definition: Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range.

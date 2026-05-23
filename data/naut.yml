@@ -477,11 +477,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (per migration v005 decisions #2/#3/#5) ─
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-05-22_02-09"
-  canonical_jsx: "naut-dcf-valuation__v001__2026-05-21_18-00.jsx"
-  pdf_version: "002"
-  pdf_timestamp: "2026-05-22_02-09"
+  footer_version: "003"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "003"
+  pdf_timestamp: "2026-05-23_21-14"
 
 glossary:
   - term: "Voyager"

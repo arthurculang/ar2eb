@@ -448,11 +448,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-05-17_13-00
-  canonical_jsx: zm-dcf-valuation__v006__2026-05-17_10-00.jsx
-  pdf_version: '020'
-  pdf_timestamp: 2026-05-18_04-00
+  footer_version: "021"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "021"
+  pdf_timestamp: "2026-05-23_21-14"
 glossary:
 - term: AI Companion / Pro
   definition: ZM's AI assistant. Bundled free into paid plans (Companion) with a premium SKU (Pro). Bundle-not-separate-SKU strategy.

@@ -427,11 +427,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-05-17_12-00
-  canonical_jsx: lth-dcf-valuation__v003__2026-05-17_10-00.jsx
-  pdf_version: '021'
-  pdf_timestamp: 2026-05-18_04-00
+  footer_version: "022"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "022"
+  pdf_timestamp: "2026-05-23_21-14"
 glossary:
 - term: SLB
   definition: Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent.
