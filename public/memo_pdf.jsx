@@ -198,11 +198,15 @@ function PageFooter({ memo, pageLabel, showDisclaimerPointer = true }) {
   const footerStamp = `v${stamp.footerVersion} · ${stamp.footerTimestamp} · derived from ${stamp.canonicalJsx} (canonical)`;
   return (
     // Page bottom margin matches memo.py's MARGIN_B = 0.55in.
+    // Background masks any column text that reaches into the footer band
+    // (NAUT v002 has unusually long probability_rationale paragraphs).
     <div style={{
       position: 'absolute',
       left: '1in',
       right: '1in',
-      bottom: '0.22in',
+      bottom: '0.15in',
+      background: PALETTE.paper,
+      paddingTop: '4pt',
     }}>
       <div style={{
         borderTop: `0.4pt solid ${PALETTE.rule}`,
@@ -351,6 +355,217 @@ function PageHeader({ memo, suffix, label, recapWeighted = false, compact = fals
         <Rule strong />
       </div>
     </>
+  );
+}
+
+// ── Page 2 — Scenario narratives ───────────────────────────────────────
+// 4-column layout. Each column: label + price + upside + probability +
+// headline + "WHY x%" rationale + "WHAT HAPPENS" narrative paragraphs.
+//
+// Header is different from Pages 4/5: full-width eyebrow row on top,
+// smaller (110pt) logo on the second row, then a PROBABILITY WEIGHTS
+// strip — matches memo.py lines 1019-1059.
+function Page2Narratives({ memo }) {
+  const w = memo.print.weighted;
+  const wSign = w.upsidePct >= 0 ? '+' : '';
+  const NEG = '#b91c1c';
+  const POS = '#15803d';
+  const probStrip = (
+    `Bear ${memo.scenarios.find(s => s.key === 'bear').prob}%     `
+    + `Base ${memo.scenarios.find(s => s.key === 'base').prob}%     `
+    + `Bull ${memo.scenarios.find(s => s.key === 'bull').prob}%     `
+    + `Ultra Bull ${memo.scenarios.find(s => s.key === 'ultra').prob}%     ·     `
+    + `Weighted expected $${w.expected.toFixed(2)} `
+    + `(${wSign}${w.upsidePct.toFixed(1)}% vs spot)`
+  );
+
+  return (
+    <div className="memo-page">
+      {/* Top eyebrow row — full-width, eyebrow left + date right */}
+      <div style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'baseline',
+        paddingTop: '4pt',
+      }}>
+        <div>
+          <span style={{
+            fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7.5pt',
+            color: PALETTE.accent, letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+          }}>
+            INTERNAL RESEARCH
+          </span>
+          <span style={{
+            fontFamily: FONT_SANS, fontSize: '7.5pt',
+            color: PALETTE.muted, marginLeft: '8pt',
+          }}>
+            ·  MEMO  ·  NOT INVESTMENT ADVICE  ·  AI-ASSISTED
+          </span>
+        </div>
+        <div style={{
+          fontFamily: FONT_SANS, fontSize: '7.5pt', color: PALETTE.muted,
+        }}>
+          {fmtDayMonthYear(memo.publishedISO)}  ·  the narratives
+        </div>
+      </div>
+
+      {/* Logo + title row — smaller (110pt) logo for Pages 2/3 */}
+      <div style={{
+        marginTop: '10pt',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '14pt',
+      }}>
+        <img src="assets/ar2eb-logo-v3-cropped.png" alt=""
+             style={{ width: '110pt', height: 'auto', flexShrink: 0 }} />
+        <div style={{
+          display: 'flex',
+          alignItems: 'baseline',
+          gap: '8pt',
+        }}>
+          <div style={{
+            fontFamily: FONT_SANS, fontWeight: 600, fontSize: '15pt',
+            color: PALETTE.ink, lineHeight: 1.0,
+          }}>
+            {memo.company}
+          </div>
+          <div style={{
+            fontFamily: FONT_SANS, fontSize: '12pt',
+            color: PALETTE.muted, lineHeight: 1.0,
+          }}>
+            scenario narratives
+          </div>
+        </div>
+      </div>
+
+      {/* Probability weights strip */}
+      <div style={{ marginTop: '12pt' }}>
+        <div style={{
+          fontFamily: FONT_SANS, fontWeight: 600, fontSize: '8pt',
+          color: PALETTE.muted, letterSpacing: '0.04em',
+          textTransform: 'uppercase',
+        }}>
+          PROBABILITY WEIGHTS
+        </div>
+        <div style={{
+          marginTop: '6pt',
+          fontFamily: FONT_MONO, fontSize: '9pt', color: PALETTE.ink,
+        }}>
+          {probStrip}
+        </div>
+      </div>
+
+      <div style={{ marginTop: '10pt' }}>
+        <Rule strong />
+      </div>
+
+      {/* 4-column narrative grid */}
+      <div style={{
+        marginTop: '12pt',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        columnGap: '16pt',
+      }}>
+        {memo.scenarios.map(scn => {
+          const upside = (scn.price / memo.spot.price - 1) * 100;
+          const upSign = upside >= 0 ? '+' : '';
+          const upColor = upside >= 0 ? POS : NEG;
+          return (
+            <div key={scn.key}>
+              {/* Header row: label + price + upside */}
+              <div style={{
+                display: 'flex', justifyContent: 'space-between',
+                alignItems: 'baseline',
+              }}>
+                <div style={{
+                  fontFamily: FONT_SANS, fontWeight: 600, fontSize: '11pt',
+                  color: PALETTE.ink, letterSpacing: '0.02em',
+                }}>
+                  {scn.label}
+                </div>
+                <div style={{ textAlign: 'right' }}>
+                  <div style={{
+                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: '18pt',
+                    color: PALETTE.ink, lineHeight: 1.0,
+                  }}>
+                    ${scn.price.toFixed(2)}
+                  </div>
+                  <div style={{
+                    marginTop: '4pt',
+                    fontFamily: FONT_MONO, fontSize: '8.5pt', color: upColor,
+                  }}>
+                    {upSign}{upside.toFixed(1)}%  vs spot
+                  </div>
+                </div>
+              </div>
+
+              {/* Probability emphasized */}
+              <div style={{
+                marginTop: '10pt',
+                fontFamily: FONT_MONO, fontSize: '8pt', color: PALETTE.accent,
+              }}>
+                Probability  {scn.prob}%
+              </div>
+
+              <div style={{ marginTop: '4pt' }}><Rule /></div>
+
+              {/* Headline */}
+              <div style={{
+                marginTop: '8pt',
+                fontFamily: FONT_SANS, fontWeight: 500, fontSize: '11pt',
+                color: PALETTE.ink, lineHeight: 1.15,
+              }}>
+                {scn.headline}
+              </div>
+
+              {/* WHY x% */}
+              <div style={{
+                marginTop: '10pt',
+                fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7pt',
+                color: PALETTE.muted, letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+              }}>
+                WHY {scn.prob}%
+              </div>
+              <div style={{
+                marginTop: '3pt',
+                fontFamily: FONT_SANS, fontSize: '6.75pt', color: PALETTE.text,
+                lineHeight: 1.28,
+              }}>
+                {scn.why}
+              </div>
+
+              {/* Mini-rule then WHAT HAPPENS */}
+              <div style={{
+                marginTop: '5pt',
+                width: '30%',
+                borderTop: `0.5pt solid ${PALETTE.rule}`,
+              }} />
+              <div style={{
+                marginTop: '4pt',
+                fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7pt',
+                color: PALETTE.muted, letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+              }}>
+                WHAT HAPPENS
+              </div>
+              {scn.what.map((para, pi) => (
+                <div key={pi} style={{
+                  marginTop: pi === 0 ? '3pt' : '4pt',
+                  fontFamily: FONT_SANS, fontSize: '6.75pt', color: PALETTE.text,
+                  lineHeight: 1.28,
+                }}>
+                  {para}
+                </div>
+              ))}
+            </div>
+          );
+        })}
+      </div>
+
+      <PageFooter memo={memo} pageLabel="page 2 of 5" />
+    </div>
   );
 }
 
@@ -763,6 +978,7 @@ function MemoPDF() {
 
   return (
     <>
+      <Page2Narratives memo={memo} />
       <Page4Quantitative memo={memo} />
       <Page5BackMatter memo={memo} />
     </>
