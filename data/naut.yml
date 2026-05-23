@@ -174,7 +174,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.50
-    expected_per_share: 1.87
+    expected_per_share: 2.04
     headline: "Niche-but-real proteomics player."
     narrative:
       - >
@@ -241,7 +241,7 @@ scenarios:
       raise_total: 1.08
       dilution_pct: 57
       final_shares: 293
-      dcf_per_share: 2.22
+      dcf_per_share: 2.42
       distress: 0.30
 
     chart_data:
@@ -255,7 +255,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.12
-    expected_per_share: 17.60
+    expected_per_share: 17.39
     headline: "Single-molecule wins proteoforms."
     narrative:
       - >
@@ -323,7 +323,7 @@ scenarios:
       raise_total: 0.75
       dilution_pct: 36
       final_shares: 196
-      dcf_per_share: 19.00
+      dcf_per_share: 18.78
       distress: 1.50
 
     chart_data:
@@ -337,7 +337,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.03
-    expected_per_share: 89.17
+    expected_per_share: 86.00
     headline: "Dominant + multiomics + take-rate."
     narrative:
       - >
@@ -400,7 +400,7 @@ scenarios:
       raise_total: 0.65
       dilution_pct: 18
       final_shares: 153
-      dcf_per_share: 91.83
+      dcf_per_share: 88.56
       distress: 3.00
 
     chart_data:

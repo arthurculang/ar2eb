@@ -85,7 +85,7 @@ scenarios:
     label: Bear
     short_label: Bear           # for charts at small font (chart builder uses this)
     probability: 0.30
-    expected_per_share: 0.32    # weighted by within-scenario p_fail; not raw DCF
+    expected_per_share: 0.42    # weighted by within-scenario p_fail; not raw DCF
     headline: "Cert delays; mfg stumbles; China wins."
     narrative:
       - >
@@ -146,7 +146,7 @@ scenarios:
       raise_total: 2.75
       dilution_pct: 53
       final_shares: 1508
-      dcf_per_share: 0.22
+      dcf_per_share: 0.38
       distress: 0.50
 
     # Page 3 chart-specific auxiliary data
@@ -161,7 +161,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.55
-    expected_per_share: 2.00
+    expected_per_share: 3.65
     headline: "Joby + Archer split US; 13% margin."
     narrative:
       - >
@@ -223,7 +223,7 @@ scenarios:
       raise_total: 3.75
       dilution_pct: 31
       final_shares: 1284
-      dcf_per_share: 2.33
+      dcf_per_share: 4.34
       distress: 0.50
 
     chart_data:
@@ -237,7 +237,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.12   # reduced from 0.15 to make room for ultra_bull (12+3=15)
-    expected_per_share: 32.61
+    expected_per_share: 30.05
     headline: "Western eVTOL leader; SaaS margins."
     narrative:
       - >
@@ -298,7 +298,7 @@ scenarios:
       raise_total: 2.05
       dilution_pct: 11
       final_shares: 1091
-      dcf_per_share: 35.35
+      dcf_per_share: 32.58
       distress: 1.00
 
     chart_data:
@@ -312,7 +312,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull        # chart-builder uses this — fits at 7pt label
     probability: 0.03
-    expected_per_share: 90.00
+    expected_per_share: 90.01
     headline: "Global UAM dominance; SaaS-take-rate."
     narrative:
       - >

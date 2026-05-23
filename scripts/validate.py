@@ -150,16 +150,18 @@ def check_scenario(key: str, sc: dict, data: dict) -> tuple[list[str], list[str]
                     f"{dp['terminal_value']:.3f}", f"{tv_calc:.3f}",
                     "young-company uses different terminal formula" if dcf_type == "young_company" else ""))
 
-    # ── WARN: per-share = equity * 1000 / shares ────────────────────────
+    # ── ERROR: per-share = equity * 1000 / shares (spec §3.5 template) ──
+    # Promoted from WARN to ERROR in Phase 2 cleanup. Young tickers
+    # previously had stored per-share values that diverged inconsistently
+    # from the equity-bridge math; re-derived to match. All five tickers
+    # now satisfy the invariant.
     shares = dp["final_shares"]
     if shares > 0:
         ps_calc = dp["total_equity"] * 1000 / shares
         if abs(ps_calc - dp["dcf_per_share"]) > TOL_PER_SHARE:
-            note = "young-company dcf_per_share uses an undocumented convention" \
-                if dcf_type == "young_company" else ""
-            warns.append(f_err(
+            errors.append(f_err(
                 f"dcf_per_share ({dp['total_equity']:+.3f}B * 1000 / {shares})",
-                f"{dp['dcf_per_share']:+.2f}", f"{ps_calc:+.2f}", note))
+                f"{dp['dcf_per_share']:+.2f}", f"{ps_calc:+.2f}"))
 
     # ── Variant B: cash, dilution, expected, TAM ────────────────────────
     if dcf_type == "young_company":

@@ -26,29 +26,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 7.81,
-      "deltaPct": -25.6
+      "fair": 8.44,
+      "deltaPct": -19.6
     },
     "compound": [
       {
         "y": 5,
-        "value": 11.21,
-        "mult": 1.07
+        "value": 12.18,
+        "mult": 1.16
       },
       {
         "y": 10,
-        "value": 16.1,
-        "mult": 1.53
+        "value": 17.6,
+        "mult": 1.68
       },
       {
         "y": 15,
-        "value": 23.14,
-        "mult": 2.2
+        "value": 25.44,
+        "mult": 2.42
       },
       {
         "y": 20,
-        "value": 33.28,
-        "mult": 3.17
+        "value": 36.8,
+        "mult": 3.51
       }
     ],
     "question": "Will Joby capture meaningful share of a $250B global UAM TAM by 2036 — or is today's $10B market cap pricing certainty that competitive eVTOL economics don't support?",
@@ -57,7 +57,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 30,
-        "price": 0.32,
+        "price": 0.42,
         "headline": "Cert delays; mfg stumbles; China wins.",
         "why": "Aerospace startups historically fail at high rates even with funding. SR3 audit timing has slipped industry-wide; Stage 4 final testing routinely extends 12-24 months beyond projections. Manufacturing scaling at Dayton is the hardest unproven part — Tesla took years on Model 3 with mature automotive suppliers. The 30% weight acknowledges that the $2.5B cash + Toyota manufacturing partnership materially reduce execution risk relative to a typical aerospace startup, but eVTOL unit economics remain fundamentally unproven at fleet scale. Even with strong execution, the category itself could fail to generate profitable demand. Within-scenario 35% p_fail captures Joby-specific bankruptcy; the 30% scenario weight captures the broader 'bear world' where eVTOL economics don't scale even if Joby executes.",
         "what": [
@@ -69,7 +69,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 55,
-        "price": 2.0,
+        "price": 3.65,
         "headline": "Joby + Archer split US; 13% margin.",
         "why": "Modal outcome given de-risking factors already in place. FAA Type Cert progresses on schedule or slightly delayed; Toyota manufacturing scales incrementally rather than to full 500-aircraft/year; Dubai launches commercially but stays limited in scope; Joby and Archer effectively split the US market based on funding/partnership advantages. The 55% weight reflects that the base case requires the LEAST faith — no breakthrough business model, no dominant competitive position, no breakthrough regulatory cooperation. Just sequential execution on plans largely in motion. Result: real revenue with aerospace-blend operating margins (~13%, peer-set median between regional aviation at 8% and ADAS software at 30%), well below the software-economics framing implicit in today's market cap. Joby reaches commercial scale; the open question is at what margin.",
         "what": [
@@ -81,7 +81,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 32.61,
+        "price": 30.05,
         "headline": "Western eVTOL leader; SaaS margins.",
         "why": "The bull case requires a chain of conditional events: FAA Type Cert on schedule by end-2026 AND Toyota Dayton scales to full 500-aircraft/year capacity by 2028-29 AND Dubai exclusivity template replicates in 3+ countries (Saudi Arabia, India, SE Asia) AND competition narrows (Archer ships meaningfully lower volumes, EHang stays regional to China) AND autonomous flight matures within 5-7 years AND Joby successfully pivots to software-take-rate model on partner aircraft. Even granting 60-70% probability per condition with correlation (i.e., if cert works Toyota probably scales), joint probability lands closer to 10-15%. Conjunctive probability is one of the most reliably underestimated quantities in forecasting — the bull case isn't blocked by any single piece looking unlikely, but by compound dependency. 15% reflects that this is a real possibility, just not central.",
         "what": [
@@ -93,7 +93,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 90.0,
+        "price": 90.01,
         "headline": "Global UAM dominance; SaaS-take-rate.",
         "why": "Tail of tails: requires every Bull condition to hit AND multiple expansion AND replicate internationally AND early autonomous pivot. Each individually 60-75% probable; joint at 3-5%. Genuine tail captures the scenario where Joby joins the software-aerospace-hybrid giants club.",
         "what": [
@@ -247,8 +247,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 250,
       "weighted": {
-        "expected": 7.81,
-        "upsidePct": -25.6
+        "expected": 8.44,
+        "upsidePct": -19.6
       },
       "market": {
         "marketCapBillion": 10.3,
@@ -259,7 +259,7 @@ const MEMOS = [
       "scenarios": {
         "bear": {
           "probability": 0.3,
-          "expectedPerShare": 0.32,
+          "expectedPerShare": 0.42,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -363,7 +363,7 @@ const MEMOS = [
             "raise_total": 2.75,
             "dilution_pct": 53,
             "final_shares": 1508,
-            "dcf_per_share": 0.22,
+            "dcf_per_share": 0.38,
             "distress": 0.5
           },
           "chartData": {
@@ -420,7 +420,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.55,
-          "expectedPerShare": 2.0,
+          "expectedPerShare": 3.65,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -524,7 +524,7 @@ const MEMOS = [
             "raise_total": 3.75,
             "dilution_pct": 31,
             "final_shares": 1284,
-            "dcf_per_share": 2.33,
+            "dcf_per_share": 4.34,
             "distress": 0.5
           },
           "chartData": {
@@ -581,7 +581,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.12,
-          "expectedPerShare": 32.61,
+          "expectedPerShare": 30.05,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -685,7 +685,7 @@ const MEMOS = [
             "raise_total": 2.05,
             "dilution_pct": 11,
             "final_shares": 1091,
-            "dcf_per_share": 35.35,
+            "dcf_per_share": 32.58,
             "distress": 1.0
           },
           "chartData": {
@@ -742,7 +742,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 90.0,
+          "expectedPerShare": 90.01,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -853,7 +853,7 @@ const MEMOS = [
             "raises": [
               0.3,
               0.5,
-              0.5,
+              0.75,
               0.3,
               0.2,
               0.0,
@@ -996,29 +996,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 9.01,
-      "deltaPct": 16.4
+      "fair": 6.65,
+      "deltaPct": -14.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 13.15,
-        "mult": 1.7
+        "value": 9.68,
+        "mult": 1.25
       },
       {
         "y": 10,
-        "value": 19.18,
-        "mult": 2.48
+        "value": 14.1,
+        "mult": 1.82
       },
       {
         "y": 15,
-        "value": 28.0,
-        "mult": 3.62
+        "value": 20.54,
+        "mult": 2.65
       },
       {
         "y": 20,
-        "value": 40.89,
-        "mult": 5.28
+        "value": 29.93,
+        "mult": 3.87
       }
     ],
     "question": "Will Aurora capture meaningful share of a $160B US autonomous trucking TAM by 2036 — or is today's $13B market cap pricing certainty about driverless commercial economics that hasn't been proven?",
@@ -1027,7 +1027,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 35,
-        "price": 0.06,
+        "price": 0.11,
         "headline": "Tech doesn't scale, capital exhausts.",
         "why": "Bearish thesis is compound: tech doesn't scale from supervised highway pilots to driverless at necessary safety thresholds; capital exhausts before commercial validation; dilution at falling prices accelerates as capital needs persist; competitive losses to Kodiak (cargo-focused, well-funded) and Waabi (smaller but capital-efficient). Within-scenario 45% p_fail captures Aurora-specific failure; the 35% scenario weight reflects category-level risk — autonomous trucking economics may not scale for Western operators. Waymo Via's 2023 shutdown was a credible signal of category difficulty. The 35% weight is slightly above JOBY's 30% bear because AUR is earlier-stage (pre-commercial), more capital-dependent, and faces more direct competition.",
         "what": [
@@ -1051,7 +1051,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 37.31,
+        "price": 37.32,
         "headline": "Dominant US platform, software-like margins.",
         "why": "Compound bet: Driverless commercial launches on schedule AND scaled trucking fleet ramps to 5,000+ trucks by 2028 AND software-take-rate model emerges (Aurora-as-platform on partner-operated fleet) AND competitive narrowing (Kodiak underperforms, Waabi stays niche) AND autonomous trucking proves uniquely viable. Each condition independently plausible at 40-60% probability; conjunctive probability lands at 15%. The asymmetric venture-bet pattern characteristic of autonomous-platform investments — bull case pays multiples-of-current- valuation if it converges, but requires conditions to align over 5-10 years.",
         "what": [
@@ -1063,7 +1063,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 100.0,
+        "price": 20.76,
         "headline": "Dominant US; software-take-rate.",
         "why": "Tail of tails: commercial launch on schedule (50%) AND 25%+ TAM share by 2036 (30% conditional on launch) AND software-take-rate model wins (40%) AND multiple expansion to software/aerospace-hybrid premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
         "what": [
@@ -1216,8 +1216,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 160,
       "weighted": {
-        "expected": 9.01,
-        "upsidePct": 16.4
+        "expected": 6.65,
+        "upsidePct": -14.0
       },
       "market": {
         "marketCapBillion": 13.2,
@@ -1228,7 +1228,7 @@ const MEMOS = [
       "scenarios": {
         "bear": {
           "probability": 0.35,
-          "expectedPerShare": 0.06,
+          "expectedPerShare": 0.11,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -1332,7 +1332,7 @@ const MEMOS = [
             "raise_total": 4.25,
             "dilution_pct": 74,
             "final_shares": 3401,
-            "dcf_per_share": 0.11,
+            "dcf_per_share": 0.19,
             "distress": 0.0
           },
           "chartData": {
@@ -1485,7 +1485,7 @@ const MEMOS = [
             ],
             "sum_pv_fcf": -2.566,
             "terminal_value": 41.7,
-            "pv_terminal": 9.59,
+            "pv_terminal": 10.89,
             "op_ev": 8.32,
             "cash": 1.28,
             "net_debt": 0.0,
@@ -1550,7 +1550,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.12,
-          "expectedPerShare": 37.31,
+          "expectedPerShare": 37.32,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -1654,7 +1654,7 @@ const MEMOS = [
             "raise_total": 2.8,
             "dilution_pct": 10,
             "final_shares": 2145,
-            "dcf_per_share": 42.26,
+            "dcf_per_share": 42.28,
             "distress": 1.0
           },
           "chartData": {
@@ -1711,7 +1711,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 100.0,
+          "expectedPerShare": 20.76,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -1815,7 +1815,7 @@ const MEMOS = [
             "raise_total": 2.0,
             "dilution_pct": 18,
             "final_shares": 2010,
-            "dcf_per_share": 102.5,
+            "dcf_per_share": 21.37,
             "distress": 0.98
           },
           "chartData": {
@@ -1965,29 +1965,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 21.88,
-      "deltaPct": -34.9
+      "fair": 22.26,
+      "deltaPct": -33.8
     },
     "compound": [
       {
         "y": 5,
-        "value": 32.85,
-        "mult": 0.98
+        "value": 33.42,
+        "mult": 0.99
       },
       {
         "y": 10,
-        "value": 49.38,
-        "mult": 1.47
+        "value": 50.23,
+        "mult": 1.49
       },
       {
         "y": 15,
-        "value": 74.34,
-        "mult": 2.21
+        "value": 75.62,
+        "mult": 2.25
       },
       {
         "y": 20,
-        "value": 112.09,
-        "mult": 3.33
+        "value": 114.0,
+        "mult": 3.39
       }
     ],
     "question": "Is Life Time a premium wellness platform with durable luxury economics — or a leveraged real estate vehicle whose positive FCF depends on perpetual $400M/year sale-leasebacks?",
@@ -1996,7 +1996,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 20,
-        "price": -0.36,
+        "price": 0.0,
         "headline": "Capital recycling, not earnings.",
         "why": "Bearish thesis is structurally coherent: LTH's headline FCF is dependent on SLB proceeds (~$400M/yr); strip those out and operating FCF is barely positive. Cumulative SLB program is finite (~$2B remaining); each SLB trades one-time cash for permanent rent increase. Net debt + capitalized lease obligations near $4B. If macro slows and luxury fitness spend compresses, FCF margin drops, stock works to $20-25. The 20% weight reflects that this thesis bumps against LTH's actual track record: FY24/25 execution strong, recent S&P upgrade validates the credit story, and new luxury club economics ($25-35M revenue vs $15-20M legacy) genuinely change the unit math.",
         "what": [
@@ -2008,7 +2008,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 55,
-        "price": 14.99,
+        "price": 15.0,
         "headline": "Premium platform, leveraged structure.",
         "why": "Modal outcome. LTH executes guidance: revenue grows 11% FY26, decelerating to mid-single-digits. EBITDA margin holds 28-30% (top quartile for consumer services). New 2026 club openings (1.2M sq ft, mostly luxury) mature over 3-4 years. SLB cadence holds for 2-3 more years then tapers. Net debt leverage stays in the 1.5-2.0x EBITDA target. The 55% weight reflects that this requires the least faith — sequential execution on plans already in motion. The base case is well-run but priced for steady-state execution; the multiple stays compressed.",
         "what": [
@@ -2032,7 +2032,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 90.0,
+        "price": 96.13,
         "headline": "Luxury category-of-one; 15x re-rate.",
         "why": "Joint conditional: 250+ clubs by 2030 (40%) AND ARPU $6,500+ achieved via medspa/recovery upsell (50% conditional on club growth) AND SLB self-funded with bank capital (60%) AND multiple expansion to 15x EV/EBITDA (50%). Joint at 4-6%, reflected here at 5%. Tail of tails: LTH stops being a 'leveraged real estate compounder' and becomes a 'luxury wellness software-like compounder.'",
         "what": [
@@ -2246,8 +2246,8 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 21.88,
-        "upsidePct": -34.9
+        "expected": 22.26,
+        "upsidePct": -33.8
       },
       "market": {
         "marketCapBillion": 7.46,
@@ -2258,7 +2258,7 @@ const MEMOS = [
       "scenarios": {
         "bear": {
           "probability": 0.2,
-          "expectedPerShare": -0.36,
+          "expectedPerShare": 0.0,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -2332,7 +2332,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.55,
-          "expectedPerShare": 14.99,
+          "expectedPerShare": 15.0,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -2388,7 +2388,7 @@ const MEMOS = [
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 222,
-            "dcf_per_share": 14.99,
+            "dcf_per_share": 15.0,
             "distress": 0.0
           },
           "chartData": {
@@ -2480,7 +2480,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 90.0,
+          "expectedPerShare": 96.13,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -2536,7 +2536,7 @@ const MEMOS = [
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 235,
-            "dcf_per_share": 96.1,
+            "dcf_per_share": 96.13,
             "distress": 0.0
           },
           "chartData": {
@@ -2647,29 +2647,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 167.2,
-      "deltaPct": 67.2
+      "fair": 167.83,
+      "deltaPct": 67.8
     },
     "compound": [
       {
         "y": 5,
-        "value": 251.69,
-        "mult": 2.52
+        "value": 252.6,
+        "mult": 2.53
       },
       {
         "y": 10,
-        "value": 379.34,
-        "mult": 3.79
+        "value": 380.63,
+        "mult": 3.81
       },
       {
         "y": 15,
-        "value": 572.43,
-        "mult": 5.72
+        "value": 574.28,
+        "mult": 5.74
       },
       {
         "y": 20,
-        "value": 864.9,
-        "mult": 8.65
+        "value": 867.53,
+        "mult": 8.67
       }
     ],
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
@@ -2678,7 +2678,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 30,
-        "price": 91.94,
+        "price": 92.04,
         "headline": "Zoom without a core market.",
         "why": "Bearish thesis is competitive commoditization: Teams (Microsoft's bundled play) and Google Meet (free for Workspace customers) continue to take seats from ZM's enterprise base; AI Companion Pro fails to differentiate or monetize meaningfully (Microsoft Copilot integration into Teams is the obvious competitive response); Phone seats stagnate; Contact Center fails to reach scale; Anthropic stake gets compressed if AI valuations correct or Anthropic does an underwhelming IPO. The 30% weight reflects that Teams/Workspace competition is real, ongoing, and structurally favored — but ZM has shown unexpected resilience through 2024-25 (stable revenue, growing FCF, $1B+ buyback program). Not bankruptcy risk; share-loss-with-margin-compression risk.",
         "what": [
@@ -2690,7 +2690,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 50,
-        "price": 163.44,
+        "price": 163.16,
         "headline": "Stable cash machine with a visible kicker.",
         "why": "Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27 guidance holds; AI Companion Pro is a meaningful contributor but not a category-defining product; Anthropic stake gets a public mark via Anthropic's IPO at $700B-1T valuation; ZM multiple expands modestly as the market gives credit for the Anthropic stake AND for stable cash generation. Buyback compounds shares-out reduction at attractive prices. The 50% weight reflects that this requires the least faith — sequential execution on plans already in motion.",
         "what": [
@@ -2702,7 +2702,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 15,
-        "price": 252.63,
+        "price": 252.46,
         "headline": "AI monetization + Anthropic re-rating.",
         "why": "AI Companion Pro monetizes (per-seat add-on becomes meaningful contributor); Phone scales to 16M+ seats with margin expansion; Contact Center crosses $500M ARR and becomes a real third leg of growth; Anthropic IPOs at $1T+ with stake getting full mark (vs current discount carrying value); the operating business multiple expands AND the Anthropic stake appreciates. The 20% weight is higher than JOBY/AUR's bull weight because ZM's bull case is less compound — AI monetization and Anthropic appreciation are somewhat independent bets that can succeed without each other. But the conjunction still requires multiple things at once: product success on three new SKUs (Companion Pro, Phone scale, Contact Center scale) plus a favorable AI capital markets backdrop for Anthropic's IPO.",
         "what": [
@@ -2714,7 +2714,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 400.0,
+        "price": 415.4,
         "headline": "Anthropic $2T+; full re-rating.",
         "why": "Joint conditional: Anthropic IPO above $2T (60% conditional on IPO) AND AI Companion crosses $1B ARR (40% conditional on existing trajectory) AND multiple re-rates from 15x to 30x P/FCF (50% conditional on growth + AI both firing). Joint at 5-7%, reflected here at 5%. This is the scenario where ZM stops being a 'value with AI optionality' name and becomes a growth-software name with an emerging-leader AI partner. Tail of tails.",
         "what": [
@@ -2906,8 +2906,8 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 167.2,
-        "upsidePct": 67.2
+        "expected": 167.83,
+        "upsidePct": 67.8
       },
       "market": {
         "marketCapBillion": 30.8,
@@ -2918,7 +2918,7 @@ const MEMOS = [
       "scenarios": {
         "bear": {
           "probability": 0.3,
-          "expectedPerShare": 91.94,
+          "expectedPerShare": 92.04,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -2975,7 +2975,7 @@ const MEMOS = [
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 285,
-            "dcf_per_share": 91.94,
+            "dcf_per_share": 92.04,
             "distress": 0.0
           },
           "chartData": {
@@ -2998,7 +2998,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.5,
-          "expectedPerShare": 163.44,
+          "expectedPerShare": 163.16,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -3055,7 +3055,7 @@ const MEMOS = [
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 263,
-            "dcf_per_share": 163.44,
+            "dcf_per_share": 163.16,
             "distress": 0.0
           },
           "chartData": {
@@ -3078,7 +3078,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.15,
-          "expectedPerShare": 252.63,
+          "expectedPerShare": 252.46,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -3135,7 +3135,7 @@ const MEMOS = [
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 240,
-            "dcf_per_share": 252.63,
+            "dcf_per_share": 252.46,
             "distress": 0.0
           },
           "chartData": {
@@ -3158,7 +3158,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 400.0,
+          "expectedPerShare": 415.4,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -3206,7 +3206,7 @@ const MEMOS = [
             "term_g": 0.03,
             "sum_pv_fcf": 11.61,
             "terminal_value": 91.0,
-            "pv_terminal": 63.4,
+            "pv_terminal": 68.44,
             "op_ev": 80.05,
             "cash": 7.8,
             "net_debt": 0.0,
@@ -3215,7 +3215,7 @@ const MEMOS = [
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 250,
-            "dcf_per_share": 412.0,
+            "dcf_per_share": 415.4,
             "distress": 0.0
           },
           "chartData": {
@@ -3331,29 +3331,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 5.72,
-      "deltaPct": 138.4
+      "fair": 5.69,
+      "deltaPct": 136.9
     },
     "compound": [
       {
         "y": 5,
-        "value": 8.38,
-        "mult": 3.49
+        "value": 8.34,
+        "mult": 3.47
       },
       {
         "y": 10,
-        "value": 12.29,
-        "mult": 5.12
+        "value": 12.24,
+        "mult": 5.1
       },
       {
         "y": 15,
-        "value": 18.02,
-        "mult": 7.51
+        "value": 17.97,
+        "mult": 7.49
       },
       {
         "y": 20,
-        "value": 26.45,
-        "mult": 11.02
+        "value": 26.4,
+        "mult": 11.0
       }
     ],
     "question": "Will Nautilus capture meaningful share of a $130B global proteomics TAM by 2036 with its Voyager single-molecule platform — or is today's $302M market cap pricing certainty about commercial economics that the late-2026 launch and early-2027 instrument installations haven't yet earned?",
@@ -3374,7 +3374,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 50,
-        "price": 1.87,
+        "price": 2.04,
         "headline": "Niche-but-real proteomics player.",
         "why": "Modal outcome. Voyager launches on or near schedule (late 2026 pre-orders, early 2027 installations); proteoform assay portfolio expands to 5-10 assays by 2030; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% share of the $130B FY36 proteomics TAM — meaningful but not dominant. Mature operating margin ~15-18% — between commodity tools (~10%) and high-margin specialty diagnostics (~25%). Dilution from ~$1.08B of 2027-2029 raises at $3-14/share lands at ~57% total. The 50% weight reflects that this is the modal outcome — most realistic for a strong technical team executing on a long timeline, but not requiring breakthrough commercial dominance against entrenched affinity-platform competitors (Olink/Thermo, SomaScan/SBT). Base case is well-executed but stays a niche player; multiple stays compressed.",
         "what": [
@@ -3386,7 +3386,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 17.6,
+        "price": 17.39,
         "headline": "Single-molecule wins proteoforms.",
         "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands successfully to 10-15+ proteoforms by 2030 (60% conditional on platform success) AND mature margins reach 20-25% (40% conditional) AND market gives NAUT credit for platform position via acquisition or independent re-rating (50%). Joint at 10-15%, reflected at 12%. The bull case isn't blocked by any single piece looking unlikely — it requires conjunctive execution AND a favorable competitive backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single- molecule frontier into their existing reach. 12% (vs JOBY's 12%) reflects that NAUT's category is structurally similar to JOBY's (compound conditional venture-bet) but the path is somewhat clearer (commercial launch ~6 months out vs JOBY's still-pending Type Certification).",
         "what": [
@@ -3398,7 +3398,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 89.17,
+        "price": 86.0,
         "headline": "Dominant + multiomics + take-rate.",
         "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 3%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
         "what": [
@@ -3560,8 +3560,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 130,
       "weighted": {
-        "expected": 5.72,
-        "upsidePct": 138.4
+        "expected": 5.69,
+        "upsidePct": 136.9
       },
       "market": {
         "marketCapBillion": 0.302,
@@ -3733,7 +3733,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.5,
-          "expectedPerShare": 1.87,
+          "expectedPerShare": 2.04,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -3837,7 +3837,7 @@ const MEMOS = [
             "raise_total": 1.08,
             "dilution_pct": 57,
             "final_shares": 293,
-            "dcf_per_share": 2.22,
+            "dcf_per_share": 2.42,
             "distress": 0.3
           },
           "chartData": {
@@ -3894,7 +3894,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.12,
-          "expectedPerShare": 17.6,
+          "expectedPerShare": 17.39,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -3998,7 +3998,7 @@ const MEMOS = [
             "raise_total": 0.75,
             "dilution_pct": 36,
             "final_shares": 196,
-            "dcf_per_share": 19.0,
+            "dcf_per_share": 18.78,
             "distress": 1.5
           },
           "chartData": {
@@ -4055,7 +4055,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 89.17,
+          "expectedPerShare": 86.0,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -4159,7 +4159,7 @@ const MEMOS = [
             "raise_total": 0.65,
             "dilution_pct": 18,
             "final_shares": 153,
-            "dcf_per_share": 91.83,
+            "dcf_per_share": 88.56,
             "distress": 3.0
           },
           "chartData": {

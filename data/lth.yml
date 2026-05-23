@@ -84,7 +84,7 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.20
-    expected_per_share: -0.36
+    expected_per_share: 0.00
     headline: "Capital recycling, not earnings."
     narrative:
       - >
@@ -161,7 +161,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.55
-    expected_per_share: 14.99
+    expected_per_share: 15.00
     headline: "Premium platform, leveraged structure."
     narrative:
       - >
@@ -218,7 +218,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 222
-      dcf_per_share: 14.99
+      dcf_per_share: 15.00
       distress: 0.0
 
     chart_data:
@@ -303,7 +303,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 90.00
+    expected_per_share: 96.13
     headline: "Luxury category-of-one; 15x re-rate."
     narrative:
       - >
@@ -351,7 +351,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 235
-      dcf_per_share: 96.10        # raw DCF
+      dcf_per_share: 96.13        # raw DCF
       distress: 0.0
       # expected_per_share ($90.00) ≠ dcf_per_share ($96.10) — manual rounding
       # for display. Generator uses expected_per_share for weighted math.

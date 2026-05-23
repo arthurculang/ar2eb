@@ -72,7 +72,7 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.35
-    expected_per_share: 0.06
+    expected_per_share: 0.11
     headline: "Tech doesn't scale, capital exhausts."
     narrative:
       - >
@@ -131,7 +131,7 @@ scenarios:
       raise_total: 4.25
       dilution_pct: 74
       final_shares: 3401
-      dcf_per_share: 0.11
+      dcf_per_share: 0.19
       distress: 0.00
 
     chart_data:
@@ -217,7 +217,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.12   # reduced from 0.15 for ultra_bull (12+3=15)
-    expected_per_share: 37.31
+    expected_per_share: 37.32
     headline: "Dominant US platform, software-like margins."
     narrative:
       - >
@@ -276,7 +276,7 @@ scenarios:
       raise_total: 2.80
       dilution_pct: 10
       final_shares: 2145
-      dcf_per_share: 42.26
+      dcf_per_share: 42.28
       distress: 1.00
 
     chart_data:
@@ -290,7 +290,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.03
-    expected_per_share: 100.00
+    expected_per_share: 20.76
     headline: "Dominant US; software-take-rate."
     narrative:
       - >
@@ -339,7 +339,7 @@ scenarios:
       raise_total: 2.0
       dilution_pct: 18
       final_shares: 2010
-      dcf_per_share: 102.50
+      dcf_per_share: 21.37
       distress: 0.98
 
     chart_data:
