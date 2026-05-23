@@ -224,6 +224,22 @@ const MEMOS = [
           28,
           50
         ]
+      },
+      "chartConfig": {
+        "peerY": 15,
+        "peerText": "Aerospace + operator peer median ~15%",
+        "fleetAnchor": 50,
+        "fleetTitle": "eVTOL aircraft deployed (log)",
+        "fleetReference": null,
+        "valnAnchorY": 3,
+        "valnAnchorText": "Mature aerospace P/S ~2-4×",
+        "valnCaption": "Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×).",
+        "tamTitle": "$250B global UAM TAM (FY36) — Joby share",
+        "tamLegend": [
+          "JOBY",
+          "Competitors",
+          "Other UAM (cargo, etc.)"
+        ]
       }
     },
     "print": {
@@ -1173,6 +1189,25 @@ const MEMOS = [
           6,
           20,
           50
+        ]
+      },
+      "chartConfig": {
+        "peerY": 20,
+        "peerText": "Mature tech-auto peer median ~20%",
+        "fleetAnchor": 50,
+        "fleetTitle": "Driverless trucks deployed (log)",
+        "fleetReference": {
+          "value": 750000,
+          "label": "US Class 8 fleet ~750K"
+        },
+        "valnAnchorY": 4,
+        "valnAnchorText": "Mature peer P/S ~3-5×",
+        "valnCaption": "Bear=stretched (6×), base=fair (1.3×), bull=cheap (0.5×).",
+        "tamTitle": "$160B US autonomous trucking TAM (FY36) — AUR share",
+        "tamLegend": [
+          "AUR",
+          "Competitors",
+          "Non-autonomous (legacy)"
         ]
       }
     },
@@ -2198,6 +2233,12 @@ const MEMOS = [
           148
         ],
         "clubStandardProjFy30": 148
+      },
+      "chartConfig": {
+        "segmentA": "Membership",
+        "segmentB": "In-center",
+        "chart6Title": "Club count — Luxury vs Standard",
+        "chart6Type": "lthClubs"
       }
     },
     "print": {
@@ -2845,6 +2886,19 @@ const MEMOS = [
           1.47,
           1.706
         ]
+      },
+      "chartConfig": {
+        "segmentA": "Enterprise",
+        "segmentB": "Online",
+        "histEntSplit": [
+          0.55,
+          0.58,
+          0.59,
+          0.6,
+          0.603
+        ],
+        "chart6Title": "SOTP equity (Op EV + cash + Anthropic)",
+        "chart6Type": "zmSotp"
       }
     },
     "print": {
@@ -3482,6 +3536,22 @@ const MEMOS = [
           0,
           0,
           0
+        ]
+      },
+      "chartConfig": {
+        "peerY": 20,
+        "peerText": "Mature life-science-tools peer median ~20%",
+        "fleetAnchor": 1,
+        "fleetTitle": "Voyager instruments deployed (log)",
+        "fleetReference": null,
+        "valnAnchorY": 5,
+        "valnAnchorText": "Mature tools P/S ~4-7×",
+        "valnCaption": "Bear, base = stretched on FY36 niche-rev; bull onward = cheap.",
+        "tamTitle": "$130B global proteomics TAM (FY36) — NAUT share",
+        "tamLegend": [
+          "NAUT",
+          "Competitors (Olink / SomaScan / MS)",
+          "Other proteomics"
         ]
       }
     },

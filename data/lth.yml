@@ -66,6 +66,13 @@ chart_reference:
   club_history_standard: [149, 144, 148]
   club_standard_proj_fy30: 148      # standard count stays flat in all scenarios
 
+# ── Page 3 chart-aesthetic config (Phase 4: migrated out of JSX) ────────
+page3_chart_config:
+  segment_a: "Membership"
+  segment_b: "In-center"
+  chart6_title: "Club count — Luxury vs Standard"
+  chart6_type: "lthClubs"
+
 # ═════════════════════════════════════════════════════════════════════════════
 # SCENARIOS
 # ═════════════════════════════════════════════════════════════════════════════

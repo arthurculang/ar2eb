@@ -58,6 +58,19 @@ chart_reference:
   history_revenue: [0.080, 0.150, 0.240]  # $B actuals
   history_fleet: [12, 28, 50]  # cumulative aircraft delivered
 
+# ── Page 3 chart-aesthetic config (Phase 4: migrated out of JSX) ────────
+page3_chart_config:
+  peer_y: 15
+  peer_text: "Aerospace + operator peer median ~15%"
+  fleet_anchor: 50                            # anchor to last historical aircraft count
+  fleet_title: "eVTOL aircraft deployed (log)"
+  fleet_reference: null
+  valn_anchor_y: 3
+  valn_anchor_text: "Mature aerospace P/S ~2-4×"
+  valn_caption: "Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×)."
+  tam_title: "$250B global UAM TAM (FY36) — Joby share"
+  tam_legend: ["JOBY", "Competitors", "Other UAM (cargo, etc.)"]
+
 # ═════════════════════════════════════════════════════════════════════════════
 # SCENARIOS
 # ═════════════════════════════════════════════════════════════════════════════

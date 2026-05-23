@@ -179,12 +179,11 @@ def build_memo(ticker: str) -> dict:
         "page3": {
             "subtitle": collapse(d["page3"]["subtitle"]),
             "sources": collapse(d["page3"]["sources"]),
-            # chart_reference passes through as snake_case for the
-            # historical-anchor arrays that differ by dcf_type. Young
-            # tickers have a handful (history_years/_revenue/_fleet); LTH
-            # has segments + margins + EV multiples + club history; ZM
-            # has revenue + FCF.
             "chartReference": _camelize(d.get("chart_reference", {})),
+            # Phase 4: chart-aesthetic config (titles, peer copy, captions,
+            # legend strings) lives in YAML so per-ticker layout strings
+            # ship with the data, not the JSX.
+            "chartConfig": _camelize(d.get("page3_chart_config", {})),
         },
         # PDF-only payload — fields the print harness (public/print.html +
         # public/memo_pdf.jsx) needs that the site doesn't. Per-scenario data

@@ -1294,54 +1294,16 @@ function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
   );
 }
 
-// --- Young-company Page 3 charts 4-6 per-ticker config ---
-// Per-ticker copy and reference values still live in the chart builder
-// today (charts/young_company.py). Mirror them here until they migrate
-// into YAML.
-const YOUNG_CHART_CFG = {
-  joby: {
-    fleetHistory: [1, 2, 5],
-    fleetAnchor: 5,
-    fleetTitle: 'eVTOL aircraft deployed (log)',
-    fleetReference: null,
-    valnAnchorY: 3,
-    valnAnchorText: 'Mature aerospace P/S ~2-4×',
-    valnCaption: 'Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×).',
-    tamTitle: '$250B global UAM TAM (FY36) — Joby share',
-    tamLegend: ['JOBY', 'Competitors', 'Other UAM (cargo, etc.)'],
-  },
-  aur: {
-    fleetHistory: [6, 20, 50],
-    fleetAnchor: 50,
-    fleetTitle: 'Driverless trucks deployed (log)',
-    fleetReference: { value: 750000, label: 'US Class 8 fleet ~750K' },
-    valnAnchorY: 4,
-    valnAnchorText: 'Mature peer P/S ~3-5×',
-    valnCaption: 'Bear=stretched (6×), base=fair (1.3×), bull=cheap (0.5×).',
-    tamTitle: '$160B US autonomous trucking TAM (FY36) — AUR share',
-    tamLegend: ['AUR', 'Competitors', 'Non-autonomous (legacy)'],
-  },
-  naut: {
-    fleetHistory: [0, 0, 0],
-    fleetAnchor: 1,
-    fleetTitle: 'Voyager instruments deployed (log)',
-    fleetReference: null,
-    valnAnchorY: 5,
-    valnAnchorText: 'Mature tools P/S ~4-7×',
-    valnCaption: 'Bear, base = stretched on FY36 niche-rev; bull onward = cheap.',
-    tamTitle: '$130B global proteomics TAM (FY36) — NAUT share',
-    tamLegend: ['NAUT', 'Competitors (Olink / SomaScan / MS)', 'Other proteomics'],
-  },
-};
+// Page 3 chart-aesthetic config is read from memo.page3.chartConfig
+// (YAML page3_chart_config block). The pre-Phase 4 JSX hardcoded
+// YOUNG_CHART_CFG / MATURE_CHART_CFG dicts here; those moved to YAML.
 
 // --- Young-company Chart 4: fleet / unit growth (log scale) ---
 function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
-  const cfg = YOUNG_CHART_CFG[memo.slug];
-  if (!cfg) return null;
+  const cfg = memo.page3.chartConfig || {};
+  const ref = memo.page3.chartReference;
   const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
 
-  // fleet[i] = rev[i] * 1000 / rev_per_unit[i] — units derived from
-  // dollar revenue ÷ revenue per unit. Matches memo.py fleet_from_rev.
   const fleetFromRev = (key) => {
     const rev = memo.print.scenarios[key].dcfPath.rev_path;
     const rpu = memo.print.scenarios[key].revPerUnit || [];
@@ -1350,16 +1312,12 @@ function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
       : rev.map(() => 0);
   };
 
-  // X: 3 historical + 10 projected = 13 years (FY24..FY36).
   const fyAll = ['FY24', 'FY25', 'FY26', ...Array.from({ length: 10 }, (_, i) => `FY${27 + i}`)];
-
   const m = CHART_MARGIN;
   const plotL = m.left, plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
   const xScale = mkLinearScale([-0.5, 13.6], [plotL, plotR]);
 
-  // Y log scale — range + ticks differ by reference line (AUR includes a
-  // 750K reference, so the scale extends to 2M).
   const hasRef = !!cfg.fleetReference;
   const yLo = hasRef ? 1 : 0.5;
   const yHi = hasRef ? 2_000_000 : 10_000;
@@ -1375,35 +1333,33 @@ function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
     n >= 10000 ? `${(n / 1000).toFixed(0)}K` :
     n >= 1000  ? `${(n / 1000).toFixed(1)}K` :
                  `${n.toFixed(0)}`;
+  const fleetHist = ref.historyFleet || [0, 0, 0];
+  const fleetAnchor = cfg.fleetAnchor || fleetHist.at(-1) || 1;
 
   return (
     <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
          viewBox={`0 0 ${widthPt} ${heightPt}`}
          style={{ display: 'block' }}>
-      <ChartTitle>{cfg.fleetTitle}</ChartTitle>
+      <ChartTitle>{cfg.fleetTitle || 'Fleet / unit growth (log)'}</ChartTitle>
       <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
       <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
-
-      {/* Today divider — between historical [0,1,2] and projection [3..12] */}
       <line x1={xScale(2.5)} x2={xScale(2.5)} y1={plotT} y2={plotB}
             stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
 
-      {/* Historical fleet (solid, accent) */}
-      {(() => {
-        const hist = cfg.fleetHistory.map((v, i) => [i, Math.max(v, yLo)]);
-        return (
-          <>
-            <path d={pathD(hist, xScale, yScale)}
-                  stroke={PALETTE.accent} strokeWidth="1.5" fill="none" />
-            {hist.map(([t, v]) => (
-              <circle key={`fh-${t}`} cx={xScale(t)} cy={yScale(v)} r="2.2"
+      {/* Historical fleet — drawn only when there's real data to show */}
+      {fleetHist.some(v => v > 0) && (
+        <>
+          <path d={pathD(fleetHist.map((v, i) => [i, Math.max(v, yLo)]), xScale, yScale)}
+                stroke={PALETTE.accent} strokeWidth="1.5" fill="none" />
+          {fleetHist.map((v, i) =>
+            v > 0 && (
+              <circle key={`fh-${i}`} cx={xScale(i)} cy={yScale(v)} r="2.2"
                       fill={PALETTE.accent} stroke="white" strokeWidth="0.6" />
-            ))}
-          </>
-        );
-      })()}
+            )
+          )}
+        </>
+      )}
 
-      {/* Reference line (e.g. US Class 8 fleet ~750K) */}
       {cfg.fleetReference && (
         <>
           <line x1={plotL} x2={plotR}
@@ -1417,10 +1373,9 @@ function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
         </>
       )}
 
-      {/* Scenario projection fleets (dashed) */}
       {scnKeys.map(key => {
         const fleet = fleetFromRev(key);
-        const pts = [[2, Math.max(cfg.fleetAnchor, yLo)],
+        const pts = [[2, Math.max(fleetAnchor, yLo)],
                      ...fleet.map((v, i) => [3 + i, Math.max(v, yLo)])];
         const end = fleet[fleet.length - 1];
         return (
@@ -1446,8 +1401,7 @@ function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
 
 // --- Young-company Chart 5: valuation (P/S on FY36 revenue) ---
 function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
-  const cfg = YOUNG_CHART_CFG[memo.slug];
-  if (!cfg) return null;
+  const cfg = memo.page3.chartConfig || {};
   const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
   const mktCap = memo.print.market.marketCapBillion;
 
@@ -1529,8 +1483,7 @@ function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
 
 // --- Young-company Chart 6: TAM positioning at FY36 (horizontal stacked) ---
 function YoungTamChart({ memo, widthPt = 280, heightPt = 190 }) {
-  const cfg = YOUNG_CHART_CFG[memo.slug];
-  if (!cfg) return null;
+  const cfg = memo.page3.chartConfig || {};
   const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
   const tam = memo.print.tamBillion;
   if (!tam) return null;
@@ -1840,20 +1793,8 @@ function YoungCashDilutionChart({ memo, widthPt = 280, heightPt = 190 }) {
   );
 }
 
-// --- Mature-company Page 3 chart aesthetic config ---
-const MATURE_CHART_CFG = {
-  lth: {
-    segmentA: 'Membership', segmentB: 'In-center',
-    chart6Title: 'Club count — Luxury vs Standard',
-    chart6Type: 'lthClubs',
-  },
-  zm: {
-    segmentA: 'Enterprise', segmentB: 'Online',
-    histEntSplit: [0.55, 0.58, 0.59, 0.60, 0.603],
-    chart6Title: 'SOTP equity (Op EV + cash + Anthropic)',
-    chart6Type: 'zmSotp',
-  },
-};
+// Mature-company aesthetic config (segments, chart6 dispatch) is read
+// from memo.page3.chartConfig (YAML page3_chart_config).
 
 const projectMatureRev = (revB, growthPath) => {
   let r = revB;
@@ -1941,19 +1882,22 @@ function MatureRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
 }
 
 function MatureSegmentsChart({ memo, widthPt = 280, heightPt = 190 }) {
-  const cfg = MATURE_CHART_CFG[memo.slug];
-  if (!cfg) return null;
+  const cfg = memo.page3.chartConfig || {};
   const ref = memo.page3.chartReference;
   const histYears = ref.historyYears;
   const nHist = histYears.length;
   let segA, segB;
-  if (memo.slug === 'lth') {
-    segA = ref.historyEntRevenueM || [];
+  if (ref.historyEntRevenueM) {
+    // LTH variant — segments tracked in $M directly.
+    segA = ref.historyEntRevenueM;
     segB = ref.historyOnlRevenueM || [];
-  } else {
+  } else if (cfg.histEntSplit) {
+    // ZM variant — derive Enterprise from total × split coefficient.
     const rev = ref.historyRevenue;
     segA = rev.map((r, i) => r * (cfg.histEntSplit[i] || 0.6) * 1000);
     segB = rev.map((r, i) => (r * 1000) - segA[i]);
+  } else {
+    segA = []; segB = [];
   }
 
   const m = CHART_MARGIN;
@@ -1990,10 +1934,10 @@ function MatureSegmentsChart({ memo, widthPt = 280, heightPt = 190 }) {
       ))}
       <text x={xScale(0) + 4} y={yScale(segA[0]) - 4}
             fontFamily={FONT_SANS} fontWeight={500} fontSize="6pt"
-            fill={PALETTE.accent}>{cfg.segmentA}</text>
+            fill={PALETTE.accent}>{cfg.segmentA || 'Primary'}</text>
       <text x={xScale(0) + 4} y={yScale(segB[0]) - 4}
             fontFamily={FONT_SANS} fontSize="6pt" fill={PALETTE.muted}>
-        {cfg.segmentB}
+        {cfg.segmentB || 'Secondary'}
       </text>
     </svg>
   );
@@ -2179,8 +2123,7 @@ function MatureEvMultiplesChart({ memo, widthPt = 280, heightPt = 190 }) {
 }
 
 function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
-  const cfg = MATURE_CHART_CFG[memo.slug];
-  if (!cfg) return null;
+  const cfg = memo.page3.chartConfig || {};
   const m = { left: 30, right: 24, top: 16, bottom: 16 };
   const plotL = m.left, plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
@@ -2291,17 +2234,15 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
 
 // --- Young-company Chart 2: path to profitability (op margin) ---
 // 10 projected years FY27-FY36, op margin %, linear Y -100% to +50% with
-// a zero line + a horizontal peer-median reference. Per-ticker peer text +
-// y level live below until they migrate into YAML.
-const YOUNG_PEER_REFS = {
-  joby: { peerY: 15, peerText: 'Aerospace + operator peer median ~15%' },
-  aur:  { peerY: 20, peerText: 'Mature tech-auto peer median ~20%' },
-  naut: { peerY: 20, peerText: 'Mature life-science-tools peer median ~20%' },
-};
-
+// a zero line + a horizontal peer-median reference. Peer text + y level
+// from memo.page3.chartConfig (YAML page3_chart_config).
 function YoungProfitabilityChart({ memo, widthPt = 280, heightPt = 190 }) {
   const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
-  const peer = YOUNG_PEER_REFS[memo.slug] || { peerY: 20, peerText: 'Peer median' };
+  const cfg = memo.page3.chartConfig || {};
+  const peer = {
+    peerY: cfg.peerY ?? 20,
+    peerText: cfg.peerText || 'Peer median',
+  };
   const fyProj = Array.from({ length: 10 }, (_, i) => `FY${27 + i}`);
 
   const m = CHART_MARGIN;
