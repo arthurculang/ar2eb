@@ -56,11 +56,21 @@ def _serve_public(port: int) -> socketserver.ThreadingTCPServer:
     return server
 
 
-def render(ticker: str) -> Path:
+def _stamped_filename(ticker: str) -> str:
+    import yaml
+    st = yaml.safe_load((REPO / "data" / f"{ticker}.yml").read_text())["stamp"]
+    return f"{ticker}-memo__v{st['pdf_version']}__{st['pdf_timestamp']}.pdf"
+
+
+def render(ticker: str, out_path: Path | None = None) -> Path:
     from playwright.sync_api import sync_playwright
 
     OUT.mkdir(exist_ok=True)
-    out_pdf = OUT / f"{ticker}-memo__phase1.pdf"
+    if out_path is None:
+        # Use the stamped filename from data/<ticker>.yml so output lands at
+        # the canonical name that public/memos/ expects.
+        out_path = OUT / _stamped_filename(ticker)
+    out_pdf = out_path
 
     port = _free_port()
     server = _serve_public(port)
