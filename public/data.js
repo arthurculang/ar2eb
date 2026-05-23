@@ -2112,7 +2112,6 @@ const MEMOS = [
       "subtitle": "FY23–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q, S&P credit reports",
       "sources": "Sources: LTH 10-K FY25, Q1 2026 10-Q, S&P / Moody's credit reports, REIT comparables for SLB cap rates.",
       "chartReference": {
-        "tamBillion": null,
         "historyYears": [
           2021,
           2022,
@@ -2127,7 +2126,78 @@ const MEMOS = [
           2.621,
           2.995
         ],
-        "historyFleet": []
+        "historyEntRevenueM": [
+          907,
+          1276,
+          1551,
+          1853,
+          2118
+        ],
+        "historyOnlRevenueM": [
+          380,
+          524,
+          638,
+          740,
+          845
+        ],
+        "historyGrossMargin": [
+          29.4,
+          35.6,
+          37.8,
+          38.4,
+          39.0
+        ],
+        "historyOpMargin": [
+          2.5,
+          9.2,
+          12.5,
+          15.5,
+          18.0
+        ],
+        "historyFcfMargin": [
+          -8.3,
+          -7.5,
+          -4.9,
+          10.4,
+          6.9
+        ],
+        "historyNetDebt": [
+          1.51,
+          1.62,
+          1.51,
+          1.34,
+          1.29
+        ],
+        "historyEvRev": [
+          null,
+          5.8,
+          4.7,
+          3.8,
+          3.2
+        ],
+        "historyEvEbitda": [
+          null,
+          28.0,
+          16.5,
+          12.5,
+          10.5
+        ],
+        "clubHistoryYears": [
+          "FY23",
+          "FY24",
+          "FY25"
+        ],
+        "clubHistoryLuxury": [
+          22,
+          30,
+          42
+        ],
+        "clubHistoryStandard": [
+          149,
+          144,
+          148
+        ],
+        "clubStandardProjFy30": 148
       }
     },
     "print": {
@@ -2754,7 +2824,6 @@ const MEMOS = [
       "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Jan 31 · 10-K FY26, Q1 2026 10-Q, Anthropic press releases",
       "sources": "Sources: ZM 10-K FY26, Q1 2026 10-Q, Anthropic financial press, AI infrastructure peer set.",
       "chartReference": {
-        "tamBillion": null,
         "historyYears": [
           2021,
           2022,
@@ -2769,7 +2838,13 @@ const MEMOS = [
           4.53,
           4.66
         ],
-        "historyFleet": []
+        "historyFcf": [
+          1.466,
+          1.605,
+          1.292,
+          1.47,
+          1.706
+        ]
       }
     },
     "print": {

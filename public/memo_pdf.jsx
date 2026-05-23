@@ -1840,6 +1840,455 @@ function YoungCashDilutionChart({ memo, widthPt = 280, heightPt = 190 }) {
   );
 }
 
+// --- Mature-company Page 3 chart aesthetic config ---
+const MATURE_CHART_CFG = {
+  lth: {
+    segmentA: 'Membership', segmentB: 'In-center',
+    chart6Title: 'Club count — Luxury vs Standard',
+    chart6Type: 'lthClubs',
+  },
+  zm: {
+    segmentA: 'Enterprise', segmentB: 'Online',
+    histEntSplit: [0.55, 0.58, 0.59, 0.60, 0.603],
+    chart6Title: 'SOTP equity (Op EV + cash + Anthropic)',
+    chart6Type: 'zmSotp',
+  },
+};
+
+const projectMatureRev = (revB, growthPath) => {
+  let r = revB;
+  return growthPath.map(g => (r *= 1 + g));
+};
+
+function MatureRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const ref = memo.page3.chartReference;
+  const histYears = ref.historyYears;
+  const histRev = ref.historyRevenue;
+  const nHist = histYears.length;
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const revB = memo.print.scenarios.base.dcfPath.rev_b;
+  const projByScn = Object.fromEntries(scnKeys.map(k =>
+    [k, projectMatureRev(revB, memo.print.scenarios[k].dcfPath.rev_path)]));
+
+  const totalX = nHist + 5;
+  const fyAll = [
+    ...histYears.map(y => `${y - 2000}`),
+    ...Array.from({ length: 5 }, (_, i) => `${26 + i}`),
+  ];
+  const m = CHART_MARGIN;
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+  const xScale = mkLinearScale([-0.5, totalX + 0.5], [plotL, plotR]);
+  const allVals = [...histRev, ...Object.values(projByScn).flat()];
+  const yMax = Math.max(...allVals) * 1.1;
+  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+  const yTickStep = yMax > 6 ? 2 : yMax > 3 ? 1 : 0.5;
+  const yTicks = [];
+  for (let v = 0; v <= yMax; v += yTickStep) yTicks.push([v, `$${v.toFixed(0)}B`]);
+  const shortLabel = (k) => memo.print.scenarios[k].shortLabel;
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>Revenue ($B) — history + scenarios to FY30</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      {fyAll.map((fy, i) => (
+        <text key={`xt-${i}`} x={xScale(i)} y={plotB + 8}
+              fontFamily={FONT_MONO} fontSize="5pt" fill={PALETTE.muted}
+              textAnchor="middle">{fy}</text>
+      ))}
+      <line x1={xScale(nHist - 0.5)} x2={xScale(nHist - 0.5)} y1={plotT} y2={plotB}
+            stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
+      {histRev.map((v, i) => {
+        const x = xScale(i);
+        const y0 = yScale(0), yv = yScale(v);
+        const barW = (plotR - plotL) / totalX * 0.55;
+        const isLatest = i === nHist - 1;
+        return (
+          <g key={`hb-${i}`}>
+            <rect x={x - barW / 2} y={yv} width={barW} height={y0 - yv}
+                  fill={isLatest ? PALETTE.accent : '#94a3b8'} />
+            <text x={x} y={yv - 2}
+                  fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.text}
+                  textAnchor="middle">{v.toFixed(1)}</text>
+          </g>
+        );
+      })}
+      {scnKeys.map(k => {
+        const pts = [[nHist - 1, histRev[nHist - 1]],
+                     ...projByScn[k].map((v, i) => [nHist + i, v])];
+        const endV = projByScn[k].at(-1);
+        return (
+          <g key={`p-${k}`}>
+            <path d={pathD(pts, xScale, yScale)}
+                  stroke={SCN_COLORS[k]} strokeWidth="1.2" fill="none"
+                  strokeDasharray="3,2" />
+            {pts.map(([t, v], i) => (
+              <circle key={`pp-${k}-${i}`} cx={xScale(t)} cy={yScale(v)} r="1.4"
+                      fill={SCN_COLORS[k]} stroke="white" strokeWidth="0.4" />
+            ))}
+            <text x={xScale(nHist + 4) + 3} y={yScale(endV) + 2}
+                  fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
+                  fill={SCN_COLORS[k]}>
+              {shortLabel(k)} {endV.toFixed(1)}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function MatureSegmentsChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const cfg = MATURE_CHART_CFG[memo.slug];
+  if (!cfg) return null;
+  const ref = memo.page3.chartReference;
+  const histYears = ref.historyYears;
+  const nHist = histYears.length;
+  let segA, segB;
+  if (memo.slug === 'lth') {
+    segA = ref.historyEntRevenueM || [];
+    segB = ref.historyOnlRevenueM || [];
+  } else {
+    const rev = ref.historyRevenue;
+    segA = rev.map((r, i) => r * (cfg.histEntSplit[i] || 0.6) * 1000);
+    segB = rev.map((r, i) => (r * 1000) - segA[i]);
+  }
+
+  const m = CHART_MARGIN;
+  const plotL = m.left + 8, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+  const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
+  const yMax = Math.max(...segA, ...segB) * 1.15;
+  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+  const yTickStep = yMax > 4000 ? 1000 : yMax > 2000 ? 500 : yMax > 1000 ? 250 : 100;
+  const yTicks = [];
+  for (let v = 0; v <= yMax; v += yTickStep) {
+    yTicks.push([v, v >= 1000 ? `${(v / 1000).toFixed(1)}K` : `${v.toFixed(0)}`]);
+  }
+  const xTicks = histYears.map((y, i) => [i, `${y - 2000}`]);
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>Revenue by segment ($M)</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+      <path d={pathD(segA.map((v, i) => [i, v]), xScale, yScale)}
+            stroke={PALETTE.accent} strokeWidth="1.6" fill="none" />
+      {segA.map((v, i) => (
+        <circle key={`a-${i}`} cx={xScale(i)} cy={yScale(v)} r="2"
+                fill={PALETTE.accent} stroke="white" strokeWidth="0.5" />
+      ))}
+      <path d={pathD(segB.map((v, i) => [i, v]), xScale, yScale)}
+            stroke={PALETTE.muted} strokeWidth="1.2" fill="none" />
+      {segB.map((v, i) => (
+        <circle key={`b-${i}`} cx={xScale(i)} cy={yScale(v)} r="1.6"
+                fill={PALETTE.muted} stroke="white" strokeWidth="0.4" />
+      ))}
+      <text x={xScale(0) + 4} y={yScale(segA[0]) - 4}
+            fontFamily={FONT_SANS} fontWeight={500} fontSize="6pt"
+            fill={PALETTE.accent}>{cfg.segmentA}</text>
+      <text x={xScale(0) + 4} y={yScale(segB[0]) - 4}
+            fontFamily={FONT_SANS} fontSize="6pt" fill={PALETTE.muted}>
+        {cfg.segmentB}
+      </text>
+    </svg>
+  );
+}
+
+function MatureMarginsChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const ref = memo.page3.chartReference;
+  const histYears = ref.historyYears;
+  const nHist = histYears.length;
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const histOp = (ref.historyOpMargin || []).map(v => v);
+
+  const m = CHART_MARGIN;
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+  const totalX = nHist + 5;
+  const xScale = mkLinearScale([-0.5, totalX + 0.5], [plotL, plotR]);
+  const allMargins = [
+    ...histOp,
+    ...scnKeys.flatMap(k => memo.print.scenarios[k].dcfPath.op_margin.map(d => d * 100)),
+  ];
+  const yMin = Math.min(0, Math.floor(Math.min(...allMargins) / 10) * 10);
+  const yMax = Math.ceil(Math.max(...allMargins) / 10) * 10 + 5;
+  const yScale = mkLinearScale([yMin, yMax], [plotB, plotT]);
+  const yTicks = [];
+  for (let v = yMin; v <= yMax; v += 10) yTicks.push([v, `${v}%`]);
+  const fyAll = [
+    ...histYears.map(y => `${y - 2000}`),
+    ...Array.from({ length: 5 }, (_, i) => `${26 + i}`),
+  ];
+  const xTicks = fyAll.map((fy, i) => [i, fy]);
+  const shortLabel = (k) => memo.print.scenarios[k].shortLabel;
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>Op margin — history + scenarios</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+      <line x1={plotL} x2={plotR} y1={yScale(0)} y2={yScale(0)}
+            stroke={PALETTE.dim} strokeWidth="0.4" opacity="0.6" />
+      <line x1={xScale(nHist - 0.5)} x2={xScale(nHist - 0.5)} y1={plotT} y2={plotB}
+            stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
+      {histOp.length > 0 && (
+        <>
+          <path d={pathD(histOp.map((v, i) => [i, v]), xScale, yScale)}
+                stroke={PALETTE.accent} strokeWidth="1.6" fill="none" />
+          {histOp.map((v, i) => (
+            <circle key={`h-${i}`} cx={xScale(i)} cy={yScale(v)} r="2"
+                    fill={PALETTE.accent} stroke="white" strokeWidth="0.5" />
+          ))}
+        </>
+      )}
+      {scnKeys.map(k => {
+        const margins = memo.print.scenarios[k].dcfPath.op_margin.map(d => d * 100);
+        const pts = [[nHist - 1, histOp.at(-1) || 0],
+                     ...margins.map((v, i) => [nHist + i, v])];
+        const endV = margins.at(-1);
+        return (
+          <g key={`m-${k}`}>
+            <path d={pathD(pts, xScale, yScale)}
+                  stroke={SCN_COLORS[k]} strokeWidth="1.2" fill="none"
+                  strokeDasharray="3,2" />
+            <text x={xScale(nHist + 4) + 3} y={yScale(endV) + 2}
+                  fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
+                  fill={SCN_COLORS[k]}>
+              {shortLabel(k)} {endV.toFixed(0)}%
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function MatureBalanceChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const ref = memo.page3.chartReference;
+  const histYears = ref.historyYears;
+  const nHist = histYears.length;
+  const histND = ref.historyNetDebt;
+  const isDebtChart = !!histND;
+
+  const m = CHART_MARGIN;
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+  const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
+
+  let vals, title;
+  if (isDebtChart) {
+    vals = histND; title = 'Net financial debt ($B) — history';
+  } else if (ref.historyFcf) {
+    vals = ref.historyFcf; title = 'Free cash flow ($B) — history';
+  } else {
+    vals = [memo.print.market.cashBillion]; title = 'Net cash ($B)';
+  }
+  const yMax = Math.max(...vals) * 1.2;
+  const yMin = Math.min(0, Math.min(...vals));
+  const yScale = mkLinearScale([yMin, yMax], [plotB, plotT]);
+  const yTickStep = (yMax - yMin) > 4 ? 1 : 0.5;
+  const yTicks = [];
+  for (let v = yMin; v <= yMax; v += yTickStep) yTicks.push([v, `$${v.toFixed(1)}B`]);
+  const xTicks = histYears.map((y, i) => [i, `${y - 2000}`]);
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>{title}</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+      {vals.map((v, i) => {
+        const x = xScale(i);
+        const y0 = yScale(0), yv = yScale(v);
+        const barW = (plotR - plotL) / nHist * 0.55;
+        return (
+          <g key={`b-${i}`}>
+            <rect x={x - barW / 2} y={Math.min(y0, yv)} width={barW}
+                  height={Math.abs(y0 - yv)} fill={PALETTE.accent} />
+            <text x={x} y={Math.min(y0, yv) - 2}
+                  fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.text}
+                  textAnchor="middle">{v.toFixed(1)}</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function MatureEvMultiplesChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const ref = memo.page3.chartReference;
+  const histYears = ref.historyYears;
+  const nHist = histYears.length;
+  const evRev = (ref.historyEvRev || []).map(v => v == null ? null : v);
+  const haveData = evRev.some(v => v != null);
+
+  const m = CHART_MARGIN;
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+  const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
+
+  if (!haveData) {
+    return (
+      <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+           viewBox={`0 0 ${widthPt} ${heightPt}`}
+           style={{ display: 'block' }}>
+        <ChartTitle>EV / Revenue — historical</ChartTitle>
+        <text x={widthPt / 2} y={heightPt / 2}
+              fontFamily={FONT_MONO} fontSize="7pt" fill={PALETTE.muted}
+              textAnchor="middle">(no EV history data)</text>
+      </svg>
+    );
+  }
+  const validVals = evRev.filter(v => v != null);
+  const yMax = Math.max(...validVals) * 1.2;
+  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+  const yTickStep = yMax > 8 ? 2 : 1;
+  const yTicks = [];
+  for (let v = 0; v <= yMax; v += yTickStep) yTicks.push([v, `${v.toFixed(0)}×`]);
+  const xTicks = histYears.map((y, i) => [i, `${y - 2000}`]);
+  const linePts = evRev.map((v, i) => [i, v]).filter(([, v]) => v != null);
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>EV / Revenue — historical</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+      <path d={pathD(linePts, xScale, yScale)}
+            stroke={PALETTE.accent} strokeWidth="1.6" fill="none" />
+      {linePts.map(([t, v]) => (
+        <g key={`ev-${t}`}>
+          <circle cx={xScale(t)} cy={yScale(v)} r="2"
+                  fill={PALETTE.accent} stroke="white" strokeWidth="0.5" />
+          <text x={xScale(t)} y={yScale(v) - 4}
+                fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.text}
+                textAnchor="middle">{v.toFixed(1)}×</text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const cfg = MATURE_CHART_CFG[memo.slug];
+  if (!cfg) return null;
+  const m = { left: 30, right: 24, top: 16, bottom: 16 };
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+
+  if (cfg.chart6Type === 'lthClubs') {
+    const ref = memo.page3.chartReference;
+    const yrs = ref.clubHistoryYears || [];
+    const luxury = ref.clubHistoryLuxury || [];
+    const standard = ref.clubHistoryStandard || [];
+    const totalX = yrs.length + 5;
+    const xScale = mkLinearScale([-0.5, totalX - 0.5], [plotL, plotR]);
+    const yMax = Math.max(...standard, ...luxury) * 1.2 + 60;
+    const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+    const yTicks = [0, 50, 100, 150, 200].filter(v => v <= yMax).map(v => [v, `${v}`]);
+    const allLabels = [...yrs.map(y => y.slice(2)), '26', '27', '28', '29', '30'];
+    const xTicks = allLabels.map((l, i) => [i, l]);
+    const luxFY30 = { bear: 50, base: 80, bull: 130, ultra_bull: 180 };
+    const stdFY30 = ref.clubStandardProjFy30 || standard.at(-1);
+
+    return (
+      <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+           viewBox={`0 0 ${widthPt} ${heightPt}`}
+           style={{ display: 'block' }}>
+        <ChartTitle>{cfg.chart6Title}</ChartTitle>
+        <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+        <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+        <path d={pathD([...standard.map((v, i) => [i, v]),
+                       [yrs.length + 4, stdFY30]], xScale, yScale)}
+              stroke={PALETTE.muted} strokeWidth="1.4" fill="none" />
+        <path d={pathD(luxury.map((v, i) => [i, v]), xScale, yScale)}
+              stroke={PALETTE.accent} strokeWidth="1.6" fill="none" />
+        {['bear', 'base', 'bull', 'ultra_bull'].map(k => (
+          <path key={`lx-${k}`}
+                d={pathD([[yrs.length - 1, luxury.at(-1)],
+                          [yrs.length + 4, luxFY30[k]]], xScale, yScale)}
+                stroke={SCN_COLORS[k]} strokeWidth="1.0" fill="none"
+                strokeDasharray="3,2" />
+        ))}
+        <text x={plotL + 4} y={yScale(standard[0]) - 4}
+              fontFamily={FONT_SANS} fontSize="6pt" fill={PALETTE.muted}>
+          Standard
+        </text>
+        <text x={plotL + 4} y={yScale(luxury[0]) - 4}
+              fontFamily={FONT_SANS} fontWeight={500} fontSize="6pt"
+              fill={PALETTE.accent}>
+          Luxury
+        </text>
+      </svg>
+    );
+  }
+
+  // ZM SOTP equity decomposition
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const rows = scnKeys.map(k => {
+    const s = memo.print.scenarios[k];
+    return {
+      key: k,
+      label: s.shortLabel,
+      opEv: Math.max(0, s.dcfPath.op_ev),
+      cash: s.dcfPath.cash || 0,
+      anth: s.dcfPath.special_assets || 0,
+    };
+  });
+  const maxTotal = Math.max(...rows.map(r => r.opEv + r.cash + r.anth)) * 1.05;
+  const xScale = mkLinearScale([0, maxTotal], [plotL, plotR]);
+  const rowH = (plotB - plotT) / rows.length;
+  const barH = rowH * 0.5;
+  const rowY = (i) => plotT + (i + 0.5) * rowH;
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>{cfg.chart6Title}</ChartTitle>
+      {rows.map((r, i) => {
+        const y = rowY(i);
+        const yTop = y - barH / 2;
+        const x1 = xScale(r.opEv);
+        const x2 = xScale(r.opEv + r.cash);
+        const x3 = xScale(r.opEv + r.cash + r.anth);
+        return (
+          <g key={r.key}>
+            <text x={plotL - 4} y={y + 2}
+                  fontFamily={FONT_SANS} fontWeight={500} fontSize="6.5pt"
+                  fill={SCN_COLORS[r.key]} textAnchor="end">
+              {r.label}
+            </text>
+            <rect x={plotL} y={yTop} width={x1 - plotL} height={barH}
+                  fill={SCN_COLORS[r.key]} />
+            <rect x={x1} y={yTop} width={x2 - x1} height={barH}
+                  fill="#94a3b8" />
+            <rect x={x2} y={yTop} width={x3 - x2} height={barH}
+                  fill="#9ca3af" opacity="0.6" />
+            <text x={x3 + 3} y={y + 2}
+                  fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.text}>
+              ${(r.opEv + r.cash + r.anth).toFixed(0)}B
+            </text>
+          </g>
+        );
+      })}
+      <text x={plotL} y={heightPt - 4}
+            fontFamily={FONT_SANS} fontSize="5.5pt" fill={PALETTE.muted}>
+        Op EV  ·  cash  ·  Anthropic stake
+      </text>
+    </svg>
+  );
+}
+
 // --- Young-company Chart 2: path to profitability (op margin) ---
 // 10 projected years FY27-FY36, op margin %, linear Y -100% to +50% with
 // a zero line + a horizontal peer-median reference. Per-ticker peer text +
@@ -1953,12 +2402,12 @@ function Page3Snapshot({ memo }) {
     <YoungValuationChart memo={memo} />,
     <YoungTamChart memo={memo} />,
   ] : [
-    placeholder('01', 'Revenue history + scenarios'),
-    placeholder('02', 'Segments'),
-    placeholder('03', 'Margins'),
-    placeholder('04', 'Net cash / debt'),
-    placeholder('05', 'EV / Revenue'),
-    placeholder('06', 'SOTP or clubs'),
+    <MatureRevenueChart memo={memo} />,
+    <MatureSegmentsChart memo={memo} />,
+    <MatureMarginsChart memo={memo} />,
+    <MatureBalanceChart memo={memo} />,
+    <MatureEvMultiplesChart memo={memo} />,
+    <MatureTerminalChart memo={memo} />,
   ];
 
   return (

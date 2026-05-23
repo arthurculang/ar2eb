@@ -45,6 +45,20 @@ def _pick_rev_per_unit(chart_data: dict) -> list | None:
     return None
 
 
+def _camelize(d: dict) -> dict:
+    """snake_case → camelCase for top-level keys (recursive on dict values).
+    The JSX side uses camelCase; YAML uses snake_case. Keep the line crossing
+    here so JSX doesn't carry the mapping."""
+    out = {}
+    for k, v in d.items():
+        parts = k.split("_")
+        new_k = parts[0] + "".join(p.title() for p in parts[1:])
+        if isinstance(v, dict):
+            v = _camelize(v)
+        out[new_k] = v
+    return out
+
+
 def fmt_shares(m: float) -> str:
     return f"{m / 1000:.2f}B" if m >= 1000 else f"{m:.0f}M"
 
@@ -165,12 +179,12 @@ def build_memo(ticker: str) -> dict:
         "page3": {
             "subtitle": collapse(d["page3"]["subtitle"]),
             "sources": collapse(d["page3"]["sources"]),
-            "chartReference": {
-                "tamBillion": d.get("chart_reference", {}).get("tam_billion"),
-                "historyYears": d.get("chart_reference", {}).get("history_years", []),
-                "historyRevenue": d.get("chart_reference", {}).get("history_revenue", []),
-                "historyFleet": d.get("chart_reference", {}).get("history_fleet", []),
-            },
+            # chart_reference passes through as snake_case for the
+            # historical-anchor arrays that differ by dcf_type. Young
+            # tickers have a handful (history_years/_revenue/_fleet); LTH
+            # has segments + margins + EV multiples + club history; ZM
+            # has revenue + FCF.
+            "chartReference": _camelize(d.get("chart_reference", {})),
         },
         # PDF-only payload — fields the print harness (public/print.html +
         # public/memo_pdf.jsx) needs that the site doesn't. Per-scenario data
