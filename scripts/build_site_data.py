@@ -141,6 +141,17 @@ def build_memo(ticker: str) -> dict:
             f"Bear {probs['bear']} / Base {probs['base']} / "
             f"Bull {probs['bull']} / Ultra Bull {probs['ultra_bull']}. "
             f"Spot price reference: {lbl} close."),
+        "thesis": collapse(d["thesis"]),
+        "historicalPrices": {
+            "xMin": float(d["historical_prices"]["x_min"]),
+            "ipoMarker": d["historical_prices"]["ipo_marker"],
+            "points": [[float(p[0]), float(p[1])]
+                       for p in d["historical_prices"]["points"]],
+        },
+        "weightingRationale": [
+            {"label": r["label"], "body": collapse(r["body"])}
+            for r in d["weighting_rationale"]
+        ],
         # PDF-only payload — fields the print harness (public/print.html +
         # public/memo_pdf.jsx) needs that the site doesn't. Per-scenario data
         # is dumped raw so the JSX can compute display rows itself (no

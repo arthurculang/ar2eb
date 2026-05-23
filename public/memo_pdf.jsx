@@ -358,6 +358,558 @@ function PageHeader({ memo, suffix, label, recapWeighted = false, compact = fals
   );
 }
 
+// ── Page 1 — Headline (qualitative + probability-weighted answer) ──────
+// Two-column layout: LEFT (~56%) is text — central question, thesis,
+// the big expected value, forward-compounded table, weighting rationale,
+// and decomposition insight. RIGHT (~44%) is the forward-value chart.
+// Below: 4-column scenario summary cards. Footer.
+
+function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
+  const NEG = '#b91c1c';
+  const POS = '#15803d';
+  const ULTRA = '#762aa6';                   // deep purple — tail signifier
+  const BENCH = 'rgb(140,140,140)';          // benchmark gray
+  const BENCH_LBL = 'rgb(115,115,115)';
+  const spot = memo.spot.price;
+  const hist = memo.historicalPrices;
+  const printScn = memo.print.scenarios;
+  const w = memo.print.weighted;
+  const X_MIN = hist.xMin;
+  const X_MAX = 20.0;
+
+  // Scenario forward paths: expected_per_share × (1 + terminal WACC)^t for t=0..20.
+  const path = (key) => {
+    const s = printScn[key];
+    const wacc = s.dcfPath.wacc_path[s.dcfPath.wacc_path.length - 1];
+    return Array.from({ length: 21 }, (_, t) => [t, s.expectedPerShare * Math.pow(1 + wacc, t)]);
+  };
+  const bearP  = path('bear');
+  const baseP  = path('base');
+  const bullP  = path('bull');
+  const ultraP = path('ultra_bull');
+
+  const weightedAt = (t) =>
+    Object.values(printScn).reduce((acc, s) => {
+      const wacc = s.dcfPath.wacc_path[s.dcfPath.wacc_path.length - 1];
+      return acc + s.probability * s.expectedPerShare * Math.pow(1 + wacc, t);
+    }, 0);
+  const weightedP = Array.from({ length: 21 }, (_, t) => [t, weightedAt(t)]);
+
+  // Benchmarks
+  const TSY = 0.045, EQ = 0.085;
+  const tsyP = Array.from({ length: 21 }, (_, t) => [t, spot * Math.pow(1 + TSY, t)]);
+  const eqP  = Array.from({ length: 21 }, (_, t) => [t, spot * Math.pow(1 + EQ, t)]);
+
+  // Y-range: data-adaptive. memo.py rules:
+  // - y_min: 0.10 if any value <= 0, else largest log-decade <= min positive.
+  // - y_max: bucketed ceiling based on max forward across all scenarios+benchmarks.
+  const allVals = [
+    ...bearP, ...baseP, ...bullP, ...ultraP, ...weightedP,
+    ...tsyP, ...eqP, ...hist.points, [0, spot],
+  ].map(p => p[1]);
+  const hasNeg = allVals.some(v => v <= 0);
+  let yMin;
+  if (hasNeg) {
+    yMin = 0.10;
+  } else {
+    const minPos = Math.min(...allVals.filter(v => v > 0));
+    const raw = Math.pow(10, Math.floor(Math.log10(minPos)));
+    yMin = Math.max(0.10, Math.min(100.0, raw));
+  }
+  const maxFwd = Math.max(
+    bearP[20][1], baseP[20][1], bullP[20][1], ultraP[20][1],
+    weightedP[20][1], tsyP[20][1], eqP[20][1]
+  );
+  let yMax;
+  if (maxFwd <= 180) yMax = 200;
+  else if (maxFwd <= 900) yMax = 1000;
+  else if (maxFwd <= 1800) yMax = 2000;
+  else if (maxFwd <= 9000) yMax = 10000;
+  else yMax = Math.pow(10, Math.ceil(Math.log10(maxFwd * 1.5)));
+  const logMin = Math.log10(yMin);
+  const logMax = Math.log10(yMax);
+
+  // Plot area within SVG. Padding lets Y labels (left) + end-of-line series
+  // labels (right) live outside the plot.
+  const plotLeft = 32;
+  const plotRight = widthPt - 60;
+  const plotTop = 24;
+  const plotBot = heightPt - 18;
+
+  const x = (t) => plotLeft + (t - X_MIN) / (X_MAX - X_MIN) * (plotRight - plotLeft);
+  const y = (v) => {
+    const clamped = Math.max(yMin, Math.min(yMax, v));
+    return plotBot + (Math.log10(clamped) - logMin) / (logMax - logMin) * (plotTop - plotBot);
+  };
+  const pathD = (pts) => pts.map(([t, v], i) => `${i === 0 ? 'M' : 'L'} ${x(t).toFixed(2)},${y(v).toFixed(2)}`).join(' ');
+
+  const yTicks = [0.10, 1.0, 10.0, 100.0, 1000.0, 10000.0].filter(t => t >= yMin && t <= yMax);
+  const xTicks = [
+    [-5, '-5y'], [-2, '-2y'], [0, 'today'],
+    [5, '+5y'], [10, '+10y'], [15, '+15y'], [20, '+20y'],
+  ];
+
+  // End-of-line labels with min-vertical-separation enforcement.
+  const endLabels = [
+    [bearP[20][1],     `Bear  ${(bearP[20][1] / spot).toFixed(2)}×`,     NEG],
+    [baseP[20][1],     `Base  ${(baseP[20][1] / spot).toFixed(2)}×`,     PALETTE.accent],
+    [weightedP[20][1], `Weighted  ${(weightedP[20][1] / spot).toFixed(2)}×`, PALETTE.ink],
+    [bullP[20][1],     `Bull  ${(bullP[20][1] / spot).toFixed(2)}×`,     POS],
+    [ultraP[20][1],    `Ultra Bull  ${(ultraP[20][1] / spot).toFixed(2)}×`, ULTRA],
+    [tsyP[20][1],      `Tsy 4.5%  ${(tsyP[20][1] / spot).toFixed(2)}×`,  BENCH_LBL],
+    [eqP[20][1],       `S&P 8.5%  ${(eqP[20][1] / spot).toFixed(2)}×`,   BENCH_LBL],
+  ].sort((a, b) => a[0] - b[0]);
+  // Bottom-up stacking; ensure at least 8pt vertical separation.
+  const MIN_SEP = 8;
+  const labelPositions = [];
+  let prevY = null;
+  for (const [val, lbl, col] of endLabels) {
+    let py = y(val) + 2;
+    if (prevY !== null && prevY - py < MIN_SEP) py = prevY - MIN_SEP;
+    labelPositions.push([py, lbl, col]);
+    prevY = py;
+  }
+
+  // Multiplier annotations at +5/+10/+15. Bear/base annotations go below the
+  // line (since bear tends to sit lowest); others go above.
+  const annotate = (pts, color, pos) => {
+    const dy = pos === 'above' ? -4 : 8;
+    return pts.filter(([t]) => [5, 10, 15].includes(t)).map(([t, v]) => (
+      <text key={`${color}-${t}-${pos}`}
+            x={x(t)} y={y(v) + dy}
+            fontFamily={FONT_MONO} fontSize="5.5pt" fill={color}
+            textAnchor="middle">
+        {(v / spot).toFixed(2)}×
+      </text>
+    ));
+  };
+
+  const histPoints = [...hist.points, [0, spot]];
+  const todayX = x(0);
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      {/* Title */}
+      <text x={plotLeft} y={12}
+            fontFamily={FONT_SANS} fontWeight={600} fontSize="7.5pt"
+            fill={PALETTE.muted} letterSpacing="0.04em">
+        PRICE + PROJECTIONS  ·  HISTORICAL THROUGH PROBABILITY-WEIGHTED FORWARD
+      </text>
+
+      {/* Y-axis gridlines + tick labels */}
+      {yTicks.map(t => (
+        <g key={`yt-${t}`}>
+          <line x1={plotLeft} x2={plotRight} y1={y(t)} y2={y(t)}
+                stroke={PALETTE.rule} strokeWidth="0.3" />
+          <text x={plotLeft - 4} y={y(t) + 2}
+                fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.muted}
+                textAnchor="end">
+            {t < 1 ? `$${t.toFixed(2)}` : `$${t.toFixed(0)}`}
+          </text>
+        </g>
+      ))}
+
+      {/* X-axis baseline + ticks */}
+      <line x1={plotLeft} x2={plotRight} y1={plotBot} y2={plotBot}
+            stroke={PALETTE.rule} strokeWidth="0.5" />
+      {xTicks.map(([t, lbl]) => (
+        <text key={`xt-${t}`} x={x(t)} y={plotBot + 9}
+              fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.muted}
+              textAnchor="middle">
+          {lbl}
+        </text>
+      ))}
+
+      {/* "Today" divider line (dashed vertical) */}
+      <line x1={todayX} x2={todayX} y1={plotTop} y2={plotBot}
+            stroke={PALETTE.muted} strokeWidth="0.4" strokeDasharray="1,2" />
+
+      {/* Spot reference line (dashed horizontal) */}
+      <line x1={plotLeft} x2={plotRight} y1={y(spot)} y2={y(spot)}
+            stroke={PALETTE.muted} strokeWidth="0.6" strokeDasharray="2,2" />
+      <text x={plotRight - 2} y={y(spot) - 2}
+            fontFamily={FONT_MONO} fontSize="6.5pt" fill={PALETTE.muted}
+            textAnchor="end">
+        spot ${spot.toFixed(2)}
+      </text>
+
+      {/* Historical price line */}
+      <path d={pathD(histPoints)} stroke={PALETTE.text} strokeWidth="0.9" fill="none" />
+      <text x={x(hist.points[0][0]) + 2} y={y(hist.points[0][1]) - 4}
+            fontFamily={FONT_SANS} fontSize="5.5pt" fill={PALETTE.muted}>
+        {hist.ipoMarker}
+      </text>
+
+      {/* Today's spot marker */}
+      <circle cx={todayX} cy={y(spot)} r="2.6" fill={PALETTE.ink} />
+
+      {/* Benchmark lines (dotted, light) */}
+      <path d={pathD(tsyP)} stroke={BENCH} strokeWidth="0.5" fill="none" strokeDasharray="1,2" />
+      <path d={pathD(eqP)}  stroke={BENCH} strokeWidth="0.5" fill="none" strokeDasharray="1,2" />
+
+      {/* Scenario paths */}
+      <path d={pathD(bearP)}  stroke={NEG}            strokeWidth="0.7" fill="none" />
+      <path d={pathD(baseP)}  stroke={PALETTE.accent} strokeWidth="0.7" fill="none" />
+      <path d={pathD(bullP)}  stroke={POS}            strokeWidth="0.7" fill="none" />
+      <path d={pathD(ultraP)} stroke={ULTRA}          strokeWidth="0.7" fill="none" />
+      {/* Weighted line — thickest, ink */}
+      <path d={pathD(weightedP)} stroke={PALETTE.ink} strokeWidth="2.0" fill="none" />
+
+      {/* Anchor markers at t=0 for each scenario */}
+      <circle cx={todayX} cy={y(printScn.bear.expectedPerShare)} r="1.6" fill={NEG} />
+      <circle cx={todayX} cy={y(printScn.base.expectedPerShare)} r="1.6" fill={PALETTE.accent} />
+      <circle cx={todayX} cy={y(printScn.bull.expectedPerShare)} r="1.6" fill={POS} />
+      <circle cx={todayX} cy={y(printScn.ultra_bull.expectedPerShare)} r="1.6" fill={ULTRA} />
+      <circle cx={todayX} cy={y(w.expected)} r="2.2" fill={PALETTE.ink} />
+
+      {/* Multiplier annotations at +5/+10/+15 */}
+      {annotate(bullP, POS, 'above')}
+      {annotate(ultraP, ULTRA, 'above')}
+      {annotate(weightedP, PALETTE.ink, 'above')}
+      {annotate(baseP, PALETTE.accent, 'below')}
+      {annotate(bearP, NEG, 'below')}
+
+      {/* End-of-line labels */}
+      {labelPositions.map(([py, lbl, col], i) => (
+        <text key={`end-${i}`} x={plotRight + 4} y={py}
+              fontFamily={FONT_SANS} fontWeight={600} fontSize="6.5pt"
+              fill={col}>
+          {lbl}
+        </text>
+      ))}
+    </svg>
+  );
+}
+
+// Ribbon metrics for Page 1 scenario summary cards — same dispatch as memo.py.
+function ribbonMetrics(scnPrint, dcfType) {
+  const m = scnPrint.dcfMetrics;
+  const pct = (scnPrint.probability * 100).toFixed(0);
+  if (dcfType === 'young_company') {
+    return [
+      ['TAM',     `${m.tam_share.toFixed(1)}%`],
+      ['P(fail)', `${m.p_fail.toFixed(0)}%`],
+      ['S2C',     m.s2c.toFixed(1)],
+      ['Prob',    `${pct}%`],
+    ];
+  }
+  if (dcfType === 'mature_company') {
+    return [
+      ['CAGR', `${m.cagr_5y >= 0 ? '+' : ''}${m.cagr_5y.toFixed(1)}%`],
+      ['WACC', `${(m.wacc * 100).toFixed(1)}%`],
+      ['SLB',  `$${m.slb_total_5y.toFixed(1)}B`],
+      ['Prob', `${pct}%`],
+    ];
+  }
+  return [
+    ['CAGR', `${m.cagr_5y >= 0 ? '+' : ''}${m.cagr_5y.toFixed(1)}%`],
+    ['WACC', `${(m.wacc * 100).toFixed(1)}%`],
+    ['Anth', `$${(m.anthropic_stake ?? 0).toFixed(0)}B`],
+    ['Prob', `${pct}%`],
+  ];
+}
+
+function Page1Headline({ memo }) {
+  const NEG = '#b91c1c';
+  const POS = '#15803d';
+  const spot = memo.spot.price;
+  const w = memo.print.weighted;
+  const wSign = w.upsidePct >= 0 ? '+' : '';
+  const wColor = w.expected >= spot ? POS : NEG;
+
+  // Decomposition insight — mirrors memo.py lines 615-629.
+  const bullScn = memo.print.scenarios.bull;
+  const ultraScn = memo.print.scenarios.ultra_bull;
+  const bullContrib = bullScn.probability * bullScn.expectedPerShare;
+  const ultraContrib = ultraScn.probability * ultraScn.expectedPerShare;
+  const tailContrib = bullContrib + ultraContrib;
+  const tailPct = tailContrib / w.expected * 100;
+  const bullPct = Math.round(bullScn.probability * 100);
+  const ultraPct = Math.round(ultraScn.probability * 100);
+  const combinedPct = bullPct + ultraPct;
+  const spotVsPw = Math.abs((spot / w.expected - 1) * 100);
+  const spotPosition = spot > w.expected ? 'above' : 'below';
+  const insight = `Bull (${bullPct}%) + Ultra Bull (${ultraPct}%) together contribute `
+    + `$${tailContrib.toFixed(2)} — ${tailPct.toFixed(0)}% of the $${w.expected.toFixed(2)} expected value `
+    + `despite ${combinedPct}% combined probability. `
+    + `Today's spot ($${spot.toFixed(2)}) sits ${spotVsPw.toFixed(0)}% ${spotPosition} the weighted expected; `
+    + `forward-weighted value crosses spot between +5y and +10y.`;
+
+  return (
+    <div className="memo-page">
+      {/* Masthead — Page 1 uses a LARGER logo (200pt wide) with a 3-row
+          info column to its right. */}
+      <div style={{
+        display: 'flex', alignItems: 'flex-start', gap: '40pt',
+        paddingTop: '8pt',
+      }}>
+        <img src="assets/ar2eb-logo-v3-cropped.png" alt=""
+             style={{ width: '200pt', height: 'auto', flexShrink: 0 }} />
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column',
+                      justifyContent: 'space-between', minHeight: '46pt' }}>
+          {/* Top row: eyebrow + date */}
+          <div style={{
+            display: 'flex', justifyContent: 'space-between',
+            alignItems: 'baseline',
+          }}>
+            <Eyebrow>
+              INTERNAL RESEARCH  ·  MEMO  ·  NOT INVESTMENT ADVICE  ·  AI-ASSISTED
+            </Eyebrow>
+            <div style={{
+              fontFamily: FONT_SANS, fontSize: '7.5pt', color: PALETTE.muted,
+            }}>
+              {fmtDayMonthYear(memo.publishedISO)}  ·  the qualitative
+            </div>
+          </div>
+          {/* Middle: company name + spot */}
+          <div style={{
+            display: 'flex', justifyContent: 'space-between',
+            alignItems: 'baseline',
+          }}>
+            <div style={{
+              fontFamily: FONT_SANS, fontWeight: 600, fontSize: '18pt',
+              color: PALETTE.ink, lineHeight: 1.0,
+            }}>
+              {memo.company}
+            </div>
+            <div style={{
+              fontFamily: FONT_MONO, fontWeight: 700, fontSize: '18pt',
+              color: PALETTE.ink, lineHeight: 1.0,
+            }}>
+              ${spot.toFixed(2)}
+            </div>
+          </div>
+          {/* Bottom: exchange/ticker/DCF type + masthead extras */}
+          <div style={{
+            display: 'flex', justifyContent: 'space-between',
+            alignItems: 'baseline',
+          }}>
+            <div style={{
+              fontFamily: FONT_SANS, fontSize: '8.5pt', color: PALETTE.muted,
+            }}>
+              {memo.exchange} : {memo.ticker}   ·   {memo.dcfType}
+            </div>
+            <div style={{
+              fontFamily: FONT_SANS, fontSize: '8.5pt', color: PALETTE.muted,
+            }}>
+              {memo.metrics.mktCap} mkt cap  ·  {memo.metrics.shares} sh  ·  {memo.metrics.cash}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ marginTop: '8pt' }}>
+        <Rule strong />
+      </div>
+
+      {/* Two-column band */}
+      <div style={{
+        marginTop: '12pt',
+        display: 'grid',
+        gridTemplateColumns: '56fr 44fr',
+        columnGap: '24pt',
+      }}>
+        {/* LEFT: central question + thesis + PW block */}
+        <div>
+          <Eyebrow>THE CENTRAL QUESTION</Eyebrow>
+          <div style={{
+            marginTop: '6pt',
+            fontFamily: FONT_SANS, fontSize: '12pt', color: PALETTE.ink,
+            lineHeight: 1.2,
+          }}>
+            {memo.question}
+          </div>
+
+          <div style={{
+            marginTop: '6pt',
+            fontFamily: FONT_SANS, fontSize: '8pt', color: PALETTE.text,
+            lineHeight: 1.28,
+          }}>
+            {memo.thesis}
+          </div>
+
+          <div style={{ marginTop: '10pt' }}>
+            <Eyebrow>PROBABILITY-WEIGHTED EXPECTED VALUE</Eyebrow>
+          </div>
+
+          <div style={{
+            marginTop: '6pt',
+            display: 'flex', alignItems: 'baseline', gap: '14pt',
+          }}>
+            <div style={{
+              fontFamily: FONT_MONO, fontWeight: 700, fontSize: '24pt',
+              color: PALETTE.ink, lineHeight: 1.0,
+            }}>
+              ${w.expected.toFixed(2)}
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <div style={{
+                fontFamily: FONT_SANS, fontSize: '9pt', color: PALETTE.muted,
+              }}>
+                expected fair value today
+              </div>
+              <div style={{
+                marginTop: '3pt',
+                fontFamily: FONT_MONO, fontSize: '9pt', color: wColor,
+              }}>
+                {wSign}{w.upsidePct.toFixed(1)}% vs spot ${spot.toFixed(2)}
+              </div>
+            </div>
+          </div>
+
+          {/* Forward compounded value table */}
+          <div style={{
+            marginTop: '10pt',
+            fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7.5pt',
+            color: PALETTE.muted, letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+          }}>
+            FORWARD COMPOUNDED VALUE
+          </div>
+          <div style={{
+            marginTop: '6pt',
+            display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)',
+          }}>
+            {memo.compound.map(c => {
+              const mc = c.value >= spot ? POS : NEG;
+              return (
+                <div key={c.y}>
+                  <div style={{
+                    fontFamily: FONT_SANS, fontWeight: 600, fontSize: '8pt',
+                    color: PALETTE.muted,
+                  }}>
+                    +{c.y}y
+                  </div>
+                  <div style={{
+                    marginTop: '2pt',
+                    fontFamily: FONT_MONO, fontSize: '11pt', color: PALETTE.ink,
+                  }}>
+                    ${c.value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  </div>
+                  <div style={{
+                    marginTop: '2pt',
+                    fontFamily: FONT_MONO, fontSize: '8pt', color: mc,
+                  }}>
+                    {c.mult.toFixed(2)}× spot
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Weighting rationale */}
+          <div style={{
+            marginTop: '8pt',
+            fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7.5pt',
+            color: PALETTE.muted, letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+          }}>
+            WEIGHTING RATIONALE
+          </div>
+          <div style={{ marginTop: '3pt' }}>
+            {memo.weightingRationale.map((r, i) => (
+              <div key={i} style={{
+                marginTop: i === 0 ? 0 : '2pt',
+                fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.text,
+                lineHeight: 1.28,
+              }}>
+                <span style={{ fontWeight: 600, color: PALETTE.accent }}>
+                  {r.label}
+                </span>
+                <span>  {r.body}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Decomposition insight */}
+          <div style={{
+            marginTop: '6pt',
+            fontFamily: FONT_SANS, fontSize: '7.5pt', color: PALETTE.text,
+            lineHeight: 1.3,
+          }}>
+            {insight}
+          </div>
+        </div>
+
+        {/* RIGHT: forward-value chart (SVG) */}
+        <div>
+          <ForwardValueChart memo={memo} />
+        </div>
+      </div>
+
+      {/* Section separator + scenario summary cards */}
+      <div style={{ marginTop: '6pt' }}><Rule /></div>
+
+      {/* 4-column scenario summary cards (compact — full narrative on Page 2) */}
+      <div style={{
+        marginTop: '8pt',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        columnGap: '16pt',
+      }}>
+        {memo.scenarios.map(scn => {
+          const upside = (scn.price / spot - 1) * 100;
+          const upSign = upside >= 0 ? '+' : '';
+          const upColor = upside >= 0 ? POS : NEG;
+          const scnPrint = memo.print.scenarios[scn.key === 'ultra' ? 'ultra_bull' : scn.key];
+          const ribbon = ribbonMetrics(scnPrint, memo.print.dcfType);
+          const l1 = `${ribbon[0][0]}  ${ribbon[0][1]}    ${ribbon[1][0]}  ${ribbon[1][1]}`;
+          const l2 = `${ribbon[2][0]}  ${ribbon[2][1]}    ${ribbon[3][0]}  ${ribbon[3][1]}`;
+          return (
+            <div key={scn.key}>
+              <div style={{
+                display: 'flex', justifyContent: 'space-between',
+                alignItems: 'baseline',
+              }}>
+                <div style={{
+                  fontFamily: FONT_SANS, fontWeight: 600, fontSize: '11pt',
+                  color: PALETTE.ink, letterSpacing: '0.02em',
+                }}>
+                  {scn.label}
+                </div>
+                <div style={{ textAlign: 'right' }}>
+                  <div style={{
+                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: '18pt',
+                    color: PALETTE.ink, lineHeight: 1.0,
+                  }}>
+                    ${scn.price.toFixed(2)}
+                  </div>
+                  <div style={{
+                    marginTop: '4pt',
+                    fontFamily: FONT_MONO, fontSize: '8.5pt', color: upColor,
+                  }}>
+                    {upSign}{upside.toFixed(1)}%  vs spot
+                  </div>
+                </div>
+              </div>
+              <div style={{
+                marginTop: '6pt',
+                fontFamily: FONT_MONO, fontSize: '7pt', color: PALETTE.muted,
+                lineHeight: 1.4,
+              }}>
+                <div>{l1}</div>
+                <div>{l2}</div>
+              </div>
+              <div style={{ marginTop: '4pt' }}><Rule /></div>
+              <div style={{
+                marginTop: '6pt',
+                fontFamily: FONT_SANS, fontWeight: 500, fontSize: '9.5pt',
+                color: PALETTE.ink, lineHeight: 1.2,
+              }}>
+                {scn.headline}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <PageFooter memo={memo} pageLabel="page 1 of 5" />
+    </div>
+  );
+}
+
 // ── Page 2 — Scenario narratives ───────────────────────────────────────
 // 4-column layout. Each column: label + price + upside + probability +
 // headline + "WHY x%" rationale + "WHAT HAPPENS" narrative paragraphs.
@@ -978,6 +1530,7 @@ function MemoPDF() {
 
   return (
     <>
+      <Page1Headline memo={memo} />
       <Page2Narratives memo={memo} />
       <Page4Quantitative memo={memo} />
       <Page5BackMatter memo={memo} />

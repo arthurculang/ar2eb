@@ -103,6 +103,107 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 30 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "thesis": "Joby trades at ~$10.3B against $24M of Q1 2026 revenue and $700M annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise) provides ~3 years of runway. FAA Type Certification is in Stage 4 (final), Dubai exclusive operations begin in 2026, and the Toyota manufacturing partnership unlocks scale. Pre-revenue category-defining companies present a Damodaran problem: the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Aug '21",
+      "points": [
+        [
+          -4.67,
+          9.5
+        ],
+        [
+          -4.42,
+          8.0
+        ],
+        [
+          -4.17,
+          5.0
+        ],
+        [
+          -3.92,
+          3.5
+        ],
+        [
+          -3.67,
+          4.0
+        ],
+        [
+          -3.42,
+          3.0
+        ],
+        [
+          -3.17,
+          5.0
+        ],
+        [
+          -2.92,
+          9.0
+        ],
+        [
+          -2.67,
+          7.5
+        ],
+        [
+          -2.42,
+          6.0
+        ],
+        [
+          -2.17,
+          5.5
+        ],
+        [
+          -1.92,
+          5.5
+        ],
+        [
+          -1.67,
+          5.5
+        ],
+        [
+          -1.42,
+          9.0
+        ],
+        [
+          -1.17,
+          8.0
+        ],
+        [
+          -0.92,
+          7.0
+        ],
+        [
+          -0.67,
+          7.5
+        ],
+        [
+          -0.42,
+          9.5
+        ],
+        [
+          -0.17,
+          9.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 30%",
+        "body": "Aerospace startups historically fail at high rates; SR3 timing slipped industry-wide."
+      },
+      {
+        "label": "Base 55%",
+        "body": "Modal outcome: Joby + Archer split US with aerospace-blend margins."
+      },
+      {
+        "label": "Bull 12%",
+        "body": "Compound conditional chain; joint probability lands at 10-15% despite individually plausible pieces."
+      },
+      {
+        "label": "Ultra Bull 3%",
+        "body": "Tail of tails: dominant global UAM + early autonomous pivot + software-take-rate multiple expansion."
+      }
+    ],
     "print": {
       "dcfType": "young_company",
       "dcfPeriodYears": 10,
@@ -724,6 +825,103 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "thesis": "Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M annualized cash burn. The $1.28B liquidity position needs replenishment by mid-2027 absent commercial conversion. Driverless commercial launch slipped from 2024 to now 2027; the Driver runs supervised highway pilots with PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin, P(failure). Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Nov '21",
+      "points": [
+        [
+          -4.5,
+          10.0
+        ],
+        [
+          -4.25,
+          7.0
+        ],
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -3.75,
+          2.5
+        ],
+        [
+          -3.5,
+          1.5
+        ],
+        [
+          -3.25,
+          2.0
+        ],
+        [
+          -3.0,
+          3.5
+        ],
+        [
+          -2.75,
+          3.0
+        ],
+        [
+          -2.5,
+          2.5
+        ],
+        [
+          -2.25,
+          3.0
+        ],
+        [
+          -2.0,
+          4.5
+        ],
+        [
+          -1.75,
+          4.0
+        ],
+        [
+          -1.5,
+          5.5
+        ],
+        [
+          -1.25,
+          6.0
+        ],
+        [
+          -1.0,
+          4.5
+        ],
+        [
+          -0.75,
+          5.0
+        ],
+        [
+          -0.5,
+          6.5
+        ],
+        [
+          -0.25,
+          7.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 35%",
+        "body": "Autonomous trucking unproven at scale; Waymo Via shutdown signal still recent."
+      },
+      {
+        "label": "Base 50%",
+        "body": "Modal outcome: Aurora is one of 2-3 winners, 7-8% TAM share, tech-auto blend margins."
+      },
+      {
+        "label": "Bull 12%",
+        "body": "Compound conditional chain; software-take-rate platform thesis requires multiple alignments."
+      },
+      {
+        "label": "Ultra Bull 3%",
+        "body": "Tail of tails: dominant US autonomous + early software-take-rate + multiple expansion."
+      }
+    ],
     "print": {
       "dcfType": "young_company",
       "dcfPeriodYears": 10,
@@ -1345,6 +1543,107 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Bear 20 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
+    "thesis": "LTH trades at $33.61 ($7.5B mkt cap) on TTM revenue $3.0B and Adj EBITDA $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14 luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear: capital recycling unsustainable, leveraged real estate vehicle. Bull: luxury wellness category-of-one, SLB is smart financing. Today's price requires bull-case execution. Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Oct '21",
+      "points": [
+        [
+          -4.58,
+          18.0
+        ],
+        [
+          -4.42,
+          14.0
+        ],
+        [
+          -4.17,
+          13.0
+        ],
+        [
+          -3.92,
+          14.5
+        ],
+        [
+          -3.67,
+          16.0
+        ],
+        [
+          -3.42,
+          13.0
+        ],
+        [
+          -3.17,
+          17.0
+        ],
+        [
+          -2.92,
+          16.5
+        ],
+        [
+          -2.67,
+          14.0
+        ],
+        [
+          -2.42,
+          15.5
+        ],
+        [
+          -2.17,
+          18.0
+        ],
+        [
+          -1.92,
+          17.0
+        ],
+        [
+          -1.67,
+          18.5
+        ],
+        [
+          -1.42,
+          26.0
+        ],
+        [
+          -1.17,
+          29.0
+        ],
+        [
+          -0.92,
+          28.5
+        ],
+        [
+          -0.67,
+          31.0
+        ],
+        [
+          -0.42,
+          32.5
+        ],
+        [
+          -0.17,
+          33.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 20%",
+        "body": "SLB-as-capital-recycling thesis structurally coherent but lacks traction vs FY24/25 execution."
+      },
+      {
+        "label": "Base 55%",
+        "body": "Modal outcome: LTH executes guidance, leverage stays in target."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "Luxury wellness platform compounds; category-of-one; multiple expansion requires execution AND re-rating."
+      },
+      {
+        "label": "Ultra Bull 5%",
+        "body": "250+ clubs by 2030 + ARPU $6,500 + SLB self-funded + multiple re-rates to 15x EV/EBITDA."
+      }
+    ],
     "print": {
       "dcfType": "mature_company",
       "dcfPeriodYears": 5,
@@ -1774,6 +2073,143 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
+    "thesis": "Zoom trades at $100.01 ($30.8B mkt cap) on TTM revenue of $4.87B, $1.7B FCF, and $7.8B cash & marketable securities — roughly 25% of market cap is just cash. On top of that sits an Anthropic equity stake carried at cost but worth $4-9B across scenarios, pending the public mark from Anthropic's expected IPO. The operating business is a stable cash machine (35-40% FCF margin) facing real but slow competition from Teams and Workspace. Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -7.5,
+      "ipoMarker": "IPO Apr '19",
+      "points": [
+        [
+          -7.08,
+          36.0
+        ],
+        [
+          -6.83,
+          85.0
+        ],
+        [
+          -6.58,
+          68.0
+        ],
+        [
+          -6.33,
+          160.0
+        ],
+        [
+          -6.08,
+          260.0
+        ],
+        [
+          -5.83,
+          500.0
+        ],
+        [
+          -5.58,
+          410.0
+        ],
+        [
+          -5.33,
+          320.0
+        ],
+        [
+          -5.08,
+          360.0
+        ],
+        [
+          -4.83,
+          270.0
+        ],
+        [
+          -4.58,
+          185.0
+        ],
+        [
+          -4.33,
+          110.0
+        ],
+        [
+          -4.08,
+          110.0
+        ],
+        [
+          -3.83,
+          78.0
+        ],
+        [
+          -3.58,
+          68.0
+        ],
+        [
+          -3.33,
+          77.0
+        ],
+        [
+          -3.08,
+          70.0
+        ],
+        [
+          -2.83,
+          70.0
+        ],
+        [
+          -2.58,
+          72.0
+        ],
+        [
+          -2.33,
+          64.0
+        ],
+        [
+          -2.08,
+          60.0
+        ],
+        [
+          -1.83,
+          65.0
+        ],
+        [
+          -1.58,
+          85.0
+        ],
+        [
+          -1.33,
+          76.0
+        ],
+        [
+          -1.08,
+          82.0
+        ],
+        [
+          -0.83,
+          85.0
+        ],
+        [
+          -0.58,
+          93.0
+        ],
+        [
+          -0.33,
+          95.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 30%",
+        "body": "Teams/Workspace structurally favored; AI Companion fails to monetize; Anthropic stake compressed."
+      },
+      {
+        "label": "Base 50%",
+        "body": "Modal outcome: stable mid-single-digit growth, Anthropic IPOs at $700B-1T, multiple modest expand."
+      },
+      {
+        "label": "Bull 15%",
+        "body": "AI Companion monetizes + Anthropic at $1T+; two engines succeed independently."
+      },
+      {
+        "label": "Ultra Bull 5%",
+        "body": "Both engines fire simultaneously; Anthropic at $2T+; multiple re-rates to growth-software premium."
+      }
+    ],
     "print": {
       "dcfType": "mature_company_sotp",
       "dcfPeriodYears": 5,
@@ -2207,6 +2643,115 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "thesis": "NAUT trades at $2.40 ($302M mkt cap, 47% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029; dilutive raise likely 2027-2028. Mature peers — Olink (Thermo), SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Four scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Jun '21",
+      "points": [
+        [
+          -4.92,
+          9.5
+        ],
+        [
+          -4.83,
+          14.0
+        ],
+        [
+          -4.58,
+          16.0
+        ],
+        [
+          -4.33,
+          12.0
+        ],
+        [
+          -4.08,
+          9.0
+        ],
+        [
+          -3.83,
+          6.0
+        ],
+        [
+          -3.58,
+          4.5
+        ],
+        [
+          -3.33,
+          3.5
+        ],
+        [
+          -3.08,
+          4.5
+        ],
+        [
+          -2.83,
+          3.0
+        ],
+        [
+          -2.58,
+          2.5
+        ],
+        [
+          -2.33,
+          2.0
+        ],
+        [
+          -2.08,
+          1.5
+        ],
+        [
+          -1.83,
+          1.2
+        ],
+        [
+          -1.58,
+          1.8
+        ],
+        [
+          -1.33,
+          2.5
+        ],
+        [
+          -1.08,
+          3.5
+        ],
+        [
+          -0.83,
+          4.0
+        ],
+        [
+          -0.58,
+          4.3
+        ],
+        [
+          -0.33,
+          3.5
+        ],
+        [
+          -0.08,
+          2.5
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 35%",
+        "body": "Single-molecule unproven at scale; entrenched affinity competition (Olink, SomaScan)."
+      },
+      {
+        "label": "Base 50%",
+        "body": "Modal: Voyager launches on schedule, ~1-2% FY36 TAM share, niche-but-real proteomics platform."
+      },
+      {
+        "label": "Bull 12%",
+        "body": "Compound conditional: single-molecule wins proteoform race; Tau success catalyzes mainstream adoption."
+      },
+      {
+        "label": "Ultra Bull 3%",
+        "body": "Tail of tails: dominant proteomics + multiomics + software-take-rate + platform re-rating."
+      }
+    ],
     "print": {
       "dcfType": "young_company",
       "dcfPeriodYears": 10,
