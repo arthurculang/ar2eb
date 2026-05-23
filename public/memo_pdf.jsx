@@ -2867,15 +2867,27 @@ function MemoPDF() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<MemoPDF />);
+// Export page components so the site (public/pages.jsx → MemoPage) can
+// render the same JSX inline. The print harness (print.html) sets
+// body[data-harness="print"] and we auto-mount + signal ready; the site
+// imports MemoPagesAll and renders it scaled inside MemoPage.
+window.AR2EB_MEMO = {
+  Page1Headline, Page2Narratives, Page3Snapshot, Page4Quantitative, Page5BackMatter,
+  MemoPDF,
+  findMemo, getTickerSlug,
+};
 
-// Signal to the print renderer that React has mounted and fonts have loaded.
-(async () => {
-  if (document.fonts && document.fonts.ready) {
-    await document.fonts.ready;
-  }
-  requestAnimationFrame(() => {
-    document.body.dataset.ready = '1';
-  });
-})();
+if (document.body && document.body.dataset.harness === 'print') {
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<MemoPDF />);
+
+  // Signal to the print renderer that React has mounted and fonts have loaded.
+  (async () => {
+    if (document.fonts && document.fonts.ready) {
+      await document.fonts.ready;
+    }
+    requestAnimationFrame(() => {
+      document.body.dataset.ready = '1';
+    });
+  })();
+}

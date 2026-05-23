@@ -7,21 +7,41 @@
   <meta name="description" content="Long horizons. Structural shifts. Imagination. Probability-weighted DCF research on individual equities — asymmetric bets and free-cash-flow compounders." />
   <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='3' y='3' width='26' height='26' fill='none' stroke='%230e0e0e' stroke-width='2'/><text x='16' y='14' font-family='Inter, sans-serif' font-size='9' font-weight='600' text-anchor='middle' fill='%230e0e0e'>AR</text><text x='16' y='24' font-family='Inter, sans-serif' font-size='9' font-weight='600' text-anchor='middle' fill='%230e0e0e'>2EB</text></svg>" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+  <!-- Local fonts (vendored under public/assets/fonts/). No network at
+       runtime — matches the print harness and avoids Google Fonts FOUT
+       / privacy / cert-pinning issues. -->
+  <style>
+    @font-face { font-family: 'Inter'; font-weight: 400; font-style: normal;
+                 src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-weight: 500; font-style: normal;
+                 src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-weight: 600; font-style: normal;
+                 src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-weight: 700; font-style: normal;
+                 src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-weight: 400; font-style: italic;
+                 src: url('assets/fonts/Inter-Italic.ttf') format('truetype'); }
+    @font-face { font-family: 'JetBrains Mono'; font-weight: 400; font-style: normal;
+                 src: url('assets/fonts/JetBrainsMono-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'JetBrains Mono'; font-weight: 700; font-style: normal;
+                 src: url('assets/fonts/JetBrainsMono-Bold.ttf') format('truetype'); }
+  </style>
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div id="root"></div>
 
-  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <!-- Vendored React + Babel — same files the print harness uses. -->
+  <script src="assets/vendor/react.production.min.js"></script>
+  <script src="assets/vendor/react-dom.production.min.js"></script>
+  <script src="assets/vendor/babel.min.js"></script>
 
   <script src="data.js"></script>
   <script type="text/babel" src="components.jsx"></script>
+  <!-- Memo PDF components — same JSX powers the site's inline memo view
+       and the Playwright print harness. -->
+  <script type="text/babel" src="memo_pdf.jsx"></script>
   <script type="text/babel" src="pages.jsx"></script>
   <script type="text/babel" src="app.jsx"></script>
 </body>
