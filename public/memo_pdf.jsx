@@ -1294,7 +1294,367 @@ function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
   );
 }
 
-// --- Young-company Chart 3: cash runway + dilution (dual Y axis) ---
+// --- Young-company Page 3 charts 4-6 per-ticker config ---
+// Per-ticker copy and reference values still live in the chart builder
+// today (charts/young_company.py). Mirror them here until they migrate
+// into YAML.
+const YOUNG_CHART_CFG = {
+  joby: {
+    fleetHistory: [1, 2, 5],
+    fleetAnchor: 5,
+    fleetTitle: 'eVTOL aircraft deployed (log)',
+    fleetReference: null,
+    valnAnchorY: 3,
+    valnAnchorText: 'Mature aerospace P/S ~2-4×',
+    valnCaption: 'Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×).',
+    tamTitle: '$250B global UAM TAM (FY36) — Joby share',
+    tamLegend: ['JOBY', 'Competitors', 'Other UAM (cargo, etc.)'],
+  },
+  aur: {
+    fleetHistory: [6, 20, 50],
+    fleetAnchor: 50,
+    fleetTitle: 'Driverless trucks deployed (log)',
+    fleetReference: { value: 750000, label: 'US Class 8 fleet ~750K' },
+    valnAnchorY: 4,
+    valnAnchorText: 'Mature peer P/S ~3-5×',
+    valnCaption: 'Bear=stretched (6×), base=fair (1.3×), bull=cheap (0.5×).',
+    tamTitle: '$160B US autonomous trucking TAM (FY36) — AUR share',
+    tamLegend: ['AUR', 'Competitors', 'Non-autonomous (legacy)'],
+  },
+  naut: {
+    fleetHistory: [0, 0, 0],
+    fleetAnchor: 1,
+    fleetTitle: 'Voyager instruments deployed (log)',
+    fleetReference: null,
+    valnAnchorY: 5,
+    valnAnchorText: 'Mature tools P/S ~4-7×',
+    valnCaption: 'Bear, base = stretched on FY36 niche-rev; bull onward = cheap.',
+    tamTitle: '$130B global proteomics TAM (FY36) — NAUT share',
+    tamLegend: ['NAUT', 'Competitors (Olink / SomaScan / MS)', 'Other proteomics'],
+  },
+};
+
+// --- Young-company Chart 4: fleet / unit growth (log scale) ---
+function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const cfg = YOUNG_CHART_CFG[memo.slug];
+  if (!cfg) return null;
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+
+  // fleet[i] = rev[i] * 1000 / rev_per_unit[i] — units derived from
+  // dollar revenue ÷ revenue per unit. Matches memo.py fleet_from_rev.
+  const fleetFromRev = (key) => {
+    const rev = memo.print.scenarios[key].dcfPath.rev_path;
+    const rpu = memo.print.scenarios[key].revPerUnit || [];
+    return rpu.length === rev.length
+      ? rev.map((r, i) => (r * 1000) / rpu[i])
+      : rev.map(() => 0);
+  };
+
+  // X: 3 historical + 10 projected = 13 years (FY24..FY36).
+  const fyAll = ['FY24', 'FY25', 'FY26', ...Array.from({ length: 10 }, (_, i) => `FY${27 + i}`)];
+
+  const m = CHART_MARGIN;
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+  const xScale = mkLinearScale([-0.5, 13.6], [plotL, plotR]);
+
+  // Y log scale — range + ticks differ by reference line (AUR includes a
+  // 750K reference, so the scale extends to 2M).
+  const hasRef = !!cfg.fleetReference;
+  const yLo = hasRef ? 1 : 0.5;
+  const yHi = hasRef ? 2_000_000 : 10_000;
+  const yScale = mkLogScale([yLo, yHi], [plotB, plotT]);
+  const yTicks = hasRef
+    ? [[10, '10'], [100, '100'], [1000, '1K'], [10000, '10K'],
+       [100000, '100K'], [1000000, '1M']]
+    : [[1, '1'], [10, '10'], [100, '100'], [1000, '1K'], [10000, '10K']];
+
+  const xTicks = fyAll.map((fy, i) => [i, fy.slice(2)]);
+  const shortLabel = (key) => memo.print.scenarios[key].shortLabel;
+  const fmtUnits = (n) =>
+    n >= 10000 ? `${(n / 1000).toFixed(0)}K` :
+    n >= 1000  ? `${(n / 1000).toFixed(1)}K` :
+                 `${n.toFixed(0)}`;
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>{cfg.fleetTitle}</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+
+      {/* Today divider — between historical [0,1,2] and projection [3..12] */}
+      <line x1={xScale(2.5)} x2={xScale(2.5)} y1={plotT} y2={plotB}
+            stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
+
+      {/* Historical fleet (solid, accent) */}
+      {(() => {
+        const hist = cfg.fleetHistory.map((v, i) => [i, Math.max(v, yLo)]);
+        return (
+          <>
+            <path d={pathD(hist, xScale, yScale)}
+                  stroke={PALETTE.accent} strokeWidth="1.5" fill="none" />
+            {hist.map(([t, v]) => (
+              <circle key={`fh-${t}`} cx={xScale(t)} cy={yScale(v)} r="2.2"
+                      fill={PALETTE.accent} stroke="white" strokeWidth="0.6" />
+            ))}
+          </>
+        );
+      })()}
+
+      {/* Reference line (e.g. US Class 8 fleet ~750K) */}
+      {cfg.fleetReference && (
+        <>
+          <line x1={plotL} x2={plotR}
+                y1={yScale(cfg.fleetReference.value)} y2={yScale(cfg.fleetReference.value)}
+                stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
+          <text x={plotR - 2} y={yScale(cfg.fleetReference.value) - 2}
+                fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted}
+                textAnchor="end">
+            {cfg.fleetReference.label}
+          </text>
+        </>
+      )}
+
+      {/* Scenario projection fleets (dashed) */}
+      {scnKeys.map(key => {
+        const fleet = fleetFromRev(key);
+        const pts = [[2, Math.max(cfg.fleetAnchor, yLo)],
+                     ...fleet.map((v, i) => [3 + i, Math.max(v, yLo)])];
+        const end = fleet[fleet.length - 1];
+        return (
+          <g key={`f-${key}`}>
+            <path d={pathD(pts, xScale, yScale)}
+                  stroke={SCN_COLORS[key]} strokeWidth="1.1" fill="none"
+                  strokeDasharray="3,2" />
+            {pts.map(([t, v], i) => (
+              <circle key={`fp-${key}-${i}`} cx={xScale(t)} cy={yScale(v)} r="1.4"
+                      fill={SCN_COLORS[key]} stroke="white" strokeWidth="0.4" />
+            ))}
+            <text x={xScale(12) + 3} y={yScale(Math.max(end, yLo)) + 2}
+                  fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
+                  fill={SCN_COLORS[key]}>
+              {shortLabel(key)} {fmtUnits(end)}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+// --- Young-company Chart 5: valuation (P/S on FY36 revenue) ---
+function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const cfg = YOUNG_CHART_CFG[memo.slug];
+  if (!cfg) return null;
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const mktCap = memo.print.market.marketCapBillion;
+
+  // P/S = today_mkt_cap / FY36 revenue per scenario.
+  const ratios = scnKeys.map(k => ({
+    key: k,
+    label: memo.print.scenarios[k].shortLabel,
+    mult: mktCap / memo.print.scenarios[k].dcfPath.rev_path.at(-1),
+  }));
+
+  const m = { left: 26, right: 22, top: 16, bottom: 30 };
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+
+  // Y axis: 0 → max(9, ratios×1.2), with ticks at 0/2/4/6/8.
+  const maxR = Math.max(...ratios.map(r => r.mult));
+  const yMax = Math.max(9, maxR * 1.2);
+  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+  const yTicks = [0, 2, 4, 6, 8].filter(v => v <= yMax).map(v => [v, `${v}×`]);
+
+  // Bars: equal spacing across plot width.
+  const barW = (plotR - plotL) / (ratios.length + 1.5);
+  const xCenter = (i) => plotL + (i + 1) * (plotR - plotL) / (ratios.length + 1);
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>{`$${mktCap.toFixed(2)}B mkt cap as P/S on FY36 rev`}</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+
+      {/* Reference line for mature peer P/S */}
+      <line x1={plotL} x2={plotR}
+            y1={yScale(cfg.valnAnchorY)} y2={yScale(cfg.valnAnchorY)}
+            stroke={PALETTE.dim} strokeWidth="0.5" strokeDasharray="1,2" />
+      <text x={plotR - 2} y={yScale(cfg.valnAnchorY) - 2}
+            fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted}
+            textAnchor="end">
+        {cfg.valnAnchorText}
+      </text>
+
+      {/* Bars */}
+      {ratios.map((r, i) => {
+        const cx = xCenter(i);
+        const top = yScale(r.mult);
+        const baseY = yScale(0);
+        return (
+          <g key={r.key}>
+            <rect x={cx - barW / 2} y={top} width={barW}
+                  height={baseY - top}
+                  fill={SCN_COLORS[r.key]} />
+            <text x={cx} y={top - 4}
+                  fontFamily={FONT_MONO} fontWeight={600} fontSize="7pt"
+                  fill={SCN_COLORS[r.key]} textAnchor="middle">
+              {r.mult.toFixed(1)}×
+            </text>
+            <text x={cx} y={plotB + 9}
+                  fontFamily={FONT_SANS} fontSize="6pt" fill={PALETTE.text}
+                  textAnchor="middle">
+              {r.label}
+            </text>
+            <text x={cx} y={plotB + 17}
+                  fontFamily={FONT_SANS} fontSize="5.5pt" fill={PALETTE.muted}
+                  textAnchor="middle">
+              FY36
+            </text>
+          </g>
+        );
+      })}
+
+      {/* Caption */}
+      <text x={plotL} y={heightPt - 2}
+            fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted}>
+        {cfg.valnCaption}
+      </text>
+    </svg>
+  );
+}
+
+// --- Young-company Chart 6: TAM positioning at FY36 (horizontal stacked) ---
+function YoungTamChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const cfg = YOUNG_CHART_CFG[memo.slug];
+  if (!cfg) return null;
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const tam = memo.print.tamBillion;
+  if (!tam) return null;
+
+  // 4 rows. Each row split into: company share / competitor share / rest.
+  const rows = scnKeys.map(k => {
+    const s = memo.print.scenarios[k];
+    const company = s.dcfPath.rev_path.at(-1);
+    const competitor = s.chartData.tam_competitor_share || 0;
+    const remaining = Math.max(0, tam - company - competitor);
+    return {
+      key: k,
+      label: s.shortLabel,
+      share: (s.dcfMetrics.tam_share || 0),
+      company, competitor, remaining,
+    };
+  });
+
+  const m = { left: 50, right: 14, top: 16, bottom: 30 };
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+  const xScale = mkLinearScale([0, tam * 1.04], [plotL, plotR]);
+
+  // Y rows
+  const rowH = (plotB - plotT) / rows.length;
+  const rowY = (i) => plotT + (i + 0.5) * rowH;
+  const barH = rowH * 0.5;
+
+  const SOFT = '#94a3b8';
+  const REM_FILL = '#9ca3af';
+
+  // X ticks adapted to TAM size.
+  const xTickVals = tam >= 200
+    ? [0, 50, 100, 150, 200, 250]
+    : tam >= 100 ? [0, 40, 80, 120, 160] : [0, 25, 50, 75];
+  const xTicks = xTickVals.filter(v => v <= tam * 1.04).map(v => [v, `$${v}B`]);
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>{cfg.tamTitle}</ChartTitle>
+
+      {/* X-axis labels along the bottom */}
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+
+      {/* Rows */}
+      {rows.map((r, i) => {
+        const y = rowY(i);
+        const yTop = y - barH / 2;
+        const xCompanyEnd = xScale(r.company);
+        const xCompetitorEnd = xScale(r.company + r.competitor);
+        const xRemainingEnd = xScale(r.company + r.competitor + r.remaining);
+        return (
+          <g key={r.key}>
+            {/* Y-axis row labels */}
+            <text x={plotL - 4} y={y - 2}
+                  fontFamily={FONT_SANS} fontWeight={500} fontSize="6.5pt"
+                  fill={PALETTE.text} textAnchor="end">
+              {r.label}
+            </text>
+            <text x={plotL - 4} y={y + 7}
+                  fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.muted}
+                  textAnchor="end">
+              {r.share.toFixed(1)}%
+            </text>
+
+            {/* Company share */}
+            <rect x={plotL} y={yTop} width={xCompanyEnd - plotL} height={barH}
+                  fill={SCN_COLORS[r.key]} />
+            {r.company >= tam * 0.04 && (
+              <text x={plotL + (xCompanyEnd - plotL) / 2} y={y + 2}
+                    fontFamily={FONT_MONO} fontWeight={500} fontSize="5.5pt"
+                    fill="white" textAnchor="middle">
+                ${r.company.toFixed(0)}B
+              </text>
+            )}
+
+            {/* Competitor share */}
+            <rect x={xCompanyEnd} y={yTop} width={xCompetitorEnd - xCompanyEnd}
+                  height={barH} fill={SOFT} />
+            {r.competitor >= tam * 0.08 && (
+              <text x={(xCompanyEnd + xCompetitorEnd) / 2} y={y + 2}
+                    fontFamily={FONT_MONO} fontSize="5pt" fill="white"
+                    textAnchor="middle">
+                ${r.competitor.toFixed(0)}B
+              </text>
+            )}
+
+            {/* Remaining */}
+            <rect x={xCompetitorEnd} y={yTop} width={xRemainingEnd - xCompetitorEnd}
+                  height={barH} fill={REM_FILL} opacity="0.55" />
+            {r.remaining >= tam * 0.15 && (
+              <text x={(xCompetitorEnd + xRemainingEnd) / 2} y={y + 2}
+                    fontFamily={FONT_MONO} fontSize="5pt" fill="white"
+                    textAnchor="middle">
+                ${r.remaining.toFixed(0)}B
+              </text>
+            )}
+          </g>
+        );
+      })}
+
+      {/* Legend */}
+      <g transform={`translate(${plotL}, ${heightPt - 8})`}>
+        <rect x="0" y="-4" width="6" height="4" fill={PALETTE.accent} />
+        <text x="9" y="0" fontFamily={FONT_SANS} fontSize="5.5pt"
+              fontWeight={500} fill={PALETTE.accent}>
+          {cfg.tamLegend[0]}
+        </text>
+        <rect x="40" y="-4" width="6" height="4" fill={SOFT} />
+        <text x="49" y="0" fontFamily={FONT_SANS} fontSize="5.5pt"
+              fill={PALETTE.text}>
+          {cfg.tamLegend[1]}
+        </text>
+        <rect x="140" y="-4" width="6" height="4" fill={REM_FILL} opacity="0.55" />
+        <text x="149" y="0" fontFamily={FONT_SANS} fontSize="5.5pt"
+              fill={PALETTE.muted}>
+          {cfg.tamLegend[2]}
+        </text>
+      </g>
+    </svg>
+  );
+}
 // LEFT axis: cumulative cash in $B (auto-fit range, not hardcoded — this
 // was the §6c.6 axis-clipping bug that v002 surfaced).
 // RIGHT axis: shares (M) — dotted lines, scaled separately.
@@ -1589,9 +1949,9 @@ function Page3Snapshot({ memo }) {
     <YoungRevenueChart memo={memo} />,
     <YoungProfitabilityChart memo={memo} />,
     <YoungCashDilutionChart memo={memo} />,
-    placeholder('04', 'Fleet / unit growth'),
-    placeholder('05', 'Valuation: P/S on FY36 rev'),
-    placeholder('06', 'TAM positioning at FY36'),
+    <YoungFleetChart memo={memo} />,
+    <YoungValuationChart memo={memo} />,
+    <YoungTamChart memo={memo} />,
   ] : [
     placeholder('01', 'Revenue history + scenarios'),
     placeholder('02', 'Segments'),

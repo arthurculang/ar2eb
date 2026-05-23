@@ -37,6 +37,14 @@ def collapse(s: str) -> str:
     return " ".join(str(s).split())
 
 
+def _pick_rev_per_unit(chart_data: dict) -> list | None:
+    # rev_per_unit's YAML key is ticker-specific. Probe known names.
+    for key in ("rev_per_aircraft", "rev_per_truck", "rev_per_instrument"):
+        if key in chart_data:
+            return list(chart_data[key])
+    return None
+
+
 def fmt_shares(m: float) -> str:
     return f"{m / 1000:.2f}B" if m >= 1000 else f"{m:.0f}M"
 
@@ -191,6 +199,10 @@ def build_memo(ticker: str) -> dict:
                     "dcfMetrics": dict(scn[k]["dcf_metrics"]),
                     "dcfPath": dict(scn[k]["dcf_path"]),
                     "chartData": dict(scn[k].get("chart_data", {})),
+                    # rev_per_unit's YAML key differs per ticker
+                    # (rev_per_aircraft/rev_per_truck/rev_per_instrument);
+                    # normalize for the JSX charts.
+                    "revPerUnit": _pick_rev_per_unit(scn[k].get("chart_data", {})),
                 }
                 for k in SCEN_ORDER
             },

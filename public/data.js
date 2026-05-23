@@ -388,7 +388,19 @@ const MEMOS = [
               4.5
             ],
             "tam_competitor_share": 40.0
-          }
+          },
+          "revPerUnit": [
+            3.0,
+            3.2,
+            3.5,
+            3.7,
+            4.0,
+            4.2,
+            4.4,
+            4.5,
+            4.5,
+            4.5
+          ]
         },
         "base": {
           "probability": 0.55,
@@ -537,7 +549,19 @@ const MEMOS = [
               5.0
             ],
             "tam_competitor_share": 60.0
-          }
+          },
+          "revPerUnit": [
+            3.5,
+            3.8,
+            4.0,
+            4.2,
+            4.5,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ]
         },
         "bull": {
           "probability": 0.12,
@@ -686,7 +710,19 @@ const MEMOS = [
               5.0
             ],
             "tam_competitor_share": 70.0
-          }
+          },
+          "revPerUnit": [
+            4.0,
+            4.3,
+            4.5,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ]
         },
         "ultra_bull": {
           "probability": 0.03,
@@ -835,7 +871,19 @@ const MEMOS = [
               5.5
             ],
             "tam_competitor_share": 75.0
-          }
+          },
+          "revPerUnit": [
+            4.5,
+            4.8,
+            5.0,
+            5.2,
+            5.5,
+            5.5,
+            5.5,
+            5.5,
+            5.5,
+            5.5
+          ]
         }
       },
       "appendix": {
@@ -1290,7 +1338,19 @@ const MEMOS = [
               165
             ],
             "tam_competitor_share": 25.0
-          }
+          },
+          "revPerUnit": [
+            100,
+            110,
+            120,
+            130,
+            140,
+            150,
+            155,
+            160,
+            160,
+            165
+          ]
         },
         "base": {
           "probability": 0.5,
@@ -1439,7 +1499,19 @@ const MEMOS = [
               225
             ],
             "tam_competitor_share": 35.0
-          }
+          },
+          "revPerUnit": [
+            120,
+            135,
+            150,
+            165,
+            180,
+            195,
+            205,
+            215,
+            220,
+            225
+          ]
         },
         "bull": {
           "probability": 0.12,
@@ -1588,7 +1660,19 @@ const MEMOS = [
               250
             ],
             "tam_competitor_share": 50.0
-          }
+          },
+          "revPerUnit": [
+            150,
+            175,
+            200,
+            225,
+            240,
+            250,
+            250,
+            250,
+            250,
+            250
+          ]
         },
         "ultra_bull": {
           "probability": 0.03,
@@ -1737,7 +1821,19 @@ const MEMOS = [
               280
             ],
             "tam_competitor_share": 55.0
-          }
+          },
+          "revPerUnit": [
+            180,
+            210,
+            240,
+            260,
+            275,
+            280,
+            280,
+            280,
+            280,
+            280
+          ]
         }
       },
       "appendix": {
@@ -2120,7 +2216,8 @@ const MEMOS = [
             ],
             "luxury_club_count_fy30": 77,
             "fcf_to_ebitda_ratio": 0.1
-          }
+          },
+          "revPerUnit": null
         },
         "base": {
           "probability": 0.55,
@@ -2193,7 +2290,8 @@ const MEMOS = [
             ],
             "luxury_club_count_fy30": 97,
             "fcf_to_ebitda_ratio": 0.3
-          }
+          },
+          "revPerUnit": null
         },
         "bull": {
           "probability": 0.2,
@@ -2266,7 +2364,8 @@ const MEMOS = [
             ],
             "luxury_club_count_fy30": 107,
             "fcf_to_ebitda_ratio": 0.5
-          }
+          },
+          "revPerUnit": null
         },
         "ultra_bull": {
           "probability": 0.05,
@@ -2339,7 +2438,8 @@ const MEMOS = [
             ],
             "luxury_club_count_fy30": 117,
             "fcf_to_ebitda_ratio": 0.65
-          }
+          },
+          "revPerUnit": null
         }
       },
       "appendix": {
@@ -2764,7 +2864,8 @@ const MEMOS = [
               7.0,
               6.0
             ]
-          }
+          },
+          "revPerUnit": null
         },
         "base": {
           "probability": 0.5,
@@ -2843,7 +2944,8 @@ const MEMOS = [
               15.0,
               15.5
             ]
-          }
+          },
+          "revPerUnit": null
         },
         "bull": {
           "probability": 0.15,
@@ -2922,7 +3024,8 @@ const MEMOS = [
               22.0,
               23.0
             ]
-          }
+          },
+          "revPerUnit": null
         },
         "ultra_bull": {
           "probability": 0.05,
@@ -3001,7 +3104,8 @@ const MEMOS = [
               30.0,
               32.0
             ]
-          }
+          },
+          "revPerUnit": null
         }
       },
       "appendix": {
@@ -3468,7 +3572,19 @@ const MEMOS = [
               260
             ],
             "tam_competitor_share": 70.0
-          }
+          },
+          "revPerUnit": [
+            150,
+            160,
+            175,
+            190,
+            210,
+            225,
+            240,
+            250,
+            255,
+            260
+          ]
         },
         "base": {
           "probability": 0.5,
@@ -3617,7 +3733,19 @@ const MEMOS = [
               400
             ],
             "tam_competitor_share": 55.0
-          }
+          },
+          "revPerUnit": [
+            200,
+            220,
+            250,
+            280,
+            310,
+            340,
+            370,
+            390,
+            400,
+            400
+          ]
         },
         "bull": {
           "probability": 0.12,
@@ -3766,7 +3894,19 @@ const MEMOS = [
               510
             ],
             "tam_competitor_share": 45.0
-          }
+          },
+          "revPerUnit": [
+            250,
+            290,
+            330,
+            370,
+            410,
+            450,
+            480,
+            500,
+            510,
+            510
+          ]
         },
         "ultra_bull": {
           "probability": 0.03,
@@ -3915,7 +4055,19 @@ const MEMOS = [
               750
             ],
             "tam_competitor_share": 35.0
-          }
+          },
+          "revPerUnit": [
+            300,
+            380,
+            460,
+            540,
+            620,
+            680,
+            720,
+            740,
+            750,
+            750
+          ]
         }
       },
       "appendix": {
