@@ -142,8 +142,28 @@ def build_memo(ticker: str) -> dict:
             f"Bull {probs['bull']} / Ultra Bull {probs['ultra_bull']}. "
             f"Spot price reference: {lbl} close."),
         # PDF-only payload — fields the print harness (public/print.html +
-        # public/memo_pdf.jsx) needs that the site doesn't.
+        # public/memo_pdf.jsx) needs that the site doesn't. Per-scenario data
+        # is dumped raw so the JSX can compute display rows itself (no
+        # parallel "what to display" logic in Python).
         "print": {
+            "dcfType": dcf_type,
+            "dcfPeriodYears": 10 if dcf_type == "young_company" else 5,
+            "tamBillion": d.get("chart_reference", {}).get("tam_billion"),
+            "weighted": {
+                "expected": round(pw_expected, 2),
+                "upsidePct": round((pw_expected / spot - 1) * 100, 1),
+            },
+            "scenarios": {
+                k: {
+                    "probability": float(scn[k]["probability"]),
+                    "expectedPerShare": float(scn[k]["expected_per_share"]),
+                    "label": scn[k]["label"],
+                    "shortLabel": scn[k]["short_label"],
+                    "dcfMetrics": dict(scn[k]["dcf_metrics"]),
+                    "dcfPath": dict(scn[k]["dcf_path"]),
+                }
+                for k in SCEN_ORDER
+            },
             "appendix": {
                 "pushback": [{"label": p["label"], "body": collapse(p["body"])}
                              for p in d["appendix"]["pushback"]],

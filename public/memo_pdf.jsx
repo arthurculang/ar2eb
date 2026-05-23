@@ -47,6 +47,123 @@ function fmtDayMonthYear(isoDate) {
   return `${d.getUTCDate()} ${month} ${d.getUTCFullYear()}`;
 }
 
+// ── DCF display logic — ported from memo.py for compute-from-inputs parity.
+// Mirrors assumptions_rows() and equity_build_rows() per dcf_type so the
+// JSX computes its own display rather than receiving pre-formatted rows.
+
+function dcfYearLabels(dcfType, n) {
+  // Young: FY27 → FY36 (10y); Mature: FY26 → FY30 (5y).
+  const start = dcfType === 'young_company' ? 27 : 26;
+  return Array.from({ length: n }, (_, i) => `FY${start + i}`);
+}
+
+function dcfRevenueDisplay(scn, dcfType, n) {
+  // Young rev_path is absolute $B; Mature is growth rates compounded from rev_b.
+  const p = scn.dcfPath;
+  if (dcfType === 'young_company') {
+    return p.rev_path.slice(0, n);
+  }
+  const out = [];
+  let r = p.rev_b;
+  for (let i = 0; i < n; i++) {
+    r = r * (1 + p.rev_path[i]);
+    out.push(r);
+  }
+  return out;
+}
+
+function assumptionsRows(scn, dcfType, tamBillion) {
+  const m = scn.dcfMetrics;
+  const p = scn.dcfPath;
+  const probPct = (scn.probability * 100).toFixed(0);
+  if (dcfType === 'young_company') {
+    return [
+      ['TAM Year-10 ($B)',        (tamBillion || 0).toFixed(0)],
+      ['Mature share (%)',        m.tam_share.toFixed(1)],
+      ['Mature op margin (%)',    (p.op_margin[p.op_margin.length - 1] * 100).toFixed(0)],
+      ['Sales-to-capital',        m.s2c.toFixed(1)],
+      ['Terminal WACC (%)',       (p.wacc_path[p.wacc_path.length - 1] * 100).toFixed(1)],
+      ['Terminal growth (%)',     (p.term_g * 100).toFixed(1)],
+      ['P(failure) (%)',          String(m.p_fail)],
+      ['Scenario probability (%)', probPct],
+    ];
+  }
+  if (dcfType === 'mature_company') {
+    const sign = m.cagr_5y >= 0 ? '+' : '';
+    return [
+      ['5y revenue CAGR (%)',     `${sign}${m.cagr_5y.toFixed(1)}`],
+      ['Year-5 op margin (%)',    (p.op_margin[p.op_margin.length - 1] * 100).toFixed(1)],
+      ['WACC (%)',                (m.wacc * 100).toFixed(1)],
+      ['Terminal growth (%)',     (p.term_g * 100).toFixed(1)],
+      ['5y SLB total ($B)',       m.slb_total_5y.toFixed(2)],
+      ['Starting revenue ($B)',   p.rev_b.toFixed(2)],
+      ['Scenario probability (%)', probPct],
+    ];
+  }
+  // mature_company_sotp
+  const signS = m.cagr_5y >= 0 ? '+' : '';
+  return [
+    ['5y revenue CAGR (%)',     `${signS}${m.cagr_5y.toFixed(1)}`],
+    ['Year-5 op margin (%)',    (p.op_margin[p.op_margin.length - 1] * 100).toFixed(1)],
+    ['WACC (%)',                (m.wacc * 100).toFixed(1)],
+    ['Terminal growth (%)',     (p.term_g * 100).toFixed(1)],
+    ['Anthropic stake ($B)',    (m.anthropic_stake ?? 0).toFixed(1)],
+    ['Starting revenue ($B)',   p.rev_b.toFixed(2)],
+    ['Scenario probability (%)', probPct],
+  ];
+}
+
+function equityBuildRows(scn, dcfType) {
+  const p = scn.dcfPath;
+  if (dcfType === 'young_company') {
+    return [
+      ['Operating EV',           `$${p.op_ev.toFixed(2)}B`,        'normal'],
+      ['+ Cash & investments',   `$${p.cash.toFixed(2)}B`,         'normal'],
+      ['= Equity value',         `$${p.total_equity.toFixed(2)}B`, 'subtotal'],
+      ['Raised over period',     `$${p.raise_total.toFixed(2)}B`,  'normal'],
+      ['Dilution by FY36',       `+${p.dilution_pct}%`,            'normal'],
+      ['FY36 shares (M)',        p.final_shares.toLocaleString(),  'normal'],
+      ['DCF per share',          `$${p.dcf_per_share.toFixed(2)}`, 'subtotal'],
+      [`× (1−P_fail) [${100 - scn.dcfMetrics.p_fail}%]`,
+        `$${((1 - scn.dcfMetrics.p_fail / 100) * p.dcf_per_share).toFixed(2)}`, 'normal'],
+      [`+ P_fail × distress [${scn.dcfMetrics.p_fail}% × $${p.distress.toFixed(2)}]`,
+        `$${(scn.dcfMetrics.p_fail / 100 * p.distress).toFixed(2)}`, 'normal'],
+      ['= Expected per share',   `$${scn.expectedPerShare.toFixed(2)}`, 'total'],
+    ];
+  }
+  if (dcfType === 'mature_company') {
+    const rows = [
+      ['Operating EV',           `$${p.op_ev.toFixed(2)}B`,        'normal'],
+      ['+ Cash & investments',   `$${p.cash.toFixed(2)}B`,         'normal'],
+    ];
+    if ((p.net_debt || 0) > 0) {
+      rows.push(['− Net debt',   `$${p.net_debt.toFixed(2)}B`,     'normal']);
+    }
+    rows.push(
+      ['= Equity value',         `$${p.total_equity.toFixed(2)}B`, 'subtotal'],
+      ['FY30 shares (M)',        p.final_shares.toLocaleString(),  'normal'],
+      ['= Expected per share',   `$${scn.expectedPerShare.toFixed(2)}`, 'total'],
+    );
+    return rows;
+  }
+  // mature_company_sotp
+  const saLabel = scn.dcfMetrics.anthropic_stake != null ? '+ Anthropic stake' : '+ Special assets';
+  const rowsS = [
+    ['Operating EV',             `$${p.op_ev.toFixed(2)}B`,        'normal'],
+    ['+ Cash & investments',     `$${p.cash.toFixed(2)}B`,         'normal'],
+    [saLabel,                    `$${(p.special_assets || 0).toFixed(2)}B`, 'normal'],
+  ];
+  if ((p.net_debt || 0) > 0) {
+    rowsS.push(['− Net debt',    `$${p.net_debt.toFixed(2)}B`,     'normal']);
+  }
+  rowsS.push(
+    ['= Equity value',           `$${p.total_equity.toFixed(2)}B`, 'subtotal'],
+    ['FY30 shares (M)',          p.final_shares.toLocaleString(),  'normal'],
+    ['= Expected per share',     `$${scn.expectedPerShare.toFixed(2)}`, 'total'],
+  );
+  return rowsS;
+}
+
 // ── Shared building blocks ─────────────────────────────────────────────
 function Eyebrow({ children, color = PALETTE.accent }) {
   return (
@@ -85,7 +202,7 @@ function PageFooter({ memo, pageLabel, showDisclaimerPointer = true }) {
       position: 'absolute',
       left: '1in',
       right: '1in',
-      bottom: '0.40in',
+      bottom: '0.22in',
     }}>
       <div style={{
         borderTop: `0.4pt solid ${PALETTE.rule}`,
@@ -152,27 +269,29 @@ function ThreeColGrid({ items, renderItem, rowGap = '12pt' }) {
   );
 }
 
-// ── Page 5 — Back matter (pushback, triggers, disclaimers, glossary) ──
-function Page5BackMatter({ memo }) {
-  const { appendix, glossary } = memo.print;
-  const disclaimers = window.AR2EB_DATA.PDF_DISCLAIMERS;
+// ── Reusable page header (logo + eyebrow + company + recap strip). The
+// `compact` mode trims internal margins so Page 4 (4-column quant grid)
+// fits without overflow. Page 5 uses the default (slightly airier). ──
+function PageHeader({ memo, suffix, label, recapWeighted = false, compact = false }) {
   const bear = memo.scenarios.find(s => s.key === 'bear');
   const base = memo.scenarios.find(s => s.key === 'base');
   const bull = memo.scenarios.find(s => s.key === 'bull');
-
-  // Substitute ${TICKER} in disclaimer body at render time.
-  const renderDisclaimer = d => ({
-    ...d,
-    p: d.p.replace(/\$\{TICKER\}/g, `$${memo.ticker}`),
-  });
-
+  const w = memo.print.weighted;
+  const wSign = w.upsidePct >= 0 ? '+' : '';
+  const recap = recapWeighted
+    ? `Bear  ${fmtDollars(bear.price)}     Base  ${fmtDollars(base.price)}     `
+      + `Bull  ${fmtDollars(bull.price)}     ·     `
+      + `Weighted  ${fmtDollars(w.expected)}  (${wSign}${w.upsidePct.toFixed(1)}%)`
+    : `Bear  ${fmtDollars(bear.price)}     Base  ${fmtDollars(base.price)}     `
+      + `Bull  ${fmtDollars(bull.price)}`;
+  const padTop = compact ? '12pt' : '22pt';
+  const gap1 = compact ? '8pt' : '12pt';
+  const gap2 = compact ? '4pt' : '8pt';
+  const ruleMargin = compact ? '8pt' : '14pt';
   return (
-    <div className="memo-page">
-      {/* Header strip. Logo is 150pt wide (memo.py LOGO_W_P3). The text
-          column starts 28pt to the right of the logo. The logo TOP sits
-          22pt below the page-content top so the header has breathing room. */}
+    <>
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '28pt',
-                    paddingTop: '22pt' }}>
+                    paddingTop: padTop }}>
         <img src="assets/ar2eb-logo-v3-cropped.png" alt=""
              style={{ width: '150pt', height: 'auto', flexShrink: 0 }} />
         <div style={{ flex: 1 }}>
@@ -189,11 +308,11 @@ function Page5BackMatter({ memo }) {
               fontSize: '7.5pt',
               color: PALETTE.muted,
             }}>
-              {fmtDayMonthYear(memo.publishedISO)}  ·  the back matter
+              {fmtDayMonthYear(memo.publishedISO)}  ·  {label}
             </div>
           </div>
           <div style={{
-            marginTop: '12pt',
+            marginTop: gap1,
             display: 'flex',
             alignItems: 'baseline',
             gap: '8pt',
@@ -213,27 +332,301 @@ function Page5BackMatter({ memo }) {
               color: PALETTE.muted,
               lineHeight: 1.0,
             }}>
-              supporting analysis · disclaimers · glossary
+              {suffix}
             </div>
           </div>
           <div style={{
-            marginTop: '8pt',
+            marginTop: gap2,
             textAlign: 'right',
             fontFamily: FONT_MONO,
-            fontSize: '9pt',
-            color: PALETTE.muted,
+            fontSize: recapWeighted ? '10pt' : '9pt',
+            color: recapWeighted ? PALETTE.ink : PALETTE.muted,
           }}>
-            Bear  {fmtDollars(bear.price)}     Base  {fmtDollars(base.price)}     Bull  {fmtDollars(bull.price)}
+            {recap}
           </div>
         </div>
       </div>
 
-      <div style={{ marginTop: '14pt' }}>
+      <div style={{ marginTop: ruleMargin }}>
         <Rule strong />
       </div>
+    </>
+  );
+}
+
+// ── Page 4 — Quantitative (show your work) ─────────────────────────────
+function ScenarioQuantColumn({ memo, scenarioKey }) {
+  const print = memo.print;
+  const scn = print.scenarios[scenarioKey];
+  const dcfType = print.dcfType;
+  const n = print.dcfPeriodYears;
+  const fyLabels = dcfYearLabels(dcfType, n);
+  const rev = dcfRevenueDisplay(scn, dcfType, n);
+  const margins = scn.dcfPath.op_margin;
+  const fcf = scn.dcfPath.fcf;
+  const pvFcf = scn.dcfPath.pv_fcf;
+  const sumPv = scn.dcfPath.sum_pv_fcf;
+  const pvTerm = scn.dcfPath.pv_terminal;
+  const termG = scn.dcfPath.term_g;
+  const waccTerm = scn.dcfPath.wacc_path[scn.dcfPath.wacc_path.length - 1];
+  const asm = assumptionsRows(scn, dcfType, print.tamBillion);
+  const eb = equityBuildRows(scn, dcfType);
+  const expected = scn.expectedPerShare;
+  const NEG = '#b91c1c';
+  const POS = '#15803d';
+
+  // Column-internal positions (memo.py uses 4 numeric columns + label).
+  const cell = {
+    fontFamily: FONT_MONO, fontSize: '6.5pt', color: PALETTE.ink,
+    textAlign: 'right',
+  };
+  const cellLabel = {
+    fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.text,
+  };
+  const headerCell = {
+    fontFamily: FONT_SANS, fontWeight: 600, fontSize: '6.5pt',
+    color: PALETTE.muted, textAlign: 'right',
+  };
+
+  // Section helper for in-column headings. Tight margins so the 5-section
+  // column (header / assumptions / DCF / equity / future-value) fits on
+  // one page — memo.py uses ~22pt total per section header; CSS Grid
+  // gives 22pt at 4/4 margins.
+  const SectionEyebrow = ({ children }) => (
+    <div style={{ marginTop: '4pt', marginBottom: '4pt' }}>
+      <Eyebrow>{children}</Eyebrow>
+      <div style={{ marginTop: '2pt' }}><Rule /></div>
+    </div>
+  );
+
+  return (
+    <div>
+      {/* Scenario header */}
+      <div style={{ display: 'flex', justifyContent: 'space-between',
+                    alignItems: 'baseline', paddingBottom: '4pt' }}>
+        <div style={{
+          fontFamily: FONT_SANS, fontWeight: 600, fontSize: '10pt',
+          color: PALETTE.ink, letterSpacing: '0.02em',
+        }}>
+          {scn.label.toUpperCase()}
+        </div>
+        <div style={{
+          fontFamily: FONT_MONO, fontWeight: 700, fontSize: '14pt',
+          color: PALETTE.ink,
+        }}>
+          ${expected.toFixed(2)}
+        </div>
+      </div>
+      <Rule />
+
+      {/* Assumptions */}
+      <SectionEyebrow>ASSUMPTIONS</SectionEyebrow>
+      {asm.map(([lab, val], i) => (
+        <div key={i} style={{
+          display: 'flex', justifyContent: 'space-between',
+          lineHeight: '9.5pt',
+        }}>
+          <span style={cellLabel}>{lab}</span>
+          <span style={{ ...cell, fontFamily: FONT_MONO }}>{val}</span>
+        </div>
+      ))}
+
+      {/* DCF table */}
+      <SectionEyebrow>{n}-YEAR DCF  ·  $B</SectionEyebrow>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '28pt 1fr 1fr 1fr 1fr',
+        columnGap: '4pt',
+        rowGap: '0',
+      }}>
+        <div style={{ ...headerCell, textAlign: 'left' }}>FY</div>
+        <div style={headerCell}>Rev</div>
+        <div style={headerCell}>Margin</div>
+        <div style={headerCell}>FCF</div>
+        <div style={headerCell}>PV FCF</div>
+      </div>
+      <div style={{ marginTop: '2pt' }}><Rule /></div>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '28pt 1fr 1fr 1fr 1fr',
+        columnGap: '4pt',
+        rowGap: '0',
+        marginTop: '3pt',
+      }}>
+        {fyLabels.map((fy, i) => {
+          const fcfColor = fcf[i] < 0 ? NEG : PALETTE.ink;
+          const marginSign = margins[i] >= 0 ? '+' : '';
+          const fcfSign = fcf[i] >= 0 ? '+' : '';
+          const pvSign = pvFcf[i] >= 0 ? '+' : '';
+          return (
+            <React.Fragment key={fy}>
+              <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt',
+                            color: PALETTE.text, lineHeight: '9pt' }}>{fy}</div>
+              <div style={{ ...cell, lineHeight: '9pt' }}>{rev[i].toFixed(2)}</div>
+              <div style={{ ...cell, lineHeight: '9pt' }}>
+                {marginSign}{(margins[i] * 100).toFixed(0)}%
+              </div>
+              <div style={{ ...cell, color: fcfColor, lineHeight: '9pt' }}>
+                {fcfSign}{fcf[i].toFixed(2)}
+              </div>
+              <div style={{ ...cell, lineHeight: '9pt' }}>
+                {pvSign}{pvFcf[i].toFixed(2)}
+              </div>
+            </React.Fragment>
+          );
+        })}
+      </div>
+
+      {/* DCF subtotals */}
+      <div style={{ marginTop: '4pt' }}><Rule /></div>
+      <div style={{ display: 'flex', justifyContent: 'space-between',
+                    marginTop: '4pt' }}>
+        <span style={{ fontFamily: FONT_SANS, fontSize: '7pt',
+                       fontWeight: 500, color: PALETTE.ink }}>
+          Σ PV explicit FCF
+        </span>
+        <span style={{ fontFamily: FONT_MONO, fontSize: '7pt',
+                       fontWeight: 700, color: PALETTE.ink }}>
+          {sumPv >= 0 ? '+' : ''}{sumPv.toFixed(2)}
+        </span>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between',
+                    marginTop: '2pt' }}>
+        <span style={{ fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.text }}>
+          + PV terminal (g {(termG * 100).toFixed(1)}%)
+        </span>
+        <span style={{ fontFamily: FONT_MONO, fontSize: '7pt', color: PALETTE.ink }}>
+          {pvTerm.toFixed(2)}
+        </span>
+      </div>
+
+      {/* Equity build */}
+      <SectionEyebrow>EQUITY BUILD  ·  $B & per share</SectionEyebrow>
+      {eb.map(([lab, val, kind], i) => {
+        const baseStyle = { display: 'flex', justifyContent: 'space-between' };
+        if (kind === 'subtotal') {
+          return (
+            <React.Fragment key={i}>
+              <div style={{ marginBottom: '2pt' }}><Rule /></div>
+              <div style={{ ...baseStyle, lineHeight: '9.5pt' }}>
+                <span style={{ fontFamily: FONT_SANS, fontSize: '7pt',
+                               fontWeight: 500, color: PALETTE.ink }}>{lab}</span>
+                <span style={{ fontFamily: FONT_MONO, fontSize: '7pt',
+                               fontWeight: 700, color: PALETTE.ink }}>{val}</span>
+              </div>
+            </React.Fragment>
+          );
+        }
+        if (kind === 'total') {
+          return (
+            <React.Fragment key={i}>
+              <div style={{ marginTop: '2pt', marginBottom: '3pt' }}>
+                <Rule strong />
+              </div>
+              <div style={{ ...baseStyle, lineHeight: '12pt' }}>
+                <span style={{ fontFamily: FONT_SANS, fontSize: '8.5pt',
+                               fontWeight: 600, color: PALETTE.ink }}>{lab}</span>
+                <span style={{ fontFamily: FONT_MONO, fontSize: '8.5pt',
+                               fontWeight: 700, color: PALETTE.ink }}>{val}</span>
+              </div>
+            </React.Fragment>
+          );
+        }
+        return (
+          <div key={i} style={{ ...baseStyle, lineHeight: '10pt' }}>
+            <span style={{ fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.text }}>{lab}</span>
+            <span style={{ fontFamily: FONT_MONO, fontSize: '7pt', color: PALETTE.text }}>{val}</span>
+          </div>
+        );
+      })}
+
+      {/* Future fair value */}
+      <SectionEyebrow>FUTURE FAIR VALUE  ·  IF SCENARIO PLAYS OUT</SectionEyebrow>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        textAlign: 'center',
+      }}>
+        {[5, 10, 15, 20].map(T => (
+          <div key={`y-${T}`} style={{ ...headerCell, textAlign: 'center' }}>
+            +{T}y
+          </div>
+        ))}
+        {[5, 10, 15, 20].map(T => {
+          const fv = expected * Math.pow(1 + waccTerm, T);
+          return (
+            <div key={`v-${T}`} style={{
+              fontFamily: FONT_MONO, fontSize: '7pt', color: PALETTE.ink,
+              textAlign: 'center', marginTop: '2pt',
+            }}>
+              ${fv.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            </div>
+          );
+        })}
+        {[5, 10, 15, 20].map(T => {
+          const fv = expected * Math.pow(1 + waccTerm, T);
+          const mult = fv / memo.spot.price;
+          const color = (expected <= 0 || fv < memo.spot.price) ? NEG : POS;
+          return (
+            <div key={`m-${T}`} style={{
+              fontFamily: FONT_MONO, fontSize: '6.5pt', color,
+              textAlign: 'center',
+            }}>
+              {mult.toFixed(2)}×
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function Page4Quantitative({ memo }) {
+  return (
+    <div className="memo-page">
+      <PageHeader memo={memo} suffix="show your work"
+                  label="the quantitative" recapWeighted compact />
+
+      {/* 4-column scenario quant grid — fills the page alone. Pushback +
+          falsification triggers live on Page 5; we tried Page 4 per the
+          spec but the quant content takes the full page. */}
+      <div style={{
+        marginTop: '8pt',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(4, 1fr)',
+        columnGap: '16pt',
+      }}>
+        {['bear', 'base', 'bull', 'ultra_bull'].map(k => (
+          <ScenarioQuantColumn key={k} memo={memo} scenarioKey={k} />
+        ))}
+      </div>
+
+      <PageFooter memo={memo} pageLabel="page 4 of 5" />
+    </div>
+  );
+}
+
+// ── Page 5 — Back matter (pushback, triggers, disclaimers, glossary).
+// Spec §6 implies pushback+triggers belong on Page 4 (quant) but the
+// 4-column quant grid takes a full page; following memo.py's layout. ──
+function Page5BackMatter({ memo }) {
+  const { appendix, glossary } = memo.print;
+  const disclaimers = window.AR2EB_DATA.PDF_DISCLAIMERS;
+
+  // Substitute ${TICKER} in disclaimer body at render time.
+  const renderDisclaimer = d => ({
+    ...d,
+    p: d.p.replace(/\$\{TICKER\}/g, `$${memo.ticker}`),
+  });
+
+  return (
+    <div className="memo-page">
+      <PageHeader memo={memo} suffix="supporting analysis · disclaimers · glossary"
+                  label="the back matter" />
 
       {/* PUSHBACK */}
-      <SectionHeader label="PUSHBACK  ·  WHY THE BASE CASE IS TOO HARSH" marginTop="14pt" />
+      <SectionHeader label="PUSHBACK  ·  WHY THE BASE CASE IS TOO HARSH"
+                     marginTop="14pt" />
       <ThreeColGrid
         items={appendix.pushback}
         rowGap="18pt"
@@ -368,7 +761,12 @@ function MemoPDF() {
     scripts/build_site_data.py.
   </div>;
 
-  return <Page5BackMatter memo={memo} />;
+  return (
+    <>
+      <Page4Quantitative memo={memo} />
+      <Page5BackMatter memo={memo} />
+    </>
+  );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

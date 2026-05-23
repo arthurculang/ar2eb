@@ -104,6 +104,455 @@ const MEMOS = [
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 30 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
     "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 250,
+      "weighted": {
+        "expected": 7.81,
+        "upsidePct": -25.6
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.3,
+          "expectedPerShare": 0.32,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 0.6,
+            "p_fail": 35,
+            "s2c": 0.8
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.15,
+              0.25,
+              0.4,
+              0.6,
+              0.8,
+              0.95,
+              1.1,
+              1.25,
+              1.4,
+              1.5
+            ],
+            "op_margin": [
+              -3.0,
+              -2.0,
+              -1.2,
+              -0.6,
+              -0.2,
+              0.0,
+              0.02,
+              0.04,
+              0.05,
+              0.05
+            ],
+            "wacc_path": [
+              0.14,
+              0.135,
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.45,
+              -0.5,
+              -0.48,
+              -0.36,
+              -0.16,
+              0.0,
+              0.022,
+              0.05,
+              0.07,
+              0.075
+            ],
+            "reinvest": [
+              0.05,
+              0.125,
+              0.188,
+              0.25,
+              0.25,
+              0.188,
+              0.188,
+              0.188,
+              0.188,
+              0.125
+            ],
+            "fcf": [
+              -0.5,
+              -0.625,
+              -0.668,
+              -0.61,
+              -0.41,
+              -0.188,
+              -0.166,
+              -0.138,
+              -0.118,
+              -0.05
+            ],
+            "pv_fcf": [
+              -0.439,
+              -0.483,
+              -0.457,
+              -0.371,
+              -0.222,
+              -0.091,
+              -0.072,
+              -0.054,
+              -0.042,
+              -0.016
+            ],
+            "sum_pv_fcf": -2.247,
+            "terminal_value": 1.0,
+            "pv_terminal": 0.32,
+            "op_ev": -1.93,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 0.57,
+            "raise_total": 2.75,
+            "dilution_pct": 53,
+            "final_shares": 1508,
+            "dcf_per_share": 0.22,
+            "distress": 0.5
+          }
+        },
+        "base": {
+          "probability": 0.55,
+          "expectedPerShare": 2.0,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 2.8,
+            "p_fail": 18,
+            "s2c": 1.2
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.18,
+              0.4,
+              0.9,
+              1.6,
+              2.5,
+              3.5,
+              4.5,
+              5.5,
+              6.3,
+              7.0
+            ],
+            "op_margin": [
+              -2.5,
+              -1.2,
+              -0.5,
+              -0.1,
+              0.05,
+              0.08,
+              0.1,
+              0.12,
+              0.13,
+              0.13
+            ],
+            "wacc_path": [
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.45,
+              -0.48,
+              -0.45,
+              -0.16,
+              0.125,
+              0.221,
+              0.356,
+              0.521,
+              0.647,
+              0.719
+            ],
+            "reinvest": [
+              0.058,
+              0.183,
+              0.417,
+              0.583,
+              0.75,
+              0.833,
+              0.833,
+              0.833,
+              0.667,
+              0.583
+            ],
+            "fcf": [
+              -0.508,
+              -0.663,
+              -0.867,
+              -0.743,
+              -0.625,
+              -0.612,
+              -0.478,
+              -0.312,
+              -0.02,
+              0.136
+            ],
+            "pv_fcf": [
+              -0.45,
+              -0.522,
+              -0.609,
+              -0.468,
+              -0.355,
+              -0.314,
+              -0.223,
+              -0.133,
+              -0.008,
+              0.049
+            ],
+            "sum_pv_fcf": -3.033,
+            "terminal_value": 21.5,
+            "pv_terminal": 6.1,
+            "op_ev": 3.07,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 5.57,
+            "raise_total": 3.75,
+            "dilution_pct": 31,
+            "final_shares": 1284,
+            "dcf_per_share": 2.33,
+            "distress": 0.5
+          }
+        },
+        "bull": {
+          "probability": 0.12,
+          "expectedPerShare": 32.61,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 8.0,
+            "p_fail": 8,
+            "s2c": 1.6
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.2,
+              0.5,
+              1.2,
+              2.5,
+              4.5,
+              7.5,
+              11.0,
+              15.0,
+              18.0,
+              20.0
+            ],
+            "op_margin": [
+              -2.0,
+              -0.8,
+              -0.2,
+              0.05,
+              0.12,
+              0.18,
+              0.22,
+              0.25,
+              0.27,
+              0.28
+            ],
+            "wacc_path": [
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.075
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.4,
+              -0.4,
+              -0.24,
+              0.125,
+              0.54,
+              1.35,
+              2.42,
+              3.75,
+              4.86,
+              5.6
+            ],
+            "reinvest": [
+              0.056,
+              0.188,
+              0.438,
+              0.813,
+              1.25,
+              1.875,
+              2.188,
+              2.5,
+              1.875,
+              1.25
+            ],
+            "fcf": [
+              -0.456,
+              -0.588,
+              -0.678,
+              -0.688,
+              -0.71,
+              -0.525,
+              0.232,
+              1.25,
+              2.985,
+              4.35
+            ],
+            "pv_fcf": [
+              -0.407,
+              -0.464,
+              -0.477,
+              -0.435,
+              -0.404,
+              -0.262,
+              0.105,
+              0.527,
+              1.169,
+              1.586
+            ],
+            "sum_pv_fcf": 0.938,
+            "terminal_value": 88.0,
+            "pv_terminal": 32.1,
+            "op_ev": 33.04,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 35.54,
+            "raise_total": 2.05,
+            "dilution_pct": 11,
+            "final_shares": 1091,
+            "dcf_per_share": 35.35,
+            "distress": 1.0
+          }
+        },
+        "ultra_bull": {
+          "probability": 0.03,
+          "expectedPerShare": 90.0,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 16.0,
+            "p_fail": 4,
+            "s2c": 1.8
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.25,
+              0.7,
+              1.8,
+              3.8,
+              7.0,
+              11.5,
+              17.0,
+              23.0,
+              28.0,
+              32.0
+            ],
+            "op_margin": [
+              -1.8,
+              -0.6,
+              -0.1,
+              0.1,
+              0.18,
+              0.24,
+              0.28,
+              0.3,
+              0.32,
+              0.34
+            ],
+            "wacc_path": [
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.075,
+              0.072,
+              0.07
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.45,
+              -0.42,
+              -0.18,
+              0.38,
+              1.26,
+              2.76,
+              4.76,
+              6.9,
+              8.96,
+              10.88
+            ],
+            "reinvest": [
+              0.07,
+              0.26,
+              0.66,
+              1.26,
+              1.95,
+              2.7,
+              2.87,
+              2.8,
+              2.0,
+              1.25
+            ],
+            "fcf": [
+              -0.52,
+              -0.68,
+              -0.84,
+              -0.88,
+              -0.69,
+              0.06,
+              1.89,
+              4.1,
+              6.96,
+              9.63
+            ],
+            "pv_fcf": [
+              -0.468,
+              -0.547,
+              -0.616,
+              -0.584,
+              -0.418,
+              0.033,
+              0.929,
+              1.852,
+              2.88,
+              3.665
+            ],
+            "sum_pv_fcf": 6.726,
+            "terminal_value": 252.0,
+            "pv_terminal": 95.83,
+            "op_ev": 102.56,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 105.06,
+            "raise_total": 2.05,
+            "dilution_pct": 11,
+            "final_shares": 1121,
+            "dcf_per_share": 93.72,
+            "distress": 0.96
+          }
+        }
+      },
       "appendix": {
         "pushback": [
           {
@@ -276,6 +725,455 @@ const MEMOS = [
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
     "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 160,
+      "weighted": {
+        "expected": 9.01,
+        "upsidePct": 16.4
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.35,
+          "expectedPerShare": 0.06,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 1.5,
+            "p_fail": 45,
+            "s2c": 1.2
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.015,
+              0.04,
+              0.08,
+              0.15,
+              0.3,
+              0.6,
+              1.0,
+              1.5,
+              2.0,
+              2.5
+            ],
+            "op_margin": [
+              -8.0,
+              -4.0,
+              -2.0,
+              -1.0,
+              -0.5,
+              -0.2,
+              -0.1,
+              0.0,
+              0.05,
+              0.08
+            ],
+            "wacc_path": [
+              0.14,
+              0.14,
+              0.135,
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.12,
+              -0.16,
+              -0.16,
+              -0.15,
+              -0.15,
+              -0.12,
+              -0.1,
+              0.0,
+              0.1,
+              0.2
+            ],
+            "reinvest": [
+              0.009,
+              0.021,
+              0.033,
+              0.058,
+              0.125,
+              0.25,
+              0.333,
+              0.417,
+              0.417,
+              0.417
+            ],
+            "fcf": [
+              -0.129,
+              -0.181,
+              -0.193,
+              -0.208,
+              -0.275,
+              -0.37,
+              -0.433,
+              -0.417,
+              -0.317,
+              -0.217
+            ],
+            "pv_fcf": [
+              -0.113,
+              -0.139,
+              -0.131,
+              -0.124,
+              -0.146,
+              -0.175,
+              -0.184,
+              -0.159,
+              -0.109,
+              -0.068
+            ],
+            "sum_pv_fcf": -1.348,
+            "terminal_value": 2.3,
+            "pv_terminal": 0.72,
+            "op_ev": -0.63,
+            "cash": 1.28,
+            "net_debt": 0.0,
+            "total_equity": 0.65,
+            "raise_total": 4.25,
+            "dilution_pct": 74,
+            "final_shares": 3401,
+            "dcf_per_share": 0.11,
+            "distress": 0.0
+          }
+        },
+        "base": {
+          "probability": 0.5,
+          "expectedPerShare": 3.03,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 7.5,
+            "p_fail": 25,
+            "s2c": 1.5
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.03,
+              0.1,
+              0.25,
+              0.6,
+              1.2,
+              2.5,
+              4.5,
+              7.0,
+              9.5,
+              12.0
+            ],
+            "op_margin": [
+              -6.0,
+              -2.5,
+              -1.0,
+              -0.4,
+              -0.1,
+              0.05,
+              0.1,
+              0.15,
+              0.18,
+              0.2
+            ],
+            "wacc_path": [
+              0.12,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.09,
+              0.085
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.18,
+              -0.25,
+              -0.25,
+              -0.24,
+              -0.12,
+              0.099,
+              0.356,
+              0.83,
+              1.351,
+              1.896
+            ],
+            "reinvest": [
+              0.017,
+              0.047,
+              0.1,
+              0.233,
+              0.4,
+              0.867,
+              1.333,
+              1.667,
+              1.667,
+              1.667
+            ],
+            "fcf": [
+              -0.197,
+              -0.297,
+              -0.35,
+              -0.473,
+              -0.52,
+              -0.768,
+              -0.978,
+              -0.837,
+              -0.316,
+              0.229
+            ],
+            "pv_fcf": [
+              -0.176,
+              -0.237,
+              -0.25,
+              -0.305,
+              -0.303,
+              -0.407,
+              -0.473,
+              -0.372,
+              -0.129,
+              0.086
+            ],
+            "sum_pv_fcf": -2.566,
+            "terminal_value": 41.7,
+            "pv_terminal": 9.59,
+            "op_ev": 8.32,
+            "cash": 1.28,
+            "net_debt": 0.0,
+            "total_equity": 9.6,
+            "raise_total": 4.5,
+            "dilution_pct": 27,
+            "final_shares": 2480,
+            "dcf_per_share": 3.87,
+            "distress": 0.5
+          }
+        },
+        "bull": {
+          "probability": 0.12,
+          "expectedPerShare": 37.31,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 22.5,
+            "p_fail": 12,
+            "s2c": 1.8
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.04,
+              0.18,
+              0.5,
+              1.2,
+              2.5,
+              5.0,
+              10.0,
+              18.0,
+              27.0,
+              36.0
+            ],
+            "op_margin": [
+              -5.0,
+              -1.5,
+              -0.3,
+              0.05,
+              0.15,
+              0.22,
+              0.28,
+              0.32,
+              0.34,
+              0.35
+            ],
+            "wacc_path": [
+              0.11,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.08,
+              0.075
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.2,
+              -0.27,
+              -0.15,
+              0.06,
+              0.375,
+              1.1,
+              2.8,
+              5.76,
+              9.18,
+              12.6
+            ],
+            "reinvest": [
+              0.02,
+              0.078,
+              0.178,
+              0.389,
+              0.722,
+              1.389,
+              2.778,
+              4.444,
+              5.0,
+              5.0
+            ],
+            "fcf": [
+              -0.22,
+              -0.348,
+              -0.328,
+              -0.329,
+              -0.347,
+              -0.289,
+              0.022,
+              1.316,
+              4.18,
+              7.6
+            ],
+            "pv_fcf": [
+              -0.198,
+              -0.282,
+              -0.243,
+              -0.22,
+              -0.211,
+              -0.161,
+              0.011,
+              0.598,
+              1.756,
+              2.974
+            ],
+            "sum_pv_fcf": 4.024,
+            "terminal_value": 173.8,
+            "pv_terminal": 85.38,
+            "op_ev": 89.4,
+            "cash": 1.28,
+            "net_debt": 0.0,
+            "total_equity": 90.68,
+            "raise_total": 2.8,
+            "dilution_pct": 10,
+            "final_shares": 2145,
+            "dcf_per_share": 42.26,
+            "distress": 1.0
+          }
+        },
+        "ultra_bull": {
+          "probability": 0.03,
+          "expectedPerShare": 100.0,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 25.0,
+            "p_fail": 3,
+            "s2c": 2.5
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.03,
+              0.15,
+              0.5,
+              1.5,
+              3.0,
+              5.0,
+              7.0,
+              8.5,
+              9.5,
+              10.5
+            ],
+            "op_margin": [
+              -2.5,
+              -0.8,
+              -0.3,
+              0.0,
+              0.15,
+              0.25,
+              0.32,
+              0.36,
+              0.38,
+              0.4
+            ],
+            "wacc_path": [
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.075,
+              -0.12,
+              -0.15,
+              0.0,
+              0.45,
+              1.25,
+              2.24,
+              3.06,
+              3.61,
+              4.2
+            ],
+            "reinvest": [
+              0.03,
+              0.12,
+              0.35,
+              0.75,
+              1.2,
+              1.5,
+              1.4,
+              1.25,
+              1.0,
+              0.75
+            ],
+            "fcf": [
+              -0.105,
+              -0.24,
+              -0.5,
+              -0.75,
+              -0.75,
+              -0.25,
+              0.84,
+              1.81,
+              2.61,
+              3.45
+            ],
+            "pv_fcf": [
+              -0.093,
+              -0.191,
+              -0.357,
+              -0.488,
+              -0.444,
+              -0.135,
+              0.413,
+              0.815,
+              1.082,
+              1.327
+            ],
+            "sum_pv_fcf": 1.929,
+            "terminal_value": 105.0,
+            "pv_terminal": 40.4,
+            "op_ev": 42.33,
+            "cash": 1.28,
+            "net_debt": 0.65,
+            "total_equity": 42.96,
+            "raise_total": 2.0,
+            "dilution_pct": 18,
+            "final_shares": 2010,
+            "dcf_per_share": 102.5,
+            "distress": 0.98
+          }
+        }
+      },
       "appendix": {
         "pushback": [
           {
@@ -448,6 +1346,263 @@ const MEMOS = [
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Bear 20 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
     "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 21.88,
+        "upsidePct": -34.9
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.2,
+          "expectedPerShare": -0.36,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 5.1,
+            "wacc": 0.11,
+            "slb_total_5y": 0.95
+          },
+          "dcfPath": {
+            "rev_b": 2.995,
+            "rev_path": [
+              0.11,
+              0.06,
+              0.04,
+              0.03,
+              0.02
+            ],
+            "op_margin": [
+              0.175,
+              0.17,
+              0.16,
+              0.15,
+              0.14
+            ],
+            "wacc_path": [
+              0.11,
+              0.11,
+              0.11,
+              0.11,
+              0.11
+            ],
+            "fcf": [
+              0.133,
+              0.176,
+              0.147,
+              0.113,
+              0.077
+            ],
+            "pv_fcf": [
+              0.12,
+              0.143,
+              0.107,
+              0.075,
+              0.046
+            ],
+            "term_g": 0.015,
+            "sum_pv_fcf": 0.49,
+            "terminal_value": 0.82,
+            "pv_terminal": 0.49,
+            "op_ev": 0.98,
+            "cash": 0.232,
+            "net_debt": 1.29,
+            "total_equity": -0.08,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 222,
+            "dcf_per_share": -0.36,
+            "distress": 0.0
+          }
+        },
+        "base": {
+          "probability": 0.55,
+          "expectedPerShare": 14.99,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 7.8,
+            "wacc": 0.095,
+            "slb_total_5y": 1.7
+          },
+          "dcfPath": {
+            "rev_b": 2.995,
+            "rev_path": [
+              0.11,
+              0.09,
+              0.08,
+              0.06,
+              0.05
+            ],
+            "op_margin": [
+              0.18,
+              0.185,
+              0.188,
+              0.19,
+              0.19
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "fcf": [
+              0.233,
+              0.29,
+              0.313,
+              0.332,
+              0.348
+            ],
+            "pv_fcf": [
+              0.213,
+              0.242,
+              0.238,
+              0.231,
+              0.221
+            ],
+            "term_g": 0.025,
+            "sum_pv_fcf": 1.14,
+            "terminal_value": 5.1,
+            "pv_terminal": 3.24,
+            "op_ev": 4.39,
+            "cash": 0.232,
+            "net_debt": 1.29,
+            "total_equity": 3.33,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 222,
+            "dcf_per_share": 14.99,
+            "distress": 0.0
+          }
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 46.04,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 9.8,
+            "wacc": 0.08,
+            "slb_total_5y": 2.0
+          },
+          "dcfPath": {
+            "rev_b": 2.995,
+            "rev_path": [
+              0.12,
+              0.11,
+              0.1,
+              0.09,
+              0.07
+            ],
+            "op_margin": [
+              0.185,
+              0.195,
+              0.205,
+              0.215,
+              0.22
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "fcf": [
+              0.302,
+              0.41,
+              0.491,
+              0.58,
+              0.669
+            ],
+            "pv_fcf": [
+              0.28,
+              0.351,
+              0.39,
+              0.427,
+              0.455
+            ],
+            "term_g": 0.03,
+            "sum_pv_fcf": 1.9,
+            "terminal_value": 13.78,
+            "pv_terminal": 9.38,
+            "op_ev": 11.28,
+            "cash": 0.232,
+            "net_debt": 1.29,
+            "total_equity": 10.22,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 222,
+            "dcf_per_share": 46.04,
+            "distress": 0.0
+          }
+        },
+        "ultra_bull": {
+          "probability": 0.05,
+          "expectedPerShare": 90.0,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 12.0,
+            "wacc": 0.075,
+            "slb_total_5y": 3.0
+          },
+          "dcfPath": {
+            "rev_b": 3.0,
+            "rev_path": [
+              0.12,
+              0.13,
+              0.13,
+              0.12,
+              0.1
+            ],
+            "op_margin": [
+              0.29,
+              0.3,
+              0.31,
+              0.32,
+              0.33
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              0.35,
+              0.5,
+              0.7,
+              0.9,
+              1.1
+            ],
+            "pv_fcf": [
+              0.326,
+              0.434,
+              0.56,
+              0.669,
+              0.76
+            ],
+            "term_g": 0.035,
+            "sum_pv_fcf": 2.749,
+            "terminal_value": 30.0,
+            "pv_terminal": 20.9,
+            "op_ev": 23.65,
+            "cash": 0.23,
+            "net_debt": 1.29,
+            "total_equity": 22.59,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 235,
+            "dcf_per_share": 96.1,
+            "distress": 0.0
+          }
+        }
+      },
       "appendix": {
         "pushback": [
           {
@@ -620,6 +1775,267 @@ const MEMOS = [
     ],
     "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
     "print": {
+      "dcfType": "mature_company_sotp",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 167.2,
+        "upsidePct": 67.2
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.3,
+          "expectedPerShare": 91.94,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": -0.7,
+            "wacc": 0.1,
+            "anthropic_stake": 4.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.01,
+              0.0,
+              -0.01,
+              -0.02,
+              -0.02
+            ],
+            "op_margin": [
+              0.385,
+              0.37,
+              0.355,
+              0.34,
+              0.32
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "fcf": [
+              1.722,
+              1.672,
+              1.607,
+              1.479,
+              1.356
+            ],
+            "pv_fcf": [
+              1.566,
+              1.382,
+              1.207,
+              1.01,
+              0.842
+            ],
+            "term_g": 0.0,
+            "sum_pv_fcf": 6.01,
+            "terminal_value": 13.56,
+            "pv_terminal": 8.42,
+            "op_ev": 14.43,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 4.0,
+            "total_equity": 26.23,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 285,
+            "dcf_per_share": 91.94,
+            "distress": 0.0
+          }
+        },
+        "base": {
+          "probability": 0.5,
+          "expectedPerShare": 163.44,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 3.1,
+            "wacc": 0.085,
+            "anthropic_stake": 7.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.04,
+              0.035,
+              0.03,
+              0.025,
+              0.025
+            ],
+            "op_margin": [
+              0.395,
+              0.395,
+              0.395,
+              0.395,
+              0.395
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "fcf": [
+              1.773,
+              1.835,
+              1.89,
+              1.937,
+              1.985
+            ],
+            "pv_fcf": [
+              1.634,
+              1.56,
+              1.482,
+              1.401,
+              1.323
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 7.39,
+            "terminal_value": 31.16,
+            "pv_terminal": 20.72,
+            "op_ev": 28.11,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 7.0,
+            "total_equity": 42.91,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 263,
+            "dcf_per_share": 163.44,
+            "distress": 0.0
+          }
+        },
+        "bull": {
+          "probability": 0.15,
+          "expectedPerShare": 252.63,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 6.4,
+            "wacc": 0.08,
+            "anthropic_stake": 9.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.05,
+              0.07,
+              0.08,
+              0.07,
+              0.05
+            ],
+            "op_margin": [
+              0.38,
+              0.39,
+              0.4,
+              0.41,
+              0.41
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "fcf": [
+              1.943,
+              2.134,
+              2.364,
+              2.592,
+              2.722
+            ],
+            "pv_fcf": [
+              1.799,
+              1.829,
+              1.877,
+              1.905,
+              1.852
+            ],
+            "term_g": 0.025,
+            "sum_pv_fcf": 9.26,
+            "terminal_value": 50.72,
+            "pv_terminal": 34.52,
+            "op_ev": 43.79,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 9.0,
+            "total_equity": 60.59,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 240,
+            "dcf_per_share": 252.63,
+            "distress": 0.0
+          }
+        },
+        "ultra_bull": {
+          "probability": 0.05,
+          "expectedPerShare": 400.0,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 9.5,
+            "wacc": 0.075,
+            "anthropic_stake": 16.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.08,
+              0.1,
+              0.12,
+              0.1,
+              0.08
+            ],
+            "op_margin": [
+              0.42,
+              0.43,
+              0.44,
+              0.45,
+              0.45
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              2.143,
+              2.564,
+              3.02,
+              3.35,
+              3.58
+            ],
+            "pv_fcf": [
+              1.994,
+              2.213,
+              2.42,
+              2.498,
+              2.481
+            ],
+            "term_g": 0.03,
+            "sum_pv_fcf": 11.61,
+            "terminal_value": 91.0,
+            "pv_terminal": 63.4,
+            "op_ev": 80.05,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 16.0,
+            "total_equity": 103.85,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 250,
+            "dcf_per_share": 412.0,
+            "distress": 0.0
+          }
+        }
+      },
       "appendix": {
         "pushback": [
           {
@@ -792,6 +2208,455 @@ const MEMOS = [
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
     "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 130,
+      "weighted": {
+        "expected": 5.72,
+        "upsidePct": 138.4
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.35,
+          "expectedPerShare": 0.0,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 0.5,
+            "p_fail": 40,
+            "s2c": 0.7
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.006,
+              0.025,
+              0.07,
+              0.14,
+              0.22,
+              0.31,
+              0.4,
+              0.48,
+              0.55,
+              0.6
+            ],
+            "op_margin": [
+              -3.0,
+              -2.0,
+              -1.2,
+              -0.6,
+              -0.3,
+              -0.1,
+              0.02,
+              0.06,
+              0.08,
+              0.08
+            ],
+            "wacc_path": [
+              0.14,
+              0.135,
+              0.13,
+              0.13,
+              0.125,
+              0.12,
+              0.12,
+              0.115,
+              0.115,
+              0.11
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.018,
+              -0.05,
+              -0.084,
+              -0.084,
+              -0.066,
+              -0.031,
+              0.008,
+              0.029,
+              0.044,
+              0.048
+            ],
+            "reinvest": [
+              0.007,
+              0.027,
+              0.064,
+              0.1,
+              0.114,
+              0.129,
+              0.129,
+              0.114,
+              0.1,
+              0.071
+            ],
+            "fcf": [
+              -0.025,
+              -0.077,
+              -0.148,
+              -0.184,
+              -0.18,
+              -0.16,
+              -0.121,
+              -0.085,
+              -0.056,
+              -0.023
+            ],
+            "pv_fcf": [
+              -0.022,
+              -0.06,
+              -0.102,
+              -0.112,
+              -0.097,
+              -0.077,
+              -0.052,
+              -0.033,
+              -0.02,
+              -0.007
+            ],
+            "sum_pv_fcf": -0.582,
+            "terminal_value": 0.0,
+            "pv_terminal": 0.0,
+            "op_ev": -0.58,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": -0.44,
+            "raise_total": 1.1,
+            "dilution_pct": 93,
+            "final_shares": 1777,
+            "dcf_per_share": -0.25,
+            "distress": 0.15
+          }
+        },
+        "base": {
+          "probability": 0.5,
+          "expectedPerShare": 1.87,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 1.2,
+            "p_fail": 18,
+            "s2c": 1.0
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.01,
+              0.055,
+              0.15,
+              0.3,
+              0.52,
+              0.8,
+              1.1,
+              1.35,
+              1.5,
+              1.55
+            ],
+            "op_margin": [
+              -2.5,
+              -1.5,
+              -0.8,
+              -0.2,
+              0.05,
+              0.1,
+              0.13,
+              0.15,
+              0.16,
+              0.16
+            ],
+            "wacc_path": [
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.025,
+              -0.083,
+              -0.12,
+              -0.06,
+              0.026,
+              0.08,
+              0.143,
+              0.203,
+              0.24,
+              0.248
+            ],
+            "reinvest": [
+              0.009,
+              0.045,
+              0.095,
+              0.15,
+              0.22,
+              0.28,
+              0.3,
+              0.25,
+              0.15,
+              0.05
+            ],
+            "fcf": [
+              -0.034,
+              -0.128,
+              -0.215,
+              -0.21,
+              -0.194,
+              -0.2,
+              -0.157,
+              -0.048,
+              0.09,
+              0.198
+            ],
+            "pv_fcf": [
+              -0.03,
+              -0.1,
+              -0.15,
+              -0.131,
+              -0.108,
+              -0.1,
+              -0.071,
+              -0.02,
+              0.034,
+              0.069
+            ],
+            "sum_pv_fcf": -0.608,
+            "terminal_value": 3.13,
+            "pv_terminal": 1.18,
+            "op_ev": 0.57,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": 0.71,
+            "raise_total": 1.08,
+            "dilution_pct": 57,
+            "final_shares": 293,
+            "dcf_per_share": 2.22,
+            "distress": 0.3
+          }
+        },
+        "bull": {
+          "probability": 0.12,
+          "expectedPerShare": 17.6,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 1.5,
+            "p_fail": 8,
+            "s2c": 1.4
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.012,
+              0.075,
+              0.22,
+              0.5,
+              0.95,
+              1.45,
+              1.8,
+              1.95,
+              2.0,
+              2.0
+            ],
+            "op_margin": [
+              -2.0,
+              -1.0,
+              -0.3,
+              0.05,
+              0.13,
+              0.18,
+              0.21,
+              0.22,
+              0.22,
+              0.22
+            ],
+            "wacc_path": [
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.08
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.024,
+              -0.075,
+              -0.066,
+              0.025,
+              0.124,
+              0.261,
+              0.378,
+              0.429,
+              0.44,
+              0.44
+            ],
+            "reinvest": [
+              0.008,
+              0.045,
+              0.104,
+              0.2,
+              0.321,
+              0.357,
+              0.25,
+              0.107,
+              0.036,
+              0.0
+            ],
+            "fcf": [
+              -0.032,
+              -0.12,
+              -0.17,
+              -0.175,
+              -0.197,
+              -0.096,
+              0.128,
+              0.322,
+              0.404,
+              0.44
+            ],
+            "pv_fcf": [
+              -0.029,
+              -0.096,
+              -0.123,
+              -0.114,
+              -0.116,
+              -0.052,
+              0.063,
+              0.146,
+              0.169,
+              0.171
+            ],
+            "sum_pv_fcf": 0.019,
+            "terminal_value": 9.06,
+            "pv_terminal": 3.52,
+            "op_ev": 3.54,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": 3.68,
+            "raise_total": 0.75,
+            "dilution_pct": 36,
+            "final_shares": 196,
+            "dcf_per_share": 19.0,
+            "distress": 1.5
+          }
+        },
+        "ultra_bull": {
+          "probability": 0.03,
+          "expectedPerShare": 89.17,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 3.1,
+            "p_fail": 3,
+            "s2c": 1.6
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.015,
+              0.1,
+              0.35,
+              0.9,
+              1.8,
+              2.8,
+              3.5,
+              3.9,
+              4.0,
+              4.0
+            ],
+            "op_margin": [
+              -1.5,
+              -0.5,
+              0.0,
+              0.1,
+              0.18,
+              0.24,
+              0.27,
+              0.29,
+              0.3,
+              0.3
+            ],
+            "wacc_path": [
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.075,
+              0.075
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.023,
+              -0.05,
+              0.0,
+              0.09,
+              0.324,
+              0.672,
+              0.945,
+              1.131,
+              1.2,
+              1.2
+            ],
+            "reinvest": [
+              0.009,
+              0.053,
+              0.156,
+              0.344,
+              0.563,
+              0.625,
+              0.438,
+              0.25,
+              0.063,
+              0.0
+            ],
+            "fcf": [
+              -0.032,
+              -0.103,
+              -0.156,
+              -0.254,
+              -0.239,
+              0.047,
+              0.507,
+              0.881,
+              1.137,
+              1.2
+            ],
+            "pv_fcf": [
+              -0.029,
+              -0.083,
+              -0.114,
+              -0.167,
+              -0.143,
+              0.026,
+              0.255,
+              0.402,
+              0.484,
+              0.475
+            ],
+            "sum_pv_fcf": 1.106,
+            "terminal_value": 31.05,
+            "pv_terminal": 12.3,
+            "op_ev": 13.41,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": 13.55,
+            "raise_total": 0.65,
+            "dilution_pct": 18,
+            "final_shares": 153,
+            "dcf_per_share": 91.83,
+            "distress": 3.0
+          }
+        }
+      },
       "appendix": {
         "pushback": [
           {
