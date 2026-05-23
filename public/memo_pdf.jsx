@@ -1121,6 +1121,232 @@ function Page2Narratives({ memo }) {
   );
 }
 
+// ── Page 3 — Business snapshot (6-chart grid) ──────────────────────────
+// Each chart is 280pt × 190pt; 3-column × 2-row grid; per-dcf_type
+// dispatch. Phase 2 ports them one at a time. Each chart computes from
+// data.js inputs — no PNG embeds.
+
+// --- Scenario colors (shared across charts) ---
+const SCN_COLORS = {
+  bear:       '#b91c1c',
+  base:       '#1e3a8a',
+  bull:       '#15803d',
+  ultra_bull: '#7629a6',
+};
+
+// --- Young-company Chart 1: revenue ramp (log scale) ---
+// Historical FY24-FY26 anchor + 4 scenario projections FY27-FY36.
+function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const ref = memo.page3.chartReference;
+  const histYears = ref.historyYears;                    // e.g. [2024, 2025, 2026]
+  const histRev = ref.historyRevenue;                    // e.g. [0, 0, 0.001] in $B
+  const nHist = histYears.length;
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+
+  // FY labels e.g. "FY24"..."FY36" → render as 2-digit "24"..."36".
+  const fyAll = [
+    ...histYears.map(y => `FY${y - 2000}`),
+    ...Array.from({ length: 10 }, (_, i) => `FY${27 + i}`),
+  ];
+
+  // Coordinate budget (matches memo.py legacy chart):
+  // Title band 14pt at top; x-label band 12pt at bottom; y-label gutter
+  // 26pt on the left; right edge has ~36pt slack for end-of-line labels.
+  const padLeft = 26;
+  const padRight = 36;
+  const padTop = 16;
+  const padBot = 14;
+  const plotL = padLeft, plotR = widthPt - padRight;
+  const plotT = padTop, plotB = heightPt - padBot;
+
+  // X scale: discrete year index 0..nHist+9, padded slightly.
+  const xMin = -0.5;
+  const xMax = nHist + 9 + 1.6;
+  const x = i => plotL + (i - xMin) / (xMax - xMin) * (plotR - plotL);
+
+  // Y scale: log $B, fixed range matching memo.py (0.0005 → 80).
+  const yLo = 0.0005, yHi = 80;
+  const logLo = Math.log10(yLo), logHi = Math.log10(yHi);
+  const y = v => {
+    const cl = Math.max(yLo, Math.min(yHi, v));
+    return plotB - (Math.log10(cl) - logLo) / (logHi - logLo) * (plotB - plotT);
+  };
+
+  // Y ticks at $1M / $10M / $100M / $1B / $10B (0.001..10 in $B).
+  const yTicks = [
+    [0.001, '$1M'], [0.01, '$10M'], [0.1, '$100M'],
+    [1, '$1B'], [10, '$10B'],
+  ];
+
+  // Historical line.
+  const histPlot = histRev.map(r => Math.max(r, 0.001));
+  const histD = histPlot.map((r, i) =>
+    `${i === 0 ? 'M' : 'L'} ${x(i).toFixed(2)},${y(r).toFixed(2)}`).join(' ');
+
+  // Projection paths (each scenario: starts at last historical pt, runs to FY36).
+  const projD = (key) => {
+    const rev = memo.print.scenarios[key].dcfPath.rev_path;
+    const pts = [[nHist - 1, histRev[nHist - 1]], ...rev.map((r, i) => [nHist + i, r])];
+    return pts.map(([t, v], i) =>
+      `${i === 0 ? 'M' : 'L'} ${x(t).toFixed(2)},${y(Math.max(v, yLo)).toFixed(2)}`
+    ).join(' ');
+  };
+  const projEnd = (key) => {
+    const rev = memo.print.scenarios[key].dcfPath.rev_path;
+    return [nHist + 9, rev[rev.length - 1]];
+  };
+  const shortLabel = (key) => memo.print.scenarios[key].shortLabel;
+
+  // Sub-$1M FY24 zero anchor label (matches memo.py's "$0" annotation).
+  const showZeroAnchor = histRev[0] < 0.001;
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      {/* Title — short to fit the 280pt chart slot */}
+      <text x={2} y={10}
+            fontFamily={FONT_SANS} fontWeight={600} fontSize="7.5pt"
+            fill={PALETTE.ink}>
+        Revenue — history + scenarios to FY36 (log)
+      </text>
+
+      {/* Y-axis gridlines + tick labels */}
+      {yTicks.map(([v, lbl]) => (
+        <g key={`yt-${v}`}>
+          <line x1={plotL} x2={plotR} y1={y(v)} y2={y(v)}
+                stroke={PALETTE.rule} strokeWidth="0.3" />
+          <text x={plotL - 3} y={y(v) + 2}
+                fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.muted}
+                textAnchor="end">
+            {lbl}
+          </text>
+        </g>
+      ))}
+
+      {/* X-axis labels (last 2 digits of FY) */}
+      {fyAll.map((fy, i) => (
+        <text key={`xt-${i}`} x={x(i)} y={plotB + 8}
+              fontFamily={FONT_MONO} fontSize="5pt" fill={PALETTE.muted}
+              textAnchor="middle">
+          {fy.slice(2)}
+        </text>
+      ))}
+
+      {/* "Today" divider (between historical and projection) */}
+      <line x1={x(nHist - 0.5)} x2={x(nHist - 0.5)} y1={plotT} y2={plotB}
+            stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
+
+      {/* Historical revenue line (solid, accent) */}
+      <path d={histD} stroke={PALETTE.accent} strokeWidth="1.4" fill="none" />
+      {histPlot.map((r, i) => (
+        <circle key={`h-${i}`} cx={x(i)} cy={y(r)} r="2.4"
+                fill={PALETTE.accent} stroke="white" strokeWidth="0.6" />
+      ))}
+      {showZeroAnchor && (
+        <text x={x(0)} y={y(0.0008) + 6}
+              fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted}
+              textAnchor="middle">
+          $0
+        </text>
+      )}
+
+      {/* Scenario projection paths (dashed) */}
+      {scnKeys.map(key => (
+        <path key={`p-${key}`} d={projD(key)}
+              stroke={SCN_COLORS[key]} strokeWidth="1.1" fill="none"
+              strokeDasharray="3,2" />
+      ))}
+      {/* Scenario projection markers + end-of-line labels */}
+      {scnKeys.map(key => {
+        const [t, v] = projEnd(key);
+        return (
+          <g key={`pe-${key}`}>
+            <circle cx={x(t)} cy={y(Math.max(v, yLo))} r="1.4"
+                    fill={SCN_COLORS[key]} stroke="white" strokeWidth="0.4" />
+            <text x={x(t) + 3} y={y(Math.max(v, yLo)) + 2}
+                  fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
+                  fill={SCN_COLORS[key]}>
+              {shortLabel(key)} {v < 1 ? v.toFixed(2) : v.toFixed(0)}
+            </text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+function Page3Snapshot({ memo }) {
+  const isYoung = memo.print.dcfType === 'young_company';
+
+  // Six chart slots — 3 columns × 2 rows. Phase 2 ports them one at a time;
+  // un-ported slots show a placeholder so the layout stays representative.
+  const placeholder = (slot, title) => (
+    <div style={{
+      width: '280pt', height: '190pt',
+      border: `0.5pt dashed ${PALETTE.dim}`,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      fontFamily: FONT_MONO, fontSize: '7pt', color: PALETTE.muted,
+    }}>
+      {slot}. {title} (pending)
+    </div>
+  );
+
+  const slots = isYoung ? [
+    <YoungRevenueChart memo={memo} />,
+    placeholder('02', 'Path to profitability'),
+    placeholder('03', 'Cash runway + dilution'),
+    placeholder('04', 'Fleet / unit growth'),
+    placeholder('05', 'Valuation: P/S on FY36 rev'),
+    placeholder('06', 'TAM positioning at FY36'),
+  ] : [
+    placeholder('01', 'Revenue history + scenarios'),
+    placeholder('02', 'Segments'),
+    placeholder('03', 'Margins'),
+    placeholder('04', 'Net cash / debt'),
+    placeholder('05', 'EV / Revenue'),
+    placeholder('06', 'SOTP or clubs'),
+  ];
+
+  return (
+    <div className="memo-page">
+      <PageHeader memo={memo} suffix="business snapshot"
+                  label="the snapshot" compact />
+
+      {/* Page 3 subtitle (data scope, fiscal years, sources strip) */}
+      <div style={{
+        marginTop: '8pt',
+        fontFamily: FONT_SANS, fontSize: '8pt', color: PALETTE.muted,
+      }}>
+        {memo.page3.subtitle}
+      </div>
+
+      {/* 3 × 2 chart grid */}
+      <div style={{
+        marginTop: '12pt',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 280pt)',
+        gridTemplateRows: 'repeat(2, 190pt)',
+        columnGap: '12pt',
+        rowGap: '16pt',
+        justifyContent: 'center',
+      }}>
+        {slots.map((slot, i) => <div key={i}>{slot}</div>)}
+      </div>
+
+      {/* Sources caption */}
+      <div style={{
+        marginTop: '12pt',
+        fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.muted,
+      }}>
+        {memo.page3.sources}
+      </div>
+
+      <PageFooter memo={memo} pageLabel="page 3 of 5" />
+    </div>
+  );
+}
+
 // ── Page 4 — Quantitative (show your work) ─────────────────────────────
 function ScenarioQuantColumn({ memo, scenarioKey }) {
   const print = memo.print;
@@ -1532,6 +1758,7 @@ function MemoPDF() {
     <>
       <Page1Headline memo={memo} />
       <Page2Narratives memo={memo} />
+      <Page3Snapshot memo={memo} />
       <Page4Quantitative memo={memo} />
       <Page5BackMatter memo={memo} />
     </>

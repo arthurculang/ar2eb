@@ -152,6 +152,18 @@ def build_memo(ticker: str) -> dict:
             {"label": r["label"], "body": collapse(r["body"])}
             for r in d["weighting_rationale"]
         ],
+        # Page 3 (business snapshot) data — historical anchors for charts +
+        # page subtitle/sources strings.
+        "page3": {
+            "subtitle": collapse(d["page3"]["subtitle"]),
+            "sources": collapse(d["page3"]["sources"]),
+            "chartReference": {
+                "tamBillion": d.get("chart_reference", {}).get("tam_billion"),
+                "historyYears": d.get("chart_reference", {}).get("history_years", []),
+                "historyRevenue": d.get("chart_reference", {}).get("history_revenue", []),
+                "historyFleet": d.get("chart_reference", {}).get("history_fleet", []),
+            },
+        },
         # PDF-only payload — fields the print harness (public/print.html +
         # public/memo_pdf.jsx) needs that the site doesn't. Per-scenario data
         # is dumped raw so the JSX can compute display rows itself (no

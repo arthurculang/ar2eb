@@ -204,6 +204,28 @@ const MEMOS = [
         "body": "Tail of tails: dominant global UAM + early autonomous pivot + software-take-rate multiple expansion."
       }
     ],
+    "page3": {
+      "subtitle": "FY24–FY26 history + FY27–FY36 scenario projections · fiscal years end Dec 31 · 10-K, Q1 2026 10-Q, Morgan Stanley UAM",
+      "sources": "Sources: JOBY 10-K FY25, Q1 2026 10-Q, Morgan Stanley UAM TAM Update (Global $1T by 2040; ~$250B FY36 interpolation).",
+      "chartReference": {
+        "tamBillion": 250,
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          0.08,
+          0.15,
+          0.24
+        ],
+        "historyFleet": [
+          12,
+          28,
+          50
+        ]
+      }
+    },
     "print": {
       "dcfType": "young_company",
       "dcfPeriodYears": 10,
@@ -922,6 +944,28 @@ const MEMOS = [
         "body": "Tail of tails: dominant US autonomous + early software-take-rate + multiple expansion."
       }
     ],
+    "page3": {
+      "subtitle": "FY24–FY26 history + FY27–FY36 scenario projections · fiscal years end Dec 31 · 10-K, Q1 2026 10-Q, ATA/FTR Tonnage Index",
+      "sources": "Sources: AUR 10-K FY25, Q1 2026 10-Q, ATA/FTR Tonnage Index (US for-hire long-haul $300B; autonomy-addressable $160B).",
+      "chartReference": {
+        "tamBillion": 160,
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          0.069,
+          0.106,
+          0.044
+        ],
+        "historyFleet": [
+          6,
+          20,
+          50
+        ]
+      }
+    },
     "print": {
       "dcfType": "young_company",
       "dcfPeriodYears": 10,
@@ -1644,6 +1688,28 @@ const MEMOS = [
         "body": "250+ clubs by 2030 + ARPU $6,500 + SLB self-funded + multiple re-rates to 15x EV/EBITDA."
       }
     ],
+    "page3": {
+      "subtitle": "FY23–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q, S&P credit reports",
+      "sources": "Sources: LTH 10-K FY25, Q1 2026 10-Q, S&P / Moody's credit reports, REIT comparables for SLB cap rates.",
+      "chartReference": {
+        "tamBillion": null,
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          1.318,
+          1.822,
+          2.217,
+          2.621,
+          2.995
+        ],
+        "historyFleet": []
+      }
+    },
     "print": {
       "dcfType": "mature_company",
       "dcfPeriodYears": 5,
@@ -2210,6 +2276,28 @@ const MEMOS = [
         "body": "Both engines fire simultaneously; Anthropic at $2T+; multiple re-rates to growth-software premium."
       }
     ],
+    "page3": {
+      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Jan 31 · 10-K FY26, Q1 2026 10-Q, Anthropic press releases",
+      "sources": "Sources: ZM 10-K FY26, Q1 2026 10-Q, Anthropic financial press, AI infrastructure peer set.",
+      "chartReference": {
+        "tamBillion": null,
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          2.65,
+          4.1,
+          4.39,
+          4.53,
+          4.66
+        ],
+        "historyFleet": []
+      }
+    },
     "print": {
       "dcfType": "mature_company_sotp",
       "dcfPeriodYears": 5,
@@ -2752,6 +2840,28 @@ const MEMOS = [
         "body": "Tail of tails: dominant proteomics + multiomics + software-take-rate + platform re-rating."
       }
     ],
+    "page3": {
+      "subtitle": "FY24-FY26 history + FY27-FY36 scenario projections · fiscal years end Dec 31 · Q1 2026 10-Q, Voyager press releases, peer market cap data",
+      "sources": "Sources: NAUT 10-K FY25, Q1 2026 10-Q, Voyager Early Access Program press releases (Jan 2026), MarketsandMarkets proteomics market sizing 2030-2035, peer transaction data (Olink/Thermo, SomaLogic/SBT).",
+      "chartReference": {
+        "tamBillion": 130,
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          0.0,
+          0.0,
+          0.001
+        ],
+        "historyFleet": [
+          0,
+          0,
+          0
+        ]
+      }
+    },
     "print": {
       "dcfType": "young_company",
       "dcfPeriodYears": 10,
