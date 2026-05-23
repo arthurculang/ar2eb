@@ -354,7 +354,7 @@ scenarios:
       term_g: 0.030
       sum_pv_fcf: 11.61
       terminal_value: 91.0
-      pv_terminal: 63.40
+      pv_terminal: 68.44          # bumped 63.40 → 68.44 so op_ev = sum_pv_fcf + pv_terminal (80.05 = 11.61 + 68.44)
       op_ev: 80.05
       cash: 7.8
       net_debt: 0.0

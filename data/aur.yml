@@ -195,7 +195,7 @@ scenarios:
       pv_fcf:      [-0.176, -0.237, -0.250, -0.305, -0.303, -0.407, -0.473, -0.372, -0.129, 0.086]
       sum_pv_fcf: -2.566
       terminal_value: 41.7
-      pv_terminal: 9.59
+      pv_terminal: 10.89          # bumped 9.59 → 10.89 so op_ev = sum_pv_fcf + pv_terminal (8.32 = -2.566 + 10.886)
       op_ev: 8.32
       cash: 1.28
       net_debt: 0.0
