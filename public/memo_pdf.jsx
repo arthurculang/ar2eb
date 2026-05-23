@@ -1134,6 +1134,65 @@ const SCN_COLORS = {
   ultra_bull: '#7629a6',
 };
 
+// --- Chart primitives (shared by Page 3 charts) ---
+//
+// mkLinearScale / mkLogScale: return a function value→pixel. Following
+// d3's idiom (domain, range), without pulling in d3.
+const mkLinearScale = ([d0, d1], [r0, r1]) => (v) =>
+  r0 + (v - d0) / (d1 - d0) * (r1 - r0);
+const mkLogScale = ([d0, d1], [r0, r1]) => {
+  const lo = Math.log10(d0), hi = Math.log10(d1);
+  return (v) => {
+    const cl = Math.max(d0, Math.min(d1, v));
+    return r0 + (Math.log10(cl) - lo) / (hi - lo) * (r1 - r0);
+  };
+};
+
+// Build a path "d" string from points + scales.
+const pathD = (pts, xScale, yScale) =>
+  pts.map(([t, v], i) =>
+    `${i === 0 ? 'M' : 'L'} ${xScale(t).toFixed(2)},${yScale(v).toFixed(2)}`
+  ).join(' ');
+
+// Standard chart frame margins for the 280×190 slots on Page 3.
+const CHART_MARGIN = { left: 26, right: 36, top: 16, bottom: 14 };
+
+function ChartTitle({ children, x = 2, y = 10 }) {
+  return (
+    <text x={x} y={y}
+          fontFamily={FONT_SANS} fontWeight={600} fontSize="7.5pt"
+          fill={PALETTE.ink}>
+      {children}
+    </text>
+  );
+}
+
+// Generic Y-axis gridlines + tick labels. `ticks` is [[value, label], ...].
+function YGridTicks({ ticks, yScale, plotL, plotR }) {
+  return ticks.map(([v, lbl]) => (
+    <g key={`yt-${v}`}>
+      <line x1={plotL} x2={plotR} y1={yScale(v)} y2={yScale(v)}
+            stroke={PALETTE.rule} strokeWidth="0.3" />
+      <text x={plotL - 3} y={yScale(v) + 2}
+            fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.muted}
+            textAnchor="end">
+        {lbl}
+      </text>
+    </g>
+  ));
+}
+
+// X-axis tick labels. `ticks` is [[value, label], ...].
+function XTicks({ ticks, xScale, plotB }) {
+  return ticks.map(([v, lbl]) => (
+    <text key={`xt-${v}`} x={xScale(v)} y={plotB + 8}
+          fontFamily={FONT_MONO} fontSize="5pt" fill={PALETTE.muted}
+          textAnchor="middle">
+      {lbl}
+    </text>
+  ));
+}
+
 // --- Young-company Chart 1: revenue ramp (log scale) ---
 // Historical FY24-FY26 anchor + 4 scenario projections FY27-FY36.
 function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
@@ -1149,127 +1208,175 @@ function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
     ...Array.from({ length: 10 }, (_, i) => `FY${27 + i}`),
   ];
 
-  // Coordinate budget (matches memo.py legacy chart):
-  // Title band 14pt at top; x-label band 12pt at bottom; y-label gutter
-  // 26pt on the left; right edge has ~36pt slack for end-of-line labels.
-  const padLeft = 26;
-  const padRight = 36;
-  const padTop = 16;
-  const padBot = 14;
-  const plotL = padLeft, plotR = widthPt - padRight;
-  const plotT = padTop, plotB = heightPt - padBot;
+  const m = CHART_MARGIN;
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
 
   // X scale: discrete year index 0..nHist+9, padded slightly.
-  const xMin = -0.5;
-  const xMax = nHist + 9 + 1.6;
-  const x = i => plotL + (i - xMin) / (xMax - xMin) * (plotR - plotL);
+  const xScale = mkLinearScale([-0.5, nHist + 9 + 1.6], [plotL, plotR]);
 
   // Y scale: log $B, fixed range matching memo.py (0.0005 → 80).
   const yLo = 0.0005, yHi = 80;
-  const logLo = Math.log10(yLo), logHi = Math.log10(yHi);
-  const y = v => {
-    const cl = Math.max(yLo, Math.min(yHi, v));
-    return plotB - (Math.log10(cl) - logLo) / (logHi - logLo) * (plotB - plotT);
-  };
+  const yScale = mkLogScale([yLo, yHi], [plotB, plotT]);
 
   // Y ticks at $1M / $10M / $100M / $1B / $10B (0.001..10 in $B).
   const yTicks = [
     [0.001, '$1M'], [0.01, '$10M'], [0.1, '$100M'],
     [1, '$1B'], [10, '$10B'],
   ];
+  const xTicks = fyAll.map((fy, i) => [i, fy.slice(2)]);
 
   // Historical line.
-  const histPlot = histRev.map(r => Math.max(r, 0.001));
-  const histD = histPlot.map((r, i) =>
-    `${i === 0 ? 'M' : 'L'} ${x(i).toFixed(2)},${y(r).toFixed(2)}`).join(' ');
-
+  const histPlot = histRev.map((r, i) => [i, Math.max(r, 0.001)]);
   // Projection paths (each scenario: starts at last historical pt, runs to FY36).
-  const projD = (key) => {
+  const projPts = (key) => {
     const rev = memo.print.scenarios[key].dcfPath.rev_path;
-    const pts = [[nHist - 1, histRev[nHist - 1]], ...rev.map((r, i) => [nHist + i, r])];
-    return pts.map(([t, v], i) =>
-      `${i === 0 ? 'M' : 'L'} ${x(t).toFixed(2)},${y(Math.max(v, yLo)).toFixed(2)}`
-    ).join(' ');
+    return [[nHist - 1, Math.max(histRev[nHist - 1], yLo)],
+            ...rev.map((r, i) => [nHist + i, Math.max(r, yLo)])];
   };
   const projEnd = (key) => {
     const rev = memo.print.scenarios[key].dcfPath.rev_path;
     return [nHist + 9, rev[rev.length - 1]];
   };
   const shortLabel = (key) => memo.print.scenarios[key].shortLabel;
-
-  // Sub-$1M FY24 zero anchor label (matches memo.py's "$0" annotation).
   const showZeroAnchor = histRev[0] < 0.001;
 
   return (
     <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
          viewBox={`0 0 ${widthPt} ${heightPt}`}
          style={{ display: 'block' }}>
-      {/* Title — short to fit the 280pt chart slot */}
-      <text x={2} y={10}
-            fontFamily={FONT_SANS} fontWeight={600} fontSize="7.5pt"
-            fill={PALETTE.ink}>
-        Revenue — history + scenarios to FY36 (log)
-      </text>
-
-      {/* Y-axis gridlines + tick labels */}
-      {yTicks.map(([v, lbl]) => (
-        <g key={`yt-${v}`}>
-          <line x1={plotL} x2={plotR} y1={y(v)} y2={y(v)}
-                stroke={PALETTE.rule} strokeWidth="0.3" />
-          <text x={plotL - 3} y={y(v) + 2}
-                fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.muted}
-                textAnchor="end">
-            {lbl}
-          </text>
-        </g>
-      ))}
-
-      {/* X-axis labels (last 2 digits of FY) */}
-      {fyAll.map((fy, i) => (
-        <text key={`xt-${i}`} x={x(i)} y={plotB + 8}
-              fontFamily={FONT_MONO} fontSize="5pt" fill={PALETTE.muted}
-              textAnchor="middle">
-          {fy.slice(2)}
-        </text>
-      ))}
+      <ChartTitle>Revenue — history + scenarios to FY36 (log)</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
 
       {/* "Today" divider (between historical and projection) */}
-      <line x1={x(nHist - 0.5)} x2={x(nHist - 0.5)} y1={plotT} y2={plotB}
+      <line x1={xScale(nHist - 0.5)} x2={xScale(nHist - 0.5)}
+            y1={plotT} y2={plotB}
             stroke={PALETTE.dim} strokeWidth="0.4" strokeDasharray="1,2" />
 
-      {/* Historical revenue line (solid, accent) */}
-      <path d={histD} stroke={PALETTE.accent} strokeWidth="1.4" fill="none" />
-      {histPlot.map((r, i) => (
-        <circle key={`h-${i}`} cx={x(i)} cy={y(r)} r="2.4"
+      {/* Historical line (solid, accent) */}
+      <path d={pathD(histPlot, xScale, yScale)}
+            stroke={PALETTE.accent} strokeWidth="1.4" fill="none" />
+      {histPlot.map(([t, r]) => (
+        <circle key={`h-${t}`} cx={xScale(t)} cy={yScale(r)} r="2.4"
                 fill={PALETTE.accent} stroke="white" strokeWidth="0.6" />
       ))}
       {showZeroAnchor && (
-        <text x={x(0)} y={y(0.0008) + 6}
+        <text x={xScale(0)} y={yScale(0.0008) + 6}
               fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted}
               textAnchor="middle">
           $0
         </text>
       )}
 
-      {/* Scenario projection paths (dashed) */}
+      {/* Scenario projection paths (dashed) + end-of-line labels */}
       {scnKeys.map(key => (
-        <path key={`p-${key}`} d={projD(key)}
+        <path key={`p-${key}`} d={pathD(projPts(key), xScale, yScale)}
               stroke={SCN_COLORS[key]} strokeWidth="1.1" fill="none"
               strokeDasharray="3,2" />
       ))}
-      {/* Scenario projection markers + end-of-line labels */}
       {scnKeys.map(key => {
         const [t, v] = projEnd(key);
+        const py = yScale(Math.max(v, yLo));
         return (
           <g key={`pe-${key}`}>
-            <circle cx={x(t)} cy={y(Math.max(v, yLo))} r="1.4"
+            <circle cx={xScale(t)} cy={py} r="1.4"
                     fill={SCN_COLORS[key]} stroke="white" strokeWidth="0.4" />
-            <text x={x(t) + 3} y={y(Math.max(v, yLo)) + 2}
+            <text x={xScale(t) + 3} y={py + 2}
                   fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
                   fill={SCN_COLORS[key]}>
               {shortLabel(key)} {v < 1 ? v.toFixed(2) : v.toFixed(0)}
             </text>
           </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+// --- Young-company Chart 2: path to profitability (op margin) ---
+// 10 projected years FY27-FY36, op margin %, linear Y -100% to +50% with
+// a zero line + a horizontal peer-median reference. Per-ticker peer text +
+// y level live below until they migrate into YAML.
+const YOUNG_PEER_REFS = {
+  joby: { peerY: 15, peerText: 'Aerospace + operator peer median ~15%' },
+  aur:  { peerY: 20, peerText: 'Mature tech-auto peer median ~20%' },
+  naut: { peerY: 20, peerText: 'Mature life-science-tools peer median ~20%' },
+};
+
+function YoungProfitabilityChart({ memo, widthPt = 280, heightPt = 190 }) {
+  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const peer = YOUNG_PEER_REFS[memo.slug] || { peerY: 20, peerText: 'Peer median' };
+  const fyProj = Array.from({ length: 10 }, (_, i) => `FY${27 + i}`);
+
+  const m = CHART_MARGIN;
+  const plotL = m.left, plotR = widthPt - m.right;
+  const plotT = m.top, plotB = heightPt - m.bottom;
+
+  const xScale = mkLinearScale([-0.4, 10.8], [plotL, plotR]);
+  // Y: -110% to +50% linear, matching memo.py. Plot in % units (not decimals).
+  const yScale = mkLinearScale([-110, 50], [plotB, plotT]);
+
+  const yTickVals = [-100, -80, -60, -40, -20, 0, 20, 40];
+  const yTicks = yTickVals.map(v => [v, `${v}%`]);
+  const xTicks = fyProj.map((fy, i) => [i, fy.slice(2)]);
+
+  // Margins clamped to ≥ -100% (matches memo.py max(m*100, -100)).
+  const marginPts = (key) =>
+    memo.print.scenarios[key].dcfPath.op_margin.map((m, i) =>
+      [i, Math.max(m * 100, -100)]);
+  const endMargin = (key) => {
+    const arr = memo.print.scenarios[key].dcfPath.op_margin;
+    return arr[arr.length - 1] * 100;
+  };
+  const shortLabel = (key) => memo.print.scenarios[key].shortLabel;
+
+  // Peer text label position: JOBY (peerY=15) drew text near the bottom in
+  // legacy; others near the line itself. Mirror that here.
+  const peerLabelY = peer.peerY === 15 ? -95 : peer.peerY + 4;
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+         viewBox={`0 0 ${widthPt} ${heightPt}`}
+         style={{ display: 'block' }}>
+      <ChartTitle>Path to profitability — op margin (FY27→FY36)</ChartTitle>
+      <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+      <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+
+      {/* Zero line — slightly more prominent than gridlines */}
+      <line x1={plotL} x2={plotR} y1={yScale(0)} y2={yScale(0)}
+            stroke={PALETTE.dim} strokeWidth="0.5" opacity="0.6" />
+
+      {/* Peer median reference (dotted) */}
+      <line x1={plotL} x2={plotR} y1={yScale(peer.peerY)} y2={yScale(peer.peerY)}
+            stroke="#94a3b8" strokeWidth="0.4" strokeDasharray="1,2" />
+      <text x={plotL + 4} y={yScale(peerLabelY) + 2}
+            fontFamily={FONT_SANS} fontSize="5.5pt" fill={PALETTE.muted}>
+        {peer.peerText}
+      </text>
+
+      {/* Scenario lines (solid, with markers) */}
+      {scnKeys.map(key => (
+        <g key={`m-${key}`}>
+          <path d={pathD(marginPts(key), xScale, yScale)}
+                stroke={SCN_COLORS[key]} strokeWidth="1.3" fill="none" />
+          {marginPts(key).map(([t, v], i) => (
+            <circle key={`pt-${key}-${i}`} cx={xScale(t)} cy={yScale(v)} r="1.6"
+                    fill={SCN_COLORS[key]} stroke="white" strokeWidth="0.4" />
+          ))}
+        </g>
+      ))}
+
+      {/* End-of-line labels (final margin %) */}
+      {scnKeys.map(key => {
+        const v = endMargin(key);
+        return (
+          <text key={`e-${key}`}
+                x={xScale(9) + 4} y={yScale(v) + 2}
+                fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
+                fill={SCN_COLORS[key]}>
+            {shortLabel(key)} {v.toFixed(0)}%
+          </text>
         );
       })}
     </svg>
@@ -1294,7 +1401,7 @@ function Page3Snapshot({ memo }) {
 
   const slots = isYoung ? [
     <YoungRevenueChart memo={memo} />,
-    placeholder('02', 'Path to profitability'),
+    <YoungProfitabilityChart memo={memo} />,
     placeholder('03', 'Cash runway + dilution'),
     placeholder('04', 'Fleet / unit growth'),
     placeholder('05', 'Valuation: P/S on FY36 rev'),
