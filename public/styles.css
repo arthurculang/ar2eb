@@ -720,3 +720,156 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   page-break-after: auto;
   break-after: auto;
 }
+
+/* ── Portfolio page ─────────────────────────────────────────────────────
+   Cross-asset weighting per spec §12. Uses existing site primitives
+   (wrap, eyebrow, mono, delta-pos/neg) — only the portfolio-specific
+   shapes (sliders, bars, table) need new styles. */
+.portfolio-head { padding: 56px 0 24px; }
+.portfolio-head h1 { margin: 8px 0 12px; }
+.portfolio-head .lead {
+  max-width: 720px;
+  color: var(--ink-2);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.portfolio-head .lead a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.portfolio-controls { padding: 16px 0 32px; }
+.portfolio-controls .control-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 720px;
+}
+.portfolio-controls .control label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.portfolio-controls .control label .mono {
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: 8px;
+}
+.portfolio-controls .control input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.portfolio-controls .control .hint {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted-2);
+  line-height: 1.4;
+}
+@media (max-width: 720px) {
+  .portfolio-controls .control-grid { grid-template-columns: 1fr; gap: 24px; }
+}
+
+.portfolio-summary { padding: 16px 0 32px; }
+.portfolio-summary .summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 20px 24px;
+  background: #fafafa;
+  border: 0.5pt solid var(--rule);
+  border-radius: 6px;
+}
+.portfolio-summary .lbl {
+  font-size: 11px;
+  color: var(--muted-2);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+.portfolio-summary .big {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--ink);
+}
+@media (max-width: 720px) {
+  .portfolio-summary .summary-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+.portfolio-bars { padding: 24px 0; }
+.portfolio-bars .eyebrow { margin-bottom: 12px; }
+.portfolio-bars .bars { display: flex; flex-direction: column; gap: 8px; }
+.portfolio-bars .empty {
+  font-style: italic; color: var(--muted-2); padding: 24px 0;
+}
+.portfolio-bars .bar-row {
+  display: grid;
+  grid-template-columns: 64px 1fr 64px;
+  align-items: center;
+  gap: 12px;
+}
+.portfolio-bars .bar-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.portfolio-bars .bar-track {
+  height: 20px;
+  background: var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.portfolio-bars .bar-fill {
+  height: 100%;
+  transition: width 220ms ease-out;
+}
+.portfolio-bars .bar-value {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  color: var(--ink);
+}
+
+.portfolio-table { padding: 32px 0; }
+.portfolio-table .eyebrow { margin-bottom: 12px; }
+.portfolio-table .ptable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.portfolio-table .ptable thead th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted-2);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 8px 10px;
+  border-bottom: 0.5pt solid var(--rule);
+}
+.portfolio-table .ptable th.num,
+.portfolio-table .ptable td.num { text-align: right; }
+.portfolio-table .ptable tbody td {
+  padding: 10px 10px;
+  border-bottom: 0.5pt solid var(--rule);
+}
+.portfolio-table .ptable tbody tr.row-out td { opacity: 0.55; }
+.portfolio-table .ptable tbody tr.row-cash td {
+  background: #fafafa;
+  font-style: italic;
+  color: var(--muted-2);
+}
+.portfolio-table .ptable a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.portfolio-table .ptable a:hover { text-decoration: underline; }
+
+.portfolio-method { padding: 32px 0 64px; }
+.portfolio-method .eyebrow { margin-bottom: 12px; }
+.portfolio-method p { max-width: 720px; color: var(--ink-2); line-height: 1.55; }
+.portfolio-method p .mono { color: var(--ink); font-weight: 500; }
+.portfolio-method p.lead { font-size: 16px; color: var(--ink); margin-top: 16px; }

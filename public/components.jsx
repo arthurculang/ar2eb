@@ -69,6 +69,7 @@ function TopBar({ route }) {
         <nav className="topbar-nav" aria-label="Primary">
           <Link to="/asymmetrical-moonshots" className={route.startsWith('/asymmetrical-moonshots') ? 'active' : ''}>Asymmetrical Moonshots</Link>
           <Link to="/fcf-plus-plus-growth"   className={route.startsWith('/fcf-plus-plus-growth')   ? 'active' : ''}>FCF++Growth</Link>
+          <Link to="/portfolio"              className={route === '/portfolio'                      ? 'active' : ''}>Portfolio</Link>
           <Link to="/about"                  className={route === '/about'                          ? 'active' : ''}>About</Link>
         </nav>
       </div>

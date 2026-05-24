@@ -419,4 +419,280 @@ function NotFoundPage() {
   );
 }
 
-window.AR2EB_PAGES = { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, NotFoundPage };
+// ────────────────────────────────────────────────────────────────────
+// PORTFOLIO — cross-asset weighting per spec §12.
+//
+// computePortfolio implements the methodology straight from the spec:
+//   1. Hurdle: weighted_expected > spot × (1 + hurdle)
+//   2. Conviction: P_pos = Σ {scn.prob : scn.price > spot}
+//   3. Score:    upside_pct × √P_pos
+//   4. Raw w:    score / Σ score
+//   5. Cap:      iterate — if any w > MAX_POSITION, clamp it and
+//                redistribute the excess proportionally to uncapped
+//                names. Repeat until stable. Residual = cash.
+//
+// Pure function; deterministic given memos + opts. Sliders re-call it.
+// ────────────────────────────────────────────────────────────────────
+function computePortfolio(memos, opts = {}) {
+  const { maxPosition = 0.40, hurdleFrac = 0 } = opts;
+
+  const rows = memos.map(m => {
+    const spot = m.spot.price;
+    const expected = m.expected.fair;
+    const upsidePct = m.expected.deltaPct;
+    const passesHurdle = upsidePct > hurdleFrac * 100;
+    // P_pos: scenario probabilities where expected price > spot.
+    const pPos = m.scenarios
+      .filter(s => s.price > spot)
+      .reduce((acc, s) => acc + s.prob / 100, 0);
+    const score = passesHurdle ? upsidePct * Math.sqrt(pPos) : 0;
+    return {
+      ticker: m.ticker, slug: m.slug, company: m.company,
+      spot, expected, upsidePct, pPos, score,
+      passesHurdle, rawWeight: 0, weight: 0,
+    };
+  });
+
+  // Raw normalize.
+  const totalScore = rows.reduce((a, r) => a + r.score, 0);
+  if (totalScore > 0) {
+    rows.forEach(r => { r.rawWeight = r.score / totalScore; });
+  }
+
+  // Iterative cap with proportional redistribution.
+  let weights = rows.map(r => r.rawWeight);
+  const capped = rows.map(() => false);
+  for (let iter = 0; iter < 20; iter++) {
+    let excess = 0;
+    weights.forEach((w, i) => {
+      if (!capped[i] && w > maxPosition) {
+        excess += w - maxPosition;
+        weights[i] = maxPosition;
+        capped[i] = true;
+      }
+    });
+    if (excess < 1e-9) break;
+    const uncappedTotal = weights.reduce(
+      (a, w, i) => a + (capped[i] ? 0 : w), 0
+    );
+    if (uncappedTotal < 1e-9) break;  // all capped; excess → cash
+    weights = weights.map(
+      (w, i) => capped[i] ? w : w * (1 + excess / uncappedTotal)
+    );
+  }
+  rows.forEach((r, i) => { r.weight = weights[i]; });
+
+  const totalDeployed = rows.reduce((a, r) => a + r.weight, 0);
+  const cashWeight = Math.max(0, 1 - totalDeployed);
+
+  // Weighted-avg portfolio upside (longs only, by capped weight)
+  const portfolioUpside = totalDeployed > 0
+    ? rows.reduce((a, r) => a + r.weight * r.upsidePct, 0) / totalDeployed
+    : 0;
+
+  return { rows, cashWeight, portfolioUpside, totalScore };
+}
+
+function PortfolioPage() {
+  const { fmtUSD, fmtPct } = L();
+  const { MEMOS } = D();
+
+  // Controls — defaults match spec §12 recommendation.
+  const [maxPosition, setMaxPosition] = React.useState(0.40);
+  const [hurdleFrac, setHurdleFrac] = React.useState(0);  // 0% = above-spot
+  const portfolio = React.useMemo(
+    () => computePortfolio(MEMOS, { maxPosition, hurdleFrac }),
+    [MEMOS, maxPosition, hurdleFrac]
+  );
+
+  // Sort the table by raw score desc so the strongest names lead.
+  const sortedRows = [...portfolio.rows].sort((a, b) => b.score - a.score);
+  const maxBarWeight = Math.max(
+    maxPosition, ...portfolio.rows.map(r => r.weight)
+  );
+
+  // Bar chart helpers — simple horizontal bars, scaled to maxBarWeight.
+  const barRows = sortedRows
+    .filter(r => r.weight > 0)
+    .map(r => ({ key: r.slug, label: r.ticker, weight: r.weight, color: 'var(--accent)' }));
+  if (portfolio.cashWeight > 0.001) {
+    barRows.push({ key: 'cash', label: 'Cash', weight: portfolio.cashWeight, color: 'var(--ink-2)' });
+  }
+
+  const longCount = portfolio.rows.filter(r => r.weight > 0).length;
+  const passedHurdleCount = portfolio.rows.filter(r => r.passesHurdle).length;
+
+  return (
+    <>
+      <section className="portfolio-head" data-screen-label="Portfolio">
+        <div className="wrap">
+          <div className="eyebrow">Cross-asset · Portfolio construction</div>
+          <h1>Weighted portfolio</h1>
+          <p className="lead">
+            Five memos. One portfolio. The methodology is{' '}
+            <a href="https://github.com/arthurculang/ar2eb/blob/main/spec/memo-spec__v023__2026-05-23_21-30.md#12-portfolio-construction-draft"
+               target="_blank" rel="noopener noreferrer">spec §12</a> —
+            conviction-weighted long with hurdle and cap. Drag the
+            sliders to see what changes.
+          </p>
+        </div>
+      </section>
+
+      <section className="portfolio-controls">
+        <div className="wrap">
+          <div className="control-grid">
+            <div className="control">
+              <label htmlFor="cap">
+                Position cap{' '}
+                <span className="mono">{(maxPosition * 100).toFixed(0)}%</span>
+              </label>
+              <input id="cap" type="range" min="0.10" max="1.0" step="0.05"
+                     value={maxPosition}
+                     onChange={(e) => setMaxPosition(parseFloat(e.target.value))} />
+              <div className="hint">
+                No single name above this fraction. If raw weight exceeds
+                the cap, excess redistributes proportionally to remaining
+                names. Iterates until stable.
+              </div>
+            </div>
+            <div className="control">
+              <label htmlFor="hurdle">
+                Hurdle{' '}
+                <span className="mono">+{(hurdleFrac * 100).toFixed(0)}%</span>
+              </label>
+              <input id="hurdle" type="range" min="0" max="0.20" step="0.01"
+                     value={hurdleFrac}
+                     onChange={(e) => setHurdleFrac(parseFloat(e.target.value))} />
+              <div className="hint">
+                Minimum upside vs spot to earn an allocation. 0% =
+                "expected &gt; spot." Slide up to use a Treasury or
+                S&amp;P-like hurdle.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-summary">
+        <div className="wrap">
+          <div className="summary-grid">
+            <div>
+              <div className="lbl">Names that pass</div>
+              <div className="big mono">{passedHurdleCount} / {portfolio.rows.length}</div>
+            </div>
+            <div>
+              <div className="lbl">Names allocated</div>
+              <div className="big mono">{longCount}</div>
+            </div>
+            <div>
+              <div className="lbl">Portfolio-weighted upside</div>
+              <div className={'big mono ' + (portfolio.portfolioUpside >= 0 ? 'delta-pos' : 'delta-neg')}>
+                {fmtPct(portfolio.portfolioUpside)}
+              </div>
+            </div>
+            <div>
+              <div className="lbl">Cash sleeve</div>
+              <div className="big mono">{(portfolio.cashWeight * 100).toFixed(1)}%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-bars">
+        <div className="wrap">
+          <div className="eyebrow">Allocation</div>
+          <div className="bars">
+            {barRows.length === 0 ? (
+              <div className="empty">
+                No names pass the hurdle. Cash sleeve = 100%.
+              </div>
+            ) : (
+              barRows.map(r => (
+                <div className="bar-row" key={r.key}>
+                  <div className="bar-label mono">{r.label}</div>
+                  <div className="bar-track">
+                    <div className="bar-fill"
+                         style={{
+                           width: ((r.weight / maxBarWeight) * 100) + '%',
+                           background: r.color,
+                         }} />
+                  </div>
+                  <div className="bar-value mono">{(r.weight * 100).toFixed(1)}%</div>
+                </div>
+              ))
+            )}
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-table">
+        <div className="wrap">
+          <div className="eyebrow">Math (show your work)</div>
+          <table className="ptable">
+            <thead>
+              <tr>
+                <th>Ticker</th>
+                <th className="num">Spot</th>
+                <th className="num">Expected</th>
+                <th className="num">Upside</th>
+                <th className="num">P(pos)</th>
+                <th className="num">Score</th>
+                <th className="num">Raw w</th>
+                <th className="num">Capped w</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedRows.map(r => (
+                <tr key={r.slug} className={r.passesHurdle ? '' : 'row-out'}>
+                  <td>
+                    <a href={'#/memo/' + r.slug}>{r.ticker}</a>
+                  </td>
+                  <td className="num mono">{fmtUSD(r.spot)}</td>
+                  <td className="num mono">{fmtUSD(r.expected)}</td>
+                  <td className={'num mono ' + (r.upsidePct >= 0 ? 'delta-pos' : 'delta-neg')}>
+                    {fmtPct(r.upsidePct)}
+                  </td>
+                  <td className="num mono">{(r.pPos * 100).toFixed(0)}%</td>
+                  <td className="num mono">{r.score > 0 ? r.score.toFixed(1) : '—'}</td>
+                  <td className="num mono">{r.rawWeight > 0 ? (r.rawWeight * 100).toFixed(1) + '%' : '—'}</td>
+                  <td className="num mono"><b>{r.weight > 0 ? (r.weight * 100).toFixed(1) + '%' : '—'}</b></td>
+                </tr>
+              ))}
+              {portfolio.cashWeight > 0.001 && (
+                <tr className="row-cash">
+                  <td>Cash</td>
+                  <td colSpan="6" className="num">unallocated (hurdle fail / cap residual)</td>
+                  <td className="num mono"><b>{(portfolio.cashWeight * 100).toFixed(1)}%</b></td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section className="portfolio-method">
+        <div className="wrap">
+          <div className="eyebrow">How the score works</div>
+          <p>
+            <span className="mono">score = upside_pct × √P_pos</span>, where{' '}
+            P_pos sums scenario probabilities for cases that beat spot.
+            The square root softens the conviction component so neither
+            upside nor conviction dominates. Names below the hurdle score
+            zero. Raw weights are <span className="mono">score / Σ score</span>;
+            the cap is applied iteratively with proportional redistribution;
+            any unallocated weight becomes cash.
+          </p>
+          <p className="lead">
+            This is intentionally minimal. It's a framework to debate, not
+            a black box. Operator overrides on any name with a structural
+            view.
+          </p>
+        </div>
+      </section>
+    </>
+  );
+}
+
+
+
+window.AR2EB_PAGES = { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, PortfolioPage, NotFoundPage };

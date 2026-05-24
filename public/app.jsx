@@ -2,7 +2,7 @@
 
 function App() {
   const { useRoute, TopBar, Footer } = window.AR2EB_LIB;
-  const { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, NotFoundPage } = window.AR2EB_PAGES;
+  const { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, PortfolioPage, NotFoundPage } = window.AR2EB_PAGES;
   const route = useRoute();
 
   // update <title> on route change
@@ -10,6 +10,7 @@ function App() {
     let title = 'AR2EB — Long horizons. Structural shifts. Imagination.';
     if (route === '/about') title = 'About · AR2EB';
     else if (route === '/disclaimers') title = 'Disclaimers · AR2EB';
+    else if (route === '/portfolio') title = 'Portfolio · AR2EB';
     else if (route === '/asymmetrical-moonshots') title = 'Asymmetrical Moonshots · AR2EB';
     else if (route === '/fcf-plus-plus-growth') title = 'FCF++Growth · AR2EB';
     else if (route.startsWith('/memo/')) {
@@ -27,6 +28,8 @@ function App() {
     page = <CategoryPage slug={route.slice(1)} />;
   } else if (route.startsWith('/memo/')) {
     page = <MemoPage slug={route.split('/')[2]} />;
+  } else if (route === '/portfolio') {
+    page = <PortfolioPage />;
   } else if (route === '/disclaimers') {
     page = <DisclaimersPage />;
   } else if (route === '/about') {
