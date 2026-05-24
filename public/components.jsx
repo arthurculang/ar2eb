@@ -5,7 +5,10 @@ const { useState, useEffect, useMemo, useRef } = React;
 // ---------- routing ----------
 function parseHash() {
   const raw = (location.hash || '#/').replace(/^#/, '');
-  return raw || '/';
+  // Strip query string so /portfolio?cap=0.6 still routes to /portfolio.
+  // Components read location.hash directly when they need their own params.
+  const path = raw.split('?')[0];
+  return path || '/';
 }
 function useRoute() {
   const [route, setRoute] = useState(parseHash());
@@ -69,6 +72,7 @@ function TopBar({ route }) {
         <nav className="topbar-nav" aria-label="Primary">
           <Link to="/asymmetrical-moonshots" className={route.startsWith('/asymmetrical-moonshots') ? 'active' : ''}>Asymmetrical Moonshots</Link>
           <Link to="/fcf-plus-plus-growth"   className={route.startsWith('/fcf-plus-plus-growth')   ? 'active' : ''}>FCF++Growth</Link>
+          <Link to="/portfolio"              className={route === '/portfolio'                      ? 'active' : ''}>Portfolio</Link>
           <Link to="/about"                  className={route === '/about'                          ? 'active' : ''}>About</Link>
         </nav>
       </div>
