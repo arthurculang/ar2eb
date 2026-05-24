@@ -396,13 +396,128 @@ function computePortfolio(memos, opts = {}) {
   return { rows, cashWeight, portfolioUpside, totalScore };
 }
 
+// Renders three buttons that copy the current portfolio state to the
+// clipboard in different formats: JSON (machine-readable, full math),
+// CSV (spreadsheet-pasteable), and a deep-link URL (shareable).
+function PortfolioExport({ portfolio, maxPosition, hurdleFrac }) {
+  const [flash, setFlash] = React.useState(null);
+  const showFlash = (msg) => {
+    setFlash(msg);
+    setTimeout(() => setFlash(null), 1600);
+  };
+
+  const buildJson = () => JSON.stringify({
+    computed_at: new Date().toISOString(),
+    settings: { max_position: maxPosition, hurdle: hurdleFrac },
+    summary: {
+      portfolio_weighted_upside_pct: portfolio.portfolioUpside,
+      names_allocated: portfolio.rows.filter(r => r.weight > 0).length,
+      names_passed_hurdle: portfolio.rows.filter(r => r.passesHurdle).length,
+      cash_weight: portfolio.cashWeight,
+    },
+    rows: portfolio.rows.map(r => ({
+      ticker: r.ticker, spot: r.spot, expected: r.expected,
+      upside_pct: r.upsidePct, p_pos: r.pPos, score: r.score,
+      raw_weight: r.rawWeight, weight: r.weight,
+      passes_hurdle: r.passesHurdle,
+    })),
+  }, null, 2);
+
+  const buildCsv = () => {
+    const header = 'ticker,spot,expected,upside_pct,p_pos,score,raw_weight,weight';
+    const lines = portfolio.rows.map(r => [
+      r.ticker,
+      r.spot.toFixed(2),
+      r.expected.toFixed(2),
+      r.upsidePct.toFixed(2),
+      r.pPos.toFixed(4),
+      r.score.toFixed(2),
+      r.rawWeight.toFixed(4),
+      r.weight.toFixed(4),
+    ].join(','));
+    if (portfolio.cashWeight > 0.001) {
+      lines.push(`cash,,,,,,,${portfolio.cashWeight.toFixed(4)}`);
+    }
+    return header + '\n' + lines.join('\n') + '\n';
+  };
+
+  const buildUrl = () => {
+    const params = new URLSearchParams();
+    if (Math.abs(maxPosition - 0.40) > 1e-6) params.set('cap', maxPosition.toFixed(2));
+    if (hurdleFrac > 1e-6) params.set('hurdle', hurdleFrac.toFixed(2));
+    const qs = params.toString();
+    return location.origin + '/#/portfolio' + (qs ? '?' + qs : '');
+  };
+
+  const copy = (text, label) => {
+    if (!navigator.clipboard) {
+      // Older-browser fallback. Cloudflare Pages is HTTPS so clipboard
+      // should work, but include the fallback for paranoia.
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); } catch (e) { /* swallow */ }
+      document.body.removeChild(ta);
+      showFlash(label + ' copied');
+      return;
+    }
+    navigator.clipboard.writeText(text).then(
+      () => showFlash(label + ' copied'),
+      () => showFlash('Copy failed — your browser may block clipboard access')
+    );
+  };
+
+  return (
+    <section className="portfolio-export">
+      <div className="wrap">
+        <div className="export-row">
+          <span className="export-label">Export this view</span>
+          <button onClick={() => copy(buildJson(), 'JSON')}>Copy JSON</button>
+          <button onClick={() => copy(buildCsv(), 'CSV')}>Copy CSV</button>
+          <button onClick={() => copy(buildUrl(), 'URL')}>Copy URL</button>
+          {flash && <span className="export-flash">{flash}</span>}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function PortfolioPage() {
   const { fmtUSD, fmtPct } = L();
   const { MEMOS } = D();
 
-  // Controls — defaults match spec §12 recommendation.
-  const [maxPosition, setMaxPosition] = React.useState(0.40);
-  const [hurdleFrac, setHurdleFrac] = React.useState(0);  // 0% = above-spot
+  // URL state — read initial values from the hash query (`#/portfolio?cap=0.6&hurdle=0.05`).
+  // Lets a particular allocation be bookmarked or shared.
+  const initial = React.useMemo(() => {
+    const hash = location.hash || '#/portfolio';
+    const q = hash.indexOf('?');
+    if (q < 0) return { maxPosition: 0.40, hurdleFrac: 0 };
+    const params = new URLSearchParams(hash.slice(q + 1));
+    const cap = parseFloat(params.get('cap'));
+    const hurdle = parseFloat(params.get('hurdle'));
+    return {
+      maxPosition: isFinite(cap) ? Math.max(0.10, Math.min(1.0, cap)) : 0.40,
+      hurdleFrac:  isFinite(hurdle) ? Math.max(0, Math.min(0.20, hurdle)) : 0,
+    };
+  }, []);
+
+  const [maxPosition, setMaxPosition] = React.useState(initial.maxPosition);
+  const [hurdleFrac, setHurdleFrac] = React.useState(initial.hurdleFrac);
+
+  // Persist slider state to URL without triggering navigation. Only encode
+  // non-default values so a clean #/portfolio remains a clean shareable.
+  React.useEffect(() => {
+    const params = new URLSearchParams();
+    if (Math.abs(maxPosition - 0.40) > 1e-6) params.set('cap', maxPosition.toFixed(2));
+    if (hurdleFrac > 1e-6) params.set('hurdle', hurdleFrac.toFixed(2));
+    const qs = params.toString();
+    const newHash = '#/portfolio' + (qs ? '?' + qs : '');
+    if (location.hash !== newHash) {
+      history.replaceState(null, '', newHash);
+    }
+  }, [maxPosition, hurdleFrac]);
+
   const portfolio = React.useMemo(
     () => computePortfolio(MEMOS, { maxPosition, hurdleFrac }),
     [MEMOS, maxPosition, hurdleFrac]
@@ -527,6 +642,9 @@ function PortfolioPage() {
           </div>
         </div>
       </section>
+
+      <PortfolioExport memo={null} portfolio={portfolio}
+                       maxPosition={maxPosition} hurdleFrac={hurdleFrac} />
 
       <section className="portfolio-table">
         <div className="wrap">

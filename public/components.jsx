@@ -5,7 +5,10 @@ const { useState, useEffect, useMemo, useRef } = React;
 // ---------- routing ----------
 function parseHash() {
   const raw = (location.hash || '#/').replace(/^#/, '');
-  return raw || '/';
+  // Strip query string so /portfolio?cap=0.6 still routes to /portfolio.
+  // Components read location.hash directly when they need their own params.
+  const path = raw.split('?')[0];
+  return path || '/';
 }
 function useRoute() {
   const [route, setRoute] = useState(parseHash());

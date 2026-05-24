@@ -873,3 +873,42 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 .portfolio-method p { max-width: 720px; color: var(--ink-2); line-height: 1.55; }
 .portfolio-method p .mono { color: var(--ink); font-weight: 500; }
 .portfolio-method p.lead { font-size: 16px; color: var(--ink); margin-top: 16px; }
+
+.portfolio-export { padding: 16px 0; }
+.portfolio-export .export-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.portfolio-export .export-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted-2);
+  margin-right: 4px;
+}
+.portfolio-export button {
+  background: white;
+  border: 0.5pt solid var(--rule);
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 120ms, border-color 120ms;
+}
+.portfolio-export button:hover {
+  background: #fafafa;
+  border-color: var(--ink-2);
+}
+.portfolio-export button:active { background: var(--rule); }
+.portfolio-export .export-flash {
+  font-size: 12px;
+  color: var(--pos);
+  font-weight: 500;
+  font-style: italic;
+  margin-left: 6px;
+}
