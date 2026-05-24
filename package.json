@@ -1,0 +1,17 @@
+{
+  "name": "ar2eb-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ar2eb.com — site + print harness build",
+  "scripts": {
+    "build": "node build.js",
+    "build:watch": "node build.js --watch"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.0"
+  }
+}

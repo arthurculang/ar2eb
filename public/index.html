@@ -32,17 +32,12 @@
 <body>
   <div id="root"></div>
 
-  <!-- Vendored React + Babel — same files the print harness uses. -->
-  <script src="assets/vendor/react.production.min.js"></script>
-  <script src="assets/vendor/react-dom.production.min.js"></script>
-  <script src="assets/vendor/babel.min.js"></script>
-
+  <!-- data.js sets window.AR2EB_DATA; loaded as a plain script before
+       the bundle so the bundle can read it on mount. -->
   <script src="data.js"></script>
-  <script type="text/babel" src="components.jsx"></script>
-  <!-- Memo PDF components — same JSX powers the site's inline memo view
-       and the Playwright print harness. -->
-  <script type="text/babel" src="memo_pdf.jsx"></script>
-  <script type="text/babel" src="pages.jsx"></script>
-  <script type="text/babel" src="app.jsx"></script>
+  <!-- Pre-compiled bundle (esbuild). Includes React + ReactDOM +
+       components.jsx + pages.jsx + memo_pdf.jsx + app.jsx. Built by
+       `npm run build` (see build.js). -->
+  <script src="assets/bundle/site.js"></script>
 </body>
 </html>

@@ -58,13 +58,10 @@
 <body data-harness="print">
   <div id="root"></div>
 
-  <!-- Vendored React + Babel — deterministic, no network. Versions pinned in
-       scripts/render_memo_pdf.py (Phase 1) and refreshed via npm if upgraded. -->
-  <script src="assets/vendor/react.production.min.js"></script>
-  <script src="assets/vendor/react-dom.production.min.js"></script>
-  <script src="assets/vendor/babel.min.js"></script>
-
+  <!-- data.js sets window.AR2EB_DATA; bundle reads it on mount. -->
   <script src="data.js"></script>
-  <script type="text/babel" src="memo_pdf.jsx"></script>
+  <!-- Pre-compiled bundle (esbuild). Includes React + ReactDOM + memo_pdf.jsx.
+       Built by `npm run build` (see build.js). -->
+  <script src="assets/bundle/print.js"></script>
 </body>
 </html>
