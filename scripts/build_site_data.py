@@ -37,6 +37,28 @@ def collapse(s: str) -> str:
     return " ".join(str(s).split())
 
 
+def _pick_rev_per_unit(chart_data: dict) -> list | None:
+    # rev_per_unit's YAML key is ticker-specific. Probe known names.
+    for key in ("rev_per_aircraft", "rev_per_truck", "rev_per_instrument"):
+        if key in chart_data:
+            return list(chart_data[key])
+    return None
+
+
+def _camelize(d: dict) -> dict:
+    """snake_case → camelCase for top-level keys (recursive on dict values).
+    The JSX side uses camelCase; YAML uses snake_case. Keep the line crossing
+    here so JSX doesn't carry the mapping."""
+    out = {}
+    for k, v in d.items():
+        parts = k.split("_")
+        new_k = parts[0] + "".join(p.title() for p in parts[1:])
+        if isinstance(v, dict):
+            v = _camelize(v)
+        out[new_k] = v
+    return out
+
+
 def fmt_shares(m: float) -> str:
     return f"{m / 1000:.2f}B" if m >= 1000 else f"{m:.0f}M"
 
@@ -141,6 +163,76 @@ def build_memo(ticker: str) -> dict:
             f"Bear {probs['bear']} / Base {probs['base']} / "
             f"Bull {probs['bull']} / Ultra Bull {probs['ultra_bull']}. "
             f"Spot price reference: {lbl} close."),
+        "thesis": collapse(d["thesis"]),
+        "historicalPrices": {
+            "xMin": float(d["historical_prices"]["x_min"]),
+            "ipoMarker": d["historical_prices"]["ipo_marker"],
+            "points": [[float(p[0]), float(p[1])]
+                       for p in d["historical_prices"]["points"]],
+        },
+        "weightingRationale": [
+            {"label": r["label"], "body": collapse(r["body"])}
+            for r in d["weighting_rationale"]
+        ],
+        # Page 3 (business snapshot) data — historical anchors for charts +
+        # page subtitle/sources strings.
+        "page3": {
+            "subtitle": collapse(d["page3"]["subtitle"]),
+            "sources": collapse(d["page3"]["sources"]),
+            "chartReference": _camelize(d.get("chart_reference", {})),
+            # Phase 4: chart-aesthetic config (titles, peer copy, captions,
+            # legend strings) lives in YAML so per-ticker layout strings
+            # ship with the data, not the JSX.
+            "chartConfig": _camelize(d.get("page3_chart_config", {})),
+        },
+        # PDF-only payload — fields the print harness (public/print.html +
+        # public/memo_pdf.jsx) needs that the site doesn't. Per-scenario data
+        # is dumped raw so the JSX can compute display rows itself (no
+        # parallel "what to display" logic in Python).
+        "print": {
+            "dcfType": dcf_type,
+            "dcfPeriodYears": 10 if dcf_type == "young_company" else 5,
+            "tamBillion": d.get("chart_reference", {}).get("tam_billion"),
+            "weighted": {
+                "expected": round(pw_expected, 2),
+                "upsidePct": round((pw_expected / spot - 1) * 100, 1),
+            },
+            "market": {
+                "marketCapBillion": float(mk["market_cap_billion"]),
+                "sharesOutstandingMillion": float(mk["shares_outstanding_million"]),
+                "cashBillion": float(mk["cash_billion"]),
+                "netDebtBillion": float(mk["net_debt_billion"]),
+            },
+            "scenarios": {
+                k: {
+                    "probability": float(scn[k]["probability"]),
+                    "expectedPerShare": float(scn[k]["expected_per_share"]),
+                    "label": scn[k]["label"],
+                    "shortLabel": scn[k]["short_label"],
+                    "dcfMetrics": dict(scn[k]["dcf_metrics"]),
+                    "dcfPath": dict(scn[k]["dcf_path"]),
+                    "chartData": dict(scn[k].get("chart_data", {})),
+                    # rev_per_unit's YAML key differs per ticker
+                    # (rev_per_aircraft/rev_per_truck/rev_per_instrument);
+                    # normalize for the JSX charts.
+                    "revPerUnit": _pick_rev_per_unit(scn[k].get("chart_data", {})),
+                }
+                for k in SCEN_ORDER
+            },
+            "appendix": {
+                "pushback": [{"label": p["label"], "body": collapse(p["body"])}
+                             for p in d["appendix"]["pushback"]],
+                "triggers": [{"label": t["label"], "body": collapse(t["body"])}
+                             for t in d["appendix"]["triggers"]],
+            },
+            "glossary": [{"term": g["term"], "definition": collapse(g["definition"])}
+                         for g in d["glossary"]],
+            "stamp": {
+                "footerVersion": st["footer_version"],
+                "footerTimestamp": st["footer_timestamp"],
+                "canonicalJsx": st["canonical_jsx"],
+            },
+        },
     }
 
 
@@ -200,6 +292,51 @@ DISCLAIMER_BLOCKS = [
           "investment decision."},
 ]
 
+# Disclaimers rendered on PDF Page 5. These mirror memo.py's hardcoded
+# DISCLAIMERS_FULL list (6 items, fuller treatment than the site's
+# DISCLAIMER_BLOCKS). Kept here so the JSX print harness has a single
+# source of truth.
+PDF_DISCLAIMERS = [
+    {"h": "Not investment advice.",
+     "p": "This document is produced for entertainment and educational "
+          "purposes only by an individual amateur investor. "
+          "\"Alameda Research 2: Electric Boogaloo\" is the unincorporated "
+          "personal concept of one person and is not a registered investment "
+          "management entity. Nothing herein constitutes investment advice, "
+          "a recommendation, or a solicitation to buy or sell any security."},
+    {"h": "Not a professional.",
+     "p": "The author is not a registered investment advisor, broker-dealer, "
+          "CFA charterholder, certified financial planner, or licensed "
+          "financial professional of any kind. The author has no formal "
+          "training in equity research or capital markets. No fiduciary "
+          "relationship is created by reading this document."},
+    {"h": "AI-assisted analysis.",
+     "p": "Substantial portions of this analysis were produced with the "
+          "assistance of large language models. LLMs are known to fabricate "
+          "facts, miscalculate numbers, hallucinate sources, and present "
+          "incorrect information with high apparent confidence. Every figure, "
+          "claim, and projection in this document should be independently "
+          "verified before acting on it."},
+    {"h": "Forward-looking statements.",
+     "p": "Scenarios, valuations, projections, and any forward-looking "
+          "statements involve substantial assumptions and uncertainty. Actual "
+          "results may differ materially from those projected. Past "
+          "performance is not indicative of future results. The model is a "
+          "model; reality is not."},
+    {"h": "Author may hold positions.",
+     # Ticker token replaced at render time so the JSX can swap per memo.
+     "p": "The author may own, intend to acquire, or hold short exposure to "
+          "${TICKER} or related securities at any time. Positions may change "
+          "without notice and without an update to this document. Do not "
+          "assume the author's positions match the tone of the analysis."},
+    {"h": "Do your own research.",
+     "p": "Do not make investment decisions on the basis of this document. "
+          "Consult a licensed financial professional and read the company's "
+          "official SEC filings (10-K, 10-Q, 8-K, proxy) before forming any "
+          "investment view. If you wouldn't trust your retirement to a "
+          "chatbot, don't trust this either."},
+]
+
 
 def main() -> None:
     memos = [build_memo(t) for t in TICKERS]
@@ -211,7 +348,8 @@ def main() -> None:
         f"const MEMOS = {dump(memos)};\n\n"
         f"const CATEGORIES = {dump(CATEGORIES)};\n\n"
         f"const DISCLAIMER_BLOCKS = {dump(DISCLAIMER_BLOCKS)};\n\n"
-        "window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS };\n"
+        f"const PDF_DISCLAIMERS = {dump(PDF_DISCLAIMERS)};\n\n"
+        "window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS, PDF_DISCLAIMERS };\n"
     )
     OUT.write_text(js, encoding="utf-8")
     print(f"wrote {OUT.relative_to(REPO)}  ({len(memos)} memos, {OUT.stat().st_size:,} bytes)")

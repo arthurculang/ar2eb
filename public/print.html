@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AR2EB Memo (Print)</title>
+
+  <style>
+    /* Local fonts for deterministic PDF rendering — never reach the network. */
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400;
+                 src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500;
+                 src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600;
+                 src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 700;
+                 src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: italic; font-weight: 400;
+                 src: url('assets/fonts/Inter-Italic.ttf') format('truetype'); }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400;
+                 src: url('assets/fonts/JetBrainsMono-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 700;
+                 src: url('assets/fonts/JetBrainsMono-Bold.ttf') format('truetype'); }
+
+    /* Page size: matches memo.py — 14" x 8.5" landscape legal. */
+    @page {
+      size: 14in 8.5in;
+      margin: 0;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      font-family: 'Inter', sans-serif;
+      color: #18181b;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* One memo page = one printed page. Subsequent .memo-page elements force
+       a page break so 5 pages render as 5 PDF pages. */
+    .memo-page {
+      width: 14in;
+      height: 8.5in;
+      padding: 0.55in 1in;
+      box-sizing: border-box;
+      page-break-after: always;
+      break-after: page;
+      overflow: hidden;
+      position: relative;
+    }
+    .memo-page:last-child {
+      page-break-after: auto;
+      break-after: auto;
+    }
+  </style>
+</head>
+<body data-harness="print">
+  <div id="root"></div>
+
+  <!-- Vendored React + Babel — deterministic, no network. Versions pinned in
+       scripts/render_memo_pdf.py (Phase 1) and refreshed via npm if upgraded. -->
+  <script src="assets/vendor/react.production.min.js"></script>
+  <script src="assets/vendor/react-dom.production.min.js"></script>
+  <script src="assets/vendor/babel.min.js"></script>
+
+  <script src="data.js"></script>
+  <script type="text/babel" src="memo_pdf.jsx"></script>
+</body>
+</html>

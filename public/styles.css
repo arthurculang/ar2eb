@@ -697,3 +697,26 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   outline-offset: 2px;
   border-radius: 2px;
 }
+
+/* ── Embedded memo viewer ─────────────────────────────────────────────
+   MemoPage embeds the full 5-page JSX memo (same components as the PDF
+   print harness). Each .memo-page is 14"×8.5" native; the JS in
+   <EmbeddedMemo> scales the inner wrapper to fit the container. The
+   memo-page footer is print-only (absolute positioned overlapping
+   content); the site uses normal flow so we re-flow the page chrome. */
+.memo-embed-section .memo-embed-wrap {
+  overflow: hidden;
+  /* Reserve vertical space so the scaled content stays in flow.
+     Computed via aspect-ratio: 14×8.5 per page × 5 pages = ratio 14:42.5 */
+  aspect-ratio: 14 / 42.5;
+  background: #fafafa;
+  border: 0.5pt solid #e4e4e7;
+}
+.memo-embed-section .memo-embed-inner {
+  /* JS sets transform: scale(); the page components retain their native
+     pt sizing for layout fidelity with the PDF. */
+}
+.memo-embed-section .memo-page {
+  page-break-after: auto;
+  break-after: auto;
+}

@@ -58,6 +58,19 @@ chart_reference:
   history_revenue: [0.080, 0.150, 0.240]  # $B actuals
   history_fleet: [12, 28, 50]  # cumulative aircraft delivered
 
+# ── Page 3 chart-aesthetic config (Phase 4: migrated out of JSX) ────────
+page3_chart_config:
+  peer_y: 15
+  peer_text: "Aerospace + operator peer median ~15%"
+  fleet_anchor: 50                            # anchor to last historical aircraft count
+  fleet_title: "eVTOL aircraft deployed (log)"
+  fleet_reference: null
+  valn_anchor_y: 3
+  valn_anchor_text: "Mature aerospace P/S ~2-4×"
+  valn_caption: "Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×)."
+  tam_title: "$250B global UAM TAM (FY36) — Joby share"
+  tam_legend: ["JOBY", "Competitors", "Other UAM (cargo, etc.)"]
+
 # ═════════════════════════════════════════════════════════════════════════════
 # SCENARIOS
 # ═════════════════════════════════════════════════════════════════════════════
@@ -72,7 +85,7 @@ scenarios:
     label: Bear
     short_label: Bear           # for charts at small font (chart builder uses this)
     probability: 0.30
-    expected_per_share: 0.32    # weighted by within-scenario p_fail; not raw DCF
+    expected_per_share: 0.42    # weighted by within-scenario p_fail; not raw DCF
     headline: "Cert delays; mfg stumbles; China wins."
     narrative:
       - >
@@ -133,7 +146,7 @@ scenarios:
       raise_total: 2.75
       dilution_pct: 53
       final_shares: 1508
-      dcf_per_share: 0.22
+      dcf_per_share: 0.38
       distress: 0.50
 
     # Page 3 chart-specific auxiliary data
@@ -148,7 +161,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.55
-    expected_per_share: 2.00
+    expected_per_share: 3.65
     headline: "Joby + Archer split US; 13% margin."
     narrative:
       - >
@@ -210,7 +223,7 @@ scenarios:
       raise_total: 3.75
       dilution_pct: 31
       final_shares: 1284
-      dcf_per_share: 2.33
+      dcf_per_share: 4.34
       distress: 0.50
 
     chart_data:
@@ -224,7 +237,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.12   # reduced from 0.15 to make room for ultra_bull (12+3=15)
-    expected_per_share: 32.61
+    expected_per_share: 30.05
     headline: "Western eVTOL leader; SaaS margins."
     narrative:
       - >
@@ -285,7 +298,7 @@ scenarios:
       raise_total: 2.05
       dilution_pct: 11
       final_shares: 1091
-      dcf_per_share: 35.35
+      dcf_per_share: 32.58
       distress: 1.00
 
     chart_data:
@@ -299,7 +312,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull        # chart-builder uses this — fits at 7pt label
     probability: 0.03
-    expected_per_share: 90.00
+    expected_per_share: 90.01
     headline: "Global UAM dominance; SaaS-take-rate."
     narrative:
       - >
@@ -351,7 +364,7 @@ scenarios:
       distress: 0.96
 
     chart_data:
-      raises:           [0.30, 0.50, 0.50, 0.30, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00]
+      raises:           [0.30, 0.50, 0.75, 0.30, 0.20, 0.00, 0.00, 0.00, 0.00, 0.00]
       raise_prices:     [16.00, 28.00, 50.00, 80.00, 120.00, 0.00, 0.00, 0.00, 0.00, 0.00]
       rev_per_aircraft: [4.5, 4.8, 5.0, 5.2, 5.5, 5.5, 5.5, 5.5, 5.5, 5.5]
       tam_competitor_share: 75.0
@@ -422,11 +435,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: '006'
-  footer_timestamp: 2026-05-17_14-00
-  canonical_jsx: joby-dcf-valuation__v007__2026-05-17_14-00.jsx
-  pdf_version: 028
-  pdf_timestamp: 2026-05-18_04-00
+  footer_version: "029"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "029"
+  pdf_timestamp: "2026-05-23_21-14"
 glossary:
 - term: eVTOL
   definition: Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range.

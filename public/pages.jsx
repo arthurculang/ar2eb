@@ -129,6 +129,47 @@ function CategoryPage({ slug }) {
 }
 
 // ---------- MEMO DETAIL ----------
+// EmbeddedMemo — renders the full 5-page JSX memo (same components the
+// Playwright print harness uses) at native 14"×8.5" size, scaled down to
+// fit whatever container it lives in. ResizeObserver keeps it responsive.
+function EmbeddedMemo({ memo }) {
+  const { Page1Headline, Page2Narratives, Page3Snapshot,
+          Page4Quantitative, Page5BackMatter } = window.AR2EB_MEMO || {};
+  const containerRef = React.useRef(null);
+  const [scale, setScale] = React.useState(1);
+  const NATIVE_W = 14 * 96; // 14 inches at 96 dpi = 1344px
+
+  React.useEffect(() => {
+    const update = () => {
+      if (!containerRef.current) return;
+      const w = containerRef.current.clientWidth;
+      setScale(Math.min(1, w / NATIVE_W));
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    if (containerRef.current) ro.observe(containerRef.current);
+    return () => ro.disconnect();
+  }, []);
+
+  if (!Page1Headline) return <p>Memo viewer not loaded — refresh required.</p>;
+
+  return (
+    <div className="memo-embed-wrap" ref={containerRef}>
+      <div className="memo-embed-inner" style={{
+        transform: `scale(${scale})`,
+        transformOrigin: 'top left',
+        width: NATIVE_W + 'px',
+      }}>
+        <Page1Headline memo={memo} />
+        <Page2Narratives memo={memo} />
+        <Page3Snapshot memo={memo} />
+        <Page4Quantitative memo={memo} />
+        <Page5BackMatter memo={memo} />
+      </div>
+    </div>
+  );
+}
+
 function MemoPage({ slug }) {
   const { fmtUSD, fmtPct, fmtMult } = L();
   const { MEMOS, DISCLAIMER_BLOCKS } = D();
@@ -241,6 +282,17 @@ function MemoPage({ slug }) {
               <span aria-hidden="true">↓</span>
             </div>
           </a>
+        </div>
+      </section>
+
+      <section className="memo-embed-section">
+        <div className="wrap">
+          <div className="eyebrow">Full memo · inline</div>
+          <p className="muted" style={{ margin: '8px 0 16px', fontSize: '14px' }}>
+            Same JSX components that render the downloadable PDF, scaled to fit.
+            All five pages render below — no chrome, no chart-as-image.
+          </p>
+          <EmbeddedMemo memo={memo} />
         </div>
       </section>
 

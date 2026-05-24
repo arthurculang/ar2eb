@@ -13,8 +13,9 @@ Edits data/<ticker>.yml's `stamp` block in place:
     canonical drift on the next real build).
 
 Old PDFs are never touched — memo-spec §10: versions accumulate as
-immutable history. After bumping, run `python memo.py <ticker>` to emit
-the new public/memos/<ticker>-memo__v{NNN}__{timestamp}.pdf.
+immutable history. After bumping, run `python scripts/rebuild_all.py`
+to emit the new public/memos/<ticker>-memo__v{NNN}__{timestamp}.pdf via
+the JSX print harness (Phase 2: memo.py was retired).
 
 The canonical JSX reference is NOT auto-changed (a JSX bump is a separate,
 deliberate act); update `stamp.canonical_jsx` by hand when the JSX bumps.
@@ -59,7 +60,7 @@ def main() -> int:
             return 1
     yml.write_text(text, encoding="utf-8")
     print(f"{ticker}: pdf_version {old_v} -> {new_v}  (timestamp {now})")
-    print(f"  next: python memo.py {ticker}  "
+    print(f"  next: python scripts/rebuild_all.py  "
           f"-> public/memos/{ticker}-memo__v{new_v}__{now}.pdf")
     print("  note: stamp.canonical_jsx unchanged — bump it by hand on a JSX change")
     return 0

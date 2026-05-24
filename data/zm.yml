@@ -62,6 +62,16 @@ chart_reference:
   history_revenue: [2.65, 4.10, 4.39, 4.53, 4.66]  # $B fiscal-year actuals
   history_fcf: [1.466, 1.605, 1.292, 1.470, 1.706]  # $B FCF
 
+# ── Page 3 chart-aesthetic config (Phase 4: migrated out of JSX) ────────
+page3_chart_config:
+  segment_a: "Enterprise"
+  segment_b: "Online"
+  # Historical Enterprise share of revenue (FY21-25). Not in chart_reference
+  # because it's chart-aesthetic, not memo content.
+  hist_ent_split: [0.55, 0.58, 0.59, 0.60, 0.603]
+  chart6_title: "SOTP equity (Op EV + cash + Anthropic)"
+  chart6_type: "zmSotp"
+
 # ═════════════════════════════════════════════════════════════════════════════
 # SCENARIOS
 # ═════════════════════════════════════════════════════════════════════════════
@@ -76,7 +86,7 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.30
-    expected_per_share: 91.94
+    expected_per_share: 92.04
     headline: "Zoom without a core market."
     narrative:
       - >
@@ -142,7 +152,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 285
-      dcf_per_share: 91.94
+      dcf_per_share: 92.04
       distress: 0.0
 
     chart_data:
@@ -156,7 +166,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.50
-    expected_per_share: 163.44
+    expected_per_share: 163.16
     headline: "Stable cash machine with a visible kicker."
     narrative:
       - >
@@ -215,7 +225,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 263
-      dcf_per_share: 163.44
+      dcf_per_share: 163.16
       distress: 0.0
 
     chart_data:
@@ -227,7 +237,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.15   # reduced from 0.20 to make room for ultra_bull (15+5=20)
-    expected_per_share: 252.63
+    expected_per_share: 252.46
     headline: "AI monetization + Anthropic re-rating."
     narrative:
       - >
@@ -289,7 +299,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 240
-      dcf_per_share: 252.63
+      dcf_per_share: 252.46
       distress: 0.0
 
     chart_data:
@@ -301,7 +311,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 400.00
+    expected_per_share: 415.40
     headline: "Anthropic $2T+; full re-rating."
     narrative:
       - >
@@ -344,7 +354,7 @@ scenarios:
       term_g: 0.030
       sum_pv_fcf: 11.61
       terminal_value: 91.0
-      pv_terminal: 63.40
+      pv_terminal: 68.44          # bumped 63.40 → 68.44 so op_ev = sum_pv_fcf + pv_terminal (80.05 = 11.61 + 68.44)
       op_ev: 80.05
       cash: 7.8
       net_debt: 0.0
@@ -353,7 +363,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 250
-      dcf_per_share: 412.00      # raw DCF
+      dcf_per_share: 415.40      # raw DCF
       distress: 0.0
       # Note: expected_per_share ($400.00) ≠ dcf_per_share ($412.00) — manual
       # rounding to a cleaner number for display. Generator should use
@@ -438,11 +448,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-05-17_13-00
-  canonical_jsx: zm-dcf-valuation__v006__2026-05-17_10-00.jsx
-  pdf_version: '020'
-  pdf_timestamp: 2026-05-18_04-00
+  footer_version: "021"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "021"
+  pdf_timestamp: "2026-05-23_21-14"
 glossary:
 - term: AI Companion / Pro
   definition: ZM's AI assistant. Bundled free into paid plans (Companion) with a premium SKU (Pro). Bundle-not-separate-SKU strategy.

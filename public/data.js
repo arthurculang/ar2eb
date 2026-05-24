@@ -13,8 +13,8 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "joby-memo__v028__2026-05-18_04-00.pdf",
-      "size": "451 KB"
+      "file": "joby-memo__v029__2026-05-23_21-14.pdf",
+      "size": "320 KB"
     },
     "metrics": {
       "mktCap": "$10.3B",
@@ -26,29 +26,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 7.81,
-      "deltaPct": -25.6
+      "fair": 8.44,
+      "deltaPct": -19.6
     },
     "compound": [
       {
         "y": 5,
-        "value": 11.21,
-        "mult": 1.07
+        "value": 12.18,
+        "mult": 1.16
       },
       {
         "y": 10,
-        "value": 16.1,
-        "mult": 1.53
+        "value": 17.6,
+        "mult": 1.68
       },
       {
         "y": 15,
-        "value": 23.14,
-        "mult": 2.2
+        "value": 25.44,
+        "mult": 2.42
       },
       {
         "y": 20,
-        "value": 33.28,
-        "mult": 3.17
+        "value": 36.8,
+        "mult": 3.51
       }
     ],
     "question": "Will Joby capture meaningful share of a $250B global UAM TAM by 2036 — or is today's $10B market cap pricing certainty that competitive eVTOL economics don't support?",
@@ -57,7 +57,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 30,
-        "price": 0.32,
+        "price": 0.42,
         "headline": "Cert delays; mfg stumbles; China wins.",
         "why": "Aerospace startups historically fail at high rates even with funding. SR3 audit timing has slipped industry-wide; Stage 4 final testing routinely extends 12-24 months beyond projections. Manufacturing scaling at Dayton is the hardest unproven part — Tesla took years on Model 3 with mature automotive suppliers. The 30% weight acknowledges that the $2.5B cash + Toyota manufacturing partnership materially reduce execution risk relative to a typical aerospace startup, but eVTOL unit economics remain fundamentally unproven at fleet scale. Even with strong execution, the category itself could fail to generate profitable demand. Within-scenario 35% p_fail captures Joby-specific bankruptcy; the 30% scenario weight captures the broader 'bear world' where eVTOL economics don't scale even if Joby executes.",
         "what": [
@@ -69,7 +69,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 55,
-        "price": 2.0,
+        "price": 3.65,
         "headline": "Joby + Archer split US; 13% margin.",
         "why": "Modal outcome given de-risking factors already in place. FAA Type Cert progresses on schedule or slightly delayed; Toyota manufacturing scales incrementally rather than to full 500-aircraft/year; Dubai launches commercially but stays limited in scope; Joby and Archer effectively split the US market based on funding/partnership advantages. The 55% weight reflects that the base case requires the LEAST faith — no breakthrough business model, no dominant competitive position, no breakthrough regulatory cooperation. Just sequential execution on plans largely in motion. Result: real revenue with aerospace-blend operating margins (~13%, peer-set median between regional aviation at 8% and ADAS software at 30%), well below the software-economics framing implicit in today's market cap. Joby reaches commercial scale; the open question is at what margin.",
         "what": [
@@ -81,7 +81,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 32.61,
+        "price": 30.05,
         "headline": "Western eVTOL leader; SaaS margins.",
         "why": "The bull case requires a chain of conditional events: FAA Type Cert on schedule by end-2026 AND Toyota Dayton scales to full 500-aircraft/year capacity by 2028-29 AND Dubai exclusivity template replicates in 3+ countries (Saudi Arabia, India, SE Asia) AND competition narrows (Archer ships meaningfully lower volumes, EHang stays regional to China) AND autonomous flight matures within 5-7 years AND Joby successfully pivots to software-take-rate model on partner aircraft. Even granting 60-70% probability per condition with correlation (i.e., if cert works Toyota probably scales), joint probability lands closer to 10-15%. Conjunctive probability is one of the most reliably underestimated quantities in forecasting — the bull case isn't blocked by any single piece looking unlikely, but by compound dependency. 15% reflects that this is a real possibility, just not central.",
         "what": [
@@ -93,7 +93,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 90.0,
+        "price": 90.01,
         "headline": "Global UAM dominance; SaaS-take-rate.",
         "why": "Tail of tails: requires every Bull condition to hit AND multiple expansion AND replicate internationally AND early autonomous pivot. Each individually 60-75% probable; joint at 3-5%. Genuine tail captures the scenario where Joby joins the software-aerospace-hybrid giants club.",
         "what": [
@@ -102,7 +102,876 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 30 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 30 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "thesis": "Joby trades at ~$10.3B against $24M of Q1 2026 revenue and $700M annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise) provides ~3 years of runway. FAA Type Certification is in Stage 4 (final), Dubai exclusive operations begin in 2026, and the Toyota manufacturing partnership unlocks scale. Pre-revenue category-defining companies present a Damodaran problem: the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Aug '21",
+      "points": [
+        [
+          -4.67,
+          9.5
+        ],
+        [
+          -4.42,
+          8.0
+        ],
+        [
+          -4.17,
+          5.0
+        ],
+        [
+          -3.92,
+          3.5
+        ],
+        [
+          -3.67,
+          4.0
+        ],
+        [
+          -3.42,
+          3.0
+        ],
+        [
+          -3.17,
+          5.0
+        ],
+        [
+          -2.92,
+          9.0
+        ],
+        [
+          -2.67,
+          7.5
+        ],
+        [
+          -2.42,
+          6.0
+        ],
+        [
+          -2.17,
+          5.5
+        ],
+        [
+          -1.92,
+          5.5
+        ],
+        [
+          -1.67,
+          5.5
+        ],
+        [
+          -1.42,
+          9.0
+        ],
+        [
+          -1.17,
+          8.0
+        ],
+        [
+          -0.92,
+          7.0
+        ],
+        [
+          -0.67,
+          7.5
+        ],
+        [
+          -0.42,
+          9.5
+        ],
+        [
+          -0.17,
+          9.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 30%",
+        "body": "Aerospace startups historically fail at high rates; SR3 timing slipped industry-wide."
+      },
+      {
+        "label": "Base 55%",
+        "body": "Modal outcome: Joby + Archer split US with aerospace-blend margins."
+      },
+      {
+        "label": "Bull 12%",
+        "body": "Compound conditional chain; joint probability lands at 10-15% despite individually plausible pieces."
+      },
+      {
+        "label": "Ultra Bull 3%",
+        "body": "Tail of tails: dominant global UAM + early autonomous pivot + software-take-rate multiple expansion."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY24–FY26 history + FY27–FY36 scenario projections · fiscal years end Dec 31 · 10-K, Q1 2026 10-Q, Morgan Stanley UAM",
+      "sources": "Sources: JOBY 10-K FY25, Q1 2026 10-Q, Morgan Stanley UAM TAM Update (Global $1T by 2040; ~$250B FY36 interpolation).",
+      "chartReference": {
+        "tamBillion": 250,
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          0.08,
+          0.15,
+          0.24
+        ],
+        "historyFleet": [
+          12,
+          28,
+          50
+        ]
+      },
+      "chartConfig": {
+        "peerY": 15,
+        "peerText": "Aerospace + operator peer median ~15%",
+        "fleetAnchor": 50,
+        "fleetTitle": "eVTOL aircraft deployed (log)",
+        "fleetReference": null,
+        "valnAnchorY": 3,
+        "valnAnchorText": "Mature aerospace P/S ~2-4×",
+        "valnCaption": "Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×).",
+        "tamTitle": "$250B global UAM TAM (FY36) — Joby share",
+        "tamLegend": [
+          "JOBY",
+          "Competitors",
+          "Other UAM (cargo, etc.)"
+        ]
+      }
+    },
+    "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 250,
+      "weighted": {
+        "expected": 8.44,
+        "upsidePct": -19.6
+      },
+      "market": {
+        "marketCapBillion": 10.3,
+        "sharesOutstandingMillion": 984.0,
+        "cashBillion": 2.5,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.3,
+          "expectedPerShare": 0.42,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 0.6,
+            "p_fail": 35,
+            "s2c": 0.8
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.15,
+              0.25,
+              0.4,
+              0.6,
+              0.8,
+              0.95,
+              1.1,
+              1.25,
+              1.4,
+              1.5
+            ],
+            "op_margin": [
+              -3.0,
+              -2.0,
+              -1.2,
+              -0.6,
+              -0.2,
+              0.0,
+              0.02,
+              0.04,
+              0.05,
+              0.05
+            ],
+            "wacc_path": [
+              0.14,
+              0.135,
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.45,
+              -0.5,
+              -0.48,
+              -0.36,
+              -0.16,
+              0.0,
+              0.022,
+              0.05,
+              0.07,
+              0.075
+            ],
+            "reinvest": [
+              0.05,
+              0.125,
+              0.188,
+              0.25,
+              0.25,
+              0.188,
+              0.188,
+              0.188,
+              0.188,
+              0.125
+            ],
+            "fcf": [
+              -0.5,
+              -0.625,
+              -0.668,
+              -0.61,
+              -0.41,
+              -0.188,
+              -0.166,
+              -0.138,
+              -0.118,
+              -0.05
+            ],
+            "pv_fcf": [
+              -0.439,
+              -0.483,
+              -0.457,
+              -0.371,
+              -0.222,
+              -0.091,
+              -0.072,
+              -0.054,
+              -0.042,
+              -0.016
+            ],
+            "sum_pv_fcf": -2.247,
+            "terminal_value": 1.0,
+            "pv_terminal": 0.32,
+            "op_ev": -1.93,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 0.57,
+            "raise_total": 2.75,
+            "dilution_pct": 53,
+            "final_shares": 1508,
+            "dcf_per_share": 0.38,
+            "distress": 0.5
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.5,
+              0.75,
+              0.75,
+              0.75,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              10.0,
+              8.0,
+              6.0,
+              4.0,
+              3.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              3.0,
+              3.2,
+              3.5,
+              3.7,
+              4.0,
+              4.2,
+              4.4,
+              4.5,
+              4.5,
+              4.5
+            ],
+            "tam_competitor_share": 40.0
+          },
+          "revPerUnit": [
+            3.0,
+            3.2,
+            3.5,
+            3.7,
+            4.0,
+            4.2,
+            4.4,
+            4.5,
+            4.5,
+            4.5
+          ]
+        },
+        "base": {
+          "probability": 0.55,
+          "expectedPerShare": 3.65,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 2.8,
+            "p_fail": 18,
+            "s2c": 1.2
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.18,
+              0.4,
+              0.9,
+              1.6,
+              2.5,
+              3.5,
+              4.5,
+              5.5,
+              6.3,
+              7.0
+            ],
+            "op_margin": [
+              -2.5,
+              -1.2,
+              -0.5,
+              -0.1,
+              0.05,
+              0.08,
+              0.1,
+              0.12,
+              0.13,
+              0.13
+            ],
+            "wacc_path": [
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.45,
+              -0.48,
+              -0.45,
+              -0.16,
+              0.125,
+              0.221,
+              0.356,
+              0.521,
+              0.647,
+              0.719
+            ],
+            "reinvest": [
+              0.058,
+              0.183,
+              0.417,
+              0.583,
+              0.75,
+              0.833,
+              0.833,
+              0.833,
+              0.667,
+              0.583
+            ],
+            "fcf": [
+              -0.508,
+              -0.663,
+              -0.867,
+              -0.743,
+              -0.625,
+              -0.612,
+              -0.478,
+              -0.312,
+              -0.02,
+              0.136
+            ],
+            "pv_fcf": [
+              -0.45,
+              -0.522,
+              -0.609,
+              -0.468,
+              -0.355,
+              -0.314,
+              -0.223,
+              -0.133,
+              -0.008,
+              0.049
+            ],
+            "sum_pv_fcf": -3.033,
+            "terminal_value": 21.5,
+            "pv_terminal": 6.1,
+            "op_ev": 3.07,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 5.57,
+            "raise_total": 3.75,
+            "dilution_pct": 31,
+            "final_shares": 1284,
+            "dcf_per_share": 4.34,
+            "distress": 0.5
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.75,
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              10.0,
+              9.0,
+              8.0,
+              7.0,
+              6.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              3.5,
+              3.8,
+              4.0,
+              4.2,
+              4.5,
+              4.8,
+              5.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "tam_competitor_share": 60.0
+          },
+          "revPerUnit": [
+            3.5,
+            3.8,
+            4.0,
+            4.2,
+            4.5,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ]
+        },
+        "bull": {
+          "probability": 0.12,
+          "expectedPerShare": 30.05,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 8.0,
+            "p_fail": 8,
+            "s2c": 1.6
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.2,
+              0.5,
+              1.2,
+              2.5,
+              4.5,
+              7.5,
+              11.0,
+              15.0,
+              18.0,
+              20.0
+            ],
+            "op_margin": [
+              -2.0,
+              -0.8,
+              -0.2,
+              0.05,
+              0.12,
+              0.18,
+              0.22,
+              0.25,
+              0.27,
+              0.28
+            ],
+            "wacc_path": [
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.075
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.4,
+              -0.4,
+              -0.24,
+              0.125,
+              0.54,
+              1.35,
+              2.42,
+              3.75,
+              4.86,
+              5.6
+            ],
+            "reinvest": [
+              0.056,
+              0.188,
+              0.438,
+              0.813,
+              1.25,
+              1.875,
+              2.188,
+              2.5,
+              1.875,
+              1.25
+            ],
+            "fcf": [
+              -0.456,
+              -0.588,
+              -0.678,
+              -0.688,
+              -0.71,
+              -0.525,
+              0.232,
+              1.25,
+              2.985,
+              4.35
+            ],
+            "pv_fcf": [
+              -0.407,
+              -0.464,
+              -0.477,
+              -0.435,
+              -0.404,
+              -0.262,
+              0.105,
+              0.527,
+              1.169,
+              1.586
+            ],
+            "sum_pv_fcf": 0.938,
+            "terminal_value": 88.0,
+            "pv_terminal": 32.1,
+            "op_ev": 33.04,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 35.54,
+            "raise_total": 2.05,
+            "dilution_pct": 11,
+            "final_shares": 1091,
+            "dcf_per_share": 32.58,
+            "distress": 1.0
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.75,
+              0.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              12.0,
+              16.0,
+              22.0,
+              30.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              4.0,
+              4.3,
+              4.5,
+              4.8,
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0,
+              5.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            4.0,
+            4.3,
+            4.5,
+            4.8,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ]
+        },
+        "ultra_bull": {
+          "probability": 0.03,
+          "expectedPerShare": 90.01,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 16.0,
+            "p_fail": 4,
+            "s2c": 1.8
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.25,
+              0.7,
+              1.8,
+              3.8,
+              7.0,
+              11.5,
+              17.0,
+              23.0,
+              28.0,
+              32.0
+            ],
+            "op_margin": [
+              -1.8,
+              -0.6,
+              -0.1,
+              0.1,
+              0.18,
+              0.24,
+              0.28,
+              0.3,
+              0.32,
+              0.34
+            ],
+            "wacc_path": [
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.075,
+              0.072,
+              0.07
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.45,
+              -0.42,
+              -0.18,
+              0.38,
+              1.26,
+              2.76,
+              4.76,
+              6.9,
+              8.96,
+              10.88
+            ],
+            "reinvest": [
+              0.07,
+              0.26,
+              0.66,
+              1.26,
+              1.95,
+              2.7,
+              2.87,
+              2.8,
+              2.0,
+              1.25
+            ],
+            "fcf": [
+              -0.52,
+              -0.68,
+              -0.84,
+              -0.88,
+              -0.69,
+              0.06,
+              1.89,
+              4.1,
+              6.96,
+              9.63
+            ],
+            "pv_fcf": [
+              -0.468,
+              -0.547,
+              -0.616,
+              -0.584,
+              -0.418,
+              0.033,
+              0.929,
+              1.852,
+              2.88,
+              3.665
+            ],
+            "sum_pv_fcf": 6.726,
+            "terminal_value": 252.0,
+            "pv_terminal": 95.83,
+            "op_ev": 102.56,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 105.06,
+            "raise_total": 2.05,
+            "dilution_pct": 11,
+            "final_shares": 1121,
+            "dcf_per_share": 93.72,
+            "distress": 0.96
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.75,
+              0.3,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              16.0,
+              28.0,
+              50.0,
+              80.0,
+              120.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_aircraft": [
+              4.5,
+              4.8,
+              5.0,
+              5.2,
+              5.5,
+              5.5,
+              5.5,
+              5.5,
+              5.5,
+              5.5
+            ],
+            "tam_competitor_share": 75.0
+          },
+          "revPerUnit": [
+            4.5,
+            4.8,
+            5.0,
+            5.2,
+            5.5,
+            5.5,
+            5.5,
+            5.5,
+            5.5,
+            5.5
+          ]
+        }
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Type Cert is imminent.",
+            "body": "Stage 4 in progress, SR3 audit complete Q1'26. Conforming aircraft already flying. Removes the largest single bear risk."
+          },
+          {
+            "label": "Best capitalized eVTOL.",
+            "body": "$2.5B cash exceeds Archer ($1.8B) and Vertical (+$850M raise). Multi-year runway through commercial scaling."
+          },
+          {
+            "label": "Partnership stack is unique.",
+            "body": "Toyota ($894M, mfg), Delta ($200M, US distribution), Dubai RTA (exclusive 2032). No other eVTOL has this stack."
+          },
+          {
+            "label": "Operator + mfg = wider moat.",
+            "body": "Joby owns/operates fleet rather than selling aircraft. Captures full revenue per flight, not just OEM margin."
+          },
+          {
+            "label": "Mature margin may be conservative.",
+            "body": "Base case 13% reflects aerospace blend. If software-take-rate on partner aircraft scales, terminal margin could be 20%+."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Type Cert slips to 2027+ · Cash < $1.5B by EOY 2026 · Dubai passenger volume disappoints (< 50K rides FY27)"
+          },
+          {
+            "label": "Bull validation",
+            "body": "Type Cert achieved by Q3 2026 · Dayton facility hits 4 aircraft/month · Second exclusive country contract signed"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Archer achieves Type Cert first — Joby's first-mover advantage in US erodes; share-of-TAM math compresses"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "eVTOL",
+          "definition": "Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range."
+        },
+        {
+          "term": "Type Certification",
+          "definition": "FAA approval to operate a new aircraft design commercially. Joby is in Stage 4 (final) of 4-stage process."
+        },
+        {
+          "term": "eIPP",
+          "definition": "eVTOL Integration Pilot Program. White House-backed initiative letting Joby fly in US states pre-Type Cert."
+        },
+        {
+          "term": "Dubai RTA",
+          "definition": "Roads & Transport Authority. Awarded Joby exclusive eVTOL air-taxi rights in Dubai through 2032."
+        },
+        {
+          "term": "Toyota partnership",
+          "definition": "$894M total investment. Joint manufacturing program at Dayton, Ohio facility for production scale."
+        },
+        {
+          "term": "Blade",
+          "definition": "Helicopter-based mobility business acquired in 2024 — gives Joby existing routes (NYC-airport) for early ops."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "029",
+        "footerTimestamp": "2026-05-23_21-14",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   },
   {
     "ticker": "AUR",
@@ -114,8 +983,8 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "aur-memo__v022__2026-05-18_04-00.pdf",
-      "size": "461 KB"
+      "file": "aur-memo__v023__2026-05-23_21-14.pdf",
+      "size": "317 KB"
     },
     "metrics": {
       "mktCap": "$13.2B",
@@ -127,29 +996,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 9.01,
-      "deltaPct": 16.4
+      "fair": 6.65,
+      "deltaPct": -14.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 13.15,
-        "mult": 1.7
+        "value": 9.68,
+        "mult": 1.25
       },
       {
         "y": 10,
-        "value": 19.18,
-        "mult": 2.48
+        "value": 14.1,
+        "mult": 1.82
       },
       {
         "y": 15,
-        "value": 28.0,
-        "mult": 3.62
+        "value": 20.54,
+        "mult": 2.65
       },
       {
         "y": 20,
-        "value": 40.89,
-        "mult": 5.28
+        "value": 29.93,
+        "mult": 3.87
       }
     ],
     "question": "Will Aurora capture meaningful share of a $160B US autonomous trucking TAM by 2036 — or is today's $13B market cap pricing certainty about driverless commercial economics that hasn't been proven?",
@@ -158,7 +1027,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 35,
-        "price": 0.06,
+        "price": 0.11,
         "headline": "Tech doesn't scale, capital exhausts.",
         "why": "Bearish thesis is compound: tech doesn't scale from supervised highway pilots to driverless at necessary safety thresholds; capital exhausts before commercial validation; dilution at falling prices accelerates as capital needs persist; competitive losses to Kodiak (cargo-focused, well-funded) and Waabi (smaller but capital-efficient). Within-scenario 45% p_fail captures Aurora-specific failure; the 35% scenario weight reflects category-level risk — autonomous trucking economics may not scale for Western operators. Waymo Via's 2023 shutdown was a credible signal of category difficulty. The 35% weight is slightly above JOBY's 30% bear because AUR is earlier-stage (pre-commercial), more capital-dependent, and faces more direct competition.",
         "what": [
@@ -182,7 +1051,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 37.31,
+        "price": 37.32,
         "headline": "Dominant US platform, software-like margins.",
         "why": "Compound bet: Driverless commercial launches on schedule AND scaled trucking fleet ramps to 5,000+ trucks by 2028 AND software-take-rate model emerges (Aurora-as-platform on partner-operated fleet) AND competitive narrowing (Kodiak underperforms, Waabi stays niche) AND autonomous trucking proves uniquely viable. Each condition independently plausible at 40-60% probability; conjunctive probability lands at 15%. The asymmetric venture-bet pattern characteristic of autonomous-platform investments — bull case pays multiples-of-current- valuation if it converges, but requires conditions to align over 5-10 years.",
         "what": [
@@ -194,7 +1063,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 100.0,
+        "price": 20.76,
         "headline": "Dominant US; software-take-rate.",
         "why": "Tail of tails: commercial launch on schedule (50%) AND 25%+ TAM share by 2036 (30% conditional on launch) AND software-take-rate model wins (40%) AND multiple expansion to software/aerospace-hybrid premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
         "what": [
@@ -203,7 +1072,875 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "thesis": "Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M annualized cash burn. The $1.28B liquidity position needs replenishment by mid-2027 absent commercial conversion. Driverless commercial launch slipped from 2024 to now 2027; the Driver runs supervised highway pilots with PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin, P(failure). Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Nov '21",
+      "points": [
+        [
+          -4.5,
+          10.0
+        ],
+        [
+          -4.25,
+          7.0
+        ],
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -3.75,
+          2.5
+        ],
+        [
+          -3.5,
+          1.5
+        ],
+        [
+          -3.25,
+          2.0
+        ],
+        [
+          -3.0,
+          3.5
+        ],
+        [
+          -2.75,
+          3.0
+        ],
+        [
+          -2.5,
+          2.5
+        ],
+        [
+          -2.25,
+          3.0
+        ],
+        [
+          -2.0,
+          4.5
+        ],
+        [
+          -1.75,
+          4.0
+        ],
+        [
+          -1.5,
+          5.5
+        ],
+        [
+          -1.25,
+          6.0
+        ],
+        [
+          -1.0,
+          4.5
+        ],
+        [
+          -0.75,
+          5.0
+        ],
+        [
+          -0.5,
+          6.5
+        ],
+        [
+          -0.25,
+          7.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 35%",
+        "body": "Autonomous trucking unproven at scale; Waymo Via shutdown signal still recent."
+      },
+      {
+        "label": "Base 50%",
+        "body": "Modal outcome: Aurora is one of 2-3 winners, 7-8% TAM share, tech-auto blend margins."
+      },
+      {
+        "label": "Bull 12%",
+        "body": "Compound conditional chain; software-take-rate platform thesis requires multiple alignments."
+      },
+      {
+        "label": "Ultra Bull 3%",
+        "body": "Tail of tails: dominant US autonomous + early software-take-rate + multiple expansion."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY24–FY26 history + FY27–FY36 scenario projections · fiscal years end Dec 31 · 10-K, Q1 2026 10-Q, ATA/FTR Tonnage Index",
+      "sources": "Sources: AUR 10-K FY25, Q1 2026 10-Q, ATA/FTR Tonnage Index (US for-hire long-haul $300B; autonomy-addressable $160B).",
+      "chartReference": {
+        "tamBillion": 160,
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          0.069,
+          0.106,
+          0.044
+        ],
+        "historyFleet": [
+          6,
+          20,
+          50
+        ]
+      },
+      "chartConfig": {
+        "peerY": 20,
+        "peerText": "Mature tech-auto peer median ~20%",
+        "fleetAnchor": 50,
+        "fleetTitle": "Driverless trucks deployed (log)",
+        "fleetReference": {
+          "value": 750000,
+          "label": "US Class 8 fleet ~750K"
+        },
+        "valnAnchorY": 4,
+        "valnAnchorText": "Mature peer P/S ~3-5×",
+        "valnCaption": "Bear=stretched (6×), base=fair (1.3×), bull=cheap (0.5×).",
+        "tamTitle": "$160B US autonomous trucking TAM (FY36) — AUR share",
+        "tamLegend": [
+          "AUR",
+          "Competitors",
+          "Non-autonomous (legacy)"
+        ]
+      }
+    },
+    "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 160,
+      "weighted": {
+        "expected": 6.65,
+        "upsidePct": -14.0
+      },
+      "market": {
+        "marketCapBillion": 13.2,
+        "sharesOutstandingMillion": 1710.0,
+        "cashBillion": 1.28,
+        "netDebtBillion": 0.65
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.35,
+          "expectedPerShare": 0.11,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 1.5,
+            "p_fail": 45,
+            "s2c": 1.2
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.015,
+              0.04,
+              0.08,
+              0.15,
+              0.3,
+              0.6,
+              1.0,
+              1.5,
+              2.0,
+              2.5
+            ],
+            "op_margin": [
+              -8.0,
+              -4.0,
+              -2.0,
+              -1.0,
+              -0.5,
+              -0.2,
+              -0.1,
+              0.0,
+              0.05,
+              0.08
+            ],
+            "wacc_path": [
+              0.14,
+              0.14,
+              0.135,
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.12,
+              -0.16,
+              -0.16,
+              -0.15,
+              -0.15,
+              -0.12,
+              -0.1,
+              0.0,
+              0.1,
+              0.2
+            ],
+            "reinvest": [
+              0.009,
+              0.021,
+              0.033,
+              0.058,
+              0.125,
+              0.25,
+              0.333,
+              0.417,
+              0.417,
+              0.417
+            ],
+            "fcf": [
+              -0.129,
+              -0.181,
+              -0.193,
+              -0.208,
+              -0.275,
+              -0.37,
+              -0.433,
+              -0.417,
+              -0.317,
+              -0.217
+            ],
+            "pv_fcf": [
+              -0.113,
+              -0.139,
+              -0.131,
+              -0.124,
+              -0.146,
+              -0.175,
+              -0.184,
+              -0.159,
+              -0.109,
+              -0.068
+            ],
+            "sum_pv_fcf": -1.348,
+            "terminal_value": 2.3,
+            "pv_terminal": 0.72,
+            "op_ev": -0.63,
+            "cash": 1.28,
+            "net_debt": 0.0,
+            "total_equity": 0.65,
+            "raise_total": 4.25,
+            "dilution_pct": 74,
+            "final_shares": 3401,
+            "dcf_per_share": 0.19,
+            "distress": 0.0
+          },
+          "chartData": {
+            "raises": [
+              0.5,
+              0.75,
+              0.75,
+              0.75,
+              0.75,
+              0.5,
+              0.25,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              5.0,
+              4.0,
+              3.5,
+              3.0,
+              2.5,
+              2.0,
+              1.75,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              100,
+              110,
+              120,
+              130,
+              140,
+              150,
+              155,
+              160,
+              160,
+              165
+            ],
+            "tam_competitor_share": 25.0
+          },
+          "revPerUnit": [
+            100,
+            110,
+            120,
+            130,
+            140,
+            150,
+            155,
+            160,
+            160,
+            165
+          ]
+        },
+        "base": {
+          "probability": 0.5,
+          "expectedPerShare": 3.03,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 7.5,
+            "p_fail": 25,
+            "s2c": 1.5
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.03,
+              0.1,
+              0.25,
+              0.6,
+              1.2,
+              2.5,
+              4.5,
+              7.0,
+              9.5,
+              12.0
+            ],
+            "op_margin": [
+              -6.0,
+              -2.5,
+              -1.0,
+              -0.4,
+              -0.1,
+              0.05,
+              0.1,
+              0.15,
+              0.18,
+              0.2
+            ],
+            "wacc_path": [
+              0.12,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.09,
+              0.085
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.18,
+              -0.25,
+              -0.25,
+              -0.24,
+              -0.12,
+              0.099,
+              0.356,
+              0.83,
+              1.351,
+              1.896
+            ],
+            "reinvest": [
+              0.017,
+              0.047,
+              0.1,
+              0.233,
+              0.4,
+              0.867,
+              1.333,
+              1.667,
+              1.667,
+              1.667
+            ],
+            "fcf": [
+              -0.197,
+              -0.297,
+              -0.35,
+              -0.473,
+              -0.52,
+              -0.768,
+              -0.978,
+              -0.837,
+              -0.316,
+              0.229
+            ],
+            "pv_fcf": [
+              -0.176,
+              -0.237,
+              -0.25,
+              -0.305,
+              -0.303,
+              -0.407,
+              -0.473,
+              -0.372,
+              -0.129,
+              0.086
+            ],
+            "sum_pv_fcf": -2.566,
+            "terminal_value": 41.7,
+            "pv_terminal": 10.89,
+            "op_ev": 8.32,
+            "cash": 1.28,
+            "net_debt": 0.0,
+            "total_equity": 9.6,
+            "raise_total": 4.5,
+            "dilution_pct": 27,
+            "final_shares": 2480,
+            "dcf_per_share": 3.87,
+            "distress": 0.5
+          },
+          "chartData": {
+            "raises": [
+              0.5,
+              0.75,
+              1.0,
+              1.0,
+              0.75,
+              0.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              7.0,
+              7.5,
+              8.0,
+              9.0,
+              10.0,
+              12.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              120,
+              135,
+              150,
+              165,
+              180,
+              195,
+              205,
+              215,
+              220,
+              225
+            ],
+            "tam_competitor_share": 35.0
+          },
+          "revPerUnit": [
+            120,
+            135,
+            150,
+            165,
+            180,
+            195,
+            205,
+            215,
+            220,
+            225
+          ]
+        },
+        "bull": {
+          "probability": 0.12,
+          "expectedPerShare": 37.32,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 22.5,
+            "p_fail": 12,
+            "s2c": 1.8
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.04,
+              0.18,
+              0.5,
+              1.2,
+              2.5,
+              5.0,
+              10.0,
+              18.0,
+              27.0,
+              36.0
+            ],
+            "op_margin": [
+              -5.0,
+              -1.5,
+              -0.3,
+              0.05,
+              0.15,
+              0.22,
+              0.28,
+              0.32,
+              0.34,
+              0.35
+            ],
+            "wacc_path": [
+              0.11,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.08,
+              0.075
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.2,
+              -0.27,
+              -0.15,
+              0.06,
+              0.375,
+              1.1,
+              2.8,
+              5.76,
+              9.18,
+              12.6
+            ],
+            "reinvest": [
+              0.02,
+              0.078,
+              0.178,
+              0.389,
+              0.722,
+              1.389,
+              2.778,
+              4.444,
+              5.0,
+              5.0
+            ],
+            "fcf": [
+              -0.22,
+              -0.348,
+              -0.328,
+              -0.329,
+              -0.347,
+              -0.289,
+              0.022,
+              1.316,
+              4.18,
+              7.6
+            ],
+            "pv_fcf": [
+              -0.198,
+              -0.282,
+              -0.243,
+              -0.22,
+              -0.211,
+              -0.161,
+              0.011,
+              0.598,
+              1.756,
+              2.974
+            ],
+            "sum_pv_fcf": 4.024,
+            "terminal_value": 173.8,
+            "pv_terminal": 85.38,
+            "op_ev": 89.4,
+            "cash": 1.28,
+            "net_debt": 0.0,
+            "total_equity": 90.68,
+            "raise_total": 2.8,
+            "dilution_pct": 10,
+            "final_shares": 2145,
+            "dcf_per_share": 42.28,
+            "distress": 1.0
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.75,
+              0.75,
+              0.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              9.0,
+              12.0,
+              15.0,
+              18.0,
+              22.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              150,
+              175,
+              200,
+              225,
+              240,
+              250,
+              250,
+              250,
+              250,
+              250
+            ],
+            "tam_competitor_share": 50.0
+          },
+          "revPerUnit": [
+            150,
+            175,
+            200,
+            225,
+            240,
+            250,
+            250,
+            250,
+            250,
+            250
+          ]
+        },
+        "ultra_bull": {
+          "probability": 0.03,
+          "expectedPerShare": 20.76,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 25.0,
+            "p_fail": 3,
+            "s2c": 2.5
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.03,
+              0.15,
+              0.5,
+              1.5,
+              3.0,
+              5.0,
+              7.0,
+              8.5,
+              9.5,
+              10.5
+            ],
+            "op_margin": [
+              -2.5,
+              -0.8,
+              -0.3,
+              0.0,
+              0.15,
+              0.25,
+              0.32,
+              0.36,
+              0.38,
+              0.4
+            ],
+            "wacc_path": [
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.075,
+              -0.12,
+              -0.15,
+              0.0,
+              0.45,
+              1.25,
+              2.24,
+              3.06,
+              3.61,
+              4.2
+            ],
+            "reinvest": [
+              0.03,
+              0.12,
+              0.35,
+              0.75,
+              1.2,
+              1.5,
+              1.4,
+              1.25,
+              1.0,
+              0.75
+            ],
+            "fcf": [
+              -0.105,
+              -0.24,
+              -0.5,
+              -0.75,
+              -0.75,
+              -0.25,
+              0.84,
+              1.81,
+              2.61,
+              3.45
+            ],
+            "pv_fcf": [
+              -0.093,
+              -0.191,
+              -0.357,
+              -0.488,
+              -0.444,
+              -0.135,
+              0.413,
+              0.815,
+              1.082,
+              1.327
+            ],
+            "sum_pv_fcf": 1.929,
+            "terminal_value": 105.0,
+            "pv_terminal": 40.4,
+            "op_ev": 42.33,
+            "cash": 1.28,
+            "net_debt": 0.65,
+            "total_equity": 42.96,
+            "raise_total": 2.0,
+            "dilution_pct": 18,
+            "final_shares": 2010,
+            "dcf_per_share": 21.37,
+            "distress": 0.98
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.5,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              11.0,
+              16.0,
+              25.0,
+              40.0,
+              60.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_truck": [
+              180,
+              210,
+              240,
+              260,
+              275,
+              280,
+              280,
+              280,
+              280,
+              280
+            ],
+            "tam_competitor_share": 55.0
+          },
+          "revPerUnit": [
+            180,
+            210,
+            240,
+            260,
+            275,
+            280,
+            280,
+            280,
+            280,
+            280
+          ]
+        }
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Commercial operation is real.",
+            "body": "Aurora Driver runs supervised highway pilots with McLane (Berkshire), PACCAR, Volvo. Removes 'science project' bear framing."
+          },
+          {
+            "label": "Partnership stack across OEMs.",
+            "body": "Volvo VNL Autonomous and PACCAR Peterbilt/Kenworth integrations. Unlike Kodiak (cargo-only) or Waabi (Volvo-only), Aurora spans both."
+          },
+          {
+            "label": "$1.28B liquidity + capital flexibility.",
+            "body": "Q1 2026 raise extended runway. Strategic options (M&A interest from majors) provide downside floor."
+          },
+          {
+            "label": "First-mover regulatory moat.",
+            "body": "Aurora has logged the most miles in commercial operation. Lane data, TX/OK/NM regulatory relationships compound."
+          },
+          {
+            "label": "Mature margin may be conservative.",
+            "body": "Base 20% reflects tech-auto blend. If software-take-rate on OEM trucks scales (Mobileye analog), terminal could be 30%+."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Driverless launch slips to 2028+ · Cash < $500M by mid-2027 · Commercial volume disappoints (< 100 trucks by EOY 2028)"
+          },
+          {
+            "label": "Bull validation",
+            "body": "Driverless commercial launches by Q3 2027 · Fleet > 500 trucks by EOY 2028 · Second OEM software-take-rate deal signed"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Kodiak achieves at-scale commercial first — Aurora's first-mover advantage in long-haul erodes; TAM-share math compresses"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Aurora Driver",
+          "definition": "Aurora's autonomy software + hardware stack. Currently runs supervised on highway pilots with PACCAR, Volvo, and FedEx."
+        },
+        {
+          "term": "Driverless commercial",
+          "definition": "Operation with no human driver in the truck, generating per-mile or per-load revenue. Aurora's 2027 launch milestone."
+        },
+        {
+          "term": "S2C (sales-to-capital)",
+          "definition": "Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. Higher = more capital-efficient growth."
+        },
+        {
+          "term": "Hub-to-hub",
+          "definition": "Highway-only routes between terminals (e.g., Dallas-Houston). Aurora's commercial focus. Easier autonomy domain than urban streets."
+        },
+        {
+          "term": "OEM partners",
+          "definition": "Volvo VNL Autonomous and PACCAR (Peterbilt, Kenworth). OEM integration gives Aurora a manufacturing path competitors lack."
+        },
+        {
+          "term": "Take-rate model",
+          "definition": "Revenue per autonomy-mile on OEM-built trucks (vs Aurora-owned fleet). Software-like margins; the bull terminal-margin driver."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "023",
+        "footerTimestamp": "2026-05-23_21-14",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   },
   {
     "ticker": "LTH",
@@ -215,8 +1952,8 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "lth-memo__v021__2026-05-18_04-00.pdf",
-      "size": "421 KB"
+      "file": "lth-memo__v022__2026-05-23_21-14.pdf",
+      "size": "240 KB"
     },
     "metrics": {
       "mktCap": "$7.46B",
@@ -228,29 +1965,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 21.88,
-      "deltaPct": -34.9
+      "fair": 22.26,
+      "deltaPct": -33.8
     },
     "compound": [
       {
         "y": 5,
-        "value": 32.85,
-        "mult": 0.98
+        "value": 33.42,
+        "mult": 0.99
       },
       {
         "y": 10,
-        "value": 49.38,
-        "mult": 1.47
+        "value": 50.23,
+        "mult": 1.49
       },
       {
         "y": 15,
-        "value": 74.34,
-        "mult": 2.21
+        "value": 75.62,
+        "mult": 2.25
       },
       {
         "y": 20,
-        "value": 112.09,
-        "mult": 3.33
+        "value": 114.0,
+        "mult": 3.39
       }
     ],
     "question": "Is Life Time a premium wellness platform with durable luxury economics — or a leveraged real estate vehicle whose positive FCF depends on perpetual $400M/year sale-leasebacks?",
@@ -259,7 +1996,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 20,
-        "price": -0.36,
+        "price": 0.0,
         "headline": "Capital recycling, not earnings.",
         "why": "Bearish thesis is structurally coherent: LTH's headline FCF is dependent on SLB proceeds (~$400M/yr); strip those out and operating FCF is barely positive. Cumulative SLB program is finite (~$2B remaining); each SLB trades one-time cash for permanent rent increase. Net debt + capitalized lease obligations near $4B. If macro slows and luxury fitness spend compresses, FCF margin drops, stock works to $20-25. The 20% weight reflects that this thesis bumps against LTH's actual track record: FY24/25 execution strong, recent S&P upgrade validates the credit story, and new luxury club economics ($25-35M revenue vs $15-20M legacy) genuinely change the unit math.",
         "what": [
@@ -271,7 +2008,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 55,
-        "price": 14.99,
+        "price": 15.0,
         "headline": "Premium platform, leveraged structure.",
         "why": "Modal outcome. LTH executes guidance: revenue grows 11% FY26, decelerating to mid-single-digits. EBITDA margin holds 28-30% (top quartile for consumer services). New 2026 club openings (1.2M sq ft, mostly luxury) mature over 3-4 years. SLB cadence holds for 2-3 more years then tapers. Net debt leverage stays in the 1.5-2.0x EBITDA target. The 55% weight reflects that this requires the least faith — sequential execution on plans already in motion. The base case is well-run but priced for steady-state execution; the multiple stays compressed.",
         "what": [
@@ -295,7 +2032,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 90.0,
+        "price": 96.13,
         "headline": "Luxury category-of-one; 15x re-rate.",
         "why": "Joint conditional: 250+ clubs by 2030 (40%) AND ARPU $6,500+ achieved via medspa/recovery upsell (50% conditional on club growth) AND SLB self-funded with bank capital (60%) AND multiple expansion to 15x EV/EBITDA (50%). Joint at 4-6%, reflected here at 5%. Tail of tails: LTH stops being a 'leveraged real estate compounder' and becomes a 'luxury wellness software-like compounder.'",
         "what": [
@@ -304,7 +2041,588 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Bear 20 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Bear 20 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
+    "thesis": "LTH trades at $33.61 ($7.5B mkt cap) on TTM revenue $3.0B and Adj EBITDA $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14 luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear: capital recycling unsustainable, leveraged real estate vehicle. Bull: luxury wellness category-of-one, SLB is smart financing. Today's price requires bull-case execution. Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Oct '21",
+      "points": [
+        [
+          -4.58,
+          18.0
+        ],
+        [
+          -4.42,
+          14.0
+        ],
+        [
+          -4.17,
+          13.0
+        ],
+        [
+          -3.92,
+          14.5
+        ],
+        [
+          -3.67,
+          16.0
+        ],
+        [
+          -3.42,
+          13.0
+        ],
+        [
+          -3.17,
+          17.0
+        ],
+        [
+          -2.92,
+          16.5
+        ],
+        [
+          -2.67,
+          14.0
+        ],
+        [
+          -2.42,
+          15.5
+        ],
+        [
+          -2.17,
+          18.0
+        ],
+        [
+          -1.92,
+          17.0
+        ],
+        [
+          -1.67,
+          18.5
+        ],
+        [
+          -1.42,
+          26.0
+        ],
+        [
+          -1.17,
+          29.0
+        ],
+        [
+          -0.92,
+          28.5
+        ],
+        [
+          -0.67,
+          31.0
+        ],
+        [
+          -0.42,
+          32.5
+        ],
+        [
+          -0.17,
+          33.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 20%",
+        "body": "SLB-as-capital-recycling thesis structurally coherent but lacks traction vs FY24/25 execution."
+      },
+      {
+        "label": "Base 55%",
+        "body": "Modal outcome: LTH executes guidance, leverage stays in target."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "Luxury wellness platform compounds; category-of-one; multiple expansion requires execution AND re-rating."
+      },
+      {
+        "label": "Ultra Bull 5%",
+        "body": "250+ clubs by 2030 + ARPU $6,500 + SLB self-funded + multiple re-rates to 15x EV/EBITDA."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY23–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q, S&P credit reports",
+      "sources": "Sources: LTH 10-K FY25, Q1 2026 10-Q, S&P / Moody's credit reports, REIT comparables for SLB cap rates.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          1.318,
+          1.822,
+          2.217,
+          2.621,
+          2.995
+        ],
+        "historyEntRevenueM": [
+          907,
+          1276,
+          1551,
+          1853,
+          2118
+        ],
+        "historyOnlRevenueM": [
+          380,
+          524,
+          638,
+          740,
+          845
+        ],
+        "historyGrossMargin": [
+          29.4,
+          35.6,
+          37.8,
+          38.4,
+          39.0
+        ],
+        "historyOpMargin": [
+          2.5,
+          9.2,
+          12.5,
+          15.5,
+          18.0
+        ],
+        "historyFcfMargin": [
+          -8.3,
+          -7.5,
+          -4.9,
+          10.4,
+          6.9
+        ],
+        "historyNetDebt": [
+          1.51,
+          1.62,
+          1.51,
+          1.34,
+          1.29
+        ],
+        "historyEvRev": [
+          null,
+          5.8,
+          4.7,
+          3.8,
+          3.2
+        ],
+        "historyEvEbitda": [
+          null,
+          28.0,
+          16.5,
+          12.5,
+          10.5
+        ],
+        "clubHistoryYears": [
+          "FY23",
+          "FY24",
+          "FY25"
+        ],
+        "clubHistoryLuxury": [
+          22,
+          30,
+          42
+        ],
+        "clubHistoryStandard": [
+          149,
+          144,
+          148
+        ],
+        "clubStandardProjFy30": 148
+      },
+      "chartConfig": {
+        "segmentA": "Membership",
+        "segmentB": "In-center",
+        "chart6Title": "Club count — Luxury vs Standard",
+        "chart6Type": "lthClubs"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 22.26,
+        "upsidePct": -33.8
+      },
+      "market": {
+        "marketCapBillion": 7.46,
+        "sharesOutstandingMillion": 222.0,
+        "cashBillion": 0.232,
+        "netDebtBillion": 1.29
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.2,
+          "expectedPerShare": 0.0,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 5.1,
+            "wacc": 0.11,
+            "slb_total_5y": 0.95
+          },
+          "dcfPath": {
+            "rev_b": 2.995,
+            "rev_path": [
+              0.11,
+              0.06,
+              0.04,
+              0.03,
+              0.02
+            ],
+            "op_margin": [
+              0.175,
+              0.17,
+              0.16,
+              0.15,
+              0.14
+            ],
+            "wacc_path": [
+              0.11,
+              0.11,
+              0.11,
+              0.11,
+              0.11
+            ],
+            "fcf": [
+              0.133,
+              0.176,
+              0.147,
+              0.113,
+              0.077
+            ],
+            "pv_fcf": [
+              0.12,
+              0.143,
+              0.107,
+              0.075,
+              0.046
+            ],
+            "term_g": 0.015,
+            "sum_pv_fcf": 0.49,
+            "terminal_value": 0.82,
+            "pv_terminal": 0.49,
+            "op_ev": 0.98,
+            "cash": 0.232,
+            "net_debt": 1.29,
+            "total_equity": -0.08,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 222,
+            "dcf_per_share": -0.36,
+            "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.3,
+              0.25,
+              0.2,
+              0.1,
+              0.1
+            ],
+            "luxury_club_count_fy30": 77,
+            "fcf_to_ebitda_ratio": 0.1
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.55,
+          "expectedPerShare": 15.0,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 7.8,
+            "wacc": 0.095,
+            "slb_total_5y": 1.7
+          },
+          "dcfPath": {
+            "rev_b": 2.995,
+            "rev_path": [
+              0.11,
+              0.09,
+              0.08,
+              0.06,
+              0.05
+            ],
+            "op_margin": [
+              0.18,
+              0.185,
+              0.188,
+              0.19,
+              0.19
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "fcf": [
+              0.233,
+              0.29,
+              0.313,
+              0.332,
+              0.348
+            ],
+            "pv_fcf": [
+              0.213,
+              0.242,
+              0.238,
+              0.231,
+              0.221
+            ],
+            "term_g": 0.025,
+            "sum_pv_fcf": 1.14,
+            "terminal_value": 5.1,
+            "pv_terminal": 3.24,
+            "op_ev": 4.39,
+            "cash": 0.232,
+            "net_debt": 1.29,
+            "total_equity": 3.33,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 222,
+            "dcf_per_share": 15.0,
+            "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.4,
+              0.4,
+              0.35,
+              0.3,
+              0.25
+            ],
+            "luxury_club_count_fy30": 97,
+            "fcf_to_ebitda_ratio": 0.3
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 46.04,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 9.8,
+            "wacc": 0.08,
+            "slb_total_5y": 2.0
+          },
+          "dcfPath": {
+            "rev_b": 2.995,
+            "rev_path": [
+              0.12,
+              0.11,
+              0.1,
+              0.09,
+              0.07
+            ],
+            "op_margin": [
+              0.185,
+              0.195,
+              0.205,
+              0.215,
+              0.22
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "fcf": [
+              0.302,
+              0.41,
+              0.491,
+              0.58,
+              0.669
+            ],
+            "pv_fcf": [
+              0.28,
+              0.351,
+              0.39,
+              0.427,
+              0.455
+            ],
+            "term_g": 0.03,
+            "sum_pv_fcf": 1.9,
+            "terminal_value": 13.78,
+            "pv_terminal": 9.38,
+            "op_ev": 11.28,
+            "cash": 0.232,
+            "net_debt": 1.29,
+            "total_equity": 10.22,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 222,
+            "dcf_per_share": 46.04,
+            "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.45,
+              0.45,
+              0.4,
+              0.4,
+              0.3
+            ],
+            "luxury_club_count_fy30": 107,
+            "fcf_to_ebitda_ratio": 0.5
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.05,
+          "expectedPerShare": 96.13,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 12.0,
+            "wacc": 0.075,
+            "slb_total_5y": 3.0
+          },
+          "dcfPath": {
+            "rev_b": 3.0,
+            "rev_path": [
+              0.12,
+              0.13,
+              0.13,
+              0.12,
+              0.1
+            ],
+            "op_margin": [
+              0.29,
+              0.3,
+              0.31,
+              0.32,
+              0.33
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              0.35,
+              0.5,
+              0.7,
+              0.9,
+              1.1
+            ],
+            "pv_fcf": [
+              0.326,
+              0.434,
+              0.56,
+              0.669,
+              0.76
+            ],
+            "term_g": 0.035,
+            "sum_pv_fcf": 2.749,
+            "terminal_value": 30.0,
+            "pv_terminal": 20.9,
+            "op_ev": 23.65,
+            "cash": 0.23,
+            "net_debt": 1.29,
+            "total_equity": 22.59,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 235,
+            "dcf_per_share": 96.13,
+            "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.6,
+              0.6,
+              0.6,
+              0.6,
+              0.6
+            ],
+            "luxury_club_count_fy30": 117,
+            "fcf_to_ebitda_ratio": 0.65
+          },
+          "revPerUnit": null
+        }
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Track record is strong.",
+            "body": "FY24-25 execution delivered guidance; S&P upgrade validates credit. Removes the leveraged-real-estate-vehicle framing."
+          },
+          {
+            "label": "New club economics shift mix.",
+            "body": "1.2M sq ft of 2026 luxury openings generate $25-35M revenue vs $15-20M legacy. Unit economics improving, not deteriorating."
+          },
+          {
+            "label": "Category-of-one positioning.",
+            "body": "No US operator at LTH's premium luxury athletic country club scale. Equinox private + smaller; gym chains budget; boutiques single-discipline."
+          },
+          {
+            "label": "In-center monetization compounds.",
+            "body": "Dynamic PT, MIORA, pickleball, spa, cafe — in-center revenue per member growing from $1,050 toward $1,400-1,500. High-margin, recurring."
+          },
+          {
+            "label": "SLB flywheel sustains.",
+            "body": "New clubs become future SLB inventory in 5-7 years. Cadence of $400M/yr can persist as long as new construction continues."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "FY27 revenue growth < 5% · SLB cadence < $300M/yr · Net debt / EBITDA > 2.5x · Credit rating downgraded below BB-"
+          },
+          {
+            "label": "Bull validation",
+            "body": "FY27 revenue growth > 9% · EBITDA margin > 30% · In-center revenue per member > $1,250 · P/E multiple expands above 18x"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Equinox or comparable luxury operator IPOs at premium multiple — establishes valuation comparable for LTH multiple expansion"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "SLB",
+          "definition": "Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent."
+        },
+        {
+          "term": "Athletic Country Club",
+          "definition": "LTH's positioning — luxury multi-discipline format combining fitness, racquet sports, pools, kids, dining and recovery."
+        },
+        {
+          "term": "Dynamic PT",
+          "definition": "Personalized training program. Highest-margin in-center revenue stream and a key ARPU driver as the luxury mix grows."
+        },
+        {
+          "term": "MIORA",
+          "definition": "Hormone optimization and longevity service line. New higher-margin in-center revenue category, central to the bull ARPU thesis."
+        },
+        {
+          "term": "In-center revenue",
+          "definition": "Revenue beyond membership dues: PT, classes, spa, cafe, retail. Currently ~30% of total; compounds faster than dues."
+        },
+        {
+          "term": "Lease-adjusted leverage",
+          "definition": "Per ASC 842, capitalized operating lease liabilities included in total obligations. Adds ~$2.5B+ to $1.29B net debt."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "022",
+        "footerTimestamp": "2026-05-23_21-14",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   },
   {
     "ticker": "ZM",
@@ -316,8 +2634,8 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "zm-memo__v020__2026-05-18_04-00.pdf",
-      "size": "425 KB"
+      "file": "zm-memo__v021__2026-05-23_21-14.pdf",
+      "size": "238 KB"
     },
     "metrics": {
       "mktCap": "$30.8B",
@@ -329,29 +2647,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 167.2,
-      "deltaPct": 67.2
+      "fair": 167.83,
+      "deltaPct": 67.8
     },
     "compound": [
       {
         "y": 5,
-        "value": 251.69,
-        "mult": 2.52
+        "value": 252.6,
+        "mult": 2.53
       },
       {
         "y": 10,
-        "value": 379.34,
-        "mult": 3.79
+        "value": 380.63,
+        "mult": 3.81
       },
       {
         "y": 15,
-        "value": 572.43,
-        "mult": 5.72
+        "value": 574.28,
+        "mult": 5.74
       },
       {
         "y": 20,
-        "value": 864.9,
-        "mult": 8.65
+        "value": 867.53,
+        "mult": 8.67
       }
     ],
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
@@ -360,7 +2678,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 30,
-        "price": 91.94,
+        "price": 92.04,
         "headline": "Zoom without a core market.",
         "why": "Bearish thesis is competitive commoditization: Teams (Microsoft's bundled play) and Google Meet (free for Workspace customers) continue to take seats from ZM's enterprise base; AI Companion Pro fails to differentiate or monetize meaningfully (Microsoft Copilot integration into Teams is the obvious competitive response); Phone seats stagnate; Contact Center fails to reach scale; Anthropic stake gets compressed if AI valuations correct or Anthropic does an underwhelming IPO. The 30% weight reflects that Teams/Workspace competition is real, ongoing, and structurally favored — but ZM has shown unexpected resilience through 2024-25 (stable revenue, growing FCF, $1B+ buyback program). Not bankruptcy risk; share-loss-with-margin-compression risk.",
         "what": [
@@ -372,7 +2690,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 50,
-        "price": 163.44,
+        "price": 163.16,
         "headline": "Stable cash machine with a visible kicker.",
         "why": "Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27 guidance holds; AI Companion Pro is a meaningful contributor but not a category-defining product; Anthropic stake gets a public mark via Anthropic's IPO at $700B-1T valuation; ZM multiple expands modestly as the market gives credit for the Anthropic stake AND for stable cash generation. Buyback compounds shares-out reduction at attractive prices. The 50% weight reflects that this requires the least faith — sequential execution on plans already in motion.",
         "what": [
@@ -384,7 +2702,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 15,
-        "price": 252.63,
+        "price": 252.46,
         "headline": "AI monetization + Anthropic re-rating.",
         "why": "AI Companion Pro monetizes (per-seat add-on becomes meaningful contributor); Phone scales to 16M+ seats with margin expansion; Contact Center crosses $500M ARR and becomes a real third leg of growth; Anthropic IPOs at $1T+ with stake getting full mark (vs current discount carrying value); the operating business multiple expands AND the Anthropic stake appreciates. The 20% weight is higher than JOBY/AUR's bull weight because ZM's bull case is less compound — AI monetization and Anthropic appreciation are somewhat independent bets that can succeed without each other. But the conjunction still requires multiple things at once: product success on three new SKUs (Companion Pro, Phone scale, Contact Center scale) plus a favorable AI capital markets backdrop for Anthropic's IPO.",
         "what": [
@@ -396,7 +2714,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 400.0,
+        "price": 415.4,
         "headline": "Anthropic $2T+; full re-rating.",
         "why": "Joint conditional: Anthropic IPO above $2T (60% conditional on IPO) AND AI Companion crosses $1B ARR (40% conditional on existing trajectory) AND multiple re-rates from 15x to 30x P/FCF (50% conditional on growth + AI both firing). Joint at 5-7%, reflected here at 5%. This is the scenario where ZM stops being a 'value with AI optionality' name and becomes a growth-software name with an emerging-leader AI partner. Tail of tails.",
         "what": [
@@ -405,7 +2723,590 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
+    "thesis": "Zoom trades at $100.01 ($30.8B mkt cap) on TTM revenue of $4.87B, $1.7B FCF, and $7.8B cash & marketable securities — roughly 25% of market cap is just cash. On top of that sits an Anthropic equity stake carried at cost but worth $4-9B across scenarios, pending the public mark from Anthropic's expected IPO. The operating business is a stable cash machine (35-40% FCF margin) facing real but slow competition from Teams and Workspace. Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -7.5,
+      "ipoMarker": "IPO Apr '19",
+      "points": [
+        [
+          -7.08,
+          36.0
+        ],
+        [
+          -6.83,
+          85.0
+        ],
+        [
+          -6.58,
+          68.0
+        ],
+        [
+          -6.33,
+          160.0
+        ],
+        [
+          -6.08,
+          260.0
+        ],
+        [
+          -5.83,
+          500.0
+        ],
+        [
+          -5.58,
+          410.0
+        ],
+        [
+          -5.33,
+          320.0
+        ],
+        [
+          -5.08,
+          360.0
+        ],
+        [
+          -4.83,
+          270.0
+        ],
+        [
+          -4.58,
+          185.0
+        ],
+        [
+          -4.33,
+          110.0
+        ],
+        [
+          -4.08,
+          110.0
+        ],
+        [
+          -3.83,
+          78.0
+        ],
+        [
+          -3.58,
+          68.0
+        ],
+        [
+          -3.33,
+          77.0
+        ],
+        [
+          -3.08,
+          70.0
+        ],
+        [
+          -2.83,
+          70.0
+        ],
+        [
+          -2.58,
+          72.0
+        ],
+        [
+          -2.33,
+          64.0
+        ],
+        [
+          -2.08,
+          60.0
+        ],
+        [
+          -1.83,
+          65.0
+        ],
+        [
+          -1.58,
+          85.0
+        ],
+        [
+          -1.33,
+          76.0
+        ],
+        [
+          -1.08,
+          82.0
+        ],
+        [
+          -0.83,
+          85.0
+        ],
+        [
+          -0.58,
+          93.0
+        ],
+        [
+          -0.33,
+          95.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 30%",
+        "body": "Teams/Workspace structurally favored; AI Companion fails to monetize; Anthropic stake compressed."
+      },
+      {
+        "label": "Base 50%",
+        "body": "Modal outcome: stable mid-single-digit growth, Anthropic IPOs at $700B-1T, multiple modest expand."
+      },
+      {
+        "label": "Bull 15%",
+        "body": "AI Companion monetizes + Anthropic at $1T+; two engines succeed independently."
+      },
+      {
+        "label": "Ultra Bull 5%",
+        "body": "Both engines fire simultaneously; Anthropic at $2T+; multiple re-rates to growth-software premium."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Jan 31 · 10-K FY26, Q1 2026 10-Q, Anthropic press releases",
+      "sources": "Sources: ZM 10-K FY26, Q1 2026 10-Q, Anthropic financial press, AI infrastructure peer set.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          2.65,
+          4.1,
+          4.39,
+          4.53,
+          4.66
+        ],
+        "historyFcf": [
+          1.466,
+          1.605,
+          1.292,
+          1.47,
+          1.706
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Enterprise",
+        "segmentB": "Online",
+        "histEntSplit": [
+          0.55,
+          0.58,
+          0.59,
+          0.6,
+          0.603
+        ],
+        "chart6Title": "SOTP equity (Op EV + cash + Anthropic)",
+        "chart6Type": "zmSotp"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company_sotp",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 167.83,
+        "upsidePct": 67.8
+      },
+      "market": {
+        "marketCapBillion": 30.8,
+        "sharesOutstandingMillion": 308.0,
+        "cashBillion": 7.8,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.3,
+          "expectedPerShare": 92.04,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": -0.7,
+            "wacc": 0.1,
+            "anthropic_stake": 4.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.01,
+              0.0,
+              -0.01,
+              -0.02,
+              -0.02
+            ],
+            "op_margin": [
+              0.385,
+              0.37,
+              0.355,
+              0.34,
+              0.32
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "fcf": [
+              1.722,
+              1.672,
+              1.607,
+              1.479,
+              1.356
+            ],
+            "pv_fcf": [
+              1.566,
+              1.382,
+              1.207,
+              1.01,
+              0.842
+            ],
+            "term_g": 0.0,
+            "sum_pv_fcf": 6.01,
+            "terminal_value": 13.56,
+            "pv_terminal": 8.42,
+            "op_ev": 14.43,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 4.0,
+            "total_equity": 26.23,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 285,
+            "dcf_per_share": 92.04,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.8,
+              3.5,
+              3.3,
+              3.0,
+              2.8
+            ],
+            "ev_fcf_multiple": [
+              10.0,
+              9.0,
+              8.0,
+              7.0,
+              6.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.5,
+          "expectedPerShare": 163.16,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 3.1,
+            "wacc": 0.085,
+            "anthropic_stake": 7.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.04,
+              0.035,
+              0.03,
+              0.025,
+              0.025
+            ],
+            "op_margin": [
+              0.395,
+              0.395,
+              0.395,
+              0.395,
+              0.395
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "fcf": [
+              1.773,
+              1.835,
+              1.89,
+              1.937,
+              1.985
+            ],
+            "pv_fcf": [
+              1.634,
+              1.56,
+              1.482,
+              1.401,
+              1.323
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 7.39,
+            "terminal_value": 31.16,
+            "pv_terminal": 20.72,
+            "op_ev": 28.11,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 7.0,
+            "total_equity": 42.91,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 263,
+            "dcf_per_share": 163.16,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.5,
+              4.7,
+              4.8,
+              4.9,
+              5.0
+            ],
+            "ev_fcf_multiple": [
+              12.0,
+              13.5,
+              14.5,
+              15.0,
+              15.5
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.15,
+          "expectedPerShare": 252.46,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 6.4,
+            "wacc": 0.08,
+            "anthropic_stake": 9.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.05,
+              0.07,
+              0.08,
+              0.07,
+              0.05
+            ],
+            "op_margin": [
+              0.38,
+              0.39,
+              0.4,
+              0.41,
+              0.41
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "fcf": [
+              1.943,
+              2.134,
+              2.364,
+              2.592,
+              2.722
+            ],
+            "pv_fcf": [
+              1.799,
+              1.829,
+              1.877,
+              1.905,
+              1.852
+            ],
+            "term_g": 0.025,
+            "sum_pv_fcf": 9.26,
+            "terminal_value": 50.72,
+            "pv_terminal": 34.52,
+            "op_ev": 43.79,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 9.0,
+            "total_equity": 60.59,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 240,
+            "dcf_per_share": 252.46,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.5,
+              6.5,
+              7.5,
+              8.0,
+              8.5
+            ],
+            "ev_fcf_multiple": [
+              14.0,
+              17.0,
+              20.0,
+              22.0,
+              23.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.05,
+          "expectedPerShare": 415.4,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 9.5,
+            "wacc": 0.075,
+            "anthropic_stake": 16.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              0.08,
+              0.1,
+              0.12,
+              0.1,
+              0.08
+            ],
+            "op_margin": [
+              0.42,
+              0.43,
+              0.44,
+              0.45,
+              0.45
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              2.143,
+              2.564,
+              3.02,
+              3.35,
+              3.58
+            ],
+            "pv_fcf": [
+              1.994,
+              2.213,
+              2.42,
+              2.498,
+              2.481
+            ],
+            "term_g": 0.03,
+            "sum_pv_fcf": 11.61,
+            "terminal_value": 91.0,
+            "pv_terminal": 68.44,
+            "op_ev": 80.05,
+            "cash": 7.8,
+            "net_debt": 0.0,
+            "special_assets": 16.0,
+            "total_equity": 103.85,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 250,
+            "dcf_per_share": 415.4,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.0,
+              7.5,
+              9.0,
+              10.0,
+              11.0
+            ],
+            "ev_fcf_multiple": [
+              16.0,
+              22.0,
+              28.0,
+              30.0,
+              32.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Operating business has resilience.",
+            "body": "ZM revenue stable through 2024-25 despite Teams competition. Phone + Contact Center grew 25%+. Resilience visible, not theoretical."
+          },
+          {
+            "label": "AI Companion strategy is right.",
+            "body": "Bundle AI into existing plans rather than separate SKU. Microsoft Copilot's $30/seat model is the cautionary tale — adoption underwhelmed."
+          },
+          {
+            "label": "$7.8B cash is a real floor.",
+            "body": "25% of market cap is liquid. T-bills earn ~4%. Optionality for M&A, buybacks, or capital return. Hard to lose money against this."
+          },
+          {
+            "label": "Anthropic stake is asymmetric.",
+            "body": "Carried at cost ($1.5B); worth $4-9B today; could mark to $15B+ post-IPO. Hidden asset most screeners ignore."
+          },
+          {
+            "label": "Capital allocation track record.",
+            "body": "$1B+ buyback authorization announced 2024. Avg buyback price below $80. Eric Yuan personally aligned (15%+ owner)."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "FY27 revenue declines · AI Companion attach < 5% on paid seats · Anthropic IPO marks stake below $5B · Phone seat growth < 15%"
+          },
+          {
+            "label": "Bull validation",
+            "body": "FY27 revenue re-accelerates > 5% · AI Companion attach > 10% · Anthropic IPO at $1T+ · Contact Center crosses $500M ARR"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Eric Yuan executes major M&A (>$3B deal) — repurposing cash from optionality to platform expansion; both bear and bull theses get rewritten"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "AI Companion / Pro",
+          "definition": "ZM's AI assistant. Bundled free into paid plans (Companion) with a premium SKU (Pro). Bundle-not-separate-SKU strategy."
+        },
+        {
+          "term": "Phone",
+          "definition": "ZM's cloud PBX product. ~9M seats currently, growing 25%+. Cross-sells off the meetings install base; a third-leg growth driver."
+        },
+        {
+          "term": "Contact Center",
+          "definition": "ZM's CCaaS product (cloud-based customer service). ~$200M ARR currently, growing fast; bull case crosses $500M ARR."
+        },
+        {
+          "term": "Anthropic stake",
+          "definition": "ZM invested in Anthropic 2023. Carrying value disclosed at ~$1.5B; market value $4-9B across scenarios pending the IPO mark."
+        },
+        {
+          "term": "SOTP",
+          "definition": "Sum-of-the-parts: operating EV + cash + special assets - debt. Used when material balance-sheet value sits outside operations."
+        },
+        {
+          "term": "Buyback flywheel",
+          "definition": "ZM generates $1.7-2.4B FCF/yr. Buybacks at $1-1.5B/yr retire shares; lower share count compounds per-share value."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "021",
+        "footerTimestamp": "2026-05-23_21-14",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   },
   {
     "ticker": "NAUT",
@@ -417,8 +3318,8 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "naut-memo__v002__2026-05-22_02-09.pdf",
-      "size": "414 KB"
+      "file": "naut-memo__v003__2026-05-23_21-14.pdf",
+      "size": "314 KB"
     },
     "metrics": {
       "mktCap": "$302M",
@@ -430,29 +3331,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 5.72,
-      "deltaPct": 138.4
+      "fair": 5.69,
+      "deltaPct": 136.9
     },
     "compound": [
       {
         "y": 5,
-        "value": 8.38,
-        "mult": 3.49
+        "value": 8.34,
+        "mult": 3.47
       },
       {
         "y": 10,
-        "value": 12.29,
-        "mult": 5.12
+        "value": 12.24,
+        "mult": 5.1
       },
       {
         "y": 15,
-        "value": 18.02,
-        "mult": 7.51
+        "value": 17.97,
+        "mult": 7.49
       },
       {
         "y": 20,
-        "value": 26.45,
-        "mult": 11.02
+        "value": 26.4,
+        "mult": 11.0
       }
     ],
     "question": "Will Nautilus capture meaningful share of a $130B global proteomics TAM by 2036 with its Voyager single-molecule platform — or is today's $302M market cap pricing certainty about commercial economics that the late-2026 launch and early-2027 instrument installations haven't yet earned?",
@@ -473,7 +3374,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 50,
-        "price": 1.87,
+        "price": 2.04,
         "headline": "Niche-but-real proteomics player.",
         "why": "Modal outcome. Voyager launches on or near schedule (late 2026 pre-orders, early 2027 installations); proteoform assay portfolio expands to 5-10 assays by 2030; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% share of the $130B FY36 proteomics TAM — meaningful but not dominant. Mature operating margin ~15-18% — between commodity tools (~10%) and high-margin specialty diagnostics (~25%). Dilution from ~$1.08B of 2027-2029 raises at $3-14/share lands at ~57% total. The 50% weight reflects that this is the modal outcome — most realistic for a strong technical team executing on a long timeline, but not requiring breakthrough commercial dominance against entrenched affinity-platform competitors (Olink/Thermo, SomaScan/SBT). Base case is well-executed but stays a niche player; multiple stays compressed.",
         "what": [
@@ -485,7 +3386,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 17.6,
+        "price": 17.39,
         "headline": "Single-molecule wins proteoforms.",
         "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands successfully to 10-15+ proteoforms by 2030 (60% conditional on platform success) AND mature margins reach 20-25% (40% conditional) AND market gives NAUT credit for platform position via acquisition or independent re-rating (50%). Joint at 10-15%, reflected at 12%. The bull case isn't blocked by any single piece looking unlikely — it requires conjunctive execution AND a favorable competitive backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single- molecule frontier into their existing reach. 12% (vs JOBY's 12%) reflects that NAUT's category is structurally similar to JOBY's (compound conditional venture-bet) but the path is somewhat clearer (commercial launch ~6 months out vs JOBY's still-pending Type Certification).",
         "what": [
@@ -497,7 +3398,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 89.17,
+        "price": 86.0,
         "headline": "Dominant + multiomics + take-rate.",
         "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 3%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
         "what": [
@@ -506,7 +3407,884 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close."
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "thesis": "NAUT trades at $2.40 ($302M mkt cap, 47% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029; dilutive raise likely 2027-2028. Mature peers — Olink (Thermo), SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Four scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Jun '21",
+      "points": [
+        [
+          -4.92,
+          9.5
+        ],
+        [
+          -4.83,
+          14.0
+        ],
+        [
+          -4.58,
+          16.0
+        ],
+        [
+          -4.33,
+          12.0
+        ],
+        [
+          -4.08,
+          9.0
+        ],
+        [
+          -3.83,
+          6.0
+        ],
+        [
+          -3.58,
+          4.5
+        ],
+        [
+          -3.33,
+          3.5
+        ],
+        [
+          -3.08,
+          4.5
+        ],
+        [
+          -2.83,
+          3.0
+        ],
+        [
+          -2.58,
+          2.5
+        ],
+        [
+          -2.33,
+          2.0
+        ],
+        [
+          -2.08,
+          1.5
+        ],
+        [
+          -1.83,
+          1.2
+        ],
+        [
+          -1.58,
+          1.8
+        ],
+        [
+          -1.33,
+          2.5
+        ],
+        [
+          -1.08,
+          3.5
+        ],
+        [
+          -0.83,
+          4.0
+        ],
+        [
+          -0.58,
+          4.3
+        ],
+        [
+          -0.33,
+          3.5
+        ],
+        [
+          -0.08,
+          2.5
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 35%",
+        "body": "Single-molecule unproven at scale; entrenched affinity competition (Olink, SomaScan)."
+      },
+      {
+        "label": "Base 50%",
+        "body": "Modal: Voyager launches on schedule, ~1-2% FY36 TAM share, niche-but-real proteomics platform."
+      },
+      {
+        "label": "Bull 12%",
+        "body": "Compound conditional: single-molecule wins proteoform race; Tau success catalyzes mainstream adoption."
+      },
+      {
+        "label": "Ultra Bull 3%",
+        "body": "Tail of tails: dominant proteomics + multiomics + software-take-rate + platform re-rating."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY24-FY26 history + FY27-FY36 scenario projections · fiscal years end Dec 31 · Q1 2026 10-Q, Voyager press releases, peer market cap data",
+      "sources": "Sources: NAUT 10-K FY25, Q1 2026 10-Q, Voyager Early Access Program press releases (Jan 2026), MarketsandMarkets proteomics market sizing 2030-2035, peer transaction data (Olink/Thermo, SomaLogic/SBT).",
+      "chartReference": {
+        "tamBillion": 130,
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          0.0,
+          0.0,
+          0.001
+        ],
+        "historyFleet": [
+          0,
+          0,
+          0
+        ]
+      },
+      "chartConfig": {
+        "peerY": 20,
+        "peerText": "Mature life-science-tools peer median ~20%",
+        "fleetAnchor": 1,
+        "fleetTitle": "Voyager instruments deployed (log)",
+        "fleetReference": null,
+        "valnAnchorY": 5,
+        "valnAnchorText": "Mature tools P/S ~4-7×",
+        "valnCaption": "Bear, base = stretched on FY36 niche-rev; bull onward = cheap.",
+        "tamTitle": "$130B global proteomics TAM (FY36) — NAUT share",
+        "tamLegend": [
+          "NAUT",
+          "Competitors (Olink / SomaScan / MS)",
+          "Other proteomics"
+        ]
+      }
+    },
+    "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 130,
+      "weighted": {
+        "expected": 5.69,
+        "upsidePct": 136.9
+      },
+      "market": {
+        "marketCapBillion": 0.302,
+        "sharesOutstandingMillion": 126.0,
+        "cashBillion": 0.143,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "bear": {
+          "probability": 0.35,
+          "expectedPerShare": 0.0,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 0.5,
+            "p_fail": 40,
+            "s2c": 0.7
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.006,
+              0.025,
+              0.07,
+              0.14,
+              0.22,
+              0.31,
+              0.4,
+              0.48,
+              0.55,
+              0.6
+            ],
+            "op_margin": [
+              -3.0,
+              -2.0,
+              -1.2,
+              -0.6,
+              -0.3,
+              -0.1,
+              0.02,
+              0.06,
+              0.08,
+              0.08
+            ],
+            "wacc_path": [
+              0.14,
+              0.135,
+              0.13,
+              0.13,
+              0.125,
+              0.12,
+              0.12,
+              0.115,
+              0.115,
+              0.11
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.018,
+              -0.05,
+              -0.084,
+              -0.084,
+              -0.066,
+              -0.031,
+              0.008,
+              0.029,
+              0.044,
+              0.048
+            ],
+            "reinvest": [
+              0.007,
+              0.027,
+              0.064,
+              0.1,
+              0.114,
+              0.129,
+              0.129,
+              0.114,
+              0.1,
+              0.071
+            ],
+            "fcf": [
+              -0.025,
+              -0.077,
+              -0.148,
+              -0.184,
+              -0.18,
+              -0.16,
+              -0.121,
+              -0.085,
+              -0.056,
+              -0.023
+            ],
+            "pv_fcf": [
+              -0.022,
+              -0.06,
+              -0.102,
+              -0.112,
+              -0.097,
+              -0.077,
+              -0.052,
+              -0.033,
+              -0.02,
+              -0.007
+            ],
+            "sum_pv_fcf": -0.582,
+            "terminal_value": 0.0,
+            "pv_terminal": 0.0,
+            "op_ev": -0.58,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": -0.44,
+            "raise_total": 1.1,
+            "dilution_pct": 93,
+            "final_shares": 1777,
+            "dcf_per_share": -0.25,
+            "distress": 0.15
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.1,
+              0.2,
+              0.25,
+              0.25,
+              0.2,
+              0.1,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              2.0,
+              1.4,
+              1.0,
+              0.8,
+              0.6,
+              0.5,
+              0.4,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              150,
+              160,
+              175,
+              190,
+              210,
+              225,
+              240,
+              250,
+              255,
+              260
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            150,
+            160,
+            175,
+            190,
+            210,
+            225,
+            240,
+            250,
+            255,
+            260
+          ]
+        },
+        "base": {
+          "probability": 0.5,
+          "expectedPerShare": 2.04,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 1.2,
+            "p_fail": 18,
+            "s2c": 1.0
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.01,
+              0.055,
+              0.15,
+              0.3,
+              0.52,
+              0.8,
+              1.1,
+              1.35,
+              1.5,
+              1.55
+            ],
+            "op_margin": [
+              -2.5,
+              -1.5,
+              -0.8,
+              -0.2,
+              0.05,
+              0.1,
+              0.13,
+              0.15,
+              0.16,
+              0.16
+            ],
+            "wacc_path": [
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.025,
+              -0.083,
+              -0.12,
+              -0.06,
+              0.026,
+              0.08,
+              0.143,
+              0.203,
+              0.24,
+              0.248
+            ],
+            "reinvest": [
+              0.009,
+              0.045,
+              0.095,
+              0.15,
+              0.22,
+              0.28,
+              0.3,
+              0.25,
+              0.15,
+              0.05
+            ],
+            "fcf": [
+              -0.034,
+              -0.128,
+              -0.215,
+              -0.21,
+              -0.194,
+              -0.2,
+              -0.157,
+              -0.048,
+              0.09,
+              0.198
+            ],
+            "pv_fcf": [
+              -0.03,
+              -0.1,
+              -0.15,
+              -0.131,
+              -0.108,
+              -0.1,
+              -0.071,
+              -0.02,
+              0.034,
+              0.069
+            ],
+            "sum_pv_fcf": -0.608,
+            "terminal_value": 3.13,
+            "pv_terminal": 1.18,
+            "op_ev": 0.57,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": 0.71,
+            "raise_total": 1.08,
+            "dilution_pct": 57,
+            "final_shares": 293,
+            "dcf_per_share": 2.42,
+            "distress": 0.3
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.12,
+              0.18,
+              0.22,
+              0.18,
+              0.15,
+              0.15,
+              0.08,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              3.0,
+              3.5,
+              4.5,
+              6.0,
+              8.0,
+              10.0,
+              12.0,
+              14.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              200,
+              220,
+              250,
+              280,
+              310,
+              340,
+              370,
+              390,
+              400,
+              400
+            ],
+            "tam_competitor_share": 55.0
+          },
+          "revPerUnit": [
+            200,
+            220,
+            250,
+            280,
+            310,
+            340,
+            370,
+            390,
+            400,
+            400
+          ]
+        },
+        "bull": {
+          "probability": 0.12,
+          "expectedPerShare": 17.39,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 1.5,
+            "p_fail": 8,
+            "s2c": 1.4
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.012,
+              0.075,
+              0.22,
+              0.5,
+              0.95,
+              1.45,
+              1.8,
+              1.95,
+              2.0,
+              2.0
+            ],
+            "op_margin": [
+              -2.0,
+              -1.0,
+              -0.3,
+              0.05,
+              0.13,
+              0.18,
+              0.21,
+              0.22,
+              0.22,
+              0.22
+            ],
+            "wacc_path": [
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.08
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.024,
+              -0.075,
+              -0.066,
+              0.025,
+              0.124,
+              0.261,
+              0.378,
+              0.429,
+              0.44,
+              0.44
+            ],
+            "reinvest": [
+              0.008,
+              0.045,
+              0.104,
+              0.2,
+              0.321,
+              0.357,
+              0.25,
+              0.107,
+              0.036,
+              0.0
+            ],
+            "fcf": [
+              -0.032,
+              -0.12,
+              -0.17,
+              -0.175,
+              -0.197,
+              -0.096,
+              0.128,
+              0.322,
+              0.404,
+              0.44
+            ],
+            "pv_fcf": [
+              -0.029,
+              -0.096,
+              -0.123,
+              -0.114,
+              -0.116,
+              -0.052,
+              0.063,
+              0.146,
+              0.169,
+              0.171
+            ],
+            "sum_pv_fcf": 0.019,
+            "terminal_value": 9.06,
+            "pv_terminal": 3.52,
+            "op_ev": 3.54,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": 3.68,
+            "raise_total": 0.75,
+            "dilution_pct": 36,
+            "final_shares": 196,
+            "dcf_per_share": 18.78,
+            "distress": 1.5
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.12,
+              0.2,
+              0.2,
+              0.15,
+              0.08,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              3.5,
+              5.5,
+              9.0,
+              14.0,
+              18.0,
+              22.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              250,
+              290,
+              330,
+              370,
+              410,
+              450,
+              480,
+              500,
+              510,
+              510
+            ],
+            "tam_competitor_share": 45.0
+          },
+          "revPerUnit": [
+            250,
+            290,
+            330,
+            370,
+            410,
+            450,
+            480,
+            500,
+            510,
+            510
+          ]
+        },
+        "ultra_bull": {
+          "probability": 0.03,
+          "expectedPerShare": 86.0,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 3.1,
+            "p_fail": 3,
+            "s2c": 1.6
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.015,
+              0.1,
+              0.35,
+              0.9,
+              1.8,
+              2.8,
+              3.5,
+              3.9,
+              4.0,
+              4.0
+            ],
+            "op_margin": [
+              -1.5,
+              -0.5,
+              0.0,
+              0.1,
+              0.18,
+              0.24,
+              0.27,
+              0.29,
+              0.3,
+              0.3
+            ],
+            "wacc_path": [
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.075,
+              0.075
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.023,
+              -0.05,
+              0.0,
+              0.09,
+              0.324,
+              0.672,
+              0.945,
+              1.131,
+              1.2,
+              1.2
+            ],
+            "reinvest": [
+              0.009,
+              0.053,
+              0.156,
+              0.344,
+              0.563,
+              0.625,
+              0.438,
+              0.25,
+              0.063,
+              0.0
+            ],
+            "fcf": [
+              -0.032,
+              -0.103,
+              -0.156,
+              -0.254,
+              -0.239,
+              0.047,
+              0.507,
+              0.881,
+              1.137,
+              1.2
+            ],
+            "pv_fcf": [
+              -0.029,
+              -0.083,
+              -0.114,
+              -0.167,
+              -0.143,
+              0.026,
+              0.255,
+              0.402,
+              0.484,
+              0.475
+            ],
+            "sum_pv_fcf": 1.106,
+            "terminal_value": 31.05,
+            "pv_terminal": 12.3,
+            "op_ev": 13.41,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": 13.55,
+            "raise_total": 0.65,
+            "dilution_pct": 18,
+            "final_shares": 153,
+            "dcf_per_share": 88.56,
+            "distress": 3.0
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.1,
+              0.15,
+              0.2,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              4.0,
+              9.0,
+              22.0,
+              35.0,
+              55.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              300,
+              380,
+              460,
+              540,
+              620,
+              680,
+              720,
+              740,
+              750,
+              750
+            ],
+            "tam_competitor_share": 35.0
+          },
+          "revPerUnit": [
+            300,
+            380,
+            460,
+            540,
+            620,
+            680,
+            720,
+            740,
+            750,
+            750
+          ]
+        }
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Best-funded single-molecule platform.",
+            "body": "$143M cash + zero debt + cost discipline (16% headcount cut, lowered Q1 burn to $12.8M). Real runway to mid-2029 absent commercial scale-up. Quantum-Si and other peers are less funded relative to runway needs."
+          },
+          {
+            "label": "Early Access is real, not vaporware.",
+            "body": "Tau proteoforms EAP live since Jan 2026 with academic + biopharma partners. NAUT is post-tech-risk (instrument works), pre-commercial-scale. Tech demos at US HUPO 2026 reportedly well-received."
+          },
+          {
+            "label": "First-mover in proteoform single-molecule.",
+            "body": "Quantum-Si is parallel single-molecule but sequencing-focused; affinity platforms (Olink/SomaScan) target different modality. NAUT has time-to-market lead specifically in proteoforms."
+          },
+          {
+            "label": "Tau strategic positioning.",
+            "body": "Alzheimer's biomarker market $10B+; proteoform analysis is exactly what makes Tau actionable as a biomarker. Single-product launch anchors adoption in a large research market."
+          },
+          {
+            "label": "Cash floor is real downside protection.",
+            "body": "$1.13/share cash vs $2.40 spot = 47% of market cap is liquid. Operating EV per share ~$1.27 for a real platform. Hard to lose money permanently against this floor."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP customer count flat YoY"
+          },
+          {
+            "label": "Bull validation",
+            "body": "Voyager pre-orders > $30M by Q1 2027 · 100+ instruments installed by EOY 2027 · Second pharma/OEM partnership signed · Multi-year subscription/take-rate deal disclosed"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Quantum-Si or a new entrant achieves single-molecule resolution at lower cost or higher throughput first — NAUT's first-mover positioning erodes; share-of-TAM math compresses"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Voyager",
+          "definition": "NAUT's single-molecule proteomics platform — instrument + reagents + assays + software for high-resolution proteoform analysis."
+        },
+        {
+          "term": "Proteoforms",
+          "definition": "Protein variants from a single gene (post-translational modifications, splice variants). Single-molecule readout is uniquely positioned to resolve these vs ensemble methods."
+        },
+        {
+          "term": "Tau",
+          "definition": "Microtubule-associated protein; key Alzheimer's biomarker. Tau proteoform analysis is NAUT's first commercial assay, live in Early Access since Jan 2026."
+        },
+        {
+          "term": "Early Access Program",
+          "definition": "Limited release to select academic and biopharma partners ahead of general availability. Live since Jan 2026 with the Tau proteoforms assay; expands to Broadscale H1 2027."
+        },
+        {
+          "term": "Broadscale",
+          "definition": "Voyager's planned 10-billion-protein-mapping capability for general proteomics applications, scheduled for general availability in H1 2027."
+        },
+        {
+          "term": "S2C (sales-to-capital)",
+          "definition": "Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. NAUT young-company case ranges 0.7-1.7 (hardware-software blend, capital-light vs eVTOL/trucking)."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "003",
+        "footerTimestamp": "2026-05-23_21-14",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   }
 ];
 
@@ -550,4 +4328,31 @@ const DISCLAIMER_BLOCKS = [
   }
 ];
 
-window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS };
+const PDF_DISCLAIMERS = [
+  {
+    "h": "Not investment advice.",
+    "p": "This document is produced for entertainment and educational purposes only by an individual amateur investor. \"Alameda Research 2: Electric Boogaloo\" is the unincorporated personal concept of one person and is not a registered investment management entity. Nothing herein constitutes investment advice, a recommendation, or a solicitation to buy or sell any security."
+  },
+  {
+    "h": "Not a professional.",
+    "p": "The author is not a registered investment advisor, broker-dealer, CFA charterholder, certified financial planner, or licensed financial professional of any kind. The author has no formal training in equity research or capital markets. No fiduciary relationship is created by reading this document."
+  },
+  {
+    "h": "AI-assisted analysis.",
+    "p": "Substantial portions of this analysis were produced with the assistance of large language models. LLMs are known to fabricate facts, miscalculate numbers, hallucinate sources, and present incorrect information with high apparent confidence. Every figure, claim, and projection in this document should be independently verified before acting on it."
+  },
+  {
+    "h": "Forward-looking statements.",
+    "p": "Scenarios, valuations, projections, and any forward-looking statements involve substantial assumptions and uncertainty. Actual results may differ materially from those projected. Past performance is not indicative of future results. The model is a model; reality is not."
+  },
+  {
+    "h": "Author may hold positions.",
+    "p": "The author may own, intend to acquire, or hold short exposure to ${TICKER} or related securities at any time. Positions may change without notice and without an update to this document. Do not assume the author's positions match the tone of the analysis."
+  },
+  {
+    "h": "Do your own research.",
+    "p": "Do not make investment decisions on the basis of this document. Consult a licensed financial professional and read the company's official SEC filings (10-K, 10-Q, 8-K, proxy) before forming any investment view. If you wouldn't trust your retirement to a chatbot, don't trust this either."
+  }
+];
+
+window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS, PDF_DISCLAIMERS };

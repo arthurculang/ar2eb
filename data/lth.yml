@@ -66,6 +66,13 @@ chart_reference:
   club_history_standard: [149, 144, 148]
   club_standard_proj_fy30: 148      # standard count stays flat in all scenarios
 
+# ── Page 3 chart-aesthetic config (Phase 4: migrated out of JSX) ────────
+page3_chart_config:
+  segment_a: "Membership"
+  segment_b: "In-center"
+  chart6_title: "Club count — Luxury vs Standard"
+  chart6_type: "lthClubs"
+
 # ═════════════════════════════════════════════════════════════════════════════
 # SCENARIOS
 # ═════════════════════════════════════════════════════════════════════════════
@@ -77,7 +84,7 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.20
-    expected_per_share: -0.36
+    expected_per_share: 0.00
     headline: "Capital recycling, not earnings."
     narrative:
       - >
@@ -154,7 +161,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.55
-    expected_per_share: 14.99
+    expected_per_share: 15.00
     headline: "Premium platform, leveraged structure."
     narrative:
       - >
@@ -211,7 +218,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 222
-      dcf_per_share: 14.99
+      dcf_per_share: 15.00
       distress: 0.0
 
     chart_data:
@@ -296,7 +303,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 90.00
+    expected_per_share: 96.13
     headline: "Luxury category-of-one; 15x re-rate."
     narrative:
       - >
@@ -344,7 +351,7 @@ scenarios:
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 235
-      dcf_per_share: 96.10        # raw DCF
+      dcf_per_share: 96.13        # raw DCF
       distress: 0.0
       # expected_per_share ($90.00) ≠ dcf_per_share ($96.10) — manual rounding
       # for display. Generator uses expected_per_share for weighted math.
@@ -420,11 +427,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-05-17_12-00
-  canonical_jsx: lth-dcf-valuation__v003__2026-05-17_10-00.jsx
-  pdf_version: '021'
-  pdf_timestamp: 2026-05-18_04-00
+  footer_version: "022"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "022"
+  pdf_timestamp: "2026-05-23_21-14"
 glossary:
 - term: SLB
   definition: Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent.

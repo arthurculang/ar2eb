@@ -59,6 +59,26 @@ chart_reference:
   history_revenue: [0.000, 0.000, 0.001]      # essentially pre-revenue (FY26 MJFF grant)
   history_fleet: [0, 0, 0]                    # no commercial Voyager instruments deployed yet
 
+# ── Page 3 chart-aesthetic config ───────────────────────────────────────
+# Migrated out of the JSX (Phase 4) so per-ticker labels, peer references,
+# titles, captions, and legend strings live next to their data. Compute-
+# from-inputs principle for the print harness layout.
+page3_chart_config:
+  # Chart 2 — path to profitability: horizontal dotted reference line.
+  peer_y: 20
+  peer_text: "Mature life-science-tools peer median ~20%"
+  # Chart 4 — fleet / unit growth.
+  fleet_anchor: 1                             # log-scale floor; first commercial Voyager installs early FY27
+  fleet_title: "Voyager instruments deployed (log)"
+  fleet_reference: null                       # no horizontal reference (cf. AUR's 750K US Class 8 fleet)
+  # Chart 5 — P/S valuation.
+  valn_anchor_y: 5
+  valn_anchor_text: "Mature tools P/S ~4-7×"
+  valn_caption: "Bear, base = stretched on FY36 niche-rev; bull onward = cheap."
+  # Chart 6 — TAM positioning at FY36.
+  tam_title: "$130B global proteomics TAM (FY36) — NAUT share"
+  tam_legend: ["NAUT", "Competitors (Olink / SomaScan / MS)", "Other proteomics"]
+
 # ═════════════════════════════════════════════════════════════════════════════
 # SCENARIOS — probabilities sum to 1.0 (asserted by memo.py).
 # DCF math: spec §3.5 — equity bridge, PV of FCF, terminal value, cash≥0.
@@ -154,7 +174,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.50
-    expected_per_share: 1.87
+    expected_per_share: 2.04
     headline: "Niche-but-real proteomics player."
     narrative:
       - >
@@ -221,7 +241,7 @@ scenarios:
       raise_total: 1.08
       dilution_pct: 57
       final_shares: 293
-      dcf_per_share: 2.22
+      dcf_per_share: 2.42
       distress: 0.30
 
     chart_data:
@@ -235,7 +255,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.12
-    expected_per_share: 17.60
+    expected_per_share: 17.39
     headline: "Single-molecule wins proteoforms."
     narrative:
       - >
@@ -303,7 +323,7 @@ scenarios:
       raise_total: 0.75
       dilution_pct: 36
       final_shares: 196
-      dcf_per_share: 19.00
+      dcf_per_share: 18.78
       distress: 1.50
 
     chart_data:
@@ -317,7 +337,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.03
-    expected_per_share: 89.17
+    expected_per_share: 86.00
     headline: "Dominant + multiomics + take-rate."
     narrative:
       - >
@@ -380,7 +400,7 @@ scenarios:
       raise_total: 0.65
       dilution_pct: 18
       final_shares: 153
-      dcf_per_share: 91.83
+      dcf_per_share: 88.56
       distress: 3.00
 
     chart_data:
@@ -457,11 +477,11 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (per migration v005 decisions #2/#3/#5) ─
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-05-22_02-09"
-  canonical_jsx: "naut-dcf-valuation__v001__2026-05-21_18-00.jsx"
-  pdf_version: "002"
-  pdf_timestamp: "2026-05-22_02-09"
+  footer_version: "003"
+  footer_timestamp: "2026-05-23_21-14"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "003"
+  pdf_timestamp: "2026-05-23_21-14"
 
 glossary:
   - term: "Voyager"
