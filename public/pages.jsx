@@ -171,11 +171,10 @@ function EmbeddedMemo({ memo }) {
 }
 
 function MemoPage({ slug }) {
-  const { fmtUSD, fmtPct, fmtMult } = L();
+  const { fmtUSD } = L();
   const { MEMOS, DISCLAIMER_BLOCKS } = D();
   const memo = MEMOS.find(m => m.slug === slug);
   if (!memo) return <NotFoundPage />;
-  const positive = memo.expected.deltaPct >= 0;
 
   return (
     <>
@@ -208,73 +207,11 @@ function MemoPage({ slug }) {
         </div>
       </section>
 
-      <section className="central-q">
-        <div className="wrap">
-          <div className="eyebrow">Central question</div>
-          <blockquote>{memo.question}</blockquote>
-        </div>
-      </section>
-
-      <section className="pwev">
-        <div className="wrap">
-          <div className="eyebrow">Probability-weighted expected value</div>
-          <div className="pwev-grid">
-            <div className="pwev-headline">
-              <div className="label">Expected fair value today</div>
-              <div className="big">{fmtUSD(memo.expected.fair)}</div>
-              <div className={'delta ' + (positive ? 'pos' : 'neg')} style={{ color: positive ? 'var(--pos)' : 'var(--neg)' }}>
-                {fmtPct(memo.expected.deltaPct)} vs spot
-              </div>
-              <div className="vs">Spot {fmtUSD(memo.spot.price)} · {memo.spot.asOf}</div>
-            </div>
-            <table className="compound-table" aria-label="Forward compounded value">
-              <thead>
-                <tr>
-                  <th>Forward year</th>
-                  <th>Compounded value</th>
-                  <th>× spot</th>
-                </tr>
-              </thead>
-              <tbody>
-                {memo.compound.map(r => (
-                  <tr key={r.y}>
-                    <td>+{r.y}y</td>
-                    <td>{fmtUSD(r.value)}</td>
-                    <td>{fmtMult(r.mult)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="scenarios">
-        <div className="wrap">
-          <div className="eyebrow">Four scenarios</div>
-          <div className="scenarios-grid">
-            {memo.scenarios.map(s => (
-              <div className={'scn ' + s.key} key={s.key}>
-                <div className="label">{s.label}</div>
-                <div className="price">{fmtUSD(s.price)}</div>
-                <div className={'delta ' + (s.price >= memo.spot.price ? 'delta-pos' : 'delta-neg')}
-                     style={{ color: s.price >= memo.spot.price ? 'var(--pos)' : 'var(--neg)' }}>
-                  {fmtPct(((s.price - memo.spot.price) / memo.spot.price) * 100)} vs spot
-                </div>
-                <div className="prob">Probability <b>{s.prob}%</b></div>
-                <div className="head">{s.headline}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="pdf-cta-wrap">
         <div className="wrap">
-          <a href={'memos/' + memo.pdf.file} className="pdf-cta" target="_blank" rel="noopener noreferrer"
-             onClick={(e) => { /* PDFs not present in prototype; let browser try */ }}>
+          <a href={'memos/' + memo.pdf.file} className="pdf-cta" target="_blank" rel="noopener noreferrer">
             <div className="left">
-              <div className="ttl">Read full memo (PDF)</div>
+              <div className="ttl">Download as PDF</div>
               <div className="meta">{memo.pdf.file} · {memo.pdf.size}</div>
             </div>
             <div className="right">
@@ -287,41 +224,7 @@ function MemoPage({ slug }) {
 
       <section className="memo-embed-section">
         <div className="wrap">
-          <div className="eyebrow">Full memo · inline</div>
-          <p className="muted" style={{ margin: '8px 0 16px', fontSize: '14px' }}>
-            Same JSX components that render the downloadable PDF, scaled to fit.
-            All five pages render below — no chrome, no chart-as-image.
-          </p>
           <EmbeddedMemo memo={memo} />
-        </div>
-      </section>
-
-      <section className="narr">
-        <div className="wrap">
-          <div className="eyebrow">Scenario narratives</div>
-          <div className="narr-grid">
-            {memo.scenarios.map(s => (
-              <div className={'narr-col ' + s.key} key={s.key}>
-                <div className="lbl">{s.label}</div>
-                <div className="top">
-                  <span className="price">{fmtUSD(s.price)}</span>
-                  <span className="prob">{s.prob}%</span>
-                </div>
-                <div className="head">{s.headline}</div>
-                <h5>Why</h5>
-                <p>{s.why}</p>
-                <h5>What happens</h5>
-                {s.what.map((line, i) => <p key={i}>{line}</p>)}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="methodology">
-        <div className="wrap">
-          <div className="eyebrow">Methodology</div>
-          <p>{memo.methodology}</p>
         </div>
       </section>
 
