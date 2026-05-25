@@ -297,10 +297,11 @@ scenarios:
         The ultra-bull case is that Aurora becomes the dominant US autonomous
         trucking platform AND wins the software-take-rate game. Commercial
         launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous
-        miles by 2028 + 25%+ TAM share by 2036 + software-take-rate model
-        wins (Aurora monetizes via per-mile revenue share with PACCAR/Volvo/
-        FedEx fleet partners rather than capex-heavy direct ownership). By
-        FY36 Aurora generates $8B+ revenue at 40%+ software-like margins.
+        miles by 2028 + Aurora Driver running on ~20% of US autonomous
+        long-haul miles by 2036, monetized via per-mile take-rate (~6–7%
+        revenue-share of TAM) with PACCAR/Volvo/FedEx fleet partners rather
+        than capex-heavy direct ownership. By FY36 Aurora generates $8B+
+        revenue at 40%+ software-like margins.
       - >
         Compound conditional: each piece individually plausible at 50-65%;
         joint at 3-4%. Reflected here at 3%. This is the scenario where
@@ -308,15 +309,21 @@ scenarios:
         'Aurora wins the autonomy market.' Contributes $3.00 to weighted
         ($100 × 3%) — the asymmetric tail.
     probability_rationale: >
-      Tail of tails: commercial launch on schedule (50%) AND 25%+ TAM share
-      by 2036 (30% conditional on launch) AND software-take-rate model wins
-      (40%) AND multiple expansion to software/aerospace-hybrid premium
-      (50%). Each individually plausible; joint at 3-4%. Captures the
-      scenario where Aurora becomes a category-defining Big Tech-tier
-      company.
+      Tail of tails: commercial launch on schedule (50%) AND Aurora Driver
+      becomes the default software on PACCAR/Volvo fleets reaching ~20% of
+      autonomous miles / ~6–7% take-rate share of TAM by 2036 (30% conditional
+      on launch) AND software-take-rate model wins (40%) AND multiple
+      expansion to software/aerospace-hybrid premium (50%). Each individually
+      plausible; joint at 3-4%. Captures the scenario where Aurora becomes
+      a category-defining Big Tech-tier company.
 
     dcf_metrics:
-      tam_share: 25.0
+      # tam_share is the revenue-share of FY36 US autonomous long-haul TAM
+      # (~$160B per McKinsey 2024). Aurora's ultra-bull is software-take-rate
+      # at ~$0.50/mi blended, so it touches ~20% of autonomous miles but books
+      # only ~6.6% of TAM revenue. The full validator check: rev_path[-1] of
+      # $10.5B = $160B × 6.6%.
+      tam_share: 6.6
       p_fail: 3
       s2c: 2.5
 
