@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 out/
+node_modules/
+public/assets/bundle/*.map
