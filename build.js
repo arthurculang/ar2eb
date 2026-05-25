@@ -11,10 +11,12 @@
 // Output: public/assets/bundle/site.js
 //         public/assets/bundle/print.js
 //
-// Cloudflare Pages auto-runs `npm run build` when its Build command is
-// set to that. See PR description for the one-time settings change.
+// The GitHub Pages workflow (.github/workflows/pages.yml) runs
+// `npm run build` before uploading public/ as the Pages artifact.
 
 const esbuild = require('esbuild');
+const fs = require('fs');
+const crypto = require('crypto');
 const path = require('path');
 
 const watch = process.argv.includes('--watch');
@@ -35,9 +37,30 @@ const common = {
 };
 
 const builds = [
-  { entry: 'src/site-entry.js',  out: 'public/assets/bundle/site.js'  },
-  { entry: 'src/print-entry.js', out: 'public/assets/bundle/print.js' },
+  { entry: 'src/site-entry.js',  out: 'public/assets/bundle/site.js',  html: 'public/index.html' },
+  { entry: 'src/print-entry.js', out: 'public/assets/bundle/print.js', html: 'public/print.html' },
 ];
+
+// Cache-bust the bundle URL in HTML by appending ?v=<content-hash>. Without
+// this, Cloudflare's CDN and end-user browsers can serve a stale bundle for
+// minutes-to-hours after a deploy. Content hash means the URL only changes
+// when bundle content changes — identical builds keep caches warm.
+function stampHtml(htmlPath, bundleRelPath, hash) {
+  const html = fs.readFileSync(htmlPath, 'utf8');
+  // Match the bundle reference with or without an existing ?v= query.
+  const escaped = bundleRelPath.replace(/[.]/g, '\\.');
+  const re = new RegExp(`(src="${escaped})(\\?v=[a-f0-9]+)?(")`, 'g');
+  let replaced = false;
+  const next = html.replace(re, (_m, a, _q, c) => { replaced = true; return `${a}?v=${hash}${c}`; });
+  if (!replaced) {
+    throw new Error(`stampHtml: no <script src="${bundleRelPath}"> found in ${htmlPath}`);
+  }
+  if (next !== html) fs.writeFileSync(htmlPath, next);
+}
+
+function hashFile(p) {
+  return crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex').slice(0, 12);
+}
 
 async function run() {
   if (watch) {
@@ -57,7 +80,10 @@ async function run() {
         entryPoints: [b.entry],
         outfile: b.out,
       });
-      console.log(`built:    ${b.entry} → ${b.out}`);
+      const hash = hashFile(b.out);
+      const bundleRel = path.relative('public', b.out);
+      stampHtml(b.html, bundleRel, hash);
+      console.log(`built:    ${b.entry} → ${b.out}  [${hash}]`);
     }
   }
 }
