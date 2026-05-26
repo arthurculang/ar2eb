@@ -541,16 +541,24 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 .disclaimers-page p { font-size: 15px; color: var(--ink-2); line-height: 1.7; }
 
 /* ---- responsive ---- */
+/* Topbar nav has two label variants per long-named item: full text for
+   desktop ("Asymmetrical Moonshots") and short text for mobile ("Moonshots").
+   Default = desktop. The mobile media query below swaps them. */
+.nav-label-short { display: none; }
+.nav-label-full { display: inline; }
+
 @media (max-width: 1024px) {
   :root { --gutter: 56px; }
   h1 { font-size: 36px; }
   .memo-head h1 { font-size: 44px; }
 }
 @media (max-width: 760px) {
-  :root { --gutter: 24px; }
+  :root { --gutter: 32px; }
   body { font-size: 16px; }
-  .topbar-nav { gap: 18px; }
-  .topbar-nav a { font-size: 13px; }
+  .topbar-nav { gap: 18px; flex-wrap: wrap; justify-content: flex-end; }
+  .topbar-nav a { font-size: 13px; white-space: nowrap; }
+  .nav-label-full  { display: none; }
+  .nav-label-short { display: inline; }
   .hero { padding: 72px 0 64px; }
   .hero-logo { width: 280px; margin-bottom: 36px; }
   .hero-tagline { font-size: 24px; }
@@ -904,10 +912,15 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 .portfolio-table .ptable a:hover { text-decoration: underline; }
 
 /* Hide secondary columns at narrow widths so the four most important
-   stay legible on phones: ticker, spot, expected, upside, weight. */
+   stay legible on phones: ticker, spot, expected, upside, weight.
+   Tighten cell padding at narrow widths too so the 5 remaining columns
+   fit in 320–390px of content area without spilling past the gutter. */
 @media (max-width: 720px) {
   .portfolio-table .ptable .col-secondary { display: none; }
   .portfolio-table .ptable tbody tr.row-cash td[colspan] { display: none; }
+  .portfolio-table .ptable thead th,
+  .portfolio-table .ptable tbody td { padding: 8px 6px; }
+  .portfolio-table .wrap { overflow-x: auto; }
 }
 
 /* Method — collapsed by default, opens to detail */
