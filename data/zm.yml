@@ -48,16 +48,14 @@ central_question: >
 thesis: >
   Zoom trades at $105.64 ($32.5B mkt cap) on TTM revenue of ~$4.94B, $1.7B
   FCF, and $7.9B cash & marketable securities — roughly a quarter of market
-  cap is just cash. Q1 FY27 (reported May 2026) confirmed the base case:
-  revenue $1.24B (+5.5% YoY, beat), adj-EPS $1.55 (beat), FY27 guidance
-  raised to $5.09B / $5.98 EPS midpoint, and the buyback expanded by $1.0B
-  on top of $625M remaining — explicit signal that management is returning
-  capital while it waits for the Anthropic mark. On top of operating value
-  sits an Anthropic equity stake carried at cost but worth $4-9B across
-  scenarios, pending the public mark from Anthropic's expected IPO. The
-  operating business is a stable cash machine (35-40% FCF margin) facing
-  real but slow competition from Teams and Workspace. Mature-Company DCF
-  with SOTP framing below. Three scenarios, weighted; show your work.
+  cap is just cash. Q1 FY27 confirmed the base case: revenue $1.24B (+5.5%,
+  beat), FY27 guidance raised to $5.09B / $5.98 EPS, buyback expanded $1.0B
+  — management returning capital while it waits for the Anthropic mark. On
+  top sits an Anthropic equity stake carried at cost but worth $4-9B across
+  scenarios, pending the IPO mark. The operating business is a stable cash
+  machine (35-40% FCF margin) facing real but slow competition from Teams
+  and Workspace. Mature-Company DCF with SOTP framing below. Three
+  scenarios, weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:

@@ -46,6 +46,7 @@ def target_pdf(ticker: str) -> Path:
 def main() -> None:
     # 1. Math QC.
     strict = "--strict-validate" in sys.argv
+    strict_layout = "--strict-layout" in sys.argv
     print("[validate] running Math QC")
     rc = subprocess.run(
         [sys.executable, "scripts/validate.py"], cwd=REPO,
@@ -70,7 +71,12 @@ def main() -> None:
             skipped.append(t)
             continue
         print(f"[{t}] rendering JSX -> {pdf.name}")
-        run([sys.executable, "scripts/render_memo_pdf.py", t])
+        # Pass STRICT_LAYOUT=1 via env if --strict-layout was set, so the
+        # renderer fails on Page-boundary bleeds rather than just warning.
+        env = {**os.environ}
+        if strict_layout:
+            env["STRICT_LAYOUT"] = "1"
+        run([sys.executable, "scripts/render_memo_pdf.py", t], env=env)
         # render_memo_pdf.py writes to out/<stamped_name>.pdf using the
         # same stamp the PDF lives under in public/memos.
         src = REPO / "out" / pdf.name

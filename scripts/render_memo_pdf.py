@@ -85,6 +85,41 @@ def render(ticker: str, out_path: Path | None = None) -> Path:
             page.wait_for_function(
                 "document.body.dataset.ready === '1'", timeout=15_000
             )
+            # Spec §3.5 A safe-zones: every .memo-page must keep its content
+            # inside the page height. The CSS uses overflow:hidden + a paper-
+            # colored footer band to mask small bleeds, but anything past the
+            # footer band gets clipped — invisible content is worse than
+            # truncated content. We surface overflows on every render so they
+            # can't ship undetected. Set STRICT_LAYOUT=1 to turn them into
+            # errors (use in CI / before merge). Default is warn-only so the
+            # rebuild_all.py pipeline doesn't break on legacy bleeds (NAUT
+            # page 2 ultra_bull column is a known pre-existing case).
+            overflows = page.evaluate("""() => {
+                const TOL_PX = 2;
+                return Array.from(document.querySelectorAll('.memo-page')).map((el, i) => ({
+                    page: i + 1,
+                    scrollH: el.scrollHeight,
+                    clientH: el.clientHeight,
+                    bleed: el.scrollHeight - el.clientHeight,
+                })).filter(p => p.bleed > TOL_PX);
+            }""")
+            if overflows:
+                strict = os.environ.get("STRICT_LAYOUT") == "1"
+                tag = "ERROR" if strict else "warn"
+                lines = "\n".join(
+                    f"    page {o['page']}: scrollH={o['scrollH']}px > clientH={o['clientH']}px (bleed {o['bleed']}px)"
+                    for o in overflows
+                )
+                print(
+                    f"[{ticker}] {tag}: content overflows page boundary:\n{lines}\n"
+                    "  spec §3.5 A: content area must not extend past the "
+                    "footer band. Trim narrative / rowGap / fontSize so the "
+                    "page fits within 8.5in. (set STRICT_LAYOUT=1 to fail)",
+                    file=sys.stderr,
+                )
+                if strict:
+                    browser.close()
+                    raise SystemExit(2)
             page.pdf(
                 path=str(out_pdf),
                 width="14in",
