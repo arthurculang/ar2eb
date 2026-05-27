@@ -219,6 +219,30 @@ function MemoPage({ slug }) {
               <span aria-hidden="true">↓</span>
             </div>
           </a>
+          {memo.pdf.priorVersions && memo.pdf.priorVersions.length > 0 && (
+            <details className="prior-versions">
+              <summary>
+                Prior versions <span className="mono">({memo.pdf.priorVersions.length})</span>
+              </summary>
+              <ul className="prior-versions-list">
+                {memo.pdf.priorVersions.map(pv => (
+                  <li key={pv.version}>
+                    <a href={'memos/' + pv.file} target="_blank" rel="noopener noreferrer">
+                      <span className="pv-version mono">v{pv.version}</span>
+                      <span className="pv-asof">as of {pv.asOfDate}</span>
+                      <span className="pv-spot mono">spot {fmtUSD(pv.spotPrice)}</span>
+                      <span className="pv-size mono">{pv.size}</span>
+                      <span className="pv-arrow" aria-hidden="true">↓</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="prior-versions-note">
+                PDFs accumulate as immutable history — each version captures the spot price
+                and analysis as of the date shown. The current version is at top of the page.
+              </p>
+            </details>
+          )}
         </div>
       </section>
 
