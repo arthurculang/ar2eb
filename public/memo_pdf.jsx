@@ -387,15 +387,25 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   const X_MAX = 20.0;
 
   // Scenario forward paths: expected_per_share × (1 + terminal WACC)^t for t=0..20.
+  // Dynamically computed per-scenario so tickers with ultra_bear get an
+  // additional line plotted. SCN_PATH_META keys map to JSX color tokens
+  // declared above (NEG/POS/ULTRA/etc) and per-line stroke widths.
   const path = (key) => {
     const s = printScn[key];
     const wacc = s.dcfPath.wacc_path[s.dcfPath.wacc_path.length - 1];
     return Array.from({ length: 21 }, (_, t) => [t, s.expectedPerShare * Math.pow(1 + wacc, t)]);
   };
-  const bearP  = path('bear');
-  const baseP  = path('base');
-  const bullP  = path('bull');
-  const ultraP = path('ultra_bull');
+  const scnList = scnKeysFor(memo);
+  const scnPaths = Object.fromEntries(scnList.map(k => [k, path(k)]));
+  // Legacy aliases — preserved so the rest of this big component (label
+  // sorting, multiplier annotations) doesn't need broader refactoring.
+  // Missing-scenario lookups are guarded; e.g. tickers without ultra_bear
+  // skip rendering the ultraBearP line.
+  const ultraBearP = scnPaths.ultra_bear;
+  const bearP  = scnPaths.bear;
+  const baseP  = scnPaths.base;
+  const bullP  = scnPaths.bull;
+  const ultraP = scnPaths.ultra_bull;
 
   const weightedAt = (t) =>
     Object.values(printScn).reduce((acc, s) => {
@@ -413,7 +423,7 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   // - y_min: 0.10 if any value <= 0, else largest log-decade <= min positive.
   // - y_max: bucketed ceiling based on max forward across all scenarios+benchmarks.
   const allVals = [
-    ...bearP, ...baseP, ...bullP, ...ultraP, ...weightedP,
+    ...Object.values(scnPaths).flat(), ...weightedP,
     ...tsyP, ...eqP, ...hist.points, [0, spot],
   ].map(p => p[1]);
   const hasNeg = allVals.some(v => v <= 0);
@@ -426,7 +436,7 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
     yMin = Math.max(0.10, Math.min(100.0, raw));
   }
   const maxFwd = Math.max(
-    bearP[20][1], baseP[20][1], bullP[20][1], ultraP[20][1],
+    ...scnList.map(k => scnPaths[k][20][1]),
     weightedP[20][1], tsyP[20][1], eqP[20][1]
   );
   let yMax;
@@ -459,12 +469,23 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   ];
 
   // End-of-line labels with min-vertical-separation enforcement.
+  // Built dynamically from scnList so tickers with ultra_bear get an extra
+  // label; tickers without it just skip cleanly. SCN_LABEL_META maps each
+  // scenario key to the rendered label and color.
+  const SCN_LABEL_META = {
+    ultra_bear: { name: 'Ultra Bear', color: SCN_COLORS.ultra_bear },
+    bear:       { name: 'Bear',       color: NEG },
+    base:       { name: 'Base',       color: PALETTE.accent },
+    bull:       { name: 'Bull',       color: POS },
+    ultra_bull: { name: 'Ultra Bull', color: ULTRA },
+  };
   const endLabels = [
-    [bearP[20][1],     `Bear  ${(bearP[20][1] / spot).toFixed(2)}×`,     NEG],
-    [baseP[20][1],     `Base  ${(baseP[20][1] / spot).toFixed(2)}×`,     PALETTE.accent],
+    ...scnList.map(k => {
+      const p = scnPaths[k];
+      const m = SCN_LABEL_META[k];
+      return [p[20][1], `${m.name}  ${(p[20][1] / spot).toFixed(2)}×`, m.color];
+    }),
     [weightedP[20][1], `Weighted  ${(weightedP[20][1] / spot).toFixed(2)}×`, PALETTE.ink],
-    [bullP[20][1],     `Bull  ${(bullP[20][1] / spot).toFixed(2)}×`,     POS],
-    [ultraP[20][1],    `Ultra Bull  ${(ultraP[20][1] / spot).toFixed(2)}×`, ULTRA],
     [tsyP[20][1],      `Tsy 4.5%  ${(tsyP[20][1] / spot).toFixed(2)}×`,  BENCH_LBL],
     [eqP[20][1],       `S&P 8.5%  ${(eqP[20][1] / spot).toFixed(2)}×`,   BENCH_LBL],
   ].sort((a, b) => a[0] - b[0]);
@@ -558,27 +579,34 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
       <path d={pathD(tsyP)} stroke={BENCH} strokeWidth="0.5" fill="none" strokeDasharray="1,2" />
       <path d={pathD(eqP)}  stroke={BENCH} strokeWidth="0.5" fill="none" strokeDasharray="1,2" />
 
-      {/* Scenario paths */}
-      <path d={pathD(bearP)}  stroke={NEG}            strokeWidth="0.7" fill="none" />
-      <path d={pathD(baseP)}  stroke={PALETTE.accent} strokeWidth="0.7" fill="none" />
-      <path d={pathD(bullP)}  stroke={POS}            strokeWidth="0.7" fill="none" />
-      <path d={pathD(ultraP)} stroke={ULTRA}          strokeWidth="0.7" fill="none" />
+      {/* Scenario paths — one per scenario in the ticker. */}
+      {scnList.map(k => (
+        <path key={`p-${k}`}
+              d={pathD(scnPaths[k])}
+              stroke={SCN_LABEL_META[k].color}
+              strokeWidth="0.7" fill="none" />
+      ))}
       {/* Weighted line — thickest, ink */}
       <path d={pathD(weightedP)} stroke={PALETTE.ink} strokeWidth="2.0" fill="none" />
 
       {/* Anchor markers at t=0 for each scenario */}
-      <circle cx={todayX} cy={y(printScn.bear.expectedPerShare)} r="1.6" fill={NEG} />
-      <circle cx={todayX} cy={y(printScn.base.expectedPerShare)} r="1.6" fill={PALETTE.accent} />
-      <circle cx={todayX} cy={y(printScn.bull.expectedPerShare)} r="1.6" fill={POS} />
-      <circle cx={todayX} cy={y(printScn.ultra_bull.expectedPerShare)} r="1.6" fill={ULTRA} />
+      {scnList.map(k => (
+        <circle key={`a-${k}`}
+                cx={todayX}
+                cy={y(printScn[k].expectedPerShare)}
+                r="1.6"
+                fill={SCN_LABEL_META[k].color} />
+      ))}
       <circle cx={todayX} cy={y(w.expected)} r="2.2" fill={PALETTE.ink} />
 
-      {/* Multiplier annotations at +5/+10/+15 */}
-      {annotate(bullP, POS, 'above')}
-      {annotate(ultraP, ULTRA, 'above')}
+      {/* Multiplier annotations at +5/+10/+15. Above the line for the
+          upside scenarios, below for downside; weighted is above. */}
+      {bullP   && annotate(bullP, POS, 'above')}
+      {ultraP  && annotate(ultraP, ULTRA, 'above')}
       {annotate(weightedP, PALETTE.ink, 'above')}
-      {annotate(baseP, PALETTE.accent, 'below')}
-      {annotate(bearP, NEG, 'below')}
+      {baseP   && annotate(baseP, PALETTE.accent, 'below')}
+      {bearP   && annotate(bearP, NEG, 'below')}
+      {ultraBearP && annotate(ultraBearP, SCN_COLORS.ultra_bear, 'below')}
 
       {/* End-of-line labels */}
       {labelPositions.map(([py, lbl, col], i) => (
@@ -851,12 +879,14 @@ function Page1Headline({ memo }) {
       {/* Section separator + scenario summary cards */}
       <div style={{ marginTop: '6pt' }}><Rule /></div>
 
-      {/* 4-column scenario summary cards (compact — full narrative on Page 2) */}
+      {/* Scenario summary cards (compact — full narrative on Page 2).
+          Column count tracks scenario count: 4 for the standard tickers,
+          5 when a ticker carries ultra_bear. 5-col mode tightens typography. */}
       <div style={{
         marginTop: '8pt',
         display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        columnGap: '16pt',
+        gridTemplateColumns: `repeat(${memo.scenarios.length}, 1fr)`,
+        columnGap: memo.scenarios.length === 5 ? '10pt' : '16pt',
       }}>
         {memo.scenarios.map(scn => {
           const upside = (scn.price / spot - 1) * 100;
@@ -866,6 +896,14 @@ function Page1Headline({ memo }) {
           const ribbon = ribbonMetrics(scnPrint, memo.print.dcfType);
           const l1 = `${ribbon[0][0]}  ${ribbon[0][1]}    ${ribbon[1][0]}  ${ribbon[1][1]}`;
           const l2 = `${ribbon[2][0]}  ${ribbon[2][1]}    ${ribbon[3][0]}  ${ribbon[3][1]}`;
+          const isWide = memo.scenarios.length === 5;
+          const F = {
+            label:    isWide ? '9.5pt'  : '11pt',
+            price:    isWide ? '14pt'   : '18pt',
+            upside:   isWide ? '7pt'    : '8.5pt',
+            ribbon:   isWide ? '6pt'    : '7pt',
+            headline: isWide ? '8pt'    : '9.5pt',
+          };
           return (
             <div key={scn.key}>
               <div style={{
@@ -873,21 +911,21 @@ function Page1Headline({ memo }) {
                 alignItems: 'baseline',
               }}>
                 <div style={{
-                  fontFamily: FONT_SANS, fontWeight: 600, fontSize: '11pt',
+                  fontFamily: FONT_SANS, fontWeight: 600, fontSize: F.label,
                   color: PALETTE.ink, letterSpacing: '0.02em',
                 }}>
                   {scn.label}
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{
-                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: '18pt',
+                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: F.price,
                     color: PALETTE.ink, lineHeight: 1.0,
                   }}>
                     ${scn.price.toFixed(2)}
                   </div>
                   <div style={{
                     marginTop: '4pt',
-                    fontFamily: FONT_MONO, fontSize: '8.5pt', color: upColor,
+                    fontFamily: FONT_MONO, fontSize: F.upside, color: upColor,
                   }}>
                     {upSign}{upside.toFixed(1)}%  vs spot
                   </div>
@@ -895,7 +933,7 @@ function Page1Headline({ memo }) {
               </div>
               <div style={{
                 marginTop: '6pt',
-                fontFamily: FONT_MONO, fontSize: '7pt', color: PALETTE.muted,
+                fontFamily: FONT_MONO, fontSize: F.ribbon, color: PALETTE.muted,
                 lineHeight: 1.4,
               }}>
                 <div>{l1}</div>
@@ -904,7 +942,7 @@ function Page1Headline({ memo }) {
               <div style={{ marginTop: '4pt' }}><Rule /></div>
               <div style={{
                 marginTop: '6pt',
-                fontFamily: FONT_SANS, fontWeight: 500, fontSize: '9.5pt',
+                fontFamily: FONT_SANS, fontWeight: 500, fontSize: F.headline,
                 color: PALETTE.ink, lineHeight: 1.2,
               }}>
                 {scn.headline}
@@ -931,11 +969,17 @@ function Page2Narratives({ memo }) {
   const wSign = w.upsidePct >= 0 ? '+' : '';
   const NEG = '#b91c1c';
   const POS = '#15803d';
+  // Build prob strip dynamically — tickers may have ultra_bear (5th column).
+  const PROB_LABELS = {
+    ultra_bear: 'Ultra Bear',
+    bear:       'Bear',
+    base:       'Base',
+    bull:       'Bull',
+    ultra:      'Ultra Bull',  // site key for ultra_bull
+  };
   const probStrip = (
-    `Bear ${memo.scenarios.find(s => s.key === 'bear').prob}%     `
-    + `Base ${memo.scenarios.find(s => s.key === 'base').prob}%     `
-    + `Bull ${memo.scenarios.find(s => s.key === 'bull').prob}%     `
-    + `Ultra Bull ${memo.scenarios.find(s => s.key === 'ultra').prob}%     ·     `
+    memo.scenarios.map(s => `${PROB_LABELS[s.key]} ${s.prob}%`).join('     ')
+    + `     ·     `
     + `Weighted expected $${w.expected.toFixed(2)} `
     + `(${wSign}${w.upsidePct.toFixed(1)}% vs spot)`
   );
@@ -1021,14 +1065,28 @@ function Page2Narratives({ memo }) {
         <Rule strong />
       </div>
 
-      {/* 4-column narrative grid */}
+      {/* Scenario narrative grid — column count tracks scenarios.length.
+          5-col mode (ultra_bear present) tightens fonts so narratives fit
+          in 20%-narrower columns without spilling past the page bottom. */}
       <div style={{
         marginTop: '12pt',
         display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        columnGap: '16pt',
+        gridTemplateColumns: `repeat(${memo.scenarios.length}, 1fr)`,
+        columnGap: memo.scenarios.length === 5 ? '10pt' : '16pt',
       }}>
         {memo.scenarios.map(scn => {
+          // 5-col mode: tighter typography for narrower columns.
+          const isWide = memo.scenarios.length === 5;
+          const F = {
+            label:    isWide ? '10pt'  : '11pt',
+            price:    isWide ? '14pt'  : '18pt',
+            upside:   isWide ? '8pt'   : '8.5pt',
+            prob:     isWide ? '7.5pt' : '8pt',
+            headline: isWide ? '9pt'   : '11pt',
+            section:  isWide ? '6.5pt' : '7pt',
+            body:     isWide ? '6.0pt' : '6.75pt',
+            bodyLH:   isWide ? 1.25    : 1.28,
+          };
           const upside = (scn.price / memo.spot.price - 1) * 100;
           const upSign = upside >= 0 ? '+' : '';
           const upColor = upside >= 0 ? POS : NEG;
@@ -1040,21 +1098,21 @@ function Page2Narratives({ memo }) {
                 alignItems: 'baseline',
               }}>
                 <div style={{
-                  fontFamily: FONT_SANS, fontWeight: 600, fontSize: '11pt',
+                  fontFamily: FONT_SANS, fontWeight: 600, fontSize: F.label,
                   color: PALETTE.ink, letterSpacing: '0.02em',
                 }}>
                   {scn.label}
                 </div>
                 <div style={{ textAlign: 'right' }}>
                   <div style={{
-                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: '18pt',
+                    fontFamily: FONT_MONO, fontWeight: 700, fontSize: F.price,
                     color: PALETTE.ink, lineHeight: 1.0,
                   }}>
                     ${scn.price.toFixed(2)}
                   </div>
                   <div style={{
                     marginTop: '4pt',
-                    fontFamily: FONT_MONO, fontSize: '8.5pt', color: upColor,
+                    fontFamily: FONT_MONO, fontSize: F.upside, color: upColor,
                   }}>
                     {upSign}{upside.toFixed(1)}%  vs spot
                   </div>
@@ -1063,8 +1121,8 @@ function Page2Narratives({ memo }) {
 
               {/* Probability emphasized */}
               <div style={{
-                marginTop: '10pt',
-                fontFamily: FONT_MONO, fontSize: '8pt', color: PALETTE.accent,
+                marginTop: isWide ? '8pt' : '10pt',
+                fontFamily: FONT_MONO, fontSize: F.prob, color: PALETTE.accent,
               }}>
                 Probability  {scn.prob}%
               </div>
@@ -1073,8 +1131,8 @@ function Page2Narratives({ memo }) {
 
               {/* Headline */}
               <div style={{
-                marginTop: '8pt',
-                fontFamily: FONT_SANS, fontWeight: 500, fontSize: '11pt',
+                marginTop: isWide ? '6pt' : '8pt',
+                fontFamily: FONT_SANS, fontWeight: 500, fontSize: F.headline,
                 color: PALETTE.ink, lineHeight: 1.15,
               }}>
                 {scn.headline}
@@ -1082,8 +1140,8 @@ function Page2Narratives({ memo }) {
 
               {/* WHY x% */}
               <div style={{
-                marginTop: '10pt',
-                fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7pt',
+                marginTop: isWide ? '8pt' : '10pt',
+                fontFamily: FONT_SANS, fontWeight: 600, fontSize: F.section,
                 color: PALETTE.muted, letterSpacing: '0.04em',
                 textTransform: 'uppercase',
               }}>
@@ -1091,8 +1149,8 @@ function Page2Narratives({ memo }) {
               </div>
               <div style={{
                 marginTop: '3pt',
-                fontFamily: FONT_SANS, fontSize: '6.75pt', color: PALETTE.text,
-                lineHeight: 1.28,
+                fontFamily: FONT_SANS, fontSize: F.body, color: PALETTE.text,
+                lineHeight: F.bodyLH,
               }}>
                 {scn.why}
               </div>
@@ -1105,7 +1163,7 @@ function Page2Narratives({ memo }) {
               }} />
               <div style={{
                 marginTop: '4pt',
-                fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7pt',
+                fontFamily: FONT_SANS, fontWeight: 600, fontSize: F.section,
                 color: PALETTE.muted, letterSpacing: '0.04em',
                 textTransform: 'uppercase',
               }}>
@@ -1114,8 +1172,8 @@ function Page2Narratives({ memo }) {
               {scn.what.map((para, pi) => (
                 <div key={pi} style={{
                   marginTop: pi === 0 ? '3pt' : '4pt',
-                  fontFamily: FONT_SANS, fontSize: '6.75pt', color: PALETTE.text,
-                  lineHeight: 1.28,
+                  fontFamily: FONT_SANS, fontSize: F.body, color: PALETTE.text,
+                  lineHeight: F.bodyLH,
                 }}>
                   {para}
                 </div>
@@ -1137,11 +1195,24 @@ function Page2Narratives({ memo }) {
 
 // --- Scenario colors (shared across charts) ---
 const SCN_COLORS = {
+  ultra_bear: '#5b1010',    // dark red — mirror of ultra_bull's deep purple
   bear:       '#b91c1c',
   base:       '#1e3a8a',
   bull:       '#15803d',
   ultra_bull: '#7629a6',
 };
+
+// Canonical scenario order — worst to best. Used everywhere that needs to
+// iterate scenarios (Page 1 cards, Page 2 narratives, Page 4 quant grid,
+// charts). Per-ticker visible set = SCN_ORDER ∩ keys-in-memo. ZM has all 5;
+// JOBY/AUR/LTH/NAUT have the standard 4. New scenario types must be added
+// here AND in scripts/build_site_data.py's SCEN_ORDER, AND any layouts that
+// use `repeat(N, 1fr)` must derive N from scnKeysFor(memo).length.
+const SCN_ORDER = ['ultra_bear', 'bear', 'base', 'bull', 'ultra_bull'];
+function scnKeysFor(memo) {
+  const scns = (memo.print && memo.print.scenarios) || {};
+  return SCN_ORDER.filter(k => scns[k] !== undefined);
+}
 
 // --- Chart primitives (shared by Page 3 charts) ---
 //
@@ -1209,7 +1280,7 @@ function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
   const histYears = ref.historyYears;                    // e.g. [2024, 2025, 2026]
   const histRev = ref.historyRevenue;                    // e.g. [0, 0, 0.001] in $B
   const nHist = histYears.length;
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
 
   // FY labels e.g. "FY24"..."FY36" → render as 2-digit "24"..."36".
   const fyAll = [
@@ -1311,7 +1382,7 @@ function YoungRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
 function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
   const cfg = memo.page3.chartConfig || {};
   const ref = memo.page3.chartReference;
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
 
   const fleetFromRev = (key) => {
     const rev = memo.print.scenarios[key].dcfPath.rev_path;
@@ -1411,7 +1482,7 @@ function YoungFleetChart({ memo, widthPt = 280, heightPt = 190 }) {
 // --- Young-company Chart 5: valuation (P/S on FY36 revenue) ---
 function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
   const cfg = memo.page3.chartConfig || {};
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
   const mktCap = memo.print.market.marketCapBillion;
 
   // P/S = today_mkt_cap / FY36 revenue per scenario.
@@ -1493,7 +1564,7 @@ function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
 // --- Young-company Chart 6: TAM positioning at FY36 (horizontal stacked) ---
 function YoungTamChart({ memo, widthPt = 280, heightPt = 190 }) {
   const cfg = memo.page3.chartConfig || {};
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
   const tam = memo.print.tamBillion;
   if (!tam) return null;
 
@@ -1658,7 +1729,7 @@ const sharesPathSeries = (scn, startShares) => {
 };
 
 function YoungCashDilutionChart({ memo, widthPt = 280, heightPt = 190 }) {
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
   const startCash = memo.print.market.cashBillion;
   const startShares = memo.print.market.sharesOutstandingMillion;
 
@@ -1815,7 +1886,7 @@ function MatureRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
   const histYears = ref.historyYears;
   const histRev = ref.historyRevenue;
   const nHist = histYears.length;
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
   const revB = memo.print.scenarios.base.dcfPath.rev_b;
   const projByScn = Object.fromEntries(scnKeys.map(k =>
     [k, projectMatureRev(revB, memo.print.scenarios[k].dcfPath.rev_path)]));
@@ -1956,7 +2027,7 @@ function MatureMarginsChart({ memo, widthPt = 280, heightPt = 190 }) {
   const ref = memo.page3.chartReference;
   const histYears = ref.historyYears;
   const nHist = histYears.length;
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
   const histOp = (ref.historyOpMargin || []).map(v => v);
 
   const m = CHART_MARGIN;
@@ -2164,7 +2235,7 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
               stroke={PALETTE.muted} strokeWidth="1.4" fill="none" />
         <path d={pathD(luxury.map((v, i) => [i, v]), xScale, yScale)}
               stroke={PALETTE.accent} strokeWidth="1.6" fill="none" />
-        {['bear', 'base', 'bull', 'ultra_bull'].map(k => (
+        {scnKeysFor(memo).map(k => (
           <path key={`lx-${k}`}
                 d={pathD([[yrs.length - 1, luxury.at(-1)],
                           [yrs.length + 4, luxFY30[k]]], xScale, yScale)}
@@ -2185,7 +2256,7 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
   }
 
   // ZM SOTP equity decomposition
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
   const rows = scnKeys.map(k => {
     const s = memo.print.scenarios[k];
     return {
@@ -2246,7 +2317,7 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
 // a zero line + a horizontal peer-median reference. Peer text + y level
 // from memo.page3.chartConfig (YAML page3_chart_config).
 function YoungProfitabilityChart({ memo, widthPt = 280, heightPt = 190 }) {
-  const scnKeys = ['bear', 'base', 'bull', 'ultra_bull'];
+  const scnKeys = scnKeysFor(memo);
   const cfg = memo.page3.chartConfig || {};
   const peer = {
     peerY: cfg.peerY ?? 20,
@@ -2632,16 +2703,18 @@ function Page4Quantitative({ memo }) {
       <PageHeader memo={memo} suffix="show your work"
                   label="the quantitative" recapWeighted compact />
 
-      {/* 4-column scenario quant grid — fills the page alone. Pushback +
+      {/* Scenario quant grid — fills the page alone. Pushback +
           falsification triggers live on Page 5; we tried Page 4 per the
-          spec but the quant content takes the full page. */}
+          spec but the quant content takes the full page. Column count
+          tracks scnKeysFor(memo).length (4 for most tickers, 5 with
+          ultra_bear). */}
       <div style={{
         marginTop: '8pt',
         display: 'grid',
-        gridTemplateColumns: 'repeat(4, 1fr)',
-        columnGap: '16pt',
+        gridTemplateColumns: `repeat(${scnKeysFor(memo).length}, 1fr)`,
+        columnGap: scnKeysFor(memo).length === 5 ? '10pt' : '16pt',
       }}>
-        {['bear', 'base', 'bull', 'ultra_bull'].map(k => (
+        {scnKeysFor(memo).map(k => (
           <ScenarioQuantColumn key={k} memo={memo} scenarioKey={k} />
         ))}
       </div>

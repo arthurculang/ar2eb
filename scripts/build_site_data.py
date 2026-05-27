@@ -23,8 +23,20 @@ MEMOS_DIR = REPO / "public" / "memos"
 OUT = REPO / "public" / "data.js"
 
 TICKERS = ["joby", "aur", "lth", "zm", "naut"]
-SCEN_ORDER = ["bear", "base", "bull", "ultra_bull"]
-SITE_KEY = {"bear": "bear", "base": "base", "bull": "bull", "ultra_bull": "ultra"}
+# Canonical scenario order — worst to best. Each ticker subsets this list
+# based on which keys appear in scenarios.* (e.g. ZM has all five, JOBY/AUR/
+# LTH/NAUT have the standard four). The order here drives display order
+# everywhere (Page 1 cards, Page 4 quant grid, Page 2 narratives) so adding
+# ultra_bear at the front meant updating the visual layouts to render from
+# left-to-right in the same order.
+SCEN_ORDER = ["ultra_bear", "bear", "base", "bull", "ultra_bull"]
+SITE_KEY = {
+    "ultra_bear": "ultra_bear",
+    "bear": "bear",
+    "base": "base",
+    "bull": "bull",
+    "ultra_bull": "ultra",
+}
 
 DCF_DISPLAY = {
     "young_company": ("Young-Company DCF (Damodaran)", "asymmetrical-moonshots"),
@@ -113,8 +125,12 @@ def build_memo(ticker: str) -> dict:
     compound = [{"y": T, "value": round(pw_at(T), 2),
                  "mult": round(pw_at(T) / spot, 2)} for T in (5, 10, 15, 20)]
 
+    # Each ticker subsets SCEN_ORDER based on which keys exist in its YAML.
+    # ZM has 5 (with ultra_bear); JOBY/AUR/LTH/NAUT have the standard 4.
+    ticker_scens = [k for k in SCEN_ORDER if k in scn]
+
     scenarios = []
-    for k in SCEN_ORDER:
+    for k in ticker_scens:
         s = scn[k]
         paras = s["narrative"]
         what = paras[:-1] if len(paras) > 2 else paras  # drop math-summary para (memo.py P2)
@@ -128,7 +144,7 @@ def build_memo(ticker: str) -> dict:
             "what": [collapse(p) for p in what],
         })
 
-    probs = {k: round(scn[k]["probability"] * 100) for k in SCEN_ORDER}
+    probs = {k: round(scn[k]["probability"] * 100) for k in ticker_scens}
     pdf_file = f"{ticker}-memo__v{st['pdf_version']}__{st['pdf_timestamp']}.pdf"
     pdf_path = MEMOS_DIR / pdf_file
     if not pdf_path.exists():
@@ -178,7 +194,8 @@ def build_memo(ticker: str) -> dict:
         "scenarios": scenarios,
         "methodology": (
             f"DCF framework: {dcf_display}. Probability weighting: "
-            f"Bear {probs['bear']} / Base {probs['base']} / "
+            + (f"Ultra Bear {probs['ultra_bear']} / " if "ultra_bear" in probs else "")
+            + f"Bear {probs['bear']} / Base {probs['base']} / "
             f"Bull {probs['bull']} / Ultra Bull {probs['ultra_bull']}. "
             f"Spot price reference: {lbl} close."),
         "thesis": collapse(d["thesis"]),
@@ -235,7 +252,7 @@ def build_memo(ticker: str) -> dict:
                     # normalize for the JSX charts.
                     "revPerUnit": _pick_rev_per_unit(scn[k].get("chart_data", {})),
                 }
-                for k in SCEN_ORDER
+                for k in ticker_scens
             },
             "appendix": {
                 "pushback": [{"label": p["label"], "body": collapse(p["body"])}

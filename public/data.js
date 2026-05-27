@@ -2637,9 +2637,16 @@ const MEMOS = [
     "publishedISO": "2026-05-27",
     "publishedLabel": "May 27, 2026",
     "pdf": {
-      "file": "zm-memo__v022__2026-05-27_15-31.pdf",
-      "size": "237 KB",
+      "file": "zm-memo__v023__2026-05-27_19-17.pdf",
+      "size": "255 KB",
       "priorVersions": [
+        {
+          "version": "022",
+          "file": "zm-memo__v022__2026-05-27_15-31.pdf",
+          "size": "237 KB",
+          "asOfDate": "2026-05-27",
+          "spotPrice": 105.64
+        },
         {
           "version": "021",
           "file": "zm-memo__v021__2026-05-23_21-14.pdf",
@@ -2659,37 +2666,49 @@ const MEMOS = [
       "asOf": "May 27, 2026 close"
     },
     "expected": {
-      "fair": 167.83,
-      "deltaPct": 58.9
+      "fair": 164.39,
+      "deltaPct": 55.6
     },
     "compound": [
       {
         "y": 5,
-        "value": 252.6,
-        "mult": 2.39
+        "value": 247.65,
+        "mult": 2.34
       },
       {
         "y": 10,
-        "value": 380.63,
-        "mult": 3.6
+        "value": 373.71,
+        "mult": 3.54
       },
       {
         "y": 15,
-        "value": 574.28,
-        "mult": 5.44
+        "value": 564.97,
+        "mult": 5.35
       },
       {
         "y": 20,
-        "value": 867.53,
-        "mult": 8.21
+        "value": 855.81,
+        "mult": 8.1
       }
     ],
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
     "scenarios": [
       {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 8,
+        "price": 49.0,
+        "headline": "Cisco-Webex moment; -54% tail.",
+        "why": "Joint conjunction of four independent fault lines: (a) Cisco-style displacement curve materializes (-10/-13/-19% YoY) — historical base rate of incumbent-SaaS displacement by hyperscaler bundles is real but not the median outcome; (b) Anthropic IPO disappoints below $400B (vs current $900B private mark) on AI-capex correction + Pentagon supply-chain risk + cheap-AI commoditization; (c) AI Companion Pro fails to monetize as Microsoft Copilot bundling collapses pricing power for collaboration AI; (d) Phone + Contact Center growth stalls below 15%, killing the diversification story. Each individually 15-30% probability conditional on macro; joint conjunction at 8%. Lower than bear's 22% because (i) Q1 FY27 just printed a beat with NDR ticking up to 99% and AI Companion MAUs +184% YoY, and (ii) compound conjunction requires all four to fire simultaneously over five years.",
+        "what": [
+          "The ultra-bear is qualitatively different from bear's slow melt. It's the Cisco Webex collaboration trajectory — revenue prints -10%, then -13%, then -19% YoY as Teams reaches its tipping point. Four things compound: enterprise NDR breaks 95% as Teams Premium pricing collapses ZM's seat economics; AI Companion Pro fails to differentiate against Copilot/Gemini bundled into M365 and Workspace; Phone + Contact Center growth stalls below 15% (the diversification story dies); and Anthropic IPOs at &lt;$400B (Pentagon supply-chain risk + AI-capex moderation + cheap-AI commoditization), gutting the SOTP \"hidden asset\" narrative.",
+          "Revenue collapses from $4.87B to $3.6B over five years (-26%). Op margin compresses from 36% to 12% as ZM spends defensively to retain the enterprise base. Terminal growth turns negative (-2%, perpetual decline). Op EV: $5.7B. Cash drains from $7.9B to ~$5.5B as management runs $1.5B/yr buybacks for two years before halting when the flywheel breaks. Anthropic stake floors at $2B (sub-$400B IPO). SOTP equity: $13.2B ÷ 270M shares = ~$49/share — a -54% tail, mirroring ultra_bull's +293% asymmetry."
+        ]
+      },
+      {
         "key": "bear",
         "label": "BEAR",
-        "prob": 30,
+        "prob": 22,
         "price": 92.04,
         "headline": "Zoom without a core market.",
         "why": "Bearish thesis is competitive commoditization: Teams (Microsoft's bundled play) and Google Meet (free for Workspace customers) continue to take seats from ZM's enterprise base; AI Companion Pro fails to differentiate or monetize meaningfully (Microsoft Copilot integration into Teams is the obvious competitive response); Phone seats stagnate; Contact Center fails to reach scale; Anthropic stake gets compressed if AI valuations correct or Anthropic does an underwhelming IPO. The 30% weight reflects that Teams/Workspace competition is real, ongoing, and structurally favored — but ZM has shown unexpected resilience through 2024-25 (stable revenue, growing FCF, $1B+ buyback program). Not bankruptcy risk; share-loss-with-margin-compression risk.",
@@ -2735,7 +2754,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 27, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 27, 2026 close.",
     "thesis": "Zoom trades at $105.64 ($32.5B mkt cap) on TTM revenue of ~$4.94B, $1.7B FCF, and $7.9B cash & marketable securities — roughly a quarter of market cap is just cash. Q1 FY27 confirmed the base case: revenue $1.24B (+5.5%, beat), FY27 guidance raised to $5.09B / $5.98 EPS, buyback expanded $1.0B — management returning capital while it waits for the Anthropic mark. On top sits an Anthropic equity stake carried at cost but worth $4-9B across scenarios, pending the IPO mark. The operating business is a stable cash machine (35-40% FCF margin) facing real but slow competition from Teams and Workspace. Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -7.5,
@@ -2918,8 +2937,8 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 167.83,
-        "upsidePct": 58.9
+        "expected": 164.39,
+        "upsidePct": 55.6
       },
       "market": {
         "marketCapBillion": 32.5,
@@ -2928,8 +2947,88 @@ const MEMOS = [
         "netDebtBillion": 0.0
       },
       "scenarios": {
+        "ultra_bear": {
+          "probability": 0.08,
+          "expectedPerShare": 49.0,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": -5.8,
+            "wacc": 0.12,
+            "anthropic_stake": 2.0
+          },
+          "dcfPath": {
+            "rev_b": 4.87,
+            "rev_path": [
+              -0.02,
+              -0.05,
+              -0.08,
+              -0.08,
+              -0.06
+            ],
+            "op_margin": [
+              0.36,
+              0.3,
+              0.24,
+              0.18,
+              0.12
+            ],
+            "wacc_path": [
+              0.12,
+              0.12,
+              0.12,
+              0.12,
+              0.12
+            ],
+            "fcf": [
+              1.717,
+              1.36,
+              1.001,
+              0.691,
+              0.433
+            ],
+            "pv_fcf": [
+              1.533,
+              1.084,
+              0.713,
+              0.439,
+              0.246
+            ],
+            "term_g": -0.02,
+            "sum_pv_fcf": 4.02,
+            "terminal_value": 3.03,
+            "pv_terminal": 1.72,
+            "op_ev": 5.74,
+            "cash": 5.5,
+            "net_debt": 0.0,
+            "special_assets": 2.0,
+            "total_equity": 13.24,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 270,
+            "dcf_per_share": 49.04,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.5,
+              2.0,
+              1.7,
+              1.5,
+              1.3
+            ],
+            "ev_fcf_multiple": [
+              5.0,
+              4.5,
+              4.0,
+              3.5,
+              3.3
+            ]
+          },
+          "revPerUnit": null
+        },
         "bear": {
-          "probability": 0.3,
+          "probability": 0.22,
           "expectedPerShare": 92.04,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -3314,8 +3413,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "022",
-        "footerTimestamp": "2026-05-27_15-31",
+        "footerVersion": "023",
+        "footerTimestamp": "2026-05-27_19-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
