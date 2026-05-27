@@ -197,16 +197,25 @@ function PageFooter({ memo, pageLabel, showDisclaimerPointer = true }) {
     : "NOT INVESTMENT ADVICE  ·  Not from a registered investment advisor  ·  AI-assisted analysis  ·  Author may hold positions";
   const footerStamp = `v${stamp.footerVersion} · ${stamp.footerTimestamp} · derived from ${stamp.canonicalJsx} (canonical)`;
   return (
-    // Page bottom margin matches memo.py's MARGIN_B = 0.55in.
-    // Background masks any column text that reaches into the footer band
-    // (NAUT v002 has unusually long probability_rationale paragraphs).
+    // Anchor at bottom: 0 so the masked band extends to the very edge of
+    // the page (no leak zone below the footer). Inner padding-bottom of
+    // 0.15in places the disclaimer line visually where it was before;
+    // padding-left/right of 1in match memo.py's MARGIN_L/R. Background
+    // covers full width so any content reaching into the bottom band is
+    // hidden, not just content inside the 1in margin column.
+    // Spec §3.5 A: footer band must mask any overflowing content all the
+    // way to the page edge — otherwise long glossary/disclaimer/narrative
+    // entries (e.g. NAUT, ZM v022 Page 5) leak below the disclaimer line.
     <div style={{
       position: 'absolute',
-      left: '1in',
-      right: '1in',
-      bottom: '0.15in',
+      left: 0,
+      right: 0,
+      bottom: 0,
       background: PALETTE.paper,
       paddingTop: '4pt',
+      paddingBottom: '0.15in',
+      paddingLeft: '1in',
+      paddingRight: '1in',
     }}>
       <div style={{
         borderTop: `0.4pt solid ${PALETTE.rule}`,
@@ -2662,10 +2671,10 @@ function Page5BackMatter({ memo }) {
 
       {/* PUSHBACK */}
       <SectionHeader label="PUSHBACK  ·  WHY THE BASE CASE IS TOO HARSH"
-                     marginTop="14pt" />
+                     marginTop="10pt" />
       <ThreeColGrid
         items={appendix.pushback}
-        rowGap="18pt"
+        rowGap="12pt"
         renderItem={(item, i) => (
           <div style={{ display: 'flex', gap: '6pt' }}>
             <div style={{
@@ -2733,23 +2742,23 @@ function Page5BackMatter({ memo }) {
       <SectionHeader label="DISCLAIMERS  ·  PLEASE READ BEFORE USING THIS DOCUMENT" />
       <ThreeColGrid
         items={disclaimers.map(renderDisclaimer)}
-        rowGap="22pt"
+        rowGap="10pt"
         renderItem={(d) => (
           <div>
             <div style={{
               fontFamily: FONT_SANS,
               fontWeight: 600,
-              fontSize: '9pt',
+              fontSize: '8.5pt',
               color: PALETTE.ink,
-              marginBottom: '4pt',
+              marginBottom: '3pt',
             }}>
               {d.h}
             </div>
             <div style={{
               fontFamily: FONT_SANS,
-              fontSize: '8pt',
+              fontSize: '7.5pt',
               color: PALETTE.text,
-              lineHeight: 1.4,
+              lineHeight: 1.35,
             }}>
               {d.p}
             </div>
@@ -2761,7 +2770,7 @@ function Page5BackMatter({ memo }) {
       <SectionHeader label="GLOSSARY  ·  CONCEPTS REFERENCED IN THE NARRATIVE" />
       <ThreeColGrid
         items={glossary}
-        rowGap="10pt"
+        rowGap="8pt"
         renderItem={(g) => (
           <div style={{
             fontFamily: FONT_SANS,

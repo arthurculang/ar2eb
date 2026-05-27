@@ -14,7 +14,8 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "joby-memo__v029__2026-05-23_21-14.pdf",
-      "size": "320 KB"
+      "size": "320 KB",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$10.3B",
@@ -984,7 +985,8 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "aur-memo__v023__2026-05-23_21-14.pdf",
-      "size": "317 KB"
+      "size": "317 KB",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$13.2B",
@@ -1953,7 +1955,8 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "lth-memo__v022__2026-05-23_21-14.pdf",
-      "size": "240 KB"
+      "size": "240 KB",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$7.46B",
@@ -2631,45 +2634,54 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF · SOTP",
-    "publishedISO": "2026-05-16",
-    "publishedLabel": "May 16, 2026",
+    "publishedISO": "2026-05-27",
+    "publishedLabel": "May 27, 2026",
     "pdf": {
-      "file": "zm-memo__v021__2026-05-23_21-14.pdf",
-      "size": "238 KB"
+      "file": "zm-memo__v022__2026-05-27_15-31.pdf",
+      "size": "237 KB",
+      "priorVersions": [
+        {
+          "version": "021",
+          "file": "zm-memo__v021__2026-05-23_21-14.pdf",
+          "size": "238 KB",
+          "asOfDate": "2026-05-16",
+          "spotPrice": 100.01
+        }
+      ]
     },
     "metrics": {
-      "mktCap": "$30.8B",
+      "mktCap": "$32.5B",
       "shares": "308M",
-      "cash": "$7.8B cash, zero debt · Anthropic stake (carried)"
+      "cash": "$7.9B cash, zero debt · Anthropic stake (carried)"
     },
     "spot": {
-      "price": 100.01,
-      "asOf": "May 16, 2026 close"
+      "price": 105.64,
+      "asOf": "May 27, 2026 close"
     },
     "expected": {
       "fair": 167.83,
-      "deltaPct": 67.8
+      "deltaPct": 58.9
     },
     "compound": [
       {
         "y": 5,
         "value": 252.6,
-        "mult": 2.53
+        "mult": 2.39
       },
       {
         "y": 10,
         "value": 380.63,
-        "mult": 3.81
+        "mult": 3.6
       },
       {
         "y": 15,
         "value": 574.28,
-        "mult": 5.74
+        "mult": 5.44
       },
       {
         "y": 20,
         "value": 867.53,
-        "mult": 8.67
+        "mult": 8.21
       }
     ],
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
@@ -2723,8 +2735,8 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
-    "thesis": "Zoom trades at $100.01 ($30.8B mkt cap) on TTM revenue of $4.87B, $1.7B FCF, and $7.8B cash & marketable securities — roughly 25% of market cap is just cash. On top of that sits an Anthropic equity stake carried at cost but worth $4-9B across scenarios, pending the public mark from Anthropic's expected IPO. The operating business is a stable cash machine (35-40% FCF margin) facing real but slow competition from Teams and Workspace. Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show your work.",
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Bear 30 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: May 27, 2026 close.",
+    "thesis": "Zoom trades at $105.64 ($32.5B mkt cap) on TTM revenue of ~$4.94B, $1.7B FCF, and $7.9B cash & marketable securities — roughly a quarter of market cap is just cash. Q1 FY27 confirmed the base case: revenue $1.24B (+5.5%, beat), FY27 guidance raised to $5.09B / $5.98 EPS, buyback expanded $1.0B — management returning capital while it waits for the Anthropic mark. On top sits an Anthropic equity stake carried at cost but worth $4-9B across scenarios, pending the IPO mark. The operating business is a stable cash machine (35-40% FCF margin) facing real but slow competition from Teams and Workspace. Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -7.5,
       "ipoMarker": "IPO Apr '19",
@@ -2907,12 +2919,12 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 167.83,
-        "upsidePct": 67.8
+        "upsidePct": 58.9
       },
       "market": {
-        "marketCapBillion": 30.8,
+        "marketCapBillion": 32.5,
         "sharesOutstandingMillion": 308.0,
-        "cashBillion": 7.8,
+        "cashBillion": 7.9,
         "netDebtBillion": 0.0
       },
       "scenarios": {
@@ -3302,8 +3314,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "021",
-        "footerTimestamp": "2026-05-23_21-14",
+        "footerVersion": "022",
+        "footerTimestamp": "2026-05-27_15-31",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -3319,7 +3331,8 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "naut-memo__v003__2026-05-23_21-14.pdf",
-      "size": "314 KB"
+      "size": "314 KB",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$302M",

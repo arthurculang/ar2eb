@@ -400,6 +400,91 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   text-transform: uppercase;
 }
 
+/* ---- prior versions disclosure (under PDF download CTA) ──────────────
+   Discloses historical immutable PDFs by version + as-of date + spot. */
+.prior-versions { margin-top: 16px; }
+.prior-versions summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--type-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  padding: 4px 0;
+}
+.prior-versions summary::-webkit-details-marker { display: none; }
+.prior-versions summary::before {
+  content: '▸';
+  display: inline-block;
+  font-size: 10px;
+  color: var(--muted-2);
+  transition: transform 120ms;
+}
+.prior-versions[open] summary::before { transform: rotate(90deg); }
+.prior-versions summary:hover { color: var(--accent-ink); }
+.prior-versions summary .mono { color: var(--muted); }
+.prior-versions-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  border-top: 0.5pt solid var(--rule);
+}
+.prior-versions-list li { border-bottom: 0.5pt solid var(--rule); }
+.prior-versions-list a {
+  display: grid;
+  grid-template-columns: 60px 1fr auto auto auto;
+  gap: 16px;
+  align-items: baseline;
+  padding: 12px 4px;
+  color: var(--ink-2);
+  font-size: 13px;
+  transition: background 120ms;
+}
+.prior-versions-list a:hover {
+  background: var(--paper-2);
+  color: var(--accent-ink);
+}
+.prior-versions-list .pv-version {
+  font-weight: 600;
+  color: var(--ink);
+}
+.prior-versions-list .pv-asof { color: var(--muted); }
+.prior-versions-list .pv-spot { color: var(--ink-2); }
+.prior-versions-list .pv-size {
+  color: var(--muted-2);
+  font-size: 11px;
+}
+.prior-versions-list .pv-arrow {
+  color: var(--muted-2);
+  font-size: 12px;
+}
+.prior-versions-list a:hover .pv-arrow { color: var(--accent); }
+.prior-versions-note {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 720px;
+}
+@media (max-width: 600px) {
+  .prior-versions-list a {
+    grid-template-columns: 48px 1fr auto;
+    grid-template-areas:
+      "v asof arrow"
+      "v spot size";
+    row-gap: 2px;
+  }
+  .prior-versions-list .pv-version { grid-area: v; align-self: center; }
+  .prior-versions-list .pv-asof { grid-area: asof; }
+  .prior-versions-list .pv-spot { grid-area: spot; }
+  .prior-versions-list .pv-size { grid-area: size; text-align: right; }
+  .prior-versions-list .pv-arrow { grid-area: arrow; align-self: center; }
+}
+
 /* ---- disclaimer block ---- */
 .disclaim {
   padding: 56px 0 24px;

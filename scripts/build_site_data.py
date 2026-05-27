@@ -136,6 +136,24 @@ def build_memo(ticker: str) -> dict:
             f"{ticker}: {pdf_file} not in public/memos/ — regenerate the PDF "
             f"(scripts/rebuild_all.py) before building site data")
 
+    # Prior versions — the same shape we accept in the YAML (stamp.prior_versions).
+    # We resolve each entry's PDF filename + size against public/memos/. If a
+    # historical PDF is missing on disk we drop the entry from the site
+    # listing (file would 404). Most recent first.
+    prior = []
+    for pv in (st.get("prior_versions") or []):
+        pv_file = f"{ticker}-memo__v{pv['version']}__{pv['timestamp']}.pdf"
+        pv_path = MEMOS_DIR / pv_file
+        if not pv_path.exists():
+            continue
+        prior.append({
+            "version": pv["version"],
+            "file": pv_file,
+            "size": human_size(pv_path),
+            "asOfDate": pv["asOfDate"],
+            "spotPrice": float(pv["spotPrice"]),
+        })
+
     mk = d["market"]
     return {
         "ticker": d["ticker"],
@@ -146,7 +164,7 @@ def build_memo(ticker: str) -> dict:
         "dcfType": dcf_display,
         "publishedISO": iso,
         "publishedLabel": lbl,
-        "pdf": {"file": pdf_file, "size": human_size(pdf_path)},
+        "pdf": {"file": pdf_file, "size": human_size(pdf_path), "priorVersions": prior},
         "metrics": {
             "mktCap": _fmt_b(mk['market_cap_billion']),
             "shares": fmt_shares(mk["shares_outstanding_million"]),

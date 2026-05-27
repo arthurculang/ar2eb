@@ -26,14 +26,14 @@ ticker: ZM
 company: Zoom Communications
 exchange: NASDAQ
 dcf_type: mature_company_sotp   # young_company | mature_company | mature_company_sotp
-date: 2026-05-16
-spot: 100.01
+date: 2026-05-27
+spot: 105.64
 
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 30.8
+  market_cap_billion: 32.5
   shares_outstanding_million: 308
-  cash_billion: 7.8           # ZM cash & marketable securities
+  cash_billion: 7.9           # ZM cash & marketable securities (post-Q1 FY27)
   net_debt_billion: 0.0
   extras:
     - "Anthropic stake (carried)"   # ZM-specific masthead extra; SOTP non-operating asset
@@ -46,14 +46,16 @@ central_question: >
   public?
 
 thesis: >
-  Zoom trades at $100.01 ($30.8B mkt cap) on TTM revenue of $4.87B, $1.7B FCF,
-  and $7.8B cash & marketable securities — roughly 25% of market cap is just
-  cash. On top of that sits an Anthropic equity stake carried at cost but
-  worth $4-9B across scenarios, pending the public mark from Anthropic's
-  expected IPO. The operating business is a stable cash machine (35-40% FCF
-  margin) facing real but slow competition from Teams and Workspace.
-  Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show
-  your work.
+  Zoom trades at $105.64 ($32.5B mkt cap) on TTM revenue of ~$4.94B, $1.7B
+  FCF, and $7.9B cash & marketable securities — roughly a quarter of market
+  cap is just cash. Q1 FY27 confirmed the base case: revenue $1.24B (+5.5%,
+  beat), FY27 guidance raised to $5.09B / $5.98 EPS, buyback expanded $1.0B
+  — management returning capital while it waits for the Anthropic mark. On
+  top sits an Anthropic equity stake carried at cost but worth $4-9B across
+  scenarios, pending the IPO mark. The operating business is a stable cash
+  machine (35-40% FCF margin) facing real but slow competition from Teams
+  and Workspace. Mature-Company DCF with SOTP framing below. Three
+  scenarios, weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:
@@ -448,11 +450,16 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: "021"
-  footer_timestamp: "2026-05-23_21-14"
+  footer_version: "022"
+  footer_timestamp: "2026-05-27_15-31"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "021"
-  pdf_timestamp: "2026-05-23_21-14"
+  pdf_version: "022"
+  pdf_timestamp: "2026-05-27_15-31"
+  prior_versions:
+  - version: "021"
+    timestamp: "2026-05-23_21-14"
+    asOfDate: "2026-05-16"
+    spotPrice: 100.01
 glossary:
 - term: AI Companion / Pro
   definition: ZM's AI assistant. Bundled free into paid plans (Companion) with a premium SKU (Pro). Bundle-not-separate-SKU strategy.
