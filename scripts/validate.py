@@ -39,7 +39,10 @@ import yaml
 
 REPO = Path(__file__).resolve().parent.parent
 TICKERS = ["joby", "aur", "lth", "zm", "naut"]
+# Required scenario keys (every ticker must have these four). `ultra_bear`
+# is an optional 5th — present on ZM, may be added to other tickers later.
 SCEN_KEYS = ["bear", "base", "bull", "ultra_bull"]
+SCEN_KEYS_ALL = ["ultra_bear", "bear", "base", "bull", "ultra_bull"]
 
 # Tolerances
 TOL_B = 0.05          # $B equity-bridge / EV
@@ -253,12 +256,12 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
     if abs(prob_sum - 1.0) > TOL_PROB:
         errors.append(f_err("probabilities sum", "1.000", f"{prob_sum:.3f}"))
 
-    # Scenario keys
+    # Scenario keys — the four required ones must exist; ultra_bear optional.
     missing = [k for k in SCEN_KEYS if k not in data["scenarios"]]
     if missing:
         errors.append(f_err("scenario keys", f"all of {SCEN_KEYS}", f"missing {missing}"))
 
-    for key in SCEN_KEYS:
+    for key in SCEN_KEYS_ALL:
         if key not in data["scenarios"]:
             continue
         sc = data["scenarios"][key]

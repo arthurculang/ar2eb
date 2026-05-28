@@ -84,10 +84,92 @@ page3_chart_config:
 scenarios:
 
   # ───────────────────────────────────────────────────────────────────────────
+  # ULTRA_BEAR — Cisco-Webex displacement pattern. Mirror of ultra_bull's
+  # joint-conjunction structure (4 things have to hit together). Captures the
+  # tail risk that the current "bear" doesn't: not slow erosion, but
+  # coordinated displacement + AI commoditization + Anthropic disappointment.
+  # ───────────────────────────────────────────────────────────────────────────
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.08
+    expected_per_share: 49.00
+    headline: "Cisco-Webex moment; -54% tail."
+    narrative:
+      - >
+        The ultra-bear is qualitatively different from bear's slow melt. It's
+        the Cisco Webex collaboration trajectory — revenue prints -10%, then
+        -13%, then -19% YoY as Teams reaches its tipping point. Four things
+        compound: enterprise NDR breaks 95% as Teams Premium pricing collapses
+        ZM's seat economics; AI Companion Pro fails to differentiate against
+        Copilot/Gemini bundled into M365 and Workspace; Phone + Contact Center
+        growth stalls below 15% (the diversification story dies); and
+        Anthropic IPOs at &lt;$400B (Pentagon supply-chain risk + AI-capex
+        moderation + cheap-AI commoditization), gutting the SOTP "hidden
+        asset" narrative.
+      - >
+        Revenue collapses from $4.87B to $3.6B over five years (-26%). Op
+        margin compresses from 36% to 12% as ZM spends defensively to retain
+        the enterprise base. Terminal growth turns negative (-2%, perpetual
+        decline). Op EV: $5.7B. Cash drains from $7.9B to ~$5.5B as
+        management runs $1.5B/yr buybacks for two years before halting when
+        the flywheel breaks. Anthropic stake floors at $2B (sub-$400B IPO).
+        SOTP equity: $13.2B ÷ 270M shares = ~$49/share — a -54% tail,
+        mirroring ultra_bull's +293% asymmetry.
+    probability_rationale: >
+      Joint conjunction of four independent fault lines: (a) Cisco-style
+      displacement curve materializes (-10/-13/-19% YoY) — historical base
+      rate of incumbent-SaaS displacement by hyperscaler bundles is real but
+      not the median outcome; (b) Anthropic IPO disappoints below $400B (vs
+      current $900B private mark) on AI-capex correction + Pentagon
+      supply-chain risk + cheap-AI commoditization; (c) AI Companion Pro
+      fails to monetize as Microsoft Copilot bundling collapses pricing
+      power for collaboration AI; (d) Phone + Contact Center growth stalls
+      below 15%, killing the diversification story. Each individually 15-30%
+      probability conditional on macro; joint conjunction at 8%. Lower than
+      bear's 22% because (i) Q1 FY27 just printed a beat with NDR ticking up
+      to 99% and AI Companion MAUs +184% YoY, and (ii) compound conjunction
+      requires all four to fire simultaneously over five years.
+
+    # Mature-Company SOTP DCF metrics — structural-decline risk premium baked
+    # into WACC (12% vs base 10%); Anthropic stake at low-IPO floor.
+    dcf_metrics:
+      cagr_5y: -5.8           # 5y revenue CAGR (%)
+      wacc: 0.120             # discount rate — structural-decline premium
+      anthropic_stake: 2.0    # Anthropic equity at sub-$400B IPO mark ($B)
+
+    # 5-year DCF path (FY26 → FY30) — Cisco-Webex displacement curve
+    dcf_path:
+      rev_b: 4.87                                  # starting revenue ($B FY25 actual)
+      rev_path:    [-0.02, -0.05, -0.08, -0.08, -0.06] # declining growth rates
+      op_margin:   [0.360, 0.300, 0.240, 0.180, 0.120] # defensive-spend margin crush
+      wacc_path:   [0.120, 0.120, 0.120, 0.120, 0.120]
+      fcf:         [1.717, 1.360, 1.001, 0.691, 0.433] # $B (= rev × margin)
+      pv_fcf:      [1.533, 1.084, 0.713, 0.439, 0.246]
+      term_g: -0.02                                 # perpetual decline, not zero
+      sum_pv_fcf: 4.02
+      terminal_value: 3.03                          # fcf × (1+g) / (wacc-g)
+      pv_terminal: 1.72                             # discounted 5y at 12%
+      op_ev: 5.74                                   # sum_pv_fcf + pv_terminal
+      cash: 5.5                                     # drained from $7.9B by defensive buybacks
+      net_debt: 0.0
+      special_assets: 2.0                           # Anthropic stake $B at low IPO floor
+      total_equity: 13.24                           # = op_ev + cash + special - debt
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 270                             # modest reduction from buybacks before halt
+      dcf_per_share: 49.04                          # 13.24 / 270
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [2.5, 2.0, 1.7, 1.5, 1.3]    # multiple compression
+      ev_fcf_multiple: [5.0, 4.5, 4.0, 3.5, 3.3]    # structural-decline multiple
+
+  # ───────────────────────────────────────────────────────────────────────────
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.30
+    probability: 0.22
     expected_per_share: 92.04
     headline: "Zoom without a core market."
     narrative:
@@ -450,12 +532,16 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 stamp:
-  footer_version: "022"
-  footer_timestamp: "2026-05-27_15-31"
+  footer_version: "023"
+  footer_timestamp: "2026-05-27_19-17"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "022"
-  pdf_timestamp: "2026-05-27_15-31"
+  pdf_version: "023"
+  pdf_timestamp: "2026-05-27_19-17"
   prior_versions:
+  - version: "022"
+    timestamp: "2026-05-27_15-31"
+    asOfDate: "2026-05-27"
+    spotPrice: 105.64
   - version: "021"
     timestamp: "2026-05-23_21-14"
     asOfDate: "2026-05-16"
