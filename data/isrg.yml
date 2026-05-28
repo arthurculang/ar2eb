@@ -70,6 +70,7 @@ chart_reference:
   history_revenue: [5.71, 6.22, 7.12, 8.35, 10.10]   # $B fiscal-year actuals
   history_fcf: [1.749, 0.958, 0.750, 1.304, 2.500]   # $B FCF
   history_ev_rev: [20.0, 13.0, 14.0, 17.0, 16.0]     # year-end EV/Revenue multiple
+  history_installed_base: [6730, 7544, 8606, 9902, 11106]  # da Vinci systems EoY (FY21-25)
 
 # ── Page 3 chart-aesthetic config ───────────────────────────────────────────
 page3_chart_config:
@@ -78,9 +79,8 @@ page3_chart_config:
   # Recurring revenue share (FY21-25). Drives the segments chart (ZM variant:
   # Recurring = revenue × split, Systems = remainder).
   hist_ent_split: [0.73, 0.74, 0.75, 0.76, 0.78]
-  chart6_title: "Equity value (Op EV + cash)"
-  chart6_footer: "Op EV  ·  cash"
-  chart6_type: "isrgSotp"
+  chart6_title: "Installed base — da Vinci systems (to FY30)"
+  chart6_type: "isrgInstalledBase"
 
 # ═════════════════════════════════════════════════════════════════════════════
 # SCENARIOS
@@ -508,12 +508,17 @@ appendix:
 
 # ── Footer stamp + Page-5 glossary ──────────────────────────────────────────
 stamp:
-  footer_version: "001"
-  footer_timestamp: "2026-05-27_19-30"
+  footer_version: "002"
+  footer_timestamp: "2026-05-28_05-26"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "001"
-  pdf_timestamp: "2026-05-27_19-30"
+  pdf_version: "002"
+  pdf_timestamp: "2026-05-28_05-26"
 
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-05-27_19-30"
+    asOfDate: "2026-05-27"
+    spotPrice: 436.64
 glossary:
 - term: da Vinci 5
   definition: ISRG's 5th-gen surgical robot (2024). Force feedback, on-board insufflation, Iris imaging. ~1,500 installed; driving +4% US utilization.

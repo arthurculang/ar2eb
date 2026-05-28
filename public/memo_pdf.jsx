@@ -2226,6 +2226,66 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
   const plotL = m.left, plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
 
+  // ISRG installed-base chart: historical da Vinci systems (FY21-25) + a
+  // per-scenario projection to FY30 (each scenario's dcfMetrics
+  // .installed_base_fy30). Surfaces the razor-blade engine — the installed
+  // base is the denominator that drives recurring revenue.
+  if (cfg.chart6Type === 'isrgInstalledBase') {
+    const ref = memo.page3.chartReference;
+    const yrs = ref.historyYears || [];
+    const hist = ref.historyInstalledBase || [];
+    const scnKeys = scnKeysFor(memo);
+    const totalX = yrs.length + 4;   // history + 5 projected years (FY26-30)
+    const xScale = mkLinearScale([-0.5, totalX + 0.5], [plotL, plotR]);
+    const fy30 = scnKeys.map(k => memo.print.scenarios[k].dcfMetrics.installed_base_fy30 || 0);
+    const yMax = Math.max(...hist, ...fy30) * 1.1;
+    const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+    const yTicks = [0, 5000, 10000, 15000, 20000, 25000]
+      .filter(v => v <= yMax).map(v => [v, `${(v / 1000).toFixed(0)}K`]);
+    const allLabels = [...yrs.map(y => String(y).slice(2)), '26', '27', '28', '29', '30'];
+    const xTicks = allLabels.map((l, i) => [i, l]);
+    const lastHistX = yrs.length - 1;
+    const lastHistY = hist[hist.length - 1];
+
+    return (
+      <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+           viewBox={`0 0 ${widthPt} ${heightPt}`}
+           style={{ display: 'block' }}>
+        <ChartTitle>{cfg.chart6Title}</ChartTitle>
+        <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
+        <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
+        {/* Historical installed base (solid ink) */}
+        <path d={pathD(hist.map((v, i) => [i, v]), xScale, yScale)}
+              stroke={PALETTE.ink} strokeWidth="1.6" fill="none" />
+        {/* Per-scenario projection from last history point to FY30 */}
+        {scnKeys.map((k, i) => (
+          <path key={`ib-${k}`}
+                d={pathD([[lastHistX, lastHistY], [totalX, fy30[i]]], xScale, yScale)}
+                stroke={SCN_COLORS[k]} strokeWidth="1.0" fill="none"
+                strokeDasharray="3,2" />
+        ))}
+        {/* End-of-line scenario labels at FY30 */}
+        {scnKeys.map((k, i) => (
+          <text key={`ibl-${k}`}
+                x={xScale(totalX) + 2} y={yScale(fy30[i]) + 2}
+                fontFamily={FONT_MONO} fontSize="5pt" fill={SCN_COLORS[k]}>
+            {(fy30[i] / 1000).toFixed(1)}K
+          </text>
+        ))}
+        <text x={plotL + 4} y={yScale(hist[0]) - 4}
+              fontFamily={FONT_SANS} fontSize="6pt" fill={PALETTE.muted}>
+          da Vinci systems
+        </text>
+        {cfg.chart6Footer && (
+          <text x={plotL} y={heightPt - 4}
+                fontFamily={FONT_SANS} fontSize="5.5pt" fill={PALETTE.muted}>
+            {cfg.chart6Footer}
+          </text>
+        )}
+      </svg>
+    );
+  }
+
   if (cfg.chart6Type === 'lthClubs') {
     const ref = memo.page3.chartReference;
     const yrs = ref.clubHistoryYears || [];
@@ -2762,7 +2822,7 @@ function Page5BackMatter({ memo }) {
 
       {/* PUSHBACK */}
       <SectionHeader label="PUSHBACK  ·  WHY THE BASE CASE IS TOO HARSH"
-                     marginTop="10pt" />
+                     marginTop="10pt" marginBottom="8pt" />
       <ThreeColGrid
         items={appendix.pushback}
         rowGap="12pt"
@@ -2802,7 +2862,7 @@ function Page5BackMatter({ memo }) {
       />
 
       {/* FALSIFICATION TRIGGERS */}
-      <SectionHeader label="FALSIFICATION TRIGGERS" />
+      <SectionHeader label="FALSIFICATION TRIGGERS" marginTop="10pt" marginBottom="8pt" />
       <ThreeColGrid
         items={appendix.triggers}
         rowGap="10pt"
@@ -2830,7 +2890,7 @@ function Page5BackMatter({ memo }) {
       />
 
       {/* DISCLAIMERS */}
-      <SectionHeader label="DISCLAIMERS  ·  PLEASE READ BEFORE USING THIS DOCUMENT" />
+      <SectionHeader label="DISCLAIMERS  ·  PLEASE READ BEFORE USING THIS DOCUMENT" marginTop="10pt" marginBottom="8pt" />
       <ThreeColGrid
         items={disclaimers.map(renderDisclaimer)}
         rowGap="10pt"
@@ -2858,7 +2918,7 @@ function Page5BackMatter({ memo }) {
       />
 
       {/* GLOSSARY */}
-      <SectionHeader label="GLOSSARY  ·  CONCEPTS REFERENCED IN THE NARRATIVE" />
+      <SectionHeader label="GLOSSARY  ·  CONCEPTS REFERENCED IN THE NARRATIVE" marginTop="10pt" marginBottom="8pt" />
       <ThreeColGrid
         items={glossary}
         rowGap="8pt"
