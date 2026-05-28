@@ -38,7 +38,7 @@ from typing import Any
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-TICKERS = ["joby", "aur", "lth", "zm", "naut"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg"]
 # Required scenario keys (every ticker must have these four). `ultra_bear`
 # is an optional 5th — present on ZM, may be added to other tickers later.
 SCEN_KEYS = ["bear", "base", "bull", "ultra_bull"]
@@ -138,20 +138,35 @@ def check_scenario(key: str, sc: dict, data: dict) -> tuple[list[str], list[str]
                 f"{dp['sum_pv_fcf']:+.3f}", f"{pv_sum:+.3f}",
                 "may indicate stale pv_fcf array"))
 
-    # ── WARN: terminal_value Gordon perpetuity ──────────────────────────
+    # ── WARN: terminal value — Gordon perpetuity OR exit-multiple ───────
+    # High-multiple compounders (e.g. ISRG) are valued on an exit multiple,
+    # not a Gordon perpetuity — a Gordon TV at a defensible terminal growth
+    # systematically undervalues them. When dcf_metrics.exit_fcf_multiple is
+    # present, validate terminal_value against (exit_mult × fcf[-1]) instead.
+    # Otherwise fall back to the Gordon perpetuity check.
     if dp.get("terminal_value", 0) and "fcf" in dp:
-        wt = dp["wacc_path"][-1]
-        g = dp["term_g"]
-        if wt > g:
-            tv_calc = dp["fcf"][-1] * (1 + g) / (wt - g)
-            # Mature: tight match expected. Young: undocumented formula.
-            tol = TOL_B * 4 if dcf_type != "young_company" else 50.0
+        exit_mult = dm.get("exit_fcf_multiple")
+        if exit_mult:
+            tv_calc = dp["fcf"][-1] * exit_mult
+            tol = TOL_B * 4
             if abs(tv_calc - dp["terminal_value"]) > tol:
                 warns.append(f_err(
-                    f"terminal_value (Gordon: fcf[-1]={dp['fcf'][-1]:+.3f} * "
-                    f"(1+{g}) / ({wt}-{g}))",
-                    f"{dp['terminal_value']:.3f}", f"{tv_calc:.3f}",
-                    "young-company uses different terminal formula" if dcf_type == "young_company" else ""))
+                    f"terminal_value (exit-multiple: fcf[-1]={dp['fcf'][-1]:+.3f} "
+                    f"× {exit_mult}×)",
+                    f"{dp['terminal_value']:.3f}", f"{tv_calc:.3f}"))
+        else:
+            wt = dp["wacc_path"][-1]
+            g = dp["term_g"]
+            if wt > g:
+                tv_calc = dp["fcf"][-1] * (1 + g) / (wt - g)
+                # Mature: tight match expected. Young: undocumented formula.
+                tol = TOL_B * 4 if dcf_type != "young_company" else 50.0
+                if abs(tv_calc - dp["terminal_value"]) > tol:
+                    warns.append(f_err(
+                        f"terminal_value (Gordon: fcf[-1]={dp['fcf'][-1]:+.3f} * "
+                        f"(1+{g}) / ({wt}-{g}))",
+                        f"{dp['terminal_value']:.3f}", f"{tv_calc:.3f}",
+                        "young-company uses different terminal formula" if dcf_type == "young_company" else ""))
 
     # ── ERROR: per-share = equity * 1000 / shares (spec §3.5 template) ──
     # Promoted from WARN to ERROR in Phase 2 cleanup. Young tickers

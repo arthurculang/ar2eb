@@ -90,15 +90,31 @@ function assumptionsRows(scn, dcfType, tamBillion) {
   }
   if (dcfType === 'mature_company') {
     const sign = m.cagr_5y >= 0 ? '+' : '';
-    return [
+    // Ticker-specific diagnostic row: LTH = SLB total, ISRG = installed
+    // base, exit-multiple names also surface the terminal multiple.
+    let diagRow;
+    if (m.slb_total_5y !== undefined) {
+      diagRow = ['5y SLB total ($B)', m.slb_total_5y.toFixed(2)];
+    } else if (m.installed_base_fy30 !== undefined) {
+      diagRow = ['Installed base FY30', m.installed_base_fy30.toLocaleString()];
+    } else {
+      diagRow = ['5y revenue CAGR (%)', `${sign}${m.cagr_5y.toFixed(1)}`];
+    }
+    const rows = [
       ['5y revenue CAGR (%)',     `${sign}${m.cagr_5y.toFixed(1)}`],
       ['Year-5 op margin (%)',    (p.op_margin[p.op_margin.length - 1] * 100).toFixed(1)],
       ['WACC (%)',                (m.wacc * 100).toFixed(1)],
       ['Terminal growth (%)',     (p.term_g * 100).toFixed(1)],
-      ['5y SLB total ($B)',       m.slb_total_5y.toFixed(2)],
+      diagRow,
       ['Starting revenue ($B)',   p.rev_b.toFixed(2)],
       ['Scenario probability (%)', probPct],
     ];
+    // If the diagnostic is an exit-multiple ticker, swap terminal-growth for
+    // the exit multiple (more informative than a display-only term_g).
+    if (m.exit_fcf_multiple !== undefined) {
+      rows[3] = ['Exit FCF multiple (×)', m.exit_fcf_multiple.toFixed(0)];
+    }
+    return rows;
   }
   // mature_company_sotp
   const signS = m.cagr_5y >= 0 ? '+' : '';
@@ -632,20 +648,22 @@ function ribbonMetrics(scnPrint, dcfType) {
       ['Prob',    `${pct}%`],
     ];
   }
-  if (dcfType === 'mature_company') {
-    return [
-      ['CAGR', `${m.cagr_5y >= 0 ? '+' : ''}${m.cagr_5y.toFixed(1)}%`],
-      ['WACC', `${(m.wacc * 100).toFixed(1)}%`],
-      ['SLB',  `$${m.slb_total_5y.toFixed(1)}B`],
-      ['Prob', `${pct}%`],
-    ];
+  // Mature tickers share CAGR + WACC + Prob; the 3rd slot is the
+  // ticker-specific diagnostic metric. Dispatch on whichever key is present
+  // so a new mature ticker only needs its own metric in the YAML, not a JSX
+  // branch: LTH = slb_total_5y, ZM = anthropic_stake, ISRG = installed_base_fy30.
+  const cagrCell = ['CAGR', `${m.cagr_5y >= 0 ? '+' : ''}${m.cagr_5y.toFixed(1)}%`];
+  const waccCell = ['WACC', `${(m.wacc * 100).toFixed(1)}%`];
+  const probCell = ['Prob', `${pct}%`];
+  let thirdCell;
+  if (m.slb_total_5y !== undefined) {
+    thirdCell = ['SLB', `$${m.slb_total_5y.toFixed(1)}B`];
+  } else if (m.installed_base_fy30 !== undefined) {
+    thirdCell = ['Base', `${(m.installed_base_fy30 / 1000).toFixed(1)}K`];
+  } else {
+    thirdCell = ['Anth', `$${(m.anthropic_stake ?? 0).toFixed(0)}B`];
   }
-  return [
-    ['CAGR', `${m.cagr_5y >= 0 ? '+' : ''}${m.cagr_5y.toFixed(1)}%`],
-    ['WACC', `${(m.wacc * 100).toFixed(1)}%`],
-    ['Anth', `$${(m.anthropic_stake ?? 0).toFixed(0)}B`],
-    ['Prob', `${pct}%`],
-  ];
+  return [cagrCell, waccCell, thirdCell, probCell];
 }
 
 function Page1Headline({ memo }) {
@@ -2306,7 +2324,7 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
       })}
       <text x={plotL} y={heightPt - 4}
             fontFamily={FONT_SANS} fontSize="5.5pt" fill={PALETTE.muted}>
-        Op EV  ·  cash  ·  Anthropic stake
+        {cfg.chart6Footer || 'Op EV  ·  cash  ·  special assets'}
       </text>
     </svg>
   );

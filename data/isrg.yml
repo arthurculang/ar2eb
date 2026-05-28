@@ -1,0 +1,529 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# isrg.yml — Intuitive Surgical (NASDAQ: ISRG)
+# Canonical data file per memo-spec §6c.16
+# Schema v003 · mature_company (Variant A — no SOTP)
+# ═════════════════════════════════════════════════════════════════════════════
+#
+# SCHEMA NOTES:
+#
+# 1. dcf_type = mature_company. ISRG's $9.5B cash is only ~6% of mkt cap —
+#    not material enough for SOTP framing (cf. ZM, where the Anthropic stake
+#    demands it). Plain operating-DCF + cash.
+# 2. dcf_path arrays are length-5 (5-year explicit DCF). rev_path stores
+#    GROWTH RATES; rev_b is the anchor (FY25 actual revenue).
+# 3. EXIT-MULTIPLE TERMINAL FRAMING. ISRG is a high-multiple compounder
+#    (~55× FCF). A Gordon perpetuity at a defensible terminal growth
+#    systematically undervalues it — the market correctly prices a
+#    multi-decade moat that a 5-year-explicit + Gordon tail truncates. So
+#    each scenario's terminal_value = exit_fcf_multiple × fcf[-1], with the
+#    multiple matching the scenario narrative (compression in the bears,
+#    sustained/expanding in the bulls). dcf_metrics.exit_fcf_multiple drives
+#    the validator's terminal-value check (instead of Gordon). term_g is
+#    retained as the long-run-growth display value but is NOT the terminal
+#    driver.
+# 4. dcf_metrics ticker-specific 3rd key: installed_base_fy30 (da Vinci
+#    systems at year 5) — the single most diagnostic number (placement
+#    velocity + geographic expansion + competitive displacement in one).
+# 5. Five scenarios (ultra_bear / bear / base / bull / ultra_bull) per the
+#    §6c.18 + §6c.11 pattern.
+# ═════════════════════════════════════════════════════════════════════════════
+
+# ── Ticker identity ─────────────────────────────────────────────────────────
+ticker: ISRG
+company: Intuitive Surgical
+exchange: NASDAQ
+dcf_type: mature_company
+date: 2026-05-27
+spot: 436.64
+
+# ── Market data ─────────────────────────────────────────────────────────────
+market:
+  market_cap_billion: 154.8
+  shares_outstanding_million: 355
+  cash_billion: 9.5               # cash + investments, Q1 2026 10-Q
+  net_debt_billion: 0.0           # zero long-term debt; pristine balance sheet
+  extras:
+    - "11,106 da Vinci installed base"   # masthead extra — the moat in one number
+
+# ── Page 1 narrative content ────────────────────────────────────────────────
+
+central_question: >
+  Is Intuitive's near-monopoly in soft-tissue surgical robotics — 11,100
+  da Vinci systems, ~78% recurring revenue — durable enough to outrun the
+  first credible competitors (Hugo, Ottava, Versius) and justify a 50-60×
+  forward P/FCF, or is this peak-platform pricing?
+
+thesis: >
+  Intuitive trades at $436.64 ($155B mkt cap) on FY25 revenue $10.1B, ~$2.5B
+  FCF, $9.5B cash, zero debt. Structurally enviable: ~78% recurring revenue,
+  an 11,106-system installed base growing 12% YoY, 17% procedure growth in
+  Q1 2026, and a 26-year moat no soft-tissue competitor has broken. But the
+  bear case is finally non-trivial: Medtronic Hugo won FDA urology clearance
+  Dec 2025, J&J Ottava is in trials, GLP-1s threaten bariatric volumes, and a
+  May 2026 Class I recall compressed the multiple. Mature-Company DCF with
+  exit-multiple terminal framing below; five scenarios, weighted; show your
+  work.
+
+# ── Page 3 chart-level reference data ───────────────────────────────────────
+chart_reference:
+  history_years: [2021, 2022, 2023, 2024, 2025]
+  history_revenue: [5.71, 6.22, 7.12, 8.35, 10.10]   # $B fiscal-year actuals
+  history_fcf: [1.749, 0.958, 0.750, 1.304, 2.500]   # $B FCF
+  history_ev_rev: [20.0, 13.0, 14.0, 17.0, 16.0]     # year-end EV/Revenue multiple
+
+# ── Page 3 chart-aesthetic config ───────────────────────────────────────────
+page3_chart_config:
+  segment_a: "Recurring"
+  segment_b: "Systems"
+  # Recurring revenue share (FY21-25). Drives the segments chart (ZM variant:
+  # Recurring = revenue × split, Systems = remainder).
+  hist_ent_split: [0.73, 0.74, 0.75, 0.76, 0.78]
+  chart6_title: "Equity value (Op EV + cash)"
+  chart6_footer: "Op EV  ·  cash"
+  chart6_type: "isrgSotp"
+
+# ═════════════════════════════════════════════════════════════════════════════
+# SCENARIOS
+# Mature-Company DCF: 5-year explicit period (FY26 → FY30). Exit-multiple
+# terminal value (see schema note 3). All dcf_path arrays are length-5.
+# Probabilities: ultra_bear 6 / bear 20 / base 52 / bull 16 / ultra_bull 6.
+# ═════════════════════════════════════════════════════════════════════════════
+
+scenarios:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # ULTRA_BEAR — coordinated shock, not slow erosion. Mirror of ultra_bull.
+  # ───────────────────────────────────────────────────────────────────────────
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.06
+    expected_per_share: 144.58
+    headline: "GLP-1s + Hugo + recall."
+    narrative:
+      - >
+        The ultra-bear is a coordinated shock, not slow erosion. GLP-1
+        penetration compresses US bariatric volumes 30-40% over five years;
+        Medtronic Hugo wins meaningful urology share (15-20% of new
+        placements by FY28) and gets general-surgery clearance FY27; J&J
+        Ottava launches commercially FY27 and takes 5-8% of share; and a
+        recurring quality/recall cycle (the May 2026 SureForm 30 Class I
+        recall was the warning shot) compresses operator confidence.
+      - >
+        Procedure growth collapses from 17% to ~6% by FY28, then 2%
+        terminal. Installed-base growth halves from 12% to 5-6%. System
+        ASPs compress as competitive bids force Xi-account discounting.
+        Operating margin compresses from 29% to 22% on defensive spend.
+        The multiple resets from ~55× to 28× FCF as the "monopoly
+        compounder" narrative breaks. Exit-multiple SOTP: $42B op EV +
+        $9.5B cash = $52B equity ÷ 358M shares = ~$145/share — a -67% tail.
+    probability_rationale: >
+      Joint conjunction of four largely independent risks: (a) GLP-1
+      bariatric drag at the high end (~30% volume compression); (b) Hugo +
+      Ottava combined share gain >15% over five years, requiring both to
+      scale and hospitals to multi-source; (c) a quality/recall cycle that
+      compresses the multiple structurally; (d) core-specialty (urology,
+      GYN) procedure mix maturing earlier than expected. Each individually
+      15-25% conditional on macro; joint at 6%. Lower than bear's 20%
+      because the conjunction requires multiple competitive moats to break
+      simultaneously over a 5-year window — faster than incumbents
+      typically lose share in regulated medtech (historical base rate:
+      8-12 years for a soft-tissue leader to lose 20+ points of share).
+
+    dcf_metrics:
+      cagr_5y: 5.2            # 5y revenue CAGR (%) — implied by rev_path
+      wacc: 0.105            # discount rate — structural-decline premium
+      installed_base_fy30: 14500   # da Vinci systems at FY30 (vs 11,106 today)
+      exit_fcf_multiple: 28   # terminal multiple — compression from ~55x
+
+    dcf_path:
+      rev_b: 10.10                                   # FY25 revenue ($B)
+      rev_path:    [0.10, 0.07, 0.04, 0.03, 0.02]    # decelerating growth rates
+      op_margin:   [0.285, 0.270, 0.250, 0.235, 0.220]
+      wacc_path:   [0.105, 0.105, 0.105, 0.105, 0.105]
+      fcf:         [2.50, 2.45, 2.30, 2.13, 1.98]    # $B
+      pv_fcf:      [2.262, 2.007, 1.705, 1.429, 1.202]
+      term_g: 0.020                                  # long-run growth (display only)
+      sum_pv_fcf: 8.61
+      terminal_value: 55.44                          # exit_fcf_multiple × fcf[-1] = 28 × 1.98
+      pv_terminal: 33.65
+      op_ev: 42.26                                   # sum_pv_fcf + pv_terminal
+      cash: 9.5
+      net_debt: 0.0
+      total_equity: 51.76                            # op_ev + cash - net_debt
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 358                              # modest buyback offset by SBC
+      dcf_per_share: 144.58                          # total_equity × 1000 / final_shares
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [12.0, 10.0, 8.5, 7.5, 7.0]
+      ev_fcf_multiple: [40.0, 36.0, 32.0, 29.0, 28.0]
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.20
+    expected_per_share: 277.34
+    headline: "Hugo lands; multiple resets to 33×."
+    narrative:
+      - >
+        The pessimistic case takes the new competitive landscape seriously.
+        Medtronic Hugo received FDA urology clearance in December 2025 — the
+        first credible US soft-tissue robotics competitor in 25 years.
+        General-surgery and GYN clearances follow within 18-24 months. Hugo
+        takes 8-12% of new system placements by FY28, primarily at
+        price-sensitive community hospitals. J&J Ottava enters trials and
+        erodes the "no real competition" narrative; CMR Versius takes
+        multi-specialty community share.
+      - >
+        Revenue growth decelerates from 23% (Q1 2026) toward 9% by FY28 and
+        5% by FY30 as urology + gynecology mature and general surgery
+        competes with Hugo on price. Operating margin holds at 27-29% — Hugo
+        competitive-bid gross-margin pressure offset by mix toward
+        higher-margin instruments/services on the installed base. The
+        multiple resets from ~55× toward 33× FCF.
+      - >
+        Exit-multiple SOTP: $88B op EV + $9.5B cash = $97B equity ÷ 350M
+        shares = ~$277/share on the model. Bear isn't existential — it's the
+        "growth-software-loses-its-premium" trajectory. ISRG remains a great
+        business at $277 (still ~28× FCF) — just not a great stock from $436.
+    probability_rationale: >
+      The competitive landscape genuinely shifted in late 2025: Hugo FDA
+      clearance + J&J Ottava trials + CMR Versius commercial launch. History
+      suggests soft-tissue medtech incumbents lose 5-15 points of share over
+      five years when the first credible competitor lands (analog: Stryker
+      Mako vs Zimmer ROSA in ortho — Stryker held but lost some new-account
+      placements). The 20% weight reflects that competitive entry has already
+      happened — higher base rate than the ultra-bear — but the multiple
+      compression from ~55× to 33× FCF is the dominant driver, more than the
+      revenue erosion. Q1 2026 procedure growth (17%) says we're not in this
+      scenario yet; bear is the FY27-28 thesis.
+
+    dcf_metrics:
+      cagr_5y: 9.3
+      wacc: 0.090
+      installed_base_fy30: 16500
+      exit_fcf_multiple: 33
+
+    dcf_path:
+      rev_b: 10.10
+      rev_path:    [0.15, 0.12, 0.09, 0.06, 0.05]
+      op_margin:   [0.290, 0.285, 0.280, 0.275, 0.270]
+      wacc_path:   [0.090, 0.090, 0.090, 0.090, 0.090]
+      fcf:         [2.85, 3.13, 3.32, 3.40, 3.50]
+      pv_fcf:      [2.615, 2.634, 2.564, 2.409, 2.275]
+      term_g: 0.025
+      sum_pv_fcf: 12.50
+      terminal_value: 115.50                         # 33 × 3.50
+      pv_terminal: 75.07
+      op_ev: 87.57
+      cash: 9.5
+      net_debt: 0.0
+      total_equity: 97.07
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 350
+      dcf_per_share: 277.34
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [13.5, 12.0, 10.5, 9.5, 9.0]
+      ev_fcf_multiple: [45.0, 42.0, 38.0, 35.0, 33.0]
+
+  # ───────────────────────────────────────────────────────────────────────────
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.52
+    expected_per_share: 494.74
+    headline: "Mid-teens growth; razor compounds."
+    narrative:
+      - >
+        The middle path: ISRG executes on a near-monopoly that erodes slowly,
+        not catastrophically. FY26 guidance (13.5-15.5% procedure growth)
+        lands at the midpoint. da Vinci 5 keeps ramping — ~1,500 systems
+        today toward ~5,000 by FY30 — driving a mid-single-digit utilization
+        tailwind on the installed base. Ion scales (39% Q1 procedure growth
+        annualizes toward 25-30%). Cardiac clearance opens a ~$2B incremental
+        specialty.
+      - >
+        Hugo lands, but at the pace medtech rollouts actually run: 5-7% of
+        new placements by FY28, mostly at community hospitals Intuitive was
+        always going to fight for. The installed-base switching cost —
+        surgeon retraining, instrument inventory, service contracts — keeps
+        the 11,000+ existing systems sticky. Recurring mix climbs from 78% to
+        81% as services and instruments compound on installed-base growth.
+      - >
+        Revenue: $10.1B → ~$17B by FY30 (~12% CAGR). Operating margin expands
+        from 29% to 32% on Norcross + Mexicali manufacturing scale. FCF: $2.5B
+        → ~$4.9B. The multiple compresses modestly from ~55× to ~45× FCF as
+        growth decelerates. Exit-multiple SOTP: $165B op EV + $9.5B cash =
+        $174B equity ÷ 352M shares = ~$495/share. Modest upside from spot —
+        what a mature compounder offers when the moat is already mostly priced.
+    probability_rationale: >
+      Modal outcome. Q1 2026 just printed 23% revenue and 17% procedure
+      growth — the base case is in motion, not a future call. FY26 guidance
+      (procedures 13.5-15.5%, gross margin 67.5-68.5%, opex 11-14%) implies a
+      slight deceleration but no inflection. Hugo competitive entry is real
+      but slow — 18-24 months to general-surgery clearance, 3-5 years to
+      material share. da Vinci 5 reaccelerates installed-base utilization.
+      The 52% weight is higher than ZM's base (50%) because (i) Q1 2026
+      actuals already validate the trajectory and (ii) the moat (surgeon
+      training, switching cost, FDA data) provides more inertia than ZM's
+      seat-based SaaS contracts.
+
+    dcf_metrics:
+      cagr_5y: 12.0
+      wacc: 0.080
+      installed_base_fy30: 18500
+      exit_fcf_multiple: 45
+
+    dcf_path:
+      rev_b: 10.10
+      rev_path:    [0.16, 0.14, 0.12, 0.10, 0.08]
+      op_margin:   [0.295, 0.305, 0.315, 0.320, 0.320]
+      wacc_path:   [0.080, 0.080, 0.080, 0.080, 0.080]
+      fcf:         [3.20, 3.70, 4.20, 4.55, 4.85]
+      pv_fcf:      [2.963, 3.172, 3.334, 3.344, 3.301]
+      term_g: 0.030
+      sum_pv_fcf: 16.11
+      terminal_value: 218.25                         # 45 × 4.85
+      pv_terminal: 148.54
+      op_ev: 164.65
+      cash: 9.5
+      net_debt: 0.0
+      total_equity: 174.15
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 352
+      dcf_per_share: 494.74
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [15.0, 14.5, 14.0, 13.5, 13.0]
+      ev_fcf_multiple: [52.0, 50.0, 48.0, 46.0, 45.0]
+
+  # ───────────────────────────────────────────────────────────────────────────
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.16
+    expected_per_share: 800.86
+    headline: "dV5 + general surgery wins; 52× holds."
+    narrative:
+      - >
+        The bull case is that da Vinci 5 unlocks the general-surgery TAM —
+        the unfought ~70% of US soft-tissue procedures still done open or
+        laparoscopically — AND ISRG defends share against Hugo. dV5's force
+        feedback, on-board insufflation, and Iris imaging hit critical mass
+        in 2027-28; placements accelerate to 2,500+/yr. Ion sustains 30%+
+        procedure growth toward a $1.5B revenue line. Cardiac clearance
+        translates to real volume. Japan, Korea, Brazil penetrate at pace.
+      - >
+        Revenue accelerates above guidance: 17-18% CAGR through FY28,
+        moderating to 12% by FY30. Operating margin expands toward 34% as
+        the high-margin instrument/service razor outpaces systems. FCF
+        reaches ~$6.9B by FY30. The market doesn't compress the multiple
+        because growth re-accelerates — ~52× FCF sustains. Exit-multiple
+        SOTP: $269B op EV + $9.5B cash = $279B equity ÷ 348M shares =
+        ~$801/share. +83% from spot.
+      - >
+        The bull doesn't require Hugo to fail — it requires da Vinci 5 to be
+        meaningfully better than Hugo at general surgery, which is what
+        surgeons who've used both report so far. Platform width (cardiac,
+        general, GYN, urology, thoracic, bariatric, hernia, colorectal) is
+        the moat: Hugo competes in 1-2 specialties at a time.
+    probability_rationale: >
+      da Vinci 5 captures general surgery (vs Hugo's urology-first rollout)
+      AND ISRG holds 85%+ of incremental US placements through FY28 AND Ion
+      scales to ~$1.5B revenue AND the multiple sustains at ~52× FCF. The 16%
+      weight is reasonable because (a) Q1 2026 dV5 placement velocity (232 vs
+      147 prior year) supports the dV5 thesis, (b) general surgery is the
+      largest unfought TAM and ISRG has a structural advantage, but (c)
+      sustained 50×+ multiples require continued category leadership that
+      competitive entry directly threatens. Not the base case but a real
+      possibility — especially if the May 2026 recall stays contained to one
+      product line.
+
+    dcf_metrics:
+      cagr_5y: 15.0
+      wacc: 0.075
+      installed_base_fy30: 21000
+      exit_fcf_multiple: 52
+
+    dcf_path:
+      rev_b: 10.10
+      rev_path:    [0.18, 0.17, 0.15, 0.13, 0.12]
+      op_margin:   [0.305, 0.320, 0.330, 0.340, 0.345]
+      wacc_path:   [0.075, 0.075, 0.075, 0.075, 0.075]
+      fcf:         [3.65, 4.55, 5.45, 6.15, 6.85]
+      pv_fcf:      [3.395, 3.937, 4.387, 4.605, 4.771]
+      term_g: 0.035
+      sum_pv_fcf: 21.09
+      terminal_value: 356.20                         # 52 × 6.85
+      pv_terminal: 248.11
+      op_ev: 269.20
+      cash: 9.5
+      net_debt: 0.0
+      total_equity: 278.70
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 348
+      dcf_per_share: 800.86
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [17.0, 17.5, 18.0, 18.0, 17.5]
+      ev_fcf_multiple: [55.0, 55.0, 54.0, 53.0, 52.0]
+
+  # ───────────────────────────────────────────────────────────────────────────
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.06
+    expected_per_share: 1259.91
+    headline: "Outside-OR + China + AI; 62× re-rate."
+    narrative:
+      - >
+        The ultra-bull is ISRG inflecting on three independent axes at once.
+        (1) Outside-OR / clinic deployment: dV5 compact configurations enable
+        ambulatory-surgical-center placements at $500K-1M (vs $2.5M
+        traditional), tripling the addressable TAM beyond hospital ORs. (2)
+        China + India scale: China revenue grows from <$500M to >$3B by FY30
+        as the Fosun JV penetrates tier-2/3 cities; India localized
+        manufacturing enables local-market price points. (3) AI / autonomous
+        surgery: ISRG's data moat (17M+ recorded procedures) becomes training
+        data for semi-autonomous assistance — a new SaaS-like recurring line.
+      - >
+        Revenue compounds at ~19% CAGR — $10.1B → $25B+ by FY30. Operating
+        margin reaches 36-37% as 90%+-gross-margin software/AI blends in.
+        FCF: $2.5B → ~$9B. The market re-rates to growth-software multiples:
+        ~62× FCF on a $9B base. Exit-multiple SOTP: $425B op EV + $9.5B cash
+        = $435B equity ÷ 345M shares = ~$1,260/share. +189% from spot. This
+        is the scenario where ISRG stops being "great mature medtech" and
+        becomes "the SaaS-like platform for procedures."
+    probability_rationale: >
+      Joint conditional: outside-OR / ASC deployment scales (40% conditional
+      on a dV5 compact form factor) AND China crosses $2B by FY30 (30%
+      conditional on no geopolitical catastrophe) AND AI / autonomous-surgery
+      monetization gets real (25% conditional on an FDA approval pathway for
+      semi-autonomous assist) AND the multiple re-rates to 60-65× FCF (40%).
+      Joint at 5-7%, reflected at 6%. Tail of tails — but ISRG has the
+      installed base, the data moat, and the cash to actually attempt all
+      three simultaneously.
+
+    dcf_metrics:
+      cagr_5y: 18.8
+      wacc: 0.070
+      installed_base_fy30: 25000
+      exit_fcf_multiple: 62
+
+    dcf_path:
+      rev_b: 10.10
+      rev_path:    [0.20, 0.20, 0.19, 0.18, 0.17]
+      op_margin:   [0.315, 0.335, 0.355, 0.370, 0.375]
+      wacc_path:   [0.070, 0.070, 0.070, 0.070, 0.070]
+      fcf:         [3.82, 4.88, 6.20, 7.55, 9.05]
+      pv_fcf:      [3.570, 4.262, 5.061, 5.760, 6.453]
+      term_g: 0.040
+      sum_pv_fcf: 25.11
+      terminal_value: 561.10                         # 62 × 9.05
+      pv_terminal: 400.06
+      op_ev: 425.17
+      cash: 9.5
+      net_debt: 0.0
+      total_equity: 434.67
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 345
+      dcf_per_share: 1259.91
+      distress: 0.0
+
+    chart_data:
+      ev_rev_multiple: [18.0, 19.5, 21.0, 22.5, 23.0]
+      ev_fcf_multiple: [58.0, 60.0, 61.0, 62.0, 62.0]
+
+# ── Historical price data ───────────────────────────────────────────────────
+# Quarterly closes (split-adjusted). Generator appends (0.0, spot) as final
+# point. x = years offset from today (negative = past).
+historical_prices:
+  ipo_marker: "IPO Jun '00"
+  x_min: -5.0
+  points:
+    - [-4.92, 280]
+    - [-4.42, 310]
+    - [-3.92, 280]
+    - [-3.42, 220]
+    - [-2.92, 195]
+    - [-2.42, 245]
+    - [-1.92, 270]
+    - [-1.42, 340]
+    - [-1.08, 380]
+    - [-0.83, 425]
+    - [-0.58, 555]
+    - [-0.42, 510]
+    - [-0.17, 450]
+
+# ── Page 1 weighting rationale (one line per scenario) ──────────────────────
+weighting_rationale:
+  - label: "Ultra Bear 6%"
+    body: "GLP-1s + Hugo + Ottava + recall cycle compound; multiple compresses to ~28× FCF."
+  - label: "Bear 20%"
+    body: "Hugo lands at 8-12% of new placements; multiple resets to ~33×; revenue decelerates to 5% by FY30."
+  - label: "Base 52%"
+    body: "Mid-teens growth holds; dV5 reaccelerates utilization; recurring revenue compounds; multiple ~45×."
+  - label: "Bull 16%"
+    body: "dV5 wins general-surgery TAM; Ion + cardiac add growth; multiple sustains at ~52×."
+  - label: "Ultra Bull 6%"
+    body: "Outside-OR + China + AI inflect simultaneously; multiple re-rates to ~62×."
+
+# ── Page 3 / Page 4 ticker-specific text ────────────────────────────────────
+page3:
+  subtitle: "FY21–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q1 2026 10-Q, FDA filings, medtech competitive analysis"
+  sources:  "Sources: ISRG 10-K FY25, Q1 2026 8-K/10-Q, Medtronic Hugo FDA clearance Dec 2025, J&J Ottava trial filings, surgical-robotics TAM analysis. "
+
+# ── Page 4 appendix sections ────────────────────────────────────────────────
+appendix:
+  pushback:
+    - label: "Moat is real and measurable."
+      body: "11,106 installed base + 17M procedures + 26-year FDA record. Hugo has <50 US systems, one specialty cleared. The asymmetry is enormous."
+    - label: "Razor-blade is the business."
+      body: "78% of FY25 revenue recurring (instruments + service). Compounds on installed-base growth even if system pricing compresses."
+    - label: "Balance sheet is a fortress."
+      body: "$9.5B cash, zero debt, $4B buyback authorization. Q1 2026 retired $1.1B of stock. Capital return finally at scale."
+    - label: "da Vinci 5 is reaccelerating."
+      body: "Q1 2026: 232 dV5 placements vs 147 prior year (+58%). US utilization +4%. Force feedback is a step-function, not incremental."
+    - label: "Procedure growth is structural."
+      body: "17% Q1 procedure growth on already-trained surgeons. Grows with aging + minimally-invasive penetration. Hard to bend the curve."
+  triggers:
+    - label: "Bear validation"
+      body: "Hugo wins > 15% of US new placements  ·  dV5 placements < 200/qtr  ·  procedure growth < 10%  ·  another Class I recall on a core line  ·  forward P/FCF < 30×"
+    - label: "Bull validation"
+      body: "dV5 placements > 300/qtr  ·  Ion procedure growth > 40%  ·  cardiac volume > 5,000/yr  ·  general-surgery share grows materially  ·  forward P/FCF > 50×"
+    - label: "Reframe needed"
+      body: "If Stryker / J&J announce a credible cross-platform alliance against ISRG, OR if ISRG acquires a major outside-OR or AI surgical asset (>$5B deal), the moat / TAM framing changes materially"
+
+# ── Footer stamp + Page-5 glossary ──────────────────────────────────────────
+stamp:
+  footer_version: "001"
+  footer_timestamp: "2026-05-27_19-30"
+  canonical_jsx: "public/memo_pdf.jsx"
+  pdf_version: "001"
+  pdf_timestamp: "2026-05-27_19-30"
+
+glossary:
+- term: da Vinci 5
+  definition: ISRG's 5th-gen surgical robot (2024). Force feedback, on-board insufflation, Iris imaging. ~1,500 installed; driving +4% US utilization.
+- term: Ion
+  definition: ISRG's endoluminal robot for minimally invasive lung biopsies. Q1 2026 procedure growth +39% YoY. Separate installed base.
+- term: Hugo (Medtronic)
+  definition: Medtronic's competing soft-tissue robot. FDA-cleared Dec 2025 for urology — first credible US soft-tissue competitor in 25 years.
+- term: Ottava (J&J)
+  definition: J&J's competing soft-tissue robot. In trials FY26; commercial launch expected FY27-28. Adjacency to J&J's Monarch.
+- term: Installed base
+  definition: da Vinci systems in service worldwide. 11,106 at Dec 2025 (+12% YoY). The denominator that drives recurring-revenue compounding.
+- term: Recurring revenue mix
+  definition: Revenue from instruments, accessories, and service (vs one-time systems). FY25 ~78%. The razor-blade lock-in.
