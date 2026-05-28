@@ -1067,9 +1067,9 @@ const MEMOS = [
         "prob": 3,
         "price": 20.76,
         "headline": "Dominant US; software-take-rate.",
-        "why": "Tail of tails: commercial launch on schedule (50%) AND 25%+ TAM share by 2036 (30% conditional on launch) AND software-take-rate model wins (40%) AND multiple expansion to software/aerospace-hybrid premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
+        "why": "Tail of tails: commercial launch on schedule (50%) AND Aurora Driver becomes the default software on PACCAR/Volvo fleets reaching ~20% of autonomous miles / ~6–7% take-rate share of TAM by 2036 (30% conditional on launch) AND software-take-rate model wins (40%) AND multiple expansion to software/aerospace-hybrid premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
         "what": [
-          "The ultra-bull case is that Aurora becomes the dominant US autonomous trucking platform AND wins the software-take-rate game. Commercial launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by 2028 + 25%+ TAM share by 2036 + software-take-rate model wins (Aurora monetizes via per-mile revenue share with PACCAR/Volvo/ FedEx fleet partners rather than capex-heavy direct ownership). By FY36 Aurora generates $8B+ revenue at 40%+ software-like margins.",
+          "The ultra-bull case is that Aurora becomes the dominant US autonomous trucking platform AND wins the software-take-rate game. Commercial launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by 2028 + Aurora Driver running on ~20% of US autonomous long-haul miles by 2036, monetized via per-mile take-rate (~6–7% revenue-share of TAM) with PACCAR/Volvo/FedEx fleet partners rather than capex-heavy direct ownership. By FY36 Aurora generates $8B+ revenue at 40%+ software-like margins.",
           "Compound conditional: each piece individually plausible at 50-65%; joint at 3-4%. Reflected here at 3%. This is the scenario where Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but 'Aurora wins the autonomy market.' Contributes $3.00 to weighted ($100 × 3%) — the asymmetric tail."
         ]
       }
@@ -1717,7 +1717,7 @@ const MEMOS = [
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 25.0,
+            "tam_share": 6.6,
             "p_fail": 3,
             "s2c": 2.5
           },
@@ -4394,6 +4394,735 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "003",
         "footerTimestamp": "2026-05-23_21-14",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "ISRG",
+    "slug": "isrg",
+    "company": "Intuitive Surgical",
+    "exchange": "NASDAQ",
+    "category": "fcf-plus-plus-growth",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-05-27",
+    "publishedLabel": "May 27, 2026",
+    "pdf": {
+      "file": "isrg-memo__v001__2026-05-27_19-30.pdf",
+      "size": "260 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$154.8B",
+      "shares": "355M",
+      "cash": "$9.5B cash, zero debt · 11,106 da Vinci installed base"
+    },
+    "spot": {
+      "price": 436.64,
+      "asOf": "May 27, 2026 close"
+    },
+    "expected": {
+      "fair": 525.14,
+      "deltaPct": 20.3
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 767.63,
+        "mult": 1.76
+      },
+      {
+        "y": 10,
+        "value": 1123.07,
+        "mult": 2.57
+      },
+      {
+        "y": 15,
+        "value": 1644.63,
+        "mult": 3.77
+      },
+      {
+        "y": 20,
+        "value": 2410.7,
+        "mult": 5.52
+      }
+    ],
+    "question": "Is Intuitive's near-monopoly in soft-tissue surgical robotics — 11,100 da Vinci systems, ~78% recurring revenue — durable enough to outrun the first credible competitors (Hugo, Ottava, Versius) and justify a 50-60× forward P/FCF, or is this peak-platform pricing?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 6,
+        "price": 144.58,
+        "headline": "GLP-1s + Hugo + recall.",
+        "why": "Joint conjunction of four largely independent risks: (a) GLP-1 bariatric drag at the high end (~30% volume compression); (b) Hugo + Ottava combined share gain >15% over five years, requiring both to scale and hospitals to multi-source; (c) a quality/recall cycle that compresses the multiple structurally; (d) core-specialty (urology, GYN) procedure mix maturing earlier than expected. Each individually 15-25% conditional on macro; joint at 6%. Lower than bear's 20% because the conjunction requires multiple competitive moats to break simultaneously over a 5-year window — faster than incumbents typically lose share in regulated medtech (historical base rate: 8-12 years for a soft-tissue leader to lose 20+ points of share).",
+        "what": [
+          "The ultra-bear is a coordinated shock, not slow erosion. GLP-1 penetration compresses US bariatric volumes 30-40% over five years; Medtronic Hugo wins meaningful urology share (15-20% of new placements by FY28) and gets general-surgery clearance FY27; J&J Ottava launches commercially FY27 and takes 5-8% of share; and a recurring quality/recall cycle (the May 2026 SureForm 30 Class I recall was the warning shot) compresses operator confidence.",
+          "Procedure growth collapses from 17% to ~6% by FY28, then 2% terminal. Installed-base growth halves from 12% to 5-6%. System ASPs compress as competitive bids force Xi-account discounting. Operating margin compresses from 29% to 22% on defensive spend. The multiple resets from ~55× to 28× FCF as the \"monopoly compounder\" narrative breaks. Exit-multiple SOTP: $42B op EV + $9.5B cash = $52B equity ÷ 358M shares = ~$145/share — a -67% tail."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 20,
+        "price": 277.34,
+        "headline": "Hugo lands; multiple resets to 33×.",
+        "why": "The competitive landscape genuinely shifted in late 2025: Hugo FDA clearance + J&J Ottava trials + CMR Versius commercial launch. History suggests soft-tissue medtech incumbents lose 5-15 points of share over five years when the first credible competitor lands (analog: Stryker Mako vs Zimmer ROSA in ortho — Stryker held but lost some new-account placements). The 20% weight reflects that competitive entry has already happened — higher base rate than the ultra-bear — but the multiple compression from ~55× to 33× FCF is the dominant driver, more than the revenue erosion. Q1 2026 procedure growth (17%) says we're not in this scenario yet; bear is the FY27-28 thesis.",
+        "what": [
+          "The pessimistic case takes the new competitive landscape seriously. Medtronic Hugo received FDA urology clearance in December 2025 — the first credible US soft-tissue robotics competitor in 25 years. General-surgery and GYN clearances follow within 18-24 months. Hugo takes 8-12% of new system placements by FY28, primarily at price-sensitive community hospitals. J&J Ottava enters trials and erodes the \"no real competition\" narrative; CMR Versius takes multi-specialty community share.",
+          "Revenue growth decelerates from 23% (Q1 2026) toward 9% by FY28 and 5% by FY30 as urology + gynecology mature and general surgery competes with Hugo on price. Operating margin holds at 27-29% — Hugo competitive-bid gross-margin pressure offset by mix toward higher-margin instruments/services on the installed base. The multiple resets from ~55× toward 33× FCF."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 52,
+        "price": 494.74,
+        "headline": "Mid-teens growth; razor compounds.",
+        "why": "Modal outcome. Q1 2026 just printed 23% revenue and 17% procedure growth — the base case is in motion, not a future call. FY26 guidance (procedures 13.5-15.5%, gross margin 67.5-68.5%, opex 11-14%) implies a slight deceleration but no inflection. Hugo competitive entry is real but slow — 18-24 months to general-surgery clearance, 3-5 years to material share. da Vinci 5 reaccelerates installed-base utilization. The 52% weight is higher than ZM's base (50%) because (i) Q1 2026 actuals already validate the trajectory and (ii) the moat (surgeon training, switching cost, FDA data) provides more inertia than ZM's seat-based SaaS contracts.",
+        "what": [
+          "The middle path: ISRG executes on a near-monopoly that erodes slowly, not catastrophically. FY26 guidance (13.5-15.5% procedure growth) lands at the midpoint. da Vinci 5 keeps ramping — ~1,500 systems today toward ~5,000 by FY30 — driving a mid-single-digit utilization tailwind on the installed base. Ion scales (39% Q1 procedure growth annualizes toward 25-30%). Cardiac clearance opens a ~$2B incremental specialty.",
+          "Hugo lands, but at the pace medtech rollouts actually run: 5-7% of new placements by FY28, mostly at community hospitals Intuitive was always going to fight for. The installed-base switching cost — surgeon retraining, instrument inventory, service contracts — keeps the 11,000+ existing systems sticky. Recurring mix climbs from 78% to 81% as services and instruments compound on installed-base growth."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 16,
+        "price": 800.86,
+        "headline": "dV5 + general surgery wins; 52× holds.",
+        "why": "da Vinci 5 captures general surgery (vs Hugo's urology-first rollout) AND ISRG holds 85%+ of incremental US placements through FY28 AND Ion scales to ~$1.5B revenue AND the multiple sustains at ~52× FCF. The 16% weight is reasonable because (a) Q1 2026 dV5 placement velocity (232 vs 147 prior year) supports the dV5 thesis, (b) general surgery is the largest unfought TAM and ISRG has a structural advantage, but (c) sustained 50×+ multiples require continued category leadership that competitive entry directly threatens. Not the base case but a real possibility — especially if the May 2026 recall stays contained to one product line.",
+        "what": [
+          "The bull case is that da Vinci 5 unlocks the general-surgery TAM — the unfought ~70% of US soft-tissue procedures still done open or laparoscopically — AND ISRG defends share against Hugo. dV5's force feedback, on-board insufflation, and Iris imaging hit critical mass in 2027-28; placements accelerate to 2,500+/yr. Ion sustains 30%+ procedure growth toward a $1.5B revenue line. Cardiac clearance translates to real volume. Japan, Korea, Brazil penetrate at pace.",
+          "Revenue accelerates above guidance: 17-18% CAGR through FY28, moderating to 12% by FY30. Operating margin expands toward 34% as the high-margin instrument/service razor outpaces systems. FCF reaches ~$6.9B by FY30. The market doesn't compress the multiple because growth re-accelerates — ~52× FCF sustains. Exit-multiple SOTP: $269B op EV + $9.5B cash = $279B equity ÷ 348M shares = ~$801/share. +83% from spot."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 6,
+        "price": 1259.91,
+        "headline": "Outside-OR + China + AI; 62× re-rate.",
+        "why": "Joint conditional: outside-OR / ASC deployment scales (40% conditional on a dV5 compact form factor) AND China crosses $2B by FY30 (30% conditional on no geopolitical catastrophe) AND AI / autonomous-surgery monetization gets real (25% conditional on an FDA approval pathway for semi-autonomous assist) AND the multiple re-rates to 60-65× FCF (40%). Joint at 5-7%, reflected at 6%. Tail of tails — but ISRG has the installed base, the data moat, and the cash to actually attempt all three simultaneously.",
+        "what": [
+          "The ultra-bull is ISRG inflecting on three independent axes at once. (1) Outside-OR / clinic deployment: dV5 compact configurations enable ambulatory-surgical-center placements at $500K-1M (vs $2.5M traditional), tripling the addressable TAM beyond hospital ORs. (2) China + India scale: China revenue grows from <$500M to >$3B by FY30 as the Fosun JV penetrates tier-2/3 cities; India localized manufacturing enables local-market price points. (3) AI / autonomous surgery: ISRG's data moat (17M+ recorded procedures) becomes training data for semi-autonomous assistance — a new SaaS-like recurring line.",
+          "Revenue compounds at ~19% CAGR — $10.1B → $25B+ by FY30. Operating margin reaches 36-37% as 90%+-gross-margin software/AI blends in. FCF: $2.5B → ~$9B. The market re-rates to growth-software multiples: ~62× FCF on a $9B base. Exit-multiple SOTP: $425B op EV + $9.5B cash = $435B equity ÷ 345M shares = ~$1,260/share. +189% from spot. This is the scenario where ISRG stops being \"great mature medtech\" and becomes \"the SaaS-like platform for procedures.\""
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 6 / Bear 20 / Base 52 / Bull 16 / Ultra Bull 6. Spot price reference: May 27, 2026 close.",
+    "thesis": "Intuitive trades at $436.64 ($155B mkt cap) on FY25 revenue $10.1B, ~$2.5B FCF, $9.5B cash, zero debt. Structurally enviable: ~78% recurring revenue, an 11,106-system installed base growing 12% YoY, 17% procedure growth in Q1 2026, and a 26-year moat no soft-tissue competitor has broken. But the bear case is finally non-trivial: Medtronic Hugo won FDA urology clearance Dec 2025, J&J Ottava is in trials, GLP-1s threaten bariatric volumes, and a May 2026 Class I recall compressed the multiple. Mature-Company DCF with exit-multiple terminal framing below; five scenarios, weighted; show your work.",
+    "historicalPrices": {
+      "xMin": -5.0,
+      "ipoMarker": "IPO Jun '00",
+      "points": [
+        [
+          -4.92,
+          280.0
+        ],
+        [
+          -4.42,
+          310.0
+        ],
+        [
+          -3.92,
+          280.0
+        ],
+        [
+          -3.42,
+          220.0
+        ],
+        [
+          -2.92,
+          195.0
+        ],
+        [
+          -2.42,
+          245.0
+        ],
+        [
+          -1.92,
+          270.0
+        ],
+        [
+          -1.42,
+          340.0
+        ],
+        [
+          -1.08,
+          380.0
+        ],
+        [
+          -0.83,
+          425.0
+        ],
+        [
+          -0.58,
+          555.0
+        ],
+        [
+          -0.42,
+          510.0
+        ],
+        [
+          -0.17,
+          450.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 6%",
+        "body": "GLP-1s + Hugo + Ottava + recall cycle compound; multiple compresses to ~28× FCF."
+      },
+      {
+        "label": "Bear 20%",
+        "body": "Hugo lands at 8-12% of new placements; multiple resets to ~33×; revenue decelerates to 5% by FY30."
+      },
+      {
+        "label": "Base 52%",
+        "body": "Mid-teens growth holds; dV5 reaccelerates utilization; recurring revenue compounds; multiple ~45×."
+      },
+      {
+        "label": "Bull 16%",
+        "body": "dV5 wins general-surgery TAM; Ion + cardiac add growth; multiple sustains at ~52×."
+      },
+      {
+        "label": "Ultra Bull 6%",
+        "body": "Outside-OR + China + AI inflect simultaneously; multiple re-rates to ~62×."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q, FDA filings, medtech competitive analysis",
+      "sources": "Sources: ISRG 10-K FY25, Q1 2026 8-K/10-Q, Medtronic Hugo FDA clearance Dec 2025, J&J Ottava trial filings, surgical-robotics TAM analysis.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          5.71,
+          6.22,
+          7.12,
+          8.35,
+          10.1
+        ],
+        "historyFcf": [
+          1.749,
+          0.958,
+          0.75,
+          1.304,
+          2.5
+        ],
+        "historyEvRev": [
+          20.0,
+          13.0,
+          14.0,
+          17.0,
+          16.0
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Recurring",
+        "segmentB": "Systems",
+        "histEntSplit": [
+          0.73,
+          0.74,
+          0.75,
+          0.76,
+          0.78
+        ],
+        "chart6Title": "Equity value (Op EV + cash)",
+        "chart6Footer": "Op EV  ·  cash",
+        "chart6Type": "isrgSotp"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 525.14,
+        "upsidePct": 20.3
+      },
+      "market": {
+        "marketCapBillion": 154.8,
+        "sharesOutstandingMillion": 355.0,
+        "cashBillion": 9.5,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.06,
+          "expectedPerShare": 144.58,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 5.2,
+            "wacc": 0.105,
+            "installed_base_fy30": 14500,
+            "exit_fcf_multiple": 28
+          },
+          "dcfPath": {
+            "rev_b": 10.1,
+            "rev_path": [
+              0.1,
+              0.07,
+              0.04,
+              0.03,
+              0.02
+            ],
+            "op_margin": [
+              0.285,
+              0.27,
+              0.25,
+              0.235,
+              0.22
+            ],
+            "wacc_path": [
+              0.105,
+              0.105,
+              0.105,
+              0.105,
+              0.105
+            ],
+            "fcf": [
+              2.5,
+              2.45,
+              2.3,
+              2.13,
+              1.98
+            ],
+            "pv_fcf": [
+              2.262,
+              2.007,
+              1.705,
+              1.429,
+              1.202
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 8.61,
+            "terminal_value": 55.44,
+            "pv_terminal": 33.65,
+            "op_ev": 42.26,
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "total_equity": 51.76,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 358,
+            "dcf_per_share": 144.58,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              12.0,
+              10.0,
+              8.5,
+              7.5,
+              7.0
+            ],
+            "ev_fcf_multiple": [
+              40.0,
+              36.0,
+              32.0,
+              29.0,
+              28.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.2,
+          "expectedPerShare": 277.34,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 9.3,
+            "wacc": 0.09,
+            "installed_base_fy30": 16500,
+            "exit_fcf_multiple": 33
+          },
+          "dcfPath": {
+            "rev_b": 10.1,
+            "rev_path": [
+              0.15,
+              0.12,
+              0.09,
+              0.06,
+              0.05
+            ],
+            "op_margin": [
+              0.29,
+              0.285,
+              0.28,
+              0.275,
+              0.27
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "fcf": [
+              2.85,
+              3.13,
+              3.32,
+              3.4,
+              3.5
+            ],
+            "pv_fcf": [
+              2.615,
+              2.634,
+              2.564,
+              2.409,
+              2.275
+            ],
+            "term_g": 0.025,
+            "sum_pv_fcf": 12.5,
+            "terminal_value": 115.5,
+            "pv_terminal": 75.07,
+            "op_ev": 87.57,
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "total_equity": 97.07,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 350,
+            "dcf_per_share": 277.34,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              13.5,
+              12.0,
+              10.5,
+              9.5,
+              9.0
+            ],
+            "ev_fcf_multiple": [
+              45.0,
+              42.0,
+              38.0,
+              35.0,
+              33.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.52,
+          "expectedPerShare": 494.74,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 12.0,
+            "wacc": 0.08,
+            "installed_base_fy30": 18500,
+            "exit_fcf_multiple": 45
+          },
+          "dcfPath": {
+            "rev_b": 10.1,
+            "rev_path": [
+              0.16,
+              0.14,
+              0.12,
+              0.1,
+              0.08
+            ],
+            "op_margin": [
+              0.295,
+              0.305,
+              0.315,
+              0.32,
+              0.32
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "fcf": [
+              3.2,
+              3.7,
+              4.2,
+              4.55,
+              4.85
+            ],
+            "pv_fcf": [
+              2.963,
+              3.172,
+              3.334,
+              3.344,
+              3.301
+            ],
+            "term_g": 0.03,
+            "sum_pv_fcf": 16.11,
+            "terminal_value": 218.25,
+            "pv_terminal": 148.54,
+            "op_ev": 164.65,
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "total_equity": 174.15,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 352,
+            "dcf_per_share": 494.74,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              15.0,
+              14.5,
+              14.0,
+              13.5,
+              13.0
+            ],
+            "ev_fcf_multiple": [
+              52.0,
+              50.0,
+              48.0,
+              46.0,
+              45.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.16,
+          "expectedPerShare": 800.86,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 15.0,
+            "wacc": 0.075,
+            "installed_base_fy30": 21000,
+            "exit_fcf_multiple": 52
+          },
+          "dcfPath": {
+            "rev_b": 10.1,
+            "rev_path": [
+              0.18,
+              0.17,
+              0.15,
+              0.13,
+              0.12
+            ],
+            "op_margin": [
+              0.305,
+              0.32,
+              0.33,
+              0.34,
+              0.345
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              3.65,
+              4.55,
+              5.45,
+              6.15,
+              6.85
+            ],
+            "pv_fcf": [
+              3.395,
+              3.937,
+              4.387,
+              4.605,
+              4.771
+            ],
+            "term_g": 0.035,
+            "sum_pv_fcf": 21.09,
+            "terminal_value": 356.2,
+            "pv_terminal": 248.11,
+            "op_ev": 269.2,
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "total_equity": 278.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 348,
+            "dcf_per_share": 800.86,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              17.0,
+              17.5,
+              18.0,
+              18.0,
+              17.5
+            ],
+            "ev_fcf_multiple": [
+              55.0,
+              55.0,
+              54.0,
+              53.0,
+              52.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.06,
+          "expectedPerShare": 1259.91,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 18.8,
+            "wacc": 0.07,
+            "installed_base_fy30": 25000,
+            "exit_fcf_multiple": 62
+          },
+          "dcfPath": {
+            "rev_b": 10.1,
+            "rev_path": [
+              0.2,
+              0.2,
+              0.19,
+              0.18,
+              0.17
+            ],
+            "op_margin": [
+              0.315,
+              0.335,
+              0.355,
+              0.37,
+              0.375
+            ],
+            "wacc_path": [
+              0.07,
+              0.07,
+              0.07,
+              0.07,
+              0.07
+            ],
+            "fcf": [
+              3.82,
+              4.88,
+              6.2,
+              7.55,
+              9.05
+            ],
+            "pv_fcf": [
+              3.57,
+              4.262,
+              5.061,
+              5.76,
+              6.453
+            ],
+            "term_g": 0.04,
+            "sum_pv_fcf": 25.11,
+            "terminal_value": 561.1,
+            "pv_terminal": 400.06,
+            "op_ev": 425.17,
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "total_equity": 434.67,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 345,
+            "dcf_per_share": 1259.91,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              18.0,
+              19.5,
+              21.0,
+              22.5,
+              23.0
+            ],
+            "ev_fcf_multiple": [
+              58.0,
+              60.0,
+              61.0,
+              62.0,
+              62.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Moat is real and measurable.",
+            "body": "11,106 installed base + 17M procedures + 26-year FDA record. Hugo has <50 US systems, one specialty cleared. The asymmetry is enormous."
+          },
+          {
+            "label": "Razor-blade is the business.",
+            "body": "78% of FY25 revenue recurring (instruments + service). Compounds on installed-base growth even if system pricing compresses."
+          },
+          {
+            "label": "Balance sheet is a fortress.",
+            "body": "$9.5B cash, zero debt, $4B buyback authorization. Q1 2026 retired $1.1B of stock. Capital return finally at scale."
+          },
+          {
+            "label": "da Vinci 5 is reaccelerating.",
+            "body": "Q1 2026: 232 dV5 placements vs 147 prior year (+58%). US utilization +4%. Force feedback is a step-function, not incremental."
+          },
+          {
+            "label": "Procedure growth is structural.",
+            "body": "17% Q1 procedure growth on already-trained surgeons. Grows with aging + minimally-invasive penetration. Hard to bend the curve."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Hugo wins > 15% of US new placements · dV5 placements < 200/qtr · procedure growth < 10% · another Class I recall on a core line · forward P/FCF < 30×"
+          },
+          {
+            "label": "Bull validation",
+            "body": "dV5 placements > 300/qtr · Ion procedure growth > 40% · cardiac volume > 5,000/yr · general-surgery share grows materially · forward P/FCF > 50×"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If Stryker / J&J announce a credible cross-platform alliance against ISRG, OR if ISRG acquires a major outside-OR or AI surgical asset (>$5B deal), the moat / TAM framing changes materially"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "da Vinci 5",
+          "definition": "ISRG's 5th-gen surgical robot (2024). Force feedback, on-board insufflation, Iris imaging. ~1,500 installed; driving +4% US utilization."
+        },
+        {
+          "term": "Ion",
+          "definition": "ISRG's endoluminal robot for minimally invasive lung biopsies. Q1 2026 procedure growth +39% YoY. Separate installed base."
+        },
+        {
+          "term": "Hugo (Medtronic)",
+          "definition": "Medtronic's competing soft-tissue robot. FDA-cleared Dec 2025 for urology — first credible US soft-tissue competitor in 25 years."
+        },
+        {
+          "term": "Ottava (J&J)",
+          "definition": "J&J's competing soft-tissue robot. In trials FY26; commercial launch expected FY27-28. Adjacency to J&J's Monarch."
+        },
+        {
+          "term": "Installed base",
+          "definition": "da Vinci systems in service worldwide. 11,106 at Dec 2025 (+12% YoY). The denominator that drives recurring-revenue compounding."
+        },
+        {
+          "term": "Recurring revenue mix",
+          "definition": "Revenue from instruments, accessories, and service (vs one-time systems). FY25 ~78%. The razor-blade lock-in."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-27_19-30",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
