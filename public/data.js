@@ -3429,9 +3429,17 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "naut-memo__v003__2026-05-23_21-14.pdf",
-      "size": "314 KB",
-      "priorVersions": []
+      "file": "naut-memo__v004__2026-05-28_05-25.pdf",
+      "size": "312 KB",
+      "priorVersions": [
+        {
+          "version": "003",
+          "file": "naut-memo__v003__2026-05-23_21-14.pdf",
+          "size": "314 KB",
+          "asOfDate": "2026-05-16",
+          "spotPrice": 2.4
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$302M",
@@ -3476,7 +3484,7 @@ const MEMOS = [
         "prob": 35,
         "price": 0.0,
         "headline": "Capital exhausts; equity wiped.",
-        "why": "Pre-revenue single-molecule platforms face a stack of risks the public market knows well — IPO'd peers demonstrate the path is hard (Olink acquired by Thermo at a premium; SomaLogic merged into Standard BioTools at a discount; Quantum-Si still pre-revenue). NAUT-specific: Voyager's late-2026 commercial launch already slipped from earlier guidance; the Jan 2026 Early Access Program is real but narrow (Tau proteoforms first); $143M cash extends operations to mid-2029 but commercial scale-up requires a 2027-2028 dilutive raise. Bear case is structural — tech doesn't scale beyond niche, or proteoform analysis stays a research curiosity rather than a diagnostic/clinical workhorse. 35% scenario weight (vs JOBY's 30%) reflects: NAUT is one stage earlier than JOBY (fully pre-revenue vs commercial pilot operations), smaller cash buffer relative to capital needs, more direct established competition. Within-scenario 40% p_fail captures Nautilus-specific bankruptcy risk; the 35% scenario weight captures the broader bear world where single-molecule proteomics economics don't scale even with execution.",
+        "why": "Pre-revenue single-molecule platforms face a stack of risks the public market knows well — IPO'd peers show the path is hard (Olink acquired by Thermo at a premium; SomaLogic merged into Standard BioTools at a discount; Quantum-Si still pre-revenue). NAUT-specific: Voyager's late-2026 launch already slipped; the Jan 2026 Early Access Program is real but narrow (Tau proteoforms first); $143M cash extends to mid-2029 but commercial scale-up requires a 2027-2028 dilutive raise. Bear case is structural — tech doesn't scale beyond niche, or proteoform analysis stays a research curiosity rather than a clinical workhorse. 35% weight (vs JOBY's 30%): NAUT is one stage earlier, with a smaller cash buffer and more direct competition. Within-scenario 40% p_fail captures Nautilus-specific bankruptcy risk.",
         "what": [
           "The pessimistic case is structural. Voyager's single-molecule resolution doesn't deliver at commercial scale: Tau Early Access data through 2026-27 surfaces reproducibility or throughput limitations that cap broader adoption. Broadscale (H1 2027) slips or underwhelms. Customers default to affinity platforms (Olink at Thermo, SomaScan at SBT) for routine proteomics and to mass spec for high-end research, leaving single-molecule proteomics as a research-niche curiosity.",
           "To maintain solvency through commercial launch, NAUT raises ~$1.1B cumulatively at $0.40-2.00/share — successive dilutive rounds at falling prices as the equity story deteriorates. Share count balloons from 126M to ~1.78B (93% dilution). By FY36 NAUT reaches just 0.5% of the $130B proteomics TAM — $600M revenue at 8% margin, profitable but tiny relative to the diluted share count."
@@ -3500,7 +3508,7 @@ const MEMOS = [
         "prob": 12,
         "price": 17.39,
         "headline": "Single-molecule wins proteoforms.",
-        "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands successfully to 10-15+ proteoforms by 2030 (60% conditional on platform success) AND mature margins reach 20-25% (40% conditional) AND market gives NAUT credit for platform position via acquisition or independent re-rating (50%). Joint at 10-15%, reflected at 12%. The bull case isn't blocked by any single piece looking unlikely — it requires conjunctive execution AND a favorable competitive backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single- molecule frontier into their existing reach. 12% (vs JOBY's 12%) reflects that NAUT's category is structurally similar to JOBY's (compound conditional venture-bet) but the path is somewhat clearer (commercial launch ~6 months out vs JOBY's still-pending Type Certification).",
+        "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands to 10-15+ proteoforms by 2030 (60% conditional) AND mature margins reach 20-25% (40% conditional) AND the market gives NAUT credit via acquisition or re-rating (50%). Joint at 10-15%, reflected at 12%. The bull requires conjunctive execution AND a favorable backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single-molecule frontier. 12% (vs JOBY's 12%): structurally similar compound venture-bet, but a clearer near-term path (launch ~6 months out vs JOBY's still-pending Type Certification).",
         "what": [
           "The bull case is that single-molecule resolution becomes the new gold standard for proteoform analysis. Tau success — FDA biomarker validation, mainstream adoption in Alzheimer's drug development — catalyzes broader category acceptance. Broadscale (H1 2027) delivers on the 10B-protein-mapping promise; customers adopt Voyager as the routine high-resolution workhorse alongside (not replacing) Olink and SomaScan.",
           "By 2030, NAUT operates 2,000+ instruments globally at $300-500K/yr each (instrument + reagents + assay subscriptions). Assay catalog expands from 2 to 15+ proteoform assays. Pharma partnerships drive multi-year recurring revenue. Operating margin reaches 22% by FY36 as software/assay mix shifts to higher-margin recurring revenue. NAUT becomes an obvious acquisition target for Thermo / Danaher / Bruker at premium multiples — or remains independent at platform-tools scale."
@@ -4331,48 +4339,48 @@ const MEMOS = [
         "pushback": [
           {
             "label": "Best-funded single-molecule platform.",
-            "body": "$143M cash + zero debt + cost discipline (16% headcount cut, lowered Q1 burn to $12.8M). Real runway to mid-2029 absent commercial scale-up. Quantum-Si and other peers are less funded relative to runway needs."
+            "body": "$143M cash, zero debt, cost discipline (16% headcount cut, Q1 burn $12.8M). Runway to mid-2029. Peers are less funded relative to need."
           },
           {
             "label": "Early Access is real, not vaporware.",
-            "body": "Tau proteoforms EAP live since Jan 2026 with academic + biopharma partners. NAUT is post-tech-risk (instrument works), pre-commercial-scale. Tech demos at US HUPO 2026 reportedly well-received."
+            "body": "Tau proteoforms EAP live since Jan 2026 with academic + biopharma partners. Post-tech-risk (instrument works), pre-commercial-scale."
           },
           {
             "label": "First-mover in proteoform single-molecule.",
-            "body": "Quantum-Si is parallel single-molecule but sequencing-focused; affinity platforms (Olink/SomaScan) target different modality. NAUT has time-to-market lead specifically in proteoforms."
+            "body": "Quantum-Si is sequencing-focused; affinity platforms (Olink/SomaScan) target a different modality. NAUT leads time-to-market in proteoforms."
           },
           {
             "label": "Tau strategic positioning.",
-            "body": "Alzheimer's biomarker market $10B+; proteoform analysis is exactly what makes Tau actionable as a biomarker. Single-product launch anchors adoption in a large research market."
+            "body": "Alzheimer's biomarker market $10B+; proteoform analysis is what makes Tau actionable. Single-product launch anchors adoption in a large research market."
           },
           {
             "label": "Cash floor is real downside protection.",
-            "body": "$1.13/share cash vs $2.40 spot = 47% of market cap is liquid. Operating EV per share ~$1.27 for a real platform. Hard to lose money permanently against this floor."
+            "body": "$1.13/share cash vs $2.40 spot = 47% of mkt cap is liquid. Operating EV ~$1.27/share for a real platform. Hard to lose money permanently here."
           }
         ],
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP customer count flat YoY"
+            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP count flat YoY"
           },
           {
             "label": "Bull validation",
-            "body": "Voyager pre-orders > $30M by Q1 2027 · 100+ instruments installed by EOY 2027 · Second pharma/OEM partnership signed · Multi-year subscription/take-rate deal disclosed"
+            "body": "Pre-orders > $30M by Q1 2027 · 100+ instruments installed EOY 2027 · second pharma/OEM partnership · multi-year take-rate deal disclosed"
           },
           {
             "label": "Reframe needed",
-            "body": "If Quantum-Si or a new entrant achieves single-molecule resolution at lower cost or higher throughput first — NAUT's first-mover positioning erodes; share-of-TAM math compresses"
+            "body": "If Quantum-Si or a new entrant hits single-molecule resolution at lower cost/higher throughput first — NAUT's first-mover edge erodes; share-of-TAM compresses"
           }
         ]
       },
       "glossary": [
         {
           "term": "Voyager",
-          "definition": "NAUT's single-molecule proteomics platform — instrument + reagents + assays + software for high-resolution proteoform analysis."
+          "definition": "NAUT's single-molecule proteomics platform — instrument + reagents + assays + software for proteoform analysis."
         },
         {
           "term": "Proteoforms",
-          "definition": "Protein variants from a single gene (post-translational modifications, splice variants). Single-molecule readout is uniquely positioned to resolve these vs ensemble methods."
+          "definition": "Protein variants from a single gene (post-translational modifications, splice variants). Single-molecule readout resolves these vs ensemble methods."
         },
         {
           "term": "Tau",
@@ -4380,20 +4388,20 @@ const MEMOS = [
         },
         {
           "term": "Early Access Program",
-          "definition": "Limited release to select academic and biopharma partners ahead of general availability. Live since Jan 2026 with the Tau proteoforms assay; expands to Broadscale H1 2027."
+          "definition": "Limited release to academic + biopharma partners ahead of general availability. Live since Jan 2026 (Tau assay); expands to Broadscale H1 2027."
         },
         {
           "term": "Broadscale",
-          "definition": "Voyager's planned 10-billion-protein-mapping capability for general proteomics applications, scheduled for general availability in H1 2027."
+          "definition": "Voyager's planned 10-billion-protein-mapping capability for general proteomics, scheduled for H1 2027 general availability."
         },
         {
           "term": "S2C (sales-to-capital)",
-          "definition": "Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. NAUT young-company case ranges 0.7-1.7 (hardware-software blend, capital-light vs eVTOL/trucking)."
+          "definition": "Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. NAUT case ranges 0.7-1.7 (capital-light hardware-software blend)."
         }
       ],
       "stamp": {
-        "footerVersion": "003",
-        "footerTimestamp": "2026-05-23_21-14",
+        "footerVersion": "004",
+        "footerTimestamp": "2026-05-28_05-25",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -4408,9 +4416,17 @@ const MEMOS = [
     "publishedISO": "2026-05-27",
     "publishedLabel": "May 27, 2026",
     "pdf": {
-      "file": "isrg-memo__v001__2026-05-27_19-30.pdf",
-      "size": "260 KB",
-      "priorVersions": []
+      "file": "isrg-memo__v002__2026-05-28_05-26.pdf",
+      "size": "266 KB",
+      "priorVersions": [
+        {
+          "version": "001",
+          "file": "isrg-memo__v001__2026-05-27_19-30.pdf",
+          "size": "266 KB",
+          "asOfDate": "2026-05-27",
+          "spotPrice": 436.64
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$154.8B",
@@ -4623,6 +4639,13 @@ const MEMOS = [
           14.0,
           17.0,
           16.0
+        ],
+        "historyInstalledBase": [
+          6730,
+          7544,
+          8606,
+          9902,
+          11106
         ]
       },
       "chartConfig": {
@@ -4635,9 +4658,8 @@ const MEMOS = [
           0.76,
           0.78
         ],
-        "chart6Title": "Equity value (Op EV + cash)",
-        "chart6Footer": "Op EV  ·  cash",
-        "chart6Type": "isrgSotp"
+        "chart6Title": "Installed base — da Vinci systems (to FY30)",
+        "chart6Type": "isrgInstalledBase"
       }
     },
     "print": {
@@ -5121,8 +5143,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "001",
-        "footerTimestamp": "2026-05-27_19-30",
+        "footerVersion": "002",
+        "footerTimestamp": "2026-05-28_05-26",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
