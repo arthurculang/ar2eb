@@ -288,6 +288,50 @@ function DisclaimersPage() {
   );
 }
 
+// ---------- THESIS & METHOD ----------
+function ThesisPage() {
+  const { Link } = L();
+  return (
+    <section className="about-page thesis-page" data-screen-label="Thesis & Method">
+      <div className="wrap-narrow">
+        <div className="eyebrow" style={{ marginBottom: 18 }}>Thesis &amp; method</div>
+        <h1>Long horizons. Structural shifts. Imagination.</h1>
+
+        <p className="thesis-lead">
+          Three words seed everything published here. They are not a slogan — they are the filter every position passes through. We underwrite individual equities on a multi-year, probability-weighted basis: a concentrated book of asymmetric bets and free-cash-flow compounders, each one valued in the open with the work shown.
+        </p>
+
+        <h3>Long horizons</h3>
+        <p>
+          Markets price the next quarter with great precision and the next decade with almost none. That gap is the opportunity. Every memo is built on a multi-year discounted-cash-flow model — five to ten years of explicit projection, then a terminal value — and a forward-value chart that runs from today out to twenty years. The discipline is patience: the goal is to be approximately right about 2035, not precisely right about next earnings. Time-horizon arbitrage is the most durable edge available to an investor with no redemption pressure and no benchmark to chase.
+        </p>
+
+        <h3>Structural shifts</h3>
+        <p>
+          We don't diversify across sectors; we concentrate on structural change. The universe is organized by theme — autonomous mobility, energy transition, single-molecule biology, surgical robotics, AI compute, and a dozen others — because the question that matters is not "which industry" but "what is becoming structurally true that the market hasn't yet underwritten." A theme earns a position only when a specific company is the cleanest expression of it at a defensible price. The map of themes is where we look; the DCF is how we decide.
+        </p>
+
+        <h3>Imagination</h3>
+        <p>
+          A single point-estimate price target is a failure of imagination. Every memo carries explicit scenarios — Bear, Base, Bull, and, where the asymmetry warrants, an Ultra Bear or Ultra Bull tail — each with its own probability, its own cash-flow path, and its own honest math. The probability-weighted expected value is the output, but the distribution is the point. The work is to imagine the futures consensus won't: the wipeout and the multi-bagger, priced side by side, so the shape of the bet is visible before any capital is committed.
+        </p>
+
+        <h3>How we keep it honest</h3>
+        <p>
+          Imagination without discipline is just storytelling. Every scenario is a full DCF that has to balance — an equity bridge that reconciles, a terminal value that's defensible, arithmetic a validator checks on every build. When a company doesn't fit the standard framework, we don't force it: a high-multiple compounder earns an exit-multiple terminal rather than a perpetuity that flatters it; a business with significant non-operating value is valued on its parts; a pre-revenue platform gets a Damodaran young-company treatment with an explicit failure probability. The memo is an auditable artifact, not a pitch — published as a PDF, summarized on-site, and kept as version-stamped history when the facts change.
+        </p>
+
+        <p className="thesis-close">
+          None of this is investment advice. All of it shows its work. Browse the{' '}
+          <Link to="/asymmetrical-moonshots">asymmetric bets</Link>, the{' '}
+          <Link to="/fcf-plus-plus-growth">free-cash-flow compounders</Link>, or see how
+          they combine into a <Link to="/portfolio">conviction-weighted portfolio</Link>.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 // ---------- ABOUT ----------
 function AboutPage() {
   return (
@@ -776,4 +820,4 @@ function PortfolioPage() {
 
 
 
-window.AR2EB_PAGES = { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, PortfolioPage, NotFoundPage };
+window.AR2EB_PAGES = { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, ThesisPage, PortfolioPage, NotFoundPage };

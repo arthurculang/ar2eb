@@ -531,6 +531,25 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 .about-page .kv .v a { color: var(--accent-ink); }
 .about-page .kv .v a:hover { text-decoration: underline; }
 
+/* Thesis & method — reuses .about-page; lead-in + closing get distinct weight. */
+.thesis-page h1 { max-width: 820px; letter-spacing: -0.02em; }
+.thesis-page .thesis-lead {
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 28px 0 8px;
+  max-width: 760px;
+}
+.thesis-page .thesis-close {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+  font-size: 16px;
+  color: var(--muted);
+}
+.thesis-page .thesis-close a { color: var(--accent-ink); text-decoration: underline; text-underline-offset: 2px; }
+.thesis-page .thesis-close a:hover { color: var(--accent); }
+
 /* ---- disclaimers page ---- */
 .disclaimers-page { padding: 96px 0; }
 .disclaimers-page h1 { margin-bottom: 24px; }

@@ -2,13 +2,14 @@
 
 function App() {
   const { useRoute, TopBar, Footer } = window.AR2EB_LIB;
-  const { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, PortfolioPage, NotFoundPage } = window.AR2EB_PAGES;
+  const { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, ThesisPage, PortfolioPage, NotFoundPage } = window.AR2EB_PAGES;
   const route = useRoute();
 
   // update <title> on route change
   React.useEffect(() => {
     let title = 'AR2EB — Long horizons. Structural shifts. Imagination.';
     if (route === '/about') title = 'About · AR2EB';
+    else if (route === '/thesis') title = 'Thesis & Method · AR2EB';
     else if (route === '/disclaimers') title = 'Disclaimers · AR2EB';
     else if (route === '/portfolio') title = 'Portfolio · AR2EB';
     else if (route === '/asymmetrical-moonshots') title = 'Asymmetrical Moonshots · AR2EB';
@@ -34,6 +35,8 @@ function App() {
     page = <DisclaimersPage />;
   } else if (route === '/about') {
     page = <AboutPage />;
+  } else if (route === '/thesis') {
+    page = <ThesisPage />;
   } else {
     page = <NotFoundPage />;
   }
