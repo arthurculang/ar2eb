@@ -469,6 +469,13 @@ appendix:
       body: "If Quantum-Si or a new entrant hits single-molecule resolution at lower cost/higher throughput first — NAUT's first-mover edge erodes; share-of-TAM compresses"
 
 # ── Footer stamp + Page-5 glossary (per migration v005 decisions #2/#3/#5) ─
+# ── Taxonomy (Helm v33b) ────────────────────────────────────────────────────
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: High
+  themes: [omics-life-science-infrastructure]
+  primary_theme: omics-life-science-infrastructure
+
 stamp:
   footer_version: "004"
   footer_timestamp: "2026-05-28_05-25"

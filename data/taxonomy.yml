@@ -1,0 +1,137 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# taxonomy.yml — canonical taxonomy for the AR2EB universe
+# ═════════════════════════════════════════════════════════════════════════════
+#
+# Mirrors The Helm app's WATCHLISTS / TICKER_THEMES / THEME_CLUSTERS exports
+# (Helm v33b @ 2026-05-25). The Helm is the source of truth for what's in the
+# investing universe; this file is the source of truth the AR2EB site reads
+# to validate per-ticker tags and resolve display names. Refresh whenever
+# the Helm refreshes.
+#
+# Per-ticker taxonomy lives in each data/<ticker>.yml under `taxonomy:`:
+#
+#   taxonomy:
+#     watchlist: asymmetrical-moonshots   # one of the 4 watchlist slugs
+#     tier: High                          # one of 5 tiers; null for megacap/private
+#     themes: [evtol-advanced-air-mobility]   # 1+ theme slugs
+#     primary_theme: evtol-advanced-air-mobility  # optional; default = themes[0]
+#
+# `umbrella` is DERIVED from the primary_theme's parent (no need to store).
+# Multi-theme tickers spanning multiple umbrellas: primary_theme determines
+# the canonical placement; the other themes are still tagged for cross-cut
+# discovery.
+# ═════════════════════════════════════════════════════════════════════════════
+
+# ── Watchlists (4) ─────────────────────────────────────────────────────────
+# The four columns of the Helm Matrix; each becomes a category slug on the
+# site. The site only surfaces a category in nav/home once a memo populates
+# it (built dynamically by build_site_data.py — no empty categories shown).
+watchlists:
+  asymmetrical-moonshots:
+    name: "Asymmetrical Moonshots"
+    short: "Moonshots"
+    sub: "Young-company DCFs. Compound conditional tails. Show your work."
+    long: >
+      Long-tail bets with asymmetric upside. Pre-revenue or pre-profitability
+      category-defining companies where the standard 5-year DCF generates
+      nonsense. The young-company framework asks what mature TAM share is
+      plausible, what terminal margins look like at scale, and what
+      probability of outright failure. Four to five scenarios including
+      explicit tails, weighted; show your work.
+    allows_tiers: true
+
+  fcf-plus-plus-growth:
+    name: "FCF++Growth"
+    short: "FCF++"
+    sub: "Mature-company DCFs. Cash machines with runway."
+    long: >
+      Cash-generative businesses with durable runway. Quality compounders
+      where the work is calibrating the multi-year growth/margin path and
+      defending the terminal value (Gordon perpetuity, exit-multiple, or
+      sum-of-the-parts when material non-operating value is present).
+    allows_tiers: true
+
+  fcf-megacap:
+    name: "FCF+ Megacap"
+    short: "Megacap"
+    sub: "Established mega-caps with structural cash-flow advantages."
+    long: >
+      Established mega-cap businesses with structural cash-flow advantages.
+      Segment-economics rich; efficient-market dampens edge but durability
+      and capital return make the math worth doing.
+    allows_tiers: false
+
+  private-wishlist:
+    name: "Private Wishlist"
+    short: "Private"
+    sub: "Private companies of interest. No public spot."
+    long: >
+      Private companies of interest. Access typically via secondaries
+      (EquityZen, Forge), syndicates (AngelList), or direct allocations.
+      Valued from last-round mark + scenario exits rather than a live price.
+    allows_tiers: false
+
+# ── Conviction tiers (5) ───────────────────────────────────────────────────
+tiers:
+  - High
+  - Med-High
+  - Med
+  - Med-Low
+  - Low
+
+# ── Umbrellas (7) → themes (24) ────────────────────────────────────────────
+# Umbrellas are the Matrix's row bands. Each umbrella's themes are the atoms
+# we tag tickers with. theme → umbrella is implicit via this nesting.
+umbrellas:
+
+  life-sciences-health:
+    name: "Life Sciences & Health"
+    themes:
+      omics-life-science-infrastructure: "Omics & Life-Science Infrastructure"
+      genetic-engineering-gene-editing: "Genetic Engineering & Gene Editing"
+      precision-medicine-oncology: "Precision Medicine & Oncology"
+      medical-devices: "Medical Devices"
+
+  ai-compute:
+    name: "AI & Compute"
+    themes:
+      ai-compute: "AI & Compute"
+      quantum-computing: "Quantum Computing"
+
+  mobility-aerospace:
+    name: "Mobility & Aerospace"
+    themes:
+      evtol-advanced-air-mobility: "eVTOL & Advanced Air Mobility"
+      space-launch-infrastructure: "Space Launch & Infrastructure"
+      autonomous-vehicles-systems: "Autonomous Vehicles & Systems"
+
+  energy-power:
+    name: "Energy & Power"
+    themes:
+      energy-transition-storage: "Energy Transition & Storage"
+      nuclear-fission-smr: "Nuclear Fission & SMR"
+      fusion-energy: "Fusion Energy"
+
+  robotics-defense:
+    name: "Robotics & Defense"
+    themes:
+      robotics-automation: "Robotics & Automation"
+      humanoid-robotics-physical-ai: "Humanoid Robotics & Physical AI"
+      defense-tech-autonomous-defense: "Defense Tech & Autonomous Defense"
+
+  digital-platforms:
+    name: "Digital & Platforms"
+    themes:
+      digital-assets-fintech-rails: "Digital Assets & Fintech Rails"
+      platform-marketplace-tech: "Platform & Marketplace Tech"
+      creator-design-software: "Creator & Design Software"
+      identity-trust-security: "Identity, Trust & Security"
+
+  consumer-real-economy:
+    name: "Consumer & Real Economy"
+    themes:
+      premium-consumer-brands: "Premium Consumer Brands"
+      consumer-experience: "Consumer Experience"
+      travel-mobility-services: "Travel & Mobility Services"
+      real-economy-hard-assets: "Real Economy & Hard Assets"
+      investment-vehicles-funds: "Investment Vehicles & Funds"

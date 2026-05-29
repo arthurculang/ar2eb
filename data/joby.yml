@@ -434,6 +434,13 @@ appendix:
       body: "If Archer achieves Type Cert first — Joby's first-mover advantage in US erodes; share-of-TAM math compresses"
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
+# ── Taxonomy (Helm v33b) ────────────────────────────────────────────────────
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: High
+  themes: [evtol-advanced-air-mobility]
+  primary_theme: evtol-advanced-air-mobility
+
 stamp:
   footer_version: "029"
   footer_timestamp: "2026-05-23_21-14"
