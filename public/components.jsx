@@ -78,6 +78,7 @@ function TopBar({ route }) {
             <span className="nav-label-full">FCF++Growth</span>
             <span className="nav-label-short">FCF++</span>
           </Link>
+          <Link to="/thesis"                 className={route === '/thesis'                         ? 'active' : ''}>Thesis</Link>
           <Link to="/portfolio"              className={route === '/portfolio'                      ? 'active' : ''}>Portfolio</Link>
           <Link to="/about"                  className={route === '/about'                          ? 'active' : ''}>About</Link>
         </nav>
