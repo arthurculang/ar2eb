@@ -30,7 +30,7 @@ from pathlib import Path
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin"]
 FORCE = bool(os.environ.get("MEMO_FORCE"))
 MEMOS_DIR = REPO / "public" / "memos"
 
