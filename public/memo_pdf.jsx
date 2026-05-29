@@ -73,9 +73,25 @@ function dcfRevenueDisplay(scn, dcfType, n) {
 }
 
 function assumptionsRows(scn, dcfType, tamBillion) {
+  const probPct = (scn.probability * 100).toFixed(0);
+  if (dcfType === 'private_prevaluation') {
+    const e = scn.exitTerms;
+    const exitStr = e.exitPostMoneyBillion >= 1000
+      ? `$${(e.exitPostMoneyBillion / 1000).toFixed(2)}T` : `$${e.exitPostMoneyBillion.toFixed(0)}B`;
+    return [
+      ['Exit kind',               e.kind.replace(/_/g, ' ')],
+      ['Exit year',               String(e.exitYear)],
+      ['Exit post-money',         exitStr],
+      ['Per-share at exit ($)',   e.exitPerShareNominal.toLocaleString()],
+      ['Years to exit',           e.yearsToExit.toFixed(1)],
+      ['Venture WACC (%)',        (e.ventureWacc * 100).toFixed(0)],
+      ['Dilution to exit (%)',    `+${e.dilutionPctFromToday}`],
+      ['P(total loss) (%)',       ((e.pTotalLoss || 0) * 100).toFixed(0)],
+      ['Scenario probability (%)', probPct],
+    ];
+  }
   const m = scn.dcfMetrics;
   const p = scn.dcfPath;
-  const probPct = (scn.probability * 100).toFixed(0);
   if (dcfType === 'young_company') {
     return [
       ['TAM Year-10 ($B)',        (tamBillion || 0).toFixed(0)],
@@ -134,6 +150,22 @@ function assumptionsRows(scn, dcfType, tamBillion) {
 }
 
 function equityBuildRows(scn, dcfType) {
+  if (dcfType === 'private_prevaluation') {
+    // Exit-payout PV walk: nominal exit → discount → loss/haircut → expected.
+    const e = scn.exitTerms;
+    const ipoHc = e.ipoUnderperformanceHaircutPct || 0;
+    const pLoss = (e.pTotalLoss || 0) * 100;
+    const rows = [
+      ['Per-share at exit (nominal)', `$${e.exitPerShareNominal.toLocaleString()}`, 'normal'],
+      [`÷ (1+${(e.ventureWacc * 100).toFixed(0)}%)^${e.yearsToExit.toFixed(1)}`,
+        `$${e.pvPerShare.toFixed(2)}`, 'subtotal'],
+    ];
+    if (ipoHc) rows.push([`× (1−IPO haircut ${ipoHc}%)`,
+      `$${(e.pvPerShare * (1 - ipoHc / 100)).toFixed(2)}`, 'normal']);
+    if (pLoss) rows.push([`× (1−P_loss ${pLoss.toFixed(0)}%)`, '', 'normal']);
+    rows.push(['= Expected PV per share', `$${scn.expectedPerShare.toFixed(2)}`, 'total']);
+    return rows;
+  }
   const p = scn.dcfPath;
   if (dcfType === 'young_company') {
     return [
@@ -393,6 +425,101 @@ function PageHeader({ memo, suffix, label, recapWeighted = false, compact = fals
 // and decomposition insight. RIGHT (~44%) is the forward-value chart.
 // Below: 4-column scenario summary cards. Footer.
 
+// Private-company chart: funding-round history (left of today) + exit-scenario
+// fan (right of today), log Y. Each scenario draws a dashed line from today's
+// last mark to its (years_to_exit, exit_per_share_nominal) endpoint.
+function PrivateValueChart({ memo, widthPt = 415, heightPt = 290 }) {
+  const NEG = '#b91c1c', POS = '#15803d';
+  const mark = memo.spot.price;
+  const fh = memo.print.fundingHistory;
+  const scn = memo.print.scenarios;
+  const scnList = scnKeysFor(memo);
+  const SCN_C = {
+    ultra_bear: '#5b1010', bear: '#b91c1c', base: '#1e3a8a',
+    bull: '#15803d', ultra_bull: '#762aa6',
+  };
+  const xMin = fh.xMin;
+  const xMax = Math.max(...scnList.map(k => scn[k].exitTerms.yearsToExit)) + 0.5;
+  const allY = [
+    ...fh.rounds.map(r => r.ps), mark,
+    ...scnList.map(k => scn[k].exitTerms.exitPerShareNominal),
+  ].filter(v => v > 0);
+  const yLo = Math.pow(10, Math.floor(Math.log10(Math.min(...allY))));
+  const yHi = Math.pow(10, Math.ceil(Math.log10(Math.max(...allY))));
+  const plotL = 34, plotR = widthPt - 70, plotT = 22, plotB = heightPt - 20;
+  const x = t => plotL + (t - xMin) / (xMax - xMin) * (plotR - plotL);
+  const y = v => {
+    const c = Math.max(yLo, Math.min(yHi, v));
+    return plotB + (Math.log10(c) - Math.log10(yLo)) / (Math.log10(yHi) - Math.log10(yLo)) * (plotT - plotB);
+  };
+  const yTicks = [];
+  for (let e = Math.log10(yLo); e <= Math.log10(yHi) + 0.001; e++) yTicks.push(Math.pow(10, e));
+  const todayX = x(0);
+  const histPts = [...fh.rounds.map(r => [r.x, r.ps]), [0, mark]];
+  const pathD = pts => pts.map(([t, v], i) => `${i === 0 ? 'M' : 'L'} ${x(t).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+  // End-label declutter (min 9pt vertical separation).
+  const ends = scnList.map(k => {
+    const e = scn[k].exitTerms;
+    return { k, t: e.yearsToExit, v: e.exitPerShareNominal, c: SCN_C[k], lab: scn[k].shortLabel };
+  }).sort((a, b) => a.v - b.v);
+  let prevY = null;
+  const endPos = ends.map(e => {
+    let py = y(e.v) + 2;
+    if (prevY !== null && prevY - py < 9) py = prevY - 9;
+    prevY = py;
+    return { ...e, py };
+  });
+
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`} viewBox={`0 0 ${widthPt} ${heightPt}`} style={{ display: 'block' }}>
+      <text x={plotL} y={12} fontFamily={FONT_SANS} fontWeight={600} fontSize="7.5pt"
+            fill={PALETTE.muted} letterSpacing="0.04em">
+        FUNDING ROUNDS  ·  LAST MARK  ·  EXIT-SCENARIO FAN (PV at exit, $/sh)
+      </text>
+      {yTicks.map(t => (
+        <g key={`y${t}`}>
+          <line x1={plotL} x2={plotR} y1={y(t)} y2={y(t)} stroke={PALETTE.rule} strokeWidth="0.3" />
+          <text x={plotL - 4} y={y(t) + 2} fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.muted} textAnchor="end">
+            {t < 1 ? `$${t.toFixed(2)}` : `$${t.toFixed(0)}`}
+          </text>
+        </g>
+      ))}
+      {/* today divider */}
+      <line x1={todayX} x2={todayX} y1={plotT} y2={plotB} stroke={PALETTE.muted} strokeWidth="0.4" strokeDasharray="1,2" />
+      <text x={todayX} y={plotB + 9} fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.muted} textAnchor="middle">today</text>
+      {/* last-mark reference */}
+      <line x1={plotL} x2={plotR} y1={y(mark)} y2={y(mark)} stroke={PALETTE.muted} strokeWidth="0.6" strokeDasharray="2,2" />
+      <text x={plotL + 2} y={y(mark) - 2} fontFamily={FONT_MONO} fontSize="6.5pt" fill={PALETTE.muted}>last mark ${mark.toFixed(0)}</text>
+      {/* funding history line + round markers */}
+      <path d={pathD(histPts)} stroke={PALETTE.text} strokeWidth="0.9" fill="none" />
+      {fh.rounds.map(r => (
+        <g key={r.name}>
+          <circle cx={x(r.x)} cy={y(r.ps)} r="1.6" fill={PALETTE.ink} />
+          <text x={x(r.x)} y={y(r.ps) - 4} fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted} textAnchor="middle">
+            {r.name.replace('Series ', '')}
+          </text>
+        </g>
+      ))}
+      <circle cx={todayX} cy={y(mark)} r="2.6" fill={PALETTE.ink} />
+      {/* exit-scenario fan */}
+      {scnList.map(k => {
+        const e = scn[k].exitTerms;
+        return <path key={k} d={pathD([[0, mark], [e.yearsToExit, e.exitPerShareNominal]])}
+                     stroke={SCN_C[k]} strokeWidth="0.9" fill="none" strokeDasharray="3,2" />;
+      })}
+      {scnList.map(k => {
+        const e = scn[k].exitTerms;
+        return <circle key={`e${k}`} cx={x(e.yearsToExit)} cy={y(e.exitPerShareNominal)} r="1.6" fill={SCN_C[k]} />;
+      })}
+      {endPos.map(e => (
+        <text key={`l${e.k}`} x={plotR + 3} y={e.py} fontFamily={FONT_MONO} fontSize="5.5pt" fill={e.c}>
+          {e.lab} ${e.v >= 1000 ? (e.v/1000).toFixed(1)+'k' : e.v.toFixed(0)}
+        </text>
+      ))}
+    </svg>
+  );
+}
+
 function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   const NEG = '#b91c1c';
   const POS = '#15803d';
@@ -642,8 +769,19 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
 
 // Ribbon metrics for Page 1 scenario summary cards — same dispatch as memo.py.
 function ribbonMetrics(scnPrint, dcfType) {
-  const m = scnPrint.dcfMetrics;
   const pct = (scnPrint.probability * 100).toFixed(0);
+  if (dcfType === 'private_prevaluation') {
+    // Private exit-scenario ribbon: exit valuation / years to exit / venture
+    // WACC / probability (the analog of the public DCF ribbon).
+    const e = scnPrint.exitTerms;
+    return [
+      ['Exit',  `$${e.exitPostMoneyBillion >= 1000 ? (e.exitPostMoneyBillion/1000).toFixed(1)+'T' : e.exitPostMoneyBillion.toFixed(0)+'B'}`],
+      ['Yrs',   e.yearsToExit.toFixed(1)],
+      ['WACC',  `${(e.ventureWacc * 100).toFixed(0)}%`],
+      ['Prob',  `${pct}%`],
+    ];
+  }
+  const m = scnPrint.dcfMetrics;
   if (dcfType === 'young_company') {
     return [
       ['TAM',     `${m.tam_share.toFixed(1)}%`],
@@ -680,7 +818,9 @@ function ribbonMetrics(scnPrint, dcfType) {
 function Page1Headline({ memo }) {
   const NEG = '#b91c1c';
   const POS = '#15803d';
+  const isPriv = memo.print.dcfType === 'private_prevaluation';
   const spot = memo.spot.price;
+  const refLabel = isPriv ? 'last mark' : 'spot';   // private compares to last round mark
   const w = memo.print.weighted;
   const wSign = w.upsidePct >= 0 ? '+' : '';
   const wColor = w.expected >= spot ? POS : NEG;
@@ -697,11 +837,17 @@ function Page1Headline({ memo }) {
   const combinedPct = bullPct + ultraPct;
   const spotVsPw = Math.abs((spot / w.expected - 1) * 100);
   const spotPosition = spot > w.expected ? 'above' : 'below';
-  const insight = `Bull (${bullPct}%) + Ultra Bull (${ultraPct}%) together contribute `
-    + `$${tailContrib.toFixed(2)} — ${tailPct.toFixed(0)}% of the $${w.expected.toFixed(2)} expected value `
-    + `despite ${combinedPct}% combined probability. `
-    + `Today's spot ($${spot.toFixed(2)}) sits ${spotVsPw.toFixed(0)}% ${spotPosition} the weighted expected; `
-    + `forward-weighted value crosses spot between +5y and +10y.`;
+  const insight = isPriv
+    ? `${memo.print.scenarios.bull.label} (${bullPct}%) + ${memo.print.scenarios.ultra_bull.label} (${ultraPct}%) `
+      + `contribute $${tailContrib.toFixed(0)} — ${tailPct.toFixed(0)}% of the $${w.expected.toFixed(0)} weighted PV `
+      + `despite ${combinedPct}% combined probability. The last round mark ($${spot.toFixed(0)}) sits `
+      + `${spotVsPw.toFixed(0)}% ${spotPosition} the weighted PV, so secondary buyers paying through the mark are `
+      + `roughly justified. The venture discount rate is the load-bearing input — see Page 4 sensitivity.`
+    : `Bull (${bullPct}%) + Ultra Bull (${ultraPct}%) together contribute `
+      + `$${tailContrib.toFixed(2)} — ${tailPct.toFixed(0)}% of the $${w.expected.toFixed(2)} expected value `
+      + `despite ${combinedPct}% combined probability. `
+      + `Today's spot ($${spot.toFixed(2)}) sits ${spotVsPw.toFixed(0)}% ${spotPosition} the weighted expected; `
+      + `forward-weighted value crosses spot between +5y and +10y.`;
 
   return (
     <div className="memo-page">
@@ -740,11 +886,18 @@ function Page1Headline({ memo }) {
             }}>
               {memo.company}
             </div>
-            <div style={{
-              fontFamily: FONT_MONO, fontWeight: 700, fontSize: '18pt',
-              color: PALETTE.ink, lineHeight: 1.0,
-            }}>
-              ${spot.toFixed(2)}
+            <div style={{ textAlign: 'right' }}>
+              <div style={{
+                fontFamily: FONT_MONO, fontWeight: 700, fontSize: '18pt',
+                color: PALETTE.ink, lineHeight: 1.0,
+              }}>
+                ${spot.toFixed(2)}
+              </div>
+              {isPriv && (
+                <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.muted, marginTop: '1pt' }}>
+                  last round mark · {memo.print.private.spotRound}
+                </div>
+              )}
             </div>
           </div>
           {/* Bottom: exchange/ticker/DCF type + masthead extras */}
@@ -820,12 +973,14 @@ function Page1Headline({ memo }) {
                 marginTop: '3pt',
                 fontFamily: FONT_MONO, fontSize: '9pt', color: wColor,
               }}>
-                {wSign}{w.upsidePct.toFixed(1)}% vs spot ${spot.toFixed(2)}
+                {wSign}{w.upsidePct.toFixed(1)}% vs {refLabel} ${spot.toFixed(2)}
               </div>
             </div>
           </div>
 
-          {/* Forward compounded value table */}
+          {/* Forward compounded value table — public only (the forward
+              compounding is meaningless for a private pre-exit company). */}
+          {!isPriv && <>
           <div style={{
             marginTop: '10pt',
             fontFamily: FONT_SANS, fontWeight: 600, fontSize: '7.5pt',
@@ -864,6 +1019,7 @@ function Page1Headline({ memo }) {
               );
             })}
           </div>
+          </>}
 
           {/* Weighting rationale */}
           <div style={{
@@ -899,9 +1055,11 @@ function Page1Headline({ memo }) {
           </div>
         </div>
 
-        {/* RIGHT: forward-value chart (SVG) */}
+        {/* RIGHT: forward-value chart (public) or funding+exit fan (private) */}
         <div>
-          <ForwardValueChart memo={memo} />
+          {memo.print.dcfType === 'private_prevaluation'
+            ? <PrivateValueChart memo={memo} />
+            : <ForwardValueChart memo={memo} />}
         </div>
       </div>
 
@@ -2491,7 +2649,85 @@ function YoungProfitabilityChart({ memo, widthPt = 280, heightPt = 190 }) {
   );
 }
 
+// Private Page 3: ARR build (history) + exit-valuation distribution (one bar
+// per scenario, height = exit post-money, labelled with probability). Far less
+// chart surface than the public 6-grid, and honest about what data exists.
+function PrivateArrChart({ memo, widthPt = 415, heightPt = 188 }) {
+  const ref = memo.page3.chartReference;
+  const yrs = ref.historyYears || [];
+  const arr = ref.historyArrBillion || [];
+  const m = { left: 38, right: 20, top: 20, bottom: 22 };
+  const plotL = m.left, plotR = widthPt - m.right, plotT = m.top, plotB = heightPt - m.bottom;
+  const yMax = Math.max(...arr) * 1.2 || 1;
+  const xScale = mkLinearScale([-0.5, yrs.length - 0.5], [plotL, plotR]);
+  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+  const bw = (plotR - plotL) / yrs.length * 0.55;
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`} viewBox={`0 0 ${widthPt} ${heightPt}`} style={{ display: 'block' }}>
+      <ChartTitle>{(memo.page3.chartConfig || {}).arrTitle || 'ARR build (run-rate $B)'}</ChartTitle>
+      <line x1={plotL} x2={plotR} y1={plotB} y2={plotB} stroke={PALETTE.rule} strokeWidth="0.5" />
+      {arr.map((v, i) => (
+        <g key={i}>
+          <rect x={xScale(i) - bw / 2} y={yScale(v)} width={bw} height={plotB - yScale(v)} fill={PALETTE.accent} />
+          <text x={xScale(i)} y={yScale(v) - 3} fontFamily={FONT_MONO} fontSize="6.5pt" fill={PALETTE.ink} textAnchor="middle">${v.toFixed(1)}</text>
+          <text x={xScale(i)} y={plotB + 10} fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.muted} textAnchor="middle">{String(yrs[i]).slice(2)}</text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+function PrivateExitDistChart({ memo, widthPt = 415, heightPt = 188 }) {
+  const scn = memo.print.scenarios;
+  const keys = scnKeysFor(memo);
+  const SCN_C = { ultra_bear: '#5b1010', bear: '#b91c1c', base: '#1e3a8a', bull: '#15803d', ultra_bull: '#762aa6' };
+  const m = { left: 38, right: 20, top: 20, bottom: 30 };
+  const plotL = m.left, plotR = widthPt - m.right, plotT = m.top, plotB = heightPt - m.bottom;
+  const vals = keys.map(k => scn[k].exitTerms.exitPostMoneyBillion);
+  const yMax = Math.max(...vals) * 1.15;
+  const xScale = mkLinearScale([-0.5, keys.length - 0.5], [plotL, plotR]);
+  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
+  const bw = (plotR - plotL) / keys.length * 0.6;
+  return (
+    <svg width={`${widthPt}pt`} height={`${heightPt}pt`} viewBox={`0 0 ${widthPt} ${heightPt}`} style={{ display: 'block' }}>
+      <ChartTitle>{(memo.page3.chartConfig || {}).exitFanTitle || 'Exit valuation distribution (post-money $B)'}</ChartTitle>
+      <line x1={plotL} x2={plotR} y1={plotB} y2={plotB} stroke={PALETTE.rule} strokeWidth="0.5" />
+      {keys.map((k, i) => {
+        const e = scn[k].exitTerms;
+        const lab = e.exitPostMoneyBillion >= 1000 ? `$${(e.exitPostMoneyBillion/1000).toFixed(1)}T` : `$${e.exitPostMoneyBillion.toFixed(0)}B`;
+        return (
+          <g key={k}>
+            <rect x={xScale(i) - bw / 2} y={yScale(e.exitPostMoneyBillion)} width={bw}
+                  height={plotB - yScale(e.exitPostMoneyBillion)} fill={SCN_C[k]} />
+            <text x={xScale(i)} y={yScale(e.exitPostMoneyBillion) - 3} fontFamily={FONT_MONO} fontSize="6.5pt" fill={PALETTE.ink} textAnchor="middle">{lab}</text>
+            <text x={xScale(i)} y={plotB + 10} fontFamily={FONT_SANS} fontSize="6pt" fill={SCN_C[k]} textAnchor="middle">{scn[k].shortLabel}</text>
+            <text x={xScale(i)} y={plotB + 19} fontFamily={FONT_MONO} fontSize="5.5pt" fill={PALETTE.muted} textAnchor="middle">{(scn[k].probability*100).toFixed(0)}%</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
 function Page3Snapshot({ memo }) {
+  if (memo.print.dcfType === 'private_prevaluation') {
+    return (
+      <div className="memo-page">
+        <PageHeader memo={memo} suffix="business snapshot" label="the snapshot" compact />
+        <div style={{ marginTop: '8pt', fontFamily: FONT_SANS, fontSize: '8pt', color: PALETTE.muted }}>
+          {memo.page3.subtitle}
+        </div>
+        <div style={{ marginTop: '16pt', display: 'flex', flexDirection: 'column', gap: '10pt', alignItems: 'center' }}>
+          <PrivateArrChart memo={memo} />
+          <PrivateExitDistChart memo={memo} />
+        </div>
+        <div style={{ marginTop: '12pt', fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.muted }}>
+          {memo.page3.sources}
+        </div>
+        <PageFooter memo={memo} pageLabel="page 3 of 5" />
+      </div>
+    );
+  }
   const isYoung = memo.print.dcfType === 'young_company';
 
   // Six chart slots — 3 columns × 2 rows. Phase 2 ports them one at a time;
@@ -2567,16 +2803,19 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
   const print = memo.print;
   const scn = print.scenarios[scenarioKey];
   const dcfType = print.dcfType;
+  const isPriv = dcfType === 'private_prevaluation';
   const n = print.dcfPeriodYears;
-  const fyLabels = dcfYearLabels(dcfType, n);
-  const rev = dcfRevenueDisplay(scn, dcfType, n);
-  const margins = scn.dcfPath.op_margin;
-  const fcf = scn.dcfPath.fcf;
-  const pvFcf = scn.dcfPath.pv_fcf;
-  const sumPv = scn.dcfPath.sum_pv_fcf;
-  const pvTerm = scn.dcfPath.pv_terminal;
-  const termG = scn.dcfPath.term_g;
-  const waccTerm = scn.dcfPath.wacc_path[scn.dcfPath.wacc_path.length - 1];
+  // DCF-table fields are public-equity only; private scenarios have no
+  // operating-cash-flow path (they carry exit_terms instead).
+  const fyLabels = isPriv ? [] : dcfYearLabels(dcfType, n);
+  const rev = isPriv ? [] : dcfRevenueDisplay(scn, dcfType, n);
+  const margins = isPriv ? [] : scn.dcfPath.op_margin;
+  const fcf = isPriv ? [] : scn.dcfPath.fcf;
+  const pvFcf = isPriv ? [] : scn.dcfPath.pv_fcf;
+  const sumPv = isPriv ? 0 : scn.dcfPath.sum_pv_fcf;
+  const pvTerm = isPriv ? 0 : scn.dcfPath.pv_terminal;
+  const termG = isPriv ? 0 : scn.dcfPath.term_g;
+  const waccTerm = isPriv ? 0 : scn.dcfPath.wacc_path[scn.dcfPath.wacc_path.length - 1];
   const asm = assumptionsRows(scn, dcfType, print.tamBillion);
   const eb = equityBuildRows(scn, dcfType);
   const expected = scn.expectedPerShare;
@@ -2639,7 +2878,8 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
         </div>
       ))}
 
-      {/* DCF table */}
+      {/* DCF table — public-equity only (private has no operating cash flows) */}
+      {!isPriv && <>
       <SectionEyebrow>{n}-YEAR DCF  ·  $B</SectionEyebrow>
       <div style={{
         display: 'grid',
@@ -2707,9 +2947,10 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
           {pvTerm.toFixed(2)}
         </span>
       </div>
+      </>}
 
-      {/* Equity build */}
-      <SectionEyebrow>EQUITY BUILD  ·  $B & per share</SectionEyebrow>
+      {/* Equity build (public) / Exit-PV build (private) */}
+      <SectionEyebrow>{isPriv ? 'EXIT → PV PER SHARE' : 'EQUITY BUILD  ·  $B & per share'}</SectionEyebrow>
       {eb.map(([lab, val, kind], i) => {
         const baseStyle = { display: 'flex', justifyContent: 'space-between' };
         if (kind === 'subtotal') {
@@ -2748,7 +2989,40 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
         );
       })}
 
-      {/* Future fair value */}
+      {/* Private: discount-rate sensitivity (the load-bearing input). Shows
+          how the scenario's PV moves with the venture WACC. */}
+      {isPriv ? (() => {
+        const e = scn.exitTerms;
+        const nom = e.exitPerShareNominal * (1 - (e.lpHaircutPct || 0) / 100);
+        const ipoHc = 1 - (e.ipoUnderperformanceHaircutPct || 0) / 100;
+        const pLoss = e.pTotalLoss || 0;
+        const rates = [0.15, 0.18, 0.22, 0.25];
+        return (
+          <>
+            <SectionEyebrow>PV SENSITIVITY TO DISCOUNT RATE</SectionEyebrow>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', textAlign: 'center' }}>
+              {rates.map(r => (
+                <div key={`r-${r}`} style={{ ...headerCell, textAlign: 'center' }}>{(r*100).toFixed(0)}%</div>
+              ))}
+              {rates.map(r => {
+                const pv = nom / Math.pow(1 + r, e.yearsToExit);
+                const exp = (1 - pLoss) * pv * ipoHc;
+                const hot = Math.abs(r - e.ventureWacc) < 0.005;
+                return (
+                  <div key={`rv-${r}`} style={{
+                    fontFamily: FONT_MONO, fontSize: '7pt',
+                    color: hot ? PALETTE.accent : PALETTE.ink,
+                    fontWeight: hot ? 700 : 400,
+                    textAlign: 'center', marginTop: '2pt',
+                  }}>
+                    ${exp.toFixed(0)}
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        );
+      })() : (<>
       <SectionEyebrow>FUTURE FAIR VALUE  ·  IF SCENARIO PLAYS OUT</SectionEyebrow>
       <div style={{
         display: 'grid',
@@ -2785,6 +3059,7 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
           );
         })}
       </div>
+      </>)}
     </div>
   );
 }

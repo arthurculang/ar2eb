@@ -190,6 +190,28 @@ def generate_stamp(canonical_jsx: str = "public/memo_pdf.jsx") -> dict:
     }
 
 
+def derive_exit_terms(et: dict, ticker: str, scn_key: str) -> float:
+    """Fill in derived exit_terms fields for a private_prevaluation scenario.
+    Returns the expected_per_share (present value) for the scenario.
+
+      pv_per_share = exit_per_share_nominal × (1 - lp_haircut) / (1+wacc)^t
+      expected     = (1-p_loss) × pv × (1 - ipo_haircut) + p_loss × distress
+    """
+    nom = et.get("exit_per_share_nominal")
+    yrs = et.get("years_to_exit")
+    wacc = et.get("venture_wacc")
+    if None in (nom, yrs, wacc):
+        raise ValueError(f"{ticker}.{scn_key}: exit_terms needs exit_per_share_nominal, "
+                         "years_to_exit, venture_wacc")
+    lp = et.get("lp_haircut_pct", 0) / 100
+    pv = nom * (1 - lp) / (1 + wacc) ** yrs
+    et["pv_per_share"] = round(pv, 2)
+    p_loss = et.get("p_total_loss", 0)
+    ipo_hc = et.get("ipo_underperformance_haircut_pct", 0) / 100
+    distress = et.get("distress_per_share", 0) or 0
+    return round((1 - p_loss) * pv * (1 - ipo_hc) + p_loss * distress, 2)
+
+
 def scaffold(ticker: str, intake_path: Path, force: bool = False) -> Path:
     if not intake_path.exists():
         raise FileNotFoundError(f"intake not found: {intake_path}")
@@ -197,23 +219,53 @@ def scaffold(ticker: str, intake_path: Path, force: bool = False) -> Path:
     if not intake or not intake.get("scenarios"):
         raise ValueError(f"{intake_path}: missing scenarios block")
 
-    # Pre-check cash runway before computing the equity bridge. Cheaper to
-    # fail with a useful message here than after the validator runs post-hoc.
-    runway_errs = check_cash_runway(intake, ticker)
-    if runway_errs:
-        raise ValueError("cash-runway violations:\n  " + "\n  ".join(runway_errs))
+    is_private = intake.get("dcf_type") == "private_prevaluation"
 
-    for scn_key, sc in intake["scenarios"].items():
-        derive_dcf_path(
-            sc.setdefault("dcf_path", {}),
-            intake.get("market", {}),
-            sc.get("dcf_metrics", {}),
-            ticker, scn_key,
-        )
+    if is_private:
+        # Exit-scenario PV math (no operating DCF). Each scenario's expected
+        # per-share is the discounted exit payout; sets expected_per_share.
+        for scn_key, sc in intake["scenarios"].items():
+            et = sc.get("exit_terms")
+            if not et:
+                raise ValueError(f"{ticker}.{scn_key}: private scenario needs an exit_terms block")
+            sc["expected_per_share"] = derive_exit_terms(et, ticker, scn_key)
+    else:
+        # Pre-check cash runway before computing the equity bridge. Cheaper to
+        # fail with a useful message here than after the validator runs post-hoc.
+        runway_errs = check_cash_runway(intake, ticker)
+        if runway_errs:
+            raise ValueError("cash-runway violations:\n  " + "\n  ".join(runway_errs))
 
+        for scn_key, sc in intake["scenarios"].items():
+            # Queued fix #4: auto-derive cagr_5y from rev_path for mature
+            # tickers so it always reconciles with the validator's cross-check.
+            dm = sc.get("dcf_metrics", {})
+            if intake.get("dcf_type", "").startswith("mature") and "rev_path" in sc.get("dcf_path", {}):
+                rp = sc["dcf_path"]["rev_path"]
+                prod = 1.0
+                for g in rp:
+                    prod *= (1 + g)
+                dm["cagr_5y"] = round((prod ** (1 / len(rp)) - 1) * 100, 1)
+            derive_dcf_path(
+                sc.setdefault("dcf_path", {}),
+                intake.get("market", {}),
+                dm,
+                ticker, scn_key,
+            )
+
+    # Queued fix #3: preserve an existing data/<ticker>.yml stamp on --force
+    # so re-scaffolds keep the same PDF version/timestamp (the render→build
+    # ordering depends on a stable filename). New tickers get a fresh stamp.
+    output_path = REPO / "data" / f"{ticker}.yml"
+    if "stamp" not in intake and output_path.exists():
+        try:
+            existing = yaml.safe_load(output_path.read_text())
+            if existing.get("stamp"):
+                intake["stamp"] = existing["stamp"]
+        except Exception:
+            pass
     intake.setdefault("stamp", generate_stamp())
 
-    output_path = REPO / "data" / f"{ticker}.yml"
     if output_path.exists() and not force:
         raise FileExistsError(
             f"{output_path} already exists; pass --force to overwrite "

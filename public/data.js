@@ -7195,6 +7195,434 @@ const MEMOS = [
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
+  },
+  {
+    "ticker": "ANTHROPIC",
+    "slug": "anthropic",
+    "company": "Anthropic",
+    "exchange": "PRIVATE",
+    "category": "private-wishlist",
+    "dcfType": "Private Pre-Valuation (exit-scenario)",
+    "publishedISO": "2026-05-29",
+    "publishedLabel": "May 29, 2026",
+    "pdf": {
+      "file": "anthropic-memo__v001__2026-05-29_23-44.pdf",
+      "size": "204 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$61.5B",
+      "shares": "373M",
+      "cash": "$8B cash, zero debt · Last mark Mar 2025 — Series F; Lead: Lightspeed; Google, Salesforce, Amazon participating"
+    },
+    "spot": {
+      "price": 165.0,
+      "asOf": "May 29, 2026 close"
+    },
+    "expected": {
+      "fair": 346.69,
+      "deltaPct": 110.1
+    },
+    "compound": [],
+    "taxonomy": {
+      "watchlist": "private-wishlist",
+      "watchlistName": "Private Wishlist",
+      "tier": null,
+      "themes": [
+        "ai-compute"
+      ],
+      "themeNames": [
+        "AI & Compute"
+      ],
+      "primaryTheme": "ai-compute",
+      "primaryThemeName": "AI & Compute",
+      "umbrella": "ai-compute",
+      "umbrellaName": "AI & Compute"
+    },
+    "question": "Is the Series F $61.5B mark ($165/share for common) defensible against a probability-weighted distribution of exits over 1-5 years — when secondary buyers are already paying through the last mark in tender offers?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "WIPEOUT",
+        "prob": 10,
+        "price": 14.1,
+        "headline": "Capability eclipsed; down-round.",
+        "why": "Capability eclipse + safety-talent attrition + AWS withdrawal is a compound 3-vector event. Each individually 25-40% plausible across a 3-year horizon; joint at ~10%. The dominant risk for any frontier-AI lab is being lapped on capability — the downside is one binary, not slow erosion. Bayesian update from 2026: Claude 4.5 reception was strong, enterprise revenue held, the RSP framework didn't constrain commercial deployment as much as bears feared — so a-priori 15% nudges down to 10%.",
+        "what": [
+          "OpenAI ships GPT-6 with a step-function capability gain. Google folds Gemini-Ultra into Workspace at near-zero marginal price. Anthropic's growth decelerates; AWS cools on Bedrock as Amazon's own Nova line gains traction. Top safety researchers exit for Google DeepMind and a stealth lab. A planned 2027 IPO gets pulled; a 2028 bridge round prices below the Series F mark, triggering dilution and a quiet acqui-hire by Amazon or Google.",
+          "At the resulting $12B post-money, common-equity per share falls to ~$32 nominal — discounted three years at a 22% venture-WACC (illiquidity + execution + dilution overhang), and after a 20% within-scenario write-to-zero probability, expected PV is ~$14/share, roughly a tenth of the last mark."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "SLOW PRIVATE",
+        "prob": 20,
+        "price": 78.14,
+        "headline": "Stays private 5y+; no liquidity.",
+        "why": "Stripe is the canonical analog: $95B mark, no IPO seven years later. Anthropic's PBC + Long-Term Benefit Trust structure makes the \"we don't have to go public\" stance more credible than for a vanilla C-corp. Modal over 3 years but not over 5+; at some point holders demand liquidity. 20% reflects the real possibility the LTBT prefers indefinite private status.",
+        "what": [
+          "The \"stays private indefinitely\" path. Anthropic raises 2-3 more growth rounds at marks that grow with the AI sector — Series G ~2027 around $95B, Series H ~2029 around $130B — but no IPO appears credible (regulatory uncertainty, a depressed IPO window, or a Long-Term Benefit Trust decision that public-company quarterly pressure conflicts with the safety mission). Secondaries create episodic liquidity at steep discounts to the mark.",
+          "The economics are real — ARR grows from $4B to ~$25B by 2031 — but without an IPO catalyst, the holder faces ~5 years of illiquidity and substantial dilution risk. PV at a 23% venture discount: ~$78, meaningfully below the $165 last mark even as the nominal round price grows. This is the underappreciated outcome."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE IPO",
+        "prob": 42,
+        "price": 250.13,
+        "headline": "2027 IPO at $250B; 1.5× the mark.",
+        "why": "Modal outcome. Conditions: enterprise revenue compounds >100% YoY through end-2026; no catastrophic safety incident delays timing; the AI IPO window opens on the back of OpenAI's secondary or its own IPO. Each individually ~70-80%; joint ~40-45%. 42% reflects that this IS the base case but isn't overwhelming — Anthropic could slide into slow_private or bull_ipo depending on conditions.",
+        "what": [
+          "Anthropic IPOs mid-2027 on the heels of an enterprise ARR inflection ($8B+ run-rate by Q2 2027), riding a re-opened AI IPO window that OpenAI's late-2026 secondary tender priced. Lead underwriters anchor a $250B post-money — roughly 4× the Series F valuation — reflecting both fundamental progress (Claude family revenue, Bedrock and Vertex pass-through) and AI-sector multiple expansion. Constitutional AI / RSP positioning becomes a marketed governance differentiator vs OpenAI.",
+          "Per-share at IPO ≈ $595. PV back to today at an 18% venture-WACC over ~1.4 years = ~$472 — but with a within-scenario haircut for IPO underperformance (47%, reflecting lockup decay + typical post-lockup behavior across the 2027 AI cohort), expected PV/share is ~$250. That is 1.5× the $165 last mark — explaining why secondary buyers pay above-mark in tender offers running into the IPO window."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL IPO",
+        "prob": 20,
+        "price": 543.45,
+        "headline": "2028 IPO at $700B; lead holds.",
+        "why": "Requires conjunction: capability lead persists 24+ months; enterprise NDR holds >130%; gross margin expands as inference compute commoditizes downward; the 2028 AI IPO window receives the cohort favorably. Each 40-60% individually; joint ~20%. Higher floor than a typical young-company bull because Anthropic already has revenue traction.",
+        "what": [
+          "Anthropic's capability lead consolidates. Claude 5 / 6 deliver durable enterprise stickiness — net retention >150%, gross-margin expansion through caching + lower inference unit costs. The AWS Bedrock relationship deepens; Vertex pass-through grows. Enterprise share of revenue rises above 80%, making the business look more like Snowflake or Databricks than consumer-AI. Late-2028 IPO at $700B reflects ARR ($18-22B run-rate) and multiple expansion to 35-40× ARR.",
+          "Per-share at IPO ≈ $1,650 nominal; PV at 18% over 2.4 years = ~$1,109; the IPO-underperformance haircut brings expected PV/share to ~$543. A 3.3× outcome on the last mark — material upside that justifies the secondary buyer paying through the mark today."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 1448.85,
+        "headline": "AGI-tier moat; $1.5T IPO.",
+        "why": "Tail of tails. Each Bull condition AND a capability gap that justifies mega-cap multiples AND regulatory positioning as the \"safe lab\" AND a durable lead over OpenAI / Google / xAI for 3+ years. 5-10% feels right; 8% acknowledges Anthropic's safety-research depth without over-weighting the tail.",
+        "what": [
+          "The genuine tail. Anthropic produces an AGI-tier capability gap that monetizes as a software platform — autonomous-agent revenue compounds, Claude becomes the default enterprise AI substrate, and revenue inflects from $20B (FY28) to $50B+. Constitutional AI / RSP becomes a regulatory moat (Anthropic is \"the safe lab\" in the EU AI Act and US AI policy regime). IPO 2029 at $1.5T — joining Microsoft / Google / Meta in the tier-1 mega-cap club.",
+          "Per-share at IPO ≈ $3,450 nominal; PV at 18% over 3 years = ~$2,100; the haircut brings expected PV/share to ~$1,449 — an 8.8× outcome on the last mark. Contributes the largest single slice of weighted value despite only 8% probability — compound-conditional-tail behavior."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Private Pre-Valuation (exit-scenario). Probability weighting: Ultra Bear 10 / Bear 20 / Base 42 / Bull 20 / Ultra Bull 8. Spot price reference: May 29, 2026 close.",
+    "thesis": "Anthropic prints ~$4B annualized revenue (mid-2026, up from ~$1B end-2024), still growing >100% YoY, with an enterprise mix that increasingly looks like a software platform rather than a research lab. The Series F priced ~15× forward revenue. The dominant variable in valuing the equity today is not an operating DCF (revenue is opaque, inference economics in flux) but the exit distribution: an IPO between 2027 and 2029 at $250B-$1.5T is the modal good outcome. The bear case is not slow erosion but a capability eclipse — OpenAI ships a step-function, AWS cools on Bedrock, talent exits to Google DeepMind. Probability-weighted present value lands near 2× the last mark, justifying secondary buyers paying premium-to-mark. The single most consequential editorial input is the discount rate, not the exit valuations. Five exit scenarios, weighted; show your work.",
+    "historicalPrices": null,
+    "weightingRationale": [
+      {
+        "label": "Wipeout 10%",
+        "body": "Capability eclipse + AWS withdrawal + talent flight — compound 3-vector tail."
+      },
+      {
+        "label": "Slow Private 20%",
+        "body": "Stripe analog: indefinitely private, LTBT-blessed, holders illiquid."
+      },
+      {
+        "label": "Base IPO 42%",
+        "body": "Modal: 2027 IPO at ~$250B, ~4× last-round; routine cohort dynamics."
+      },
+      {
+        "label": "Bull IPO 20%",
+        "body": "Capability lead holds 24+ months, enterprise NDR sustains, $700B IPO 2028."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "AGI-tier moat + regulatory positioning; $1.5T tier-1 mega-cap club."
+      }
+    ],
+    "page3": {
+      "subtitle": "Funding-round history + exit-scenario distribution · no operating-business DCF (revenue opaque) · discount rate is the load-bearing input",
+      "sources": "Sources: TechCrunch, Bloomberg, The Information, Anthropic blog, AWS announcements, SEC filings of Amazon/Google equity disclosures.",
+      "chartReference": {
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyArrBillion": [
+          0.1,
+          1.0,
+          4.0
+        ],
+        "historyEmployees": [
+          120,
+          500,
+          1100
+        ]
+      },
+      "chartConfig": {
+        "chartType": "funding_and_exit_fan",
+        "exitFanTitle": "Exit valuation distribution (post-money $B)",
+        "arrTitle": "ARR build to scenario exit (run-rate $B)"
+      }
+    },
+    "print": {
+      "dcfType": "private_prevaluation",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 346.69,
+        "upsidePct": 110.1
+      },
+      "market": {
+        "marketCapBillion": 61.5,
+        "sharesOutstandingMillion": 373.0,
+        "cashBillion": 8.0,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.1,
+          "expectedPerShare": 14.1,
+          "label": "Wipeout",
+          "shortLabel": "Wipeout",
+          "exitTerms": {
+            "kind": "down_round",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 12.0,
+            "exitPerShareNominal": 32.0,
+            "fdsAtExitMillion": 425,
+            "dilutionPctFromToday": 14,
+            "ventureWacc": 0.22,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.2,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 17.62
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.2,
+          "expectedPerShare": 78.14,
+          "label": "Slow Private",
+          "shortLabel": "SlowPriv",
+          "exitTerms": {
+            "kind": "stay_private",
+            "exitYear": 2031,
+            "yearsToExit": 5.0,
+            "exitPostMoneyBillion": 95.0,
+            "exitPerShareNominal": 220.0,
+            "fdsAtExitMillion": 432,
+            "dilutionPctFromToday": 16,
+            "ventureWacc": 0.23,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 78.14
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.42,
+          "expectedPerShare": 250.13,
+          "label": "Base IPO",
+          "shortLabel": "BaseIPO",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2027,
+            "yearsToExit": 1.4,
+            "exitPostMoneyBillion": 250.0,
+            "exitPerShareNominal": 595.0,
+            "fdsAtExitMillion": 420,
+            "dilutionPctFromToday": 12,
+            "ventureWacc": 0.18,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 47,
+            "pvPerShare": 471.93
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 543.45,
+          "label": "Bull IPO",
+          "shortLabel": "BullIPO",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2028,
+            "yearsToExit": 2.4,
+            "exitPostMoneyBillion": 700.0,
+            "exitPerShareNominal": 1650.0,
+            "fdsAtExitMillion": 424,
+            "dilutionPctFromToday": 14,
+            "ventureWacc": 0.18,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 51,
+            "pvPerShare": 1109.09
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 1448.85,
+          "label": "Ultra Bull",
+          "shortLabel": "UBull",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 1500.0,
+            "exitPerShareNominal": 3450.0,
+            "fdsAtExitMillion": 435,
+            "dilutionPctFromToday": 17,
+            "ventureWacc": 0.18,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 31,
+            "pvPerShare": 2099.78
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        }
+      },
+      "private": {
+        "spotKind": "last_round_mark",
+        "spotAsOf": "2025-03-01",
+        "spotRound": "Series F",
+        "spotCaveat": "Per-share post-money implied by Series F ($61.5B ÷ ~373M fully-diluted). Preferred liquidation preferences not netted; common converts 1:1 in an IPO but sits behind preferred in a down-side. FDS is an estimate (undisclosed).",
+        "lastPostMoneyBillion": 61.5,
+        "fdsMillion": 373.0
+      },
+      "fundingHistory": {
+        "firstRoundMarker": "Seed May '21",
+        "xMin": -5.0,
+        "rounds": [
+          {
+            "x": -5.0,
+            "ps": 0.5,
+            "name": "Seed",
+            "pm": 0.124,
+            "lead": "Jaan Tallinn"
+          },
+          {
+            "x": -4.0,
+            "ps": 2.5,
+            "name": "Series A",
+            "pm": 0.7,
+            "lead": "Tallinn / McClave"
+          },
+          {
+            "x": -3.5,
+            "ps": 10.0,
+            "name": "Series B",
+            "pm": 4.1,
+            "lead": "Spark Capital"
+          },
+          {
+            "x": -2.75,
+            "ps": 18.0,
+            "name": "Series C",
+            "pm": 5.0,
+            "lead": "Google"
+          },
+          {
+            "x": -2.25,
+            "ps": 50.0,
+            "name": "Series D",
+            "pm": 18.4,
+            "lead": "Menlo / Lightspeed"
+          },
+          {
+            "x": -1.5,
+            "ps": 110.0,
+            "name": "Series E",
+            "pm": 41.5,
+            "lead": "Lightspeed"
+          },
+          {
+            "x": -1.25,
+            "ps": 165.0,
+            "name": "Series F",
+            "pm": 61.5,
+            "lead": "Lightspeed"
+          }
+        ]
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Enterprise revenue inflection is real.",
+            "body": "$1B → $4B in 18 months beats Snowflake's comparable phase. NDR >150% implies land-and-expand, not pilots."
+          },
+          {
+            "label": "AWS Project Rainier is a strategic moat.",
+            "body": "A 1M+ Trainium2 cluster reserved for Anthropic is durable compute alignment rivals can't replicate cheaply."
+          },
+          {
+            "label": "Safety positioning may monetize in regulation.",
+            "body": "EU AI Act enforcement begins 2026-2027. RSP / Constitutional AI framing makes Anthropic the easiest model to deploy in regulated industries."
+          },
+          {
+            "label": "Secondaries pay through the mark.",
+            "body": "2026 tender activity cleared ~$200/share-equiv (~$74B implied) for common — the equity already trades above the $165 mark."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "OpenAI ships GPT-6 with measurable step-function gains · 200+ research-head exit in any 6-month window · AWS cools publicly on Project Rainier expansion"
+          },
+          {
+            "label": "Bull validation",
+            "body": "ARR crosses $8B run-rate by Q2 2027 · a confidential S-1 leaks · enterprise NDR sustains >130% in a published reference disclosure"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "An LTBT action blocking/delaying IPO — the 'stay private' path becomes modal, inverting the discount-rate logic and depressing PV ~40%."
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Constitutional AI (CAI)",
+          "definition": "Anthropic's training method — models trained against a written constitution using AI feedback rather than dense human ratings."
+        },
+        {
+          "term": "Responsible Scaling Policy (RSP)",
+          "definition": "Published commitments to halt/slow deployments when dangerous-capability evals trip. Both a safety mechanism and a marketed differentiator."
+        },
+        {
+          "term": "Claude family (Opus / Sonnet / Haiku)",
+          "definition": "Tiered model family — Opus highest capability, Sonnet the workhorse, Haiku fast/cheap. Generations refresh ~twice a year."
+        },
+        {
+          "term": "Long-Term Benefit Trust (LTBT)",
+          "definition": "Independent trust holding a stock class that elects a board majority over time. Non-investor members aligned with the safety mission."
+        },
+        {
+          "term": "Project Rainier",
+          "definition": "AWS's announced 1M+ Trainium2 cluster reserved for Anthropic — a supply commitment and a marker of AWS's strategic stake."
+        },
+        {
+          "term": "Last-round mark",
+          "definition": "Per-share value implied by the latest round (post-money ÷ fully-diluted). A preferred, illiquid, single-counterparty price — not a market quote."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-29_23-44",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   }
 ];
 
@@ -7212,6 +7640,13 @@ const CATEGORIES = {
     "sub": "Mature-company DCFs. Cash machines with runway.",
     "short": "Mature-company DCFs. Cash machines with runway.",
     "long": "Cash-generative businesses with durable runway. Quality compounders where the work is calibrating the multi-year growth/margin path and defending the terminal value (Gordon perpetuity, exit-multiple, or sum-of-the-parts when material non-operating value is present)."
+  },
+  "private-wishlist": {
+    "slug": "private-wishlist",
+    "name": "Private Wishlist",
+    "sub": "Private companies of interest. No public spot.",
+    "short": "Private companies of interest. No public spot.",
+    "long": "Private companies of interest. Access typically via secondaries (EquityZen, Forge), syndicates (AngelList), or direct allocations. Valued from last-round mark + scenario exits rather than a live price."
   }
 };
 
