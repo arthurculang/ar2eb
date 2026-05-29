@@ -5259,7 +5259,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "ionq-memo__v001__2026-05-29_23-02.pdf",
-      "size": "8 KB",
+      "size": "351 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -6411,6 +6411,787 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "001",
         "footerTimestamp": "2026-05-29_23-02",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "COIN",
+    "slug": "coin",
+    "company": "Coinbase Global",
+    "exchange": "NASDAQ",
+    "category": "fcf-plus-plus-growth",
+    "dcfType": "Mature-Company DCF · SOTP",
+    "publishedISO": "2026-05-29",
+    "publishedLabel": "May 29, 2026",
+    "pdf": {
+      "file": "coin-memo__v001__2026-05-29_23-20.pdf",
+      "size": "263 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$48B",
+      "shares": "263M",
+      "cash": "$10.2B cash, zero debt · $7.2B converts/notes (~$3B net cash); ~17K BTC treasury (~$1.3B); Circle (CRCL) stake (~$1B)"
+    },
+    "spot": {
+      "price": 182.25,
+      "asOf": "May 29, 2026 close"
+    },
+    "expected": {
+      "fair": 271.62,
+      "deltaPct": 49.0
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 415.31,
+        "mult": 2.28
+      },
+      {
+        "y": 10,
+        "value": 636.04,
+        "mult": 3.49
+      },
+      {
+        "y": 15,
+        "value": 975.85,
+        "mult": 5.35
+      },
+      {
+        "y": 20,
+        "value": 1500.15,
+        "mult": 8.23
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "High",
+      "themes": [
+        "digital-assets-fintech-rails"
+      ],
+      "themeNames": [
+        "Digital Assets & Fintech Rails"
+      ],
+      "primaryTheme": "digital-assets-fintech-rails",
+      "primaryThemeName": "Digital Assets & Fintech Rails",
+      "umbrella": "digital-platforms",
+      "umbrellaName": "Digital & Platforms"
+    },
+    "question": "Is Coinbase the durable monopoly rail layer for crypto — $19B USDC float, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock whose Q1 2026 just printed a $394M loss?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 8,
+        "price": 30.41,
+        "headline": "Crypto winter + take-rate war.",
+        "why": "Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style multi-year bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood gains share AND Hyperliquid-style USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per Coindesk May 2026); (c) GENIUS Act favors bank-issued stablecoins, capping USDC at ~$50B float; (d) Deribit integration friction stalls the derivatives flywheel. Each individually 20-30%; joint at 8%. Higher than ZM's 8% ultra_bear because crypto-cycle volatility has a real historical base rate (2022 was 14 months ago).",
+        "what": [
+          "Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down 70%+ from $120K peak to $35-40K) as ETF outflows compound and the post-halving liquidity wave fails to materialize. Transaction revenue collapses from $4.0B FY25 to $1.5B by FY28 as both volume drops 60% AND take-rate compresses 30% under Robinhood/Hyperliquid pressure. The GENIUS Act regime turns hostile in implementation — bank-issued stablecoins take share from USDC and the discount-window asymmetry kills USDC's runway.",
+          "The Circle relationship inverts: Hyperliquid-style direct-USDC deals proliferate across DeFi, compressing Coinbase's 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating margin compresses from 40% (FY25) to 10% by FY28 as Coinbase spends defensively. FCF goes negative two years. The multiple collapses from ~15× FCF normalized to 8× — crypto loses its narrative entirely. Exit-multiple SOTP: ~$52/share, a -71% tail. Mirrors the 2022 winter (COIN traded to $33 from $381 IPO) on a more diversified business."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 22,
+        "price": 104.19,
+        "headline": "Cycle bottoms; multiple resets to 18×.",
+        "why": "Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months (median post-peak crypto correction); revenue stays $2.5-3.0B; take-rate compresses 15-20% as Robinhood gains retail share and Hyperliquid-style deals nick institutional flows; USDC float plateaus under the GENIUS Act ceiling; multiple resets from ~20× to 18× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018, 2022 — base rate ~25% per 5-year window), and Q1 2026 already validated some of the cycle thesis.",
+        "what": [
+          "Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years (a deeper, longer correction than Q1 2026 priced). Transaction revenue runs $2.5-3.0B annually — below FY25's $4.0B peak but above the FY23 winter trough. Coinbase still gains share (regulatory wedge post-SEC dismissal) but on a smaller pie. The everything-exchange thesis holds operationally, but the equity re-rates to 18-22× FCF — crypto stocks lose their growth premium when transaction revenue stops growing.",
+          "The subscription engine partially compensates. USDC float plateaus at $25-30B as the GENIUS Act ceiling caps growth and bank-issued stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume grows as Deribit integrates, but margin profile is structurally lower than spot. FCF cycles $1.5-2.5B/year. Exit-multiple SOTP: ~$138/share, ~24% below spot — a real downside but not catastrophic. The cycle hurts; the platform survives."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 47,
+        "price": 226.16,
+        "headline": "Everything-exchange compounds.",
+        "why": "Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is integrating, Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution + cycle. Base assumes BTC ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually but the volume base grows, USDC float grows at a decelerating rate as the ceiling bites, and the multiple holds at 22× FCF. 47% reflects that the thesis is well-priced but in motion — sequential execution, not heroic assumptions.",
+        "what": [
+          "The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K (mid-cycle). Transaction revenue runs $3.5-4.5B annually with cycle texture. Subscription & services becomes the structural growth engine — USDC float compounds to $35-40B, stablecoin revenue grows to $1.5-2.0B, staking + custody + interest add another $1.5B+. The Deribit acquisition delivers — derivatives volume grows 40%+ annually with margin converging toward spot over time.",
+          "The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Coinbase International scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, removing the cycle floor on engaged users. Operating margin holds 38-42%. Exit-multiple SOTP: ~$215/share, modest upside vs spot — what a great mature platform offers when the moat is mostly priced. Revenue $7.18B → $10.5B by FY30 (~8% CAGR); FCF $2.55B → $4.0B; multiple 22× sustained."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 18,
+        "price": 482.45,
+        "headline": "Derivatives flywheel + USDC rails.",
+        "why": "Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth (conditional 35%); (b) USDC float compounds to $75B+ driving the subscription engine (conditional 40%); (c) Deribit delivers and derivatives crosses $1.5B revenue (conditional 50% on integration); (d) multiple sustains at 30× FCF (conditional 50%). Joint at 15-20%, weighted 18%. Higher than ZM bull because COIN's bull has one cycle- dependent leg AND one secular leg — they can succeed independently.",
+        "what": [
+          "The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as institutional ETF flows compound. Transaction revenue grows $4.0B → $7.0B by FY30 as volume compounds AND share gains hold. Deribit integration succeeds beyond model — derivatives revenue crosses $1.5B by FY28 with options margin substantially better than spot. Coinbase International captures 15-20% of offshore derivatives flows as US regulatory clarity attracts onshore institutional volume back from Binance.",
+          "The subscription engine inflects. USDC float compounds to $75-100B as the GENIUS Act establishes USDC as the de facto regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30. Coinbase One reaches 4M subs at $30+ ARPU. Operating margin expands to 45%. FCF reaches $6.5B by FY30. The multiple expands — the market recognizes COIN as crypto's Stripe-meets-Nasdaq, sustaining 30× FCF. Exit-multiple SOTP: ~$358/share, +97% from spot. Two engines (cycle-driven transaction + subscription rails) both fire."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 5,
+        "price": 1062.68,
+        "headline": "Crypto-as-rails; 38× re-rate.",
+        "why": "Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); USDC crosses $150B as regulatory tailwind + EU MICA convert it to the global regulated dollar (25%); Coinbase International captures Binance's offshore institutional share post-regulatory squeeze (30%); multiple re-rates to fintech-infrastructure 35-40× FCF (30%). Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the regulatory wedge, float, derivatives platform, and cash to attempt all four.",
+        "what": [
+          "The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US gateway. BTC ranges $200-300K as sovereign treasury adoption institutionalizes. USDC float crosses $150B as GENIUS Act + EU MICA make USDC the global regulated dollar — challenging SWIFT for cross-border. Coinbase International becomes the dominant offshore venue as Binance's regulatory squeeze opens institutional flows. Transaction revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin reaches 50%.",
+          "The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN at 38× FCF on a $9B base. Exit-multiple SOTP: ~$610/share, +235% from spot. The crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase has the regulatory wedge, the float, the derivatives platform, and the cash to attempt all four."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 47 / Bull 18 / Ultra Bull 5. Spot price reference: May 29, 2026 close.",
+    "thesis": "Coinbase trades at $182.25 ($48B mkt cap) on FY25 revenue $7.18B and adj EBITDA $2.81B, with a fortress balance sheet (~$10.2B cash, $7.2B debt, ~$3.5B CRCL + BTC + crypto). FY25 was peak-cycle; Q1 2026 broke the spell: revenue $1.4B (-40% from Q4), a $394M net loss as BTC slid $120K to $73K. Bull thesis is structural (SEC case dropped, GENIUS Act USDC moat, Deribit derivatives leadership); bear is equally real (take-rate compression, persistent cycle exposure). Mature-Company SOTP DCF, exit-multiple terminal; five scenarios; show your work.",
+    "historicalPrices": {
+      "xMin": -5.2,
+      "ipoMarker": "Direct Listing Apr '21 @ $381",
+      "points": [
+        [
+          -5.13,
+          328.0
+        ],
+        [
+          -4.83,
+          252.0
+        ],
+        [
+          -4.58,
+          251.0
+        ],
+        [
+          -4.33,
+          189.0
+        ],
+        [
+          -4.08,
+          70.0
+        ],
+        [
+          -3.83,
+          64.0
+        ],
+        [
+          -3.58,
+          35.0
+        ],
+        [
+          -3.33,
+          66.0
+        ],
+        [
+          -3.08,
+          60.0
+        ],
+        [
+          -2.83,
+          75.0
+        ],
+        [
+          -2.58,
+          175.0
+        ],
+        [
+          -2.33,
+          240.0
+        ],
+        [
+          -2.08,
+          230.0
+        ],
+        [
+          -1.83,
+          175.0
+        ],
+        [
+          -1.58,
+          275.0
+        ],
+        [
+          -1.33,
+          250.0
+        ],
+        [
+          -1.08,
+          260.0
+        ],
+        [
+          -0.83,
+          420.0
+        ],
+        [
+          -0.58,
+          380.0
+        ],
+        [
+          -0.33,
+          145.0
+        ],
+        [
+          -0.17,
+          175.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 8%",
+        "body": "Crypto winter + take-rate compression + GENIUS hostility compound; multiple collapses to ~8× FCF."
+      },
+      {
+        "label": "Bear 22%",
+        "body": "Cycle normalizes; transaction revenue stays sub-FY25; multiple resets to ~18× FCF on slower growth."
+      },
+      {
+        "label": "Base 47%",
+        "body": "Modal: BTC ranges $80-130K; subscription engine compounds; USDC to $35B; ~15× FCF."
+      },
+      {
+        "label": "Bull 18%",
+        "body": "BTC $130-200K + USDC >$75B + Deribit delivers; two engines fire independently."
+      },
+      {
+        "label": "Ultra Bull 5%",
+        "body": "Crypto-as-rails; sovereign adoption; multiple re-rates to fintech-infrastructure ~38× FCF."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q/shareholder letter, GENIUS Act, Deribit closing 8-K",
+      "sources": "Sources: COIN 10-K FY25, Q1 2026 shareholder letter, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          7.84,
+          3.19,
+          3.11,
+          6.56,
+          7.18
+        ],
+        "historyFcf": [
+          1.7,
+          -0.95,
+          0.92,
+          2.39,
+          2.55
+        ],
+        "historyEvRev": [
+          8.5,
+          1.8,
+          4.5,
+          8.0,
+          6.5
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Transaction",
+        "segmentB": "Subscription & Services",
+        "histEntSplit": [
+          0.86,
+          0.58,
+          0.45,
+          0.61,
+          0.56
+        ],
+        "chart6Title": "SOTP equity (Op EV + cash + CRCL + BTC)",
+        "chart6Footer": "Op EV  ·  cash  ·  special assets",
+        "chart6Type": "zmSotp"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company_sotp",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 271.62,
+        "upsidePct": 49.0
+      },
+      "market": {
+        "marketCapBillion": 48.0,
+        "sharesOutstandingMillion": 263.4,
+        "cashBillion": 10.2,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.08,
+          "expectedPerShare": 30.41,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": -13.1,
+            "wacc": 0.13,
+            "take_rate_basis": 8,
+            "exit_fcf_multiple": 8
+          },
+          "dcfPath": {
+            "rev_b": 7.18,
+            "rev_path": [
+              -0.2,
+              -0.25,
+              -0.15,
+              -0.05,
+              0.02
+            ],
+            "op_margin": [
+              0.25,
+              0.15,
+              0.1,
+              0.1,
+              0.12
+            ],
+            "wacc_path": [
+              0.13,
+              0.13,
+              0.13,
+              0.13,
+              0.13
+            ],
+            "term_g": -0.02,
+            "fcf": [
+              1.44,
+              0.65,
+              0.34,
+              0.29,
+              0.36
+            ],
+            "cash": 9.0,
+            "net_debt": 7.0,
+            "special_assets": 1.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 245,
+            "distress": 0.0,
+            "pv_fcf": [
+              1.274,
+              0.509,
+              0.236,
+              0.178,
+              0.195
+            ],
+            "sum_pv_fcf": 2.39,
+            "terminal_value": 2.88,
+            "pv_terminal": 1.56,
+            "op_ev": 3.95,
+            "total_equity": 7.45,
+            "dcf_per_share": 30.41
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.5,
+              3.5,
+              2.5,
+              2.0,
+              1.8
+            ],
+            "ev_fcf_multiple": [
+              18.0,
+              14.0,
+              10.0,
+              9.0,
+              8.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.22,
+          "expectedPerShare": 104.19,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": -3.3,
+            "wacc": 0.11,
+            "take_rate_basis": 11,
+            "exit_fcf_multiple": 12
+          },
+          "dcfPath": {
+            "rev_b": 7.18,
+            "rev_path": [
+              -0.15,
+              -0.1,
+              0.0,
+              0.05,
+              0.05
+            ],
+            "op_margin": [
+              0.32,
+              0.3,
+              0.3,
+              0.32,
+              0.32
+            ],
+            "wacc_path": [
+              0.11,
+              0.11,
+              0.11,
+              0.11,
+              0.11
+            ],
+            "term_g": 0.01,
+            "fcf": [
+              1.95,
+              1.74,
+              1.74,
+              1.92,
+              2.02
+            ],
+            "cash": 10.0,
+            "net_debt": 7.2,
+            "special_assets": 3.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 260,
+            "distress": 0.0,
+            "pv_fcf": [
+              1.757,
+              1.412,
+              1.272,
+              1.265,
+              1.199
+            ],
+            "sum_pv_fcf": 6.9,
+            "terminal_value": 24.24,
+            "pv_terminal": 14.39,
+            "op_ev": 21.29,
+            "total_equity": 27.09,
+            "dcf_per_share": 104.19
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.5,
+              5.0,
+              4.5,
+              4.2,
+              4.0
+            ],
+            "ev_fcf_multiple": [
+              22.0,
+              20.0,
+              19.0,
+              18.5,
+              18.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.47,
+          "expectedPerShare": 226.16,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 5.8,
+            "wacc": 0.09,
+            "take_rate_basis": 13,
+            "exit_fcf_multiple": 15
+          },
+          "dcfPath": {
+            "rev_b": 7.18,
+            "rev_path": [
+              -0.05,
+              0.05,
+              0.12,
+              0.1,
+              0.08
+            ],
+            "op_margin": [
+              0.36,
+              0.38,
+              0.4,
+              0.4,
+              0.4
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.02,
+            "fcf": [
+              2.46,
+              2.71,
+              3.22,
+              3.55,
+              3.83
+            ],
+            "cash": 10.5,
+            "net_debt": 7.2,
+            "special_assets": 5.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 255,
+            "distress": 0.0,
+            "pv_fcf": [
+              2.257,
+              2.281,
+              2.486,
+              2.515,
+              2.489
+            ],
+            "sum_pv_fcf": 12.03,
+            "terminal_value": 57.45,
+            "pv_terminal": 37.34,
+            "op_ev": 49.37,
+            "total_equity": 57.67,
+            "dcf_per_share": 226.16
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              7.0,
+              7.5,
+              7.5,
+              7.0,
+              7.0
+            ],
+            "ev_fcf_multiple": [
+              23.0,
+              23.0,
+              22.5,
+              22.0,
+              22.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.18,
+          "expectedPerShare": 482.45,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 13.9,
+            "wacc": 0.085,
+            "take_rate_basis": 13,
+            "exit_fcf_multiple": 20
+          },
+          "dcfPath": {
+            "rev_b": 7.18,
+            "rev_path": [
+              0.05,
+              0.18,
+              0.2,
+              0.15,
+              0.12
+            ],
+            "op_margin": [
+              0.4,
+              0.42,
+              0.44,
+              0.45,
+              0.45
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              3.02,
+              3.83,
+              4.97,
+              6.07,
+              6.58
+            ],
+            "cash": 11.0,
+            "net_debt": 7.0,
+            "special_assets": 8.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 245,
+            "distress": 0.0,
+            "pv_fcf": [
+              2.783,
+              3.253,
+              3.891,
+              4.38,
+              4.376
+            ],
+            "sum_pv_fcf": 18.68,
+            "terminal_value": 131.6,
+            "pv_terminal": 87.52,
+            "op_ev": 106.2,
+            "total_equity": 118.2,
+            "dcf_per_share": 482.45
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              8.5,
+              10.0,
+              11.0,
+              11.0,
+              10.5
+            ],
+            "ev_fcf_multiple": [
+              25.0,
+              27.0,
+              29.0,
+              30.0,
+              30.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.05,
+          "expectedPerShare": 1062.68,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 20.4,
+            "wacc": 0.08,
+            "take_rate_basis": 14,
+            "exit_fcf_multiple": 28
+          },
+          "dcfPath": {
+            "rev_b": 7.18,
+            "rev_path": [
+              0.1,
+              0.25,
+              0.28,
+              0.22,
+              0.18
+            ],
+            "op_margin": [
+              0.42,
+              0.45,
+              0.48,
+              0.5,
+              0.5
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              3.32,
+              4.93,
+              7.05,
+              9.03,
+              10.65
+            ],
+            "cash": 12.0,
+            "net_debt": 7.0,
+            "special_assets": 15.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 235,
+            "distress": 0.0,
+            "pv_fcf": [
+              3.074,
+              4.227,
+              5.597,
+              6.637,
+              7.248
+            ],
+            "sum_pv_fcf": 26.78,
+            "terminal_value": 298.2,
+            "pv_terminal": 202.95,
+            "op_ev": 229.73,
+            "total_equity": 249.73,
+            "dcf_per_share": 1062.68
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              10.0,
+              13.0,
+              16.0,
+              18.0,
+              18.0
+            ],
+            "ev_fcf_multiple": [
+              30.0,
+              35.0,
+              37.0,
+              38.0,
+              38.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Subscription engine is structural.",
+            "body": "Sub & services hit $584M Q1 2026 despite trading collapse — counter-cyclical USDC float kept revenue from imploding like 2022. ~44% of net revenue."
+          },
+          {
+            "label": "Regulatory moat is unprecedented.",
+            "body": "SEC dismissed with prejudice Feb 2025; GENIUS Act passed; CFTC derivatives jurisdiction clear. The only fully-regulated US large-scale exchange."
+          },
+          {
+            "label": "Deribit makes COIN the global derivatives leader.",
+            "body": "Acquisition closed Aug 2025 at $4.3B effective. #1 by options open interest and volume. Derivatives are higher-margin and less cycle-correlated than spot."
+          },
+          {
+            "label": "Coinbase One is the cycle hedge.",
+            "body": ">1M paid subs at $30/mo + premium tiers. Engagement floor regardless of BTC price. Higher trading volume + revenue per user vs free tier."
+          },
+          {
+            "label": "Balance sheet absorbs cycle.",
+            "body": "$10.2B cash + $1.3B BTC + ~$1B CRCL + ~$1.3B crypto = $13.8B liquid. Survives a 2022-style winter without distress."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "BTC < $60K sustained > 2 quarters · transaction rev < $700M/qtr · take-rate below 10 bps · USDC float < $20B · Hyperliquid-style deals proliferate"
+          },
+          {
+            "label": "Bull validation",
+            "body": "BTC > $150K sustained > 2 quarters · derivatives rev > $400M/qtr · USDC float > $50B · Coinbase One > 2M subs · international flows > 25% of derivatives"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If banks (JPM, BoA) launch GENIUS-compliant stablecoins at scale taking >20% of USDC share, the rails thesis breaks. Conversely, a major COIN acquisition (>$5B) broadens the thesis."
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "USDC",
+          "definition": "Circle-issued regulated dollar stablecoin. ~$60B circulating; $19B held within Coinbase products Q1 2026. Federally regulated under the GENIUS Act."
+        },
+        {
+          "term": "Transaction revenue",
+          "definition": "Fees on trading volume (spot + derivatives). $4.0B FY25 (56% of revenue). Cyclically tied to crypto prices/volatility; the main swing variable."
+        },
+        {
+          "term": "Subscription & services",
+          "definition": "Non-transaction revenue — USDC interest, staking, custody, Coinbase One subs. $2.8B FY25; structurally growing."
+        },
+        {
+          "term": "Deribit",
+          "definition": "Crypto-options exchange acquired Aug 2025 for $4.3B. Global #1 by options open interest. Made COIN the derivatives leader."
+        },
+        {
+          "term": "GENIUS Act",
+          "definition": "US stablecoin law (2025). Defines permitted issuers; $10B ceiling for state-qualified ones. Federal moat for USDC."
+        },
+        {
+          "term": "Circle (CRCL) stake",
+          "definition": "COIN holds ~8.4M CRCL shares from the 2023 Centre dissolution. ~$1B at $120/share (range $0.5-2.5B). Marked as a strategic investment."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-29_23-20",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
