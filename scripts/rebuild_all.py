@@ -15,9 +15,11 @@ PDFs land at public/memos/<ticker>-memo__v{NNN}__{timestamp}.pdf where
 scripts/bump_pdf_version.py).
 
 Usage:
-    python scripts/rebuild_all.py                    # bumped only
-    MEMO_FORCE=1 python scripts/rebuild_all.py       # rebuild all
-    python scripts/rebuild_all.py --strict-validate  # fail on validator errors
+    python scripts/rebuild_all.py                       # all tickers, bumped only
+    python scripts/rebuild_all.py joby aur              # subset (positional)
+    MEMO_FORCE=1 python scripts/rebuild_all.py          # rebuild all
+    python scripts/rebuild_all.py --strict-validate     # fail on validator errors
+    python scripts/rebuild_all.py --strict-layout       # fail on STRICT_LAYOUT violations
 """
 import os
 import shutil
@@ -44,9 +46,21 @@ def target_pdf(ticker: str) -> Path:
 
 
 def main() -> None:
-    # 1. Math QC.
+    # Positional args (non-flag) = ticker subset; otherwise rebuild all.
+    # Lets the pilot / a single-wave rebuild target just the tickers we touched
+    # without churning the rest. Validation + site-data regen still run over
+    # ALL tickers (their cross-cutting checks shouldn't skip).
     strict = "--strict-validate" in sys.argv
     strict_layout = "--strict-layout" in sys.argv
+    positional = [a for a in sys.argv[1:] if not a.startswith("--")]
+    bad = [t for t in positional if t not in TICKERS]
+    if bad:
+        print(f"unknown ticker(s): {bad}  (known: {TICKERS})", file=sys.stderr)
+        sys.exit(2)
+    tickers = positional if positional else TICKERS
+    print(f"[rebuild_all] tickers: {tickers}")
+
+    # 1. Math QC.
     print("[validate] running Math QC")
     rc = subprocess.run(
         [sys.executable, "scripts/validate.py"], cwd=REPO,
@@ -64,7 +78,7 @@ def main() -> None:
     # 3. PDFs.
     MEMOS_DIR.mkdir(parents=True, exist_ok=True)
     built, skipped = [], []
-    for t in TICKERS:
+    for t in tickers:
         pdf = target_pdf(t)
         if pdf.exists() and not FORCE:
             print(f"[{t}] {pdf.name} exists — skip (bump_pdf_version.py to rebuild)")
