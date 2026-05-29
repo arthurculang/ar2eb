@@ -38,7 +38,7 @@ from typing import Any
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic"]
 # Required scenario keys (every ticker must have these four). `ultra_bear`
 # is an optional 5th — present on ZM, may be added to other tickers later.
 SCEN_KEYS = ["bear", "base", "bull", "ultra_bull"]
@@ -67,6 +67,46 @@ _THEME_TO_UMBRELLA = {
     t: u for u, ublock in _TAXONOMY["umbrellas"].items()
     for t in ublock.get("themes", {})
 }
+
+
+_EXIT_KINDS = {"ipo", "acquisition", "down_round", "stay_private", "wipeout"}
+
+
+def _private_exit_errors(key: str, sc: dict) -> list[str]:
+    """Validate a private_prevaluation scenario's exit_terms block.
+
+    The equity math here is `outcome × prob / (1+r)^t`, not a DCF. We check:
+      - exit_terms present with a valid kind
+      - pv_per_share = exit_per_share_nominal × (1 - lp_haircut) / (1+wacc)^t
+      - expected_per_share = (1-p_loss)×pv×(1-ipo_haircut) + p_loss×distress
+    so a typo in any input fails the build (the analog of the equity-bridge
+    ERROR checks for public memos).
+    """
+    et = sc.get("exit_terms")
+    if not et:
+        return [f_err("exit_terms", "present", "missing")]
+    errs: list[str] = []
+    if et.get("kind") not in _EXIT_KINDS:
+        errs.append(f_err("exit_terms.kind", f"one of {sorted(_EXIT_KINDS)}", repr(et.get('kind'))))
+    nom = et.get("exit_per_share_nominal")
+    yrs = et.get("years_to_exit")
+    wacc = et.get("venture_wacc")
+    lp = et.get("lp_haircut_pct", 0) / 100
+    if None not in (nom, yrs, wacc):
+        pv_calc = nom * (1 - lp) / (1 + wacc) ** yrs
+        if abs(pv_calc - et.get("pv_per_share", 0)) > max(0.01 * pv_calc, 0.5):
+            errs.append(f_err(
+                f"pv_per_share (nom {nom} × (1-{lp:.2f}) / (1+{wacc})^{yrs})",
+                f"{et.get('pv_per_share')}", f"{pv_calc:.2f}"))
+        p_loss = et.get("p_total_loss", 0)
+        ipo_hc = et.get("ipo_underperformance_haircut_pct", 0) / 100
+        distress = et.get("distress_per_share", 0) or 0
+        exp_calc = (1 - p_loss) * pv_calc * (1 - ipo_hc) + p_loss * distress
+        if abs(exp_calc - sc.get("expected_per_share", 0)) > max(0.02 * abs(exp_calc), 0.5):
+            errs.append(f_err(
+                f"expected_per_share ((1-{p_loss:.2f})×{pv_calc:.1f}×(1-{ipo_hc:.2f}) + {p_loss:.2f}×{distress:.1f})",
+                f"{sc.get('expected_per_share')}", f"{exp_calc:.2f}"))
+    return errs
 
 
 def _taxonomy_errors(tax: dict | None) -> list[str]:
@@ -311,6 +351,19 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
     prob_sum = sum(s["probability"] for s in data["scenarios"].values())
     if abs(prob_sum - 1.0) > TOL_PROB:
         errors.append(f_err("probabilities sum", "1.000", f"{prob_sum:.3f}"))
+
+    # Private companies use a distinct scenario shape (exit_terms, not
+    # dcf_path); validate those and return early — the public-equity checks
+    # below don't apply.
+    if data.get("dcf_type") == "private_prevaluation":
+        for key in SCEN_KEYS_ALL:
+            if key not in data["scenarios"]:
+                continue
+            pe = _private_exit_errors(key, data["scenarios"][key])
+            if pe:
+                errors.append(f"  [{key}]")
+                errors.extend(pe)
+        return errors, warns
 
     # Scenario keys — the four required ones must exist; ultra_bear optional.
     missing = [k for k in SCEN_KEYS if k not in data["scenarios"]]

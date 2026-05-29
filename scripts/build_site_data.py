@@ -22,7 +22,7 @@ DATA = REPO / "data"
 MEMOS_DIR = REPO / "public" / "memos"
 OUT = REPO / "public" / "data.js"
 
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic"]
 # Canonical scenario order — worst to best. Each ticker subsets this list
 # based on which keys appear in scenarios.* (e.g. ZM has all five, JOBY/AUR/
 # LTH/NAUT have the standard four). The order here drives display order
@@ -42,6 +42,7 @@ DCF_DISPLAY = {
     "young_company": ("Young-Company DCF (Damodaran)", "asymmetrical-moonshots"),
     "mature_company": ("Mature-Company DCF", "fcf-plus-plus-growth"),
     "mature_company_sotp": ("Mature-Company DCF · SOTP", "fcf-plus-plus-growth"),
+    "private_prevaluation": ("Private Pre-Valuation (exit-scenario)", "private-wishlist"),
 }
 
 # Canonical Helm taxonomy — source of truth for watchlists, umbrellas, themes,
@@ -168,6 +169,30 @@ def label_date(d) -> tuple[str, str]:
     return iso, lbl
 
 
+def _scn_print_payload(s: dict, is_private: bool) -> dict:
+    """Per-scenario PDF payload. Public scenarios carry dcf_metrics/dcf_path;
+    private scenarios carry an exit_terms block instead (the renderer
+    dispatches on dcfType)."""
+    base = {
+        "probability": float(s["probability"]),
+        "expectedPerShare": float(s["expected_per_share"]),
+        "label": s["label"],
+        "shortLabel": s["short_label"],
+    }
+    if is_private:
+        base["exitTerms"] = _camelize(dict(s["exit_terms"]))
+        base["dcfMetrics"] = {}
+        base["dcfPath"] = {}
+        base["chartData"] = {}
+        base["revPerUnit"] = None
+    else:
+        base["dcfMetrics"] = dict(s["dcf_metrics"])
+        base["dcfPath"] = dict(s["dcf_path"])
+        base["chartData"] = dict(s.get("chart_data", {}))
+        base["revPerUnit"] = _pick_rev_per_unit(s.get("chart_data", {}))
+    return base
+
+
 def build_memo(ticker: str) -> dict:
     d = yaml.safe_load((DATA / f"{ticker}.yml").read_text())
     st = d["stamp"]
@@ -180,18 +205,28 @@ def build_memo(ticker: str) -> dict:
     category = tax["watchlist"] if tax else fallback_category
     iso, lbl = label_date(d["date"])
 
+    is_private = dcf_type == "private_prevaluation"
     scn = d["scenarios"]
-    # Probability-weighted math — identical to memo.py.
+    # Probability-weighted math — identical to memo.py. For private companies
+    # expected_per_share is already a present-value (discounted at a venture
+    # WACC per scenario), so the weighted is a present value too.
     pw_expected = sum(s["probability"] * s["expected_per_share"]
                       for s in scn.values())
 
-    def pw_at(T: int) -> float:
-        return sum(s["probability"] * s["expected_per_share"]
-                   * (1 + s["dcf_path"]["wacc_path"][-1]) ** T
-                   for s in scn.values())
-
-    compound = [{"y": T, "value": round(pw_at(T), 2),
-                 "mult": round(pw_at(T) / spot, 2)} for T in (5, 10, 15, 20)]
+    # Forward-compounded value table is a public-equity construct (compound the
+    # weighted value at the terminal WACC out to +20y). It's meaningless for a
+    # private pre-exit company whose value crystallizes at a discrete exit, so
+    # we emit an empty compound for private and the Page 1 forward table is
+    # suppressed in the renderer.
+    if is_private:
+        compound = []
+    else:
+        def pw_at(T: int) -> float:
+            return sum(s["probability"] * s["expected_per_share"]
+                       * (1 + s["dcf_path"]["wacc_path"][-1]) ** T
+                       for s in scn.values())
+        compound = [{"y": T, "value": round(pw_at(T), 2),
+                     "mult": round(pw_at(T) / spot, 2)} for T in (5, 10, 15, 20)]
 
     # Each ticker subsets SCEN_ORDER based on which keys exist in its YAML.
     # ZM has 5 (with ultra_bear); JOBY/AUR/LTH/NAUT have the standard 4.
@@ -268,12 +303,14 @@ def build_memo(ticker: str) -> dict:
             f"Bull {probs['bull']} / Ultra Bull {probs['ultra_bull']}. "
             f"Spot price reference: {lbl} close."),
         "thesis": collapse(d["thesis"]),
-        "historicalPrices": {
+        # Public-equity price history. Private companies have no price history
+        # (funding_history is emitted under print.fundingHistory instead).
+        "historicalPrices": ({
             "xMin": float(d["historical_prices"]["x_min"]),
             "ipoMarker": d["historical_prices"]["ipo_marker"],
             "points": [[float(p[0]), float(p[1])]
                        for p in d["historical_prices"]["points"]],
-        },
+        } if "historical_prices" in d else None),
         "weightingRationale": [
             {"label": r["label"], "body": collapse(r["body"])}
             for r in d["weighting_rationale"]
@@ -295,7 +332,7 @@ def build_memo(ticker: str) -> dict:
         # parallel "what to display" logic in Python).
         "print": {
             "dcfType": dcf_type,
-            "dcfPeriodYears": 10 if dcf_type == "young_company" else 5,
+            "dcfPeriodYears": 10 if dcf_type == "young_company" else 5,  # n/a for private
             "tamBillion": d.get("chart_reference", {}).get("tam_billion"),
             "weighted": {
                 "expected": round(pw_expected, 2),
@@ -308,21 +345,30 @@ def build_memo(ticker: str) -> dict:
                 "netDebtBillion": float(mk["net_debt_billion"]),
             },
             "scenarios": {
-                k: {
-                    "probability": float(scn[k]["probability"]),
-                    "expectedPerShare": float(scn[k]["expected_per_share"]),
-                    "label": scn[k]["label"],
-                    "shortLabel": scn[k]["short_label"],
-                    "dcfMetrics": dict(scn[k]["dcf_metrics"]),
-                    "dcfPath": dict(scn[k]["dcf_path"]),
-                    "chartData": dict(scn[k].get("chart_data", {})),
-                    # rev_per_unit's YAML key differs per ticker
-                    # (rev_per_aircraft/rev_per_truck/rev_per_instrument);
-                    # normalize for the JSX charts.
-                    "revPerUnit": _pick_rev_per_unit(scn[k].get("chart_data", {})),
-                }
+                k: _scn_print_payload(scn[k], is_private)
                 for k in ticker_scens
             },
+            # Private-company extras. Funding-round history replaces public
+            # price history; the renderer uses it for the Page-1/Page-3 charts.
+            **({
+                "private": {
+                    "spotKind": d.get("spot_kind"),
+                    "spotAsOf": d.get("spot_as_of"),
+                    "spotRound": d.get("spot_round"),
+                    "spotCaveat": collapse(d.get("spot_caveat", "")),
+                    "lastPostMoneyBillion": float(mk["market_cap_billion"]),
+                    "fdsMillion": float(mk["shares_outstanding_million"]),
+                },
+                "fundingHistory": {
+                    "firstRoundMarker": d["funding_history"]["first_round_marker"],
+                    "xMin": float(d["funding_history"]["x_min"]),
+                    "rounds": [
+                        {"x": float(r["x"]), "ps": float(r["ps"]), "name": r["name"],
+                         "pm": float(r["pm"]), "lead": r.get("lead", "")}
+                        for r in d["funding_history"]["rounds"]
+                    ],
+                },
+            } if is_private else {}),
             "appendix": {
                 "pushback": [{"label": p["label"], "body": collapse(p["body"])}
                              for p in d["appendix"]["pushback"]],

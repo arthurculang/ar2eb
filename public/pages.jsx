@@ -588,9 +588,16 @@ function PortfolioPage() {
     }
   }, [maxPosition, hurdleFrac]);
 
+  // Private companies (private-wishlist) aren't publicly buyable, so they're
+  // excluded from the conviction-weighted long portfolio — it allocates across
+  // positions you can actually take.
+  const publicMemos = React.useMemo(
+    () => MEMOS.filter(m => !m.taxonomy || m.taxonomy.watchlist !== 'private-wishlist'),
+    [MEMOS]
+  );
   const portfolio = React.useMemo(
-    () => computePortfolio(MEMOS, { maxPosition, hurdleFrac }),
-    [MEMOS, maxPosition, hurdleFrac]
+    () => computePortfolio(publicMemos, { maxPosition, hurdleFrac }),
+    [publicMemos, maxPosition, hurdleFrac]
   );
 
   // Sort the table by raw score desc so the strongest names lead.
