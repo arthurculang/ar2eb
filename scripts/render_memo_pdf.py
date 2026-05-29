@@ -86,35 +86,63 @@ def render(ticker: str, out_path: Path | None = None) -> Path:
                 "document.body.dataset.ready === '1'", timeout=15_000
             )
             # Spec §3.5 A safe-zones: every .memo-page must keep its content
-            # inside the page height. The CSS uses overflow:hidden + a paper-
-            # colored footer band to mask small bleeds, but anything past the
-            # footer band gets clipped — invisible content is worse than
-            # truncated content. We surface overflows on every render so they
-            # can't ship undetected. Set STRICT_LAYOUT=1 to turn them into
-            # errors (use in CI / before merge). Default is warn-only so the
-            # rebuild_all.py pipeline doesn't break on legacy bleeds (NAUT
-            # page 2 ultra_bull column is a known pre-existing case).
+            # inside the page height AND clear of the footer band. Two distinct
+            # failure modes:
+            #   (1) page-boundary overflow — content runs past the bottom of
+            #       the 8.5in page (scrollHeight > clientHeight). overflow:hidden
+            #       clips it; the reader loses information off the page edge.
+            #   (2) footer-band intrusion — content sits within the page but
+            #       behind the opaque footer band (position:absolute, bottom:0).
+            #       scrollHeight stays within bounds so (1) misses it, yet the
+            #       footer's paper background visually truncates the content
+            #       (e.g. ISRG page-1 scenario-card headlines, May 2026). The
+            #       footer is the .memo-footer element; any in-flow content whose
+            #       bottom crosses the footer's top edge is masked.
+            # Both surface on every render; STRICT_LAYOUT=1 turns them into
+            # errors (CI / pre-merge). Default warn-only so rebuild_all.py
+            # doesn't break on legacy bleeds.
             overflows = page.evaluate("""() => {
                 const TOL_PX = 2;
-                return Array.from(document.querySelectorAll('.memo-page')).map((el, i) => ({
-                    page: i + 1,
-                    scrollH: el.scrollHeight,
-                    clientH: el.clientHeight,
-                    bleed: el.scrollHeight - el.clientHeight,
-                })).filter(p => p.bleed > TOL_PX);
+                const out = [];
+                document.querySelectorAll('.memo-page').forEach((pg, i) => {
+                    const issues = [];
+                    // (1) page-boundary overflow
+                    const bleed = pg.scrollHeight - pg.clientHeight;
+                    if (bleed > TOL_PX) issues.push(`overflows page bottom by ${bleed}px`);
+                    // (2) footer-band intrusion
+                    const footer = pg.querySelector('.memo-footer');
+                    if (footer) {
+                        const pgTop = pg.getBoundingClientRect().top;
+                        const footTop = footer.getBoundingClientRect().top - pgTop;
+                        // Max bottom of any in-flow content NOT inside the footer.
+                        let maxBottom = 0;
+                        pg.querySelectorAll('*').forEach(el => {
+                            if (el === footer || footer.contains(el)) return;
+                            if (!(el.textContent || '').trim()) return;
+                            const b = el.getBoundingClientRect().bottom - pgTop;
+                            if (b > maxBottom) maxBottom = b;
+                        });
+                        const intrude = Math.round(maxBottom - footTop);
+                        if (intrude > TOL_PX) {
+                            issues.push(`content hidden behind footer band by ${intrude}px (footer top ${Math.round(footTop)}px)`);
+                        }
+                    }
+                    if (issues.length) out.push({ page: i + 1, issues });
+                });
+                return out;
             }""")
             if overflows:
                 strict = os.environ.get("STRICT_LAYOUT") == "1"
                 tag = "ERROR" if strict else "warn"
                 lines = "\n".join(
-                    f"    page {o['page']}: scrollH={o['scrollH']}px > clientH={o['clientH']}px (bleed {o['bleed']}px)"
+                    f"    page {o['page']}: {'; '.join(o['issues'])}"
                     for o in overflows
                 )
                 print(
-                    f"[{ticker}] {tag}: content overflows page boundary:\n{lines}\n"
-                    "  spec §3.5 A: content area must not extend past the "
-                    "footer band. Trim narrative / rowGap / fontSize so the "
-                    "page fits within 8.5in. (set STRICT_LAYOUT=1 to fail)",
+                    f"[{ticker}] {tag}: layout safe-zone violation:\n{lines}\n"
+                    "  spec §3.5 A: content must stay inside the page AND clear "
+                    "of the footer band. Trim narrative / rowGap / fontSize. "
+                    "(set STRICT_LAYOUT=1 to fail)",
                     file=sys.stderr,
                 )
                 if strict:

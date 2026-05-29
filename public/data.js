@@ -4416,13 +4416,20 @@ const MEMOS = [
     "publishedISO": "2026-05-27",
     "publishedLabel": "May 27, 2026",
     "pdf": {
-      "file": "isrg-memo__v002__2026-05-28_05-26.pdf",
+      "file": "isrg-memo__v003__2026-05-29_01-52.pdf",
       "size": "266 KB",
       "priorVersions": [
         {
+          "version": "002",
+          "file": "isrg-memo__v002__2026-05-28_05-26.pdf",
+          "size": "266 KB",
+          "asOfDate": "2026-05-27",
+          "spotPrice": 436.64
+        },
+        {
           "version": "001",
           "file": "isrg-memo__v001__2026-05-27_19-30.pdf",
-          "size": "266 KB",
+          "size": "260 KB",
           "asOfDate": "2026-05-27",
           "spotPrice": 436.64
         }
@@ -5143,8 +5150,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-05-28_05-26",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-05-29_01-52",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

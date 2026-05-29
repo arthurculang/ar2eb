@@ -222,7 +222,7 @@ function PageFooter({ memo, pageLabel, showDisclaimerPointer = true }) {
     // Spec §3.5 A: footer band must mask any overflowing content all the
     // way to the page edge — otherwise long glossary/disclaimer/narrative
     // entries (e.g. NAUT, ZM v022 Page 5) leak below the disclaimer line.
-    <div style={{
+    <div className="memo-footer" style={{
       position: 'absolute',
       left: 0,
       right: 0,
@@ -895,13 +895,16 @@ function Page1Headline({ memo }) {
       </div>
 
       {/* Section separator + scenario summary cards */}
-      <div style={{ marginTop: '6pt' }}><Rule /></div>
+      <div style={{ marginTop: memo.scenarios.length === 5 ? '4pt' : '6pt' }}><Rule /></div>
 
       {/* Scenario summary cards (compact — full narrative on Page 2).
           Column count tracks scenario count: 4 for the standard tickers,
-          5 when a ticker carries ultra_bear. 5-col mode tightens typography. */}
+          5 when a ticker carries ultra_bear. 5-col mode tightens typography
+          AND the top margin — a 5-scenario Page 1 left column (thesis +
+          PWEV + 5 weighting lines + decomposition) is tall enough that the
+          card headlines can otherwise sit behind the footer band. */}
       <div style={{
-        marginTop: '8pt',
+        marginTop: memo.scenarios.length === 5 ? '4pt' : '8pt',
         display: 'grid',
         gridTemplateColumns: `repeat(${memo.scenarios.length}, 1fr)`,
         columnGap: memo.scenarios.length === 5 ? '10pt' : '16pt',
