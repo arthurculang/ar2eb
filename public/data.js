@@ -52,6 +52,21 @@ const MEMOS = [
         "mult": 3.51
       }
     ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "High",
+      "themes": [
+        "evtol-advanced-air-mobility"
+      ],
+      "themeNames": [
+        "eVTOL & Advanced Air Mobility"
+      ],
+      "primaryTheme": "evtol-advanced-air-mobility",
+      "primaryThemeName": "eVTOL & Advanced Air Mobility",
+      "umbrella": "mobility-aerospace",
+      "umbrellaName": "Mobility & Aerospace"
+    },
     "question": "Will Joby capture meaningful share of a $250B global UAM TAM by 2036 — or is today's $10B market cap pricing certainty that competitive eVTOL economics don't support?",
     "scenarios": [
       {
@@ -1023,6 +1038,21 @@ const MEMOS = [
         "mult": 3.87
       }
     ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "High",
+      "themes": [
+        "autonomous-vehicles-systems"
+      ],
+      "themeNames": [
+        "Autonomous Vehicles & Systems"
+      ],
+      "primaryTheme": "autonomous-vehicles-systems",
+      "primaryThemeName": "Autonomous Vehicles & Systems",
+      "umbrella": "mobility-aerospace",
+      "umbrellaName": "Mobility & Aerospace"
+    },
     "question": "Will Aurora capture meaningful share of a $160B US autonomous trucking TAM by 2036 — or is today's $13B market cap pricing certainty about driverless commercial economics that hasn't been proven?",
     "scenarios": [
       {
@@ -1993,6 +2023,21 @@ const MEMOS = [
         "mult": 3.39
       }
     ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "High",
+      "themes": [
+        "consumer-experience"
+      ],
+      "themeNames": [
+        "Consumer Experience"
+      ],
+      "primaryTheme": "consumer-experience",
+      "primaryThemeName": "Consumer Experience",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
     "question": "Is Life Time a premium wellness platform with durable luxury economics — or a leveraged real estate vehicle whose positive FCF depends on perpetual $400M/year sale-leasebacks?",
     "scenarios": [
       {
@@ -2691,6 +2736,21 @@ const MEMOS = [
         "mult": 8.1
       }
     ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "Med",
+      "themes": [
+        "platform-marketplace-tech"
+      ],
+      "themeNames": [
+        "Platform & Marketplace Tech"
+      ],
+      "primaryTheme": "platform-marketplace-tech",
+      "primaryThemeName": "Platform & Marketplace Tech",
+      "umbrella": "digital-platforms",
+      "umbrellaName": "Digital & Platforms"
+    },
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
     "scenarios": [
       {
@@ -3476,6 +3536,21 @@ const MEMOS = [
         "mult": 11.0
       }
     ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "High",
+      "themes": [
+        "omics-life-science-infrastructure"
+      ],
+      "themeNames": [
+        "Omics & Life-Science Infrastructure"
+      ],
+      "primaryTheme": "omics-life-science-infrastructure",
+      "primaryThemeName": "Omics & Life-Science Infrastructure",
+      "umbrella": "life-sciences-health",
+      "umbrellaName": "Life Sciences & Health"
+    },
     "question": "Will Nautilus capture meaningful share of a $130B global proteomics TAM by 2036 with its Voyager single-molecule platform — or is today's $302M market cap pricing certainty about commercial economics that the late-2026 launch and early-2027 instrument installations haven't yet earned?",
     "scenarios": [
       {
@@ -4470,6 +4545,23 @@ const MEMOS = [
         "mult": 5.52
       }
     ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "Med",
+      "themes": [
+        "robotics-automation",
+        "medical-devices"
+      ],
+      "themeNames": [
+        "Robotics & Automation",
+        "Medical Devices"
+      ],
+      "primaryTheme": "medical-devices",
+      "primaryThemeName": "Medical Devices",
+      "umbrella": "life-sciences-health",
+      "umbrellaName": "Life Sciences & Health"
+    },
     "question": "Is Intuitive's near-monopoly in soft-tissue surgical robotics — 11,100 da Vinci systems, ~78% recurring revenue — durable enough to outrun the first credible competitors (Hugo, Ottava, Versius) and justify a 50-60× forward P/FCF, or is this peak-platform pricing?",
     "scenarios": [
       {
@@ -5164,14 +5256,14 @@ const CATEGORIES = {
     "name": "Asymmetrical Moonshots",
     "sub": "Young-company DCFs. Compound conditional tails. Show your work.",
     "short": "Young-company DCFs. Compound conditional tails. Show your work.",
-    "long": "Pre-revenue or pre-profitability category-defining companies where the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Three scenarios plus an ultra-bull tail, weighted; show your work."
+    "long": "Long-tail bets with asymmetric upside. Pre-revenue or pre-profitability category-defining companies where the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Four to five scenarios including explicit tails, weighted; show your work."
   },
   "fcf-plus-plus-growth": {
     "slug": "fcf-plus-plus-growth",
     "name": "FCF++Growth",
-    "sub": "Mature-company DCFs. Cash machines with optionality.",
-    "short": "Mature-company DCFs. Cash machines with optionality.",
-    "long": "Established businesses generating real free cash flow today, with credible paths to growth-rate inflection. The mature-company framework uses 5-year explicit DCFs with terminal-value treatment, and prices in the bull case where the company gets re-rated AS WELL AS executes operationally."
+    "sub": "Mature-company DCFs. Cash machines with runway.",
+    "short": "Mature-company DCFs. Cash machines with runway.",
+    "long": "Cash-generative businesses with durable runway. Quality compounders where the work is calibrating the multi-year growth/margin path and defending the terminal value (Gordon perpetuity, exit-multiple, or sum-of-the-parts when material non-operating value is present)."
   }
 };
 

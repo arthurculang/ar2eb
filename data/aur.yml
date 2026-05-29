@@ -419,6 +419,13 @@ appendix:
       body: "If Kodiak achieves at-scale commercial first — Aurora's first-mover advantage in long-haul erodes; TAM-share math compresses"
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
+# ── Taxonomy (Helm v33b) ────────────────────────────────────────────────────
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: High
+  themes: [autonomous-vehicles-systems]
+  primary_theme: autonomous-vehicles-systems
+
 stamp:
   footer_version: "023"
   footer_timestamp: "2026-05-23_21-14"

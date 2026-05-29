@@ -60,6 +60,42 @@ def f_err(check: str, expected: Any, got: Any, extra: str = "") -> str:
     return f"{base} ({extra})" if extra else base
 
 
+# Canonical Helm taxonomy — load once. Per-ticker taxonomy blocks must reference
+# slugs (watchlist/themes) that exist in this file.
+_TAXONOMY = yaml.safe_load((REPO / "data" / "taxonomy.yml").read_text())
+_THEME_TO_UMBRELLA = {
+    t: u for u, ublock in _TAXONOMY["umbrellas"].items()
+    for t in ublock.get("themes", {})
+}
+
+
+def _taxonomy_errors(tax: dict | None) -> list[str]:
+    if not tax:
+        return [f_err("taxonomy block", "present", "missing")]
+    errs: list[str] = []
+    wl = tax.get("watchlist")
+    if wl not in _TAXONOMY["watchlists"]:
+        errs.append(f_err("taxonomy.watchlist", f"one of {list(_TAXONOMY['watchlists'])}", repr(wl)))
+        return errs  # downstream checks depend on a valid watchlist
+    w = _TAXONOMY["watchlists"][wl]
+    tier = tax.get("tier")
+    if w.get("allows_tiers", True):
+        if tier not in _TAXONOMY["tiers"]:
+            errs.append(f_err("taxonomy.tier", f"one of {_TAXONOMY['tiers']}", repr(tier)))
+    elif tier is not None:
+        errs.append(f_err("taxonomy.tier", "null (watchlist is tier-less)", repr(tier)))
+    themes = tax.get("themes") or []
+    if not themes:
+        errs.append(f_err("taxonomy.themes", "≥1 entry", "[]"))
+    for t in themes:
+        if t not in _THEME_TO_UMBRELLA:
+            errs.append(f_err("taxonomy.themes entry", "valid theme slug", repr(t)))
+    primary = tax.get("primary_theme") or (themes[0] if themes else None)
+    if primary and primary not in themes:
+        errs.append(f_err("taxonomy.primary_theme", "one of taxonomy.themes", repr(primary)))
+    return errs
+
+
 def young_cash_path(sc: dict, start_cash: float) -> list[float]:
     """Mirrors charts/young_company.py::_cash_path.
 
@@ -265,6 +301,11 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
 
     errors: list[str] = []
     warns: list[str] = []
+
+    # Taxonomy — every ticker must carry a Helm-aligned taxonomy block. Values
+    # validated against data/taxonomy.yml (the canonical source of truth).
+    tax_errors = _taxonomy_errors(data.get("taxonomy"))
+    errors.extend(tax_errors)
 
     # Probabilities sum to 1.0
     prob_sum = sum(s["probability"] for s in data["scenarios"].values())

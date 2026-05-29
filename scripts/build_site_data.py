@@ -44,6 +44,64 @@ DCF_DISPLAY = {
     "mature_company_sotp": ("Mature-Company DCF · SOTP", "fcf-plus-plus-growth"),
 }
 
+# Canonical Helm taxonomy — source of truth for watchlists, umbrellas, themes,
+# and conviction tiers. Loaded once; per-ticker taxonomy blocks are validated
+# against this. The site emits memo.taxonomy (with display names resolved) so
+# the JSX side can render chips, filters, and the future Matrix view without
+# carrying the taxonomy mapping in JS.
+TAXONOMY = yaml.safe_load((REPO / "data" / "taxonomy.yml").read_text())
+
+
+def _theme_to_umbrella() -> dict:
+    """Build reverse lookup: theme slug → umbrella slug. The taxonomy nests
+    themes under umbrellas; this flattens for fast resolution."""
+    out = {}
+    for u_slug, u in TAXONOMY["umbrellas"].items():
+        for t_slug in u.get("themes", {}):
+            out[t_slug] = u_slug
+    return out
+
+
+THEME_TO_UMBRELLA = _theme_to_umbrella()
+
+
+def resolve_taxonomy(tax: dict, ticker: str) -> dict:
+    """Validate per-ticker taxonomy fields against TAXONOMY and resolve
+    display names for the site. Raises ValueError on invalid values so a
+    typo (e.g. wrong theme slug) fails the build instead of shipping silently."""
+    if not tax:
+        raise ValueError(f"{ticker}: missing top-level `taxonomy:` block")
+    wl = tax.get("watchlist")
+    if wl not in TAXONOMY["watchlists"]:
+        raise ValueError(f"{ticker}: taxonomy.watchlist={wl!r} not in {list(TAXONOMY['watchlists'])}")
+    tier = tax.get("tier")
+    if TAXONOMY["watchlists"][wl].get("allows_tiers", True):
+        if tier not in TAXONOMY["tiers"]:
+            raise ValueError(f"{ticker}: taxonomy.tier={tier!r} not in {TAXONOMY['tiers']}")
+    elif tier is not None:
+        raise ValueError(f"{ticker}: watchlist {wl!r} is tier-less; remove taxonomy.tier")
+    themes = tax.get("themes") or []
+    if not themes:
+        raise ValueError(f"{ticker}: taxonomy.themes must have at least one entry")
+    for t in themes:
+        if t not in THEME_TO_UMBRELLA:
+            raise ValueError(f"{ticker}: taxonomy.themes entry {t!r} not in any umbrella")
+    primary = tax.get("primary_theme") or themes[0]
+    if primary not in themes:
+        raise ValueError(f"{ticker}: taxonomy.primary_theme={primary!r} not in themes")
+    umbrella = THEME_TO_UMBRELLA[primary]
+    return {
+        "watchlist": wl,
+        "watchlistName": TAXONOMY["watchlists"][wl]["name"],
+        "tier": tier,
+        "themes": list(themes),
+        "themeNames": [TAXONOMY["umbrellas"][THEME_TO_UMBRELLA[t]]["themes"][t] for t in themes],
+        "primaryTheme": primary,
+        "primaryThemeName": TAXONOMY["umbrellas"][umbrella]["themes"][primary],
+        "umbrella": umbrella,
+        "umbrellaName": TAXONOMY["umbrellas"][umbrella]["name"],
+    }
+
 
 def collapse(s: str) -> str:
     return " ".join(str(s).split())
@@ -109,7 +167,11 @@ def build_memo(ticker: str) -> dict:
     st = d["stamp"]
     spot = float(d["spot"])
     dcf_type = d["dcf_type"]
-    dcf_display, category = DCF_DISPLAY[dcf_type]
+    dcf_display, fallback_category = DCF_DISPLAY[dcf_type]
+    # Taxonomy is now the source of truth for category. The DCF-type fallback
+    # remains for any ticker not yet tagged (back-compat during rollout).
+    tax = resolve_taxonomy(d.get("taxonomy"), ticker) if d.get("taxonomy") else None
+    category = tax["watchlist"] if tax else fallback_category
     iso, lbl = label_date(d["date"])
 
     scn = d["scenarios"]
@@ -190,6 +252,7 @@ def build_memo(ticker: str) -> dict:
         "expected": {"fair": round(pw_expected, 2),
                       "deltaPct": round((pw_expected / spot - 1) * 100, 1)},
         "compound": compound,
+        "taxonomy": tax,
         "question": collapse(d["central_question"]),
         "scenarios": scenarios,
         "methodology": (
@@ -271,33 +334,24 @@ def build_memo(ticker: str) -> dict:
     }
 
 
-# Static blocks — verbatim from the design spec (prompt-for-claude-design
-# §disclaimer); content-stable, not derived from YAML.
-CATEGORIES = {
-    "asymmetrical-moonshots": {
-        "slug": "asymmetrical-moonshots",
-        "name": "Asymmetrical Moonshots",
-        "sub": "Young-company DCFs. Compound conditional tails. Show your work.",
-        "short": "Young-company DCFs. Compound conditional tails. Show your work.",
-        "long": ("Pre-revenue or pre-profitability category-defining companies "
-                 "where the standard 5-year DCF generates nonsense. The "
-                 "young-company framework asks what mature TAM share is "
-                 "plausible, what terminal margins look like at scale, and what "
-                 "probability of outright failure. Three scenarios plus an "
-                 "ultra-bull tail, weighted; show your work."),
-    },
-    "fcf-plus-plus-growth": {
-        "slug": "fcf-plus-plus-growth",
-        "name": "FCF++Growth",
-        "sub": "Mature-company DCFs. Cash machines with optionality.",
-        "short": "Mature-company DCFs. Cash machines with optionality.",
-        "long": ("Established businesses generating real free cash flow today, "
-                 "with credible paths to growth-rate inflection. The "
-                 "mature-company framework uses 5-year explicit DCFs with "
-                 "terminal-value treatment, and prices in the bull case where "
-                 "the company gets re-rated AS WELL AS executes operationally."),
-    },
-}
+# Categories derive from the taxonomy watchlists. Built dynamically and
+# filtered to watchlists that have ≥1 published memo (no empty cards on
+# the home page). Adding a memo in a new watchlist (e.g. private-wishlist,
+# fcf-megacap) makes the category appear automatically — no hand-wiring.
+def build_categories(memos: list) -> dict:
+    present = {m["category"] for m in memos}
+    out = {}
+    for slug, w in TAXONOMY["watchlists"].items():
+        if slug not in present:
+            continue
+        out[slug] = {
+            "slug": slug,
+            "name": w["name"],
+            "sub": collapse(w.get("sub", "")),
+            "short": collapse(w.get("sub", "")),
+            "long": collapse(w.get("long", "")),
+        }
+    return out
 
 DISCLAIMER_BLOCKS = [
     {"h": "Not investment advice.",
@@ -375,13 +429,14 @@ PDF_DISCLAIMERS = [
 
 def main() -> None:
     memos = [build_memo(t) for t in TICKERS]
+    categories = build_categories(memos)
     dump = lambda o: json.dumps(o, ensure_ascii=False, indent=2)
     js = (
         "/* AR2EB — memo data.\n"
         " * GENERATED by scripts/build_site_data.py from data/{ticker}.yml.\n"
         " * Do not edit by hand — edit the YAML and rerun the generator. */\n\n"
         f"const MEMOS = {dump(memos)};\n\n"
-        f"const CATEGORIES = {dump(CATEGORIES)};\n\n"
+        f"const CATEGORIES = {dump(categories)};\n\n"
         f"const DISCLAIMER_BLOCKS = {dump(DISCLAIMER_BLOCKS)};\n\n"
         f"const PDF_DISCLAIMERS = {dump(PDF_DISCLAIMERS)};\n\n"
         "window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS, PDF_DISCLAIMERS };\n"

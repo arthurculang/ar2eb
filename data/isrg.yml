@@ -507,6 +507,17 @@ appendix:
       body: "If Stryker / J&J announce a credible cross-platform alliance against ISRG, OR if ISRG acquires a major outside-OR or AI surgical asset (>$5B deal), the moat / TAM framing changes materially"
 
 # ── Footer stamp + Page-5 glossary ──────────────────────────────────────────
+# ── Taxonomy (Helm v33b) ────────────────────────────────────────────────────
+# Multi-theme ticker — Helm default primary would be robotics-automation
+# (themes[0]); overridden to medical-devices here because the clinical/
+# economic category for ISRG is medical devices that happen to use robotics,
+# not a pure-play robotics business. See Helm "multi-theme override" list.
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med
+  themes: [robotics-automation, medical-devices]
+  primary_theme: medical-devices
+
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-05-29_01-52"

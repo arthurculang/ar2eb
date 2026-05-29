@@ -531,6 +531,16 @@ appendix:
       body: "If Eric Yuan executes major M&A (>$3B deal) — repurposing cash from optionality to platform expansion; both bear and bull theses get rewritten"
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
+# ── Taxonomy (not in Helm v33b; tagged for site consistency) ────────────────
+# ZM is a published memo predating the Helm refresh and is not on any current
+# Helm watchlist. Tagged with the closest-fit umbrella/theme so the site can
+# render it consistently. Re-evaluate if/when ZM returns to the Helm.
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med
+  themes: [platform-marketplace-tech]
+  primary_theme: platform-marketplace-tech
+
 stamp:
   footer_version: "023"
   footer_timestamp: "2026-05-27_19-17"
