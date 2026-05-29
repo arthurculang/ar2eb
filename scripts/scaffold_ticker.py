@@ -141,6 +141,44 @@ def derive_dcf_path(dp: dict, mkt: dict, dcf_metrics: dict, ticker: str, scn_key
     dp.setdefault("distress", 0.0)
 
 
+def check_cash_runway(intake: dict, ticker: str) -> list[str]:
+    """Pre-check year-by-year cumulative cash for young_company scenarios.
+
+    The validator catches this post-hoc (cumulative cash must stay ≥ 0), but a
+    research agent or author can easily ship a raise schedule that violates the
+    constraint in 2–3 years before the validator notices. Pre-checking here
+    surfaces the issue + the exact year-of-failure to fix, BEFORE the heavy
+    scaffold step writes out the canonical YAML. Per-scenario `cash` overrides
+    market.cash_billion (e.g. ZM-style M&A or IONQ-style SkyWater close).
+    """
+    if intake.get("dcf_type") != "young_company":
+        return []
+    mkt = intake.get("market", {}) or {}
+    market_cash = float(mkt.get("cash_billion", 0))
+    errs: list[str] = []
+    for scn_key, sc in intake.get("scenarios", {}).items():
+        dp = sc.get("dcf_path", {}) or {}
+        cd = sc.get("chart_data", {}) or {}
+        start = float(dp.get("cash", market_cash))
+        fcf = dp.get("fcf", []) or []
+        raises = cd.get("raises", []) or [0] * len(fcf)
+        cum = start
+        for i in range(len(fcf)):
+            cum += float(fcf[i])
+            if i < len(raises):
+                cum += float(raises[i])
+            # 0.05B (~$50M) tolerance — covers rounding without masking real shortfalls.
+            if cum < -0.05:
+                errs.append(
+                    f"{ticker}.{scn_key}: cash runway negative at year {i+1} "
+                    f"(cum cash ${cum:+.3f}B; start ${start:.3f}B, fcf "
+                    f"{[round(float(x),2) for x in fcf[:i+1]]}, raises "
+                    f"{[round(float(x),2) for x in raises[:i+1]]})"
+                )
+                break
+    return errs
+
+
 def generate_stamp(canonical_jsx: str = "public/memo_pdf.jsx") -> dict:
     now = datetime.now().strftime("%Y-%m-%d_%H-%M")
     return {
@@ -158,6 +196,12 @@ def scaffold(ticker: str, intake_path: Path, force: bool = False) -> Path:
     intake = yaml.safe_load(intake_path.read_text())
     if not intake or not intake.get("scenarios"):
         raise ValueError(f"{intake_path}: missing scenarios block")
+
+    # Pre-check cash runway before computing the equity bridge. Cheaper to
+    # fail with a useful message here than after the validator runs post-hoc.
+    runway_errs = check_cash_runway(intake, ticker)
+    if runway_errs:
+        raise ValueError("cash-runway violations:\n  " + "\n  ".join(runway_errs))
 
     for scn_key, sc in intake["scenarios"].items():
         derive_dcf_path(

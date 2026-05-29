@@ -97,6 +97,10 @@ function assumptionsRows(scn, dcfType, tamBillion) {
       diagRow = ['5y SLB total ($B)', m.slb_total_5y.toFixed(2)];
     } else if (m.installed_base_fy30 !== undefined) {
       diagRow = ['Installed base FY30', m.installed_base_fy30.toLocaleString()];
+    } else if (m.take_rate_basis !== undefined) {
+      diagRow = ['Take rate (bp)', m.take_rate_basis.toFixed(0)];
+    } else if (m.anthropic_stake !== undefined) {
+      diagRow = ['Anthropic stake ($B)', m.anthropic_stake.toFixed(1)];
     } else {
       diagRow = ['5y revenue CAGR (%)', `${sign}${m.cagr_5y.toFixed(1)}`];
     }
@@ -262,7 +266,7 @@ function PageFooter({ memo, pageLabel, showDisclaimerPointer = true }) {
             fontSize: '6pt',
             color: PALETTE.muted,
           }}>
-            Alameda Research 2: Electric Boogaloo (AR2EB)  ·  arthur@culang.co  ·  {pageLabel}
+            Alameda Research 2: Electric Boogaloo (AR2EB)  ·  arthur@culang.co  ·  ar2eb.com  ·  {pageLabel}
           </div>
         </div>
       </div>
@@ -660,8 +664,15 @@ function ribbonMetrics(scnPrint, dcfType) {
     thirdCell = ['SLB', `$${m.slb_total_5y.toFixed(1)}B`];
   } else if (m.installed_base_fy30 !== undefined) {
     thirdCell = ['Base', `${(m.installed_base_fy30 / 1000).toFixed(1)}K`];
+  } else if (m.take_rate_basis !== undefined) {
+    thirdCell = ['Take', `${m.take_rate_basis.toFixed(0)}bp`];
+  } else if (m.anthropic_stake !== undefined) {
+    thirdCell = ['Anth', `$${m.anthropic_stake.toFixed(0)}B`];
   } else {
-    thirdCell = ['Anth', `$${(m.anthropic_stake ?? 0).toFixed(0)}B`];
+    // Generic fallback: surface the exit multiple if set, else CAGR repeats.
+    thirdCell = m.exit_fcf_multiple !== undefined
+      ? ['Exit', `${m.exit_fcf_multiple.toFixed(0)}×`]
+      : ['CAGR', `${m.cagr_5y >= 0 ? '+' : ''}${m.cagr_5y.toFixed(1)}%`];
   }
   return [cagrCell, waccCell, thirdCell, probCell];
 }
