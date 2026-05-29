@@ -22,7 +22,7 @@ DATA = REPO / "data"
 MEMOS_DIR = REPO / "public" / "memos"
 OUT = REPO / "public" / "data.js"
 
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq"]
 # Canonical scenario order — worst to best. Each ticker subsets this list
 # based on which keys appear in scenarios.* (e.g. ZM has all five, JOBY/AUR/
 # LTH/NAUT have the standard four). The order here drives display order
@@ -108,9 +108,15 @@ def collapse(s: str) -> str:
 
 
 def _pick_rev_per_unit(chart_data: dict) -> list | None:
-    # rev_per_unit's YAML key is ticker-specific. Probe known names.
-    for key in ("rev_per_aircraft", "rev_per_truck", "rev_per_instrument"):
+    # rev_per_unit's YAML key is ticker-specific. Probe known names, then
+    # fall back to anything that starts with "rev_per_" so a new ticker can
+    # name its unit naturally (e.g. rev_per_system for IONQ) without needing
+    # a JSX/Python sync.
+    for key in ("rev_per_aircraft", "rev_per_truck", "rev_per_instrument", "rev_per_system"):
         if key in chart_data:
+            return list(chart_data[key])
+    for key in chart_data:
+        if key.startswith("rev_per_"):
             return list(chart_data[key])
     return None
 
