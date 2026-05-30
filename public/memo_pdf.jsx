@@ -818,6 +818,13 @@ function ribbonMetrics(scnPrint, dcfType) {
 function Page1Headline({ memo }) {
   const NEG = '#b91c1c';
   const POS = '#15803d';
+  // 5-scenario memos carry a 5th weighting-rationale line + an extra card
+  // column; tighten the left-column type a touch so the central question and
+  // thesis don't have to be hand-trimmed to clear the footer band. 4-scenario
+  // memos render exactly as before.
+  const five = memo.scenarios.length === 5;
+  const qFont = five ? '11pt' : '12pt';
+  const thesisLH = five ? 1.24 : 1.28;
   const isPriv = memo.print.dcfType === 'private_prevaluation';
   const spot = memo.spot.price;
   const refLabel = isPriv ? 'last mark' : 'spot';   // private compares to last round mark
@@ -935,7 +942,7 @@ function Page1Headline({ memo }) {
           <Eyebrow>THE CENTRAL QUESTION</Eyebrow>
           <div style={{
             marginTop: '6pt',
-            fontFamily: FONT_SANS, fontSize: '12pt', color: PALETTE.ink,
+            fontFamily: FONT_SANS, fontSize: qFont, color: PALETTE.ink,
             lineHeight: 1.2,
           }}>
             {memo.question}
@@ -944,7 +951,7 @@ function Page1Headline({ memo }) {
           <div style={{
             marginTop: '6pt',
             fontFamily: FONT_SANS, fontSize: '8pt', color: PALETTE.text,
-            lineHeight: 1.28,
+            lineHeight: thesisLH,
           }}>
             {memo.thesis}
           </div>
@@ -2839,8 +2846,14 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
   // column (header / assumptions / DCF / equity / future-value) fits on
   // one page — memo.py uses ~22pt total per section header; CSS Grid
   // gives 22pt at 4/4 margins.
+  // 5-scenario columns are ~20% narrower and (for young_company) carry a
+  // 10-row DCF table — tighten section margins and row line-heights so the
+  // column fits the page without trimming narrative. 4-scenario memos are
+  // untouched.
+  const tight = scnKeysFor(memo).length === 5;
+  const dcfRowLH = tight ? '8.3pt' : '9pt';
   const SectionEyebrow = ({ children }) => (
-    <div style={{ marginTop: '4pt', marginBottom: '4pt' }}>
+    <div style={{ marginTop: tight ? '3pt' : '4pt', marginBottom: tight ? '3pt' : '4pt' }}>
       <Eyebrow>{children}</Eyebrow>
       <div style={{ marginTop: '2pt' }}><Rule /></div>
     </div>
@@ -2909,15 +2922,15 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
           return (
             <React.Fragment key={fy}>
               <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt',
-                            color: PALETTE.text, lineHeight: '9pt' }}>{fy}</div>
-              <div style={{ ...cell, lineHeight: '9pt' }}>{rev[i].toFixed(2)}</div>
-              <div style={{ ...cell, lineHeight: '9pt' }}>
+                            color: PALETTE.text, lineHeight: dcfRowLH }}>{fy}</div>
+              <div style={{ ...cell, lineHeight: dcfRowLH }}>{rev[i].toFixed(2)}</div>
+              <div style={{ ...cell, lineHeight: dcfRowLH }}>
                 {marginSign}{(margins[i] * 100).toFixed(0)}%
               </div>
-              <div style={{ ...cell, color: fcfColor, lineHeight: '9pt' }}>
+              <div style={{ ...cell, color: fcfColor, lineHeight: dcfRowLH }}>
                 {fcfSign}{fcf[i].toFixed(2)}
               </div>
-              <div style={{ ...cell, lineHeight: '9pt' }}>
+              <div style={{ ...cell, lineHeight: dcfRowLH }}>
                 {pvSign}{pvFcf[i].toFixed(2)}
               </div>
             </React.Fragment>
