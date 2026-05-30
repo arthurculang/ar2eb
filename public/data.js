@@ -5258,9 +5258,17 @@ const MEMOS = [
     "publishedISO": "2026-05-29",
     "publishedLabel": "May 29, 2026",
     "pdf": {
-      "file": "ionq-memo__v001__2026-05-29_23-02.pdf",
+      "file": "ionq-memo__v002__2026-05-30_00-02.pdf",
       "size": "351 KB",
-      "priorVersions": []
+      "priorVersions": [
+        {
+          "version": "001",
+          "file": "ionq-memo__v001__2026-05-29_23-02.pdf",
+          "size": "351 KB",
+          "asOfDate": "2026-05-29",
+          "spotPrice": 70.14
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$26.17B",
@@ -6409,8 +6417,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "001",
-        "footerTimestamp": "2026-05-29_23-02",
+        "footerVersion": "002",
+        "footerTimestamp": "2026-05-30_00-02",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
