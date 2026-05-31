@@ -10940,7 +10940,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "achr-memo__v001__2026-05-31_20-31.pdf",
-      "size": "—",
+      "size": "375 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -12161,6 +12161,1220 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "001",
         "footerTimestamp": "2026-05-31_20-31",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "GRAL",
+    "slug": "gral",
+    "company": "GRAIL",
+    "exchange": "NASDAQ",
+    "category": "asymmetrical-moonshots",
+    "dcfType": "Young-Company DCF (Damodaran)",
+    "publishedISO": "2026-05-31",
+    "publishedLabel": "May 31, 2026",
+    "pdf": {
+      "file": "gral-memo__v001__2026-05-31_20-47.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$3.1B",
+      "shares": "44M",
+      "cash": "$823M cash, zero debt · $0.823B cash, no debt; ~43M shares (low float); Illumina holds ~12.5%; Revenue-generating: $147M FY25 (+17%), Galleri self-pay; burn ~$300M/yr (~2.5yr); NHS-Galleri missed primary endpoint (Feb'26); FDA PMA filed; Medicare law signed"
+    },
+    "spot": {
+      "price": 73.0,
+      "asOf": "May 31, 2026 close"
+    },
+    "expected": {
+      "fair": 79.54,
+      "deltaPct": 9.0
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 123.72,
+        "mult": 1.69
+      },
+      {
+        "y": 10,
+        "value": 192.59,
+        "mult": 2.64
+      },
+      {
+        "y": 15,
+        "value": 300.05,
+        "mult": 4.11
+      },
+      {
+        "y": 20,
+        "value": 467.89,
+        "mult": 6.41
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "Med-High",
+      "themes": [
+        "precision-medicine-oncology"
+      ],
+      "themeNames": [
+        "Precision Medicine & Oncology"
+      ],
+      "primaryTheme": "precision-medicine-oncology",
+      "primaryThemeName": "Precision Medicine & Oncology",
+      "umbrella": "life-sciences-health",
+      "umbrellaName": "Life Sciences & Health"
+    },
+    "question": "Does ~$3B / ~20x sales price GRAIL's multi-gate regulatory option fairly — after the NHS-Galleri miss, but with the FDA filing and Medicare law in hand?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 20,
+        "price": 1.69,
+        "headline": "FDA rejects; no coverage; self-pay niche.",
+        "why": "The NHS-Galleri miss is a real, fired datapoint — the only RCT of any MCED failed its stage-shift primary endpoint, hardening FDA and payer skepticism. 40% within-scenario failure reflects genuine PMA-rejection risk. 20% scenario weight.",
+        "what": [
+          "The FDA PMA is rejected or stalled — the NHS-Galleri primary-endpoint miss (no significant stage III+IV reduction) hardens FDA/USPSTF skepticism about clinical utility, and Galleri stays a self-pay LDT niche. Test volume plateaus, the Medicare benefit never activates (it is gated on FDA approval), and GRAIL burns its ~$823M cash defending the franchise.",
+          "With a 40% within-scenario failure probability and revenue stalled near $0.3B, the equity collapses toward the cash-and-distress floor — a near-total loss from today's $73."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 28,
+        "price": 12.82,
+        "headline": "FDA late; Medicare narrow; modest volume.",
+        "why": "FDA approves but adoption disappoints — Medicare narrow, private payers await mortality proof, ASP compresses. 22% failure probability. 28% weight as a very plausible 'approved but sub-scale' outcome.",
+        "what": [
+          "The FDA approves but late, and Medicare coverage arrives narrow and slow; private payers wait for the mortality data the NHS trial did not deliver. Galleri reaches modest reimbursed volume (~$1B revenue by 2035) at thin-but-improving margins — a real test, sub-scale economics.",
+          "The DCF lands in the low teens — well below spot. This is the 'approved, but adoption disappoints' world the NHS miss makes plausible."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 34,
+        "price": 73.13,
+        "headline": "FDA 2027 + Medicare 2028; category leader.",
+        "why": "Requires FDA approval (on PATHFINDER 2, which was positive) + Medicare activation (the law is already signed) + broad coverage — the machinery is in motion. 12% failure probability. 34% weight as the central, modal outcome.",
+        "what": [
+          "The modal path: the FDA approves Galleri (~2027) on the PATHFINDER 2 evidence, Medicare coverage activates (~2028), and broad private coverage follows — Galleri becomes the leading reimbursed MCED test at ~$2.6B revenue by 2035 (~10% of a ~$25B screening market) at ~30% operating margins.",
+          "DCF ~$82/share — roughly today's price. The market is pricing this modal regulatory-success case; the small ~50M share count makes the per-share value swing hard on each gate."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 13,
+        "price": 219.48,
+        "headline": "Broad adoption; annual-repeat screening.",
+        "why": "A chain: clean FDA + Medicare + broad private coverage + annual-repeat adoption + category leadership. Each plausible at 50-70%; jointly ~13%. GRAIL's breadth and only-RCT dataset are the edge.",
+        "what": [
+          "The bull: FDA + Medicare clear cleanly, broad private coverage and annual-repeat screening take hold, and GRAIL extends its first-mover, broadest-test, only-RCT-dataset lead — ~$4.5B revenue by 2035 at ~36% operating margins. The screening category compounds and GRAIL leads it.",
+          "DCF ~$232/share — ~3× today's price. This is the scenario the regulatory machinery (PMA filed + Medicare law) keeps alive despite the NHS miss."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 5,
+        "price": 444.35,
+        "headline": "MCED standard of care; GRAIL dominant.",
+        "why": "Tail of tails: MCED standard of care + eventual mortality proof + GRAIL dominance + premium terminal. Individually 40-60%; jointly ~5%. The asymmetric upside the ~43M share count amplifies.",
+        "what": [
+          "The tail: MCED becomes standard of care, the extended NHS follow-up eventually shows a mortality benefit, and GRAIL is the dominant platform — ~$6.8B revenue by 2035 at ~40% margins with a premium terminal.",
+          "DCF ~$457/share — ~6× spot. The asymmetric upside the low share count amplifies; individually each gate is plausible, jointly ~5%."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 28 / Base 34 / Bull 13 / Ultra Bull 5. Spot price reference: May 31, 2026 close.",
+    "thesis": "GRAIL trades at ~$3B (≈$73/sh on just ~43M shares) on ~$147M FY25 revenue and ~$823M cash. Galleri — a blood test for 50+ cancers, self-pay today — is a multi-gate regulatory option: FDA PMA (filed Jan 2026) → Medicare coverage (signed Feb 2026; ≥2028) → broad adoption. The shape is unusual: the pivotal NHS-Galleri trial MISSED its endpoint (-50% stock), but the FDA filing rests on the positive PATHFINDER 2 and the Medicare law passed — partly broken, partly de-risked. The finding: at $73 the market roughly prices the modal regulatory-success case, with FDA-rejection downside and broad-adoption upside about balanced.",
+    "historicalPrices": {
+      "xMin": -2.05,
+      "ipoMarker": "Spin Jun '24",
+      "points": [
+        [
+          -1.95,
+          16.0
+        ],
+        [
+          -1.6,
+          13.0
+        ],
+        [
+          -1.2,
+          22.0
+        ],
+        [
+          -0.9,
+          45.0
+        ],
+        [
+          -0.6,
+          80.0
+        ],
+        [
+          -0.4,
+          110.0
+        ],
+        [
+          -0.32,
+          119.0
+        ],
+        [
+          -0.28,
+          72.0
+        ],
+        [
+          -0.15,
+          65.0
+        ],
+        [
+          -0.05,
+          73.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 20%",
+        "body": "FDA rejects; no coverage; near-total loss."
+      },
+      {
+        "label": "Bear 28%",
+        "body": "FDA late; Medicare narrow; sub-scale; low teens."
+      },
+      {
+        "label": "Base 34%",
+        "body": "FDA 2027 + Medicare 2028; leader; ≈ spot."
+      },
+      {
+        "label": "Bull 13%",
+        "body": "Broad adoption; category leader; ~3×."
+      },
+      {
+        "label": "Ultra Bull 5%",
+        "body": "MCED standard of care; dominant; ~6×."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY26-FY35 scenario projections (revenue-generating; pre-profit) · fiscal years end Dec 31 · Q1 2026 10-Q, FY25 results",
+      "sources": "Sources: GRAIL Q1 2026 10-Q (cash $0.823B), FY2025 results ($147M revenue, net loss), NHS-Galleri (primary endpoint missed Feb'26) + PATHFINDER 2 (positive) readouts, FDA PMA filing, Medicare MCED Coverage Act. Revenue modeled as reimbursed test volume x ASP; FCF NOL-shielded pre-tax over the window (documented simplification). TAM: MCED screening serviceable slice, ~$25B annual by FY35.",
+      "chartReference": {
+        "tamBillion": 25.0,
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          0.093,
+          0.126,
+          0.147
+        ],
+        "historyFleet": [
+          100,
+          137,
+          185
+        ]
+      },
+      "chartConfig": {
+        "peerY": 20,
+        "peerText": "Mature diagnostics op margin ~15-25%",
+        "fleetAnchor": 185,
+        "fleetTitle": "Galleri tests sold (000s/yr, log)",
+        "fleetReference": null,
+        "valnAnchorY": 8,
+        "valnAnchorText": "Mature dx P/S ~5-10x",
+        "valnCaption": "At ~20x sales today, every scenario implies the multiple resolves only as reimbursed test volume arrives.",
+        "tamTitle": "$25B FY35 MCED screening TAM — GRAIL share",
+        "tamLegend": [
+          "GRAIL",
+          "Exact / Guardant / other MCED",
+          "Other cancer screening"
+        ]
+      }
+    },
+    "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 25.0,
+      "weighted": {
+        "expected": 79.54,
+        "upsidePct": 9.0
+      },
+      "market": {
+        "marketCapBillion": 3.1,
+        "sharesOutstandingMillion": 44.0,
+        "cashBillion": 0.823,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.2,
+          "expectedPerShare": 1.69,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "tam_share": 1.28,
+            "p_fail": 40,
+            "s2c": 1.0
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.18,
+              0.22,
+              0.25,
+              0.27,
+              0.29,
+              0.3,
+              0.31,
+              0.31,
+              0.32,
+              0.32
+            ],
+            "op_margin": [
+              -1.4,
+              -1.1,
+              -0.8,
+              -0.55,
+              -0.35,
+              -0.22,
+              -0.12,
+              -0.05,
+              0.0,
+              0.03
+            ],
+            "wacc_path": [
+              0.15,
+              0.146,
+              0.142,
+              0.138,
+              0.134,
+              0.131,
+              0.127,
+              0.123,
+              0.119,
+              0.115
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.252,
+              -0.242,
+              -0.2,
+              -0.149,
+              -0.101,
+              -0.066,
+              -0.037,
+              -0.015,
+              0.0,
+              0.01
+            ],
+            "reinvest": [
+              0.033,
+              0.04,
+              0.03,
+              0.02,
+              0.02,
+              0.01,
+              0.01,
+              0.0,
+              0.01,
+              0.0
+            ],
+            "fcf": [
+              -0.285,
+              -0.282,
+              -0.23,
+              -0.169,
+              -0.121,
+              -0.076,
+              -0.047,
+              -0.015,
+              -0.01,
+              0.01
+            ],
+            "cash": 0.823,
+            "net_debt": 0.0,
+            "raise_total": 0.7,
+            "dilution_pct": 50,
+            "final_shares": 66,
+            "distress": 4.0,
+            "pv_fcf": [
+              -0.248,
+              -0.214,
+              -0.153,
+              -0.099,
+              -0.062,
+              -0.035,
+              -0.019,
+              -0.005,
+              -0.003,
+              0.003
+            ],
+            "sum_pv_fcf": -0.84,
+            "terminal_value": 0.11,
+            "pv_terminal": 0.03,
+            "op_ev": -0.81,
+            "total_equity": 0.01,
+            "dcf_per_share": 0.15
+          },
+          "chartData": {
+            "raises": [
+              0.2,
+              0.3,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              45.0,
+              32.0,
+              25.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bear": {
+          "probability": 0.28,
+          "expectedPerShare": 12.82,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 4.12,
+            "p_fail": 22,
+            "s2c": 1.1
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.19,
+              0.26,
+              0.36,
+              0.5,
+              0.65,
+              0.78,
+              0.88,
+              0.95,
+              1.0,
+              1.03
+            ],
+            "op_margin": [
+              -1.2,
+              -0.8,
+              -0.45,
+              -0.2,
+              0.0,
+              0.08,
+              0.13,
+              0.16,
+              0.18,
+              0.18
+            ],
+            "wacc_path": [
+              0.14,
+              0.136,
+              0.131,
+              0.127,
+              0.122,
+              0.118,
+              0.113,
+              0.109,
+              0.104,
+              0.1
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.228,
+              -0.208,
+              -0.162,
+              -0.1,
+              0.0,
+              0.062,
+              0.114,
+              0.152,
+              0.18,
+              0.185
+            ],
+            "reinvest": [
+              0.039,
+              0.064,
+              0.091,
+              0.127,
+              0.136,
+              0.118,
+              0.091,
+              0.064,
+              0.045,
+              0.027
+            ],
+            "fcf": [
+              -0.267,
+              -0.272,
+              -0.253,
+              -0.227,
+              -0.136,
+              -0.056,
+              0.023,
+              0.088,
+              0.135,
+              0.158
+            ],
+            "cash": 0.823,
+            "net_debt": 0.0,
+            "raise_total": 0.65,
+            "dilution_pct": 27,
+            "final_shares": 56,
+            "distress": 7.0,
+            "pv_fcf": [
+              -0.234,
+              -0.21,
+              -0.173,
+              -0.138,
+              -0.073,
+              -0.027,
+              0.01,
+              0.034,
+              0.048,
+              0.051
+            ],
+            "sum_pv_fcf": -0.71,
+            "terminal_value": 2.16,
+            "pv_terminal": 0.7,
+            "op_ev": -0.01,
+            "total_equity": 0.81,
+            "dcf_per_share": 14.46
+          },
+          "chartData": {
+            "raises": [
+              0.2,
+              0.25,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              55.0,
+              50.0,
+              50.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "base": {
+          "probability": 0.34,
+          "expectedPerShare": 73.13,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 10.4,
+            "p_fail": 12,
+            "s2c": 1.3
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.2,
+              0.3,
+              0.48,
+              0.75,
+              1.15,
+              1.6,
+              2.0,
+              2.3,
+              2.5,
+              2.6
+            ],
+            "op_margin": [
+              -1.0,
+              -0.5,
+              -0.15,
+              0.05,
+              0.15,
+              0.22,
+              0.26,
+              0.29,
+              0.3,
+              0.3
+            ],
+            "wacc_path": [
+              0.13,
+              0.127,
+              0.123,
+              0.12,
+              0.117,
+              0.113,
+              0.11,
+              0.107,
+              0.103,
+              0.1
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.2,
+              -0.15,
+              -0.072,
+              0.038,
+              0.172,
+              0.352,
+              0.52,
+              0.667,
+              0.75,
+              0.78
+            ],
+            "reinvest": [
+              0.041,
+              0.077,
+              0.138,
+              0.208,
+              0.308,
+              0.346,
+              0.308,
+              0.231,
+              0.154,
+              0.077
+            ],
+            "fcf": [
+              -0.241,
+              -0.227,
+              -0.21,
+              -0.17,
+              -0.135,
+              0.006,
+              0.212,
+              0.436,
+              0.596,
+              0.703
+            ],
+            "cash": 0.823,
+            "net_debt": 0.0,
+            "raise_total": 0.4,
+            "dilution_pct": 14,
+            "final_shares": 50,
+            "distress": 11.0,
+            "pv_fcf": [
+              -0.213,
+              -0.178,
+              -0.147,
+              -0.106,
+              -0.075,
+              0.003,
+              0.096,
+              0.178,
+              0.221,
+              0.237
+            ],
+            "sum_pv_fcf": 0.02,
+            "terminal_value": 9.61,
+            "pv_terminal": 3.24,
+            "op_ev": 3.26,
+            "total_equity": 4.08,
+            "dcf_per_share": 81.6
+          },
+          "chartData": {
+            "raises": [
+              0.2,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              60.0,
+              65.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bull": {
+          "probability": 0.13,
+          "expectedPerShare": 219.48,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 18.0,
+            "p_fail": 6,
+            "s2c": 1.5
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.21,
+              0.35,
+              0.6,
+              1.0,
+              1.7,
+              2.5,
+              3.2,
+              3.8,
+              4.2,
+              4.5
+            ],
+            "op_margin": [
+              -0.8,
+              -0.3,
+              0.05,
+              0.18,
+              0.26,
+              0.31,
+              0.34,
+              0.35,
+              0.36,
+              0.36
+            ],
+            "wacc_path": [
+              0.125,
+              0.121,
+              0.117,
+              0.113,
+              0.109,
+              0.106,
+              0.102,
+              0.098,
+              0.094,
+              0.09
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.168,
+              -0.105,
+              0.03,
+              0.18,
+              0.442,
+              0.775,
+              1.088,
+              1.33,
+              1.512,
+              1.62
+            ],
+            "reinvest": [
+              0.042,
+              0.093,
+              0.167,
+              0.267,
+              0.467,
+              0.533,
+              0.467,
+              0.4,
+              0.267,
+              0.2
+            ],
+            "fcf": [
+              -0.21,
+              -0.198,
+              -0.137,
+              -0.087,
+              -0.025,
+              0.242,
+              0.621,
+              0.93,
+              1.245,
+              1.42
+            ],
+            "cash": 0.823,
+            "net_debt": 0.0,
+            "raise_total": 0.2,
+            "dilution_pct": 7,
+            "final_shares": 47,
+            "distress": 18.0,
+            "pv_fcf": [
+              -0.187,
+              -0.157,
+              -0.097,
+              -0.055,
+              -0.014,
+              0.126,
+              0.293,
+              0.4,
+              0.489,
+              0.512
+            ],
+            "sum_pv_fcf": 1.31,
+            "terminal_value": 24.38,
+            "pv_terminal": 8.79,
+            "op_ev": 10.1,
+            "total_equity": 10.92,
+            "dcf_per_share": 232.34
+          },
+          "chartData": {
+            "raises": [
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              70.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ultra_bull": {
+          "probability": 0.05,
+          "expectedPerShare": 444.35,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 27.2,
+            "p_fail": 3,
+            "s2c": 1.7
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.22,
+              0.4,
+              0.72,
+              1.3,
+              2.2,
+              3.3,
+              4.4,
+              5.4,
+              6.2,
+              6.8
+            ],
+            "op_margin": [
+              -0.6,
+              -0.1,
+              0.15,
+              0.27,
+              0.33,
+              0.37,
+              0.39,
+              0.4,
+              0.4,
+              0.4
+            ],
+            "wacc_path": [
+              0.115,
+              0.112,
+              0.108,
+              0.105,
+              0.102,
+              0.098,
+              0.095,
+              0.092,
+              0.088,
+              0.085
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.132,
+              -0.04,
+              0.108,
+              0.351,
+              0.726,
+              1.221,
+              1.716,
+              2.16,
+              2.48,
+              2.72
+            ],
+            "reinvest": [
+              0.043,
+              0.106,
+              0.188,
+              0.341,
+              0.529,
+              0.647,
+              0.647,
+              0.588,
+              0.471,
+              0.353
+            ],
+            "fcf": [
+              -0.175,
+              -0.146,
+              -0.08,
+              0.01,
+              0.197,
+              0.574,
+              1.069,
+              1.572,
+              2.009,
+              2.367
+            ],
+            "cash": 0.823,
+            "net_debt": 0.0,
+            "raise_total": 0.2,
+            "dilution_pct": 5,
+            "final_shares": 46,
+            "distress": 30.0,
+            "pv_fcf": [
+              -0.157,
+              -0.118,
+              -0.058,
+              0.007,
+              0.118,
+              0.312,
+              0.531,
+              0.716,
+              0.841,
+              0.913
+            ],
+            "sum_pv_fcf": 3.11,
+            "terminal_value": 44.33,
+            "pv_terminal": 17.1,
+            "op_ev": 20.21,
+            "total_equity": 21.03,
+            "dcf_per_share": 457.17
+          },
+          "chartData": {
+            "raises": [
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              80.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "competitive": {
+        "arena": "Multi-cancer early detection (MCED) blood screening — GRAIL (Galleri, 50+ cancers, only RCT) vs Exact Sciences (Cancerguard + Cologuard cash engine), Guardant (Shield, FDA-approved CRC -> MCED), Freenome, Delfi; the race to originate the first FDA-approved, reimbursed MCED franchise.",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "A reimbursed-volume cost curve is future; today's self-pay volume is sub-scale."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "No network flywheel yet; data scale is the closest analog."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Galleri's 50-cancer breadth + build-own dataset is hard for single-cancer (Shield CRC) entrants to mirror without their own large trials."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Provider-ordering and EHR integration build mild lock-in; early."
+          },
+          "branding": {
+            "score": 2,
+            "note": "The MCED category-definer brand; strong but dented by the NHS miss."
+          },
+          "corneredResource": {
+            "score": 3,
+            "note": "The only randomized MCED dataset (NHS ~140k) + first PMA + largest commercial test base — the strongest, if contested, origination asset."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Assay + bioinformatics pipeline is real but not a demonstrated durable process edge."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "Exact Sciences",
+            "kind": "public",
+            "note": "Cancerguard MCED (LDT, launched 2025) funded by the profitable Cologuard franchise; huge commercial muscle.",
+            "shareNow": 0.05,
+            "shareTerminal": 0.25,
+            "capital": "~$3B-rev co.; self-funded"
+          },
+          {
+            "name": "Guardant Health",
+            "kind": "public",
+            "note": "Shield FDA-approved for CRC (Medicare $1,495); extending to MCED (Breakthrough Device).",
+            "shareNow": 0.05,
+            "shareTerminal": 0.22,
+            "capital": "~$700M-rev co."
+          },
+          {
+            "name": "Freenome",
+            "kind": "private",
+            "note": "CRC-first -> multi-cancer; ~$1.35B raised (Roche, T. Rowe).",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "$1.35B private"
+          },
+          {
+            "name": "Delfi Diagnostics",
+            "kind": "private",
+            "note": "FirstLook Lung (fragmentomics); niche, lung-first.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.05,
+            "capital": "Merck GHI + rounds"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "MCED clinical evidence (RCT)",
+            "company": "NHS ~140k (only RCT; primary missed)",
+            "bestRival": "none randomized",
+            "verdict": "leading"
+          },
+          {
+            "metric": "FDA approval",
+            "company": "PMA filed (decision 2026-27)",
+            "bestRival": "Guardant Shield approved (CRC)",
+            "verdict": "roughly level"
+          },
+          {
+            "metric": "Reimbursement / commercial scale",
+            "company": "self-pay; Medicare gated to 2028",
+            "bestRival": "Exact Cologuard reimbursed engine",
+            "verdict": "lagging"
+          }
+        ],
+        "takeaway": "GRAIL is originating the MCED category — the broadest test (50+ cancers), the only randomized dataset, and the first PMA — but the NHS-Galleri primary-endpoint miss dented the 'proven population benefit' narrative, and Exact (Cologuard cash engine) and Guardant (FDA + Medicare in CRC) are scaling MCED behind it. The origination window is open but closing: GRAIL must convert the PMA into approval + Medicare coverage before better-capitalized rivals scale, and the extended NHS mortality follow-up is the falsifier that could reopen — or close — the whole thesis."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Only randomized MCED dataset.",
+            "body": "The NHS-Galleri RCT (~140k) is the largest, only randomized MCED dataset — a cornered resource even after the primary-endpoint miss (stage IV fell -14%; mortality follow-up extended)."
+          },
+          {
+            "label": "FDA filing rests on PATHFINDER 2, not NHS.",
+            "body": "The PMA is built on the positive PATHFINDER 2 (69.8% sensitivity for the 12 deadliest, 99.6% specificity) plus the NHS prevalent round — not the failed late-stage primary."
+          },
+          {
+            "label": "Medicare law already signed.",
+            "body": "The MCED coverage benefit is law (Feb 2026); coverage is gated on FDA approval and earliest 2028, but the legislative risk is retired."
+          },
+          {
+            "label": "Cash-funded into the coverage window.",
+            "body": "~$823M and burn halved to ~$300M/yr funds GRAIL into the ~2028 Medicare window without an imminent raise."
+          },
+          {
+            "label": "Tiny share count amplifies the unlock.",
+            "body": "~43M shares means a reimbursed-volume inflection moves per-share value hard — the asymmetry cuts both ways."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "FDA PMA approval (2026-27) · Medicare NCD activates (~2028) · broad private coverage · test volume sustains >40% growth"
+          },
+          {
+            "label": "Bear validation",
+            "body": "PMA rejected/delayed · Medicare coverage narrow or post-2028 · private payers demand mortality data"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if the extended NHS follow-up shows a mortality benefit, the clinical-utility debate resolves and the bull/ultra weights rise materially"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Galleri",
+          "definition": "GRAIL's blood test screening for 50+ cancers from one draw; sold self-pay (~$949) today as an LDT, FDA PMA filed Jan 2026."
+        },
+        {
+          "term": "MCED",
+          "definition": "Multi-cancer early detection — blood-based screening across many cancer types; a new category GRAIL pioneered."
+        },
+        {
+          "term": "NHS-Galleri",
+          "definition": "The ~140k-participant UK randomized trial; missed its stage-shift primary endpoint (Feb 2026) but cut stage IV; mortality follow-up extended."
+        },
+        {
+          "term": "PMA / NCD",
+          "definition": "FDA Premarket Approval (filed Jan 2026) and Medicare National Coverage Determination (earliest 2028) — the two gates to reimbursed scale."
+        },
+        {
+          "term": "Sales-to-capital (s2c)",
+          "definition": "Damodaran reinvestment efficiency — incremental revenue per dollar of reinvested capital."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-31_20-47",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
