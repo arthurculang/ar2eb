@@ -91,17 +91,27 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 - **Competitive page (§6d) — DONE.** Rolled out to all 9 tickers, 6-page PDFs shipped
   to `public/memos/`, `tests/visual_baseline.json` regenerated (9×6), spec Page-4/5
   cross-refs swept. Origination lens: AUR/JOBY/NAUT/IONQ/Anthropic; audit: LTH/ZM/COIN/ISRG.
-- **Wave 1 — IN PROGRESS.** Remaining young: ACHR, GRAL, TXG, OKLO; mature: LULU, YETI,
-  ILMN, ABNB, UBER, DASH — each fundamentals-only, competitive page baked in. Batch ~6–8
-  with one per-wave review digest.
-  - **RKLB — SHIPPED & LIVE (2026-05-31).** `data/rklb.yml` + `data/_intake/rklb.yml`;
-    young-company DCF, 5 scenarios, competitive page (origination). 6-page PDF
-    (`rklb-memo__v001__2026-05-31_18-52.pdf`) in `public/memos/`; `rklb` registered in all 4
-    scripts' `TICKERS`; `data.js` resolves it; `visual_baseline.json` now covers 10 tickers
-    (60 pages, `--check` clean). Finding holds: even an aggressive ultra-bull (~$20B-rev space
-    prime by 2035) is ~−26% vs spot; weighted ~−85% (priced beyond a decade of fundamentals).
-    *Handoff-note correction:* the "~12px over `STRICT_LAYOUT`" blocker was stale — Page 1
-    actually **clears the footer band by +12px** (in family with JOBY +14px, ZM +47px); the
-    5-scenario adaptive-density work (already on main before the staging commit) had resolved
-    it, so **no `memo_pdf.jsx` tweak was needed**. Tightest page is Pg5 at +9px clearance.
+- **Wave 1 — Batch A DONE (2026-05-31): RKLB, OKLO, ACHR, GRAL, TXG shipped & live.**
+  All 6-page, conviction-neutral, §6d competitive page baked in; `visual_baseline.json` now
+  **14 tickers / 84 pages** (`--check` clean). The authoring pattern that held: research (web
+  subagent) → **model the DCF in python for internal consistency** (a reusable engine —
+  `/tmp/model_dcf.py` young + `/tmp/model_mature.py` — reproduces the validator's
+  equity-bridge + cash-runway/Gordon math to the cent, killing the AUR sign-flip class) →
+  *generate* the intake from locked inputs (no transcription drift) → scaffold → validate →
+  render under `STRICT_LAYOUT`. **Page-1 overflow on the 5-scenario layout is prose-driven
+  (thesis length) or card-headline-driven, NOT structural** — trim the ticker's own copy to
+  ~RKLB length (+10–15px clearance), never the shared layout, so the other tickers stay
+  byte-identical and the baseline stays green.
+  - **Findings (entry price vs the scenario distribution drives the sign):** RKLB **−85%**,
+    OKLO **−64%** (richly-priced pre/early-revenue moonshots, priced beyond a decade — only
+    the ~8% ultra-bull clears spot); GRAL **+9%** (fairly valued — the modal FDA+Medicare
+    success ≈ spot, post-NHS-miss; tiny ~43M float amplifies both tails); ACHR **+18%**
+    (Joby's eVTOL fundamentals at ~half the price → the 15% cert-success+defense tail goes
+    positive-EV, vs Joby −20%); TXG **−49%**.
+  - **TXG reclassified young → MATURE (user-approved).** Revenue ~$600M flat-declining,
+    cash-generative, net-cash (p_fail≈0), razor/blade consumables, public peer comps → a
+    mature-company DCF (Power **Audit** lens, Gordon terminal, no dilution). The mature engine
+    is verified against ZM's shipped numbers and is in the toolkit for Batch B.
+- **Wave 1 — Batch B (mature) NEXT:** LULU, YETI, ILMN, ABNB, UBER, DASH — mature-company
+  DCFs, audit lens, fundamentals-only. (Per-wave review digest after the batch.)
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
