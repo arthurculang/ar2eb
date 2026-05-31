@@ -8470,6 +8470,1228 @@ const MEMOS = [
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
+  },
+  {
+    "ticker": "RKLB",
+    "slug": "rklb",
+    "company": "Rocket Lab",
+    "exchange": "NASDAQ",
+    "category": "asymmetrical-moonshots",
+    "dcfType": "Young-Company DCF (Damodaran)",
+    "publishedISO": "2026-05-31",
+    "publishedLabel": "May 31, 2026",
+    "pdf": {
+      "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$81.4B",
+      "shares": "573M",
+      "cash": "$830M cash, zero debt · $1.85B backlog (+73% YoY, FY25); Neutron first launch targeted Q4 2026; FY25 revenue $602M (+38%)"
+    },
+    "spot": {
+      "price": 142.0,
+      "asOf": "May 31, 2026 close"
+    },
+    "expected": {
+      "fair": 21.64,
+      "deltaPct": -84.8
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 33.25,
+        "mult": 0.23
+      },
+      {
+        "y": 10,
+        "value": 51.11,
+        "mult": 0.36
+      },
+      {
+        "y": 15,
+        "value": 78.62,
+        "mult": 0.55
+      },
+      {
+        "y": 20,
+        "value": 121.0,
+        "mult": 0.85
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "Med-High",
+      "themes": [
+        "space-launch-infrastructure"
+      ],
+      "themeNames": [
+        "Space Launch & Infrastructure"
+      ],
+      "primaryTheme": "space-launch-infrastructure",
+      "primaryThemeName": "Space Launch & Infrastructure",
+      "umbrella": "mobility-aerospace",
+      "umbrellaName": "Mobility & Aerospace"
+    },
+    "question": "Does ~135x sales (~$81B on $602M FY25 revenue) price a realistic path to a space prime — or a SpaceX-scale outcome a decade of fundamentals can't reach?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 10,
+        "price": 1.8,
+        "headline": "Neutron fails; dilution; SpaceX runs away.",
+        "why": "The compound bear: a Neutron failure (the FY26 tank-test failure is a real datapoint) plus Space Systems deceleration plus persistent thin margins. Aerospace hardware is unforgiving and SpaceX's cost curve is brutal. 25% within-scenario failure probability reflects that RKLB, while revenue-generating with $1.85B backlog, is still capital-hungry and Neutron-dependent for the bull thesis.",
+        "what": [
+          "Neutron's tank-test troubles compound into a failed or indefinitely delayed program; RKLB stays a sub-scale small-lift + components shop. Launch cadence stalls, Space Systems growth decelerates as satellite primes in-source, and gross margins stay structurally thin against a fixed-cost manufacturing base.",
+          "Repeated dilutive ATM raises fund the burn (start cash $0.83B), share count creeps toward 590M, and by FY35 revenue is ~$1.4B at ~7-8% operating margin. With a 25% probability of an outright restructuring/recap, the expected per-share collapses toward the distress floor — orders of magnitude below today's price."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 25,
+        "price": 3.7,
+        "headline": "Neutron slips; #2 but sub-scale.",
+        "why": "Neutron works but underwhelms on cadence/cost; Space Systems grows steadily without becoming a prime. 12% failure probability — lower than a pre-revenue name given backlog and balance sheet, but Neutron execution risk is real. The 25% weight reflects this as a very plausible 'competent but capped' outcome.",
+        "what": [
+          "Neutron eventually flies but late and at low cadence; RKLB remains a credible #2 launch name and a solid Space Systems supplier, but never escapes SpaceX's shadow on cost or volume. Revenue compounds to ~$2.85B by FY35 at ~12% operating margin — real, but a fraction of the bull trajectory.",
+          "Modest dilution funds the Neutron ramp. The DCF lands in the low-single-digit dollars per share — the market is pricing a far larger outcome. This is the 'good company, wrong price' world."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 35,
+        "price": 11.65,
+        "headline": "Neutron works; #2 prime; 18% margin.",
+        "why": "Requires the least faith: Neutron works (not dominates), Space Systems keeps compounding, margins reach an aerospace-prime ~18%. No SpaceX-toppling assumption. 5% failure probability given backlog, cash, and revenue diversification. 35% weight as the central outcome.",
+        "what": [
+          "The modal path: Neutron certifies and reaches meaningful cadence, RKLB consolidates the clear #2 launch position, and the vertically-integrated Space Systems business scales into a genuine space prime. Revenue compounds ~25% to ~$5.9B by FY35 at an ~18% mature operating margin — aerospace-prime economics, not software.",
+          "Light early dilution; the business self-funds by the late 2020s. DCF ~$12/share. Even this constructive base case sits ~92% below today's $142 — a measure of how much the market is paying for a larger, faster outcome than a successful-but-rational base implies."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 22,
+        "price": 36.37,
+        "headline": "Neutron scales; top-3 + constellations.",
+        "why": "A chain: Neutron reusability works AND captures share AND Space Systems scales AND constellation economics materialize. Each plausible at 50-70%; jointly ~22%. This is a real, fundable trajectory — RKLB has the balance sheet and backlog — but it's conjunctive.",
+        "what": [
+          "The bull: Neutron's reusability lands RKLB a real share of medium-lift, Space Systems becomes a top-tier prime, and RKLB begins owning/operating constellations (recurring, higher-margin revenue). Revenue compounds toward ~$10.5B by FY35 at a ~23% operating margin.",
+          "Minimal dilution; strong self-funding. DCF ~$37/share — and still ~74% below spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you have to extend the horizon or believe in multiple expansion."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 105.65,
+        "headline": "The space prime; SpaceX-scale by 2035.",
+        "why": "Tail of tails: every bull condition hits AND RKLB reaches SpaceX-scale AND earns a premium platform multiple. Individually 50-65%; jointly ~8%. The genuine asymmetric upside — and notably it still falls short of spot, which is the memo's central finding.",
+        "what": [
+          "The tail: RKLB becomes a vertically-integrated space prime at SpaceX-ish scale — Neutron a workhorse, Space Systems dominant, owned constellations throwing off recurring revenue. Revenue reaches ~$20.5B by FY35 at a ~27% operating margin, with a premium terminal multiple for a dominant platform.",
+          "Even this — a genuine 'next-prime' outcome — produces a DCF of ~$108/share, still ~26% below today's $142. To justify spot you must believe in something richer than a $20B-revenue space prime by 2035, or value beyond the 10-year window. That is the honest framing of what the market is paying for."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 35 / Bull 22 / Ultra Bull 8. Spot price reference: May 31, 2026 close.",
+    "thesis": "Rocket Lab trades at ~$81B against $602M FY25 revenue (+38%) and a $1.85B backlog (+73%) — ~135x sales. Two engines: Electron (the established #2 small-lift launcher) plus Neutron (a reusable medium-lift vehicle targeting a Q4 2026 first launch after a stage-1 tank-test failure), and a larger vertically-integrated Space Systems segment with a path to owned constellations. The young-company DCF asks what mature scale, prime-style margins, and Neutron-stumble probability are plausible over ten years. Five scenarios, weighted — and the finding is stark: even an aggressive ultra-bull (a ~$20B-revenue space prime by 2035) lands below spot.",
+    "historicalPrices": {
+      "xMin": -4.5,
+      "ipoMarker": "SPAC Aug '21",
+      "points": [
+        [
+          -4.4,
+          11.0
+        ],
+        [
+          -4.0,
+          9.0
+        ],
+        [
+          -3.5,
+          5.0
+        ],
+        [
+          -3.0,
+          4.0
+        ],
+        [
+          -2.5,
+          4.5
+        ],
+        [
+          -2.0,
+          6.0
+        ],
+        [
+          -1.5,
+          12.0
+        ],
+        [
+          -1.0,
+          24.0
+        ],
+        [
+          -0.75,
+          48.0
+        ],
+        [
+          -0.5,
+          70.0
+        ],
+        [
+          -0.25,
+          120.0
+        ],
+        [
+          -0.08,
+          140.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 10%",
+        "body": "Neutron fails; dilution; SpaceX runs away."
+      },
+      {
+        "label": "Bear 25%",
+        "body": "Neutron slips; credible #2 but capped."
+      },
+      {
+        "label": "Base 35%",
+        "body": "Neutron works; #2 + Space Systems prime ~18%."
+      },
+      {
+        "label": "Bull 22%",
+        "body": "Reusable Neutron scales; top-3 + constellations."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "SpaceX-scale prime by 2035 — still below spot."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY23-FY25 history + FY26-FY35 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q4'25 release",
+      "sources": "Sources: RKLB FY2025 results (Feb 2026), Q4'25 8-K, company guidance. FCF is NOL-shielded pre-tax over the explicit window (documented simplification). TAM: launch + space-systems serviceable slice, ~$120B by FY35.",
+      "chartReference": {
+        "tamBillion": 120,
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          0.245,
+          0.436,
+          0.602
+        ],
+        "historyFleet": [
+          0,
+          0,
+          0
+        ]
+      },
+      "chartConfig": {
+        "peerY": 15,
+        "peerText": "Aerospace/defense prime margin ~12-18%",
+        "fleetAnchor": 0,
+        "fleetTitle": "Revenue ramp (log)",
+        "fleetReference": null,
+        "valnAnchorY": 3,
+        "valnAnchorText": "Mature aero/defense P/S ~2-4x",
+        "valnCaption": "At ~135x sales today, every scenario implies massive multiple compression.",
+        "tamTitle": "$120B FY35 launch + space-systems TAM — RKLB share",
+        "tamLegend": [
+          "RKLB",
+          "Competitors",
+          "Other space (cargo, gov, etc.)"
+        ]
+      }
+    },
+    "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 120,
+      "weighted": {
+        "expected": 21.64,
+        "upsidePct": -84.8
+      },
+      "market": {
+        "marketCapBillion": 81.4,
+        "sharesOutstandingMillion": 573.0,
+        "cashBillion": 0.83,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.1,
+          "expectedPerShare": 1.8,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "tam_share": 1.1,
+            "p_fail": 25,
+            "s2c": 1.7
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.8,
+              0.95,
+              1.08,
+              1.18,
+              1.25,
+              1.3,
+              1.33,
+              1.35,
+              1.36,
+              1.37
+            ],
+            "op_margin": [
+              -0.1,
+              -0.06,
+              -0.03,
+              0.0,
+              0.02,
+              0.04,
+              0.05,
+              0.06,
+              0.07,
+              0.075
+            ],
+            "wacc_path": [
+              0.13,
+              0.128,
+              0.126,
+              0.124,
+              0.122,
+              0.12,
+              0.117,
+              0.114,
+              0.112,
+              0.11
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.08,
+              -0.057,
+              -0.032,
+              0.0,
+              0.025,
+              0.052,
+              0.067,
+              0.081,
+              0.095,
+              0.103
+            ],
+            "reinvest": [
+              0.116,
+              0.088,
+              0.076,
+              0.059,
+              0.041,
+              0.029,
+              0.018,
+              0.012,
+              0.006,
+              0.006
+            ],
+            "fcf": [
+              -0.196,
+              -0.145,
+              -0.108,
+              -0.059,
+              -0.016,
+              0.023,
+              0.049,
+              0.069,
+              0.089,
+              0.097
+            ],
+            "cash": 0.83,
+            "net_debt": 0.0,
+            "raise_total": 1.8,
+            "dilution_pct": 3,
+            "final_shares": 588,
+            "distress": 2.5,
+            "pv_fcf": [
+              -0.173,
+              -0.114,
+              -0.075,
+              -0.037,
+              -0.009,
+              0.011,
+              0.022,
+              0.027,
+              0.032,
+              0.031
+            ],
+            "sum_pv_fcf": -0.28,
+            "terminal_value": 1.17,
+            "pv_terminal": 0.38,
+            "op_ev": 0.1,
+            "total_equity": 0.93,
+            "dcf_per_share": 1.58
+          },
+          "chartData": {
+            "raises": [
+              0.4,
+              0.5,
+              0.4,
+              0.3,
+              0.2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raise_prices": [
+              120,
+              120,
+              120,
+              120,
+              120,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 66.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bear": {
+          "probability": 0.25,
+          "expectedPerShare": 3.7,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 2.4,
+            "p_fail": 12,
+            "s2c": 1.9
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.82,
+              1.05,
+              1.3,
+              1.55,
+              1.85,
+              2.1,
+              2.35,
+              2.55,
+              2.7,
+              2.85
+            ],
+            "op_margin": [
+              -0.07,
+              -0.03,
+              0.01,
+              0.04,
+              0.07,
+              0.09,
+              0.105,
+              0.115,
+              0.12,
+              0.125
+            ],
+            "wacc_path": [
+              0.122,
+              0.12,
+              0.118,
+              0.116,
+              0.114,
+              0.112,
+              0.109,
+              0.106,
+              0.104,
+              0.102
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.057,
+              -0.032,
+              0.013,
+              0.062,
+              0.13,
+              0.189,
+              0.247,
+              0.293,
+              0.324,
+              0.356
+            ],
+            "reinvest": [
+              0.115,
+              0.121,
+              0.132,
+              0.132,
+              0.158,
+              0.132,
+              0.132,
+              0.105,
+              0.079,
+              0.079
+            ],
+            "fcf": [
+              -0.172,
+              -0.153,
+              -0.119,
+              -0.07,
+              -0.028,
+              0.057,
+              0.115,
+              0.188,
+              0.245,
+              0.277
+            ],
+            "cash": 0.83,
+            "net_debt": 0.0,
+            "raise_total": 1.2,
+            "dilution_pct": 2,
+            "final_shares": 582,
+            "distress": 4.0,
+            "pv_fcf": [
+              -0.153,
+              -0.122,
+              -0.085,
+              -0.045,
+              -0.016,
+              0.029,
+              0.053,
+              0.079,
+              0.093,
+              0.096
+            ],
+            "sum_pv_fcf": -0.07,
+            "terminal_value": 3.96,
+            "pv_terminal": 1.37,
+            "op_ev": 1.3,
+            "total_equity": 2.13,
+            "dcf_per_share": 3.66
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.4,
+              0.3,
+              0.2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raise_prices": [
+              140,
+              140,
+              140,
+              140,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 66.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "base": {
+          "probability": 0.35,
+          "expectedPerShare": 11.65,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 4.9,
+            "p_fail": 5,
+            "s2c": 2.1
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.86,
+              1.2,
+              1.65,
+              2.2,
+              2.85,
+              3.55,
+              4.25,
+              4.9,
+              5.45,
+              5.9
+            ],
+            "op_margin": [
+              -0.05,
+              0.01,
+              0.05,
+              0.09,
+              0.12,
+              0.145,
+              0.16,
+              0.17,
+              0.175,
+              0.18
+            ],
+            "wacc_path": [
+              0.115,
+              0.113,
+              0.111,
+              0.109,
+              0.107,
+              0.105,
+              0.102,
+              0.099,
+              0.097,
+              0.095
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.043,
+              0.012,
+              0.083,
+              0.198,
+              0.342,
+              0.515,
+              0.68,
+              0.833,
+              0.954,
+              1.062
+            ],
+            "reinvest": [
+              0.123,
+              0.162,
+              0.214,
+              0.262,
+              0.31,
+              0.333,
+              0.333,
+              0.31,
+              0.262,
+              0.214
+            ],
+            "fcf": [
+              -0.166,
+              -0.15,
+              -0.131,
+              -0.064,
+              0.032,
+              0.182,
+              0.347,
+              0.523,
+              0.692,
+              0.848
+            ],
+            "cash": 0.83,
+            "net_debt": 0.0,
+            "raise_total": 0.75,
+            "dilution_pct": 1,
+            "final_shares": 578,
+            "distress": 6.0,
+            "pv_fcf": [
+              -0.149,
+              -0.121,
+              -0.095,
+              -0.042,
+              0.019,
+              0.097,
+              0.168,
+              0.231,
+              0.278,
+              0.312
+            ],
+            "sum_pv_fcf": 0.7,
+            "terminal_value": 14.63,
+            "pv_terminal": 5.38,
+            "op_ev": 6.08,
+            "total_equity": 6.91,
+            "dcf_per_share": 11.96
+          },
+          "chartData": {
+            "raises": [
+              0.25,
+              0.3,
+              0.2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raise_prices": [
+              155,
+              155,
+              155,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 66.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bull": {
+          "probability": 0.22,
+          "expectedPerShare": 36.37,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 8.8,
+            "p_fail": 3,
+            "s2c": 2.3
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.88,
+              1.35,
+              2.05,
+              3.0,
+              4.2,
+              5.6,
+              7.1,
+              8.5,
+              9.6,
+              10.5
+            ],
+            "op_margin": [
+              -0.03,
+              0.04,
+              0.09,
+              0.13,
+              0.17,
+              0.195,
+              0.21,
+              0.22,
+              0.225,
+              0.23
+            ],
+            "wacc_path": [
+              0.11,
+              0.108,
+              0.106,
+              0.104,
+              0.102,
+              0.1,
+              0.097,
+              0.094,
+              0.092,
+              0.09
+            ],
+            "term_g": 0.045,
+            "nopat": [
+              -0.026,
+              0.054,
+              0.184,
+              0.39,
+              0.714,
+              1.092,
+              1.491,
+              1.87,
+              2.16,
+              2.415
+            ],
+            "reinvest": [
+              0.121,
+              0.204,
+              0.304,
+              0.413,
+              0.522,
+              0.609,
+              0.652,
+              0.609,
+              0.478,
+              0.391
+            ],
+            "fcf": [
+              -0.147,
+              -0.15,
+              -0.12,
+              -0.023,
+              0.192,
+              0.483,
+              0.839,
+              1.261,
+              1.682,
+              2.024
+            ],
+            "cash": 0.83,
+            "net_debt": 0.0,
+            "raise_total": 0.4,
+            "dilution_pct": 0,
+            "final_shares": 575,
+            "distress": 9.0,
+            "pv_fcf": [
+              -0.132,
+              -0.122,
+              -0.088,
+              -0.015,
+              0.116,
+              0.265,
+              0.42,
+              0.577,
+              0.705,
+              0.778
+            ],
+            "sum_pv_fcf": 2.5,
+            "terminal_value": 47.0,
+            "pv_terminal": 18.08,
+            "op_ev": 20.58,
+            "total_equity": 21.41,
+            "dcf_per_share": 37.23
+          },
+          "chartData": {
+            "raises": [
+              0.2,
+              0.2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raise_prices": [
+              180,
+              180,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 66.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 105.65,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 17.1,
+            "p_fail": 2,
+            "s2c": 2.5
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.92,
+              1.55,
+              2.6,
+              4.1,
+              6.2,
+              8.8,
+              11.8,
+              15.0,
+              18.0,
+              20.5
+            ],
+            "op_margin": [
+              -0.02,
+              0.06,
+              0.12,
+              0.17,
+              0.21,
+              0.235,
+              0.25,
+              0.26,
+              0.265,
+              0.27
+            ],
+            "wacc_path": [
+              0.105,
+              0.103,
+              0.101,
+              0.099,
+              0.097,
+              0.095,
+              0.092,
+              0.089,
+              0.087,
+              0.085
+            ],
+            "term_g": 0.05,
+            "nopat": [
+              -0.018,
+              0.093,
+              0.312,
+              0.697,
+              1.302,
+              2.068,
+              2.95,
+              3.9,
+              4.77,
+              5.535
+            ],
+            "reinvest": [
+              0.127,
+              0.252,
+              0.42,
+              0.6,
+              0.84,
+              1.04,
+              1.2,
+              1.28,
+              1.2,
+              1.0
+            ],
+            "fcf": [
+              -0.145,
+              -0.159,
+              -0.108,
+              0.097,
+              0.462,
+              1.028,
+              1.75,
+              2.62,
+              3.57,
+              4.535
+            ],
+            "cash": 0.83,
+            "net_debt": 0.0,
+            "raise_total": 0.15,
+            "dilution_pct": 0,
+            "final_shares": 574,
+            "distress": 12.0,
+            "pv_fcf": [
+              -0.131,
+              -0.13,
+              -0.08,
+              0.066,
+              0.286,
+              0.58,
+              0.905,
+              1.244,
+              1.559,
+              1.825
+            ],
+            "sum_pv_fcf": 6.12,
+            "terminal_value": 136.05,
+            "pv_terminal": 54.76,
+            "op_ev": 60.88,
+            "total_equity": 61.71,
+            "dcf_per_share": 107.51
+          },
+          "chartData": {
+            "raises": [
+              0.15,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raise_prices": [
+              210,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 66.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "competitive": {
+        "arena": "Space launch + space systems — Rocket Lab (Electron small-lift, Neutron medium-lift reusable coming, vertically-integrated Space Systems) vs SpaceX (dominant), Firefly, Stoke Space, ULA/Blue Origin; the race to become a vertically-integrated space prime.",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "Electron cadence builds a learning curve; Neutron reusability could reset cost, but it is pre-launch."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Owned-constellation/data flywheel is a future moat, not yet originated."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Vertically integrated launch + components + future constellation — few new-space peers can replicate the full stack."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Space Systems components get designed-in (some lock-in); launch is largely contestable."
+          },
+          "branding": {
+            "score": 2,
+            "note": "The credible #2 launch brand after SpaceX; strong gov/defense trust."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Launch sites/licenses, an acquired vertically-integrated component portfolio, Beck-led engineering talent, Neutron IP."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Electron reliability + manufacturing learning curve; a genuine, if narrow, process edge."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "SpaceX",
+            "kind": "private",
+            "note": "Falcon 9 cadence + Starship + Starlink — the gravity well of the industry.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.45,
+            "capital": "$ tens of B; Starlink cash flow"
+          },
+          {
+            "name": "ULA / Blue Origin",
+            "kind": "incumbent-division",
+            "note": "Vulcan / New Glenn; legacy contracts + Bezos capital.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.12,
+            "capital": "Boeing/LM + Bezos"
+          },
+          {
+            "name": "Firefly Aerospace",
+            "kind": "public",
+            "note": "Alpha + Elytra + MLV; lunar lander; recently public.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.08,
+            "capital": "public; funded"
+          },
+          {
+            "name": "Stoke Space",
+            "kind": "private",
+            "note": "Fully reusable from day one; early but ambitious.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.05,
+            "capital": "~$ hundreds M"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Medium-lift reusable launch",
+            "company": "Neutron pre-launch",
+            "bestRival": "Falcon 9 + Starship",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Launch cadence (per yr)",
+            "company": "~15-20 (Electron)",
+            "bestRival": ">100 (SpaceX)",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Space Systems revenue scale",
+            "company": "leading new-space",
+            "bestRival": "fragmented",
+            "verdict": "leading"
+          }
+        ],
+        "takeaway": "Rocket Lab is originating a genuine vertically-integrated space-prime position — the credible #2 to SpaceX — with real Space Systems scale, a $1.85B backlog, and Neutron optionality. But it lags SpaceX by an order of magnitude on launch cadence/reusability, and Neutron is unproven; the window is open as the #2, but SpaceX's cost-and-scale gravity well is the falsifier the whole bull case must clear."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Best-capitalized new-space name.",
+            "body": "$0.83B cash + $1.85B backlog + ATM access; far more de-risked than pre-revenue peers."
+          },
+          {
+            "label": "Space Systems is the hidden engine.",
+            "body": "The majority of revenue is components/satellites, not launch — diversified, growing, and sticky (designed-in)."
+          },
+          {
+            "label": "Neutron is optionality, not the whole thesis.",
+            "body": "Even modeling Neutron conservatively, Space Systems alone compounds to a real business."
+          },
+          {
+            "label": "Reusability could reset the cost curve.",
+            "body": "If Neutron lands reuse economics, the bull launch-share path opens — the single biggest swing factor."
+          },
+          {
+            "label": "Backlog visibility.",
+            "body": "$1.85B backlog (+73% YoY) gives unusual revenue visibility for a 'young' name."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "Neutron reaches orbit on schedule (Q4'26) · reuse demonstrated by FY27 · Space Systems > $1B annual run-rate"
+          },
+          {
+            "label": "Bear validation",
+            "body": "Neutron slips beyond FY27 · gross margin stalls < 35% · Space Systems growth decelerates < 20%"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "If reusable medium-lift cadence approaches Falcon 9 economics, the launch-share ceiling lifts materially — revisit the bull tam_share"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Electron",
+          "definition": "RKLB's small-lift (~300kg) orbital rocket; the established #2 to SpaceX by launch count."
+        },
+        {
+          "term": "Neutron",
+          "definition": "RKLB's reusable medium-lift (~13t) rocket targeting a Q4 2026 first launch; the core bull catalyst."
+        },
+        {
+          "term": "Space Systems",
+          "definition": "RKLB's non-launch segment: satellites, star trackers, solar, separation systems, components — the majority of revenue."
+        },
+        {
+          "term": "Backlog",
+          "definition": "Contracted future revenue not yet recognized; RKLB's was $1.85B (+73% YoY) at FY25."
+        },
+        {
+          "term": "Sales-to-capital (s2c)",
+          "definition": "Damodaran reinvestment efficiency: incremental revenue per dollar of reinvested capital. Higher = more capital-efficient growth."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-31_18-52",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   }
 ];
 

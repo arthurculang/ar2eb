@@ -38,7 +38,7 @@ from typing import Any
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb"]
 # Required scenario keys (every ticker must have these four). `ultra_bear`
 # is an optional 5th — present on ZM, may be added to other tickers later.
 SCEN_KEYS = ["bear", "base", "bull", "ultra_bull"]

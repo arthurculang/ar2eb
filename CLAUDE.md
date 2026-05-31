@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
-changelog-driven — currently at logical **v028**) are the source of truth.
+changelog-driven — currently at logical **v029**) are the source of truth.
 
 ## What this is
 
@@ -94,12 +94,14 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 - **Wave 1 — IN PROGRESS.** Remaining young: ACHR, GRAL, TXG, OKLO; mature: LULU, YETI,
   ILMN, ABNB, UBER, DASH — each fundamentals-only, competitive page baked in. Batch ~6–8
   with one per-wave review digest.
-  - **RKLB — STAGED (modeled, authored, validator-green; not yet live).** `data/rklb.yml`
-    + `data/_intake/rklb.yml` committed; young-company DCF, 5 scenarios, competitive page
-    (origination). Finding: even an aggressive ultra-bull (~$20B-rev space prime by 2035)
-    is ~−26% vs spot; weighted ~−85% (priced beyond a decade of fundamentals). **To ship:**
-    Page 1 is ~12px over `STRICT_LAYOUT` — a *structural* 5-scenario-young overflow (the
-    forward chart / card row, not prose; trimming text doesn't move it), so it needs a small
-    Page-1 spacing tweak in `memo_pdf.jsx` (will touch all tickers → re-verify + re-baseline).
-    Then register `rklb` in the 4 scripts' `TICKERS`, `rebuild_all rklb`, ship the 6-page PDF.
+  - **RKLB — SHIPPED & LIVE (2026-05-31).** `data/rklb.yml` + `data/_intake/rklb.yml`;
+    young-company DCF, 5 scenarios, competitive page (origination). 6-page PDF
+    (`rklb-memo__v001__2026-05-31_18-52.pdf`) in `public/memos/`; `rklb` registered in all 4
+    scripts' `TICKERS`; `data.js` resolves it; `visual_baseline.json` now covers 10 tickers
+    (60 pages, `--check` clean). Finding holds: even an aggressive ultra-bull (~$20B-rev space
+    prime by 2035) is ~−26% vs spot; weighted ~−85% (priced beyond a decade of fundamentals).
+    *Handoff-note correction:* the "~12px over `STRICT_LAYOUT`" blocker was stale — Page 1
+    actually **clears the footer band by +12px** (in family with JOBY +14px, ZM +47px); the
+    5-scenario adaptive-density work (already on main before the staging commit) had resolved
+    it, so **no `memo_pdf.jsx` tweak was needed**. Tightest page is Pg5 at +9px clearance.
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
