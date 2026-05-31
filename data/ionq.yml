@@ -545,7 +545,7 @@ scenarios:
     short_label: UltBull
     probability: 0.03
     expected_per_share: 130.99
-    headline: Nvidia-of-quantum; SaaS multiple.
+    headline: Dominant quantum pure-play; software-premium re-rate.
     narrative:
     - 'Tail of tails. Every Bull condition hits AND the FY36 TAM is materially larger than consensus (Roots Analysis $198B
       FY40 trajectory, McKinsey upper-bound $72B by 2035 just for computing) AND IonQ achieves de facto platform monopoly
@@ -938,6 +938,10 @@ appendix:
   - label: Bull validation
     body: AQ#256 hit by H1 2027  ·  First verified commercial quantum advantage on customer workload  ·  Multi-product share
       >50%  ·  2nd large govt contract (>$100M)
+  - label: Ultra-bull ceiling
+    body: 'The ultra-bull caps at ~$16B FY36 revenue (32% of a $50B TAM) — Nvidia-2021 scale, not Nvidia-today. The binding
+      constraint is the TAM, not IONQ execution: a credible >$50B FY36 quantum-TAM print is the only thing that unlocks a literal
+      Nvidia-scale outcome. Absent that, even flawless execution tops out here.'
   - label: Reframe needed
     body: If neutral-atom (QuEra/Atom Computing) achieves fault-tolerance first — trapped-ion premium thesis erodes; revisit
       TAM share assumptions across all scenarios
