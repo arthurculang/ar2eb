@@ -360,8 +360,46 @@ glossary:
   definition: Per-share value implied by the latest round (post-money ÷ fully-diluted). A preferred, illiquid, single-counterparty
     price — not a market quote.
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-05-29_23-44
+  footer_version: "002"
+  footer_timestamp: "2026-05-31_17-11"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-05-29_23-44
+  pdf_version: "002"
+  pdf_timestamp: "2026-05-31_17-11"
+
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-05-29_23-44"
+    asOfDate: "2026-05-29"
+    spotPrice: 165.0
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Origination lens (private_prevaluation).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Frontier AI labs — Anthropic vs OpenAI, Google DeepMind, xAI, Meta AI; the race for
+    frontier capability plus the compute, capital, and talent to sustain it.
+  lens: power_origination
+  powers:
+    scale_economies:     { score: 2, note: "Training-cost amortization needs scale; well-capitalized (Amazon/Google) but smaller than OpenAI/Google." }
+    network_economies:   { score: 1, note: "Claude developer ecosystem + MCP standard emerging; far less consumer network than ChatGPT." }
+    counter_positioning: { score: 2, note: "Safety-first, enterprise-trust positioning vs consumer-first incumbents (Constitutional AI)." }
+    switching_costs:     { score: 2, note: "Enterprise API integration; Claude embedded in coding workflows; MCP." }
+    branding:            { score: 2, note: "Strong in enterprise + coding + safety; less consumer mindshare than ChatGPT/Gemini." }
+    cornered_resource:   { score: 2, note: "Elite research talent; Amazon (~$8B) + Google compute/Trainium access." }
+    process_power:       { score: 2, note: "Research velocity; RL + interpretability/safety methods." }
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+    - { name: "OpenAI", kind: private, note: "ChatGPT consumer scale + Microsoft; largest war chest.", share_now: 0.30, share_terminal: 0.32, capital: "$ tens of B + Microsoft" }
+    - { name: "Google DeepMind", kind: incumbent-division, note: "Gemini + TPUs + distribution + balance sheet; the scale threat.", share_now: 0.20, share_terminal: 0.24, capital: "Alphabet balance sheet" }
+    - { name: "xAI", kind: private, note: "Grok + X data + Musk capital + large GPU cluster.", share_now: 0.05, share_terminal: 0.12, capital: "$ billions raised" }
+    - { name: "Meta AI", kind: incumbent-division, note: "Open-weight Llama; free distribution at platform scale.", share_now: 0.08, share_terminal: 0.12, capital: "Meta balance sheet" }
+  lead_lag:
+    - { metric: "Frontier capability (coding/agents)", company: "leading", best_rival: "parity", verdict: leading }
+    - { metric: "Compute / capital scale", company: "~$8-13B", best_rival: "far larger", verdict: lagging }
+    - { metric: "Consumer distribution", company: "limited", best_rival: "massive", verdict: lagging }
+  takeaway: >
+    Anthropic is originating a real enterprise + coding + safety position with elite talent and
+    major-cloud compute, but it lags OpenAI and Google on capital scale and consumer reach; the
+    window is open while the frontier moves — the compute/capital gap is the falsifier for
+    whether it stays at the frontier.

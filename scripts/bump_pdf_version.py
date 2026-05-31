@@ -40,7 +40,9 @@ def _read_top_scalar(text: str, key: str) -> str | None:
 
 def _read_stamp_scalar(text: str, key: str) -> str | None:
     """Read a stamp.* key (indented two spaces, lives inside `stamp:` block)."""
-    m = re.search(rf'^\s+{key}:\s*"?([^"\n#]+?)"?\s*(?:#.*)?$', text, re.M)
+    # Tolerate unquoted, "double"-, and 'single'-quoted scalars (COIN/Anthropic
+    # ship single-quoted stamps; the old regex only stripped double quotes).
+    m = re.search(rf'''^\s+{key}:\s*["']?([^"'\n#]+?)["']?\s*(?:#.*)?$''', text, re.M)
     return m.group(1).strip() if m else None
 
 

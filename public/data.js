@@ -13,9 +13,17 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "joby-memo__v029__2026-05-23_21-14.pdf",
-      "size": "320 KB",
-      "priorVersions": []
+      "file": "joby-memo__v030__2026-05-31_17-10.pdf",
+      "size": "344 KB",
+      "priorVersions": [
+        {
+          "version": "029",
+          "file": "joby-memo__v029__2026-05-23_21-14.pdf",
+          "size": "320 KB",
+          "asOfDate": "2026-05-16",
+          "spotPrice": 10.5
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$10.3B",
@@ -918,6 +926,97 @@ const MEMOS = [
           ]
         }
       },
+      "competitive": {
+        "arena": "eVTOL / advanced air mobility — Joby vs Archer, Beta, Vertical Aerospace, Eve/Embraer; the race to FAA type certification and commercial air-taxi service.\n",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "Manufacturing scale years away; unit economics unproven."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Vertiport/route network is the eventual moat; not yet originated."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Vertically integrated OEM-plus-operator model legacy aero/airlines can't easily copy."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "No installed base yet; future pilot/fleet lock-in."
+          },
+          "branding": {
+            "score": 2,
+            "note": "Joby + Toyota/Delta halo; acquired Uber Elevate brand."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Toyota manufacturing partnership + capital; Delta tie-up; FAA cert lead; powertrain IP."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Manufacturing learning curve just beginning."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "Archer Aviation",
+            "kind": "public",
+            "note": "United + Stellantis manufacturing + US Army; close behind on cert.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.2,
+            "capital": "well-funded; Stellantis"
+          },
+          {
+            "name": "Beta Technologies",
+            "kind": "private",
+            "note": "Cargo/eCTOL first; building a charging network.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.12,
+            "capital": "~$1B+ raised"
+          },
+          {
+            "name": "Vertical Aerospace",
+            "kind": "public",
+            "note": "UK; VX4; smaller balance sheet.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.08,
+            "capital": "constrained"
+          },
+          {
+            "name": "Eve (Embraer)",
+            "kind": "incumbent-division",
+            "note": "OEM heritage + order book; later to fly.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "Embraer-backed"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "FAA type certification stage",
+            "company": "for-credit testing",
+            "bestRival": "for-credit testing",
+            "verdict": "even"
+          },
+          {
+            "metric": "Manufacturing partner",
+            "company": "Toyota",
+            "bestRival": "Stellantis",
+            "verdict": "even"
+          },
+          {
+            "metric": "Cash runway (yrs at burn)",
+            "company": 3,
+            "bestRival": 2,
+            "verdict": "leading"
+          }
+        ],
+        "takeaway": "Joby leads on certification progress and a Toyota-backed capital/manufacturing position, but the network-economics moat is unoriginated and Archer is close; the window stays open through type certification — the gating falsifier for the whole category.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -983,8 +1082,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "029",
-        "footerTimestamp": "2026-05-23_21-14",
+        "footerVersion": "030",
+        "footerTimestamp": "2026-05-31_17-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -999,9 +1098,17 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "aur-memo__v023__2026-05-23_21-14.pdf",
-      "size": "317 KB",
-      "priorVersions": []
+      "file": "aur-memo__v024__2026-05-31_17-10.pdf",
+      "size": "341 KB",
+      "priorVersions": [
+        {
+          "version": "023",
+          "file": "aur-memo__v023__2026-05-23_21-14.pdf",
+          "size": "317 KB",
+          "asOfDate": "2026-05-16",
+          "spotPrice": 7.74
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$13.2B",
@@ -1903,6 +2010,97 @@ const MEMOS = [
           ]
         }
       },
+      "competitive": {
+        "arena": "Driverless Class-8 trucking on US highways — Aurora vs Kodiak, Waabi, Torc/Daimler, Gatik; the race to scale commercial driverless freight.\n",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "Per-mile cost falls with fleet, but the driverless fleet is barely launched; R&D is still a fixed sink."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Aurora Driver improves with miles driven; a data flywheel, not yet a moat."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Driver-as-a-service subscription model carriers/OEMs can't easily self-build."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Carrier/terminal integration nascent; lane-by-lane."
+          },
+          "branding": {
+            "score": 1,
+            "note": "Safety-case credibility; not yet the category default."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Aurora Driver + FirstLight lidar IP; PACCAR/Volvo/Continental platform partnerships; Dallas–Houston–Phoenix terminals."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Safety Case Framework rigor; not yet a durable cost/quality edge."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "Kodiak",
+            "kind": "public",
+            "note": "Driverless in the Permian (off-highway first); SPAC-funded.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.12,
+            "capital": "SPAC; ~$ hundreds M"
+          },
+          {
+            "name": "Waabi",
+            "kind": "private",
+            "note": "Generative-AI simulation approach; Volvo/Khosla-backed.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "~$200M raised"
+          },
+          {
+            "name": "Torc Robotics (Daimler)",
+            "kind": "incumbent-division",
+            "note": "OEM-captive; Freightliner integration.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "Daimler balance sheet"
+          },
+          {
+            "name": "Gatik",
+            "kind": "private",
+            "note": "Short-haul B2B (Walmart, Tyson); narrower problem.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.08,
+            "capital": "~$300M raised"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Driverless commercial launch",
+            "company": "live (TX)",
+            "bestRival": "off-highway",
+            "verdict": "leading"
+          },
+          {
+            "metric": "OEM platform partners",
+            "company": 3,
+            "bestRival": 1,
+            "verdict": "leading"
+          },
+          {
+            "metric": "Cash runway (yrs at burn)",
+            "company": 2,
+            "bestRival": 3,
+            "verdict": "lagging"
+          }
+        ],
+        "takeaway": "A genuine first-to-driverless and OEM-partnership lead, but scale and network power are unbuilt and the model is deeply capital-hungry; the window is open while Aurora out-executes — a safety or capital stumble cedes it.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -1968,8 +2166,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "023",
-        "footerTimestamp": "2026-05-23_21-14",
+        "footerVersion": "024",
+        "footerTimestamp": "2026-05-31_17-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -1984,9 +2182,17 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "lth-memo__v022__2026-05-23_21-14.pdf",
-      "size": "240 KB",
-      "priorVersions": []
+      "file": "lth-memo__v023__2026-05-31_17-10.pdf",
+      "size": "262 KB",
+      "priorVersions": [
+        {
+          "version": "022",
+          "file": "lth-memo__v022__2026-05-23_21-14.pdf",
+          "size": "240 KB",
+          "asOfDate": "2026-05-16",
+          "spotPrice": 33.61
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$7.46B",
@@ -2601,6 +2807,81 @@ const MEMOS = [
           "revPerUnit": null
         }
       },
+      "competitive": {
+        "arena": "Premium health-and-wellness clubs — Life Time vs Equinox (urban premium), boutique studios (Xponential et al.), value gyms (Planet Fitness), and at-home fitness.\n",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Large-format clubs + real-estate scale spread fixed cost; ancillary revenue (spa, cafe, work)."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Member community/events create some stickiness; not a true network."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Premium 'athletic country club' big-box that mass-market and boutiques can't straddle."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Family memberships, onboarding, community and locker inertia."
+          },
+          "branding": {
+            "score": 3,
+            "note": "The premium destination brand in big-box fitness."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Prime, large-footprint real-estate locations that are hard to replicate."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Club operating model + ancillary-revenue playbook honed over years."
+          }
+        },
+        "dominantPower": "branding",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Equinox",
+            "kind": "private",
+            "note": "Urban ultra-premium; overlaps at the top end.",
+            "growth": 0.06,
+            "margin": null,
+            "multiple": "private"
+          },
+          {
+            "name": "Planet Fitness",
+            "kind": "public",
+            "note": "Mass-market low-price; a different segment, but caps pricing power below.",
+            "growth": 0.1,
+            "margin": 0.36,
+            "multiple": "~20x EV/EBITDA"
+          },
+          {
+            "name": "Boutique studios (Xponential)",
+            "kind": "public",
+            "note": "Fragmented, asset-light franchising; cherry-picks modalities.",
+            "growth": 0.08,
+            "margin": 0.2,
+            "multiple": "~8x"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "counter_positioning",
+            "who": "Equinox + boutiques",
+            "falsifier": "Same-club revenue growth < 5% for 2 consecutive years while membership churn climbs above 35%."
+          },
+          {
+            "vector": "switching_costs",
+            "who": "Macro down-trade / at-home",
+            "falsifier": "Dues-paying membership declines YoY in a non-recession year."
+          }
+        ],
+        "takeaway": "A durable premium brand plus prime-real-estate moat that underwrites the DCF's terminal economics; the live risks are macro down-trade and Equinox at the top end — same-club revenue and churn are the erosion gauges.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -2666,8 +2947,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "022",
-        "footerTimestamp": "2026-05-23_21-14",
+        "footerVersion": "023",
+        "footerTimestamp": "2026-05-31_17-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -2682,9 +2963,16 @@ const MEMOS = [
     "publishedISO": "2026-05-27",
     "publishedLabel": "May 27, 2026",
     "pdf": {
-      "file": "zm-memo__v023__2026-05-27_19-17.pdf",
-      "size": "255 KB",
+      "file": "zm-memo__v024__2026-05-31_17-10.pdf",
+      "size": "278 KB",
       "priorVersions": [
+        {
+          "version": "023",
+          "file": "zm-memo__v023__2026-05-27_19-17.pdf",
+          "size": "255 KB",
+          "asOfDate": "2026-05-27",
+          "spotPrice": 105.64
+        },
         {
           "version": "022",
           "file": "zm-memo__v022__2026-05-27_15-31.pdf",
@@ -3408,6 +3696,89 @@ const MEMOS = [
           "revPerUnit": null
         }
       },
+      "competitive": {
+        "arena": "Video communications + collaboration — Zoom vs Microsoft Teams (bundled in M365), Google Meet (Workspace), Cisco Webex; the question is whether a standalone platform holds against suite bundling, and whether AI Companion monetizes.\n",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Large user base + global media infrastructure spread cost."
+          },
+          "networkEconomies": {
+            "score": 2,
+            "note": "Ubiquity ('Zoom me'), guest-join reach, app marketplace."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the ease-of-use disruptor; incumbents have since matched the model."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Enterprise contracts; Zoom Phone / Contact Center stickiness; habit."
+          },
+          "branding": {
+            "score": 3,
+            "note": "Category-defining verb; default for external meetings."
+          },
+          "corneredResource": {
+            "score": 1,
+            "note": "No durable exclusive asset; talent + reliability are replicable."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Reliability/UX engineering culture; uptime track record."
+          }
+        },
+        "dominantPower": "branding",
+        "durability": "medium",
+        "rivals": [
+          {
+            "name": "Microsoft Teams",
+            "kind": "incumbent-division",
+            "note": "Bundled free in M365 — the existential bundling threat.",
+            "growth": 0.1,
+            "margin": 0.4,
+            "multiple": "bundled"
+          },
+          {
+            "name": "Google Meet",
+            "kind": "incumbent-division",
+            "note": "Bundled in Workspace; good-enough for many.",
+            "growth": 0.08,
+            "margin": 0.3,
+            "multiple": "bundled"
+          },
+          {
+            "name": "Cisco Webex",
+            "kind": "public",
+            "note": "Enterprise legacy; declining share.",
+            "growth": -0.05,
+            "margin": 0.25,
+            "multiple": "~12x"
+          },
+          {
+            "name": "RingCentral / 8x8",
+            "kind": "public",
+            "note": "UCaaS pure-plays in Phone/CC.",
+            "growth": 0.05,
+            "margin": 0.18,
+            "multiple": "~8x"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "counter_positioning",
+            "who": "Microsoft Teams (bundling)",
+            "falsifier": "Online seat growth < 0% or net-dollar-retention < 100% as Teams bundling displaces standalone seats."
+          },
+          {
+            "vector": "branding",
+            "who": "AI assistants (Copilot/Gemini)",
+            "falsifier": "AI Companion fails to lift ARPU while bundled rivals give equivalent AI free."
+          }
+        ],
+        "takeaway": "A category-defining brand + network with real switching costs, but durability is the whole debate — Microsoft's bundling is the dominant threat the terminal multiple hinges on; seat growth and net retention are the gauges.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -3473,8 +3844,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "023",
-        "footerTimestamp": "2026-05-27_19-17",
+        "footerVersion": "024",
+        "footerTimestamp": "2026-05-31_17-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -3489,9 +3860,16 @@ const MEMOS = [
     "publishedISO": "2026-05-16",
     "publishedLabel": "May 16, 2026",
     "pdf": {
-      "file": "naut-memo__v004__2026-05-28_05-25.pdf",
-      "size": "312 KB",
+      "file": "naut-memo__v005__2026-05-31_17-10.pdf",
+      "size": "337 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "naut-memo__v004__2026-05-28_05-25.pdf",
+          "size": "312 KB",
+          "asOfDate": "2026-05-16",
+          "spotPrice": 2.4
+        },
         {
           "version": "003",
           "file": "naut-memo__v003__2026-05-23_21-14.pdf",
@@ -4410,6 +4788,97 @@ const MEMOS = [
           ]
         }
       },
+      "competitive": {
+        "arena": "Broad-scale proteomics — Nautilus's single-molecule protein-analysis platform vs Seer, Olink/Thermo, SomaLogic/Standard BioTools, Quantum-Si; the race to high-throughput, deep proteome coverage.\n",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 0,
+            "note": "Pre-revenue; no instruments placed, no consumable pull-through yet."
+          },
+          "networkEconomies": {
+            "score": 0,
+            "note": "No installed base or data ecosystem yet."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Multi-affinity-probe single-molecule decoding — distinct from mass-spec and aptamer incumbents."
+          },
+          "switchingCosts": {
+            "score": 0,
+            "note": "None until an instrument ships and labs standardize on it."
+          },
+          "branding": {
+            "score": 1,
+            "note": "Scientific credibility; unproven commercially."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Core IP on the probe-cycling decode method; well-funded cash position pre-launch."
+          },
+          "processPower": {
+            "score": 0,
+            "note": "No manufacturing/assay learning curve yet."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "closing",
+        "rivals": [
+          {
+            "name": "Seer",
+            "kind": "public",
+            "note": "Proteograph shipping with revenue; nanoparticle enrichment + MS.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.2,
+            "capital": "public; cash-funded"
+          },
+          {
+            "name": "Olink (Thermo Fisher)",
+            "kind": "incumbent-division",
+            "note": "Established PEA panels (~5k proteins); NGS readout; Thermo distribution.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.25,
+            "capital": "Thermo balance sheet"
+          },
+          {
+            "name": "SomaLogic / Standard BioTools",
+            "kind": "public",
+            "note": "Aptamer SomaScan (~11k); merged scale.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.2,
+            "capital": "public; merged"
+          },
+          {
+            "name": "Quantum-Si",
+            "kind": "public",
+            "note": "Semiconductor protein sequencing; also early.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "public"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Commercial instrument shipping",
+            "company": "no (pre-launch)",
+            "bestRival": "yes",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Demonstrated proteome coverage",
+            "company": "limited (dev)",
+            "bestRival": "broad (~5-11k)",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Cash runway (yrs at burn)",
+            "company": 3,
+            "bestRival": 3,
+            "verdict": "even"
+          }
+        ],
+        "takeaway": "Nautilus is originating a genuinely differentiated single-molecule platform with strong IP and a funded balance sheet, but it is pre-commercial and lags shipping rivals on every demonstrated metric; the window is open only while the cash lasts and before incumbents close the coverage gap — a launched, validated instrument is the falsifier.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -4475,8 +4944,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-05-28_05-25",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-05-31_17-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -6613,9 +7082,17 @@ const MEMOS = [
     "publishedISO": "2026-05-29",
     "publishedLabel": "May 29, 2026",
     "pdf": {
-      "file": "coin-memo__v001__2026-05-29_23-20.pdf",
-      "size": "263 KB",
-      "priorVersions": []
+      "file": "coin-memo__v002__2026-05-31_17-11.pdf",
+      "size": "286 KB",
+      "priorVersions": [
+        {
+          "version": "001",
+          "file": "coin-memo__v001__2026-05-29_23-20.pdf",
+          "size": "263 KB",
+          "asOfDate": "2026-05-29",
+          "spotPrice": 182.25
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$48B",
@@ -7313,6 +7790,89 @@ const MEMOS = [
           "revPerUnit": null
         }
       },
+      "competitive": {
+        "arena": "Crypto exchange + on-chain financial rails — Coinbase vs Binance (global volume), Kraken, Robinhood (low-fee), spot ETFs (BlackRock/Fidelity), and on-chain DEXs; the race for the regulated US rails, custody, and stablecoin (USDC/Base).\n",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Liquidity + volume amortize compliance/security cost."
+          },
+          "networkEconomies": {
+            "score": 2,
+            "note": "Liquidity begets liquidity; Base L2 ecosystem; USDC distribution."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Hard to counter-position in a commoditizing exchange market."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Custody, staking, institutional integrations, fiat on-ramps."
+          },
+          "branding": {
+            "score": 3,
+            "note": "The trusted, regulated, public-company US crypto brand."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "US regulatory licenses/compliance estate; Circle/USDC relationship; Base L2."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Compliance + security track record (no major custody hack)."
+          }
+        },
+        "dominantPower": "branding",
+        "durability": "medium",
+        "rivals": [
+          {
+            "name": "Binance",
+            "kind": "private",
+            "note": "Largest global volume; regulatory overhang; offshore.",
+            "growth": 0.1,
+            "margin": 0.45,
+            "multiple": "private"
+          },
+          {
+            "name": "Robinhood",
+            "kind": "public",
+            "note": "Low/zero-fee; gaining US crypto + equities share.",
+            "growth": 0.25,
+            "margin": 0.3,
+            "multiple": "~30x"
+          },
+          {
+            "name": "Spot ETFs (BlackRock/Fidelity)",
+            "kind": "incumbent-division",
+            "note": "Disintermediate spot holding/custody for many.",
+            "growth": 0.4,
+            "margin": null,
+            "multiple": "n/a"
+          },
+          {
+            "name": "Kraken",
+            "kind": "private",
+            "note": "Established US exchange; IPO-bound.",
+            "growth": 0.15,
+            "margin": null,
+            "multiple": "private"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "scale_economies",
+            "who": "Robinhood / zero-fee entrants",
+            "falsifier": "Retail take-rate compresses below ~1% on a sustained basis as fee competition bites."
+          },
+          {
+            "vector": "counter_positioning",
+            "who": "Spot ETFs + DEXs",
+            "falsifier": "Coinbase trading-volume share declines 2 consecutive quarters during a crypto bull market."
+          }
+        ],
+        "takeaway": "A regulated-trust brand plus liquidity/USDC network with real compliance barriers, underpinning the bull terminal value; fee compression and ETF/DEX disintermediation are the durability falsifiers to watch.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -7378,8 +7938,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "001",
-        "footerTimestamp": "2026-05-29_23-20",
+        "footerVersion": "002",
+        "footerTimestamp": "2026-05-31_17-11",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -7394,9 +7954,17 @@ const MEMOS = [
     "publishedISO": "2026-05-29",
     "publishedLabel": "May 29, 2026",
     "pdf": {
-      "file": "anthropic-memo__v001__2026-05-29_23-44.pdf",
-      "size": "204 KB",
-      "priorVersions": []
+      "file": "anthropic-memo__v002__2026-05-31_17-11.pdf",
+      "size": "233 KB",
+      "priorVersions": [
+        {
+          "version": "001",
+          "file": "anthropic-memo__v001__2026-05-29_23-44.pdf",
+          "size": "204 KB",
+          "asOfDate": "2026-05-29",
+          "spotPrice": 165.0
+        }
+      ]
     },
     "metrics": {
       "mktCap": "$61.5B",
@@ -7745,6 +8313,97 @@ const MEMOS = [
           }
         ]
       },
+      "competitive": {
+        "arena": "Frontier AI labs — Anthropic vs OpenAI, Google DeepMind, xAI, Meta AI; the race for frontier capability plus the compute, capital, and talent to sustain it.\n",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Training-cost amortization needs scale; well-capitalized (Amazon/Google) but smaller than OpenAI/Google."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Claude developer ecosystem + MCP standard emerging; far less consumer network than ChatGPT."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Safety-first, enterprise-trust positioning vs consumer-first incumbents (Constitutional AI)."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Enterprise API integration; Claude embedded in coding workflows; MCP."
+          },
+          "branding": {
+            "score": 2,
+            "note": "Strong in enterprise + coding + safety; less consumer mindshare than ChatGPT/Gemini."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Elite research talent; Amazon (~$8B) + Google compute/Trainium access."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Research velocity; RL + interpretability/safety methods."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "OpenAI",
+            "kind": "private",
+            "note": "ChatGPT consumer scale + Microsoft; largest war chest.",
+            "shareNow": 0.3,
+            "shareTerminal": 0.32,
+            "capital": "$ tens of B + Microsoft"
+          },
+          {
+            "name": "Google DeepMind",
+            "kind": "incumbent-division",
+            "note": "Gemini + TPUs + distribution + balance sheet; the scale threat.",
+            "shareNow": 0.2,
+            "shareTerminal": 0.24,
+            "capital": "Alphabet balance sheet"
+          },
+          {
+            "name": "xAI",
+            "kind": "private",
+            "note": "Grok + X data + Musk capital + large GPU cluster.",
+            "shareNow": 0.05,
+            "shareTerminal": 0.12,
+            "capital": "$ billions raised"
+          },
+          {
+            "name": "Meta AI",
+            "kind": "incumbent-division",
+            "note": "Open-weight Llama; free distribution at platform scale.",
+            "shareNow": 0.08,
+            "shareTerminal": 0.12,
+            "capital": "Meta balance sheet"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Frontier capability (coding/agents)",
+            "company": "leading",
+            "bestRival": "parity",
+            "verdict": "leading"
+          },
+          {
+            "metric": "Compute / capital scale",
+            "company": "~$8-13B",
+            "bestRival": "far larger",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Consumer distribution",
+            "company": "limited",
+            "bestRival": "massive",
+            "verdict": "lagging"
+          }
+        ],
+        "takeaway": "Anthropic is originating a real enterprise + coding + safety position with elite talent and major-cloud compute, but it lags OpenAI and Google on capital scale and consumer reach; the window is open while the frontier moves — the compute/capital gap is the falsifier for whether it stays at the frontier.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -7806,8 +8465,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "001",
-        "footerTimestamp": "2026-05-29_23-44",
+        "footerVersion": "002",
+        "footerTimestamp": "2026-05-31_17-11",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

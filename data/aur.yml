@@ -427,11 +427,16 @@ taxonomy:
   primary_theme: autonomous-vehicles-systems
 
 stamp:
-  footer_version: "023"
-  footer_timestamp: "2026-05-23_21-14"
+  footer_version: "024"
+  footer_timestamp: "2026-05-31_17-10"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "023"
-  pdf_timestamp: "2026-05-23_21-14"
+  pdf_version: "024"
+  pdf_timestamp: "2026-05-31_17-10"
+  prior_versions:
+  - version: "023"
+    timestamp: "2026-05-23_21-14"
+    asOfDate: "2026-05-16"
+    spotPrice: 7.74
 glossary:
 - term: Aurora Driver
   definition: Aurora's autonomy software + hardware stack. Currently runs supervised on highway pilots with PACCAR, Volvo, and FedEx.
@@ -445,3 +450,35 @@ glossary:
   definition: Volvo VNL Autonomous and PACCAR (Peterbilt, Kenworth). OEM integration gives Aurora a manufacturing path competitors lack.
 - term: Take-rate model
   definition: Revenue per autonomy-mile on OEM-built trucks (vs Aurora-owned fleet). Software-like margins; the bull terminal-margin driver.
+
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Origination lens (young_company).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Driverless Class-8 trucking on US highways — Aurora vs Kodiak, Waabi,
+    Torc/Daimler, Gatik; the race to scale commercial driverless freight.
+  lens: power_origination
+  powers:
+    scale_economies:     { score: 1, note: "Per-mile cost falls with fleet, but the driverless fleet is barely launched; R&D is still a fixed sink." }
+    network_economies:   { score: 1, note: "Aurora Driver improves with miles driven; a data flywheel, not yet a moat." }
+    counter_positioning: { score: 2, note: "Driver-as-a-service subscription model carriers/OEMs can't easily self-build." }
+    switching_costs:     { score: 1, note: "Carrier/terminal integration nascent; lane-by-lane." }
+    branding:            { score: 1, note: "Safety-case credibility; not yet the category default." }
+    cornered_resource:   { score: 2, note: "Aurora Driver + FirstLight lidar IP; PACCAR/Volvo/Continental platform partnerships; Dallas–Houston–Phoenix terminals." }
+    process_power:       { score: 1, note: "Safety Case Framework rigor; not yet a durable cost/quality edge." }
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+    - { name: "Kodiak", kind: public, note: "Driverless in the Permian (off-highway first); SPAC-funded.", share_now: 0.0, share_terminal: 0.12, capital: "SPAC; ~$ hundreds M" }
+    - { name: "Waabi", kind: private, note: "Generative-AI simulation approach; Volvo/Khosla-backed.", share_now: 0.0, share_terminal: 0.10, capital: "~$200M raised" }
+    - { name: "Torc Robotics (Daimler)", kind: incumbent-division, note: "OEM-captive; Freightliner integration.", share_now: 0.0, share_terminal: 0.10, capital: "Daimler balance sheet" }
+    - { name: "Gatik", kind: private, note: "Short-haul B2B (Walmart, Tyson); narrower problem.", share_now: 0.0, share_terminal: 0.08, capital: "~$300M raised" }
+  lead_lag:
+    - { metric: "Driverless commercial launch", company: "live (TX)", best_rival: "off-highway", verdict: leading }
+    - { metric: "OEM platform partners", company: 3, best_rival: 1, verdict: leading }
+    - { metric: "Cash runway (yrs at burn)", company: 2, best_rival: 3, verdict: lagging }
+  takeaway: >
+    A genuine first-to-driverless and OEM-partnership lead, but scale and network power
+    are unbuilt and the model is deeply capital-hungry; the window is open while Aurora
+    out-executes — a safety or capital stumble cedes it.

@@ -442,11 +442,16 @@ taxonomy:
   primary_theme: evtol-advanced-air-mobility
 
 stamp:
-  footer_version: "029"
-  footer_timestamp: "2026-05-23_21-14"
+  footer_version: "030"
+  footer_timestamp: "2026-05-31_17-10"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "029"
-  pdf_timestamp: "2026-05-23_21-14"
+  pdf_version: "030"
+  pdf_timestamp: "2026-05-31_17-10"
+  prior_versions:
+  - version: "029"
+    timestamp: "2026-05-23_21-14"
+    asOfDate: "2026-05-16"
+    spotPrice: 10.50
 glossary:
 - term: eVTOL
   definition: Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range.
@@ -460,3 +465,35 @@ glossary:
   definition: $894M total investment. Joint manufacturing program at Dayton, Ohio facility for production scale.
 - term: Blade
   definition: Helicopter-based mobility business acquired in 2024 — gives Joby existing routes (NYC-airport) for early ops.
+
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Origination lens (young_company).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    eVTOL / advanced air mobility — Joby vs Archer, Beta, Vertical Aerospace,
+    Eve/Embraer; the race to FAA type certification and commercial air-taxi service.
+  lens: power_origination
+  powers:
+    scale_economies:     { score: 1, note: "Manufacturing scale years away; unit economics unproven." }
+    network_economies:   { score: 1, note: "Vertiport/route network is the eventual moat; not yet originated." }
+    counter_positioning: { score: 2, note: "Vertically integrated OEM-plus-operator model legacy aero/airlines can't easily copy." }
+    switching_costs:     { score: 1, note: "No installed base yet; future pilot/fleet lock-in." }
+    branding:            { score: 2, note: "Joby + Toyota/Delta halo; acquired Uber Elevate brand." }
+    cornered_resource:   { score: 2, note: "Toyota manufacturing partnership + capital; Delta tie-up; FAA cert lead; powertrain IP." }
+    process_power:       { score: 1, note: "Manufacturing learning curve just beginning." }
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+    - { name: "Archer Aviation", kind: public, note: "United + Stellantis manufacturing + US Army; close behind on cert.", share_now: 0.0, share_terminal: 0.20, capital: "well-funded; Stellantis" }
+    - { name: "Beta Technologies", kind: private, note: "Cargo/eCTOL first; building a charging network.", share_now: 0.0, share_terminal: 0.12, capital: "~$1B+ raised" }
+    - { name: "Vertical Aerospace", kind: public, note: "UK; VX4; smaller balance sheet.", share_now: 0.0, share_terminal: 0.08, capital: "constrained" }
+    - { name: "Eve (Embraer)", kind: incumbent-division, note: "OEM heritage + order book; later to fly.", share_now: 0.0, share_terminal: 0.10, capital: "Embraer-backed" }
+  lead_lag:
+    - { metric: "FAA type certification stage", company: "for-credit testing", best_rival: "for-credit testing", verdict: even }
+    - { metric: "Manufacturing partner", company: "Toyota", best_rival: "Stellantis", verdict: even }
+    - { metric: "Cash runway (yrs at burn)", company: 3, best_rival: 2, verdict: leading }
+  takeaway: >
+    Joby leads on certification progress and a Toyota-backed capital/manufacturing position,
+    but the network-economics moat is unoriginated and Archer is close; the window stays open
+    through type certification — the gating falsifier for the whole category.

@@ -630,8 +630,45 @@ glossary:
   definition: COIN holds ~8.4M CRCL shares from the 2023 Centre dissolution. ~$1B at $120/share (range $0.5-2.5B). Marked
     as a strategic investment.
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-05-29_23-20
+  footer_version: "002"
+  footer_timestamp: "2026-05-31_17-11"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-05-29_23-20
+  pdf_version: "002"
+  pdf_timestamp: "2026-05-31_17-11"
+
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-05-29_23-20"
+    asOfDate: "2026-05-29"
+    spotPrice: 182.25
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Audit lens (mature_company_sotp).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Crypto exchange + on-chain financial rails — Coinbase vs Binance (global volume),
+    Kraken, Robinhood (low-fee), spot ETFs (BlackRock/Fidelity), and on-chain DEXs;
+    the race for the regulated US rails, custody, and stablecoin (USDC/Base).
+  lens: power_audit
+  powers:
+    scale_economies:     { score: 2, note: "Liquidity + volume amortize compliance/security cost." }
+    network_economies:   { score: 2, note: "Liquidity begets liquidity; Base L2 ecosystem; USDC distribution." }
+    counter_positioning: { score: 1, note: "Hard to counter-position in a commoditizing exchange market." }
+    switching_costs:     { score: 2, note: "Custody, staking, institutional integrations, fiat on-ramps." }
+    branding:            { score: 3, note: "The trusted, regulated, public-company US crypto brand." }
+    cornered_resource:   { score: 2, note: "US regulatory licenses/compliance estate; Circle/USDC relationship; Base L2." }
+    process_power:       { score: 2, note: "Compliance + security track record (no major custody hack)." }
+  dominant_power: branding
+  durability: medium
+  rivals:
+    - { name: "Binance", kind: private, note: "Largest global volume; regulatory overhang; offshore.", growth: 0.10, margin: 0.45, multiple: "private" }
+    - { name: "Robinhood", kind: public, note: "Low/zero-fee; gaining US crypto + equities share.", growth: 0.25, margin: 0.30, multiple: "~30x" }
+    - { name: "Spot ETFs (BlackRock/Fidelity)", kind: incumbent-division, note: "Disintermediate spot holding/custody for many.", growth: 0.40, margin: null, multiple: "n/a" }
+    - { name: "Kraken", kind: private, note: "Established US exchange; IPO-bound.", growth: 0.15, margin: null, multiple: "private" }
+  threats:
+    - { vector: scale_economies, who: "Robinhood / zero-fee entrants", falsifier: "Retail take-rate compresses below ~1% on a sustained basis as fee competition bites." }
+    - { vector: counter_positioning, who: "Spot ETFs + DEXs", falsifier: "Coinbase trading-volume share declines 2 consecutive quarters during a crypto bull market." }
+  takeaway: >
+    A regulated-trust brand plus liquidity/USDC network with real compliance barriers,
+    underpinning the bull terminal value; fee compression and ETF/DEX disintermediation are
+    the durability falsifiers to watch.
