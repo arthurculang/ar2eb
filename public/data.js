@@ -8482,7 +8482,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
-      "size": "—",
+      "size": "371 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -9689,6 +9689,1242 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "001",
         "footerTimestamp": "2026-05-31_18-52",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "OKLO",
+    "slug": "oklo",
+    "company": "Oklo",
+    "exchange": "NYSE",
+    "category": "asymmetrical-moonshots",
+    "dcfType": "Young-Company DCF (Damodaran)",
+    "publishedISO": "2026-05-31",
+    "publishedLabel": "May 31, 2026",
+    "pdf": {
+      "file": "oklo-memo__v001__2026-05-31_20-03.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$12.1B",
+      "shares": "180M",
+      "cash": "$2.54B cash, zero debt · $2.54B cash, debt-free; zero warrants (174M basic / ~180M diluted); Pre-revenue; first Aurora power targeted 2027-28; ~14 GW pipeline (mostly non-binding); Equinix $25M prepay"
+    },
+    "spot": {
+      "price": 67.2,
+      "asOf": "May 31, 2026 close"
+    },
+    "expected": {
+      "fair": 24.49,
+      "deltaPct": -63.6
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 41.48,
+        "mult": 0.62
+      },
+      {
+        "y": 10,
+        "value": 70.34,
+        "mult": 1.05
+      },
+      {
+        "y": 15,
+        "value": 119.36,
+        "mult": 1.78
+      },
+      {
+        "y": 20,
+        "value": 202.73,
+        "mult": 3.02
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "Med-High",
+      "themes": [
+        "nuclear-fission-smr",
+        "ai-compute"
+      ],
+      "themeNames": [
+        "Nuclear Fission & SMR",
+        "AI & Compute"
+      ],
+      "primaryTheme": "nuclear-fission-smr",
+      "primaryThemeName": "Nuclear Fission & SMR",
+      "umbrella": "energy-power",
+      "umbrellaName": "Energy & Power"
+    },
+    "question": "Does ~$12B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power outcome a decade of fundamentals can't reach?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 10,
+        "price": 6.4,
+        "headline": "Aurora fails; NRC/FOAK setback; cash shell.",
+        "why": "The compound bear: a fast-reactor FOAK failure or regulatory re-denial, plus HALEU-fuel scarcity. Advanced fission has never been commercialized on this build-own-operate model, and the prior 2022 NRC denial is a real datapoint. 38% within-scenario failure reflects that Oklo, though cash-rich and debt-free, is pre-revenue and dependent on never-built technology.",
+        "what": [
+          "First-of-a-kind execution defeats Oklo — a sodium fast-reactor technical setback, a second NRC denial (the 2022 COLA was denied without prejudice), or a HALEU-fuel shortfall (the same constraint that slipped TerraPower) pushes Aurora past 2030 or off the table. The build-own-operate model never reaches commercial power; Oklo subsists as a radioisotope (Atomic Alchemy) and services shell.",
+          "The $2.54B cash is the floor — but dilutive flailing raises and a decade of opex erode it, and a 38% within-scenario probability of restructuring pulls the expected toward the distress floor. Revenue stalls near $0.1B; the equity is worth a fraction of today's ~$12B."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 25,
+        "price": 9.66,
+        "headline": "Aurora slips; ~1 GW niche, capped.",
+        "why": "Aurora works but underwhelms on cadence and cost; the ~14 GW pipeline converts only fractionally as binding PPAs prove hard to land. 18% failure probability — lower than a pure science-project given $2.54B cash, DOE support, and a site under construction, but FOAK nuclear execution risk is real. 25% weight as a very plausible 'competent but capped' outcome.",
+        "what": [
+          "Aurora certifies and powers up, but late (first power ~2029) and at low cadence; Oklo becomes a credible niche advanced-nuclear operator — ~1 GW deployed by the mid-2030s, real PPA revenue (~$0.8B by FY35) at solid IPP margins — but never converts the headline pipeline. FOAK costs run high and the factory-cost thesis only partly materializes.",
+          "Modest dilution funds the slow buildout. The DCF lands ~$10/share — the market is pricing a far larger, faster fleet. This is the 'real company, wrong price' world."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 34,
+        "price": 15.73,
+        "headline": "First power ~2028; ~3 GW IPP fleet.",
+        "why": "Requires Aurora to work (not dominate) and the build-own-operate model to scale to a few GW — no full-pipeline conversion, no SpaceX-style runaway. 10% failure probability given the cash, DOE/INL momentum, and NRC progress (PDC topical report approved 2026). 34% weight as the central outcome.",
+        "what": [
+          "The modal path: Aurora reaches first power on roughly the targeted timeline (~2028), and Oklo scales the build-own-operate model to a ~3 GW operating fleet by 2034, selling baseload power to data centers at ~$75-90/MWh and ~50% mature operating margins — genuine IPP economics. FY30 revenue ~$0.42B sits near the (thin) analyst consensus, compounding as reactors come online.",
+          "The buildout is capital-intensive (~$2B/GW, ~$5.7B cumulative reinvestment) funded by ~$2.9B of dilutive raises on top of the $2.54B cash. DCF ~$16/share — ~76% below spot, a measure of how much the market is paying for a fleet larger and faster than a successful-but-rational base implies."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 23,
+        "price": 35.83,
+        "headline": "Factory economics work; ~7 GW AI-power.",
+        "why": "A chain: Aurora works AND factory-cost economics materialize AND NRC clears AND the pipeline converts to binding PPAs at scale. Each plausible at 50-70%; jointly ~23%. A real, fundable trajectory — Oklo has the cash, the site, and the AI-power demand backdrop — but it is conjunctive.",
+        "what": [
+          "The bull: Aurora's factory-built economics prove out (capex per GW falls with cadence), NRC licensing clears, and Oklo converts a real slice of its pipeline — ~7 GW deployed by 2034, powering AI data centers under long-dated PPAs at scale, with fuel-recycling and radioisotope verticals adding optionality. Revenue compounds toward ~$4.8B at a ~58% operating margin.",
+          "Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$37/share — and still ~45% below spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you must extend the horizon or believe a richer terminal."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 98.02,
+        "headline": "~13 GW AI-nuclear prime by 2034.",
+        "why": "Tail of tails: every bull condition hits AND Oklo reaches grid-scale AND earns a premium platform multiple as the AI-power category winner. Individually 50-65%; jointly ~8%. The genuine asymmetric upside — and the one scenario that clears spot.",
+        "what": [
+          "The tail: Oklo becomes the dominant build-own-operate AI-baseload-nuclear prime — the ~14 GW pipeline largely converts, factory production drives capex down, and Oklo operates ~13 GW by 2034 throwing off recurring PPA revenue (~$8.8B at a ~66% operating margin) with a premium platform terminal.",
+          "Even this — a genuine 'nuclear-prime-for-AI' outcome — produces a DCF of ~$100/share, ~+49% above today's $67. To justify spot on the weighted math you must lean heavily on this ~8% tail. That is the honest framing of what the market is paying for."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 34 / Bull 23 / Ultra Bull 8. Spot price reference: May 31, 2026 close.",
+    "thesis": "Oklo trades at ~$12B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline. It is a build-own-operate nuclear IPP — Aurora fast reactors sold as power via PPAs to AI data centers, first power targeted 2027-28, the only commercial advanced-fission site under construction. The young-company DCF asks what deployed-GW scale, IPP margins, and dilution are plausible over a decade. The finding is stark: even a successful base (~3 GW) and a strong bull (~7 GW) sit below spot; only an ~8% ultra-bull clears it.",
+    "historicalPrices": {
+      "xMin": -2.2,
+      "ipoMarker": "SPAC May '24",
+      "points": [
+        [
+          -2.05,
+          10.0
+        ],
+        [
+          -1.9,
+          9.0
+        ],
+        [
+          -1.7,
+          8.0
+        ],
+        [
+          -1.5,
+          11.0
+        ],
+        [
+          -1.25,
+          18.0
+        ],
+        [
+          -1.0,
+          26.0
+        ],
+        [
+          -0.8,
+          45.0
+        ],
+        [
+          -0.6,
+          90.0
+        ],
+        [
+          -0.45,
+          150.0
+        ],
+        [
+          -0.33,
+          190.0
+        ],
+        [
+          -0.22,
+          120.0
+        ],
+        [
+          -0.12,
+          85.0
+        ],
+        [
+          -0.05,
+          67.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 10%",
+        "body": "Aurora fails / NRC re-denial; cash shell."
+      },
+      {
+        "label": "Bear 25%",
+        "body": "Aurora slips; credible niche but ~1 GW capped."
+      },
+      {
+        "label": "Base 34%",
+        "body": "First power ~2028; ~3 GW IPP fleet, ~50% margin."
+      },
+      {
+        "label": "Bull 23%",
+        "body": "Factory economics work; ~7 GW AI-power scale."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "~13 GW AI-nuclear prime — only case above spot."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY26-FY35 scenario projections (pre-revenue today) · fiscal years end Dec 31 · Q1 2026 10-Q, FY25 results",
+      "sources": "Sources: Oklo Q1 2026 10-Q (cash $2.54B, net loss $33.1M), FY2025 results (net loss $105.7M), company pipeline/PPA disclosures, DOE Reactor Pilot + NRC filings. Revenue modeled as deployed-GW × capacity factor × PPA price (build-own-operate IPP); FCF is NOL-shielded pre-tax over the explicit window (documented simplification). TAM: advanced-fission power serviceable slice, ~$120B annual by FY35.",
+      "chartReference": {
+        "tamBillion": 120.0,
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "historyFleet": [
+          0,
+          0,
+          0
+        ]
+      },
+      "chartConfig": {
+        "peerY": 48,
+        "peerText": "Mature merchant-nuclear / IPP op margin ~40-55%",
+        "fleetAnchor": 0,
+        "fleetTitle": "Deployed-capacity revenue ramp (log)",
+        "fleetReference": null,
+        "valnAnchorY": 4,
+        "valnAnchorText": "Mature IPP / utility EV/Rev ~3-6×",
+        "valnCaption": "On $0 revenue today, the multiple resolves only as PPA power revenue arrives; every scenario implies massive compression.",
+        "tamTitle": "$120B FY35 advanced-nuclear power TAM — OKLO share",
+        "tamLegend": [
+          "OKLO",
+          "Other advanced nuclear",
+          "Other power (grid, gas, renewables)"
+        ]
+      }
+    },
+    "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 120.0,
+      "weighted": {
+        "expected": 24.49,
+        "upsidePct": -63.6
+      },
+      "market": {
+        "marketCapBillion": 12.1,
+        "sharesOutstandingMillion": 180.0,
+        "cashBillion": 2.54,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.1,
+          "expectedPerShare": 6.4,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "tam_share": 0.07,
+            "p_fail": 38,
+            "s2c": 0.2
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.02,
+              0.04,
+              0.05,
+              0.06,
+              0.07,
+              0.08,
+              0.08,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "op_margin": [
+              -3.5,
+              -3.0,
+              -2.5,
+              -1.8,
+              -1.2,
+              -0.7,
+              -0.4,
+              -0.2,
+              -0.05,
+              0.05
+            ],
+            "wacc_path": [
+              0.16,
+              0.157,
+              0.154,
+              0.152,
+              0.149,
+              0.146,
+              0.143,
+              0.141,
+              0.138,
+              0.135
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.07,
+              -0.12,
+              -0.125,
+              -0.108,
+              -0.084,
+              -0.056,
+              -0.032,
+              -0.018,
+              -0.004,
+              0.004
+            ],
+            "reinvest": [
+              0.1,
+              0.1,
+              0.05,
+              0.05,
+              0.05,
+              0.05,
+              0.0,
+              0.05,
+              0.0,
+              0.0
+            ],
+            "fcf": [
+              -0.17,
+              -0.22,
+              -0.175,
+              -0.158,
+              -0.134,
+              -0.106,
+              -0.032,
+              -0.068,
+              -0.004,
+              0.004
+            ],
+            "cash": 2.54,
+            "net_debt": 0.0,
+            "raise_total": 1.0,
+            "dilution_pct": 15,
+            "final_shares": 208,
+            "distress": 2.0,
+            "pv_fcf": [
+              -0.147,
+              -0.164,
+              -0.113,
+              -0.089,
+              -0.065,
+              -0.045,
+              -0.012,
+              -0.022,
+              -0.001,
+              0.001
+            ],
+            "sum_pv_fcf": -0.66,
+            "terminal_value": 0.04,
+            "pv_terminal": 0.01,
+            "op_ev": -0.65,
+            "total_equity": 1.89,
+            "dcf_per_share": 9.09
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.3,
+              0.3,
+              0.2,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              55.0,
+              45.0,
+              38.0,
+              32.0,
+              30.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bear": {
+          "probability": 0.25,
+          "expectedPerShare": 9.66,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 0.67,
+            "p_fail": 18,
+            "s2c": 0.28
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.03,
+              0.06,
+              0.12,
+              0.22,
+              0.36,
+              0.52,
+              0.66,
+              0.74,
+              0.78,
+              0.8
+            ],
+            "op_margin": [
+              -3.5,
+              -2.5,
+              -1.5,
+              -0.6,
+              0.0,
+              0.18,
+              0.3,
+              0.37,
+              0.42,
+              0.45
+            ],
+            "wacc_path": [
+              0.145,
+              0.142,
+              0.139,
+              0.137,
+              0.134,
+              0.131,
+              0.128,
+              0.126,
+              0.123,
+              0.12
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.105,
+              -0.15,
+              -0.18,
+              -0.132,
+              0.0,
+              0.094,
+              0.198,
+              0.274,
+              0.328,
+              0.36
+            ],
+            "reinvest": [
+              0.107,
+              0.107,
+              0.214,
+              0.357,
+              0.5,
+              0.571,
+              0.5,
+              0.286,
+              0.143,
+              0.071
+            ],
+            "fcf": [
+              -0.212,
+              -0.257,
+              -0.394,
+              -0.489,
+              -0.5,
+              -0.478,
+              -0.302,
+              -0.012,
+              0.185,
+              0.289
+            ],
+            "cash": 2.54,
+            "net_debt": 0.0,
+            "raise_total": 1.0,
+            "dilution_pct": 8,
+            "final_shares": 195,
+            "distress": 6.0,
+            "pv_fcf": [
+              -0.185,
+              -0.197,
+              -0.265,
+              -0.289,
+              -0.26,
+              -0.22,
+              -0.123,
+              -0.004,
+              0.06,
+              0.083
+            ],
+            "sum_pv_fcf": -1.4,
+            "terminal_value": 3.12,
+            "pv_terminal": 0.9,
+            "op_ev": -0.5,
+            "total_equity": 2.04,
+            "dcf_per_share": 10.46
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.0,
+              0.0,
+              0.2,
+              0.3,
+              0.3,
+              0.2,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              68.0,
+              68.0,
+              68.0,
+              68.0,
+              68.0,
+              68.0,
+              68.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "base": {
+          "probability": 0.34,
+          "expectedPerShare": 15.73,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 1.67,
+            "p_fail": 10,
+            "s2c": 0.38
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.03,
+              0.06,
+              0.13,
+              0.24,
+              0.42,
+              0.7,
+              1.1,
+              1.55,
+              1.85,
+              2.0
+            ],
+            "op_margin": [
+              -3.5,
+              -2.5,
+              -1.3,
+              -0.5,
+              0.08,
+              0.26,
+              0.39,
+              0.46,
+              0.49,
+              0.5
+            ],
+            "wacc_path": [
+              0.14,
+              0.137,
+              0.134,
+              0.132,
+              0.129,
+              0.126,
+              0.123,
+              0.121,
+              0.118,
+              0.115
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.105,
+              -0.15,
+              -0.169,
+              -0.12,
+              0.034,
+              0.182,
+              0.429,
+              0.713,
+              0.906,
+              1.0
+            ],
+            "reinvest": [
+              0.079,
+              0.079,
+              0.184,
+              0.289,
+              0.474,
+              0.737,
+              1.053,
+              1.184,
+              0.789,
+              0.395
+            ],
+            "fcf": [
+              -0.184,
+              -0.229,
+              -0.353,
+              -0.409,
+              -0.44,
+              -0.555,
+              -0.624,
+              -0.471,
+              0.117,
+              0.605
+            ],
+            "cash": 2.54,
+            "net_debt": 0.0,
+            "raise_total": 2.9,
+            "dilution_pct": 16,
+            "final_shares": 208,
+            "distress": 12.0,
+            "pv_fcf": [
+              -0.161,
+              -0.177,
+              -0.24,
+              -0.246,
+              -0.234,
+              -0.262,
+              -0.263,
+              -0.177,
+              0.039,
+              0.182
+            ],
+            "sum_pv_fcf": -1.54,
+            "terminal_value": 7.83,
+            "pv_terminal": 2.36,
+            "op_ev": 0.82,
+            "total_equity": 3.36,
+            "dcf_per_share": 16.15
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.0,
+              0.2,
+              0.4,
+              0.6,
+              0.6,
+              0.5,
+              0.4,
+              0.2,
+              0.0
+            ],
+            "raise_prices": [
+              75.0,
+              80.0,
+              85.0,
+              90.0,
+              100.0,
+              110.0,
+              120.0,
+              130.0,
+              140.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bull": {
+          "probability": 0.23,
+          "expectedPerShare": 35.83,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 4.0,
+            "p_fail": 5,
+            "s2c": 0.48
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.03,
+              0.08,
+              0.18,
+              0.4,
+              0.75,
+              1.3,
+              2.1,
+              3.1,
+              4.1,
+              4.8
+            ],
+            "op_margin": [
+              -3.5,
+              -2.0,
+              -0.8,
+              0.0,
+              0.22,
+              0.4,
+              0.5,
+              0.55,
+              0.57,
+              0.58
+            ],
+            "wacc_path": [
+              0.135,
+              0.132,
+              0.129,
+              0.127,
+              0.124,
+              0.121,
+              0.118,
+              0.116,
+              0.113,
+              0.11
+            ],
+            "term_g": 0.045,
+            "nopat": [
+              -0.105,
+              -0.16,
+              -0.144,
+              0.0,
+              0.165,
+              0.52,
+              1.05,
+              1.705,
+              2.337,
+              2.784
+            ],
+            "reinvest": [
+              0.062,
+              0.104,
+              0.208,
+              0.458,
+              0.729,
+              1.146,
+              1.667,
+              2.083,
+              2.083,
+              1.458
+            ],
+            "fcf": [
+              -0.167,
+              -0.264,
+              -0.352,
+              -0.458,
+              -0.564,
+              -0.626,
+              -0.617,
+              -0.378,
+              0.254,
+              1.326
+            ],
+            "cash": 2.54,
+            "net_debt": 0.0,
+            "raise_total": 7.5,
+            "dilution_pct": 19,
+            "final_shares": 215,
+            "distress": 22.0,
+            "pv_fcf": [
+              -0.147,
+              -0.205,
+              -0.243,
+              -0.28,
+              -0.307,
+              -0.304,
+              -0.268,
+              -0.147,
+              0.089,
+              0.418
+            ],
+            "sum_pv_fcf": -1.39,
+            "terminal_value": 21.32,
+            "pv_terminal": 6.71,
+            "op_ev": 5.32,
+            "total_equity": 7.86,
+            "dcf_per_share": 36.56
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.0,
+              0.4,
+              0.8,
+              1.2,
+              1.5,
+              1.5,
+              1.3,
+              0.8,
+              0.0
+            ],
+            "raise_prices": [
+              90.0,
+              120.0,
+              150.0,
+              180.0,
+              200.0,
+              220.0,
+              240.0,
+              260.0,
+              280.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 98.02,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 7.33,
+            "p_fail": 3,
+            "s2c": 0.58
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.04,
+              0.12,
+              0.3,
+              0.65,
+              1.25,
+              2.2,
+              3.6,
+              5.4,
+              7.2,
+              8.8
+            ],
+            "op_margin": [
+              -3.5,
+              -1.5,
+              -0.3,
+              0.12,
+              0.34,
+              0.48,
+              0.57,
+              0.62,
+              0.65,
+              0.66
+            ],
+            "wacc_path": [
+              0.13,
+              0.127,
+              0.124,
+              0.122,
+              0.119,
+              0.116,
+              0.113,
+              0.111,
+              0.108,
+              0.105
+            ],
+            "term_g": 0.05,
+            "nopat": [
+              -0.14,
+              -0.18,
+              -0.09,
+              0.078,
+              0.425,
+              1.056,
+              2.052,
+              3.348,
+              4.68,
+              5.808
+            ],
+            "reinvest": [
+              0.069,
+              0.138,
+              0.31,
+              0.603,
+              1.034,
+              1.638,
+              2.414,
+              3.103,
+              3.103,
+              2.759
+            ],
+            "fcf": [
+              -0.209,
+              -0.318,
+              -0.4,
+              -0.525,
+              -0.609,
+              -0.582,
+              -0.362,
+              0.245,
+              1.577,
+              3.049
+            ],
+            "cash": 2.54,
+            "net_debt": 0.0,
+            "raise_total": 9.5,
+            "dilution_pct": 20,
+            "final_shares": 216,
+            "distress": 40.0,
+            "pv_fcf": [
+              -0.185,
+              -0.25,
+              -0.279,
+              -0.327,
+              -0.339,
+              -0.29,
+              -0.162,
+              0.099,
+              0.574,
+              1.004
+            ],
+            "sum_pv_fcf": -0.15,
+            "terminal_value": 58.21,
+            "pv_terminal": 19.17,
+            "op_ev": 19.02,
+            "total_equity": 21.56,
+            "dcf_per_share": 99.81
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.5,
+              1.0,
+              1.5,
+              2.0,
+              2.0,
+              1.5,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              110.0,
+              140.0,
+              180.0,
+              230.0,
+              280.0,
+              320.0,
+              360.0,
+              400.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 70.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "competitive": {
+        "arena": "Advanced-fission power for AI data centers — Oklo (Aurora fast reactor, build-own-operate IPP, fuel recycling) vs NuScale, X-energy, Kairos, TerraPower, GE-Hitachi BWRX-300, Westinghouse eVinci; the race to originate the build-own-operate AI-baseload-nuclear position.",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "Factory-built microreactors could reset capex/GW with cadence, but Aurora is pre-commercial — the learning curve is unbuilt."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "A fleet/grid + fuel-recycling flywheel is a future moat, not yet originated."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Build-own-operate (sell power, not reactors) + vertical fuel integration is hard for equipment-sale SMR peers to replicate without becoming IPPs themselves."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "20-40yr PPAs and co-located behind-the-meter reactors embed deeply once contracted (Equinix prepay a signal) — but most commitments are non-binding today."
+          },
+          "branding": {
+            "score": 2,
+            "note": "A leading advanced-nuclear brand (Altman halo, DOE selection); strong but unproven on delivery."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor IP — a genuine first-mover physical lead."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "No operating reactor yet; the EBR-II heritage is design pedigree, not demonstrated process power."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "NuScale",
+            "kind": "public",
+            "note": "Only NRC-approved SMR design (LWR, 77 MWe VOYGR); deploys ~2030; TVA + Romania (RoPower).",
+            "shareNow": 0.0,
+            "shareTerminal": 0.2,
+            "capital": "public; Fluor / ENTRA1"
+          },
+          {
+            "name": "X-energy",
+            "kind": "private",
+            "note": "HTGR 80 MWe TRISO pebble; Amazon 5+ GW by 2039; reactor early-2030s.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.18,
+            "capital": "$985M+; Amazon, DOE"
+          },
+          {
+            "name": "Kairos Power",
+            "kind": "private",
+            "note": "Fluoride-salt KP-FHR; Hermes test reactor ~2027 (nearest demo); Google 500 MW.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.12,
+            "capital": "DOE $303M; Google"
+          },
+          {
+            "name": "TerraPower (Natrium)",
+            "kind": "private",
+            "note": "Sodium fast + molten-salt storage, 345 MWe; ops ~2030+; HALEU-delayed.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.12,
+            "capital": ">$3.4B; Gates, Nvidia, DOE"
+          },
+          {
+            "name": "GE-Hitachi BWRX-300",
+            "kind": "incumbent-division",
+            "note": "BWR 300 MWe; OPG first unit ~2030; TVA Clinch River.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.15,
+            "capital": "GE Vernova / Hitachi"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Commercial site under construction",
+            "company": "Aurora-INL (ground broken 2025)",
+            "bestRival": "none commercial",
+            "verdict": "leading"
+          },
+          {
+            "metric": "NRC design / license status",
+            "company": "COLA pending (denied 2022)",
+            "bestRival": "NuScale design-approved",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Operating reactor / demo",
+            "company": "none (first power 2027-28)",
+            "bestRival": "Kairos Hermes ~2027",
+            "verdict": "roughly level"
+          }
+        ],
+        "takeaway": "Oklo is originating a genuine build-own-operate AI-baseload-nuclear position — the only commercial advanced-fission site under construction, a model that captures more value than equipment-sale SMR peers, $2.54B to fund it, and the structural AI-power demand pull. But it lags NuScale on design approval, has no operating reactor, was denied once by the NRC, and its ~14 GW pipeline is overwhelmingly non-binding; first-of-a-kind execution and HALEU-fuel supply are the falsifiers the whole bull case must clear."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Best-capitalized advanced-nuclear name.",
+            "body": "$2.54B cash, debt-free, zero warrants — far more funded than SMR peers; dilution is opportunistic, not existential."
+          },
+          {
+            "label": "Only commercial advanced-fission site under construction.",
+            "body": "DOE site-use permit + Aurora-INL groundbreaking (Sep 2025) — a structural first-mover lead on physical deployment, not just paper."
+          },
+          {
+            "label": "Build-own-operate captures more value.",
+            "body": "Selling power via PPAs, not reactors — recurring, higher-lifetime-value revenue vs equipment-sale SMR peers."
+          },
+          {
+            "label": "Vertical integration is a hedge.",
+            "body": "Fuel recycling + Atomic Alchemy radioisotopes add non-power revenue and a HALEU-supply hedge against the sector's fuel bottleneck."
+          },
+          {
+            "label": "The demand pull is structural.",
+            "body": "AI data-center power demand (33→176 GW US by 2035) plus the 400 GW US nuclear goal — the pull is real even if today's pipeline is non-binding."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "Aurora-INL first power on schedule (2027-28) · first binding PPA (pipeline → contracted) · factory capex tracking < $2.5B/GW"
+          },
+          {
+            "label": "Bear validation",
+            "body": "first power slips beyond 2029 · COLA stalls at NRC · pipeline stays non-binding / churns"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if factory-built capex approaches $1B/GW at cadence, the bull deployment ceiling lifts materially — revisit tam_share and the terminal"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Aurora Powerhouse",
+          "definition": "Oklo's sodium-cooled fast microreactor (15→50→75 MWe), metallic HALEU fuel, modeled on EBR-II; sold as power, not hardware."
+        },
+        {
+          "term": "Build-own-operate (IPP)",
+          "definition": "Oklo owns and runs the reactors and sells electricity via long-dated PPAs — an independent-power-producer model with recurring revenue."
+        },
+        {
+          "term": "HALEU",
+          "definition": "High-Assay Low-Enriched Uranium (5-20% U-235), the fuel advanced reactors need; supply is scarce — a sector-wide constraint."
+        },
+        {
+          "term": "COLA / NRC",
+          "definition": "Combined Operating License Application to the Nuclear Regulatory Commission; Oklo's 2022 COLA was denied without prejudice — the regulatory falsifier."
+        },
+        {
+          "term": "Sales-to-capital (s2c)",
+          "definition": "Damodaran reinvestment efficiency — incremental revenue per dollar of reinvested capital; low for capital-intensive nuclear (here ~0.2-0.6, implying ~$1.2-3B/GW capex)."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-31_20-03",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
