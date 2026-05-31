@@ -72,24 +72,26 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 - **GitHub Flow:** `main` + short-lived feature branches → PR → merge. No
   long-lived dev branch. Repo: `arthurculang/ar2eb`.
 - **Deploy:** GitHub Actions (`.github/workflows/pages.yml`) → GitHub Pages,
-  custom domain via `public/CNAME` (ar2eb.com). `netlify.toml` is **vestigial**
-  (safe to delete). *History note: the deploy host churned (Cloudflare Worker →
-  Cloudflare Pages → GitHub Pages) — if anything deploy-related is in doubt,
-  confirm the live DNS target before acting.*
+  custom domain via `public/CNAME` (ar2eb.com). `netlify.toml` deleted (was vestigial).
+  **Live host confirmed (2026-05-31):** apex `ar2eb.com` is a *proxied Cloudflare
+  CNAME → `arthurculang.github.io`* (GitHub Pages). *History (resolved): host churned
+  Cloudflare Worker → Cloudflare Pages → GitHub Pages; the Worker and the Cloudflare
+  Pages "ar2eb-site" project are dead/parked — GitHub Pages is the one true deployer.*
 - **DNS** is managed at **Cloudflare**. Mail is on **@culang.co**, so `ar2eb.com`
-  sends no email (this is why hard anti-spoof lockdown — null-MX + DMARC
-  `p=reject` — is safe).
+  sends no email. **Anti-spoof lockdown is LIVE (2026-05-31):** null-MX (`0 .`),
+  SPF `v=spf1 -all`, DMARC `p=reject; sp=reject; adkim=s; aspf=s`, plus a
+  `www → apex` 301 redirect (proxied CNAME + Redirect Rule). Re-enabling mail on
+  `ar2eb.com` would require revisiting that DMARC/SPF/MX lockdown first.
 
-## Open items (keep reminding Arthur)
+## Status / open items
 
-- **DNS housekeeping** (do at a computer): `www.ar2eb.com` → apex redirect
-  (Cloudflare CNAME + Redirect Rule) and DMARC + null-MX anti-spoof on the
-  `ar2eb.com` zone. A reviewed prompt exists; before adding SPF, check for an
-  existing apex `v=spf1` TXT (a domain may have only one).
-- **Competitive page rollout:** shipped + grounded on IONQ (origination) and ISRG
-  (audit); still to author `competitive:` blocks for the other 7 tickers, ship
-  bumped 6-page PDFs, regen `tests/visual_baseline.json`, and sweep residual
-  "Page 4/5" cross-refs in the spec (§6a, §6c.11).
-- **Wave 1** new tickers (when ready): ACHR, GRAL, TXG, RKLB, OKLO (young); LULU,
-  YETI, ILMN, ABNB, UBER, DASH (mature) — each fundamentals-only, with the
-  competitive page baked in.
+- **DNS housekeeping — DONE (2026-05-31).** `www → apex` 301 redirect live; null-MX +
+  SPF `-all` + DMARC `p=reject` live; Cloudflare DNS panel clean. (Posture recorded
+  under Git & deploy above.)
+- **Competitive page (§6d) — DONE.** Rolled out to all 9 tickers, 6-page PDFs shipped
+  to `public/memos/`, `tests/visual_baseline.json` regenerated (9×6), spec Page-4/5
+  cross-refs swept. Origination lens: AUR/JOBY/NAUT/IONQ/Anthropic; audit: LTH/ZM/COIN/ISRG.
+- **Wave 1 — OPEN** (the main remaining work): ACHR, GRAL, TXG, RKLB, OKLO (young); LULU,
+  YETI, ILMN, ABNB, UBER, DASH (mature) — each fundamentals-only, competitive page baked
+  in. Fresh-thread-sized; batch ~6–8 with one per-wave review digest.
+- **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
