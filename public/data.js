@@ -9704,7 +9704,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "oklo-memo__v001__2026-05-31_20-03.pdf",
-      "size": "—",
+      "size": "379 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -10925,6 +10925,1242 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "001",
         "footerTimestamp": "2026-05-31_20-03",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "ACHR",
+    "slug": "achr",
+    "company": "Archer Aviation",
+    "exchange": "NYSE",
+    "category": "asymmetrical-moonshots",
+    "dcfType": "Young-Company DCF (Damodaran)",
+    "publishedISO": "2026-05-31",
+    "publishedLabel": "May 31, 2026",
+    "pdf": {
+      "file": "achr-memo__v001__2026-05-31_20-31.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$5.4B",
+      "shares": "790M",
+      "cash": "$1.78B cash, $80M net debt · $1.78B cash ($0.95B + $0.83B ST inv), low debt; ~760M basic / ~790M diluted; Pre-revenue (Q1'26 first $1.6M); ~$727M/yr burn, ~2.4yr runway; Anduril defense JV + $142M USAF; ~$6B order book (mostly LOIs)"
+    },
+    "spot": {
+      "price": 6.81,
+      "asOf": "May 31, 2026 close"
+    },
+    "expected": {
+      "fair": 8.01,
+      "deltaPct": 17.7
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 11.48,
+        "mult": 1.69
+      },
+      {
+        "y": 10,
+        "value": 16.47,
+        "mult": 2.42
+      },
+      {
+        "y": 15,
+        "value": 23.64,
+        "mult": 3.47
+      },
+      {
+        "y": 20,
+        "value": 33.99,
+        "mult": 4.99
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "Med",
+      "themes": [
+        "evtol-advanced-air-mobility",
+        "defense-tech-autonomous-defense"
+      ],
+      "themeNames": [
+        "eVTOL & Advanced Air Mobility",
+        "Defense Tech & Autonomous Defense"
+      ],
+      "primaryTheme": "evtol-advanced-air-mobility",
+      "primaryThemeName": "eVTOL & Advanced Air Mobility",
+      "umbrella": "mobility-aerospace",
+      "umbrellaName": "Mobility & Aerospace"
+    },
+    "question": "Is Archer's ~half-Joby price enough discount to make the eVTOL-plus-defense lottery ticket positive-EV — despite being the certification follower?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 12,
+        "price": 0.35,
+        "headline": "TC fails (Lilium-style); cash burns; dilution.",
+        "why": "The category's base rate is unforgiving — no one holds an FAA Type Certificate yet, and Lilium (raised $1.4B, failed) proves under-capitalization is fatal. Archer is the cert-follower with ≈2.4yr of runway; 45% within-scenario failure reflects real first-of-a-kind certification + funding risk. 12% scenario weight.",
+        "what": [
+          "Type certification defeats Archer — a flight-test setback, a transition-flight failure, or simply running out of runway (≈2.4yr of cash at the ~$727M/yr burn) before the FAA grants a TC. Lilium's 2025 collapse proves the category kills the under-capitalized. Archer dilutes desperately at collapsing prices, then restructures; the residual is defense scraps plus whatever cash survives the attempt.",
+          "With a 45% within-scenario failure probability and the share count ballooning past 1.4B on sub-$4 raises, the expected per-share collapses toward the distress floor — a near-total loss from today's $6.81."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 31,
+        "price": 0.69,
+        "headline": "Cert slips; lean sub-scale operator.",
+        "why": "Cert slips and the business stays sub-scale; the ~$6B order book (mostly LOIs) converts only partially. 35% failure probability — Archer is behind Joby on conforming-aircraft flight testing. 31% weight as a very plausible 'certifies but the dilution wins' outcome.",
+        "what": [
+          "Archer eventually certifies but late and sub-scale; it becomes a lean niche eVTOL operator (~$1.2B revenue by the mid-2030s at a low-teens margin) plus a modest defense line, never converting the ~$6B order book or matching Joby's cadence. Heavy dilution (≈$2.4B of raises at depressed prices) funds the long road to cert.",
+          "The DCF lands under $1/share — the market is pricing a far larger outcome. This is the 'cert works, but the dilution math wins' world that Joby's bear shares."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 42,
+        "price": 1.94,
+        "headline": "Cert ~2027; UAM scales + defense kicker.",
+        "why": "Requires cert on roughly schedule and a mid-scale UAM-plus-defense ramp — no category dominance. 18% failure probability given $1.78B cash, Stellantis manufacturing, and the USAF/Anduril defense anchor. 42% weight as the central outcome.",
+        "what": [
+          "The modal path: Archer certifies on roughly the targeted timeline (~2027), scales the Midnight UAM network across the US and UAE, and converts part of the Anduril defense relationship into recurring revenue — ~$5.6B combined by 2035 at a low-teens operating margin. A real, profitable transport-tech business.",
+          "But ~$3.4B of dilutive raises to fund the buildout balloon the share count past 1.2B, and most of the fleet's value sits beyond the 10-year window. DCF ~$2.25/share — ~67% below spot, the dilution tax on a successful-but-capital-hungry ramp."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 11,
+        "price": 29.79,
+        "headline": "Cert + DoD program of record win.",
+        "why": "A chain: cert clears AND manufacturing ramps AND UAM scales AND the Anduril relationship becomes a DoD program of record. Each plausible at 50-70%; jointly ~11%. The defense leg is Archer's distinctive second shot at the upside.",
+        "what": [
+          "The bull: Archer certifies, the Covington/Stellantis line ramps toward high volume, the UAM network scales across multiple metros, AND the Anduril partnership converts into a DoD program of record — ~$16B combined revenue by 2035 at a ~28% operating margin. The defense leg is the differentiator Joby lacks.",
+          "Self-funding arrives mid-decade; dilution turns value-accretive. DCF ~$32/share — ~5× today's price. This is the scenario the cheap entry is really buying."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 4,
+        "price": 91.64,
+        "headline": "UAM leader + major defense program.",
+        "why": "Tail of tails: UAM leadership AND a major multi-service defense program AND a premium platform terminal. Individually 40-60%; jointly ~4%. The asymmetric upside that the half-Joby price is really buying.",
+        "what": [
+          "The tail: Archer becomes a US UAM leader AND lands a major multi-service defense program — the autonomous hybrid-VTOL scales into a real DoD platform — for ~$24B combined revenue by 2035 at a ~34% operating margin and a premium platform terminal.",
+          "DCF ~$95/share — ~14× spot. A genuine 'eVTOL + defense prime' outcome; each leg is individually plausible at 40-60%, jointly ~4%. The asymmetric upside that makes the cheap entry positive-EV."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 12 / Bear 31 / Base 42 / Bull 11 / Ultra Bull 4. Spot price reference: May 31, 2026 close.",
+    "thesis": "Archer trades at ~$5.4B (≈$6.81/sh) on $0 revenue — about half Joby's cap on a near-identical certification position, with $1.78B cash but a ~$727M/yr burn (≈2.4yr runway) and a defense wildcard (the Anduril autonomous-VTOL JV) Joby lacks. The young-company DCF asks what aircraft fleet, UAM-plus-defense revenue, and dilution are plausible over a decade. The finding: 85% of the probability sits well below spot — heavy dilution craters the bear/base outcomes — but Archer is cheap enough that the 15% cert-success-plus-defense tail (paying 4-13×) lifts the weighted expected modestly above today's price.",
+    "historicalPrices": {
+      "xMin": -4.8,
+      "ipoMarker": "SPAC Sep '21",
+      "points": [
+        [
+          -4.6,
+          9.5
+        ],
+        [
+          -4.3,
+          6.0
+        ],
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -3.5,
+          2.5
+        ],
+        [
+          -3.0,
+          2.0
+        ],
+        [
+          -2.5,
+          3.0
+        ],
+        [
+          -2.0,
+          5.0
+        ],
+        [
+          -1.5,
+          9.0
+        ],
+        [
+          -1.0,
+          11.0
+        ],
+        [
+          -0.7,
+          14.0
+        ],
+        [
+          -0.4,
+          10.0
+        ],
+        [
+          -0.2,
+          7.5
+        ],
+        [
+          -0.05,
+          6.81
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 12%",
+        "body": "TC fails (Lilium-style); cash burns; near-total loss."
+      },
+      {
+        "label": "Bear 31%",
+        "body": "Cert slips; lean sub-scale operator; dilution wins."
+      },
+      {
+        "label": "Base 42%",
+        "body": "Cert ~2027; mid-scale UAM + defense; diluted."
+      },
+      {
+        "label": "Bull 11%",
+        "body": "Cert + DoD program of record; ~5× spot."
+      },
+      {
+        "label": "Ultra Bull 4%",
+        "body": "UAM leader + major defense program; ~14×."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY26-FY35 scenario projections (pre-revenue today) · fiscal years end Dec 31 · Q1 2026 10-Q, FY25 results",
+      "sources": "Sources: Archer Q1 2026 10-Q (cash+ST inv $1.78B, net loss), FY2025 results (net loss $618M), order-book + Anduril/USAF disclosures. Revenue modeled as UAM (passenger) + defense; FCF is NOL-shielded pre-tax over the explicit window (documented simplification). TAM: $250B FY36 global UAM (matches the Joby memo) plus a separate defense leg.",
+      "chartReference": {
+        "tamBillion": 250.0,
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          0.0,
+          0.0,
+          0.002
+        ],
+        "historyFleet": [
+          0,
+          4,
+          10
+        ]
+      },
+      "chartConfig": {
+        "peerY": 10,
+        "peerText": "Mature airline/aerospace op margin ~8-12%",
+        "fleetAnchor": 10,
+        "fleetTitle": "Aircraft fleet deployed (log)",
+        "fleetReference": null,
+        "valnAnchorY": 3,
+        "valnAnchorText": "Mature aero/airline EV/Rev ~1-3×",
+        "valnCaption": "On $0 revenue today, every scenario implies the multiple resolves only as UAM + defense revenue arrives.",
+        "tamTitle": "$250B FY36 global UAM TAM — ACHR share (+ separate defense leg)",
+        "tamLegend": [
+          "ACHR",
+          "Joby + other eVTOL",
+          "Other UAM / ground"
+        ]
+      }
+    },
+    "print": {
+      "dcfType": "young_company",
+      "dcfPeriodYears": 10,
+      "tamBillion": 250.0,
+      "weighted": {
+        "expected": 8.01,
+        "upsidePct": 17.7
+      },
+      "market": {
+        "marketCapBillion": 5.4,
+        "sharesOutstandingMillion": 790.0,
+        "cashBillion": 1.78,
+        "netDebtBillion": 0.08
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.12,
+          "expectedPerShare": 0.35,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "tam_share": 0.02,
+            "p_fail": 45,
+            "s2c": 0.6
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.04,
+              0.06,
+              0.07,
+              0.07,
+              0.07,
+              0.07,
+              0.06,
+              0.06,
+              0.06,
+              0.06
+            ],
+            "op_margin": [
+              -7.0,
+              -5.0,
+              -3.5,
+              -2.5,
+              -1.8,
+              -1.2,
+              -0.8,
+              -0.5,
+              -0.3,
+              -0.2
+            ],
+            "wacc_path": [
+              0.16,
+              0.156,
+              0.151,
+              0.147,
+              0.142,
+              0.138,
+              0.133,
+              0.129,
+              0.124,
+              0.12
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.28,
+              -0.3,
+              -0.245,
+              -0.175,
+              -0.126,
+              -0.084,
+              -0.048,
+              -0.03,
+              -0.018,
+              -0.012
+            ],
+            "reinvest": [
+              0.067,
+              0.033,
+              0.017,
+              0.0,
+              0.0,
+              0.0,
+              -0.017,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fcf": [
+              -0.347,
+              -0.333,
+              -0.262,
+              -0.175,
+              -0.126,
+              -0.084,
+              -0.031,
+              -0.03,
+              -0.018,
+              -0.012
+            ],
+            "cash": 1.78,
+            "net_debt": 0.08,
+            "raise_total": 1.2,
+            "dilution_pct": 80,
+            "final_shares": 1425,
+            "distress": 0.15,
+            "pv_fcf": [
+              -0.299,
+              -0.248,
+              -0.17,
+              -0.099,
+              -0.062,
+              -0.037,
+              -0.012,
+              -0.01,
+              -0.005,
+              -0.003
+            ],
+            "sum_pv_fcf": -0.94,
+            "terminal_value": -0.12,
+            "pv_terminal": -0.03,
+            "op_ev": -0.97,
+            "total_equity": 0.73,
+            "dcf_per_share": 0.51
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.4,
+              0.3,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              4.0,
+              2.5,
+              1.5,
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 75.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bear": {
+          "probability": 0.31,
+          "expectedPerShare": 0.69,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "tam_share": 0.47,
+            "p_fail": 35,
+            "s2c": 1.0
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.05,
+              0.12,
+              0.25,
+              0.45,
+              0.65,
+              0.85,
+              1.0,
+              1.1,
+              1.15,
+              1.18
+            ],
+            "op_margin": [
+              -3.0,
+              -2.0,
+              -1.2,
+              -0.5,
+              0.0,
+              0.05,
+              0.09,
+              0.11,
+              0.12,
+              0.12
+            ],
+            "wacc_path": [
+              0.14,
+              0.135,
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.15,
+              -0.24,
+              -0.3,
+              -0.225,
+              0.0,
+              0.043,
+              0.09,
+              0.121,
+              0.138,
+              0.142
+            ],
+            "reinvest": [
+              0.05,
+              0.07,
+              0.13,
+              0.2,
+              0.2,
+              0.2,
+              0.15,
+              0.1,
+              0.05,
+              0.03
+            ],
+            "fcf": [
+              -0.2,
+              -0.31,
+              -0.43,
+              -0.425,
+              -0.2,
+              -0.157,
+              -0.06,
+              0.021,
+              0.088,
+              0.112
+            ],
+            "cash": 1.78,
+            "net_debt": 0.08,
+            "raise_total": 2.4,
+            "dilution_pct": 64,
+            "final_shares": 1296,
+            "distress": 0.4,
+            "pv_fcf": [
+              -0.175,
+              -0.24,
+              -0.294,
+              -0.258,
+              -0.109,
+              -0.076,
+              -0.026,
+              0.008,
+              0.032,
+              0.037
+            ],
+            "sum_pv_fcf": -1.1,
+            "terminal_value": 1.52,
+            "pv_terminal": 0.5,
+            "op_ev": -0.6,
+            "total_equity": 1.1,
+            "dcf_per_share": 0.85
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.6,
+              0.6,
+              0.4,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              6.0,
+              5.0,
+              4.5,
+              4.5,
+              4.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 75.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "base": {
+          "probability": 0.42,
+          "expectedPerShare": 1.94,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "tam_share": 2.24,
+            "p_fail": 18,
+            "s2c": 1.2
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.06,
+              0.2,
+              0.55,
+              1.1,
+              1.9,
+              2.9,
+              3.8,
+              4.6,
+              5.2,
+              5.6
+            ],
+            "op_margin": [
+              -2.5,
+              -1.2,
+              -0.5,
+              -0.1,
+              0.05,
+              0.09,
+              0.11,
+              0.13,
+              0.14,
+              0.14
+            ],
+            "wacc_path": [
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085
+            ],
+            "term_g": 0.025,
+            "nopat": [
+              -0.15,
+              -0.24,
+              -0.275,
+              -0.11,
+              0.095,
+              0.261,
+              0.418,
+              0.598,
+              0.728,
+              0.784
+            ],
+            "reinvest": [
+              0.05,
+              0.117,
+              0.292,
+              0.458,
+              0.667,
+              0.833,
+              0.75,
+              0.667,
+              0.5,
+              0.333
+            ],
+            "fcf": [
+              -0.2,
+              -0.357,
+              -0.567,
+              -0.568,
+              -0.572,
+              -0.572,
+              -0.332,
+              -0.069,
+              0.228,
+              0.451
+            ],
+            "cash": 1.78,
+            "net_debt": 0.08,
+            "raise_total": 3.4,
+            "dilution_pct": 53,
+            "final_shares": 1209,
+            "distress": 0.5,
+            "pv_fcf": [
+              -0.177,
+              -0.281,
+              -0.398,
+              -0.358,
+              -0.325,
+              -0.294,
+              -0.155,
+              -0.029,
+              0.089,
+              0.163
+            ],
+            "sum_pv_fcf": -1.76,
+            "terminal_value": 7.7,
+            "pv_terminal": 2.78,
+            "op_ev": 1.02,
+            "total_equity": 2.72,
+            "dcf_per_share": 2.25
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.7,
+              0.9,
+              0.9,
+              0.6,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              6.5,
+              7.0,
+              8.0,
+              9.0,
+              10.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 75.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "bull": {
+          "probability": 0.11,
+          "expectedPerShare": 29.79,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "tam_share": 6.4,
+            "p_fail": 8,
+            "s2c": 1.5
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.08,
+              0.3,
+              0.8,
+              1.8,
+              3.5,
+              6.0,
+              8.5,
+              11.5,
+              14.0,
+              16.0
+            ],
+            "op_margin": [
+              -2.0,
+              -0.8,
+              -0.2,
+              0.05,
+              0.12,
+              0.18,
+              0.22,
+              0.25,
+              0.27,
+              0.28
+            ],
+            "wacc_path": [
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1,
+              0.095,
+              0.09,
+              0.085,
+              0.08,
+              0.075
+            ],
+            "term_g": 0.03,
+            "nopat": [
+              -0.16,
+              -0.24,
+              -0.16,
+              0.09,
+              0.42,
+              1.08,
+              1.87,
+              2.875,
+              3.78,
+              4.48
+            ],
+            "reinvest": [
+              0.053,
+              0.147,
+              0.333,
+              0.667,
+              1.133,
+              1.667,
+              1.667,
+              2.0,
+              1.667,
+              1.333
+            ],
+            "fcf": [
+              -0.213,
+              -0.387,
+              -0.493,
+              -0.577,
+              -0.713,
+              -0.587,
+              0.203,
+              0.875,
+              2.113,
+              3.147
+            ],
+            "cash": 1.78,
+            "net_debt": 0.08,
+            "raise_total": 2.0,
+            "dilution_pct": 21,
+            "final_shares": 954,
+            "distress": 1.0,
+            "pv_fcf": [
+              -0.19,
+              -0.31,
+              -0.356,
+              -0.377,
+              -0.423,
+              -0.318,
+              0.101,
+              0.401,
+              0.897,
+              1.242
+            ],
+            "sum_pv_fcf": 0.67,
+            "terminal_value": 72.03,
+            "pv_terminal": 28.43,
+            "op_ev": 29.1,
+            "total_equity": 30.8,
+            "dcf_per_share": 32.29
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.7,
+              0.5,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              8.0,
+              11.0,
+              14.0,
+              16.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 75.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "ultra_bull": {
+          "probability": 0.04,
+          "expectedPerShare": 91.64,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "tam_share": 9.6,
+            "p_fail": 4,
+            "s2c": 1.7
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.1,
+              0.4,
+              1.1,
+              2.6,
+              5.0,
+              8.5,
+              12.5,
+              17.0,
+              21.0,
+              24.0
+            ],
+            "op_margin": [
+              -1.8,
+              -0.6,
+              -0.1,
+              0.1,
+              0.18,
+              0.24,
+              0.28,
+              0.3,
+              0.32,
+              0.34
+            ],
+            "wacc_path": [
+              0.11,
+              0.106,
+              0.101,
+              0.097,
+              0.092,
+              0.088,
+              0.083,
+              0.079,
+              0.074,
+              0.07
+            ],
+            "term_g": 0.035,
+            "nopat": [
+              -0.18,
+              -0.24,
+              -0.11,
+              0.26,
+              0.9,
+              2.04,
+              3.5,
+              5.1,
+              6.72,
+              8.16
+            ],
+            "reinvest": [
+              0.059,
+              0.176,
+              0.412,
+              0.882,
+              1.412,
+              2.059,
+              2.353,
+              2.647,
+              2.353,
+              1.765
+            ],
+            "fcf": [
+              -0.239,
+              -0.416,
+              -0.522,
+              -0.622,
+              -0.512,
+              -0.019,
+              1.147,
+              2.453,
+              4.367,
+              6.395
+            ],
+            "cash": 1.78,
+            "net_debt": 0.08,
+            "raise_total": 1.6,
+            "dilution_pct": 15,
+            "final_shares": 906,
+            "distress": 1.5,
+            "pv_fcf": [
+              -0.215,
+              -0.339,
+              -0.386,
+              -0.419,
+              -0.316,
+              -0.011,
+              0.601,
+              1.192,
+              1.975,
+              2.703
+            ],
+            "sum_pv_fcf": 4.79,
+            "terminal_value": 189.11,
+            "pv_terminal": 79.94,
+            "op_ev": 84.73,
+            "total_equity": 86.43,
+            "dcf_per_share": 95.4
+          },
+          "chartData": {
+            "raises": [
+              0.3,
+              0.5,
+              0.5,
+              0.3,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              9.0,
+              13.0,
+              17.0,
+              20.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_unit": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "tam_competitor_share": 75.0
+          },
+          "revPerUnit": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      },
+      "competitive": {
+        "arena": "Electric vertical-takeoff air mobility (eVTOL) + defense VTOL — Archer (Midnight UAM 'airline' + Anduril defense) vs Joby (cert + cash leader), Beta, Vertical, EHang (China), Wisk/Boeing (autonomy); the race to originate the first certified, scaled UAM + dual-use position.",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "The Covington/Stellantis line targets high volume, but it's pre-cert and unproven at rate."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "A vertiport/route-network flywheel is future, not yet originated."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Archer's defense dual-use (Anduril) is a position Joby and pure-UAM peers can't easily mirror."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Airline/operator + defense-program lock-in is real once contracted, but contracts are early/conditional."
+          },
+          "branding": {
+            "score": 2,
+            "note": "A leading eVTOL brand (United, Stellantis, Anduril, UAE); strong but unproven on delivery."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "An FAA TC (once granted) is the first-mover regulatory moat; Archer is a close #2 with manufacturing + defense assets."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "No certified aircraft yet; the manufacturing learning curve is ahead, not demonstrated."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "Joby Aviation",
+            "kind": "public",
+            "note": "Cert + cash leader (Toyota ~$894M, ~$2.5B cash, Dubai 6yr exclusive); flew FAA-conforming aircraft for TIA.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.2,
+            "capital": "Toyota; ~$2.5B cash"
+          },
+          {
+            "name": "Beta Technologies",
+            "kind": "public",
+            "note": "eCTOL flying/delivering; eVTOL behind; strong balance sheet (Nov'25 IPO ~$7.4B); cargo + military.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.12,
+            "capital": ">$1B; QIA, GE"
+          },
+          {
+            "name": "Vertical Aerospace",
+            "kind": "public",
+            "note": "VX4; targets cert end-2026; chronically thin balance sheet.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.06,
+            "capital": "~$180M; Mudrick"
+          },
+          {
+            "name": "EHang",
+            "kind": "public",
+            "note": "EH216-S autonomous; CERTIFIED in China (tourism) — but jurisdiction-bound.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "China; ~$97M"
+          },
+          {
+            "name": "Wisk (Boeing)",
+            "kind": "incumbent-division",
+            "note": "Autonomous (no pilot) Gen 6; harder/longer cert, later EIS; Boeing-funded.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "Boeing $450M+"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "FAA certification stage",
+            "company": "closed 'Phase 3'; for-credit testing",
+            "bestRival": "Joby (TIA, conforming a/c flown)",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Defense / dual-use",
+            "company": "Anduril JV + $142M USAF",
+            "bestRival": "Joby (limited DoD)",
+            "verdict": "leading"
+          },
+          {
+            "metric": "Liquidity / runway",
+            "company": "$1.78B (~2.4yr)",
+            "bestRival": "Joby ~$2.5B",
+            "verdict": "lagging"
+          }
+        ],
+        "takeaway": "Archer is originating a credible #2 eVTOL position plus a distinctive defense dual-use leg (Anduril) that Joby lacks — at roughly half Joby's market cap. But it lags Joby on the one Power that matters first (FAA certification — Joby has flown conforming aircraft for TIA; Archer hasn't), and on cash/runway; the category just killed the under-capitalized Lilium. The window is open as the close #2 with a defense call option, but certification and the ~$727M/yr burn are the falsifiers the whole bull case must clear."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Half of Joby's price, similar cert position.",
+            "body": "~$5.4B cap vs Joby's ~$11B on a near-identical TC stage — the cheaper entry is the whole thesis."
+          },
+          {
+            "label": "Defense optionality Joby lacks.",
+            "body": "Anduril autonomous-VTOL JV + $142M USAF AFWERX + EDGE/Omen powertrain — a second revenue leg and a DoD-program-of-record call option."
+          },
+          {
+            "label": "Stellantis as contract manufacturer.",
+            "body": "Automotive mass-production discipline behind the Covington line; the manufacturing partner is hands-on, not just strategic."
+          },
+          {
+            "label": "$1.78B cash, low debt.",
+            "body": "Funds the next phase; the constraint is burn (~$727M/yr), not insolvency today."
+          },
+          {
+            "label": "First to close FAA 'Phase 3'.",
+            "body": "Real certification progress; the gap to Joby is conforming-aircraft flight testing, not paperwork."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "FAA Type Certificate (2026-27) · Anduril → DoD program of record · UAE/US commercial ops generating revenue · Covington line at rate"
+          },
+          {
+            "label": "Bear validation",
+            "body": "TC slips beyond 2027 · order book stays LOIs · burn forces dilutive raises < $5/share"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if a major DoD program of record is awarded, the defense leg re-rates independently of UAM — revisit the bull/ultra weights"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Midnight",
+          "definition": "Archer's 4-passenger + pilot eVTOL, ~100-mile range, 12 tilt-rotors; targets short city hops."
+        },
+        {
+          "term": "Type Certification (TC)",
+          "definition": "The FAA's airworthiness approval; no eVTOL has one yet — the gating risk for the whole sector."
+        },
+        {
+          "term": "Anduril JV",
+          "definition": "Archer's partnership to build an autonomous hybrid-VTOL for a potential DoD program of record — the defense leg Joby lacks."
+        },
+        {
+          "term": "Launch Edition",
+          "definition": "Archer's direct-operations model in international markets (UAE, etc.) ahead of US commercial UAM."
+        },
+        {
+          "term": "Sales-to-capital (s2c)",
+          "definition": "Damodaran reinvestment efficiency — incremental revenue per dollar of reinvested capital."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-05-31_20-31",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
