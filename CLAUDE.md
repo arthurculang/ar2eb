@@ -91,7 +91,15 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 - **Competitive page (§6d) — DONE.** Rolled out to all 9 tickers, 6-page PDFs shipped
   to `public/memos/`, `tests/visual_baseline.json` regenerated (9×6), spec Page-4/5
   cross-refs swept. Origination lens: AUR/JOBY/NAUT/IONQ/Anthropic; audit: LTH/ZM/COIN/ISRG.
-- **Wave 1 — OPEN** (the main remaining work): ACHR, GRAL, TXG, RKLB, OKLO (young); LULU,
-  YETI, ILMN, ABNB, UBER, DASH (mature) — each fundamentals-only, competitive page baked
-  in. Fresh-thread-sized; batch ~6–8 with one per-wave review digest.
+- **Wave 1 — IN PROGRESS.** Remaining young: ACHR, GRAL, TXG, OKLO; mature: LULU, YETI,
+  ILMN, ABNB, UBER, DASH — each fundamentals-only, competitive page baked in. Batch ~6–8
+  with one per-wave review digest.
+  - **RKLB — STAGED (modeled, authored, validator-green; not yet live).** `data/rklb.yml`
+    + `data/_intake/rklb.yml` committed; young-company DCF, 5 scenarios, competitive page
+    (origination). Finding: even an aggressive ultra-bull (~$20B-rev space prime by 2035)
+    is ~−26% vs spot; weighted ~−85% (priced beyond a decade of fundamentals). **To ship:**
+    Page 1 is ~12px over `STRICT_LAYOUT` — a *structural* 5-scenario-young overflow (the
+    forward chart / card row, not prose; trimming text doesn't move it), so it needs a small
+    Page-1 spacing tweak in `memo_pdf.jsx` (will touch all tickers → re-verify + re-baseline).
+    Then register `rklb` in the 4 scripts' `TICKERS`, `rebuild_all rklb`, ship the 6-page PDF.
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
