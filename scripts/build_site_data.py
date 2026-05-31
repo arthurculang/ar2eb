@@ -136,6 +136,20 @@ def _camelize(d: dict) -> dict:
     return out
 
 
+def _camel_deep(v):
+    """Like _camelize but also recurses into lists (the competitive block
+    carries lists of dicts — rivals, lead_lag, threats)."""
+    if isinstance(v, dict):
+        out = {}
+        for k, val in v.items():
+            parts = k.split("_")
+            out[parts[0] + "".join(p.title() for p in parts[1:])] = _camel_deep(val)
+        return out
+    if isinstance(v, list):
+        return [_camel_deep(x) for x in v]
+    return v
+
+
 def fmt_shares(m: float) -> str:
     return f"{m / 1000:.2f}B" if m >= 1000 else f"{m:.0f}M"
 
@@ -369,6 +383,11 @@ def build_memo(ticker: str) -> dict:
                     ],
                 },
             } if is_private else {}),
+            # Page 4 — Competitive landscape (§6d). Optional: emitted only when
+            # the ticker carries a `competitive` block; the renderer adds the
+            # 6th page only when present (else the memo stays 5 pages).
+            **({"competitive": _camel_deep(d["competitive"])}
+               if "competitive" in d else {}),
             "appendix": {
                 "pushback": [{"label": p["label"], "body": collapse(p["body"])}
                              for p in d["appendix"]["pushback"]],

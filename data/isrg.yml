@@ -547,3 +547,34 @@ glossary:
   definition: da Vinci systems in service worldwide. 11,106 at Dec 2025 (+12% YoY). The denominator that drives recurring-revenue compounding.
 - term: Recurring revenue mix
   definition: Revenue from instruments, accessories, and service (vs one-time systems). FY25 ~78%. The razor-blade lock-in.
+
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Audit lens (mature_company).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Soft-tissue robotic surgery — da Vinci's installed base vs. emerging challengers
+    (Medtronic Hugo, J&J Ottava, CMR Surgical Versius) for the global multi-specialty
+    minimally-invasive surgery platform standard.
+  lens: power_audit
+  powers:
+    scale_economies:     { score: 3, note: "~9,500 systems installed; instrument/service volume amortizes R&D no challenger matches." }
+    network_economies:   { score: 2, note: "Surgeon training + case-data flywheel (Case Insights) compounds with the installed base." }
+    counter_positioning: { score: 1, note: "Challengers catch up on model, not displace it; weak collateral-damage barrier." }
+    switching_costs:     { score: 3, note: "Sunk capital + surgeon retraining + hospital workflow lock-in; razor/blade recurring revenue." }
+    branding:            { score: 3, note: "da Vinci is the category synonym; surgeon and hospital default." }
+    cornered_resource:   { score: 2, note: "Deep patent estate (many now expiring) + the installed base itself as a distribution asset." }
+    process_power:       { score: 2, note: "Two decades of manufacturing/service learning-curve and reliability data." }
+  dominant_power: switching_costs
+  durability: high
+  rivals:
+    - { name: "Medtronic (Hugo)", kind: public, note: "CE-marked; US trials; bundled into a broad device channel.", growth: 0.10, margin: 0.25, multiple: "~17x EV/EBIT" }
+    - { name: "J&J MedTech (Ottava)", kind: public, note: "Delayed; deep surgical channel + Ethicon stapling tie-in.", growth: 0.06, margin: 0.28, multiple: "~16x EV/EBIT" }
+    - { name: "CMR Surgical (Versius)", kind: private, note: "Modular, lower-cost; OUS traction.", growth: 0.30, margin: null, multiple: "private" }
+  threats:
+    - { vector: counter_positioning, who: "Medtronic / J&J", falsifier: "ISRG procedure growth < 10% for 2 consecutive years while a rival's installed base passes 1,000 systems." }
+    - { vector: switching_costs, who: "Hospitals (capital pressure)", falsifier: "da Vinci placement mix shifts to lease/usage > 50%, signaling pricing-power erosion." }
+  takeaway: >
+    A wide, durable moat anchored on switching costs and scale — the basis for the DCF's
+    premium terminal multiple; challengers are real but years from the installed-base and
+    brand barriers. Watch procedure growth as the erosion gauge.

@@ -136,6 +136,41 @@ def _taxonomy_errors(tax: dict | None) -> list[str]:
     return errs
 
 
+# 7 Powers (Helmer) — the keys the Page-4 competitive scorecard expects (§6d).
+_POWER_KEYS = {"scale_economies", "network_economies", "counter_positioning",
+               "switching_costs", "branding", "cornered_resource", "process_power"}
+_LENSES = {"power_audit", "power_origination"}
+
+
+def _competitive_warnings(comp: dict | None) -> list[str]:
+    """WARN-only structural checks on the optional `competitive:` block (§6d).
+    Promote to ERROR once the block is required for new memos."""
+    if not comp:
+        return []  # optional at introduction; absence is fine (memo stays 5pp)
+    w: list[str] = []
+    lens = comp.get("lens")
+    if lens not in _LENSES:
+        w.append(f_err("competitive.lens", f"one of {sorted(_LENSES)}", repr(lens)))
+    if not comp.get("arena"):
+        w.append(f_err("competitive.arena", "present", "missing"))
+    if not comp.get("takeaway"):
+        w.append(f_err("competitive.takeaway", "present", "missing"))
+    powers = comp.get("powers", {})
+    dom = comp.get("dominant_power")
+    if dom not in _POWER_KEYS:
+        w.append(f_err("competitive.dominant_power", f"one of the 7 Powers", repr(dom)))
+    elif (powers.get(dom, {}) or {}).get("score", 0) < 2:
+        # "you can't lean on a Power you don't have" (§6d QC)
+        w.append(f_err(f"competitive.powers.{dom}.score", "≥2 (it's the dominant power)",
+                       repr((powers.get(dom, {}) or {}).get("score"))))
+    # lens-appropriate falsifiers present
+    if lens == "power_origination" and not comp.get("lead_lag"):
+        w.append(f_err("competitive.lead_lag", "≥1 entry (origination lens)", "missing"))
+    if lens == "power_audit" and not comp.get("threats"):
+        w.append(f_err("competitive.threats", "≥1 entry (audit lens)", "missing"))
+    return w
+
+
 def young_cash_path(sc: dict, start_cash: float) -> list[float]:
     """Mirrors charts/young_company.py::_cash_path.
 
@@ -346,6 +381,9 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
     # validated against data/taxonomy.yml (the canonical source of truth).
     tax_errors = _taxonomy_errors(data.get("taxonomy"))
     errors.extend(tax_errors)
+
+    # Page 4 — competitive block (§6d). WARN-only while optional.
+    warns.extend(_competitive_warnings(data.get("competitive")))
 
     # Probabilities sum to 1.0
     prob_sum = sum(s["probability"] for s in data["scenarios"].values())

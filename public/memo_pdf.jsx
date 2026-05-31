@@ -245,7 +245,7 @@ function Rule({ strong = false, width = 0.4 }) {
 function PageFooter({ memo, pageLabel, showDisclaimerPointer = true }) {
   const stamp = memo.print.stamp;
   const disclaimer = showDisclaimerPointer
-    ? "NOT INVESTMENT ADVICE  ·  Not from a registered investment advisor  ·  AI-assisted analysis  ·  Author may hold positions  ·  See full disclaimers, page 5"
+    ? `NOT INVESTMENT ADVICE  ·  Not from a registered investment advisor  ·  AI-assisted analysis  ·  Author may hold positions  ·  See full disclaimers, page ${memoTotalPages(memo)}`
     : "NOT INVESTMENT ADVICE  ·  Not from a registered investment advisor  ·  AI-assisted analysis  ·  Author may hold positions";
   const footerStamp = `v${stamp.footerVersion} · ${stamp.footerTimestamp} · derived from ${stamp.canonicalJsx} (canonical)`;
   return (
@@ -1149,7 +1149,7 @@ function Page1Headline({ memo }) {
         })}
       </div>
 
-      <PageFooter memo={memo} pageLabel="page 1 of 5" />
+      <PageFooter memo={memo} pageLabel={`page 1 of ${memoTotalPages(memo)}`} />
     </div>
   );
 }
@@ -1380,7 +1380,7 @@ function Page2Narratives({ memo }) {
         })}
       </div>
 
-      <PageFooter memo={memo} pageLabel="page 2 of 5" />
+      <PageFooter memo={memo} pageLabel={`page 2 of ${memoTotalPages(memo)}`} />
     </div>
   );
 }
@@ -1409,6 +1409,16 @@ const SCN_ORDER = ['ultra_bear', 'bear', 'base', 'bull', 'ultra_bull'];
 function scnKeysFor(memo) {
   const scns = (memo.print && memo.print.scenarios) || {};
   return SCN_ORDER.filter(k => scns[k] !== undefined);
+}
+
+// Page 4 — Competitive landscape (§6d) renders only when the ticker carries
+// a `competitive` block. Tickers without it stay at the original 5 pages;
+// the footer page numbers below are computed so both cases render correctly.
+function hasCompetitive(memo) {
+  return !!(memo.print && memo.print.competitive);
+}
+function memoTotalPages(memo) {
+  return hasCompetitive(memo) ? 6 : 5;
 }
 
 // --- Chart primitives (shared by Page 3 charts) ---
@@ -2731,7 +2741,7 @@ function Page3Snapshot({ memo }) {
         <div style={{ marginTop: '12pt', fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.muted }}>
           {memo.page3.sources}
         </div>
-        <PageFooter memo={memo} pageLabel="page 3 of 5" />
+        <PageFooter memo={memo} pageLabel={`page 3 of ${memoTotalPages(memo)}`} />
       </div>
     );
   }
@@ -2800,7 +2810,7 @@ function Page3Snapshot({ memo }) {
         {memo.page3.sources}
       </div>
 
-      <PageFooter memo={memo} pageLabel="page 3 of 5" />
+      <PageFooter memo={memo} pageLabel={`page 3 of ${memoTotalPages(memo)}`} />
     </div>
   );
 }
@@ -3077,6 +3087,191 @@ function ScenarioQuantColumn({ memo, scenarioKey }) {
   );
 }
 
+// ── Page 4 — Competitive landscape (§6d). Two lenses keyed off
+// competitive.lens: Power Audit (mature/FCF++/megacap) and Power Origination
+// (moonshots/private). Renders only when memo.print.competitive is present;
+// otherwise the memo stays 5 pages. Helmer's 7 Powers is the spine. ──
+const POWER_ORDER = ['scaleEconomies', 'networkEconomies', 'counterPositioning',
+                     'switchingCosts', 'branding', 'corneredResource', 'processPower'];
+const POWER_LABEL = {
+  scaleEconomies: 'Scale Economies', networkEconomies: 'Network Economies',
+  counterPositioning: 'Counter-Positioning', switchingCosts: 'Switching Costs',
+  branding: 'Branding', corneredResource: 'Cornered Resource',
+  processPower: 'Process Power',
+};
+const VERDICT_COLOR = { leading: '#15803d', even: PALETTE.muted, lagging: '#b91c1c' };
+// camelize a snake_case *value* (list-item string values aren't camelized upstream)
+const _camelVal = s => (s || '').replace(/_([a-z])/g, (_, x) => x.toUpperCase());
+
+function PowerBar({ score }) {
+  return (
+    <div style={{ display: 'flex', gap: '2pt' }}>
+      {[0, 1, 2].map(i => (
+        <div key={i} style={{
+          width: '14pt', height: '5pt', borderRadius: '1pt',
+          background: i < score ? PALETTE.accent : PALETTE.rule,
+        }} />
+      ))}
+    </div>
+  );
+}
+
+function Page4Competitive({ memo }) {
+  const c = memo.print.competitive;
+  const origination = c.lens === 'power_origination';
+  const lensLabel = origination ? 'Power Origination' : 'Power Audit';
+  const dom = _camelVal(c.dominantPower);
+  const maxT = Math.max(0.01, ...((c.rivals || []).map(x => x.shareTerminal || 0)));
+  return (
+    <div className="memo-page">
+      <PageHeader memo={memo} suffix="7 Powers · the moat, scored"
+                  label="the competitive landscape" />
+
+      {/* Arena + lens badge */}
+      <div style={{ display: 'flex', justifyContent: 'space-between',
+                    alignItems: 'flex-start', marginTop: '8pt', gap: '14pt' }}>
+        <div style={{ fontFamily: FONT_SANS, fontSize: '8.5pt', color: PALETTE.text,
+                      lineHeight: 1.4, flex: 1 }}>
+          <span style={{ fontWeight: 700, color: PALETTE.ink }}>Arena.&nbsp;</span>{c.arena}
+        </div>
+        <div style={{ flexShrink: 0, textAlign: 'right' }}>
+          <div style={{ fontFamily: FONT_MONO, fontSize: '7pt', fontWeight: 700,
+                        color: PALETTE.accent, letterSpacing: '0.04em' }}>
+            {lensLabel.toUpperCase()}
+          </div>
+          <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.muted }}>
+            {origination
+              ? `origination window: ${c.window || '—'}`
+              : `dominant-power durability: ${c.durability || '—'}`}
+          </div>
+        </div>
+      </div>
+
+      {/* Two columns: 7-Powers scorecard (left) + rivals/falsifiers (right) */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 1fr',
+                    gap: '20pt', marginTop: '12pt' }}>
+        {/* LEFT — 7 Powers scorecard */}
+        <div>
+          <SectionHeader label={origination ? 'POWER ORIGINATION · 7 POWERS' : 'POWER AUDIT · 7 POWERS'}
+                         marginTop="0" marginBottom="8pt" />
+          {POWER_ORDER.map(k => {
+            const p = (c.powers || {})[k] || { score: 0, note: '' };
+            const isDom = k === dom;
+            return (
+              <div key={k} style={{ display: 'flex', gap: '8pt',
+                                    alignItems: 'flex-start', marginBottom: '7pt' }}>
+                <div style={{ width: '150pt', flexShrink: 0 }}>
+                  <div style={{ fontFamily: FONT_SANS, fontSize: '7.5pt',
+                                fontWeight: isDom ? 700 : 600,
+                                color: isDom ? PALETTE.accent : PALETTE.ink }}>
+                    {POWER_LABEL[k]}
+                    {isDom && <span style={{ fontFamily: FONT_MONO, fontSize: '6pt',
+                                             fontWeight: 700, color: PALETTE.accent }}>
+                      {'  ◂ thesis leans here'}</span>}
+                  </div>
+                  <div style={{ marginTop: '2pt' }}><PowerBar score={p.score} /></div>
+                </div>
+                <div style={{ flex: 1, fontFamily: FONT_SANS, fontSize: '7pt',
+                              color: PALETTE.text, lineHeight: 1.35 }}>{p.note}</div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* RIGHT — rivals + falsifiers, lens-dependent */}
+        <div>
+          {origination ? (
+            <>
+              <SectionHeader label="THE RACE · NAMED RIVALS" marginTop="0" marginBottom="8pt" />
+              {(c.rivals || []).map((r, i) => (
+                <div key={i} style={{ marginBottom: '6pt' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ fontFamily: FONT_SANS, fontSize: '7.5pt',
+                                   fontWeight: 600, color: PALETTE.ink }}>{r.name}</span>
+                    <span style={{ fontFamily: FONT_MONO, fontSize: '6.5pt',
+                                   color: PALETTE.muted }}>{r.capital}</span>
+                  </div>
+                  <div style={{ height: '5pt', background: PALETTE.rule,
+                                borderRadius: '1pt', marginTop: '2pt' }}>
+                    <div style={{ width: `${100 * (r.shareTerminal || 0) / maxT}%`,
+                                  height: '100%', background: PALETTE.dim,
+                                  borderRadius: '1pt' }} />
+                  </div>
+                  <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt',
+                                color: PALETTE.text, marginTop: '2pt', lineHeight: 1.3 }}>
+                    <span style={{ fontFamily: FONT_MONO, color: PALETTE.muted }}>
+                      ~{Math.round(100 * (r.shareTerminal || 0))}% terminal share · </span>{r.note}
+                  </div>
+                </div>
+              ))}
+              <SectionHeader label="LEAD / LAG · FALSIFIERS" marginTop="10pt" marginBottom="6pt" />
+              {(c.leadLag || []).map((l, i) => (
+                <div key={i} style={{ display: 'flex', justifyContent: 'space-between',
+                                      alignItems: 'baseline', marginBottom: '4pt', gap: '8pt' }}>
+                  <span style={{ fontFamily: FONT_SANS, fontSize: '7pt',
+                                 color: PALETTE.text, flex: 1 }}>{l.metric}</span>
+                  <span style={{ fontFamily: FONT_MONO, fontSize: '7pt', color: PALETTE.ink }}>
+                    {l.company} <span style={{ color: PALETTE.dim }}>vs</span> {l.bestRival}</span>
+                  <span style={{ fontFamily: FONT_MONO, fontSize: '6.5pt', fontWeight: 700,
+                                 color: VERDICT_COLOR[l.verdict] || PALETTE.muted,
+                                 width: '42pt', textAlign: 'right' }}>
+                    {(l.verdict || '').toUpperCase()}</span>
+                </div>
+              ))}
+            </>
+          ) : (
+            <>
+              <SectionHeader label="PEER SET" marginTop="0" marginBottom="8pt" />
+              {(c.rivals || []).map((r, i) => (
+                <div key={i} style={{ marginBottom: '7pt' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between',
+                                alignItems: 'baseline' }}>
+                    <span style={{ fontFamily: FONT_SANS, fontSize: '7.5pt',
+                                   fontWeight: 600, color: PALETTE.ink }}>{r.name}</span>
+                    <span style={{ fontFamily: FONT_MONO, fontSize: '6.5pt', color: PALETTE.muted }}>
+                      {r.growth != null ? `${Math.round(r.growth * 100)}% gr` : ''}
+                      {r.margin != null ? ` · ${Math.round(r.margin * 100)}% mgn` : ''}
+                      {r.multiple ? ` · ${r.multiple}` : ''}
+                    </span>
+                  </div>
+                  <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt',
+                                color: PALETTE.text, marginTop: '1pt', lineHeight: 1.3 }}>{r.note}</div>
+                </div>
+              ))}
+              <SectionHeader label="THREAT VECTORS · FALSIFIERS" marginTop="10pt" marginBottom="6pt" />
+              {(c.threats || []).map((t, i) => (
+                <div key={i} style={{ marginBottom: '6pt' }}>
+                  <div style={{ fontFamily: FONT_SANS, fontSize: '7pt',
+                                fontWeight: 600, color: PALETTE.ink }}>
+                    {POWER_LABEL[_camelVal(t.vector)] || t.vector}
+                    <span style={{ color: PALETTE.muted, fontWeight: 400 }}> · {t.who}</span>
+                  </div>
+                  <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt',
+                                color: PALETTE.text, lineHeight: 1.3 }}>
+                    <span style={{ fontFamily: FONT_MONO, color: '#b91c1c' }}>falsifier: </span>{t.falsifier}
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
+        </div>
+      </div>
+
+      {/* Takeaway — conviction-neutral competitive verdict */}
+      <div style={{ marginTop: '12pt', borderLeft: `2pt solid ${PALETTE.accent}`,
+                    paddingLeft: '10pt' }}>
+        <div style={{ fontFamily: FONT_MONO, fontSize: '6.5pt', fontWeight: 700,
+                      color: PALETTE.accent, letterSpacing: '0.05em', marginBottom: '2pt' }}>
+          COMPETITIVE READ</div>
+        <div style={{ fontFamily: FONT_SANS, fontSize: '8pt',
+                      color: PALETTE.ink, lineHeight: 1.4 }}>{c.takeaway}</div>
+      </div>
+
+      <PageFooter memo={memo} pageLabel={`page 4 of ${memoTotalPages(memo)}`} />
+    </div>
+  );
+}
+
 function Page4Quantitative({ memo }) {
   return (
     <div className="memo-page">
@@ -3099,7 +3294,7 @@ function Page4Quantitative({ memo }) {
         ))}
       </div>
 
-      <PageFooter memo={memo} pageLabel="page 4 of 5" />
+      <PageFooter memo={memo} pageLabel={`page ${hasCompetitive(memo) ? 5 : 4} of ${memoTotalPages(memo)}`} />
     </div>
   );
 }
@@ -3238,7 +3433,7 @@ function Page5BackMatter({ memo }) {
         )}
       />
 
-      <PageFooter memo={memo} pageLabel="page 5 of 5" showDisclaimerPointer={false} />
+      <PageFooter memo={memo} pageLabel={`page ${memoTotalPages(memo)} of ${memoTotalPages(memo)}`} showDisclaimerPointer={false} />
     </div>
   );
 }
@@ -3264,6 +3459,7 @@ function MemoPDF() {
       <Page1Headline memo={memo} />
       <Page2Narratives memo={memo} />
       <Page3Snapshot memo={memo} />
+      {hasCompetitive(memo) && <Page4Competitive memo={memo} />}
       <Page4Quantitative memo={memo} />
       <Page5BackMatter memo={memo} />
     </>
@@ -3275,7 +3471,7 @@ function MemoPDF() {
 // body[data-harness="print"] and we auto-mount + signal ready; the site
 // imports MemoPagesAll and renders it scaled inside MemoPage.
 window.AR2EB_MEMO = {
-  Page1Headline, Page2Narratives, Page3Snapshot, Page4Quantitative, Page5BackMatter,
+  Page1Headline, Page2Narratives, Page3Snapshot, Page4Competitive, Page4Quantitative, Page5BackMatter,
   MemoPDF,
   findMemo, getTickerSlug,
 };

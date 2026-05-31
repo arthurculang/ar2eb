@@ -5177,6 +5177,81 @@ const MEMOS = [
           "revPerUnit": null
         }
       },
+      "competitive": {
+        "arena": "Soft-tissue robotic surgery — da Vinci's installed base vs. emerging challengers (Medtronic Hugo, J&J Ottava, CMR Surgical Versius) for the global multi-specialty minimally-invasive surgery platform standard.\n",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 3,
+            "note": "~9,500 systems installed; instrument/service volume amortizes R&D no challenger matches."
+          },
+          "networkEconomies": {
+            "score": 2,
+            "note": "Surgeon training + case-data flywheel (Case Insights) compounds with the installed base."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Challengers catch up on model, not displace it; weak collateral-damage barrier."
+          },
+          "switchingCosts": {
+            "score": 3,
+            "note": "Sunk capital + surgeon retraining + hospital workflow lock-in; razor/blade recurring revenue."
+          },
+          "branding": {
+            "score": 3,
+            "note": "da Vinci is the category synonym; surgeon and hospital default."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Deep patent estate (many now expiring) + the installed base itself as a distribution asset."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Two decades of manufacturing/service learning-curve and reliability data."
+          }
+        },
+        "dominantPower": "switching_costs",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Medtronic (Hugo)",
+            "kind": "public",
+            "note": "CE-marked; US trials; bundled into a broad device channel.",
+            "growth": 0.1,
+            "margin": 0.25,
+            "multiple": "~17x EV/EBIT"
+          },
+          {
+            "name": "J&J MedTech (Ottava)",
+            "kind": "public",
+            "note": "Delayed; deep surgical channel + Ethicon stapling tie-in.",
+            "growth": 0.06,
+            "margin": 0.28,
+            "multiple": "~16x EV/EBIT"
+          },
+          {
+            "name": "CMR Surgical (Versius)",
+            "kind": "private",
+            "note": "Modular, lower-cost; OUS traction.",
+            "growth": 0.3,
+            "margin": null,
+            "multiple": "private"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "counter_positioning",
+            "who": "Medtronic / J&J",
+            "falsifier": "ISRG procedure growth < 10% for 2 consecutive years while a rival's installed base passes 1,000 systems."
+          },
+          {
+            "vector": "switching_costs",
+            "who": "Hospitals (capital pressure)",
+            "falsifier": "da Vinci placement mix shifts to lease/usage > 50%, signaling pricing-power erosion."
+          }
+        ],
+        "takeaway": "A wide, durable moat anchored on switching costs and scale — the basis for the DCF's premium terminal multiple; challengers are real but years from the installed-base and brand barriers. Watch procedure growth as the erosion gauge.\n"
+      },
       "appendix": {
         "pushback": [
           {
@@ -6351,6 +6426,97 @@ const MEMOS = [
             95.0
           ]
         }
+      },
+      "competitive": {
+        "arena": "The race to a ~$50B FY36 fault-tolerant quantum-computing TAM — trapped-ion (IonQ, Quantinuum) vs. superconducting (Google, IBM) vs. neutral-atom (QuEra, Pasqal, Atom Computing).\n",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "SkyWater fab vertical integration begun; not yet a cost-curve advantage."
+          },
+          "networkEconomies": {
+            "score": 0,
+            "note": "No developer/data flywheel; cloud reach via AWS/Azure is rented, not owned."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Trapped-ion stack incumbents can't pivot to without abandoning sunk superconducting fabs."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "$470M RPO; algorithms compiled to IonQ's native gate set raise re-port cost."
+          },
+          "branding": {
+            "score": 1,
+            "note": "Strong research credibility (AQ#64 early); not yet the enterprise default."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Trapped-ion IP portfolio + SkyWater fab; Maryland/Duke talent lineage."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Fidelity yield improving each generation; not yet a durable, opaque process edge."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "Quantinuum",
+            "kind": "private",
+            "note": "Helios: 48 logical qubits @ 99.92%; $12.7B IPO; Honeywell-backed.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.2,
+            "capital": "$1.4B+ raised"
+          },
+          {
+            "name": "Google Quantum AI",
+            "kind": "incumbent-division",
+            "note": "Willow: verifiable quantum advantage demonstrated.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.16,
+            "capital": "Alphabet balance sheet"
+          },
+          {
+            "name": "IBM Quantum",
+            "kind": "incumbent-division",
+            "note": "Nighthawk roadmap to 1,080 qubits; deep enterprise channel.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.14,
+            "capital": "IBM balance sheet"
+          },
+          {
+            "name": "Neutral-atom (QuEra/Pasqal/Atom)",
+            "kind": "private",
+            "note": "1,200+ physical qubits in 18 months; different error profile.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.1,
+            "capital": "$300M+ aggregate"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Algorithmic qubits (AQ)",
+            "company": 64,
+            "bestRival": 56,
+            "verdict": "leading"
+          },
+          {
+            "metric": "Logical qubits @ >=99.9%",
+            "company": 36,
+            "bestRival": 48,
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Cash runway (yrs at burn)",
+            "company": 4,
+            "bestRival": 6,
+            "verdict": "lagging"
+          }
+        ],
+        "takeaway": "Real trapped-ion cornered-resource and counter-positioning leads, but network and scale power are unoriginated and Quantinuum's logical-qubit edge is the falsifier to watch; the origination window is open, but not indefinitely.\n"
       },
       "appendix": {
         "pushback": [
