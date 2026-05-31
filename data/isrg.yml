@@ -519,13 +519,17 @@ taxonomy:
   primary_theme: medical-devices
 
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-05-29_01-52"
+  footer_version: "004"
+  footer_timestamp: "2026-05-31_17-03"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "003"
-  pdf_timestamp: "2026-05-29_01-52"
+  pdf_version: "004"
+  pdf_timestamp: "2026-05-31_17-03"
 
   prior_versions:
+  - version: "003"
+    timestamp: "2026-05-29_01-52"
+    asOfDate: "2026-05-27"
+    spotPrice: 436.64
   - version: "002"
     timestamp: "2026-05-28_05-26"
     asOfDate: "2026-05-27"

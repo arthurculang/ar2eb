@@ -960,12 +960,16 @@ glossary:
   definition: IonQ system generations. Forte = current commercial (AQ#36). Tempo = next-gen, AQ#64 demonstrated, 256-qubit chip.
 
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-05-30_00-02"
+  footer_version: "003"
+  footer_timestamp: "2026-05-31_17-03"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-05-30_00-02"
+  pdf_version: "003"
+  pdf_timestamp: "2026-05-31_17-03"
   prior_versions:
+  - version: "002"
+    timestamp: "2026-05-30_00-02"
+    asOfDate: "2026-05-29"
+    spotPrice: 70.14
   - version: "001"
     timestamp: "2026-05-29_23-02"
     asOfDate: "2026-05-29"

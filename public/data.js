@@ -4491,9 +4491,16 @@ const MEMOS = [
     "publishedISO": "2026-05-27",
     "publishedLabel": "May 27, 2026",
     "pdf": {
-      "file": "isrg-memo__v003__2026-05-29_01-52.pdf",
-      "size": "266 KB",
+      "file": "isrg-memo__v004__2026-05-31_17-03.pdf",
+      "size": "290 KB",
       "priorVersions": [
+        {
+          "version": "003",
+          "file": "isrg-memo__v003__2026-05-29_01-52.pdf",
+          "size": "266 KB",
+          "asOfDate": "2026-05-27",
+          "spotPrice": 436.64
+        },
         {
           "version": "002",
           "file": "isrg-memo__v002__2026-05-28_05-26.pdf",
@@ -5317,8 +5324,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "003",
-        "footerTimestamp": "2026-05-29_01-52",
+        "footerVersion": "004",
+        "footerTimestamp": "2026-05-31_17-03",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -5333,9 +5340,16 @@ const MEMOS = [
     "publishedISO": "2026-05-29",
     "publishedLabel": "May 29, 2026",
     "pdf": {
-      "file": "ionq-memo__v002__2026-05-30_00-02.pdf",
-      "size": "351 KB",
+      "file": "ionq-memo__v003__2026-05-31_17-03.pdf",
+      "size": "376 KB",
       "priorVersions": [
+        {
+          "version": "002",
+          "file": "ionq-memo__v002__2026-05-30_00-02.pdf",
+          "size": "351 KB",
+          "asOfDate": "2026-05-29",
+          "spotPrice": 70.14
+        },
         {
           "version": "001",
           "file": "ionq-memo__v001__2026-05-29_23-02.pdf",
@@ -6583,8 +6597,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-05-30_00-02",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-05-31_17-03",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

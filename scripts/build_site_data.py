@@ -264,10 +264,14 @@ def build_memo(ticker: str) -> dict:
     probs = {k: round(scn[k]["probability"] * 100) for k in ticker_scens}
     pdf_file = f"{ticker}-memo__v{st['pdf_version']}__{st['pdf_timestamp']}.pdf"
     pdf_path = MEMOS_DIR / pdf_file
+    # The target PDF may not be rendered yet — rebuild_all runs build_site_data
+    # (which render needs for content + footer stamp) *before* the render step,
+    # and a freshly bumped stamp names a file that doesn't exist until render.
+    # Size is display-only, so emit a placeholder and continue rather than
+    # hard-failing; it's corrected on the post-render rebuild.
+    pdf_size = human_size(pdf_path) if pdf_path.exists() else "—"
     if not pdf_path.exists():
-        raise FileNotFoundError(
-            f"{ticker}: {pdf_file} not in public/memos/ — regenerate the PDF "
-            f"(scripts/rebuild_all.py) before building site data")
+        print(f"  note: {pdf_file} not yet rendered — size placeholder")
 
     # Prior versions — the same shape we accept in the YAML (stamp.prior_versions).
     # We resolve each entry's PDF filename + size against public/memos/. If a
@@ -297,7 +301,7 @@ def build_memo(ticker: str) -> dict:
         "dcfType": dcf_display,
         "publishedISO": iso,
         "publishedLabel": lbl,
-        "pdf": {"file": pdf_file, "size": human_size(pdf_path), "priorVersions": prior},
+        "pdf": {"file": pdf_file, "size": pdf_size, "priorVersions": prior},
         "metrics": {
             "mktCap": _fmt_b(mk['market_cap_billion']),
             "shares": fmt_shares(mk["shares_outstanding_million"]),
