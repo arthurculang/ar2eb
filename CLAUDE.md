@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
-changelog-driven — currently at logical **v029**) are the source of truth.
+changelog-driven — currently at logical **v030**) are the source of truth.
 
 ## What this is
 
