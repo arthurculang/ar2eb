@@ -1,4 +1,4 @@
-# OKLO — Oklo Inc (NYSE) · INTAKE (python-modeled & sanity-checked; scaffold-ready)
+# OKLO — Oklo Inc (NYSE) · INTAKE (python-modeled & sanity-checked; scaffold-ready; v030 second-act retrofit)
 ticker: OKLO
 company: Oklo
 exchange: NYSE
@@ -23,11 +23,11 @@ taxonomy:
   primary_theme: nuclear-fission-smr
 central_question: Does ~$12B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power
   outcome a decade of fundamentals can't reach?
-thesis: 'Oklo trades at ~$12B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline. It is a build-own-operate
-  nuclear IPP — Aurora fast reactors sold as power via PPAs to AI data centers, first power targeted 2027-28, the only commercial
-  advanced-fission site under construction. The young-company DCF asks what deployed-GW scale, IPP margins, and dilution are
-  plausible over a decade. The finding is stark: even a successful base (~3 GW) and a strong bull (~7 GW) sit below spot;
-  only an ~8% ultra-bull clears it.'
+thesis: 'Oklo trades at ~$12B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate
+  nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the only commercial advanced-fission site under construction).
+  The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible
+  over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly,
+  +184%) clears it — the capital-intensive base leaves the weighted ~-53%.'
 chart_reference:
   tam_billion: 120.0
   history_years:
@@ -588,95 +588,95 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.08
-    expected_per_share: 98.02
-    headline: ~13 GW AI-nuclear prime by 2034.
+    expected_per_share: 186.66
+    headline: 13 GW power + HALEU fuel monopoly.
     narrative:
-    - 'The tail: Oklo becomes the dominant build-own-operate AI-baseload-nuclear prime — the ~14 GW pipeline largely converts,
-      factory production drives capex down, and Oklo operates ~13 GW by 2034 throwing off recurring PPA revenue (~$8.8B at
-      a ~66% operating margin) with a premium platform terminal.'
-    - Even this — a genuine 'nuclear-prime-for-AI' outcome — produces a DCF of ~$100/share, ~+49% above today's $67. To justify
-      spot on the weighted math you must lean heavily on this ~8% tail. That is the honest framing of what the market is paying
-      for.
-    probability_rationale: 'Tail of tails: every bull condition hits AND Oklo reaches grid-scale AND earns a premium platform
-      multiple as the AI-power category winner. Individually 50-65%; jointly ~8%. The genuine asymmetric upside — and the
-      one scenario that clears spot.'
+    - 'The tail (the second act): Oklo becomes the dominant AI-baseload-power IPP (~13 GW) AND originates a HALEU fuel-recycling
+      monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center
+      load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource
+      Power (§6d).'
+    - 'DCF ~$191/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +184%
+      above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn''t capture.'
+    probability_rationale: 'Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling
+      monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly
+      (a cornered resource) is the §6d-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.'
     dcf_metrics:
-      tam_share: 7.33
+      tam_share: 14.42
       p_fail: 3
-      s2c: 0.58
+      s2c: 0.6
     dcf_path:
       rev_path:
       - 0.04
       - 0.12
       - 0.3
       - 0.65
-      - 1.25
-      - 2.2
-      - 3.6
-      - 5.4
-      - 7.2
-      - 8.8
+      - 1.55
+      - 3.2
+      - 6.1
+      - 9.9
+      - 13.7
+      - 17.3
       op_margin:
       - -3.5
       - -1.5
       - -0.3
-      - 0.12
-      - 0.34
-      - 0.48
-      - 0.57
-      - 0.62
-      - 0.65
+      - 0.15
+      - 0.35
+      - 0.5
+      - 0.58
+      - 0.63
       - 0.66
+      - 0.68
       wacc_path:
       - 0.13
       - 0.127
       - 0.124
-      - 0.122
-      - 0.119
-      - 0.116
-      - 0.113
-      - 0.111
-      - 0.108
+      - 0.121
+      - 0.118
+      - 0.115
+      - 0.112
+      - 0.109
+      - 0.107
       - 0.105
-      term_g: 0.05
+      term_g: 0.055
       nopat:
       - -0.14
       - -0.18
       - -0.09
-      - 0.078
-      - 0.425
-      - 1.056
-      - 2.052
-      - 3.348
-      - 4.68
-      - 5.808
+      - 0.098
+      - 0.542
+      - 1.6
+      - 3.538
+      - 6.237
+      - 9.042
+      - 11.764
       reinvest:
-      - 0.069
-      - 0.138
-      - 0.31
-      - 0.603
-      - 1.034
-      - 1.638
-      - 2.414
-      - 3.103
-      - 3.103
-      - 2.759
+      - 0.067
+      - 0.133
+      - 0.3
+      - 0.583
+      - 1.5
+      - 2.75
+      - 4.833
+      - 6.333
+      - 6.333
+      - 6.0
       fcf:
-      - -0.209
-      - -0.318
-      - -0.4
-      - -0.525
-      - -0.609
-      - -0.582
-      - -0.362
-      - 0.245
-      - 1.577
-      - 3.049
+      - -0.207
+      - -0.313
+      - -0.39
+      - -0.486
+      - -0.958
+      - -1.15
+      - -1.295
+      - -0.096
+      - 2.709
+      - 5.764
       cash: 2.54
       net_debt: 0.0
-      raise_total: 9.5
+      raise_total: 11.0
       dilution_pct: 20
-      final_shares: 216
+      final_shares: 225
       distress: 40.0
     chart_data:
       raises:
@@ -685,9 +685,9 @@ scenarios:
       - 1.0
       - 1.5
       - 2.0
+      - 2.5
       - 2.0
       - 1.5
-      - 1.0
       - 0.0
       - 0.0
       raise_prices:
@@ -753,7 +753,7 @@ weighting_rationale:
 - label: Bull 23%
   body: Factory economics work; ~7 GW AI-power scale.
 - label: Ultra Bull 8%
-  body: ~13 GW AI-nuclear prime — only case above spot.
+  body: 13 GW + HALEU fuel monopoly; +184%, clears spot.
 appendix:
   pushback:
   - label: Best-capitalized advanced-nuclear name.
@@ -821,7 +821,8 @@ competitive:
     cornered_resource:
       score: 2
       note: DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor
-        IP — a genuine first-mover physical lead.
+        IP — a genuine first-mover physical lead. In the ultra-bull this extends to a HALEU fuel-recycling monopoly — the
+        §6c.11.1 second act.
     process_power:
       score: 1
       note: No operating reactor yet; the EBR-II heritage is design pedigree, not demonstrated process power.

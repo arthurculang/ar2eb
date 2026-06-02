@@ -1,4 +1,4 @@
-# RKLB — Rocket Lab (NASDAQ) · INTAKE (modeled & sanity-checked; scaffold-ready)
+# RKLB — Rocket Lab (NASDAQ) · INTAKE (modeled & sanity-checked; scaffold-ready; v030 second-act retrofit)
 ticker: RKLB
 company: Rocket Lab
 exchange: NASDAQ
@@ -20,15 +20,14 @@ taxonomy:
   themes:
   - space-launch-infrastructure
   primary_theme: space-launch-infrastructure
-central_question: Does ~135x sales (~$81B on $602M FY25 revenue) price a realistic path to a space prime
-  — or a SpaceX-scale outcome a decade of fundamentals can't reach?
-thesis: 'Rocket Lab trades at ~$81B against $602M FY25 revenue (+38%) and a $1.85B backlog (+73%) — ~135x
-  sales. Two engines: Electron (the established #2 small-lift launcher) plus Neutron (a reusable medium-lift
-  vehicle targeting a Q4 2026 first launch after a stage-1 tank-test failure), and a larger vertically-integrated
-  Space Systems segment with a path to owned constellations. The young-company DCF asks what mature scale,
-  prime-style margins, and Neutron-stumble probability are plausible over ten years. Five scenarios, weighted
-  — and the finding is stark: even an aggressive ultra-bull (a ~$20B-revenue space prime by 2035) lands
-  below spot.'
+central_question: Does ~135x sales (~$81B on $602M FY25 revenue) price a realistic path to a space prime — or a SpaceX-scale
+  outcome a decade of fundamentals can't reach?
+thesis: 'Rocket Lab trades at ~$81B on $602M FY25 revenue — ~135x sales. Electron (#2 small-lift) + Neutron (reusable medium-lift,
+  Q4 2026 debut) + a vertically-integrated Space Systems segment with a path to owned constellations. The DCF asks what scale,
+  prime margins, and — in the upper scenarios — a Starlink-style constellation second act are plausible over a decade. The
+  finding: launch+systems alone is priced beyond ten years; only if RKLB originates an owned constellation does the ultra-bull
+  clear spot (+159%, a ~$213B smaller-SpaceX) — even then the modal base leaves the weighted ~-63%: the market prices near-certain
+  success.'
 chart_reference:
   tam_billion: 120
   history_years:
@@ -58,11 +57,9 @@ page3_chart_config:
   - Competitors
   - Other space (cargo, gov, etc.)
 page3:
-  subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25,
-    Q4'25 release
-  sources: 'Sources: RKLB FY2025 results (Feb 2026), Q4''25 8-K, company guidance. FCF is NOL-shielded
-    pre-tax over the explicit window (documented simplification). TAM: launch + space-systems serviceable
-    slice, ~$120B by FY35.'
+  subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q4'25 release
+  sources: 'Sources: RKLB FY2025 results (Feb 2026), Q4''25 8-K, company guidance. FCF is NOL-shielded pre-tax over the explicit
+    window (documented simplification). TAM: launch + space-systems serviceable slice, ~$120B by FY35.'
 scenarios:
   ultra_bear:
     label: Ultra Bear
@@ -71,18 +68,16 @@ scenarios:
     expected_per_share: 1.8
     headline: Neutron fails; dilution; SpaceX runs away.
     narrative:
-    - Neutron's tank-test troubles compound into a failed or indefinitely delayed program; RKLB stays
-      a sub-scale small-lift + components shop. Launch cadence stalls, Space Systems growth decelerates
-      as satellite primes in-source, and gross margins stay structurally thin against a fixed-cost manufacturing
-      base.
-    - Repeated dilutive ATM raises fund the burn (start cash $0.83B), share count creeps toward 590M,
-      and by FY35 revenue is ~$1.4B at ~7-8% operating margin. With a 25% probability of an outright restructuring/recap,
-      the expected per-share collapses toward the distress floor — orders of magnitude below today's price.
-    probability_rationale: 'The compound bear: a Neutron failure (the FY26 tank-test failure is a real
-      datapoint) plus Space Systems deceleration plus persistent thin margins. Aerospace hardware is unforgiving
-      and SpaceX''s cost curve is brutal. 25% within-scenario failure probability reflects that RKLB,
-      while revenue-generating with $1.85B backlog, is still capital-hungry and Neutron-dependent for
-      the bull thesis.'
+    - Neutron's tank-test troubles compound into a failed or indefinitely delayed program; RKLB stays a sub-scale small-lift
+      + components shop. Launch cadence stalls, Space Systems growth decelerates as satellite primes in-source, and gross
+      margins stay structurally thin against a fixed-cost manufacturing base.
+    - Repeated dilutive ATM raises fund the burn (start cash $0.83B), share count creeps toward 590M, and by FY35 revenue
+      is ~$1.4B at ~7-8% operating margin. With a 25% probability of an outright restructuring/recap, the expected per-share
+      collapses toward the distress floor — orders of magnitude below today's price.
+    probability_rationale: 'The compound bear: a Neutron failure (the FY26 tank-test failure is a real datapoint) plus Space
+      Systems deceleration plus persistent thin margins. Aerospace hardware is unforgiving and SpaceX''s cost curve is brutal.
+      25% within-scenario failure probability reflects that RKLB, while revenue-generating with $1.85B backlog, is still capital-hungry
+      and Neutron-dependent for the bull thesis.'
     dcf_metrics:
       tam_share: 1.1
       p_fail: 25
@@ -203,15 +198,14 @@ scenarios:
     expected_per_share: 3.7
     headline: 'Neutron slips; #2 but sub-scale.'
     narrative:
-    - 'Neutron eventually flies but late and at low cadence; RKLB remains a credible #2 launch name and
-      a solid Space Systems supplier, but never escapes SpaceX''s shadow on cost or volume. Revenue compounds
-      to ~$2.85B by FY35 at ~12% operating margin — real, but a fraction of the bull trajectory.'
-    - Modest dilution funds the Neutron ramp. The DCF lands in the low-single-digit dollars per share
-      — the market is pricing a far larger outcome. This is the 'good company, wrong price' world.
-    probability_rationale: Neutron works but underwhelms on cadence/cost; Space Systems grows steadily
-      without becoming a prime. 12% failure probability — lower than a pre-revenue name given backlog
-      and balance sheet, but Neutron execution risk is real. The 25% weight reflects this as a very plausible
-      'competent but capped' outcome.
+    - 'Neutron eventually flies but late and at low cadence; RKLB remains a credible #2 launch name and a solid Space Systems
+      supplier, but never escapes SpaceX''s shadow on cost or volume. Revenue compounds to ~$2.85B by FY35 at ~12% operating
+      margin — real, but a fraction of the bull trajectory.'
+    - Modest dilution funds the Neutron ramp. The DCF lands in the low-single-digit dollars per share — the market is pricing
+      a far larger outcome. This is the 'good company, wrong price' world.
+    probability_rationale: Neutron works but underwhelms on cadence/cost; Space Systems grows steadily without becoming a
+      prime. 12% failure probability — lower than a pre-revenue name given backlog and balance sheet, but Neutron execution
+      risk is real. The 25% weight reflects this as a very plausible 'competent but capped' outcome.
     dcf_metrics:
       tam_share: 2.4
       p_fail: 12
@@ -332,16 +326,15 @@ scenarios:
     expected_per_share: 11.65
     headline: 'Neutron works; #2 prime; 18% margin.'
     narrative:
-    - 'The modal path: Neutron certifies and reaches meaningful cadence, RKLB consolidates the clear #2
-      launch position, and the vertically-integrated Space Systems business scales into a genuine space
-      prime. Revenue compounds ~25% to ~$5.9B by FY35 at an ~18% mature operating margin — aerospace-prime
-      economics, not software.'
-    - Light early dilution; the business self-funds by the late 2020s. DCF ~$12/share. Even this constructive
-      base case sits ~92% below today's $142 — a measure of how much the market is paying for a larger,
-      faster outcome than a successful-but-rational base implies.
-    probability_rationale: 'Requires the least faith: Neutron works (not dominates), Space Systems keeps
-      compounding, margins reach an aerospace-prime ~18%. No SpaceX-toppling assumption. 5% failure probability
-      given backlog, cash, and revenue diversification. 35% weight as the central outcome.'
+    - 'The modal path: Neutron certifies and reaches meaningful cadence, RKLB consolidates the clear #2 launch position, and
+      the vertically-integrated Space Systems business scales into a genuine space prime. Revenue compounds ~25% to ~$5.9B
+      by FY35 at an ~18% mature operating margin — aerospace-prime economics, not software.'
+    - Light early dilution; the business self-funds by the late 2020s. DCF ~$12/share. Even this constructive base case sits
+      ~92% below today's $142 — a measure of how much the market is paying for a larger, faster outcome than a successful-but-rational
+      base implies.
+    probability_rationale: 'Requires the least faith: Neutron works (not dominates), Space Systems keeps compounding, margins
+      reach an aerospace-prime ~18%. No SpaceX-toppling assumption. 5% failure probability given backlog, cash, and revenue
+      diversification. 35% weight as the central outcome.'
     dcf_metrics:
       tam_share: 4.9
       p_fail: 5
@@ -459,45 +452,44 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.22
-    expected_per_share: 36.37
-    headline: Neutron scales; top-3 + constellations.
+    expected_per_share: 82.02
+    headline: Neutron scales; owned-constellation second act begins.
     narrative:
-    - 'The bull: Neutron''s reusability lands RKLB a real share of medium-lift, Space Systems becomes
-      a top-tier prime, and RKLB begins owning/operating constellations (recurring, higher-margin revenue).
-      Revenue compounds toward ~$10.5B by FY35 at a ~23% operating margin.'
-    - Minimal dilution; strong self-funding. DCF ~$37/share — and still ~74% below spot. The bull case
-      is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you have
-      to extend the horizon or believe in multiple expansion.
-    probability_rationale: 'A chain: Neutron reusability works AND captures share AND Space Systems scales
-      AND constellation economics materialize. Each plausible at 50-70%; jointly ~22%. This is a real,
-      fundable trajectory — RKLB has the balance sheet and backlog — but it''s conjunctive.'
+    - 'The bull: Neutron''s reusability lands RKLB real medium-lift share, Space Systems becomes a top-tier prime, AND RKLB
+      begins operating its own constellation — recurring, higher-margin data/services revenue layered on launch+systems. Revenue
+      compounds toward ~$16.5B by FY35 at a ~31% blended operating margin.'
+    - Minimal dilution; strong self-funding. DCF ~$82/share — still ~42% below spot, but the owned-constellation second act
+      is now visible in the numbers, not just the story. The launch business is the wedge; the constellation is the business.
+    probability_rationale: 'A chain: Neutron reusability works AND captures share AND Space Systems scales AND an owned constellation
+      begins generating recurring revenue. Each plausible at 50-70%; jointly ~22%. RKLB has the balance sheet, backlog, and
+      vertical integration — but it is conjunctive.'
     dcf_metrics:
-      tam_share: 8.8
+      tam_share: 13.75
       p_fail: 3
-      s2c: 2.3
+      s2c: 2.4
     dcf_path:
       rev_path:
       - 0.88
       - 1.35
       - 2.05
       - 3.0
-      - 4.2
-      - 5.6
-      - 7.1
-      - 8.5
-      - 9.6
-      - 10.5
+      - 4.5
+      - 6.5
+      - 9.0
+      - 12.0
+      - 14.5
+      - 16.5
       op_margin:
       - -0.03
       - 0.04
       - 0.09
       - 0.13
-      - 0.17
-      - 0.195
-      - 0.21
+      - 0.18
       - 0.22
-      - 0.225
-      - 0.23
+      - 0.26
+      - 0.29
+      - 0.3
+      - 0.31
       wacc_path:
       - 0.11
       - 0.108
@@ -509,69 +501,69 @@ scenarios:
       - 0.094
       - 0.092
       - 0.09
-      term_g: 0.045
+      term_g: 0.05
       nopat:
       - -0.026
       - 0.054
       - 0.184
       - 0.39
-      - 0.714
-      - 1.092
-      - 1.491
-      - 1.87
-      - 2.16
-      - 2.415
+      - 0.81
+      - 1.43
+      - 2.34
+      - 3.48
+      - 4.35
+      - 5.115
       reinvest:
-      - 0.121
-      - 0.204
-      - 0.304
-      - 0.413
-      - 0.522
-      - 0.609
-      - 0.652
-      - 0.609
-      - 0.478
-      - 0.391
+      - 0.116
+      - 0.196
+      - 0.292
+      - 0.396
+      - 0.625
+      - 0.833
+      - 1.042
+      - 1.25
+      - 1.042
+      - 0.833
       fcf:
-      - -0.147
-      - -0.15
-      - -0.12
-      - -0.023
-      - 0.192
-      - 0.483
-      - 0.839
-      - 1.261
-      - 1.682
-      - 2.024
+      - -0.142
+      - -0.142
+      - -0.107
+      - -0.006
+      - 0.185
+      - 0.597
+      - 1.298
+      - 2.23
+      - 3.308
+      - 4.282
       cash: 0.83
       net_debt: 0.0
-      raise_total: 0.4
+      raise_total: 1.0
       dilution_pct: 0
-      final_shares: 575
+      final_shares: 580
       distress: 9.0
     chart_data:
       raises:
       - 0.2
+      - 0.3
+      - 0.3
       - 0.2
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
       raise_prices:
-      - 180
-      - 180
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
+      - 180.0
+      - 200.0
+      - 220.0
+      - 240.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
       rev_per_unit:
       - 1.0
       - 1.0
@@ -588,20 +580,20 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.08
-    expected_per_share: 105.65
-    headline: The space prime; SpaceX-scale by 2035.
+    expected_per_share: 360.14
+    headline: Starlink-style constellation; smaller-SpaceX by 2035.
     narrative:
-    - 'The tail: RKLB becomes a vertically-integrated space prime at SpaceX-ish scale — Neutron a workhorse,
-      Space Systems dominant, owned constellations throwing off recurring revenue. Revenue reaches ~$20.5B
-      by FY35 at a ~27% operating margin, with a premium terminal multiple for a dominant platform.'
-    - Even this — a genuine 'next-prime' outcome — produces a DCF of ~$108/share, still ~26% below today's
-      $142. To justify spot you must believe in something richer than a $20B-revenue space prime by 2035,
-      or value beyond the 10-year window. That is the honest framing of what the market is paying for.
-    probability_rationale: 'Tail of tails: every bull condition hits AND RKLB reaches SpaceX-scale AND
-      earns a premium platform multiple. Individually 50-65%; jointly ~8%. The genuine asymmetric upside
-      — and notably it still falls short of spot, which is the memo''s central finding.'
+    - 'The tail (the second act): RKLB originates a Starlink-style owned constellation on top of a vertically-integrated launch+systems
+      prime — recurring data/services revenue at platform margins. Revenue reaches ~$36.5B by FY35 at a ~38% blended margin,
+      with a platform terminal reflecting the originated network-economies Power (§6d).'
+    - 'DCF ~$367/share — equity ~$213B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX''s ~23x private mark, most of which
+      is Starlink). The genuine exponential tail, and it finally clears spot (+159%): the value is the constellation, not
+      the rockets.'
+    probability_rationale: 'Tail of tails: every bull condition hits AND RKLB originates an owned constellation at platform
+      scale AND earns a platform terminal as the network-economies Power lands. Individually 50-65%; jointly ~8%. The Starlink
+      analog is the anchor; the §6d constellation lead/lag metrics are the falsifiers.'
     dcf_metrics:
-      tam_share: 17.1
+      tam_share: 30.42
       p_fail: 2
       s2c: 2.5
     dcf_path:
@@ -610,23 +602,23 @@ scenarios:
       - 1.55
       - 2.6
       - 4.1
-      - 6.2
-      - 8.8
-      - 11.8
-      - 15.0
-      - 18.0
-      - 20.5
+      - 6.7
+      - 10.8
+      - 16.8
+      - 24.0
+      - 31.0
+      - 36.5
       op_margin:
       - -0.02
       - 0.06
       - 0.12
       - 0.17
-      - 0.21
-      - 0.235
-      - 0.25
-      - 0.26
-      - 0.265
+      - 0.22
       - 0.27
+      - 0.31
+      - 0.34
+      - 0.36
+      - 0.38
       wacc_path:
       - 0.105
       - 0.103
@@ -638,69 +630,69 @@ scenarios:
       - 0.089
       - 0.087
       - 0.085
-      term_g: 0.05
+      term_g: 0.06
       nopat:
       - -0.018
       - 0.093
       - 0.312
       - 0.697
-      - 1.302
-      - 2.068
-      - 2.95
-      - 3.9
-      - 4.77
-      - 5.535
+      - 1.474
+      - 2.916
+      - 5.208
+      - 8.16
+      - 11.16
+      - 13.87
       reinvest:
       - 0.127
       - 0.252
       - 0.42
       - 0.6
-      - 0.84
       - 1.04
-      - 1.2
-      - 1.28
-      - 1.2
-      - 1.0
+      - 1.64
+      - 2.4
+      - 2.88
+      - 2.8
+      - 2.2
       fcf:
-      - -0.145
+      - -0.146
       - -0.159
       - -0.108
       - 0.097
-      - 0.462
-      - 1.028
-      - 1.75
-      - 2.62
-      - 3.57
-      - 4.535
+      - 0.434
+      - 1.276
+      - 2.808
+      - 5.28
+      - 8.36
+      - 11.67
       cash: 0.83
       net_debt: 0.0
-      raise_total: 0.15
+      raise_total: 1.35
       dilution_pct: 0
-      final_shares: 574
+      final_shares: 580
       distress: 12.0
     chart_data:
       raises:
       - 0.15
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
+      - 0.3
+      - 0.4
+      - 0.3
+      - 0.2
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
       raise_prices:
-      - 210
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
+      - 210.0
+      - 250.0
+      - 300.0
+      - 350.0
+      - 400.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
       rev_per_unit:
       - 1.0
       - 1.0
@@ -749,64 +741,58 @@ weighting_rationale:
 - label: Base 35%
   body: 'Neutron works; #2 + Space Systems prime ~18%.'
 - label: Bull 22%
-  body: Reusable Neutron scales; top-3 + constellations.
+  body: Reusable Neutron scales; top-3 + owned constellation begins.
 - label: Ultra Bull 8%
-  body: SpaceX-scale prime by 2035 — still below spot.
+  body: Starlink-style constellation; ~$213B smaller-SpaceX — clears spot.
 appendix:
   pushback:
   - label: Best-capitalized new-space name.
     body: $0.83B cash + $1.85B backlog + ATM access; far more de-risked than pre-revenue peers.
   - label: Space Systems is the hidden engine.
-    body: The majority of revenue is components/satellites, not launch — diversified, growing, and sticky
-      (designed-in).
+    body: The majority of revenue is components/satellites, not launch — diversified, growing, and sticky (designed-in).
   - label: Neutron is optionality, not the whole thesis.
     body: Even modeling Neutron conservatively, Space Systems alone compounds to a real business.
   - label: Reusability could reset the cost curve.
-    body: If Neutron lands reuse economics, the bull launch-share path opens — the single biggest swing
-      factor.
+    body: If Neutron lands reuse economics, the bull launch-share path opens — the single biggest swing factor.
   - label: Backlog visibility.
     body: $1.85B backlog (+73% YoY) gives unusual revenue visibility for a 'young' name.
   triggers:
   - label: Bull validation
-    body: Neutron reaches orbit on schedule (Q4'26)  ·  reuse demonstrated by FY27  ·  Space Systems >
-      $1B annual run-rate
+    body: Neutron reaches orbit on schedule (Q4'26)  ·  reuse demonstrated by FY27  ·  Space Systems > $1B annual run-rate
   - label: Bear validation
-    body: Neutron slips beyond FY27  ·  gross margin stalls < 35%  ·  Space Systems growth decelerates
-      < 20%
+    body: Neutron slips beyond FY27  ·  gross margin stalls < 35%  ·  Space Systems growth decelerates < 20%
   - label: Reframe needed
-    body: If reusable medium-lift cadence approaches Falcon 9 economics, the launch-share ceiling lifts
-      materially — revisit the bull tam_share
+    body: If reusable medium-lift cadence approaches Falcon 9 economics, the launch-share ceiling lifts materially — revisit
+      the bull tam_share
 glossary:
 - term: Electron
   definition: 'RKLB''s small-lift (~300kg) orbital rocket; the established #2 to SpaceX by launch count.'
 - term: Neutron
-  definition: RKLB's reusable medium-lift (~13t) rocket targeting a Q4 2026 first launch; the core bull
-    catalyst.
+  definition: RKLB's reusable medium-lift (~13t) rocket targeting a Q4 2026 first launch; the core bull catalyst.
 - term: Space Systems
-  definition: 'RKLB''s non-launch segment: satellites, star trackers, solar, separation systems, components
-    — the majority of revenue.'
+  definition: 'RKLB''s non-launch segment: satellites, star trackers, solar, separation systems, components — the majority
+    of revenue.'
 - term: Backlog
   definition: Contracted future revenue not yet recognized; RKLB's was $1.85B (+73% YoY) at FY25.
 - term: Sales-to-capital (s2c)
-  definition: 'Damodaran reinvestment efficiency: incremental revenue per dollar of reinvested capital.
-    Higher = more capital-efficient growth.'
+  definition: 'Damodaran reinvestment efficiency: incremental revenue per dollar of reinvested capital. Higher = more capital-efficient
+    growth.'
 competitive:
-  arena: Space launch + space systems — Rocket Lab (Electron small-lift, Neutron medium-lift reusable
-    coming, vertically-integrated Space Systems) vs SpaceX (dominant), Firefly, Stoke Space, ULA/Blue
-    Origin; the race to become a vertically-integrated space prime.
+  arena: Space launch + space systems — Rocket Lab (Electron small-lift, Neutron medium-lift reusable coming, vertically-integrated
+    Space Systems) vs SpaceX (dominant), Firefly, Stoke Space, ULA/Blue Origin; the race to become a vertically-integrated
+    space prime.
   lens: power_origination
   powers:
     scale_economies:
       score: 1
-      note: Electron cadence builds a learning curve; Neutron reusability could reset cost, but it is
-        pre-launch.
+      note: Electron cadence builds a learning curve; Neutron reusability could reset cost, but it is pre-launch.
     network_economies:
       score: 1
-      note: Owned-constellation/data flywheel is a future moat, not yet originated.
+      note: Owned-constellation/data flywheel — the ultra-bull second act (§6c.11.1); being originated, not yet established.
     counter_positioning:
       score: 2
-      note: Vertically integrated launch + components + future constellation — few new-space peers can
-        replicate the full stack.
+      note: Vertically integrated launch + components + future constellation — few new-space peers can replicate the full
+        stack.
     switching_costs:
       score: 1
       note: Space Systems components get designed-in (some lock-in); launch is largely contestable.
@@ -815,8 +801,8 @@ competitive:
       note: 'The credible #2 launch brand after SpaceX; strong gov/defense trust.'
     cornered_resource:
       score: 2
-      note: Launch sites/licenses, an acquired vertically-integrated component portfolio, Beck-led engineering
-        talent, Neutron IP.
+      note: Launch sites/licenses, an acquired vertically-integrated component portfolio, Beck-led engineering talent, Neutron
+        IP.
     process_power:
       score: 2
       note: Electron reliability + manufacturing learning curve; a genuine, if narrow, process edge.
@@ -860,8 +846,7 @@ competitive:
     company: leading new-space
     best_rival: fragmented
     verdict: leading
-  takeaway: 'Rocket Lab is originating a genuine vertically-integrated space-prime position — the credible
-    #2 to SpaceX — with real Space Systems scale, a $1.85B backlog, and Neutron optionality. But it lags
-    SpaceX by an order of magnitude on launch cadence/reusability, and Neutron is unproven; the window
-    is open as the #2, but SpaceX''s cost-and-scale gravity well is the falsifier the whole bull case
-    must clear.'
+  takeaway: 'Rocket Lab is originating a genuine vertically-integrated space-prime position — the credible #2 to SpaceX —
+    with real Space Systems scale, a $1.85B backlog, and Neutron optionality. But it lags SpaceX by an order of magnitude
+    on launch cadence/reusability, and Neutron is unproven; the window is open as the #2, but SpaceX''s cost-and-scale gravity
+    well is the falsifier the whole bull case must clear.'

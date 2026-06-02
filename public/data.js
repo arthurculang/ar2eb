@@ -8482,7 +8482,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
-      "size": "371 KB",
+      "size": "373 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -8495,29 +8495,29 @@ const MEMOS = [
       "asOf": "May 31, 2026 close"
     },
     "expected": {
-      "fair": 21.64,
-      "deltaPct": -84.8
+      "fair": 52.04,
+      "deltaPct": -63.4
     },
     "compound": [
       {
         "y": 5,
-        "value": 33.25,
-        "mult": 0.23
+        "value": 79.31,
+        "mult": 0.56
       },
       {
         "y": 10,
-        "value": 51.11,
-        "mult": 0.36
+        "value": 120.92,
+        "mult": 0.85
       },
       {
         "y": 15,
-        "value": 78.62,
-        "mult": 0.55
+        "value": 184.42,
+        "mult": 1.3
       },
       {
         "y": 20,
-        "value": 121.0,
-        "mult": 0.85
+        "value": 281.36,
+        "mult": 1.98
       }
     ],
     "taxonomy": {
@@ -8577,29 +8577,29 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 22,
-        "price": 36.37,
-        "headline": "Neutron scales; top-3 + constellations.",
-        "why": "A chain: Neutron reusability works AND captures share AND Space Systems scales AND constellation economics materialize. Each plausible at 50-70%; jointly ~22%. This is a real, fundable trajectory — RKLB has the balance sheet and backlog — but it's conjunctive.",
+        "price": 82.02,
+        "headline": "Neutron scales; owned-constellation second act begins.",
+        "why": "A chain: Neutron reusability works AND captures share AND Space Systems scales AND an owned constellation begins generating recurring revenue. Each plausible at 50-70%; jointly ~22%. RKLB has the balance sheet, backlog, and vertical integration — but it is conjunctive.",
         "what": [
-          "The bull: Neutron's reusability lands RKLB a real share of medium-lift, Space Systems becomes a top-tier prime, and RKLB begins owning/operating constellations (recurring, higher-margin revenue). Revenue compounds toward ~$10.5B by FY35 at a ~23% operating margin.",
-          "Minimal dilution; strong self-funding. DCF ~$37/share — and still ~74% below spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you have to extend the horizon or believe in multiple expansion."
+          "The bull: Neutron's reusability lands RKLB real medium-lift share, Space Systems becomes a top-tier prime, AND RKLB begins operating its own constellation — recurring, higher-margin data/services revenue layered on launch+systems. Revenue compounds toward ~$16.5B by FY35 at a ~31% blended operating margin.",
+          "Minimal dilution; strong self-funding. DCF ~$82/share — still ~42% below spot, but the owned-constellation second act is now visible in the numbers, not just the story. The launch business is the wedge; the constellation is the business."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 8,
-        "price": 105.65,
-        "headline": "The space prime; SpaceX-scale by 2035.",
-        "why": "Tail of tails: every bull condition hits AND RKLB reaches SpaceX-scale AND earns a premium platform multiple. Individually 50-65%; jointly ~8%. The genuine asymmetric upside — and notably it still falls short of spot, which is the memo's central finding.",
+        "price": 360.14,
+        "headline": "Starlink-style constellation; smaller-SpaceX by 2035.",
+        "why": "Tail of tails: every bull condition hits AND RKLB originates an owned constellation at platform scale AND earns a platform terminal as the network-economies Power lands. Individually 50-65%; jointly ~8%. The Starlink analog is the anchor; the §6d constellation lead/lag metrics are the falsifiers.",
         "what": [
-          "The tail: RKLB becomes a vertically-integrated space prime at SpaceX-ish scale — Neutron a workhorse, Space Systems dominant, owned constellations throwing off recurring revenue. Revenue reaches ~$20.5B by FY35 at a ~27% operating margin, with a premium terminal multiple for a dominant platform.",
-          "Even this — a genuine 'next-prime' outcome — produces a DCF of ~$108/share, still ~26% below today's $142. To justify spot you must believe in something richer than a $20B-revenue space prime by 2035, or value beyond the 10-year window. That is the honest framing of what the market is paying for."
+          "The tail (the second act): RKLB originates a Starlink-style owned constellation on top of a vertically-integrated launch+systems prime — recurring data/services revenue at platform margins. Revenue reaches ~$36.5B by FY35 at a ~38% blended margin, with a platform terminal reflecting the originated network-economies Power (§6d).",
+          "DCF ~$367/share — equity ~$213B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX's ~23x private mark, most of which is Starlink). The genuine exponential tail, and it finally clears spot (+159%): the value is the constellation, not the rockets."
         ]
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 35 / Bull 22 / Ultra Bull 8. Spot price reference: May 31, 2026 close.",
-    "thesis": "Rocket Lab trades at ~$81B against $602M FY25 revenue (+38%) and a $1.85B backlog (+73%) — ~135x sales. Two engines: Electron (the established #2 small-lift launcher) plus Neutron (a reusable medium-lift vehicle targeting a Q4 2026 first launch after a stage-1 tank-test failure), and a larger vertically-integrated Space Systems segment with a path to owned constellations. The young-company DCF asks what mature scale, prime-style margins, and Neutron-stumble probability are plausible over ten years. Five scenarios, weighted — and the finding is stark: even an aggressive ultra-bull (a ~$20B-revenue space prime by 2035) lands below spot.",
+    "thesis": "Rocket Lab trades at ~$81B on $602M FY25 revenue — ~135x sales. Electron (#2 small-lift) + Neutron (reusable medium-lift, Q4 2026 debut) + a vertically-integrated Space Systems segment with a path to owned constellations. The DCF asks what scale, prime margins, and — in the upper scenarios — a Starlink-style constellation second act are plausible over a decade. The finding: launch+systems alone is priced beyond ten years; only if RKLB originates an owned constellation does the ultra-bull clear spot (+159%, a ~$213B smaller-SpaceX) — even then the modal base leaves the weighted ~-63%: the market prices near-certain success.",
     "historicalPrices": {
       "xMin": -4.5,
       "ipoMarker": "SPAC Aug '21",
@@ -8669,11 +8669,11 @@ const MEMOS = [
       },
       {
         "label": "Bull 22%",
-        "body": "Reusable Neutron scales; top-3 + constellations."
+        "body": "Reusable Neutron scales; top-3 + owned constellation begins."
       },
       {
         "label": "Ultra Bull 8%",
-        "body": "SpaceX-scale prime by 2035 — still below spot."
+        "body": "Starlink-style constellation; ~$213B smaller-SpaceX — clears spot."
       }
     ],
     "page3": {
@@ -8719,8 +8719,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 120,
       "weighted": {
-        "expected": 21.64,
-        "upsidePct": -84.8
+        "expected": 52.04,
+        "upsidePct": -63.4
       },
       "market": {
         "marketCapBillion": 81.4,
@@ -9214,13 +9214,13 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.22,
-          "expectedPerShare": 36.37,
+          "expectedPerShare": 82.02,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "tam_share": 8.8,
+            "tam_share": 13.75,
             "p_fail": 3,
-            "s2c": 2.3
+            "s2c": 2.4
           },
           "dcfPath": {
             "rev_path": [
@@ -9228,24 +9228,24 @@ const MEMOS = [
               1.35,
               2.05,
               3.0,
-              4.2,
-              5.6,
-              7.1,
-              8.5,
-              9.6,
-              10.5
+              4.5,
+              6.5,
+              9.0,
+              12.0,
+              14.5,
+              16.5
             ],
             "op_margin": [
               -0.03,
               0.04,
               0.09,
               0.13,
-              0.17,
-              0.195,
-              0.21,
+              0.18,
               0.22,
-              0.225,
-              0.23
+              0.26,
+              0.29,
+              0.3,
+              0.31
             ],
             "wacc_path": [
               0.11,
@@ -9259,92 +9259,92 @@ const MEMOS = [
               0.092,
               0.09
             ],
-            "term_g": 0.045,
+            "term_g": 0.05,
             "nopat": [
               -0.026,
               0.054,
               0.184,
               0.39,
-              0.714,
-              1.092,
-              1.491,
-              1.87,
-              2.16,
-              2.415
+              0.81,
+              1.43,
+              2.34,
+              3.48,
+              4.35,
+              5.115
             ],
             "reinvest": [
-              0.121,
-              0.204,
-              0.304,
-              0.413,
-              0.522,
-              0.609,
-              0.652,
-              0.609,
-              0.478,
-              0.391
+              0.116,
+              0.196,
+              0.292,
+              0.396,
+              0.625,
+              0.833,
+              1.042,
+              1.25,
+              1.042,
+              0.833
             ],
             "fcf": [
-              -0.147,
-              -0.15,
-              -0.12,
-              -0.023,
-              0.192,
-              0.483,
-              0.839,
-              1.261,
-              1.682,
-              2.024
+              -0.142,
+              -0.142,
+              -0.107,
+              -0.006,
+              0.185,
+              0.597,
+              1.298,
+              2.23,
+              3.308,
+              4.282
             ],
             "cash": 0.83,
             "net_debt": 0.0,
-            "raise_total": 0.4,
+            "raise_total": 1.0,
             "dilution_pct": 0,
-            "final_shares": 575,
+            "final_shares": 580,
             "distress": 9.0,
             "pv_fcf": [
-              -0.132,
-              -0.122,
-              -0.088,
-              -0.015,
-              0.116,
-              0.265,
-              0.42,
-              0.577,
-              0.705,
-              0.778
+              -0.128,
+              -0.115,
+              -0.079,
+              -0.004,
+              0.112,
+              0.328,
+              0.65,
+              1.021,
+              1.387,
+              1.647
             ],
-            "sum_pv_fcf": 2.5,
-            "terminal_value": 47.0,
-            "pv_terminal": 18.08,
-            "op_ev": 20.58,
-            "total_equity": 21.41,
-            "dcf_per_share": 37.23
+            "sum_pv_fcf": 4.82,
+            "terminal_value": 112.4,
+            "pv_terminal": 43.23,
+            "op_ev": 48.05,
+            "total_equity": 48.88,
+            "dcf_per_share": 84.28
           },
           "chartData": {
             "raises": [
               0.2,
+              0.3,
+              0.3,
               0.2,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
             ],
             "raise_prices": [
-              180,
-              180,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
+              180.0,
+              200.0,
+              220.0,
+              240.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
             ],
             "rev_per_unit": [
               1.0,
@@ -9375,11 +9375,11 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.08,
-          "expectedPerShare": 105.65,
+          "expectedPerShare": 360.14,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 17.1,
+            "tam_share": 30.42,
             "p_fail": 2,
             "s2c": 2.5
           },
@@ -9389,24 +9389,24 @@ const MEMOS = [
               1.55,
               2.6,
               4.1,
-              6.2,
-              8.8,
-              11.8,
-              15.0,
-              18.0,
-              20.5
+              6.7,
+              10.8,
+              16.8,
+              24.0,
+              31.0,
+              36.5
             ],
             "op_margin": [
               -0.02,
               0.06,
               0.12,
               0.17,
-              0.21,
-              0.235,
-              0.25,
-              0.26,
-              0.265,
-              0.27
+              0.22,
+              0.27,
+              0.31,
+              0.34,
+              0.36,
+              0.38
             ],
             "wacc_path": [
               0.105,
@@ -9420,92 +9420,92 @@ const MEMOS = [
               0.087,
               0.085
             ],
-            "term_g": 0.05,
+            "term_g": 0.06,
             "nopat": [
               -0.018,
               0.093,
               0.312,
               0.697,
-              1.302,
-              2.068,
-              2.95,
-              3.9,
-              4.77,
-              5.535
+              1.474,
+              2.916,
+              5.208,
+              8.16,
+              11.16,
+              13.87
             ],
             "reinvest": [
               0.127,
               0.252,
               0.42,
               0.6,
-              0.84,
               1.04,
-              1.2,
-              1.28,
-              1.2,
-              1.0
+              1.64,
+              2.4,
+              2.88,
+              2.8,
+              2.2
             ],
             "fcf": [
-              -0.145,
+              -0.146,
               -0.159,
               -0.108,
               0.097,
-              0.462,
-              1.028,
-              1.75,
-              2.62,
-              3.57,
-              4.535
+              0.434,
+              1.276,
+              2.808,
+              5.28,
+              8.36,
+              11.67
             ],
             "cash": 0.83,
             "net_debt": 0.0,
-            "raise_total": 0.15,
+            "raise_total": 1.35,
             "dilution_pct": 0,
-            "final_shares": 574,
+            "final_shares": 580,
             "distress": 12.0,
             "pv_fcf": [
-              -0.131,
+              -0.132,
               -0.13,
               -0.08,
               0.066,
-              0.286,
-              0.58,
-              0.905,
-              1.244,
-              1.559,
-              1.825
+              0.268,
+              0.72,
+              1.452,
+              2.506,
+              3.651,
+              4.697
             ],
-            "sum_pv_fcf": 6.12,
-            "terminal_value": 136.05,
-            "pv_terminal": 54.76,
-            "op_ev": 60.88,
-            "total_equity": 61.71,
-            "dcf_per_share": 107.51
+            "sum_pv_fcf": 13.02,
+            "terminal_value": 494.81,
+            "pv_terminal": 199.15,
+            "op_ev": 212.17,
+            "total_equity": 213.0,
+            "dcf_per_share": 367.24
           },
           "chartData": {
             "raises": [
               0.15,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
+              0.3,
+              0.4,
+              0.3,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
             ],
             "raise_prices": [
-              210,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
+              210.0,
+              250.0,
+              300.0,
+              350.0,
+              400.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
             ],
             "rev_per_unit": [
               1.0,
@@ -9545,7 +9545,7 @@ const MEMOS = [
           },
           "networkEconomies": {
             "score": 1,
-            "note": "Owned-constellation/data flywheel is a future moat, not yet originated."
+            "note": "Owned-constellation/data flywheel — the ultra-bull second act (§6c.11.1); being originated, not yet established."
           },
           "counterPositioning": {
             "score": 2,
@@ -9704,7 +9704,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "oklo-memo__v001__2026-05-31_20-03.pdf",
-      "size": "379 KB",
+      "size": "380 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -9717,29 +9717,29 @@ const MEMOS = [
       "asOf": "May 31, 2026 close"
     },
     "expected": {
-      "fair": 24.49,
-      "deltaPct": -63.6
+      "fair": 31.58,
+      "deltaPct": -53.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 41.48,
-        "mult": 0.62
+        "value": 53.17,
+        "mult": 0.79
       },
       {
         "y": 10,
-        "value": 70.34,
-        "mult": 1.05
+        "value": 89.58,
+        "mult": 1.33
       },
       {
         "y": 15,
-        "value": 119.36,
-        "mult": 1.78
+        "value": 151.07,
+        "mult": 2.25
       },
       {
         "y": 20,
-        "value": 202.73,
-        "mult": 3.02
+        "value": 254.96,
+        "mult": 3.79
       }
     ],
     "taxonomy": {
@@ -9813,17 +9813,17 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 8,
-        "price": 98.02,
-        "headline": "~13 GW AI-nuclear prime by 2034.",
-        "why": "Tail of tails: every bull condition hits AND Oklo reaches grid-scale AND earns a premium platform multiple as the AI-power category winner. Individually 50-65%; jointly ~8%. The genuine asymmetric upside — and the one scenario that clears spot.",
+        "price": 186.66,
+        "headline": "13 GW power + HALEU fuel monopoly.",
+        "why": "Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly (a cornered resource) is the §6d-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.",
         "what": [
-          "The tail: Oklo becomes the dominant build-own-operate AI-baseload-nuclear prime — the ~14 GW pipeline largely converts, factory production drives capex down, and Oklo operates ~13 GW by 2034 throwing off recurring PPA revenue (~$8.8B at a ~66% operating margin) with a premium platform terminal.",
-          "Even this — a genuine 'nuclear-prime-for-AI' outcome — produces a DCF of ~$100/share, ~+49% above today's $67. To justify spot on the weighted math you must lean heavily on this ~8% tail. That is the honest framing of what the market is paying for."
+          "The tail (the second act): Oklo becomes the dominant AI-baseload-power IPP (~13 GW) AND originates a HALEU fuel-recycling monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource Power (§6d).",
+          "DCF ~$191/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +184% above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn't capture."
         ]
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 34 / Bull 23 / Ultra Bull 8. Spot price reference: May 31, 2026 close.",
-    "thesis": "Oklo trades at ~$12B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline. It is a build-own-operate nuclear IPP — Aurora fast reactors sold as power via PPAs to AI data centers, first power targeted 2027-28, the only commercial advanced-fission site under construction. The young-company DCF asks what deployed-GW scale, IPP margins, and dilution are plausible over a decade. The finding is stark: even a successful base (~3 GW) and a strong bull (~7 GW) sit below spot; only an ~8% ultra-bull clears it.",
+    "thesis": "Oklo trades at ~$12B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the only commercial advanced-fission site under construction). The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly, +184%) clears it — the capital-intensive base leaves the weighted ~-53%.",
     "historicalPrices": {
       "xMin": -2.2,
       "ipoMarker": "SPAC May '24",
@@ -9901,7 +9901,7 @@ const MEMOS = [
       },
       {
         "label": "Ultra Bull 8%",
-        "body": "~13 GW AI-nuclear prime — only case above spot."
+        "body": "13 GW + HALEU fuel monopoly; +184%, clears spot."
       }
     ],
     "page3": {
@@ -9947,8 +9947,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 120.0,
       "weighted": {
-        "expected": 24.49,
-        "upsidePct": -63.6
+        "expected": 31.58,
+        "upsidePct": -53.0
       },
       "market": {
         "marketCapBillion": 12.1,
@@ -10603,13 +10603,13 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.08,
-          "expectedPerShare": 98.02,
+          "expectedPerShare": 186.66,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 7.33,
+            "tam_share": 14.42,
             "p_fail": 3,
-            "s2c": 0.58
+            "s2c": 0.6
           },
           "dcfPath": {
             "rev_path": [
@@ -10617,98 +10617,98 @@ const MEMOS = [
               0.12,
               0.3,
               0.65,
-              1.25,
-              2.2,
-              3.6,
-              5.4,
-              7.2,
-              8.8
+              1.55,
+              3.2,
+              6.1,
+              9.9,
+              13.7,
+              17.3
             ],
             "op_margin": [
               -3.5,
               -1.5,
               -0.3,
-              0.12,
-              0.34,
-              0.48,
-              0.57,
-              0.62,
-              0.65,
-              0.66
+              0.15,
+              0.35,
+              0.5,
+              0.58,
+              0.63,
+              0.66,
+              0.68
             ],
             "wacc_path": [
               0.13,
               0.127,
               0.124,
-              0.122,
-              0.119,
-              0.116,
-              0.113,
-              0.111,
-              0.108,
+              0.121,
+              0.118,
+              0.115,
+              0.112,
+              0.109,
+              0.107,
               0.105
             ],
-            "term_g": 0.05,
+            "term_g": 0.055,
             "nopat": [
               -0.14,
               -0.18,
               -0.09,
-              0.078,
-              0.425,
-              1.056,
-              2.052,
-              3.348,
-              4.68,
-              5.808
+              0.098,
+              0.542,
+              1.6,
+              3.538,
+              6.237,
+              9.042,
+              11.764
             ],
             "reinvest": [
-              0.069,
-              0.138,
-              0.31,
-              0.603,
-              1.034,
-              1.638,
-              2.414,
-              3.103,
-              3.103,
-              2.759
+              0.067,
+              0.133,
+              0.3,
+              0.583,
+              1.5,
+              2.75,
+              4.833,
+              6.333,
+              6.333,
+              6.0
             ],
             "fcf": [
-              -0.209,
-              -0.318,
-              -0.4,
-              -0.525,
-              -0.609,
-              -0.582,
-              -0.362,
-              0.245,
-              1.577,
-              3.049
+              -0.207,
+              -0.313,
+              -0.39,
+              -0.486,
+              -0.958,
+              -1.15,
+              -1.295,
+              -0.096,
+              2.709,
+              5.764
             ],
             "cash": 2.54,
             "net_debt": 0.0,
-            "raise_total": 9.5,
+            "raise_total": 11.0,
             "dilution_pct": 20,
-            "final_shares": 216,
+            "final_shares": 225,
             "distress": 40.0,
             "pv_fcf": [
-              -0.185,
-              -0.25,
-              -0.279,
-              -0.327,
-              -0.339,
-              -0.29,
-              -0.162,
-              0.099,
-              0.574,
-              1.004
+              -0.183,
+              -0.246,
+              -0.272,
+              -0.303,
+              -0.534,
+              -0.575,
+              -0.582,
+              -0.039,
+              0.992,
+              1.91
             ],
-            "sum_pv_fcf": -0.15,
-            "terminal_value": 58.21,
-            "pv_terminal": 19.17,
-            "op_ev": 19.02,
-            "total_equity": 21.56,
-            "dcf_per_share": 99.81
+            "sum_pv_fcf": 0.17,
+            "terminal_value": 121.62,
+            "pv_terminal": 40.31,
+            "op_ev": 40.48,
+            "total_equity": 43.02,
+            "dcf_per_share": 191.2
           },
           "chartData": {
             "raises": [
@@ -10717,9 +10717,9 @@ const MEMOS = [
               1.0,
               1.5,
               2.0,
+              2.5,
               2.0,
               1.5,
-              1.0,
               0.0,
               0.0
             ],
@@ -10789,7 +10789,7 @@ const MEMOS = [
           },
           "corneredResource": {
             "score": 2,
-            "note": "DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor IP — a genuine first-mover physical lead."
+            "note": "DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor IP — a genuine first-mover physical lead. In the ultra-bull this extends to a HALEU fuel-recycling monopoly — the §6c.11.1 second act."
           },
           "processPower": {
             "score": 1,
@@ -13390,7 +13390,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "txg-memo__v001__2026-05-31_21-46.pdf",
-      "size": "—",
+      "size": "273 KB",
       "priorVersions": []
     },
     "metrics": {

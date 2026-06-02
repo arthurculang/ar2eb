@@ -102,9 +102,12 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   (thesis length) or card-headline-driven, NOT structural** — trim the ticker's own copy to
   ~RKLB length (+10–15px clearance), never the shared layout, so the other tickers stay
   byte-identical and the baseline stays green.
-  - **Findings (entry price vs the scenario distribution drives the sign):** RKLB **−85%**,
-    OKLO **−64%** (richly-priced pre/early-revenue moonshots, priced beyond a decade — only
-    the ~8% ultra-bull clears spot); GRAL **+9%** (fairly valued — the modal FDA+Medicare
+  - **Findings (entry price vs the scenario distribution drives the sign):** RKLB **−63%**,
+    OKLO **−53%** (richly-priced pre/early-revenue moonshots; *post-v030 second-act retrofit* —
+    were −85%/−64% on the old linear-ultra method, and even a Starlink-style constellation
+    (RKLB) / HALEU-fuel-monopoly (OKLO) ultra-bull leaves them deeply negative, because the
+    modal base sits 90%+ below spot — the market prices near-certain success); GRAL **+9%**
+    (fairly valued — the modal FDA+Medicare
     success ≈ spot, post-NHS-miss; tiny ~43M float amplifies both tails); ACHR **+18%**
     (Joby's eVTOL fundamentals at ~half the price → the 15% cert-success+defense tail goes
     positive-EV, vs Joby −20%); TXG **−49%**.
@@ -112,6 +115,17 @@ Present decisions as a **table** so I can approve in bulk. Columns:
     cash-generative, net-cash (p_fail≈0), razor/blade consumables, public peer comps → a
     mature-company DCF (Power **Audit** lens, Gordon terminal, no dilution). The mature engine
     is verified against ZM's shipped numbers and is in the toolkit for Batch B.
+- **Spec v030 — `ultra_bull` as a Power-gated second-act (DONE; §6c.11.1).** Fixed a structural
+  short-vol bias: the ultra-bulls were linear lifts (`base × bigger TAM share`), not exponential
+  second acts (AWS/Starlink/NVIDIA-datacenter). New rule: the upper scenarios may carry a
+  second-act revenue stream (not in base TAM) + a platform terminal, **gated on the §6d Power
+  Origination** (durable Power ≥2 + named falsifier), analog-anchored (sanity-checked vs the
+  analog's *realized* financials, not a TAM %). **Retrofitted RKLB + OKLO** (the two where a
+  Power is genuinely being originated; ACHR/GRAL are cheap-options, left alone). The `/tmp`
+  retrofit scripts (`retrofit_rklb.py`, `retrofit_oklo.py`) patch only `bull`/`ultra_bull` +
+  thesis. *Watch-out:* a second-act ultra makes the ultra card / forward-chart taller — re-trim
+  Page-1 prose; OKLO lands at −1px (within the 2px STRICT tolerance, passes; chart-bound, not
+  prose-trimmable without touching the shared layout).
 - **Wave 1 — Batch B (mature) NEXT:** LULU, YETI, ILMN, ABNB, UBER, DASH — mature-company
   DCFs, audit lens, fundamentals-only. (Per-wave review digest after the batch.)
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
