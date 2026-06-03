@@ -126,9 +126,12 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   thesis. *Watch-out:* a second-act ultra makes the ultra card / forward-chart taller — re-trim
   Page-1 prose; OKLO lands at −1px (within the 2px STRICT tolerance, passes; chart-bound, not
   prose-trimmable without touching the shared layout).
-- **Wave 1 — Batch B (mature) MODELED 2026-06-01; memos NOT yet shipped.** All 6 researched
-  (web subagents) + modeled through the mature engine (now preserved in `scripts/_models/`,
-  verified vs ZM), audit lens. **Findings (same entry-price-vs-distribution logic as Batch A —
+- **Wave 1 — Batch B (mature) SHIPPED & LIVE (2026-06-03): LULU, ABNB, UBER, YETI, DASH, ILMN.**
+  All 6 researched (web subagents) + modeled through the mature engine (preserved in
+  `scripts/_models/`, verified vs ZM) + authored via the reusable builder (`gen_b1.py build()`,
+  driven by `gen_b2.py`/`gen_b3.py`) → shipped 6-page memos, audit lens. **`visual_baseline.json`
+  now 20 tickers / 120 pages (`--check` clean); validator green.** **Findings (same
+  entry-price-vs-distribution logic as Batch A —
   beaten-down quality screens cheap, rallied names expensive):** **LULU +65%** (de-rated ~60% to
   ~10× FCF; modal stabilization overshoots the decline the market prices — even a real
   brand-impairment ultra_bear is −34%); **UBER +48%** (~14× EV/FCF; market over-discounts the AV
@@ -137,8 +140,9 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   + SBC dilution offsets 20%+ growth); **ILMN −30%** (rallied ~80% to near highs, priced for a
   re-acceleration the base doesn't deliver — the TXG mirror). **Watchlist:** UBER → `fcf-megacap`;
   ILMN → `fcf-megacap` (debatable vs ++growth); ABNB/DASH/LULU/YETI → `fcf-plus-plus-growth`.
-  **NEXT (ship):** author the 6 intakes (clone the TXG mature generator — `dcf_type:
-  mature_company`, growth-rate `rev_path`, fcf=rev·fcf_margin, Power-Audit `competitive:` block,
-  ZM-style chart_reference/page3_chart_config) → scaffold → validate → render under STRICT_LAYOUT
-  (trim Page-1 thesis ~RKLB length) → ship → baseline. Then the **Wave-1 PR to main**.
+  **Watchlist (shipped):** UBER → `fcf-megacap` (tier-less); ILMN/ABNB/DASH/LULU/YETI →
+  `fcf-plus-plus-growth`. *Layout note:* the 5-scenario mature Page 1 lands at −1px clearance
+  (within STRICT's 2px tolerance → passes; cards/chart-bound, not prose-trimmable) — acceptable,
+  like OKLO. **NEXT: the Wave-1 PR to main** (11 new/retrofit memos: RKLB, OKLO, ACHR, GRAL, TXG
+  + the 6 mature; spec v030; all on `claude/ecstatic-newton-YKOJJ`, not yet merged).
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
