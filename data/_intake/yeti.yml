@@ -1,0 +1,515 @@
+# YETI — YETI Holdings (NYSE) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: YETI
+company: YETI Holdings
+exchange: NYSE
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 48.0
+market:
+  market_cap_billion: 3.6
+  shares_outstanding_million: 75.7
+  cash_billion: 0.114
+  net_debt_billion: 0.0
+  extras:
+  - ~$114M net cash; ~76M shares; $500M buyback authorization (no dividend)
+  - Revenue $1.87B FY25 (+2% trough; Q1'26 +8%); ~14% adj op margin (tariff-compressed), ~$212M FCF
+  - Stanley/Owala/dupe pressure in US drinkware; China <5% of COGS post de-risking
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med
+  themes:
+  - premium-consumer-brands
+  primary_theme: premium-consumer-brands
+central_question: Is YETI a durable premium brand re-accelerating via international + new categories — or a saturated, fad-cyclical
+  US drinkware brand whose +2% trough caps the multiple?
+thesis: 'YETI trades at ~$3.6B (≈$48/sh) — ~17x FCF on $1.87B revenue, net cash, a $500M buyback. Growth troughed at +2% in
+  FY2025 (US drinkware saturation + Stanley/Owala/dupes) and re-accelerated to +8% in Q1''26 on wholesale + international;
+  tariffs compressed margins (~16.5%->14.4% adj op) but China is now <5% of COGS. The mature DCF asks whether international
+  (20%->25% target) + new categories (bags via Mystery Ranch, cookware) + margin recovery offset the saturating core. The
+  finding: roughly fair — the modal growth/margin-recovery path lands near spot.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 1.41
+  - 1.595
+  - 1.658
+  - 1.834
+  - 1.868
+  history_fcf:
+  - 0.1
+  - 0.05
+  - 0.2
+  - 0.18
+  - 0.212
+  history_ev_rev:
+  - 5.0
+  - 3.5
+  - 2.5
+  - 2.5
+  - 1.9
+page3_chart_config:
+  segment_a: Drinkware
+  segment_b: Coolers & Equipment
+  hist_ent_split:
+  - 0.62
+  - 0.61
+  - 0.6
+  - 0.59
+  - 0.58
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  52/53-week fiscal year  ·  FY2025 (Jan'26) + Q1'26 results
+  sources: 'Sources: YETI FY2025 results (year ended Jan 3, 2026; revenue $1.87B, FCF $212M, net cash ~$114M), Q1''26 (+8.3%).
+    Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal. EV/FCF vs Helen of Troy (Hydro Flask)
+    + Newell.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.15
+    expected_per_share: 23.15
+    headline: Fad fades; dupes win; US drinkware shrinks.
+    narrative:
+    - The viral tumbler trend rotates away (Stanley->Owala->next), RTIC/private-label dupes arbitrage the premium, and the
+      international/category bets don't offset a shrinking US core. Revenue declines; margins stay tariff-pressured.
+    - DCF ~$23 (-52%) — a fad-exposed brand losing its core earns a distressed multiple.
+    probability_rationale: 'The fad-cyclical bear: drinkware is ~58% of sales and brand heat rotates fast. 15% weight on the
+      trend turning against YETI.'
+    dcf_metrics:
+      cagr_5y: -1.0
+      wacc: 0.11
+    dcf_path:
+      rev_b: 1.868
+      rev_path:
+      - -0.02
+      - -0.02
+      - -0.01
+      - 0.0
+      - 0.0
+      op_margin:
+      - 0.11
+      - 0.11
+      - 0.12
+      - 0.12
+      - 0.13
+      wacc_path:
+      - 0.11
+      - 0.11
+      - 0.11
+      - 0.11
+      - 0.11
+      term_g: 0.0
+      fcf:
+      - 0.165
+      - 0.161
+      - 0.16
+      - 0.178
+      - 0.178
+      cash: 0.114
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 73
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 1.0
+      - 0.9
+      - 0.8
+      - 0.7
+      - 0.7
+      ev_fcf_multiple:
+      - 9.0
+      - 9.0
+      - 9.0
+      - 9.0
+      - 9.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.3
+    expected_per_share: 38.22
+    headline: US saturated; modest; tariff drag lingers.
+    narrative:
+    - The US core stays saturated and tariffs keep margins below peak; international + categories grow but only enough to
+      keep the total roughly flat-to-low.
+    - DCF ~$38 (-20%) — a dominant-but-stalled brand at ~11x FCF, below today's price.
+    probability_rationale: US drinkware stays saturated and the trend doesn't reverse. 30% weight — the plausible 'stalls'
+      path given the +2% trough.
+    dcf_metrics:
+      cagr_5y: 2.2
+      wacc: 0.1
+    dcf_path:
+      rev_b: 1.868
+      rev_path:
+      - 0.01
+      - 0.02
+      - 0.02
+      - 0.03
+      - 0.03
+      op_margin:
+      - 0.12
+      - 0.13
+      - 0.13
+      - 0.14
+      - 0.14
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.015
+      fcf:
+      - 0.189
+      - 0.212
+      - 0.216
+      - 0.243
+      - 0.25
+      cash: 0.114
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 73
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 1.4
+      - 1.3
+      - 1.2
+      - 1.2
+      - 1.1
+      ev_fcf_multiple:
+      - 11.0
+      - 11.0
+      - 11.0
+      - 11.0
+      - 11.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 51.81
+    headline: International + categories offset US; margin recovers.
+    narrative:
+    - 'The modal path: international (toward 25% of revenue) + bags/cookware offset a stabilizing US core, and margins recover
+      as tariffs annualize and China-sourcing exits. Revenue compounds ~5%.'
+    - DCF ~$52 (+8%) — roughly fair; the growth/margin-recovery the Q1'26 +8% hints at, priced about right.
+    probability_rationale: Requires international + new categories + margin recovery, consistent with Q1'26's +8% and China
+      <5% of COGS. 33% as the central, near-spot outcome.
+    dcf_metrics:
+      cagr_5y: 4.6
+      wacc: 0.095
+    dcf_path:
+      rev_b: 1.868
+      rev_path:
+      - 0.03
+      - 0.05
+      - 0.05
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.13
+      - 0.14
+      - 0.14
+      - 0.15
+      - 0.15
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.02
+      fcf:
+      - 0.212
+      - 0.242
+      - 0.255
+      - 0.29
+      - 0.304
+      cash: 0.114
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 72
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.0
+      - 1.9
+      - 1.8
+      - 1.8
+      - 1.7
+      ev_fcf_multiple:
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.17
+    expected_per_share: 75.07
+    headline: International ramps; bags/cookware traction.
+    narrative:
+    - International scales past 25%, Mystery Ranch bags + cookware become real categories, and margins recover toward mid-teens
+      — the brand proves durable beyond fad-cyclical drinkware.
+    - DCF ~$75 (+56%) — category + geographic diversification re-rates the brand.
+    probability_rationale: International + new categories deliver and margins recover. ~17%; the diversification strategy
+      is credible but unproven at scale.
+    dcf_metrics:
+      cagr_5y: 7.0
+      wacc: 0.09
+    dcf_path:
+      rev_b: 1.868
+      rev_path:
+      - 0.05
+      - 0.08
+      - 0.08
+      - 0.07
+      - 0.07
+      op_margin:
+      - 0.14
+      - 0.15
+      - 0.16
+      - 0.16
+      - 0.17
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.025
+      fcf:
+      - 0.235
+      - 0.275
+      - 0.32
+      - 0.343
+      - 0.393
+      cash: 0.114
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 71
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.6
+      - 2.5
+      - 2.4
+      - 2.3
+      - 2.3
+      ev_fcf_multiple:
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.05
+    expected_per_share: 97.43
+    headline: Durable multi-category global brand.
+    narrative:
+    - YETI becomes a durable multi-category premium-outdoor brand (drinkware + coolers + bags + cookware) with international
+      as a second engine, compounding ~10% at recovered margins.
+    - DCF ~$97 (+103%) — the brand transcends the drinkware fad; ~5% probability.
+    probability_rationale: Full category + geographic diversification works and the brand de-fads. ~5%, the asymmetric upside.
+    dcf_metrics:
+      cagr_5y: 9.4
+      wacc: 0.085
+    dcf_path:
+      rev_b: 1.868
+      rev_path:
+      - 0.07
+      - 0.1
+      - 0.11
+      - 0.1
+      - 0.09
+      op_margin:
+      - 0.15
+      - 0.16
+      - 0.17
+      - 0.17
+      - 0.18
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.025
+      fcf:
+      - 0.26
+      - 0.308
+      - 0.366
+      - 0.403
+      - 0.468
+      cash: 0.114
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 70
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.2
+      - 3.1
+      - 3.0
+      - 2.9
+      - 2.9
+      ev_fcf_multiple:
+      - 17.0
+      - 17.0
+      - 17.0
+      - 17.0
+      - 17.0
+historical_prices:
+  ipo_marker: IPO Oct '18
+  x_min: -7.5
+  points:
+  - - -7.0
+    - 17.0
+  - - -6.0
+    - 30.0
+  - - -5.0
+    - 80.0
+  - - -4.5
+    - 100.0
+  - - -4.0
+    - 55.0
+  - - -3.0
+    - 45.0
+  - - -2.0
+    - 38.0
+  - - -1.0
+    - 30.0
+  - - -0.5
+    - 40.0
+  - - -0.05
+    - 48.0
+weighting_rationale:
+- label: Ultra Bear 15%
+  body: Fad fades; dupes win; ~$23 (-52%).
+- label: Bear 30%
+  body: US saturated; tariff drag; ~$38 (-20%).
+- label: Base 33%
+  body: Intl + categories offset US; ~$52 (+8%).
+- label: Bull 17%
+  body: Intl ramps; bags/cookware; ~$75 (+56%).
+- label: Ultra Bull 5%
+  body: Durable multi-category global brand; ~$97 (+103%).
+appendix:
+  pushback:
+  - label: Net cash, ~$212M FCF, $500M buyback.
+    body: Debt-light, cash-generative, shrinking the float at ~17x FCF — capital return is real.
+  - label: China sourcing de-risked.
+    body: China now <5% of COGS (Vietnam/Philippines/Mexico) — the tariff drag (~$0.35/sh) is largely an annualization headwind,
+      not structural.
+  - label: International is the engine.
+    body: ~20% of revenue growing mid-teens, Japan greenfield (2025), 25%-by-2027 target — a runway the US-saturation view
+      misses.
+  - label: New categories extend the brand.
+    body: Mystery Ranch bags ($9B+ premium-bag TAM) + Butter Pat cookware diversify beyond fad-cyclical drinkware.
+  - label: Q1'26 re-accelerated to +8%.
+    body: Wholesale +19% (best in 3 years) + international suggest the +2% FY25 was a trough, not a new normal.
+  triggers:
+  - label: Bull validation
+    body: international passes 25% of revenue  ·  bags/cookware become reported needle-movers  ·  adj op margin recovers above
+      16%  ·  wholesale rebound sustains
+  - label: Bear validation
+    body: US drinkware stays soft  ·  Owala/Stanley/dupes keep taking share  ·  margins stay tariff-compressed  ·  new categories
+      stall
+  - label: Reframe needed
+    body: if drinkware brand heat structurally rotates away (the fad ends), re-rate the core toward a commodity-housewares
+      multiple
+glossary:
+- term: Drinkware
+  definition: YETI's tumbler/bottle core (~58% of sales, higher margin) — the fad-cyclical, most-contested category.
+- term: Mystery Ranch / Butter Pat
+  definition: '2024 acquisitions: technical bags (premium-bag TAM $9B+) + cast-iron cookware — the new-category diversification
+    bets.'
+- term: Dupes
+  definition: Lower-priced look-alikes (RTIC, private label) + viral challengers (Stanley, Owala) eroding the drinkware premium.
+- term: Branding
+  definition: 'Helmer Power: premium pricing + community/ambassadors + durability reputation — durable in outdoor, contestable
+    in faddish tumblers.'
+- term: FCF margin
+  definition: Free cash flow / revenue (~11% FY25, tariff-compressed); the mature-DCF lever as margins recover.
+competitive:
+  arena: Premium outdoor drinkware + gear — YETI (brand, ~60% DTC, drinkware + coolers + new bags/cookware) vs Stanley, Owala,
+    Hydro Flask (Helen of Troy), RTIC, Newell; defending a premium brand Power in a fad-cyclical core.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 2
+      note: Sourcing/marketing leverage at ~$1.9B revenue; modest vs housewares conglomerates.
+    network_economies:
+      score: 1
+      note: Community/ambassador affinity, not a hard network.
+    counter_positioning:
+      score: 1
+      note: Premium incumbent; dupes counter-position on price.
+    switching_costs:
+      score: 1
+      note: Weak — drinkware is a discretionary, swappable purchase.
+    branding:
+      score: 2
+      note: 'The dominant Power: premium pricing + outdoor credibility — durable in coolers/gear, contestable in viral tumblers.'
+    cornered_resource:
+      score: 2
+      note: Brand IP + design + durability reputation; real but copyable.
+    process_power:
+      score: 1
+      note: Design/sourcing learning curve; modest.
+  dominant_power: branding
+  durability: medium
+  rivals:
+  - name: Stanley (PMI/HAVI)
+    kind: private
+    note: US unit leader; viral surge cooling (~50% search decline 2025).
+    growth:
+    margin:
+    multiple: private
+  - name: Owala
+    kind: private
+    note: Fastest-growing brand (+~60% search); took the viral baton from Stanley.
+    growth:
+    margin:
+    multiple: private
+  - name: Hydro Flask (Helen of Troy)
+    kind: public
+    note: Cleanest public peer; Home/Outdoor segment declining (~-7%).
+    growth: -0.05
+    margin: 0.1
+    multiple: ~9x P/E
+  - name: RTIC / private label
+    kind: private
+    note: Explicit price-dupe of YETI; arbitrages the premium.
+    growth:
+    margin:
+    multiple: private
+  threats:
+  - vector: branding
+    who: Owala / Stanley / dupes
+    falsifier: US drinkware revenue declines while viral share rotates to challengers.
+  - vector: scale_economies
+    who: Tariffs / sourcing
+    falsifier: Margins stay compressed below 14% adj op for 2+ years.
+  - vector: counter_positioning
+    who: Private label / RTIC
+    falsifier: Sustained price competition forces YETI off its full-price model.
+  takeaway: YETI's brand Power is durable in coolers/outdoor gear but genuinely contestable in its fad-cyclical drinkware
+    core (~58% of sales), where viral heat rotates (Stanley->Owala) and dupes arbitrage the premium. International (toward
+    25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~17x FCF
+    the modal growth/margin-recovery path lands near spot — roughly fair, with the sign hinging on whether the +2% FY25 was
+    a trough (Q1'26 +8%) or a new normal.
