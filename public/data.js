@@ -14211,7 +14211,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "lulu-memo__v001__2026-06-03_15-38.pdf",
-      "size": "—",
+      "size": "273 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -15008,6 +15008,1612 @@ const MEMOS = [
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
+  },
+  {
+    "ticker": "ABNB",
+    "slug": "abnb",
+    "company": "Airbnb",
+    "exchange": "NASDAQ",
+    "category": "fcf-plus-plus-growth",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "abnb-memo__v001__2026-06-03_15-44.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$79B",
+      "shares": "650M",
+      "cash": "$9.5B cash, zero debt · ~$9.5B net cash; ~650M diluted shares; ~$3.8B/yr buyback offsets SBC; Revenue $12.24B FY25 (+10%, decel from +40%); 38% FCF margin, $4.6B FCF; ~15x EV/FCF; Experiences/Services relaunch (2025) the swing optionality"
+    },
+    "spot": {
+      "price": 133.0,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 183.95,
+      "deltaPct": 38.3
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 281.78,
+        "mult": 2.12
+      },
+      {
+        "y": 10,
+        "value": 431.91,
+        "mult": 3.25
+      },
+      {
+        "y": 15,
+        "value": 662.45,
+        "mult": 4.98
+      },
+      {
+        "y": 20,
+        "value": 1016.71,
+        "mult": 7.64
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "Med-High",
+      "themes": [
+        "travel-mobility-services"
+      ],
+      "themeNames": [
+        "Travel & Mobility Services"
+      ],
+      "primaryTheme": "travel-mobility-services",
+      "primaryThemeName": "Travel & Mobility Services",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "question": "Does Airbnb's ~15x EV/FCF fairly price a decelerating but FCF-gushing travel network — or is the Experiences/Services optionality + international runway underpriced?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 12,
+        "price": 106.48,
+        "headline": "Regulation + maturation; growth stalls.",
+        "why": "Regulation is the structural bear: NYC listings fell ~92%, Spain fined Airbnb EUR65M. 12% weight on bans + maturation capping the network.",
+        "what": [
+          "City STR bans spread (Barcelona's 2028 phase-out as the template), growth decays toward GDP-plus, and Experiences/Services never monetizes. Revenue grows only ~3%; the premium multiple de-rates toward Booking's.",
+          "DCF ~$106 (-20%) — a great FCF machine, but priced for the growth it has stopped delivering."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 25,
+        "price": 136.97,
+        "headline": "Decelerates to high-single; regulation bites.",
+        "why": "The law-of-large-numbers + Booking competition path. 25% weight — a very plausible 'matures gracefully' outcome.",
+        "what": [
+          "Growth settles in the high-single digits as Booking out-executes in alternative accommodations and regulation nibbles supply; FCF margin holds ~37%.",
+          "DCF ~$137 (+3%) — roughly fair; the network defends the cash even as growth matures."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 35,
+        "price": 182.78,
+        "headline": "Low-mid-teens growth; Experiences ramps.",
+        "why": "Requires the guided low-mid-teens growth + modest Experiences/Services monetization. 35% as the central outcome — the network + brand are genuinely durable.",
+        "what": [
+          "The modal path: revenue compounds low-mid-teens (the 2026 guide), Experiences/Services begins to monetize, and international under-penetration carries the network at a 38-39% FCF margin.",
+          "DCF ~$183 (+37%). A verb-grade FCF machine at ~15x FCF is mispriced for this quality if growth holds in the teens."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 20,
+        "price": 242.25,
+        "headline": "Experiences/Services + international re-accel.",
+        "why": "Experiences/Services monetizes into a needle-mover + international compounds. ~20%; the relaunch is early but credible.",
+        "what": [
+          "Experiences/Services becomes a real second leg, international scales, and AI-driven conversion lifts the take rate — revenue re-accelerates to the mid-teens at a 40% FCF margin.",
+          "DCF ~$242 (+82%) — the optionality the relaunch is buying actually pays off."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 306.35,
+        "headline": "End-to-end travel hub; AI concierge.",
+        "why": "The full 'Airbnb everything' hub + AI concierge. ~8%, the asymmetric upside the Experiences/Services bet is really for.",
+        "what": [
+          "Airbnb becomes an end-to-end travel/lifestyle platform (homes + services + experiences + AI concierge), expanding TAM well beyond rentals at peak network margins.",
+          "DCF ~$306 (+130%) — the platform vision fully realized; ~8% probability."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 25 / Base 35 / Bull 20 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "Airbnb trades at ~$79B (≈$133/sh) — ~15x EV/FCF on a $4.6B-FCF, 38%-margin two-sided travel network with ~$9.5B net cash. Growth has decelerated (+40%→+10%, guided low-mid-teens) and regulation (Barcelona, NYC) caps dense-urban supply. The mature DCF asks whether the verb-grade brand + network defend the FCF and whether Experiences/Services + international re-accelerate growth. The finding: at ~15x FCF for this quality the modal case implies modest undervaluation — the premium-to-Booking is on P/E, not on the cash flow the DCF values.",
+    "historicalPrices": {
+      "xMin": -5.5,
+      "ipoMarker": "IPO Dec '20",
+      "points": [
+        [
+          -5.4,
+          145.0
+        ],
+        [
+          -5.0,
+          210.0
+        ],
+        [
+          -4.0,
+          90.0
+        ],
+        [
+          -3.0,
+          130.0
+        ],
+        [
+          -2.0,
+          150.0
+        ],
+        [
+          -1.5,
+          160.0
+        ],
+        [
+          -1.0,
+          140.0
+        ],
+        [
+          -0.5,
+          120.0
+        ],
+        [
+          -0.05,
+          133.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 12%",
+        "body": "Regulation + maturation; ~$106 (-20%)."
+      },
+      {
+        "label": "Bear 25%",
+        "body": "High-single growth; regulation; ~$137 (+3%)."
+      },
+      {
+        "label": "Base 35%",
+        "body": "Low-mid-teens; Experiences ramps; ~$183 (+37%)."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "Experiences/intl re-accel; ~$242 (+82%)."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "End-to-end travel hub; ~$306 (+130%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · calendar fiscal year · FY2025 10-K (Feb'26)",
+      "sources": "Sources: Airbnb FY2025 10-K (revenue $12.24B, FCF $4.6B/38%, ~$9.5B net cash, GBV $91.3B), Q1'26 results. Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin (use ~38% structural, not the seasonal Q1 64%); Gordon terminal. EV/FCF vs Booking/Expedia.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          5.99,
+          8.4,
+          9.92,
+          11.1,
+          12.24
+        ],
+        "historyFcf": [
+          1.6,
+          3.4,
+          3.8,
+          4.5,
+          4.6
+        ],
+        "historyEvRev": [
+          10.0,
+          7.0,
+          6.0,
+          6.0,
+          5.7
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Core stays",
+        "segmentB": "Experiences/Services",
+        "histEntSplit": [
+          0.99,
+          0.99,
+          0.98,
+          0.97,
+          0.96
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 183.95,
+        "upsidePct": 38.3
+      },
+      "market": {
+        "marketCapBillion": 79.0,
+        "sharesOutstandingMillion": 650.0,
+        "cashBillion": 9.5,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.12,
+          "expectedPerShare": 106.48,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 3.4,
+            "wacc": 0.1
+          },
+          "dcfPath": {
+            "rev_b": 12.24,
+            "rev_path": [
+              0.04,
+              0.04,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "op_margin": [
+              0.2,
+              0.2,
+              0.2,
+              0.21,
+              0.21
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "term_g": 0.02,
+            "fcf": [
+              4.583,
+              4.766,
+              4.909,
+              5.056,
+              5.208
+            ],
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 650,
+            "distress": 0.0,
+            "pv_fcf": [
+              4.166,
+              3.939,
+              3.688,
+              3.453,
+              3.234
+            ],
+            "sum_pv_fcf": 18.48,
+            "terminal_value": 66.4,
+            "pv_terminal": 41.23,
+            "op_ev": 59.71,
+            "total_equity": 69.21,
+            "dcf_per_share": 106.48
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.0,
+              4.5,
+              4.0,
+              4.0,
+              3.5
+            ],
+            "ev_fcf_multiple": [
+              13.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.25,
+          "expectedPerShare": 136.97,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 6.2,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 12.24,
+            "rev_path": [
+              0.07,
+              0.07,
+              0.06,
+              0.06,
+              0.05
+            ],
+            "op_margin": [
+              0.21,
+              0.21,
+              0.22,
+              0.22,
+              0.22
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              4.846,
+              5.185,
+              5.496,
+              5.983,
+              6.283
+            ],
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 650,
+            "distress": 0.0,
+            "pv_fcf": [
+              4.426,
+              4.324,
+              4.186,
+              4.162,
+              3.991
+            ],
+            "sum_pv_fcf": 21.09,
+            "terminal_value": 92.0,
+            "pv_terminal": 58.44,
+            "op_ev": 79.53,
+            "total_equity": 89.03,
+            "dcf_per_share": 136.97
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.5,
+              6.0,
+              5.5,
+              5.5,
+              5.0
+            ],
+            "ev_fcf_multiple": [
+              15.0,
+              14.0,
+              14.0,
+              14.0,
+              14.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.35,
+          "expectedPerShare": 182.78,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 9.8,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 12.24,
+            "rev_path": [
+              0.1,
+              0.11,
+              0.1,
+              0.09,
+              0.09
+            ],
+            "op_margin": [
+              0.22,
+              0.23,
+              0.23,
+              0.24,
+              0.24
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              5.116,
+              5.679,
+              6.412,
+              6.988,
+              7.617
+            ],
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 650,
+            "distress": 0.0,
+            "pv_fcf": [
+              4.694,
+              4.78,
+              4.951,
+              4.95,
+              4.951
+            ],
+            "sum_pv_fcf": 24.33,
+            "terminal_value": 130.76,
+            "pv_terminal": 84.98,
+            "op_ev": 109.31,
+            "total_equity": 118.81,
+            "dcf_per_share": 182.78
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              8.0,
+              7.5,
+              7.0,
+              6.5,
+              6.5
+            ],
+            "ev_fcf_multiple": [
+              17.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 242.25,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 12.4,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 12.24,
+            "rev_path": [
+              0.12,
+              0.14,
+              0.13,
+              0.12,
+              0.11
+            ],
+            "op_margin": [
+              0.23,
+              0.24,
+              0.25,
+              0.25,
+              0.26
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              5.209,
+              6.095,
+              7.064,
+              7.912,
+              8.782
+            ],
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 650,
+            "distress": 0.0,
+            "pv_fcf": [
+              4.801,
+              5.177,
+              5.53,
+              5.709,
+              5.84
+            ],
+            "sum_pv_fcf": 27.06,
+            "terminal_value": 181.79,
+            "pv_terminal": 120.9,
+            "op_ev": 147.96,
+            "total_equity": 157.46,
+            "dcf_per_share": 242.25
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              10.0,
+              9.5,
+              9.0,
+              8.5,
+              8.5
+            ],
+            "ev_fcf_multiple": [
+              20.0,
+              19.0,
+              19.0,
+              19.0,
+              19.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 306.35,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 15.2,
+            "wacc": 0.08
+          },
+          "dcfPath": {
+            "rev_b": 12.24,
+            "rev_path": [
+              0.14,
+              0.17,
+              0.16,
+              0.15,
+              0.14
+            ],
+            "op_margin": [
+              0.24,
+              0.25,
+              0.26,
+              0.27,
+              0.27
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              5.442,
+              6.53,
+              7.765,
+              8.929,
+              10.179
+            ],
+            "cash": 9.5,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 650,
+            "distress": 0.0,
+            "pv_fcf": [
+              5.039,
+              5.598,
+              6.164,
+              6.563,
+              6.928
+            ],
+            "sum_pv_fcf": 30.29,
+            "terminal_value": 234.12,
+            "pv_terminal": 159.34,
+            "op_ev": 189.63,
+            "total_equity": 199.13,
+            "dcf_per_share": 306.35
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              12.0,
+              11.5,
+              11.0,
+              10.5,
+              10.5
+            ],
+            "ev_fcf_multiple": [
+              23.0,
+              22.0,
+              22.0,
+              22.0,
+              22.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Travel / lodging + experiences — Airbnb (two-sided STR marketplace, ~8M listings, verb-grade brand) vs Booking, Expedia/Vrbo, Google Travel, hotels; defending a network + brand Power as growth matures and regulation tightens.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Fixed platform/trust-&-safety/marketing spread over $91B GBV -> best-in-class ~38% FCF margin."
+          },
+          "networkEconomies": {
+            "score": 3,
+            "note": "The dominant Power: two-sided host<->guest density; more hosts -> more guests -> more hosts."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the disruptor vs hotels; incumbents (Booking, Vrbo) have matched the STR model."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Weak-medium: hosts multi-list; guests are promiscuous."
+          },
+          "branding": {
+            "score": 3,
+            "note": "'Airbnb' is a verb; direct-traffic advantage lowers CAC vs OTAs — durable demand-side Power."
+          },
+          "corneredResource": {
+            "score": 1,
+            "note": "No durable exclusive asset; supply is replicable."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Matching/pricing/trust-and-safety execution at scale."
+          }
+        },
+        "dominantPower": "network_economies",
+        "durability": "medium-high",
+        "rivals": [
+          {
+            "name": "Booking Holdings",
+            "kind": "public",
+            "note": "Larger GBV; pushing into alternative accommodations (>8M listings, growing faster than ABNB there).",
+            "growth": 0.13,
+            "margin": 0.36,
+            "multiple": "~15.6x P/E"
+          },
+          {
+            "name": "Expedia / Vrbo",
+            "kind": "public",
+            "note": "#3 OTA; Vrbo the direct STR competitor.",
+            "growth": 0.06,
+            "margin": 0.15,
+            "multiple": "~11.8x P/E"
+          },
+          {
+            "name": "Google Travel",
+            "kind": "incumbent-division",
+            "note": "Disintermediation risk at the search layer.",
+            "growth": null,
+            "margin": null,
+            "multiple": "n/a"
+          },
+          {
+            "name": "Hotels / chains",
+            "kind": "incumbent",
+            "note": "Direct booking + loyalty; the alternative for urban stays.",
+            "growth": 0.05,
+            "margin": null,
+            "multiple": "varies"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "network_economies",
+            "who": "Booking in alternative accommodations",
+            "falsifier": "Booking out-grows ABNB in alt-accommodations bookings for 2+ years."
+          },
+          {
+            "vector": "branding",
+            "who": "Google Travel disintermediation",
+            "falsifier": "Paid-search dependence rises and direct-traffic share falls."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "STR regulation",
+            "falsifier": "A flagship metro structurally bans STRs, or registration regimes materially shrink supply."
+          }
+        ],
+        "takeaway": "Airbnb's network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided liquidity), and the ~38% FCF margin is best-in-class. The terminal-value debate is not a competitor out-networking them — it's regulation (dense-urban supply caps) + growth maturation. At ~15x EV/FCF the cash flow is priced cheaply for the quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds in the teens or decays to GDP-plus."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "~15x EV/FCF, 38% FCF margin.",
+            "body": "A verb-grade two-sided network throwing off $4.6B FCF at a 38% margin — priced like a maturing OTA, not a durable platform."
+          },
+          {
+            "label": "$9.5B net cash, working-capital-positive.",
+            "body": "Guest pre-payments fund the float -> structurally high FCF conversion; fortress balance sheet, ~$3.8B/yr buyback."
+          },
+          {
+            "label": "Network economies + a verb brand.",
+            "body": "'Airbnb' is the default for alternative accommodations; direct traffic lowers CAC vs OTAs — the two-sided liquidity moat."
+          },
+          {
+            "label": "Experiences/Services optionality is free.",
+            "body": "The 2025 relaunch expands TAM beyond rentals; unmonetized today, so any traction is upside the multiple doesn't pay for."
+          },
+          {
+            "label": "International under-penetrated.",
+            "body": "Latin America / Asia-Pacific grow faster than core — a multi-year runway the US-centric view misses."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "revenue re-accelerates to mid-teens · Experiences/Services monetizes into a reported needle-mover · take rate rises · international outgrows core"
+          },
+          {
+            "label": "Bear validation",
+            "body": "growth decays to high-single · major-metro bans spread · Booking out-grows ABNB in alternative accommodations · multiple de-rates toward peers"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if a flagship market structurally bans STRs or Google disintermediates search, re-rate the network durability + terminal multiple"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "GBV / take rate",
+          "definition": "Gross booking value (~$91B FY25) x ~13.4% take = revenue; the two metrics that drive the model."
+        },
+        {
+          "term": "Network economies",
+          "definition": "Helmer Power: more hosts -> more guests -> more hosts; the two-sided liquidity flywheel that is Airbnb's core moat."
+        },
+        {
+          "term": "Experiences / Services",
+          "definition": "The 2025 relaunch (locally-hosted activities + in-stay services); the TAM-expanding optionality, unmonetized today."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~38% structural; ignore the seasonal Q1 ~64% float build) — the mature-DCF lever."
+        },
+        {
+          "term": "STR regulation",
+          "definition": "Short-term-rental bans/registration (Barcelona 2028 phase-out, NYC -92%) — the structural cap on dense-urban supply."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-03_15-44",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "UBER",
+    "slug": "uber",
+    "company": "Uber Technologies",
+    "exchange": "NYSE",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "uber-memo__v001__2026-06-03_15-44.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$145B",
+      "shares": "2.04B",
+      "cash": "$2.7B cash, zero debt · ~$2.7B net cash; ~2.04B shares; $20B buyback authorization (2025); Revenue $52B / gross bookings $193.5B FY25 (+19% GB); $9.76B FCF (+40% YoY), ~14x EV/FCF; Down ~30% from highs on AV fear; ads >$2B run-rate, Uber One ~50M members"
+    },
+    "spot": {
+      "price": 70.4,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 104.27,
+      "deltaPct": 48.1
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 163.54,
+        "mult": 2.32
+      },
+      {
+        "y": 10,
+        "value": 256.72,
+        "mult": 3.65
+      },
+      {
+        "y": 15,
+        "value": 403.31,
+        "mult": 5.73
+      },
+      {
+        "y": 20,
+        "value": 634.11,
+        "mult": 9.01
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "travel-mobility-services"
+      ],
+      "themeNames": [
+        "Travel & Mobility Services"
+      ],
+      "primaryTheme": "travel-mobility-services",
+      "primaryThemeName": "Travel & Mobility Services",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "question": "Is Uber a dominant FCF-inflecting mobility/delivery network at ~14x EV/FCF — or does autonomy commoditize its driver-marketplace and erode the network toll?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 15,
+        "price": 39.73,
+        "headline": "AV bypasses the marketplace; toll erodes.",
+        "why": "The autonomy paradox bear: Uber's biggest hedge (platform for all AVs) is its biggest vulnerability if a winning fleet goes direct. 15% weight on real disruption.",
+        "what": [
+          "Waymo/Tesla scale direct-to-consumer robotaxi fleets that don't need Uber's demand layer, and driver reclassification raises the labor-cost base. Gross bookings stall and the take-rate toll compresses.",
+          "DCF ~$40 (-44%) — the network's value collapses if it's disintermediated from the supply side."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 27,
+        "price": 74.74,
+        "headline": "AV pressure; growth decelerates.",
+        "why": "AV pressure + regulation + competition decelerate the network without breaking it. 27% weight as the 'contested but intact' path.",
+        "what": [
+          "AV uncertainty and competition slow GB to mid-single digits and cap margin expansion; Uber stays profitable but the network thesis is contested.",
+          "DCF ~$75 (+6%) — roughly fair; the FCF defends the floor while the AV question hangs over the multiple."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 33,
+        "price": 109.49,
+        "headline": "Stays the AV aggregator; ads + delivery margin.",
+        "why": "Uber stays the AV demand layer (Waymo productivity data supports it) and ads/delivery margins compound. 33% as the central outcome.",
+        "what": [
+          "The modal path: Uber remains the demand aggregator for AV fleets, advertising scales past $3B, delivery margins converge toward mobility's, and GB compounds low-double-digits at a rising FCF margin.",
+          "DCF ~$110 (+55%). At 14x FCF the market over-discounts the AV threat relative to the network's durability and the FCF ramp."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 18,
+        "price": 154.85,
+        "headline": "Network holds; ads scale; AV accretive.",
+        "why": "AV becomes a tailwind (Uber as the aggregator for cheaper AV rides) + ads scale. ~18%; the productivity data hints at it.",
+        "what": [
+          "The network power holds, AV partnerships prove accretive (cheaper rides expand the TAM), advertising + Uber One drive a software-like margin mix, and GB compounds mid-teens.",
+          "DCF ~$155 (+120%) — the FCF machine re-rates as the AV fear proves overblown."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 7,
+        "price": 201.73,
+        "headline": "The AV demand layer; advertising platform.",
+        "why": "Uber is the demand layer every AV fleet needs + a major ad platform. ~7%, the asymmetric upside the AV-discounted entry is buying.",
+        "what": [
+          "Uber becomes the indispensable demand/marketplace layer for the entire AV ecosystem plus a >$10B advertising platform, compounding GB high-teens at peak margins.",
+          "DCF ~$202 (+187%) — the platform-for-all-autonomy outcome; ~7% probability."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: June 1, 2026 close.",
+    "thesis": "Uber trades at ~$145B (≈$70/sh, down ~30% on AV fear) — ~14x EV/FCF on $9.76B FCF (growing 40%+), $193.5B gross bookings (+19%), net cash and a $20B buyback. The mature DCF asks whether the two-sided network + advertising (>$2B run-rate) + delivery-margin ramp compound, or whether Waymo/Tesla bypass the marketplace. The finding: at 14x FCF for a network compounding GB ~mid-teens with expanding margins, the modal case implies meaningful undervaluation — but a genuine AV-disruption ultra-bear is -44%, so the sign is a bet on Uber remaining the AV demand-aggregator.",
+    "historicalPrices": {
+      "xMin": -7.2,
+      "ipoMarker": "IPO May '19",
+      "points": [
+        [
+          -7.0,
+          42.0
+        ],
+        [
+          -6.0,
+          30.0
+        ],
+        [
+          -5.0,
+          45.0
+        ],
+        [
+          -4.0,
+          25.0
+        ],
+        [
+          -3.0,
+          44.0
+        ],
+        [
+          -2.0,
+          62.0
+        ],
+        [
+          -1.0,
+          85.0
+        ],
+        [
+          -0.6,
+          102.0
+        ],
+        [
+          -0.3,
+          80.0
+        ],
+        [
+          -0.05,
+          70.4
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 15%",
+        "body": "AV bypasses marketplace; ~$40 (-44%)."
+      },
+      {
+        "label": "Bear 27%",
+        "body": "AV pressure; decel; ~$75 (+6%)."
+      },
+      {
+        "label": "Base 33%",
+        "body": "Stays AV aggregator; ads + delivery; ~$110 (+55%)."
+      },
+      {
+        "label": "Bull 18%",
+        "body": "Network holds; AV accretive; ~$155 (+120%)."
+      },
+      {
+        "label": "Ultra Bull 7%",
+        "body": "The AV demand layer; ~$202 (+187%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · calendar fiscal year · FY2025 + Q1'26 results",
+      "sources": "Sources: Uber FY2025 results (revenue $52B, GB $193.5B, adj EBITDA $8.73B, FCF $9.76B), Q1'26 (GB +25%). Revenue as a growth-rate path off FY25 (or GB x ~27% take); FCF = revenue x FCF margin; Gordon terminal. Equity stakes (Aurora ~$1.4B) immaterial -> no SOTP. EV/FCF vs DASH/LYFT.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          17.5,
+          31.9,
+          37.3,
+          44.0,
+          52.0
+        ],
+        "historyFcf": [
+          -0.7,
+          0.4,
+          3.4,
+          6.9,
+          9.76
+        ],
+        "historyEvRev": [
+          8.0,
+          4.0,
+          4.0,
+          3.5,
+          2.9
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Mobility",
+        "segmentB": "Delivery",
+        "histEntSplit": [
+          0.55,
+          0.56,
+          0.57,
+          0.57,
+          0.57
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 104.27,
+        "upsidePct": 48.1
+      },
+      "market": {
+        "marketCapBillion": 145.0,
+        "sharesOutstandingMillion": 2036.0,
+        "cashBillion": 2.7,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.15,
+          "expectedPerShare": 39.73,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 1.0,
+            "wacc": 0.11
+          },
+          "dcfPath": {
+            "rev_b": 52.0,
+            "rev_path": [
+              0.02,
+              0.02,
+              0.01,
+              0.0,
+              0.0
+            ],
+            "op_margin": [
+              0.06,
+              0.06,
+              0.05,
+              0.05,
+              0.05
+            ],
+            "wacc_path": [
+              0.11,
+              0.11,
+              0.11,
+              0.11,
+              0.11
+            ],
+            "term_g": 0.01,
+            "fcf": [
+              7.956,
+              8.115,
+              7.65,
+              7.65,
+              7.65
+            ],
+            "cash": 2.7,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1950,
+            "distress": 0.0,
+            "pv_fcf": [
+              7.168,
+              6.586,
+              5.594,
+              5.039,
+              4.54
+            ],
+            "sum_pv_fcf": 28.93,
+            "terminal_value": 77.27,
+            "pv_terminal": 45.85,
+            "op_ev": 74.78,
+            "total_equity": 77.48,
+            "dcf_per_share": 39.73
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.0,
+              1.8,
+              1.6,
+              1.5,
+              1.4
+            ],
+            "ev_fcf_multiple": [
+              10.0,
+              9.0,
+              9.0,
+              9.0,
+              9.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.27,
+          "expectedPerShare": 74.74,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 5.2,
+            "wacc": 0.1
+          },
+          "dcfPath": {
+            "rev_b": 52.0,
+            "rev_path": [
+              0.06,
+              0.06,
+              0.05,
+              0.05,
+              0.04
+            ],
+            "op_margin": [
+              0.09,
+              0.1,
+              0.1,
+              0.11,
+              0.11
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "term_g": 0.02,
+            "fcf": [
+              9.922,
+              10.517,
+              11.043,
+              12.239,
+              12.729
+            ],
+            "cash": 2.7,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1950,
+            "distress": 0.0,
+            "pv_fcf": [
+              9.02,
+              8.692,
+              8.297,
+              8.359,
+              7.904
+            ],
+            "sum_pv_fcf": 42.27,
+            "terminal_value": 162.29,
+            "pv_terminal": 100.77,
+            "op_ev": 143.04,
+            "total_equity": 145.74,
+            "dcf_per_share": 74.74
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.6,
+              2.4,
+              2.3,
+              2.2,
+              2.1
+            ],
+            "ev_fcf_multiple": [
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              12.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.33,
+          "expectedPerShare": 109.49,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 9.0,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 52.0,
+            "rev_path": [
+              0.1,
+              0.1,
+              0.09,
+              0.08,
+              0.08
+            ],
+            "op_margin": [
+              0.11,
+              0.12,
+              0.13,
+              0.13,
+              0.14
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              10.868,
+              12.584,
+              13.717,
+              15.554,
+              16.799
+            ],
+            "cash": 2.7,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1930,
+            "distress": 0.0,
+            "pv_fcf": [
+              9.925,
+              10.495,
+              10.448,
+              10.819,
+              10.671
+            ],
+            "sum_pv_fcf": 52.36,
+            "terminal_value": 245.99,
+            "pv_terminal": 156.26,
+            "op_ev": 208.62,
+            "total_equity": 211.32,
+            "dcf_per_share": 109.49
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.2,
+              3.1,
+              3.0,
+              2.9,
+              2.9
+            ],
+            "ev_fcf_multiple": [
+              15.0,
+              14.0,
+              14.0,
+              14.0,
+              14.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.18,
+          "expectedPerShare": 154.85,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 11.4,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 52.0,
+            "rev_path": [
+              0.13,
+              0.13,
+              0.11,
+              0.1,
+              0.1
+            ],
+            "op_margin": [
+              0.13,
+              0.14,
+              0.15,
+              0.15,
+              0.16
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              12.34,
+              14.608,
+              16.215,
+              18.647,
+              20.511
+            ],
+            "cash": 2.7,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1900,
+            "distress": 0.0,
+            "pv_fcf": [
+              11.321,
+              12.295,
+              12.521,
+              13.21,
+              13.331
+            ],
+            "sum_pv_fcf": 62.68,
+            "terminal_value": 352.11,
+            "pv_terminal": 228.84,
+            "op_ev": 291.52,
+            "total_equity": 294.22,
+            "dcf_per_share": 154.85
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.8,
+              3.7,
+              3.6,
+              3.5,
+              3.5
+            ],
+            "ev_fcf_multiple": [
+              17.0,
+              17.0,
+              17.0,
+              17.0,
+              17.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.07,
+          "expectedPerShare": 201.73,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 13.4,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 52.0,
+            "rev_path": [
+              0.16,
+              0.15,
+              0.13,
+              0.12,
+              0.11
+            ],
+            "op_margin": [
+              0.14,
+              0.15,
+              0.16,
+              0.16,
+              0.17
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              13.27,
+              16.648,
+              18.813,
+              21.948,
+              24.362
+            ],
+            "cash": 2.7,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1880,
+            "distress": 0.0,
+            "pv_fcf": [
+              12.23,
+              14.142,
+              14.729,
+              15.837,
+              16.202
+            ],
+            "sum_pv_fcf": 73.14,
+            "terminal_value": 456.23,
+            "pv_terminal": 303.42,
+            "op_ev": 376.56,
+            "total_equity": 379.26,
+            "dcf_per_share": 201.73
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.4,
+              4.3,
+              4.2,
+              4.1,
+              4.1
+            ],
+            "ev_fcf_multiple": [
+              19.0,
+              19.0,
+              18.0,
+              18.0,
+              18.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Global mobility + delivery — Uber (two-sided rides + eats network, ads, Uber One) vs Lyft (rides), DoorDash (delivery), and the autonomous-vehicle stack (Waymo, Tesla); defending a network Power whose driver-supply side autonomy could commoditize.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 3,
+            "note": "Largest GB base spreads fixed tech/insurance/support; data + routing density."
+          },
+          "networkEconomies": {
+            "score": 3,
+            "note": "The dominant Power: two-sided liquidity flywheel, deepest marketplace globally."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the disruptor; AV-native players could counter-position against the human-driver model."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Uber One (~50M, ~half of GB) + cross-product habit; real but not deep."
+          },
+          "branding": {
+            "score": 2,
+            "note": "'Get an Uber' verb; default global ride-hail brand."
+          },
+          "corneredResource": {
+            "score": 1,
+            "note": "No durable exclusive asset; the AV stack is the cornered resource Uber lacks (Waymo/Tesla have it)."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Matching/pricing-algorithm + multi-product operational edge."
+          }
+        },
+        "dominantPower": "network_economies",
+        "durability": "medium-high",
+        "rivals": [
+          {
+            "name": "Waymo (Alphabet)",
+            "kind": "incumbent-division",
+            "note": "AV leader; runs on Uber in Austin/Atlanta but separating in Dallas/SF — partner turning competitor.",
+            "growth": null,
+            "margin": null,
+            "multiple": "n/a"
+          },
+          {
+            "name": "Tesla",
+            "kind": "public",
+            "note": "Camera-only robotaxi bet; could go direct-to-consumer and bypass the marketplace.",
+            "growth": null,
+            "margin": null,
+            "multiple": "n/a"
+          },
+          {
+            "name": "DoorDash",
+            "kind": "public",
+            "note": "US delivery leader; richer EV/EBITDA, faster GOV growth.",
+            "growth": 0.27,
+            "margin": null,
+            "multiple": "~25x EV/EBITDA"
+          },
+          {
+            "name": "Lyft",
+            "kind": "public",
+            "note": "Distant #2 in US rides; sub-scale margin.",
+            "growth": 0.15,
+            "margin": 0.029,
+            "multiple": "sub-scale"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "network_economies",
+            "who": "Waymo/Tesla direct-to-consumer AV",
+            "falsifier": "A major AV fleet scales D2C robotaxi without Uber's demand layer."
+          },
+          {
+            "vector": "counter_positioning",
+            "who": "Driver reclassification",
+            "falsifier": "A major-jurisdiction gig-worker ruling structurally raises the labor-cost base."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "DoorDash / Lyft competition",
+            "falsifier": "DoorDash extends its delivery lead or Lyft regains rides share, compressing take rate."
+          }
+        ],
+        "takeaway": "Uber's network economies + scale are genuinely dominant — the deepest two-sided marketplace, now throwing off ~$10B FCF with advertising and delivery margins still ramping. The entire terminal-value debate is the autonomy paradox: the network power is durable only if Uber remains the demand aggregator for AV fleets. At ~14x EV/FCF the market is pricing meaningful AV-disruption risk; the sign of the memo hinges on whether autonomy commoditizes the driver-supply side (ultra-bear -44%) or Uber tolls the cheaper AV rides (base +55%)."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "~14x EV/FCF on $9.76B FCF growing 40%+.",
+            "body": "A dominant two-sided network priced at a mid-teens FCF multiple while FCF is still inflecting steeply — the AV fear is doing the discounting."
+          },
+          {
+            "label": "Advertising is the hidden high-margin lever.",
+            "body": ">$2B run-rate, +50%, near-100% incremental margin — the single biggest take-rate/margin-expansion driver, embedded in the segments."
+          },
+          {
+            "label": "Uber One + multi-product flywheel.",
+            "body": "~50M members driving ~half of gross bookings; rides+eats+ads on one app deepen switching costs."
+          },
+          {
+            "label": "AV could be a tailwind, not just a threat.",
+            "body": "Waymo on Uber outproduced 99% of human drivers; Uber's aggregator strategy + ~$10B AV commitments position it as the demand layer."
+          },
+          {
+            "label": "$20B buyback, net cash.",
+            "body": "~7% FCF yield funding a large buyback at a depressed multiple — accretive."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "autonomous trips scale on Uber's network profitably · advertising passes $3B run-rate · delivery margin converges toward mobility's 8% of GB · GB stays mid-teens+"
+          },
+          {
+            "label": "Bear validation",
+            "body": "a major AV fleet (Waymo/Tesla) scales direct-to-consumer · driver reclassification raises the cost base · GB decelerates to mid-single"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if AV demonstrably disintermediates the driver-marketplace (fleets bypass Uber's demand), re-rate the network durability + terminal toward a commoditized-logistics multiple"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Gross bookings (GB)",
+          "definition": "Total value of rides+eats+freight (~$193.5B FY25); revenue is GB x ~27% take rate — the top of the model."
+        },
+        {
+          "term": "AV / autonomy paradox",
+          "definition": "Uber's strategy to be the demand aggregator for all AV fleets is also its vulnerability — a winning fleet could bypass the marketplace."
+        },
+        {
+          "term": "Network economies",
+          "definition": "Helmer Power: more riders <-> more drivers -> lower wait/price -> more riders; the deepest two-sided marketplace globally."
+        },
+        {
+          "term": "Uber One",
+          "definition": "~50M-member subscription driving ~half of gross bookings; the frequency/retention + switching-cost flywheel."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~19% FY25, rising); the mature-DCF lever as ads + delivery margin mix up."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-03_15-44",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   }
 ];
 
@@ -15025,6 +16631,13 @@ const CATEGORIES = {
     "sub": "Mature-company DCFs. Cash machines with runway.",
     "short": "Mature-company DCFs. Cash machines with runway.",
     "long": "Cash-generative businesses with durable runway. Quality compounders where the work is calibrating the multi-year growth/margin path and defending the terminal value (Gordon perpetuity, exit-multiple, or sum-of-the-parts when material non-operating value is present)."
+  },
+  "fcf-megacap": {
+    "slug": "fcf-megacap",
+    "name": "FCF+ Megacap",
+    "sub": "Established mega-caps with structural cash-flow advantages.",
+    "short": "Established mega-caps with structural cash-flow advantages.",
+    "long": "Established mega-cap businesses with structural cash-flow advantages. Segment-economics rich; efficient-market dampens edge but durability and capital return make the math worth doing."
   },
   "private-wishlist": {
     "slug": "private-wishlist",
