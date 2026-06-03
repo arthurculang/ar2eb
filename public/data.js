@@ -14199,6 +14199,815 @@ const MEMOS = [
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
+  },
+  {
+    "ticker": "LULU",
+    "slug": "lulu",
+    "company": "Lululemon Athletica",
+    "exchange": "NASDAQ",
+    "category": "fcf-plus-plus-growth",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "lulu-memo__v001__2026-06-03_15-38.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$15.2B",
+      "shares": "114M",
+      "cash": "$1.8B cash, zero debt · $1.8B cash, no debt; ~114M shares; heavy buyback, no dividend; Revenue $11.1B FY25 (+5%, decelerating from +42%); ~22% op margin, ~$1.58B FCF; Down ~60% from the $340 high; US declining, China/international +20-29%"
+    },
+    "spot": {
+      "price": 127.0,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 209.94,
+      "deltaPct": 65.3
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 332.91,
+        "mult": 2.62
+      },
+      {
+        "y": 10,
+        "value": 528.59,
+        "mult": 4.16
+      },
+      {
+        "y": 15,
+        "value": 840.41,
+        "mult": 6.62
+      },
+      {
+        "y": 20,
+        "value": 1338.0,
+        "mult": 10.54
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "Med-High",
+      "themes": [
+        "premium-consumer-brands"
+      ],
+      "themeNames": [
+        "Premium Consumer Brands"
+      ],
+      "primaryTheme": "premium-consumer-brands",
+      "primaryThemeName": "Premium Consumer Brands",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "question": "Is lululemon's ~60% de-rating to ~10x FCF an overshoot on a still-profitable premium brand — or the early innings of structural brand impairment (US decline, Alo/Vuori share loss)?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 15,
+        "price": 84.51,
+        "headline": "Brand impairment; US decline; margins crater.",
+        "why": "The genuine bear: the founder himself called the product stale, US (50%+ of sales) is already declining, and DTC share fell 30%->24% in a year. 15% weight on real brand impairment.",
+        "what": [
+          "Brand heat fades like Under Armour's: US revenue keeps declining, Alo/Vuori and dupes take share, and the full-price model erodes into promotions. Revenue falls ~4%/yr; operating margins compress toward single digits.",
+          "A shrinking premium brand earns a distressed multiple — DCF ~$85, ~33% below spot. The net cash and buyback cushion the floor but can't offset structural impairment."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 32,
+        "price": 157.77,
+        "headline": "Share loss continues; US shrinks; capped.",
+        "why": "Share loss continues and the dupe pressure caps the multiple, but the brand doesn't break. 32% weight as the plausible 'stalls but survives' path given the bearish US momentum.",
+        "what": [
+          "The US stays soft and international decelerates; lululemon holds its position but doesn't grow, and tariffs/promotions keep margins below the historical peak. Revenue roughly flat, low-teens FCF margin.",
+          "DCF ~$158 (+24%) — even a 'dominant but ex-growth' brand at ~11x FCF is worth more than today's price; the de-rating already prices worse."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 33,
+        "price": 235.52,
+        "headline": "US stabilizes; China/international compounds.",
+        "why": "Requires US stabilization (not re-acceleration) plus continued international compounding — consistent with FY26 guidance. 33% as the central outcome; the brand's cornered-resource fabrics + community don't vanish.",
+        "what": [
+          "The modal path: the US stabilizes under new CEO Heidi O'Neill (ex-Nike) while China/international keep compounding ~20%, blending to ~4% total growth at a defended ~22% operating margin.",
+          "DCF ~$236 (+85%). A stabilizing premium brand at 10x FCF with a long international runway is simply mispriced if the modal case plays out — the core of the thesis."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 15,
+        "price": 324.02,
+        "headline": "New-CEO turnaround; margin recovery.",
+        "why": "O'Neill's product fix works and the US re-accelerates while international compounds — a real turnaround. ~15% weight; lululemon has done it before.",
+        "what": [
+          "The turnaround lands: product newness re-accelerates the US, international/China stay hot, footwear/men's scale, and margins recover toward 24%. Revenue compounds ~7%.",
+          "DCF ~$324 (+155%) — back toward the old growth-compounder valuation as the brand re-rates with the fundamentals."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 5,
+        "price": 409.07,
+        "headline": "Full re-rate; China + footwear scale.",
+        "why": "Everything works — US turnaround AND China AND categories AND a multiple re-rating. ~5%, the asymmetric upside the depressed entry is buying.",
+        "what": [
+          "The full turnaround: China becomes a second home market, footwear/men's/international all compound, and lululemon re-rates to a premium growth multiple. Revenue ~10% CAGR at peak margins.",
+          "DCF ~$409 (+222%) — the brand reclaims its compounder status; ~5% probability."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 32 / Base 33 / Bull 15 / Ultra Bull 5. Spot price reference: June 1, 2026 close.",
+    "thesis": "Lululemon trades at ~$15B (≈$127/sh, down ~60% from $340) — ~10x FCF on $11.1B revenue, ~22% operating margins, net cash and a heavy buyback. Growth has decelerated hard (+42%→+5%, guided +2-4%): the US is shrinking (-1 to -3%) while China/international compound +20-29%. The mature DCF asks whether the brand stabilizes and defends margins, or whether dupes (Alo, Vuori) and stale product structurally impair it. The finding: even pricing real brand-impairment downside (ultra-bear -34%), the modal stabilization case at 10x FCF implies the de-rating overshot.",
+    "historicalPrices": {
+      "xMin": -6.5,
+      "ipoMarker": "IPO Jul '07",
+      "points": [
+        [
+          -6.0,
+          200.0
+        ],
+        [
+          -5.0,
+          350.0
+        ],
+        [
+          -4.0,
+          485.0
+        ],
+        [
+          -3.5,
+          300.0
+        ],
+        [
+          -3.0,
+          380.0
+        ],
+        [
+          -2.0,
+          400.0
+        ],
+        [
+          -1.5,
+          340.0
+        ],
+        [
+          -1.0,
+          300.0
+        ],
+        [
+          -0.5,
+          200.0
+        ],
+        [
+          -0.25,
+          150.0
+        ],
+        [
+          -0.05,
+          127.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 15%",
+        "body": "Brand impairment; US decline; ~$85 (-34%)."
+      },
+      {
+        "label": "Bear 32%",
+        "body": "Share loss; US shrinks; ex-growth; ~$158 (+24%)."
+      },
+      {
+        "label": "Base 33%",
+        "body": "US stabilizes + China/intl; ~$236 (+85%)."
+      },
+      {
+        "label": "Bull 15%",
+        "body": "New-CEO turnaround; ~$324 (+155%)."
+      },
+      {
+        "label": "Ultra Bull 5%",
+        "body": "Full re-rate + China; ~$409 (+222%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end late Jan · FY2025 (Feb'26) results",
+      "sources": "Sources: lululemon FY2025 results (year ended Feb 1, 2026; revenue $11.1B, FCF ~$1.58B, net cash ~$1.8B), FY2026 guidance, Earnest/Retail Dive share data. Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales vs premium-apparel peers.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          6.25,
+          8.11,
+          9.62,
+          10.59,
+          11.1
+        ],
+        "historyFcf": [
+          0.7,
+          0.9,
+          1.3,
+          1.64,
+          1.58
+        ],
+        "historyEvRev": [
+          6.0,
+          5.0,
+          3.5,
+          2.5,
+          1.2
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Americas",
+        "segmentB": "International",
+        "histEntSplit": [
+          0.86,
+          0.84,
+          0.82,
+          0.8,
+          0.78
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 209.94,
+        "upsidePct": 65.3
+      },
+      "market": {
+        "marketCapBillion": 15.2,
+        "sharesOutstandingMillion": 114.0,
+        "cashBillion": 1.8,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.15,
+          "expectedPerShare": 84.51,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": -3.8,
+            "wacc": 0.115
+          },
+          "dcfPath": {
+            "rev_b": 11.1,
+            "rev_path": [
+              -0.05,
+              -0.05,
+              -0.04,
+              -0.03,
+              -0.02
+            ],
+            "op_margin": [
+              0.16,
+              0.14,
+              0.12,
+              0.12,
+              0.12
+            ],
+            "wacc_path": [
+              0.115,
+              0.115,
+              0.115,
+              0.115,
+              0.115
+            ],
+            "term_g": 0.0,
+            "fcf": [
+              1.054,
+              0.902,
+              0.769,
+              0.746,
+              0.731
+            ],
+            "cash": 1.8,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 102,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.945,
+              0.726,
+              0.555,
+              0.483,
+              0.424
+            ],
+            "sum_pv_fcf": 3.13,
+            "terminal_value": 6.36,
+            "pv_terminal": 3.69,
+            "op_ev": 6.82,
+            "total_equity": 8.62,
+            "dcf_per_share": 84.51
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              1.0,
+              0.8,
+              0.6,
+              0.5,
+              0.4
+            ],
+            "ev_fcf_multiple": [
+              9.0,
+              8.0,
+              7.0,
+              7.0,
+              7.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.32,
+          "expectedPerShare": 157.77,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 1.0,
+            "wacc": 0.105
+          },
+          "dcfPath": {
+            "rev_b": 11.1,
+            "rev_path": [
+              0.0,
+              0.0,
+              0.01,
+              0.02,
+              0.02
+            ],
+            "op_margin": [
+              0.18,
+              0.18,
+              0.19,
+              0.19,
+              0.2
+            ],
+            "wacc_path": [
+              0.105,
+              0.105,
+              0.105,
+              0.105,
+              0.105
+            ],
+            "term_g": 0.015,
+            "fcf": [
+              1.221,
+              1.221,
+              1.345,
+              1.372,
+              1.4
+            ],
+            "cash": 1.8,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 103,
+            "distress": 0.0,
+            "pv_fcf": [
+              1.105,
+              1.0,
+              0.997,
+              0.92,
+              0.85
+            ],
+            "sum_pv_fcf": 4.87,
+            "terminal_value": 15.79,
+            "pv_terminal": 9.58,
+            "op_ev": 14.45,
+            "total_equity": 16.25,
+            "dcf_per_share": 157.77
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              1.4,
+              1.3,
+              1.2,
+              1.1,
+              1.1
+            ],
+            "ev_fcf_multiple": [
+              12.0,
+              11.0,
+              11.0,
+              11.0,
+              11.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.33,
+          "expectedPerShare": 235.52,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 4.2,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 11.1,
+            "rev_path": [
+              0.03,
+              0.04,
+              0.04,
+              0.05,
+              0.05
+            ],
+            "op_margin": [
+              0.21,
+              0.21,
+              0.22,
+              0.22,
+              0.22
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.02,
+            "fcf": [
+              1.486,
+              1.546,
+              1.731,
+              1.818,
+              1.909
+            ],
+            "cash": 1.8,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 105,
+            "distress": 0.0,
+            "pv_fcf": [
+              1.357,
+              1.289,
+              1.318,
+              1.265,
+              1.213
+            ],
+            "sum_pv_fcf": 6.44,
+            "terminal_value": 25.96,
+            "pv_terminal": 16.49,
+            "op_ev": 22.93,
+            "total_equity": 24.73,
+            "dcf_per_share": 235.52
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.0,
+              1.9,
+              1.8,
+              1.7,
+              1.7
+            ],
+            "ev_fcf_multiple": [
+              15.0,
+              14.0,
+              14.0,
+              14.0,
+              14.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.15,
+          "expectedPerShare": 324.02,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 6.6,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 11.1,
+            "rev_path": [
+              0.05,
+              0.07,
+              0.07,
+              0.07,
+              0.07
+            ],
+            "op_margin": [
+              0.22,
+              0.23,
+              0.23,
+              0.24,
+              0.24
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              1.632,
+              1.871,
+              2.002,
+              2.284,
+              2.444
+            ],
+            "cash": 1.8,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 107,
+            "distress": 0.0,
+            "pv_fcf": [
+              1.497,
+              1.575,
+              1.546,
+              1.618,
+              1.588
+            ],
+            "sum_pv_fcf": 7.82,
+            "terminal_value": 38.54,
+            "pv_terminal": 25.05,
+            "op_ev": 32.87,
+            "total_equity": 34.67,
+            "dcf_per_share": 324.02
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.6,
+              2.5,
+              2.4,
+              2.3,
+              2.3
+            ],
+            "ev_fcf_multiple": [
+              17.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.05,
+          "expectedPerShare": 409.07,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 9.2,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 11.1,
+            "rev_path": [
+              0.07,
+              0.1,
+              0.1,
+              0.1,
+              0.09
+            ],
+            "op_margin": [
+              0.23,
+              0.24,
+              0.24,
+              0.25,
+              0.25
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              1.782,
+              2.09,
+              2.299,
+              2.687,
+              2.929
+            ],
+            "cash": 1.8,
+            "net_debt": 0.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 108,
+            "distress": 0.0,
+            "pv_fcf": [
+              1.642,
+              1.775,
+              1.8,
+              1.939,
+              1.948
+            ],
+            "sum_pv_fcf": 9.1,
+            "terminal_value": 50.04,
+            "pv_terminal": 33.28,
+            "op_ev": 42.38,
+            "total_equity": 44.18,
+            "dcf_per_share": 409.07
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.2,
+              3.1,
+              3.0,
+              2.9,
+              2.9
+            ],
+            "ev_fcf_multiple": [
+              19.0,
+              18.0,
+              18.0,
+              18.0,
+              18.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Premium athleisure — lululemon (brand + proprietary fabrics, ~60% DTC) vs Nike, Alo Yoga, Vuori, Athleta, On, fast-fashion dupes; defending a premium brand Power as US share erodes.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Sourcing/marketing leverage at $11B revenue, but apparel scale is limited vs Nike."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Community/ambassadors are brand affinity, not a hard network."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the women's-first disruptor; now the incumbent being counter-positioned by Alo/Vuori."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Weak — apparel is promiscuous; this is why dupes bite."
+          },
+          "branding": {
+            "score": 3,
+            "note": "The dominant Power: premium pricing, cult community, ~58% gross margin — but eroding in US (DTC share 30%->24%)."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Proprietary fabrics (Nulu/Luxtreme/Everlux) + fit/quality + patents — durable, the hardest piece to dupe."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Design/supply learning curve; modest."
+          }
+        },
+        "dominantPower": "branding",
+        "durability": "medium",
+        "rivals": [
+          {
+            "name": "Nike",
+            "kind": "public",
+            "note": "Scale leader, mid-cycle reset; women's/DTC is lululemon's edge vs Nike.",
+            "growth": 0.02,
+            "margin": 0.11,
+            "multiple": "~25x P/E"
+          },
+          {
+            "name": "Alo Yoga",
+            "kind": "private",
+            "note": "Influencer-led, fashion-forward; ~88% growth, taking US share at higher tickets.",
+            "growth": null,
+            "margin": null,
+            "multiple": "private"
+          },
+          {
+            "name": "Vuori",
+            "kind": "private",
+            "note": "Workout-to-everyday; ~33%+ growth, premium-priced, gaining share.",
+            "growth": null,
+            "margin": null,
+            "multiple": "private"
+          },
+          {
+            "name": "On Holding",
+            "kind": "public",
+            "note": "Premium performance, fast-growing; adjacency pressure.",
+            "growth": 0.3,
+            "margin": 0.1,
+            "multiple": "~45x P/E"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "branding",
+            "who": "Alo Yoga + Vuori (US share)",
+            "falsifier": "Americas revenue declines for 2+ years while DTC share falls below 22%."
+          },
+          {
+            "vector": "counter_positioning",
+            "who": "Fast-fashion dupes",
+            "falsifier": "Gross margin compresses below 55% on sustained promotions/markdowns."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "Nike / macro down-trade",
+            "falsifier": "International growth decelerates below 10% while the US keeps shrinking."
+          }
+        ],
+        "takeaway": "lululemon's brand Power is genuinely durable internationally (China +29%, only 16% of revenue) and underpinned by cornered-resource fabrics, but it is eroding in the saturated US where Alo/Vuori and dupes are taking DTC share and the founder calls the product stale. The ~60% de-rating to ~10x FCF prices structural impairment; the DCF tests whether the brand stabilizes — and even a real-impairment ultra-bear is only -34%, while the modal stabilization implies the sell-off overshot."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "~10x FCF for a 22%-margin brand.",
+            "body": "Net-cash, $1.58B FCF, ~22% operating margin — priced like a terminal-decline retailer, not a premium brand."
+          },
+          {
+            "label": "Cornered-resource fabrics.",
+            "body": "Proprietary Nulu/Luxtreme/Everlux blends + fit/quality are the hardest thing for Alo/Vuori/dupes to replicate."
+          },
+          {
+            "label": "Huge international runway.",
+            "body": "China +29%, international +22%, only ~16% of revenue — a multi-year growth engine the US weakness masks."
+          },
+          {
+            "label": "Heavy buyback at the lows.",
+            "body": "No dividend; ~$1.6B authorization remaining, retiring shares at ~10x FCF — accretive."
+          },
+          {
+            "label": "New CEO from Nike.",
+            "body": "Heidi O'Neill (ex-Nike) + a settled founder proxy fight = fresh product/turnaround optionality."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "US/Americas revenue returns to growth · international stays >20% · gross margin re-expands above 58% · footwear/men's scale"
+          },
+          {
+            "label": "Bear validation",
+            "body": "Americas declines for 2+ years · DTC share falls below 22% · gross margin compresses below 55% on sustained promotions"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if the brand goes structurally cold (Under-Armour path) the cornered-resource Power erodes — re-rate the terminal toward a commodity-apparel multiple"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "DTC / wholesale",
+          "definition": "Direct-to-consumer (stores + digital, ~60% of sales, higher margin) vs wholesale; the channel mix that supports the brand premium."
+        },
+        {
+          "term": "Dupes",
+          "definition": "Lower-priced look-alikes (and premium challengers Alo/Vuori) eroding lululemon's US share — the central bear mechanism."
+        },
+        {
+          "term": "Power of Three x2",
+          "definition": "Management's plan to double men's + digital and quadruple international vs 2021 — now at risk on the FY26 guide."
+        },
+        {
+          "term": "Cornered resource",
+          "definition": "Helmer Power: proprietary fabrics + fit/quality that rivals can't easily copy — lululemon's most durable moat."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~14% in FY25); the mature-DCF lever the 22% operating margin converts to."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-03_15-38",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   }
 ];
 
