@@ -626,9 +626,10 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
    content); the site uses normal flow so we re-flow the page chrome. */
 .memo-embed-section .memo-embed-wrap {
   overflow: hidden;
-  /* Reserve vertical space for the scaled content (transform doesn't affect
-     flow). 5 pages × 8.5in + 4 × 0.5in inter-page gaps = 44.5in tall. */
-  aspect-ratio: 14 / 44.5;
+  /* Height is set in JS (EmbeddedMemo) to the scaled content height, so it
+     reserves the right space for any page count — 5, or 6 with the §6d
+     competitive page. min-height is just a pre-JS-paint placeholder. */
+  min-height: 60vh;
   background: transparent;   /* beige page bg shows through the inter-page gaps */
 }
 .memo-embed-section .memo-embed-inner {
