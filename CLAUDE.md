@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
-changelog-driven — currently at logical **v032**) are the source of truth.
+changelog-driven — currently at logical **v033**) are the source of truth.
 
 ## What this is
 
@@ -155,20 +155,35 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   on GM+growth but DCF-negative, GM-flattered + decelerating). **AI 2.0** (adds op/FCF-margin + Δ
   rate-of-change terms, weights `w1…w8`) captured from `AI.pdf` but **uncalibrated**. N/A for
   pre-revenue / gross-loss names (the young DCF's domain).
-- **AI 2.0 backtest — harness DONE & self-tested; fit BLOCKED on data (2026-06-04).** Built
-  `scripts/_models/ai2_backtest.py` (fits `w1…w8` by per-FY cross-section rank-IC + leave-one-year-out
-  CV; numpy-only; `--selftest` recovers a known weight vector, OOS IC +0.91) and assembled a 26-name
-  panel (`ai2_panel.csv`, winners + busts, FY2014–25). **The env network allowlist blocks every finance
-  data host** (SEC EDGAR, stooq, Yahoo, FMP, AlphaVantage — only WebSearch + raw.githubusercontent work),
-  so the research agents could source operating columns (rev/margins/growth, reliable) but **mktcap /
-  net_cash / FYE-price came back as training-estimates `[e]`** → the 8-weight fit **overfits** (in-sample
-  rank-IC +0.12→+0.51 at 3y, but LOYO OOS collapses to ~0/+0.16, weights unstable). **NEXT (gated on the
-  user): allowlist `data.sec.gov` + `stooq.com`, then run `scripts/_models/source_ai2_panel.py`** (the
-  deterministic sourcing script — SEC XBRL + stooq → the panel schema; ready & parser-self-tested, exits
-  gracefully while blocked) → promote `--out ai2_panel.csv` → re-fit. AI 1.0 stays the live screen.
+- **AI 2.0 backtest — fundamentals now SOURCED; price feed + fit handed to a fresh session (2026-06-04,
+  branch `claude/ecstatic-newton-YKOJJ`).** Harness (`scripts/_models/ai2_backtest.py`) validated —
+  reproduces the overfit exactly (AI 1.0 rank-IC +0.122/3y, +0.059/1y; 8-weight AI 2.0 +0.51 in-sample
+  but +0.155 LOYO-OOS / +0.034 at 1y, sign-flipping weights). Allowlist arrived (`data.sec.gov` +
+  `stooq.com`), **but stooq's bulk CSV is now apikey/captcha-gated** → switched the price feed to **keyless
+  Yahoo** (`query1.finance.yahoo.com`, v8 chart JSON; gated on Arthur allowlisting that host — option A,
+  agreed). **SEC parser REWRITTEN this session** (`source_ai2_panel.py`): fixed fy-conflation (used the
+  filing's `fy`, collapsing NVDA's FY17/18/19 revenue → 4 rows; now period-END year), tag-shadowing
+  (`if out: break` → per-fy priority merge, restoring pre-2018 history), and debt (disjoint noncurrent +
+  current + convertibles + debt-free→0). Result: **191→347 rows, 26 tickers, full history, 0 fundamentals
+  gaps**, entity cross-check clean, spot-checks match truth (NVDA FY24/25 rev 60.9/130.5, UBER FY24 GM
+  0.394). Yahoo source added (raw close→mktcap, adj close→returns), parser self-tested offline. **NEXT
+  (fresh session → spec v034): `--probe` Yahoo → source full panel → promote `--out ai2_panel.csv` → fit →
+  judge by LOYO OOS vs AI 1.0; if it still overfits (26×~12yr is thin for 8 weights), regularize
+  (sign-constrain Δ≥0, ridge toward AI 1.0, nested models) rather than chase in-sample IC.** Handoff prompt
+  drafted in-thread. AI 1.0 (`scripts/arthur_indicator.py`) stays the live screen.
 - **Website rendering-parity — DONE (2026-06-04, merged to main).** (1) Embedded site memo now renders
   the §6d competitive page (`EmbeddedMemo` had mounted only 5 of 6 page components; PDF showed 6) — JS
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
   box (1in/0.55in white frame + white card + beige inter-page gap); that box lived only in `print.html`,
   so the site had been butting black text against the white edge. PDF untouched.
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
+- **REMINDER (Arthur wants this) — POCD underwriting lens, spec §14 (draft, added v033, 2026-06-04).**
+  Bill Ackman's framing — *underwrite SpaceX the same way you underwrite any venture investment* — applied
+  across the **whole** book via the **People · Opportunity · Context · Deal** framework (origin: **William
+  Sahlman / HBS**, building on Poorvu & Stevenson; Ackman cited it, didn't originate it). Opportunity/Context/
+  Deal already map onto §6c/§6d/§13 + §12; **the build item is the People leg** (no first-class treatment
+  today) and reframing **Deal** for public equity as *your purchase itself* (entry price vs. the scenario
+  distribution + §12 sizing). Hold People to conviction-neutrality (§3.5 B): observable track record /
+  ownership / incentives / governance, never "I believe in the founder." **Surface this to Arthur when he
+  next opens the repo** — he asked to be reminded; revisit before building (likely a POCD scorecard + a
+  `people:`/`pocd:` YAML block + validator hook, à la §6d's `competitive:`).
