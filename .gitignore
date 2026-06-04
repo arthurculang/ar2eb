@@ -3,3 +3,6 @@ __pycache__/
 out/
 node_modules/
 public/assets/bundle/*.map
+
+# AI 2.0 sourcing: transient diagnostic (regenerated each run)
+scripts/_models/ai2_coverage_gaps.txt

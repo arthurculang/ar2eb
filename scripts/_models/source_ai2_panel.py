@@ -52,13 +52,19 @@ CIK = {
     "ZM": 1585521, "W": 1616707,
 }
 
-# Concept priority lists. First tag with an annual value for the FY wins; for
-# gross profit / total debt we fall back to a computed combination.
+# Concept priority lists. Resolved by per-fy PRIORITY MERGE (see flow_series /
+# instant_series): for each fiscal year, the earliest-filed value from the
+# highest-priority tag that covers it wins — so a tag with sparse coverage
+# (e.g. a stray single year) no longer shadows a fuller tag, and post-ASC606
+# revenue (RevenueFromContract…, ~2018+) is back-filled by Revenues/SalesRevenueNet
+# for the earlier years. Debt is built from disjoint noncurrent + current parts
+# (avoids double-counting a "total" tag), with a combined-tag fallback.
 CONCEPTS = {
     "revenue": ["RevenueFromContractWithCustomerExcludingAssessedTax",
                 "Revenues", "RevenueFromContractWithCustomerIncludingAssessedTax",
                 "SalesRevenueNet"],
     "cogs": ["CostOfRevenue", "CostOfGoodsAndServicesSold",
+             "CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization",
              "CostOfGoodsSold", "CostOfServices"],
     "gross_profit": ["GrossProfit"],
     "op_income": ["OperatingIncomeLoss"],
@@ -70,11 +76,15 @@ CONCEPTS = {
              "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"],
     "sti": ["ShortTermInvestments", "MarketableSecuritiesCurrent",
             "AvailableForSaleSecuritiesCurrent"],
-    "debt_total": ["DebtLongtermAndShorttermCombinedAmount"],
-    "debt_lt": ["LongTermDebtNoncurrent", "LongTermDebt",
-                "LongTermDebtAndCapitalLeaseObligations"],
-    "debt_cur": ["LongTermDebtCurrent", "DebtCurrent", "ShortTermBorrowings",
-                 "LongTermDebtAndCapitalLeaseObligationsCurrent"],
+    # Disjoint debt parts → total = noncurrent + current (or a combined tag).
+    "debt_noncur": ["LongTermDebtNoncurrent", "ConvertibleDebtNoncurrent",
+                    "ConvertibleLongTermNotesPayable", "SecuredLongTermDebt",
+                    "LongTermDebtAndCapitalLeaseObligations", "SeniorNotesNoncurrent",
+                    "SeniorNotes", "NotesPayableNoncurrent"],
+    "debt_cur": ["LongTermDebtCurrent", "ConvertibleNotesPayableCurrent",
+                 "ConvertibleDebtCurrent", "SecuredDebtCurrent", "DebtCurrent",
+                 "ShortTermBorrowings", "LongTermDebtAndCapitalLeaseObligationsCurrent"],
+    "debt_combined": ["DebtLongtermAndShorttermCombinedAmount", "LongTermDebt"],
 }
 
 
@@ -148,59 +158,92 @@ def _is_annual_duration(e: dict) -> bool:
     return 350 <= d <= 380
 
 
+def _fy(e: dict) -> int:
+    """Fiscal-year key = the YEAR of the period-end date.
+
+    NOT e['fy'] — that is the *filing's* fiscal year, which the same value
+    repeats across the 2 comparative years inside every 10-K (e.g. NVIDIA tags
+    the FY2017/18/19 revenues all with fy=2019), so e['fy'] conflates distinct
+    years. The end-date year is unique per fiscal year and increments by one
+    across consecutive annual reports (incl. late-January fiscal years)."""
+    return date.fromisoformat(e["end"]).year
+
+
 def flow_series(facts: dict, names: list[str]) -> dict[int, float]:
-    """fy → full-year value (10-K, FY, ~annual duration), as first reported."""
-    out: dict[int, tuple[str, float]] = {}   # fy → (filed, val)
-    for tag in names:
+    """fy → full-year value (10-K, FY, ~annual duration). Per-fy priority merge:
+    for each fy the earliest-filed value (as-first-reported) from the highest-
+    priority tag covering it wins; lower-priority tags back-fill other years."""
+    best: dict[int, tuple[int, str, float]] = {}   # fy → (tag_rank, filed, val)
+    for rank, tag in enumerate(names):
         for e in _annual_entries(facts, tag):
             if e.get("fp") != "FY" or not str(e.get("form", "")).startswith("10-K"):
                 continue
             if not _is_annual_duration(e):
                 continue
-            fy = int(e.get("fy") or date.fromisoformat(e["end"]).year)
+            fy = _fy(e)
             filed = e.get("filed", "9999-99-99")
-            if fy not in out or filed < out[fy][0]:   # earliest filing = as-first-reported
-                out[fy] = (filed, float(e["val"]))
-        if out:
-            break   # first tag that yielded data wins
-    return {fy: v for fy, (_, v) in out.items()}
+            cur = best.get(fy)
+            if cur is None or rank < cur[0] or (rank == cur[0] and filed < cur[1]):
+                best[fy] = (rank, filed, float(e["val"]))
+    return {fy: v for fy, (_, _, v) in best.items()}
 
 
 def instant_series(facts: dict, names: list[str], taxonomy: str = "us-gaap") -> dict[int, float]:
-    """fy → point-in-time value at fiscal-year-end (10-K, FY)."""
-    out: dict[int, tuple[str, float]] = {}
-    for tag in names:
-        for e in _annual_entries(facts, tag) if taxonomy == "us-gaap" \
-                else _annual_entries(facts, tag, taxonomy):
+    """fy → point-in-time value at fiscal-year-end (10-K, FY). Per-fy priority merge."""
+    best: dict[int, tuple[int, str, float]] = {}
+    for rank, tag in enumerate(names):
+        for e in _annual_entries(facts, tag, taxonomy):
             if e.get("fp") != "FY" or not str(e.get("form", "")).startswith("10-K"):
                 continue
             if e.get("start"):    # instant facts have no start
                 continue
-            fy = int(e.get("fy") or date.fromisoformat(e["end"]).year)
+            fy = _fy(e)
             filed = e.get("filed", "9999-99-99")
-            if fy not in out or filed < out[fy][0]:
-                out[fy] = (filed, float(e["val"]))
-        if out:
-            break
-    return {fy: v for fy, (_, v) in out.items()}
+            cur = best.get(fy)
+            if cur is None or rank < cur[0] or (rank == cur[0] and filed < cur[1]):
+                best[fy] = (rank, filed, float(e["val"]))
+    return {fy: v for fy, (_, _, v) in best.items()}
 
 
 def fye_dates(facts: dict) -> dict[int, date]:
-    """fy → fiscal-year-end date, from the revenue tag's annual entries."""
-    out: dict[int, tuple[str, date]] = {}
-    for tag in CONCEPTS["revenue"]:
+    """fy → fiscal-year-end date, from the revenue tags' annual entries."""
+    best: dict[int, tuple[int, str, date]] = {}
+    for rank, tag in enumerate(CONCEPTS["revenue"]):
         for e in _annual_entries(facts, tag):
             if e.get("fp") != "FY" or not str(e.get("form", "")).startswith("10-K"):
                 continue
             if not _is_annual_duration(e):
                 continue
-            fy = int(e.get("fy") or date.fromisoformat(e["end"]).year)
+            fy = _fy(e)
             filed = e.get("filed", "9999-99-99")
-            if fy not in out or filed < out[fy][0]:
-                out[fy] = (filed, date.fromisoformat(e["end"]))
-        if out:
+            cur = best.get(fy)
+            if cur is None or rank < cur[0] or (rank == cur[0] and filed < cur[1]):
+                best[fy] = (rank, filed, date.fromisoformat(e["end"]))
+    return {fy: d for fy, (_, _, d) in best.items()}
+
+
+def shares_at_fye(facts: dict, fyes: dict[int, date]) -> dict[int, float]:
+    """fy → shares outstanding nearest each fiscal-year-end. The dei cover-page
+    count is as-of a date shortly AFTER FYE, so map each entry to the fy whose
+    FYE it most closely follows (≤ ~135 days), else a balance-sheet count at FYE."""
+    raw: list[tuple[date, str, float]] = []
+    for tag, tax in (("EntityCommonStockSharesOutstanding", "dei"),
+                     ("CommonStockSharesOutstanding", "us-gaap")):
+        for e in _annual_entries(facts, tag, tax):
+            if e.get("start") or not e.get("end"):
+                continue
+            raw.append((date.fromisoformat(e["end"]), e.get("filed", "9999"), float(e["val"])))
+        if raw:
             break
-    return {fy: d for fy, (_, d) in out.items()}
+    out: dict[int, float] = {}
+    for fy, fye in fyes.items():
+        cand = [r for r in raw if 0 <= (r[0] - fye).days <= 135]
+        if not cand:
+            cand = [r for r in raw if abs((r[0] - fye).days) <= 20]
+        if cand:
+            cand.sort(key=lambda r: (abs((r[0] - fye).days), r[1]))
+            out[fy] = cand[0][2]
+    return out
 
 
 # ── stooq prices ────────────────────────────────────────────────────────────
@@ -233,8 +276,9 @@ def safe_div(a, b):
     return (a / b) if (a is not None and b not in (None, 0)) else None
 
 
-def build(tickers: list[str]) -> tuple[list[dict], list[str]]:
+def build(tickers: list[str]) -> tuple[list[dict], list[str], dict]:
     rows, gaps = [], []
+    diag = {"entity": {}, "debtfree": []}
     for t in tickers:
         cik = CIK.get(t)
         if not cik:
@@ -254,11 +298,12 @@ def build(tickers: list[str]) -> tuple[list[dict], list[str]]:
         capex = flow_series(facts, CONCEPTS["capex"])
         cash = instant_series(facts, CONCEPTS["cash"])
         sti = instant_series(facts, CONCEPTS["sti"])
-        dtot = instant_series(facts, CONCEPTS["debt_total"])
-        dlt = instant_series(facts, CONCEPTS["debt_lt"])
-        dcur = instant_series(facts, CONCEPTS["debt_cur"])
-        shares = instant_series(facts, ["EntityCommonStockSharesOutstanding"], "dei")
+        d_nc = instant_series(facts, CONCEPTS["debt_noncur"])
+        d_cu = instant_series(facts, CONCEPTS["debt_cur"])
+        d_comb = instant_series(facts, CONCEPTS["debt_combined"])
         fyes = fye_dates(facts)
+        shares = shares_at_fye(facts, fyes)
+        diag["entity"][t] = name
         try:
             closes = stooq_closes(t)
         except Blocked:
@@ -271,22 +316,32 @@ def build(tickers: list[str]) -> tuple[list[dict], list[str]]:
             gprof = gp.get(fy)
             if gprof is None and cogs.get(fy) is not None:
                 gprof = r - cogs[fy]
-            debt = dtot.get(fy)
-            if debt is None:
-                debt = (dlt.get(fy) or 0) + (dcur.get(fy) or 0) if (fy in dlt or fy in dcur) else None
-            netcash = (cash.get(fy, 0) + sti.get(fy, 0) - debt) if debt is not None else None
+            # Total debt = disjoint noncurrent + current parts; a combined "total"
+            # tag (LongTermDebt / DebtLongtermAndShorttermCombinedAmount) takes the
+            # max (it already bundles current maturities). No debt tag at all ⇒
+            # genuinely debt-free ⇒ 0 (so net cash = cash + STI, never None).
+            parts = (d_nc.get(fy) or 0.0) + (d_cu.get(fy) or 0.0)
+            total = d_comb.get(fy)
+            if total is not None:
+                debt = max(total, parts)
+            elif fy in d_nc or fy in d_cu:
+                debt = parts
+            else:
+                debt = 0.0
+                diag["debtfree"].append(f"{t} FY{fy}")
+            netcash = cash.get(fy, 0.0) + sti.get(fy, 0.0) - debt
             fye = fyes.get(fy)
             px = close_on_or_before(closes, fye) if (closes and fye) else None
             sh = shares.get(fy)
             mktcap = (px * sh / 1e9) if (px and sh) else None
             for metric, val in (("gross_profit", gprof), ("op_income", opi.get(fy)),
-                                ("ocf", ocf.get(fy)), ("price", px), ("debt", debt)):
+                                ("ocf", ocf.get(fy)), ("price", px)):
                 if val is None:
                     gaps.append(f"{t} FY{fy}: missing {metric}")
             rows.append(dict(
                 ticker=t, fy=fy, fye_month=(fye.strftime("%b") if fye else ""),
                 mktcap_b=mktcap,
-                net_cash_b=(netcash / 1e9 if netcash is not None else None),
+                net_cash_b=netcash / 1e9,
                 revenue_b=r / 1e9,
                 gross_margin=safe_div(gprof, r),
                 op_margin=safe_div(opi.get(fy), r),
@@ -296,7 +351,7 @@ def build(tickers: list[str]) -> tuple[list[dict], list[str]]:
                 price_fye=px,
                 _name=name))
         time.sleep(0.3)   # be polite to SEC
-    return rows, gaps
+    return rows, gaps, diag
 
 
 COLS = ["ticker", "fy", "fye_month", "mktcap_b", "net_cash_b", "revenue_b",
@@ -318,12 +373,18 @@ def write_csv(rows: list[dict], out: Path):
 
 # ── self-test: parser on a synthetic companyfacts blob (no network) ──────────
 def selftest():
+    # Revenues covers 2021–2022 (pre-ASC606); RevenueFromContract covers 2022–2023.
+    # The 2022 RevenueFromContract entry is a COMPARATIVE tagged with the filing's
+    # fy=2023 (the conflation trap) — it must land in 2022 by its end-date, NOT 2023.
     facts = {"entityName": "TEST", "facts": {
         "us-gaap": {
             "Revenues": {"units": {"USD": [
+                {"start": "2021-01-01", "end": "2021-12-31", "val": 80,  "fy": 2021, "fp": "FY", "form": "10-K", "filed": "2022-02-01"},
                 {"start": "2022-01-01", "end": "2022-12-31", "val": 100, "fy": 2022, "fp": "FY", "form": "10-K", "filed": "2023-02-01"},
-                {"start": "2023-01-01", "end": "2023-12-31", "val": 120, "fy": 2023, "fp": "FY", "form": "10-K", "filed": "2024-02-01"},
-                {"start": "2023-07-01", "end": "2023-09-30", "val": 31, "fy": 2023, "fp": "Q3", "form": "10-Q", "filed": "2023-10-01"}]}},
+                {"start": "2022-07-01", "end": "2022-09-30", "val": 26,  "fy": 2022, "fp": "Q3", "form": "10-Q", "filed": "2022-10-01"}]}},
+            "RevenueFromContractWithCustomerExcludingAssessedTax": {"units": {"USD": [
+                {"start": "2022-01-01", "end": "2022-12-31", "val": 100, "fy": 2023, "fp": "FY", "form": "10-K", "filed": "2024-02-01"},
+                {"start": "2023-01-01", "end": "2023-12-31", "val": 120, "fy": 2023, "fp": "FY", "form": "10-K", "filed": "2024-02-01"}]}},
             "GrossProfit": {"units": {"USD": [
                 {"start": "2023-01-01", "end": "2023-12-31", "val": 60, "fy": 2023, "fp": "FY", "form": "10-K", "filed": "2024-02-01"}]}},
             "OperatingIncomeLoss": {"units": {"USD": [
@@ -333,18 +394,21 @@ def selftest():
             "CashAndCashEquivalentsAtCarryingValue": {"units": {"USD": [
                 {"end": "2023-12-31", "val": 30, "fy": 2023, "fp": "FY", "form": "10-K", "filed": "2024-02-01"}]}}},
         "dei": {"EntityCommonStockSharesOutstanding": {"units": {"shares": [
-            {"end": "2023-12-31", "val": 1_000_000_000, "fy": 2023, "fp": "FY", "form": "10-K", "filed": "2024-02-01"}]}}}}}
+            {"end": "2024-01-20", "val": 1_000_000_000, "fy": 2023, "fp": "FY", "form": "10-K", "filed": "2024-02-01"}]}}}}}
     rev = flow_series(facts, CONCEPTS["revenue"])
-    assert rev == {2022: 100.0, 2023: 120.0}, rev          # quarterly excluded
+    assert rev == {2021: 80.0, 2022: 100.0, 2023: 120.0}, rev   # conflation fixed; quarterly excluded; back-fill works
     gp = flow_series(facts, CONCEPTS["gross_profit"])
     assert gp == {2023: 60.0}, gp
-    debt = instant_series(facts, CONCEPTS["debt_lt"])
-    assert debt == {2023: 50.0}, debt
-    sh = instant_series(facts, ["EntityCommonStockSharesOutstanding"], "dei")
+    # LongTermDebt now lives in the combined (total) bucket, not noncurrent.
+    assert instant_series(facts, CONCEPTS["debt_noncur"]) == {}, "LongTermDebt must not be a noncurrent tag"
+    assert instant_series(facts, CONCEPTS["debt_combined"]) == {2023: 50.0}
+    # shares: cover-page count dated 20d after the 2023 FYE maps to fy2023 only.
+    sh = shares_at_fye(facts, fye_dates(facts))
     assert sh == {2023: 1e9}, sh
     g = safe_div(120 - 100, 100)
     assert abs(g - 0.20) < 1e-9
-    print("selftest OK — flow/instant parsers, FY filtering, growth all correct")
+    print("selftest OK — end-date fy (no conflation), priority-merge back-fill, "
+          "debt buckets, share-to-FYE mapping all correct")
 
 
 def probe():
@@ -367,7 +431,7 @@ def main(argv):
     out = Path(argv[argv.index("--out") + 1]) if "--out" in argv else HERE / "ai2_panel_sourced.csv"
     out = out if out.is_absolute() else HERE / out
     try:
-        rows, gaps = build(list(CIK))
+        rows, gaps, diag = build(list(CIK))
     except Blocked as e:
         print(f"\nNETWORK BLOCKED: {e}")
         print("Allowlist data.sec.gov + stooq.com in the environment network policy,")
@@ -395,6 +459,13 @@ def main(argv):
             print("   -", g)
     else:
         print("\n  no fundamentals-tag gaps — SEC coverage is solid.")
+    # entity cross-check: a wrong CIK shows up as a company name that isn't the ticker.
+    ents = "  ".join(f"{t}={diag['entity'].get(t, '?')[:16]}" for t in sorted(diag["entity"]))
+    print(f"\nentity cross-check (ticker = SEC entityName — eyeball for a wrong CIK):\n  {ents}")
+    if diag["debtfree"]:
+        dft = sorted({x.split()[0] for x in diag["debtfree"]})
+        print(f"\n{len(diag['debtfree'])} (ticker,fy) carried no debt tag → treated debt-free "
+              f"(net cash = cash + STI): {', '.join(dft)}")
     print("\nnext: python scripts/_models/ai2_backtest.py   (after promoting to ai2_panel.csv)")
     return 0
 
