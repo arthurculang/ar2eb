@@ -36,3 +36,13 @@ correctly reporting the data is insufficient. **To trust `w1…w8` we need
 sourced EV + FYE prices** (allowlist `data.sec.gov` + a price host, or load a
 CSV export), then re-run `python scripts/_models/ai2_backtest.py`. Until then
 **AI 1.0 remains the live screen.**
+
+- `source_ai2_panel.py` — the deterministic sourcing path (no transcription, no
+  memory). Pulls fundamentals + shares from SEC XBRL companyfacts and
+  split-adjusted FYE closes from stooq, computes EV / margins / growth / forward
+  prices, and writes the panel schema. **Gated on the network allowlist:**
+  needs `data.sec.gov` + `stooq.com` opened (it exits gracefully with that
+  instruction otherwise). `--selftest` unit-tests the XBRL parser offline (flow
+  vs instant facts, 10-K/FY filtering, as-first-reported dedup); `--probe` tests
+  host reachability. Once it runs: review the printed coverage gaps, then
+  `--out ai2_panel.csv` to promote and re-fit.

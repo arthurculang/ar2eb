@@ -153,9 +153,19 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   (sourced 2016–2025 small-multiples — META 2022=3.1, NVDA FY23 31→FY25 12, LULU 3.0, ISRG ~15–25).
   Cross-validates the DCF (agree at extremes; **divergences are the signal** — TXG/ILMN screen "fair"
   on GM+growth but DCF-negative, GM-flattered + decelerating). **AI 2.0** (adds op/FCF-margin + Δ
-  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf` but **uncalibrated — NEXT: build the
-  backtest harness to fit `w1…w8`** (gather a multi-year fundamentals panel + forward-return labels).
-  N/A for pre-revenue / gross-loss names (the young DCF's domain).
+  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf` but **uncalibrated**. N/A for
+  pre-revenue / gross-loss names (the young DCF's domain).
+- **AI 2.0 backtest — harness DONE & self-tested; fit BLOCKED on data (2026-06-04).** Built
+  `scripts/_models/ai2_backtest.py` (fits `w1…w8` by per-FY cross-section rank-IC + leave-one-year-out
+  CV; numpy-only; `--selftest` recovers a known weight vector, OOS IC +0.91) and assembled a 26-name
+  panel (`ai2_panel.csv`, winners + busts, FY2014–25). **The env network allowlist blocks every finance
+  data host** (SEC EDGAR, stooq, Yahoo, FMP, AlphaVantage — only WebSearch + raw.githubusercontent work),
+  so the research agents could source operating columns (rev/margins/growth, reliable) but **mktcap /
+  net_cash / FYE-price came back as training-estimates `[e]`** → the 8-weight fit **overfits** (in-sample
+  rank-IC +0.12→+0.51 at 3y, but LOYO OOS collapses to ~0/+0.16, weights unstable). **NEXT (gated on the
+  user): allowlist `data.sec.gov` + `stooq.com`, then run `scripts/_models/source_ai2_panel.py`** (the
+  deterministic sourcing script — SEC XBRL + stooq → the panel schema; ready & parser-self-tested, exits
+  gracefully while blocked) → promote `--out ai2_panel.csv` → re-fit. AI 1.0 stays the live screen.
 - **Website rendering-parity — DONE (2026-06-04, merged to main).** (1) Embedded site memo now renders
   the §6d competitive page (`EmbeddedMemo` had mounted only 5 of 6 page components; PDF showed 6) — JS
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
