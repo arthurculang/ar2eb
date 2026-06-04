@@ -143,6 +143,22 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   **Watchlist (shipped):** UBER → `fcf-megacap` (tier-less); ILMN/ABNB/DASH/LULU/YETI →
   `fcf-plus-plus-growth`. *Layout note:* the 5-scenario mature Page 1 lands at −1px clearance
   (within STRICT's 2px tolerance → passes; cards/chart-bound, not prose-trimmable) — acceptable,
-  like OKLO. **NEXT: the Wave-1 PR to main** (11 new/retrofit memos: RKLB, OKLO, ACHR, GRAL, TXG
-  + the 6 mature; spec v030; all on `claude/ecstatic-newton-YKOJJ`, not yet merged).
+  like OKLO. **Wave 1 MERGED to main via PR #22** (2026-06-03): 11 new/retrofit memos (RKLB, OKLO,
+  ACHR, GRAL, TXG + the 6 mature) + spec v030, live on ar2eb.com.
+- **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
+  valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
+  paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin
+  Rule-of-40). Zones (META-anchored): green <6 buy · fair ~6–15 · red >15. `scripts/arthur_indicator.py`
+  (snapshot: LULU 1.95 cheapest → IONQ 154 / RKLB 197 richest) + `scripts/arthur_indicator_history.py`
+  (sourced 2016–2025 small-multiples — META 2022=3.1, NVDA FY23 31→FY25 12, LULU 3.0, ISRG ~15–25).
+  Cross-validates the DCF (agree at extremes; **divergences are the signal** — TXG/ILMN screen "fair"
+  on GM+growth but DCF-negative, GM-flattered + decelerating). **AI 2.0** (adds op/FCF-margin + Δ
+  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf` but **uncalibrated — NEXT: build the
+  backtest harness to fit `w1…w8`** (gather a multi-year fundamentals panel + forward-return labels).
+  N/A for pre-revenue / gross-loss names (the young DCF's domain).
+- **Website rendering-parity — DONE (2026-06-04, merged to main).** (1) Embedded site memo now renders
+  the §6d competitive page (`EmbeddedMemo` had mounted only 5 of 6 page components; PDF showed 6) — JS
+  sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
+  box (1in/0.55in white frame + white card + beige inter-page gap); that box lived only in `print.html`,
+  so the site had been butting black text against the white edge. PDF untouched.
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
