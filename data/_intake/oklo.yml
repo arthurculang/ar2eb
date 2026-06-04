@@ -1,0 +1,879 @@
+# OKLO — Oklo Inc (NYSE) · INTAKE (python-modeled & sanity-checked; scaffold-ready; v030 second-act retrofit)
+ticker: OKLO
+company: Oklo
+exchange: NYSE
+dcf_type: young_company
+date: '2026-05-31'
+spot: 67.2
+market:
+  market_cap_billion: 12.1
+  shares_outstanding_million: 180.0
+  cash_billion: 2.54
+  net_debt_billion: 0.0
+  extras:
+  - $2.54B cash, debt-free; zero warrants (174M basic / ~180M diluted)
+  - Pre-revenue; first Aurora power targeted 2027-28
+  - ~14 GW pipeline (mostly non-binding); Equinix $25M prepay
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Med-High
+  themes:
+  - nuclear-fission-smr
+  - ai-compute
+  primary_theme: nuclear-fission-smr
+central_question: Does ~$12B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power
+  outcome a decade of fundamentals can't reach?
+thesis: 'Oklo trades at ~$12B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate
+  nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the only commercial advanced-fission site under construction).
+  The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible
+  over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly,
+  +184%) clears it — the capital-intensive base leaves the weighted ~-53%.'
+chart_reference:
+  tam_billion: 120.0
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.0
+  - 0.0
+  - 0.0
+  history_fleet:
+  - 0
+  - 0
+  - 0
+page3_chart_config:
+  peer_y: 48
+  peer_text: Mature merchant-nuclear / IPP op margin ~40-55%
+  fleet_anchor: 0
+  fleet_title: Deployed-capacity revenue ramp (log)
+  fleet_reference: null
+  valn_anchor_y: 4
+  valn_anchor_text: Mature IPP / utility EV/Rev ~3-6×
+  valn_caption: On $0 revenue today, the multiple resolves only as PPA power revenue arrives; every scenario implies massive
+    compression.
+  tam_title: $120B FY35 advanced-nuclear power TAM — OKLO share
+  tam_legend:
+  - OKLO
+  - Other advanced nuclear
+  - Other power (grid, gas, renewables)
+page3:
+  subtitle: FY26-FY35 scenario projections (pre-revenue today)  ·  fiscal years end Dec 31  ·  Q1 2026 10-Q, FY25 results
+  sources: 'Sources: Oklo Q1 2026 10-Q (cash $2.54B, net loss $33.1M), FY2025 results (net loss $105.7M), company pipeline/PPA
+    disclosures, DOE Reactor Pilot + NRC filings. Revenue modeled as deployed-GW × capacity factor × PPA price (build-own-operate
+    IPP); FCF is NOL-shielded pre-tax over the explicit window (documented simplification). TAM: advanced-fission power serviceable
+    slice, ~$120B annual by FY35.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.1
+    expected_per_share: 6.4
+    headline: Aurora fails; NRC/FOAK setback; cash shell.
+    narrative:
+    - First-of-a-kind execution defeats Oklo — a sodium fast-reactor technical setback, a second NRC denial (the 2022 COLA
+      was denied without prejudice), or a HALEU-fuel shortfall (the same constraint that slipped TerraPower) pushes Aurora
+      past 2030 or off the table. The build-own-operate model never reaches commercial power; Oklo subsists as a radioisotope
+      (Atomic Alchemy) and services shell.
+    - The $2.54B cash is the floor — but dilutive flailing raises and a decade of opex erode it, and a 38% within-scenario
+      probability of restructuring pulls the expected toward the distress floor. Revenue stalls near $0.1B; the equity is
+      worth a fraction of today's ~$12B.
+    probability_rationale: 'The compound bear: a fast-reactor FOAK failure or regulatory re-denial, plus HALEU-fuel scarcity.
+      Advanced fission has never been commercialized on this build-own-operate model, and the prior 2022 NRC denial is a real
+      datapoint. 38% within-scenario failure reflects that Oklo, though cash-rich and debt-free, is pre-revenue and dependent
+      on never-built technology.'
+    dcf_metrics:
+      tam_share: 0.07
+      p_fail: 38
+      s2c: 0.2
+    dcf_path:
+      rev_path:
+      - 0.02
+      - 0.04
+      - 0.05
+      - 0.06
+      - 0.07
+      - 0.08
+      - 0.08
+      - 0.09
+      - 0.09
+      - 0.09
+      op_margin:
+      - -3.5
+      - -3.0
+      - -2.5
+      - -1.8
+      - -1.2
+      - -0.7
+      - -0.4
+      - -0.2
+      - -0.05
+      - 0.05
+      wacc_path:
+      - 0.16
+      - 0.157
+      - 0.154
+      - 0.152
+      - 0.149
+      - 0.146
+      - 0.143
+      - 0.141
+      - 0.138
+      - 0.135
+      term_g: 0.02
+      nopat:
+      - -0.07
+      - -0.12
+      - -0.125
+      - -0.108
+      - -0.084
+      - -0.056
+      - -0.032
+      - -0.018
+      - -0.004
+      - 0.004
+      reinvest:
+      - 0.1
+      - 0.1
+      - 0.05
+      - 0.05
+      - 0.05
+      - 0.05
+      - 0.0
+      - 0.05
+      - 0.0
+      - 0.0
+      fcf:
+      - -0.17
+      - -0.22
+      - -0.175
+      - -0.158
+      - -0.134
+      - -0.106
+      - -0.032
+      - -0.068
+      - -0.004
+      - 0.004
+      cash: 2.54
+      net_debt: 0.0
+      raise_total: 1.0
+      dilution_pct: 15
+      final_shares: 208
+      distress: 2.0
+    chart_data:
+      raises:
+      - 0.0
+      - 0.3
+      - 0.3
+      - 0.2
+      - 0.2
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 55.0
+      - 45.0
+      - 38.0
+      - 32.0
+      - 30.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 70.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.25
+    expected_per_share: 9.66
+    headline: Aurora slips; ~1 GW niche, capped.
+    narrative:
+    - Aurora certifies and powers up, but late (first power ~2029) and at low cadence; Oklo becomes a credible niche advanced-nuclear
+      operator — ~1 GW deployed by the mid-2030s, real PPA revenue (~$0.8B by FY35) at solid IPP margins — but never converts
+      the headline pipeline. FOAK costs run high and the factory-cost thesis only partly materializes.
+    - Modest dilution funds the slow buildout. The DCF lands ~$10/share — the market is pricing a far larger, faster fleet.
+      This is the 'real company, wrong price' world.
+    probability_rationale: Aurora works but underwhelms on cadence and cost; the ~14 GW pipeline converts only fractionally
+      as binding PPAs prove hard to land. 18% failure probability — lower than a pure science-project given $2.54B cash, DOE
+      support, and a site under construction, but FOAK nuclear execution risk is real. 25% weight as a very plausible 'competent
+      but capped' outcome.
+    dcf_metrics:
+      tam_share: 0.67
+      p_fail: 18
+      s2c: 0.28
+    dcf_path:
+      rev_path:
+      - 0.03
+      - 0.06
+      - 0.12
+      - 0.22
+      - 0.36
+      - 0.52
+      - 0.66
+      - 0.74
+      - 0.78
+      - 0.8
+      op_margin:
+      - -3.5
+      - -2.5
+      - -1.5
+      - -0.6
+      - 0.0
+      - 0.18
+      - 0.3
+      - 0.37
+      - 0.42
+      - 0.45
+      wacc_path:
+      - 0.145
+      - 0.142
+      - 0.139
+      - 0.137
+      - 0.134
+      - 0.131
+      - 0.128
+      - 0.126
+      - 0.123
+      - 0.12
+      term_g: 0.025
+      nopat:
+      - -0.105
+      - -0.15
+      - -0.18
+      - -0.132
+      - 0.0
+      - 0.094
+      - 0.198
+      - 0.274
+      - 0.328
+      - 0.36
+      reinvest:
+      - 0.107
+      - 0.107
+      - 0.214
+      - 0.357
+      - 0.5
+      - 0.571
+      - 0.5
+      - 0.286
+      - 0.143
+      - 0.071
+      fcf:
+      - -0.212
+      - -0.257
+      - -0.394
+      - -0.489
+      - -0.5
+      - -0.478
+      - -0.302
+      - -0.012
+      - 0.185
+      - 0.289
+      cash: 2.54
+      net_debt: 0.0
+      raise_total: 1.0
+      dilution_pct: 8
+      final_shares: 195
+      distress: 6.0
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.2
+      - 0.3
+      - 0.3
+      - 0.2
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 68.0
+      - 68.0
+      - 68.0
+      - 68.0
+      - 68.0
+      - 68.0
+      - 68.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 70.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.34
+    expected_per_share: 15.73
+    headline: First power ~2028; ~3 GW IPP fleet.
+    narrative:
+    - 'The modal path: Aurora reaches first power on roughly the targeted timeline (~2028), and Oklo scales the build-own-operate
+      model to a ~3 GW operating fleet by 2034, selling baseload power to data centers at ~$75-90/MWh and ~50% mature operating
+      margins — genuine IPP economics. FY30 revenue ~$0.42B sits near the (thin) analyst consensus, compounding as reactors
+      come online.'
+    - The buildout is capital-intensive (~$2B/GW, ~$5.7B cumulative reinvestment) funded by ~$2.9B of dilutive raises on top
+      of the $2.54B cash. DCF ~$16/share — ~76% below spot, a measure of how much the market is paying for a fleet larger
+      and faster than a successful-but-rational base implies.
+    probability_rationale: Requires Aurora to work (not dominate) and the build-own-operate model to scale to a few GW — no
+      full-pipeline conversion, no SpaceX-style runaway. 10% failure probability given the cash, DOE/INL momentum, and NRC
+      progress (PDC topical report approved 2026). 34% weight as the central outcome.
+    dcf_metrics:
+      tam_share: 1.67
+      p_fail: 10
+      s2c: 0.38
+    dcf_path:
+      rev_path:
+      - 0.03
+      - 0.06
+      - 0.13
+      - 0.24
+      - 0.42
+      - 0.7
+      - 1.1
+      - 1.55
+      - 1.85
+      - 2.0
+      op_margin:
+      - -3.5
+      - -2.5
+      - -1.3
+      - -0.5
+      - 0.08
+      - 0.26
+      - 0.39
+      - 0.46
+      - 0.49
+      - 0.5
+      wacc_path:
+      - 0.14
+      - 0.137
+      - 0.134
+      - 0.132
+      - 0.129
+      - 0.126
+      - 0.123
+      - 0.121
+      - 0.118
+      - 0.115
+      term_g: 0.035
+      nopat:
+      - -0.105
+      - -0.15
+      - -0.169
+      - -0.12
+      - 0.034
+      - 0.182
+      - 0.429
+      - 0.713
+      - 0.906
+      - 1.0
+      reinvest:
+      - 0.079
+      - 0.079
+      - 0.184
+      - 0.289
+      - 0.474
+      - 0.737
+      - 1.053
+      - 1.184
+      - 0.789
+      - 0.395
+      fcf:
+      - -0.184
+      - -0.229
+      - -0.353
+      - -0.409
+      - -0.44
+      - -0.555
+      - -0.624
+      - -0.471
+      - 0.117
+      - 0.605
+      cash: 2.54
+      net_debt: 0.0
+      raise_total: 2.9
+      dilution_pct: 16
+      final_shares: 208
+      distress: 12.0
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.2
+      - 0.4
+      - 0.6
+      - 0.6
+      - 0.5
+      - 0.4
+      - 0.2
+      - 0.0
+      raise_prices:
+      - 75.0
+      - 80.0
+      - 85.0
+      - 90.0
+      - 100.0
+      - 110.0
+      - 120.0
+      - 130.0
+      - 140.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 70.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.23
+    expected_per_share: 35.83
+    headline: Factory economics work; ~7 GW AI-power.
+    narrative:
+    - 'The bull: Aurora''s factory-built economics prove out (capex per GW falls with cadence), NRC licensing clears, and
+      Oklo converts a real slice of its pipeline — ~7 GW deployed by 2034, powering AI data centers under long-dated PPAs
+      at scale, with fuel-recycling and radioisotope verticals adding optionality. Revenue compounds toward ~$4.8B at a ~58%
+      operating margin.'
+    - Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$37/share — and still ~45% below
+      spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you must
+      extend the horizon or believe a richer terminal.
+    probability_rationale: 'A chain: Aurora works AND factory-cost economics materialize AND NRC clears AND the pipeline converts
+      to binding PPAs at scale. Each plausible at 50-70%; jointly ~23%. A real, fundable trajectory — Oklo has the cash, the
+      site, and the AI-power demand backdrop — but it is conjunctive.'
+    dcf_metrics:
+      tam_share: 4.0
+      p_fail: 5
+      s2c: 0.48
+    dcf_path:
+      rev_path:
+      - 0.03
+      - 0.08
+      - 0.18
+      - 0.4
+      - 0.75
+      - 1.3
+      - 2.1
+      - 3.1
+      - 4.1
+      - 4.8
+      op_margin:
+      - -3.5
+      - -2.0
+      - -0.8
+      - 0.0
+      - 0.22
+      - 0.4
+      - 0.5
+      - 0.55
+      - 0.57
+      - 0.58
+      wacc_path:
+      - 0.135
+      - 0.132
+      - 0.129
+      - 0.127
+      - 0.124
+      - 0.121
+      - 0.118
+      - 0.116
+      - 0.113
+      - 0.11
+      term_g: 0.045
+      nopat:
+      - -0.105
+      - -0.16
+      - -0.144
+      - 0.0
+      - 0.165
+      - 0.52
+      - 1.05
+      - 1.705
+      - 2.337
+      - 2.784
+      reinvest:
+      - 0.062
+      - 0.104
+      - 0.208
+      - 0.458
+      - 0.729
+      - 1.146
+      - 1.667
+      - 2.083
+      - 2.083
+      - 1.458
+      fcf:
+      - -0.167
+      - -0.264
+      - -0.352
+      - -0.458
+      - -0.564
+      - -0.626
+      - -0.617
+      - -0.378
+      - 0.254
+      - 1.326
+      cash: 2.54
+      net_debt: 0.0
+      raise_total: 7.5
+      dilution_pct: 19
+      final_shares: 215
+      distress: 22.0
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.4
+      - 0.8
+      - 1.2
+      - 1.5
+      - 1.5
+      - 1.3
+      - 0.8
+      - 0.0
+      raise_prices:
+      - 90.0
+      - 120.0
+      - 150.0
+      - 180.0
+      - 200.0
+      - 220.0
+      - 240.0
+      - 260.0
+      - 280.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 70.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 186.66
+    headline: 13 GW power + HALEU fuel monopoly.
+    narrative:
+    - 'The tail (the second act): Oklo becomes the dominant AI-baseload-power IPP (~13 GW) AND originates a HALEU fuel-recycling
+      monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center
+      load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource
+      Power (§6d).'
+    - 'DCF ~$191/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +184%
+      above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn''t capture.'
+    probability_rationale: 'Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling
+      monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly
+      (a cornered resource) is the §6d-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.'
+    dcf_metrics:
+      tam_share: 14.42
+      p_fail: 3
+      s2c: 0.6
+    dcf_path:
+      rev_path:
+      - 0.04
+      - 0.12
+      - 0.3
+      - 0.65
+      - 1.55
+      - 3.2
+      - 6.1
+      - 9.9
+      - 13.7
+      - 17.3
+      op_margin:
+      - -3.5
+      - -1.5
+      - -0.3
+      - 0.15
+      - 0.35
+      - 0.5
+      - 0.58
+      - 0.63
+      - 0.66
+      - 0.68
+      wacc_path:
+      - 0.13
+      - 0.127
+      - 0.124
+      - 0.121
+      - 0.118
+      - 0.115
+      - 0.112
+      - 0.109
+      - 0.107
+      - 0.105
+      term_g: 0.055
+      nopat:
+      - -0.14
+      - -0.18
+      - -0.09
+      - 0.098
+      - 0.542
+      - 1.6
+      - 3.538
+      - 6.237
+      - 9.042
+      - 11.764
+      reinvest:
+      - 0.067
+      - 0.133
+      - 0.3
+      - 0.583
+      - 1.5
+      - 2.75
+      - 4.833
+      - 6.333
+      - 6.333
+      - 6.0
+      fcf:
+      - -0.207
+      - -0.313
+      - -0.39
+      - -0.486
+      - -0.958
+      - -1.15
+      - -1.295
+      - -0.096
+      - 2.709
+      - 5.764
+      cash: 2.54
+      net_debt: 0.0
+      raise_total: 11.0
+      dilution_pct: 20
+      final_shares: 225
+      distress: 40.0
+    chart_data:
+      raises:
+      - 0.0
+      - 0.5
+      - 1.0
+      - 1.5
+      - 2.0
+      - 2.5
+      - 2.0
+      - 1.5
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 110.0
+      - 140.0
+      - 180.0
+      - 230.0
+      - 280.0
+      - 320.0
+      - 360.0
+      - 400.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 70.0
+historical_prices:
+  ipo_marker: SPAC May '24
+  x_min: -2.2
+  points:
+  - - -2.05
+    - 10.0
+  - - -1.9
+    - 9.0
+  - - -1.7
+    - 8.0
+  - - -1.5
+    - 11.0
+  - - -1.25
+    - 18.0
+  - - -1.0
+    - 26.0
+  - - -0.8
+    - 45.0
+  - - -0.6
+    - 90.0
+  - - -0.45
+    - 150.0
+  - - -0.33
+    - 190.0
+  - - -0.22
+    - 120.0
+  - - -0.12
+    - 85.0
+  - - -0.05
+    - 67.0
+weighting_rationale:
+- label: Ultra Bear 10%
+  body: Aurora fails / NRC re-denial; cash shell.
+- label: Bear 25%
+  body: Aurora slips; credible niche but ~1 GW capped.
+- label: Base 34%
+  body: First power ~2028; ~3 GW IPP fleet, ~50% margin.
+- label: Bull 23%
+  body: Factory economics work; ~7 GW AI-power scale.
+- label: Ultra Bull 8%
+  body: 13 GW + HALEU fuel monopoly; +184%, clears spot.
+appendix:
+  pushback:
+  - label: Best-capitalized advanced-nuclear name.
+    body: $2.54B cash, debt-free, zero warrants — far more funded than SMR peers; dilution is opportunistic, not existential.
+  - label: Only commercial advanced-fission site under construction.
+    body: DOE site-use permit + Aurora-INL groundbreaking (Sep 2025) — a structural first-mover lead on physical deployment,
+      not just paper.
+  - label: Build-own-operate captures more value.
+    body: Selling power via PPAs, not reactors — recurring, higher-lifetime-value revenue vs equipment-sale SMR peers.
+  - label: Vertical integration is a hedge.
+    body: Fuel recycling + Atomic Alchemy radioisotopes add non-power revenue and a HALEU-supply hedge against the sector's
+      fuel bottleneck.
+  - label: The demand pull is structural.
+    body: AI data-center power demand (33→176 GW US by 2035) plus the 400 GW US nuclear goal — the pull is real even if today's
+      pipeline is non-binding.
+  triggers:
+  - label: Bull validation
+    body: Aurora-INL first power on schedule (2027-28)  ·  first binding PPA (pipeline → contracted)  ·  factory capex tracking
+      < $2.5B/GW
+  - label: Bear validation
+    body: first power slips beyond 2029  ·  COLA stalls at NRC  ·  pipeline stays non-binding / churns
+  - label: Reframe needed
+    body: if factory-built capex approaches $1B/GW at cadence, the bull deployment ceiling lifts materially — revisit tam_share
+      and the terminal
+glossary:
+- term: Aurora Powerhouse
+  definition: Oklo's sodium-cooled fast microreactor (15→50→75 MWe), metallic HALEU fuel, modeled on EBR-II; sold as power,
+    not hardware.
+- term: Build-own-operate (IPP)
+  definition: Oklo owns and runs the reactors and sells electricity via long-dated PPAs — an independent-power-producer model
+    with recurring revenue.
+- term: HALEU
+  definition: High-Assay Low-Enriched Uranium (5-20% U-235), the fuel advanced reactors need; supply is scarce — a sector-wide
+    constraint.
+- term: COLA / NRC
+  definition: Combined Operating License Application to the Nuclear Regulatory Commission; Oklo's 2022 COLA was denied without
+    prejudice — the regulatory falsifier.
+- term: Sales-to-capital (s2c)
+  definition: Damodaran reinvestment efficiency — incremental revenue per dollar of reinvested capital; low for capital-intensive
+    nuclear (here ~0.2-0.6, implying ~$1.2-3B/GW capex).
+competitive:
+  arena: Advanced-fission power for AI data centers — Oklo (Aurora fast reactor, build-own-operate IPP, fuel recycling) vs
+    NuScale, X-energy, Kairos, TerraPower, GE-Hitachi BWRX-300, Westinghouse eVinci; the race to originate the build-own-operate
+    AI-baseload-nuclear position.
+  lens: power_origination
+  powers:
+    scale_economies:
+      score: 1
+      note: Factory-built microreactors could reset capex/GW with cadence, but Aurora is pre-commercial — the learning curve
+        is unbuilt.
+    network_economies:
+      score: 1
+      note: A fleet/grid + fuel-recycling flywheel is a future moat, not yet originated.
+    counter_positioning:
+      score: 2
+      note: Build-own-operate (sell power, not reactors) + vertical fuel integration is hard for equipment-sale SMR peers
+        to replicate without becoming IPPs themselves.
+    switching_costs:
+      score: 2
+      note: 20-40yr PPAs and co-located behind-the-meter reactors embed deeply once contracted (Equinix prepay a signal) —
+        but most commitments are non-binding today.
+    branding:
+      score: 2
+      note: A leading advanced-nuclear brand (Altman halo, DOE selection); strong but unproven on delivery.
+    cornered_resource:
+      score: 2
+      note: DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor
+        IP — a genuine first-mover physical lead. In the ultra-bull this extends to a HALEU fuel-recycling monopoly — the
+        §6c.11.1 second act.
+    process_power:
+      score: 1
+      note: No operating reactor yet; the EBR-II heritage is design pedigree, not demonstrated process power.
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+  - name: NuScale
+    kind: public
+    note: Only NRC-approved SMR design (LWR, 77 MWe VOYGR); deploys ~2030; TVA + Romania (RoPower).
+    share_now: 0.0
+    share_terminal: 0.2
+    capital: public; Fluor / ENTRA1
+  - name: X-energy
+    kind: private
+    note: HTGR 80 MWe TRISO pebble; Amazon 5+ GW by 2039; reactor early-2030s.
+    share_now: 0.0
+    share_terminal: 0.18
+    capital: $985M+; Amazon, DOE
+  - name: Kairos Power
+    kind: private
+    note: Fluoride-salt KP-FHR; Hermes test reactor ~2027 (nearest demo); Google 500 MW.
+    share_now: 0.0
+    share_terminal: 0.12
+    capital: DOE $303M; Google
+  - name: TerraPower (Natrium)
+    kind: private
+    note: Sodium fast + molten-salt storage, 345 MWe; ops ~2030+; HALEU-delayed.
+    share_now: 0.0
+    share_terminal: 0.12
+    capital: '>$3.4B; Gates, Nvidia, DOE'
+  - name: GE-Hitachi BWRX-300
+    kind: incumbent-division
+    note: BWR 300 MWe; OPG first unit ~2030; TVA Clinch River.
+    share_now: 0.0
+    share_terminal: 0.15
+    capital: GE Vernova / Hitachi
+  lead_lag:
+  - metric: Commercial site under construction
+    company: Aurora-INL (ground broken 2025)
+    best_rival: none commercial
+    verdict: leading
+  - metric: NRC design / license status
+    company: COLA pending (denied 2022)
+    best_rival: NuScale design-approved
+    verdict: lagging
+  - metric: Operating reactor / demo
+    company: none (first power 2027-28)
+    best_rival: Kairos Hermes ~2027
+    verdict: roughly level
+  takeaway: Oklo is originating a genuine build-own-operate AI-baseload-nuclear position — the only commercial advanced-fission
+    site under construction, a model that captures more value than equipment-sale SMR peers, $2.54B to fund it, and the structural
+    AI-power demand pull. But it lags NuScale on design approval, has no operating reactor, was denied once by the NRC, and
+    its ~14 GW pipeline is overwhelmingly non-binding; first-of-a-kind execution and HALEU-fuel supply are the falsifiers
+    the whole bull case must clear.

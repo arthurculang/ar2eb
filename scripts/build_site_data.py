@@ -22,7 +22,7 @@ DATA = REPO / "data"
 MEMOS_DIR = REPO / "public" / "memos"
 OUT = REPO / "public" / "data.js"
 
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn"]
 # Canonical scenario order — worst to best. Each ticker subsets this list
 # based on which keys appear in scenarios.* (e.g. ZM has all five, JOBY/AUR/
 # LTH/NAUT have the standard four). The order here drives display order
@@ -134,6 +134,20 @@ def _camelize(d: dict) -> dict:
             v = _camelize(v)
         out[new_k] = v
     return out
+
+
+def _camel_deep(v):
+    """Like _camelize but also recurses into lists (the competitive block
+    carries lists of dicts — rivals, lead_lag, threats)."""
+    if isinstance(v, dict):
+        out = {}
+        for k, val in v.items():
+            parts = k.split("_")
+            out[parts[0] + "".join(p.title() for p in parts[1:])] = _camel_deep(val)
+        return out
+    if isinstance(v, list):
+        return [_camel_deep(x) for x in v]
+    return v
 
 
 def fmt_shares(m: float) -> str:
@@ -250,10 +264,14 @@ def build_memo(ticker: str) -> dict:
     probs = {k: round(scn[k]["probability"] * 100) for k in ticker_scens}
     pdf_file = f"{ticker}-memo__v{st['pdf_version']}__{st['pdf_timestamp']}.pdf"
     pdf_path = MEMOS_DIR / pdf_file
+    # The target PDF may not be rendered yet — rebuild_all runs build_site_data
+    # (which render needs for content + footer stamp) *before* the render step,
+    # and a freshly bumped stamp names a file that doesn't exist until render.
+    # Size is display-only, so emit a placeholder and continue rather than
+    # hard-failing; it's corrected on the post-render rebuild.
+    pdf_size = human_size(pdf_path) if pdf_path.exists() else "—"
     if not pdf_path.exists():
-        raise FileNotFoundError(
-            f"{ticker}: {pdf_file} not in public/memos/ — regenerate the PDF "
-            f"(scripts/rebuild_all.py) before building site data")
+        print(f"  note: {pdf_file} not yet rendered — size placeholder")
 
     # Prior versions — the same shape we accept in the YAML (stamp.prior_versions).
     # We resolve each entry's PDF filename + size against public/memos/. If a
@@ -283,7 +301,7 @@ def build_memo(ticker: str) -> dict:
         "dcfType": dcf_display,
         "publishedISO": iso,
         "publishedLabel": lbl,
-        "pdf": {"file": pdf_file, "size": human_size(pdf_path), "priorVersions": prior},
+        "pdf": {"file": pdf_file, "size": pdf_size, "priorVersions": prior},
         "metrics": {
             "mktCap": _fmt_b(mk['market_cap_billion']),
             "shares": fmt_shares(mk["shares_outstanding_million"]),
@@ -369,6 +387,11 @@ def build_memo(ticker: str) -> dict:
                     ],
                 },
             } if is_private else {}),
+            # Page 4 — Competitive landscape (§6d). Optional: emitted only when
+            # the ticker carries a `competitive` block; the renderer adds the
+            # 6th page only when present (else the memo stays 5 pages).
+            **({"competitive": _camel_deep(d["competitive"])}
+               if "competitive" in d else {}),
             "appendix": {
                 "pushback": [{"label": p["label"], "body": collapse(p["body"])}
                              for p in d["appendix"]["pushback"]],

@@ -477,13 +477,17 @@ taxonomy:
   primary_theme: omics-life-science-infrastructure
 
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-05-28_05-25"
+  footer_version: "005"
+  footer_timestamp: "2026-05-31_17-10"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "004"
-  pdf_timestamp: "2026-05-28_05-25"
+  pdf_version: "005"
+  pdf_timestamp: "2026-05-31_17-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-05-28_05-25"
+    asOfDate: "2026-05-16"
+    spotPrice: 2.40
   - version: "003"
     timestamp: "2026-05-23_21-14"
     asOfDate: "2026-05-16"
@@ -501,3 +505,37 @@ glossary:
     definition: "Voyager's planned 10-billion-protein-mapping capability for general proteomics, scheduled for H1 2027 general availability."
   - term: "S2C (sales-to-capital)"
     definition: "Damodaran reinvestment ratio. ΔRevenue / S2C = reinvestment in $. NAUT case ranges 0.7-1.7 (capital-light hardware-software blend)."
+
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Origination lens (young_company).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Broad-scale proteomics — Nautilus's single-molecule protein-analysis platform vs
+    Seer, Olink/Thermo, SomaLogic/Standard BioTools, Quantum-Si; the race to
+    high-throughput, deep proteome coverage.
+  lens: power_origination
+  powers:
+    scale_economies:     { score: 0, note: "Pre-revenue; no instruments placed, no consumable pull-through yet." }
+    network_economies:   { score: 0, note: "No installed base or data ecosystem yet." }
+    counter_positioning: { score: 2, note: "Multi-affinity-probe single-molecule decoding — distinct from mass-spec and aptamer incumbents." }
+    switching_costs:     { score: 0, note: "None until an instrument ships and labs standardize on it." }
+    branding:            { score: 1, note: "Scientific credibility; unproven commercially." }
+    cornered_resource:   { score: 2, note: "Core IP on the probe-cycling decode method; well-funded cash position pre-launch." }
+    process_power:       { score: 0, note: "No manufacturing/assay learning curve yet." }
+  dominant_power: cornered_resource
+  window: closing
+  rivals:
+    - { name: "Seer", kind: public, note: "Proteograph shipping with revenue; nanoparticle enrichment + MS.", share_now: 0.0, share_terminal: 0.20, capital: "public; cash-funded" }
+    - { name: "Olink (Thermo Fisher)", kind: incumbent-division, note: "Established PEA panels (~5k proteins); NGS readout; Thermo distribution.", share_now: 0.0, share_terminal: 0.25, capital: "Thermo balance sheet" }
+    - { name: "SomaLogic / Standard BioTools", kind: public, note: "Aptamer SomaScan (~11k); merged scale.", share_now: 0.0, share_terminal: 0.20, capital: "public; merged" }
+    - { name: "Quantum-Si", kind: public, note: "Semiconductor protein sequencing; also early.", share_now: 0.0, share_terminal: 0.10, capital: "public" }
+  lead_lag:
+    - { metric: "Commercial instrument shipping", company: "no (pre-launch)", best_rival: "yes", verdict: lagging }
+    - { metric: "Demonstrated proteome coverage", company: "limited (dev)", best_rival: "broad (~5-11k)", verdict: lagging }
+    - { metric: "Cash runway (yrs at burn)", company: 3, best_rival: 3, verdict: even }
+  takeaway: >
+    Nautilus is originating a genuinely differentiated single-molecule platform with strong
+    IP and a funded balance sheet, but it is pre-commercial and lags shipping rivals on every
+    demonstrated metric; the window is open only while the cash lasts and before incumbents
+    close the coverage gap — a launched, validated instrument is the falsifier.

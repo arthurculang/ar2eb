@@ -964,13 +964,50 @@ glossary:
   definition: IonQ system generations. Forte = current commercial (AQ#36). Tempo = next-gen, AQ#64 demonstrated, 256-qubit chip.
 
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-05-30_00-02"
+  footer_version: "003"
+  footer_timestamp: "2026-05-31_17-03"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-05-30_00-02"
+  pdf_version: "003"
+  pdf_timestamp: "2026-05-31_17-03"
   prior_versions:
+  - version: "002"
+    timestamp: "2026-05-30_00-02"
+    asOfDate: "2026-05-29"
+    spotPrice: 70.14
   - version: "001"
     timestamp: "2026-05-29_23-02"
     asOfDate: "2026-05-29"
     spotPrice: 70.14
+
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Origination lens (young_company).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    The race to a ~$50B FY36 fault-tolerant quantum-computing TAM — trapped-ion
+    (IonQ, Quantinuum) vs. superconducting (Google, IBM) vs. neutral-atom
+    (QuEra, Pasqal, Atom Computing).
+  lens: power_origination
+  powers:
+    scale_economies:     { score: 1, note: "SkyWater fab vertical integration begun; not yet a cost-curve advantage." }
+    network_economies:   { score: 0, note: "No developer/data flywheel; cloud reach via AWS/Azure is rented, not owned." }
+    counter_positioning: { score: 2, note: "Trapped-ion stack incumbents can't pivot to without abandoning sunk superconducting fabs." }
+    switching_costs:     { score: 2, note: "$470M RPO; algorithms compiled to IonQ's native gate set raise re-port cost." }
+    branding:            { score: 1, note: "Strong research credibility (AQ#64 early); not yet the enterprise default." }
+    cornered_resource:   { score: 2, note: "Trapped-ion IP portfolio + SkyWater fab; Maryland/Duke talent lineage." }
+    process_power:       { score: 1, note: "Fidelity yield improving each generation; not yet a durable, opaque process edge." }
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+    - { name: "Quantinuum", kind: private, note: "Helios: 48 logical qubits @ 99.92%; $12.7B IPO; Honeywell-backed.", share_now: 0.0, share_terminal: 0.20, capital: "$1.4B+ raised" }
+    - { name: "Google Quantum AI", kind: incumbent-division, note: "Willow: verifiable quantum advantage demonstrated.", share_now: 0.0, share_terminal: 0.16, capital: "Alphabet balance sheet" }
+    - { name: "IBM Quantum", kind: incumbent-division, note: "Nighthawk roadmap to 1,080 qubits; deep enterprise channel.", share_now: 0.0, share_terminal: 0.14, capital: "IBM balance sheet" }
+    - { name: "Neutral-atom (QuEra/Pasqal/Atom)", kind: private, note: "1,200+ physical qubits in 18 months; different error profile.", share_now: 0.0, share_terminal: 0.10, capital: "$300M+ aggregate" }
+  lead_lag:
+    - { metric: "Algorithmic qubits (AQ)", company: 64, best_rival: 56, verdict: leading }
+    - { metric: "Logical qubits @ >=99.9%", company: 36, best_rival: 48, verdict: lagging }
+    - { metric: "Cash runway (yrs at burn)", company: 4, best_rival: 6, verdict: lagging }
+  takeaway: >
+    Real trapped-ion cornered-resource and counter-positioning leads, but network and
+    scale power are unoriginated and Quantinuum's logical-qubit edge is the falsifier to
+    watch; the origination window is open, but not indefinitely.

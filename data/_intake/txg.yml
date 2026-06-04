@@ -1,0 +1,540 @@
+# TXG — 10x Genomics (NASDAQ) · INTAKE (MATURE-company DCF; python-modeled; scaffold-ready)
+ticker: TXG
+company: 10x Genomics
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-05-31'
+spot: 28.11
+market:
+  market_cap_billion: 3.57
+  shares_outstanding_million: 127.0
+  cash_billion: 0.54
+  net_debt_billion: 0.0
+  extras:
+  - ~$540M net cash, no debt; ~127M shares (dual-class, founder voting control)
+  - Revenue ~$600M, flat-to-declining 3yrs; cash-generative (+$26M op cash Q1'26)
+  - ~85% recurring consumables (70% gross margin); NIH-funding exposed
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med
+  themes:
+  - omics-life-science-infrastructure
+  primary_theme: omics-life-science-infrastructure
+central_question: Is the market paying a spatial-growth multiple (~5x EV/sales) for a single-cell-decline reality — or correctly
+  pricing a margin inflection plus spatial re-acceleration?
+thesis: '10x trades at ~$3.6B (≈$28/sh) — ~5x EV/sales on ~$600M revenue now flat-to-declining for three years. A dominant
+  tools franchise: >7,900 instruments and ~85% recurring 70%-gross-margin consumables, net-cash and cash-generative after
+  a 17% opex cut. The mature DCF asks whether revenue re-accelerates and margins convert to operating profit — against an
+  NIH-funding shock and instrument-free rivals. The finding: the recent triple prices a spatial re-acceleration the base case
+  (~3% grind) doesn''t support — only the bull (~8%) approaches spot, the ultra-bull clears it.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.49
+  - 0.516
+  - 0.619
+  - 0.611
+  - 0.599
+  history_fcf:
+  - -0.1
+  - -0.15
+  - -0.22
+  - -0.08
+  - 0.0
+  history_ev_rev:
+  - null
+  - 18
+  - 10
+  - 6
+  - 5
+page3_chart_config:
+  segment_a: Single Cell
+  segment_b: Spatial + other
+  hist_ent_split:
+  - 0.78
+  - 0.75
+  - 0.7
+  - 0.67
+  - 0.64
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec 31  ·  Q1 2026 10-Q, FY25 results
+  sources: 'Sources: 10x Genomics Q1 2026 10-Q (net cash $0.54B), FY2025 results ($599M underlying revenue ex-litigation),
+    segment + installed-base disclosures, patent-settlement filings. Revenue modeled as a growth-rate path off the FY25 base;
+    FCF = revenue x FCF margin (mature framework, no dilution); terminal = Gordon at the scenario WACC. EV/sales context vs
+    mature life-science-tools peers.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.15
+    expected_per_share: 4.41
+    headline: NIH cuts bite; revenue declines.
+    narrative:
+    - The NIH / academic funding shock deepens — the proposed ~40% NIH cut sticks, instrument placements stay frozen, and
+      the single-cell consumables decline accelerates faster than spatial can offset. Revenue falls ~4%/yr toward ~$0.50B
+      by FY30; the franchise shrinks.
+    - Even net-cash and debt-free, a declining-revenue tools business earns a distressed multiple — the DCF lands near $5,
+      ~80% below spot. The recurring consumables annuity erodes with the shrinking installed base.
+    probability_rationale: The NIH funding shock is the dominant risk — ~25% of revenue is NIH-tied, instruments already fell
+      39%, and the academic market could shrink for years. 15% weight on a sustained decline.
+    dcf_metrics:
+      cagr_5y: -3.6
+      wacc: 0.125
+    dcf_path:
+      rev_b: 0.599
+      rev_path:
+      - -0.04
+      - -0.05
+      - -0.04
+      - -0.03
+      - -0.02
+      op_margin:
+      - -0.1
+      - -0.06
+      - -0.03
+      - 0.0
+      - 0.02
+      wacc_path:
+      - 0.125
+      - 0.125
+      - 0.125
+      - 0.125
+      - 0.125
+      term_g: -0.01
+      fcf:
+      - -0.023
+      - -0.011
+      - 0.0
+      - 0.005
+      - 0.01
+      cash: 0.54
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 127.0
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 0.6
+      - 0.5
+      - 0.4
+      - 0.3
+      - 0.2
+      ev_fcf_multiple:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 8.0
+      - 7.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.3
+    expected_per_share: 8.19
+    headline: Stalled; flat revenue, thin margins.
+    narrative:
+    - Revenue stays roughly flat — the NIH drag offsets the Xenium spatial ramp, and single-cell erosion continues. 10x holds
+      its dominant position but doesn't grow; margins recover only modestly on cost discipline.
+    - A flat ~$0.6B-revenue franchise at a mid-single-digit FCF margin earns ~$8/share on the DCF — well below spot. 'Dominant,
+      but ex-growth.'
+    probability_rationale: Spatial grows but can't offset single-cell erosion + the NIH drag; revenue stays flat. 30% weight
+      — a very plausible 'dominant but ex-growth' outcome given the 3-year stall.
+    dcf_metrics:
+      cagr_5y: -0.4
+      wacc: 0.11
+    dcf_path:
+      rev_b: 0.599
+      rev_path:
+      - -0.02
+      - -0.01
+      - 0.0
+      - 0.0
+      - 0.01
+      op_margin:
+      - -0.06
+      - -0.01
+      - 0.04
+      - 0.08
+      - 0.11
+      wacc_path:
+      - 0.11
+      - 0.11
+      - 0.11
+      - 0.11
+      - 0.11
+      term_g: 0.01
+      fcf:
+      - 0.0
+      - 0.017
+      - 0.035
+      - 0.052
+      - 0.065
+      cash: 0.54
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 127.0
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 1.4
+      - 1.2
+      - 1.1
+      - 1.0
+      - 0.9
+      ev_fcf_multiple:
+      - 0.0
+      - 14.0
+      - 12.0
+      - 10.0
+      - 8.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 13.86
+    headline: Slow ~3% grind; margins recover.
+    narrative:
+    - 'The modal path: FY26 guidance holds (0-4% growth), spatial roughly offsets single-cell decline, and the 17% opex cut
+      plus modest top-line growth converts the 70% gross margin toward a low-teens FCF margin — revenue ~$0.68B by FY30 at
+      ~3% CAGR.'
+    - DCF ~$14/share — ~50% below spot. The franchise is real and finally profitable, but a 3%-grower at a low-teens FCF margin
+      doesn't support ~5x EV/sales. The market is paying for a re-acceleration the base case doesn't deliver.
+    probability_rationale: Guidance holds (0-4%), cost discipline converts to FCF, spatial roughly offsets single-cell. 33%
+      as the central, modal outcome — consistent with consensus ~3.8% CAGR.
+    dcf_metrics:
+      cagr_5y: 2.6
+      wacc: 0.095
+    dcf_path:
+      rev_b: 0.599
+      rev_path:
+      - 0.0
+      - 0.02
+      - 0.03
+      - 0.04
+      - 0.04
+      op_margin:
+      - -0.04
+      - 0.01
+      - 0.07
+      - 0.12
+      - 0.16
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.025
+      fcf:
+      - 0.012
+      - 0.031
+      - 0.057
+      - 0.085
+      - 0.109
+      cash: 0.54
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 127.0
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.4
+      - 2.2
+      - 2.1
+      - 2.0
+      - 1.8
+      ev_fcf_multiple:
+      - 20.0
+      - 18.0
+      - 16.0
+      - 14.0
+      - 12.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.17
+    expected_per_share: 26.06
+    headline: Spatial re-accelerates the total.
+    narrative:
+    - 'The bull: Xenium spatial (and the ScaleBio instrument-free chemistry) re-accelerate the whole company to ~8% CAGR,
+      NIH funding stabilizes, instrument placements resume, and operating leverage drives the FCF margin toward ~20% — revenue
+      ~$0.88B by FY30.'
+    - DCF ~$26/share — roughly today's price. This is the scenario the recent triple is pricing; it requires spatial to actually
+      move the total, not just grow within a flat mix.
+    probability_rationale: Requires spatial (Xenium) to re-accelerate the TOTAL to ~8% AND NIH to stabilize AND operating
+      leverage to land. Each plausible; jointly ~17%.
+    dcf_metrics:
+      cagr_5y: 8.0
+      wacc: 0.085
+    dcf_path:
+      rev_b: 0.599
+      rev_path:
+      - 0.04
+      - 0.07
+      - 0.09
+      - 0.1
+      - 0.1
+      op_margin:
+      - -0.02
+      - 0.05
+      - 0.11
+      - 0.17
+      - 0.22
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.03
+      fcf:
+      - 0.025
+      - 0.053
+      - 0.095
+      - 0.144
+      - 0.193
+      cash: 0.54
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 127.0
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.8
+      - 3.6
+      - 3.4
+      - 3.3
+      - 3.2
+      ev_fcf_multiple:
+      - 24.0
+      - 21.0
+      - 18.0
+      - 16.0
+      - 14.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.05
+    expected_per_share: 43.23
+    headline: Clinical spatial inflection.
+    narrative:
+    - 'The tail: spatial biology inflects from research into translational/clinical use, 10x''s installed-base + IP moat compounds,
+      and revenue reaches mid-teens CAGR (~$1.05B by FY30) at peak-tools margins (~27% FCF).'
+    - DCF ~$43/share — ~+54% above spot. The genuine 'secular-growth platform' outcome the bulls envision; ~5% probability.
+    probability_rationale: 'Tail: spatial inflects into clinical/translational use + peak-tools margins. ~5% — the secular-platform
+      thesis fully realized.'
+    dcf_metrics:
+      cagr_5y: 11.7
+      wacc: 0.08
+    dcf_path:
+      rev_b: 0.599
+      rev_path:
+      - 0.06
+      - 0.1
+      - 0.14
+      - 0.15
+      - 0.14
+      op_margin:
+      - 0.0
+      - 0.08
+      - 0.15
+      - 0.22
+      - 0.27
+      wacc_path:
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      term_g: 0.035
+      fcf:
+      - 0.038
+      - 0.077
+      - 0.127
+      - 0.202
+      - 0.282
+      cash: 0.54
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 127.0
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.8
+      - 4.8
+      - 4.7
+      - 4.6
+      - 4.7
+      ev_fcf_multiple:
+      - 28.0
+      - 24.0
+      - 21.0
+      - 19.0
+      - 17.0
+historical_prices:
+  ipo_marker: IPO Sep '19
+  x_min: -6.8
+  points:
+  - - -6.7
+    - 55.0
+  - - -6.0
+    - 90.0
+  - - -5.0
+    - 150.0
+  - - -4.5
+    - 190.0
+  - - -4.0
+    - 120.0
+  - - -3.5
+    - 60.0
+  - - -3.0
+    - 45.0
+  - - -2.5
+    - 55.0
+  - - -2.0
+    - 40.0
+  - - -1.5
+    - 25.0
+  - - -1.0
+    - 15.0
+  - - -0.6
+    - 9.0
+  - - -0.3
+    - 18.0
+  - - -0.05
+    - 28.0
+weighting_rationale:
+- label: Ultra Bear 15%
+  body: NIH cuts crush demand; revenue declines; ~$5.
+- label: Bear 30%
+  body: Flat revenue, thin margins; dominant ex-growth; ~$8.
+- label: Base 33%
+  body: Slow ~3% grind; margins recover; ~$14 (≈-50%).
+- label: Bull 17%
+  body: Spatial re-accelerates to ~8%; ~$26 (≈spot).
+- label: Ultra Bull 5%
+  body: Clinical spatial inflection; mid-teens; ~$43.
+appendix:
+  pushback:
+  - label: Razor/blade annuity is the moat.
+    body: ~85% of revenue is recurring 70%-gross-margin consumables off a >7,900-instrument installed base — a durable Scale-Economies
+      Power.
+  - label: Net-cash, self-funding, no dilution.
+    body: ~$540M net cash, debt-free, and freshly cash-generative (+$26M op cash Q1'26) — no raise needed; failure risk negligible.
+  - label: IP estate bankrupted a competitor.
+    body: 10x's droplet/in-situ patents bankrupted NanoString and extract royalties from Bruker/Vizgen — a real cornered resource.
+  - label: Spatial (Xenium) is the growth engine.
+    body: Spatial consumables +19%; Xenium Protein multiomics extends the lead — the re-acceleration optionality.
+  - label: Cost discipline already executed.
+    body: A 17% opex cut + 8% headcount reduction collapsed the net loss from -$183M to -$44M; the operating leverage is in
+      place if revenue grows.
+  triggers:
+  - label: Bull validation
+    body: total revenue growth re-accelerates >7%  ·  spatial offsets single-cell decline  ·  NIH / instrument placements
+      recover  ·  FCF margin > 15%
+  - label: Bear validation
+    body: single-cell consumables decline accelerates < -5%  ·  instruments stay frozen  ·  NIH cuts bite  ·  revenue flat-to-down
+      through FY27
+  - label: Reframe needed
+    body: if spatial biology inflects into clinical/translational use at scale, re-rate the growth path and terminal multiple
+      toward a secular-platform level
+glossary:
+- term: Chromium / single-cell
+  definition: 10x's flagship single-cell platform; the legacy core — ~$386M revenue, slowly declining.
+- term: Visium / Xenium / spatial
+  definition: 10x's spatial-biology platforms (in-situ + sequencing-based); the +19% growth engine.
+- term: Razor/blade (consumables)
+  definition: Instruments (the razor) drive recurring consumable-reagent sales (the blade); ~85% of 10x revenue is recurring
+    consumables.
+- term: NIH funding shock
+  definition: ~25% of revenue is NIH-tied; proposed ~40% NIH cuts froze academic instrument purchases (-39% in FY25) — the
+    dominant headwind.
+- term: FCF margin
+  definition: Mature-DCF lever — the free-cash-flow margin the 70% gross margin converts to as revenue and operating leverage
+    build.
+competitive:
+  arena: Single-cell + spatial biology tools — 10x Genomics (Chromium single-cell, Visium/Xenium spatial; ~85% recurring consumables)
+    vs Illumina (sequencing platform, entering spatial), Bruker (CosMx/GeoMx ex-NanoString), Parse (instrument-free single-cell),
+    Standard BioTools; defending a dominant tools franchise as growth stalls.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 3
+      note: Razor/blade installed base (>6,400 Chromium + >1,500 spatial instruments) → ~85% recurring high-margin consumables;
+        the strongest, most durable Power.
+    network_economies:
+      score: 1
+      note: A published-protocol / citation network is mild; not a hard flywheel.
+    counter_positioning:
+      score: 1
+      note: 10x is the incumbent, not counter-positioned; instrument-free entrants (Parse) counter-position against its razor
+        model.
+    switching_costs:
+      score: 2
+      note: Entrenched lab workflows, protocols, and data pipelines create real but not insurmountable lock-in.
+    branding:
+      score: 2
+      note: The 'gold standard' single-cell brand; strong in academia.
+    cornered_resource:
+      score: 2
+      note: Extensive droplet + in-situ patent estate (bankrupted NanoString; forces rivals to license) — durable on existing
+        methods, but doesn't stop combinatorial-barcoding designs-around.
+    process_power:
+      score: 2
+      note: Manufacturing + assay learning curve; real but contestable.
+  dominant_power: scale_economies
+  durability: medium
+  rivals:
+  - name: Illumina
+    kind: public
+    note: Sequencing platform 10x's reads run on; entering spatial; huge balance sheet. 10x is suing it over spatial/single-cell
+      IP.
+    growth: 0.03
+    margin: 0.2
+    multiple: ~5x sales
+  - name: Bruker
+    kind: public
+    note: CosMx/GeoMx (ex-NanoString) spatial imaging; settled & licenses 10x IP (pays $68M + royalties).
+    growth: 0.05
+    margin: 0.15
+    multiple: ~3x sales
+  - name: Parse Biosciences
+    kind: private
+    note: Instrument-free split-pool single-cell — removes the razor, undercuts Chromium. 10x won an ATAC injunction vs it.
+    growth: null
+    margin: null
+    multiple: private
+  - name: Standard BioTools
+    kind: public
+    note: Fluidigm + Olink; multiomics-adjacent, consolidating.
+    growth: 0.0
+    margin: null
+    multiple: ~2x sales
+  threats:
+  - vector: counter_positioning
+    who: Instrument-free entrants (Parse; 10x's own ScaleBio chemistry)
+    falsifier: Single-cell consumables decline accelerates beyond -5%/yr as researchers adopt instrument-free workflows.
+  - vector: scale_economies
+    who: NIH / academic funding cuts
+    falsifier: Instrument placements stay frozen (instruments < -20%/yr) for two more years, shrinking the future consumables
+      annuity.
+  - vector: cornered_resource
+    who: Illumina spatial entry + design-arounds
+    falsifier: Illumina or a combinatorial-barcoding rival takes material spatial share while 10x's IP suits stall.
+  takeaway: '10x''s Scale-Economies Power — a >7,900-instrument installed base throwing off ~85% recurring, 70%-margin consumables
+    — is real and durable, and its IP estate bankrupted NanoString. But the Power is being audited in real time: single-cell
+    consumables are declining, instrument placements are frozen by the NIH funding shock, and instrument-free entrants (Parse
+    — and 10x''s own ScaleBio acquisition) attack the razor model the annuity depends on. The market pays ~5x EV/sales for
+    a spatial re-acceleration the base case doesn''t yet support; the durability of the consumables annuity through the academic-funding
+    shock is the falsifier the valuation rests on.'

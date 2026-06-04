@@ -434,11 +434,16 @@ taxonomy:
   primary_theme: consumer-experience
 
 stamp:
-  footer_version: "022"
-  footer_timestamp: "2026-05-23_21-14"
+  footer_version: "023"
+  footer_timestamp: "2026-05-31_17-10"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "022"
-  pdf_timestamp: "2026-05-23_21-14"
+  pdf_version: "023"
+  pdf_timestamp: "2026-05-31_17-10"
+  prior_versions:
+  - version: "022"
+    timestamp: "2026-05-23_21-14"
+    asOfDate: "2026-05-16"
+    spotPrice: 33.61
 glossary:
 - term: SLB
   definition: Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent.
@@ -452,3 +457,33 @@ glossary:
   definition: 'Revenue beyond membership dues: PT, classes, spa, cafe, retail. Currently ~30% of total; compounds faster than dues.'
 - term: Lease-adjusted leverage
   definition: Per ASC 842, capitalized operating lease liabilities included in total obligations. Adds ~$2.5B+ to $1.29B net debt.
+
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Audit lens (mature_company).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Premium health-and-wellness clubs — Life Time vs Equinox (urban premium), boutique
+    studios (Xponential et al.), value gyms (Planet Fitness), and at-home fitness.
+  lens: power_audit
+  powers:
+    scale_economies:     { score: 2, note: "Large-format clubs + real-estate scale spread fixed cost; ancillary revenue (spa, cafe, work)." }
+    network_economies:   { score: 1, note: "Member community/events create some stickiness; not a true network." }
+    counter_positioning: { score: 2, note: "Premium 'athletic country club' big-box that mass-market and boutiques can't straddle." }
+    switching_costs:     { score: 2, note: "Family memberships, onboarding, community and locker inertia." }
+    branding:            { score: 3, note: "The premium destination brand in big-box fitness." }
+    cornered_resource:   { score: 2, note: "Prime, large-footprint real-estate locations that are hard to replicate." }
+    process_power:       { score: 2, note: "Club operating model + ancillary-revenue playbook honed over years." }
+  dominant_power: branding
+  durability: high
+  rivals:
+    - { name: "Equinox", kind: private, note: "Urban ultra-premium; overlaps at the top end.", growth: 0.06, margin: null, multiple: "private" }
+    - { name: "Planet Fitness", kind: public, note: "Mass-market low-price; a different segment, but caps pricing power below.", growth: 0.10, margin: 0.36, multiple: "~20x EV/EBITDA" }
+    - { name: "Boutique studios (Xponential)", kind: public, note: "Fragmented, asset-light franchising; cherry-picks modalities.", growth: 0.08, margin: 0.20, multiple: "~8x" }
+  threats:
+    - { vector: counter_positioning, who: "Equinox + boutiques", falsifier: "Same-club revenue growth < 5% for 2 consecutive years while membership churn climbs above 35%." }
+    - { vector: switching_costs, who: "Macro down-trade / at-home", falsifier: "Dues-paying membership declines YoY in a non-recession year." }
+  takeaway: >
+    A durable premium brand plus prime-real-estate moat that underwrites the DCF's terminal
+    economics; the live risks are macro down-trade and Equinox at the top end — same-club
+    revenue and churn are the erosion gauges.

@@ -1,0 +1,510 @@
+# DASH — DoorDash (NASDAQ) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: DASH
+company: DoorDash
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 159.0
+market:
+  market_cap_billion: 66.0
+  shares_outstanding_million: 415.0
+  cash_billion: 5.5
+  net_debt_billion: 0.0
+  extras:
+  - ~$5.5B net cash; ~415M basic / ~442M diluted shares (SBC dilutes ~$1.3B/yr)
+  - GOV $102B / revenue $13.72B FY25 (+27% GOV); $1.8B FCF; first +FY GAAP income 2024
+  - Down ~40% from highs; advertising ~$1B run-rate, Deliveroo+Wolt international, ~33x EV/FCF
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med-High
+  themes:
+  - platform-marketplace-tech
+  primary_theme: platform-marketplace-tech
+central_question: Is DoorDash a dominant local-commerce network whose profitability is about to inflect — or a high-SBC, ~33x-FCF
+  delivery business punished for spending ahead of returns?
+thesis: 'DoorDash trades at ~$66B (≈$159/sh, down ~40% from $285) — ~33x EV/FCF on $1.8B FCF, but GOV is still compounding
+  +27% ($102B) and adj-EBITDA hit $2.8B (~2.7% of GOV). The crash is a margin/SBC problem, not a growth one. The mature DCF
+  asks whether advertising (~$1B run-rate) + New-Verticals (grocery) unit economics + international (Deliveroo/Wolt) inflect
+  the 2.4%-of-GOV margin upward, against ~$1.3B/yr SBC dilution. The finding: roughly fair — the 20%+ growth + margin inflection
+  are offset by the premium FCF multiple + dilution.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 4.89
+  - 6.58
+  - 8.6
+  - 10.7
+  - 13.72
+  history_fcf:
+  - 0.4
+  - 0.4
+  - 1.35
+  - 1.8
+  - 1.8
+  history_ev_rev:
+  - 12.0
+  - 5.0
+  - 5.0
+  - 5.0
+  - 4.4
+page3_chart_config:
+  segment_a: US Restaurants
+  segment_b: New Verticals + Intl
+  hist_ent_split:
+  - 0.9
+  - 0.85
+  - 0.8
+  - 0.75
+  - 0.7
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  calendar fiscal year  ·  FY2025 10-K + Q1'26
+  sources: 'Sources: DoorDash FY2025 10-K (GOV $102B, revenue $13.72B, adj EBITDA $2.8B, FCF $1.8B, net cash $5.5B), Q1''26
+    (GOV +37% incl. Deliveroo). Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin; SBC modeled via rising
+    final_shares (dilution); Gordon terminal. EV/FCF vs UBER/Instacart.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.15
+    expected_per_share: 67.43
+    headline: Growth slows; margin stalls; SBC dilutes.
+    narrative:
+    - US restaurant delivery saturates, New Verticals stay margin-dilutive, Uber Eats presses, and ~$1.3B/yr SBC keeps diluting.
+      GOV growth decays toward high-single while the 2.4%-of-GOV margin stalls.
+    - DCF ~$67 (-58%) — a no-margin-inflection, SBC-heavy delivery business at a premium multiple de-rates hard.
+    probability_rationale: 'The bear: the margin inflection stalls and SBC dilution + Uber competition cap returns. 15% weight
+      on spending-ahead-of-returns persisting.'
+    dcf_metrics:
+      cagr_5y: 6.2
+      wacc: 0.105
+    dcf_path:
+      rev_b: 13.72
+      rev_path:
+      - 0.08
+      - 0.07
+      - 0.06
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.04
+      - 0.05
+      - 0.06
+      - 0.07
+      - 0.07
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.025
+      fcf:
+      - 1.778
+      - 1.903
+      - 2.185
+      - 2.294
+      - 2.409
+      cash: 5.5
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 475
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.5
+      - 2.2
+      - 2.0
+      - 1.8
+      ev_fcf_multiple:
+      - 16.0
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 103.28
+    headline: Decelerates; modest margin inflection.
+    narrative:
+    - GOV decelerates to low-double-digits and the margin inflects only modestly as ads scale but New Verticals stay competitive;
+      SBC dilution continues.
+    - DCF ~$103 (-35%) — still below spot; the premium FCF multiple isn't covered by a modest inflection.
+    probability_rationale: Growth decelerates and the margin ramp is slower than the bull case. 27% weight — a plausible 'grows
+      but stays expensive' path.
+    dcf_metrics:
+      cagr_5y: 10.0
+      wacc: 0.1
+    dcf_path:
+      rev_b: 13.72
+      rev_path:
+      - 0.12
+      - 0.11
+      - 0.1
+      - 0.09
+      - 0.08
+      op_margin:
+      - 0.06
+      - 0.08
+      - 0.1
+      - 0.11
+      - 0.11
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.03
+      fcf:
+      - 2.151
+      - 2.559
+      - 3.002
+      - 3.272
+      - 3.534
+      cash: 5.5
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 470
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.6
+      - 3.3
+      - 3.1
+      - 2.9
+      - 2.8
+      ev_fcf_multiple:
+      - 18.0
+      - 17.0
+      - 17.0
+      - 17.0
+      - 17.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 158.19
+    headline: Margin inflects; ads scale; ~15% growth.
+    narrative:
+    - 'The modal path: advertising scales past $1B, New-Verticals (grocery) unit economics turn positive in 2H''26, and the
+      network compounds GOV mid-teens — lifting the FCF margin toward 20%.'
+    - DCF ~$158 (-1%) — roughly fair; the 20%+ growth + margin inflection just cover the ~33x FCF entry after the de-rate.
+    probability_rationale: Requires the guided 2H'26 margin inflection + ads scaling + mid-teens GOV. 33% as the central,
+      near-spot outcome — but SBC caps the per-share.
+    dcf_metrics:
+      cagr_5y: 12.4
+      wacc: 0.095
+    dcf_path:
+      rev_b: 13.72
+      rev_path:
+      - 0.15
+      - 0.14
+      - 0.12
+      - 0.11
+      - 0.1
+      op_margin:
+      - 0.08
+      - 0.11
+      - 0.13
+      - 0.15
+      - 0.15
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.035
+      fcf:
+      - 2.524
+      - 3.238
+      - 3.828
+      - 4.472
+      - 4.919
+      cash: 5.5
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 465
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.4
+      - 4.1
+      - 3.9
+      - 3.7
+      - 3.7
+      ev_fcf_multiple:
+      - 20.0
+      - 19.0
+      - 19.0
+      - 19.0
+      - 19.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.18
+    expected_per_share: 237.79
+    headline: Ads + grocery scale; margin to ~5% of GOV.
+    narrative:
+    - Advertising + grocery + international (Deliveroo/Wolt) drive the GOV margin toward 4-5%, GOV compounds high-teens, and
+      SBC moderates as a share of revenue.
+    - DCF ~$238 (+50%) — the local-commerce network re-rates as the margin inflection proves durable.
+    probability_rationale: The margin inflection compounds (ads + grocery + international) and growth stays high-teens. ~18%;
+      the bull the de-rate is discounting away.
+    dcf_metrics:
+      cagr_5y: 15.0
+      wacc: 0.09
+    dcf_path:
+      rev_b: 13.72
+      rev_path:
+      - 0.18
+      - 0.17
+      - 0.15
+      - 0.13
+      - 0.12
+      op_margin:
+      - 0.1
+      - 0.14
+      - 0.17
+      - 0.19
+      - 0.19
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.04
+      fcf:
+      - 2.914
+      - 3.788
+      - 4.792
+      - 5.661
+      - 6.341
+      cash: 5.5
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 458
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 5.2
+      - 4.9
+      - 4.6
+      - 4.4
+      - 4.4
+      ev_fcf_multiple:
+      - 23.0
+      - 22.0
+      - 22.0
+      - 22.0
+      - 22.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.07
+    expected_per_share: 338.45
+    headline: Dominant local-commerce platform.
+    narrative:
+    - DoorDash becomes the dominant local-commerce platform (restaurants + grocery + retail + ads + autonomy optionality)
+      compounding GOV ~20% at peak network margins.
+    - DCF ~$338 (+113%) — the local-commerce 'everything' platform; ~7% probability.
+    probability_rationale: Full local-commerce dominance + a high-margin ad/autonomy mix. ~7%, the asymmetric upside.
+    dcf_metrics:
+      cagr_5y: 18.0
+      wacc: 0.085
+    dcf_path:
+      rev_b: 13.72
+      rev_path:
+      - 0.22
+      - 0.2
+      - 0.18
+      - 0.16
+      - 0.14
+      op_margin:
+      - 0.12
+      - 0.16
+      - 0.2
+      - 0.22
+      - 0.22
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.04
+      fcf:
+      - 3.348
+      - 4.62
+      - 5.926
+      - 7.148
+      - 8.149
+      cash: 5.5
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 452
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 6.0
+      - 5.7
+      - 5.4
+      - 5.2
+      - 5.2
+      ev_fcf_multiple:
+      - 26.0
+      - 25.0
+      - 25.0
+      - 25.0
+      - 25.0
+historical_prices:
+  ipo_marker: IPO Dec '20
+  x_min: -5.5
+  points:
+  - - -5.4
+    - 180.0
+  - - -5.0
+    - 250.0
+  - - -4.0
+    - 75.0
+  - - -3.0
+    - 55.0
+  - - -2.0
+    - 110.0
+  - - -1.0
+    - 180.0
+  - - -0.6
+    - 285.0
+  - - -0.3
+    - 150.0
+  - - -0.05
+    - 159.0
+weighting_rationale:
+- label: Ultra Bear 15%
+  body: Growth slows; margin stalls; SBC; ~$67 (-58%).
+- label: Bear 27%
+  body: Decel; modest inflection; ~$103 (-35%).
+- label: Base 33%
+  body: Margin inflects; ads scale; ~$158 (-1%).
+- label: Bull 18%
+  body: Ads+grocery scale; ~$238 (+50%).
+- label: Ultra Bull 7%
+  body: Dominant local-commerce platform; ~$338 (+113%).
+appendix:
+  pushback:
+  - label: GOV still compounding +27%.
+    body: Down 40% on a margin/SBC concern, not a growth one — GOV $102B (+27%), Q1'26 +37%; the network keeps scaling.
+  - label: 'US #1 with network + scale density.'
+    body: ~60% US restaurant share, >2x Uber Eats; logistics density is a genuine cost moat.
+  - label: Advertising is the high-margin lever.
+    body: ~$1B run-rate, near-100% incremental margin — the single biggest margin-inflection driver.
+  - label: Net cash $5.5B; first +FY GAAP income 2024.
+    body: Profitability inflected ($123M 2024 -> $935M 2025); self-funding, buying back stock.
+  - label: New Verticals + international optionality.
+    body: Grocery unit economics guided positive 2H'26; Deliveroo/Wolt add 9 countries — TAM expansion.
+  triggers:
+  - label: Bull validation
+    body: grocery/retail unit economics turn positive (2H'26)  ·  advertising passes $1.5B run-rate  ·  GOV margin rises above
+      3.5%  ·  GOV stays mid-teens+
+  - label: Bear validation
+    body: US restaurant share falls below 58%  ·  grocery stays margin-negative past 2026  ·  SBC stays >$1.3B/yr  ·  Uber
+      Eats gains share
+  - label: Reframe needed
+    body: if gig-worker reclassification structurally raises the Dasher cost base, re-rate the unit economics + terminal margin
+glossary:
+- term: GOV / take rate
+  definition: Gross order value (~$102B FY25) x ~13.4% take = revenue; the two metrics that drive the model.
+- term: New Verticals
+  definition: Grocery / convenience / retail delivery — the fastest-growing, margin-dilutive-today segment guided to positive
+    unit economics 2H'26.
+- term: Network economies
+  definition: 'Helmer Power: more consumers -> more merchants/Dashers -> density -> speed/selection; the core moat.'
+- term: SBC dilution
+  definition: Stock-based comp ~$1.3-1.4B/yr (> GAAP net income) — modeled here as a rising share count; the sharpest bear
+    point.
+- term: FCF margin
+  definition: Free cash flow / revenue (~13% FY25, inflecting); the mature-DCF lever as ads + New Verticals scale.
+competitive:
+  arena: 'Local commerce / food delivery — DoorDash (US #1, ~60% restaurant share, New Verticals + ads + Wolt/Deliveroo) vs
+    Uber Eats, Instacart (grocery), Grubhub; defending a network + scale Power as it spends to inflect margins.'
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 3
+      note: '#1 US volume; logistics density lowers cost/delivery; fixed ad/tech spread over the largest GOV base.'
+    network_economies:
+      score: 3
+      note: 'The dominant Power: two-sided consumer<->merchant<->Dasher density flywheel.'
+    counter_positioning:
+      score: 1
+      note: Was the suburban-first disruptor; incumbents have matched.
+    switching_costs:
+      score: 2
+      note: DashPass + habit + saved data; modest (multi-homing is easy).
+    branding:
+      score: 2
+      note: Strong US verb-status, not pricing-power branding.
+    cornered_resource:
+      score: 1
+      note: No durable exclusive asset; the Dasher network is replicable.
+    process_power:
+      score: 2
+      note: Logistics/ML routing + ETA accuracy — a real operational edge.
+  dominant_power: network_economies
+  durability: medium-high
+  rivals:
+  - name: Uber Eats
+    kind: public
+    note: 'US #2 restaurants + global; bundles with mobility; richer EV/EBITDA.'
+    growth: 0.18
+    margin:
+    multiple: ~16x EV/FCF
+  - name: Instacart (CART)
+    kind: public
+    note: US grocery-delivery leader; high-margin ads, slower GOV growth.
+    growth: 0.1
+    margin:
+    multiple: cheaper
+  - name: Grubhub
+    kind: private
+    note: 'Distant #3 in US restaurants (<10% share); declining.'
+    growth: -0.05
+    margin:
+    multiple: n/a
+  - name: Amazon / Walmart
+    kind: incumbent
+    note: Grocery/retail-delivery scale — the New-Verticals threat.
+    growth:
+    margin:
+    multiple: varies
+  threats:
+  - vector: scale_economies
+    who: Uber Eats (US share)
+    falsifier: DoorDash US restaurant share falls below 58% or Uber bundling erodes take rate.
+  - vector: network_economies
+    who: Instacart (grocery)
+    falsifier: DASH grocery unit economics stay negative past 2026.
+  - vector: counter_positioning
+    who: Gig-worker regulation
+    falsifier: A major-state reclassification ruling structurally raises the Dasher cost base.
+  takeaway: DoorDash's network-economies + scale (logistics density) are dominant and durable in US restaurants (~60% share,
+    >2x Uber Eats), and GOV is still compounding +27% — the 40% drawdown is a margin/SBC story, not a growth one. The terminal
+    multiple hinges on whether advertising + New-Verticals scale lift the 2.4%-of-GOV margin without a price war, net of ~$1.3B/yr
+    SBC dilution. At ~33x EV/FCF the 20%+ growth + margin inflection roughly cover the entry — fair, with the sign on the
+    2H'26 inflection.

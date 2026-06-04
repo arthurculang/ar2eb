@@ -1,0 +1,585 @@
+ticker: ILMN
+company: Illumina
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 144.83
+market:
+  market_cap_billion: 21.9
+  shares_outstanding_million: 151.0
+  cash_billion: 1.16
+  net_debt_billion: 1.99
+  extras:
+  - ~$0.83B net debt; ~151M shares; ~$700M/yr buyback (no dividend)
+  - Revenue $4.34B FY25 (~flat 4yrs; Q1'26 +4.8% re-accel); ~23% non-GAAP op margin, ~70% gross, ~$0.9-1.0B FCF
+  - Rallied ~80% off lows on the clinical/NovaSeq-X turnaround; ~5x EV/sales, ~22x FCF
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med
+  themes:
+  - omics-life-science-infrastructure
+  primary_theme: omics-life-science-infrastructure
+central_question: Is Illumina's ~80% rally + ~5x EV/sales pricing a durable clinical/NovaSeq-X re-acceleration — or is flat
+  revenue + low-cost-entrant (Ultima/Element) + Roche erosion the reality?
+thesis: 'Illumina trades at ~$22B (≈$145/sh, up ~80% off the lows) — ~5x EV/sales, ~22x FCF on $4.34B revenue (flat for four
+  years, Q1''26 +4.8%), ~70% gross margin, ~$1B FCF. The mature DCF asks whether the NovaSeq-X consumables pull-through +
+  clinical mix (>65% of sequencing consumables, +20% ex-China) re-accelerate the franchise toward a ~26% margin, against low-cost
+  entrants (Ultima/Element $100 genome), Roche''s 2026 SBX re-entry, China decline, and NIH cuts. The finding: the rally has
+  priced the re-acceleration — only the bull-or-better clears spot; the base (modest re-accel) sits ~27% below. The TXG mirror.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 4.53
+  - 4.58
+  - 4.5
+  - 4.33
+  - 4.34
+  history_fcf:
+  - 0.6
+  - 0.5
+  - 0.7
+  - 1.07
+  - 0.95
+  history_ev_rev:
+  - 12.0
+  - 7.0
+  - 5.0
+  - 4.0
+  - 5.0
+page3_chart_config:
+  segment_a: Consumables
+  segment_b: Instruments + services
+  hist_ent_split:
+  - 0.68
+  - 0.7
+  - 0.71
+  - 0.71
+  - 0.72
+  chart6_title: Equity build (Op EV - net debt)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  calendar fiscal year  ·  FY2025 10-K + Q1'26 (Core Illumina,
+    post-GRAIL)
+  sources: 'Sources: Illumina FY2025 results (Core revenue $4.34B, ~23% non-GAAP op margin, ~$1B FCF, net debt ~$0.83B), Q1''26
+    (+4.8%, raised guide). GRAIL divested Jun 2024 -> Core-only. Revenue as a growth-rate path off FY25; FCF = revenue x FCF
+    margin; Gordon terminal. EV/sales vs life-science-tools peers.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.12
+    expected_per_share: 39.59
+    headline: Low-cost entrants + China + NIH crush.
+    narrative:
+    - Ultima/Element ($100 genome) compress consumables pricing/share, Roche's SBX re-entry bites, China keeps declining,
+      and NIH cuts freeze research demand. Revenue declines and the consumables annuity erodes.
+    - DCF ~$40 (-73%) — a shrinking franchise losing its pricing Power earns a distressed multiple.
+    probability_rationale: 'The bear: the SBS patent estate ages, low-cost entrants design around it, and the academic base
+      shrinks. 12% weight on real erosion.'
+    dcf_metrics:
+      cagr_5y: -1.0
+      wacc: 0.105
+    dcf_path:
+      rev_b: 4.34
+      rev_path:
+      - -0.02
+      - -0.02
+      - -0.01
+      - 0.0
+      - 0.0
+      op_margin:
+      - 0.18
+      - 0.18
+      - 0.19
+      - 0.2
+      - 0.2
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.01
+      fcf:
+      - 0.68
+      - 0.625
+      - 0.619
+      - 0.66
+      - 0.66
+      cash: 1.16
+      net_debt: 1.99
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 148
+      distress: 0.0
+      pv_fcf:
+      - 0.615
+      - 0.512
+      - 0.459
+      - 0.443
+      - 0.401
+      sum_pv_fcf: 2.43
+      terminal_value: 7.02
+      pv_terminal: 4.26
+      op_ev: 6.69
+      total_equity: 5.86
+      dcf_per_share: 39.59
+    chart_data:
+      ev_rev_multiple:
+      - 2.5
+      - 2.2
+      - 2.0
+      - 1.8
+      - 1.8
+      ev_fcf_multiple:
+      - 11.0
+      - 11.0
+      - 11.0
+      - 11.0
+      - 11.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.3
+    expected_per_share: 62.91
+    headline: Flat; clinical offsets erosion; rally unwinds.
+    narrative:
+    - Clinical growth roughly offsets China + entrant erosion, leaving revenue ~flat at a recovering margin; the franchise
+      is dominant but ex-growth.
+    - DCF ~$92 (-37%) — well below the rallied price; flat revenue doesn't justify ~5x sales.
+    probability_rationale: Flat revenue (the FY22-25 reality) with clinical offsetting erosion. 30% weight — the rally priced
+      more than this.
+    dcf_metrics:
+      cagr_5y: 1.4
+      wacc: 0.1
+    dcf_path:
+      rev_b: 4.34
+      rev_path:
+      - 0.0
+      - 0.01
+      - 0.02
+      - 0.02
+      - 0.02
+      op_margin:
+      - 0.2
+      - 0.21
+      - 0.22
+      - 0.22
+      - 0.22
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.02
+      fcf:
+      - 0.781
+      - 0.789
+      - 0.849
+      - 0.866
+      - 0.884
+      cash: 1.16
+      net_debt: 1.99
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 148
+      distress: 0.0
+      pv_fcf:
+      - 0.71
+      - 0.652
+      - 0.638
+      - 0.591
+      - 0.549
+      sum_pv_fcf: 3.14
+      terminal_value: 11.27
+      pv_terminal: 7.0
+      op_ev: 10.14
+      total_equity: 9.31
+      dcf_per_share: 62.91
+    chart_data:
+      ev_rev_multiple:
+      - 3.2
+      - 3.0
+      - 2.9
+      - 2.8
+      - 2.8
+      ev_fcf_multiple:
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.35
+    expected_per_share: 106.3
+    headline: Modest re-accel; NovaSeq-X pull-through; ~26% margin.
+    narrative:
+    - 'The modal path: the NovaSeq-X installed base matures into a consumables acceleration, clinical compounds, and the margin
+      marches to ~26% (management''s 2027 target). Revenue grows ~4-5%.'
+    - DCF ~$106 (-27%) — even a successful modest re-acceleration doesn't justify the ~80% rally; the entry has run ahead
+      of the fundamentals.
+    probability_rationale: NovaSeq-X pull-through + clinical + the ~26% margin target, consistent with Q1'26's +4.8% and raised
+      guide. 35% as the central outcome — but priced in.
+    dcf_metrics:
+      cagr_5y: 4.6
+      wacc: 0.09
+    dcf_path:
+      rev_b: 4.34
+      rev_path:
+      - 0.04
+      - 0.05
+      - 0.05
+      - 0.05
+      - 0.04
+      op_margin:
+      - 0.23
+      - 0.24
+      - 0.25
+      - 0.26
+      - 0.26
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.025
+      fcf:
+      - 0.903
+      - 0.995
+      - 1.095
+      - 1.149
+      - 1.195
+      cash: 1.16
+      net_debt: 1.99
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 146
+      distress: 0.0
+      pv_fcf:
+      - 0.828
+      - 0.837
+      - 0.846
+      - 0.814
+      - 0.777
+      sum_pv_fcf: 4.1
+      terminal_value: 18.84
+      pv_terminal: 12.25
+      op_ev: 16.35
+      total_equity: 15.52
+      dcf_per_share: 106.3
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.8
+      - 3.7
+      - 3.6
+      - 3.6
+      ev_fcf_multiple:
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.18
+    expected_per_share: 162.15
+    headline: Clinical compounds; multiomics; margin >26%.
+    narrative:
+    - Clinical sequencing compounds high-single-digits, multiomics/proteomics (SomaLogic) cross-sells, and the margin pushes
+      past 26% as NovaSeq-X pull-through accelerates in 2H'26+.
+    - DCF ~$162 (+12%) — the durable re-acceleration the rally is pricing actually materializes.
+    probability_rationale: The clinical-led re-acceleration is durable + multiomics adds growth. ~18%; the bull the rally
+      is discounting in.
+    dcf_metrics:
+      cagr_5y: 7.2
+      wacc: 0.085
+    dcf_path:
+      rev_b: 4.34
+      rev_path:
+      - 0.06
+      - 0.08
+      - 0.08
+      - 0.07
+      - 0.07
+      op_margin:
+      - 0.25
+      - 0.27
+      - 0.28
+      - 0.28
+      - 0.28
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.03
+      fcf:
+      - 1.012
+      - 1.192
+      - 1.341
+      - 1.435
+      - 1.536
+      cash: 1.16
+      net_debt: 1.99
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 144
+      distress: 0.0
+      pv_fcf:
+      - 0.933
+      - 1.013
+      - 1.05
+      - 1.035
+      - 1.022
+      sum_pv_fcf: 5.05
+      terminal_value: 28.77
+      pv_terminal: 19.13
+      op_ev: 24.18
+      total_equity: 23.35
+      dcf_per_share: 162.15
+    chart_data:
+      ev_rev_multiple:
+      - 4.6
+      - 4.4
+      - 4.3
+      - 4.2
+      - 4.2
+      ev_fcf_multiple:
+      - 17.0
+      - 17.0
+      - 17.0
+      - 17.0
+      - 17.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.05
+    expected_per_share: 230.21
+    headline: Sequencing super-cycle; dominant + multiomics.
+    narrative:
+    - A genomics super-cycle (clinical at scale + multiomics) re-accelerates ILMN to low-double-digits at ~30% margins, defending
+      its ~80% share against entrants.
+    - DCF ~$230 (+59%) — the dominant-platform-re-rates outcome; ~5% probability.
+    probability_rationale: Sequencing super-cycle + ILMN defends its Power. ~5%, the asymmetric upside.
+    dcf_metrics:
+      cagr_5y: 10.0
+      wacc: 0.08
+    dcf_path:
+      rev_b: 4.34
+      rev_path:
+      - 0.08
+      - 0.11
+      - 0.11
+      - 0.1
+      - 0.1
+      op_margin:
+      - 0.27
+      - 0.29
+      - 0.3
+      - 0.3
+      - 0.3
+      wacc_path:
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      term_g: 0.03
+      fcf:
+      - 1.125
+      - 1.353
+      - 1.559
+      - 1.779
+      - 1.957
+      cash: 1.16
+      net_debt: 1.99
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 142
+      distress: 0.0
+      pv_fcf:
+      - 1.042
+      - 1.16
+      - 1.238
+      - 1.308
+      - 1.332
+      sum_pv_fcf: 6.08
+      terminal_value: 40.31
+      pv_terminal: 27.44
+      op_ev: 33.52
+      total_equity: 32.69
+      dcf_per_share: 230.21
+    chart_data:
+      ev_rev_multiple:
+      - 5.2
+      - 5.0
+      - 4.9
+      - 4.8
+      - 4.8
+      ev_fcf_multiple:
+      - 19.0
+      - 19.0
+      - 19.0
+      - 19.0
+      - 19.0
+historical_prices:
+  ipo_marker: IPO Jul '00
+  x_min: -5.5
+  points:
+  - - -5.4
+    - 400.0
+  - - -5.0
+    - 500.0
+  - - -4.5
+    - 300.0
+  - - -4.0
+    - 200.0
+  - - -3.0
+    - 180.0
+  - - -2.0
+    - 130.0
+  - - -1.2
+    - 80.0
+  - - -0.7
+    - 110.0
+  - - -0.3
+    - 150.0
+  - - -0.05
+    - 144.83
+weighting_rationale:
+- label: Ultra Bear 12%
+  body: Entrants + China + NIH crush; ~$40 (-73%).
+- label: Bear 30%
+  body: Flat; clinical offsets; ~$92 (-37%).
+- label: Base 35%
+  body: Modest re-accel; ~26% margin; ~$106 (-27%).
+- label: Bull 18%
+  body: Clinical compounds; multiomics; ~$162 (+12%).
+- label: Ultra Bull 5%
+  body: Sequencing super-cycle; ~$230 (+59%).
+appendix:
+  pushback:
+  - label: ~80% share, >90% of clinical genomics.
+    body: Dominant installed base + consumables lock-in (validated clinical assays don't re-validate cheaply) — a real scale
+      + switching Power.
+  - label: ~70% gross margin, ~$1B FCF.
+    body: A razor/blade annuity (consumables ~72% of revenue) with a clear path to a ~26% operating margin (2027 target).
+  - label: NovaSeq-X pull-through is coming.
+    body: ~890 installed (end-FY25); ~6-month pull-through lag -> a 2H'26 consumables acceleration the base is just starting
+      to price.
+  - label: Clinical mix is the durable engine.
+    body: '>65% of sequencing consumables, +20% ex-China — less funding-exposed than the academic/research side.'
+  - label: GRAIL overhang is gone.
+    body: Divested Jun 2024; Core-only reporting, EU fine/impairments behind it; new CEO running the cost-out + clinical pivot.
+  triggers:
+  - label: Bull validation
+    body: total revenue growth sustains >6%  ·  NovaSeq-X consumables accelerate (2H'26)  ·  non-GAAP op margin reaches ~26%  ·  clinical
+      stays +20% ex-China
+  - label: Bear validation
+    body: revenue stays flat-to-down  ·  Ultima/Element take material share  ·  Roche SBX gains clinical traction  ·  China/NIH
+      drag deepens
+  - label: Reframe needed
+    body: if a low-cost entrant or Roche SBX structurally breaks the SBS consumables-pricing Power, re-rate toward a commoditized-sequencing
+      multiple
+glossary:
+- term: Consumables (razor/blade)
+  definition: Reagents/flow-cells that run on the installed base (~72% of revenue, ~70% margin) — the recurring annuity and
+    the moat.
+- term: NovaSeq X
+  definition: Illumina's flagship high-throughput sequencer; its installed-base ramp drives the consumables pull-through (the
+    re-acceleration mechanism).
+- term: Clinical mix
+  definition: '>65% of sequencing consumables, +20% ex-China — the durable, less-funding-exposed demand engine vs academic/research.'
+- term: Low-cost entrants
+  definition: Ultima (~$80-100 genome) + Element (Vitari) + Roche SBX (2026) attacking the sequencing-by-synthesis franchise
+    on price.
+- term: FCF margin
+  definition: Free cash flow / revenue (~21% FY25); the mature-DCF lever as the margin marches to the ~26% 2027 target.
+competitive:
+  arena: DNA sequencing — Illumina (~80% share, NovaSeq-X installed base, ~70%-margin consumables annuity) vs Ultima, Element,
+    Roche (SBX, 2026), PacBio, Thermo, MGI/Complete Genomics; defending a scale + switching Power against low-cost entrants.
+    (Supplies 10x Genomics/TXG; the two are IP litigants.)
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 3
+      note: ~80% share + huge installed base -> manufacturing/R&D cost advantage on consumables; the dominant Power.
+    network_economies:
+      score: 1
+      note: Published-protocol/citation network is mild.
+    counter_positioning:
+      score: 1
+      note: Incumbent; low-cost entrants counter-position on price-per-genome.
+    switching_costs:
+      score: 3
+      note: Validated clinical assays + DRAGEN pipelines on Illumina chemistry won't re-validate cheaply (regulatory friction).
+    branding:
+      score: 2
+      note: The 'gold standard' in clinical NGS.
+    cornered_resource:
+      score: 2
+      note: Sequencing-by-synthesis patent estate — established but contested/aging (litigated vs Element/BGI).
+    process_power:
+      score: 2
+      note: Chemistry/manufacturing learning curve.
+  dominant_power: scale_economies
+  durability: medium
+  rivals:
+  - name: Ultima Genomics
+    kind: private
+    note: UG 100, ~$80-100 genome (high-throughput) — the low-cost price attack.
+    growth: null
+    margin: null
+    multiple: private
+  - name: Element Biosciences
+    kind: private
+    note: AVITI + Vitari ($100 30x genome); mutual IP litigation with Illumina.
+    growth: null
+    margin: null
+    multiple: private
+  - name: Roche (SBX)
+    kind: incumbent-division
+    note: Re-entering with sequencing-by-expansion (2026); diagnostics channel — the credible long-term threat.
+    growth: null
+    margin: null
+    multiple: diversified
+  - name: PacBio / Thermo / MGI
+    kind: public
+    note: Long-read niche / Ion Torrent / China (MGI blocked from US by BIOSECURE).
+    growth: null
+    margin: null
+    multiple: varies
+  threats:
+  - vector: scale_economies
+    who: Ultima / Element ($100 genome)
+    falsifier: Low-cost entrants take material high-throughput share; consumables pricing compresses.
+  - vector: cornered_resource
+    who: Roche SBX (2026)
+    falsifier: Roche's SBX gains clinical traction, breaking the SBS franchise.
+  - vector: switching_costs
+    who: NIH / China
+    falsifier: NIH cuts + China decline shrink the academic installed base the annuity depends on.
+  takeaway: 'Illumina''s scale + switching-cost Power is genuine and durable — ~80% share, >90% of clinical genomics, a ~70%-margin
+    consumables annuity, and clinical labs that won''t cheaply re-validate. But the Power is being audited: revenue was flat
+    for four years, China collapsed, NIH froze research demand, low-cost entrants (Ultima/Element $100 genome) attack pricing,
+    and Roche''s SBX re-enters in 2026. The ~80% rally to ~5x EV/sales has priced the NovaSeq-X/clinical re-acceleration;
+    only the bull-or-better clears spot, and the modal base sits ~27% below — the entry, not the franchise, is the problem
+    (the TXG mirror).'
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-06-03_15-50
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: '001'
+  pdf_timestamp: 2026-06-03_15-50

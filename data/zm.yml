@@ -542,12 +542,16 @@ taxonomy:
   primary_theme: platform-marketplace-tech
 
 stamp:
-  footer_version: "023"
-  footer_timestamp: "2026-05-27_19-17"
+  footer_version: "024"
+  footer_timestamp: "2026-05-31_17-10"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "023"
-  pdf_timestamp: "2026-05-27_19-17"
+  pdf_version: "024"
+  pdf_timestamp: "2026-05-31_17-10"
   prior_versions:
+  - version: "023"
+    timestamp: "2026-05-27_19-17"
+    asOfDate: "2026-05-27"
+    spotPrice: 105.64
   - version: "022"
     timestamp: "2026-05-27_15-31"
     asOfDate: "2026-05-27"
@@ -569,3 +573,35 @@ glossary:
   definition: 'Sum-of-the-parts: operating EV + cash + special assets - debt. Used when material balance-sheet value sits outside operations.'
 - term: Buyback flywheel
   definition: ZM generates $1.7-2.4B FCF/yr. Buybacks at $1-1.5B/yr retire shares; lower share count compounds per-share value.
+
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Audit lens (mature_company_sotp).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Video communications + collaboration — Zoom vs Microsoft Teams (bundled in M365),
+    Google Meet (Workspace), Cisco Webex; the question is whether a standalone platform
+    holds against suite bundling, and whether AI Companion monetizes.
+  lens: power_audit
+  powers:
+    scale_economies:     { score: 2, note: "Large user base + global media infrastructure spread cost." }
+    network_economies:   { score: 2, note: "Ubiquity ('Zoom me'), guest-join reach, app marketplace." }
+    counter_positioning: { score: 1, note: "Was the ease-of-use disruptor; incumbents have since matched the model." }
+    switching_costs:     { score: 2, note: "Enterprise contracts; Zoom Phone / Contact Center stickiness; habit." }
+    branding:            { score: 3, note: "Category-defining verb; default for external meetings." }
+    cornered_resource:   { score: 1, note: "No durable exclusive asset; talent + reliability are replicable." }
+    process_power:       { score: 2, note: "Reliability/UX engineering culture; uptime track record." }
+  dominant_power: branding
+  durability: medium
+  rivals:
+    - { name: "Microsoft Teams", kind: incumbent-division, note: "Bundled free in M365 — the existential bundling threat.", growth: 0.10, margin: 0.40, multiple: "bundled" }
+    - { name: "Google Meet", kind: incumbent-division, note: "Bundled in Workspace; good-enough for many.", growth: 0.08, margin: 0.30, multiple: "bundled" }
+    - { name: "Cisco Webex", kind: public, note: "Enterprise legacy; declining share.", growth: -0.05, margin: 0.25, multiple: "~12x" }
+    - { name: "RingCentral / 8x8", kind: public, note: "UCaaS pure-plays in Phone/CC.", growth: 0.05, margin: 0.18, multiple: "~8x" }
+  threats:
+    - { vector: counter_positioning, who: "Microsoft Teams (bundling)", falsifier: "Online seat growth < 0% or net-dollar-retention < 100% as Teams bundling displaces standalone seats." }
+    - { vector: branding, who: "AI assistants (Copilot/Gemini)", falsifier: "AI Companion fails to lift ARPU while bundled rivals give equivalent AI free." }
+  takeaway: >
+    A category-defining brand + network with real switching costs, but durability is the whole
+    debate — Microsoft's bundling is the dominant threat the terminal multiple hinges on; seat
+    growth and net retention are the gauges.
