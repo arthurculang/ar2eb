@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Source the AI 2.0 fundamentals panel deterministically — no transcription,
-no memory — from SEC XBRL (fundamentals + shares) and stooq (split-adjusted
-FYE prices). Emits the schema scripts/_models/ai2_backtest.py consumes.
+no memory — from SEC XBRL (fundamentals + shares) and Yahoo (split/dividend-
+adjusted FYE prices). Emits the schema scripts/_models/ai2_backtest.py consumes.
 
 WHY THIS EXISTS: the research-agent panel (`ai2_panel.csv`) has reliable
 operating columns but its EV inputs (mktcap, net_cash) and FYE prices are
@@ -11,15 +11,17 @@ replaces those load-bearing columns with sourced data the moment the hosts are
 allowlisted.
 
 REQUIRES the environment network policy to allow:
-    data.sec.gov     — XBRL companyfacts (revenue, margins, cash, debt, shares)
-    stooq.com        — daily split-adjusted closes (for FYE price → mktcap, returns)
-  (optional) www.sec.gov — the ticker→CIK map; we embed a fallback so it's not required.
+    data.sec.gov                 — XBRL companyfacts (revenue, margins, cash, debt, shares)
+    query1.finance.yahoo.com     — v8 chart JSON: daily raw + split/div-adjusted closes
+                                   (raw × FYE shares → market cap; adjusted → forward returns)
+  Price source is selectable: AI2_PRICE_SRC=stooq + STOOQ_APIKEY=<key> uses stooq's
+  (now apikey-gated) bulk CSV instead. Default is Yahoo (keyless).
 
 USAGE:
     python scripts/_models/source_ai2_panel.py            # → ai2_panel_sourced.csv
     python scripts/_models/source_ai2_panel.py --out ai2_panel.csv   # promote
     python scripts/_models/source_ai2_panel.py --selftest # parser unit test (no network)
-    python scripts/_models/source_ai2_panel.py --probe    # just test host reachability
+    python scripts/_models/source_ai2_panel.py --probe    # test SEC + Yahoo reachability
 
 After a real run, eyeball the coverage report it prints (which (ticker, metric,
 fy) cells it could not fill — concept-tag gaps are expected for a few names and
@@ -93,11 +95,11 @@ class Blocked(Exception):
     pass
 
 
-def _get(url: str, tries: int = 4) -> bytes:
+def _get(url: str, tries: int = 4, ua: str = UA) -> bytes:
     for i in range(tries):
         try:
             req = urllib.request.Request(url, headers={
-                "User-Agent": UA, "Accept-Encoding": "gzip", "Accept": "*/*"})
+                "User-Agent": ua, "Accept-Encoding": "gzip", "Accept": "*/*"})
             with urllib.request.urlopen(req, timeout=30) as r:
                 raw = r.read()
                 if r.headers.get("Content-Encoding") == "gzip":
@@ -246,26 +248,72 @@ def shares_at_fye(facts: dict, fyes: dict[int, date]) -> dict[int, float]:
     return out
 
 
-# ── stooq prices ────────────────────────────────────────────────────────────
-def stooq_closes(ticker: str) -> list[tuple[date, float]]:
-    url = f"https://stooq.com/q/d/l/?s={ticker.lower()}.us&i=d"
+# ── prices ───────────────────────────────────────────────────────────────────
+# Each source returns (date, raw_close, adj_close):
+#   · raw_close  — unadjusted close, paired with reported (unadjusted) FYE shares
+#                  → a consistent market cap at fiscal-year-end.
+#   · adj_close  — split (+ dividend) adjusted close → clean forward returns
+#                  (a stock split must not look like a −50% return).
+# Default source is Yahoo's keyless v8 chart JSON; set AI2_PRICE_SRC=stooq to use
+# stooq instead (needs a stooq apikey appended — see stooq_closes).
+YAHOO_UA = "Mozilla/5.0 (compatible; ar2eb-research; arthurculang@gmail.com)"
+
+
+def yahoo_closes(ticker: str) -> list[tuple[date, float, float]]:
+    from datetime import datetime, timezone
+    url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker}"
+           f"?period1=0&period2=9999999999&interval=1d&events=split")
+    data = json.loads(_get(url, ua=YAHOO_UA))
+    chart = data.get("chart") or {}
+    if chart.get("error"):
+        raise RuntimeError(f"yahoo error for {ticker}: {chart['error']}")
+    res = (chart.get("result") or [None])[0]
+    if not res:
+        return []
+    ts = res.get("timestamp") or []
+    quote = (res.get("indicators", {}).get("quote") or [{}])[0]
+    raw = quote.get("close") or []
+    adj_block = (res.get("indicators", {}).get("adjclose") or [{}])[0]
+    adj = adj_block.get("adjclose") or raw
+    rows = []
+    for t, c, a in zip(ts, raw, adj):
+        if c is None:
+            continue
+        d = datetime.fromtimestamp(t, tz=timezone.utc).date()
+        rows.append((d, float(c), float(a) if a is not None else float(c)))
+    return sorted(rows)
+
+
+def stooq_closes(ticker: str) -> list[tuple[date, float, float]]:
+    import os
+    key = os.environ.get("STOOQ_APIKEY", "")           # bulk CSV is now apikey-gated
+    url = f"https://stooq.com/q/d/l/?s={ticker.lower()}.us&i=d" + (f"&apikey={key}" if key else "")
     txt = _get(url).decode("utf8", "replace")
     rows = []
     for ln in txt.splitlines()[1:]:
         p = ln.split(",")
         if len(p) >= 5:
             try:
-                rows.append((date.fromisoformat(p[0]), float(p[4])))
+                c = float(p[4])
+                rows.append((date.fromisoformat(p[0]), c, c))   # stooq close is split-adjusted
             except ValueError:
                 pass
     return sorted(rows)
 
 
-def close_on_or_before(closes: list[tuple[date, float]], d: date) -> float | None:
-    best = None
-    for dt, c in closes:
+def price_history(ticker: str) -> list[tuple[date, float, float]]:
+    import os
+    if os.environ.get("AI2_PRICE_SRC", "yahoo").lower() == "stooq":
+        return stooq_closes(ticker)
+    return yahoo_closes(ticker)
+
+
+def close_on_or_before(closes: list[tuple[date, float, float]], d: date) -> tuple[float | None, float | None]:
+    """(raw, adj) of the last bar on or before d, else (None, None)."""
+    best = (None, None)
+    for dt, raw, adj in closes:
         if dt <= d:
-            best = c
+            best = (raw, adj)
         else:
             break
     return best
@@ -305,11 +353,11 @@ def build(tickers: list[str]) -> tuple[list[dict], list[str], dict]:
         shares = shares_at_fye(facts, fyes)
         diag["entity"][t] = name
         try:
-            closes = stooq_closes(t)
+            closes = price_history(t)
         except Blocked:
             raise
         except Exception as e:
-            closes = []; gaps.append(f"{t}: stooq failed ({e})")
+            closes = []; gaps.append(f"{t}: price fetch failed ({e})")
 
         for fy in sorted(rev):
             r = rev[fy]
@@ -331,11 +379,11 @@ def build(tickers: list[str]) -> tuple[list[dict], list[str], dict]:
                 diag["debtfree"].append(f"{t} FY{fy}")
             netcash = cash.get(fy, 0.0) + sti.get(fy, 0.0) - debt
             fye = fyes.get(fy)
-            px = close_on_or_before(closes, fye) if (closes and fye) else None
+            raw_px, adj_px = close_on_or_before(closes, fye) if (closes and fye) else (None, None)
             sh = shares.get(fy)
-            mktcap = (px * sh / 1e9) if (px and sh) else None
+            mktcap = (raw_px * sh / 1e9) if (raw_px and sh) else None   # raw close × reported shares
             for metric, val in (("gross_profit", gprof), ("op_income", opi.get(fy)),
-                                ("ocf", ocf.get(fy)), ("price", px)):
+                                ("ocf", ocf.get(fy)), ("price", adj_px)):
                 if val is None:
                     gaps.append(f"{t} FY{fy}: missing {metric}")
             rows.append(dict(
@@ -348,7 +396,7 @@ def build(tickers: list[str]) -> tuple[list[dict], list[str], dict]:
                 fcf_margin=safe_div((ocf.get(fy) - capex.get(fy))
                                     if (fy in ocf and fy in capex) else None, r),
                 rev_growth=safe_div(r - rev[fy - 1], rev[fy - 1]) if (fy - 1) in rev else None,
-                price_fye=px,
+                price_fye=adj_px,                                       # split/div-adjusted → returns
                 _name=name))
         time.sleep(0.3)   # be polite to SEC
     return rows, gaps, diag
@@ -407,16 +455,41 @@ def selftest():
     assert sh == {2023: 1e9}, sh
     g = safe_div(120 - 100, 100)
     assert abs(g - 0.20) < 1e-9
+    # Yahoo chart parser: raw vs adjusted close split out; close_on_or_before picks
+    # the last bar ≤ FYE and returns (raw, adj).
+    blob = {"chart": {"error": None, "result": [{
+        "timestamp": [1703548800, 1703721600],   # 2023-12-26, 2023-12-28 (UTC)
+        "indicators": {"quote": [{"close": [100.0, 110.0]}],
+                       "adjclose": [{"adjclose": [99.0, 108.9]}]}}]}}
+    import builtins
+    _orig = globals()["_get"]
+    globals()["_get"] = lambda url, tries=4, ua=UA: json.dumps(blob).encode()
+    try:
+        hist = yahoo_closes("TEST")
+    finally:
+        globals()["_get"] = _orig
+    assert [d.isoformat() for d, _, _ in hist] == ["2023-12-26", "2023-12-28"], hist
+    raw_px, adj_px = close_on_or_before(hist, date(2023, 12, 27))   # picks the 12-26 bar
+    assert (raw_px, adj_px) == (100.0, 99.0), (raw_px, adj_px)
     print("selftest OK — end-date fy (no conflation), priority-merge back-fill, "
-          "debt buckets, share-to-FYE mapping all correct")
+          "debt buckets, share-to-FYE mapping, Yahoo raw/adj parse all correct")
 
 
 def probe():
-    for url in ("https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
-                "https://stooq.com/q/d/l/?s=nvda.us&i=d"):
+    # SEC + the active price host. Yahoo's chart endpoint returns real JSON only
+    # when reachable AND not bot-blocked; we check the payload parses to closes.
+    for url, ua, kind in (
+            ("https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json", UA, "raw"),
+            ("https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=5d&interval=1d", YAHOO_UA, "yahoo"),
+            ("https://stooq.com/q/d/l/?s=nvda.us&i=d", UA, "raw")):
         try:
-            n = len(_get(url))
-            print(f"OK   {url.split('?')[0]}  ({n} bytes)")
+            raw = _get(url, ua=ua)
+            tag = f"({len(raw)} bytes)"
+            if kind == "yahoo":
+                res = ((json.loads(raw).get("chart") or {}).get("result") or [None])[0]
+                n = len((res or {}).get("timestamp") or [])
+                tag = f"({n} daily bars parsed)" if n else "(REACHABLE but NO bars — bot-block/crumb?)"
+            print(f"OK   {url.split('?')[0]}  {tag}")
         except Blocked as e:
             print(f"BLOCKED  {e}")
         except Exception as e:
