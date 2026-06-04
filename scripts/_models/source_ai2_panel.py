@@ -110,9 +110,25 @@ def _get(url: str, tries: int = 4) -> bytes:
 
 
 # ── SEC XBRL parsing ────────────────────────────────────────────────────────
+# companyfacts blobs are large (tens of MB for AAPL/MSFT/AMZN) and slow to pull
+# + parse; cache the raw JSON to disk so re-runs (while patching CONCEPTS below)
+# are instant. Historical first-reported facts are immutable, so a session-local
+# cache is safe; set AI2_NO_CACHE=1 to force a fresh pull.
+CACHE = Path("/tmp/ai2_companyfacts_cache")
+
+
 def companyfacts(cik: int) -> dict:
+    import os
+    cf = CACHE / f"CIK{cik:010d}.json"
+    if not os.environ.get("AI2_NO_CACHE") and cf.exists() and cf.stat().st_size > 0:
+        return json.loads(cf.read_text())
     url = f"https://data.sec.gov/api/xbrl/companyfacts/CIK{cik:010d}.json"
-    return json.loads(_get(url))
+    raw = _get(url)
+    CACHE.mkdir(parents=True, exist_ok=True)
+    tmp = cf.with_suffix(".json.tmp")     # atomic write (no truncated cache on kill)
+    tmp.write_bytes(raw)
+    tmp.replace(cf)
+    return json.loads(raw)
 
 
 def _annual_entries(facts: dict, tag: str, taxonomy: str = "us-gaap"):
@@ -361,10 +377,24 @@ def main(argv):
     nt = len({r["ticker"] for r in rows})
     filled = sum(1 for r in rows if r["mktcap_b"] and r["price_fye"] is not None)
     print(f"wrote {out}  ({len(rows)} rows · {nt} tickers · {filled} with mktcap+price)")
-    if gaps:
-        print(f"\n{len(gaps)} coverage gaps (patch CONCEPTS / inspect): showing first 30")
-        for g in gaps[:30]:
-            print("  -", g)
+    # Split price/mktcap gaps (the stooq-gated columns) from genuine SEC concept-
+    # tag gaps — the latter are what CONCEPTS patching is about. Full list → file.
+    price_gaps = [g for g in gaps if "missing price" in g]
+    fund_gaps = [g for g in gaps if "missing price" not in g]
+    rep = HERE / "ai2_coverage_gaps.txt"
+    rep.write_text("\n".join(gaps) + ("\n" if gaps else ""))
+    print(f"\ncoverage gaps: {len(fund_gaps)} fundamentals + {len(price_gaps)} price/mktcap "
+          f"(full list → {rep.name})")
+    if price_gaps:
+        pt = sorted({g.split()[0] for g in price_gaps})
+        print(f"  price/mktcap unfilled for {len(pt)} tickers (stooq apikey-gated): "
+              f"{', '.join(pt)}")
+    if fund_gaps:
+        print(f"\n  {len(fund_gaps)} fundamentals gaps to triage (patch CONCEPTS / CIK / debt logic):")
+        for g in fund_gaps:
+            print("   -", g)
+    else:
+        print("\n  no fundamentals-tag gaps — SEC coverage is solid.")
     print("\nnext: python scripts/_models/ai2_backtest.py   (after promoting to ai2_panel.csv)")
     return 0
 
