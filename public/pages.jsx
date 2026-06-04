@@ -134,28 +134,41 @@ function CategoryPage({ slug }) {
 // fit whatever container it lives in. ResizeObserver keeps it responsive.
 function EmbeddedMemo({ memo }) {
   const { Page1Headline, Page2Narratives, Page3Snapshot,
-          Page4Quantitative, Page5BackMatter } = window.AR2EB_MEMO || {};
+          Page4Competitive, Page4Quantitative, Page5BackMatter } = window.AR2EB_MEMO || {};
   const containerRef = React.useRef(null);
+  const innerRef = React.useRef(null);
   const [scale, setScale] = React.useState(1);
   const NATIVE_W = 14 * 96; // 14 inches at 96 dpi = 1344px
+  // Mirror the PDF gate (memo_pdf.jsx → hasCompetitive): the §6d page renders
+  // only when the ticker carries a `competitive` block, so 5- and 6-page memos
+  // both come out right.
+  const hasCompetitive = !!(memo.print && memo.print.competitive);
 
   React.useEffect(() => {
     const update = () => {
       if (!containerRef.current) return;
       const w = containerRef.current.clientWidth;
-      setScale(Math.min(1, w / NATIVE_W));
+      const s = Math.min(1, w / NATIVE_W);
+      setScale(s);
+      // transform: scale() is visual only and doesn't reserve flow space, so
+      // size the wrap explicitly to the scaled content height. scrollHeight is
+      // the untransformed layout height (any page count), so this stays correct
+      // whether the memo has the §6d page (6) or not (5).
+      if (innerRef.current) {
+        containerRef.current.style.height = (innerRef.current.scrollHeight * s) + 'px';
+      }
     };
     update();
     const ro = new ResizeObserver(update);
     if (containerRef.current) ro.observe(containerRef.current);
     return () => ro.disconnect();
-  }, []);
+  }, [memo]);
 
   if (!Page1Headline) return <p>Memo viewer not loaded — refresh required.</p>;
 
   return (
     <div className="memo-embed-wrap" ref={containerRef}>
-      <div className="memo-embed-inner" style={{
+      <div className="memo-embed-inner" ref={innerRef} style={{
         transform: `scale(${scale})`,
         transformOrigin: 'top left',
         width: NATIVE_W + 'px',
@@ -163,6 +176,7 @@ function EmbeddedMemo({ memo }) {
         <Page1Headline memo={memo} />
         <Page2Narratives memo={memo} />
         <Page3Snapshot memo={memo} />
+        {hasCompetitive && Page4Competitive && <Page4Competitive memo={memo} />}
         <Page4Quantitative memo={memo} />
         <Page5BackMatter memo={memo} />
       </div>

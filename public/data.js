@@ -5933,7 +5933,7 @@ const MEMOS = [
         "label": "ULTRA BULL",
         "prob": 3,
         "price": 130.99,
-        "headline": "Nvidia-of-quantum; SaaS multiple.",
+        "headline": "Dominant quantum pure-play; software-premium re-rate.",
         "why": "Conjunctive bull chain × TAM upside × multiple expansion × competitor collapse. Each piece individually 40-60%; joint ~3-5%. Genuine tail capturing the world where quantum becomes a category- defining tech platform and IonQ is the dominant US pure-play. The asymmetrical-moonshots tier's reason-for-being: real upside that you can't get to without it.",
         "what": [
           "Tail of tails. Every Bull condition hits AND the FY36 TAM is materially larger than consensus (Roots Analysis $198B FY40 trajectory, McKinsey upper-bound $72B by 2035 just for computing) AND IonQ achieves de facto platform monopoly in trapped-ion + becomes a meaningful chip foundry via SkyWater. Quantinuum struggles with IPO-era execution; superconducting hits fault- tolerance walls that trapped-ion's higher native fidelity sidesteps. IonQ becomes the \"Nvidia of quantum\" — vertically integrated, full-stack, with AWS/Azure/GCP installed customer base creating a software flywheel.",
@@ -7032,6 +7032,10 @@ const MEMOS = [
           {
             "label": "Bull validation",
             "body": "AQ#256 hit by H1 2027 · First verified commercial quantum advantage on customer workload · Multi-product share >50% · 2nd large govt contract (>$100M)"
+          },
+          {
+            "label": "Ultra-bull ceiling",
+            "body": "The ultra-bull caps at ~$16B FY36 revenue (32% of a $50B TAM) — Nvidia-2021 scale, not Nvidia-today. The binding constraint is the TAM, not IONQ execution: a credible >$50B FY36 quantum-TAM print is the only thing that unlocks a literal Nvidia-scale outcome. Absent that, even flawless execution tops out here."
           },
           {
             "label": "Reframe needed",
@@ -16626,7 +16630,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "yeti-memo__v001__2026-06-03_15-50.pdf",
-      "size": "—",
+      "size": "272 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -17431,7 +17435,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "dash-memo__v001__2026-06-03_15-50.pdf",
-      "size": "—",
+      "size": "275 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -18232,7 +18236,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "ilmn-memo__v001__2026-06-03_15-50.pdf",
-      "size": "—",
+      "size": "276 KB",
       "priorVersions": []
     },
     "metrics": {

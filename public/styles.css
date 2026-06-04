@@ -626,20 +626,35 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
    content); the site uses normal flow so we re-flow the page chrome. */
 .memo-embed-section .memo-embed-wrap {
   overflow: hidden;
-  /* Reserve vertical space so the scaled content stays in flow.
-     Computed via aspect-ratio: 14×8.5 per page × 5 pages = ratio 14:42.5 */
-  aspect-ratio: 14 / 42.5;
-  background: #fafafa;
-  border: 0.5pt solid #e4e4e7;
+  /* Height is set in JS (EmbeddedMemo) to the scaled content height, so it
+     reserves the right space for any page count — 5, or 6 with the §6d
+     competitive page. min-height is just a pre-JS-paint placeholder. */
+  min-height: 60vh;
+  background: transparent;   /* beige page bg shows through the inter-page gaps */
 }
 .memo-embed-section .memo-embed-inner {
   /* JS sets transform: scale(); the page components retain their native
      pt sizing for layout fidelity with the PDF. */
 }
+/* On the website the .memo-page base box (14×8.5 + padding) is NOT inherited from
+   print.html — re-create it here so the site renders the content exactly like the
+   PDF: a 12in × 7.4in content area inside a 1in/0.55in white frame. Without this
+   the content fills the full 14in and the black text butts the white edge. Then add
+   web-only chrome — a white card + a beige gap between pages. The PDF is untouched. */
 .memo-embed-section .memo-page {
+  width: 14in;
+  height: 8.5in;
+  padding: 0.55in 1in;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #ece7dd;
+  margin: 0 auto 0.5in;
   page-break-after: auto;
   break-after: auto;
 }
+.memo-embed-section .memo-page:last-child { margin-bottom: 0; }
 
 /* ── Portfolio page ─────────────────────────────────────────────────────
    Cross-asset weighting per spec §12. Result-first hierarchy: hero block
