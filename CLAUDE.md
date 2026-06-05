@@ -164,11 +164,14 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   events (NVDA FY2024 $152B→$1526B); (ii) dual-class names expose no consolidated share count in
   companyfacts → weighted-avg-share fallback (META 0 caps → $1.48T). **v034 (26 names):** 8-weight fit
   overfits (LOYO-OOS −0.063/−0.068, sign-flipping); regularized `ai2_backtest.py` (nested ladder + Δ≥0
-  sampler + ridge + 1-param `--fcfm`) → only AI 1.0 + an FCF-margin term beat AI 1.0 OOS at both horizons,
-  but modest/1y-concentrated, flagged as possibly small-sample. **v035 (expanded → 104 in-domain tickers,
-  winners+busts; CIKs ticker-verified vs `data.sec.gov/submissions`; ~95 names/cross-section, 1245 usable
-  rows): the FCF-margin signal does NOT survive — NO enrichment (fcfm/opm/any Δ/full-8) beats AI 1.0 OOS at
-  both horizons (L3 fcfm → −0.041/3y); the 26-name win was a small-sample artifact.** Conversely **AI 1.0
+  sampler + ridge + 1-param `--fcfm` + exhaustive `--grid`) → only AI 1.0 + an FCF-margin term beat AI 1.0
+  OOS at both horizons, but modest/1y-concentrated, flagged as possibly small-sample. **v035 (expanded → 104
+  in-domain tickers, winners+busts; CIKs ticker-verified vs `data.sec.gov/submissions`; ~85 names/cross-section,
+  ~1000 rows/97 tickers all-8 features): the FCF-margin signal does NOT survive — NO enrichment (fcfm/opm/any
+  Δ/full-8) beats AI 1.0 OOS at both horizons (L3 fcfm → −0.041/3y); the 26-name win was a small-sample
+  artifact. A belt-and-suspenders exhaustive `--grid` (15,625 fixed combos, no sampler) confirms it: ~2,500
+  beat AI 1.0 in-sample with backwards (negative-margin) weights, but nested OOS the best wins only 3y
+  (+0.084)/loses 1y (+0.032) — the sampler missed nothing.** Conversely **AI 1.0
   (gm+growth) is validated: OOS +0.044/3y, +0.063/1y on the broad universe** (narrow-panel 3y was ≈0).
   AI 1.0 (`scripts/arthur_indicator.py`) stays the live screen — now with broad-universe OOS support;
   AI 2.0 earns none of its 8 weights. *Data limit (documented):* ~14 compounders (ORCL/V/MA/INTU/CDNS/TMO/

@@ -21,8 +21,10 @@ and stable OOS at both horizons on the wide universe — and **remains the live 
 
 - `source_ai2_panel.py` — the deterministic sourcing path (no transcription, no memory):
   SEC XBRL companyfacts (fundamentals, debt, shares) + Yahoo v8 chart JSON (FYE prices) →
-  the panel schema. **104-ticker universe, 1483 rows / FY2007–26, ~1245 usable rows** (gross
-  margin + mktcap + price); each fiscal-year cross-section is ~95 names (was ~26).
+  the panel schema. **104-ticker universe, 1483 rows / FY2007–26.** The model comparison runs
+  on the **~1,000 rows / 97 tickers with all eight features present** (g, gm, opm, fcfm + the
+  four Δ — `quality()` drops a row if any is NaN, so every model shares one universe),
+  ~85 names per recent cross-section (was ~26).
     - raw (unadjusted) close × reported shares → market cap; split+dividend-adjusted close → forward returns.
     - **Two bugs a market-cap sanity-gate caught + fixed (both self-tested in `--selftest`):**
       (i) Yahoo's `quote.close` is *split-adjusted, not raw* → `close × pre-split shares`
@@ -54,6 +56,9 @@ and stable OOS at both horizons on the wide universe — and **remains the live 
     - `--select` — the **nested-model ladder** (AI 1.0 → +levels → +Δ → full-8), Δ-weights ≥ 0,
       judged by LOYO-OOS at both horizons. The regularizer that picks the model.
     - `--fcfm` — the parsimonious **AI 1.0 + λ·fcfm** model (one knob): λ-curve + nested-LOYO OOS.
+    - `--grid` — **deterministic exhaustive grid** (15,625 fixed combos of the 6 added variables
+      over {−1,−0.5,0,0.5,1}, g=gm=1 fixed, no sampler): how many beat AI 1.0 OOS at both horizons,
+      plus a nested grid-LOYO. Belt-and-suspenders that the random search missed nothing.
     - `--ridge X` / `--allow-neg-delta` — ridge shrinkage toward AI 1.0 / lift the Δ ≥ 0 constraint.
 
 **The finding (judge = LOYO-OOS), expanded 104-name panel.** AI 1.0 baseline OOS: **+0.044 (3y)
@@ -61,5 +66,9 @@ and stable OOS at both horizons on the wide universe — and **remains the live 
 ladder: every richer model wins at most one horizon and loses the other, and **none beats AI 1.0
 at both** — L3 (+fcfm) flips to **−0.041 at 3y**; L2/L4/Δ-models split horizons; the full eight
 weights overfit (in-sample IC climbs +0.074→+0.113 at 3y, OOS does not). The 26-name FCF-margin
-"win" did not replicate. **Net: AI 2.0 earns none of its extra parameters on a broad universe;
-AI 1.0 is the screen, now with broad out-of-sample support.**
+"win" did not replicate. An **exhaustive deterministic grid** (`--grid`, 15,625 fixed combos of
+the 6 added variables, no sampler) confirms the random search missed nothing: ~2,500 combinations
+beat AI 1.0 *in-sample* but with economically-backwards weights (best loads opm/fcfm *negatively*),
+and nested out-of-sample the best wins only one horizon (3y +0.084) and loses the other (1y +0.032)
+— never both. **Net: AI 2.0 earns none of its extra parameters on a broad universe; AI 1.0 is the
+screen, now with broad out-of-sample support.**
