@@ -78,6 +78,14 @@ CONCEPTS = {
              "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents"],
     "sti": ["ShortTermInvestments", "MarketableSecuritiesCurrent",
             "AvailableForSaleSecuritiesCurrent"],
+    # Weighted-average share count (income statement) — the always-present fallback
+    # for shares outstanding when the point-in-time cover-page count is absent. The
+    # companyfacts API drops per-class dimensional facts, so a dual-class name
+    # (META/GOOGL/SNAP/W/…) often exposes NO consolidated instant share tag at all;
+    # its weighted-average shares are still reported every year in the 10-K.
+    "wavg_shares": ["WeightedAverageNumberOfSharesOutstandingBasic",
+                    "WeightedAverageNumberOfDilutedSharesOutstanding",
+                    "WeightedAverageNumberOfShareOutstandingBasicAndDiluted"],
     # Disjoint debt parts → total = noncurrent + current (or a combined tag).
     "debt_noncur": ["LongTermDebtNoncurrent", "ConvertibleDebtNoncurrent",
                     "ConvertibleLongTermNotesPayable", "SecuredLongTermDebt",
@@ -245,18 +253,56 @@ def shares_at_fye(facts: dict, fyes: dict[int, date]) -> dict[int, float]:
         if cand:
             cand.sort(key=lambda r: (abs((r[0] - fye).days), r[1]))
             out[fy] = cand[0][2]
+    # Fallback for any fy the instant cover-page count missed (dual-class names
+    # with no consolidated share tag; pre-XBRL early years): the income-statement
+    # weighted-average share count, which is always filed. Basic ≈ shares
+    # outstanding for a market cap (within a few % of the point-in-time count).
+    if len(out) < len(fyes):
+        wavg = flow_series(facts, CONCEPTS["wavg_shares"])
+        for fy in fyes:
+            if fy not in out and fy in wavg:
+                out[fy] = wavg[fy]
     return out
 
 
 # ── prices ───────────────────────────────────────────────────────────────────
-# Each source returns (date, raw_close, adj_close):
-#   · raw_close  — unadjusted close, paired with reported (unadjusted) FYE shares
-#                  → a consistent market cap at fiscal-year-end.
+# Each source returns (date, unadjusted_close, adj_close):
+#   · unadjusted_close — the genuine close on the as-of-FYE split basis, paired
+#                  with reported (as-of-FYE, unadjusted) shares → a consistent
+#                  market cap at fiscal-year-end.
 #   · adj_close  — split (+ dividend) adjusted close → clean forward returns
 #                  (a stock split must not look like a −50% return).
+# CAUTION: Yahoo's quote.close is SPLIT-ADJUSTED, not raw — so close × pre-split
+# shares understates an old-year cap by the cumulative post-FYE split factor (e.g.
+# NVDA FY2024 → 10× low pre the 2024 10:1). We rebuild the unadjusted close from
+# the split events (close × Π split-ratios that took effect AFTER the bar's date).
 # Default source is Yahoo's keyless v8 chart JSON; set AI2_PRICE_SRC=stooq to use
 # stooq instead (needs a stooq apikey appended — see stooq_closes).
 YAHOO_UA = "Mozilla/5.0 (compatible; ar2eb-research; arthurculang@gmail.com)"
+
+
+def _split_events(res: dict) -> list[tuple[date, float]]:
+    """(ex-date, ratio) for each split in the chart payload, sorted ascending.
+    Used to undo Yahoo's split adjustment: the unadjusted close at an old date =
+    split-adjusted close × Π(ratio) over splits with ex-date AFTER that date."""
+    from datetime import datetime, timezone
+    out = []
+    ev = (res.get("events") or {}).get("splits") or {}
+    for s in ev.values():
+        try:
+            sd = datetime.fromtimestamp(s["date"], tz=timezone.utc).date()
+        except Exception:
+            continue
+        num, den = float(s.get("numerator") or 0), float(s.get("denominator") or 0)
+        ratio = (num / den) if (num > 0 and den > 0) else None
+        if ratio is None and s.get("splitRatio"):       # "10:1" → 10.0 fallback
+            try:
+                a, b = s["splitRatio"].split(":"); ratio = float(a) / float(b)
+            except Exception:
+                ratio = None
+        if ratio and ratio > 0:
+            out.append((sd, ratio))
+    return sorted(out)
 
 
 def yahoo_closes(ticker: str) -> list[tuple[date, float, float]]:
@@ -272,15 +318,21 @@ def yahoo_closes(ticker: str) -> list[tuple[date, float, float]]:
         return []
     ts = res.get("timestamp") or []
     quote = (res.get("indicators", {}).get("quote") or [{}])[0]
-    raw = quote.get("close") or []
+    sclose = quote.get("close") or []                    # SPLIT-adjusted (not raw)
     adj_block = (res.get("indicators", {}).get("adjclose") or [{}])[0]
-    adj = adj_block.get("adjclose") or raw
+    adj = adj_block.get("adjclose") or sclose            # split+dividend adjusted
+    splits = _split_events(res)
     rows = []
-    for t, c, a in zip(ts, raw, adj):
+    for t, c, a in zip(ts, sclose, adj):
         if c is None:
             continue
         d = datetime.fromtimestamp(t, tz=timezone.utc).date()
-        rows.append((d, float(c), float(a) if a is not None else float(c)))
+        factor = 1.0                                     # rebuild the unadjusted close
+        for sd, r in splits:
+            if sd > d:
+                factor *= r
+        unadj = float(c) * factor
+        rows.append((d, unadj, float(a) if a is not None else float(c)))
     return sorted(rows)
 
 
@@ -471,8 +523,32 @@ def selftest():
     assert [d.isoformat() for d, _, _ in hist] == ["2023-12-26", "2023-12-28"], hist
     raw_px, adj_px = close_on_or_before(hist, date(2023, 12, 27))   # picks the 12-26 bar
     assert (raw_px, adj_px) == (100.0, 99.0), (raw_px, adj_px)
+    # split reconstruction: quote.close is SPLIT-adjusted, so a bar BEFORE a split
+    # must be scaled back up by the ratio to recover the unadjusted close.
+    blob2 = {"chart": {"error": None, "result": [{
+        "timestamp": [1590969600, 1717200000],     # 2020-06-01, 2024-06-01 (UTC)
+        "indicators": {"quote": [{"close": [50.0, 100.0]}],
+                       "adjclose": [{"adjclose": [50.0, 100.0]}]},
+        "events": {"splits": {"x": {"date": 1623283200, "numerator": 10.0,
+                                    "denominator": 1.0, "splitRatio": "10:1"}}}}]}}  # split 2021-06-10
+    globals()["_get"] = lambda url, tries=4, ua=UA: json.dumps(blob2).encode()
+    try:
+        hist2 = {d.isoformat(): (u, a) for d, u, a in yahoo_closes("TEST2")}
+    finally:
+        globals()["_get"] = _orig
+    assert abs(hist2["2020-06-01"][0] - 500.0) < 1e-6, hist2   # before split → ×10
+    assert abs(hist2["2024-06-01"][0] - 100.0) < 1e-6, hist2   # after split  → ×1
+    # dual-class shares fallback: no instant cover-page count, only weighted-average
+    # → shares_at_fye must fall back to the income-statement share count.
+    dc = {"entityName": "DUAL", "facts": {"us-gaap": {
+        "Revenues": {"units": {"USD": [
+            {"start": "2024-01-01", "end": "2024-12-31", "val": 10, "fy": 2024, "fp": "FY", "form": "10-K", "filed": "2025-02-01"}]}},
+        "WeightedAverageNumberOfSharesOutstandingBasic": {"units": {"shares": [
+            {"start": "2024-01-01", "end": "2024-12-31", "val": 2.5e9, "fy": 2024, "fp": "FY", "form": "10-K", "filed": "2025-02-01"}]}}}}}
+    assert shares_at_fye(dc, fye_dates(dc)) == {2024: 2.5e9}, shares_at_fye(dc, fye_dates(dc))
     print("selftest OK — end-date fy (no conflation), priority-merge back-fill, "
-          "debt buckets, share-to-FYE mapping, Yahoo raw/adj parse all correct")
+          "debt buckets, share-to-FYE mapping + weighted-avg fallback, "
+          "Yahoo split-reconstruction + raw/adj parse all correct")
 
 
 def probe():
