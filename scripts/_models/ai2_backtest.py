@@ -380,6 +380,97 @@ def _fmt_w(w):
     return "  ".join(f"{n}={v:+.2f}" for n, v in zip(names, w))
 
 
+# ── belt-and-suspenders: deterministic exhaustive grid (no sampler) ──────────
+def _year_arrays(rows, horizon):
+    """Per fiscal year, the (features, ev_rev, fwd) arrays — built once so the grid
+    scan can score thousands of fixed weight vectors fast."""
+    fwd = "fwd_1y" if horizon == "1y" else "fwd_3y"
+    feats = ("g", "gm", "opm", "fcfm", "dg", "dgm", "dopm", "dfcfm")
+    # Match the harness's universe exactly: quality() sums w·features where
+    # 0·NaN = NaN, so ai() drops a row if ANY of the 8 features is NaN — for every
+    # w. That puts AI 1.0 and every enriched model on the SAME cross-sections (a
+    # fair comparison), so the grid must require all 8 features present too.
+    out = []
+    for fy in sorted({r["fy"] for r in rows}):
+        xs = [r for r in rows if r["fy"] == fy
+              and np.isfinite(r.get(fwd, np.nan)) and np.isfinite(r.get("ev_rev", np.nan))
+              and all(np.isfinite(r.get(k, np.nan)) for k in feats)]
+        if len(xs) < MIN_XS:
+            continue
+        F = np.array([[r[k] for k in feats] for r in xs], float)
+        ev = np.array([r["ev_rev"] for r in xs], float)
+        fw = np.array([r[fwd] for r in xs], float)
+        out.append((F, ev, fw))
+    return out
+
+
+def _grid_year_ics(year_arrays, w):
+    """Per-year Spearman(−AI, fwd) for a FIXED w (np.nan where a year is unscorable);
+    AI = ev/(F·w); a row is dropped if any USED (w≠0) feature is NaN or Q ≤ 0. The
+    NaN-of-a-zero-weighted feature is treated as 0 (not propagated), matching ai()."""
+    nz = w != 0
+    ics = []
+    for F, ev, fw in year_arrays:
+        bad = np.isnan(F[:, nz]).any(axis=1)
+        Q = np.where(np.isnan(F), 0.0, F) @ w
+        ok = (~bad) & np.isfinite(Q) & (Q > 0)
+        rho = spearman(-(ev[ok] / Q[ok]), fw[ok]) if ok.sum() >= MIN_XS else np.nan
+        ics.append(rho)
+    return np.array(ics, float)
+
+
+def grid_scan(rows, levels=(-1.0, -0.5, 0.0, 0.5, 1.0)):
+    """Deterministic EXHAUSTIVE grid over the 6 *added* AI 2.0 variables (opm, fcfm,
+    Δg, Δgm, Δopm, Δfcfm), g=gm=1 fixed, each weight ∈ `levels` — no random sampler.
+    Scores every combination by leave-one-year-out OOS (fixed-w per-year IC) at both
+    horizons; reports how many beat AI 1.0 at both, the best, and a nested grid-LOYO
+    (best grid w chosen on the train folds, scored on the held-out year)."""
+    import itertools
+    by1, by3 = _year_arrays(rows, "1y"), _year_arrays(rows, "3y")
+    base1 = float(np.nanmean(_grid_year_ics(by1, W_AI1)))
+    base3 = float(np.nanmean(_grid_year_ics(by3, W_AI1)))
+    # self-validate the fast scorer against the tested loyo_fixed before trusting it
+    assert abs(base1 - loyo_fixed(rows, W_AI1, "1y")[0]) < 1e-9, "fast scorer ≠ loyo_fixed (1y)"
+    assert abs(base3 - loyo_fixed(rows, W_AI1, "3y")[0]) < 1e-9, "fast scorer ≠ loyo_fixed (3y)"
+    grid = list(itertools.product(levels, repeat=6))
+    names = ["opm", "fcfm", "Δg", "Δgm", "Δopm", "Δfcfm"]
+    print(f"exhaustive grid: g=gm=1 fixed · 6 added weights ∈ {levels} → "
+          f"{len(grid)} combinations, each scored by LOYO-OOS at both horizons (no sampler)")
+    print(f"AI 1.0 OOS baseline:  3y {base3:+.3f}   1y {base1:+.3f}\n")
+    Y1 = np.full((len(grid), len(by1)), np.nan)
+    Y3 = np.full((len(grid), len(by3)), np.nan)
+    n_both = 0; best_both = None; max1 = (-9.0, None); max3 = (-9.0, None)
+    for gi, combo in enumerate(grid):
+        w = np.array([1.0, 1.0, *combo])
+        Y1[gi] = _grid_year_ics(by1, w); Y3[gi] = _grid_year_ics(by3, w)
+        ic1, ic3 = float(np.nanmean(Y1[gi])), float(np.nanmean(Y3[gi]))
+        if ic1 > max1[0]: max1 = (ic1, combo)
+        if ic3 > max3[0]: max3 = (ic3, combo)
+        if ic1 > base1 and ic3 > base3:
+            n_both += 1
+            edge = min(ic1 - base1, ic3 - base3)
+            if best_both is None or edge > best_both[0]:
+                best_both = (edge, combo, ic3, ic1)
+    print(f"combinations beating AI 1.0 OOS at BOTH horizons: {n_both} / {len(grid)}")
+    if best_both:
+        c = best_both[1]
+        print("  best-both: " + "  ".join(f"{n}={v:+.1f}" for n, v in zip(names, c))
+              + f"  → 3y {best_both[2]:+.3f}  1y {best_both[3]:+.3f}")
+    print(f"  best single horizon:  3y {max3[0]:+.3f} (vs {base3:+.3f})   "
+          f"1y {max1[0]:+.3f} (vs {base1:+.3f})")
+
+    def nested(Y):
+        ny = Y.shape[1]; oos = []
+        for ty in range(ny):
+            train = np.nanmean(Y[:, np.delete(np.arange(ny), ty)], axis=1)
+            gi = int(np.nanargmax(train))
+            if np.isfinite(Y[gi, ty]):
+                oos.append(Y[gi, ty])
+        return float(np.nanmean(oos)) if oos else np.nan
+    print("\nnested grid-LOYO (best grid w chosen per train fold, scored on the held-out year):")
+    print(f"  3y {nested(Y3):+.3f}  (AI 1.0 {base3:+.3f})    1y {nested(Y1):+.3f}  (AI 1.0 {base1:+.3f})")
+
+
 def report(rows, horizon=HORIZON):
     nt = len({r["ticker"] for r in rows})
     print(f"panel: {len(rows)} rows · {nt} tickers · "
@@ -455,6 +546,9 @@ def selftest():
     assert np.allclose(wR, W_AI1, atol=0.05), ("heavy ridge should collapse to AI 1.0", wR)
     res = model_select(rows, delta_nonneg=True, seed=1)
     assert set(res) == set(MODELS), "model ladder incomplete"
+    # exhaustive-grid path (small grid for speed): self-validates its fast scorer
+    # against loyo_fixed via internal asserts, and must run end-to-end.
+    grid_scan(rows, levels=(0.0, 1.0))
     # parsimonious AI 1.0 + λ·fcfm: at λ=0 it must reproduce AI 1.0's OOS exactly.
     fc = fcfm_model(rows)
     for hz in ("3y", "1y"):
@@ -479,6 +573,9 @@ def main(argv):
         return 0
     if "--fcfm" in argv:                        # parsimonious AI 1.0 + λ·fcfm model
         fcfm_model(rows)
+        return 0
+    if "--grid" in argv:                        # deterministic exhaustive grid (no sampler)
+        grid_scan(rows)
         return 0
     horizon = "1y" if "--1y" in argv else HORIZON
     report(rows, horizon)
