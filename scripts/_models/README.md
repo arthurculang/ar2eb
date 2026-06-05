@@ -11,38 +11,54 @@ Run: `python scripts/_models/model_lulu.py` etc. (prints the per-scenario dcf + 
 
 ## Arthur Indicator 2.0 — backtest (spec §13)
 
-- `ai2_backtest.py` — fits the eight AI 2.0 weights `w1…w8` against forward
-  returns via per-fiscal-year cross-section rank-IC (cheapness = −AI vs forward
-  return), with a Q>0 coverage penalty and leave-one-year-out CV. numpy-only;
-  self-tested (`--selftest` recovers a known weight vector, OOS IC +0.91).
-- `ai2_panel.csv` — the fundamentals panel, one row per (ticker, fiscal year),
-  26 names FY2014–FY2025 spanning winners (META/NVDA/MSFT/…) and busts
-  (PTON/BYND/SNAP/W/ZM/…). **Provenance is uneven and the file flags it with
-  `[e]`:** the *operating* columns (revenue, gross/op margin, growth) are
-  research-sourced and reliable (many cross-checked to the dollar); the
-  *valuation* columns (`mktcap_b`, `net_cash_b`) and `price_fye` came back as
-  **training-knowledge estimates `[e]` or blank** — every finance data host
-  (SEC EDGAR, stooq, Yahoo Finance, FMP, AlphaVantage) is **egress-blocked by
-  the environment's network allowlist**, so they could not be sourced. Two
-  corrupted columns were blanked on assembly (ISRG/LULU `fcf_margin` came back
-  as absolute $B, not a ratio).
+**Result (v034, sourced panel): AI 2.0 does NOT calibrate as a full 8-weight model.**
+The only enrichment that survives leave-one-year-out (LOYO) OOS is a single FCF-margin
+term, and even that is modest and 1-year-concentrated. **AI 1.0 (`scripts/arthur_indicator.py`)
+remains the live screen** — the FCF-margin loading is the one validated extension.
 
-**Status — AI 2.0 cannot yet be credibly fit (the result, not a failure).**
-On this memory-grade EV/price data the 8-weight fit *overfits*: in-sample
-rank-IC rises (AI 1.0 ≈ +0.12 → AI 2.0 ≈ +0.51 at 3y) but **leave-one-year-out
-OOS IC collapses** (≈ +0.03 at 1y, +0.16 at 3y) and the fitted weights are
-unstable across horizons/subsamples. The harness + CV are working — they're
-correctly reporting the data is insufficient. **To trust `w1…w8` we need
-sourced EV + FYE prices** (allowlist `data.sec.gov` + a price host, or load a
-CSV export), then re-run `python scripts/_models/ai2_backtest.py`. Until then
-**AI 1.0 remains the live screen.**
+- `source_ai2_panel.py` — the deterministic sourcing path (no transcription, no memory):
+  SEC XBRL companyfacts (fundamentals, debt, shares) + Yahoo v8 chart JSON (FYE prices) →
+  the panel schema. **Sourced cleanly: 347 rows / 26 tickers / FY2007–25, 0 fundamentals
+  gaps, 316 rows with a market-cap + price** (the rest are pre-IPO years with no public price).
+    - raw (unadjusted) close × reported shares → market cap; split+dividend-adjusted close → forward returns.
+    - **Two bugs a market-cap sanity-gate caught + fixed (both self-tested in `--selftest`):**
+      (i) Yahoo's `quote.close` is *split-adjusted, not raw* → `close × pre-split shares`
+      understated old-year caps by the cumulative post-FYE split factor (NVDA FY2024 read
+      $152B, ~10× low, pre the 2024 10:1); the unadjusted close is now rebuilt from the
+      `events.splits` payload. (ii) dual-class names (META/GOOGL/SNAP/W) expose **no
+      consolidated point-in-time share count** in companyfacts (the API drops per-class
+      dimensional facts), so META had zero caps; now back-filled from the income-statement
+      weighted-average share count.
+    - Post-fix caps match truth: META FY2024 $1.48T · NVDA FY2025 $3.48T · AAPL FY2024 $3.44T;
+      split-year adjusted-price transitions are artifact-free.
+    - `--probe` tests host reachability (SEC + Yahoo); `--selftest` unit-tests the parser
+      offline. `--out ai2_panel.csv` promotes the sourced file for the fit.
 
-- `source_ai2_panel.py` — the deterministic sourcing path (no transcription, no
-  memory). Pulls fundamentals + shares from SEC XBRL companyfacts and
-  split-adjusted FYE closes from stooq, computes EV / margins / growth / forward
-  prices, and writes the panel schema. **Gated on the network allowlist:**
-  needs `data.sec.gov` + `stooq.com` opened (it exits gracefully with that
-  instruction otherwise). `--selftest` unit-tests the XBRL parser offline (flow
-  vs instant facts, 10-K/FY filtering, as-first-reported dedup); `--probe` tests
-  host reachability. Once it runs: review the printed coverage gaps, then
-  `--out ai2_panel.csv` to promote and re-fit.
+- `ai2_panel_sourced.csv` / `ai2_panel.csv` — the sourced fundamentals + price panel, one
+  row per (ticker, fiscal year), 26 names FY2007–25 spanning winners (META/NVDA/MSFT/…) and
+  busts (PTON/BYND/SNAP/W/ZM/…). `…_sourced.csv` is the sourcing output; `ai2_panel.csv` is
+  the promoted copy the backtest fits. (Provenance is now fully sourced — the old `[e]`
+  training-knowledge estimates are gone.)
+
+- `ai2_backtest.py` — fits the AI 2.0 weights against forward returns via per-fiscal-year
+  cross-section rank-IC (cheapness `−AI` vs forward return, n-weighted, `Q>0` coverage
+  penalty), judged by **LOYO-OOS, not in-sample**. numpy-only; self-tested (`--selftest`
+  recovers a known weight vector *and* checks the regularizers). Modes:
+    - (default) `python ai2_backtest.py [--1y]` — fit the full 8-weight model; report
+      in-sample IC, fitted weights, LOYO-OOS.
+    - `--select` — the **nested-model ladder** (AI 1.0 → +levels → +Δ → full-8) with the
+      Δ-weights sign-constrained ≥ 0, judged by LOYO-OOS at both horizons. The regularizer
+      that picks the model.
+    - `--fcfm` — the parsimonious **AI 1.0 + λ·fcfm** model (one knob): the λ-curve + the
+      honest nested-LOYO OOS (λ re-fit per training fold).
+    - `--ridge X` / `--allow-neg-delta` — ridge shrinkage toward AI 1.0 / lift the Δ ≥ 0 constraint.
+
+**The finding (judge = LOYO-OOS).** The full 8-weight fit **overfits**: in-sample rank-IC
++0.156 (3y) / +0.212 (1y) but LOYO-OOS −0.063 / −0.068, weights sign-flipping across
+horizons; even Δ ≥ 0-constrained the full model is +0.140 (3y) / −0.012 (1y) — tops one
+horizon, negative on the other. Regularized, the **only** model beating AI 1.0 OOS at *both*
+horizons is **AI 1.0 + an FCF-margin term**; the operating-margin term and all four Δ terms
+fail OOS. Even the FCF-margin term is modest + 1y-concentrated (1y OOS +0.107 → ~+0.11–0.12
+at λ ≈ 0.4, cheaper-for-higher-FCF-margin, sign-stable across seeds; 3y has no reliable
+signal for any model — ~15 drawdown-dominated cross-sections). **26 names × ~20 thin
+cross-sections cannot support 8 free parameters.** AI 1.0 stays live.

@@ -153,24 +153,29 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   (sourced 2016–2025 small-multiples — META 2022=3.1, NVDA FY23 31→FY25 12, LULU 3.0, ISRG ~15–25).
   Cross-validates the DCF (agree at extremes; **divergences are the signal** — TXG/ILMN screen "fair"
   on GM+growth but DCF-negative, GM-flattered + decelerating). **AI 2.0** (adds op/FCF-margin + Δ
-  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf` but **uncalibrated**. N/A for
+  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf`; **backtested on sourced data (v034) —
+  does NOT calibrate as a full model, only a modest FCF-margin term survives OOS (see next bullet)**. N/A for
   pre-revenue / gross-loss names (the young DCF's domain).
-- **AI 2.0 backtest — fundamentals now SOURCED; price feed + fit handed to a fresh session (2026-06-04,
-  branch `claude/ecstatic-newton-YKOJJ`).** Harness (`scripts/_models/ai2_backtest.py`) validated —
-  reproduces the overfit exactly (AI 1.0 rank-IC +0.122/3y, +0.059/1y; 8-weight AI 2.0 +0.51 in-sample
-  but +0.155 LOYO-OOS / +0.034 at 1y, sign-flipping weights). Allowlist arrived (`data.sec.gov` +
-  `stooq.com`), **but stooq's bulk CSV is now apikey/captcha-gated** → switched the price feed to **keyless
-  Yahoo** (`query1.finance.yahoo.com`, v8 chart JSON; gated on Arthur allowlisting that host — option A,
-  agreed). **SEC parser REWRITTEN this session** (`source_ai2_panel.py`): fixed fy-conflation (used the
-  filing's `fy`, collapsing NVDA's FY17/18/19 revenue → 4 rows; now period-END year), tag-shadowing
-  (`if out: break` → per-fy priority merge, restoring pre-2018 history), and debt (disjoint noncurrent +
-  current + convertibles + debt-free→0). Result: **191→347 rows, 26 tickers, full history, 0 fundamentals
-  gaps**, entity cross-check clean, spot-checks match truth (NVDA FY24/25 rev 60.9/130.5, UBER FY24 GM
-  0.394). Yahoo source added (raw close→mktcap, adj close→returns), parser self-tested offline. **NEXT
-  (fresh session → spec v034): `--probe` Yahoo → source full panel → promote `--out ai2_panel.csv` → fit →
-  judge by LOYO OOS vs AI 1.0; if it still overfits (26×~12yr is thin for 8 weights), regularize
-  (sign-constrain Δ≥0, ridge toward AI 1.0, nested models) rather than chase in-sample IC.** Handoff prompt
-  drafted in-thread. AI 1.0 (`scripts/arthur_indicator.py`) stays the live screen.
+- **AI 2.0 backtest — DONE (2026-06-05, branch `claude/ecstatic-newton-YKOJJ`, spec v034): the 8-weight
+  model does NOT calibrate; one FCF-margin term survives OOS.** With `query1.finance.yahoo.com` +
+  `data.sec.gov` allowlisted, sourced the panel end-to-end (SEC XBRL + Yahoo FYE prices): **347 rows /
+  26 tickers / FY2007–25, 0 fundamentals gaps, 316 with mktcap+price.** A market-cap **sanity-gate**
+  caught + fixed two `source_ai2_panel.py` bugs (both self-tested): (i) Yahoo's `quote.close` is
+  split-adjusted *not* raw → rebuilt the unadjusted close from the split events (NVDA FY2024 $152B→$1526B);
+  (ii) dual-class names (META/GOOGL/SNAP/W) expose no consolidated point-in-time share count in
+  companyfacts (API drops per-class dims) → weighted-avg-share fallback (META 0 caps → $1.48T FY2024).
+  Post-fix caps match truth (META $1.48T · NVDA FY25 $3.48T · AAPL $3.44T); split-years artifact-free.
+  **Fit (judge = LOYO-OOS, NOT in-sample):** full 8-weight overfits — in-sample +0.156/+0.212 (3y/1y) but
+  LOYO-OOS −0.063/−0.068, sign-flipping; even Δ≥0-constrained it's +0.140/−0.012 (tops one horizon,
+  negative the other). **Regularized `ai2_backtest.py`** (nested-model ladder + Δ≥0 sampler + ridge +
+  1-param `--fcfm`, all self-tested): the *only* model beating AI 1.0 OOS at BOTH horizons is **AI 1.0 +
+  an FCF-margin term**, and even that is modest + 1y-concentrated (1y OOS +0.107→~+0.11–0.12 at λ≈0.4,
+  cheaper-for-higher-FCF-margin, sign-stable; 3y no reliable signal for any model — 2008/2022-drawdown-
+  dominated, ~15 cross-sections). Op-margin + all four Δ terms fail OOS. **26 names × ~20 thin
+  cross-sections can't support 8 free params.** AI 1.0 (`scripts/arthur_indicator.py`) stays the live
+  screen; the FCF-margin loading is the one validated extension. **Branch-only — NOT merged: bundle
+  v032 + v033 (POCD) + v034 + the AI 2.0 tooling in ONE PR (v031 + §13 already on main via PR #23),
+  pending Arthur's review.**
 - **Website rendering-parity — DONE (2026-06-04, merged to main).** (1) Embedded site memo now renders
   the §6d competitive page (`EmbeddedMemo` had mounted only 5 of 6 page components; PDF showed 6) — JS
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
