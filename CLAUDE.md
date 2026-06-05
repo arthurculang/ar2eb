@@ -153,29 +153,28 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   (sourced 2016–2025 small-multiples — META 2022=3.1, NVDA FY23 31→FY25 12, LULU 3.0, ISRG ~15–25).
   Cross-validates the DCF (agree at extremes; **divergences are the signal** — TXG/ILMN screen "fair"
   on GM+growth but DCF-negative, GM-flattered + decelerating). **AI 2.0** (adds op/FCF-margin + Δ
-  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf`; **backtested on sourced data (v034) —
-  does NOT calibrate as a full model, only a modest FCF-margin term survives OOS (see next bullet)**. N/A for
-  pre-revenue / gross-loss names (the young DCF's domain).
-- **AI 2.0 backtest — DONE (2026-06-05, branch `claude/ecstatic-newton-YKOJJ`, spec v034): the 8-weight
-  model does NOT calibrate; one FCF-margin term survives OOS.** With `query1.finance.yahoo.com` +
-  `data.sec.gov` allowlisted, sourced the panel end-to-end (SEC XBRL + Yahoo FYE prices): **347 rows /
-  26 tickers / FY2007–25, 0 fundamentals gaps, 316 with mktcap+price.** A market-cap **sanity-gate**
-  caught + fixed two `source_ai2_panel.py` bugs (both self-tested): (i) Yahoo's `quote.close` is
-  split-adjusted *not* raw → rebuilt the unadjusted close from the split events (NVDA FY2024 $152B→$1526B);
-  (ii) dual-class names (META/GOOGL/SNAP/W) expose no consolidated point-in-time share count in
-  companyfacts (API drops per-class dims) → weighted-avg-share fallback (META 0 caps → $1.48T FY2024).
-  Post-fix caps match truth (META $1.48T · NVDA FY25 $3.48T · AAPL $3.44T); split-years artifact-free.
-  **Fit (judge = LOYO-OOS, NOT in-sample):** full 8-weight overfits — in-sample +0.156/+0.212 (3y/1y) but
-  LOYO-OOS −0.063/−0.068, sign-flipping; even Δ≥0-constrained it's +0.140/−0.012 (tops one horizon,
-  negative the other). **Regularized `ai2_backtest.py`** (nested-model ladder + Δ≥0 sampler + ridge +
-  1-param `--fcfm`, all self-tested): the *only* model beating AI 1.0 OOS at BOTH horizons is **AI 1.0 +
-  an FCF-margin term**, and even that is modest + 1y-concentrated (1y OOS +0.107→~+0.11–0.12 at λ≈0.4,
-  cheaper-for-higher-FCF-margin, sign-stable; 3y no reliable signal for any model — 2008/2022-drawdown-
-  dominated, ~15 cross-sections). Op-margin + all four Δ terms fail OOS. **26 names × ~20 thin
-  cross-sections can't support 8 free params.** AI 1.0 (`scripts/arthur_indicator.py`) stays the live
-  screen; the FCF-margin loading is the one validated extension. **Branch-only — NOT merged: bundle
-  v032 + v033 (POCD) + v034 + the AI 2.0 tooling in ONE PR (v031 + §13 already on main via PR #23),
-  pending Arthur's review.**
+  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf`; **backtested on a sourced 104-name
+  universe (v035) — does NOT calibrate; no enrichment beats AI 1.0 out-of-sample (see next bullet).
+  AI 1.0 itself is now OOS-validated on the broad universe.** N/A for pre-revenue / gross-loss names
+  (the young DCF's domain).
+- **AI 2.0 backtest — DONE (2026-06-05, branch `claude/ecstatic-newton-YKOJJ`, spec v034→v035): AI 2.0
+  does NOT calibrate; AI 1.0 *validated* out-of-sample.** Sourced the panel end-to-end (SEC XBRL + Yahoo
+  FYE prices). A cap **sanity-gate** caught + fixed two `source_ai2_panel.py` bugs (both self-tested):
+  (i) Yahoo's `quote.close` is split-adjusted *not* raw → rebuilt the unadjusted close from the split
+  events (NVDA FY2024 $152B→$1526B); (ii) dual-class names expose no consolidated share count in
+  companyfacts → weighted-avg-share fallback (META 0 caps → $1.48T). **v034 (26 names):** 8-weight fit
+  overfits (LOYO-OOS −0.063/−0.068, sign-flipping); regularized `ai2_backtest.py` (nested ladder + Δ≥0
+  sampler + ridge + 1-param `--fcfm`) → only AI 1.0 + an FCF-margin term beat AI 1.0 OOS at both horizons,
+  but modest/1y-concentrated, flagged as possibly small-sample. **v035 (expanded → 104 in-domain tickers,
+  winners+busts; CIKs ticker-verified vs `data.sec.gov/submissions`; ~95 names/cross-section, 1245 usable
+  rows): the FCF-margin signal does NOT survive — NO enrichment (fcfm/opm/any Δ/full-8) beats AI 1.0 OOS at
+  both horizons (L3 fcfm → −0.041/3y); the 26-name win was a small-sample artifact.** Conversely **AI 1.0
+  (gm+growth) is validated: OOS +0.044/3y, +0.063/1y on the broad universe** (narrow-panel 3y was ≈0).
+  AI 1.0 (`scripts/arthur_indicator.py`) stays the live screen — now with broad-universe OOS support;
+  AI 2.0 earns none of its 8 weights. *Data limit (documented):* ~14 compounders (ORCL/V/MA/INTU/CDNS/TMO/
+  SBUX…) stopped tagging consolidated gross profit in companyfacts post-2018 → partly drop; faking a margin
+  would break conviction-neutrality. **Branch-only — NOT merged: bundle v032 + v033 (POCD) + v034 + v035 +
+  the AI 2.0 tooling in ONE PR (v031 + §13 already on main via PR #23), pending Arthur's review.**
 - **Website rendering-parity — DONE (2026-06-04, merged to main).** (1) Embedded site memo now renders
   the §6d competitive page (`EmbeddedMemo` had mounted only 5 of 6 page components; PDF showed 6) — JS
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
