@@ -52,6 +52,44 @@ CIK = {
     "ABNB": 1559720, "ISRG": 1035267, "LULU": 1397187, "DASH": 1792789,
     "PTON": 1639825, "BYND": 1655210, "ROKU": 1428439, "SNAP": 1564408,
     "ZM": 1585521, "W": 1616707,
+    # ── universe expansion (in-domain growth winners + busts; every CIK below was
+    # ticker-verified against data.sec.gov/submissions, so a wrong seed is caught,
+    # not trusted). ZI was renamed ZI→GTM (2025); MRVL (reorg continuity-break) and
+    # Unity were dropped. Widens each yearly cross-section ~26→~100 names. ──
+    # semis
+    "AVGO": 1730168, "AMD": 2488, "QCOM": 804328, "TXN": 97476,
+    "ADI": 6281, "MU": 723125, "AMAT": 6951, "LRCX": 707549,
+    "KLAC": 319201, "ON": 1097864, "NXPI": 1413447, "INTC": 50863,
+    # infra software
+    "ORCL": 1341439, "CSCO": 858877, "IBM": 51143, "PANW": 1327567,
+    "FTNT": 1262039, "ANET": 1596532, "WDAY": 1327811, "ADSK": 769397,
+    "CDNS": 813672, "SNPS": 883241,
+    # payments / quality compounders
+    "V": 1403161, "MA": 1141391, "INTU": 896878,
+    # SaaS growth
+    "ZS": 1713683, "NET": 1477333, "MDB": 1441816, "TEAM": 1650372,
+    "HUBS": 1404655, "OKTA": 1660134, "TWLO": 1447669, "DOCU": 1261333,
+    "GTM": 1794515, "BILL": 1786352, "S": 1583708, "GTLB": 1653482,
+    "DBX": 1467623, "ESTC": 1707753, "DT": 1773383, "PATH": 1734722,
+    # internet / platforms
+    "MELI": 1099590, "PINS": 1506293, "ETSY": 1370637, "EBAY": 1065088,
+    "MTCH": 891103, "LYFT": 1759509, "DKNG": 1883685, "RBLX": 1315098,
+    "BMBL": 1830043,
+    # fintech (de-rated / busts)
+    "PYPL": 1633917, "XYZ": 1512673, "AFRM": 1820953, "UPST": 1647639,
+    "SOFI": 1818874, "HOOD": 1783879,
+    # 2021-bubble busts
+    "OPEN": 1801169, "CVNA": 1690820, "CHWY": 1766502, "OTLY": 1843586,
+    # consumer growth
+    "CMG": 1058090, "COST": 909832, "NKE": 320187, "SBUX": 829224,
+    "MNST": 865752, "CELH": 1341766, "ELF": 1600033, "DECK": 910521,
+    "CROX": 1334036, "ULTA": 1403568, "EL": 1001250, "WING": 1636222,
+    "YETI": 1670592,
+    # med-tech / life-science tools
+    "DXCM": 1093557, "PODD": 1145197, "ALGN": 1097149, "VEEV": 1393052,
+    "IDXX": 874716, "RMD": 943819, "TMO": 97745, "A": 1090872,
+    "MTD": 1037646, "WST": 105770, "ILMN": 1110803, "TXG": 1770787,
+    "TNDM": 1438133,
 }
 
 # Concept priority lists. Resolved by per-fy PRIORITY MERGE (see flow_series /
