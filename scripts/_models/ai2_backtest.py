@@ -170,42 +170,76 @@ def cross_section_ic(rows: list[dict], w: np.ndarray, horizon: str = HORIZON):
     return ic, (used / scored if scored else 0.0), len(ics)
 
 
-def objective(rows, w, horizon=HORIZON):
+def objective(rows, w, horizon=HORIZON, ridge=0.0):
     ic, cov, n = cross_section_ic(rows, w, horizon)
     if not np.isfinite(ic) or n == 0:
         return -1.0
-    return ic * (0.5 + 0.5 * cov)   # reward IC, gently penalise low coverage
+    score = ic * (0.5 + 0.5 * cov)   # reward IC, gently penalise low coverage
+    if ridge:                        # shrink toward AI 1.0 (Q = gm + g)
+        score -= ridge * float(np.sum((w - W_AI1) ** 2))
+    return score
 
 
 # ── fit: random search + coordinate pattern-search refine ────────────────────
-def _sample_w(rng) -> np.ndarray:
-    lvl = rng.dirichlet(np.ones(4)) * 2.0          # w1..w4 ≥ 0, sum = 2
-    dlt = rng.uniform(-1, 1, 4)                     # w5..w8 ∈ [−1,1]
-    return np.concatenate([lvl, dlt])
+# Regularisation knobs (used by the model-selection ladder — see model_select):
+#   · free          — indices of the 8 weights that are FREE to move; the rest
+#                     are pinned at 0 (nested models: fit only a subset). Levels
+#                     in `free` are renormalised to sum 2 (AI 1.0's gauge), so the
+#                     delta block's magnitude is comparable across models.
+#   · delta_nonneg  — constrain Δ-weights (w5..w8) ≥ 0: improving margins / accel-
+#                     erating growth may only make a name screen CHEAPER, never
+#                     richer. Kills the sign-flips the unconstrained fit produced.
+#   · ridge         — shrink toward AI 1.0 (penalise ‖w − w_AI1‖²).
+def _sample_w(rng, free=None, delta_nonneg=False) -> np.ndarray:
+    if free is None:
+        free = list(range(8))
+    w = np.zeros(8)
+    lvl_free = [i for i in free if i < 4]
+    dlt_free = [i for i in free if i >= 4]
+    if lvl_free:
+        d = rng.dirichlet(np.ones(len(lvl_free))) * 2.0   # free levels ≥ 0, sum = 2
+        for i, v in zip(lvl_free, d):
+            w[i] = v
+    lo = 0.0 if delta_nonneg else -1.0
+    for i in dlt_free:
+        w[i] = rng.uniform(lo, 1.0)
+    return w
 
 
-def fit(rows, horizon=HORIZON, n_random=4000, seed=0):
+def fit(rows, horizon=HORIZON, n_random=4000, seed=0,
+        free=None, delta_nonneg=False, ridge=0.0):
+    if free is None:
+        free = list(range(8))
+    lvl_free = [i for i in free if i < 4]
     rng = np.random.default_rng(seed)
-    best_w, best_s = W_AI1.copy(), objective(rows, W_AI1, horizon)
+    # start from AI 1.0 restricted to the model's free set
+    w0 = np.zeros(8)
+    for i in (0, 1):
+        if i in free:
+            w0[i] = 1.0
+    if not lvl_free:           # degenerate guard (shouldn't happen in the ladder)
+        w0[0] = w0[1] = 1.0
+    best_w, best_s = w0.copy(), objective(rows, w0, horizon, ridge)
     for _ in range(n_random):
-        w = _sample_w(rng)
-        s = objective(rows, w, horizon)
+        w = _sample_w(rng, free, delta_nonneg)
+        s = objective(rows, w, horizon, ridge)
         if s > best_s:
             best_w, best_s = w, s
-    # pattern-search refine (keep Σw1..4 ≈ 2 by renormalising the level block)
+    # pattern-search refine over FREE indices (renormalise the free level block to 2)
+    lo = 0.0 if delta_nonneg else -1.0
     step = 0.25
     for _ in range(60):
         improved = False
-        for i in range(8):
+        for i in free:
             for sign in (+1, -1):
                 w = best_w.copy(); w[i] += sign * step
                 if i < 4:
-                    w[:4] = np.clip(w[:4], 0, None)
-                    if w[:4].sum() > 0:
-                        w[:4] *= 2.0 / w[:4].sum()
+                    w[lvl_free] = np.clip(w[lvl_free], 0, None)
+                    if w[lvl_free].sum() > 0:
+                        w[lvl_free] *= 2.0 / w[lvl_free].sum()
                 else:
-                    w[i] = float(np.clip(w[i], -1, 1))
-                s = objective(rows, w, horizon)
+                    w[i] = float(np.clip(w[i], lo, 1))
+                s = objective(rows, w, horizon, ridge)
                 if s > best_s:
                     best_w, best_s, improved = w, s, True
         if not improved:
@@ -215,7 +249,7 @@ def fit(rows, horizon=HORIZON, n_random=4000, seed=0):
     return best_w, best_s
 
 
-def loyo_cv(rows, horizon=HORIZON, seed=0):
+def loyo_cv(rows, horizon=HORIZON, seed=0, free=None, delta_nonneg=False, ridge=0.0):
     """Leave-one-year-out: fit on all-but-one fy, score that held-out fy."""
     years = sorted({r["fy"] for r in rows})
     oos = []
@@ -224,11 +258,120 @@ def loyo_cv(rows, horizon=HORIZON, seed=0):
         test = [r for r in rows if r["fy"] == fy]
         if len({r["fy"] for r in train}) < 3 or len(test) < MIN_XS:
             continue
-        w, _ = fit(train, horizon, n_random=1500, seed=seed)
+        w, _ = fit(train, horizon, n_random=1500, seed=seed,
+                   free=free, delta_nonneg=delta_nonneg, ridge=ridge)
         ic, _, n = cross_section_ic(test, w, horizon)
         if n:
             oos.append(ic)
     return (float(np.nanmean(oos)) if oos else np.nan), len(oos)
+
+
+def loyo_fixed(rows, w_fixed, horizon=HORIZON):
+    """OOS for a NON-fitted model (e.g. AI 1.0): score a fixed w on each held-out
+    fy. No training → its OOS ≈ in-sample, the right zero-parameter benchmark."""
+    oos = []
+    for fy in sorted({r["fy"] for r in rows}):
+        test = [r for r in rows if r["fy"] == fy]
+        if len(test) < MIN_XS:
+            continue
+        ic, _, n = cross_section_ic(test, w_fixed, horizon)
+        if n:
+            oos.append(ic)
+    return (float(np.nanmean(oos)) if oos else np.nan), len(oos)
+
+
+# ── nested-model selection ladder (judge by LOYO-OOS, prefer the simplest) ───
+# Index map: 0=g 1=gm 2=opm 3=fcfm · 4=Δg 5=Δgm 6=Δopm 7=Δfcfm.  Every model keeps
+# the AI 1.0 core {g, gm}; we add terms one block at a time and let OOS decide.
+MODELS = {
+    "AI 1.0  (g,gm @1,1)":  [],                 # 0 free params — the baseline
+    "L2  g,gm":             [0, 1],             # re-weighted levels
+    "L3  +fcfm":            [0, 1, 3],
+    "L4  +opm,fcfm":        [0, 1, 2, 3],
+    "L4+Δfcfm":             [0, 1, 2, 3, 7],
+    "L2+Δg,Δgm":            [0, 1, 4, 5],
+    "Full-8":               [0, 1, 2, 3, 4, 5, 6, 7],
+}
+
+
+def fcfm_model(rows, grid=None):
+    """The parsimonious calibrated AI 2.0 the ladder points to: AI 1.0's proven
+    denominator plus ONE FCF-margin term — Q = g + gm + λ·fcfm. A single knob
+    (can't overfit 8), λ chosen by OOS. Prints the λ-curve (in-sample + fixed-λ
+    OOS at both horizons) and the honest nested-LOYO OOS (λ re-fit on each training
+    fold, scored on the held-out year). Returns per-horizon (λ*, nested-OOS, OOS@0)."""
+    if grid is None:
+        grid = [round(0.1 * i, 2) for i in range(0, 16)]   # 0.0 … 1.5
+    def w_of(lam):
+        return np.array([1, 1, 0, lam, 0, 0, 0, 0], float)
+    print("parsimonious AI 2.0:  Q = g + gm + λ·fcfm   (λ = 0 is exactly AI 1.0)\n")
+    print(f"{'λ':>5}  {'IS-3y':>7} {'OOS-3y':>7}  {'IS-1y':>7} {'OOS-1y':>7}")
+    print("-" * 40)
+    for lam in grid:
+        w = w_of(lam)
+        is3, oo3 = cross_section_ic(rows, w, "3y")[0], loyo_fixed(rows, w, "3y")[0]
+        is1, oo1 = cross_section_ic(rows, w, "1y")[0], loyo_fixed(rows, w, "1y")[0]
+        print(f"{lam:>5.2f}  {is3:>+7.3f} {oo3:>+7.3f}  {is1:>+7.3f} {oo1:>+7.3f}")
+    out = {}
+    for horizon in ("3y", "1y"):
+        # honest nested LOYO: pick λ on the train folds (by train IS-IC), score test
+        oos = []
+        for fy in sorted({r["fy"] for r in rows}):
+            train = [r for r in rows if r["fy"] != fy]
+            test = [r for r in rows if r["fy"] == fy]
+            if len(test) < MIN_XS or len({r["fy"] for r in train}) < 3:
+                continue
+            lam = max(grid, key=lambda L: cross_section_ic(train, w_of(L), horizon)[0])
+            ic = cross_section_ic(test, w_of(lam), horizon)[0]
+            if np.isfinite(ic):
+                oos.append(ic)
+        nested = float(np.nanmean(oos)) if oos else np.nan
+        lam_star = max(grid, key=lambda L: cross_section_ic(rows, w_of(L), horizon)[0])
+        oos0 = loyo_fixed(rows, w_of(0.0), horizon)[0]
+        out[horizon] = (lam_star, nested, oos0)
+        print(f"\n{horizon}: in-sample-optimal λ = {lam_star:.2f}  ·  "
+              f"nested-LOYO OOS (λ re-fit per fold) = {nested:+.3f}  "
+              f"(vs AI 1.0 OOS {oos0:+.3f})")
+    return out
+
+
+def model_select(rows, delta_nonneg=True, ridge=0.0, seed=0):
+    """Fit the nested ladder at both horizons; report IS + LOYO-OOS for each so the
+    simplest model that beats AI 1.0 OOS at BOTH horizons is visible. Δ-weights are
+    sign-constrained ≥ 0 by default (the economic prior)."""
+    nt = len({r["ticker"] for r in rows})
+    print(f"panel: {len(rows)} rows · {nt} tickers · "
+          f"{len({r['fy'] for r in rows})} fiscal years")
+    print(f"nested model selection  (Δ-weights ≥ 0: {delta_nonneg}; ridge={ridge})")
+    print("judge = leave-one-year-out OOS rank-IC (NOT in-sample).\n")
+    base3 = loyo_fixed(rows, W_AI1, "3y")[0]
+    base1 = loyo_fixed(rows, W_AI1, "1y")[0]
+    print(f"{'model':<20} {'k':>2}  {'IS-3y':>7} {'OOS-3y':>7}  {'IS-1y':>7} {'OOS-1y':>7}")
+    print("-" * 64)
+    results = {}
+    for name, free in MODELS.items():
+        cells, ws = [], {}
+        for hz in ("3y", "1y"):
+            if not free:
+                isamp = cross_section_ic(rows, W_AI1, hz)[0]
+                oos = loyo_fixed(rows, W_AI1, hz)[0]
+                ws[hz] = W_AI1
+            else:
+                w, _ = fit(rows, hz, free=free, delta_nonneg=delta_nonneg,
+                           ridge=ridge, seed=seed)
+                isamp = cross_section_ic(rows, w, hz)[0]
+                oos = loyo_cv(rows, hz, free=free, delta_nonneg=delta_nonneg,
+                              ridge=ridge, seed=seed)[0]
+                ws[hz] = w
+            cells.append((isamp, oos))
+        results[name] = (free, cells, ws)
+        beats = (cells[0][1] > base3 + 1e-9) and (cells[1][1] > base1 + 1e-9)
+        mark = "  ◀ beats AI 1.0 OOS (both)" if (free and beats) else ""
+        print(f"{name:<20} {len(free):>2}  {cells[0][0]:>+7.3f} {cells[0][1]:>+7.3f}  "
+              f"{cells[1][0]:>+7.3f} {cells[1][1]:>+7.3f}{mark}")
+    print("-" * 64)
+    print(f"AI 1.0 OOS baseline:  3y {base3:+.3f}   1y {base1:+.3f}")
+    return results
 
 
 # ── reporting ────────────────────────────────────────────────────────────────
@@ -301,7 +444,24 @@ def selftest():
     w = report(rows, "1y")
     ic_true, _, _ = cross_section_ic(rows, true_w, "1y")
     print(f"\noracle (true weights) rank-IC = {ic_true:+.3f}")
-    print("PASS" if cross_section_ic(rows, w, "1y")[0] > 0.15 else "CHECK fitter")
+    ok_fit = cross_section_ic(rows, w, "1y")[0] > 0.15
+    # regularisation machinery: nested mask pins non-free weights at 0; the
+    # sign-constraint holds Δ-weights ≥ 0; a heavy ridge collapses w toward AI 1.0.
+    wL2, _ = fit(rows, "1y", free=[0, 1], n_random=400, seed=1)
+    assert np.allclose(wL2[2:], 0.0), ("free mask leaked", wL2)
+    wC, _ = fit(rows, "1y", free=list(range(8)), delta_nonneg=True, n_random=400, seed=1)
+    assert (wC[4:] >= -1e-9).all(), ("Δ sign-constraint violated", wC)
+    wR, _ = fit(rows, "1y", free=list(range(8)), ridge=50.0, n_random=400, seed=1)
+    assert np.allclose(wR, W_AI1, atol=0.05), ("heavy ridge should collapse to AI 1.0", wR)
+    res = model_select(rows, delta_nonneg=True, seed=1)
+    assert set(res) == set(MODELS), "model ladder incomplete"
+    # parsimonious AI 1.0 + λ·fcfm: at λ=0 it must reproduce AI 1.0's OOS exactly.
+    fc = fcfm_model(rows)
+    for hz in ("3y", "1y"):
+        assert abs(fc[hz][2] - loyo_fixed(rows, W_AI1, hz)[0]) < 1e-9, ("λ=0 ≠ AI 1.0", hz)
+    print("\nreg machinery OK — mask pins non-free=0, Δ≥0 enforced, ridge→AI 1.0, "
+          "ladder + fcfm model run (λ=0 ≡ AI 1.0)")
+    print("PASS" if ok_fit else "CHECK fitter")
 
 
 def main(argv):
@@ -313,6 +473,13 @@ def main(argv):
         print("Run --selftest to verify the harness on synthetic data.")
         return 0
     rows = build_rows(by_t)
+    if "--select" in argv:                     # nested-model regularised selection
+        ridge = float(argv[argv.index("--ridge") + 1]) if "--ridge" in argv else 0.0
+        model_select(rows, delta_nonneg="--allow-neg-delta" not in argv, ridge=ridge)
+        return 0
+    if "--fcfm" in argv:                        # parsimonious AI 1.0 + λ·fcfm model
+        fcfm_model(rows)
+        return 0
     horizon = "1y" if "--1y" in argv else HORIZON
     report(rows, horizon)
     return 0
