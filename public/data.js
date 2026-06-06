@@ -2964,7 +2964,7 @@ const MEMOS = [
     "publishedLabel": "May 27, 2026",
     "pdf": {
       "file": "zm-memo__v024__2026-05-31_17-10.pdf",
-      "size": "278 KB",
+      "size": "296 KB",
       "priorVersions": [
         {
           "version": "023",
@@ -5749,6 +5749,27 @@ const MEMOS = [
         ],
         "takeaway": "A wide, durable moat anchored on switching costs and scale — the basis for the DCF's premium terminal multiple; challengers are real but years from the installed-base and brand barriers. Watch procedure growth as the erosion gauge.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Dave Rosa (CEO since Jul 2025)",
+          "founderLed": false,
+          "insiderOwnershipPct": 1.0,
+          "capitalAllocation": "Net cash, zero debt, no dividend — a self-funded compounder: reinvests first (R&D +~15% YoY 2024 + manufacturing capex), buys back opportunistically (~$7.95B cumulative, $5B authorization refreshed), and grows organically (build-not-buy, no transformative M&A).",
+          "incentiveAlignment": "Pay is ~85-89% equity, performance-weighted: PSUs pay 0-125% of target over 3 years on relative TSR + da Vinci/Ion procedure-volume growth + relative operating margin. Guthart FY2024 ~$18.2M (mostly stock, $0 options).",
+          "governanceFlags": [
+            "single-class (one share, one vote); no controlling individual (insiders <1%, ~85% institutional)",
+            "declassified board — directors elected annually; fully-independent committees; say-on-pay ~93% (2025)",
+            "orderly succession: Rosa is a 29-yr internal promotion; Guthart stayed on as Executive Chair",
+            "caveat: with Guthart as Executive Chair the chair is no longer independent (lead independent director)"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "The cleanest governance of the cohort: single-class, declassified annual elections, ~93% say-on-pay, performance-weighted equity, net-cash discipline, and an orderly internal CEO handoff (Rosa) — institutionalized, not person-dependent. Mild demerits: low insider skin-in-the-game and a now non-independent (Executive) chair."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ISRG 17.5 — rarely screens cheap)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +20% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -7108,7 +7129,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "coin-memo__v002__2026-05-31_17-11.pdf",
-      "size": "286 KB",
+      "size": "304 KB",
       "priorVersions": [
         {
           "version": "001",
@@ -15011,6 +15032,27 @@ const MEMOS = [
         ],
         "takeaway": "lululemon's brand Power is genuinely durable internationally (China +29%, only 16% of revenue) and underpinned by cornered-resource fabrics, but it is eroding in the saturated US where Alo/Vuori and dupes are taking DTC share and the founder calls the product stale. The ~60% de-rating to ~10x FCF prices structural impairment; the DCF tests whether the brand stabilizes — and even a real-impairment ultra-bear is only -34%, while the modal stabilization implies the sell-off overshot."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Interim co-CEOs (M. Frank, A. Maestrini)",
+          "founderLed": false,
+          "insiderOwnershipPct": 7.0,
+          "capitalAllocation": "No dividend; capital returned via large executed buybacks (~$2.5B / 9.1M shares Dec-2023→Aug-2025; +$1.0B Dec 2025, ~$1.6B remaining), otherwise reinvested in stores/product. The one notable deal — Mirror (~$500M, 2020) — failed: a ~$443M post-tax impairment (FY2022), hardware ceased 2023.",
+          "incentiveAlignment": "Standard structure (base + cash bonus + majority-equity PSU LTI). Say-on-pay passed but support slipped 93% (2024) → 83% (2025), into the range proxy advisors flag, and two directors drew weak support (76% / 72%).",
+          "governanceFlags": [
+            "single-class (one share, one vote)",
+            "independent chair, separate from CEO; but classified (staggered) board",
+            "founder Chip Wilson ~8.7% (off the board since 2015) ran a public proxy fight",
+            "settled May 2026: 2 Wilson nominees (+1 more) + a declassification commitment; ~18-mo standstill"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Professionalized and single-class with an independent chair and disciplined buybacks — but a live governance moment: CEO Calvin McDonald is out (Jan 2026; interim co-CEOs + external search), a founder proxy fight just settled (Chip Wilson ~8.7%, two board seats), a classified board, the failed Mirror deal, and slipping say-on-pay support."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (LULU 1.95)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +65% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -15089,7 +15131,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "abnb-memo__v001__2026-06-03_15-44.pdf",
-      "size": "275 KB",
+      "size": "292 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -16639,6 +16681,28 @@ const MEMOS = [
         ],
         "takeaway": "Uber's network economies + scale are genuinely dominant — the deepest two-sided marketplace, now throwing off ~$10B FCF with advertising and delivery margins still ramping. The entire terminal-value debate is the autonomy paradox: the network power is durable only if Uber remains the demand aggregator for AV fleets. At ~14x EV/FCF the market is pricing meaningful AV-disruption risk; the sign of the memo hinges on whether autonomy commoditizes the driver-supply side (ultra-bear -44%) or Uber tolls the cheaper AV rides (base +55%)."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Dara Khosrowshahi",
+          "founderLed": false,
+          "tenureYears": 8,
+          "insiderOwnershipPct": 3.0,
+          "capitalAllocation": "The standout leg: turned to GAAP profit (FY2023, first ever) and ~$6.9B FY2024 free cash flow, then opened capital return — a first $7B buyback (Feb 2024) escalated to a $20B authorization (Aug 2025, ≥50% of FCF). Divested the cash-burning bets (self-driving → Aurora; air taxi → Joby; bikes → Lime); legacy Didi/Grab stakes run down. (FY2024 GAAP net income was flattered by a ~$6.4B tax-valuation release.)",
+          "incentiveAlignment": "Pay is PSU/PRSU-weighted (multi-year metrics: gross bookings, operating income, AV partnerships); FY2024 ~$39.4M, the jump driven by share-price appreciation on already-granted awards, not a structural raise. Pay-for-performance, equity-led.",
+          "governanceFlags": [
+            "single-class (one share, one vote) — super-voting eliminated in 2017 (pre-IPO, a SoftBank condition)",
+            "separate independent chair (Ronald Sugar) vs CEO; majority-independent board",
+            "founder Travis Kalanick fully exited (board + entire stake, Dec 2019); SoftBank overhang cleared",
+            "low insider ownership (Dara ~0.07%; aggregate ~3-4%) — institutionally dispersed"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "The professionalized-after-the-founder case: a hired CEO who turned Uber to free cash flow and a $20B buyback regime, on a clean single-class register with an independent chair and no controller — the structural opposite of a founder-control name. The only real demerits: low insider skin-in-the-game and some execution-continuity tied to Dara."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (UBER 4.72)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +48% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -17522,7 +17586,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "dash-memo__v001__2026-06-03_15-50.pdf",
-      "size": "275 KB",
+      "size": "292 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -19071,6 +19135,27 @@ const MEMOS = [
           }
         ],
         "takeaway": "Illumina's scale + switching-cost Power is genuine and durable — ~80% share, >90% of clinical genomics, a ~70%-margin consumables annuity, and clinical labs that won't cheaply re-validate. But the Power is being audited: revenue was flat for four years, China collapsed, NIH froze research demand, low-cost entrants (Ultima/Element $100 genome) attack pricing, and Roche's SBX re-enters in 2026. The ~80% rally to ~5x EV/sales has priced the NovaSeq-X/clinical re-acceleration; only the bull-or-better clears spot, and the modal base sits ~27% below — the entry, not the franchise, is the problem (the TXG mirror)."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Jacob Thaysen (CEO since Sept 2023)",
+          "founderLed": false,
+          "insiderOwnershipPct": 2.0,
+          "capitalAllocation": "Dominated by the GRAIL episode — a major observable value-destruction: bought GRAIL (~$8B, 2021) and CLOSED it without regulatory clearance, drawing an EU prohibition + an unprecedented €432M \"gun-jumping\" fine (later voided on jurisdiction, 2024) and a forced spin-off (June 2024 → GRAL) that took a ~$4B impairment + a ~$1B recapitalization. No dividend; small buybacks ($1.5B authorized Apr 2026); R&D-heavy.",
+          "incentiveAlignment": "Comp redesigned after a pay revolt: CEO target equity $10M is 70% PSUs / 30% RSUs, PSUs vesting on 3-year relative TSR (the make-whole grant made explicitly 70% TSR-contingent in response to stockholder feedback). Base $1M, target bonus 125%.",
+          "governanceFlags": [
+            "single-class, declassified board (annual elections)",
+            "2023 Icahn proxy fight: chairman John Thompson ousted; Icahn won one board seat",
+            "say-on-pay FAILED 2023 → recovered ~86.5% (2024) after the comp redesign",
+            "board/chair overhaul since (Gottlieb non-exec chair 2025; Corvex Meister joined; Icahn fully exited)"
+          ],
+          "keyPersonRisk": "low",
+          "score": 2,
+          "takeaway": "The cohort's governance-turnaround story — and the weakest recent record: a board that closed an $8B deal without clearance (forced unwind, ~$4B impairment, an EU fine), failed say-on-pay (2023), and lost a proxy seat to Icahn. Being repaired — new CEO, independent chair, redesigned TSR-linked pay, say-on-pay recovered, activist oversight — but the track record is the observable flag."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ILMN 7.08)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −30% finding) + §12 sizing."
       },
       "appendix": {
         "pushback": [
