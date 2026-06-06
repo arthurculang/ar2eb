@@ -25,6 +25,26 @@ const PALETTE = {
 const FONT_SANS = "'Inter', system-ui, sans-serif";
 const FONT_MONO = "'JetBrains Mono', ui-monospace, monospace";
 
+// Inter-SemiBold (weight 600) per-glyph advance widths, in em, extracted from
+// public/assets/fonts/Inter-SemiBold.ttf (rounded UP — conservative). Used to
+// size chart margins to the actual rendered label widths so long series labels
+// never clip at the SVG edge (spec §3.5: layout bounds compute from data).
+const _INTER_SB_EM = {" ":0.252,"!":0.322,"\"":0.523,"#":0.644,"$":0.651,"%":1.005,"&":0.663,"'":0.326,"(":0.374,")":0.374,"*":0.54,"+":0.673,",":0.319,"-":0.466,".":0.319,"/":0.379,"0":0.66,"1":0.423,"2":0.624,"3":0.637,"4":0.667,"5":0.613,"6":0.64,"7":0.577,"8":0.641,"9":0.64,":":0.319,";":0.33,"<":0.673,"=":0.673,">":0.673,"?":0.544,"@":1.0,"A":0.728,"B":0.66,"C":0.737,"D":0.723,"E":0.606,"F":0.588,"G":0.75,"H":0.746,"I":0.277,"J":0.58,"K":0.704,"L":0.566,"M":0.923,"N":0.76,"O":0.769,"P":0.646,"Q":0.773,"R":0.653,"S":0.651,"T":0.661,"U":0.736,"V":0.728,"W":1.021,"X":0.72,"Y":0.714,"Z":0.653,"[":0.374,"\\":0.379,"]":0.374,"^":0.482,"_":0.47,"`":0.352,"a":0.575,"b":0.625,"c":0.583,"d":0.625,"e":0.592,"f":0.389,"g":0.626,"h":0.613,"i":0.262,"j":0.262,"k":0.57,"l":0.262,"m":0.901,"n":0.612,"o":0.609,"p":0.625,"q":0.625,"r":0.397,"s":0.55,"t":0.354,"u":0.613,"v":0.587,"w":0.84,"x":0.569,"y":0.589,"z":0.566,"{":0.455,"|":0.359,"}":0.455,"~":0.673,"×":0.673,"·":0.319,"—":1.0,"–":0.5,"’":0.294,"“":0.507,"”":0.502,"→":0.955};
+
+// Estimate the rendered width (in SVG user units) of `str` set in Inter-SemiBold
+// at `fontSizePt`. CRITICAL: inside a viewBox'd <svg>, a `font-size` given in
+// `pt` is resolved to px (×96/72) and that px value is then treated as user
+// units — so every `pt` chart font renders 1.333× larger than its number in
+// the user-coordinate system the plot box is laid out in. We bake that factor
+// in here. Ignores kerning (which only shrinks real width), so the estimate is
+// a safe upper bound. `letterSpacingEm` accounts for SVG letter-spacing.
+function estSvgTextWidth(str, fontSizePt, letterSpacingEm = 0) {
+  const PT_TO_USER = 96 / 72;
+  let em = 0;
+  for (const ch of str) em += (_INTER_SB_EM[ch] !== undefined ? _INTER_SB_EM[ch] : 1.021);
+  return (em + letterSpacingEm * str.length) * fontSizePt * PT_TO_USER;
+}
+
 // ── Helpers ────────────────────────────────────────────────────────────
 function getTickerSlug() {
   const params = new URLSearchParams(location.search);
@@ -595,30 +615,10 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   const logMin = Math.log10(yMin);
   const logMax = Math.log10(yMax);
 
-  // Plot area within SVG. Padding lets Y labels (left) + end-of-line series
-  // labels (right) live outside the plot.
-  const plotLeft = 32;
-  const plotRight = widthPt - 60;
-  const plotTop = 24;
-  const plotBot = heightPt - 18;
-
-  const x = (t) => plotLeft + (t - X_MIN) / (X_MAX - X_MIN) * (plotRight - plotLeft);
-  const y = (v) => {
-    const clamped = Math.max(yMin, Math.min(yMax, v));
-    return plotBot + (Math.log10(clamped) - logMin) / (logMax - logMin) * (plotTop - plotBot);
-  };
-  const pathD = (pts) => pts.map(([t, v], i) => `${i === 0 ? 'M' : 'L'} ${x(t).toFixed(2)},${y(v).toFixed(2)}`).join(' ');
-
-  const yTicks = [0.10, 1.0, 10.0, 100.0, 1000.0, 10000.0].filter(t => t >= yMin && t <= yMax);
-  const xTicks = [
-    [-5, '-5y'], [-2, '-2y'], [0, 'today'],
-    [5, '+5y'], [10, '+10y'], [15, '+15y'], [20, '+20y'],
-  ];
-
-  // End-of-line labels with min-vertical-separation enforcement.
-  // Built dynamically from scnList so tickers with ultra_bear get an extra
-  // label; tickers without it just skip cleanly. SCN_LABEL_META maps each
-  // scenario key to the rendered label and color.
+  // End-of-line series labels. SCN_LABEL_META maps each scenario key to its
+  // rendered label + color; built dynamically from scnList so tickers with
+  // ultra_bear/ultra_bull get the extra lines and others skip cleanly. Defined
+  // before the plot box so the RIGHT margin can be sized to the widest label.
   const SCN_LABEL_META = {
     ultra_bear: { name: 'Ultra Bear', color: SCN_COLORS.ultra_bear },
     bear:       { name: 'Bear',       color: NEG },
@@ -636,6 +636,35 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
     [tsyP[20][1],      `Tsy 4.5%  ${(tsyP[20][1] / spot).toFixed(2)}×`,  BENCH_LBL],
     [eqP[20][1],       `S&P 8.5%  ${(eqP[20][1] / spot).toFixed(2)}×`,   BENCH_LBL],
   ].sort((a, b) => a[0] - b[0]);
+
+  // Plot area within SVG. Padding lets Y labels (left) + end-of-line series
+  // labels (right) live outside the plot. The RIGHT margin is data-driven:
+  // wide enough for the WIDEST end label at its render size so nothing clips
+  // at the SVG edge (spec §3.5). Floored at the original 60 so short-label
+  // charts stay byte-identical to the prior baseline.
+  const LABEL_FS = 6.5, LABEL_GAP = 4, LABEL_PAD = 3;
+  const maxLabelW = endLabels.reduce(
+    (mx, [, lbl]) => Math.max(mx, estSvgTextWidth(lbl, LABEL_FS)), 0);
+  const plotLeft = 32;
+  const plotRight = widthPt - Math.max(60, LABEL_GAP + maxLabelW + LABEL_PAD);
+  const plotTop = 24;
+  const plotBot = heightPt - 18;
+
+  const x = (t) => plotLeft + (t - X_MIN) / (X_MAX - X_MIN) * (plotRight - plotLeft);
+  const y = (v) => {
+    const clamped = Math.max(yMin, Math.min(yMax, v));
+    return plotBot + (Math.log10(clamped) - logMin) / (logMax - logMin) * (plotTop - plotBot);
+  };
+  const pathD = (pts) => pts.map(([t, v], i) => `${i === 0 ? 'M' : 'L'} ${x(t).toFixed(2)},${y(v).toFixed(2)}`).join(' ');
+
+  const yTicks = [0.10, 1.0, 10.0, 100.0, 1000.0, 10000.0].filter(t => t >= yMin && t <= yMax);
+  const xTicks = [
+    [-5, '-5y'], [-2, '-2y'], [0, 'today'],
+    [5, '+5y'], [10, '+10y'], [15, '+15y'], [20, '+20y'],
+  ];
+
+  // End-of-line labels with min-vertical-separation enforcement (endLabels +
+  // SCN_LABEL_META are built above, before the plot box).
   // Bottom-up stacking; ensure at least 8pt vertical separation.
   const MIN_SEP = 8;
   const labelPositions = [];
@@ -664,15 +693,25 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   const histPoints = [...hist.points, [0, spot]];
   const todayX = x(0);
 
+  // Title spans the full SVG width (it sits above the plot, clear of the y-axis
+  // labels). It's longer than the box at 7.5pt, so compress-to-fit only when it
+  // would otherwise overflow the SVG edge — keeps the size/hierarchy intact and
+  // can never clip, for any title string.
+  const TITLE = 'PRICE + PROJECTIONS  ·  HISTORICAL THROUGH PROBABILITY-WEIGHTED FORWARD';
+  const TITLE_FS = 7.5, TITLE_LS = 0.04;
+  const titleAvail = widthPt - plotLeft - LABEL_PAD;
+  const titleFit = estSvgTextWidth(TITLE, TITLE_FS, TITLE_LS) > titleAvail;
+
   return (
     <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
          viewBox={`0 0 ${widthPt} ${heightPt}`}
          style={{ display: 'block' }}>
-      {/* Title */}
+      {/* Title — compressed to the box width only when it would overflow. */}
       <text x={plotLeft} y={12}
-            fontFamily={FONT_SANS} fontWeight={600} fontSize="7.5pt"
-            fill={PALETTE.muted} letterSpacing="0.04em">
-        PRICE + PROJECTIONS  ·  HISTORICAL THROUGH PROBABILITY-WEIGHTED FORWARD
+            fontFamily={FONT_SANS} fontWeight={600} fontSize={`${TITLE_FS}pt`}
+            fill={PALETTE.muted} letterSpacing={`${TITLE_LS}em`}
+            {...(titleFit ? { textLength: titleAvail, lengthAdjust: 'spacingAndGlyphs' } : {})}>
+        {TITLE}
       </text>
 
       {/* Y-axis gridlines + tick labels */}
@@ -755,10 +794,11 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
       {bearP   && annotate(bearP, NEG, 'below')}
       {ultraBearP && annotate(ultraBearP, SCN_COLORS.ultra_bear, 'below')}
 
-      {/* End-of-line labels */}
+      {/* End-of-line labels — x reserves LABEL_GAP past the plot edge; the
+          plot's right margin was sized so these never reach the SVG edge. */}
       {labelPositions.map(([py, lbl, col], i) => (
-        <text key={`end-${i}`} x={plotRight + 4} y={py}
-              fontFamily={FONT_SANS} fontWeight={600} fontSize="6.5pt"
+        <text key={`end-${i}`} x={plotRight + LABEL_GAP} y={py}
+              fontFamily={FONT_SANS} fontWeight={600} fontSize={`${LABEL_FS}pt`}
               fill={col}>
           {lbl}
         </text>
