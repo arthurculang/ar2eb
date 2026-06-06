@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Arthur Indicator — AI 1.0 vs AI 2.0 (backtest + zones)</title>
+  <style>
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400;
+                 src: url('assets/fonts/Inter-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500;
+                 src: url('assets/fonts/Inter-Medium.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600;
+                 src: url('assets/fonts/Inter-SemiBold.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 700;
+                 src: url('assets/fonts/Inter-Bold.ttf') format('truetype'); }
+    @font-face { font-family: 'Inter'; font-style: italic; font-weight: 400;
+                 src: url('assets/fonts/Inter-Italic.ttf') format('truetype'); }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400;
+                 src: url('assets/fonts/JetBrainsMono-Regular.ttf') format('truetype'); }
+    @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 700;
+                 src: url('assets/fonts/JetBrainsMono-Bold.ttf') format('truetype'); }
+
+    @page { size: 14in 8.5in; margin: 0; }
+    html, body { margin: 0; padding: 0; background: #fafafa;
+      font-family: 'Inter', sans-serif; color: #18181b;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .report-page { width: 14in; height: 8.5in; padding: 0.55in 1in; box-sizing: border-box;
+      page-break-after: always; break-after: page; overflow: hidden; position: relative; background: #fafafa; }
+    .report-page:last-child { page-break-after: auto; break-after: auto; }
+  </style>
+</head>
+<body data-harness="report">
+  <div id="root"></div>
+  <script src="assets/bundle/ai2-report.js?v=78e6d02594dc"></script>
+</body>
+</html>

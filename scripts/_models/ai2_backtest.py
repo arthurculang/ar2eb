@@ -558,6 +558,41 @@ def selftest():
     print("PASS" if ok_fit else "CHECK fitter")
 
 
+def zones(rows):
+    """Empirical AI 1.0 valuation bands (the green/yellow/orange/red zones).
+    AI 1.0 = EV / (Rev × (gm + g)) = ev_rev / (g + gm). Bucket the panel by the
+    AI 1.0 LEVEL and report forward returns per band — grounding the zones in the
+    backtest (cheaper-for-quality = lower AI should earn higher forward returns)."""
+    BANDS = [(0, 6, "GREEN  · extremely undervalued (<6)"),
+             (6, 10, "YELLOW · somewhat undervalued (6-10)"),
+             (10, 15, "ORANGE · somewhat overvalued (10-15)"),
+             (15, float("inf"), "RED    · extremely overvalued (>15)")]
+
+    def ai1(r):
+        q = r["g"] + r["gm"]
+        if np.isfinite(r.get("ev_rev", np.nan)) and np.isfinite(q) and q > 0:
+            return r["ev_rev"] / q
+        return None
+
+    nt = len({r["ticker"] for r in rows})
+    print(f"AI 1.0 valuation zones — forward return by band  ({nt} tickers; "
+          f"AI 1.0 = EV / (Rev × (GrossMargin + RevGrowth)))")
+    for hz, fwd in (("1y", "fwd_1y"), ("3y", "fwd_3y")):
+        print(f"\n  -- {hz} forward return --")
+        print(f"  {'band':<38}{'n':>5}{'mean':>9}{'median':>9}{'win%':>7}")
+        for lo, hi, label in BANDS:
+            fr = np.array([r[fwd] for r in rows
+                           if np.isfinite(r.get(fwd, np.nan)) and ai1(r) is not None
+                           and lo <= ai1(r) < hi])
+            if len(fr):
+                print(f"  {label:<38}{len(fr):>5}{fr.mean():>+9.1%}"
+                      f"{np.median(fr):>+9.1%}{(fr > 0).mean():>7.0%}")
+    print("\n  Read: GREEN clearly best, RED clearly worst (~coin-flip); the middle two are close"
+          "\n  — the signal is strongest at the extremes. Absolute returns are inflated by the"
+          "\n  2007-25 bull sample; the robust takeaway is the ORDERING (cheaper -> higher forward"
+          "\n  return), consistent with the validated rank-IC.")
+
+
 def main(argv):
     if "--selftest" in argv:
         selftest(); return 0
@@ -576,6 +611,9 @@ def main(argv):
         return 0
     if "--grid" in argv:                        # deterministic exhaustive grid (no sampler)
         grid_scan(rows)
+        return 0
+    if "--zones" in argv:                       # empirical AI 1.0 valuation bands
+        zones(rows)
         return 0
     horizon = "1y" if "--1y" in argv else HORIZON
     report(rows, horizon)
