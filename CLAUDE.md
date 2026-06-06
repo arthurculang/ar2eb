@@ -176,21 +176,32 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   AI 1.0 (`scripts/arthur_indicator.py`) stays the live screen — now with broad-universe OOS support;
   AI 2.0 earns none of its 8 weights. *Data limit (documented):* ~14 compounders (ORCL/V/MA/INTU/CDNS/TMO/
   SBUX…) stopped tagging consolidated gross profit in companyfacts post-2018 → partly drop; faking a margin
-  would break conviction-neutrality. **Branch-only — NOT merged: bundle v032 + v033 (POCD) + v034 + v035 +
-  the AI 2.0 tooling in ONE PR (v031 + §13 already on main via PR #23), pending Arthur's review.**
+  would break conviction-neutrality. **MERGED to main via PR #24 (2026-06-06): v032 + v033 (POCD) + v034 +
+  v035 + the AI 2.0 tooling (harness `--select`/`--fcfm`/`--grid`, sourcing script, 104-name panel). AI 1.0
+  (`scripts/arthur_indicator.py`) stays the live screen.**
 - **Website rendering-parity — DONE (2026-06-04, merged to main).** (1) Embedded site memo now renders
   the §6d competitive page (`EmbeddedMemo` had mounted only 5 of 6 page components; PDF showed 6) — JS
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
   box (1in/0.55in white frame + white card + beige inter-page gap); that box lived only in `print.html`,
   so the site had been butting black text against the white edge. PDF untouched.
-- **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
-- **REMINDER (Arthur wants this) — POCD underwriting lens, spec §14 (draft, added v033, 2026-06-04).**
-  Bill Ackman's framing — *underwrite SpaceX the same way you underwrite any venture investment* — applied
-  across the **whole** book via the **People · Opportunity · Context · Deal** framework (origin: **William
-  Sahlman / HBS**, building on Poorvu & Stevenson; Ackman cited it, didn't originate it). Opportunity/Context/
-  Deal already map onto §6c/§6d/§13 + §12; **the build item is the People leg** (no first-class treatment
-  today) and reframing **Deal** for public equity as *your purchase itself* (entry price vs. the scenario
-  distribution + §12 sizing). Hold People to conviction-neutrality (§3.5 B): observable track record /
-  ownership / incentives / governance, never "I believe in the founder." **Surface this to Arthur when he
-  next opens the repo** — he asked to be reminded; revisit before building (likely a POCD scorecard + a
-  `people:`/`pocd:` YAML block + validator hook, à la §6d's `competitive:`).
+- **Spec §12 portfolio construction** — draft; **§15 (v036) operationalizes it** as a deterministic
+  auto-weighting rule (decision D1 — rec: EV-tilted with caps) feeding the monthly rebuild.
+- **POCD underwriting lens (§14) — People-leg foundation BUILT (v036).** Framework: Ackman's *underwrite
+  SpaceX like any venture investment* applied across the **whole** book via **People · Opportunity · Context ·
+  Deal** (origin **Sahlman / HBS**, building on Poorvu & Stevenson; Ackman cited, didn't originate). O/C/D
+  already map onto §6c/§6d/§13/§12; the build item was **People**. **Shipped:** a `pocd:` YAML schema
+  (observable People inputs — realized capital-allocation track record, insider ownership, incentive
+  alignment, governance flags, key-person risk, 1–5 score, takeaway) + a `validate.py` hook (`_pocd_warnings`,
+  WARN-only, gated, with a **conviction-neutrality guard** rejecting belief/preference fields — §3.5 B:
+  observable only, never "I believe in the founder"). **Remaining increment: the rendered scorecard page**
+  (placement TBD — back-matter panel vs. Page 3/5 strip; no ticker carries a `pocd:` block yet).
+- **Spec §15 (v036, DRAFT) — operating cadence & automation + 1 July 2026 "launch" (Arthur's ask).**
+  **Monthly (22nd):** archive prior month → mechanically re-price + re-render all memos → update §12 weights →
+  deploy. **Daily (after close):** track the weighted portfolio vs. a wide multi-asset benchmark set
+  (VT · SPY/QQQ/IWM · EFA/EEM · AGG · SHY/IEF/TLT · TIP · BIL · GLD · DBC · VNQ · opt. BTC). **Mechanism:
+  scheduled GitHub Actions cron, NOT the `/loop` skill** (loop needs a live, ephemeral session; a calendar
+  routine must run unattended — Actions already deploys, SEC+Yahoo feeds are keyless). **Launch = "start
+  fresh":** hide all pre-launch memos from public view (internal archive, unlinked), publish the first
+  official set, begin performance tracking from t₀ (1 Jul 2026). **4 open decisions gate the build (D1 sizing
+  rule · D2 monthly-refresh scope · D3 archive privacy · D4 benchmark set) — surfaced to Arthur 2026-06-06.**
+  Once set: build `monthly-rebuild.yml` + `daily-performance.yml` + `portfolio/` scaffolding + the launch archive move.
