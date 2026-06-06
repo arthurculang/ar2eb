@@ -3779,6 +3779,27 @@ const MEMOS = [
         ],
         "takeaway": "A category-defining brand + network with real switching costs, but durability is the whole debate — Microsoft's bundling is the dominant threat the terminal multiple hinges on; seat growth and net retention are the gauges.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Eric S. Yuan",
+          "founderLed": true,
+          "tenureYears": 15,
+          "insiderOwnershipPct": 8.0,
+          "capitalAllocation": "Net cash ~$7.7B, zero debt — now being returned: stacked buyback authorizations ($1.5B 2024 → +$1.2B → +$1.0B → +$1.0B 2026). The one big swing — the $14.7B all-stock Five9 bid (2021) — was terminated when Five9 holders rejected it; no overpriced deal got done.",
+          "incentiveAlignment": "Founder equity is the alignment: 2023 base salary cut to $10,000 (−98%) with bonus declined; no extra board pay. Comp is shifting from annual equity toward cash bonus (FY26–27).",
+          "governanceFlags": [
+            "super-voting dual-class (Class B = 10 votes) → ~25–30%+ founder voting control",
+            "CEO + Chairman combined",
+            "lead independent director; ~9 of 10 directors independent"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-owner-operator (~8% economic, $10k salary) returning the $7.7B cash hoard via buybacks, with a majority-independent board — disciplined and aligned; the offsets are super-voting control (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ZM 6.4)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +56% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -7877,6 +7898,28 @@ const MEMOS = [
         ],
         "takeaway": "A regulated-trust brand plus liquidity/USDC network with real compliance barriers, underpinning the bull terminal value; fee compression and ETF/DEX disintermediation are the durability falsifiers to watch.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Brian Armstrong",
+          "founderLed": true,
+          "tenureYears": 14,
+          "insiderOwnershipPct": 14.0,
+          "capitalAllocation": "M&A-led, not capital-return: a long string of bolt-ons (Xapo, Tagomi, Bison Trails, FairX) culminating in Deribit (~$2.9B, 2025 — the largest crypto-industry deal), funded partly in stock. Holds a long-term crypto treasury (~16,500 BTC). No buyback program — capital goes to M&A + crypto, not returns.",
+          "incentiveAlignment": "Alignment runs through the founder stake, not fresh pay: FY2024 was a $1M salary with $0 bonus and $0 new equity (the bulk of \"other comp\" ~$6.2M is personal security). But Armstrong is a steady seller — a 10b5-1 plan moved ~$550M (>1.5M shares, ~5% of his stake) over the past year.",
+          "governanceFlags": [
+            "super-voting dual-class (Class B = 20 votes) → majority (~60%+) founder voting control",
+            "\"controlled company\" eligible — but committees 100% independent (does not lean on the exemptions)",
+            "CEO + Chairman combined (lead independent director)",
+            "Class B non-dilutable by outsiders (converts on transfer)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack: majority control, a steady 10b5-1 sell-down, and capital flowing to M&A + a crypto treasury rather than returns."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (COIN 4.97)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +49% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -8486,7 +8529,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
-      "size": "373 KB",
+      "size": "388 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -15769,6 +15812,28 @@ const MEMOS = [
         ],
         "takeaway": "Airbnb's network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided liquidity), and the ~38% FCF margin is best-in-class. The terminal-value debate is not a competitor out-networking them — it's regulation (dense-urban supply caps) + growth maturation. At ~15x EV/FCF the cash flow is priced cheaply for the quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds in the teens or decays to GDP-plus."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Brian Chesky",
+          "founderLed": true,
+          "tenureYears": 17,
+          "insiderOwnershipPct": 13.7,
+          "capitalAllocation": "Disciplined capital return + organic build: FY2024 buybacks ~$3.4B, a fresh $6B authorization (~$6.6B remaining) steadily cutting the share count, against ~$2.1B product-development reinvestment. Build-not-buy (no transformative M&A); no dividend. SBC ~$1.4B partly offsets the buyback.",
+          "incentiveAlignment": "$1 salary, no cash bonus; paid via a 2020 ten-year performance RSU (~12M units) that vests only against escalating share-price hurdles (Tranche 2 vested Nov 2024). Chesky has pledged to donate the net proceeds of his CEO equity to charity.",
+          "governanceFlags": [
+            "multi-class super-voting (Class B = 20 votes) → founder bloc ~79% voting control (binding agreement)",
+            "CEO + Chairman combined (lead independent director)",
+            "fully-independent board committees; classified board",
+            "sunset: Class B converts by 2040 (or 9 months after a founder's death / disability)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-CEO on a $1 salary, paid only if the stock clears price hurdles, returning capital through large buybacks — strong alignment and capital discipline, with a 2040 sunset on the control. The offset is a ~79% founder voting bloc + combined CEO/Chair concentrating control well above the ~14% economic stake."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ABNB 6.17)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +38% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -18179,6 +18244,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "DoorDash's network-economies + scale (logistics density) are dominant and durable in US restaurants (~60% share, >2x Uber Eats), and GOV is still compounding +27% — the 40% drawdown is a margin/SBC story, not a growth one. The terminal multiple hinges on whether advertising + New-Verticals scale lift the 2.4%-of-GOV margin without a price war, net of ~$1.3B/yr SBC dilution. At ~33x EV/FCF the 20%+ growth + margin inflection roughly cover the entry — fair, with the sign on the 2H'26 inflection."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Tony Xu",
+          "founderLed": true,
+          "tenureYears": 13,
+          "insiderOwnershipPct": 12.0,
+          "capitalAllocation": "Growth-by-stock: the $8.1B all-stock Wolt deal (2022) took DoorDash to 27 countries, plus 2025 bolt-ons (Deliveroo, SevenRooms) — capital goes to expansion, funded with equity (dilutive). Buybacks authorized ($1.1B 2024 → only $224M used; $5B 2025 → little executed by mid-year): intent ahead of action. Heavy SBC.",
+          "incentiveAlignment": "Pay-for-performance via the 2020 CEO award (10.4M shares, ~3.5%) that vests only as the stock clears escalating price targets (up to $501 by 2027) — $0 vested in FY2024 when targets were unmet; FY2024 cash comp was a nominal ~$300k salary with no new equity.",
+          "governanceFlags": [
+            "multi-class super-voting (Class B = 20 votes) → founders ~54% of votes, all directed by Xu via irrevocable proxy",
+            "CEO + Chairman combined; controlled-company eligible but does not use the exemptions",
+            "classified board; 2021 ISS / Glass Lewis pushback on the structure + pay",
+            "sunset is event / ownership-triggered (no fixed date)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "Founder-CEO paid only on escalating price hurdles ($0 vested when unmet) and not leaning on the controlled-company exemptions — but the ~54% founder vote is concentrated in one person via an irrevocable proxy, buyback intent has outrun execution, and growth has been bought with dilutive stock."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (DASH 6.48)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −1% finding, fairly valued) + §12 sizing."
       },
       "appendix": {
         "pushback": [

@@ -672,3 +672,28 @@ competitive:
     A regulated-trust brand plus liquidity/USDC network with real compliance barriers,
     underpinning the bull terminal value; fee compression and ETF/DEX disintermediation are
     the durability falsifiers to watch.
+pocd:
+  people:
+    ceo: 'Brian Armstrong'
+    founder_led: true
+    tenure_years: 14
+    insider_ownership_pct: 14.0
+    capital_allocation: 'M&A-led, not capital-return: a long string of bolt-ons (Xapo, Tagomi, Bison Trails,
+      FairX) culminating in Deribit (~$2.9B, 2025 — the largest crypto-industry deal), funded partly in stock.
+      Holds a long-term crypto treasury (~16,500 BTC). No buyback program — capital goes to M&A + crypto, not returns.'
+    incentive_alignment: 'Alignment runs through the founder stake, not fresh pay: FY2024 was a $1M salary with
+      $0 bonus and $0 new equity (the bulk of "other comp" ~$6.2M is personal security). But Armstrong is a
+      steady seller — a 10b5-1 plan moved ~$550M (>1.5M shares, ~5% of his stake) over the past year.'
+    governance_flags:
+      - 'super-voting dual-class (Class B = 20 votes) → majority (~60%+) founder voting control'
+      - '"controlled company" eligible — but committees 100% independent (does not lean on the exemptions)'
+      - 'CEO + Chairman combined (lead independent director)'
+      - 'Class B non-dilutable by outsiders (converts on transfer)'
+    key_person_risk: high
+    score: 3
+    takeaway: 'Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot
+      force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack:
+      majority control, a steady 10b5-1 sell-down, and capital flowing to M&A + a crypto treasury rather than returns.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (COIN 4.97)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +49% finding) + §12 sizing.'
