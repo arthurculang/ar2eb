@@ -605,3 +605,26 @@ competitive:
     A category-defining brand + network with real switching costs, but durability is the whole
     debate — Microsoft's bundling is the dominant threat the terminal multiple hinges on; seat
     growth and net retention are the gauges.
+pocd:
+  people:
+    ceo: 'Eric S. Yuan'
+    founder_led: true
+    tenure_years: 15
+    insider_ownership_pct: 8.0
+    capital_allocation: 'Net cash ~$7.7B, zero debt — now being returned: stacked buyback authorizations
+      ($1.5B 2024 → +$1.2B → +$1.0B → +$1.0B 2026). The one big swing — the $14.7B all-stock Five9 bid
+      (2021) — was terminated when Five9 holders rejected it; no overpriced deal got done.'
+    incentive_alignment: 'Founder equity is the alignment: 2023 base salary cut to $10,000 (−98%) with bonus
+      declined; no extra board pay. Comp is shifting from annual equity toward cash bonus (FY26–27).'
+    governance_flags:
+      - 'super-voting dual-class (Class B = 10 votes) → ~25–30%+ founder voting control'
+      - 'CEO + Chairman combined'
+      - 'lead independent director; ~9 of 10 directors independent'
+    key_person_risk: high
+    score: 4
+    takeaway: 'Founder-owner-operator (~8% economic, $10k salary) returning the $7.7B cash hoard via buybacks,
+      with a majority-independent board — disciplined and aligned; the offsets are super-voting control
+      (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (ZM 6.4)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +56% finding) + §12 sizing.'

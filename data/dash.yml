@@ -573,3 +573,29 @@ stamp:
   canonical_jsx: public/memo_pdf.jsx
   pdf_version: '001'
   pdf_timestamp: 2026-06-03_15-50
+pocd:
+  people:
+    ceo: 'Tony Xu'
+    founder_led: true
+    tenure_years: 13
+    insider_ownership_pct: 12.0
+    capital_allocation: 'Growth-by-stock: the $8.1B all-stock Wolt deal (2022) took DoorDash to 27 countries,
+      plus 2025 bolt-ons (Deliveroo, SevenRooms) — capital goes to expansion, funded with equity (dilutive).
+      Buybacks authorized ($1.1B 2024 → only $224M used; $5B 2025 → little executed by mid-year): intent ahead
+      of action. Heavy SBC.'
+    incentive_alignment: 'Pay-for-performance via the 2020 CEO award (10.4M shares, ~3.5%) that vests only as
+      the stock clears escalating price targets (up to $501 by 2027) — $0 vested in FY2024 when targets were
+      unmet; FY2024 cash comp was a nominal ~$300k salary with no new equity.'
+    governance_flags:
+      - 'multi-class super-voting (Class B = 20 votes) → founders ~54% of votes, all directed by Xu via irrevocable proxy'
+      - 'CEO + Chairman combined; controlled-company eligible but does not use the exemptions'
+      - 'classified board; 2021 ISS / Glass Lewis pushback on the structure + pay'
+      - 'sunset is event / ownership-triggered (no fixed date)'
+    key_person_risk: high
+    score: 3
+    takeaway: 'Founder-CEO paid only on escalating price hurdles ($0 vested when unmet) and not leaning on the
+      controlled-company exemptions — but the ~54% founder vote is concentrated in one person via an irrevocable
+      proxy, buyback intent has outrun execution, and growth has been bought with dilutive stock.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (DASH 6.48)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −1% finding, fairly valued) + §12 sizing.'

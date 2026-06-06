@@ -582,3 +582,28 @@ competitive:
     A wide, durable moat anchored on switching costs and scale — the basis for the DCF's
     premium terminal multiple; challengers are real but years from the installed-base and
     brand barriers. Watch procedure growth as the erosion gauge.
+pocd:
+  people:
+    ceo: 'Dave Rosa (CEO since Jul 2025)'
+    founder_led: false
+    insider_ownership_pct: 1.0
+    capital_allocation: 'Net cash, zero debt, no dividend — a self-funded compounder: reinvests first
+      (R&D +~15% YoY 2024 + manufacturing capex), buys back opportunistically (~$7.95B cumulative, $5B
+      authorization refreshed), and grows organically (build-not-buy, no transformative M&A).'
+    incentive_alignment: 'Pay is ~85-89% equity, performance-weighted: PSUs pay 0-125% of target over 3 years
+      on relative TSR + da Vinci/Ion procedure-volume growth + relative operating margin. Guthart FY2024
+      ~$18.2M (mostly stock, $0 options).'
+    governance_flags:
+      - 'single-class (one share, one vote); no controlling individual (insiders <1%, ~85% institutional)'
+      - 'declassified board — directors elected annually; fully-independent committees; say-on-pay ~93% (2025)'
+      - 'orderly succession: Rosa is a 29-yr internal promotion; Guthart stayed on as Executive Chair'
+      - 'caveat: with Guthart as Executive Chair the chair is no longer independent (lead independent director)'
+    key_person_risk: low
+    score: 4
+    takeaway: 'The cleanest governance of the cohort: single-class, declassified annual elections, ~93%
+      say-on-pay, performance-weighted equity, net-cash discipline, and an orderly internal CEO handoff (Rosa)
+      — institutionalized, not person-dependent. Mild demerits: low insider skin-in-the-game and a now
+      non-independent (Executive) chair.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (ISRG 17.5 — rarely screens cheap)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +20% finding) + §12 sizing.'

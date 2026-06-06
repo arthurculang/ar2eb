@@ -581,3 +581,30 @@ stamp:
   canonical_jsx: public/memo_pdf.jsx
   pdf_version: '001'
   pdf_timestamp: 2026-06-03_15-44
+pocd:
+  people:
+    ceo: 'Dara Khosrowshahi'
+    founder_led: false
+    tenure_years: 8
+    insider_ownership_pct: 3.0
+    capital_allocation: 'The standout leg: turned to GAAP profit (FY2023, first ever) and ~$6.9B FY2024 free
+      cash flow, then opened capital return — a first $7B buyback (Feb 2024) escalated to a $20B authorization
+      (Aug 2025, ≥50% of FCF). Divested the cash-burning bets (self-driving → Aurora; air taxi → Joby; bikes →
+      Lime); legacy Didi/Grab stakes run down. (FY2024 GAAP net income was flattered by a ~$6.4B tax-valuation release.)'
+    incentive_alignment: 'Pay is PSU/PRSU-weighted (multi-year metrics: gross bookings, operating income, AV
+      partnerships); FY2024 ~$39.4M, the jump driven by share-price appreciation on already-granted awards, not
+      a structural raise. Pay-for-performance, equity-led.'
+    governance_flags:
+      - 'single-class (one share, one vote) — super-voting eliminated in 2017 (pre-IPO, a SoftBank condition)'
+      - 'separate independent chair (Ronald Sugar) vs CEO; majority-independent board'
+      - 'founder Travis Kalanick fully exited (board + entire stake, Dec 2019); SoftBank overhang cleared'
+      - 'low insider ownership (Dara ~0.07%; aggregate ~3-4%) — institutionally dispersed'
+    key_person_risk: low
+    score: 4
+    takeaway: 'The professionalized-after-the-founder case: a hired CEO who turned Uber to free cash flow and a
+      $20B buyback regime, on a clean single-class register with an independent chair and no controller — the
+      structural opposite of a founder-control name. The only real demerits: low insider skin-in-the-game and
+      some execution-continuity tied to Dara.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (UBER 4.72)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +48% finding) + §12 sizing.'

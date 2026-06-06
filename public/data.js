@@ -2964,7 +2964,7 @@ const MEMOS = [
     "publishedLabel": "May 27, 2026",
     "pdf": {
       "file": "zm-memo__v024__2026-05-31_17-10.pdf",
-      "size": "278 KB",
+      "size": "296 KB",
       "priorVersions": [
         {
           "version": "023",
@@ -3778,6 +3778,27 @@ const MEMOS = [
           }
         ],
         "takeaway": "A category-defining brand + network with real switching costs, but durability is the whole debate — Microsoft's bundling is the dominant threat the terminal multiple hinges on; seat growth and net retention are the gauges.\n"
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Eric S. Yuan",
+          "founderLed": true,
+          "tenureYears": 15,
+          "insiderOwnershipPct": 8.0,
+          "capitalAllocation": "Net cash ~$7.7B, zero debt — now being returned: stacked buyback authorizations ($1.5B 2024 → +$1.2B → +$1.0B → +$1.0B 2026). The one big swing — the $14.7B all-stock Five9 bid (2021) — was terminated when Five9 holders rejected it; no overpriced deal got done.",
+          "incentiveAlignment": "Founder equity is the alignment: 2023 base salary cut to $10,000 (−98%) with bonus declined; no extra board pay. Comp is shifting from annual equity toward cash bonus (FY26–27).",
+          "governanceFlags": [
+            "super-voting dual-class (Class B = 10 votes) → ~25–30%+ founder voting control",
+            "CEO + Chairman combined",
+            "lead independent director; ~9 of 10 directors independent"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-owner-operator (~8% economic, $10k salary) returning the $7.7B cash hoard via buybacks, with a majority-independent board — disciplined and aligned; the offsets are super-voting control (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ZM 6.4)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +56% finding) + §12 sizing."
       },
       "appendix": {
         "pushback": [
@@ -5728,6 +5749,27 @@ const MEMOS = [
         ],
         "takeaway": "A wide, durable moat anchored on switching costs and scale — the basis for the DCF's premium terminal multiple; challengers are real but years from the installed-base and brand barriers. Watch procedure growth as the erosion gauge.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Dave Rosa (CEO since Jul 2025)",
+          "founderLed": false,
+          "insiderOwnershipPct": 1.0,
+          "capitalAllocation": "Net cash, zero debt, no dividend — a self-funded compounder: reinvests first (R&D +~15% YoY 2024 + manufacturing capex), buys back opportunistically (~$7.95B cumulative, $5B authorization refreshed), and grows organically (build-not-buy, no transformative M&A).",
+          "incentiveAlignment": "Pay is ~85-89% equity, performance-weighted: PSUs pay 0-125% of target over 3 years on relative TSR + da Vinci/Ion procedure-volume growth + relative operating margin. Guthart FY2024 ~$18.2M (mostly stock, $0 options).",
+          "governanceFlags": [
+            "single-class (one share, one vote); no controlling individual (insiders <1%, ~85% institutional)",
+            "declassified board — directors elected annually; fully-independent committees; say-on-pay ~93% (2025)",
+            "orderly succession: Rosa is a 29-yr internal promotion; Guthart stayed on as Executive Chair",
+            "caveat: with Guthart as Executive Chair the chair is no longer independent (lead independent director)"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "The cleanest governance of the cohort: single-class, declassified annual elections, ~93% say-on-pay, performance-weighted equity, net-cash discipline, and an orderly internal CEO handoff (Rosa) — institutionalized, not person-dependent. Mild demerits: low insider skin-in-the-game and a now non-independent (Executive) chair."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ISRG 17.5 — rarely screens cheap)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +20% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -7087,7 +7129,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "coin-memo__v002__2026-05-31_17-11.pdf",
-      "size": "286 KB",
+      "size": "304 KB",
       "priorVersions": [
         {
           "version": "001",
@@ -7877,6 +7919,28 @@ const MEMOS = [
         ],
         "takeaway": "A regulated-trust brand plus liquidity/USDC network with real compliance barriers, underpinning the bull terminal value; fee compression and ETF/DEX disintermediation are the durability falsifiers to watch.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Brian Armstrong",
+          "founderLed": true,
+          "tenureYears": 14,
+          "insiderOwnershipPct": 14.0,
+          "capitalAllocation": "M&A-led, not capital-return: a long string of bolt-ons (Xapo, Tagomi, Bison Trails, FairX) culminating in Deribit (~$2.9B, 2025 — the largest crypto-industry deal), funded partly in stock. Holds a long-term crypto treasury (~16,500 BTC). No buyback program — capital goes to M&A + crypto, not returns.",
+          "incentiveAlignment": "Alignment runs through the founder stake, not fresh pay: FY2024 was a $1M salary with $0 bonus and $0 new equity (the bulk of \"other comp\" ~$6.2M is personal security). But Armstrong is a steady seller — a 10b5-1 plan moved ~$550M (>1.5M shares, ~5% of his stake) over the past year.",
+          "governanceFlags": [
+            "super-voting dual-class (Class B = 20 votes) → majority (~60%+) founder voting control",
+            "\"controlled company\" eligible — but committees 100% independent (does not lean on the exemptions)",
+            "CEO + Chairman combined (lead independent director)",
+            "Class B non-dilutable by outsiders (converts on transfer)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack: majority control, a steady 10b5-1 sell-down, and capital flowing to M&A + a crypto treasury rather than returns."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (COIN 4.97)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +49% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -8486,7 +8550,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
-      "size": "373 KB",
+      "size": "388 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -9629,6 +9693,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "Rocket Lab is originating a genuine vertically-integrated space-prime position — the credible #2 to SpaceX — with real Space Systems scale, a $1.85B backlog, and Neutron optionality. But it lags SpaceX by an order of magnitude on launch cadence/reusability, and Neutron is unproven; the window is open as the #2, but SpaceX's cost-and-scale gravity well is the falsifier the whole bull case must clear."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Sir Peter Beck",
+          "founderLed": true,
+          "tenureYears": 13,
+          "insiderOwnershipPct": 10.0,
+          "capitalAllocation": "Vertical-integration roll-up (Space Systems): six closed acquisitions — Sinclair, ASI, Planetary Systems, SolAero ($80M), Geost ($275M), Mynaric ($155M) — funded partly by a $355M 4.25% 2029 convertible (2024). No buyback; share count grows with organic + stock-funded-M&A dilution.",
+          "incentiveAlignment": "Equity-heavy comp (2024 ~$20M, ~97% equity). March 2026: Beck cut salary to $1, waived bonus, and forfeited all unvested RSUs — alignment now rests on his ~10% stake. RSUs time-based (no confirmed TSR/PSU program).",
+          "governanceFlags": [
+            "SPAC origin (Vector Acquisition, 2021)",
+            "CEO + Chairman combined (lead independent director)",
+            "Series A founder control-continuity preferred (economically pass-through)",
+            "majority-independent board (single insider)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-owner-operator (~10%, salary cut to $1 in 2026) with a majority-independent board — strongly aligned; the offsets are acute key-person concentration (Beck is CEO / Chair / de-facto CTO / public face) and steady dilution from stock-funded M&A."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot",
+        "contextRef": "§6d 7 Powers (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −63% finding) + §12 sizing."
       },
       "appendix": {
         "pushback": [
@@ -14946,6 +15032,27 @@ const MEMOS = [
         ],
         "takeaway": "lululemon's brand Power is genuinely durable internationally (China +29%, only 16% of revenue) and underpinned by cornered-resource fabrics, but it is eroding in the saturated US where Alo/Vuori and dupes are taking DTC share and the founder calls the product stale. The ~60% de-rating to ~10x FCF prices structural impairment; the DCF tests whether the brand stabilizes — and even a real-impairment ultra-bear is only -34%, while the modal stabilization implies the sell-off overshot."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Interim co-CEOs (M. Frank, A. Maestrini)",
+          "founderLed": false,
+          "insiderOwnershipPct": 7.0,
+          "capitalAllocation": "No dividend; capital returned via large executed buybacks (~$2.5B / 9.1M shares Dec-2023→Aug-2025; +$1.0B Dec 2025, ~$1.6B remaining), otherwise reinvested in stores/product. The one notable deal — Mirror (~$500M, 2020) — failed: a ~$443M post-tax impairment (FY2022), hardware ceased 2023.",
+          "incentiveAlignment": "Standard structure (base + cash bonus + majority-equity PSU LTI). Say-on-pay passed but support slipped 93% (2024) → 83% (2025), into the range proxy advisors flag, and two directors drew weak support (76% / 72%).",
+          "governanceFlags": [
+            "single-class (one share, one vote)",
+            "independent chair, separate from CEO; but classified (staggered) board",
+            "founder Chip Wilson ~8.7% (off the board since 2015) ran a public proxy fight",
+            "settled May 2026: 2 Wilson nominees (+1 more) + a declassification commitment; ~18-mo standstill"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Professionalized and single-class with an independent chair and disciplined buybacks — but a live governance moment: CEO Calvin McDonald is out (Jan 2026; interim co-CEOs + external search), a founder proxy fight just settled (Chip Wilson ~8.7%, two board seats), a classified board, the failed Mirror deal, and slipping say-on-pay support."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (LULU 1.95)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +65% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -15024,7 +15131,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "abnb-memo__v001__2026-06-03_15-44.pdf",
-      "size": "275 KB",
+      "size": "292 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -15746,6 +15853,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "Airbnb's network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided liquidity), and the ~38% FCF margin is best-in-class. The terminal-value debate is not a competitor out-networking them — it's regulation (dense-urban supply caps) + growth maturation. At ~15x EV/FCF the cash flow is priced cheaply for the quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds in the teens or decays to GDP-plus."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Brian Chesky",
+          "founderLed": true,
+          "tenureYears": 17,
+          "insiderOwnershipPct": 13.7,
+          "capitalAllocation": "Disciplined capital return + organic build: FY2024 buybacks ~$3.4B, a fresh $6B authorization (~$6.6B remaining) steadily cutting the share count, against ~$2.1B product-development reinvestment. Build-not-buy (no transformative M&A); no dividend. SBC ~$1.4B partly offsets the buyback.",
+          "incentiveAlignment": "$1 salary, no cash bonus; paid via a 2020 ten-year performance RSU (~12M units) that vests only against escalating share-price hurdles (Tranche 2 vested Nov 2024). Chesky has pledged to donate the net proceeds of his CEO equity to charity.",
+          "governanceFlags": [
+            "multi-class super-voting (Class B = 20 votes) → founder bloc ~79% voting control (binding agreement)",
+            "CEO + Chairman combined (lead independent director)",
+            "fully-independent board committees; classified board",
+            "sunset: Class B converts by 2040 (or 9 months after a founder's death / disability)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-CEO on a $1 salary, paid only if the stock clears price hurdles, returning capital through large buybacks — strong alignment and capital discipline, with a 2040 sunset on the control. The offset is a ~79% founder voting bloc + combined CEO/Chair concentrating control well above the ~14% economic stake."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ABNB 6.17)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +38% finding) + §12 sizing."
       },
       "appendix": {
         "pushback": [
@@ -16551,6 +16680,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "Uber's network economies + scale are genuinely dominant — the deepest two-sided marketplace, now throwing off ~$10B FCF with advertising and delivery margins still ramping. The entire terminal-value debate is the autonomy paradox: the network power is durable only if Uber remains the demand aggregator for AV fleets. At ~14x EV/FCF the market is pricing meaningful AV-disruption risk; the sign of the memo hinges on whether autonomy commoditizes the driver-supply side (ultra-bear -44%) or Uber tolls the cheaper AV rides (base +55%)."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Dara Khosrowshahi",
+          "founderLed": false,
+          "tenureYears": 8,
+          "insiderOwnershipPct": 3.0,
+          "capitalAllocation": "The standout leg: turned to GAAP profit (FY2023, first ever) and ~$6.9B FY2024 free cash flow, then opened capital return — a first $7B buyback (Feb 2024) escalated to a $20B authorization (Aug 2025, ≥50% of FCF). Divested the cash-burning bets (self-driving → Aurora; air taxi → Joby; bikes → Lime); legacy Didi/Grab stakes run down. (FY2024 GAAP net income was flattered by a ~$6.4B tax-valuation release.)",
+          "incentiveAlignment": "Pay is PSU/PRSU-weighted (multi-year metrics: gross bookings, operating income, AV partnerships); FY2024 ~$39.4M, the jump driven by share-price appreciation on already-granted awards, not a structural raise. Pay-for-performance, equity-led.",
+          "governanceFlags": [
+            "single-class (one share, one vote) — super-voting eliminated in 2017 (pre-IPO, a SoftBank condition)",
+            "separate independent chair (Ronald Sugar) vs CEO; majority-independent board",
+            "founder Travis Kalanick fully exited (board + entire stake, Dec 2019); SoftBank overhang cleared",
+            "low insider ownership (Dara ~0.07%; aggregate ~3-4%) — institutionally dispersed"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "The professionalized-after-the-founder case: a hired CEO who turned Uber to free cash flow and a $20B buyback regime, on a clean single-class register with an independent chair and no controller — the structural opposite of a founder-control name. The only real demerits: low insider skin-in-the-game and some execution-continuity tied to Dara."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (UBER 4.72)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +48% finding) + §12 sizing."
       },
       "appendix": {
         "pushback": [
@@ -17435,7 +17586,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "dash-memo__v001__2026-06-03_15-50.pdf",
-      "size": "275 KB",
+      "size": "292 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -18157,6 +18308,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "DoorDash's network-economies + scale (logistics density) are dominant and durable in US restaurants (~60% share, >2x Uber Eats), and GOV is still compounding +27% — the 40% drawdown is a margin/SBC story, not a growth one. The terminal multiple hinges on whether advertising + New-Verticals scale lift the 2.4%-of-GOV margin without a price war, net of ~$1.3B/yr SBC dilution. At ~33x EV/FCF the 20%+ growth + margin inflection roughly cover the entry — fair, with the sign on the 2H'26 inflection."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Tony Xu",
+          "founderLed": true,
+          "tenureYears": 13,
+          "insiderOwnershipPct": 12.0,
+          "capitalAllocation": "Growth-by-stock: the $8.1B all-stock Wolt deal (2022) took DoorDash to 27 countries, plus 2025 bolt-ons (Deliveroo, SevenRooms) — capital goes to expansion, funded with equity (dilutive). Buybacks authorized ($1.1B 2024 → only $224M used; $5B 2025 → little executed by mid-year): intent ahead of action. Heavy SBC.",
+          "incentiveAlignment": "Pay-for-performance via the 2020 CEO award (10.4M shares, ~3.5%) that vests only as the stock clears escalating price targets (up to $501 by 2027) — $0 vested in FY2024 when targets were unmet; FY2024 cash comp was a nominal ~$300k salary with no new equity.",
+          "governanceFlags": [
+            "multi-class super-voting (Class B = 20 votes) → founders ~54% of votes, all directed by Xu via irrevocable proxy",
+            "CEO + Chairman combined; controlled-company eligible but does not use the exemptions",
+            "classified board; 2021 ISS / Glass Lewis pushback on the structure + pay",
+            "sunset is event / ownership-triggered (no fixed date)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "Founder-CEO paid only on escalating price hurdles ($0 vested when unmet) and not leaning on the controlled-company exemptions — but the ~54% founder vote is concentrated in one person via an irrevocable proxy, buyback intent has outrun execution, and growth has been bought with dilutive stock."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (DASH 6.48)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −1% finding, fairly valued) + §12 sizing."
       },
       "appendix": {
         "pushback": [
@@ -18962,6 +19135,27 @@ const MEMOS = [
           }
         ],
         "takeaway": "Illumina's scale + switching-cost Power is genuine and durable — ~80% share, >90% of clinical genomics, a ~70%-margin consumables annuity, and clinical labs that won't cheaply re-validate. But the Power is being audited: revenue was flat for four years, China collapsed, NIH froze research demand, low-cost entrants (Ultima/Element $100 genome) attack pricing, and Roche's SBX re-enters in 2026. The ~80% rally to ~5x EV/sales has priced the NovaSeq-X/clinical re-acceleration; only the bull-or-better clears spot, and the modal base sits ~27% below — the entry, not the franchise, is the problem (the TXG mirror)."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Jacob Thaysen (CEO since Sept 2023)",
+          "founderLed": false,
+          "insiderOwnershipPct": 2.0,
+          "capitalAllocation": "Dominated by the GRAIL episode — a major observable value-destruction: bought GRAIL (~$8B, 2021) and CLOSED it without regulatory clearance, drawing an EU prohibition + an unprecedented €432M \"gun-jumping\" fine (later voided on jurisdiction, 2024) and a forced spin-off (June 2024 → GRAL) that took a ~$4B impairment + a ~$1B recapitalization. No dividend; small buybacks ($1.5B authorized Apr 2026); R&D-heavy.",
+          "incentiveAlignment": "Comp redesigned after a pay revolt: CEO target equity $10M is 70% PSUs / 30% RSUs, PSUs vesting on 3-year relative TSR (the make-whole grant made explicitly 70% TSR-contingent in response to stockholder feedback). Base $1M, target bonus 125%.",
+          "governanceFlags": [
+            "single-class, declassified board (annual elections)",
+            "2023 Icahn proxy fight: chairman John Thompson ousted; Icahn won one board seat",
+            "say-on-pay FAILED 2023 → recovered ~86.5% (2024) after the comp redesign",
+            "board/chair overhaul since (Gottlieb non-exec chair 2025; Corvex Meister joined; Icahn fully exited)"
+          ],
+          "keyPersonRisk": "low",
+          "score": 2,
+          "takeaway": "The cohort's governance-turnaround story — and the weakest recent record: a board that closed an $8B deal without clearance (forced unwind, ~$4B impairment, an EU fine), failed say-on-pay (2023), and lost a proxy seat to Icahn. Being repaired — new CEO, independent chair, redesigned TSR-linked pay, say-on-pay recovered, activist oversight — but the track record is the observable flag."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ILMN 7.08)",
+        "contextRef": "§6d 7 Powers (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −30% finding) + §12 sizing."
       },
       "appendix": {
         "pushback": [

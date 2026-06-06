@@ -579,3 +579,28 @@ stamp:
   canonical_jsx: public/memo_pdf.jsx
   pdf_version: '001'
   pdf_timestamp: 2026-06-03_15-44
+pocd:
+  people:
+    ceo: 'Brian Chesky'
+    founder_led: true
+    tenure_years: 17
+    insider_ownership_pct: 13.7
+    capital_allocation: 'Disciplined capital return + organic build: FY2024 buybacks ~$3.4B, a fresh $6B
+      authorization (~$6.6B remaining) steadily cutting the share count, against ~$2.1B product-development
+      reinvestment. Build-not-buy (no transformative M&A); no dividend. SBC ~$1.4B partly offsets the buyback.'
+    incentive_alignment: '$1 salary, no cash bonus; paid via a 2020 ten-year performance RSU (~12M units) that
+      vests only against escalating share-price hurdles (Tranche 2 vested Nov 2024). Chesky has pledged to
+      donate the net proceeds of his CEO equity to charity.'
+    governance_flags:
+      - 'multi-class super-voting (Class B = 20 votes) → founder bloc ~79% voting control (binding agreement)'
+      - 'CEO + Chairman combined (lead independent director)'
+      - 'fully-independent board committees; classified board'
+      - 'sunset: Class B converts by 2040 (or 9 months after a founder''s death / disability)'
+    key_person_risk: high
+    score: 4
+    takeaway: 'Founder-CEO on a $1 salary, paid only if the stock clears price hurdles, returning capital
+      through large buybacks — strong alignment and capital discipline, with a 2040 sunset on the control. The
+      offset is a ~79% founder voting bloc + combined CEO/Chair concentrating control well above the ~14% economic stake.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (ABNB 6.17)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +38% finding) + §12 sizing.'

@@ -392,6 +392,11 @@ def build_memo(ticker: str) -> dict:
             # 6th page only when present (else the memo stays 5 pages).
             **({"competitive": _camel_deep(d["competitive"])}
                if "competitive" in d else {}),
+            # POCD underwriting lens (§14). Optional: emitted only when the ticker
+            # carries a `pocd` block; the renderer adds the back-matter scorecard
+            # page only when present.
+            **({"pocd": _camel_deep(d["pocd"])}
+               if "pocd" in d else {}),
             "appendix": {
                 "pushback": [{"label": p["label"], "body": collapse(p["body"])}
                              for p in d["appendix"]["pushback"]],

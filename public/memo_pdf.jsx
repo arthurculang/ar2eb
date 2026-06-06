@@ -1417,8 +1417,13 @@ function scnKeysFor(memo) {
 function hasCompetitive(memo) {
   return !!(memo.print && memo.print.competitive);
 }
+// POCD scorecard (§14) is the last (back-matter) page — appended, so it never
+// renumbers the earlier pages; it only grows the total by 1 when present.
+function hasPOCD(memo) {
+  return !!(memo.print && memo.print.pocd);
+}
 function memoTotalPages(memo) {
-  return hasCompetitive(memo) ? 6 : 5;
+  return 5 + (hasCompetitive(memo) ? 1 : 0) + (hasPOCD(memo) ? 1 : 0);
 }
 
 // --- Chart primitives (shared by Page 3 charts) ---
@@ -3272,6 +3277,136 @@ function Page4Competitive({ memo }) {
   );
 }
 
+// ── Back-matter — POCD underwriting lens (§14). People is the leg scored here
+// (the build item); Opportunity / Context / Deal cross-reference §6c/§6d/§13/§12.
+// Renders only when memo.print.pocd is present. All inputs observable (§3.5 B). ──
+const RISK_COLOR = { low: '#15803d', medium: '#b45309', high: '#b91c1c' };
+
+function ScoreDots({ score, of = 5 }) {
+  return (
+    <div style={{ display: 'flex', gap: '3pt' }}>
+      {Array.from({ length: of }).map((_, i) => (
+        <div key={i} style={{
+          width: '9pt', height: '9pt', borderRadius: '50%',
+          background: i < score ? PALETTE.accent : PALETTE.rule,
+        }} />
+      ))}
+    </div>
+  );
+}
+
+function PocdRow({ label, body }) {
+  if (!body) return null;
+  return (
+    <div style={{ marginBottom: '6pt' }}>
+      <div style={{ fontFamily: FONT_SANS, fontSize: '7pt', fontWeight: 600, color: PALETTE.ink }}>{label}</div>
+      <div style={{ fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.text, lineHeight: 1.35 }}>{body}</div>
+    </div>
+  );
+}
+
+function PocdLeg({ label, body }) {
+  if (!body) return null;
+  return (
+    <div style={{ marginBottom: '6pt' }}>
+      <div style={{ fontFamily: FONT_SANS, fontSize: '7.5pt', fontWeight: 600, color: PALETTE.ink }}>{label}</div>
+      <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.text, lineHeight: 1.3 }}>{body}</div>
+    </div>
+  );
+}
+
+function PagePOCD({ memo }) {
+  const pocd = memo.print.pocd || {};
+  const p = pocd.people || {};
+  const risk = (p.keyPersonRisk || '').toLowerCase();
+  return (
+    <div className="memo-page">
+      <PageHeader memo={memo} suffix="People · Opportunity · Context · Deal"
+                  label="the underwriting lens (POCD)" />
+
+      <div style={{ fontFamily: FONT_SANS, fontSize: '8pt', color: PALETTE.text,
+                    lineHeight: 1.4, marginTop: '8pt' }}>
+        Underwrite the position the way a venture investor underwrites a round — across all four legs,
+        public or private. <span style={{ fontWeight: 700, color: PALETTE.ink }}>People</span> is the
+        leg scored here (observable only); Opportunity, Context and Deal cross-reference the rest of the memo.
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1.25fr 1fr', gap: '20pt', marginTop: '12pt' }}>
+        {/* LEFT — People (the build leg) */}
+        <div>
+          <SectionHeader label="PEOPLE · WHO RUNS / OWNS / FUNDS IT" marginTop="0" marginBottom="8pt" />
+          <div style={{ display: 'flex', justifyContent: 'space-between',
+                        alignItems: 'baseline', marginBottom: '7pt' }}>
+            <span style={{ fontFamily: FONT_SANS, fontSize: '8.5pt', fontWeight: 700, color: PALETTE.ink }}>
+              {p.ceo}
+              {p.founderLed && <span style={{ fontFamily: FONT_MONO, fontSize: '6.5pt',
+                fontWeight: 700, color: PALETTE.accent }}>{'  · founder-led'}</span>}
+            </span>
+            {p.tenureYears != null && <span style={{ fontFamily: FONT_MONO, fontSize: '7pt',
+              color: PALETTE.muted }}>{p.tenureYears} yrs in seat</span>}
+          </div>
+          <div style={{ display: 'flex', gap: '24pt', marginBottom: '9pt' }}>
+            {p.insiderOwnershipPct != null && (
+              <div>
+                <div style={{ fontFamily: FONT_MONO, fontSize: '13pt', fontWeight: 700, color: PALETTE.ink }}>
+                  {p.insiderOwnershipPct}%</div>
+                <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.muted }}>insider ownership</div>
+              </div>
+            )}
+            <div>
+              <div style={{ fontFamily: FONT_MONO, fontSize: '10pt', fontWeight: 700,
+                            color: RISK_COLOR[risk] || PALETTE.muted, textTransform: 'uppercase' }}>
+                {p.keyPersonRisk || '—'}</div>
+              <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.muted }}>key-person risk</div>
+            </div>
+          </div>
+          <PocdRow label="Capital allocation (realized)" body={p.capitalAllocation} />
+          <PocdRow label="Incentive alignment" body={p.incentiveAlignment} />
+          {(p.governanceFlags || []).length > 0 && (
+            <div style={{ marginTop: '6pt' }}>
+              <div style={{ fontFamily: FONT_MONO, fontSize: '6.5pt', fontWeight: 700,
+                            color: PALETTE.muted, letterSpacing: '0.04em', marginBottom: '3pt' }}>
+                GOVERNANCE FLAGS</div>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4pt' }}>
+                {(p.governanceFlags || []).map((g, i) => (
+                  <span key={i} style={{ fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.text,
+                    background: PALETTE.rule, borderRadius: '2pt', padding: '1.5pt 5pt' }}>{g}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* RIGHT — the four legs at a glance */}
+        <div>
+          <SectionHeader label="THE FOUR LEGS" marginTop="0" marginBottom="8pt" />
+          <div style={{ marginBottom: '9pt' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span style={{ fontFamily: FONT_SANS, fontSize: '7.5pt', fontWeight: 700, color: PALETTE.accent }}>
+                People</span>
+              <ScoreDots score={p.score || 0} />
+            </div>
+            <div style={{ fontFamily: FONT_SANS, fontSize: '6.5pt', color: PALETTE.muted, marginTop: '1pt' }}>
+              observable composite · 1–5</div>
+          </div>
+          <PocdLeg label="Opportunity" body={pocd.opportunityRef} />
+          <PocdLeg label="Context" body={pocd.contextRef} />
+          <PocdLeg label="Deal" body={pocd.deal} />
+        </div>
+      </div>
+
+      {/* Takeaway — the People read (external, falsifiable; never operator preference) */}
+      <div style={{ marginTop: '12pt', borderLeft: `2pt solid ${PALETTE.accent}`, paddingLeft: '10pt' }}>
+        <div style={{ fontFamily: FONT_MONO, fontSize: '6.5pt', fontWeight: 700,
+                      color: PALETTE.accent, letterSpacing: '0.05em', marginBottom: '2pt' }}>PEOPLE READ</div>
+        <div style={{ fontFamily: FONT_SANS, fontSize: '8pt', color: PALETTE.ink, lineHeight: 1.4 }}>{p.takeaway}</div>
+      </div>
+
+      <PageFooter memo={memo} pageLabel={`page ${memoTotalPages(memo) - 1} of ${memoTotalPages(memo)}`} />
+    </div>
+  );
+}
+
 function Page4Quantitative({ memo }) {
   return (
     <div className="memo-page">
@@ -3461,6 +3596,7 @@ function MemoPDF() {
       <Page3Snapshot memo={memo} />
       {hasCompetitive(memo) && <Page4Competitive memo={memo} />}
       <Page4Quantitative memo={memo} />
+      {hasPOCD(memo) && <PagePOCD memo={memo} />}
       <Page5BackMatter memo={memo} />
     </>
   );
@@ -3471,7 +3607,7 @@ function MemoPDF() {
 // body[data-harness="print"] and we auto-mount + signal ready; the site
 // imports MemoPagesAll and renders it scaled inside MemoPage.
 window.AR2EB_MEMO = {
-  Page1Headline, Page2Narratives, Page3Snapshot, Page4Competitive, Page4Quantitative, Page5BackMatter,
+  Page1Headline, Page2Narratives, Page3Snapshot, Page4Competitive, Page4Quantitative, PagePOCD, Page5BackMatter,
   MemoPDF,
   findMemo, getTickerSlug,
 };

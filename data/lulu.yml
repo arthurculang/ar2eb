@@ -583,3 +583,28 @@ stamp:
   canonical_jsx: public/memo_pdf.jsx
   pdf_version: '001'
   pdf_timestamp: 2026-06-03_15-38
+pocd:
+  people:
+    ceo: 'Interim co-CEOs (M. Frank, A. Maestrini)'
+    founder_led: false
+    insider_ownership_pct: 7.0
+    capital_allocation: 'No dividend; capital returned via large executed buybacks (~$2.5B / 9.1M shares
+      Dec-2023→Aug-2025; +$1.0B Dec 2025, ~$1.6B remaining), otherwise reinvested in stores/product. The one
+      notable deal — Mirror (~$500M, 2020) — failed: a ~$443M post-tax impairment (FY2022), hardware ceased 2023.'
+    incentive_alignment: 'Standard structure (base + cash bonus + majority-equity PSU LTI). Say-on-pay passed
+      but support slipped 93% (2024) → 83% (2025), into the range proxy advisors flag, and two directors drew
+      weak support (76% / 72%).'
+    governance_flags:
+      - 'single-class (one share, one vote)'
+      - 'independent chair, separate from CEO; but classified (staggered) board'
+      - 'founder Chip Wilson ~8.7% (off the board since 2015) ran a public proxy fight'
+      - 'settled May 2026: 2 Wilson nominees (+1 more) + a declassification commitment; ~18-mo standstill'
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Professionalized and single-class with an independent chair and disciplined buybacks — but a live
+      governance moment: CEO Calvin McDonald is out (Jan 2026; interim co-CEOs + external search), a founder
+      proxy fight just settled (Chip Wilson ~8.7%, two board seats), a classified board, the failed Mirror deal,
+      and slipping say-on-pay support.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (LULU 1.95)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +65% finding) + §12 sizing.'

@@ -583,3 +583,29 @@ stamp:
   canonical_jsx: public/memo_pdf.jsx
   pdf_version: '001'
   pdf_timestamp: 2026-06-03_15-50
+pocd:
+  people:
+    ceo: 'Jacob Thaysen (CEO since Sept 2023)'
+    founder_led: false
+    insider_ownership_pct: 2.0
+    capital_allocation: 'Dominated by the GRAIL episode — a major observable value-destruction: bought GRAIL
+      (~$8B, 2021) and CLOSED it without regulatory clearance, drawing an EU prohibition + an unprecedented
+      €432M "gun-jumping" fine (later voided on jurisdiction, 2024) and a forced spin-off (June 2024 → GRAL)
+      that took a ~$4B impairment + a ~$1B recapitalization. No dividend; small buybacks ($1.5B authorized Apr 2026); R&D-heavy.'
+    incentive_alignment: 'Comp redesigned after a pay revolt: CEO target equity $10M is 70% PSUs / 30% RSUs,
+      PSUs vesting on 3-year relative TSR (the make-whole grant made explicitly 70% TSR-contingent in response
+      to stockholder feedback). Base $1M, target bonus 125%.'
+    governance_flags:
+      - 'single-class, declassified board (annual elections)'
+      - '2023 Icahn proxy fight: chairman John Thompson ousted; Icahn won one board seat'
+      - 'say-on-pay FAILED 2023 → recovered ~86.5% (2024) after the comp redesign'
+      - 'board/chair overhaul since (Gottlieb non-exec chair 2025; Corvex Meister joined; Icahn fully exited)'
+    key_person_risk: low
+    score: 2
+    takeaway: 'The cohort''s governance-turnaround story — and the weakest recent record: a board that closed an
+      $8B deal without clearance (forced unwind, ~$4B impairment, an EU fine), failed say-on-pay (2023), and
+      lost a proxy seat to Icahn. Being repaired — new CEO, independent chair, redesigned TSR-linked pay,
+      say-on-pay recovered, activist oversight — but the track record is the observable flag.'
+  opportunity_ref: '§6c scenarios · Page-3 business snapshot · §13 AI (ILMN 7.08)'
+  context_ref: '§6d 7 Powers (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −30% finding) + §12 sizing.'
