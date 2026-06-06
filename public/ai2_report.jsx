@@ -17,7 +17,7 @@ const LADDER = [
   { m: 'L4 · + operating margin', k: 4, o3: -0.022, o1: 0.078 },
   { m: 'L4 · + ΔFCF margin', k: 5, o3: 0.013, o1: 0.054 },
   { m: 'L2 · + Δgrowth, Δgm', k: 4, o3: 0.053, o1: 0.052 },
-  { m: 'Full 8-weight AI 2.0', k: 8, o3: 0.041, o1: -0.012 },
+  { m: 'Full 8-weight AI 2.0', k: 8, o3: 0.041, o1: 0.074 },
 ];
 // Empirical zones: forward return by AI 1.0 level (medians + win-rate).
 const ZONES = [
