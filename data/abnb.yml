@@ -39,6 +39,12 @@ chart_reference:
   - 9.92
   - 11.1
   - 12.24
+  history_op_margin:   # %  GAAP operating income / revenue (SEC XBRL OperatingIncomeLoss)
+  - 7.2
+  - 21.5
+  - 15.3
+  - 23.0
+  - 20.8
   history_fcf:
   - 1.6
   - 3.4

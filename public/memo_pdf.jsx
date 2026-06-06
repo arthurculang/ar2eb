@@ -2237,6 +2237,23 @@ function MatureMarginsChart({ memo, widthPt = 280, heightPt = 190 }) {
   const scnKeys = scnKeysFor(memo);
   const histOp = (ref.historyOpMargin || []).map(v => v);
 
+  // Defensive: with no historyOpMargin the scenario fan would anchor at 0% and
+  // the whole pre-projection history would read as a flat zero. Surface the gap
+  // explicitly instead (mirrors MatureEvMultiplesChart). The validator now makes
+  // this field a hard requirement for mature/SOTP, so this is belt-and-suspenders.
+  if (histOp.length === 0) {
+    return (
+      <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
+           viewBox={`0 0 ${widthPt} ${heightPt}`}
+           style={{ display: 'block' }}>
+        <ChartTitle>Op margin — history + scenarios</ChartTitle>
+        <text x={widthPt / 2} y={heightPt / 2}
+              fontFamily={FONT_MONO} fontSize="7pt" fill={PALETTE.muted}
+              textAnchor="middle">(no op-margin history)</text>
+      </svg>
+    );
+  }
+
   const m = CHART_MARGIN;
   const plotL = m.left, plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
@@ -2279,24 +2296,40 @@ function MatureMarginsChart({ memo, widthPt = 280, heightPt = 190 }) {
           ))}
         </>
       )}
-      {scnKeys.map(k => {
-        const margins = memo.print.scenarios[k].dcfPath.op_margin.map(d => d * 100);
-        const pts = [[nHist - 1, histOp.at(-1) || 0],
-                     ...margins.map((v, i) => [nHist + i, v])];
-        const endV = margins.at(-1);
-        return (
-          <g key={`m-${k}`}>
-            <path d={pathD(pts, xScale, yScale)}
-                  stroke={SCN_COLORS[k]} strokeWidth="1.2" fill="none"
-                  strokeDasharray="3,2" />
-            <text x={xScale(nHist + 4) + 3} y={yScale(endV) + 2}
-                  fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
-                  fill={SCN_COLORS[k]}>
-              {shortLabel(k)} {endV.toFixed(0)}%
-            </text>
-          </g>
-        );
-      })}
+      {/* Endpoint labels collide when the fan is compressed — a one-time
+          impairment year (ILMN −91%, COIN −85%) drives the data-derived axis
+          floor far down, squeezing the scenarios into a thin band. Spread any
+          overlapping labels vertically; the dashed lines stay at true value.
+          Only triggers on genuine overlap, so well-spaced tickers are unchanged. */}
+      {(() => {
+        const LBL_GAP = 7.2;  // pt — ~1.3× the 5.5pt label cap height
+        const lab = scnKeys.map(k => ({
+          k, y: yScale(memo.print.scenarios[k].dcfPath.op_margin.at(-1) * 100) + 2,
+        })).sort((a, b) => a.y - b.y);
+        for (let i = 1; i < lab.length; i++)
+          if (lab[i].y - lab[i - 1].y < LBL_GAP) lab[i].y = lab[i - 1].y + LBL_GAP;
+        const overflow = lab.length ? lab[lab.length - 1].y - plotB : 0;
+        if (overflow > 0) lab.forEach(o => (o.y -= overflow));
+        const labelY = Object.fromEntries(lab.map(o => [o.k, o.y]));
+        return scnKeys.map(k => {
+          const margins = memo.print.scenarios[k].dcfPath.op_margin.map(d => d * 100);
+          const pts = [[nHist - 1, histOp.at(-1) || 0],
+                       ...margins.map((v, i) => [nHist + i, v])];
+          const endV = margins.at(-1);
+          return (
+            <g key={`m-${k}`}>
+              <path d={pathD(pts, xScale, yScale)}
+                    stroke={SCN_COLORS[k]} strokeWidth="1.2" fill="none"
+                    strokeDasharray="3,2" />
+              <text x={xScale(nHist + 4) + 3} y={labelY[k]}
+                    fontFamily={FONT_SANS} fontWeight={500} fontSize="5.5pt"
+                    fill={SCN_COLORS[k]}>
+                {shortLabel(k)} {endV.toFixed(0)}%
+              </text>
+            </g>
+          );
+        });
+      })()}
     </svg>
   );
 }
