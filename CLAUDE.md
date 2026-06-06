@@ -183,6 +183,22 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
   box (1in/0.55in white frame + white card + beige inter-page gap); that box lived only in `print.html`,
   so the site had been butting black text against the white edge. PDF untouched.
+- **Chart label clipping — Page-1 forward chart FIXED (2026-06-06); other charts TRACKED.** Root cause: in a
+  viewBox'd `<svg>`, a `pt` font-size resolves to px (×96/72) and that px value is treated as *user units*, so every
+  `pt` chart font renders **1.333× larger** than its number in the plot's coordinate system. The forward chart's
+  hardcoded right margin (`widthPt−60`) was sized for the un-inflated numbers → the inflated right-edge series labels
+  (`Ultra Bull …×`, `Weighted …×`) AND the title (`…PROBABILITY-WEIGHTED FORWARD`) clipped at the SVG edge on **every**
+  ticker. **Fix:** added `estSvgTextWidth()` + a baked Inter-SemiBold em-table (folds in the 1.333× inflation, ignores
+  kerning → safe upper bound); `ForwardValueChart` now sizes its right margin to the widest end label (floored at 60 so
+  short-label charts stay byte-identical) and compresses the title via `textLength` only when it would overflow. Text
+  sizes unchanged; verified zero forward-chart clip across all 20 tickers. A **WARN-ONLY** horizontal-clip guard was
+  added to `render_memo_pdf.py` (flags any chart `<text>` past its SVG viewBox; promote to STRICT once the below are
+  cleared). **TRACKED (pre-existing, NOT yet fixed) — fix each by sizing its margin from data via `estSvgTextWidth`:**
+  (a) young-company **valuation caption** overflows badly (OKLO `valn_caption` ~107-char run-on → +138px in a 280 box;
+  ACHR/GRAL similar — needs wrap or YAML trim); (b) GRAL **TAM `$70B` bar labels** + young **TAM title** poke right;
+  (c) mature **equity-build** (`UltBear/UltBull`) + **FCF** (`$XX.XB`) axis labels poke left ~3–5px; (d) forward-chart
+  **`-5y` x-tick** drawn off-plot on recent-IPO tickers (OKLO/GRAL — filter xTicks to `t ≥ X_MIN`); (e) **IONQ page-6**
+  back-matter overflows the page by ~92px (vertical; STRICT_LAYOUT-flagged — trim back-matter copy).
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
 - **REMINDER (Arthur wants this) — POCD underwriting lens, spec §14 (draft, added v033, 2026-06-04).**
   Bill Ackman's framing — *underwrite SpaceX the same way you underwrite any venture investment* — applied
