@@ -39,6 +39,7 @@ const common = {
 const builds = [
   { entry: 'src/site-entry.js',  out: 'public/assets/bundle/site.js',  html: 'public/index.html' },
   { entry: 'src/print-entry.js', out: 'public/assets/bundle/print.js', html: 'public/print.html' },
+  { entry: 'src/ai2-report-entry.js', out: 'public/assets/bundle/ai2-report.js', html: 'public/ai2_report.html' },
 ];
 
 // Cache-bust the bundle URL in HTML by appending ?v=<content-hash>. Without
