@@ -355,11 +355,11 @@ function AboutPage() {
         <h1>One operator. Concentrated conviction. The work, in public.</h1>
 
         <p>
-          AR2EB — Alameda Research 2: Electric Boogaloo — is the public-facing publication of a single-operator family-office portfolio. The thesis is concentration: a small number of single-name positions, each backed by a probability-weighted DCF that gets pressure-tested in the open rather than sitting in a private folder.
+          AR2EB — Alameda Research 2: Electric Boogaloo — is the public-facing publication of a single-operator portfolio. The thesis is concentration: a small number of single-name positions, each backed by a probability-weighted DCF that gets pressure-tested in the open rather than sitting in a private folder.
         </p>
 
         <h3>Who</h3>
-        <p>An individual investor running a family-office portfolio with a concentrated, single-name conviction approach. No external capital, no fund vehicle, no benchmark to chase.</p>
+        <p>An individual investor running a single-operator portfolio with a concentrated, single-name conviction approach. No external capital, no fund vehicle, no benchmark to chase.</p>
 
         <h3>What</h3>
         <p>Publishing the same probability-weighted DCF research used internally — so the work gets read, critiqued, and improved by a smarter readership than the four walls of a private doc.</p>
