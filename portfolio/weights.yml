@@ -1,0 +1,95 @@
+as_of: '2026-06-06'
+epoch: '2026-07-01'
+rule: EV-tilted (weight proportional to max(0, weighted_DCF/spot - 1)), cap 15%/name,
+  cash residual (spec §12 / §15 D1)
+weights:
+  lulu: 0.15
+  naut: 0.15
+  zm: 0.15
+  coin: 0.1451
+  uber: 0.1424
+  abnb: 0.1134
+  isrg: 0.06
+  achr: 0.0523
+  gral: 0.0265
+  yeti: 0.0103
+  cash: 0.0
+excluded_private:
+- anthropic
+findings:
+  naut:
+    spot: 2.4
+    weighted_dcf: 5.69
+    upside: 1.3695
+  lulu:
+    spot: 127.0
+    weighted_dcf: 209.94
+    upside: 0.6531
+  zm:
+    spot: 105.64
+    weighted_dcf: 164.39
+    upside: 0.5561
+  coin:
+    spot: 182.25
+    weighted_dcf: 271.62
+    upside: 0.4904
+  uber:
+    spot: 70.4
+    weighted_dcf: 104.27
+    upside: 0.481
+  abnb:
+    spot: 133.0
+    weighted_dcf: 183.95
+    upside: 0.3831
+  isrg:
+    spot: 436.64
+    weighted_dcf: 525.14
+    upside: 0.2027
+  achr:
+    spot: 6.81
+    weighted_dcf: 8.01
+    upside: 0.1767
+  gral:
+    spot: 73.0
+    weighted_dcf: 79.54
+    upside: 0.0896
+  yeti:
+    spot: 48.0
+    weighted_dcf: 49.67
+    upside: 0.0348
+  dash:
+    spot: 159.0
+    weighted_dcf: 156.7
+    upside: -0.0145
+  aur:
+    spot: 7.74
+    weighted_dcf: 6.65
+    upside: -0.1402
+  joby:
+    spot: 10.5
+    weighted_dcf: 8.44
+    upside: -0.1962
+  ilmn:
+    spot: 144.83
+    weighted_dcf: 101.53
+    upside: -0.299
+  lth:
+    spot: 33.61
+    weighted_dcf: 22.26
+    upside: -0.3376
+  txg:
+    spot: 28.11
+    weighted_dcf: 14.28
+    upside: -0.4919
+  oklo:
+    spot: 67.2
+    weighted_dcf: 31.58
+    upside: -0.5301
+  rklb:
+    spot: 142.0
+    weighted_dcf: 52.04
+    upside: -0.6335
+  ionq:
+    spot: 70.14
+    weighted_dcf: 9.18
+    upside: -0.8691

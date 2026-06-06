@@ -1,0 +1,73 @@
+# Monthly rebuild on the 22nd (spec §15). AGENTIC — runs Claude Code (the Claude Code
+# Action) so the refresh carries judgment (re-price + flag stale theses), per decision D2.
+#
+# REQUIRES (one-time, by the repo owner) — until these are set, the agentic step is
+# guarded off and the workflow no-ops:
+#   1. Install the Claude GitHub App:  https://github.com/apps/claude
+#   2. Add repo secret  ANTHROPIC_API_KEY  (Settings → Secrets and variables → Actions)
+#   3. Workflow permissions = "Read and write"  (Settings → Actions → General)
+
+name: Monthly rebuild (22nd)
+
+on:
+  schedule:
+    - cron: "0 13 22 * *"     # the 22nd, ~13:00 UTC (mid-morning ET); date-driven
+  workflow_dispatch: {}         # manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: monthly-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guard — require the API key
+        id: guard
+        env:
+          KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [[ -z "$KEY" ]]; then
+            echo "ANTHROPIC_API_KEY not set — skipping the agentic rebuild (see workflow header)."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Monthly rebuild (Claude Code)
+        if: steps.guard.outputs.run == 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_args: "--model opus"
+          prompt: |
+            Monthly ar2eb rebuild (spec §15, conviction-neutral §3.5 B). Open a PR
+            titled "Monthly rebuild <YYYY-MM>" containing, in order:
+
+            1. ARCHIVE the prior month — move the currently published memos into
+               archive/<YYYY-MM>/ (an immutable record; do not delete history).
+
+            2. MECHANICAL RE-PRICE (judgment only on edge cases) — for each public
+               data/<ticker>.yml, refresh `spot` and `market.market_cap_billion`
+               (= current price × shares) from current Yahoo prices. SURGICALLY edit
+               only those numeric lines — do NOT reformat the file or touch the
+               theses/scenarios. Skip private_prevaluation names. Then re-render via
+               the pipeline: validate.py → build_site_data.py → `node build.js` →
+               `python scripts/rebuild_all.py --strict-layout` (STRICT_LAYOUT=1).
+
+            3. RE-WEIGHT — run `python portfolio/build_weights.py` to refresh
+               portfolio/weights.yml from the new findings.
+
+            4. JUDGMENT PASS (why this job is agentic, not a cron script): list, in
+               the PR description, any ticker whose entry-price-vs-distribution
+               finding has moved enough that a full human RE-RESEARCH looks
+               warranted. DO NOT rewrite theses — only flag them.
+
+            Keep everything observable/fundamentals-only. Leave the PR for review;
+            do not self-merge.
