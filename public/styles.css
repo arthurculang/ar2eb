@@ -133,7 +133,7 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 }
 .hero-logo {
   display: block;
-  width: 420px; max-width: 100%;
+  width: 480px; max-width: 100%;
   margin-bottom: 56px;
 }
 .hero-tagline {
@@ -579,7 +579,7 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   .nav-label-full  { display: none; }
   .nav-label-short { display: inline; }
   .hero { padding: 72px 0 64px; }
-  .hero-logo { width: 280px; margin-bottom: 36px; }
+  .hero-logo { width: 320px; margin-bottom: 36px; }
   .hero-tagline { font-size: 24px; }
   .hero-sub { font-size: 16px; }
   .cat-grid { grid-template-columns: 1fr; }
