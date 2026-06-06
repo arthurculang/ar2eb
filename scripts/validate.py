@@ -171,6 +171,50 @@ def _competitive_warnings(comp: dict | None) -> list[str]:
     return w
 
 
+# POCD People-leg (§14) — the observable, conviction-neutral inputs the scorecard
+# expects. People is the leg POCD adds; Opportunity/Context/Deal are already served
+# by §6c / §6d / §13 / §12, so only People carries a structured block here.
+_KEY_PERSON_RISK = {"low", "medium", "high"}
+_POCD_BANNED = ("conviction", "belief", "i_believe", "preference", "gut")
+
+
+def _pocd_warnings(pocd: dict | None) -> list[str]:
+    """WARN-only structural checks on the optional `pocd:` block (§14). The People
+    leg must stay OBSERVABLE / conviction-neutral (§3.5 B): realized capital-
+    allocation track record, insider ownership, incentive alignment, governance
+    flags, key-person concentration — never the operator's preference (that lives
+    only in §12 sizing). Absence is fine (the block is optional at introduction)."""
+    if not pocd:
+        return []
+    w: list[str] = []
+    ppl = pocd.get("people")
+    if not ppl:
+        w.append(f_err("pocd.people", "present (People is the leg POCD adds)", "missing"))
+        return w
+    sc = ppl.get("score")
+    if not isinstance(sc, (int, float)) or isinstance(sc, bool) or not (1 <= sc <= 5):
+        w.append(f_err("pocd.people.score", "1–5 (observable composite)", repr(sc)))
+    own = ppl.get("insider_ownership_pct")
+    if own is not None and not (isinstance(own, (int, float)) and not isinstance(own, bool)
+                                and 0 <= own <= 100):
+        w.append(f_err("pocd.people.insider_ownership_pct", "0–100", repr(own)))
+    kpr = ppl.get("key_person_risk")
+    if kpr not in _KEY_PERSON_RISK:
+        w.append(f_err("pocd.people.key_person_risk", f"one of {sorted(_KEY_PERSON_RISK)}", repr(kpr)))
+    if not ppl.get("takeaway"):
+        w.append(f_err("pocd.people.takeaway", "present (one-line external read)", "missing"))
+    gf = ppl.get("governance_flags", [])
+    if not isinstance(gf, list):
+        w.append(f_err("pocd.people.governance_flags", "a list (may be empty)",
+                       type(gf).__name__))
+    # conviction-neutrality guard: no belief/preference fields in an observable block
+    for banned in _POCD_BANNED:
+        if banned in ppl:
+            w.append(f_err(f"pocd.people.{banned}",
+                           "removed (conviction lives in §12 sizing, not POCD)", "present"))
+    return w
+
+
 def young_cash_path(sc: dict, start_cash: float) -> list[float]:
     """Mirrors charts/young_company.py::_cash_path.
 
@@ -384,6 +428,7 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
 
     # Page 4 — competitive block (§6d). WARN-only while optional.
     warns.extend(_competitive_warnings(data.get("competitive")))
+    warns.extend(_pocd_warnings(data.get("pocd")))
 
     # Probabilities sum to 1.0
     prob_sum = sum(s["probability"] for s in data["scenarios"].values())
