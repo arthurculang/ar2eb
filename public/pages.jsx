@@ -134,7 +134,7 @@ function CategoryPage({ slug }) {
 // fit whatever container it lives in. ResizeObserver keeps it responsive.
 function EmbeddedMemo({ memo }) {
   const { Page1Headline, Page2Narratives, Page3Snapshot,
-          Page4Competitive, Page4Quantitative, Page5BackMatter } = window.AR2EB_MEMO || {};
+          Page4Competitive, Page4Quantitative, PagePOCD, Page5BackMatter } = window.AR2EB_MEMO || {};
   const containerRef = React.useRef(null);
   const innerRef = React.useRef(null);
   const [scale, setScale] = React.useState(1);
@@ -143,6 +143,7 @@ function EmbeddedMemo({ memo }) {
   // only when the ticker carries a `competitive` block, so 5- and 6-page memos
   // both come out right.
   const hasCompetitive = !!(memo.print && memo.print.competitive);
+  const hasPOCD = !!(memo.print && memo.print.pocd);   // §14 back-matter scorecard
 
   React.useEffect(() => {
     const update = () => {
@@ -178,6 +179,7 @@ function EmbeddedMemo({ memo }) {
         <Page3Snapshot memo={memo} />
         {hasCompetitive && Page4Competitive && <Page4Competitive memo={memo} />}
         <Page4Quantitative memo={memo} />
+        {hasPOCD && PagePOCD && <PagePOCD memo={memo} />}
         <Page5BackMatter memo={memo} />
       </div>
     </div>
