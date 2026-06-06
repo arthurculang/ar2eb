@@ -202,6 +202,12 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   scheduled GitHub Actions cron, NOT the `/loop` skill** (loop needs a live, ephemeral session; a calendar
   routine must run unattended — Actions already deploys, SEC+Yahoo feeds are keyless). **Launch = "start
   fresh":** hide all pre-launch memos from public view (internal archive, unlinked), publish the first
-  official set, begin performance tracking from t₀ (1 Jul 2026). **4 open decisions gate the build (D1 sizing
-  rule · D2 monthly-refresh scope · D3 archive privacy · D4 benchmark set) — surfaced to Arthur 2026-06-06.**
-  Once set: build `monthly-rebuild.yml` + `daily-performance.yml` + `portfolio/` scaffolding + the launch archive move.
+  official set, begin performance tracking from t₀ (1 Jul 2026). **Decisions adopted 2026-06-06 ("go on all"):
+  D1 EV-tilted caps · D2 monthly = AGENTIC Claude routine · D3 truly-private archive · D4 the benchmark sleeve.
+  BUILT:** `portfolio/build_weights.py` + `weights.yml` (10 tradeable holdings, EV-tilted, private/anthropic
+  excluded), `portfolio/track_performance.py` (validated live — portfolio vs VT/SPY/QQQ/…/GLD/DBC since epoch),
+  `.github/workflows/daily-performance.yml` (plain script, no secret) + `monthly-rebuild.yml` (agentic Claude
+  Code Action, guarded on `ANTHROPIC_API_KEY`). **Owner one-time setup:** Actions → "Read and write"; + for the
+  monthly job, install the Claude GitHub App + add the `ANTHROPIC_API_KEY` secret (see `portfolio/README.md`).
+  **Remaining: the POCD scorecard page (§14, D5) + the 1-July launch archive move (D3).** Live epoch t₀ =
+  2026-07-01 (the daily tracker no-ops until then). Workflows activate once merged to `main`.
