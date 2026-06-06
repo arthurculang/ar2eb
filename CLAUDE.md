@@ -194,9 +194,10 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   alignment, governance flags, key-person risk, 1–5 score, takeaway) + a `validate.py` hook (`_pocd_warnings`,
   WARN-only, gated, with a **conviction-neutrality guard** rejecting belief/preference fields — §3.5 B:
   observable only, never "I believe in the founder"). **Rendered back-matter scorecard page BUILT + rolled
-  out to 5 founder-led tickers** (RKLB, COIN, ABNB, ZM, DASH; 7pp each, STRICT_LAYOUT clean, observable/sourced
-  People data, visual baselines green). `PagePOCD` in `memo_pdf.jsx` (+ site parity in `pages.jsx`), gated on a
-  `pocd:` block, placed last so it never renumbers existing pages. Extend to more tickers as People data is sourced.
+  out to 9 tickers** (founder-led RKLB/COIN/ABNB/ZM/DASH + mature UBER/ISRG/LULU/ILMN; 7pp each,
+  STRICT_LAYOUT clean, observable/sourced People data, baselines green; observable scores discriminate —
+  ILMN 2 post-GRAIL → ISRG/UBER/RKLB/ABNB/ZM 4). `PagePOCD` in `memo_pdf.jsx` (+ site parity in `pages.jsx`),
+  gated on a `pocd:` block, placed last so it never renumbers existing pages. Extend to more tickers as People data is sourced.
 - **Spec §15 (v036, DRAFT) — operating cadence & automation + 1 July 2026 "launch" (Arthur's ask).**
   **Monthly (22nd):** archive prior month → mechanically re-price + re-render all memos → update §12 weights →
   deploy. **Daily (after close):** track the weighted portfolio vs. a wide multi-asset benchmark set
