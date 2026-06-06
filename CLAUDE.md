@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
-changelog-driven — currently at logical **v030**) are the source of truth.
+changelog-driven — currently at logical **v033**) are the source of truth.
 
 ## What this is
 
@@ -153,12 +153,44 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   (sourced 2016–2025 small-multiples — META 2022=3.1, NVDA FY23 31→FY25 12, LULU 3.0, ISRG ~15–25).
   Cross-validates the DCF (agree at extremes; **divergences are the signal** — TXG/ILMN screen "fair"
   on GM+growth but DCF-negative, GM-flattered + decelerating). **AI 2.0** (adds op/FCF-margin + Δ
-  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf` but **uncalibrated — NEXT: build the
-  backtest harness to fit `w1…w8`** (gather a multi-year fundamentals panel + forward-return labels).
-  N/A for pre-revenue / gross-loss names (the young DCF's domain).
+  rate-of-change terms, weights `w1…w8`) captured from `AI.pdf`; **backtested on a sourced 104-name
+  universe (v035) — does NOT calibrate; no enrichment beats AI 1.0 out-of-sample (see next bullet).
+  AI 1.0 itself is now OOS-validated on the broad universe.** N/A for pre-revenue / gross-loss names
+  (the young DCF's domain).
+- **AI 2.0 backtest — DONE (2026-06-05, branch `claude/ecstatic-newton-YKOJJ`, spec v034→v035): AI 2.0
+  does NOT calibrate; AI 1.0 *validated* out-of-sample.** Sourced the panel end-to-end (SEC XBRL + Yahoo
+  FYE prices). A cap **sanity-gate** caught + fixed two `source_ai2_panel.py` bugs (both self-tested):
+  (i) Yahoo's `quote.close` is split-adjusted *not* raw → rebuilt the unadjusted close from the split
+  events (NVDA FY2024 $152B→$1526B); (ii) dual-class names expose no consolidated share count in
+  companyfacts → weighted-avg-share fallback (META 0 caps → $1.48T). **v034 (26 names):** 8-weight fit
+  overfits (LOYO-OOS −0.063/−0.068, sign-flipping); regularized `ai2_backtest.py` (nested ladder + Δ≥0
+  sampler + ridge + 1-param `--fcfm` + exhaustive `--grid`) → only AI 1.0 + an FCF-margin term beat AI 1.0
+  OOS at both horizons, but modest/1y-concentrated, flagged as possibly small-sample. **v035 (expanded → 104
+  in-domain tickers, winners+busts; CIKs ticker-verified vs `data.sec.gov/submissions`; ~85 names/cross-section,
+  ~1000 rows/97 tickers all-8 features): the FCF-margin signal does NOT survive — NO enrichment (fcfm/opm/any
+  Δ/full-8) beats AI 1.0 OOS at both horizons (L3 fcfm → −0.041/3y); the 26-name win was a small-sample
+  artifact. A belt-and-suspenders exhaustive `--grid` (15,625 fixed combos, no sampler) confirms it: ~2,500
+  beat AI 1.0 in-sample with backwards (negative-margin) weights, but nested OOS the best wins only 3y
+  (+0.084)/loses 1y (+0.032) — the sampler missed nothing.** Conversely **AI 1.0
+  (gm+growth) is validated: OOS +0.044/3y, +0.063/1y on the broad universe** (narrow-panel 3y was ≈0).
+  AI 1.0 (`scripts/arthur_indicator.py`) stays the live screen — now with broad-universe OOS support;
+  AI 2.0 earns none of its 8 weights. *Data limit (documented):* ~14 compounders (ORCL/V/MA/INTU/CDNS/TMO/
+  SBUX…) stopped tagging consolidated gross profit in companyfacts post-2018 → partly drop; faking a margin
+  would break conviction-neutrality. **Branch-only — NOT merged: bundle v032 + v033 (POCD) + v034 + v035 +
+  the AI 2.0 tooling in ONE PR (v031 + §13 already on main via PR #23), pending Arthur's review.**
 - **Website rendering-parity — DONE (2026-06-04, merged to main).** (1) Embedded site memo now renders
   the §6d competitive page (`EmbeddedMemo` had mounted only 5 of 6 page components; PDF showed 6) — JS
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
   box (1in/0.55in white frame + white card + beige inter-page gap); that box lived only in `print.html`,
   so the site had been butting black text against the white edge. PDF untouched.
 - **Spec §12 portfolio construction** — still a draft; refine as it's exercised.
+- **REMINDER (Arthur wants this) — POCD underwriting lens, spec §14 (draft, added v033, 2026-06-04).**
+  Bill Ackman's framing — *underwrite SpaceX the same way you underwrite any venture investment* — applied
+  across the **whole** book via the **People · Opportunity · Context · Deal** framework (origin: **William
+  Sahlman / HBS**, building on Poorvu & Stevenson; Ackman cited it, didn't originate it). Opportunity/Context/
+  Deal already map onto §6c/§6d/§13 + §12; **the build item is the People leg** (no first-class treatment
+  today) and reframing **Deal** for public equity as *your purchase itself* (entry price vs. the scenario
+  distribution + §12 sizing). Hold People to conviction-neutrality (§3.5 B): observable track record /
+  ownership / incentives / governance, never "I believe in the founder." **Surface this to Arthur when he
+  next opens the repo** — he asked to be reminded; revisit before building (likely a POCD scorecard + a
+  `people:`/`pocd:` YAML block + validator hook, à la §6d's `competitive:`).
