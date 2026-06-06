@@ -9630,6 +9630,28 @@ const MEMOS = [
         ],
         "takeaway": "Rocket Lab is originating a genuine vertically-integrated space-prime position — the credible #2 to SpaceX — with real Space Systems scale, a $1.85B backlog, and Neutron optionality. But it lags SpaceX by an order of magnitude on launch cadence/reusability, and Neutron is unproven; the window is open as the #2, but SpaceX's cost-and-scale gravity well is the falsifier the whole bull case must clear."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Sir Peter Beck",
+          "founderLed": true,
+          "tenureYears": 13,
+          "insiderOwnershipPct": 10.0,
+          "capitalAllocation": "Vertical-integration roll-up (Space Systems): six closed acquisitions — Sinclair, ASI, Planetary Systems, SolAero ($80M), Geost ($275M), Mynaric ($155M) — funded partly by a $355M 4.25% 2029 convertible (2024). No buyback; share count grows with organic + stock-funded-M&A dilution.",
+          "incentiveAlignment": "Equity-heavy comp (2024 ~$20M, ~97% equity). March 2026: Beck cut salary to $1, waived bonus, and forfeited all unvested RSUs — alignment now rests on his ~10% stake. RSUs time-based (no confirmed TSR/PSU program).",
+          "governanceFlags": [
+            "SPAC origin (Vector Acquisition, 2021)",
+            "CEO + Chairman combined (lead independent director)",
+            "Series A founder control-continuity preferred (economically pass-through)",
+            "majority-independent board (single insider)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-owner-operator (~10%, salary cut to $1 in 2026) with a majority-independent board — strongly aligned; the offsets are acute key-person concentration (Beck is CEO / Chair / de-facto CTO / public face) and steady dilution from stock-funded M&A."
+        },
+        "opportunityRef": "§6c scenarios · Page-3 business snapshot",
+        "contextRef": "§6d 7 Powers (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −63% finding) + §12 sizing."
+      },
       "appendix": {
         "pushback": [
           {
