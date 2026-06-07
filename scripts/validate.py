@@ -215,6 +215,36 @@ def _pocd_warnings(pocd: dict | None) -> list[str]:
     return w
 
 
+def _chart_reference_errors(data: dict) -> list[str]:
+    """Page-3 charts for mature/SOTP memos plot historical series out of
+    chart_reference. history_op_margin is load-bearing AND silent-on-absence:
+    MatureMarginsChart (memo_pdf.jsx) falls back to an empty series and pins the
+    scenario fan to 0% at the FY hinge, so a missing field renders the whole
+    history as a flat zero (the DASH bug) rather than failing. history_revenue is
+    load-bearing too. We therefore require both, and require every history_* array
+    to align to history_years (a misaligned series mis-plots silently). Scoped to
+    mature/mature_company_sotp — young uses a different chart set, private a
+    different page shape."""
+    if data.get("dcf_type") not in ("mature_company", "mature_company_sotp"):
+        return []
+    cr = data.get("chart_reference") or {}
+    years = cr.get("history_years") or []
+    if not years:
+        return [f_err("chart_reference.history_years", "non-empty list", repr(years))]
+    n = len(years)
+    errs: list[str] = []
+    for req in ("history_revenue", "history_op_margin"):
+        if not cr.get(req):
+            errs.append(f_err(
+                f"chart_reference.{req}", f"present ({n} values, aligned to history_years)",
+                "missing/empty",
+                "mature Page-3 chart plots it; absence renders silently (op_margin → flat 0%)"))
+    for k, v in cr.items():
+        if k.startswith("history_") and k != "history_years" and isinstance(v, list) and len(v) != n:
+            errs.append(f_err(f"chart_reference.{k} length", f"{n} (== history_years)", str(len(v))))
+    return errs
+
+
 def young_cash_path(sc: dict, start_cash: float) -> list[float]:
     """Mirrors charts/young_company.py::_cash_path.
 
@@ -429,6 +459,9 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
     # Page 4 — competitive block (§6d). WARN-only while optional.
     warns.extend(_competitive_warnings(data.get("competitive")))
     warns.extend(_pocd_warnings(data.get("pocd")))
+
+    # Page 3 — historical chart series (mature/SOTP). ERROR: required + aligned.
+    errors.extend(_chart_reference_errors(data))
 
     # Probabilities sum to 1.0
     prob_sum = sum(s["probability"] for s in data["scenarios"].values())

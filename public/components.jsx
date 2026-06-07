@@ -64,7 +64,7 @@ function TopBar({ route }) {
       <div className="wrap topbar-inner">
         <Link to="/" className="topbar-logo" aria-label="AR2EB — home">
           {showLogo ? (
-            <img src="assets/logo-mark.png" alt="AR2EB — Alameda Research 2: Electric Boogaloo" />
+            <img src="assets/logo-mark.svg" alt="AR2EB — Alameda Research 2: Electric Boogaloo" />
           ) : (
             <span style={{ fontFamily: 'var(--type-mono)', fontSize: 12, letterSpacing: '0.12em', color: 'var(--ink-2)' }}>AR2EB</span>
           )}
