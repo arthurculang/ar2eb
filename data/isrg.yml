@@ -68,6 +68,12 @@ thesis: >
 chart_reference:
   history_years: [2021, 2022, 2023, 2024, 2025]
   history_revenue: [5.71, 6.22, 7.12, 8.35, 10.10]   # $B fiscal-year actuals
+  history_op_margin:   # %  GAAP operating income / revenue (SEC XBRL OperatingIncomeLoss)
+  - 31.9
+  - 25.3
+  - 24.8
+  - 28.1
+  - 29.3
   history_fcf: [1.749, 0.958, 0.750, 1.304, 2.500]   # $B FCF
   history_ev_rev: [20.0, 13.0, 14.0, 17.0, 16.0]     # year-end EV/Revenue multiple
   history_installed_base: [6730, 7544, 8606, 9902, 11106]  # da Vinci systems EoY (FY21-25)

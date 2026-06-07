@@ -14,7 +14,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "joby-memo__v030__2026-05-31_17-10.pdf",
-      "size": "344 KB",
+      "size": "345 KB",
       "priorVersions": [
         {
           "version": "029",
@@ -1099,7 +1099,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "aur-memo__v024__2026-05-31_17-10.pdf",
-      "size": "341 KB",
+      "size": "342 KB",
       "priorVersions": [
         {
           "version": "023",
@@ -2183,7 +2183,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "lth-memo__v023__2026-05-31_17-10.pdf",
-      "size": "262 KB",
+      "size": "263 KB",
       "priorVersions": [
         {
           "version": "022",
@@ -2964,7 +2964,7 @@ const MEMOS = [
     "publishedLabel": "May 27, 2026",
     "pdf": {
       "file": "zm-memo__v024__2026-05-31_17-10.pdf",
-      "size": "296 KB",
+      "size": "297 KB",
       "priorVersions": [
         {
           "version": "023",
@@ -3257,6 +3257,13 @@ const MEMOS = [
           4.39,
           4.53,
           4.66
+        ],
+        "historyOpMargin": [
+          24.9,
+          25.9,
+          5.6,
+          11.6,
+          17.4
         ],
         "historyFcf": [
           1.466,
@@ -3882,7 +3889,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "naut-memo__v005__2026-05-31_17-10.pdf",
-      "size": "337 KB",
+      "size": "338 KB",
       "priorVersions": [
         {
           "version": "004",
@@ -4982,7 +4989,7 @@ const MEMOS = [
     "publishedLabel": "May 27, 2026",
     "pdf": {
       "file": "isrg-memo__v004__2026-05-31_17-03.pdf",
-      "size": "290 KB",
+      "size": "307 KB",
       "priorVersions": [
         {
           "version": "003",
@@ -5221,6 +5228,13 @@ const MEMOS = [
           7.12,
           8.35,
           10.1
+        ],
+        "historyOpMargin": [
+          31.9,
+          25.3,
+          24.8,
+          28.1,
+          29.3
         ],
         "historyFcf": [
           1.749,
@@ -5852,7 +5866,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "ionq-memo__v003__2026-05-31_17-03.pdf",
-      "size": "376 KB",
+      "size": "377 KB",
       "priorVersions": [
         {
           "version": "002",
@@ -7076,10 +7090,6 @@ const MEMOS = [
             "body": "AQ#256 hit by H1 2027 · First verified commercial quantum advantage on customer workload · Multi-product share >50% · 2nd large govt contract (>$100M)"
           },
           {
-            "label": "Ultra-bull ceiling",
-            "body": "The ultra-bull caps at ~$16B FY36 revenue (32% of a $50B TAM) — Nvidia-2021 scale, not Nvidia-today. The binding constraint is the TAM, not IONQ execution: a credible >$50B FY36 quantum-TAM print is the only thing that unlocks a literal Nvidia-scale outcome. Absent that, even flawless execution tops out here."
-          },
-          {
             "label": "Reframe needed",
             "body": "If neutral-atom (QuEra/Atom Computing) achieves fault-tolerance first — trapped-ion premium thesis erodes; revisit TAM share assumptions across all scenarios"
           }
@@ -7129,7 +7139,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "coin-memo__v002__2026-05-31_17-11.pdf",
-      "size": "304 KB",
+      "size": "303 KB",
       "priorVersions": [
         {
           "version": "001",
@@ -7384,6 +7394,13 @@ const MEMOS = [
           3.11,
           6.56,
           7.18
+        ],
+        "historyOpMargin": [
+          39.2,
+          -84.8,
+          -5.2,
+          35.1,
+          20.0
         ],
         "historyFcf": [
           1.7,
@@ -8023,7 +8040,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "anthropic-memo__v002__2026-05-31_17-11.pdf",
-      "size": "233 KB",
+      "size": "234 KB",
       "priorVersions": [
         {
           "version": "001",
@@ -8550,7 +8567,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
-      "size": "388 KB",
+      "size": "389 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -9794,7 +9811,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "oklo-memo__v001__2026-05-31_20-03.pdf",
-      "size": "380 KB",
+      "size": "381 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -11030,7 +11047,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "achr-memo__v001__2026-05-31_20-31.pdf",
-      "size": "375 KB",
+      "size": "376 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -12266,7 +12283,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "gral-memo__v001__2026-05-31_20-47.pdf",
-      "size": "372 KB",
+      "size": "373 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -13480,7 +13497,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "txg-memo__v001__2026-05-31_21-46.pdf",
-      "size": "273 KB",
+      "size": "275 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -13699,6 +13716,13 @@ const MEMOS = [
           0.619,
           0.611,
           0.599
+        ],
+        "historyOpMargin": [
+          -10.7,
+          -32.5,
+          -42.9,
+          -31.9,
+          -9.5
         ],
         "historyFcf": [
           -0.1,
@@ -14301,7 +14325,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "lulu-memo__v001__2026-06-03_15-38.pdf",
-      "size": "273 KB",
+      "size": "291 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -14508,6 +14532,13 @@ const MEMOS = [
           9.62,
           10.59,
           11.1
+        ],
+        "historyOpMargin": [
+          21.3,
+          16.4,
+          22.2,
+          23.7,
+          19.9
         ],
         "historyFcf": [
           0.7,
@@ -15131,7 +15162,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "abnb-memo__v001__2026-06-03_15-44.pdf",
-      "size": "292 KB",
+      "size": "291 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -15330,6 +15361,13 @@ const MEMOS = [
           9.92,
           11.1,
           12.24
+        ],
+        "historyOpMargin": [
+          7.2,
+          21.5,
+          15.3,
+          23.0,
+          20.8
         ],
         "historyFcf": [
           1.6,
@@ -15954,7 +15992,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "uber-memo__v001__2026-06-03_15-44.pdf",
-      "size": "276 KB",
+      "size": "294 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -16157,6 +16195,13 @@ const MEMOS = [
           37.3,
           44.0,
           52.0
+        ],
+        "historyOpMargin": [
+          -22.0,
+          -5.7,
+          3.0,
+          6.4,
+          10.7
         ],
         "historyFcf": [
           -0.7,
@@ -16985,6 +17030,13 @@ const MEMOS = [
           1.834,
           1.868
         ],
+        "historyOpMargin": [
+          19.5,
+          7.9,
+          13.6,
+          13.4,
+          11.4
+        ],
         "historyFcf": [
           0.1,
           0.05,
@@ -17586,7 +17638,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "dash-memo__v001__2026-06-03_15-50.pdf",
-      "size": "292 KB",
+      "size": "294 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -17785,6 +17837,13 @@ const MEMOS = [
           8.6,
           10.7,
           13.72
+        ],
+        "historyOpMargin": [
+          -9.2,
+          -17.1,
+          -6.7,
+          -0.4,
+          5.3
         ],
         "historyFcf": [
           0.4,
@@ -18409,7 +18468,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "ilmn-memo__v001__2026-06-03_15-50.pdf",
-      "size": "276 KB",
+      "size": "294 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -18612,6 +18671,13 @@ const MEMOS = [
           4.5,
           4.33,
           4.34
+        ],
+        "historyOpMargin": [
+          -2.7,
+          -91.2,
+          -23.7,
+          -19.1,
+          18.6
         ],
         "historyFcf": [
           0.6,

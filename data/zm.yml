@@ -62,6 +62,12 @@ chart_reference:
   # ZM has 5 years of history on Page 3 charts (FY21-25), not 3 like JOBY
   history_years: [2021, 2022, 2023, 2024, 2025]
   history_revenue: [2.65, 4.10, 4.39, 4.53, 4.66]  # $B fiscal-year actuals
+  history_op_margin:   # %  GAAP operating income / revenue (SEC XBRL OperatingIncomeLoss)
+  - 24.9
+  - 25.9
+  - 5.6
+  - 11.6
+  - 17.4
   history_fcf: [1.466, 1.605, 1.292, 1.470, 1.706]  # $B FCF
 
 # ── Page 3 chart-aesthetic config (Phase 4: migrated out of JSX) ────────
