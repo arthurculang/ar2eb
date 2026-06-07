@@ -15,24 +15,29 @@ workflows that keep it current. **Live launch epoch: 1 July 2026** (`epoch` in
   SHY/IEF/TLT · TIP · BIL · GLD · DBC · VNQ; BTC-USD optional), from Yahoo split/div-adjusted
   closes. Deterministic — **no Claude**. `AI_EPOCH=YYYY-MM-DD` overrides the epoch for testing.
 
-## Automation (`.github/workflows/`)
+## Automation — Claude Routines (cloud), **`ROUTINES.md`** *(v037)*
 
-| Workflow | Cadence | Engine | Needs |
+| Routine | Cadence (UTC cron) | Engine | Model |
 |---|---|---|---|
-| `daily-performance.yml` | weekdays ~22:00 UTC (after US close) | **plain script** | only repo **write permission** (no secret) |
-| `monthly-rebuild.yml` | the **22nd**, ~13:00 UTC | **agentic Claude Code Action** (judgment refresh, **D2**) | Claude GitHub App + `ANTHROPIC_API_KEY` secret + write permission |
+| `ar2eb daily performance` | weekdays `0 22 * * 1-5` (after US close) | **thin** Routine — just runs `track_performance.py` + commits | Haiku |
+| `ar2eb monthly rebuild` | the **22nd** `0 13 22 * *` | **agentic** Routine (judgment refresh, **D2**) — opens a PR | Opus |
 
-**Mechanism (§15):** scheduled **GitHub Actions cron**, not the `/loop` skill (which needs a live
-session). The monthly job is agentic because the refresh benefits from judgment (re-price + flag
-theses that look stale enough to warrant human re-research); the daily job is pure arithmetic, so
-it stays a plain script. (A Claude **Routine** on the web is an equivalent alternative for the
-monthly job — zero-config but off-repo.)
+**Mechanism (§15, v037):** **Claude Code Routines** (`claude.ai/code/routines`), not GitHub Actions
+and not `/loop`. Routines run unattended on Anthropic's cloud (no machine, no live session). This
+replaced the two `.github/workflows/*.yml` jobs (deleted); `pages.yml` still deploys the site. The
+monthly job is agentic because the refresh benefits from judgment (re-price + flag stale theses);
+the daily job is deterministic arithmetic, so its Routine prompt just runs the script.
 
-## One-time setup (repo owner)
+## One-time setup (repo owner — ~2 min, **in Claude, not GitHub**)
 
-1. **Settings → Actions → General → Workflow permissions → "Read and write"** — lets both jobs commit results back. *(Required for either workflow.)*
-2. For the **monthly** (agentic) job only: install the **[Claude GitHub App](https://github.com/apps/claude)** and add the **`ANTHROPIC_API_KEY`** repo secret. *(The monthly job guards itself off until the secret exists.)*
-3. Scheduled workflows activate once merged to `main` (GitHub runs `schedule:` from the default branch).
+Create the two Routines once from **`ROUTINES.md`** (copy-paste configs). Because Routines run on
+your Claude **subscription** and commit via their own GitHub connection:
+
+- **No `ANTHROPIC_API_KEY` secret** and **no "Actions → Read and write" toggle** — both former
+  chores are gone.
+- The daily routine **no-ops until** `epoch: 2026-07-01`, so it's safe to create now.
+- At setup, confirm direct push to `main` isn't blocked by branch protection (else switch the daily
+  prompt to "open a PR"). Full steps in **`ROUTINES.md`**.
 
 ## Launch (1 July 2026)
 
