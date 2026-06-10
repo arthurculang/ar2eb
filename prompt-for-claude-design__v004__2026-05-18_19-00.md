@@ -156,7 +156,7 @@ Footer strip (every page): "NOT INVESTMENT ADVICE · Not from a registered inves
 ## About page
 
 Short and personal:
-- Who: an individual investor running a Family Office portfolio with a concentrated, single-name conviction approach.
+- Who: an individual investor running a single-operator portfolio with a concentrated, single-name conviction approach.
 - What: publishing the same probability-weighted DCF research used internally, so the work product gets pressure-tested by readership rather than sitting in private docs.
 - Method: probability-weighted DCFs with explicit scenarios (Bear / Base / Bull / Ultra Bull), Damodaran young-company framework where appropriate, and mature-company DCFs with SOTP framing where there's significant non-operating value.
 - Cadence: irregular — research is published when conviction crystallizes, not on a schedule.
