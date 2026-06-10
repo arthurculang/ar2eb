@@ -14,7 +14,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "joby-memo__v030__2026-05-31_17-10.pdf",
-      "size": "345 KB",
+      "size": "344 KB",
       "priorVersions": [
         {
           "version": "029",
@@ -1099,7 +1099,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "aur-memo__v024__2026-05-31_17-10.pdf",
-      "size": "342 KB",
+      "size": "341 KB",
       "priorVersions": [
         {
           "version": "023",
@@ -2183,7 +2183,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "lth-memo__v023__2026-05-31_17-10.pdf",
-      "size": "263 KB",
+      "size": "262 KB",
       "priorVersions": [
         {
           "version": "022",
@@ -2964,7 +2964,7 @@ const MEMOS = [
     "publishedLabel": "May 27, 2026",
     "pdf": {
       "file": "zm-memo__v024__2026-05-31_17-10.pdf",
-      "size": "297 KB",
+      "size": "296 KB",
       "priorVersions": [
         {
           "version": "023",
@@ -3889,7 +3889,7 @@ const MEMOS = [
     "publishedLabel": "May 16, 2026",
     "pdf": {
       "file": "naut-memo__v005__2026-05-31_17-10.pdf",
-      "size": "338 KB",
+      "size": "337 KB",
       "priorVersions": [
         {
           "version": "004",
@@ -4989,7 +4989,7 @@ const MEMOS = [
     "publishedLabel": "May 27, 2026",
     "pdf": {
       "file": "isrg-memo__v004__2026-05-31_17-03.pdf",
-      "size": "307 KB",
+      "size": "306 KB",
       "priorVersions": [
         {
           "version": "003",
@@ -5866,7 +5866,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "ionq-memo__v003__2026-05-31_17-03.pdf",
-      "size": "377 KB",
+      "size": "376 KB",
       "priorVersions": [
         {
           "version": "002",
@@ -7139,7 +7139,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "coin-memo__v002__2026-05-31_17-11.pdf",
-      "size": "303 KB",
+      "size": "302 KB",
       "priorVersions": [
         {
           "version": "001",
@@ -8040,7 +8040,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "anthropic-memo__v002__2026-05-31_17-11.pdf",
-      "size": "234 KB",
+      "size": "233 KB",
       "priorVersions": [
         {
           "version": "001",
@@ -8567,7 +8567,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
-      "size": "389 KB",
+      "size": "388 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -12283,7 +12283,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "gral-memo__v001__2026-05-31_20-47.pdf",
-      "size": "373 KB",
+      "size": "372 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -13497,7 +13497,7 @@ const MEMOS = [
     "publishedLabel": "May 31, 2026",
     "pdf": {
       "file": "txg-memo__v001__2026-05-31_21-46.pdf",
-      "size": "275 KB",
+      "size": "274 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -14325,7 +14325,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "lulu-memo__v001__2026-06-03_15-38.pdf",
-      "size": "291 KB",
+      "size": "290 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -15992,7 +15992,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "uber-memo__v001__2026-06-03_15-44.pdf",
-      "size": "294 KB",
+      "size": "293 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -16826,7 +16826,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "yeti-memo__v001__2026-06-03_15-50.pdf",
-      "size": "272 KB",
+      "size": "271 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -17638,7 +17638,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "dash-memo__v001__2026-06-03_15-50.pdf",
-      "size": "294 KB",
+      "size": "293 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -18468,7 +18468,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "ilmn-memo__v001__2026-06-03_15-50.pdf",
-      "size": "294 KB",
+      "size": "293 KB",
       "priorVersions": []
     },
     "metrics": {
