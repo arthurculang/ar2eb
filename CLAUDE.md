@@ -214,7 +214,20 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   anthropic excluded), `portfolio/track_performance.py` (validated live). Execution = **two Routines** —
   *ar2eb daily performance* (thin/Haiku, `0 22 * * 1-5`, just runs the script + commits) and *ar2eb monthly
   rebuild* (agentic/Opus, `0 13 22 * *`, opens a PR) — defined in the copy-paste runbook **`portfolio/ROUTINES.md`**
-  (the two `.github/workflows/*.yml` jobs were DELETED in the re-platform; `pages.yml` stays). **Owner one-time
-  setup (now ONE step, ~2 min): create the two Routines in `claude.ai/code/routines` by pasting from
-  `ROUTINES.md`** — no GitHub secret, no Actions toggle. **Remaining: the 1-July launch archive move (D3).** Live
-  epoch t₀ = 2026-07-01 (the daily routine no-ops until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
+  (the two `.github/workflows/*.yml` jobs were DELETED in the re-platform; `pages.yml` stays). **Routines
+  CREATED by Arthur (2026-06-07) — owner setup DONE**; `ROUTINES.md` stays the reference config (edit in the
+  UI → mirror there). **Remaining: the 1-July launch archive move (D3).** *D3 design fact (verified 2026-06-07):
+  the repo is PUBLIC — "truly private" therefore means a separate PRIVATE repo (owner creates; Claude's GitHub
+  scope is ar2eb-only), and the pre-launch memos remain in public git history regardless (retroactive privacy
+  would need a destructive history rewrite — don't).* Live epoch t₀ = 2026-07-01 (the daily routine no-ops
+  until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
+- **Cleanup backlog (recorded 2026-06-07 — owner actions; Claude gets 403 on remote branch deletion).**
+  (1) **Safe deletes:** the dead probe `claude/_probe-workflows`; all merged `claude/*` branches
+  (26 as of 2026-06-07 — `git branch -r --merged origin/main` is authoritative); and
+  `claude/ionq-ultra-bull-pressure-test-6GEnv` (landed via the #21 squash — `git cherry` shows its patch in
+  main). (2) **Triage before deleting — 3 branches hold UNLANDED work:** `claude/focused-ramanujan-RK6qV`
+  (forward-chart label/title clip fix w/ data-driven margins + warn-only SVG-clip guard + re-render; a real
+  renderer fix, needs a #30-style reconcile to land), `claude/happy-wozniak-S2CTV` (About page:
+  "family-office" → single-operator wording), `claude/pensive-franklin-DEtCF` (enlarge home hero logo).
+  (3) `claude/sweet-noether-80vbp` (IONQ page-6 trim) looks superseded by #27's trigger-drop fix — verify,
+  then delete. No open PRs exist for any of these (checked 2026-06-07).

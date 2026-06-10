@@ -7,6 +7,9 @@ restarts. (This replaced `daily-performance.yml` + `monthly-rebuild.yml`, delete
 in v037. The site deploy `pages.yml` stays a plain Action, triggered by the
 Routine's commit.)
 
+> **Status: both Routines created by the owner (2026-06-07).** This file remains
+> the reference config — if you change a routine in the UI, mirror the change here.
+
 ## Why Routines (and why this clears your old setup chores)
 
 Routines execute on your **Claude subscription**, so:
