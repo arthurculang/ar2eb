@@ -184,6 +184,22 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   sizes the wrap height so 5- and 6-page memos both fit. (2) Site memo re-creates the `.memo-page` print
   box (1in/0.55in white frame + white card + beige inter-page gap); that box lived only in `print.html`,
   so the site had been butting black text against the white edge. PDF untouched.
+- **Chart label clipping — Page-1 forward chart FIXED (landed 2026-06-07, salvage merge of
+  `focused-ramanujan`); other charts TRACKED.** Root cause: in a viewBox'd `<svg>`, a `pt` font-size
+  resolves to px (×96/72) and that px value is treated as *user units*, so every `pt` chart font renders
+  **1.333× larger** than its number in the plot's coordinate system; the forward chart's hardcoded right
+  margin (`widthPt−60`) clipped the right-edge series labels + title on every ticker. **Fix:**
+  `estSvgTextWidth()` + a baked Inter-SemiBold em-table in `memo_pdf.jsx` (folds in the 1.333×; ignores
+  kerning → safe upper bound); `ForwardValueChart` sizes its right margin to the widest end label (floored
+  at 60 so short-label charts stay byte-identical) and compresses the title via `textLength` only on
+  overflow. A **WARN-ONLY horizontal-clip guard** is in `render_memo_pdf.py` (flags chart `<text>` past its
+  SVG viewBox; **promote to STRICT once the tracked items clear**). **TRACKED (pre-existing, unfixed — fix
+  by sizing each margin from data via `estSvgTextWidth`):** (a) young-company **valuation caption** overflow
+  (OKLO ~+138px in a 280 box; ACHR/GRAL similar — needs wrap or YAML trim); (b) GRAL **TAM `$70B` bar
+  labels** + young TAM title poke right; (c) mature **equity-build** (`UltBear/UltBull`) + **FCF** axis
+  labels poke left ~3–5px; (d) forward-chart **`-5y` x-tick** drawn off-plot on recent IPOs (OKLO/GRAL —
+  filter xTicks to `t ≥ X_MIN`). *(The branch also tracked IONQ page-6 vertical overflow — already fixed
+  by #27's trigger drop.)*
 - **Spec §12 portfolio construction** — draft; **§15 (v036) operationalizes it** as a deterministic
   auto-weighting rule (decision D1 — rec: EV-tilted with caps) feeding the monthly rebuild.
 - **POCD underwriting lens (§14) — People-leg foundation BUILT (v036).** Framework: Ackman's *underwrite
