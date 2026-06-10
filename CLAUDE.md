@@ -237,13 +237,11 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   scope is ar2eb-only), and the pre-launch memos remain in public git history regardless (retroactive privacy
   would need a destructive history rewrite — don't).* Live epoch t₀ = 2026-07-01 (the daily routine no-ops
   until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
-- **Cleanup backlog (recorded 2026-06-07 — owner actions; Claude gets 403 on remote branch deletion).**
-  (1) **Safe deletes:** the dead probe `claude/_probe-workflows`; all merged `claude/*` branches
-  (26 as of 2026-06-07 — `git branch -r --merged origin/main` is authoritative); and
-  `claude/ionq-ultra-bull-pressure-test-6GEnv` (landed via the #21 squash — `git cherry` shows its patch in
-  main). (2) **Triage before deleting — 3 branches hold UNLANDED work:** `claude/focused-ramanujan-RK6qV`
-  (forward-chart label/title clip fix w/ data-driven margins + warn-only SVG-clip guard + re-render; a real
-  renderer fix, needs a #30-style reconcile to land), `claude/happy-wozniak-S2CTV` (About page:
-  "family-office" → single-operator wording), `claude/pensive-franklin-DEtCF` (enlarge home hero logo).
-  (3) `claude/sweet-noether-80vbp` (IONQ page-6 trim) looks superseded by #27's trigger-drop fix — verify,
-  then delete. No open PRs exist for any of these (checked 2026-06-07).
+- **Cleanup backlog (recorded 2026-06-07; updated 2026-06-10 — owner actions; Claude gets 403 on remote
+  branch deletion).** (1) **Safe deletes:** the dead probe `claude/_probe-workflows`; all merged `claude/*`
+  branches (`git branch -r --merged origin/main` is authoritative); `claude/ionq-ultra-bull-pressure-test-6GEnv`
+  (landed via the #21 squash — `git cherry` shows its patch in main); and — **NEW (landed via #33, 2026-06-10)** —
+  the three salvaged branches `claude/focused-ramanujan-RK6qV` (forward-chart clip fix), `claude/happy-wozniak-S2CTV`
+  (About wording), `claude/pensive-franklin-DEtCF` (hero logo), now contained in main. (2) **Still to triage:**
+  `claude/sweet-noether-80vbp` (IONQ page-6 trim) looks superseded by #27's trigger-drop fix — verify, then
+  delete. No open PRs exist for any of these (checked 2026-06-10).
