@@ -41,6 +41,7 @@ your Claude **subscription** and commit via their own GitHub connection:
 
 ## Launch (1 July 2026)
 
-`epoch: 2026-07-01` sets t₀ for performance. Separately, the "start fresh" step (hide pre-launch
-memos to a **private** archive — **D3** — and publish the official set) is a launch-day action,
-not automated here yet.
+`epoch: 2026-07-01` sets t₀ for performance. The "start fresh" step (hide pre-launch memos to a
+**private** archive — **D3** — and publish the official set) is push-button:
+`scripts/launch_archive.py` (`--export` then `--flip --yes`) with the day-of runbook in the root
+**`LAUNCH.md`**.

@@ -137,4 +137,5 @@ self-merge.
 commits nothing before then (the script returns no new row), so both routines
 can be created today and simply idle until launch. The "start fresh" archive
 move (hide pre-launch memos to a truly-private archive, §15 D3) is a separate
-launch-day action, not part of these routines.
+launch-day action, not part of these routines — see the root **`LAUNCH.md`**
+(`scripts/launch_archive.py`).
