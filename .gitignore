@@ -6,3 +6,7 @@ public/assets/bundle/*.map
 
 # AI 2.0 sourcing: transient diagnostic (regenerated each run)
 scripts/_models/ai2_coverage_gaps.txt
+
+# Launch-day pre-launch snapshot (pushed to the PRIVATE archive repo,
+# never committed here — spec §15 D3; see LAUNCH.md)
+archive-export/

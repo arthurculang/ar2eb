@@ -232,11 +232,19 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   rebuild* (agentic/Opus, `0 13 22 * *`, opens a PR) — defined in the copy-paste runbook **`portfolio/ROUTINES.md`**
   (the two `.github/workflows/*.yml` jobs were DELETED in the re-platform; `pages.yml` stays). **Routines
   CREATED by Arthur (2026-06-07) — owner setup DONE**; `ROUTINES.md` stays the reference config (edit in the
-  UI → mirror there). **Remaining: the 1-July launch archive move (D3).** *D3 design fact (verified 2026-06-07):
-  the repo is PUBLIC — "truly private" therefore means a separate PRIVATE repo (owner creates; Claude's GitHub
-  scope is ar2eb-only), and the pre-launch memos remain in public git history regardless (retroactive privacy
-  would need a destructive history rewrite — don't).* Live epoch t₀ = 2026-07-01 (the daily routine no-ops
-  until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
+  UI → mirror there). **Launch tooling (D3) BUILT (v038, 2026-06-11): `scripts/launch_archive.py` + root
+  `LAUNCH.md`.** Design fact that shaped it: the site renders a "Prior versions (N)" panel from
+  `stamp.prior_versions` and 41 PDF versions have accumulated in `public/memos/` — so "hide pre-launch memos"
+  = clear every `prior_versions` block + remove ALL accumulated PDFs, not just swap the current set.
+  `--export` = safe gitignored snapshot (`archive-export/`, MANIFEST w/ sha256s) for the private repo;
+  `--flip --yes` = guarded start-fresh (stamps → v+1 @ one shared launch timestamp, history cleared, 41 PDFs
+  rm'd, STRICT re-render + baseline regen, staged-not-committed; mechanical only — optional re-price happens
+  BEFORE it per LAUNCH.md). Stamp transform self-tested green on all 20 live YMLs; export exercised for real;
+  flip verified dry-run-safe. *D3 facts (verified 2026-06-07): repo is PUBLIC → truly-private = separate
+  PRIVATE repo `ar2eb-archive` (owner creates, ~1 min; Claude's GitHub scope is ar2eb-only — launch session
+  can `add_repo` it); pre-launch memos stay in public git history regardless (no rewrite — decided).*
+  **Remaining: owner creates `ar2eb-archive` (any time) + the 1-July day-of run (LAUNCH.md).** Live epoch
+  t₀ = 2026-07-01 (the daily routine no-ops until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
 - **Cleanup backlog (recorded 2026-06-07; updated 2026-06-10 — owner actions; Claude gets 403 on remote
   branch deletion).** (1) **Safe deletes:** the dead probe `claude/_probe-workflows`; all merged `claude/*`
   branches (`git branch -r --merged origin/main` is authoritative); `claude/ionq-ultra-bull-pressure-test-6GEnv`
