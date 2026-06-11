@@ -145,6 +145,16 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   (within STRICT's 2px tolerance → passes; cards/chart-bound, not prose-trimmable) — acceptable,
   like OKLO. **Wave 1 MERGED to main via PR #22** (2026-06-03): 11 new/retrofit memos (RKLB, OKLO,
   ACHR, GRAL, TXG + the 6 mature) + spec v030, live on ar2eb.com.
+- **SHAK — Shake Shack added (2026-06-11; 21st ticker, mature_company, `fcf-plus-plus-growth` /
+  `premium-consumer-brands`, tier Med — Arthur to confirm).** Authored via the reusable mature toolkit
+  (`gen_shak.py` → `gen_b1.build` → `model_mature` → scaffold → STRICT render); op-margin history GAAP
+  from SEC XBRL (CIK 1620533). **Finding: −10%** (weighted $49.2 vs spot $54.70) — *fairly-valued-to-
+  modestly-rich*: down ~55% YoY to ~13× EV/EBITDA after the Jun-2026 guide cut, net cash (p_fail≈0), but
+  thin **capital-intensive FCF** (~4% margin, capex ~11–12% funding a 4× unit runway) caps even the modal
+  case at ~fair (−9%); upside needs a Lynch-driven FCF inflection (bull +56%, ultra-bull +121%) vs a
+  capital-intensity bear (−54%). The ILMN/TXG "de-rated but not cheap" family. 6pp (no POCD yet);
+  `visual_baseline.json` **now 21 tickers**; `--check` clean; validator green. *Layout note:* page-1 5-scenario
+  overflow was the usual prose-driven trim (thesis/CQ/extras → ~LULU length), never the shared layout.
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin
