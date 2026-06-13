@@ -55,6 +55,10 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 - I'll reply `go` (adopt all), `go on rows 1 and 3`, or `go but swap row 2`.
 - **Use the table even for a single decision.** Always make an actual
   recommendation — don't just present options.
+- **Always frame next steps / open items as a recommendation**, never a neutral
+  menu — say what you'd do next and why, even when the final call is mine. A
+  labeled low-confidence rec ("Low — your conviction call") beats "here are the
+  options." End turns with a recommended next action, not an open question.
 
 ## Working style
 
