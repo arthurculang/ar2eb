@@ -46,6 +46,13 @@ python scripts/rebuild_all.py [--strict-layout]  # bump-aware full rebuild → p
 
 ## How to frame decisions for me (Arthur's standing preference)
 
+**Clear but minimal — keep the table; plain words in every cell, no padding.**
+Each cell needs exactly enough plain words to make the question and the
+recommendation clear — no more. The failure to avoid is the *cryptic* cell:
+abbreviations, undefined jargon, or `A → B` chains I have to decode. The opposite
+failure is a wall of prose. So: plain-language cells, define a term inline only
+if it's load-bearing, cut every word that isn't doing work.
+
 Present decisions as a **table** so I can approve in bulk. Columns:
 `# | Question | Recommendation | Confidence | Rationale`.
 - If every row is high-confidence, drop the Confidence column and say
@@ -55,6 +62,10 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 - I'll reply `go` (adopt all), `go on rows 1 and 3`, or `go but swap row 2`.
 - **Use the table even for a single decision.** Always make an actual
   recommendation — don't just present options.
+- **Always frame next steps / open items as a recommendation**, never a neutral
+  menu — say what you'd do next and why, even when the final call is mine. A
+  labeled low-confidence rec ("Low — your conviction call") beats "here are the
+  options." End turns with a recommended next action, not an open question.
 
 ## Working style
 
@@ -251,15 +262,14 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   rm'd, STRICT re-render + baseline regen, staged-not-committed; mechanical only — optional re-price happens
   BEFORE it per LAUNCH.md). Stamp transform self-tested green on all 20 live YMLs; export exercised for real;
   flip verified dry-run-safe. *D3 facts (verified 2026-06-07): repo is PUBLIC → truly-private = separate
-  PRIVATE repo `ar2eb-archive` (owner creates, ~1 min; Claude's GitHub scope is ar2eb-only — launch session
-  can `add_repo` it); pre-launch memos stay in public git history regardless (no rewrite — decided).*
-  **Remaining: owner creates `ar2eb-archive` (any time) + the 1-July day-of run (LAUNCH.md).** Live epoch
+  PRIVATE repo `ar2eb-archive` (Claude's GitHub scope is ar2eb-only — launch session can `add_repo` it);
+  pre-launch memos stay in public git history regardless (no rewrite — decided).* **Private repo
+  `ar2eb-archive` CREATED by Arthur (2026-06-12, via the Claude-for-Chrome runbook) — D3 prereq DONE.**
+  **Remaining: just the 1-July day-of run (LAUNCH.md).** Live epoch
   t₀ = 2026-07-01 (the daily routine no-ops until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
-- **Cleanup backlog (recorded 2026-06-07; updated 2026-06-10 — owner actions; Claude gets 403 on remote
-  branch deletion).** (1) **Safe deletes:** the dead probe `claude/_probe-workflows`; all merged `claude/*`
-  branches (`git branch -r --merged origin/main` is authoritative); `claude/ionq-ultra-bull-pressure-test-6GEnv`
-  (landed via the #21 squash — `git cherry` shows its patch in main); and — **NEW (landed via #33, 2026-06-10)** —
-  the three salvaged branches `claude/focused-ramanujan-RK6qV` (forward-chart clip fix), `claude/happy-wozniak-S2CTV`
-  (About wording), `claude/pensive-franklin-DEtCF` (hero logo), now contained in main. (2) **Still to triage:**
-  `claude/sweet-noether-80vbp` (IONQ page-6 trim) looks superseded by #27's trigger-drop fix — verify, then
-  delete. No open PRs exist for any of these (checked 2026-06-10).
+- **Cleanup backlog — DONE (2026-06-12, via the Claude-for-Chrome runbook).** All 36 stale `claude/*`
+  branches deleted (incl. `_probe-workflows`, the #21-squashed `ionq-ultra-bull-pressure-test`, the three
+  #33-salvaged branches, and the #27-superseded `sweet-noether-80vbp` — verified superseded: ionq renders
+  STRICT-clean on main). `origin` now carries **only `main` + the active feature branch** (`add-shak`, PR #36).
+  Branch deletion + the private-repo creation were the two owner-only GitHub chores Claude couldn't do from a
+  remote session (403 on branch delete; ar2eb-only scope) — both now cleared.
