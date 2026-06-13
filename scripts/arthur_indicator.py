@@ -48,6 +48,40 @@ def weighted_dcf(d: dict) -> float:
     return sum(s["probability"] * s["expected_per_share"] for s in d["scenarios"].values())
 
 
+def compute_ai(d: dict, ticker: str) -> float | None:
+    """Arthur Indicator 1.0 for one ticker, or None where it's undefined
+    (pre-revenue / gross-loss / no sourced gross-margin). Reused by
+    build_site_data (site display) and build_weights (sizing tilt)."""
+    t = ticker.lower()
+    if t in PRE_REV or t not in GM_GROWTH:
+        return None
+    m = d["market"]
+    ev = m["market_cap_billion"] + m.get("net_debt_billion", 0) - m.get("cash_billion", 0)
+    rev = latest_revenue(d)
+    gm, g = GM_GROWTH[t]
+    if not (rev > 0.01 and (gm + g) > 0):
+        return None
+    return ev / (rev * (gm + g))
+
+
+# Valuation bands — the backtest-validated zones (spec §13 / ai2_results.md):
+# GREEN <6 · YELLOW 6-10 · ORANGE 10-15 · RED >15. Lower = cheaper-for-quality.
+def ai_zone(ai: float | None) -> str:
+    if ai is None:
+        return "n/a"
+    return "green" if ai < 6 else "yellow" if ai < 10 else "orange" if ai < 15 else "red"
+
+
+# Sizing tilt by zone (spec §12). Gentle — the validated OOS rank-IC is modest
+# (~+0.05) and overlaps the DCF's cheapness, so the Indicator refines, it
+# doesn't dominate. N/A names (pre-revenue moonshots) get a neutral 1.0.
+AI_ZONE_MULT = {"green": 1.25, "yellow": 1.10, "orange": 0.90, "red": 0.70, "n/a": 1.0}
+
+
+def ai_weight_mult(ai: float | None) -> float:
+    return AI_ZONE_MULT[ai_zone(ai)]
+
+
 def main() -> int:
     rows = []
     for f in sorted(DATA.glob("*.yml")):
@@ -55,11 +89,14 @@ def main() -> int:
         if t in ("taxonomy",) or t in PRE_REV or t not in GM_GROWTH:
             continue
         d = yaml.safe_load(f.read_text())
-        spot = d["spot"]; m = d["market"]
+        spot = d["spot"]
+        ai = compute_ai(d, t)
+        if ai is None:
+            continue
+        m = d["market"]
         ev = m["market_cap_billion"] + m.get("net_debt_billion", 0) - m.get("cash_billion", 0)
         rev = latest_revenue(d)
         gm, g = GM_GROWTH[t]
-        ai = ev / (rev * (gm + g)) if rev > 0.01 and (gm + g) > 0 else float("inf")
         dcf = weighted_dcf(d); dcf_pct = (dcf / spot - 1) * 100
         rows.append((t.upper(), ev / rev, gm + g, ai, dcf_pct))
     rows.sort(key=lambda r: r[3])

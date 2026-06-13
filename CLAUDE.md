@@ -221,8 +221,18 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   labels poke left ~3–5px; (d) forward-chart **`-5y` x-tick** drawn off-plot on recent IPOs (OKLO/GRAL —
   filter xTicks to `t ≥ X_MIN`). *(The branch also tracked IONQ page-6 vertical overflow — already fixed
   by #27's trigger drop.)*
-- **Spec §12 portfolio construction** — draft; **§15 (v036) operationalizes it** as a deterministic
-  auto-weighting rule (decision D1 — rec: EV-tilted with caps) feeding the monthly rebuild.
+- **Spec §12 portfolio construction — BUILT as a three-factor rule (v039, 2026-06-13):**
+  `weight ∝ max(0, DCF upside) × conviction_mult × Arthur-Indicator_mult`, capped 15%, water-filled, cash
+  residual. **The positioning ("the magic," Arthur's framing):** two human inputs (security *selection* +
+  a per-name *conviction* tier) × one machine layer (the AI memo's prob-weighted fair value + the §13
+  Indicator), meeting at sizing. Conviction tier (High 2.0 · Med-High 1.5 · Med 1.0 · Med-Low 0.6 · Low 0.35)
+  is the only human number, conviction-neutral (sizing only). Indicator zone (green 1.25 · yellow 1.10 ·
+  orange 0.90 · red 0.70; neutral where undefined) is a *gentle* validated-OOS tilt — value is the divergences
+  (ISRG +20% DCF but red Indicator → halved). Built end-to-end: `arthur_indicator.py` (`compute_ai`/`ai_zone`),
+  `build_site_data.py` surfaces `ai:{value,zone}` into `data.js`, `build_weights.py` writes the per-name
+  breakdown to `weights.yml`, `pages.jsx` `computePortfolio` + `<PortfolioPage>` "Math" table render it
+  transparently (Upside · Conviction · Indicator → Weight); page defaults to the 15% cap so it matches the
+  tracked book. Replaced the old `upside × √P_pos` heuristic. Site-only (no PDF/baseline change).
 - **POCD underwriting lens (§14) — People-leg foundation BUILT (v036).** Framework: Ackman's *underwrite
   SpaceX like any venture investment* applied across the **whole** book via **People · Opportunity · Context ·
   Deal** (origin **Sahlman / HBS**, building on Poorvu & Stevenson; Ackman cited, didn't originate). O/C/D

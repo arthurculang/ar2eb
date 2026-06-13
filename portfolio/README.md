@@ -6,10 +6,12 @@ workflows that keep it current. **Live launch epoch: 1 July 2026** (`epoch` in
 
 ## Files
 
-- **`build_weights.py`** → **`weights.yml`** — the deterministic sizing rule (§12 / §15 **D1**):
-  `weight ∝ max(0, weighted_DCF/spot − 1)`, capped 15%/name (water-filled), cash residual,
-  long-only, **publicly-tradeable names only** (private_prevaluation excluded — no daily price).
-  Run by hand anytime: `python portfolio/build_weights.py`.
+- **`build_weights.py`** → **`weights.yml`** — the deterministic three-factor sizing rule (§12 / §15 **D1**, v039):
+  `weight ∝ max(0, weighted_DCF/spot − 1) × conviction_mult × arthur_indicator_mult`, capped 15%/name
+  (water-filled), cash residual, long-only, **publicly-tradeable names only** (private excluded — no daily price).
+  Conviction tier (High 2.0…Low 0.35) is the human input; the §13 Indicator zone (green 1.25…red 0.70, neutral
+  where undefined) is the validated-OOS overlay. `weights.yml` carries the full per-name breakdown. Run anytime:
+  `python portfolio/build_weights.py`. *(The site `<PortfolioPage>` computes the identical rule, interactively.)*
 - **`track_performance.py`** → **`performance.csv`** — daily weighted-portfolio cumulative
   return vs. a wide multi-asset benchmark sleeve (**D4**: VT · SPY/QQQ/IWM · EFA/EEM · AGG ·
   SHY/IEF/TLT · TIP · BIL · GLD · DBC · VNQ; BTC-USD optional), from Yahoo split/div-adjusted

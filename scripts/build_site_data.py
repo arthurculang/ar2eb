@@ -13,6 +13,7 @@ wired into scripts/rebuild_all.py.
 import datetime
 import json
 import os
+import sys
 from pathlib import Path
 
 import yaml
@@ -21,6 +22,9 @@ REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
 MEMOS_DIR = REPO / "public" / "memos"
 OUT = REPO / "public" / "data.js"
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from arthur_indicator import compute_ai, ai_zone  # noqa: E402  (Arthur Indicator §13, for the portfolio page)
 
 TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak"]
 # Canonical scenario order — worst to best. Each ticker subsets this list
@@ -312,6 +316,10 @@ def build_memo(ticker: str) -> dict:
                       "deltaPct": round((pw_expected / spot - 1) * 100, 1)},
         "compound": compound,
         "taxonomy": tax,
+        # Arthur Indicator (§13) — valuation zone for the portfolio sizing tilt;
+        # null where undefined (pre-revenue / gross-loss names).
+        "ai": ({"value": round(_ai, 2), "zone": ai_zone(_ai)}
+               if (_ai := compute_ai(d, ticker)) is not None else None),
         "question": collapse(d["central_question"]),
         "scenarios": scenarios,
         "methodology": (
