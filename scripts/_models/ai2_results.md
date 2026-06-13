@@ -175,7 +175,29 @@ swings −0.31…+0.56), so its per-year std (~0.2) dwarfs its mean (~0.05), and
 can't pin that mean down. Decomposition: at ~53 names/year the within-year sampling std is already
 only ~0.14, so **more names barely moves the t-stat** — the real lever is **more time periods**
 (quarterly/monthly cross-sections, ~4–12× the count), which needs a point-in-time quarterly panel
-rebuild. This is exactly why §12 uses the Indicator as a *gentle* sizing tilt, not a dominant factor.
+rebuild.
+
+## Quarterly panel — the robustness rebuild (`source_ai2_quarterly.py`)
+
+Built it: rebalance every calendar quarter-end 2009–2024 (point-in-time by SEC **filing date** —
+no look-ahead), **3,399 rows · 61 cross-sections · 103 tickers**. Because quarterly sampling of
+1y/3y forward returns **overlaps**, a naive t-stat would be inflated, so we apply a **Newey-West
+(Bartlett)** correction, and also report a non-overlapping 1-quarter horizon.
+
+```
+ horizon                         mean IC   naive t   Newey-West t   verdict
+ 1-quarter (non-overlapping)      -0.011    -0.40      -0.40 (L=0)   noise
+ 1-year     (overlap-corrected)   +0.004    +0.18      +0.13 (L=3)   noise
+ 3-year     (overlap-corrected)   +0.052    +3.17      +2.21 (L=11)  SIGNIFICANT (|t|>2)
+```
+
+**The 3-year horizon is statistically significant** — Newey-West t ≈ +2.2, and it stays **above 2
+for every Bartlett lag from 4 to 20** (+2.6 → +2.1) and is positive in **both halves** (+0.016 /
++0.087), 67% of cross-sections positive. The 1-quarter and 1-year horizons are noise. This is the
+economically correct shape: **value/cheapness is a slow signal** — it predicts 3-year returns, not
+next-quarter ones. So the Indicator is a robust *long-horizon* tilt, which is exactly how §12 uses
+it (a gentle sizing tilt, not a timing tool). *Caveat:* the universe is survivors + known busts (no
+fully-delisted names); reproduce with `python source_ai2_quarterly.py --analyze`.
 
 A 2-page visual summary of all of the above is in `public/ai2_report.jsx`
 (render: open `public/ai2_report.html` via the print harness).
