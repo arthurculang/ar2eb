@@ -407,35 +407,42 @@ function NotFoundPage() {
 }
 
 // ────────────────────────────────────────────────────────────────────
-// PORTFOLIO — cross-asset weighting per spec §12.
+// PORTFOLIO — human conviction × quantitative forecast (spec §12).
 //
-// computePortfolio implements the methodology straight from the spec:
-//   1. Hurdle: weighted_expected > spot × (1 + hurdle)
-//   2. Conviction: P_pos = Σ {scn.prob : scn.price > spot}
-//   3. Score:    upside_pct × √P_pos
-//   4. Raw w:    score / Σ score
-//   5. Cap:      iterate — if any w > MAX_POSITION, clamp it and
-//                redistribute the excess proportionally to uncapped
-//                names. Repeat until stable. Residual = cash.
+//   weight ∝ max(0, upside) × conviction_mult × indicator_mult
 //
-// Pure function; deterministic given memos + opts. Sliders re-call it.
+//   · upside           — the AI memo's probability-weighted fair value vs spot
+//                        (the quantitative forecast).
+//   · conviction_mult  — the HUMAN input: Arthur's conviction tier per name
+//                        (High 2.0 … Low 0.35). Conviction-neutral: it enters
+//                        only here at sizing, never the analysis (spec §3.5 B).
+//   · indicator_mult   — the Arthur Indicator valuation zone (§13), a gentle
+//                        validated tilt (green 1.25 … red 0.70); neutral 1.0
+//                        where the Indicator is undefined (pre-revenue names).
+//
+// Then: hurdle gate, raw = score/Σscore, iterative cap with proportional
+// redistribution, residual = cash. Mirrors portfolio/build_weights.py (the
+// tracked book); the cap/hurdle sliders make this the interactive explorer.
 // ────────────────────────────────────────────────────────────────────
+const CONVICTION_MULT = { 'High': 2.0, 'Med-High': 1.5, 'Med': 1.0, 'Med-Low': 0.6, 'Low': 0.35 };
+const AI_ZONE_MULT = { green: 1.25, yellow: 1.10, orange: 0.90, red: 0.70 };
+
 function computePortfolio(memos, opts = {}) {
-  const { maxPosition = 0.40, hurdleFrac = 0 } = opts;
+  const { maxPosition = 0.15, hurdleFrac = 0 } = opts;
 
   const rows = memos.map(m => {
     const spot = m.spot.price;
     const expected = m.expected.fair;
     const upsidePct = m.expected.deltaPct;
     const passesHurdle = upsidePct > hurdleFrac * 100;
-    // P_pos: scenario probabilities where expected price > spot.
-    const pPos = m.scenarios
-      .filter(s => s.price > spot)
-      .reduce((acc, s) => acc + s.prob / 100, 0);
-    const score = passesHurdle ? upsidePct * Math.sqrt(pPos) : 0;
+    const tier = (m.taxonomy && m.taxonomy.tier) || null;
+    const convMult = CONVICTION_MULT[tier] != null ? CONVICTION_MULT[tier] : 1.0;
+    const ai = m.ai || null;                                   // {value, zone} | null
+    const aiMult = ai ? (AI_ZONE_MULT[ai.zone] != null ? AI_ZONE_MULT[ai.zone] : 1.0) : 1.0;
+    const score = (passesHurdle && upsidePct > 0) ? upsidePct * convMult * aiMult : 0;
     return {
       ticker: m.ticker, slug: m.slug, company: m.company,
-      spot, expected, upsidePct, pPos, score,
+      spot, expected, upsidePct, tier, convMult, ai, aiMult, score,
       passesHurdle, rawWeight: 0, weight: 0,
     };
   });
@@ -501,33 +508,40 @@ function PortfolioExport({ portfolio, maxPosition, hurdleFrac }) {
     },
     rows: portfolio.rows.map(r => ({
       ticker: r.ticker, spot: r.spot, expected: r.expected,
-      upside_pct: r.upsidePct, p_pos: r.pPos, score: r.score,
+      upside_pct: r.upsidePct,
+      tier: r.tier, conviction_mult: r.convMult,
+      indicator: r.ai ? r.ai.value : null, indicator_zone: r.ai ? r.ai.zone : 'n/a',
+      indicator_mult: r.aiMult, score: r.score,
       raw_weight: r.rawWeight, weight: r.weight,
       passes_hurdle: r.passesHurdle,
     })),
   }, null, 2);
 
   const buildCsv = () => {
-    const header = 'ticker,spot,expected,upside_pct,p_pos,score,raw_weight,weight';
+    const header = 'ticker,spot,expected,upside_pct,tier,conviction_mult,indicator,indicator_zone,indicator_mult,score,raw_weight,weight';
     const lines = portfolio.rows.map(r => [
       r.ticker,
       r.spot.toFixed(2),
       r.expected.toFixed(2),
       r.upsidePct.toFixed(2),
-      r.pPos.toFixed(4),
+      r.tier || '',
+      r.convMult.toFixed(2),
+      r.ai ? r.ai.value.toFixed(2) : '',
+      r.ai ? r.ai.zone : 'n/a',
+      r.aiMult.toFixed(2),
       r.score.toFixed(2),
       r.rawWeight.toFixed(4),
       r.weight.toFixed(4),
     ].join(','));
     if (portfolio.cashWeight > 0.001) {
-      lines.push(`cash,,,,,,,${portfolio.cashWeight.toFixed(4)}`);
+      lines.push(`cash,,,,,,,,,,,${portfolio.cashWeight.toFixed(4)}`);
     }
     return header + '\n' + lines.join('\n') + '\n';
   };
 
   const buildUrl = () => {
     const params = new URLSearchParams();
-    if (Math.abs(maxPosition - 0.40) > 1e-6) params.set('cap', maxPosition.toFixed(2));
+    if (Math.abs(maxPosition - 0.15) > 1e-6) params.set('cap', maxPosition.toFixed(2));
     if (hurdleFrac > 1e-6) params.set('hurdle', hurdleFrac.toFixed(2));
     const qs = params.toString();
     return location.origin + '/#/portfolio' + (qs ? '?' + qs : '');
@@ -578,12 +592,12 @@ function PortfolioPage() {
   const initial = React.useMemo(() => {
     const hash = location.hash || '#/portfolio';
     const q = hash.indexOf('?');
-    if (q < 0) return { maxPosition: 0.40, hurdleFrac: 0 };
+    if (q < 0) return { maxPosition: 0.15, hurdleFrac: 0 };
     const params = new URLSearchParams(hash.slice(q + 1));
     const cap = parseFloat(params.get('cap'));
     const hurdle = parseFloat(params.get('hurdle'));
     return {
-      maxPosition: isFinite(cap) ? Math.max(0.10, Math.min(1.0, cap)) : 0.40,
+      maxPosition: isFinite(cap) ? Math.max(0.10, Math.min(1.0, cap)) : 0.15,
       hurdleFrac:  isFinite(hurdle) ? Math.max(0, Math.min(0.20, hurdle)) : 0,
     };
   }, []);
@@ -595,7 +609,7 @@ function PortfolioPage() {
   // non-default values so a clean #/portfolio remains a clean shareable.
   React.useEffect(() => {
     const params = new URLSearchParams();
-    if (Math.abs(maxPosition - 0.40) > 1e-6) params.set('cap', maxPosition.toFixed(2));
+    if (Math.abs(maxPosition - 0.15) > 1e-6) params.set('cap', maxPosition.toFixed(2));
     if (hurdleFrac > 1e-6) params.set('hurdle', hurdleFrac.toFixed(2));
     const qs = params.toString();
     const newHash = '#/portfolio' + (qs ? '?' + qs : '');
@@ -644,8 +658,9 @@ function PortfolioPage() {
           <div className="eyebrow">Cross-asset · Portfolio construction</div>
           <h1>Weighted portfolio</h1>
           <p className="lead">
-            Five memos. One portfolio. Conviction-weighted long, with hurdle
-            and per-name cap. Methodology:{' '}
+            One portfolio. Each position sized by three transparent factors —
+            the memo's quantitative upside, the operator's conviction, and the
+            Arthur Indicator — with a hurdle and per-name cap. Methodology:{' '}
             <a href="https://github.com/arthurculang/ar2eb/blob/main/spec/memo-spec__v023__2026-05-23_21-30.md#12-portfolio-construction-draft"
                target="_blank" rel="noopener noreferrer">spec §12</a>.
           </p>
@@ -774,9 +789,9 @@ function PortfolioPage() {
                 <th>Ticker</th>
                 <th className="num">Spot</th>
                 <th className="num">Expected</th>
-                <th className="num">Upside</th>
-                <th className="num col-secondary">P(pos)</th>
-                <th className="num col-secondary">Score</th>
+                <th className="num">Upside <span className="muted">(quant)</span></th>
+                <th className="num">Conviction <span className="muted">(human)</span></th>
+                <th className="num">Indicator <span className="muted">(quant)</span></th>
                 <th className="num col-secondary">Raw</th>
                 <th className="num">Weight</th>
               </tr>
@@ -792,9 +807,9 @@ function PortfolioPage() {
                   <td className={'num mono ' + (r.upsidePct >= 0 ? 'delta-pos' : 'delta-neg')}>
                     {fmtPct(r.upsidePct)}
                   </td>
-                  <td className="num mono col-secondary">{(r.pPos * 100).toFixed(0)}%</td>
-                  <td className="num mono col-secondary">{r.score > 0 ? r.score.toFixed(1) : '—'}</td>
-                  <td className="num mono col-secondary">{r.rawWeight > 0 ? (r.rawWeight * 100).toFixed(1) + '%' : '—'}</td>
+                  <td className="num mono">{r.tier || '—'} <span className="muted">×{r.convMult.toFixed(2)}</span></td>
+                  <td className="num mono">{r.ai ? `${r.ai.zone} ${r.ai.value.toFixed(1)}` : 'n/a'} <span className="muted">×{r.aiMult.toFixed(2)}</span></td>
+                  <td className="num mono col-secondary">{r.score > 0 ? (r.rawWeight * 100).toFixed(1) + '%' : '—'}</td>
                   <td className="num mono"><b>{r.weight > 0 ? (r.weight * 100).toFixed(1) + '%' : '—'}</b></td>
                 </tr>
               ))}
@@ -818,13 +833,15 @@ function PortfolioPage() {
             </summary>
             <div className="method-body">
               <p>
-                <span className="mono">score = upside_pct × √P_pos</span>, where{' '}
-                P_pos sums scenario probabilities for cases that beat spot.
-                The square root softens the conviction component so neither
-                upside nor conviction dominates. Names below the hurdle score
-                zero. Raw weights are <span className="mono">score / Σ score</span>;
-                the cap is applied iteratively with proportional redistribution;
-                any unallocated weight becomes cash.
+                <span className="mono">weight ∝ max(0, upside) × conviction × indicator</span>.
+                Three transparent factors: the memo's probability-weighted{' '}
+                <b>upside</b> (the machine's forecast), the operator's{' '}
+                <b>conviction</b> tier (High&nbsp;2.0 · Med-High&nbsp;1.5 · Med&nbsp;1.0 · Med-Low&nbsp;0.6 · Low&nbsp;0.35),
+                and the <b>Arthur Indicator</b> valuation zone (green&nbsp;1.25 · yellow&nbsp;1.10 · orange&nbsp;0.90 · red&nbsp;0.70;
+                neutral for pre-revenue names). Conviction is the only human number and it
+                enters only here, never the analysis. Names below the hurdle score zero; raw
+                weights are <span className="mono">score / Σ score</span>; the cap is applied
+                iteratively with proportional redistribution; the rest is cash.
               </p>
               <p>
                 Intentionally minimal — a framework to debate, not a black box.

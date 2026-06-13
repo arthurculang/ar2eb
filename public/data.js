@@ -75,6 +75,7 @@ const MEMOS = [
       "umbrella": "mobility-aerospace",
       "umbrellaName": "Mobility & Aerospace"
     },
+    "ai": null,
     "question": "Will Joby capture meaningful share of a $250B global UAM TAM by 2036 — or is today's $10B market cap pricing certainty that competitive eVTOL economics don't support?",
     "scenarios": [
       {
@@ -1160,6 +1161,7 @@ const MEMOS = [
       "umbrella": "mobility-aerospace",
       "umbrellaName": "Mobility & Aerospace"
     },
+    "ai": null,
     "question": "Will Aurora capture meaningful share of a $160B US autonomous trucking TAM by 2036 — or is today's $13B market cap pricing certainty about driverless commercial economics that hasn't been proven?",
     "scenarios": [
       {
@@ -2244,6 +2246,7 @@ const MEMOS = [
       "umbrella": "consumer-real-economy",
       "umbrellaName": "Consumer & Real Economy"
     },
+    "ai": null,
     "question": "Is Life Time a premium wellness platform with durable luxury economics — or a leveraged real estate vehicle whose positive FCF depends on perpetual $400M/year sale-leasebacks?",
     "scenarios": [
       {
@@ -3038,6 +3041,10 @@ const MEMOS = [
       "primaryThemeName": "Platform & Marketplace Tech",
       "umbrella": "digital-platforms",
       "umbrellaName": "Digital & Platforms"
+    },
+    "ai": {
+      "value": 6.39,
+      "zone": "yellow"
     },
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
     "scenarios": [
@@ -3957,6 +3964,7 @@ const MEMOS = [
       "umbrella": "life-sciences-health",
       "umbrellaName": "Life Sciences & Health"
     },
+    "ai": null,
     "question": "Will Nautilus capture meaningful share of a $130B global proteomics TAM by 2036 with its Voyager single-molecule platform — or is today's $302M market cap pricing certainty about commercial economics that the late-2026 launch and early-2027 instrument installations haven't yet earned?",
     "scenarios": [
       {
@@ -5066,6 +5074,10 @@ const MEMOS = [
       "umbrella": "life-sciences-health",
       "umbrellaName": "Life Sciences & Health"
     },
+    "ai": {
+      "value": 17.54,
+      "zone": "red"
+    },
     "question": "Is Intuitive's near-monopoly in soft-tissue surgical robotics — 11,100 da Vinci systems, ~78% recurring revenue — durable enough to outrun the first credible competitors (Hugo, Ottava, Versius) and justify a 50-60× forward P/FCF, or is this peak-platform pricing?",
     "scenarios": [
       {
@@ -5933,6 +5945,10 @@ const MEMOS = [
       "primaryThemeName": "Quantum Computing",
       "umbrella": "ai-compute",
       "umbrellaName": "AI & Compute"
+    },
+    "ai": {
+      "value": 154.42,
+      "zone": "red"
     },
     "question": "Can IonQ capture meaningful share of a $50B global quantum TAM by 2036 with its trapped-ion stack — or is the $26B market cap pricing certainty Quantinuum, Google, and neutral-atom don't support?",
     "scenarios": [
@@ -7200,6 +7216,10 @@ const MEMOS = [
       "umbrella": "digital-platforms",
       "umbrellaName": "Digital & Platforms"
     },
+    "ai": {
+      "value": 4.97,
+      "zone": "green"
+    },
     "question": "Is Coinbase the durable monopoly rail layer for crypto — $19B USDC float, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock whose Q1 2026 just printed a $394M loss?",
     "scenarios": [
       {
@@ -8080,6 +8100,7 @@ const MEMOS = [
       "umbrella": "ai-compute",
       "umbrellaName": "AI & Compute"
     },
+    "ai": null,
     "question": "Is the Series F $61.5B mark ($165/share for common) defensible against a probability-weighted distribution of exits over 1-5 years — when secondary buyers are already paying through the last mark in tender offers?",
     "scenarios": [
       {
@@ -8619,6 +8640,10 @@ const MEMOS = [
       "primaryThemeName": "Space Launch & Infrastructure",
       "umbrella": "mobility-aerospace",
       "umbrellaName": "Mobility & Aerospace"
+    },
+    "ai": {
+      "value": 196.82,
+      "zone": "red"
     },
     "question": "Does ~135x sales (~$81B on $602M FY25 revenue) price a realistic path to a space prime — or a SpaceX-scale outcome a decade of fundamentals can't reach?",
     "scenarios": [
@@ -9866,6 +9891,7 @@ const MEMOS = [
       "umbrella": "energy-power",
       "umbrellaName": "Energy & Power"
     },
+    "ai": null,
     "question": "Does ~$12B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power outcome a decade of fundamentals can't reach?",
     "scenarios": [
       {
@@ -11102,6 +11128,7 @@ const MEMOS = [
       "umbrella": "mobility-aerospace",
       "umbrellaName": "Mobility & Aerospace"
     },
+    "ai": null,
     "question": "Is Archer's ~half-Joby price enough discount to make the eVTOL-plus-defense lottery ticket positive-EV — despite being the certification follower?",
     "scenarios": [
       {
@@ -12336,6 +12363,7 @@ const MEMOS = [
       "umbrella": "life-sciences-health",
       "umbrellaName": "Life Sciences & Health"
     },
+    "ai": null,
     "question": "Does ~$3B / ~20x sales price GRAIL's multi-gate regulatory option fairly — after the NHS-Galleri miss, but with the FDA filing and Medicare law in hand?",
     "scenarios": [
       {
@@ -13550,6 +13578,10 @@ const MEMOS = [
       "umbrella": "life-sciences-health",
       "umbrellaName": "Life Sciences & Health"
     },
+    "ai": {
+      "value": 7.03,
+      "zone": "yellow"
+    },
     "question": "Is the market paying a spatial-growth multiple (~5x EV/sales) for a single-cell-decline reality — or correctly pricing a margin inflection plus spatial re-acceleration?",
     "scenarios": [
       {
@@ -14377,6 +14409,10 @@ const MEMOS = [
       "primaryThemeName": "Premium Consumer Brands",
       "umbrella": "consumer-real-economy",
       "umbrellaName": "Consumer & Real Economy"
+    },
+    "ai": {
+      "value": 1.95,
+      "zone": "green"
     },
     "question": "Is lululemon's ~60% de-rating to ~10x FCF an overshoot on a still-profitable premium brand — or the early innings of structural brand impairment (US decline, Alo/Vuori share loss)?",
     "scenarios": [
@@ -15215,6 +15251,10 @@ const MEMOS = [
       "umbrella": "consumer-real-economy",
       "umbrellaName": "Consumer & Real Economy"
     },
+    "ai": {
+      "value": 6.17,
+      "zone": "yellow"
+    },
     "question": "Does Airbnb's ~15x EV/FCF fairly price a decelerating but FCF-gushing travel network — or is the Experiences/Services optionality + international runway underpriced?",
     "scenarios": [
       {
@@ -16044,6 +16084,10 @@ const MEMOS = [
       "primaryThemeName": "Travel & Mobility Services",
       "umbrella": "consumer-real-economy",
       "umbrellaName": "Consumer & Real Economy"
+    },
+    "ai": {
+      "value": 4.72,
+      "zone": "green"
     },
     "question": "Is Uber a dominant FCF-inflecting mobility/delivery network at ~14x EV/FCF — or does autonomy commoditize its driver-marketplace and erode the network toll?",
     "scenarios": [
@@ -16879,6 +16923,10 @@ const MEMOS = [
       "umbrella": "consumer-real-economy",
       "umbrellaName": "Consumer & Real Economy"
     },
+    "ai": {
+      "value": 3.01,
+      "zone": "green"
+    },
     "question": "Is YETI a durable premium brand re-accelerating via international + new categories — or a saturated, fad-cyclical US drinkware brand whose +2% trough caps the multiple?",
     "scenarios": [
       {
@@ -17690,6 +17738,10 @@ const MEMOS = [
       "primaryThemeName": "Platform & Marketplace Tech",
       "umbrella": "digital-platforms",
       "umbrellaName": "Digital & Platforms"
+    },
+    "ai": {
+      "value": 6.48,
+      "zone": "yellow"
     },
     "question": "Is DoorDash a dominant local-commerce network whose profitability is about to inflect — or a high-SBC, ~33x-FCF delivery business punished for spending ahead of returns?",
     "scenarios": [
@@ -18520,6 +18572,10 @@ const MEMOS = [
       "primaryThemeName": "Omics & Life-Science Infrastructure",
       "umbrella": "life-sciences-health",
       "umbrellaName": "Life Sciences & Health"
+    },
+    "ai": {
+      "value": 7.08,
+      "zone": "yellow"
     },
     "question": "Is Illumina's ~80% rally + ~5x EV/sales pricing a durable clinical/NovaSeq-X re-acceleration — or is flat revenue + low-cost-entrant (Ultima/Element) + Roche erosion the reality?",
     "scenarios": [
@@ -19354,6 +19410,7 @@ const MEMOS = [
       "umbrella": "consumer-real-economy",
       "umbrellaName": "Consumer & Real Economy"
     },
+    "ai": null,
     "question": "Did Shake Shack's ~55% crash to ~13x EV/EBITDA correct an excess to fair value — or overshoot a long-runway, new-CEO unit-growth compounder?",
     "scenarios": [
       {
