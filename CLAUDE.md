@@ -46,14 +46,12 @@ python scripts/rebuild_all.py [--strict-layout]  # bump-aware full rebuild → p
 
 ## How to frame decisions for me (Arthur's standing preference)
 
-**Readability over brevity — I have to be able to understand the question.** Write
-recommendations and questions in full, plain sentences that spell out what each
-option actually *means* and what changes if I pick it. Do NOT compress decisions
-into cryptic table cells, abbreviations, undefined jargon, or `A → B` chains — a
-recommendation I can't parse is useless, not concise. The table is fine as an
-at-a-glance index, but the real explanation lives in prose next to it; when a
-choice is subtle, prefer prose over a cramped table. Define any technical term in
-line. Err on the side of over-explaining.
+**Clear but minimal — keep the table; plain words in every cell, no padding.**
+Each cell needs exactly enough plain words to make the question and the
+recommendation clear — no more. The failure to avoid is the *cryptic* cell:
+abbreviations, undefined jargon, or `A → B` chains I have to decode. The opposite
+failure is a wall of prose. So: plain-language cells, define a term inline only
+if it's load-bearing, cut every word that isn't doing work.
 
 Present decisions as a **table** so I can approve in bulk. Columns:
 `# | Question | Recommendation | Confidence | Rationale`.
