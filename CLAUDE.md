@@ -187,9 +187,18 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   STATISTICALLY SIGNIFICANT (t~1 << 2).** Key finding (durable): the value effect runs hot/cold year to
   year (yearly IC −0.31…+0.56), so per-year std ~0.2 ≫ mean ~0.05; with ~16 annual cross-sections it can't
   be pinned down. **Adding NAMES barely moves the t-stat** (within-year sampling std already ~0.14 at ~53
-  names/yr); the only real lever to "robust" is **more PERIODS** = a point-in-time *quarterly* panel rebuild
-  (~4–12× cross-sections) — a big build with uncertain payoff, NOT yet done (awaiting Arthur's go). The
-  gentle-tilt §12 design already reflects this modest significance.
+  names/yr); the only real lever to "robust" is **more PERIODS** = a point-in-time *quarterly* panel.
+- **Arthur Indicator — ROBUSTNESS ESTABLISHED at the 3-year horizon (quarterly panel, v040, 2026-06-13).**
+  Built `scripts/_models/source_ai2_quarterly.py` → committed `ai2_quarterly.csv`: rebalance every calendar
+  quarter-end 2009–2024, fundamentals point-in-time by SEC **filing date** (no look-ahead), **3,399 rows /
+  61 cross-sections / 103 tickers** (~4× the annual). Quarterly sampling of multi-year forward returns
+  overlaps → **Newey-West (Bartlett)** correction applied (+ a non-overlapping 1-quarter horizon). **Result:
+  3-year NW t ≈ +2.2 → SIGNIFICANT** (stable >2 for Bartlett lags 4–20: +2.6→+2.1; both halves positive;
+  67% of cross-sections +). 1q and 1y are noise → **value is a slow signal** (predicts 3y, not next-quarter),
+  the economically-correct shape, and exactly the §12 long-horizon-tilt use. `/indicator` page + `ai2_results.md`
+  + spec §13/changelog v040 updated; reproduce `source_ai2_quarterly.py --analyze`. *Caveat:* survivors +
+  known busts (no fully-delisted names) — possible mild survivorship inflation of levels, not the rank-IC.
+  The `--robustness` (annual) mode stays for the annual contrast.
 - **AI 2.0 backtest — DONE (2026-06-05, branch `claude/ecstatic-newton-YKOJJ`, spec v034→v035): AI 2.0
   does NOT calibrate; AI 1.0 *validated* out-of-sample.** Sourced the panel end-to-end (SEC XBRL + Yahoo
   FYE prices). A cap **sanity-gate** caught + fixed two `source_ai2_panel.py` bugs (both self-tested):

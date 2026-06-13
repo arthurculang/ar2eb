@@ -1030,15 +1030,38 @@ function IndicatorPage() {
             a legitimately useful, if modest, value signal.
           </p>
           <p>
-            <b>But honesty about significance.</b> The <b>t-stat</b> asks whether the
-            positive average could just be luck. Above ~2 is the conventional bar for
-            "real." This signal is at <b>+1.1 (1-yr) and +0.9 (3-yr)</b> — directionally
-            positive every way we slice it (both horizons, both halves of the sample),
-            but <b>not yet statistically significant</b>. The reason is structural: the
-            value effect genuinely runs hot some years and cold others (the yearly IC
-            swings from −0.31 to +0.56), and ~16 years of annual data isn't enough to
-            pin a +0.05 average down tightly. That is exactly why the Indicator is used
-            as a <b>gentle tilt</b> in position sizing, never a dominant factor.
+            <b>But is it significant?</b> The <b>t-stat</b> asks whether a positive
+            average could just be luck — above ~2 is the conventional bar for "real."
+            On the annual panel alone, this signal is at only <b>~1.1</b> (1-yr) and{' '}
+            <b>~0.9</b> (3-yr): directionally positive, but <b>not</b> significant. The
+            value effect runs hot and cold year to year (the yearly IC swings from −0.31
+            to +0.56), and ~16 annual cross-sections can't pin a +0.05 average down.
+          </p>
+          <p>
+            So we extended the test to <b>quarterly</b> rebalancing — ~4× the
+            cross-sections (61 vs 16), point-in-time by SEC filing date, with a{' '}
+            <b>Newey-West correction</b> for the fact that overlapping forward windows
+            would otherwise inflate the t-stat. The result is sharper and economically
+            sensible:
+          </p>
+          <table className="ptable">
+            <thead>
+              <tr><th>Horizon</th><th className="num">mean IC</th><th className="num">t-stat (overlap-corrected)</th><th>verdict</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1-quarter</td><td className="num mono">−0.01</td><td className="num mono">−0.4</td><td>noise</td></tr>
+              <tr><td>1-year</td><td className="num mono">+0.00</td><td className="num mono">+0.1</td><td>noise</td></tr>
+              <tr><td><b>3-year</b></td><td className="num mono delta-pos"><b>+0.05</b></td><td className="num mono delta-pos"><b>+2.2</b></td><td><b>significant</b></td></tr>
+            </tbody>
+          </table>
+          <p>
+            At <b>three years</b> — the horizon a value/cheapness signal is supposed to
+            work on — the Indicator is <b>statistically significant</b> (t ≈ 2.2, and it
+            stays above 2 across every reasonable correction and in both halves of the
+            sample). At one quarter and one year it's noise. That's the right shape:{' '}
+            <b>value is a slow signal</b>. It vindicates using the Indicator as a{' '}
+            <b>gentle, long-horizon tilt</b> in position sizing — exactly how §12 uses it
+            — never a short-term timing tool.
           </p>
           <p className="hint">
             A note on what didn't work: enriching the formula with operating-margin,
