@@ -155,7 +155,27 @@ python scripts/_models/ai2_backtest.py --select   # nested ladder (both horizons
 python scripts/_models/ai2_backtest.py --fcfm     # AI 1.0 + λ·fcfm
 python scripts/_models/ai2_backtest.py --grid     # exhaustive deterministic grid
 python scripts/_models/ai2_backtest.py --zones    # empirical valuation bands
+python scripts/_models/ai2_backtest.py --robustness  # IC significance / t-stat per horizon
 ```
+
+## Significance — is the IC robust? (`--robustness`)
+
+Positive but **not yet statistically significant**. Per-fiscal-year ICs (AI 1.0 weights), then the
+t-stat (≈ mean / (std/√N_years); >2 is the conventional "real, not luck" bar):
+
+```
+ horizon   N years   mean IC    std    t-stat   % years +
+ 1-year      17      +0.063    0.229   +1.14      59%
+ 3-year      15      +0.044    0.188   +0.90      47%
+```
+
+Directionally positive every way it's sliced (both horizons, both halves), but t-stat ~1, under 2.
+Structural, not fixable by adding names: the value effect runs hot/cold year to year (yearly IC
+swings −0.31…+0.56), so its per-year std (~0.2) dwarfs its mean (~0.05), and ~16 annual cross-sections
+can't pin that mean down. Decomposition: at ~53 names/year the within-year sampling std is already
+only ~0.14, so **more names barely moves the t-stat** — the real lever is **more time periods**
+(quarterly/monthly cross-sections, ~4–12× the count), which needs a point-in-time quarterly panel
+rebuild. This is exactly why §12 uses the Indicator as a *gentle* sizing tilt, not a dominant factor.
 
 A 2-page visual summary of all of the above is in `public/ai2_report.jsx`
 (render: open `public/ai2_report.html` via the print harness).

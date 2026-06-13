@@ -860,4 +860,218 @@ function PortfolioPage() {
 
 
 
-window.AR2EB_PAGES = { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, ThesisPage, PortfolioPage, NotFoundPage };
+// ---------- ARTHUR INDICATOR ----------
+// Dedicated page: the equation, how to read it, the live snapshot, and the
+// backtest — with an honest IC primer + significance treatment (spec §13).
+function IndicatorPage() {
+  const { MEMOS } = D();
+
+  // Backtest results of record (scripts/_models/ai2_results.md + the robustness
+  // run). Static research output — not live data. Panel: 111 tickers / 1,483
+  // name-years / FY2009–2025; rank-IC judged leave-one-year-out out-of-sample.
+  const ZONES = [
+    { z: 'green',  label: 'Green — extremely undervalued', band: '< 6',     r1: '+38%', w1: '74%', r3: '+159%', w3: '87%' },
+    { z: 'yellow', label: 'Yellow — somewhat undervalued',  band: '6 – 10',  r1: '+28%', w1: '69%', r3: '+106%', w3: '83%' },
+    { z: 'orange', label: 'Orange — somewhat overvalued',   band: '10 – 15', r1: '+31%', w1: '70%', r3: '+93%',  w3: '84%' },
+    { z: 'red',    label: 'Red — extremely overvalued',     band: '> 15',    r1: '+14%', w1: '57%', r3: '+48%',  w3: '58%' },
+  ];
+  const IC = [
+    { h: '1-year forward', ic: '+0.063', t: '+1.14', pos: '59%', n: '17' },
+    { h: '3-year forward', ic: '+0.044', t: '+0.90', pos: '47%', n: '15' },
+  ];
+
+  // Live snapshot: where today's covered names sit on the Indicator.
+  const scored = MEMOS.filter(m => m.ai).map(m => ({
+    ticker: m.ticker, slug: m.slug, value: m.ai.value, zone: m.ai.zone,
+  })).sort((a, b) => a.value - b.value);
+
+  return (
+    <>
+      <section className="portfolio-head" data-screen-label="Arthur Indicator">
+        <div className="wrap">
+          <div className="eyebrow">Valuation screen · §13</div>
+          <h1>The Arthur Indicator</h1>
+          <p className="lead">
+            One number for a hard question: <em>am I paying a fair price for the
+            quality of this business?</em> A fast valuation screen that complements
+            the full DCF — and a worked example of how to read a backtest honestly.
+          </p>
+          <div className="ai-equation">
+            <span className="mono">
+              Arthur Indicator = EV ÷ ( Revenue × ( Gross Margin + Revenue Growth ) )
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-method">
+        <div className="wrap">
+          <div className="eyebrow">How to read it</div>
+          <p>
+            The numerator is <b>enterprise value</b> — what you pay for the whole
+            business (market cap + debt − cash). The denominator scales revenue by
+            its <b>quality</b>: a "Rule of 40"-style sum of gross margin and revenue
+            growth. A dollar of revenue from an 80%-margin business growing 30% is
+            worth far more than a dollar from a 20%-margin business growing 5%, and
+            the denominator says so. So the Indicator is, in plain terms,{' '}
+            <b>EV/Revenue divided by business quality</b> — lower is cheaper-for-quality.
+          </p>
+          <p>
+            It deliberately ignores the near-term "fixable" costs a free-cash-flow DCF
+            penalises (stock comp, R&D, capex), valuing instead from a durable
+            product-economics angle. It is therefore a <b>complement</b> to the memo
+            DCF, not a replacement — and the disagreements between the two are the
+            interesting part. It is undefined for pre-revenue or gross-loss names
+            (those are the young-company DCF's domain).
+          </p>
+          <div className="ai-zones" role="img" aria-label="Valuation zones from green (cheap) to red (rich)">
+            {ZONES.map(z => (
+              <div key={z.z} className={`ai-zone-chip ai-zone-${z.z}`}>
+                <span className="t">{z.label}</span>
+                <span className="b mono">{z.band}</span>
+              </div>
+            ))}
+          </div>
+          <p className="hint">Zones anchored on META (~8.5 historically). Green = buy range · red = priced richly on revenue.</p>
+        </div>
+      </section>
+
+      <section className="portfolio-allocation">
+        <div className="wrap">
+          <div className="eyebrow">Where today's names sit</div>
+          <table className="ptable">
+            <thead>
+              <tr><th>Ticker</th><th className="num">Indicator</th><th>Zone</th></tr>
+            </thead>
+            <tbody>
+              {scored.map(s => (
+                <tr key={s.slug}>
+                  <td><a href={'#/memo/' + s.slug}>{s.ticker}</a></td>
+                  <td className="num mono">{s.value.toFixed(1)}</td>
+                  <td><span className={`ai-dot ai-zone-${s.zone}`} aria-hidden="true" /> {s.zone}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="hint">Live, computed from each memo. Pre-revenue names (the moonshots) don't appear — the Indicator is undefined there.</p>
+        </div>
+      </section>
+
+      <section className="portfolio-method">
+        <div className="wrap">
+          <div className="eyebrow">Does it actually work? — the backtest</div>
+          <p>
+            Tested on a panel of <b>111 companies</b> across <b>FY2009–2025</b>{' '}
+            (~1,500 company-years). The method: each year, rank every name from
+            cheapest to richest on the Indicator, and see whether the cheap ones
+            actually went on to outperform. Judged <b>out-of-sample</b> — the test
+            never sees the year it's scoring.
+          </p>
+          <p><b>Forward return by zone</b> (the practical read):</p>
+          <table className="ptable">
+            <thead>
+              <tr>
+                <th>Zone</th>
+                <th className="num">1-yr return</th><th className="num col-secondary">1-yr win</th>
+                <th className="num">3-yr return</th><th className="num col-secondary">3-yr win</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ZONES.map(z => (
+                <tr key={z.z}>
+                  <td><span className={`ai-dot ai-zone-${z.z}`} aria-hidden="true" /> {z.label}</td>
+                  <td className="num mono delta-pos">{z.r1}</td>
+                  <td className="num mono col-secondary">{z.w1}</td>
+                  <td className="num mono delta-pos">{z.r3}</td>
+                  <td className="num mono col-secondary">{z.w3}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="hint">
+            Green clearly best, red clearly worst — the ordering is the result. Absolute
+            returns are inflated by a 2009–25 bull sample; what's durable is that cheaper → higher forward return.
+          </p>
+        </div>
+      </section>
+
+      <section className="portfolio-method">
+        <div className="wrap">
+          <div className="eyebrow">What is IC — and is this good?</div>
+          <p>
+            The standard way to score a signal is its <b>Information Coefficient (IC)</b>:
+            the correlation between what the signal predicted and what actually
+            happened. Here it's a <b>rank</b> correlation — how well the cheapest-to-richest
+            ordering lines up with the best-to-worst forward-return ordering. It runs
+            from −1 (perfectly backwards) through 0 (noise) to +1 (perfect).
+          </p>
+          <table className="ptable">
+            <thead>
+              <tr><th>Horizon</th><th className="num">Out-of-sample IC</th><th className="num">t-stat</th><th className="num col-secondary">years positive</th><th className="num col-secondary">N years</th></tr>
+            </thead>
+            <tbody>
+              {IC.map(r => (
+                <tr key={r.h}>
+                  <td>{r.h}</td>
+                  <td className="num mono delta-pos">{r.ic}</td>
+                  <td className="num mono">{r.t}</td>
+                  <td className="num mono col-secondary">{r.pos}</td>
+                  <td className="num mono col-secondary">{r.n}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p>
+            An IC near <b>+0.05</b> means that on any single pair of names you'd call
+            the winner ~52% of the time — barely above a coin flip. The edge is small
+            per bet but compounds across many names and many years; rough industry
+            yardstick: 0.02–0.05 useful, 0.05–0.10 good, above 0.10 excellent (and
+            usually overfit if you see it in a backtest). So the <em>direction</em> is
+            a legitimately useful, if modest, value signal.
+          </p>
+          <p>
+            <b>But honesty about significance.</b> The <b>t-stat</b> asks whether the
+            positive average could just be luck. Above ~2 is the conventional bar for
+            "real." This signal is at <b>+1.1 (1-yr) and +0.9 (3-yr)</b> — directionally
+            positive every way we slice it (both horizons, both halves of the sample),
+            but <b>not yet statistically significant</b>. The reason is structural: the
+            value effect genuinely runs hot some years and cold others (the yearly IC
+            swings from −0.31 to +0.56), and ~16 years of annual data isn't enough to
+            pin a +0.05 average down tightly. That is exactly why the Indicator is used
+            as a <b>gentle tilt</b> in position sizing, never a dominant factor.
+          </p>
+          <p className="hint">
+            A note on what didn't work: enriching the formula with operating-margin,
+            FCF-margin and momentum terms ("AI 2.0", 8 tunable weights) raised in-sample
+            accuracy but <b>overfit</b> — out-of-sample it went negative. An exhaustive
+            15,625-combination search confirmed no enrichment beats the simple one-line
+            formula. So the live screen stays AI 1.0.
+          </p>
+        </div>
+      </section>
+
+      <section className="portfolio-method">
+        <div className="wrap">
+          <details>
+            <summary><span className="eyebrow">Caveats &amp; method notes</span></summary>
+            <div className="method-body">
+              <p>
+                Fundamentals-only and therefore conviction-neutral (EV, revenue,
+                margin, growth — all observable). Gross margin and forward growth are
+                research-sourced; the rest reads from each memo. The screen overlaps the
+                DCF's own cheapness signal, so its unique value is the divergences (a
+                name the DCF likes but the Indicator flags red gets trimmed in sizing).
+                Full results and the reproduction commands live in{' '}
+                <a href="https://github.com/arthurculang/ar2eb/blob/main/scripts/_models/ai2_results.md"
+                   target="_blank" rel="noopener noreferrer">ai2_results.md</a>;
+                methodology in spec §13.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+    </>
+  );
+}
+
+window.AR2EB_PAGES = { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, ThesisPage, PortfolioPage, IndicatorPage, NotFoundPage };

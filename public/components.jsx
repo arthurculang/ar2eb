@@ -80,6 +80,7 @@ function TopBar({ route }) {
           </Link>
           <Link to="/thesis"                 className={route === '/thesis'                         ? 'active' : ''}>Thesis</Link>
           <Link to="/portfolio"              className={route === '/portfolio'                      ? 'active' : ''}>Portfolio</Link>
+          <Link to="/indicator"              className={route === '/indicator'                      ? 'active' : ''}>Indicator</Link>
           <Link to="/about"                  className={route === '/about'                          ? 'active' : ''}>About</Link>
         </nav>
       </div>
