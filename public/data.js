@@ -19301,7 +19301,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "shak-memo__v001__2026-06-11_19-58.pdf",
-      "size": "—",
+      "size": "277 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -19342,7 +19342,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med",
+      "tier": "Low",
       "themes": [
         "premium-consumer-brands"
       ],

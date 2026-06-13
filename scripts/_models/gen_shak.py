@@ -7,7 +7,7 @@ from gen_b1 import build
 
 SPEC = dict(
  ticker="SHAK", company="Shake Shack", exch="NYSE", spot=54.70, cap=2.34, sh=42.78, cash=0.314, net_debt=0.250, rev_b=1.4453,
- wl="fcf-plus-plus-growth", tier="Med", themes=["premium-consumer-brands"],
+ wl="fcf-plus-plus-growth", tier="Low", themes=["premium-consumer-brands"],
  extras=[
    "Net cash +$64M ($314M cash vs $250M 0% convert, out-of-the-money); ~42.8M fully-diluted shares",
    "Revenue $1.445B FY25 (+15%); GAAP op margin back to 4.3%; FCF +$57M (~4%); capex ~11.5% of revenue",
