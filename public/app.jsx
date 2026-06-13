@@ -2,7 +2,7 @@
 
 function App() {
   const { useRoute, TopBar, Footer } = window.AR2EB_LIB;
-  const { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, ThesisPage, PortfolioPage, NotFoundPage } = window.AR2EB_PAGES;
+  const { HomePage, CategoryPage, MemoPage, DisclaimersPage, AboutPage, ThesisPage, PortfolioPage, IndicatorPage, NotFoundPage } = window.AR2EB_PAGES;
   const route = useRoute();
 
   // Categories are dynamic — any watchlist with ≥1 memo appears in
@@ -19,6 +19,7 @@ function App() {
     else if (route === '/thesis') title = 'Thesis & Method · AR2EB';
     else if (route === '/disclaimers') title = 'Disclaimers · AR2EB';
     else if (route === '/portfolio') title = 'Portfolio · AR2EB';
+    else if (route === '/indicator') title = 'Arthur Indicator · AR2EB';
     else if (isCategory) title = CATS[catSlug].name + ' · AR2EB';
     else if (route.startsWith('/memo/')) {
       const slug = route.split('/')[2];
@@ -37,6 +38,8 @@ function App() {
     page = <MemoPage slug={route.split('/')[2]} />;
   } else if (route === '/portfolio') {
     page = <PortfolioPage />;
+  } else if (route === '/indicator') {
+    page = <IndicatorPage />;
   } else if (route === '/disclaimers') {
     page = <DisclaimersPage />;
   } else if (route === '/about') {

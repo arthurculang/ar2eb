@@ -593,6 +593,37 @@ def zones(rows):
           "\n  return), consistent with the validated rank-IC.")
 
 
+def robustness(rows):
+    """AI 1.0 IC significance: per-year Spearman ICs → mean, std, t-stat, %positive,
+    first/second-half. The t-stat is the robustness gauge (≈ mean / (std/√N_years));
+    >2 is the conventional bar for 'real, not luck'. These are the numbers the public
+    /indicator page cites."""
+    print("AI 1.0 rank-IC robustness — per-fiscal-year ICs, AI 1.0 weights (Q = gm + g).")
+    print(f"panel: {len(set(r['ticker'] for r in rows))} tickers · {len(rows)} rows\n")
+    fwdmap = {"1y": "fwd_1y", "3y": "fwd_3y"}
+    for h in ("1y", "3y"):
+        fwd = fwdmap[h]
+        ics = []
+        for fy in sorted({r["fy"] for r in rows}):
+            xs = [r for r in rows if r["fy"] == fy and np.isfinite(r.get(fwd, np.nan))]
+            a = np.array([ai(r, W_AI1) for r in xs]); fr = np.array([r[fwd] for r in xs])
+            ok = np.isfinite(a) & np.isfinite(fr)
+            if ok.sum() >= MIN_XS:
+                rho = spearman(-a[ok], fr[ok])
+                if np.isfinite(rho):
+                    ics.append((fy, rho, int(ok.sum())))
+        v = np.array([r for _, r, _ in ics]); N = len(v)
+        mean, sd = v.mean(), v.std(ddof=1)
+        t = mean / (sd / np.sqrt(N))
+        print(f"  {h} horizon — {N} yearly cross-sections (avg {np.mean([n for *_, n in ics]):.0f} names):")
+        print(f"    mean IC {mean:+.3f} · std {sd:.3f} · t-stat {t:+.2f} · "
+              f"{100*(v>0).mean():.0f}% of years positive")
+        print(f"    first half {v[:N//2].mean():+.3f} · second half {v[N//2:].mean():+.3f}")
+        print(f"    per-year: " + " ".join(f"{fy}:{r:+.2f}" for fy, r, _ in ics))
+    print("\n  read: t-stat ~1 => directionally positive but NOT statistically significant on")
+    print("  ~16 annual cross-sections; the value effect's year-to-year swing is large vs its mean.")
+
+
 def main(argv):
     if "--selftest" in argv:
         selftest(); return 0
@@ -614,6 +645,9 @@ def main(argv):
         return 0
     if "--zones" in argv:                       # empirical AI 1.0 valuation bands
         zones(rows)
+        return 0
+    if "--robustness" in argv:                  # AI 1.0 IC significance (t-stat per horizon)
+        robustness(rows)
         return 0
     horizon = "1y" if "--1y" in argv else HORIZON
     report(rows, horizon)

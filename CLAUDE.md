@@ -178,6 +178,18 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   universe (v035) — does NOT calibrate; no enrichment beats AI 1.0 out-of-sample (see next bullet).
   AI 1.0 itself is now OOS-validated on the broad universe.** N/A for pre-revenue / gross-loss names
   (the young DCF's domain).
+- **Arthur Indicator — dedicated site page LIVE (`/indicator`, 2026-06-13) + IC significance quantified.**
+  `IndicatorPage` (pages.jsx, nav link in components.jsx, route in app.jsx): equation, plain-English
+  explanation, color-coded zones, a LIVE "where today's names sit" table (from `memo.ai`), the backtest
+  zone-return + OOS-IC tables, an **IC primer**, and an **honest significance section**. New
+  `ai2_backtest.py --robustness` reports the per-year ICs + **t-stat** (reproduces the page's numbers):
+  **1y mean IC +0.063, t +1.14, 59% years+; 3y +0.044, t +0.90, 47% years+ — POSITIVE BUT NOT
+  STATISTICALLY SIGNIFICANT (t~1 << 2).** Key finding (durable): the value effect runs hot/cold year to
+  year (yearly IC −0.31…+0.56), so per-year std ~0.2 ≫ mean ~0.05; with ~16 annual cross-sections it can't
+  be pinned down. **Adding NAMES barely moves the t-stat** (within-year sampling std already ~0.14 at ~53
+  names/yr); the only real lever to "robust" is **more PERIODS** = a point-in-time *quarterly* panel rebuild
+  (~4–12× cross-sections) — a big build with uncertain payoff, NOT yet done (awaiting Arthur's go). The
+  gentle-tilt §12 design already reflects this modest significance.
 - **AI 2.0 backtest — DONE (2026-06-05, branch `claude/ecstatic-newton-YKOJJ`, spec v034→v035): AI 2.0
   does NOT calibrate; AI 1.0 *validated* out-of-sample.** Sourced the panel end-to-end (SEC XBRL + Yahoo
   FYE prices). A cap **sanity-gate** caught + fixed two `source_ai2_panel.py` bugs (both self-tested):
