@@ -4989,7 +4989,7 @@ const MEMOS = [
     "publishedLabel": "May 27, 2026",
     "pdf": {
       "file": "isrg-memo__v004__2026-05-31_17-03.pdf",
-      "size": "306 KB",
+      "size": "307 KB",
       "priorVersions": [
         {
           "version": "003",
@@ -19286,6 +19286,826 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "001",
         "footerTimestamp": "2026-06-03_15-50",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "SHAK",
+    "slug": "shak",
+    "company": "Shake Shack",
+    "exchange": "NYSE",
+    "category": "fcf-plus-plus-growth",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "shak-memo__v001__2026-06-11_19-58.pdf",
+      "size": "277 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$2.34B",
+      "shares": "43M",
+      "cash": "$314M cash, $250M net debt · Net cash +$64M ($314M cash vs $250M 0% convert, out-of-the-money); ~42.8M fully-diluted shares; Revenue $1.445B FY25 (+15%); GAAP op margin back to 4.3%; FCF +$57M (~4%); capex ~11.5% of revenue; Down ~55% YoY, near the 52-week low after the June-2026 guidance cut"
+    },
+    "spot": {
+      "price": 54.7,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 49.21,
+      "deltaPct": -10.0
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 77.11,
+        "mult": 1.41
+      },
+      {
+        "y": 10,
+        "value": 120.96,
+        "mult": 2.21
+      },
+      {
+        "y": 15,
+        "value": 189.95,
+        "mult": 3.47
+      },
+      {
+        "y": 20,
+        "value": 298.67,
+        "mult": 5.46
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "Low",
+      "themes": [
+        "premium-consumer-brands"
+      ],
+      "themeNames": [
+        "Premium Consumer Brands"
+      ],
+      "primaryTheme": "premium-consumer-brands",
+      "primaryThemeName": "Premium Consumer Brands",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "question": "Did Shake Shack's ~55% crash to ~13x EV/EBITDA correct an excess to fair value — or overshoot a long-runway, new-CEO unit-growth compounder?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 12,
+        "price": 13.04,
+        "headline": "Traffic stalls; FCF never inflects.",
+        "why": "The genuine bear: traffic is already barely positive (FY26 SSS guided +2.5-3.0%, mostly price), beef inflation just forced a margin cut, and management missed its own FY25 EBITDA. 12% weight on the runway failing to convert.",
+        "what": [
+          "The consumer cracks and the better-burger trade-down bites: same-Shack sales go negative, AUV slides off its ~$4.0M peak, and the accelerating build pace (55-60 units/yr) keeps capex ahead of operating cash. FCF margin stays stuck near 3-4% as a soft top line de-levers the restaurant P&L.",
+          "A capital-intensive restaurant that isn't compounding FCF earns a low-single-digit-growth, ~9x terminal multiple -> DCF ~$13 (-76%). Net cash sets a floor but can't offset a stalled unit machine."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 30,
+        "price": 25.0,
+        "headline": "Units grow; FCF stays thin.",
+        "why": "Share gains continue but the capital intensity + soft urban/tourism traffic keep FCF suppressed. 30% as the plausible 'grows but doesn't convert' path, given the guidance cut and the FY25 miss.",
+        "what": [
+          "Units keep opening but same-Shack sales stay low-single-digit and price-led, while heavy growth capex (~11-12% of revenue) holds FCF margin near 5%. The unit runway is real but the cash conversion isn't — revenue compounds ~7% to ~$2.0B at a still-thin ~5.5% FCF margin.",
+          "DCF ~$25 (-54%) — a capital-hungry grower whose free cash flow lags its revenue is worth well below today's price; the market's discount is warranted if FCF doesn't inflect."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 33,
+        "price": 49.56,
+        "headline": "Runway continues; FCF grinds to 8%.",
+        "why": "Requires the unit runway to continue and FCF to improve as builds scale — consistent with management's plan and the build-cost reduction, but not a step-change. 33% as the central, near-fair outcome.",
+        "what": [
+          "The modal path: company-operated units keep compounding low-double-digit toward the 1,500 target, SSS runs low-single-digit, and FCF margin grinds from ~4% toward ~8% as growth capex moderates against a larger base. Revenue compounds ~11% to ~$2.4B.",
+          "DCF ~$50 (-9%) — roughly fair. A 4x unit runway is genuinely valuable, but at ~8% terminal FCF margin and a ~14x multiple the modal case only recovers to about today's price; the crash corrected the prior excess rather than overshooting it."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 18,
+        "price": 85.23,
+        "headline": "Lynch delivers; FCF inflects to ~11%.",
+        "why": "Lynch's Wingstop record (elite unit-growth/digital/franchise compounder) plus the build-cost cut make a genuine FCF inflection credible. ~18% weight on the operational turnaround landing.",
+        "what": [
+          "Rob Lynch runs the Wingstop playbook: drive-thru/format expansion enlarges the addressable real estate, digital throughput and operational discipline lift restaurant margins, and FCF margin inflects toward ~11% as build cost stays below $2.0M. Revenue compounds ~13% to ~$2.7B.",
+          "DCF ~$85 (+56%) - if the unit runway converts to real free cash flow, the de-rated entry re-rates with the fundamentals; this is the core of the bull."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 7,
+        "price": 120.7,
+        "headline": "Wingstop-style compounder; FCF machine.",
+        "why": "Everything works - units AND margins AND international licensing AND a multiple re-rate, the Wingstop/Chipotle outcome under Lynch. ~7%, the long-duration tail.",
+        "what": [
+          "The full second act: company units march toward 1,500, capital-light international licensing scales the brand globally, digital/AI ('Project Catalyst') lifts throughput and margins, and Shake Shack becomes a true FCF machine at ~13% margin. Revenue compounds ~15% to ~$2.9B.",
+          "DCF ~$121 (+121%) - the brand reclaims a premium fast-casual compounder multiple; ~7% probability, the asymmetric upside the depressed entry is buying."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 30 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: June 1, 2026 close.",
+    "thesis": "Shake Shack trades at ~$2.34B (~$54.70, down ~55% YoY after a June-2026 guidance cut) — ~13x EV/EBITDA on $1.445B revenue growing ~15%, net cash, operating margin back to 4.3%, FCF positive (~$57M, ~4%). The bull is a 4x US unit runway (~373 -> 1,500), a sub-$2.0M build cost, a new CEO (Rob Lynch, ex-Wingstop); the bear is capital intensity keeping FCF thin while traffic is barely positive. The DCF asks whether the runway converts to free cash flow — the modal case lands ~fair (-9%), so the crash corrected the excess, not created a bargain.",
+    "historicalPrices": {
+      "xMin": -11.6,
+      "ipoMarker": "IPO Jan '15",
+      "points": [
+        [
+          -11.4,
+          45.0
+        ],
+        [
+          -10.9,
+          92.0
+        ],
+        [
+          -9.0,
+          38.0
+        ],
+        [
+          -7.0,
+          50.0
+        ],
+        [
+          -6.2,
+          35.0
+        ],
+        [
+          -5.0,
+          138.0
+        ],
+        [
+          -3.7,
+          38.0
+        ],
+        [
+          -2.5,
+          80.0
+        ],
+        [
+          -1.5,
+          110.0
+        ],
+        [
+          -1.2,
+          144.0
+        ],
+        [
+          -0.5,
+          90.0
+        ],
+        [
+          -0.05,
+          54.7
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 12%",
+        "body": "Traffic stalls; FCF never inflects; ~$13 (-76%)."
+      },
+      {
+        "label": "Bear 30%",
+        "body": "Units grow but FCF stays thin; ~$25 (-54%)."
+      },
+      {
+        "label": "Base 33%",
+        "body": "Runway continues; FCF grinds to 8%; ~$50 (-9%)."
+      },
+      {
+        "label": "Bull 18%",
+        "body": "Lynch delivers FCF inflection; ~$85 (+56%)."
+      },
+      {
+        "label": "Ultra Bull 7%",
+        "body": "Wingstop-style compounder; ~$121 (+121%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end late Dec · FY2025 results + Jun-2026 guidance",
+      "sources": "Sources: SEC XBRL company facts (CIK 1620533; revenue, GAAP operating income/margin, cash flow, debt), Shake Shack Q4/FY2025 + Q1 FY2026 releases (restaurant-level margin 22.6%, AUV ~$4.0M, ~373 company-operated units, ~$2.0M build cost, 1,500 US long-term target), June-2-2026 guidance cut. Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/EBITDA vs fast-casual peers (CMG/WING/CAVA/PTLO).",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          0.74,
+          0.901,
+          1.088,
+          1.253,
+          1.445
+        ],
+        "historyOpMargin": [
+          -2.1,
+          -3.0,
+          0.5,
+          0.2,
+          4.3
+        ],
+        "historyFcf": [
+          -0.043,
+          -0.066,
+          -0.014,
+          0.036,
+          0.057
+        ],
+        "historyEvRev": [
+          3.5,
+          2.5,
+          2.8,
+          4.0,
+          1.6
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Shack sales",
+        "segmentB": "Licensing",
+        "histEntSplit": [
+          0.95,
+          0.96,
+          0.96,
+          0.96,
+          0.963
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 49.21,
+        "upsidePct": -10.0
+      },
+      "market": {
+        "marketCapBillion": 2.34,
+        "sharesOutstandingMillion": 42.78,
+        "cashBillion": 0.314,
+        "netDebtBillion": 0.25
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.12,
+          "expectedPerShare": 13.04,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 3.6,
+            "wacc": 0.115
+          },
+          "dcfPath": {
+            "rev_b": 1.4453,
+            "rev_path": [
+              0.05,
+              0.04,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "op_margin": [
+              0.035,
+              0.035,
+              0.04,
+              0.04,
+              0.04
+            ],
+            "wacc_path": [
+              0.115,
+              0.115,
+              0.115,
+              0.115,
+              0.115
+            ],
+            "term_g": 0.0,
+            "fcf": [
+              0.03,
+              0.047,
+              0.057,
+              0.067,
+              0.069
+            ],
+            "cash": 0.314,
+            "net_debt": 0.25,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 46,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.027,
+              0.038,
+              0.041,
+              0.043,
+              0.04
+            ],
+            "sum_pv_fcf": 0.19,
+            "terminal_value": 0.6,
+            "pv_terminal": 0.35,
+            "op_ev": 0.54,
+            "total_equity": 0.6,
+            "dcf_per_share": 13.04
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              1.2,
+              1.0,
+              0.9,
+              0.8,
+              0.8
+            ],
+            "ev_fcf_multiple": [
+              9.0,
+              8.0,
+              8.0,
+              8.0,
+              8.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.3,
+          "expectedPerShare": 25.0,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 7.2,
+            "wacc": 0.105
+          },
+          "dcfPath": {
+            "rev_b": 1.4453,
+            "rev_path": [
+              0.09,
+              0.08,
+              0.07,
+              0.06,
+              0.06
+            ],
+            "op_margin": [
+              0.04,
+              0.045,
+              0.05,
+              0.055,
+              0.06
+            ],
+            "wacc_path": [
+              0.105,
+              0.105,
+              0.105,
+              0.105,
+              0.105
+            ],
+            "term_g": 0.015,
+            "fcf": [
+              0.063,
+              0.077,
+              0.091,
+              0.097,
+              0.113
+            ],
+            "cash": 0.314,
+            "net_debt": 0.25,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 46,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.057,
+              0.063,
+              0.067,
+              0.065,
+              0.069
+            ],
+            "sum_pv_fcf": 0.32,
+            "terminal_value": 1.27,
+            "pv_terminal": 0.77,
+            "op_ev": 1.09,
+            "total_equity": 1.15,
+            "dcf_per_share": 25.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              1.6,
+              1.5,
+              1.4,
+              1.3,
+              1.3
+            ],
+            "ev_fcf_multiple": [
+              12.0,
+              11.0,
+              11.0,
+              11.0,
+              11.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.33,
+          "expectedPerShare": 49.56,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 11.0,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 1.4453,
+            "rev_path": [
+              0.13,
+              0.12,
+              0.11,
+              0.1,
+              0.09
+            ],
+            "op_margin": [
+              0.045,
+              0.05,
+              0.06,
+              0.07,
+              0.08
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.02,
+            "fcf": [
+              0.073,
+              0.101,
+              0.132,
+              0.167,
+              0.195
+            ],
+            "cash": 0.314,
+            "net_debt": 0.25,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 45,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.067,
+              0.084,
+              0.101,
+              0.116,
+              0.124
+            ],
+            "sum_pv_fcf": 0.49,
+            "terminal_value": 2.65,
+            "pv_terminal": 1.68,
+            "op_ev": 2.17,
+            "total_equity": 2.23,
+            "dcf_per_share": 49.56
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.2,
+              2.1,
+              2.0,
+              1.9,
+              1.8
+            ],
+            "ev_fcf_multiple": [
+              15.0,
+              14.0,
+              14.0,
+              14.0,
+              14.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.18,
+          "expectedPerShare": 85.23,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 13.0,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 1.4453,
+            "rev_path": [
+              0.15,
+              0.14,
+              0.13,
+              0.12,
+              0.11
+            ],
+            "op_margin": [
+              0.05,
+              0.06,
+              0.07,
+              0.085,
+              0.1
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              0.083,
+              0.133,
+              0.182,
+              0.24,
+              0.293
+            ],
+            "cash": 0.314,
+            "net_debt": 0.25,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 44,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.076,
+              0.112,
+              0.141,
+              0.17,
+              0.19
+            ],
+            "sum_pv_fcf": 0.69,
+            "terminal_value": 4.62,
+            "pv_terminal": 3.0,
+            "op_ev": 3.69,
+            "total_equity": 3.75,
+            "dcf_per_share": 85.23
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.8,
+              2.7,
+              2.6,
+              2.5,
+              2.4
+            ],
+            "ev_fcf_multiple": [
+              17.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.07,
+          "expectedPerShare": 120.7,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 14.8,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 1.4453,
+            "rev_path": [
+              0.16,
+              0.16,
+              0.15,
+              0.14,
+              0.13
+            ],
+            "op_margin": [
+              0.05,
+              0.07,
+              0.09,
+              0.11,
+              0.12
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              0.101,
+              0.156,
+              0.224,
+              0.306,
+              0.375
+            ],
+            "cash": 0.314,
+            "net_debt": 0.25,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 43,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.093,
+              0.133,
+              0.175,
+              0.221,
+              0.249
+            ],
+            "sum_pv_fcf": 0.87,
+            "terminal_value": 6.41,
+            "pv_terminal": 4.26,
+            "op_ev": 5.13,
+            "total_equity": 5.19,
+            "dcf_per_share": 120.7
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.4,
+              3.3,
+              3.2,
+              3.1,
+              3.0
+            ],
+            "ev_fcf_multiple": [
+              19.0,
+              18.0,
+              18.0,
+              18.0,
+              18.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Premium fast-casual / 'better burger' — Shake Shack (premium brand, ~$4.0M AUV, ~373 company-operated + ~285 licensed) vs Chipotle, Wingstop, Cava, Portillo's, and the burger set (Five Guys, In-N-Out, McDonald's value); auditing a brand Power against capital intensity and a crowded field.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Sourcing/marketing leverage at $1.4B revenue and growing, but small vs McDonald's/CMG; national scale is years away."
+          },
+          "networkEconomies": {
+            "score": 0,
+            "note": "None — restaurants aren't networks; the app/loyalty is a channel, not a network effect."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the 'fine casual' better-burger disruptor; now the incumbent, with drive-thru a catch-up format, not counter-positioning."
+          },
+          "switchingCosts": {
+            "score": 0,
+            "note": "Zero — dining is promiscuous; every meal is a fresh decision."
+          },
+          "branding": {
+            "score": 3,
+            "note": "The dominant Power: a genuine premium brand (NYC heritage, ~$4.0M AUV well above QSR, pricing power) — but brand alone doesn't convert to FCF while capex is heavy."
+          },
+          "corneredResource": {
+            "score": 1,
+            "note": "Prime urban real estate + recipes/hospitality culture; valuable but not truly cornered."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Emerging under Lynch — build-cost reduction, throughput, digital ('Project Catalyst'); unproven at scale, the bull's swing factor."
+          }
+        },
+        "dominantPower": "branding",
+        "durability": "medium",
+        "rivals": [
+          {
+            "name": "Chipotle (CMG)",
+            "kind": "public",
+            "note": "Best-in-class fast-casual compounder; the margin/FCF benchmark Shake Shack is measured against.",
+            "growth": 0.06,
+            "margin": 0.17,
+            "multiple": "~18x EV/EBITDA"
+          },
+          {
+            "name": "Wingstop (WING)",
+            "kind": "public",
+            "note": "Asset-light franchise compounder (Lynch's old shop); also wobbling — Q1'26 domestic SSS -8.7%.",
+            "growth": 0.11,
+            "margin": 0.25,
+            "multiple": "~37x EV/EBITDA"
+          },
+          {
+            "name": "Cava (CAVA)",
+            "kind": "public",
+            "note": "The fast-casual growth darling; richest multiple in the set, the unit-growth comp.",
+            "growth": 0.25,
+            "margin": 0.12,
+            "multiple": "~46x EV/EBITDA"
+          },
+          {
+            "name": "Portillo's (PTLO)",
+            "kind": "public",
+            "note": "Closest size/model comp — mid-cap, capital-intensive unit growth, similar multiple.",
+            "growth": 0.12,
+            "margin": 0.1,
+            "multiple": "~14x EV/EBITDA"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "branding",
+            "who": "QSR value wars / trade-down (McDonald's, Five Guys, In-N-Out)",
+            "falsifier": "Same-Shack traffic stays negative as premium pricing loses to value in a soft consumer."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "Beef/commodity + labor inflation",
+            "falsifier": "Restaurant-level margin falls below ~21%, rolling back the recovery the build needs."
+          },
+          {
+            "vector": "process_power",
+            "who": "Cava / Wingstop / capital intensity",
+            "falsifier": "FCF turns negative again as the 55-60/yr build pace outruns operating cash."
+          }
+        ],
+        "takeaway": "Shake Shack's brand Power is genuine — a premium 'fine casual' name with ~$4.0M AUV well above QSR and real pricing power — but a brand doesn't convert to free cash flow while capex runs 11-12% of revenue to fund a 4x unit runway. The Audit: branding is durable (medium), process_power is the emerging swing factor under Lynch (build-cost cut, drive-thru, digital), and the threats are capital intensity + a soft, value-seeking consumer. The ~55% de-rate to ~13x EBITDA corrected the prior excess to roughly fair; the DCF tests whether the runway converts to FCF, and the modal case lands ~-9% — cheap-looking on the multiple, fair on the cash."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The de-rate corrected an excess, it didn't create a bargain.",
+            "body": "~13x EV/EBITDA is cheap vs CAVA (~46x) / WING (~37x) but the modal DCF is still ~-9% — thin capital-intensive FCF, not the multiple, is the constraint."
+          },
+          {
+            "label": "FCF conversion is the whole question.",
+            "body": "~$57M FCF on $1.445B revenue (~4%) while capex runs ~11-12%; the gap between 'units grow' and 'free cash flow grows' is the bull/bear fork."
+          },
+          {
+            "label": "Build cost below $2.0M is the real improvement.",
+            "body": "A ~20% build-cost cut directly lifts new-unit cash-on-cash (~$0.9M restaurant profit on <$2.0M invested) and self-funds more of the runway."
+          },
+          {
+            "label": "New CEO from an elite compounder.",
+            "body": "Rob Lynch built Wingstop into a unit-growth/digital/franchise machine; the drive-thru format + 'Project Catalyst' digital backbone are his levers here."
+          },
+          {
+            "label": "Net cash, p_fail ~0.",
+            "body": "$314M cash vs a single $250M 0% convert (OTM, due 2028) — no solvency risk; the downside is multiple/FCF, not survival."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "traffic re-accelerates above +2% (not just price/mix) · restaurant-level margin holds >=23% through beef inflation · FCF margin expands toward 8-10% · 55-60+ builds/yr at <$2.0M"
+          },
+          {
+            "label": "Bear validation",
+            "body": "same-Shack sales turn negative or traffic stays negative 2+ quarters · restaurant-level margin falls below ~21% · FCF turns negative again as capex outruns cash · another guide-vs-miss on EBITDA"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if unit growth slows below ~45 builds/yr or build cost creeps back above ~$2.2M, the runway shortens - re-rate the terminal toward a low-growth, capital-intensive restaurant multiple"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Same-Shack sales (SSS)",
+          "definition": "Comparable-base sales growth at company-operated Shacks open 24+ months; decelerating to ~+2% and increasingly price/mix, not traffic - the central bear signal."
+        },
+        {
+          "term": "Restaurant-level margin",
+          "definition": "Shack-level operating profit margin (non-GAAP, ~22.6% FY25) before corporate G&A and pre-opening - the unit-economics gauge; the build feeds it into a 4.3% company operating margin."
+        },
+        {
+          "term": "AUV",
+          "definition": "Average unit volume (~$4.0M company-operated) - the per-Shack sales base that, against build cost, sets new-unit returns."
+        },
+        {
+          "term": "Licensing",
+          "definition": "Capital-light royalty revenue (~3.7% of revenue but ~$2.2B system-wide sales) from licensed Shacks, mostly international - the brand's high-margin optionality."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~4% FY25); the mature-DCF swing factor - whether heavy growth capex lets the unit runway convert to free cash flow."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-11_19-58",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

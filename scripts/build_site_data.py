@@ -22,7 +22,7 @@ DATA = REPO / "data"
 MEMOS_DIR = REPO / "public" / "memos"
 OUT = REPO / "public" / "data.js"
 
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak"]
 # Canonical scenario order — worst to best. Each ticker subsets this list
 # based on which keys appear in scenarios.* (e.g. ZM has all five, JOBY/AUR/
 # LTH/NAUT have the standard four). The order here drives display order
