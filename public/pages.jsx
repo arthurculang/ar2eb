@@ -906,7 +906,7 @@ function IndicatorPage() {
 
       <section className="portfolio-method">
         <div className="wrap">
-          <div className="eyebrow">How to read it</div>
+          <h2 className="section-h">How to read it</h2>
           <p>
             The numerator is <b>enterprise value</b> — what you pay for the whole
             business (market cap + debt − cash). The denominator scales revenue by
@@ -938,7 +938,7 @@ function IndicatorPage() {
 
       <section className="portfolio-allocation">
         <div className="wrap">
-          <div className="eyebrow">Where today's names sit</div>
+          <h2 className="section-h">Where today's names sit</h2>
           <table className="ptable">
             <thead>
               <tr><th>Ticker</th><th className="num">Indicator</th><th>Zone</th></tr>
@@ -959,7 +959,7 @@ function IndicatorPage() {
 
       <section className="portfolio-method">
         <div className="wrap">
-          <div className="eyebrow">Does it actually work? — the backtest</div>
+          <h2 className="section-h">Does it actually work? — the backtest</h2>
           <p>
             Tested on a panel of <b>111 companies</b> across <b>FY2009–2025</b>{' '}
             (~1,500 company-years). The method: each year, rank every name from
@@ -997,7 +997,7 @@ function IndicatorPage() {
 
       <section className="portfolio-method">
         <div className="wrap">
-          <div className="eyebrow">What is IC — and is this good?</div>
+          <h2 className="section-h">What is IC — and is this good?</h2>
           <p>
             The standard way to score a signal is its <b>Information Coefficient (IC)</b>:
             the correlation between what the signal predicted and what actually
@@ -1071,6 +1071,18 @@ function IndicatorPage() {
             defense — harvested from SEC filings, not hand-picked). The edge{' '}
             <b>does not survive</b>:
           </p>
+          <div className="statrow">
+            <div className="stat">
+              <div className="fig pos">+48%</div>
+              <div className="lab">Quality-growth · 3-yr spread</div>
+              <div className="sub">t&nbsp;=&nbsp;1.9 — a real edge on the ar2eb names</div>
+            </div>
+            <div className="stat">
+              <div className="fig dim">+5.5%</div>
+              <div className="lab">Broad market · 3-yr spread</div>
+              <div className="sub">t&nbsp;=&nbsp;0.7 — a coin flip across ~600 names</div>
+            </div>
+          </div>
           <table className="ptable">
             <thead>
               <tr><th>Universe</th><th className="num">long-short 3y spread</th><th className="num">t-stat</th><th className="num col-secondary">quarters +</th></tr>
@@ -1100,7 +1112,7 @@ function IndicatorPage() {
 
       <section className="portfolio-method">
         <div className="wrap">
-          <div className="eyebrow">What's a "quality-growth compounder" — and can you know in advance?</div>
+          <h2 className="section-h">What's a "quality-growth compounder" — and can you know in advance?</h2>
           <p>
             That result leans on a slippery term, so here's an honest attempt. A
             quality-growth compounder is a business that grows revenue durably and fast,

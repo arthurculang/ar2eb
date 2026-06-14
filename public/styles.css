@@ -21,6 +21,10 @@
   --r-sm: 4px;
   --r-md: 6px;
 
+  /* spacing scale — 4px base; prefer these steps over off-scale one-offs */
+  --space-1: 4px; --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+
   --gutter: 96px;
   --gutter-sm: 24px;
 
@@ -62,8 +66,8 @@ button { font: inherit; cursor: pointer; }
 .muted { color: var(--muted); }
 
 h1, h2, h3, h4 { font-weight: 600; letter-spacing: -0.01em; margin: 0; }
-h1 { font-size: 44px; line-height: 1.1; letter-spacing: -0.02em; }
-h2 { font-size: 30px; line-height: 1.2; letter-spacing: -0.015em; }
+h1 { font-size: 42px; line-height: 1.08; letter-spacing: -0.022em; font-weight: 500; }
+h2 { font-size: 28px; line-height: 1.2; letter-spacing: -0.018em; font-weight: 500; }
 h3 { font-size: 20px; line-height: 1.3; }
 h4 { font-size: 15px; line-height: 1.35; }
 
@@ -137,10 +141,10 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   margin-bottom: 56px;
 }
 .hero-tagline {
-  font-size: 36px;
-  line-height: 1.15;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-size: 37px;
+  line-height: 1.12;
+  font-weight: 400;
+  letter-spacing: -0.025em;
   color: var(--ink);
   max-width: 920px;
   margin: 0 0 28px 0;
@@ -351,7 +355,7 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   gap: 48px;
   align-items: end;
 }
-.memo-head h1 { font-size: 56px; letter-spacing: -0.025em; line-height: 1.05; margin-bottom: 18px; }
+.memo-head h1 { font-size: 54px; font-weight: 400; letter-spacing: -0.028em; line-height: 1.05; margin-bottom: 18px; }
 .memo-head .meta {
   font-family: var(--type-mono);
   font-size: 13px;
@@ -1073,3 +1077,26 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 .ai-dot.ai-zone-red    { background: var(--neg); }
 .ai-lifecycle { margin: 6px 0 14px; padding-left: 20px; }
 .ai-lifecycle li { margin: 7px 0; line-height: 1.5; }
+
+/* ---- section heading (sentence-case) — for data-page section titles that are
+   too long for the uppercase .eyebrow micro-label ---- */
+.section-h {
+  font-size: 19px; font-weight: 600; letter-spacing: -0.012em;
+  color: var(--ink); line-height: 1.3; margin: 0 0 12px;
+}
+
+/* ---- hero stat callouts (Feltron: big light figure + quiet label) ---- */
+.statrow { display: flex; flex-wrap: wrap; gap: 16px 44px; margin: 16px 0 22px; }
+.stat { display: flex; flex-direction: column; gap: 5px; }
+.stat .fig {
+  font-size: 38px; font-weight: 400; letter-spacing: -0.02em; line-height: 1;
+  font-variant-numeric: tabular-nums; color: var(--ink);
+}
+.stat .fig.pos { color: var(--pos); }
+.stat .fig.dim { color: var(--muted); }
+.stat .lab {
+  font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--muted-2); font-family: var(--type-mono);
+}
+.stat .sub { font-size: 12.5px; color: var(--ink-2); max-width: 30ch; }
+@media (max-width: 720px) { .statrow { gap: 14px 28px; } .stat .fig { font-size: 30px; } }
