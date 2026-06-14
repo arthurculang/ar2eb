@@ -1,0 +1,612 @@
+ticker: HOOD
+company: Robinhood Markets
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 93.19
+market:
+  market_cap_billion: 82.8
+  shares_outstanding_million: 888.5
+  cash_billion: 4.26
+  net_debt_billion: 0.0
+  extras:
+  - Net cash ~$4.3B, no debt; ~888.5M shares and growing (SBC-dilutive); ~$82.8B market cap
+  - Revenue $4.473B FY25 (+49%); ~50% adj-EBITDA margin in Q1'26 ($534M); FCF positive (~$1.6B), but capital-light and cyclical
+  - Down ~27% YTD to ~$93 (52-wk $63.52-$153.86), giving back part of a ~280% 2025 rally
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med
+  themes:
+  - digital-assets-fintech-rails
+  primary_theme: digital-assets-fintech-rails
+central_question: Has Robinhood diversified beyond crypto and rates into a durable platform worth ~52x FCF — or is it still
+  a transaction broker levered to the crypto and rate cycle?
+thesis: 'Robinhood trades at ~$82.8B (~$93, down ~27% YTD after a ~280% 2025 rally) — ~52x FCF on $4.473B revenue growing
+  ~49%, ~50% adj-EBITDA margin, net cash, share count rising (SBC-dilutive). Roughly a third of revenue is rate-sensitive
+  net interest (~$40M/qtr per 25bp Fed cut) and transaction revenue is crypto/rate-cyclical (crypto -47% last quarter). The
+  DCF asks whether events/futures/options/Gold make HOOD a durable platform or it reverts to a transaction broker. The finding:
+  even the bull lands -40%, and only the ultra-bull (-14%) approaches fair — the price embeds a hyper-growth platform the modal
+  case (-59%) doesn''t deliver.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 1.8
+  - 1.4
+  - 1.9
+  - 3.0
+  - 4.47
+  history_op_margin:
+  - -50
+  - -20
+  - 5
+  - 22
+  - 31
+  history_fcf:
+  - -0.9
+  - -0.9
+  - 1.2
+  - -0.2
+  - 1.6
+  history_ev_rev:
+  - 20
+  - 12
+  - 15
+  - 20
+  - 18
+page3_chart_config:
+  segment_a: Transaction
+  segment_b: Net interest + other
+  hist_ent_split:
+  - 0.75
+  - 0.55
+  - 0.5
+  - 0.55
+  - 0.58
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q1 FY2026 results (Apr-28)
+  sources: 'Sources: SEC XBRL company facts (CIK 1783879), Robinhood Q1 FY2026 release (net revenue $1.07B/+15%, transaction
+    $623M incl event contracts $147M/+320% and crypto $134M/-47%, net interest $359M/+24%, adj EBITDA $534M/~50% margin, 27.4M
+    funded customers). CAVEAT: XBRL tags no clean broker operating margin, so the op-margin history uses net-margin estimates.
+    Revenue is a growth path off FY25; FCF = revenue x FCF margin; Gordon terminal. Multiples vs Coinbase / Schwab / IBKR.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.15
+    expected_per_share: 20.05
+    headline: Crypto rolls over; rate cuts bite.
+    narrative:
+    - 'The cyclical case turns: crypto extends its slide (transaction already -47% there last quarter), the Fed cuts and ~$40M/qtr
+      per 25bp drains net interest, and the events/futures push doesn''t scale fast enough to offset. Revenue dips then crawls
+      back low-single-digit as a transaction broker, not a platform.'
+    - A cyclical broker whose growth has reversed earns a low-teens FCF multiple -> DCF ~$20 (-79%). Net cash sets a floor,
+      but at ~52x FCF entry the de-rate to a cyclical multiple is most of the loss.
+    probability_rationale: 'The genuine bear: crypto revenue already fell 47% in a single quarter and ~32% of revenue rides
+      net interest into a cutting cycle. 15% weight on the cycle turning before diversification matures.'
+    dcf_metrics:
+      cagr_5y: 2.5
+      wacc: 0.115
+    dcf_path:
+      rev_b: 4.473
+      rev_path:
+      - -0.05
+      - 0.03
+      - 0.05
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.2
+      - 0.22
+      - 0.24
+      - 0.25
+      - 0.26
+      wacc_path:
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      term_g: 0.03
+      fcf:
+      - 0.935
+      - 1.05
+      - 1.195
+      - 1.303
+      - 1.419
+      cash: 4.26
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 920
+      distress: 0.0
+      pv_fcf:
+      - 0.839
+      - 0.845
+      - 0.862
+      - 0.843
+      - 0.823
+      sum_pv_fcf: 4.21
+      terminal_value: 17.19
+      pv_terminal: 9.98
+      op_ev: 14.19
+      total_equity: 18.45
+      dcf_per_share: 20.05
+    chart_data:
+      ev_rev_multiple:
+      - 8.0
+      - 6.0
+      - 5.0
+      - 4.5
+      - 4.0
+      ev_fcf_multiple:
+      - 14.0
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 28.47
+    headline: Diversifies slowly; growth normalizes.
+    narrative:
+    - Events/options/Gold grow but the crypto and rate cyclicality keep the top line lumpy; revenue normalizes to mid-single-digit
+      as the hyper-growth fades and the SBC-driven share count keeps creeping. Robinhood is a good diversified broker, not
+      a compounding platform.
+    - DCF ~$28 (-69%) - a ~30%-FCF-margin broker growing mid-single-digit is worth a mid-teens multiple, well below ~52x;
+      the market's premium unwinds as growth normalizes.
+    probability_rationale: Diversification is real but partial, and the rate/crypto cycle caps the multiple. 27% as the plausible
+      'diversifies but stays cyclical' path given the Q1 mix shift.
+    dcf_metrics:
+      cagr_5y: 5.8
+      wacc: 0.105
+    dcf_path:
+      rev_b: 4.473
+      rev_path:
+      - 0.05
+      - 0.06
+      - 0.06
+      - 0.06
+      - 0.06
+      op_margin:
+      - 0.26
+      - 0.28
+      - 0.29
+      - 0.3
+      - 0.3
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.03
+      fcf:
+      - 1.315
+      - 1.493
+      - 1.636
+      - 1.79
+      - 1.897
+      cash: 4.26
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 915
+      distress: 0.0
+      pv_fcf:
+      - 1.19
+      - 1.223
+      - 1.213
+      - 1.201
+      - 1.151
+      sum_pv_fcf: 5.98
+      terminal_value: 26.05
+      pv_terminal: 15.81
+      op_ev: 21.79
+      total_equity: 26.05
+      dcf_per_share: 28.47
+    chart_data:
+      ev_rev_multiple:
+      - 12.0
+      - 10.0
+      - 9.0
+      - 8.0
+      - 7.5
+      ev_fcf_multiple:
+      - 16.0
+      - 15.0
+      - 14.0
+      - 14.0
+      - 14.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.32
+    expected_per_share: 38.25
+    headline: Diversification holds; growth decelerates to high-single.
+    narrative:
+    - 'The modal path: event contracts (+320% off a small base), futures (MIAXdx JV), options, Gold (4.3M subs/+36%) and banking/credit
+      broaden the mix enough to keep ~30%+ FCF margins and double-digit-fading-to-high-single growth, but the crypto and rate
+      cyclicality stays in the model. Revenue compounds toward ~$7B.'
+    - DCF ~$38 (-59%) - even crediting durable diversification at a ~16x FCF terminal, the modal case sits well below spot;
+      ~52x FCF prices a faster, less cyclical platform than the base delivers.
+    probability_rationale: Requires the new lines to keep scaling while crypto/rates stay choppy - consistent with the Q1
+      diversification but not a step-change. 32% as the central outcome.
+    dcf_metrics:
+      cagr_5y: 9.8
+      wacc: 0.1
+    dcf_path:
+      rev_b: 4.473
+      rev_path:
+      - 0.14
+      - 0.11
+      - 0.09
+      - 0.08
+      - 0.07
+      op_margin:
+      - 0.28
+      - 0.29
+      - 0.3
+      - 0.31
+      - 0.31
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.035
+      fcf:
+      - 1.53
+      - 1.755
+      - 1.974
+      - 2.199
+      - 2.353
+      cash: 4.26
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 910
+      distress: 0.0
+      pv_fcf:
+      - 1.391
+      - 1.45
+      - 1.483
+      - 1.502
+      - 1.461
+      sum_pv_fcf: 7.29
+      terminal_value: 37.47
+      pv_terminal: 23.26
+      op_ev: 30.55
+      total_equity: 34.81
+      dcf_per_share: 38.25
+    chart_data:
+      ev_rev_multiple:
+      - 15.0
+      - 13.0
+      - 11.0
+      - 10.0
+      - 9.5
+      ev_fcf_multiple:
+      - 18.0
+      - 16.0
+      - 16.0
+      - 16.0
+      - 16.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.18
+    expected_per_share: 56.02
+    headline: Platform scales; events/futures/Gold compound.
+    narrative:
+    - 'The diversification thesis lands: prediction markets, futures, options and the Gold/banking ecosystem compound into
+      a durable platform, deposit growth (~20%) cushions rate cuts, and Robinhood out-grows the cycle at a ~35% FCF margin.
+      Revenue compounds high-teens early then high-single as the base scales.'
+    - DCF ~$56 (-40%) - a genuine platform re-rate, yet still below spot; even crediting the bull case, ~52x FCF starts above
+      where durable diversification gets you.
+    probability_rationale: Robinhood's ~50% EBITDA margin, 36% Gold-sub growth and 320% event-contract growth make a platform
+      path credible. ~18% weight on the diversification compounding.
+    dcf_metrics:
+      cagr_5y: 14.5
+      wacc: 0.095
+    dcf_path:
+      rev_b: 4.473
+      rev_path:
+      - 0.22
+      - 0.17
+      - 0.13
+      - 0.11
+      - 0.1
+      op_margin:
+      - 0.3
+      - 0.31
+      - 0.32
+      - 0.33
+      - 0.33
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.04
+      fcf:
+      - 1.746
+      - 2.107
+      - 2.453
+      - 2.803
+      - 3.083
+      cash: 4.26
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 900
+      distress: 0.0
+      pv_fcf:
+      - 1.595
+      - 1.757
+      - 1.868
+      - 1.95
+      - 1.958
+      sum_pv_fcf: 9.13
+      terminal_value: 58.3
+      pv_terminal: 37.03
+      op_ev: 46.16
+      total_equity: 50.42
+      dcf_per_share: 56.02
+    chart_data:
+      ev_rev_multiple:
+      - 18.0
+      - 15.0
+      - 13.0
+      - 12.0
+      - 11.0
+      ev_fcf_multiple:
+      - 20.0
+      - 18.0
+      - 18.0
+      - 18.0
+      - 18.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 80.38
+    headline: Full fintech platform; crypto cyclicality fades.
+    narrative:
+    - 'The full second act: prediction markets become a major venue, futures/tokenized assets/Bitstamp scale globally, banking/credit
+      deepen the relationship, and the revenue base diversifies enough that the crypto/rate cycle stops driving it - a true
+      fintech platform at a high-30s% FCF margin. Revenue compounds ~20%+ early.'
+    - DCF ~$80 (-14%) - the only path that approaches today's price, and it requires nearly everything to work; ~8% probability,
+      the asymmetric outcome the rich entry is paying for.
+    probability_rationale: Everything compounds - events AND futures AND Gold AND banking AND a multiple that holds - the
+      durable-platform outcome. ~8%, the long-duration tail.
+    dcf_metrics:
+      cagr_5y: 19.4
+      wacc: 0.09
+    dcf_path:
+      rev_b: 4.473
+      rev_path:
+      - 0.3
+      - 0.24
+      - 0.18
+      - 0.14
+      - 0.12
+      op_margin:
+      - 0.31
+      - 0.33
+      - 0.34
+      - 0.35
+      - 0.36
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.04
+      fcf:
+      - 1.919
+      - 2.523
+      - 3.063
+      - 3.589
+      - 4.128
+      cash: 4.26
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 890
+      distress: 0.0
+      pv_fcf:
+      - 1.761
+      - 2.124
+      - 2.365
+      - 2.543
+      - 2.683
+      sum_pv_fcf: 11.48
+      terminal_value: 85.86
+      pv_terminal: 55.8
+      op_ev: 67.28
+      total_equity: 71.54
+      dcf_per_share: 80.38
+    chart_data:
+      ev_rev_multiple:
+      - 20.0
+      - 17.0
+      - 15.0
+      - 13.0
+      - 12.0
+      ev_fcf_multiple:
+      - 22.0
+      - 20.0
+      - 20.0
+      - 20.0
+      - 20.0
+historical_prices:
+  ipo_marker: IPO Jul '21
+  x_min: -5.0
+  points:
+  - - -5.0
+    - 38
+  - - -4.5
+    - 8
+  - - -3.5
+    - 9
+  - - -2.5
+    - 12
+  - - -1.5
+    - 25
+  - - -0.8
+    - 60
+  - - -0.3
+    - 154
+  - - -0.1
+    - 100
+  - - -0.05
+    - 93.19
+weighting_rationale:
+- label: Ultra Bear 15%
+  body: Crypto rolls over; rate cuts bite; ~$20 (-79%).
+- label: Bear 27%
+  body: Diversifies slowly; growth normalizes; ~$28 (-69%).
+- label: Base 32%
+  body: Diversification holds; growth fades to high-single; ~$38 (-59%).
+- label: Bull 18%
+  body: Platform scales on events/futures/Gold; ~$56 (-40%).
+- label: Ultra Bull 8%
+  body: Full fintech platform; cyclicality fades; ~$80 (-14%).
+appendix:
+  pushback:
+  - label: ~52x FCF prices a platform, not a broker.
+    body: ~50% EBITDA margin and +49% revenue look elite, but ~32% is rate-sensitive net interest and transaction is crypto-cyclical
+      - even the bull is -40%.
+  - label: Crypto -47% is the cyclicality, in the open.
+    body: Crypto transaction revenue fell 47% in a quarter; the offset (events +320%, options) proves the top line still swings
+      with the trade.
+  - label: Rate cuts are a mechanical drag.
+    body: ~$40M/qtr per 25bp Fed cut flows straight out of net interest - a multi-hundred-million headwind the multiple doesn't
+      discount.
+  - label: Diversification is genuine - but partial and early.
+    body: Events, MIAXdx futures, Gold (4.3M/+36%), banking/credit and Bitstamp broaden the mix, yet on small bases against
+      the crypto/rate core.
+  - label: SBC dilutes the per-share math.
+    body: Share count (~888.5M) keeps rising on stock comp; growth must outrun dilution to lift per-share value.
+  triggers:
+  - label: Bull validation
+    body: events + futures + options scale to a steady >25% of transaction revenue  ·  net-interest share falls below ~25%
+      ·  deposit/Gold growth holds >20%  ·  FCF margin holds >=33% through a rate-cut cycle
+  - label: Bear validation
+    body: crypto transaction revenue keeps falling and isn't offset  ·  net interest drops materially on Fed cuts  ·  revenue
+      growth normalizes below ~10%  ·  regulatory action on tokenized equities or prediction markets
+  - label: Reframe needed
+    body: if crypto + net interest stay the swing factors and the new lines plateau, re-rate the terminal toward a cyclical-broker
+      multiple (Coinbase/IBKR), not a platform
+glossary:
+- term: Transaction revenue
+  definition: Order-flow / transaction-based revenue from options, crypto, equities and event contracts (~$623M Q1, options
+    the largest); the crypto-cyclical core diversification is meant to de-risk.
+- term: Net interest revenue
+  definition: Interest earned on margin loans, cash and securities (~$359M Q1, ~32% of revenue); the rate-sensitive line losing
+    ~$40M/qtr per 25bp Fed cut - the swing factor against the cycle.
+- term: Event contracts / prediction markets
+  definition: Yes/no contracts on real-world outcomes (~$147M Q1, +320%); the fastest-growing new line and the centerpiece
+    of the diversification thesis.
+- term: Gold subscription
+  definition: Robinhood's ~$5/mo membership (4.3M subs, +36%) bundling higher rates, margin and perks; recurring, counter-cyclical
+    revenue that deepens the customer relationship.
+- term: FCF margin
+  definition: Free cash flow / revenue (~30-38% across scenarios); the mature-DCF lever - whether diversification keeps the
+    high margin durable as the crypto/rate cycle turns.
+competitive:
+  arena: Online brokerage / fintech rails - Robinhood (mobile-first broker, 27.4M funded customers, Gold ecosystem) vs Coinbase,
+    Charles Schwab, Interactive Brokers, Webull, Cash App; auditing a nascent platform/branding Power against a weak moat
+    and the transaction/rate cycle.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 3
+      note: 'The dominant Power: 27.4M funded customers and ~$4.5B revenue spread fixed tech/clearing/compliance cost - real
+        operating leverage (~50% EBITDA margin), the source of the FCF.'
+    network_economies:
+      score: 1
+      note: Nascent - prediction markets and a social/referral layer have mild network character, but trading isn't a true
+        two-sided network.
+    counter_positioning:
+      score: 2
+      note: Was the zero-commission disruptor that forced incumbents to drop fees; now the model is copied (Schwab/Fidelity
+        went free), so the edge has eroded to brand/UX.
+    switching_costs:
+      score: 1
+      note: Weak - ACATS portability and low balances make accounts easy to move; this is the moat's central hole.
+    branding:
+      score: 2
+      note: A genuine consumer-fintech brand (the app + Gold ecosystem, default broker for a younger cohort), but young and
+        not yet pricing power.
+    cornered_resource:
+      score: 0
+      note: None - no proprietary asset; order flow, rates and crypto venues are all contestable.
+    process_power:
+      score: 1
+      note: Fast product velocity (events, futures, banking, Bitstamp shipped quickly), but execution speed, not a structural
+        process moat.
+  dominant_power: scale_economies
+  durability: medium
+  rivals:
+  - name: Coinbase (COIN)
+    kind: public
+    note: The crypto-cycle benchmark; the comp for Robinhood's crypto-revenue swings and exchange economics.
+    growth: 0.4
+    margin: 0.3
+    multiple: ~25x EV/FCF
+  - name: Charles Schwab (SCHW)
+    kind: public
+    note: Scale incumbent that went commission-free; far larger asset base, the brokerage the disruption targeted.
+    growth: 0.1
+    margin: 0.4
+    multiple: ~18x P/E
+  - name: Interactive Brokers (IBKR)
+    kind: public
+    note: High-margin, rate-levered broker; the closest cyclical-broker multiple comp.
+    growth: 0.2
+    margin: 0.65
+    multiple: ~22x P/E
+  - name: Webull / Cash App
+    kind: public
+    note: Mobile-first challengers competing for the same younger cohort; switching-cost pressure on the franchise.
+    growth: 0.2
+    margin: null
+    multiple: varies
+  threats:
+  - vector: scale_economies
+    who: The transaction + rate cycle
+    falsifier: Crypto transaction revenue keeps falling and Fed cuts drain net interest, so revenue growth normalizes below
+      ~10% before the new lines scale.
+  - vector: switching_costs
+    who: Bigger brokers + mobile challengers (Schwab/Fidelity/Webull/Cash App)
+    falsifier: Funded-customer or deposit growth stalls as low switching costs let balances migrate to incumbents or rivals.
+  - vector: branding
+    who: Regulatory action (EU tokenized equities, prediction markets)
+    falsifier: A regulatory curb on tokenized equities or event contracts caps the diversification lines the bull depends
+      on.
+  takeaway: 'Robinhood''s Power is scale_economies - 27.4M funded customers and ~$4.5B revenue across fixed tech/clearing
+    cost throw off a ~50% EBITDA margin and the FCF that supports the case - plus a nascent network/branding edge in the app
+    and Gold ecosystem. But the moat is weak: switching costs are near zero (ACATS portability), the zero-commission counter-positioning
+    has been copied, and the live threat is the transaction/rate cycle itself (crypto -47% last quarter, ~$40M/qtr per 25bp
+    rate cut) plus bigger brokers. The Audit: the scale Power is medium-durable, diversification is genuine but early, and
+    that squares with a DCF where ~52x FCF prices a durable platform the modal case (-59%) doesn''t deliver - only the ultra-bull
+    (-14%), where the cyclicality truly fades, approaches today''s price.'
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-06-14_23-03
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: '001'
+  pdf_timestamp: 2026-06-14_23-03

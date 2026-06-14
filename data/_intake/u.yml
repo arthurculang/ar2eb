@@ -1,0 +1,556 @@
+# U — Unity Software (NYSE) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: U
+company: Unity Software
+exchange: NYSE
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 27.24
+market:
+  market_cap_billion: 11.79
+  shares_outstanding_million: 433.0
+  cash_billion: 2.06
+  net_debt_billion: 2.24
+  extras:
+  - ~$2.06B cash vs ~$2.24B convertibles (net debt ~$0.18B); 2026 Notes mature Nov-2026; ~433M shares, up ~56% over 5 years
+    on SBC
+  - Revenue $1.85B FY25 (+3%); GAAP op margin still -25.9% (loss); FCF +$0.4B (~22%) but ex-SBC FCF far thinner; adj EBITDA
+    ~27%
+  - ~$27, down ~58% YTD (52-wk ~$15-$52); IPO'd Sep-2020 at $52 — a GAAP-loss turnaround, the most speculative name in this
+    batch
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Low
+  themes:
+  - creator-design-software
+  - ai-compute
+  primary_theme: creator-design-software
+central_question: Does Vector turn Unity into a durable, profitable ad-and-engine platform — or does engine-share erosion
+  plus SBC dilution and the convertibles keep GAAP losses and a wide downside?
+thesis: 'Unity trades at ~$11.8B (~$27, down ~58% YTD) — ~30x FCF on $1.85B revenue, but the FCF flatters a still-GAAP-loss
+  business: shares are up ~56% in five years on stock comp and ~$2.2B convertibles (Nov-2026) sit against ~$2.15B cash. This
+  is a turnaround bet on the Vector AI ad engine (Grow +24%, Vector +80%, ~$1B ARR targeted), not an FCF compounder. The base
+  case models a lower ex-SBC FCF margin AND a growing share count, so dilution is the core mechanism. The distribution is
+  wide and the weighted finding is -56.5% — the modal case is still well below spot.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 1.1
+  - 1.4
+  - 2.2
+  - 1.8
+  - 1.85
+  history_op_margin:
+  - -47.9
+  - -63.4
+  - -38.1
+  - -41.6
+  - -25.9
+  history_fcf:
+  - -0.2
+  - -0.1
+  - 0.2
+  - 0.3
+  - 0.4
+  history_ev_rev:
+  - 25
+  - 8
+  - 7
+  - 6
+  - 6.5
+page3_chart_config:
+  segment_a: Grow (ads / Vector)
+  segment_b: Create (subscriptions)
+  hist_ent_split:
+  - 0.55
+  - 0.6
+  - 0.65
+  - 0.68
+  - 0.69
+  chart6_title: Equity build (Op EV − net debt)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q1 FY2026 (May-2026) results
+  sources: 'Sources: SEC XBRL company facts (CIK 1810806; revenue, GAAP operating income/margin, cash flow, debt), Unity Q1
+    FY2026 release (revenue $508M +17%; Grow/ads $352M +24% with Vector +80%; GAAP net loss -$347M incl a $279M ironSource
+    Ads impairment; adj EBITDA ~27%; FCF +$66M; cash ~$2.15B; ~$2.2B convertibles). Revenue modeled as a growth-rate path
+    off FY25; FCF = revenue x FCF margin (ex-SBC, with a growing share count); Gordon terminal at scenario WACC. EV/sales
+    & EV/FCF vs AppLovin, Epic (Unreal), Godot.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.18
+    expected_per_share: 2.02
+    headline: Vector stalls; engine bleeds; dilution wins.
+    narrative:
+    - Vector's +80% comp lapses and ad share reverts toward AppLovin; Create keeps losing developers to Godot/Unreal post-runtime-fee,
+      revenue barely grows, and GAAP stays in the red. Ex-SBC free cash flow stays near 2-8% while the share count keeps climbing
+      past 520M on stock comp.
+    - A barely-growing, loss-making engine whose cash flow is consumed by dilution earns a distressed ~10x terminal multiple
+      net of the convertibles -> DCF ~$2.02 (-93%). The ~$2.2B notes maturing into ~$2.15B cash leave no cushion if FCF doesn't
+      inflect.
+    probability_rationale: 'The genuine bear: GAAP losses persist, the ironSource sunset forced a $279M charge, soft gaming
+      demand pressures Grow, and SBC has diluted holders ~56% in five years. 18% on Vector failing and dilution dominating.'
+    dcf_metrics:
+      cagr_5y: 1.3
+      wacc: 0.125
+    dcf_path:
+      rev_b: 1.85
+      rev_path:
+      - -0.05
+      - 0.0
+      - 0.03
+      - 0.04
+      - 0.05
+      op_margin:
+      - -0.1
+      - -0.05
+      - 0.0
+      - 0.02
+      - 0.04
+      wacc_path:
+      - 0.125
+      - 0.125
+      - 0.125
+      - 0.125
+      - 0.125
+      term_g: 0.025
+      fcf:
+      - 0.035
+      - 0.07
+      - 0.109
+      - 0.132
+      - 0.158
+      cash: 2.06
+      net_debt: 2.24
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 520
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.5
+      - 2.2
+      - 2.0
+      - 1.8
+      ev_fcf_multiple:
+      - 11.0
+      - 11.0
+      - 10.0
+      - 10.0
+      - 10.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.28
+    expected_per_share: 5.44
+    headline: Modest growth; FCF thin; GAAP barely turns.
+    narrative:
+    - Vector grows but decelerates as easy comps lapse and Create stabilizes only slowly; revenue compounds mid-single-digit,
+      GAAP operating margin crosses zero late, and ex-SBC FCF margin grinds to ~12% against a still-rising ~500M share count.
+    - DCF ~$5.44 (-80%) — a low-growth software business whose free cash flow is split with dilutive stock comp, net of the
+      convertibles, is worth a fraction of today's price; the market is pricing more of the turnaround than this path delivers.
+    probability_rationale: Vector helps but doesn't compound, engine-share leakage caps Create, and dilution keeps per-share
+      cash flow thin. 28% as the plausible 'turns but doesn't compound' path given the GAAP losses and competition.
+    dcf_metrics:
+      cagr_5y: 6.6
+      wacc: 0.115
+    dcf_path:
+      rev_b: 1.85
+      rev_path:
+      - 0.06
+      - 0.07
+      - 0.07
+      - 0.07
+      - 0.06
+      op_margin:
+      - -0.02
+      - 0.03
+      - 0.07
+      - 0.09
+      - 0.11
+      wacc_path:
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      term_g: 0.03
+      fcf:
+      - 0.118
+      - 0.168
+      - 0.225
+      - 0.264
+      - 0.306
+      cash: 2.06
+      net_debt: 2.24
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 500
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.5
+      - 3.2
+      - 3.0
+      - 2.8
+      ev_fcf_multiple:
+      - 13.0
+      - 12.0
+      - 12.0
+      - 12.0
+      - 12.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.3
+    expected_per_share: 10.78
+    headline: Vector scales; GAAP turns; dilution persists.
+    narrative:
+    - 'The modal path: Vector hits ~$1B ARR and keeps gaining mobile-ad share, Grow compounds low-double-digit, Create stabilizes,
+      and GAAP operating margin turns positive and climbs toward ~15%. But ex-SBC FCF margin only reaches ~16% and the share
+      count still drifts up toward ~485M, so per-share cash flow lags the headline.'
+    - DCF ~$10.78 (-60%) — even with Vector working and GAAP turning, a ~14x terminal multiple on diluted, ex-SBC free cash
+      flow net of the ~$2.2B convertibles lands well below spot. The modal case still says the price embeds more than the
+      fundamentals underwrite.
+    probability_rationale: Requires Vector to sustain ad-share gains and GAAP to inflect while dilution continues - consistent
+      with the +80% Vector growth and the ~$1B ARR target, but not a full re-rate. 30% as the central, still-negative outcome.
+    dcf_metrics:
+      cagr_5y: 11.6
+      wacc: 0.11
+    dcf_path:
+      rev_b: 1.85
+      rev_path:
+      - 0.15
+      - 0.13
+      - 0.11
+      - 0.1
+      - 0.09
+      op_margin:
+      - 0.0
+      - 0.05
+      - 0.1
+      - 0.13
+      - 0.15
+      wacc_path:
+      - 0.11
+      - 0.11
+      - 0.11
+      - 0.11
+      - 0.11
+      term_g: 0.035
+      fcf:
+      - 0.17
+      - 0.264
+      - 0.347
+      - 0.44
+      - 0.512
+      cash: 2.06
+      net_debt: 2.24
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 485
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 5.0
+      - 4.5
+      - 4.2
+      - 4.0
+      - 3.8
+      ev_fcf_multiple:
+      - 15.0
+      - 14.0
+      - 14.0
+      - 14.0
+      - 14.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.16
+    expected_per_share: 22.13
+    headline: Vector beyond gaming; margins inflect.
+    narrative:
+    - Vector sustains its ad-share gains and extends beyond mobile gaming into new verticals, adj EBITDA margin keeps expanding
+      past 27%, ex-SBC FCF margin inflects toward ~22%, and SBC moderates so the share count nearly stabilizes near ~470M.
+      Revenue compounds high-teens.
+    - DCF ~$22.13 (-19%) - if Vector becomes a durable cross-vertical ad platform and dilution slows, the de-rated entry closes
+      most of the gap to spot; this is the core of the bull.
+    probability_rationale: Vector durably wins ad share beyond gaming while cost discipline lifts margins and curbs dilution
+      - the turnaround landing. ~16% weight on Vector becoming a real platform.
+    dcf_metrics:
+      cagr_5y: 16.9
+      wacc: 0.105
+    dcf_path:
+      rev_b: 1.85
+      rev_path:
+      - 0.22
+      - 0.2
+      - 0.17
+      - 0.14
+      - 0.12
+      op_margin:
+      - 0.03
+      - 0.09
+      - 0.14
+      - 0.18
+      - 0.21
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.04
+      fcf:
+      - 0.226
+      - 0.379
+      - 0.539
+      - 0.722
+      - 0.89
+      cash: 2.06
+      net_debt: 2.24
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 470
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 6.0
+      - 5.5
+      - 5.2
+      - 5.0
+      - 4.8
+      ev_fcf_multiple:
+      - 17.0
+      - 16.0
+      - 16.0
+      - 16.0
+      - 16.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 39.96
+    headline: Vector platform; GAAP-profitable compounder.
+    narrative:
+    - 'The full second act: Vector becomes the default cross-vertical AI ad engine, Create re-accelerates on AI tooling, Unity
+      turns durably GAAP-profitable, ex-SBC FCF margin reaches high-20s%, and dilution falls away so per-share cash flow finally
+      compounds. Revenue compounds ~20%+.'
+    - DCF ~$39.96 (+47%) - the only path that prices Unity as a profitable platform compounder rather than a dilutive turnaround;
+      ~8% probability, the asymmetric upside the depressed, speculative entry is buying.
+    probability_rationale: Everything works - Vector platformizes AND Create recovers AND GAAP profitability AND dilution
+      stops. ~8%, the long-duration tail on a name with a very wide distribution.
+    dcf_metrics:
+      cagr_5y: 22.9
+      wacc: 0.1
+    dcf_path:
+      rev_b: 1.85
+      rev_path:
+      - 0.3
+      - 0.27
+      - 0.23
+      - 0.19
+      - 0.16
+      op_margin:
+      - 0.05
+      - 0.12
+      - 0.18
+      - 0.23
+      - 0.26
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.04
+      fcf:
+      - 0.289
+      - 0.489
+      - 0.789
+      - 1.118
+      - 1.452
+      cash: 2.06
+      net_debt: 2.24
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 460
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 7.0
+      - 6.5
+      - 6.2
+      - 6.0
+      - 5.8
+      ev_fcf_multiple:
+      - 18.0
+      - 17.0
+      - 17.0
+      - 17.0
+      - 17.0
+historical_prices:
+  ipo_marker: IPO Sep '20
+  x_min: -5.7
+  points:
+  - - -5.7
+    - 52
+  - - -5.0
+    - 180
+  - - -4.2
+    - 120
+  - - -3.3
+    - 30
+  - - -2.5
+    - 40
+  - - -1.5
+    - 25
+  - - -0.8
+    - 52
+  - - -0.3
+    - 18
+  - - -0.1
+    - 27
+  - - -0.05
+    - 27.24
+weighting_rationale:
+- label: Ultra Bear 18%
+  body: Vector stalls; engine bleeds; dilution wins; ~$2.02 (-93%).
+- label: Bear 28%
+  body: Modest growth; FCF thin; GAAP barely turns; ~$5.44 (-80%).
+- label: Base 30%
+  body: Vector scales; GAAP turns; dilution persists; ~$10.78 (-60%).
+- label: Bull 16%
+  body: Vector beyond gaming; margins inflect; ~$22.13 (-19%).
+- label: Ultra Bull 8%
+  body: Vector platform; profitable compounder; ~$39.96 (+47%).
+appendix:
+  pushback:
+  - label: FCF is positive — why a -60% modal case?
+    body: ~$0.4B FCF (~22%) is real but flatters a GAAP-loss business; the base models the ex-SBC margin AND a growing share
+      count, so per-share cash flow is far thinner than the headline.
+  - label: Vector is genuinely re-accelerating ads.
+    body: Grow +24% with Vector +80% toward ~$1B ARR at high mobile-ad share is the bull; the question is whether it sustains
+      past easy comps and beyond gaming, vs AppLovin.
+  - label: The convertibles are a 2026 cliff.
+    body: ~$2.2B notes mature Nov-2026 against ~$2.15B cash — manageable but it removes the buffer if the turnaround slips,
+      and it's why the bear net-of-debt bridge bites.
+  - label: Dilution is the core bear mechanism.
+    body: Shares are up ~56% in five years on SBC; even with revenue growing, per-share value leaks unless stock comp moderates
+      — modeled as a rising share count in every scenario.
+  - label: Engine share is being contested.
+    body: Godot + Unreal gained share post-runtime-fee (since cancelled); the Create franchise and the ad-data install base
+      are the cornered resource being actively attacked.
+  triggers:
+  - label: Bull validation
+    body: Vector ARR tracks toward ~$1B and Grow stays >20%  ·  ad share holds/expands beyond mobile gaming  ·  GAAP operating
+      margin turns positive  ·  SBC/share count flattens
+  - label: Bear validation
+    body: Vector growth decelerates sharply as comps lapse  ·  Create seats/engine share keep leaking to Godot/Unreal  ·  GAAP
+      stays loss-making  ·  share count keeps climbing >5%/yr
+  - label: Reframe needed
+    body: if the convertibles refinance on bad terms or Vector reverts to a low-growth engine losing developers, re-rate the
+      terminal toward a dilutive, loss-making software multiple net of debt
+glossary:
+- term: Vector
+  definition: Unity's AI-driven ad engine inside Grow - the turnaround driver, +80% YoY toward ~$1B ARR; whether it sustains
+    ad-share gains beyond mobile gaming is the swing factor.
+- term: Grow vs Create
+  definition: Grow = the ads/monetization business (~69% of revenue, incl Vector); Create = the engine subscriptions (Unity
+    Pro/Enterprise) - the two reported segments.
+- term: Runtime fee
+  definition: The 2023 per-install engine pricing (since cancelled) that triggered a developer backlash and gave Godot/Unreal
+    an opening - the Create-franchise bear catalyst.
+- term: Convertible notes
+  definition: ~$2.2B of convertible debt (2026 Notes due Nov-2026) sitting against ~$2.15B cash; the maturity that shapes
+    the equity bridge net of debt.
+- term: FCF margin (ex-SBC)
+  definition: Free cash flow / revenue net of stock-based comp, against a growing share count; the mature-DCF lever - here
+    dilution, not GAAP FCF, drives the per-share result.
+competitive:
+  arena: Game-engine + mobile-ad monetization — Unity (the dominant cross-platform engine + the Grow/Vector ad network) vs
+    Epic's Unreal and open-source Godot in engines, and AppLovin in mobile ads; auditing a contested branding + cornered-resource
+    Power against an active developer exodus and dilution.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 2
+      note: Ad-network and engine scale at ~$1.85B revenue give data/cost leverage, but Unity is loss-making and sub-scale
+        vs AppLovin in ads.
+    network_economies:
+      score: 2
+      note: Developers + ad demand share the same install base (more games -> more ad inventory -> better targeting), but
+        the loop is weaker than a pure marketplace and contested.
+    counter_positioning:
+      score: 1
+      note: Was the accessible cross-platform engine vs costly bespoke tooling; now the incumbent, with Godot the low-cost
+        counter-position after the runtime fee.
+    switching_costs:
+      score: 2
+      note: Real once a game is built in Unity, but weak at the franchise edge - the runtime fee proved developers will start
+        new projects on Godot/Unreal.
+    branding:
+      score: 3
+      note: 'The dominant Power: Unity is the default name in mobile/indie game development with a huge install base - but
+        the brand was damaged by the runtime fee and is eroding.'
+    cornered_resource:
+      score: 3
+      note: The ad-data + engine install base feeding Vector is the genuine asset - nascent and being actively contested,
+        the swing of the whole audit.
+    process_power:
+      score: 1
+      note: AI/ML ad-optimization (Vector) is improving fast but unproven and chased by AppLovin; not yet a durable process
+        advantage.
+  dominant_power: cornered_resource
+  durability: low
+  rivals:
+  - name: AppLovin (APP)
+    kind: public
+    note: The mobile-ad-monetization benchmark Vector is chasing; far more profitable, the Grow/Vector comp.
+    growth: 0.3
+    margin: 0.55
+    multiple: ~30x EV/FCF
+  - name: Epic Games (Unreal)
+    kind: private
+    note: Owns Unreal + Fortnite; the high-end engine taking AAA/console share, the Create threat.
+    growth:
+    margin:
+    multiple: private
+  - name: Godot
+    kind: private
+    note: Free, open-source engine that gained indie share post-runtime-fee; the low-cost counter-position.
+    growth:
+    margin:
+    multiple: open-source
+  - name: Roblox (RBLX)
+    kind: public
+    note: Adjacent UGC platform competing for creators/developers and ad dollars.
+    growth: 0.25
+    margin:
+    multiple: ~loss-making
+  threats:
+  - vector: cornered_resource
+    who: AppLovin (ad share) + comp lapse
+    falsifier: Vector growth decelerates sharply as easy comps roll off and ad share stops expanding beyond mobile gaming.
+  - vector: branding
+    who: Godot + Unreal (engine share)
+    falsifier: Create seats/engine share keep leaking as developers start new projects off Unity post-runtime-fee.
+  - vector: switching_costs
+    who: Developer exodus / dilution
+    falsifier: GAAP stays loss-making and the share count keeps climbing >5%/yr, so per-share value leaks even as revenue
+      grows.
+  takeaway: 'Unity''s most genuine Power is a cornered resource - the ad-data plus engine install base feeding Vector - but
+    it is nascent and being actively contested, and the branding leg (the default game engine) was damaged by the runtime
+    fee and is eroding to Godot and Unreal. The Audit: the dominant Power is the contested ad-data/install-base resource (durability
+    low), the live threats are engine-share erosion plus a developer exodus and ~56%-in-five-years SBC dilution, and ~$2.2B
+    convertibles mature into ~$2.15B cash in Nov-2026. That squares with the DCF: even with Vector working and GAAP turning,
+    the base lands -60% because the model carries a thinner ex-SBC margin and a growing share count - this is the most speculative
+    name in the batch, a turnaround bet on Vector with a very wide -93% to +47% distribution, not an FCF compounder.'
