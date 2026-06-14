@@ -22,7 +22,7 @@
 # discovery.
 # ═════════════════════════════════════════════════════════════════════════════
 
-# ── Watchlists (4) ─────────────────────────────────────────────────────────
+# ── Watchlists (5) ─────────────────────────────────────────────────────────
 # The four columns of the Helm Matrix; each becomes a category slug on the
 # site. The site only surfaces a category in nav/home once a memo populates
 # it (built dynamically by build_site_data.py — no empty categories shown).
@@ -70,6 +70,16 @@ watchlists:
       (EquityZen, Forge), syndicates (AngelList), or direct allocations.
       Valued from last-round mark + scenario exits rather than a live price.
     allows_tiers: false
+
+  fun-speculative:
+    name: "Fun / Speculative"
+    short: "Fun/Spec"
+    sub: "Smaller speculative positions — high variance, sized small."
+    long: >
+      Speculative or just-plain-fun positions held in small size: high-variance
+      names where the thesis is more lottery-ticket than core holding. Tiered by
+      conviction like the rest, but never sized as an anchor position.
+    allows_tiers: true
 
 # ── Conviction tiers (5) ───────────────────────────────────────────────────
 tiers:

@@ -3030,7 +3030,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med",
+      "tier": "Med-Low",
       "themes": [
         "platform-marketplace-tech"
       ],
@@ -9877,7 +9877,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-High",
+      "tier": "Low",
       "themes": [
         "nuclear-fission-smr",
         "ai-compute"
@@ -11114,7 +11114,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med",
+      "tier": "Low",
       "themes": [
         "evtol-advanced-air-mobility",
         "defense-tech-autonomous-defense"
@@ -13566,7 +13566,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med",
+      "tier": "Med-High",
       "themes": [
         "omics-life-science-infrastructure"
       ],
@@ -14398,7 +14398,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med-High",
+      "tier": "High",
       "themes": [
         "premium-consumer-brands"
       ],
@@ -15239,7 +15239,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med-High",
+      "tier": "High",
       "themes": [
         "travel-mobility-services"
       ],
@@ -16911,7 +16911,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med",
+      "tier": "High",
       "themes": [
         "premium-consumer-brands"
       ],
@@ -17727,7 +17727,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med-High",
+      "tier": "High",
       "themes": [
         "platform-marketplace-tech"
       ],
@@ -18561,7 +18561,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med",
+      "tier": "High",
       "themes": [
         "omics-life-science-infrastructure"
       ],
@@ -19351,7 +19351,7 @@ const MEMOS = [
     "slug": "shak",
     "company": "Shake Shack",
     "exchange": "NYSE",
-    "category": "fcf-plus-plus-growth",
+    "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
     "publishedISO": "2026-06-01",
     "publishedLabel": "June 1, 2026",
@@ -19396,8 +19396,8 @@ const MEMOS = [
       }
     ],
     "taxonomy": {
-      "watchlist": "fcf-plus-plus-growth",
-      "watchlistName": "FCF++Growth",
+      "watchlist": "fun-speculative",
+      "watchlistName": "Fun / Speculative",
       "tier": "Low",
       "themes": [
         "premium-consumer-brands"
@@ -20197,6 +20197,13 @@ const CATEGORIES = {
     "sub": "Private companies of interest. No public spot.",
     "short": "Private companies of interest. No public spot.",
     "long": "Private companies of interest. Access typically via secondaries (EquityZen, Forge), syndicates (AngelList), or direct allocations. Valued from last-round mark + scenario exits rather than a live price."
+  },
+  "fun-speculative": {
+    "slug": "fun-speculative",
+    "name": "Fun / Speculative",
+    "sub": "Smaller speculative positions — high variance, sized small.",
+    "short": "Smaller speculative positions — high variance, sized small.",
+    "long": "Speculative or just-plain-fun positions held in small size: high-variance names where the thesis is more lottery-ticket than core holding. Tiered by conviction like the rest, but never sized as an anchor position."
   }
 };
 

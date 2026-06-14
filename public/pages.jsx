@@ -906,6 +906,36 @@ function IndicatorPage() {
 
       <section className="portfolio-method">
         <div className="wrap">
+          <div className="bluf">
+            <div className="eyebrow">Bottom line</div>
+            <p>
+              <b>Does it work?</b> As a <b>relative screen among quality-growth
+              compounders</b> — the names this site covers — <b>yes</b>: the cheapest
+              names beat the richest by a statistically significant margin over a{' '}
+              <b>3-year</b> hold. As a <b>broad-market value factor, no</b> — across the
+              whole market the edge collapses to a coin flip. So it earns its place as a{' '}
+              <b>gentle, long-horizon tilt</b> in position sizing (§12) — never a
+              market-wide signal, never a timing tool, never leaned on. The structure,
+              evidence, and caveats follow, top-down.
+            </p>
+          </div>
+          <div className="statrow">
+            <div className="stat">
+              <div className="fig pos">+48%</div>
+              <div className="lab">Quality-growth · 3-yr spread</div>
+              <div className="sub">t&nbsp;=&nbsp;1.9 — a real edge on the ar2eb names</div>
+            </div>
+            <div className="stat">
+              <div className="fig dim">+5.5%</div>
+              <div className="lab">Broad market · 3-yr spread</div>
+              <div className="sub">t&nbsp;=&nbsp;0.7 — a coin flip across ~600 names</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="portfolio-method">
+        <div className="wrap">
           <h2 className="section-h">How to read it</h2>
           <p>
             The numerator is <b>enterprise value</b> — what you pay for the whole
@@ -1069,20 +1099,8 @@ function IndicatorPage() {
             <b>But does it generalize?</b> We re-ran the whole test on a <b>broad,
             794-name, all-sector universe</b> (value, cyclical, staples, industrials,
             defense — harvested from SEC filings, not hand-picked). The edge{' '}
-            <b>does not survive</b>:
+            <b>does not survive</b> (the two figures up top):
           </p>
-          <div className="statrow">
-            <div className="stat">
-              <div className="fig pos">+48%</div>
-              <div className="lab">Quality-growth · 3-yr spread</div>
-              <div className="sub">t&nbsp;=&nbsp;1.9 — a real edge on the ar2eb names</div>
-            </div>
-            <div className="stat">
-              <div className="fig dim">+5.5%</div>
-              <div className="lab">Broad market · 3-yr spread</div>
-              <div className="sub">t&nbsp;=&nbsp;0.7 — a coin flip across ~600 names</div>
-            </div>
-          </div>
           <table className="ptable">
             <thead>
               <tr><th>Universe</th><th className="num">long-short 3y spread</th><th className="num">t-stat</th><th className="num col-secondary">quarters +</th></tr>
