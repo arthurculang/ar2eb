@@ -16,10 +16,19 @@ import source_ai2_panel as S
 # its FY2026 8-K EDGAR path data/0001744489/.
 CIK = dict(S.CIK)
 CIK["DIS"] = 1744489
+# FCF+ medium batch CIKs not in the AI2 panel dict (DAL/DE/U; CMG/HOOD/ALGN/ADSK
+# already present). CART (Maplebear/Instacart) CIK resolved separately from research.
+CIK["DAL"] = 27904       # Delta Air Lines, Inc.
+CIK["DE"] = 315189       # Deere & Company
+CIK["CART"] = 1579091    # Maplebear Inc. (Instacart)
+CIK["U"] = 1810806      # Unity Software Inc. (corrected from research SEC path)
 
 TICKERS = ["META", "AMZN", "GOOGL", "AAPL", "NVDA", "TSLA", "DIS"]
 SPOT = {"META": 566.98, "AMZN": 238.55, "GOOGL": 359.68, "AAPL": 291.13,
-        "NVDA": 205.19, "TSLA": 406.43, "DIS": 100.04}
+        "NVDA": 205.19, "TSLA": 406.43, "DIS": 100.04,
+        # FCF+ batch (spots from research; 0 = pending research → mktcap ignored)
+        "CMG": 32.0, "DAL": 82.0, "HOOD": 93.0, "DE": 577.0, "ALGN": 176.5,
+        "ADSK": 198.0, "U": 27.91, "CART": 41.90}
 
 
 def series(ticker):
