@@ -543,7 +543,7 @@ appendix:
 # render it consistently. Re-evaluate if/when ZM returns to the Helm.
 taxonomy:
   watchlist: fcf-plus-plus-growth
-  tier: Med
+  tier: Med-Low
   themes: [platform-marketplace-tech]
   primary_theme: platform-marketplace-tech
 
