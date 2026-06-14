@@ -191,15 +191,41 @@ no look-ahead), **3,399 rows · 61 cross-sections · 103 tickers**. Because quar
  3-year     (overlap-corrected)   +0.052    +3.17      +2.21 (L=11)  SIGNIFICANT (|t|>2)
 ```
 
-**The 3-year horizon is statistically significant** — Newey-West t ≈ +2.2, and it stays **above 2
-for every Bartlett lag from 4 to 20** (+2.6 → +2.1) and is positive in **both halves** (+0.016 /
-+0.087), 67% of cross-sections positive. The 1-quarter and 1-year horizons are noise. This is the
-economically correct shape: **value/cheapness is a slow signal** — it predicts 3-year returns, not
-next-quarter ones. So the Indicator is a robust *long-horizon* tilt, which is exactly how §12 uses
-it (a gentle sizing tilt, not a timing tool). *Caveat:* the universe is survivors + known busts (no
-fully-delisted names); reproduce with `python source_ai2_quarterly.py --analyze`.
+**The 3-year horizon is statistically significant** — Newey-West t ≈ +2.2, stable **above 2 for every
+Bartlett lag from 4 to 20** (+2.6 → +2.1), positive in **both halves**, 67% of cross-sections positive.
+1q/1y are noise → **value is a slow signal**.
 
-A 2-page visual summary of all of the above is in `public/ai2_report.jsx`
+### Market-neutral read (`--longshort`)
+
+The IC's dollar twin: each quarter long the cheapest AI tercile, short the richest, hold 3y. The bar
+is the **spread** (cheap − rich), which differences out the market (beta) — NOT absolute return and
+NOT "beat the S&P." On the growth/quality universe: **long-short +51%/3y, NW t +2.46, 77% of quarters
+positive**. The cheap bucket beat the S&P by +98% — *but the rich bucket beat it by +47% too*, so most
+of the raw outperformance is the universe + a 2009–25 bull + survivorship; only the **spread** is the
+Indicator's edge.
+
+### Versatility — does it generalize? **NO** (`--broad`)
+
+Re-ran the whole test on a **broad 794-name, all-sector universe** (value/cyclical/staples/industrials/
+defense — harvested from the SEC XBRL *frames* API, `harvest_broad_universe.py`, not hand-picked):
+**25,123 rows · 62 cross-sections · ~400 names/quarter**. The edge **does not survive**:
+
+```
+ long-short 3y spread          mean    NW t   quarters+
+ growth/quality (~111 curated) +48%   +1.88     73%
+ broad-economy (~600 others)   +5.5%  +0.69     50%
+ whole broad universe          +2.3%  +0.31     56%
+```
+
+On the broad market the cheap-minus-rich spread is a **coin flip** (50% of quarters), and the 3-year
+IC is even slightly negative (−0.028). **The Indicator is NOT a universal value factor** — it's a
+relative screen that works *among quality-growth compounders* (cheap value/cyclical names are often
+cheap for a reason). The significant result is real but **universe-specific**. This is the honest
+scope, and it is exactly why §12 uses it only as a *gentle* tilt on a growth/quality book — never
+leaned on, never as a market-wide signal. *Caveat:* both universes are survivors (today's filers).
+Reproduce: `source_ai2_quarterly.py --analyze` (narrow) · `--broad` (broad) · `--longshort`.
+
+A 2-page visual summary of the earlier (annual) work is in `public/ai2_report.jsx`
 (render: open `public/ai2_report.html` via the print harness).
 
 ## Data limitations (documented)

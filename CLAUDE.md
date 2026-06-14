@@ -199,6 +199,19 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   + spec §13/changelog v040 updated; reproduce `source_ai2_quarterly.py --analyze`. *Caveat:* survivors +
   known busts (no fully-delisted names) — possible mild survivorship inflation of levels, not the rank-IC.
   The `--robustness` (annual) mode stays for the annual contrast.
+- **Arthur Indicator — VERSATILITY TEST: the edge does NOT generalize (v041, 2026-06-14). KEY HONEST FINDING.**
+  (1) **Market-neutral framing** (`--longshort`): the real bar is the cheap-minus-rich **long-short spread**
+  (beta cancels), not absolute return / not vs-S&P. Growth/quality universe: **+51%/3y, NW t +2.46**; but the
+  cheap bucket beat the S&P +98% AND the rich bucket beat it +47% (universe + bull + survivorship inflate
+  absolutes — only the SPREAD is the edge). (2) **Broad universe** (`harvest_broad_universe.py` → SEC XBRL
+  *frames* API, the one bulk endpoint NOT 403-blocked; 794 all-sector names ≥ $400M gross profit →
+  `ai2_quarterly_broad.csv`, 25,123 rows / 713 tickers): the long-short spread **collapses to +5.5% (t +0.69,
+  50% of quarters = coin flip)**, 3y IC slightly negative. Split confirms: edge is **entirely in the curated
+  growth/quality names** (+48%, t1.9, 73%+); broad-economy ~600 names = no edge (+5.5%, t0.69, 50%+). **So
+  the Indicator is NOT a universal value factor — a relative screen among quality-growth compounders only**
+  (cheap value/cyclicals are often cheap for a reason). v040's significance was real but universe-specific.
+  §12 keeps it as a *gentle* tilt AND only on the growth/quality book — never market-wide, never leaned on.
+  `/indicator` page + `ai2_results.md` + spec §13/v041 carry the honest scope. *Caveat:* survivors (today's filers).
 - **AI 2.0 backtest — DONE (2026-06-05, branch `claude/ecstatic-newton-YKOJJ`, spec v034→v035): AI 2.0
   does NOT calibrate; AI 1.0 *validated* out-of-sample.** Sourced the panel end-to-end (SEC XBRL + Yahoo
   FYE prices). A cap **sanity-gate** caught + fixed two `source_ai2_panel.py` bugs (both self-tested):

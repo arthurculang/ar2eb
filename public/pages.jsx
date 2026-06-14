@@ -1055,13 +1055,38 @@ function IndicatorPage() {
             </tbody>
           </table>
           <p>
-            At <b>three years</b> — the horizon a value/cheapness signal is supposed to
-            work on — the Indicator is <b>statistically significant</b> (t ≈ 2.2, and it
-            stays above 2 across every reasonable correction and in both halves of the
-            sample). At one quarter and one year it's noise. That's the right shape:{' '}
-            <b>value is a slow signal</b>. It vindicates using the Indicator as a{' '}
-            <b>gentle, long-horizon tilt</b> in position sizing — exactly how §12 uses it
-            — never a short-term timing tool.
+            One more honesty check on <em>what</em> we're measuring. The right bar isn't
+            "did the cheap names go up" (in a bull market everything does) — it's the{' '}
+            <b>market-neutral spread</b>: long the cheapest names, short the richest, so
+            the market's move cancels out. On the names this site covers — quality-growth
+            compounders — that 3-year spread is <b>+51%, t ≈ 2.2</b> (and the cheap bucket
+            beat the S&amp;P by +98%… but so did the <em>expensive</em> bucket by +47%, so
+            most of the raw outperformance is the universe and the bull market, not the
+            Indicator — the <b>spread</b> is the actual edge). At one quarter and one year
+            it's noise: <b>value is a slow signal</b>.
+          </p>
+          <p>
+            <b>But does it generalize?</b> We re-ran the whole test on a <b>broad,
+            794-name, all-sector universe</b> (value, cyclical, staples, industrials,
+            defense — harvested from SEC filings, not hand-picked). The edge{' '}
+            <b>does not survive</b>:
+          </p>
+          <table className="ptable">
+            <thead>
+              <tr><th>Universe</th><th className="num">long-short 3y spread</th><th className="num">t-stat</th><th className="num col-secondary">quarters +</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Quality-growth compounders (the ar2eb names)</td><td className="num mono delta-pos">+48%</td><td className="num mono delta-pos">+1.9</td><td className="num mono col-secondary">73%</td></tr>
+              <tr><td>Broad market (~600 everything-else names)</td><td className="num mono">+5.5%</td><td className="num mono">+0.7</td><td className="num mono col-secondary">50%</td></tr>
+            </tbody>
+          </table>
+          <p>
+            On the broad market the cheap-minus-rich spread is a <b>coin flip</b>. So the
+            Indicator is <b>not a universal value factor</b> — it's a relative screen that
+            works <em>among quality-growth compounders</em> (cheap value/cyclical names are
+            often cheap for a reason). That's the honest scope, and it's exactly why §12
+            uses it as a <b>gentle tilt on a growth/quality book</b> — never leaned on hard,
+            and never applied as a market-wide signal.
           </p>
           <p className="hint">
             A note on what didn't work: enriching the formula with operating-margin,

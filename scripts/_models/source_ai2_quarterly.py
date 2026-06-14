@@ -111,11 +111,12 @@ def quarter_ends(start: date, end: date) -> list:
     return qs
 
 
-def source(tickers: list) -> tuple:
+def source(tickers: list, cik_map: dict = None) -> tuple:
+    cik_map = cik_map if cik_map is not None else S.CIK
     QE = quarter_ends(START, END)
     rows, gaps = [], []
     for t in tickers:
-        cik = S.CIK.get(t)
+        cik = cik_map.get(t)
         if not cik:
             gaps.append(f"{t}: no CIK"); continue
         try:
@@ -232,6 +233,51 @@ def analyze(path=OUT):
     print("  Newey-West t-stats correct for the overlap that a naive t-stat would inflate.")
 
 
+def longshort(path=OUT, tercile=3):
+    """The market-neutral read: each quarter, long the cheapest 1/`tercile` by AI
+    and short the richest, hold 3y. Reports the long-short spread (the Indicator's
+    edge, net of beta) + the cheap/rich buckets vs the S&P 500 (SPY) — to show that
+    absolute returns are inflated by the universe+bull market, while the SPREAD
+    isolates the signal."""
+    import numpy as np
+    by_date = {}
+    with open(path) as f:
+        for r in csv.DictReader(f):
+            if r.get("fwd_3y") not in (None, ""):
+                by_date.setdefault(r["date"], []).append((float(r["ai"]), float(r["fwd_3y"])))
+    spy = S.price_history("SPY"); last = spy[-1][0]
+
+    def spy_fwd(dstr):
+        d = date.fromisoformat(dstr); fut = add_years(d, 3)
+        if fut > last:
+            return None
+        _, a0 = S.close_on_or_before(spy, d); _, a1 = S.close_on_or_before(spy, fut)
+        return (a1 / a0 - 1) if (a0 and a1) else None
+
+    ls, ca, ra, sa = [], [], [], []
+    for d in sorted(by_date):
+        xs = sorted(by_date[d], key=lambda p: p[0])
+        if len(xs) < 3 * tercile:
+            continue
+        sp = spy_fwd(d)
+        if sp is None:
+            continue
+        k = len(xs) // tercile
+        cheap = [p[1] for p in xs[:k]]; rich = [p[1] for p in xs[-k:]]
+        ls.append(np.mean(cheap) - np.mean(rich))
+        ca.append(np.mean(cheap)); ra.append(np.mean(rich)); sa.append(sp)
+    ls, ca, ra, sa = map(np.array, (ls, ca, ra, sa)); N = len(ls)
+    nw = lambda x: _newey_west_t(list(x), 11)[1]
+    print(f"long-short 3y read — {N} quarterly cohorts, cheapest/richest AI tercile, SPY benchmark:")
+    print(f"  LONG-SHORT (cheap-rich), market-neutral:  {ls.mean():+.1%}   NW t {nw(ls):+.2f}   {100*(ls>0).mean():.0f}% +"
+          + ("   <- the Indicator's edge" if abs(nw(ls)) > 2 else ""))
+    print(f"  cheap tercile abs / vs S&P:               {ca.mean():+.1%} / {(ca-sa).mean():+.1%} excess (t {nw(ca-sa):+.2f})")
+    print(f"  rich  tercile abs / vs S&P:               {ra.mean():+.1%} / {(ra-sa).mean():+.1%} excess (t {nw(ra-sa):+.2f})")
+    print(f"  S&P 500 (SPY) abs:                        {sa.mean():+.1%}")
+    print("  read: even the RICH bucket beats the S&P here (universe + bull + survivorship),")
+    print("  so absolute returns aren't the Indicator's edge — the market-neutral SPREAD is.")
+
+
 def selftest():
     # vintage point-in-time selection + forward arithmetic
     vs = [dict(filed=date(2020, 2, 1), fy=2019), dict(filed=date(2021, 2, 1), fy=2020),
@@ -258,23 +304,50 @@ def selftest():
     print("selftest OK — point-in-time, leap-year, quarter grid, Newey-West")
 
 
+import json as _json
+BROAD_OUT = Path(__file__).resolve().parent / "ai2_quarterly_broad.csv"
+BROAD_UNI = Path(__file__).resolve().parent / "ai2_universe_broad.json"
+
+
+def _write(rows, out):
+    fields = ["ticker", "date", "ai", "fwd_1q", "fwd_1y", "fwd_3y"]
+    with open(out, "w", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields); w.writeheader()
+        for r in sorted(rows, key=lambda x: (x["ticker"], x["date"])):
+            w.writerow(r)
+
+
+def _path_arg(argv, default):
+    for a in argv:
+        if a.endswith(".csv"):
+            return Path(a)
+    return default
+
+
 def main(argv):
     if "--selftest" in argv:
         selftest(); return 0
     if "--analyze" in argv:
-        analyze(); return 0
+        p = _path_arg(argv, OUT); analyze(p); print(); longshort(p); return 0
+    if "--longshort" in argv:
+        longshort(_path_arg(argv, OUT)); return 0
+    if "--broad" in argv:                    # source the broad all-sector universe
+        uni = _json.loads(BROAD_UNI.read_text())
+        print(f"sourcing BROAD quarterly panel: {len(uni)} tickers → {BROAD_OUT}")
+        rows, gaps = source(list(uni), cik_map=uni)
+        _write(rows, BROAD_OUT)
+        print(f"\nwrote {BROAD_OUT}: {len(rows)} rows, "
+              f"{len({r['ticker'] for r in rows})} tickers. gaps: {len(gaps)}")
+        analyze(BROAD_OUT); print(); longshort(BROAD_OUT)
+        return 0
     tickers = [t for t in S.CIK]
     print(f"sourcing quarterly panel for {len(tickers)} tickers → {OUT}")
     rows, gaps = source(tickers)
-    fields = ["ticker", "date", "ai", "fwd_1q", "fwd_1y", "fwd_3y"]
-    with open(OUT, "w", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=fields); w.writeheader()
-        for r in sorted(rows, key=lambda x: (x["ticker"], x["date"])):
-            w.writerow(r)
+    _write(rows, OUT)
     print(f"\nwrote {OUT}: {len(rows)} rows. gaps: {len(gaps)}")
     for g in gaps[:20]:
         print("  ", g)
-    analyze()
+    analyze(); print(); longshort()
     return 0
 
 
