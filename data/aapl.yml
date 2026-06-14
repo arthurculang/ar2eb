@@ -1,0 +1,615 @@
+ticker: AAPL
+company: Apple
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 291.13
+market:
+  market_cap_billion: 4302.0
+  shares_outstanding_million: 14776.4
+  cash_billion: 54.7
+  net_debt_billion: 90.7
+  extras:
+  - Net debt ~$36B ($54.7B cash vs ~$90.7B total debt); ~14.78B shares, shrinking on a fresh $100B buyback + dividend raise
+  - Revenue $416B FY25 (+6%); GAAP op margin ~32%; FCF ~$99B; Services ~$31B/quarter at ~70%+ gross margin
+  - ~$291 (Jun 2026), +56% TTM, near the ~$315 ATH; iPhone ~50% of revenue, Greater China reaccelerating (+28%)
+taxonomy:
+  watchlist: fcf-megacap
+  tier: null
+  themes:
+  - premium-consumer-brands
+  - consumer-experience
+  primary_theme: premium-consumer-brands
+central_question: Does a mid-single-digit grower at ~43x FCF, with AI outsourced to Gemini and a ~$20B/yr Google-payment cliff,
+  justify a premium the modal can't underwrite?
+thesis: 'Apple trades at ~$4.30T (~$291/sh, +56% TTM) - about 43x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B
+  net debt. Services compounds mid-teens at ~70%+ gross margin, but iPhone is still ~50% of revenue, AI is outsourced to Gemini,
+  and the ~$20B/yr Google search payment faces a DOJ rebid. The DCF resolves whether quality justifies the multiple: weighted
+  -34.5%, modal ~$188 (-35%).'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 365.8
+  - 394.3
+  - 383.3
+  - 391.0
+  - 416.2
+  history_op_margin:
+  - 29.8
+  - 30.3
+  - 29.8
+  - 31.5
+  - 32.0
+  history_fcf:
+  - 93.0
+  - 111.4
+  - 99.6
+  - 108.8
+  - 98.8
+  history_ev_rev:
+  - 6.8
+  - 6.1
+  - 7.0
+  - 8.7
+  - 9.4
+page3_chart_config:
+  segment_a: Products
+  segment_b: Services
+  hist_ent_split:
+  - 0.82
+  - 0.81
+  - 0.78
+  - 0.76
+  - 0.74
+  chart6_title: Equity build (Op EV − net debt)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end late Sept  ·  FQ2 2026 (Apr-2026) results
+  sources: 'Sources: SEC XBRL company facts (CIK 320193; revenue, GAAP operating income/margin, cash flow, debt), Apple FQ2
+    2026 release (revenue $111.2B +17%, iPhone $56.99B +22%, Services $30.98B +16% at an all-time high, Greater China $20.5B
+    +28%, gross margin 49.3% guided down to 47.5-48.5% on higher memory cost). Revenue modeled as a growth-rate path off FY25;
+    FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs mega-cap peers (MSFT/GOOGL/NVDA).'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.13
+    expected_per_share: 89.39
+    headline: iPhone stalls; Services tails crystallize.
+    narrative:
+    - 'The hardware engine flattens and the twin regulatory tails land: iPhone revenue stagnates as the upgrade super-cycle
+      pays back, the ~$20B/yr Google search payment is cut or competed away, and EU/US App Store fee erosion bites high-margin
+      Services. Revenue grows ~2%/yr and FCF margin compresses toward ~20% as the mix shifts away from the most profitable
+      dollars.'
+    - A flat hardware franchise losing its richest Services rents re-rates to a mid-teens FCF multiple -> DCF ~$89 (-69%).
+      Net debt offers no cushion here; the de-rate is the multiple meeting the growth.
+    probability_rationale: 'The genuine bear: iPhone is ~50% of revenue and partly pulled forward, the search payment must
+      be rebid annually under the DOJ ruling, and App Store fees face regulatory pressure on two continents. 13% weight on
+      the tails crystallizing together.'
+    dcf_metrics:
+      cagr_5y: 2.0
+      wacc: 0.09
+    dcf_path:
+      rev_b: 416.2
+      rev_path:
+      - 0.02
+      - 0.02
+      - 0.02
+      - 0.02
+      - 0.02
+      op_margin:
+      - 0.3
+      - 0.3
+      - 0.3
+      - 0.31
+      - 0.31
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.025
+      fcf:
+      - 84.905
+      - 86.603
+      - 92.752
+      - 94.607
+      - 96.499
+      cash: 54.7
+      net_debt: 90.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 14600
+      distress: 0.0
+      pv_fcf:
+      - 77.894
+      - 72.892
+      - 71.622
+      - 67.022
+      - 62.718
+      sum_pv_fcf: 352.15
+      terminal_value: 1521.71
+      pv_terminal: 989.01
+      op_ev: 1341.16
+      total_equity: 1305.16
+      dcf_per_share: 89.39
+    chart_data:
+      ev_rev_multiple:
+      - 5.0
+      - 4.5
+      - 4.0
+      - 3.8
+      - 3.6
+      ev_fcf_multiple:
+      - 18.0
+      - 17.0
+      - 16.0
+      - 16.0
+      - 16.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 129.46
+    headline: Low-single-digit growth; multiple compresses.
+    narrative:
+    - 'Apple keeps the ecosystem but the growth stays muted: iPhone replacement cycles lengthen, Services compounds but off
+      a base partly funded by the at-risk search payment, and tariff/India cost drag (~5-8% premium) trims gross margin. Revenue
+      compounds ~4% at a ~23% FCF margin.'
+    - DCF ~$129 (-55%) — a durable but slow-growing franchise at ~19x terminal FCF is worth well below 43x; the gap between
+      today's multiple and mid-single-digit growth is the whole bear.
+    probability_rationale: Share and ecosystem hold, but mid-single-digit growth can't carry a premium multiple while the
+      search-payment and fee tails hang over Services. 27% as the plausible 'durable but slow' path.
+    dcf_metrics:
+      cagr_5y: 4.4
+      wacc: 0.085
+    dcf_path:
+      rev_b: 416.2
+      rev_path:
+      - 0.05
+      - 0.05
+      - 0.04
+      - 0.04
+      - 0.04
+      op_margin:
+      - 0.31
+      - 0.31
+      - 0.32
+      - 0.32
+      - 0.32
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.03
+      fcf:
+      - 96.142
+      - 100.949
+      - 109.759
+      - 114.15
+      - 118.716
+      cash: 54.7
+      net_debt: 90.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 14400
+      distress: 0.0
+      pv_fcf:
+      - 88.61
+      - 85.752
+      - 85.931
+      - 82.368
+      - 78.952
+      sum_pv_fcf: 421.61
+      terminal_value: 2223.23
+      pv_terminal: 1478.55
+      op_ev: 1900.16
+      total_equity: 1864.16
+      dcf_per_share: 129.46
+    chart_data:
+      ev_rev_multiple:
+      - 6.0
+      - 5.5
+      - 5.0
+      - 4.8
+      - 4.6
+      ev_fcf_multiple:
+      - 22.0
+      - 20.0
+      - 19.0
+      - 19.0
+      - 19.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 187.74
+    headline: Services compounds; iPhone steady; still rich.
+    narrative:
+    - 'The modal path: Services compounds mid-teens at ~70%+ gross margin on a 2.5B+ installed base, the iPhone 17 cycle and
+      China reacceleration keep hardware steady, and the Gemini-powered Siri keeps users locked in. Revenue compounds ~6%
+      to ~$555B at a ~25% FCF margin, with buybacks shrinking the share count.'
+    - DCF ~$188 (-35%) — even crediting durable Services growth and a defended ecosystem, a ~23x terminal FCF multiple lands
+      well below the ~43x paid today; the modal case says the price embeds quality and safety beyond what the cash flows underwrite.
+    probability_rationale: Requires Services to keep compounding and the iPhone base to stay sticky through the AI-platform
+      shift — consistent with FQ2's record Services and China rebound, but not a re-acceleration. 33% as the central, still-rich
+      outcome.
+    dcf_metrics:
+      cagr_5y: 6.2
+      wacc: 0.08
+    dcf_path:
+      rev_b: 416.2
+      rev_path:
+      - 0.07
+      - 0.07
+      - 0.06
+      - 0.06
+      - 0.05
+      op_margin:
+      - 0.32
+      - 0.32
+      - 0.33
+      - 0.33
+      - 0.33
+      wacc_path:
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      term_g: 0.035
+      fcf:
+      - 102.427
+      - 114.362
+      - 121.224
+      - 133.851
+      - 140.543
+      cash: 54.7
+      net_debt: 90.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 14100
+      distress: 0.0
+      pv_fcf:
+      - 94.84
+      - 98.047
+      - 96.232
+      - 98.384
+      - 95.651
+      sum_pv_fcf: 483.15
+      terminal_value: 3232.49
+      pv_terminal: 2199.98
+      op_ev: 2683.13
+      total_equity: 2647.13
+      dcf_per_share: 187.74
+    chart_data:
+      ev_rev_multiple:
+      - 7.0
+      - 6.5
+      - 6.0
+      - 5.8
+      - 5.6
+      ev_fcf_multiple:
+      - 26.0
+      - 24.0
+      - 23.0
+      - 23.0
+      - 23.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.19
+    expected_per_share: 279.18
+    headline: AI-era ecosystem deepens; search risk fades.
+    narrative:
+    - 'The ecosystem wins the AI era on someone else''s model: the Gemini-powered Apple Intelligence raises engagement and
+      Services attach, the search payment survives the rebid intact, and the installed base feeds a higher-margin Services
+      mix. Revenue compounds ~8% to ~$600B and FCF margin lifts toward ~27%.'
+    - DCF ~$279 (-4%) — even the bull only reaches roughly today's price; an upper-single-digit grower at a sustained high-20s
+      FCF multiple essentially validates spot rather than beating it.
+    probability_rationale: Services + the AI-era ecosystem stay sticky, the search payment holds, and China momentum continues
+      — the FQ2 trends extended. ~19% weight on the franchise compounding without the tails biting.
+    dcf_metrics:
+      cagr_5y: 8.2
+      wacc: 0.076
+    dcf_path:
+      rev_b: 416.2
+      rev_path:
+      - 0.09
+      - 0.09
+      - 0.08
+      - 0.08
+      - 0.07
+      op_margin:
+      - 0.33
+      - 0.33
+      - 0.34
+      - 0.34
+      - 0.35
+      wacc_path:
+      - 0.076
+      - 0.076
+      - 0.076
+      - 0.076
+      - 0.076
+      term_g: 0.04
+      fcf:
+      - 108.878
+      - 123.622
+      - 138.852
+      - 155.728
+      - 166.629
+      cash: 54.7
+      net_debt: 90.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 13800
+      distress: 0.0
+      pv_fcf:
+      - 101.188
+      - 106.775
+      - 111.459
+      - 116.176
+      - 115.529
+      sum_pv_fcf: 551.13
+      terminal_value: 4813.73
+      pv_terminal: 3337.49
+      op_ev: 3888.62
+      total_equity: 3852.62
+      dcf_per_share: 279.18
+    chart_data:
+      ev_rev_multiple:
+      - 8.0
+      - 7.5
+      - 7.0
+      - 6.8
+      - 6.6
+      ev_fcf_multiple:
+      - 30.0
+      - 29.0
+      - 29.0
+      - 29.0
+      - 29.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 362.45
+    headline: Services step-change; FCF/share compounds hard.
+    narrative:
+    - 'The full upside: Services reaccelerates on AI features and new monetization, hardware finds a fresh wedge (wearables,
+      new categories), gross margin holds near 49%, and the ~$100B buyback compounds FCF/share on a shrinking count. Revenue
+      compounds ~10% to ~$640B at a ~30% FCF margin.'
+    - DCF ~$362 (+25%) — the only scenario that clears spot, and only if Services takes a genuine step-change and the multiple
+      stays in the low-30s. ~8% probability, the asymmetric upside the premium is paying for.
+    probability_rationale: Everything compounds — Services AND margins AND buyback leverage AND no regulatory hit — the quality-compounder
+      outcome. ~8%, the long-duration tail that justifies the premium if it lands.
+    dcf_metrics:
+      cagr_5y: 10.0
+      wacc: 0.074
+    dcf_path:
+      rev_b: 416.2
+      rev_path:
+      - 0.11
+      - 0.11
+      - 0.1
+      - 0.09
+      - 0.09
+      op_margin:
+      - 0.33
+      - 0.34
+      - 0.35
+      - 0.35
+      - 0.36
+      wacc_path:
+      - 0.074
+      - 0.074
+      - 0.074
+      - 0.074
+      - 0.074
+      term_g: 0.04
+      fcf:
+      - 115.496
+      - 133.328
+      - 157.942
+      - 178.306
+      - 201.055
+      cash: 54.7
+      net_debt: 90.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 13500
+      distress: 0.0
+      pv_fcf:
+      - 107.538
+      - 115.588
+      - 127.493
+      - 134.014
+      - 140.7
+      sum_pv_fcf: 625.33
+      terminal_value: 6149.92
+      pv_terminal: 4303.76
+      op_ev: 4929.09
+      total_equity: 4893.09
+      dcf_per_share: 362.45
+    chart_data:
+      ev_rev_multiple:
+      - 9.0
+      - 8.5
+      - 8.0
+      - 7.8
+      - 7.6
+      ev_fcf_multiple:
+      - 32.0
+      - 31.0
+      - 31.0
+      - 31.0
+      - 31.0
+historical_prices:
+  ipo_marker: IPO Dec '80
+  x_min: -6.2
+  points:
+  - - -6.0
+    - 75
+  - - -5.0
+    - 130
+  - - -4.0
+    - 180
+  - - -3.3
+    - 130
+  - - -2.5
+    - 190
+  - - -1.5
+    - 230
+  - - -0.5
+    - 250
+  - - -0.1
+    - 315
+  - - -0.02
+    - 291.13
+weighting_rationale:
+- label: Ultra Bear 13%
+  body: iPhone stalls and the Services tails crystallize; ~$89 (-69%).
+- label: Bear 27%
+  body: Low-single-digit growth; the multiple compresses; ~$129 (-55%).
+- label: Base 33%
+  body: Services compounds, iPhone steady, but still rich; ~$188 (-35%).
+- label: Bull 19%
+  body: AI-era ecosystem deepens and search risk fades; ~$279 (-4%).
+- label: Ultra Bull 8%
+  body: Services step-change; FCF/share compounds; ~$362 (+25%).
+appendix:
+  pushback:
+  - label: The de-rate is the multiple, not the franchise.
+    body: Apple is a genuine quality compounder, but a mid-single-digit grower at ~43x FCF prices safety beyond growth — even
+      the bull only reaches ~$279 (-4%).
+  - label: The ~$20B Google payment is a discrete cliff.
+    body: It is near-pure-margin Services that must be rebid annually under the DOJ ruling; losing it directly cuts the highest-quality
+      earnings, and the bear/ultra-bear weight it.
+  - label: AI is outsourced, not owned.
+    body: A custom Gemini behind the revamped Siri (~$1B/yr to Google) makes Apple a fast-follower on foundation models; the
+      bull needs the ecosystem to win the AI era on someone else's stack.
+  - label: Services + installed base are the quality.
+    body: ~$31B/quarter of Services at ~70%+ gross margin on 2.5B+ devices is durable recurring earnings — the base/bull lean
+      on it compounding mid-teens.
+  - label: iPhone is ~half the revenue and partly pulled forward.
+    body: FQ2 iPhone +22% rode pent-up demand from ~315M users on 4+yr phones; a payback air-pocket is the bear's mechanism
+      once the super-cycle clears.
+  triggers:
+  - label: Bull validation
+    body: Services growth holds mid-teens+  ·  iPhone upgrade cycle sustains  ·  the Google search payment survives the rebid
+      ·  gross margin defends ~47%+  ·  China revenue keeps reaccelerating
+  - label: Bear validation
+    body: Services decelerates below ~10%  ·  the search payment is cut or competed away  ·  EU/US App Store fee remedies
+      take hold  ·  iPhone goes flat-to-down  ·  gross margin slips below ~46%
+  - label: Reframe needed
+    body: if the AI-platform shift cedes the next interface (a Gemini/agent layer that disintermediates iOS) or Services structurally
+      stalls, re-rate the terminal toward a flat-hardware multiple - the ultra-bear's ~16x
+glossary:
+- term: Services
+  definition: Apple's recurring high-margin revenue (App Store, AppleCare, advertising, payments, subscriptions; ~$31B/quarter
+    at ~70%+ gross margin) on a 2.5B+ device base - the quality engine.
+- term: Installed base
+  definition: The >2.5B active Apple devices that drive Services attach and switching costs; its growth, not unit sales, anchors
+    the mid-teens Services compounding.
+- term: Google search payment
+  definition: The ~$20B/yr Google pays to be the default Safari search engine - near-pure-margin Services that must be rebid
+    annually under the DOJ ruling; a discrete cliff.
+- term: Apple Intelligence
+  definition: Apple's AI feature set; the revamped Siri runs a custom Google Gemini model (~$1B/yr) - AI partnered, not in-house.
+- term: FCF margin
+  definition: Free cash flow / revenue (~24% FY25); whether the grower defends ~70%+-margin Services against the search-payment
+    tails.
+competitive:
+  arena: Premium consumer hardware + a high-margin Services ecosystem - Apple vs Samsung/Google (phones), Microsoft/Google
+    (platforms/AI), and the App Store/payments field; auditing a branding + switching-costs Power against the AI-platform
+    shift.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 4
+      note: Massive purchasing/manufacturing and R&D scale across ~$416B revenue; among the deepest in consumer tech, though
+        not the single dominant Power.
+    network_economies:
+      score: 2
+      note: iMessage/FaceTime/AirDrop and the developer ecosystem create modest network pull, but the lock-in is more switching
+        cost than true network effect.
+    counter_positioning:
+      score: 1
+      note: Largely the incumbent now; the privacy-and-integration stance differentiates but rivals can and do copy it - not
+        a structural counter-position.
+    switching_costs:
+      score: 4
+      note: 'Deep ecosystem lock-in: iCloud, App Store purchases, Watch/AirPods/Mac continuity, iMessage - leaving means abandoning
+        a connected device estate; a core durable Power.'
+    branding:
+      score: 5
+      note: 'The strongest Power: the premium global brand commands pricing power and ~49% gross margin and anchors a 2.5B+
+        installed base; decades-durable.'
+    cornered_resource:
+      score: 2
+      note: In-house silicon (A/M-series) is a real edge and the developer base is sticky, but neither is a fully cornered,
+        irreplaceable resource.
+    process_power:
+      score: 3
+      note: World-class supply-chain and silicon-design execution (Cook's operational machine); a genuine but partly replicable
+        advantage.
+  dominant_power: branding
+  durability: high
+  rivals:
+  - name: Samsung
+    kind: public
+    note: The premium-Android hardware rival; competes on phones/wearables but lacks Apple's Services ecosystem and margin.
+    growth: 0.05
+    margin: 0.1
+    multiple: ~12x P/E
+  - name: Alphabet (GOOGL)
+    kind: public
+    note: Owns Android + Gemini; the AI-platform threat and Apple's ~$20B search-payment counterparty all at once.
+    growth: 0.15
+    margin: 0.32
+    multiple: ~24x P/E
+  - name: Microsoft (MSFT)
+    kind: public
+    note: The other quality mega-cap compounder; the platform/AI peer Apple's multiple is benchmarked against.
+    growth: 0.13
+    margin: 0.45
+    multiple: ~33x P/E
+  - name: Samsung Electronics / Xiaomi
+    kind: public
+    note: High-volume Android OEMs pressuring iPhone share in China/India at lower price points.
+    growth: 0.08
+    margin: 0.08
+    multiple: ~10x P/E
+  threats:
+  - vector: switching_costs
+    who: The AI-platform shift (Gemini/agent layer)
+    falsifier: An AI agent layer that disintermediates the iOS interface and erodes ecosystem lock-in - measurable as Services
+      attach/engagement flattening.
+  - vector: branding
+    who: Regulators (DOJ search remedy + EU/US App Store)
+    falsifier: The ~$20B Google search payment is cut on rebid and App Store fee remedies take hold, draining the highest-margin
+      Services dollars.
+  - vector: scale_economies
+    who: Tariffs + India supply shift
+    falsifier: Gross margin slips below ~46% as the ~5-8% India cost premium and tariff drag (~$900M/quarter) outrun price.
+  takeaway: 'Apple''s brand is the strongest single Power in this set - a premium global franchise with ~49% gross margin
+    and pricing power - reinforced by deep ecosystem switching costs and immense scale; durability is high. But the live threat
+    is the AI-platform shift: with Apple Intelligence outsourced to Gemini, the next interface may run on someone else''s
+    model, and that same counterparty anchors a ~$20B/yr search payment now exposed to a DOJ rebid. The Powers are durable;
+    the question the DCF presses is price, not moat. A mid-single-digit grower at ~43x FCF carries a premium even the bull
+    (~$279, -4%) barely justifies, and the modal case lands ~$188 (-35%).'
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-06-14_20-19
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: '001'
+  pdf_timestamp: 2026-06-14_20-19

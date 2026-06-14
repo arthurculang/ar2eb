@@ -166,6 +166,37 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   capital-intensity bear (−54%). The ILMN/TXG "de-rated but not cheap" family. 6pp (no POCD yet);
   `visual_baseline.json` **now 21 tickers**; `--check` clean; validator green. *Layout note:* page-1 5-scenario
   overflow was the usual prose-driven trim (thesis/CQ/extras → ~LULU length), never the shared layout.
+- **Mega-7 mega-caps SHIPPED (2026-06-14; tickers 22–28): META, AMZN, GOOGL, AAPL, NVDA, TSLA, DIS.** First
+  `fcf-megacap` batch beyond UBER/ILMN — all mature_company, **tier-less** (allows_tiers:false). Sourced
+  end-to-end from SEC XBRL (`scripts/_models/source_mega7.py`; DIS CIK 1744489 added to the dict), modeled
+  through the mature engine, authored from a **locked numeric skeleton** (`/tmp/mega7/numbers.py` → per-ticker
+  `scripts/_models/gen_<T>.py`; prose drafted by 7 parallel subagents, **numbers mine + verified**) → scaffold
+  → STRICT. **Findings (entry price vs the distribution — same logic as every wave):** META **+14.6%** (cheapest
+  mega-cap on normalized FCF, −18% TTM while ads accelerate +33%), DIS **+10.3%** (beaten-down turnaround;
+  streaming margin past the linear-TV decline), AMZN **−6.9%** (fair; FY25 FCF crushed to ~$7.7B by ~$200B AI
+  capex, recovers as AWS reaccelerates), GOOGL **−21.4%** (rich after the +28% YTD run; priced for the AI-stack
+  win), NVDA **−25.2%** (priced for perfection at ~50× FCF, China=$0, enormous distribution), AAPL **−34.5%**
+  (richest — mid-single grower at ~43× FCF, AI outsourced to Gemini, ~$20B/yr search cliff), TSLA **−75.0%**
+  (the **RKLB/OKLO pattern** — the DCF underwrites only auto+energy; the robotaxi/FSD/Optimus optionality lives
+  entirely in the ultra-bull second act and even that lands −6%; what you pay above ~$100 IS the optionality,
+  priced explicitly). **Caught a systematic net-cash framing bug** (the builder's `net_debt` field is GROSS
+  debt; true net = cash − net_debt) and corrected all 7 gen files. `visual_baseline.json` **now 28 tickers**;
+  validator green; all 28 STRICT-clean. *Page-1 5-scenario + Page-6 back-matter overflow = the usual prose
+  trim (thesis/CQ/weighting + pushback/triggers/glossary → ~SHAK length), never the shared layout — a sequential
+  subagent drove all 7 to STRICT-clean. Key mechanism: the back-matter/Page-1 are CSS grids with **stretched
+  rows** (row height = tallest cell), so trim the LONGEST cell in a row, not a short one.*
+- **Wave-2c chart-layout hardening — DONE (2026-06-14); clip-guard promoted WARN→STRICT.** Every tracked chart
+  clip fixed *from data* (spec §3.5): (a) young **valuation caption** word-wraps to ≤2 lines (`wrapSvgText`);
+  (b) **mature equity-build** left margin sized to the widest scenario label (`eqL` — kills the `UltBear` −5px
+  clip on every mature ticker) AND made **net-debt-aware** (byte-identical for net-cash names; a red −net-debt
+  bar + correct equity for AAPL/DIS, the first material-net-debt mature memos); (c) a magnitude-aware **`niceStep`**
+  axis tick replaces the fixed `yMax>6?2` logic that exploded into hundreds of gridlines at mega-cap $100B–$1T
+  scale (Mature Revenue + FCF charts), with the left margin sized from the widest `$…B` label (`monoTextWidth`);
+  (d) **`ChartTitle`** compresses via `textLength` when a title would overrun (ACHR TAM title +59px); (e)
+  **GRAL/IONQ `tam_competitor_share`** corrected (was > TAM — a copy-paste from OKLO; competitor bars ran
+  off-axis). With every chart margin/title now data-sized, the horizontal SVG-clip guard in `render_memo_pdf.py`
+  is **promoted from WARN-only to a STRICT gate** (2px tol, like the page-overflow check). All 28 render
+  STRICT-clean (overflow + clips); baseline regenerated + `--check` green; rendering deterministic (no pollution).
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin

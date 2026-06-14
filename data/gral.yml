@@ -207,7 +207,7 @@ scenarios:
       - 1.0
       - 1.0
       - 1.0
-      tam_competitor_share: 70.0
+      tam_competitor_share: 12.0
   bear:
     label: Bear
     short_label: Bear
@@ -351,7 +351,7 @@ scenarios:
       - 1.0
       - 1.0
       - 1.0
-      tam_competitor_share: 70.0
+      tam_competitor_share: 12.0
   base:
     label: Base
     short_label: Base
@@ -495,7 +495,7 @@ scenarios:
       - 1.0
       - 1.0
       - 1.0
-      tam_competitor_share: 70.0
+      tam_competitor_share: 12.0
   bull:
     label: Bull
     short_label: Bull
@@ -639,7 +639,7 @@ scenarios:
       - 1.0
       - 1.0
       - 1.0
-      tam_competitor_share: 70.0
+      tam_competitor_share: 12.0
   ultra_bull:
     label: Ultra Bull
     short_label: UltBull
@@ -782,7 +782,7 @@ scenarios:
       - 1.0
       - 1.0
       - 1.0
-      tam_competitor_share: 70.0
+      tam_competitor_share: 12.0
 historical_prices:
   ipo_marker: Spin Jun '24
   x_min: -2.05
