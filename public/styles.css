@@ -1059,3 +1059,5 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 .ai-dot.ai-zone-yellow { background: #c4a028; }
 .ai-dot.ai-zone-orange { background: #c87828; }
 .ai-dot.ai-zone-red    { background: var(--neg); }
+.ai-lifecycle { margin: 6px 0 14px; padding-left: 20px; }
+.ai-lifecycle li { margin: 7px 0; line-height: 1.5; }

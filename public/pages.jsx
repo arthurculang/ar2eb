@@ -1100,6 +1100,52 @@ function IndicatorPage() {
 
       <section className="portfolio-method">
         <div className="wrap">
+          <div className="eyebrow">What's a "quality-growth compounder" — and can you know in advance?</div>
+          <p>
+            That result leans on a slippery term, so here's an honest attempt. A
+            quality-growth compounder is a business that grows revenue durably and fast,
+            at high and stable gross margins and high returns on capital, with a long
+            runway to keep reinvesting at those returns — so intrinsic value compounds
+            for years. The observable ingredients: gross margin, durable growth, expanding
+            returns on capital, pricing power, and a widening moat (Helmer's 7 Powers, §6d).
+          </p>
+          <p>
+            The honest catch — and a real limit on the comparison above — is that
+            "compounder" is partly a <b>hindsight</b> label. You know a company compounded
+            after it has. Our "quality-growth" universe was, by construction, names we
+            already recognize as such, so part of the edge is <em>cheap among the eventual
+            winners</em> — which you couldn't have picked in real time with certainty. (The
+            fundamentals at each date were strictly point-in-time; the universe membership
+            was not.)
+          </p>
+          <p>
+            Prospectively you can see the <b>ingredients</b> but never fully the{' '}
+            <b>outcome</b> — most high-margin growers stall, and the base rate of
+            multi-decade compounding is low. Confidence rises across the lifecycle:
+          </p>
+          <ul className="ai-lifecycle">
+            <li><b>Early</b> — pre-profit hypergrowth. You're betting on ingredients and
+              narrative; high uncertainty, high failure rate. The moonshot domain.</li>
+            <li><b>Middle</b> — years of durable growth, proven unit economics, expanding
+              margins, demonstrated pricing power, a named Power. The quality is shown and
+              the runway still has room. The best window to make the bet — still probabilistic.</li>
+            <li><b>Late</b> — mega-cap maturity. You finally "know," but the runway is
+              mostly spent and the compounding is already priced in.</li>
+          </ul>
+          <p>
+            So "compounder" isn't a label you apply with certainty — it's a{' '}
+            <b>hypothesis</b>, best identified mid-lifecycle, and only ever probabilistically.
+            Underwriting that hypothesis — with explicit scenarios and falsifiers (§6c), a
+            moat audit (§6d), and a read on whether management can keep reinvesting well
+            (§14 People) — is the whole job of a memo here. You will sometimes be wrong,
+            which is exactly why the Indicator is a gentle tilt and sizing leans on a
+            probability-weighted DCF, not on the label.
+          </p>
+        </div>
+      </section>
+
+      <section className="portfolio-method">
+        <div className="wrap">
           <details>
             <summary><span className="eyebrow">Caveats &amp; method notes</span></summary>
             <div className="method-body">
