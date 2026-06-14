@@ -661,7 +661,7 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   const xTicks = [
     [-5, '-5y'], [-2, '-2y'], [0, 'today'],
     [5, '+5y'], [10, '+10y'], [15, '+15y'], [20, '+20y'],
-  ];
+  ].filter(([t]) => t >= X_MIN && t <= X_MAX);   // drop ticks off-plot on recent IPOs (X_MIN > -5)
 
   // End-of-line labels with min-vertical-separation enforcement (endLabels +
   // SCN_LABEL_META are built above, before the plot box).
