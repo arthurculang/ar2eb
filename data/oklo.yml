@@ -661,12 +661,12 @@ scenarios:
     - 'The tail (the second act): Oklo becomes the dominant AI-baseload-power IPP (~13 GW) AND originates a HALEU fuel-recycling
       monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center
       load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource
-      Power (§6d).'
+      Power.'
     - 'DCF ~$191/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +184%
       above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn''t capture.'
     probability_rationale: 'Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling
       monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly
-      (a cornered resource) is the §6d-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.'
+      (a cornered resource) is the Power-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.'
     dcf_metrics:
       tam_share: 14.42
       p_fail: 3
@@ -906,7 +906,7 @@ competitive:
       score: 2
       note: DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor
         IP — a genuine first-mover physical lead. In the ultra-bull this extends to a HALEU fuel-recycling monopoly — the
-        §6c.11.1 second act.
+        Power-gated second act.
     process_power:
       score: 1
       note: No operating reactor yet; the EBR-II heritage is design pedigree, not demonstrated process power.

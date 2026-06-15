@@ -3810,9 +3810,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Founder-owner-operator (~8% economic, $10k salary) returning the $7.7B cash hoard via buybacks, with a majority-independent board — disciplined and aligned; the offsets are super-voting control (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ZM 6.4)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +56% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ZM 6.4)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -5792,9 +5792,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "The cleanest governance of the cohort: single-class, declassified annual elections, ~93% say-on-pay, performance-weighted equity, net-cash discipline, and an orderly internal CEO handoff (Rosa) — institutionalized, not person-dependent. Mild demerits: low insider skin-in-the-game and a now non-independent (Executive) chair."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ISRG 17.5 — rarely screens cheap)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +20% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ISRG 17.5 — rarely screens cheap)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +20% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -7974,9 +7974,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack: majority control, a steady 10b5-1 sell-down, and capital flowing to M&A + a crypto treasury rather than returns."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (COIN 4.97)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +49% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (COIN 4.97)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +49% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -8701,9 +8701,9 @@ const MEMOS = [
         "prob": 8,
         "price": 360.14,
         "headline": "Starlink-style constellation; smaller-SpaceX by 2035.",
-        "why": "Tail of tails: every bull condition hits AND RKLB originates an owned constellation at platform scale AND earns a platform terminal as the network-economies Power lands. Individually 50-65%; jointly ~8%. The Starlink analog is the anchor; the §6d constellation lead/lag metrics are the falsifiers.",
+        "why": "Tail of tails: every bull condition hits AND RKLB originates an owned constellation at platform scale AND earns a platform terminal as the network-economies Power lands. Individually 50-65%; jointly ~8%. The Starlink analog is the anchor; the constellation lead/lag metrics are the falsifiers.",
         "what": [
-          "The tail (the second act): RKLB originates a Starlink-style owned constellation on top of a vertically-integrated launch+systems prime — recurring data/services revenue at platform margins. Revenue reaches ~$36.5B by FY35 at a ~38% blended margin, with a platform terminal reflecting the originated network-economies Power (§6d).",
+          "The tail (the second act): RKLB originates a Starlink-style owned constellation on top of a vertically-integrated launch+systems prime — recurring data/services revenue at platform margins. Revenue reaches ~$36.5B by FY35 at a ~38% blended margin, with a platform terminal reflecting the originated network-economies Power.",
           "DCF ~$367/share — equity ~$213B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX's ~23x private mark, most of which is Starlink). The genuine exponential tail, and it finally clears spot (+159%): the value is the constellation, not the rockets."
         ]
       }
@@ -9655,7 +9655,7 @@ const MEMOS = [
           },
           "networkEconomies": {
             "score": 1,
-            "note": "Owned-constellation/data flywheel — the ultra-bull second act (§6c.11.1); being originated, not yet established."
+            "note": "Owned-constellation/data flywheel — the ultra-bull second act; being originated, not yet established."
           },
           "counterPositioning": {
             "score": 2,
@@ -9754,9 +9754,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Founder-owner-operator (~10%, salary cut to $1 in 2026) with a majority-independent board — strongly aligned; the offsets are acute key-person concentration (Beck is CEO / Chair / de-facto CTO / public face) and steady dilution from stock-funded M&A."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot",
-        "contextRef": "§6d 7 Powers (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −63% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the −63% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -9948,9 +9948,9 @@ const MEMOS = [
         "prob": 8,
         "price": 186.66,
         "headline": "13 GW power + HALEU fuel monopoly.",
-        "why": "Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly (a cornered resource) is the §6d-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.",
+        "why": "Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly (a cornered resource) is the Power-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.",
         "what": [
-          "The tail (the second act): Oklo becomes the dominant AI-baseload-power IPP (~13 GW) AND originates a HALEU fuel-recycling monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource Power (§6d).",
+          "The tail (the second act): Oklo becomes the dominant AI-baseload-power IPP (~13 GW) AND originates a HALEU fuel-recycling monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource Power.",
           "DCF ~$191/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +184% above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn't capture."
         ]
       }
@@ -10922,7 +10922,7 @@ const MEMOS = [
           },
           "corneredResource": {
             "score": 2,
-            "note": "DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor IP — a genuine first-mover physical lead. In the ultra-bull this extends to a HALEU fuel-recycling monopoly — the §6c.11.1 second act."
+            "note": "DOE site-use permit + INL site under construction + awarded fuel + Atomic Alchemy isotopes + DeWitte-led fast-reactor IP — a genuine first-mover physical lead. In the ultra-bull this extends to a HALEU fuel-recycling monopoly — the Power-gated second act."
           },
           "processPower": {
             "score": 1,
@@ -15116,9 +15116,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Professionalized and single-class with an independent chair and disciplined buybacks — but a live governance moment: CEO Calvin McDonald is out (Jan 2026; interim co-CEOs + external search), a founder proxy fight just settled (Chip Wilson ~8.7%, two board seats), a classified board, the failed Mirror deal, and slipping say-on-pay support."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (LULU 1.95)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +65% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (LULU 1.95)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +65% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -15950,9 +15950,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Founder-CEO on a $1 salary, paid only if the stock clears price hurdles, returning capital through large buybacks — strong alignment and capital discipline, with a 2040 sunset on the control. The offset is a ~79% founder voting bloc + combined CEO/Chair concentrating control well above the ~14% economic stake."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ABNB 6.17)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +38% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ABNB 6.17)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +38% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -16788,9 +16788,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "The professionalized-after-the-founder case: a hired CEO who turned Uber to free cash flow and a $20B buyback regime, on a clean single-class register with an independent chair and no controller — the structural opposite of a founder-control name. The only real demerits: low insider skin-in-the-game and some execution-continuity tied to Dara."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (UBER 4.72)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the +48% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (UBER 4.72)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +48% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -18438,9 +18438,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-CEO paid only on escalating price hurdles ($0 vested when unmet) and not leaning on the controlled-company exemptions — but the ~54% founder vote is concentrated in one person via an irrevocable proxy, buyback intent has outrun execution, and growth has been bought with dilutive stock."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (DASH 6.48)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −1% finding, fairly valued) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (DASH 6.48)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the −1% finding, fairly valued) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -19275,9 +19275,9 @@ const MEMOS = [
           "score": 2,
           "takeaway": "The cohort's governance-turnaround story — and the weakest recent record: a board that closed an $8B deal without clearance (forced unwind, ~$4B impairment, an EU fine), failed say-on-pay (2023), and lost a proxy seat to Icahn. Being repaired — new CEO, independent chair, redesigned TSR-linked pay, say-on-pay recovered, activist oversight — but the track record is the observable flag."
         },
-        "opportunityRef": "§6c scenarios · Page-3 business snapshot · §13 AI (ILMN 7.08)",
-        "contextRef": "§6d 7 Powers (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −30% finding) + §12 sizing."
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ILMN 7.08)",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the −30% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -25855,7 +25855,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "cmg-memo__v001__2026-06-14_23-05.pdf",
-      "size": "—",
+      "size": "278 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -26656,7 +26656,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "dal-memo__v001__2026-06-14_23-03.pdf",
-      "size": "—",
+      "size": "284 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -27469,7 +27469,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "hood-memo__v001__2026-06-14_23-03.pdf",
-      "size": "—",
+      "size": "281 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -28278,7 +28278,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "de-memo__v001__2026-06-14_23-03.pdf",
-      "size": "—",
+      "size": "285 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -29093,7 +29093,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "algn-memo__v001__2026-06-14_23-05.pdf",
-      "size": "—",
+      "size": "280 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -29902,7 +29902,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "adsk-memo__v001__2026-06-14_23-05.pdf",
-      "size": "—",
+      "size": "283 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -30715,7 +30715,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "cart-memo__v001__2026-06-14_23-03.pdf",
-      "size": "—",
+      "size": "285 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -31520,7 +31520,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "u-memo__v001__2026-06-14_23-03.pdf",
-      "size": "—",
+      "size": "284 KB",
       "priorVersions": []
     },
     "metrics": {

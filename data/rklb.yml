@@ -652,13 +652,13 @@ scenarios:
     narrative:
     - 'The tail (the second act): RKLB originates a Starlink-style owned constellation on top of a vertically-integrated launch+systems
       prime — recurring data/services revenue at platform margins. Revenue reaches ~$36.5B by FY35 at a ~38% blended margin,
-      with a platform terminal reflecting the originated network-economies Power (§6d).'
+      with a platform terminal reflecting the originated network-economies Power.'
     - 'DCF ~$367/share — equity ~$213B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX''s ~23x private mark, most of which
       is Starlink). The genuine exponential tail, and it finally clears spot (+159%): the value is the constellation, not
       the rockets.'
     probability_rationale: 'Tail of tails: every bull condition hits AND RKLB originates an owned constellation at platform
       scale AND earns a platform terminal as the network-economies Power lands. Individually 50-65%; jointly ~8%. The Starlink
-      analog is the anchor; the §6d constellation lead/lag metrics are the falsifiers.'
+      analog is the anchor; the constellation lead/lag metrics are the falsifiers.'
     dcf_metrics:
       tam_share: 30.42
       p_fail: 2
@@ -872,7 +872,7 @@ competitive:
       note: Electron cadence builds a learning curve; Neutron reusability could reset cost, but it is pre-launch.
     network_economies:
       score: 1
-      note: Owned-constellation/data flywheel — the ultra-bull second act (§6c.11.1); being originated, not yet established.
+      note: Owned-constellation/data flywheel — the ultra-bull second act; being originated, not yet established.
     counter_positioning:
       score: 2
       note: Vertically integrated launch + components + future constellation — few new-space peers can replicate the full
@@ -956,9 +956,9 @@ pocd:
     takeaway: 'Founder-owner-operator (~10%, salary cut to $1 in 2026) with a majority-independent board —
       strongly aligned; the offsets are acute key-person concentration (Beck is CEO / Chair / de-facto CTO /
       public face) and steady dilution from stock-funded M&A.'
-  opportunity_ref: '§6c scenarios · Page-3 business snapshot'
-  context_ref: '§6d 7 Powers (Power Origination)'
-  deal: 'Open-market purchase = the deal: entry price vs. the §6c scenario distribution (the −63% finding) + §12 sizing.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  context_ref: 'The 7 Powers analysis (Power Origination)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the −63% finding) + position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-05-31_18-52
