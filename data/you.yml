@@ -1,0 +1,618 @@
+ticker: YOU
+company: Clear Secure
+exchange: NYSE
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 50.25
+market:
+  market_cap_billion: 4.77
+  shares_outstanding_million: 95.0
+  cash_billion: 0.8
+  net_debt_billion: 0.0
+  extras:
+  - Net cash ~$0.80B (~$171M cash + ~$629M marketable securities), no debt; ~95M economic shares (estimate)
+  - Revenue $0.901B FY25 (+19.7% in Q1'26); GAAP op margin 20.7%; FCF ~$0.30B (~30% margin) off the deferred-revenue model
+  - ~$50, YTD ~+55% / TTM ~+41% (52-wk $24.06-$62.73); ~13x EV/FCF; quarterly + special dividend + buyback
+taxonomy:
+  watchlist: fun-speculative
+  tier: Low
+  themes:
+  - identity-trust-security
+  primary_theme: identity-trust-security
+central_question: Is Clear Secure a maturing airport-lane subscription decelerating to terminal growth, or a horizontal identity-verification
+  network expanding past the airport?
+thesis: 'Clear Secure trades at ~$4.77B (~$50.25, up ~55% YTD / ~41% TTM) — about 13x EV/FCF on $0.901B revenue growing ~20%,
+  with a deferred-revenue membership model that throws off a ~30% FCF margin, net cash ~$0.80B and no debt; capital return
+  is aggressive. The fork the DCF resolves: airport CLEAR Plus saturating against a US frequent-flyer ceiling (with TSA''s
+  own free touchless ID commoditizing the lane) versus the identity platform — TSA PreCheck enrollment, biometric eGates,
+  enterprise verification — extending the network. The modal case lands ~+40%, so the distribution leans to cheap quality.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.3
+  - 0.4
+  - 0.6
+  - 0.77
+  - 0.9
+  history_op_margin:
+  - -45.3
+  - -29.5
+  - 3.3
+  - 16.0
+  - 20.7
+  history_fcf:
+  - 0.02
+  - 0.1
+  - 0.2
+  - 0.3
+  - 0.3
+  history_ev_rev:
+  - 10
+  - 6
+  - 5
+  - 4.5
+  - 4.4
+page3_chart_config:
+  segment_a: CLEAR Plus (airport)
+  segment_b: Platform / identity
+  hist_ent_split:
+  - 0.95
+  - 0.95
+  - 0.93
+  - 0.92
+  - 0.9
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end late Dec  ·  Q1 FY2026 results
+  sources: 'Sources: SEC XBRL company facts (CIK 1856314), Clear Secure Q1 FY2026 release (revenue $253.0M/+19.7%, total CLEAR
+    Members 40.99M/+31.3%, active CLEAR Plus 8.17M/+13.0%, FCF $185.5M/+103%, total bookings $291.7M/+40.8%). FCF = revenue
+    x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs subscription/identity peers. Caveats: ~95M economic
+    share count is an estimate (XBRL untagged); net cash ~$0.80B; dual-class governance gives the founder voting control.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.14
+    expected_per_share: 39.26
+    headline: Airport saturates; TSA commoditizes the lane.
+    narrative:
+    - 'CLEAR Plus hits the US frequent-flyer ceiling and TSA''s own free touchless-ID rollout commoditizes the value prop:
+      active members flatten, pricing power fades, and the platform never carries the load. Revenue creeps ~2-3%/yr and FCF
+      margin slips toward ~24% as growth spend persists against a stalled base.'
+    - A maturing single-product subscription that has stopped compounding earns a low-growth, ~11x EV/FCF terminal -> DCF
+      ~$39 (-22%). Net cash sets a floor but can't offset a saturated airport network.
+    probability_rationale: 'The genuine bear: CLEAR Plus growth already decelerated to +13% while total members grew +31%,
+      and TSA owns the airport checkpoint and is fielding its own biometric ID. 14% weight on saturation plus regulatory commoditization.'
+    dcf_metrics:
+      cagr_5y: 2.4
+      wacc: 0.105
+    dcf_path:
+      rev_b: 0.901
+      rev_path:
+      - 0.03
+      - 0.03
+      - 0.02
+      - 0.02
+      - 0.02
+      op_margin:
+      - 0.18
+      - 0.19
+      - 0.2
+      - 0.2
+      - 0.21
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.02
+      fcf:
+      - 0.223
+      - 0.239
+      - 0.254
+      - 0.258
+      - 0.274
+      cash: 0.8
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 95
+      distress: 0.0
+      pv_fcf:
+      - 0.202
+      - 0.196
+      - 0.188
+      - 0.173
+      - 0.166
+      sum_pv_fcf: 0.93
+      terminal_value: 3.29
+      pv_terminal: 2.0
+      op_ev: 2.93
+      total_equity: 3.73
+      dcf_per_share: 39.26
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.7
+      - 2.5
+      - 2.4
+      - 2.3
+      ev_fcf_multiple:
+      - 11.0
+      - 11.0
+      - 11.0
+      - 11.0
+      - 11.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 54.04
+    headline: Members grow slowly; platform stays optional.
+    narrative:
+    - Membership keeps adding at a decelerating pace on price and modest lane growth, but the identity platform (PreCheck,
+      eGates, enterprise) stays a small adjacency rather than a second engine. Revenue compounds ~6% to ~$1.2B at a steady
+      ~28-30% FCF margin.
+    - DCF ~$54 (+8%) — a high-margin, net-cash subscription that grows but doesn't break out is worth modestly above today's
+      price; most of the return is the FCF yield plus capital return, not re-rating.
+    probability_rationale: Lane growth and pricing continue but the platform doesn't inflect; a durable cash machine that
+      decelerates toward terminal growth. 27% as the plausible 'compounds slowly' path.
+    dcf_metrics:
+      cagr_5y: 6.2
+      wacc: 0.1
+    dcf_path:
+      rev_b: 0.901
+      rev_path:
+      - 0.08
+      - 0.07
+      - 0.06
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.21
+      - 0.22
+      - 0.23
+      - 0.24
+      - 0.24
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.025
+      fcf:
+      - 0.263
+      - 0.291
+      - 0.32
+      - 0.348
+      - 0.365
+      cash: 0.8
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 94
+      distress: 0.0
+      pv_fcf:
+      - 0.239
+      - 0.24
+      - 0.24
+      - 0.238
+      - 0.227
+      sum_pv_fcf: 1.18
+      terminal_value: 4.99
+      pv_terminal: 3.1
+      op_ev: 4.28
+      total_equity: 5.08
+      dcf_per_share: 54.04
+    chart_data:
+      ev_rev_multiple:
+      - 3.5
+      - 3.3
+      - 3.1
+      - 3.0
+      - 2.9
+      ev_fcf_multiple:
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.34
+    expected_per_share: 70.11
+    headline: Members compound; platform begins to carry.
+    narrative:
+    - 'The modal path: CLEAR Plus keeps adding members at ~13% with pricing, eGates roll past 50% of the network, the new
+      TSA PreCheck enrollment channel scales, and the platform starts contributing — blending to ~10% revenue growth at a
+      defended ~30%+ FCF margin. Revenue compounds toward ~$1.4B.'
+    - DCF ~$70 (+40%) — a ~20%-FCF-margin compounder at ~15x EV/FCF, net cash, returning capital, is mispriced if the modal
+      case plays out; this is the core of the finding.
+    probability_rationale: Requires continued member/pricing growth and the platform beginning to carry (PreCheck, eGates)
+      — consistent with Q1 bookings +41% and the raised FCF outlook, not a step-change. 34% as the central outcome.
+    dcf_metrics:
+      cagr_5y: 9.8
+      wacc: 0.095
+    dcf_path:
+      rev_b: 0.901
+      rev_path:
+      - 0.13
+      - 0.11
+      - 0.1
+      - 0.08
+      - 0.07
+      op_margin:
+      - 0.23
+      - 0.25
+      - 0.26
+      - 0.27
+      - 0.28
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.025
+      fcf:
+      - 0.295
+      - 0.339
+      - 0.385
+      - 0.43
+      - 0.46
+      cash: 0.8
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 93
+      distress: 0.0
+      pv_fcf:
+      - 0.269
+      - 0.283
+      - 0.293
+      - 0.299
+      - 0.292
+      sum_pv_fcf: 1.44
+      terminal_value: 6.74
+      pv_terminal: 4.28
+      op_ev: 5.72
+      total_equity: 6.52
+      dcf_per_share: 70.11
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.8
+      - 3.6
+      - 3.5
+      - 3.4
+      ev_fcf_multiple:
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.17
+    expected_per_share: 96.3
+    headline: Identity platform becomes the second act.
+    narrative:
+    - 'The platform expansion lands: CLEAR''s enrolled biometric identity becomes a horizontal verification layer beyond airport
+      lanes — PreCheck enrollment at scale, eGates across the network, stadiums and enterprise/everyday identity verification
+      — so the platform segment grows into a real second revenue stream on top of the membership base. Revenue compounds ~13%
+      to ~$1.7B at a ~33% FCF margin.'
+    - DCF ~$96 (+92%) — if the enrolled-identity network extends past airports, it re-rates toward a platform multiple; this
+      is the genuine ultra_bull second act, not a lift to the airport business.
+    probability_rationale: The platform optionality is real and observable (3rd authorized PreCheck enroller, eGates >50%
+      of airports, CLEAR Plus opened to 40+ more countries, enterprise verification). ~17% weight on it becoming a second
+      engine.
+    dcf_metrics:
+      cagr_5y: 13.2
+      wacc: 0.09
+    dcf_path:
+      rev_b: 0.901
+      rev_path:
+      - 0.17
+      - 0.15
+      - 0.13
+      - 0.11
+      - 0.1
+      op_margin:
+      - 0.25
+      - 0.27
+      - 0.29
+      - 0.31
+      - 0.32
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.03
+      fcf:
+      - 0.327
+      - 0.388
+      - 0.452
+      - 0.517
+      - 0.569
+      cash: 0.8
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 92
+      distress: 0.0
+      pv_fcf:
+      - 0.3
+      - 0.327
+      - 0.349
+      - 0.366
+      - 0.37
+      sum_pv_fcf: 1.71
+      terminal_value: 9.77
+      pv_terminal: 6.35
+      op_ev: 8.06
+      total_equity: 8.86
+      dcf_per_share: 96.3
+    chart_data:
+      ev_rev_multiple:
+      - 4.5
+      - 4.3
+      - 4.1
+      - 4.0
+      - 3.9
+      ev_fcf_multiple:
+      - 18.0
+      - 18.0
+      - 18.0
+      - 18.0
+      - 18.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 118.35
+    headline: Horizontal identity network; platform re-rate.
+    narrative:
+    - 'The full second act: the enrolled biometric identity becomes the default verification rail across travel, venues and
+      enterprise, the platform out-scales the airport base, and CLEAR re-rates to a network-platform multiple at a peak ~36%
+      FCF margin. Revenue compounds ~16% to ~$1.9B.'
+    - DCF ~$118 (+136%) — the enrolled-identity network compounds as a horizontal platform; ~8% probability, the asymmetric
+      upside the entry is buying.
+    probability_rationale: Everything works — members AND pricing AND a horizontal identity platform AND a multiple re-rate.
+      ~8%, the long-duration tail on the network becoming the verification standard.
+    dcf_metrics:
+      cagr_5y: 16.2
+      wacc: 0.088
+    dcf_path:
+      rev_b: 0.901
+      rev_path:
+      - 0.21
+      - 0.18
+      - 0.16
+      - 0.14
+      - 0.12
+      op_margin:
+      - 0.27
+      - 0.29
+      - 0.32
+      - 0.34
+      - 0.35
+      wacc_path:
+      - 0.088
+      - 0.088
+      - 0.088
+      - 0.088
+      - 0.088
+      term_g: 0.03
+      fcf:
+      - 0.349
+      - 0.437
+      - 0.522
+      - 0.612
+      - 0.686
+      cash: 0.8
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 91
+      distress: 0.0
+      pv_fcf:
+      - 0.321
+      - 0.369
+      - 0.405
+      - 0.437
+      - 0.45
+      sum_pv_fcf: 1.98
+      terminal_value: 12.18
+      pv_terminal: 7.99
+      op_ev: 9.97
+      total_equity: 10.77
+      dcf_per_share: 118.35
+    chart_data:
+      ev_rev_multiple:
+      - 5.0
+      - 4.8
+      - 4.6
+      - 4.5
+      - 4.4
+      ev_fcf_multiple:
+      - 20.0
+      - 19.0
+      - 19.0
+      - 19.0
+      - 19.0
+historical_prices:
+  ipo_marker: IPO Jun '21
+  x_min: -4.7
+  points:
+  - - -4.7
+    - 31
+  - - -4.0
+    - 40
+  - - -3.3
+    - 18
+  - - -2.5
+    - 15
+  - - -1.5
+    - 30
+  - - -0.8
+    - 40
+  - - -0.3
+    - 62
+  - - -0.05
+    - 50.25
+weighting_rationale:
+- label: Ultra Bear 14%
+  body: Airport saturates; TSA commoditizes; ~$39 (-22%).
+- label: Bear 27%
+  body: Members grow slowly; platform optional; ~$54 (+8%).
+- label: Base 34%
+  body: Members compound; platform carries; ~$70 (+40%).
+- label: Bull 17%
+  body: Identity platform second act; ~$96 (+92%).
+- label: Ultra Bull 8%
+  body: Horizontal identity network; ~$118 (+136%).
+appendix:
+  pushback:
+  - label: ~13x EV/FCF for a ~30%-margin, net-cash compounder.
+    body: A deferred-revenue model throwing off ~30% FCF margin, growing ~20%, net cash, returning capital — cheap for the
+      quality; the modal DCF is +40%.
+  - label: The deferred-revenue model is the FCF engine.
+    body: Members pay upfront, so bookings (+41% in Q1) lead revenue and FCF (~$186M, +103% YoY) runs ahead of GAAP — the
+      cash machine is the asset.
+  - label: Saturation is the real bear, not solvency.
+    body: Net cash, no debt, ~30% FCF margin — no survival risk; the downside is a US frequent-flyer ceiling plus free TSA
+      touchless ID, i.e. terminal growth.
+  - label: The platform is a genuine second act.
+    body: 3rd authorized TSA PreCheck enroller, eGates in 30+ airports (>50% of the network) — the identity network expanding
+      beyond airport lanes.
+  - label: Dual-class governance is a flag.
+    body: Founder voting control over minority economic holders, plus a ~95M economic share count that is an estimate (XBRL
+      untagged) — a caveat to size against.
+  triggers:
+  - label: Bull validation
+    body: platform/identity revenue scales as a distinct stream  ·  PreCheck enrollment + eGates ramp network-wide  ·  enterprise/everyday
+      verification wins land  ·  CLEAR Plus active members re-accelerate above mid-teens
+  - label: Bear validation
+    body: CLEAR Plus active-member growth decays toward flat  ·  TSA's free touchless ID rolls out broadly and pricing power
+      fades  ·  platform revenue stays an immaterial adjacency  ·  bookings growth converges down to revenue growth
+  - label: Reframe needed
+    body: if the airport network saturates and the platform never carries, re-rate the terminal toward a low-growth single-product
+      subscription; the dual-class governance + estimated share count are standing per-share caveats
+glossary:
+- term: CLEAR Plus
+  definition: The paid airport-security membership (~8.17M active, +13%) that gives expedited identity verification in airport
+    lanes — the core, mature revenue base and the saturation question.
+- term: Total CLEAR Members
+  definition: All enrolled identities (~40.99M, +31%), most free, spanning airports, venues and the platform — the top of
+    the funnel CLEAR aims to convert and monetize via the identity network.
+- term: Deferred revenue / bookings
+  definition: Members prepay, so cash bookings (~$291.7M, +41%) are collected ahead of recognized revenue — the mechanism
+    behind the ~30% FCF margin and FCF running ahead of GAAP.
+- term: TSA PreCheck / eGates
+  definition: Government expedited-screening enrollment (3rd authorized provider) and biometric airport gates (>50% of the
+    network) — the rails the identity platform expands through beyond lanes.
+- term: FCF margin
+  definition: Free cash flow / revenue (~30% FY25, lifted by deferred-revenue prepayment); the mature-DCF swing factor — whether
+    membership and the platform sustain ~30% cash conversion at scale.
+competitive:
+  arena: Identity verification / expedited airport security — Clear Secure (CLEAR Plus lanes + an enrolled biometric identity
+    network, ~$0.9B revenue) vs TSA PreCheck (and TSA's own free touchless ID), Idemia/airport biometrics, and identity-verification
+    platforms (Okta, Onfido, Yoti, government eID); auditing switching costs + a cornered-resource identity network against
+    saturation and regulatory commoditization.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 2
+      note: Enrollment/marketing leverage over a ~41M-member base, but airport infrastructure spend is real and the absolute
+        scale is small.
+    network_economies:
+      score: 2
+      note: More enrolled identities make CLEAR more useful to venues/partners, but it is one-sided (users, not a true two-sided
+        market) — emerging, not dominant.
+    counter_positioning:
+      score: 1
+      note: Was the consumer-paid fast-lane disruptor; now the incumbent, and TSA's free touchless ID counter-positions the
+        paid value prop.
+    switching_costs:
+      score: 3
+      note: 'A dominant Power: enrolled biometrics + the renewing membership habit make re-enrolling elsewhere a friction,
+        sticky once a frequent flyer is in the network.'
+    branding:
+      score: 2
+      note: Recognized travel brand (the visible airport lanes), but it is a convenience brand, not pricing-power-defining
+        the way a premium consumer brand is.
+    cornered_resource:
+      score: 3
+      note: 'The other dominant Power: the enrolled biometric identity dataset + secured airport real-estate footprint — hard
+        for a new entrant to replicate, though contingent on airport/TSA contracts.'
+    process_power:
+      score: 2
+      note: Biometric enrollment + verification operations and the deferred-revenue engine; real but replicable.
+  dominant_power: cornered_resource
+  durability: medium
+  rivals:
+  - name: TSA PreCheck (incl. free touchless ID)
+    kind: public
+    note: The government incumbent at the checkpoint; its own free biometric ID is the central commoditization threat to the
+      paid lane.
+    growth: null
+    margin: null
+    multiple: government
+  - name: Idemia / airport biometrics
+    kind: private
+    note: Supplies biometric checkpoint hardware/ID to TSA and airports; an infrastructure competitor to CLEAR's lane economics.
+    growth: null
+    margin: null
+    multiple: private
+  - name: Okta
+    kind: public
+    note: Enterprise identity/verification platform; the comp if CLEAR's platform becomes a horizontal identity layer, and
+      a margin/multiple benchmark.
+    growth: 0.13
+    margin: 0.22
+    multiple: ~30x EV/FCF
+  - name: Onfido / Yoti / government eID
+    kind: private
+    note: Identity-verification challengers and national digital-ID schemes; pressure on the platform's everyday-verification
+      ambition.
+    growth: null
+    margin: null
+    multiple: private
+  threats:
+  - vector: cornered_resource
+    who: TSA's own free touchless ID
+    falsifier: CLEAR Plus active-member growth decays toward flat as the free government biometric lane commoditizes the paid
+      value prop.
+  - vector: switching_costs
+    who: US frequent-flyer saturation
+    falsifier: The addressable frequent-flyer base is exhausted; net active CLEAR Plus members plateau despite pricing.
+  - vector: network_economies
+    who: Identity-verification platforms (Okta/Onfido/government eID)
+    falsifier: The platform/identity segment stays an immaterial adjacency while rivals own enterprise/everyday verification.
+  takeaway: 'Clear Secure''s Powers are switching costs (an enrolled biometric identity + the renewing membership habit) and
+    a cornered resource (the enrolled-identity dataset + secured airport footprint) — genuine but airport-contingent. The
+    Audit: the cornered resource is durable (medium) only as long as the airport network holds and the platform extends it;
+    the live threats are US frequent-flyer saturation and, more pointedly, TSA''s own free touchless ID commoditizing the
+    paid lane. That fork drives the terminal growth rate, and the DCF prices both sides — a saturating single-product subscription
+    in the ultra-bear (-22%) against a horizontal identity network in the bull/ultra-bull (+92% / +136%). The modal case has
+    members compounding while the platform begins to carry (+40%), so a ~30%-FCF-margin, net-cash, capital-returning compounder
+    at ~13x EV/FCF screens as cheap quality despite the YTD run. Standing caveats on any per-share read: dual-class governance
+    (founder voting control over minority economic holders) and a ~95M economic share count that is an estimate.'
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-06-15_06-24
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: '001'
+  pdf_timestamp: 2026-06-15_06-24
