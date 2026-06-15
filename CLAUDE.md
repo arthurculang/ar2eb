@@ -217,6 +217,26 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   usual Page-1 (5-scenario) + Page-6 (back-matter) prose trims — the binding elements are the scenario-card headlines
   (Page 1) and the pushback-row bodies in the stretched 3-col grid (Page 6); DE's captive-finance caveat got
   consolidated from 4 places to 2.* Shipped on `claude/fcf-medium-batch` (stacked on the Mega-7 `conviction-bluf`).
+- **Fun-Speculative mature slice SHIPPED (2026-06-15; tickers 37–42): CROX, RDDT, TOST, WRBY, YOU, SHOP.** First
+  `fun-speculative` batch, all mature_company; conviction tiers (Arthur, via screenshot): CROX **High**; RDDT/TOST/
+  WRBY/SHOP Med; YOU Low. Sourced from SEC XBRL (`source_mega7.py` extended: RDDT 1713445, TOST 1650164, WRBY
+  1504776, YOU 1856314; CROX/SHOP already in the panel dict), modeled through the mature engine, authored from a
+  locked skeleton (`/tmp/funspec/numbers.py` → per-ticker `gen_<T>.py`; prose by 6 parallel subagents, numbers mine).
+  SBC-adjusted RDDT/TOST/SHOP ex-SBC. **Findings:** CROX **+56.8%** (cheapest — ~9× EV/FCF + heavy buyback; market
+  hates the HEYDUDE drag + flat revenue; FY25 GAAP op margin is the non-cash impairment, modeled normalized ~22%;
+  net debt $1.2B), YOU **+38.8%** (cheap net-cash FCF machine ~13× FCF, ~30% FCF margin, capital return; dual-class
+  governance + estimated ~95M share count are flags), TOST **+25.5%** (de-rated −40% TTM + a real margin inflection;
+  FCF modeled on payments-heavy total revenue), SHOP **−15.1%** (rich ~30× fwd FCF on 34% growth; GAAP loss is a
+  non-cash equity mark), RDDT **−20.2%** (priced for perfection, +69% growth ~43× FCF, existential Google-AI-traffic
+  risk), WRBY **−42.1%** (expensive ~3× sales, priced for a not-yet-shown margin inflection + the Google-glasses
+  call-option). `visual_baseline.json` **now 42 tickers**; validator green; all 6 STRICT-clean; no drift on the
+  existing 36. *Recovery lesson: a trim subagent hand-edited CROX's thesis with `Bull:`/`Bear:` (a `Word: ` colon-space
+  in an unquoted YAML scalar → YAML read it as a mapping key → `build_site_data` aborted → the renderer ran on a stale
+  `data.js`, making all the trims unreliable). The gen source was always valid; re-scaffolding restored it; a
+  YAML-safety rule ("never write `Capitalizedword: ` in a value; confirm build_site_data succeeds after each edit")
+  is now in the trim brief.* Deferred to framework-specific waves: **HHH** (real-estate SOTP), **PACB/SYM** + the
+  **moonshot tier** (TEM/SERV/NVCR/RXRX/BEAM…, young_company DCF), **BLGFF** (a Baillie Gifford closed-end fund — NAV/
+  discount, no operating DCF). Shipped on `claude/fun-speculative-batch`.
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin

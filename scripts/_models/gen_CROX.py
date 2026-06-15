@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""CROX — Crocs, Inc. (NASDAQ) mature-company memo spec. Emits data/_intake/crox.yml
+via the reusable Batch-B builder (gen_b1.build). Numerics modeled in model_mature;
+op-margin history is GAAP (us-gaap:OperatingIncomeLoss / revenue) from SEC XBRL (CIK 1334036).
+NOTE: model is on NORMALIZED FCF — FY25 GAAP op margin 3.7% is the $737M non-cash HEYDUDE
+impairment ($430M trademark + $307M goodwill, Q2'25); adjusted ~22%. ~$1.2B net debt drags
+the equity build (chart6 title 'Op EV − net debt')."""
+import sys, os; sys.path.insert(0, os.path.dirname(__file__))
+from gen_b1 import build
+
+SPEC = dict(
+ ticker="CROX", company="Crocs, Inc.", exch="NASDAQ", spot=124.71,
+ cap=6.26, sh=50.2, cash=0.13, net_debt=1.231, rev_b=4.041,
+ wl="fun-speculative", tier="High", themes=["premium-consumer-brands"],
+ extras=[
+   "~$0.13B cash vs ~$1.34B total debt -> ~$1.2B net debt (deleveraging the HEYDUDE deal); ~50.2M shares",
+   "Revenue $4.04B FY25 (~flat); GAAP op margin 3.7% but adjusted ~22% (the $737M non-cash HEYDUDE impairment); FCF ~$0.7-0.9B",
+   "~$125, near the 52-week high ($73-$129), +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)"],
+ cq="Does the Crocs core brand (~83% of revenue) sustain mid-single-digit international-led growth — or does the N.A. fad fade while HEYDUDE keeps destroying value?",
+ thesis="Crocs trades at ~$6.26B (~$124.71, +45% YTD, near the 52-week high) — ~9x EV/FCF on $4.04B revenue that is ~flat because HEYDUDE (-12%) offsets a still-growing Crocs core (+1%, international +7%). The TTM GAAP P/E is distorted by a $737M non-cash HEYDUDE impairment; adjusted operating margin is ~22%. The bull is the Crocs brand compounding mid-single-digit on international + DTC while the already-written-down HEYDUDE de-risks the downside; the bear is the Crocs fad fading in N.A. plus more HEYDUDE value destruction. On normalized FCF the modal case lands ~+61%, so the distribution reads cheap — the market is paying ~9x for a flat-looking top line.",
+ chartref=[("history_years",[2021,2022,2023,2024,2025]),
+   ("history_revenue",[2.3,3.6,4.0,4.1,4.04]),
+   ("history_op_margin",[29.5,23.9,26.2,24.9,22.0]),
+   ("history_fcf",[0.5,0.5,0.8,0.9,0.7]),
+   ("history_ev_rev",[3.0,2.0,2.0,1.8,1.8])],
+ p3cfg=[("segment_a","Crocs brand"),("segment_b","HEYDUDE"),
+   ("hist_ent_split",[1.0,0.85,0.80,0.80,0.83]),
+   ("chart6_title","Equity build (Op EV − net debt)"),("chart6_type","matureEquityBuild")],
+ subtitle="FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end late Dec  ·  Q1-FY2026 results + raised FY26 guidance",
+ sources="Sources: SEC XBRL company facts (CIK 1334036; revenue, GAAP operating income/margin, cash flow, debt), Crocs Q1-FY2026 release (revenue $921.5M/-1.7%, Crocs brand $767M/+0.8% with international +7% and N.A. -6%, HEYDUDE $154M/-12.3%, gross margin 56.8%, adjusted operating margin ~22%, adjusted EPS $2.99), $737M HEYDUDE impairment ($430M trademark + $307M goodwill, Q2-2025), FY26 guide raised to revenue -1 to +1% / adjusted operating margin >22%. Op margin history is GAAP; the model uses normalized (ex-impairment) operating and FCF margins. Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC; equity = operating EV − ~$1.2B net debt. EV/sales & EV/FCF vs branded-footwear peers (DECK/NKE/SKX/ONON).",
+ ipo="IPO Feb '06", xmin=-5.2,
+ points=[[-5.0,50],[-4.0,90],[-3.2,110],[-2.5,140],[-1.5,90],[-0.8,100],[-0.3,73],[-0.05,124.71]],
+ scn={
+  "ultra_bear":dict(p=0.14,g=[-0.06,-0.03,0.00,0.01,0.01],fcfm=[0.13,0.13,0.14,0.14,0.15],opm=[0.16,0.16,0.17,0.17,0.18],wacc=0.115,tg=0.020,fs=48,evr=[1.6,1.4,1.3,1.2,1.1],evf=[9,9,9,9,9],
+    hl="Fad fades; HEYDUDE keeps bleeding.",
+    narr=["The Crocs core rolls over in N.A. as the clog cycle peaks and international can't offset it, while HEYDUDE keeps shrinking past the markdown already taken; consolidated revenue declines mid-single-digit before flattening. Tariffs/duties and mix compress margin and FCF margin slides toward ~13-15% as the brand loses pricing power.","A fashion brand whose lead franchise is fading earns a low single-digit-growth, ~9x FCF terminal -> DCF ~$88.96 (-29%); ~$1.2B net debt deepens the equity hit even with the buyback shrinking the share count."],
+    pr="The genuine bear: Crocs is a single-silhouette fad with N.A. already -6%, HEYDUDE is guided down again, and tariffs are live. 14% on the cash engine actually rolling over rather than just decelerating."),
+  "bear":dict(p=0.27,g=[-0.01,0.00,0.01,0.02,0.02],fcfm=[0.15,0.15,0.16,0.16,0.16],opm=[0.18,0.19,0.19,0.20,0.20],wacc=0.105,tg=0.020,fs=46,evr=[1.8,1.7,1.6,1.5,1.4],evf=[11,11,10,10,10],
+    hl="Flat top line; HEYDUDE a lasting drag.",
+    narr=["Crocs grows low-single-digit on international while N.A. stays soft, and HEYDUDE's decline is a persistent offset, so consolidated revenue is roughly flat for years. Margin holds in the high-teens/low-20s as tariffs and mix cap operating leverage; the buyback does much of the per-share work.","DCF ~$133.91 (+7%) — even a flat, HEYDUDE-dragged Crocs at ~10x terminal FCF is modestly above today's price; ~9x entry plus net-cash-funded repurchases provide a floor without a re-rate."],
+    pr="The plausible 'decelerates but doesn't break' path: Crocs muddles low-single-digit, HEYDUDE stays a drag, margins are tariff-capped. 27% as the realistic muddle-through."),
+  "base":dict(p=0.34,g=[0.02,0.03,0.03,0.03,0.03],fcfm=[0.16,0.17,0.17,0.18,0.18],opm=[0.20,0.21,0.21,0.22,0.22],wacc=0.100,tg=0.025,fs=44,evr=[2.0,1.9,1.8,1.7,1.6],evf=[13,12,12,12,12],
+    hl="Crocs core compounds; HEYDUDE stabilizes.",
+    narr=["The modal path: the Crocs brand sustains mid-single-digit growth led by international and DTC, HEYDUDE stabilizes near its written-down level rather than recovering, and consolidated revenue compounds low-single-digit (~3%). Adjusted operating margin holds ~20-22% as scale offsets tariffs, and FCF margin runs ~16-18%.","DCF ~$200.45 (+61%) — a still-growing core brand throwing off ~$0.7-0.9B FCF, valued at ~12x terminal FCF after the ~$1.2B net-debt bridge, prices well above ~9x today; the buyback compounds the per-share math. The flat consolidated optics, not the cash, are what the market is discounting."],
+    pr="Requires Crocs international + DTC to keep the brand growing while a de-risked HEYDUDE merely holds — consistent with +7% international and the raised FY26 guide. 34% as the central case."),
+  "bull":dict(p=0.17,g=[0.04,0.05,0.05,0.04,0.04],fcfm=[0.17,0.18,0.19,0.19,0.20],opm=[0.21,0.22,0.23,0.23,0.24],wacc=0.095,tg=0.030,fs=42,evr=[2.3,2.2,2.1,2.0,1.9],evf=[15,14,14,14,14],
+    hl="International runway; brand re-rates.",
+    narr=["The Crocs brand proves it is a durable global footwear platform, not a N.A. fad: international compounds mid-to-high-single-digit, DTC and Jibbitz personalization lift margin, and HEYDUDE quietly returns to flat-to-positive off its low base. Revenue compounds ~4-5% at a ~23-24% operating margin and FCF margin near 20%.","DCF ~$291.67 (+134%) — if the market re-rates Crocs toward a branded-compounder multiple (~14x terminal FCF) and the aggressive buyback keeps shrinking the float, the de-rated ~9x entry re-rates hard with the fundamentals."],
+    pr="Crocs international +7% with white space, ~83%-of-revenue cash engine, and a buyback ~$0.75B remaining make a re-rate credible if N.A. fad-fear proves wrong. 17% on the brand durability case landing."),
+  "ultra_bull":dict(p=0.08,g=[0.06,0.07,0.06,0.05,0.05],fcfm=[0.18,0.19,0.20,0.21,0.21],opm=[0.22,0.23,0.24,0.25,0.25],wacc=0.092,tg=0.030,fs=40,evr=[2.6,2.5,2.4,2.3,2.2],evf=[16,15,15,15,15],
+    hl="Global brand machine; full re-rate.",
+    narr=["The full second act: Crocs becomes an enduring global brand machine — international and DTC compound high-single-digit, Jibbitz/personalization and collaborations entrench pricing power, HEYDUDE turns into a contributor, and margin pushes toward 25%. Revenue compounds ~6% at a ~25% operating margin, FCF margin ~21%.","DCF ~$365.00 (+193%) — the asymmetric tail where a fad re-rates into a compounder at ~15x terminal FCF while a buyback retires a large share of the float; ~8% probability, the long-duration upside the ~9x entry is buying."],
+    pr="Everything works — durable international growth AND margin expansion AND a HEYDUDE recovery AND a multiple re-rate, the brand-platform outcome. 8%, the upside tail."),
+ },
+ wr=[("Ultra Bear 14%","Fad fades and HEYDUDE keeps bleeding; ~$88.96 (-29%)."),
+     ("Bear 27%","Flat top line, HEYDUDE a lasting drag; ~$133.91 (+7%)."),
+     ("Base 34%","Crocs core compounds, HEYDUDE stabilizes; ~$200.45 (+61%)."),
+     ("Bull 17%","International runway; the brand re-rates; ~$291.67 (+134%)."),
+     ("Ultra Bull 8%","Global brand machine, full re-rate; ~$365.00 (+193%).")],
+ pb=[("Consolidated revenue is flat — why is this cheap?","Flat is HEYDUDE (-12%) masking a still-growing Crocs core (+1%, international +7%); at ~9x EV/FCF the market pays a fading-business multiple for a brand that is still compounding ex-HEYDUDE."),
+     ("The TTM GAAP P/E looks distorted.","FY25 GAAP op margin is 3.7% only because of a $737M non-cash HEYDUDE impairment; adjusted operating margin is ~22% and FCF is ~$0.7-0.9B — the model runs on the normalized numbers, not the headline."),
+     ("HEYDUDE is the bear — but it's already written down.","The $430M trademark + $307M goodwill write-down is taken; further downside is a guided-down (-5 to -7%) but small residual, so HEYDUDE de-risks more than it threatens from here."),
+     ("Crocs is a single-silhouette fad concentrated in N.A.","The real risk: ~83% of revenue and the entire cash engine is one brand, and N.A. is already -6%; the bull rests on international (+7%) proving the brand is a durable global platform, not a domestic cycle."),
+     ("Net debt, not net cash — does it matter?","~$1.2B net debt (deleveraging the HEYDUDE deal) drags the equity build and is why the buyback runs alongside paydown; deep FCF services both, but it caps how fast the float shrinks.")],
+ tr=[("Bull validation","Crocs brand international growth holds mid-single-digit+  ·  adjusted operating margin stays >22% through tariffs  ·  HEYDUDE decline flattens toward 0%  ·  buyback keeps retiring float at ~9x"),
+     ("Bear validation","Crocs N.A. comps deepen below -6% and international decelerates  ·  another HEYDUDE write-down or guide-down below -7%  ·  adjusted operating margin falls below ~18% on tariffs/mix  ·  FCF margin slips toward the low teens"),
+     ("Reframe needed","if Crocs-brand growth turns negative (not just HEYDUDE), the fad thesis is confirmed — re-rate the terminal toward a declining single-brand footwear multiple, and the ~9x stops being cheap")],
+ gloss=[("Crocs brand","The core clog/sandal franchise — ~83% of revenue and essentially all the FCF; growing ~+1% overall but +7% international, the swing factor for the whole memo."),
+        ("HEYDUDE","The casual-footwear brand acquired in 2022, now in structural decline (guided -5 to -7% FY26) and already impaired by $737M; a small, de-risked residual rather than a growth leg."),
+        ("HEYDUDE impairment","A $737M non-cash write-down (Q2-2025: $430M trademark + $307M goodwill) that crushes FY25 GAAP operating margin to 3.7% and distorts the TTM P/E — the reason the model uses normalized (~22%) margins."),
+        ("Net debt","Total debt (~$1.34B) less cash (~$0.13B) ≈ $1.2B, left over from the HEYDUDE acquisition; it is subtracted from operating enterprise value in the equity build and is being paid down alongside the buyback."),
+        ("FCF margin","Free cash flow / revenue (~16-21% across scenarios, ~22% adjusted op margin underneath); the mature-DCF swing factor — whether the Crocs brand keeps converting its sales to deep free cash flow.")],
+ arena="Branded footwear — Crocs (a dominant single-brand clog/sandal franchise with personalization via Jibbitz, plus the declining HEYDUDE) vs Deckers (HOKA/UGG), Nike, Skechers, and On; auditing a brand Power against fashion/fad concentration and the HEYDUDE drag.",
+ powers=[("scale_economies",2,"Sourcing and marketing leverage at ~$4B revenue and high gross margin (56.8%), but small vs Nike/Deckers; not a cost-based moat."),
+         ("network_economies",0,"None — footwear isn't a network; Jibbitz personalization is engagement, not a network effect."),
+         ("counter_positioning",1,"Crocs was the anti-fashion 'ugly' disruptor incumbents wouldn't copy; now mainstream, so the edge is brand, not a positioning rivals can't match."),
+         ("switching_costs",0,"Zero — footwear purchase is promiscuous; every pair is a fresh decision."),
+         ("branding",4,"The dominant Power: a globally recognized brand with real pricing power, ~57% gross margin, Jibbitz personalization and collaborations — the entire cash engine, but concentrated in one silhouette and exposed to fad risk."),
+         ("cornered_resource",1,"The Crocs trademark/Croslite material and Jibbitz IP are valuable, but the form is widely imitated; not truly cornered."),
+         ("process_power",1,"Efficient sourcing and DTC/digital execution; competent operations, not a structural process moat.")],
+ dom="branding", dur="medium",
+ rivals=[("Deckers (DECK)","public","HOKA/UGG owner; the branded-footwear compounder benchmark — higher growth and a richer multiple, the bull comp.",0.15,0.21,"~18x EV/FCF"),
+         ("Nike (NKE)","public","The scale incumbent; brand/distribution power Crocs can't match, but slower-growing and turnaround-bound.",0.0,0.11,"~25x EV/FCF"),
+         ("Skechers (SKX)","public","Value/comfort footwear at scale; the closest size/price comp, taken private in 2025 at a modest multiple.",0.07,0.10,"~private (~LBO)"),
+         ("On Holding (ONON)","public","Premium performance-running insurgent; the high-growth, high-multiple end of the field, the anti-fad comp.",0.30,0.10,"~40x EV/FCF")],
+ threats=[("branding","Fashion/fad cycle in N.A. (changing taste, the clog peaking)","Crocs-brand N.A. comps deepen below -6% and international decelerates, signalling the silhouette is a domestic cycle, not a durable platform."),
+          ("branding","HEYDUDE structural decline","A further HEYDUDE write-down or a guide-down below -7%, dragging consolidated growth and confirming the deal destroyed value."),
+          ("scale_economies","Tariffs/duties + product-cost and mix inflation","Adjusted operating margin falls below ~18%, eroding the FCF margin the whole valuation rests on.")],
+ take="Crocs's brand Power is genuine and dominant — a globally recognized footwear brand with ~57% gross margin, real pricing power, and Jibbitz personalization, and it is essentially the entire cash engine (~83% of revenue, ~$0.7-0.9B FCF). The Audit: branding is durable but rated medium, not high, because it is concentrated in a single silhouette exposed to fad risk and bolted to a structurally declining HEYDUDE. The live threats are a N.A. taste shift (already -6%) and further HEYDUDE value destruction — but HEYDUDE is already impaired ($737M taken) and international is +7%, which is why the downside is de-risked and the brand re-rate is the upside. That squares with the +56.8% finding: at ~9x EV/FCF the market prices a fading business, while the normalized cash flow of a still-growing core brand underwrites materially more — the flat consolidated optics, not the cash, are the discount.",
+)
+
+if __name__ == "__main__":
+    build(SPEC)
