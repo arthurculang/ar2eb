@@ -1,0 +1,556 @@
+# ALGN — Align Technology (NASDAQ) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: ALGN
+company: Align Technology
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 174.84
+market:
+  market_cap_billion: 12.46
+  shares_outstanding_million: 71.3
+  cash_billion: 1.1
+  net_debt_billion: 0.0
+  extras:
+  - $1.10B cash, no debt (net cash, p_fail ~0); ~71.3M shares; ~$200M buyback active
+  - Revenue $4.035B FY25 (+1%, flat-lining); GAAP op margin compressed to 13.5% (non-GAAP ~21%); FCF ~$0.5B; ~70% gross margin
+  - ~$175, YTD ~+7-8%, 52-wk $122-$208 - deeply de-rated from the 2021 ~$700 peak (fwd P/E ~15)
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Low
+  themes:
+  - medical-devices
+  primary_theme: medical-devices
+central_question: Does clear-aligner category growth and Invisalign share retention outrun ASP/share erosion from Angelalign
+  and at-home commoditization in a discretionary big-ticket product?
+thesis: 'Align trades at ~$12.5B (~$174.84, deeply de-rated from the 2021 ~$700 peak to a ~+7-8% YTD ~$175) - ~25x FCF on
+  $4.04B revenue growing low-single-digit, ~70% gross margin, net cash and a buyback. It is the category-defining clear-aligner
+  brand (Invisalign + iTero) in a market still only ~15-20% penetrated, but growth has flat-lined (+1%) as discretionary demand
+  softens and Angelalign/at-home rivals pressure ASPs (-1 to -2% guided). The mature DCF asks whether category penetration
+  plus the teen/Palatal-Expander TAM outrun price/share erosion. The weighted finding lands ~fair (-1.5%): the modal case
+  is +1%, essentially at spot - de-rated, but not cheap.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 4.0
+  - 3.7
+  - 3.9
+  - 4.0
+  - 4.04
+  history_op_margin:
+  - 24.7
+  - 17.2
+  - 16.7
+  - 15.2
+  - 13.5
+  history_fcf:
+  - 0.8
+  - 0.3
+  - 0.6
+  - 0.6
+  - 0.5
+  history_ev_rev:
+  - 13
+  - 6
+  - 5
+  - 4
+  - 3.1
+page3_chart_config:
+  segment_a: Clear Aligner
+  segment_b: Systems & Services (iTero)
+  hist_ent_split:
+  - 0.83
+  - 0.82
+  - 0.82
+  - 0.82
+  - 0.85
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end late Dec  ·  Q1 FY2026 (Apr 2026) results
+  sources: 'Sources: SEC XBRL company facts (CIK 1097149; revenue, GAAP operating income/margin, cash flow, debt), Align Q1
+    FY2026 release (revenue $1,040M/+6.2%, Clear Aligner $856M, iTero/Systems $184M, record 686,000 Invisalign cases/+6.7%,
+    gross margin 70.8%, FCF $120M, FY26 ASPs guided -1 to -2%). Revenue modeled as a growth-rate path off FY25; FCF = revenue
+    x FCF margin; Gordon terminal at scenario WACC. EV/FCF & EV/sales vs medtech/dental peers (SmileDirect [defunct], Dentsply,
+    Straumann, Angelalign).'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.14
+    expected_per_share: 91.97
+    headline: Demand stalls; ASP/share erode.
+    narrative:
+    - 'The discretionary big-ticket consumer stays soft and Angelalign/at-home commoditization wins on price: case volume
+      flat-lines, ASPs keep falling beyond the guided -1 to -2%, and a richer low-cost mix de-levers a ~70% gross margin into
+      low-double-digit operating margins. Revenue is essentially flat; the category-penetration story stalls while share leaks.'
+    - A category leader whose volume and price are both pressured earns a low-growth ~13x terminal multiple -> DCF ~$92 (-47%).
+      Net cash sets a floor but can't offset a stalled top line and a margin that keeps grinding lower.
+    probability_rationale: 'The genuine bear: revenue is already flat (+1% FY25), op margin has slid four straight years (24.7%->13.5%),
+      ASPs are guided down, and Angelalign is suing on patents while taking China share. 14% weight on price/share erosion
+      beating category growth.'
+    dcf_metrics:
+      cagr_5y: 1.4
+      wacc: 0.1
+    dcf_path:
+      rev_b: 4.035
+      rev_path:
+      - 0.0
+      - 0.01
+      - 0.02
+      - 0.02
+      - 0.02
+      op_margin:
+      - 0.11
+      - 0.11
+      - 0.12
+      - 0.12
+      - 0.12
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.02
+      fcf:
+      - 0.404
+      - 0.408
+      - 0.457
+      - 0.466
+      - 0.476
+      cash: 1.1
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 71
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.0
+      - 1.8
+      - 1.7
+      - 1.6
+      - 1.5
+      ev_fcf_multiple:
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 129.43
+    headline: Low-single-digit grind; ASP pressure caps it.
+    narrative:
+    - Category penetration keeps volume rising but ASP/mix erosion and a competitive market hold growth to ~4% and margins
+      below the historical peak. Invisalign defends its lead without re-accelerating; teen/IPE helps at the edges but doesn't
+      change the trajectory. Revenue compounds ~4% at a low-teens FCF margin.
+    - DCF ~$129 (-26%) - a defended-but-decelerating franchise at ~15x FCF is worth below today's price; the market's discount
+      is warranted if growth stays mid-single-digit and ASPs keep slipping.
+    probability_rationale: Share retention continues but the discretionary backdrop + ASP pressure + Chinese competition cap
+      the multiple. 27% as the plausible 'holds the lead but doesn't convert to growth' path, consistent with the flat top
+      line and guided ASP declines.
+    dcf_metrics:
+      cagr_5y: 3.8
+      wacc: 0.095
+    dcf_path:
+      rev_b: 4.035
+      rev_path:
+      - 0.03
+      - 0.04
+      - 0.04
+      - 0.04
+      - 0.04
+      op_margin:
+      - 0.13
+      - 0.14
+      - 0.14
+      - 0.15
+      - 0.15
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.025
+      fcf:
+      - 0.457
+      - 0.519
+      - 0.539
+      - 0.608
+      - 0.632
+      cash: 1.1
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 70
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.5
+      - 2.4
+      - 2.3
+      - 2.2
+      - 2.1
+      ev_fcf_multiple:
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.34
+    expected_per_share: 176.81
+    headline: Category penetration resumes; margin firms.
+    narrative:
+    - 'The modal path: clear-aligner penetration of the ~15-20%-penetrated ortho market resumes mid-single-digit case growth,
+      the teen/Palatal-Expander TAM adds incremental volume, and iTero Lumina anchors the installed base - blending to ~7%
+      revenue growth at a firming ~16-18% operating margin as ASP pressure is offset by volume. Revenue compounds ~7% toward
+      ~$5.5B.'
+    - DCF ~$177 (+1%) - essentially at spot. A category-defining brand with a long penetration runway is genuinely valuable,
+      but at ~16x FCF and mid-single-digit growth the modal case only recovers to about today's price; the de-rate corrected
+      the 2021 excess to fair, not to a bargain.
+    probability_rationale: Requires penetration-led case growth + the teen/IPE TAM to offset ASP erosion - consistent with
+      the record Q1 case volume (686,000/+6.7%) and reaffirmed guidance, but not a step-change re-acceleration. 34% as the
+      central, near-fair outcome.
+    dcf_metrics:
+      cagr_5y: 6.6
+      wacc: 0.09
+    dcf_path:
+      rev_b: 4.035
+      rev_path:
+      - 0.06
+      - 0.07
+      - 0.07
+      - 0.07
+      - 0.06
+      op_margin:
+      - 0.14
+      - 0.15
+      - 0.16
+      - 0.17
+      - 0.18
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.025
+      fcf:
+      - 0.513
+      - 0.595
+      - 0.686
+      - 0.734
+      - 0.833
+      cash: 1.1
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 69
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.9
+      - 2.8
+      - 2.7
+      - 2.6
+      ev_fcf_multiple:
+      - 17.0
+      - 16.0
+      - 16.0
+      - 16.0
+      - 16.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.17
+    expected_per_share: 236.91
+    headline: Teen/IPE TAM expands; share holds.
+    narrative:
+    - Clear-aligner category penetration accelerates and the teen/Palatal-Expander launch opens the larger teen ortho TAM
+      (the majority of global case-starts), while Invisalign holds share through patents + the iTero installed base. Volume
+      growth and operating leverage push margins back toward 20%. Revenue compounds ~8-9%.
+    - DCF ~$237 (+35%) - if the penetration + teen-TAM engine re-accelerates and ASPs stabilize, the de-rated entry re-rates
+      with the fundamentals; this is the core of the bull.
+    probability_rationale: The IPE clearance + record teen case volume + a still-underpenetrated category make a genuine re-acceleration
+      credible. ~17% weight on the TAM expansion landing while share holds.
+    dcf_metrics:
+      cagr_5y: 8.4
+      wacc: 0.085
+    dcf_path:
+      rev_b: 4.035
+      rev_path:
+      - 0.08
+      - 0.09
+      - 0.09
+      - 0.08
+      - 0.08
+      op_margin:
+      - 0.16
+      - 0.17
+      - 0.18
+      - 0.19
+      - 0.2
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.03
+      fcf:
+      - 0.567
+      - 0.665
+      - 0.777
+      - 0.895
+      - 0.966
+      cash: 1.1
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 68
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.5
+      - 3.4
+      - 3.3
+      - 3.2
+      - 3.1
+      ev_fcf_multiple:
+      - 20.0
+      - 19.0
+      - 19.0
+      - 19.0
+      - 19.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 300.75
+    headline: Category compounds; Invisalign re-rates.
+    narrative:
+    - 'The full second act: clear aligners take a decisive share of the global ortho market, teen/IPE becomes a durable growth
+      leg, iTero scan-data + AI deepen the cornered resource, and Align re-rates to a high-quality medtech compounder at ~70%
+      gross margin. Revenue compounds ~10% to peak margins.'
+    - DCF ~$301 (+72%) - the brand reclaims a premium medtech multiple as category growth + share defense + margin recovery
+      all land; ~8% probability, the asymmetric upside the depressed entry is buying.
+    probability_rationale: Everything works - penetration AND the teen/IPE TAM AND share defense AND a margin/multiple re-rate,
+      the high-quality-compounder outcome. ~8%, the long-duration tail.
+    dcf_metrics:
+      cagr_5y: 10.0
+      wacc: 0.082
+    dcf_path:
+      rev_b: 4.035
+      rev_path:
+      - 0.1
+      - 0.11
+      - 0.1
+      - 0.1
+      - 0.09
+      op_margin:
+      - 0.17
+      - 0.18
+      - 0.2
+      - 0.21
+      - 0.22
+      wacc_path:
+      - 0.082
+      - 0.082
+      - 0.082
+      - 0.082
+      - 0.082
+      term_g: 0.03
+      fcf:
+      - 0.621
+      - 0.739
+      - 0.867
+      - 1.013
+      - 1.17
+      cash: 1.1
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 67
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.9
+      - 3.7
+      - 3.6
+      - 3.5
+      ev_fcf_multiple:
+      - 22.0
+      - 21.0
+      - 20.0
+      - 20.0
+      - 20.0
+historical_prices:
+  ipo_marker: IPO Jan '01
+  x_min: -5.5
+  points:
+  - - -5.5
+    - 300
+  - - -5.0
+    - 550
+  - - -4.2
+    - 650
+  - - -3.3
+    - 200
+  - - -2.5
+    - 300
+  - - -1.5
+    - 250
+  - - -0.8
+    - 200
+  - - -0.3
+    - 170
+  - - -0.05
+    - 174.84
+weighting_rationale:
+- label: Ultra Bear 14%
+  body: Demand stalls; ASP/share erode; ~$92 (-47%).
+- label: Bear 27%
+  body: Low-single-digit grind; ASP pressure caps it; ~$129 (-26%).
+- label: Base 34%
+  body: Category penetration resumes; margin firms; ~$177 (+1%).
+- label: Bull 17%
+  body: Teen/IPE TAM expands; share holds; ~$237 (+35%).
+- label: Ultra Bull 8%
+  body: Category compounds; Invisalign re-rates; ~$301 (+72%).
+appendix:
+  pushback:
+  - label: The de-rate corrected an excess, it didn't create a bargain.
+    body: Down ~75% from the 2021 ~$700 peak looks cheap, but at ~25x FCF and low-single-digit growth the modal DCF is +1%
+      - decelerating growth, not the multiple alone, is the constraint.
+  - label: The category is still only ~15-20% penetrated.
+    body: Clear aligners are early in displacing wires/brackets; teen/IPE opens the larger teen ortho TAM - a long runway
+      the flat recent top line masks.
+  - label: Brand + installed base are the moat.
+    body: Invisalign is the category-defining brand; iTero (>125,000 scanners) + accumulated scan-data + the patent estate
+      are the hardest things for Angelalign/at-home to replicate.
+  - label: ASP/share erosion is the whole question.
+    body: ASPs guided -1 to -2%, Angelalign taking China share and litigating patents, at-home/DIY at the low end - the gap
+      between 'category grows' and 'Align's revenue grows' is the bull/bear fork.
+  - label: Net cash, p_fail ~0.
+    body: $1.10B cash, no debt, ~$200M buyback active - no solvency risk; the downside is growth/multiple, not survival.
+  triggers:
+  - label: Bull validation
+    body: Invisalign case volume re-accelerates above ~+7%  ·  teen/IPE case-starts scale materially  ·  ASPs stabilize (not
+      down)  ·  operating margin recovers back toward ~20%
+  - label: Bear validation
+    body: case volume flat-lines or declines for 2+ quarters  ·  ASPs fall faster than the guided -1 to -2%  ·  Angelalign/at-home
+      take visible share  ·  op margin grinds below ~13%
+  - label: Reframe needed
+    body: if clear aligners commoditize (Angelalign wins on price + the ITC/patent actions fail), the branding + cornered-resource
+      Powers erode - re-rate the terminal toward a low-growth, price-taking dental-device multiple
+glossary:
+- term: Clear Aligner
+  definition: Align's largest segment (~82-85% of revenue) - Invisalign removable aligners that displace traditional wires/brackets;
+    case volume x ASP is the swing factor.
+- term: iTero / Systems & Services
+  definition: Intraoral scanners (iTero Lumina, installed base >125,000) + software/services - the cornered-resource installed
+    base that feeds Invisalign workflow and scan-data.
+- term: ASP
+  definition: Average selling price per case; guided -1 to -2% in FY26 on country/product mix and competition - the price
+    half of the volume-vs-price erosion question.
+- term: IPE (Invisalign Palatal Expander)
+  definition: US-FDA-cleared device targeting teen/kids case-starts (the majority of global ortho) - the TAM-expansion lever
+    in the bull.
+- term: FCF margin
+  definition: Free cash flow / revenue (~12-13% FY25); the mature-DCF lever - whether category growth converts the ~70% gross
+    margin to free cash flow as ASP pressure bites.
+competitive:
+  arena: Clear-aligner orthodontics / dental devices - Align Technology (Invisalign, the category-defining brand, + iTero
+    scanners) vs Angelalign, SmileDirect-style at-home/DIY, Dentsply Sirona, Straumann/ClearCorrect, and traditional wires/brackets;
+    auditing a brand + cornered-resource Power against commoditization and a discretionary-demand market.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 3
+      note: Largest clear-aligner manufacturer; manufacturing/R&D/sales leverage at $4B revenue and ~70% gross margin - real,
+        but Angelalign is scaling fast in China.
+    network_economies:
+      score: 2
+      note: Invisalign-trained doctor base + iTero/exocad workflow create two-sided pull (more doctors -> more patients),
+        but not a hard network effect.
+    counter_positioning:
+      score: 1
+      note: Was the disruptor of wires/brackets; now the incumbent being counter-positioned by lower-cost Angelalign and at-home/DIY
+        models.
+    switching_costs:
+      score: 2
+      note: Doctors invested in iTero hardware + Invisalign training face friction switching systems; patient-side switching
+        is low (a single discretionary purchase).
+    branding:
+      score: 4
+      note: 'The dominant Power: Invisalign is the category-defining consumer brand with pricing power and direct-to-consumer
+        demand pull - but eroding at the ASP line under competition.'
+    cornered_resource:
+      score: 3
+      note: iTero installed base (>125,000), accumulated scan-data, and a deep patent estate (the basis of the Angelalign
+        suits/ITC action) - durable, the hardest piece to replicate.
+    process_power:
+      score: 2
+      note: Mass-customization manufacturing + the digital treatment-planning stack; a real learning curve, modest as a standalone
+        Power.
+  dominant_power: branding
+  durability: medium
+  rivals:
+  - name: Angelalign
+    kind: public
+    note: Fast-growing Chinese clear-aligner challenger; competes on price, taking China share - the live patent/ITC threat.
+    growth: 0.3
+    margin: 0.25
+    multiple: HK-listed
+  - name: Dentsply Sirona
+    kind: public
+    note: Diversified dental incumbent (incl. SureSmile aligners + imaging); the legacy-dental comp.
+    growth: 0.0
+    margin: 0.1
+    multiple: ~12x EV/EBITDA
+  - name: Straumann / ClearCorrect
+    kind: public
+    note: Premium dental/implant group with a growing aligner line; the high-end aligner challenger.
+    growth: 0.1
+    margin: 0.25
+    multiple: ~30x P/E
+  - name: At-home / DIY (SmileDirect legacy)
+    kind: private
+    note: Direct-to-consumer aligners at the low end; SmileDirect went bankrupt, but the price-competitive segment persists.
+    growth:
+    margin:
+    multiple: private
+  threats:
+  - vector: branding
+    who: Angelalign + at-home/DIY (price competition)
+    falsifier: ASPs fall faster than the guided -1 to -2% as the brand premium erodes against lower-cost aligners.
+  - vector: cornered_resource
+    who: Angelalign (patents / ITC)
+    falsifier: The patent suits + ITC import-block action fail, letting competitors replicate the technology and scan-data
+      edge.
+  - vector: scale_economies
+    who: Discretionary-demand softness + China bulk-procurement
+    falsifier: Case volume flat-lines or declines and a low-cost mix de-levers the ~70% gross margin below ~13% operating
+      margin.
+  takeaway: 'Align''s brand Power is genuine - Invisalign is the category-defining clear-aligner name with pricing power and
+    consumer demand pull, reinforced by the iTero installed base and patent estate as a cornered resource - but the franchise
+    is decelerating: revenue is flat (+1%), op margin has slid four straight years to 13.5%, and ASPs are guided down under
+    Angelalign + at-home price competition. The Audit: branding is durable (medium) but eroding at the price line; the cornered
+    resource (iTero/scan-data/patents) is the real defense, and the live threats are commoditization + a discretionary-demand
+    market. The ~75% de-rate from the 2021 peak corrected the prior excess to roughly fair, not to a bargain; the DCF tests
+    whether category penetration + the teen/IPE TAM outrun ASP/share erosion, and the modal case lands +1% - de-rated, but
+    priced about right.'

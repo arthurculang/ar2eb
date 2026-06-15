@@ -197,6 +197,26 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   off-axis). With every chart margin/title now data-sized, the horizontal SVG-clip guard in `render_memo_pdf.py`
   is **promoted from WARN-only to a STRICT gate** (2px tol, like the page-overflow check). All 28 render
   STRICT-clean (overflow + clips); baseline regenerated + `--check` green; rendering deterministic (no pollution).
+- **FCF+ medium batch SHIPPED (2026-06-14; tickers 29–36): CMG, DAL, HOOD, DE, ALGN, ADSK, CART, U.** Second
+  `fcf-plus-plus-growth` wave, all mature_company, **conviction tiers set by Arthur** (CART/DAL/CMG/HOOD/DE = Med;
+  ALGN/U/ADSK = Low; U placed here at Low, not fun-speculative). Sourced end-to-end from SEC XBRL (`source_mega7.py`
+  extended: DAL 27904, DE 315189, U 1810806, CART/Maplebear 1579091), modeled through the mature engine, authored
+  from a locked numeric skeleton (`/tmp/fcf8/numbers.py` → per-ticker `gen_<T>.py`; prose by 8 parallel subagents,
+  numbers mine). **Key calibration vs the Mega-7: SBC-adjusted the high-stock-comp names** (CART/ADSK/HOOD/U →
+  ex-SBC owner FCF margins + share dilution, NOT the SBC-inflated headline FCF) — first pass gave ADSK +86% / CART
+  +134%; ex-SBC lands them at the honest +54%/+58%. **Findings:** CART **+57.7%** (cheap ~11× FCF + an ~80%-margin
+  ad flywheel + a buyback ~35% of cap) and ADSK **+53.6%** (de-rated −31% YTD to ~17× FCF + Starboard forcing
+  margins toward ~45% — the LULU/UBER de-rated-quality family) are the two cheap ones; ALGN **−1.5%** / CMG
+  **−4.8%** / DAL **−8.1%** the fair cluster (de-rated-not-cheap / premium-QSR-still-rich / cheap-but-cyclical-
+  airline); DE **−21.8%** (cyclical at the ag trough at a full multiple); HOOD **−57.7%** (priced for perfection
+  ~52× FCF, crypto/rate-cyclical) and U **−56.5%** (a dilutive GAAP-loss Vector turnaround, +56% share dilution/5y —
+  the most speculative). Each carries its honest caveat (DAL refinery-grossed GAAP revenue, **DE's ~$45B captive-
+  finance debt EXCLUDED** from the modeled bridge, HOOD broker-op-margin estimated since XBRL doesn't tag it, U
+  convertibles + dilution, ADSK/CART billing-shift/SBC). `visual_baseline.json` **now 36 tickers**; validator green;
+  all 8 STRICT-clean (overflow + clips); baseline `--check` green (no drift in the existing 28). *Layout note: the
+  usual Page-1 (5-scenario) + Page-6 (back-matter) prose trims — the binding elements are the scenario-card headlines
+  (Page 1) and the pushback-row bodies in the stretched 3-col grid (Page 6); DE's captive-finance caveat got
+  consolidated from 4 places to 2.* Shipped on `claude/fcf-medium-batch` (stacked on the Mega-7 `conviction-bluf`).
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin

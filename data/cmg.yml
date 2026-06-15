@@ -1,0 +1,606 @@
+ticker: CMG
+company: Chipotle Mexican Grill
+exchange: NYSE
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 32.23
+market:
+  market_cap_billion: 41.96
+  shares_outstanding_million: 1302.4
+  cash_billion: 1.05
+  net_debt_billion: 0.0
+  extras:
+  - Net cash ~$1.05B, no funded debt; ~1.30B fully-diluted shares (50:1 split-adjusted) — solvency a non-issue
+  - Revenue $11.93B FY25 (+6%); GAAP op margin 16.2% (off the 16.9% peak); FCF ~$1.4B (~12%), capex ~11-12% on new units
+  - Down ~14% YTD / ~36% TTM near the 52-week low ($29.75-$58.42); ~30x FCF, cheapest in years
+taxonomy:
+  watchlist: fcf-plus-plus-growth
+  tier: Med
+  themes:
+  - premium-consumer-brands
+  primary_theme: premium-consumer-brands
+central_question: As comps inflect barely positive while restaurant-level margin compresses, does the 4,100->7,000 unit runway
+  re-rate the stock, or is ~30x FCF already full?
+thesis: Chipotle trades at ~$41.96B (~$32.23, down ~14% YTD / ~36% TTM, near the 52-week low) — ~30x FCF on $11.93B revenue,
+  net cash, GAAP op margin 16.2% off a 16.9% peak. Q1'26 comps just turned positive (+0.5%, traffic-led, no price), but restaurant-level
+  margin fell 250bps as management declines to fully price mid-single-digit inflation to defend value. The bull is the unit
+  runway (~4,100 -> 7,000 NA) plus throughput/automation; the bear is a maturing concept with structurally low-single-digit
+  same-store growth at a premium multiple. The weighted DCF lands -4.8% — the modal base (-5.5%) only reaches about today's
+  price; the runway is real, the multiple already pays for it.
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 7.5
+  - 8.6
+  - 9.9
+  - 11.3
+  - 11.93
+  history_op_margin:
+  - 10.7
+  - 13.4
+  - 15.8
+  - 16.9
+  - 16.2
+  history_fcf:
+  - 0.8
+  - 0.8
+  - 1.2
+  - 1.5
+  - 1.4
+  history_ev_rev:
+  - 6.5
+  - 5.0
+  - 4.5
+  - 4.5
+  - 3.5
+page3_chart_config:
+  segment_a: Restaurant sales
+  segment_b: Delivery/digital
+  hist_ent_split:
+  - 0.5
+  - 0.55
+  - 0.62
+  - 0.65
+  - 0.65
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q1 FY2026 results
+  sources: 'Sources: SEC XBRL company facts (CIK 1058090), Chipotle Q1 FY2026 release (Apr 29 2026: revenue $3.1B/+7.4%, comps
+    +0.5% traffic-led, restaurant-level margin 23.7% (-250bps), ~4,100 units, ~7,000-unit NA target). Revenue modeled as a
+    growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. Multiples vs SHAK/CAVA/WING/MCD.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.13
+    expected_per_share: 14.66
+    headline: Comps roll over; margin keeps sliding.
+    narrative:
+    - 'Value-perception softness wins: traffic gives back the +0.5% inflection, same-store sales go flat-to-negative, and
+      beef/freight/labor inflation that management won''t price keeps restaurant-level margin grinding below 23% toward a
+      low-14% company op margin. The unit machine keeps opening but de-levers a softening top line, so FCF margin slips toward
+      ~10%.'
+    - A maturing premium QSR whose comps and margins are both eroding earns a low-single-digit-growth, ~13x terminal FCF multiple
+      -> DCF ~$14.66 (-54%). Net cash floors the equity but cannot offset a stalled same-store engine.
+    probability_rationale: 'The genuine bear: comps were negative three straight quarters into Q1''26, the +0.5% carries no
+      price, and the 250bps margin cut shows inflation isn''t being recovered. 13% on the inflection failing and value-wars
+      biting.'
+    dcf_metrics:
+      cagr_5y: 3.0
+      wacc: 0.1
+    dcf_path:
+      rev_b: 11.93
+      rev_path:
+      - 0.03
+      - 0.03
+      - 0.03
+      - 0.03
+      - 0.03
+      op_margin:
+      - 0.14
+      - 0.14
+      - 0.14
+      - 0.145
+      - 0.145
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.025
+      fcf:
+      - 1.229
+      - 1.266
+      - 1.304
+      - 1.477
+      - 1.521
+      cash: 1.05
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1300
+      distress: 0.0
+      pv_fcf:
+      - 1.117
+      - 1.046
+      - 0.98
+      - 1.009
+      - 0.944
+      sum_pv_fcf: 5.1
+      terminal_value: 20.79
+      pv_terminal: 12.91
+      op_ev: 18.01
+      total_equity: 19.06
+      dcf_per_share: 14.66
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.5
+      - 2.2
+      - 2.0
+      - 1.8
+      ev_fcf_multiple:
+      - 14.0
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 21.83
+    headline: Units grow; same-store stays sluggish.
+    narrative:
+    - Units keep opening toward the 7,000 runway but same-store sales stay low-single-digit and traffic-led, while inflation
+      the brand won't fully price holds restaurant-level margin around recent levels rather than recovering. Revenue compounds
+      ~5% to ~$15B at a ~12% FCF margin — the runway is real, the comp engine and margin lift are not.
+    - DCF ~$21.83 (-32%) — a slowing-comp grower at a still-rich multiple is worth meaningfully below today's price; the discount
+      is warranted if same-store growth stays structurally low and margins don't re-expand.
+    probability_rationale: Unit growth continues but soft comps + value-perception drag + unrecovered inflation keep the P&L
+      flat. 27% as the plausible 'opens stores but doesn't re-accelerate' path, given the comp history and the guide-to-flat.
+    dcf_metrics:
+      cagr_5y: 5.4
+      wacc: 0.09
+    dcf_path:
+      rev_b: 11.93
+      rev_path:
+      - 0.06
+      - 0.06
+      - 0.05
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.15
+      - 0.155
+      - 0.16
+      - 0.16
+      - 0.16
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.03
+      fcf:
+      - 1.391
+      - 1.542
+      - 1.689
+      - 1.773
+      - 1.862
+      cash: 1.05
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1290
+      distress: 0.0
+      pv_fcf:
+      - 1.276
+      - 1.298
+      - 1.304
+      - 1.256
+      - 1.21
+      sum_pv_fcf: 6.34
+      terminal_value: 31.96
+      pv_terminal: 20.77
+      op_ev: 27.11
+      total_equity: 28.16
+      dcf_per_share: 21.83
+    chart_data:
+      ev_rev_multiple:
+      - 3.5
+      - 3.2
+      - 3.0
+      - 2.8
+      - 2.6
+      ev_fcf_multiple:
+      - 18.0
+      - 17.0
+      - 16.0
+      - 16.0
+      - 16.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.34
+    expected_per_share: 30.47
+    headline: Runway delivers; comps low-single-digit.
+    narrative:
+    - 'The modal path: openings run at the high end (~350-370/yr) toward the 7,000 NA target, comps settle low-single-digit,
+      and restaurant-level margin stabilizes near current levels as throughput and the Hyphen makeline offset some inflation,
+      lifting FCF margin toward ~14%. Revenue compounds ~8% to ~$17B.'
+    - DCF ~$30.47 (-5.5%) — roughly fair. A ~10% unit runway is genuinely valuable, but at ~14% terminal FCF margin and a
+      ~19x EV/FCF the modal case only recovers to about today's spot; ~30x FCF already prices the runway in.
+    probability_rationale: Requires the unit runway to convert at roughly today's unit economics with low-single-digit comps
+      — consistent with the 'Recipe for Growth' plan, not a step-change re-acceleration. 34% as the central, near-fair outcome.
+    dcf_metrics:
+      cagr_5y: 7.8
+      wacc: 0.085
+    dcf_path:
+      rev_b: 11.93
+      rev_path:
+      - 0.09
+      - 0.08
+      - 0.08
+      - 0.07
+      - 0.07
+      op_margin:
+      - 0.16
+      - 0.165
+      - 0.17
+      - 0.17
+      - 0.175
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.03
+      fcf:
+      - 1.56
+      - 1.756
+      - 1.972
+      - 2.191
+      - 2.431
+      cash: 1.05
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1280
+      distress: 0.0
+      pv_fcf:
+      - 1.438
+      - 1.492
+      - 1.544
+      - 1.581
+      - 1.617
+      sum_pv_fcf: 7.67
+      terminal_value: 45.53
+      pv_terminal: 30.28
+      op_ev: 37.95
+      total_equity: 39.0
+      dcf_per_share: 30.47
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.7
+      - 3.4
+      - 3.2
+      - 3.0
+      ev_fcf_multiple:
+      - 22.0
+      - 20.0
+      - 19.0
+      - 19.0
+      - 19.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.18
+    expected_per_share: 44.77
+    headline: Throughput inflects; comps and margin lift.
+    narrative:
+    - 'The traffic inflection holds and compounds: digital, the Hyphen automated makeline, and throughput initiatives lift
+      transactions and restaurant-level margin back toward the high-25s even before price, units accelerate toward 7,000,
+      and FCF margin climbs past 15%. Revenue compounds ~10% to ~$18-19B.'
+    - DCF ~$44.77 (+39%) — if comps re-accelerate and automation widens unit margins as the base expands, the franchise re-rates
+      with its fundamentals; this is the core of the bull.
+    probability_rationale: Throughput/automation plus a sustained traffic turn is credible given the brand's ~$3M AUV and
+      the makeline tests. ~18% on the operational lift compounding rather than fading.
+    dcf_metrics:
+      cagr_5y: 10.0
+      wacc: 0.08
+    dcf_path:
+      rev_b: 11.93
+      rev_path:
+      - 0.11
+      - 0.11
+      - 0.1
+      - 0.09
+      - 0.09
+      op_margin:
+      - 0.17
+      - 0.175
+      - 0.18
+      - 0.185
+      - 0.19
+      wacc_path:
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      term_g: 0.035
+      fcf:
+      - 1.721
+      - 2.058
+      - 2.345
+      - 2.644
+      - 2.978
+      cash: 1.05
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1270
+      distress: 0.0
+      pv_fcf:
+      - 1.594
+      - 1.764
+      - 1.862
+      - 1.943
+      - 2.027
+      sum_pv_fcf: 9.19
+      terminal_value: 68.49
+      pv_terminal: 46.62
+      op_ev: 55.81
+      total_equity: 56.86
+      dcf_per_share: 44.77
+    chart_data:
+      ev_rev_multiple:
+      - 4.5
+      - 4.2
+      - 4.0
+      - 3.8
+      - 3.6
+      ev_fcf_multiple:
+      - 26.0
+      - 24.0
+      - 23.0
+      - 23.0
+      - 23.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 55.75
+    headline: Full runway plus automation; FCF machine.
+    narrative:
+    - 'The full second act: the 7,000 NA runway plays out at high-end unit economics, automation (Hyphen) and digital structurally
+      lift margins past 19% op / ~17% FCF, and international (Mexico, Korea/Singapore JV) opens a fresh capital-light leg.
+      Revenue compounds ~12% to ~$20B and Chipotle reclaims a premium-compounder multiple.'
+    - DCF ~$55.75 (+73%) — best-in-class brand, automation-led margins, and a global runway re-rated together; ~8% probability,
+      the asymmetric upside the de-rated entry is buying.
+    probability_rationale: Everything works — comps AND automation margins AND the full unit runway AND international, the
+      premium-compounder outcome. ~8%, the long-duration tail.
+    dcf_metrics:
+      cagr_5y: 11.8
+      wacc: 0.078
+    dcf_path:
+      rev_b: 11.93
+      rev_path:
+      - 0.13
+      - 0.13
+      - 0.12
+      - 0.11
+      - 0.1
+      op_margin:
+      - 0.18
+      - 0.185
+      - 0.19
+      - 0.195
+      - 0.2
+      wacc_path:
+      - 0.078
+      - 0.078
+      - 0.078
+      - 0.078
+      - 0.078
+      term_g: 0.035
+      fcf:
+      - 1.887
+      - 2.285
+      - 2.73
+      - 3.125
+      - 3.541
+      cash: 1.05
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1260
+      distress: 0.0
+      pv_fcf:
+      - 1.75
+      - 1.966
+      - 2.179
+      - 2.314
+      - 2.432
+      sum_pv_fcf: 10.64
+      terminal_value: 85.23
+      pv_terminal: 58.55
+      op_ev: 69.19
+      total_equity: 70.24
+      dcf_per_share: 55.75
+    chart_data:
+      ev_rev_multiple:
+      - 5.0
+      - 4.7
+      - 4.4
+      - 4.2
+      - 4.0
+      ev_fcf_multiple:
+      - 28.0
+      - 26.0
+      - 25.0
+      - 25.0
+      - 25.0
+historical_prices:
+  ipo_marker: IPO Jan '06
+  x_min: -5.2
+  points:
+  - - -5.0
+    - 13
+  - - -4.0
+    - 20
+  - - -3.0
+    - 28
+  - - -2.0
+    - 45
+  - - -1.2
+    - 58
+  - - -0.5
+    - 42
+  - - -0.05
+    - 32.23
+weighting_rationale:
+- label: Ultra Bear 13%
+  body: Comps roll over and margin slides; ~$14.66 (-54%).
+- label: Bear 27%
+  body: Units grow but same-store stays sluggish; ~$21.83 (-32%).
+- label: Base 34%
+  body: Runway delivers at low-single-digit comps; ~$30.47 (-5.5%).
+- label: Bull 18%
+  body: Throughput inflects, comps and margin lift; ~$44.77 (+39%).
+- label: Ultra Bull 8%
+  body: Full runway plus automation; ~$55.75 (+73%).
+appendix:
+  pushback:
+  - label: Comps finally turned positive — isn't that the inflection?
+    body: +0.5% is traffic-led with no price; the modal DCF is still -5.5% because ~30x FCF already embeds a re-acceleration
+      the +0.5% doesn't clear.
+  - label: The 7,000-unit runway is a long compounding machine.
+    body: ~4,100 -> 7,000 NA is ~10% unit growth, but the base lands ~fair because same-store growth is structurally low and
+      the multiple already pays for it.
+  - label: Margin compression is the live risk, not the runway.
+    body: RLM fell 250bps to 23.7% as management won't fully price inflation; the swing is whether unit economics (~25%+ RLM)
+      hold while scaling.
+  - label: It's the cheapest Chipotle has been in years.
+    body: True on the multiple (~30x FCF vs history), but cheap-vs-itself isn't cheap-vs-DCF; the distribution still centers
+      slightly negative.
+  - label: Net cash, p_fail ~0.
+    body: ~$1.05B cash and no funded debt — no solvency risk; the downside is multiple/comp/margin, not survival.
+  triggers:
+  - label: Bull validation
+    body: comps re-accelerate with traffic (not price)  ·  RLM recovers toward 25%+  ·  automation lifts throughput  ·  openings
+      hold toward 7,000
+  - label: Bear validation
+    body: comps slide back to flat/negative 2+ quarters  ·  RLM falls below ~23%  ·  inflation stays unpriced and op margin
+      drifts toward 14%
+  - label: Reframe needed
+    body: if same-store growth stays structurally low AND margin can't hold ~25%, the runway compounds at low unit economics
+      - re-rate toward a maturing QSR multiple
+glossary:
+- term: Comparable restaurant sales (comps)
+  definition: Same-store sales growth at restaurants open 13+ months; Q1'26 +0.5%, traffic-led with no price - the central
+    swing signal.
+- term: Restaurant-level margin (RLM)
+  definition: Restaurant-level operating margin (non-GAAP, 23.7% Q1'26, -250bps YoY) before G&A - the unit-economics gauge
+    that must hold ~25%+ as units scale.
+- term: AUV
+  definition: Average unit volume (~$3M per restaurant) - the per-store sales base, well above QSR, that sets new-unit returns.
+- term: Hyphen / makeline automation
+  definition: Automated digital makeline being tested to speed throughput and lift restaurant margin - the process lever and
+    the bull's margin path.
+- term: FCF margin
+  definition: Free cash flow / revenue (~12% FY25); the mature-DCF swing factor - whether the unit runway and automation convert
+    to free cash flow against growth capex.
+competitive:
+  arena: Premium fast-casual / fast food — Chipotle (the premium QSR brand, ~$3M AUV, ~4,100 company-owned units) vs Cava,
+    Shake Shack, Wingstop and the QSR value set (McDonald's, Taco Bell); auditing a brand Power against QSR value-wars and
+    value-perception softness.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 4
+      note: ~$12B revenue, ~4,100 company-owned units -> real sourcing/marketing/G&A leverage and a self-funded build; second
+        only to branding here.
+    network_economies:
+      score: 0
+      note: None - restaurants aren't networks; the app/loyalty is a channel, not a network effect.
+    counter_positioning:
+      score: 1
+      note: Was the 'food with integrity' fast-casual disruptor; now the scaled incumbent, so this has faded.
+    switching_costs:
+      score: 1
+      note: Near-zero - dining is promiscuous; loyalty/digital nudges repeat but every meal is a fresh decision.
+    branding:
+      score: 5
+      note: 'The dominant Power: a best-in-class premium QSR brand with ~$3M AUV well above peers and genuine pricing power
+        - though it''s choosing not to fully exercise it to defend value.'
+    cornered_resource:
+      score: 1
+      note: Prime real estate, supply relationships and recipe/operations IP; valuable but not truly cornered.
+    process_power:
+      score: 2
+      note: Throughput discipline and Hyphen makeline automation - a real emerging lever but unproven at the 7,000-unit scale;
+        the bull's swing factor.
+  dominant_power: branding
+  durability: high
+  rivals:
+  - name: Cava (CAVA)
+    kind: public
+    note: The fast-casual growth darling; richest multiple in the set, the unit-growth comp Chipotle is benchmarked against.
+    growth: 0.25
+    margin: 0.12
+    multiple: ~46x EV/EBITDA
+  - name: Shake Shack (SHAK)
+    kind: public
+    note: Premium 'better burger', smaller and thinner-FCF; a same-archetype premium-brand unit-growth comp.
+    growth: 0.06
+    margin: 0.04
+    multiple: ~13x EV/EBITDA
+  - name: Wingstop (WING)
+    kind: public
+    note: Asset-light franchise compounder; richly valued but wobbling - Q1'26 domestic SSS -8.7%.
+    growth: 0.11
+    margin: 0.25
+    multiple: ~37x EV/EBITDA
+  - name: McDonald's (MCD)
+    kind: public
+    note: The QSR value benchmark; the value-wars/trade-down pressure on Chipotle's premium pricing.
+    growth: 0.05
+    margin: 0.45
+    multiple: ~25x P/E
+  threats:
+  - vector: branding
+    who: QSR value-wars / trade-down (McDonald's, Taco Bell value menus)
+    falsifier: Comps stay flat-to-negative as premium pricing loses to value in a soft consumer and value-perception softens.
+  - vector: scale_economies
+    who: Beef/freight/labor inflation management won't fully price
+    falsifier: Restaurant-level margin falls further below ~23%, rolling back the unit economics the runway needs.
+  - vector: process_power
+    who: Cava / a crowded fast-casual field + throughput limits
+    falsifier: Same-store traffic fades and automation doesn't lift margin, so the 7,000-unit build compounds at low unit
+      economics.
+  takeaway: 'Chipotle''s brand Power is dominant and durable - a best-in-class premium QSR with ~$3M AUV, real scale economies
+    across ~4,100 company-owned units, and pricing power it is deliberately not fully using to defend value. The Audit: branding
+    is durable (high), process_power (throughput, Hyphen automation) is the emerging swing factor, and the live threats are
+    QSR value-wars / value-perception softness plus unrecovered beef/labor inflation that just cut restaurant-level margin
+    250bps. The franchise quality isn''t in question; the price is. Comps barely turned positive (+0.5%, no price) while the
+    stock still trades ~30x FCF, and the weighted DCF lands -4.8% - the unit runway is real and the brand is excellent, but
+    the modal case (-5.5%) shows the multiple already pays for the runway, leaving the upside in the bull/ultra automation-and-comps
+    re-acceleration.'
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-06-14_23-05
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: '001'
+  pdf_timestamp: 2026-06-14_23-05
