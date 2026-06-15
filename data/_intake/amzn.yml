@@ -1,0 +1,557 @@
+# AMZN — Amazon.com (NASDAQ) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: AMZN
+company: Amazon.com
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 238.55
+market:
+  market_cap_billion: 2561.0
+  shares_outstanding_million: 10734.9
+  cash_billion: 123.0
+  net_debt_billion: 68.4
+  extras:
+  - $123B cash vs ~$54B net cash after lease/debt; ~10.73B shares; no dividend, capital is plowed into capex not buyback
+  - Revenue $716.9B FY25 (+12%); GAAP op margin 11.2% (record); FCF crushed to ~$7.7B (~1%) by the ~$200B AI capex surge
+  - ~$238.55, +14% TTM, down ~10% over 30 days on capex fears; 52-wk range $196-$279
+taxonomy:
+  watchlist: fcf-megacap
+  tier:
+  themes:
+  - platform-marketplace-tech
+  - ai-compute
+  primary_theme: platform-marketplace-tech
+central_question: Does Amazon's ~$200B/yr AI-infrastructure capex earn its cost of capital as AWS reaccelerates — or compress
+  returns into an overbuild before FCF recovers off the FY25 trough?
+thesis: 'Amazon trades at ~$2.56T (~$238.55, +14% TTM, down ~10% in 30 days on capex fear) - but the FCF multiple is distorted:
+  FY25 free cash flow was crushed to ~$7.7B (from ~$33B in FY24) by a ~$200B AI-data-center build. The DCF models FCF margin
+  recovering off that trough as AWS reaccelerates (+28%) and retail/ads margins expand. The finding is roughly fair (-6.9%):
+  the modal base ~-12% as depreciation lags monetization, a wide spread either way.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 469.8
+  - 514.0
+  - 574.8
+  - 638.0
+  - 716.9
+  history_op_margin:
+  - 5.3
+  - 2.4
+  - 6.4
+  - 10.8
+  - 11.2
+  history_fcf:
+  - -14.7
+  - -16.9
+  - 32.2
+  - 32.9
+  - 7.7
+  history_ev_rev:
+  - 3.6
+  - 1.7
+  - 2.7
+  - 3.4
+  - 3.4
+page3_chart_config:
+  segment_a: AWS
+  segment_b: Retail + Ads
+  hist_ent_split:
+  - 0.13
+  - 0.15
+  - 0.16
+  - 0.165
+  - 0.167
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q1 2026 results
+  sources: 'Sources: SEC XBRL company facts (CIK 1018724; revenue, GAAP operating income/margin, cash flow, debt), Amazon
+    Q1 2026 release (net sales $181.5B +17%, AWS $37.6B +28% at ~37.7% margin, consolidated op margin 13.1% record, capex
+    $44.2B +77%, ~$200B FY2026 capex guide, Trainium2 sold out, advertising ~$70B annualized). Revenue modeled as a growth-rate
+    path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs hyperscaler/platform
+    peers (MSFT/GOOGL).'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.12
+    expected_per_share: 59.2
+    headline: AI overbuild; FCF stays trough-bound.
+    narrative:
+    - 'The ~$200B capex never earns its cost of capital: AI demand cools or commoditizes, AWS growth fades back toward the
+      teens, depreciation outruns monetization, and an FTC/EU overhang drags. FCF margin barely lifts off the ~1% FY25 trough
+      toward 5% as the build keeps absorbing cash. Revenue still compounds ~6% on retail/ads but operating margin stalls near
+      10%.'
+    - An overbuilt hyperscaler whose capital doesn't convert earns a low-growth ~15x terminal FCF multiple -> DCF ~$59 (-75%).
+      The net cash sets a floor, but a stranded-asset AI build cannot be discounted away.
+    probability_rationale: 'The structural-overbuild case: capex jumped +77% YoY with a 6-24 month monetization lag, the FTC
+      Buy-Box trial opens Oct 2026, and International OI is already declining. 12% weight on the build failing to earn its
+      cost of capital.'
+    dcf_metrics:
+      cagr_5y: 6.8
+      wacc: 0.095
+    dcf_path:
+      rev_b: 716.9
+      rev_path:
+      - 0.1
+      - 0.08
+      - 0.06
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.09
+      - 0.09
+      - 0.1
+      - 0.1
+      - 0.1
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.025
+      fcf:
+      - 15.772
+      - 25.55
+      - 36.111
+      - 47.396
+      - 49.766
+      cash: 123.0
+      net_debt: 68.4
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 10900
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.0
+      - 1.8
+      - 1.6
+      - 1.5
+      - 1.4
+      ev_fcf_multiple:
+      - 18.0
+      - 16.0
+      - 15.0
+      - 15.0
+      - 15.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.26
+    expected_per_share: 118.75
+    headline: AWS holds; FCF recovers slowly.
+    narrative:
+    - AWS grows but decelerates off the +28% print, capex stays elevated for several years, and depreciation keeps a lid on
+      margins, so FCF margin claws only partway back toward 8%. Retail and advertising keep expanding but can't fully offset
+      the AI-infrastructure drag. Revenue compounds ~9% to ~$1.1T at a still-suppressed FCF margin.
+    - DCF ~$119 (-50%) - a hyperscaler whose free cash flow lags its revenue while it digests a multi-year build is worth
+      well below today's price; the market's capex worry is warranted if FCF recovers only slowly.
+    probability_rationale: AWS keeps share but the capex digestion period drags FCF recovery, with the antitrust and International-margin
+      overhangs intact. 26% as the plausible 'grows but cash conversion lags' path.
+    dcf_metrics:
+      cagr_5y: 9.6
+      wacc: 0.09
+    dcf_path:
+      rev_b: 716.9
+      rev_path:
+      - 0.13
+      - 0.11
+      - 0.09
+      - 0.08
+      - 0.07
+      op_margin:
+      - 0.1
+      - 0.11
+      - 0.11
+      - 0.12
+      - 0.12
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.03
+      fcf:
+      - 24.303
+      - 44.96
+      - 58.808
+      - 74.098
+      - 90.612
+      cash: 123.0
+      net_debt: 68.4
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 10800
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.5
+      - 2.3
+      - 2.1
+      - 2.0
+      - 1.9
+      ev_fcf_multiple:
+      - 22.0
+      - 20.0
+      - 18.0
+      - 17.0
+      - 17.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.34
+    expected_per_share: 209.08
+    headline: AWS reaccelerates; FCF normalizes to ~11%.
+    narrative:
+    - 'The modal path: AWS sustains high-20s% growth on AI demand, Trainium economics defend its ~38% margin, the capex wave
+      peaks and FCF margin normalizes off the trough toward ~11% as the build monetizes, while retail margins (NA 9.0%) and
+      ~$70B advertising scale. Revenue compounds ~11% to ~$1.2T.'
+    - DCF ~$209 (-12%) - roughly fair-to-slightly-rich. AWS reacceleration and a normalizing FCF margin are genuinely valuable,
+      but at the modal recovery and a ~21x terminal FCF multiple the model lands just below today's price; the capex still
+      has to earn its return for spot to be fair.
+    probability_rationale: Requires AWS to hold high-20s% growth and FCF to normalize off the trough as the build monetizes
+      - consistent with the +28% print, Trainium sold-out demand, and the capex peaking, but not a step-change. 34% as the
+      central, near-fair outcome.
+    dcf_metrics:
+      cagr_5y: 11.6
+      wacc: 0.085
+    dcf_path:
+      rev_b: 716.9
+      rev_path:
+      - 0.15
+      - 0.13
+      - 0.11
+      - 0.1
+      - 0.09
+      op_margin:
+      - 0.11
+      - 0.12
+      - 0.13
+      - 0.14
+      - 0.14
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.035
+      fcf:
+      - 32.977
+      - 55.897
+      - 82.727
+      - 113.75
+      - 136.386
+      cash: 123.0
+      net_debt: 68.4
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 10750
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.8
+      - 2.6
+      - 2.4
+      - 2.3
+      ev_fcf_multiple:
+      - 26.0
+      - 24.0
+      - 22.0
+      - 21.0
+      - 21.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.2
+    expected_per_share: 369.75
+    headline: AI ROIC compounds; margin re-rates.
+    narrative:
+    - 'The AI capex earns a high return: AWS holds high-teens-to-20s% growth with triple-digit AI revenue, Trainium vertical
+      integration lifts AWS margins above 38%, retail/ads operating leverage compounds, and FCF margin inflects toward ~14%
+      as monetization catches the depreciation. Revenue compounds ~14% to ~$1.4T.'
+    - DCF ~$370 (+55%) - if the ~$200B build clearly earns its cost of capital, the FCF normalization plus an AI-platform
+      margin re-rate carry the stock well above spot; this is the core of the bull.
+    probability_rationale: AWS AI demand sustains the growth, Trainium defends/expands margins, and the capex converts to
+      high-ROIC capacity rather than overbuild - the demonstrated AWS franchise plus custom silicon make it credible. 20%
+      weight on the AI infrastructure earning its return.
+    dcf_metrics:
+      cagr_5y: 14.2
+      wacc: 0.08
+    dcf_path:
+      rev_b: 716.9
+      rev_path:
+      - 0.18
+      - 0.16
+      - 0.14
+      - 0.12
+      - 0.11
+      op_margin:
+      - 0.12
+      - 0.13
+      - 0.15
+      - 0.16
+      - 0.17
+      wacc_path:
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      - 0.08
+      term_g: 0.04
+      fcf:
+      - 42.297
+      - 78.503
+      - 123.054
+      - 162.879
+      - 194.703
+      cash: 123.0
+      net_debt: 68.4
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 10700
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.5
+      - 3.3
+      - 3.1
+      - 2.9
+      - 2.8
+      ev_fcf_multiple:
+      - 30.0
+      - 28.0
+      - 26.0
+      - 26.0
+      - 26.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 487.39
+    headline: AWS AI platform; full re-rate.
+    narrative:
+    - 'The full second act: AWS becomes the dominant AI-compute platform on Trainium economics, advertising scales into a
+      third profit engine, retail margins keep climbing, and Amazon re-rates to a high-FCF-margin platform at ~16% margin.
+      Revenue compounds ~16% to ~$1.5T.'
+    - DCF ~$487 (+104%) - the AI-infrastructure bet pays off in full and the FCF machine re-rates to a platform multiple;
+      ~8% probability, the asymmetric upside the trough FCF is masking.
+    probability_rationale: Everything works - AWS AI platform leadership AND Trainium margin expansion AND advertising AND
+      retail leverage AND a multiple re-rate, the AWS/Starlink-class compounding outcome. ~8%, the long-duration tail.
+    dcf_metrics:
+      cagr_5y: 16.2
+      wacc: 0.078
+    dcf_path:
+      rev_b: 716.9
+      rev_path:
+      - 0.2
+      - 0.18
+      - 0.16
+      - 0.14
+      - 0.13
+      op_margin:
+      - 0.13
+      - 0.14
+      - 0.16
+      - 0.17
+      - 0.18
+      wacc_path:
+      - 0.078
+      - 0.078
+      - 0.078
+      - 0.078
+      - 0.078
+      term_g: 0.04
+      fcf:
+      - 51.617
+      - 101.513
+      - 153.082
+      - 201.361
+      - 242.708
+      cash: 123.0
+      net_debt: 68.4
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 10650
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.8
+      - 3.6
+      - 3.4
+      - 3.3
+      ev_fcf_multiple:
+      - 32.0
+      - 30.0
+      - 28.0
+      - 27.0
+      - 27.0
+historical_prices:
+  ipo_marker: IPO May '97
+  x_min: -6.2
+  points:
+  - - -6.0
+    - 95
+  - - -5.0
+    - 160
+  - - -4.0
+    - 170
+  - - -3.3
+    - 85
+  - - -2.5
+    - 130
+  - - -1.5
+    - 180
+  - - -0.8
+    - 230
+  - - -0.3
+    - 196
+  - - -0.1
+    - 278
+  - - -0.02
+    - 238.55
+weighting_rationale:
+- label: Ultra Bear 12%
+  body: AI overbuild; FCF stays trough-bound; ~$59 (-75%).
+- label: Bear 26%
+  body: AWS holds but FCF recovers slowly; ~$119 (-50%).
+- label: Base 34%
+  body: AWS reaccelerates; FCF normalizes to ~11%; ~$209 (-12%).
+- label: Bull 20%
+  body: AI ROIC compounds; margin re-rates; ~$370 (+55%).
+- label: Ultra Bull 8%
+  body: AWS AI platform; full re-rate; ~$487 (+104%).
+appendix:
+  pushback:
+  - label: The FCF multiple is distorted by the capex trough.
+    body: FY25 FCF was crushed to ~$7.7B (from ~$33B in FY24) by the ~$200B build; the DCF prices the recovery off the trough,
+      not the depressed print - that's why the multiple looks extreme.
+  - label: AWS reaccelerating is the whole bull.
+    body: AWS +28% (fastest in 15 quarters) at ~$150B run-rate and ~37.7% margin, with triple-digit AI revenue growth - the
+      question is whether that demand justifies the depreciation.
+  - label: Trainium is the margin defense.
+    body: Custom silicon (Trainium/Graviton/Nitro) is >$20B run-rate with ~$225B commitments and Trainium2 sold out - vertical
+      integration lowers AI cost and defends AWS margins as the build scales.
+  - label: Advertising is a high-margin third engine.
+    body: ~$70B annualized and growing fast, structurally high-margin - it scales operating income independent of the AWS
+      capex cycle.
+  - label: The swing is AWS AI ROIC, not solvency.
+    body: ~$54B net cash and a record 11.2% op margin mean no balance-sheet risk; the downside is whether ~$200B/yr of capex
+      earns its cost of capital, not survival.
+  triggers:
+  - label: Bull validation
+    body: AWS growth holds high-20s% with expanding margin  ·  FCF margin recovers off the ~1% trough toward 10%+  ·  Trainium
+      commitments convert to revenue  ·  advertising sustains 20%+ growth
+  - label: Bear validation
+    body: AWS growth decelerates back toward the teens  ·  capex keeps rising while FCF stays trough-bound  ·  depreciation
+      compresses AWS margin below ~35%  ·  adverse FTC/EU cloud ruling
+  - label: Reframe needed
+    body: if AWS AI demand cools or commoditizes and the ~$200B build becomes a visible overbuild (FCF fails to recover for
+      2+ years), re-rate the terminal toward a low-ROIC capital-heavy multiple
+glossary:
+- term: AWS
+  definition: Amazon Web Services - the cloud-infrastructure segment (~$150B run-rate, ~38% operating margin, ~16-17% of revenue
+    but the majority of operating income); reaccelerated to +28% on AI demand, the central swing.
+- term: Capex / AI infrastructure
+  definition: Capital expenditure on AI data centers and chips (~$200B guided FY26, ~+50% YoY); the cash drag that crushed
+    FY25 FCF, with a 6-24 month lag to monetization - the bear's mechanism.
+- term: Trainium
+  definition: Amazon's custom AI training silicon (with Graviton/Nitro, >$20B run-rate, ~$225B commitments, Trainium2 sold
+    out); vertical integration that lowers AI cost and defends AWS margins.
+- term: AI ROIC
+  definition: Return on the AI-infrastructure capital - whether the ~$200B/yr build earns more than its cost of capital; the
+    single biggest 5-year swing factor in the DCF.
+- term: FCF margin
+  definition: Free cash flow / revenue (~1% in FY25 at the capex trough vs ~5% in FY24); the mature-DCF lever - the model's
+    central bet is recovery off the trough as the build monetizes.
+competitive:
+  arena: Cloud infrastructure + e-commerce/advertising - Amazon (AWS cloud leader, the largest US marketplace, fast-growing
+    ad business) vs Microsoft Azure, Google Cloud, and retail rivals Walmart/Shopify; auditing scale, switching, and network
+    Powers against a ~$200B AI capex bet and an FTC trial.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 4
+      note: 'Strong: AWS infrastructure scale + Trainium vertical integration lower unit cost; fulfillment/logistics scale
+        across the largest US marketplace - a genuine, compounding cost advantage.'
+    network_economies:
+      score: 3
+      note: The marketplace two-sided network (more buyers -> more sellers -> more selection) is real and self-reinforcing,
+        though weaker than a pure social network and contestable by Walmart/Shopify.
+    counter_positioning:
+      score: 1
+      note: Was the e-commerce disruptor; now the incumbent - little counter-positioning left, and AWS faces well-capitalized
+        Azure/GCP, not a slow legacy.
+    switching_costs:
+      score: 4
+      note: 'High in AWS: embedded workloads, data gravity, committed-spend contracts, and re-architecture cost make migration
+        painful - the stickiest Power, the AWS retention moat.'
+    branding:
+      score: 2
+      note: Trust/convenience (Prime) is a real consumer asset, but cloud is bought on price/performance, not brand; modest
+        as a pricing Power.
+    cornered_resource:
+      score: 2
+      note: Custom silicon (Trainium) + Prime membership + first-party logistics are valuable and hard to copy, but not uniquely
+        cornered against Azure/GCP/Walmart.
+    process_power:
+      score: 3
+      note: Decades of logistics/operations and cloud-operations learning curves (fulfillment, AWS reliability, custom hardware)
+        are a real, hard-to-replicate process advantage.
+  dominant_power: switching_costs
+  durability: high
+  rivals:
+  - name: Microsoft (Azure)
+    kind: public
+    note: 'The #1 cloud rival; Azure + OpenAI is the AWS AI-compute benchmark and the main switching-cost threat.'
+    growth: 0.16
+    margin: 0.45
+    multiple: ~35x EV/FCF
+  - name: Alphabet (Google Cloud)
+    kind: public
+    note: '#3 cloud growing fast with a full AI stack/TPUs; pressures AWS growth and margins on AI workloads.'
+    growth: 0.13
+    margin: 0.32
+    multiple: ~25x EV/FCF
+  - name: Walmart
+    kind: public
+    note: Largest US retailer; scaled e-commerce + advertising + marketplace - the network/scale challenger on the retail
+      side.
+    growth: 0.05
+    margin: 0.04
+    multiple: ~35x P/E
+  - name: Shopify
+    kind: private
+    note: Arms the long tail of independent merchants against the Amazon marketplace; the network-economies pressure on retail.
+    growth: 0.25
+    margin: 0.12
+    multiple: ~60x EV/FCF
+  threats:
+  - vector: switching_costs
+    who: Microsoft Azure / Google Cloud (AI workloads)
+    falsifier: AWS growth decelerates back toward the teens as AI workloads shift to Azure/GCP, signaling the migration cost
+      is being overcome.
+  - vector: network_economies
+    who: Walmart + Shopify (marketplace)
+    falsifier: US marketplace/seller share erodes as Walmart's network and Shopify's merchant base take third-party GMV.
+  - vector: scale_economies
+    who: AI capex overbuild / FTC antitrust
+    falsifier: FCF fails to recover off the trough for 2+ years, or the Oct-2026 FTC Buy-Box trial forces structural marketplace
+      changes that dent unit economics.
+  takeaway: 'Amazon''s Powers are genuine and durable: AWS switching costs (data gravity, committed spend) are the stickiest,
+    layered on scale (AWS infrastructure + Trainium, fulfillment) and a self-reinforcing marketplace network. The Audit: switching_costs
+    is the dominant, high-durability Power - hard for Azure/GCP to dislodge - but the live threat is the ~$200B AI-capex bet
+    and whether AWS AI demand earns its cost of capital before rivals erode growth. That squares with the DCF: the franchise
+    isn''t in question, the return on the build is, and the modal case lands ~-12% (roughly fair) because spot already assumes
+    the capex monetizes and FCF normalizes off the FY25 trough.'

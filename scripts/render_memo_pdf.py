@@ -151,15 +151,13 @@ def render(ticker: str, out_path: Path | None = None) -> Path:
 
             # (3) horizontal SVG-clip — chart <text> whose box runs past its
             # own <svg> viewBox left/right edge gets cut at the SVG viewport.
-            # The (1)/(2) checks above are page-level and don't see this; it's
-            # the class that clipped the Page-1 forward-chart labels + title.
-            # The forward chart is now sized from its label widths, but a few
-            # OTHER charts still clip (young-company captions / TAM bar labels;
-            # a couple of mature axis labels) — tracked separately. So this is
-            # WARN-ONLY for now; promote to an ERROR (gate on STRICT_LAYOUT)
-            # once those are sized from data too. TOL ignores sub-unit pokes.
+            # The (1)/(2) checks above are page-level and don't see this. Every
+            # chart margin/title now sizes from its label widths (spec §3.5:
+            # estSvgTextWidth / monoTextWidth / niceStep / wrapSvgText), so this
+            # is a STRICT gate like (1)/(2). TOL ignores sub-unit pokes (2px,
+            # matching the page-overflow tolerance).
             hclips = page.evaluate("""() => {
-                const TOL = 1.0; const out = [];
+                const TOL = 2.0; const out = [];
                 document.querySelectorAll('svg').forEach((svg) => {
                     const vb = svg.viewBox.baseVal;
                     if (!vb || !vb.width) return;
@@ -177,15 +175,20 @@ def render(ticker: str, out_path: Path | None = None) -> Path:
                 return out;
             }""")
             if hclips:
+                strict = os.environ.get("STRICT_LAYOUT") == "1"
+                tag = "ERROR" if strict else "warn"
                 shown = "\n".join(f"    {h}" for h in hclips[:8])
                 more = f"\n    … +{len(hclips) - 8} more" if len(hclips) > 8 else ""
                 print(
-                    f"[{ticker}] warn: {len(hclips)} chart label(s) clip at the "
+                    f"[{ticker}] {tag}: {len(hclips)} chart label(s) clip at the "
                     f"SVG edge:\n{shown}{more}\n"
                     "  spec §3.5: size the chart's margin from the label width "
-                    "(see ForwardValueChart / estSvgTextWidth). WARN-ONLY.",
+                    "(see estSvgTextWidth / monoTextWidth). (set STRICT_LAYOUT=1 to fail)",
                     file=sys.stderr,
                 )
+                if strict:
+                    browser.close()
+                    raise SystemExit(2)
             page.pdf(
                 path=str(out_pdf),
                 width="14in",

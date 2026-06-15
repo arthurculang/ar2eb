@@ -1,0 +1,551 @@
+# DIS — Walt Disney (NYSE) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: DIS
+company: Walt Disney
+exchange: NYSE
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 100.04
+market:
+  market_cap_billion: 178.6
+  shares_outstanding_million: 1785.3
+  cash_billion: 5.7
+  net_debt_billion: 42.0
+  extras:
+  - $5.7B cash against ~$42B total debt (~$36B net debt); ~1,785M shares; dividend raised +50%, buyback >=$8B in FY26
+  - Revenue $94.4B FY25 (+3%); GAAP op margin 18.6% (rising); FCF ~$10.1B; streaming (DTC) OI just crossed 10%
+  - ~$100, down ~9% YTD (52-wk ~$92-125), popped ~7-8% on the May print; the cheap turnaround alongside META
+taxonomy:
+  watchlist: fcf-megacap
+  tier:
+  themes:
+  - consumer-experience
+  primary_theme: consumer-experience
+central_question: Does streaming operating margin scale from ~10% toward mid-teens fast enough to outrun the secular decline
+  of linear TV and cable-affiliate revenue?
+thesis: Disney trades at ~$178.6B equity (~$100, down ~9% YTD) — ~22x EV/FCF on $94.4B revenue, an 18.6% and rising operating
+  margin, ~$10.1B FCF against ~$36B net debt. Streaming (DTC) operating income just crossed 10% (+88% YoY, guided to keep
+  scaling), Experiences is a record cash engine (~$2.6B quarterly OI) with a $60B capex runway, and the CEO succession overhang
+  is resolved. The DCF asks whether DTC margin scales toward mid-teens before linear TV erodes the base. The modal case lands
+  +14% — the cheap-turnaround read, with the secular cable decline as the live drag.
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 67.4
+  - 82.7
+  - 88.9
+  - 91.4
+  - 94.4
+  history_op_margin:
+  - 11.5
+  - 14.7
+  - 14.5
+  - 17.1
+  - 18.6
+  history_fcf:
+  - 2.0
+  - 1.1
+  - 4.9
+  - 8.6
+  - 10.1
+  history_ev_rev:
+  - 4.9
+  - 2.7
+  - 2.2
+  - 2.4
+  - 2.3
+page3_chart_config:
+  segment_a: Entertainment + Sports
+  segment_b: Experiences
+  hist_ent_split:
+  - 0.62
+  - 0.63
+  - 0.62
+  - 0.61
+  - 0.6
+  chart6_title: Equity build (Op EV - net debt)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end late Sept  ·  FQ2 2026 (May'26) results
+  sources: 'Sources: SEC XBRL company facts (CIK 1744489; revenue, GAAP operating income/margin, cash flow, debt), Disney
+    FQ2 2026 release (DTC revenue $5.49B +13% / operating income $582M +88% / 10.6% margin; Experiences revenue $9.5B +7%
+    / OI $2.6B records; domestic park visitation -1%; dividend +50%, buyback >=$8B; $60B/10-yr Experiences capex; Josh D''Amaro
+    named CEO). Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC.
+    EV/sales & EV/FCF vs NFLX/CMCSA/WBD/PARA.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.13
+    expected_per_share: 36.38
+    headline: Cable erodes faster than DTC scales.
+    narrative:
+    - 'The secular decline wins: linear TV and cable-affiliate revenue erode faster than streaming margin builds, sports rights
+      costs outrun ESPN DTC ramp, and parks demand softens as domestic attendance keeps slipping. Revenue barely grows (~1%)
+      and the operating margin stalls near 16-17% as the mix shift turns into a mix drag.'
+    - A media-and-parks conglomerate whose growth core never outpaces its declining legacy earns a low terminal multiple ->
+      DCF ~$36 (-64%). The ~$36B net debt amplifies the equity hit when EBITDA disappoints.
+    probability_rationale: 'The genuine bear: cord-cutting is structural, domestic park visitation already printed -1%, and
+      content is hit-driven. 13% weight on the legacy decline outrunning the DTC turnaround.'
+    dcf_metrics:
+      cagr_5y: 1.0
+      wacc: 0.1
+    dcf_path:
+      rev_b: 94.4
+      rev_path:
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      op_margin:
+      - 0.16
+      - 0.16
+      - 0.16
+      - 0.17
+      - 0.17
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.02
+      fcf:
+      - 7.628
+      - 7.704
+      - 7.781
+      - 8.841
+      - 8.929
+      cash: 5.7
+      net_debt: 42.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1790
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.0
+      - 1.8
+      - 1.7
+      - 1.6
+      - 1.5
+      ev_fcf_multiple:
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+      - 13.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 65.91
+    headline: DTC profits, but cable offsets it.
+    narrative:
+    - Streaming holds its ~10% margin and grows, but the affiliate/ad decline at the linear networks offsets most of the gain;
+      parks lean on price (attendance flat) and the $60B capex weighs on near-term free cash flow until the new capacity opens.
+      Revenue compounds ~3% at a low-double-digit FCF margin.
+    - DCF ~$66 (-34%) — a stabilizing but not-yet-reaccelerating Disney at ~15x FCF is worth less than today's price; the
+      market's discount holds if DTC scaling only treads water against the cable runoff.
+    probability_rationale: The DTC turnaround is real but the linear drag and capex timing cap it; parks growth is price-led
+      until 2027-2029. 27% as the plausible 'profits but doesn't compound' path.
+    dcf_metrics:
+      cagr_5y: 3.0
+      wacc: 0.095
+    dcf_path:
+      rev_b: 94.4
+      rev_path:
+      - 0.03
+      - 0.03
+      - 0.03
+      - 0.03
+      - 0.03
+      op_margin:
+      - 0.18
+      - 0.18
+      - 0.19
+      - 0.19
+      - 0.19
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.025
+      fcf:
+      - 9.723
+      - 10.015
+      - 11.347
+      - 11.687
+      - 12.038
+      cash: 5.7
+      net_debt: 42.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1780
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.5
+      - 2.3
+      - 2.2
+      - 2.1
+      - 2.0
+      ev_fcf_multiple:
+      - 16.0
+      - 15.0
+      - 15.0
+      - 15.0
+      - 15.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.34
+    expected_per_share: 114.23
+    headline: DTC scales toward mid-teens; FCF compounds.
+    narrative:
+    - 'The modal path: streaming operating margin grinds from ~10% toward mid-teens on operating leverage (ESPN DTC, bundling,
+      Hulu fully owned), Experiences compounds mid-single-digit as the $60B runway adds supply-constrained capacity, and the
+      combined engine outgrows the shrinking linear base. Revenue compounds ~5% and the operating margin climbs past 20%;
+      FCF margin grinds toward 14%.'
+    - DCF ~$114 (+14%) — the cheap-turnaround read. A franchise with a scaling DTC margin and a record cash engine in Experiences,
+      at ~17x FCF, re-rates modestly above today's price once the growth core clears the legacy drag.
+    probability_rationale: Requires DTC margin to keep scaling (guided >=10% FY26, +88% YoY OI) and Experiences to hold its
+      record cash flow as capex pays off. 34% as the central, modestly-positive outcome.
+    dcf_metrics:
+      cagr_5y: 4.6
+      wacc: 0.09
+    dcf_path:
+      rev_b: 94.4
+      rev_path:
+      - 0.05
+      - 0.05
+      - 0.05
+      - 0.04
+      - 0.04
+      op_margin:
+      - 0.19
+      - 0.2
+      - 0.21
+      - 0.21
+      - 0.22
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.03
+      fcf:
+      - 10.903
+      - 12.489
+      - 14.206
+      - 14.775
+      - 16.548
+      cash: 5.7
+      net_debt: 42.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1760
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.8
+      - 2.7
+      - 2.6
+      - 2.5
+      ev_fcf_multiple:
+      - 19.0
+      - 18.0
+      - 17.0
+      - 17.0
+      - 17.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.18
+    expected_per_share: 173.2
+    headline: Streaming hits mid-teens; parks reaccelerate.
+    narrative:
+    - 'The turnaround compounds: streaming margin reaches mid-teens and keeps climbing as the bundle (Disney+/Hulu/ESPN DTC)
+      gains pricing and scale, the new park capacity opens into resilient demand and reaccelerates Experiences past price-led
+      growth, and FCF margin lifts toward 16%. Revenue compounds ~6% at a margin recovering toward the historical peak.'
+    - DCF ~$173 (+73%) - if the DTC engine becomes the durable growth core and Experiences reaccelerates, the de-rated entry
+      re-rates with the fundamentals; this is the core of the bull.
+    probability_rationale: DTC scaling plus a $60B-funded Experiences reacceleration and a smooth CEO handoff make a real
+      compounding case credible. ~18% weight on the turnaround landing.
+    dcf_metrics:
+      cagr_5y: 5.6
+      wacc: 0.085
+    dcf_path:
+      rev_b: 94.4
+      rev_path:
+      - 0.06
+      - 0.06
+      - 0.06
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.2
+      - 0.21
+      - 0.22
+      - 0.23
+      - 0.23
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.035
+      fcf:
+      - 13.008
+      - 14.85
+      - 16.865
+      - 18.889
+      - 19.833
+      cash: 5.7
+      net_debt: 42.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1740
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.5
+      - 3.3
+      - 3.2
+      - 3.1
+      - 3.0
+      ev_fcf_multiple:
+      - 22.0
+      - 21.0
+      - 21.0
+      - 21.0
+      - 21.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 222.97
+    headline: Full re-rate; streaming a profit machine.
+    narrative:
+    - 'The full second act: streaming becomes a high-teens-margin profit machine, the IP library and franchises monetize across
+      DTC, parks and consumer products, the new $60B of capacity compounds Experiences for a decade, and Disney re-rates to
+      a growth-media multiple as the linear drag fades into irrelevance. Revenue compounds ~7% at peak margins.'
+    - DCF ~$223 (+123%) - the franchise reclaims a premium compounder valuation; ~8% probability, the asymmetric upside the
+      depressed entry is buying.
+    probability_rationale: Everything works - DTC margins AND Experiences reacceleration AND franchise monetization AND a
+      multiple re-rate, the long-duration tail. ~8%.
+    dcf_metrics:
+      cagr_5y: 6.6
+      wacc: 0.082
+    dcf_path:
+      rev_b: 94.4
+      rev_path:
+      - 0.07
+      - 0.07
+      - 0.07
+      - 0.06
+      - 0.06
+      op_margin:
+      - 0.21
+      - 0.22
+      - 0.23
+      - 0.24
+      - 0.25
+      wacc_path:
+      - 0.082
+      - 0.082
+      - 0.082
+      - 0.082
+      - 0.082
+      term_g: 0.035
+      fcf:
+      - 14.141
+      - 16.212
+      - 18.503
+      - 20.839
+      - 23.389
+      cash: 5.7
+      net_debt: 42.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 1720
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.8
+      - 3.7
+      - 3.6
+      - 3.5
+      ev_fcf_multiple:
+      - 24.0
+      - 22.0
+      - 22.0
+      - 22.0
+      - 22.0
+historical_prices:
+  ipo_marker: NYSE since '57
+  x_min: -6.2
+  points:
+  - - -6.0
+    - 110
+  - - -5.0
+    - 150
+  - - -4.2
+    - 200
+  - - -3.3
+    - 90
+  - - -2.5
+    - 85
+  - - -1.5
+    - 110
+  - - -0.8
+    - 120
+  - - -0.3
+    - 92
+  - - -0.05
+    - 100.04
+weighting_rationale:
+- label: Ultra Bear 13%
+  body: Cable erodes faster than DTC scales; ~$36 (-64%).
+- label: Bear 27%
+  body: DTC profits but linear decline offsets it; ~$66 (-34%).
+- label: Base 34%
+  body: DTC scales toward mid-teens; FCF compounds; ~$114 (+14%).
+- label: Bull 18%
+  body: Streaming hits mid-teens; parks reaccelerate; ~$173 (+73%).
+- label: Ultra Bull 8%
+  body: Full re-rate; streaming a profit machine; ~$223 (+123%).
+appendix:
+  pushback:
+  - label: The streaming turnaround is no longer a maybe.
+    body: DTC operating income +88% YoY to a 10.6% margin (first quarter above double digits, guided >=10% FY26) - the central
+      bull thesis is already printing, not projected.
+  - label: Experiences is a record cash engine.
+    body: ~$2.6B quarterly OI (a record), a $60B/10-yr capex runway adding supply-constrained capacity - the parks fund the
+      streaming build and anchor the floor.
+  - label: Linear TV is the live drag, not a tail risk.
+    body: Cable-affiliate and ad revenue are in structural decline; the whole question is whether DTC + Experiences outgrow
+      it, and the bear/base fork turns on that pace.
+  - label: The CEO overhang is resolved.
+    body: Josh D'Amaro (28-yr veteran who ran Experiences) named CEO, effective at the March annual meeting - the succession
+      question that hung over the stock is settled, though a first-time CEO carries transition risk.
+  - label: Net debt ~$36B is the amplifier.
+    body: Unlike the net-cash mega-caps, ~$36B of net debt levers the equity to EBITDA - the modal case re-rates above spot,
+      but the downside scenarios bite harder.
+  triggers:
+  - label: Bull validation
+    body: DTC operating margin scales past low-teens toward mid-teens  ·  ESPN DTC + bundle pricing hold  ·  Experiences reaccelerates
+      beyond price-led growth as new capacity opens  ·  FCF compounds despite the $60B capex
+  - label: Bear validation
+    body: DTC margin stalls near 10% while linear affiliate/ad revenue keeps eroding  ·  domestic park attendance stays negative  ·  content
+      underperforms (hit-driven)  ·  net debt rises on the capex without offsetting EBITDA
+  - label: Reframe needed
+    body: if linear TV erodes faster than DTC + Experiences can grow - the growth core never clears the legacy drag - re-rate
+      the terminal toward a declining-media-conglomerate multiple rather than a scaling-streamer one
+glossary:
+- term: DTC / streaming
+  definition: Direct-to-consumer (Disney+, Hulu, ESPN DTC) operating income; just crossed a 10% margin (+88% YoY), the swing-factor
+    metric the whole turnaround turns on.
+- term: Linear networks / affiliate
+  definition: Traditional cable/broadcast (ABC, ESPN cable, the channels) and the carriage fees pay-TV distributors pay -
+    in structural secular decline as cord-cutting erodes the base the DTC gains must outrun.
+- term: Experiences
+  definition: The parks, resorts, cruise lines and consumer-products segment - a record cash engine (~$2.6B quarterly OI)
+    with a $60B/10-yr capex runway; near-term growth is price-led ('essentially full') until 2027-2029 expansions.
+- term: Cornered resource (IP)
+  definition: 'Helmer Power: the franchise/IP library (Disney, Pixar, Marvel, Star Wars, ESPN) that monetizes across streaming,
+    parks and products - Disney''s most durable moat.'
+- term: FCF margin
+  definition: Free cash flow / revenue (~11% FY25, ~$10.1B); the mature-DCF lever the 18.6% operating margin converts to once
+    the $60B Experiences capex is funded.
+competitive:
+  arena: Media + theme parks - Disney (IP library/franchises, parks, the Disney+/Hulu/ESPN DTC bundle) vs Netflix in streaming,
+    Comcast/Universal in parks, Warner Bros. Discovery and Paramount in legacy media; auditing a cornered-resource/brand Power
+    against the secular decline of linear TV.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 4
+      note: Massive content and capex scale - Disney spreads franchise production, a global parks footprint and DTC tech across
+        the industry's largest revenue base; a genuine cost advantage.
+    network_economies:
+      score: 2
+      note: The Disney+/Hulu/ESPN bundle plus loyalty/MagicBand data create modest cross-sell pull, but streaming is not a
+        hard network - subscribers churn freely.
+    counter_positioning:
+      score: 0
+      note: None - Disney is the incumbent being disrupted by streaming and cord-cutting, not the disruptor; it had to cannibalize
+        its own cable economics to build DTC.
+    switching_costs:
+      score: 1
+      note: Weak - streaming is month-to-month and promiscuous; parks/cruise loyalty is real but a small share of revenue.
+    branding:
+      score: 4
+      note: A top global consumer brand - Disney/Pixar/Marvel/Star Wars command pricing power in parks and a trust premium
+        with families; durable but not converting fast while linear declines.
+    cornered_resource:
+      score: 5
+      note: 'The dominant Power: an irreplaceable IP/franchise library (a century of characters + ESPN sports rights) that
+        monetizes across DTC, parks and products - the hardest asset in media to replicate.'
+    process_power:
+      score: 2
+      note: Decades of theme-park operating and franchise-development know-how; real but not a primary moat versus the IP
+        itself.
+  dominant_power: cornered_resource
+  durability: high
+  rivals:
+  - name: Netflix (NFLX)
+    kind: public
+    note: The streaming scale leader and DTC-margin benchmark Disney's turnaround is measured against; far higher streaming
+      margin.
+    growth: 0.14
+    margin: 0.27
+    multiple: ~12x EV/sales
+  - name: Comcast / Universal (CMCSA)
+    kind: public
+    note: The parks rival (Epic Universe) and a cable peer; the closest media-plus-parks comp, cheaper multiple.
+    growth: 0.02
+    margin: 0.19
+    multiple: ~7x EV/FCF
+  - name: Warner Bros. Discovery (WBD)
+    kind: public
+    note: Legacy-media peer mid-restructuring; the cautionary 'cable decline + DTC build + leverage' comparison.
+    growth: 0.0
+    margin: 0.1
+    multiple: ~6x EV/EBITDA
+  - name: Paramount (PARA)
+    kind: public
+    note: Sub-scale legacy media + DTC; the 'left behind by streaming economics' comp.
+    growth: 0.0
+    margin: 0.08
+    multiple: ~7x EV/EBITDA
+  threats:
+  - vector: cornered_resource
+    who: Cord-cutting / linear decline
+    falsifier: Cable-affiliate and ad revenue erode faster than DTC + Experiences grow, so the franchise library's legacy
+      monetization shrinks faster than the new channels replace it.
+  - vector: branding
+    who: Netflix / streaming competition
+    falsifier: DTC margin stalls near 10% as bundle pricing and ESPN DTC fail to scale against Netflix's lead, and subscriber
+      growth/churn worsens.
+  - vector: scale_economies
+    who: Parks demand softness
+    falsifier: Domestic attendance stays negative and the $60B capacity opens into a soft consumer, so Experiences growth
+      stays price-led and the cash engine stalls.
+  takeaway: 'Disney''s cornered-resource Power is genuine and durable (high) - a century-deep IP/franchise library plus ESPN
+    sports rights that monetize across streaming, parks and consumer products, the hardest asset in media to replicate, backed
+    by a top brand and the industry''s largest scale. The Audit: the live threat is the secular decline of linear TV/cable
+    affiliate revenue, and the question is whether the scaling DTC margin (just crossed 10%, +88% YoY) and the record Experiences
+    engine ($2.6B quarterly OI, $60B runway) outgrow that runoff before it erodes the base. The DCF tests the pace; the modal
+    case lands +14% - the cheap-turnaround read, with ~$36B net debt amplifying both tails.'

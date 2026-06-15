@@ -1,0 +1,554 @@
+# TSLA — Tesla (NASDAQ) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: TSLA
+company: Tesla
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 406.43
+market:
+  market_cap_billion: 1525.0
+  shares_outstanding_million: 3752.4
+  cash_billion: 44.1
+  net_debt_billion: 1.6
+  extras:
+  - $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares
+  - Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B
+  - ~$406 (down ~10% YTD, +27% TTM); ~$1.5T market cap trades on the autonomy/robot narrative, not auto fundamentals
+taxonomy:
+  watchlist: fcf-megacap
+  tier:
+  themes:
+  - autonomous-vehicles-systems
+  - humanoid-robotics-physical-ai
+  primary_theme: autonomous-vehicles-systems
+central_question: At ~$1.5T on a declining ~$95B auto base earning 4.6% margins, does the price hold on auto+energy fundamentals,
+  or only if unsupervised autonomy and Optimus ship into real revenue?
+thesis: Tesla trades at ~$1.5T (~$406, +27% TTM) - ~16x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight
+  delivery decline (1.64M, -8.6%), with GAAP operating margin compressed to 4.6% from 16.8% in 2022. The DCF underwrites only
+  the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-75%). The robotaxi/FSD/Optimus optionality
+  is real but lives entirely in the ultra-bull second act, and even that lands -6%. What you pay above ~$100 is the autonomy/robot
+  option, not the car business - the modal case, an auto maker re-rating toward an auto multiple, is deeply negative.
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 53.8
+  - 81.5
+  - 96.8
+  - 97.7
+  - 94.8
+  history_op_margin:
+  - 12.1
+  - 16.8
+  - 9.2
+  - 7.2
+  - 4.6
+  history_fcf:
+  - 5.0
+  - 7.6
+  - 4.4
+  - 3.6
+  - 6.2
+  history_ev_rev:
+  - 19.6
+  - 4.8
+  - 8.2
+  - 13.3
+  - 15.8
+page3_chart_config:
+  segment_a: Automotive
+  segment_b: Energy + Services
+  hist_ent_split:
+  - 0.88
+  - 0.85
+  - 0.82
+  - 0.79
+  - 0.74
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q1 2026 results (Apr 2026)
+  sources: 'Sources: SEC XBRL company facts (CIK 1318605; revenue, GAAP operating income/margin, cash flow, debt), Tesla Q1
+    2026 release (revenue $22.39B +16% YoY, deliveries 358,023 +6.5% YoY but -14% sequentially, FCF negative, FY25 deliveries
+    1.64M -8.6%, now smaller than BYD). Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon
+    terminal at scenario WACC. EV/sales & EV/FCF vs auto peers (Toyota, BYD, VW) and the autonomy/AI names the multiple implies.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.18
+    expected_per_share: 26.42
+    headline: Deliveries keep falling; pure auto multiple.
+    narrative:
+    - 'The auto base keeps eroding: deliveries fall again as BYD/VW take share and Europe stays depressed (EU registrations
+      -17%, 13th straight monthly decline), the affordable Model Q slips further, and price cuts hold operating margin near
+      the depressed 4.6%. None of robotaxi, unsupervised FSD, or Optimus reaches material revenue inside the window.'
+    - A shrinking car maker with single-digit margins earns a low-double-digit FCF / mid-single EV/sales multiple - DCF ~$26
+      (-93%). Even ~$42.5B net cash is immaterial against a ~$1.5T price built on optionality that doesn't arrive.
+    probability_rationale: 'The fundamentals-only floor: two straight delivery declines, Q1''26 FCF negative, beats leaning
+      on warranty true-downs and tariff relief, and the moonshots still slipping. 18% weight on the auto franchise simply
+      re-rating to an auto multiple.'
+    dcf_metrics:
+      cagr_5y: 1.1
+      wacc: 0.115
+    dcf_path:
+      rev_b: 94.8
+      rev_path:
+      - -0.05
+      - 0.0
+      - 0.03
+      - 0.04
+      - 0.04
+      op_margin:
+      - 0.04
+      - 0.05
+      - 0.06
+      - 0.06
+      - 0.06
+      wacc_path:
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      term_g: 0.025
+      fcf:
+      - 3.602
+      - 4.503
+      - 5.566
+      - 5.788
+      - 6.02
+      cash: 44.1
+      net_debt: 1.6
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 3800
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.5
+      - 3.0
+      - 2.8
+      - 2.6
+      ev_fcf_multiple:
+      - 12.0
+      - 12.0
+      - 11.0
+      - 11.0
+      - 11.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.3
+    expected_per_share: 46.4
+    headline: Auto stabilizes; energy grows; no autonomy revenue.
+    narrative:
+    - Deliveries stop falling and resume mid-single-digit growth as the Model Q finally ships, energy storage keeps compounding
+      (+25% YoY, high-margin), and operating margin recovers toward 9% - a respectable car-plus-energy business, but FSD stays
+      supervised and robotaxi stays a ~20-34-vehicle pilot, so no autonomy revenue enters the model.
+    - DCF ~$46 (-89%) - even a healthier auto+energy franchise at a premium auto multiple (~14-16x FCF) is worth a fraction
+      of today's price; the gap is the un-modeled optionality, not the car business.
+    probability_rationale: 'The plausible ''auto recovers, robots don''t ship in time'' path: energy is genuinely compounding
+      and margins can heal, but autonomy keeps slipping (v15 to summer, unsupervised FSD to Q4 at earliest). 30% as the central
+      fundamentals outcome.'
+    dcf_metrics:
+      cagr_5y: 7.2
+      wacc: 0.105
+    dcf_path:
+      rev_b: 94.8
+      rev_path:
+      - 0.05
+      - 0.07
+      - 0.08
+      - 0.08
+      - 0.08
+      op_margin:
+      - 0.06
+      - 0.07
+      - 0.08
+      - 0.09
+      - 0.09
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.03
+      fcf:
+      - 5.972
+      - 7.456
+      - 9.202
+      - 11.181
+      - 12.075
+      cash: 44.1
+      net_debt: 1.6
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 3800
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 6.0
+      - 5.5
+      - 5.0
+      - 4.8
+      - 4.6
+      ev_fcf_multiple:
+      - 16.0
+      - 15.0
+      - 14.0
+      - 14.0
+      - 14.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.3
+    expected_per_share: 83.38
+    headline: Growth resumes; margins heal; autonomy begins.
+    narrative:
+    - Volume re-accelerates to low-teens as the affordable model expands the addressable market and energy scales, lifting
+      operating margin back toward the mid-teens; FSD monetization and an early robotaxi ramp begin to contribute, so the
+      business carries a richer-than-auto multiple - but the second act is just starting, not at scale.
+    - DCF ~$83 (-79%) - the modal case. A re-accelerating Tesla with healing margins and the first autonomy dollars is worth
+      far more than the bear, yet still ~four-fifths below spot, because even this constructive fundamentals path doesn't
+      justify ~$1.5T.
+    probability_rationale: Requires the auto base to inflect AND margins to recover AND early autonomy revenue - credible
+      given the product pipeline and FSD-data flywheel, but each leg is currently slipping. 30% as the central, still-deeply-negative
+      outcome.
+    dcf_metrics:
+      cagr_5y: 13.0
+      wacc: 0.1
+    dcf_path:
+      rev_b: 94.8
+      rev_path:
+      - 0.12
+      - 0.14
+      - 0.14
+      - 0.13
+      - 0.12
+      op_margin:
+      - 0.08
+      - 0.1
+      - 0.12
+      - 0.13
+      - 0.14
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.035
+      fcf:
+      - 7.432
+      - 10.894
+      - 15.178
+      - 18.711
+      - 22.703
+      cash: 44.1
+      net_debt: 1.6
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 3850
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 9.0
+      - 8.0
+      - 7.0
+      - 6.5
+      - 6.0
+      ev_fcf_multiple:
+      - 20.0
+      - 18.0
+      - 16.0
+      - 16.0
+      - 16.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.14
+    expected_per_share: 193.76
+    headline: FSD ships; robotaxi scales; software margins.
+    narrative:
+    - Unsupervised FSD clears regulators and ships, the robotaxi fleet scales out of pilot into real ride-hail revenue, and
+      high-margin software/licensing lifts blended operating margin toward 20% on >20% revenue growth - the platform repricing
+      the autonomy bulls underwrite. Optimus and energy add to a real second revenue stream.
+    - DCF ~$194 (-52%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers,
+      yet the entry price still embeds more than this delivers; the autonomy win is necessary but, at ~$1.5T, not sufficient.
+    probability_rationale: 'The Power-gated second act: durable FSD-data process power plus the robotaxi/licensing model,
+      if autonomy actually ships and scales. Real but every 2026 datapoint shows it slipping. 14% weight on the platform thesis
+      landing within the window.'
+    dcf_metrics:
+      cagr_5y: 21.8
+      wacc: 0.095
+    dcf_path:
+      rev_b: 94.8
+      rev_path:
+      - 0.22
+      - 0.24
+      - 0.23
+      - 0.21
+      - 0.19
+      op_margin:
+      - 0.1
+      - 0.13
+      - 0.16
+      - 0.18
+      - 0.2
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.04
+      fcf:
+      - 10.409
+      - 17.21
+      - 26.46
+      - 38.42
+      - 50.799
+      cash: 44.1
+      net_debt: 1.6
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 3900
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 12.0
+      - 11.0
+      - 10.0
+      - 9.5
+      - 9.0
+      ev_fcf_multiple:
+      - 24.0
+      - 22.0
+      - 19.0
+      - 19.0
+      - 19.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 382.51
+    headline: Robotaxi, Optimus, energy compound; platform.
+    narrative:
+    - 'The full second act: unsupervised autonomy scales nationally into a high-margin ride-hail + FSD-licensing business,
+      Optimus reaches volume as a non-auto TAM, and energy compounds - revenue grows ~30% at platform margins toward the mid-20s,
+      the AI/robotics company the narrative prices.'
+    - 'DCF ~$383 (-6%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple
+      does the model approach today''s price. That this best case still lands modestly below spot is the finding: ~$1.5T fully
+      prices the moonshots succeeding.'
+    probability_rationale: Everything ships and scales - robotaxi AND Optimus AND energy AND a platform re-rate, the autonomy
+      bull's complete thesis. ~8%, the long-duration tail that the current price already embeds.
+    dcf_metrics:
+      cagr_5y: 28.6
+      wacc: 0.09
+    dcf_path:
+      rev_b: 94.8
+      rev_path:
+      - 0.3
+      - 0.32
+      - 0.3
+      - 0.27
+      - 0.24
+      op_margin:
+      - 0.12
+      - 0.16
+      - 0.2
+      - 0.24
+      - 0.26
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.045
+      fcf:
+      - 12.324
+      - 22.775
+      - 40.181
+      - 61.773
+      - 86.59
+      cash: 44.1
+      net_debt: 1.6
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 3950
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 15.0
+      - 14.0
+      - 13.0
+      - 12.0
+      - 11.0
+      ev_fcf_multiple:
+      - 28.0
+      - 26.0
+      - 23.0
+      - 23.0
+      - 23.0
+historical_prices:
+  ipo_marker: IPO Jun '10
+  x_min: -5.7
+  points:
+  - - -5.5
+    - 80
+  - - -5.0
+    - 240
+  - - -4.2
+    - 410
+  - - -3.3
+    - 108
+  - - -2.5
+    - 250
+  - - -1.5
+    - 250
+  - - -0.8
+    - 460
+  - - -0.3
+    - 420
+  - - -0.05
+    - 406.43
+weighting_rationale:
+- label: Ultra Bear 18%
+  body: Deliveries keep falling; pure auto multiple; ~$26 (-93%).
+- label: Bear 30%
+  body: Auto stabilizes, energy grows, no autonomy revenue; ~$46 (-89%).
+- label: Base 30%
+  body: Growth resumes, margins heal, autonomy begins; ~$83 (-79%).
+- label: Bull 14%
+  body: FSD ships, robotaxi scales, software margins; ~$194 (-52%).
+- label: Ultra Bull 8%
+  body: Robotaxi + Optimus + energy compound into a platform; ~$383 (-6%).
+appendix:
+  pushback:
+  - label: The DCF ignores robotaxi/FSD/Optimus.
+    body: Correct, and that is the point - those cash flows aren't in the auto+energy base, so they sit only in the bull/ultra-bull
+      second act; what you pay above ~$100 IS that optionality, priced explicitly.
+  - label: Energy storage is real and compounding.
+    body: +25% YoY and high-margin, and it is in the model (the Energy + Services segment) - but at ~26% of revenue it can't
+      carry a ~$1.5T cap; even the bear builds energy in and lands -89%.
+  - label: Margins recovered to ~19% ex-credits in Q1'26.
+    body: Auto GM ex-credits did recover, but the Q1'26 beat leaned on ~$230M warranty true-downs and tariff relief while
+      FCF turned negative - margin quality, not just level, is the question.
+  - label: The FSD data flywheel is a real process Power.
+    body: Granted - fleet-scale driving data is a genuine, hard-to-copy edge, which is why the bull/ultra-bull carry a platform
+      multiple; the issue is timing, as unsupervised FSD slipped to Q4 2026 at earliest.
+  - label: Net cash, no solvency risk.
+    body: $44.1B cash vs ~$1.6B debt (~$42.5B net cash) - immaterial against a ~$1.5T price; the downside is multiple/fundamentals,
+      not survival; this is a valuation-vs-optionality memo, not a distress one.
+  triggers:
+  - label: Bull validation
+    body: unsupervised FSD ships to consumers  ·  robotaxi fleet scales past pilot into paid ride-hail at scale  ·  Optimus
+      reaches volume production  ·  auto deliveries return to growth with margin recovery
+  - label: Bear validation
+    body: deliveries decline a third straight year  ·  robotaxi stays a sub-100-vehicle pilot  ·  unsupervised FSD slips beyond
+      2027  ·  operating margin stays below ~8% as price cuts continue
+  - label: Reframe needed
+    body: if autonomy/Optimus ship and scale into material revenue, re-underwrite as a software/robotics platform (origination
+      lens), not a mature auto maker - that is the only path that closes the gap to ~$1.5T
+glossary:
+- term: Robotaxi / FSD
+  definition: Tesla's autonomous ride-hail (a ~20-34-vehicle pilot in Austin/Dallas/Houston) and Full Self-Driving software
+    (still supervised; v15 targeted summer 2026, unsupervised to Q4'26+) - the optionality outside the modeled auto cash flows.
+- term: Optimus
+  definition: Tesla's humanoid robot (V3 reveal pushed to ~Jul/Aug 2026, production 'quite slow') - a non-auto TAM that contributes
+    only in the bull/ultra-bull second act.
+- term: Deliveries
+  definition: Vehicles delivered per period; FY25 1.64M (-8.6%), the second straight annual decline, with Tesla now smaller
+    than BYD - the core fundamentals signal.
+- term: EV/sales
+  definition: Enterprise value / revenue (~16x FY25); extreme for a ~3%-declining, 4.6%-margin auto maker - the multiple that
+    embeds the un-modeled autonomy optionality.
+- term: FCF margin
+  definition: Free cash flow / revenue (~6.5% FY25); the mature-DCF swing factor - whether volume and margin recovery (and,
+    in the upper cases, software) convert to free cash flow.
+competitive:
+  arena: Global autos + autonomy/AI - Tesla (premium EV brand, FSD-data scale, energy storage) vs Toyota, BYD, Volkswagen
+    in autos and Waymo and the autonomy/robotics field in the second act; auditing a branding + nascent process Power against
+    auto-multiple compression.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 3
+      note: Real manufacturing scale (~1.6M units, gigacasting, vertically integrated batteries) and the largest charging
+        network, but volume is now declining and below BYD.
+    network_economies:
+      score: 1
+      note: Supercharger access and fleet effects are mild; cars aren't a network - the FSD data flywheel is the closest thing
+        and is counted as process power.
+    counter_positioning:
+      score: 1
+      note: Was the EV disruptor legacy autos couldn't follow; now the incumbent being counter-positioned on price by BYD
+        and on EVs by everyone.
+    switching_costs:
+      score: 1
+      note: Weak in autos (next car is a fresh decision); modest stickiness from Supercharging and the app/software ecosystem.
+    branding:
+      score: 3
+      note: A genuine premium/technology brand with pricing power and a devoted base, but eroding in Europe (registrations
+        -17%, 13th straight monthly decline) and politically polarized.
+    cornered_resource:
+      score: 2
+      note: Fleet-scale real-world driving data and battery/charging assets - valuable and hard to replicate, though contestable
+        as rivals scale data and fast-charging.
+    process_power:
+      score: 2
+      note: 'Nascent and the bull''s swing factor: manufacturing know-how plus the FSD-data/AI training loop - potentially
+        durable if autonomy ships, unproven at unsupervised scale.'
+  dominant_power: branding
+  durability: medium
+  rivals:
+  - name: BYD
+    kind: public
+    note: Now the larger EV maker; cost leader taking global share, especially outside the US - the core auto-compression
+      threat.
+    growth: 0.2
+    margin: 0.06
+    multiple: ~20x P/E
+  - name: Toyota
+    kind: public
+    note: Scale/quality benchmark; hybrid-led, slow on EVs but vast cash generation - the mature-auto multiple Tesla is measured
+      against.
+    growth: 0.05
+    margin: 0.1
+    multiple: ~9x P/E
+  - name: Volkswagen
+    kind: public
+    note: Legacy scale leader pushing EVs hard in Europe, where Tesla's brand is weakening.
+    growth: 0.02
+    margin: 0.05
+    multiple: ~4x P/E
+  - name: Waymo (Alphabet)
+    kind: private
+    note: Furthest-ahead robotaxi operator; the benchmark for whether Tesla's autonomy second act can actually scale.
+    growth:
+    margin:
+    multiple: private
+  threats:
+  - vector: branding
+    who: BYD / Volkswagen (price + EV share)
+    falsifier: Deliveries decline a third year as BYD/VW take share and Europe registrations keep falling.
+  - vector: process_power
+    who: Waymo / autonomy slipping
+    falsifier: Unsupervised FSD and robotaxi keep slipping past 2027, so the data flywheel never converts to autonomy revenue.
+  - vector: scale_economies
+    who: BYD cost leadership
+    falsifier: Operating margin stays below ~8% as price cuts continue and volume growth doesn't return.
+  takeaway: 'Tesla''s strongest Power is its premium brand, backed by a nascent FSD-data process Power - but the brand is
+    eroding in Europe, volume now trails BYD, and on the auto+energy fundamentals operating margin has compressed to 4.6%
+    across two straight delivery declines. The Audit: branding is durable (medium) and process_power is the live swing factor
+    (the autonomy flywheel), but the threat that dominates the cash flows is auto-multiple compression. The DCF underwrites
+    only those fundamentals and lands ~-75%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
+    and even full platform success lands -6% - so the ~$1.5T price embeds the moonshots succeeding, not the car business.'

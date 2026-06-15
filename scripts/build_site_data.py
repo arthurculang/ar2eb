@@ -26,7 +26,7 @@ OUT = REPO / "public" / "data.js"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from arthur_indicator import compute_ai, ai_zone  # noqa: E402  (Arthur Indicator §13, for the portfolio page)
 
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak", "meta", "amzn", "googl", "aapl", "nvda", "tsla", "dis"]
 # Canonical scenario order — worst to best. Each ticker subsets this list
 # based on which keys appear in scenarios.* (e.g. ZM has all five, JOBY/AUR/
 # LTH/NAUT have the standard four). The order here drives display order

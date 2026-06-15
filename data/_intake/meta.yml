@@ -1,0 +1,558 @@
+# META — Meta Platforms (NASDAQ) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: META
+company: Meta Platforms
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 566.98
+market:
+  market_cap_billion: 1429.0
+  shares_outstanding_million: 2521.0
+  cash_billion: 81.6
+  net_debt_billion: 58.7
+  extras:
+  - Net cash +$22.9B ($81.6B cash vs $58.7B debt); ~2.52B shares; ~$26B buybacks + ~$5B dividends FY25
+  - Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF ~$46.1B after capex stepping from ~$72B toward $125-145B
+  - '~$567 mid-June 2026: +12.6% YTD but -18% TTM, off the $796 Aug-2025 high, bounced off the $520 Mar-2026 low'
+taxonomy:
+  watchlist: fcf-megacap
+  tier:
+  themes:
+  - platform-marketplace-tech
+  - ai-compute
+  primary_theme: platform-marketplace-tech
+central_question: Does the ~$130B/yr AI capex earn its cost of capital - lifting ad growth and pricing faster than the resulting
+  D&A compresses Meta's 41% margins?
+thesis: 'Meta trades at ~$1.43T (~$567, +12.6% YTD but -18% TTM, off the $796 high) - the cheapest mega-cap on normalized
+  FCF at a high-teens EV/FCF, while Q1''26 ad growth accelerated to +33%. The fork is the capex: guidance jumped to $125-145B
+  (~2x prior year) and the stock flinched on the ROI question, even as 41% margins fund the buildout from cash flow. The DCF
+  asks whether AI-driven ad efficiency compounds revenue faster than D&A crushes margins. The finding: a weighted +14.6%,
+  the modal base ~+8% - the AI ad engine carrying the upside, the capex-ROI fear the bear.'
+chart_reference:
+  history_years:
+  - 2021
+  - 2022
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 117.9
+  - 116.6
+  - 134.9
+  - 164.5
+  - 201.0
+  history_op_margin:
+  - 39.6
+  - 24.8
+  - 34.7
+  - 42.2
+  - 41.4
+  history_fcf:
+  - 39.1
+  - 19.0
+  - 43.8
+  - 54.1
+  - 46.1
+  history_ev_rev:
+  - 7.6
+  - 2.7
+  - 6.7
+  - 9.1
+  - 7.5
+page3_chart_config:
+  segment_a: Family of Apps
+  segment_b: Reality Labs
+  hist_ent_split:
+  - 0.98
+  - 0.98
+  - 0.99
+  - 0.99
+  - 0.99
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q1 2026 (Apr'26) results
+  sources: 'Sources: SEC XBRL company facts (CIK 1326801; revenue, GAAP operating income/margin, cash flow, debt), Meta Q1
+    2026 release (revenue $56.3B +33% YoY, ad revenue ~$55B with impressions +19% & price/ad +12%, operating income $22.9B
+    at 41% margin, Family DAP +4%, Reality Labs ~$6B/qtr operating loss; capex guidance raised to $125-145B; FTC trial won
+    Nov-2025, appeal Jan-2026). Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal
+    at scenario WACC. EV/sales & EV/FCF vs GOOGL/AMZN.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.12
+    expected_per_share: 267.55
+    headline: Capex burns; ad growth fades; margins compress.
+    narrative:
+    - 'The capex-ROI fear plays out: the $125-145B buildout lands as years of D&A ahead of return, AI ad efficiency plateaus,
+      the ad cycle softens, and Reality Labs keeps bleeding ~$24B/yr. Revenue growth decelerates into the mid-single digits
+      and FCF margin compresses toward ~18-20% as depreciation outruns the operating line.'
+    - An ad business growing slowly while spending ~2x prior year on uncertain-return compute earns a low-teens terminal multiple
+      -> DCF ~$268 (-53%). Net cash sets a floor but cannot offset a buildout that does not earn its cost of capital.
+    probability_rationale: 'The genuine bear: the market already flinched (-6% after-hours) on the capex raise, the ROI is
+      unproven, and Reality Labs has lost ~$80B cumulatively. 12% weight on the spend failing to convert to durable ad gains.'
+    dcf_metrics:
+      cagr_5y: 7.0
+      wacc: 0.1
+    dcf_path:
+      rev_b: 201.0
+      rev_path:
+      - 0.12
+      - 0.08
+      - 0.06
+      - 0.05
+      - 0.04
+      op_margin:
+      - 0.36
+      - 0.35
+      - 0.35
+      - 0.36
+      - 0.36
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.025
+      fcf:
+      - 40.522
+      - 43.763
+      - 48.966
+      - 54.121
+      - 56.285
+      cash: 81.6
+      net_debt: 58.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 2550
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.0
+      - 2.5
+      - 2.0
+      - 1.8
+      - 1.6
+      ev_fcf_multiple:
+      - 16.0
+      - 14.0
+      - 13.0
+      - 13.0
+      - 13.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 414.94
+    headline: Growth normalizes; D&A weighs on margins.
+    narrative:
+    - Ad growth normalizes off the +33% spike toward high-single/low-double-digit as the buildout's depreciation steps up,
+      AI lifts pricing but only modestly, and Reality Labs stays a drag. Operating margin holds high-30s and FCF margin sits
+      low-20s as capex stays elevated against a larger D&A base.
+    - DCF ~$415 (-27%) - a still-dominant ad franchise, but one digesting a heavy buildout at a ~16x terminal FCF multiple
+      is worth below today's price; the discount is warranted if the capex weighs on free cash flow longer than the ad engine
+      compounds.
+    probability_rationale: Share gains and pricing continue but the D&A from ~$130B/yr capex caps margin and free cash flow.
+      27% as the plausible 'grows but the spend weighs' path given the elevated-capex regime.
+    dcf_metrics:
+      cagr_5y: 11.1
+      wacc: 0.095
+    dcf_path:
+      rev_b: 201.0
+      rev_path:
+      - 0.18
+      - 0.13
+      - 0.1
+      - 0.08
+      - 0.07
+      op_margin:
+      - 0.38
+      - 0.38
+      - 0.39
+      - 0.39
+      - 0.4
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.03
+      fcf:
+      - 47.436
+      - 56.283
+      - 64.859
+      - 70.048
+      - 78.358
+      cash: 81.6
+      net_debt: 58.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 2530
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 4.0
+      - 3.5
+      - 3.0
+      - 2.8
+      - 2.6
+      ev_fcf_multiple:
+      - 20.0
+      - 18.0
+      - 16.0
+      - 16.0
+      - 16.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.34
+    expected_per_share: 613.68
+    headline: AI lifts ads; margins hold ~41%; FCF compounds.
+    narrative:
+    - 'The modal path: AI-driven ad efficiency keeps lifting volume and price (the Q1''26 +33% is the first datapoint), revenue
+      compounds low-double-digit toward ~$300B+, and operating margin holds ~41% as the buildout''s returns roughly offset
+      its D&A. FCF margin grinds back from the capex trough toward the mid-20s as capex moderates against a larger base.'
+    - DCF ~$614 (+8%) - the ad engine compounds and the capex earns roughly its cost of capital, so the modal case recovers
+      to modestly above today's price at a ~20x terminal FCF multiple plus net cash; the cheapest mega-cap on normalized FCF
+      re-rates only gently in the central outcome.
+    probability_rationale: Requires the AI capex to roughly earn its cost of capital while ad growth stays double-digit -
+      consistent with the accelerating Q1'26 ad metrics and 41% margins, but not a step-change. 34% as the central, modestly-positive
+      outcome.
+    dcf_metrics:
+      cagr_5y: 13.9
+      wacc: 0.09
+    dcf_path:
+      rev_b: 201.0
+      rev_path:
+      - 0.22
+      - 0.16
+      - 0.13
+      - 0.1
+      - 0.09
+      op_margin:
+      - 0.4
+      - 0.4
+      - 0.41
+      - 0.41
+      - 0.42
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.035
+      fcf:
+      - 53.948
+      - 65.425
+      - 77.144
+      - 88.394
+      - 100.204
+      cash: 81.6
+      net_debt: 58.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 2510
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 5.5
+      - 5.0
+      - 4.5
+      - 4.0
+      - 3.8
+      ev_fcf_multiple:
+      - 24.0
+      - 22.0
+      - 20.0
+      - 19.0
+      - 19.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.2
+    expected_per_share: 997.31
+    headline: AI ad engine compounds; capex pays off.
+    narrative:
+    - 'The capex pays off: AI ad-creation (Muse Spark, adopters ~8M) and ranking durably lift impressions and price, the buildout''s
+      return outruns its D&A, and operating margin expands past 42% as the ad engine scales on the compute. Revenue compounds
+      mid-teens early and FCF margin inflects toward ~30% as capex intensity peaks and rolls over.'
+    - DCF ~$997 (+76%) - if the AI spend converts to a structurally faster, higher-margin ad engine, the de-rated entry re-rates
+      with the fundamentals at a high-20s terminal FCF multiple; this is the core of the bull and the fat right tail in the
+      finding.
+    probability_rationale: Meta's own AI tools are already in the core ad stack and Q1'26 showed both volume and price accelerating;
+      if that durability holds, the capex earns well above its cost. 20% weight on the buildout becoming a real ad-monetization
+      engine.
+    dcf_metrics:
+      cagr_5y: 17.5
+      wacc: 0.085
+    dcf_path:
+      rev_b: 201.0
+      rev_path:
+      - 0.26
+      - 0.21
+      - 0.17
+      - 0.13
+      - 0.11
+      op_margin:
+      - 0.41
+      - 0.42
+      - 0.43
+      - 0.44
+      - 0.44
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.04
+      fcf:
+      - 60.782
+      - 79.676
+      - 100.391
+      - 117.493
+      - 134.915
+      cash: 81.6
+      net_debt: 58.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 2480
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 6.5
+      - 6.0
+      - 5.5
+      - 5.0
+      - 4.8
+      ev_fcf_multiple:
+      - 28.0
+      - 26.0
+      - 24.0
+      - 23.0
+      - 23.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.07
+    expected_per_share: 1392.36
+    headline: AI platform second act; FCF machine.
+    narrative:
+    - 'The full second act: AI compounds ad monetization across the 3B+ user graph, business-messaging and AI agents open
+      a new revenue stream beyond the core ad TAM, and the compute buildout becomes an owned platform asset. Operating margin
+      pushes mid-40s and FCF margin reaches the low-30s as the spend turns into durable, high-incremental-margin revenue.'
+    - DCF ~$1392 (+146%) - the buildout reclaims a platform multiple as AI becomes an earnings engine rather than a cost;
+      ~7% probability, the asymmetric upside the de-rated entry is buying.
+    probability_rationale: Everything works - AI lifts ads AND opens a messaging/agent revenue stream AND the compute becomes
+      a platform asset, the AWS/datacenter-style second act. ~7%, the long-duration tail.
+    dcf_metrics:
+      cagr_5y: 21.5
+      wacc: 0.082
+    dcf_path:
+      rev_b: 201.0
+      rev_path:
+      - 0.3
+      - 0.26
+      - 0.21
+      - 0.17
+      - 0.14
+      op_margin:
+      - 0.42
+      - 0.43
+      - 0.44
+      - 0.45
+      - 0.45
+      wacc_path:
+      - 0.082
+      - 0.082
+      - 0.082
+      - 0.082
+      - 0.082
+      term_g: 0.04
+      fcf:
+      - 65.325
+      - 92.187
+      - 119.513
+      - 149.153
+      - 175.348
+      cash: 81.6
+      net_debt: 58.7
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 2450
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 7.5
+      - 7.0
+      - 6.5
+      - 6.0
+      - 5.8
+      ev_fcf_multiple:
+      - 30.0
+      - 28.0
+      - 26.0
+      - 25.0
+      - 25.0
+historical_prices:
+  ipo_marker: IPO May '12
+  x_min: -6.2
+  points:
+  - - -6.0
+    - 200
+  - - -5.0
+    - 270
+  - - -4.2
+    - 380
+  - - -3.5
+    - 90
+  - - -3.0
+    - 200
+  - - -2.0
+    - 350
+  - - -1.3
+    - 600
+  - - -0.8
+    - 796
+  - - -0.25
+    - 520
+  - - -0.05
+    - 566.98
+weighting_rationale:
+- label: Ultra Bear 12%
+  body: Capex burns; ad growth fades; margins compress; ~$268 (-53%).
+- label: Bear 27%
+  body: Growth normalizes; D&A weighs on margins; ~$415 (-27%).
+- label: Base 34%
+  body: AI lifts ads; margins hold ~41%; ~$614 (+8%).
+- label: Bull 20%
+  body: AI ad engine compounds; capex pays off; ~$997 (+76%).
+- label: Ultra Bull 7%
+  body: AI platform second act; FCF machine; ~$1392 (+146%).
+appendix:
+  pushback:
+  - label: Cheapest mega-cap on normalized FCF.
+    body: -18% TTM to a high-teens EV/FCF while ad revenue accelerates to +33% - priced as if the ad engine were decelerating,
+      not accelerating; the capex fear is doing the de-rating.
+  - label: The capex ROI is the whole question.
+    body: ~$130B/yr spend (~2x prior year) with uncertain return is the bear; Q1'26's accelerating volume AND price is the
+      first datapoint it might earn its cost of capital - the bull/bear fork.
+  - label: 41% margins self-fund the buildout.
+    body: Meta pays for the entire AI capex out of operating cash flow at a 41% margin while still buying back ~$26B + paying
+      ~$5B dividends - no balance-sheet risk in the spend.
+  - label: AI is already monetizing in the core ad stack.
+    body: Proprietary Muse Spark ad-creative and AI ranking are live; ad-creative adopters doubled to ~8M, with impressions
+      +19% and price/ad +12% in Q1'26.
+  - label: Breakup risk is materially reduced.
+    body: Meta won the FTC antitrust trial (Nov-2025) and keeps Instagram/WhatsApp; the FTC's Jan-2026 appeal leaves a tail,
+      but the existential breakup case is largely off the table.
+  triggers:
+  - label: Bull validation
+    body: ad revenue stays >=20% with BOTH impressions and price/ad rising  ·  operating margin holds >=40% through the D&A
+      step-up  ·  FCF margin inflects back above ~25% as capex intensity peaks  ·  Muse Spark / AI-ad adoption keeps compounding
+  - label: Bear validation
+    body: ad growth decelerates into the mid-single digits  ·  operating margin falls below ~38% as D&A outruns the operating
+      line  ·  FCF margin stays stuck near ~20% as capex keeps stepping up  ·  Reality Labs loss widens beyond ~$24B/yr
+  - label: Reframe needed
+    body: if the ~$130B/yr capex visibly fails to earn its cost of capital - ad growth fades while D&A keeps climbing - re-rate
+      the terminal toward a slow-growth, capex-heavy ad utility, not a compounding platform
+glossary:
+- term: Family of Apps
+  definition: Meta's core ad business - Facebook, Instagram, WhatsApp, Messenger (~99% of revenue, 41%+ operating margin);
+    the social-graph ad engine the Powers and the DCF rest on.
+- term: Reality Labs
+  definition: The AR/VR/metaverse segment (~$24B/yr operating loss, ~$80B cumulative); a structural drag on consolidated margin
+    and the bear's most concrete cost line.
+- term: AI capex / ROI
+  definition: The $125-145B FY26 buildout (~2x the prior ~$72B) of AI compute; whether it earns its cost of capital via faster,
+    higher-priced ads is the single biggest 5-year swing factor.
+- term: Impressions x price/ad
+  definition: The two ad-revenue drivers (Q1'26 +19% volume, +12% price); AI lifting both simultaneously is the bull mechanism,
+    a soft cycle is the bear.
+- term: FCF margin
+  definition: Free cash flow / revenue (~23% FY25, down from ~33% as capex stepped up); the mature-DCF swing factor - whether
+    the AI buildout converts to free cash flow as D&A scales.
+competitive:
+  arena: Digital advertising / social platforms - Meta (3B+ user social graph, ~$55B/qtr ads, 41% margin) vs Alphabet/Google,
+    Amazon ads, TikTok/ByteDance, and Snap/Pinterest/Reddit; auditing a branding + network-economies + scale Power against
+    the AI-capex ROI question.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 4
+      note: 'Massive: ~$200B revenue and a global ad/infra base spread fixed R&D and compute across 3B+ users; AI capex deepens
+        the cost-per-impression advantage if it earns out.'
+    network_economies:
+      score: 4
+      note: 'The core Power: the social graph compounds - more users and content make each app more valuable to users and
+        advertisers; cross-app (FB/IG/WhatsApp) reinforces it.'
+    counter_positioning:
+      score: 1
+      note: Was the mobile-social disruptor; now the incumbent being counter-positioned by TikTok's algorithmic feed, which
+        forced the Reels response.
+    switching_costs:
+      score: 2
+      note: 'Moderate: social graph + content history + creator relationships create stickiness, but users multi-home and
+        attention is contestable.'
+    branding:
+      score: 3
+      note: 'Real: Instagram/WhatsApp are category-defining consumer brands with global mindshare, though the corporate brand
+        is contested and ad-trust is a perennial overhang.'
+    cornered_resource:
+      score: 2
+      note: The 3B+ user behavioral/interest dataset and the social graph itself are hard to replicate; tempered by privacy
+        regulation (DMA, ATT) constraining its use.
+    process_power:
+      score: 3
+      note: AI ad-ranking, creative (Muse Spark) and infra are a compounding learning curve; the open question is whether
+        the capex turns this into durable monetization.
+  dominant_power: network_economies
+  durability: high
+  rivals:
+  - name: Alphabet (GOOGL)
+    kind: public
+    note: The other ad duopolist - Search/YouTube + full AI stack; the scale/margin benchmark and direct ad-budget competitor.
+    growth: 0.15
+    margin: 0.32
+    multiple: ~26x EV/FCF
+  - name: Amazon (AMZN)
+    kind: public
+    note: Fastest-growing large ad platform (retail-media), taking share of performance budgets at the margin.
+    growth: 0.13
+    margin: 0.11
+    multiple: ~3x EV/sales
+  - name: ByteDance / TikTok
+    kind: private
+    note: The attention threat that forced Reels; algorithmic short-form competing directly for engagement and ad dollars.
+    growth:
+    margin:
+    multiple: private
+  - name: Snap / Pinterest / Reddit
+    kind: public
+    note: Sub-scale social-ad peers; pressure on incremental ad budgets, not the core graph.
+    growth: 0.15
+    margin: 0.08
+    multiple: ~5x EV/sales
+  threats:
+  - vector: network_economies
+    who: ByteDance / TikTok (attention)
+    falsifier: Family DAP growth stalls or turns negative as engagement and time-spent shift to short-form rivals, capping
+      the impression base.
+  - vector: process_power
+    who: AI-capex ROI (Alphabet's full stack)
+    falsifier: Ad growth decelerates while D&A from the ~$130B/yr buildout keeps climbing - the spend fails to convert to
+      durable monetization.
+  - vector: cornered_resource
+    who: Privacy regulation (DMA, ATT, FTC appeal)
+    falsifier: EU 'pay or consent' / signal-loss erodes ad targeting and pricing, or the FTC appeal reopens the structural-separation
+      risk.
+  takeaway: 'Meta''s network-economies Power is genuinely durable (high): the 3B+ social graph compounds, reinforced by scale
+    across a ~$200B ad base and the Instagram/WhatsApp brands - and Q1''26''s accelerating ads show the engine isn''t decelerating.
+    The Audit: network economies dominates, scale and branding reinforce it, and the live threats are TikTok''s pull on attention,
+    privacy regulation, and above all the ~$130B/yr AI-capex ROI. The market prices that capex fear - the cheapest mega-cap
+    on normalized FCF at a high-teens EV/FCF - so the DCF tests whether AI lifts ads faster than the D&A weighs: a weighted
+    +14.6%, base ~+8%, a fat right tail.'

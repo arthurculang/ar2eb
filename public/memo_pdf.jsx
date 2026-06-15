@@ -45,6 +45,42 @@ function estSvgTextWidth(str, fontSizePt, letterSpacingEm = 0) {
   return (em + letterSpacingEm * str.length) * fontSizePt * PT_TO_USER;
 }
 
+// Greedy word-wrap for an SVG <text>: split `str` into lines each ≤ maxWidthUser
+// user-units wide when set in Inter at fontSizePt (via estSvgTextWidth, which
+// already folds in the pt→user 1.333× blow-up). Long single words aren't broken.
+function wrapSvgText(str, maxWidthUser, fontSizePt, letterSpacingEm = 0) {
+  const words = String(str).split(/\s+/).filter(Boolean);
+  const lines = [];
+  let cur = '';
+  for (const w of words) {
+    const trial = cur ? cur + ' ' + w : w;
+    if (!cur || estSvgTextWidth(trial, fontSizePt, letterSpacingEm) <= maxWidthUser) {
+      cur = trial;
+    } else {
+      lines.push(cur); cur = w;
+    }
+  }
+  if (cur) lines.push(cur);
+  return lines;
+}
+
+// "Nice" axis step for ~`target` ticks across a numeric range, at ANY magnitude
+// (1/2/5 × 10^k). Replaces fixed thresholds (`yMax > 6 ? 2`) that exploded into
+// hundreds of gridlines once mega-cap $100B–$1T values entered the mature charts.
+function niceStep(range, target = 6) {
+  if (!(range > 0)) return 1;
+  const raw = range / target;
+  const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+  const n = raw / mag;
+  return (n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10) * mag;
+}
+
+// Width (SVG user units) of a JetBrains-Mono string at `pt` — the chart axis
+// font. Mono advance ≈ 0.6em; folds in the same pt→user 1.333× as estSvgTextWidth.
+function monoTextWidth(str, pt) {
+  return String(str).length * 0.6 * pt * (96 / 72);
+}
+
 // ── Helpers ────────────────────────────────────────────────────────────
 function getTickerSlug() {
   const params = new URLSearchParams(location.search);
@@ -1489,11 +1525,16 @@ const pathD = (pts, xScale, yScale) =>
 // Standard chart frame margins for the 280×190 slots on Page 3.
 const CHART_MARGIN = { left: 26, right: 36, top: 16, bottom: 14 };
 
-function ChartTitle({ children, x = 2, y = 10 }) {
+function ChartTitle({ children, x = 2, y = 10, maxWidth }) {
+  // When a maxWidth is given and the title would overrun it, compress with
+  // textLength (spec §3.5: titles size to the chart, never clip the SVG edge).
+  const s = typeof children === 'string' ? children : '';
+  const over = maxWidth && s && estSvgTextWidth(s, 7.5) > (maxWidth - x);
   return (
     <text x={x} y={y}
           fontFamily={FONT_SANS} fontWeight={600} fontSize="7.5pt"
-          fill={PALETTE.ink}>
+          fill={PALETTE.ink}
+          {...(over ? { textLength: maxWidth - x, lengthAdjust: 'spacingAndGlyphs' } : {})}>
       {children}
     </text>
   );
@@ -1762,7 +1803,7 @@ function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
     <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
          viewBox={`0 0 ${widthPt} ${heightPt}`}
          style={{ display: 'block' }}>
-      <ChartTitle>{`$${mktCap.toFixed(2)}B mkt cap as P/S on FY36 rev`}</ChartTitle>
+      <ChartTitle maxWidth={widthPt}>{`$${mktCap.toFixed(2)}B mkt cap as P/S on FY36 rev`}</ChartTitle>
       <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
 
       {/* Reference line for mature peer P/S */}
@@ -1804,11 +1845,21 @@ function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
         );
       })}
 
-      {/* Caption */}
-      <text x={plotL} y={heightPt - 2}
-            fontFamily={FONT_SANS} fontSize="5pt" fill={PALETTE.muted}>
-        {cfg.valnCaption}
-      </text>
+      {/* Caption — word-wrapped to the chart width and bottom-aligned so a long
+          caption never clips the SVG right edge (spec §3.5: from data). Shrinks
+          5pt→4pt if needed to keep it to ≤2 lines clear of the FY36 row. */}
+      {(() => {
+        const availW = widthPt - plotL - 2;
+        let fs = 5, lines = wrapSvgText(cfg.valnCaption || '', availW, fs);
+        while (lines.length > 2 && fs > 4) { fs -= 0.5; lines = wrapSvgText(cfg.valnCaption || '', availW, fs); }
+        const lh = fs + 1.7;
+        return lines.map((ln, i) => (
+          <text key={`cap-${i}`} x={plotL} y={heightPt - 2 - (lines.length - 1 - i) * lh}
+                fontFamily={FONT_SANS} fontSize={`${fs}pt`} fill={PALETTE.muted}>
+            {ln}
+          </text>
+        ));
+      })()}
     </svg>
   );
 }
@@ -1857,7 +1908,7 @@ function YoungTamChart({ memo, widthPt = 280, heightPt = 190 }) {
     <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
          viewBox={`0 0 ${widthPt} ${heightPt}`}
          style={{ display: 'block' }}>
-      <ChartTitle>{cfg.tamTitle}</ChartTitle>
+      <ChartTitle maxWidth={widthPt}>{cfg.tamTitle}</ChartTitle>
 
       {/* X-axis labels along the bottom */}
       <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
@@ -2149,15 +2200,19 @@ function MatureRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
     ...Array.from({ length: 5 }, (_, i) => `${26 + i}`),
   ];
   const m = CHART_MARGIN;
-  const plotL = m.left, plotR = widthPt - m.right;
+  const plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
-  const xScale = mkLinearScale([-0.5, totalX + 0.5], [plotL, plotR]);
   const allVals = [...histRev, ...Object.values(projByScn).flat()];
   const yMax = Math.max(...allVals) * 1.1;
   const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
-  const yTickStep = yMax > 6 ? 2 : yMax > 3 ? 1 : 0.5;
+  const yStep = niceStep(yMax);
   const yTicks = [];
-  for (let v = 0; v <= yMax; v += yTickStep) yTicks.push([v, `$${v.toFixed(0)}B`]);
+  for (let v = 0; v <= yMax + yStep * 0.5; v += yStep)
+    yTicks.push([v, `$${v.toFixed(yStep < 1 ? 1 : 0)}B`]);
+  // Left margin sized to the widest y-label so $100B–$1T labels never clip (spec §3.5).
+  const plotL = Math.max(m.left,
+    Math.ceil(Math.max(...yTicks.map(([, l]) => monoTextWidth(l, 5.5)))) + 5);
+  const xScale = mkLinearScale([-0.5, totalX + 0.5], [plotL, plotR]);
   const shortLabel = (k) => memo.print.scenarios[k].shortLabel;
 
   return (
@@ -2387,9 +2442,8 @@ function MatureBalanceChart({ memo, widthPt = 280, heightPt = 190 }) {
   const isDebtChart = !!histND;
 
   const m = CHART_MARGIN;
-  const plotL = m.left, plotR = widthPt - m.right;
+  const plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
-  const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
 
   let vals, title;
   if (isDebtChart) {
@@ -2402,9 +2456,13 @@ function MatureBalanceChart({ memo, widthPt = 280, heightPt = 190 }) {
   const yMax = Math.max(...vals) * 1.2;
   const yMin = Math.min(0, Math.min(...vals));
   const yScale = mkLinearScale([yMin, yMax], [plotB, plotT]);
-  const yTickStep = (yMax - yMin) > 4 ? 1 : 0.5;
+  const yStep = niceStep(yMax - yMin);
   const yTicks = [];
-  for (let v = yMin; v <= yMax; v += yTickStep) yTicks.push([v, `$${v.toFixed(1)}B`]);
+  for (let v = yMin; v <= yMax + yStep * 0.5; v += yStep)
+    yTicks.push([v, `$${v.toFixed(yStep < 1 ? 1 : 0)}B`]);
+  const plotL = Math.max(m.left,
+    Math.ceil(Math.max(...yTicks.map(([, l]) => monoTextWidth(l, 5.5)))) + 5);
+  const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
   const xTicks = histYears.map((y, i) => [i, `${y - 2000}`]);
 
   return (
@@ -2604,16 +2662,19 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
   const scnKeys = scnKeysFor(memo);
   const rows = scnKeys.map(k => {
     const s = memo.print.scenarios[k];
-    return {
-      key: k,
-      label: s.shortLabel,
-      opEv: Math.max(0, s.dcfPath.op_ev),
-      cash: s.dcfPath.cash || 0,
-      anth: s.dcfPath.special_assets || 0,
-    };
+    const opEv = Math.max(0, s.dcfPath.op_ev);
+    const netCash = (s.dcfPath.cash || 0) - (s.dcfPath.net_debt || 0);   // signed: +cash / −debt
+    const anth = s.dcfPath.special_assets || 0;
+    return { key: k, label: s.shortLabel, opEv, netCash, anth,
+             equity: Math.max(0, opEv + netCash + anth) };
   });
-  const maxTotal = Math.max(...rows.map(r => r.opEv + r.cash + r.anth)) * 1.05;
-  const xScale = mkLinearScale([0, maxTotal], [plotL, plotR]);
+  // Bar extent = the rightmost of (Op EV, equity): net-cash rows end at equity;
+  // net-debt rows build to Op EV, then a red bar cuts back to the equity point.
+  const maxTotal = Math.max(...rows.map(r => Math.max(r.opEv, r.equity))) * 1.05;
+  // Left margin sized to the widest right-anchored scenario label so "UltBear"/
+  // "UltBull" never clip the SVG left edge (spec §3.5: bounds compute from data).
+  const eqL = Math.max(plotL, Math.ceil(Math.max(...rows.map(r => estSvgTextWidth(r.label, 6.5)))) + 6);
+  const xScale = mkLinearScale([0, maxTotal], [eqL, plotR]);
   const rowH = (plotB - plotT) / rows.length;
   const barH = rowH * 0.5;
   const rowY = (i) => plotT + (i + 0.5) * rowH;
@@ -2626,30 +2687,40 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
       {rows.map((r, i) => {
         const y = rowY(i);
         const yTop = y - barH / 2;
-        const x1 = xScale(r.opEv);
-        const x2 = xScale(r.opEv + r.cash);
-        const x3 = xScale(r.opEv + r.cash + r.anth);
+        const opX = xScale(r.opEv);
+        // Segments: net-cash rows = Op EV (color) + net cash (gray) + special
+        // assets (light); net-debt rows = equity (color) + a red −net-debt bar.
+        const segs = [];
+        if (r.netCash >= 0) {
+          const cashX = xScale(r.opEv + r.netCash);
+          const anthX = xScale(r.opEv + r.netCash + r.anth);
+          segs.push({ x: eqL, w: opX - eqL, fill: SCN_COLORS[r.key] });
+          segs.push({ x: opX, w: cashX - opX, fill: '#94a3b8' });
+          segs.push({ x: cashX, w: anthX - cashX, fill: '#9ca3af', op: 0.6 });
+        } else {
+          const eqX = xScale(r.equity);
+          segs.push({ x: eqL, w: eqX - eqL, fill: SCN_COLORS[r.key] });
+          segs.push({ x: eqX, w: opX - eqX, fill: '#dc2626', op: 0.5 });
+        }
         return (
           <g key={r.key}>
-            <text x={plotL - 4} y={y + 2}
+            <text x={eqL - 4} y={y + 2}
                   fontFamily={FONT_SANS} fontWeight={500} fontSize="6.5pt"
                   fill={SCN_COLORS[r.key]} textAnchor="end">
               {r.label}
             </text>
-            <rect x={plotL} y={yTop} width={x1 - plotL} height={barH}
-                  fill={SCN_COLORS[r.key]} />
-            <rect x={x1} y={yTop} width={x2 - x1} height={barH}
-                  fill="#94a3b8" />
-            <rect x={x2} y={yTop} width={x3 - x2} height={barH}
-                  fill="#9ca3af" opacity="0.6" />
-            <text x={x3 + 3} y={y + 2}
+            {segs.map((s, j) => (
+              <rect key={j} x={s.x} y={yTop} width={Math.max(0, s.w)} height={barH}
+                    fill={s.fill} opacity={s.op} />
+            ))}
+            <text x={xScale(Math.max(r.opEv, r.equity)) + 3} y={y + 2}
                   fontFamily={FONT_MONO} fontSize="6pt" fill={PALETTE.text}>
-              ${(r.opEv + r.cash + r.anth).toFixed(0)}B
+              ${r.equity.toFixed(0)}B
             </text>
           </g>
         );
       })}
-      <text x={plotL} y={heightPt - 4}
+      <text x={eqL} y={heightPt - 4}
             fontFamily={FONT_SANS} fontSize="5.5pt" fill={PALETTE.muted}>
         {cfg.chart6Footer || 'Op EV  ·  cash  ·  special assets'}
       </text>

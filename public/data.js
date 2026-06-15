@@ -6318,7 +6318,7 @@ const MEMOS = [
               17.0,
               17.0
             ],
-            "tam_competitor_share": 96.0
+            "tam_competitor_share": 40.0
           },
           "revPerUnit": [
             22.0,
@@ -6480,7 +6480,7 @@ const MEMOS = [
               34.0,
               35.0
             ],
-            "tam_competitor_share": 78.0
+            "tam_competitor_share": 38.0
           },
           "revPerUnit": [
             22.0,
@@ -6642,7 +6642,7 @@ const MEMOS = [
               45.0,
               45.0
             ],
-            "tam_competitor_share": 70.0
+            "tam_competitor_share": 33.0
           },
           "revPerUnit": [
             22.0,
@@ -6804,7 +6804,7 @@ const MEMOS = [
               60.0,
               62.0
             ],
-            "tam_competitor_share": 60.0
+            "tam_competitor_share": 27.0
           },
           "revPerUnit": [
             24.0,
@@ -6966,7 +6966,7 @@ const MEMOS = [
               90.0,
               95.0
             ],
-            "tam_competitor_share": 50.0
+            "tam_competitor_share": 20.0
           },
           "revPerUnit": [
             25.0,
@@ -12696,7 +12696,7 @@ const MEMOS = [
               1.0,
               1.0
             ],
-            "tam_competitor_share": 70.0
+            "tam_competitor_share": 12.0
           },
           "revPerUnit": [
             1.0,
@@ -12857,7 +12857,7 @@ const MEMOS = [
               1.0,
               1.0
             ],
-            "tam_competitor_share": 70.0
+            "tam_competitor_share": 12.0
           },
           "revPerUnit": [
             1.0,
@@ -13018,7 +13018,7 @@ const MEMOS = [
               1.0,
               1.0
             ],
-            "tam_competitor_share": 70.0
+            "tam_competitor_share": 12.0
           },
           "revPerUnit": [
             1.0,
@@ -13179,7 +13179,7 @@ const MEMOS = [
               1.0,
               1.0
             ],
-            "tam_competitor_share": 70.0
+            "tam_competitor_share": 12.0
           },
           "revPerUnit": [
             1.0,
@@ -13340,7 +13340,7 @@ const MEMOS = [
               1.0,
               1.0
             ],
-            "tam_competitor_share": 70.0
+            "tam_competitor_share": 12.0
           },
           "revPerUnit": [
             1.0,
@@ -20163,6 +20163,5683 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "001",
         "footerTimestamp": "2026-06-11_19-58",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "META",
+    "slug": "meta",
+    "company": "Meta Platforms",
+    "exchange": "NASDAQ",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "meta-memo__v001__2026-06-14_20-19.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$1429B",
+      "shares": "2.52B",
+      "cash": "$81.6B cash, $58.7B net debt · Net cash +$22.9B ($81.6B cash vs $58.7B debt); ~2.52B shares; ~$26B buybacks + ~$5B dividends FY25; Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF ~$46.1B after capex stepping from ~$72B toward $125-145B; ~$567 mid-June 2026: +12.6% YTD but -18% TTM, off the $796 Aug-2025 high, bounced off the $520 Mar-2026 low"
+    },
+    "spot": {
+      "price": 566.98,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 649.72,
+      "deltaPct": 14.6
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 993.57,
+        "mult": 1.75
+      },
+      {
+        "y": 10,
+        "value": 1520.2,
+        "mult": 2.68
+      },
+      {
+        "y": 15,
+        "value": 2327.2,
+        "mult": 4.1
+      },
+      {
+        "y": 20,
+        "value": 3564.49,
+        "mult": 6.29
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "platform-marketplace-tech",
+        "ai-compute"
+      ],
+      "themeNames": [
+        "Platform & Marketplace Tech",
+        "AI & Compute"
+      ],
+      "primaryTheme": "platform-marketplace-tech",
+      "primaryThemeName": "Platform & Marketplace Tech",
+      "umbrella": "digital-platforms",
+      "umbrellaName": "Digital & Platforms"
+    },
+    "ai": null,
+    "question": "Does the ~$130B/yr AI capex earn its cost of capital - lifting ad growth and pricing faster than the D&A compresses Meta's 41% margins?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 12,
+        "price": 267.55,
+        "headline": "Capex burns; ad growth fades; margins compress.",
+        "why": "The genuine bear: the market already flinched (-6% after-hours) on the capex raise, the ROI is unproven, and Reality Labs has lost ~$80B cumulatively. 12% weight on the spend failing to convert to durable ad gains.",
+        "what": [
+          "The capex-ROI fear plays out: the $125-145B buildout lands as years of D&A ahead of return, AI ad efficiency plateaus, the ad cycle softens, and Reality Labs keeps bleeding ~$24B/yr. Revenue growth decelerates into the mid-single digits and FCF margin compresses toward ~18-20% as depreciation outruns the operating line.",
+          "An ad business growing slowly while spending ~2x prior year on uncertain-return compute earns a low-teens terminal multiple -> DCF ~$268 (-53%). Net cash sets a floor but cannot offset a buildout that does not earn its cost of capital."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 27,
+        "price": 414.94,
+        "headline": "Growth normalizes; D&A weighs on margins.",
+        "why": "Share gains and pricing continue but the D&A from ~$130B/yr capex caps margin and free cash flow. 27% as the plausible 'grows but the spend weighs' path given the elevated-capex regime.",
+        "what": [
+          "Ad growth normalizes off the +33% spike toward high-single/low-double-digit as the buildout's depreciation steps up, AI lifts pricing but only modestly, and Reality Labs stays a drag. Operating margin holds high-30s and FCF margin sits low-20s as capex stays elevated against a larger D&A base.",
+          "DCF ~$415 (-27%) - a still-dominant ad franchise, but one digesting a heavy buildout at a ~16x terminal FCF multiple is worth below today's price; the discount is warranted if the capex weighs on free cash flow longer than the ad engine compounds."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 34,
+        "price": 613.68,
+        "headline": "AI lifts ads; margins hold ~41%; FCF compounds.",
+        "why": "Requires the AI capex to roughly earn its cost of capital while ad growth stays double-digit - consistent with the accelerating Q1'26 ad metrics and 41% margins, but not a step-change. 34% as the central, modestly-positive outcome.",
+        "what": [
+          "The modal path: AI-driven ad efficiency keeps lifting volume and price (the Q1'26 +33% is the first datapoint), revenue compounds low-double-digit toward ~$300B+, and operating margin holds ~41% as the buildout's returns roughly offset its D&A. FCF margin grinds back from the capex trough toward the mid-20s as capex moderates against a larger base.",
+          "DCF ~$614 (+8%) - the ad engine compounds and the capex earns roughly its cost of capital, so the modal case recovers to modestly above today's price at a ~20x terminal FCF multiple plus net cash; the cheapest mega-cap on normalized FCF re-rates only gently in the central outcome."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 20,
+        "price": 997.31,
+        "headline": "AI ad engine compounds; capex pays off.",
+        "why": "Meta's own AI tools are already in the core ad stack and Q1'26 showed both volume and price accelerating; if that durability holds, the capex earns well above its cost. 20% weight on the buildout becoming a real ad-monetization engine.",
+        "what": [
+          "The capex pays off: AI ad-creation (Muse Spark, adopters ~8M) and ranking durably lift impressions and price, the buildout's return outruns its D&A, and operating margin expands past 42% as the ad engine scales on the compute. Revenue compounds mid-teens early and FCF margin inflects toward ~30% as capex intensity peaks and rolls over.",
+          "DCF ~$997 (+76%) - if the AI spend converts to a structurally faster, higher-margin ad engine, the de-rated entry re-rates with the fundamentals at a high-20s terminal FCF multiple; this is the core of the bull and the fat right tail in the finding."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 7,
+        "price": 1392.36,
+        "headline": "AI platform second act; FCF machine.",
+        "why": "Everything works - AI lifts ads AND opens a messaging/agent revenue stream AND the compute becomes a platform asset, the AWS/datacenter-style second act. ~7%, the long-duration tail.",
+        "what": [
+          "The full second act: AI compounds ad monetization across the 3B+ user graph, business-messaging and AI agents open a new revenue stream beyond the core ad TAM, and the compute buildout becomes an owned platform asset. Operating margin pushes mid-40s and FCF margin reaches the low-30s as the spend turns into durable, high-incremental-margin revenue.",
+          "DCF ~$1392 (+146%) - the buildout reclaims a platform multiple as AI becomes an earnings engine rather than a cost; ~7% probability, the asymmetric upside the de-rated entry is buying."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 27 / Base 34 / Bull 20 / Ultra Bull 7. Spot price reference: June 1, 2026 close.",
+    "thesis": "Meta trades at ~$1.43T (~$567, +12.6% YTD but -18% TTM, off the $796 high) - the cheapest mega-cap on normalized FCF at a high-teens EV/FCF, while Q1'26 ad growth accelerated to +33%. The fork is the capex: guidance jumped to $125-145B (~2x prior year) and the stock flinched on the ROI question, even as 41% margins fund the buildout. The DCF asks whether AI ad efficiency compounds revenue faster than D&A crushes margins: a weighted +14.6%, modal base ~+8%.",
+    "historicalPrices": {
+      "xMin": -6.2,
+      "ipoMarker": "IPO May '12",
+      "points": [
+        [
+          -6.0,
+          200.0
+        ],
+        [
+          -5.0,
+          270.0
+        ],
+        [
+          -4.2,
+          380.0
+        ],
+        [
+          -3.5,
+          90.0
+        ],
+        [
+          -3.0,
+          200.0
+        ],
+        [
+          -2.0,
+          350.0
+        ],
+        [
+          -1.3,
+          600.0
+        ],
+        [
+          -0.8,
+          796.0
+        ],
+        [
+          -0.25,
+          520.0
+        ],
+        [
+          -0.05,
+          566.98
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 12%",
+        "body": "Capex burns; ad growth fades; margins compress; ~$268 (-53%)."
+      },
+      {
+        "label": "Bear 27%",
+        "body": "Growth normalizes; D&A weighs on margins; ~$415 (-27%)."
+      },
+      {
+        "label": "Base 34%",
+        "body": "AI lifts ads; margins hold ~41%; ~$614 (+8%)."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "AI ad engine compounds; capex pays off; ~$997 (+76%)."
+      },
+      {
+        "label": "Ultra Bull 7%",
+        "body": "AI platform second act; FCF machine; ~$1392 (+146%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end Dec · Q1 2026 (Apr'26) results",
+      "sources": "Sources: SEC XBRL company facts (CIK 1326801; revenue, GAAP operating income/margin, cash flow, debt), Meta Q1 2026 release (revenue $56.3B +33% YoY, ad revenue ~$55B with impressions +19% & price/ad +12%, operating income $22.9B at 41% margin, Reality Labs ~$6B/qtr loss; capex raised to $125-145B; FTC trial won Nov-2025, appeal Jan-2026). Revenue modeled as a growth path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          117.9,
+          116.6,
+          134.9,
+          164.5,
+          201.0
+        ],
+        "historyOpMargin": [
+          39.6,
+          24.8,
+          34.7,
+          42.2,
+          41.4
+        ],
+        "historyFcf": [
+          39.1,
+          19.0,
+          43.8,
+          54.1,
+          46.1
+        ],
+        "historyEvRev": [
+          7.6,
+          2.7,
+          6.7,
+          9.1,
+          7.5
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Family of Apps",
+        "segmentB": "Reality Labs",
+        "histEntSplit": [
+          0.98,
+          0.98,
+          0.99,
+          0.99,
+          0.99
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 649.72,
+        "upsidePct": 14.6
+      },
+      "market": {
+        "marketCapBillion": 1429.0,
+        "sharesOutstandingMillion": 2521.0,
+        "cashBillion": 81.6,
+        "netDebtBillion": 58.7
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.12,
+          "expectedPerShare": 267.55,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 7.0,
+            "wacc": 0.1
+          },
+          "dcfPath": {
+            "rev_b": 201.0,
+            "rev_path": [
+              0.12,
+              0.08,
+              0.06,
+              0.05,
+              0.04
+            ],
+            "op_margin": [
+              0.36,
+              0.35,
+              0.35,
+              0.36,
+              0.36
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              40.522,
+              43.763,
+              48.966,
+              54.121,
+              56.285
+            ],
+            "cash": 81.6,
+            "net_debt": 58.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 2550,
+            "distress": 0.0,
+            "pv_fcf": [
+              36.838,
+              36.168,
+              36.789,
+              36.965,
+              34.949
+            ],
+            "sum_pv_fcf": 181.71,
+            "terminal_value": 769.23,
+            "pv_terminal": 477.63,
+            "op_ev": 659.34,
+            "total_equity": 682.24,
+            "dcf_per_share": 267.55
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.0,
+              2.5,
+              2.0,
+              1.8,
+              1.6
+            ],
+            "ev_fcf_multiple": [
+              16.0,
+              14.0,
+              13.0,
+              13.0,
+              13.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.27,
+          "expectedPerShare": 414.94,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 11.1,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 201.0,
+            "rev_path": [
+              0.18,
+              0.13,
+              0.1,
+              0.08,
+              0.07
+            ],
+            "op_margin": [
+              0.38,
+              0.38,
+              0.39,
+              0.39,
+              0.4
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              47.436,
+              56.283,
+              64.859,
+              70.048,
+              78.358
+            ],
+            "cash": 81.6,
+            "net_debt": 58.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 2530,
+            "distress": 0.0,
+            "pv_fcf": [
+              43.321,
+              46.941,
+              49.4,
+              48.724,
+              49.775
+            ],
+            "sum_pv_fcf": 238.16,
+            "terminal_value": 1241.67,
+            "pv_terminal": 788.74,
+            "op_ev": 1026.9,
+            "total_equity": 1049.8,
+            "dcf_per_share": 414.94
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.0,
+              3.5,
+              3.0,
+              2.8,
+              2.6
+            ],
+            "ev_fcf_multiple": [
+              20.0,
+              18.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.34,
+          "expectedPerShare": 613.68,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 13.9,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 201.0,
+            "rev_path": [
+              0.22,
+              0.16,
+              0.13,
+              0.1,
+              0.09
+            ],
+            "op_margin": [
+              0.4,
+              0.4,
+              0.41,
+              0.41,
+              0.42
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              53.948,
+              65.425,
+              77.144,
+              88.394,
+              100.204
+            ],
+            "cash": 81.6,
+            "net_debt": 58.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 2510,
+            "distress": 0.0,
+            "pv_fcf": [
+              49.494,
+              55.067,
+              59.569,
+              62.621,
+              65.126
+            ],
+            "sum_pv_fcf": 291.88,
+            "terminal_value": 1885.66,
+            "pv_terminal": 1225.55,
+            "op_ev": 1517.43,
+            "total_equity": 1540.33,
+            "dcf_per_share": 613.68
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.5,
+              5.0,
+              4.5,
+              4.0,
+              3.8
+            ],
+            "ev_fcf_multiple": [
+              24.0,
+              22.0,
+              20.0,
+              19.0,
+              19.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 997.31,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 17.5,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 201.0,
+            "rev_path": [
+              0.26,
+              0.21,
+              0.17,
+              0.13,
+              0.11
+            ],
+            "op_margin": [
+              0.41,
+              0.42,
+              0.43,
+              0.44,
+              0.44
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              60.782,
+              79.676,
+              100.391,
+              117.493,
+              134.915
+            ],
+            "cash": 81.6,
+            "net_debt": 58.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 2480,
+            "distress": 0.0,
+            "pv_fcf": [
+              56.02,
+              67.681,
+              78.597,
+              84.78,
+              89.725
+            ],
+            "sum_pv_fcf": 376.8,
+            "terminal_value": 3118.04,
+            "pv_terminal": 2073.64,
+            "op_ev": 2450.44,
+            "total_equity": 2473.34,
+            "dcf_per_share": 997.31
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.5,
+              6.0,
+              5.5,
+              5.0,
+              4.8
+            ],
+            "ev_fcf_multiple": [
+              28.0,
+              26.0,
+              24.0,
+              23.0,
+              23.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.07,
+          "expectedPerShare": 1392.36,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 21.5,
+            "wacc": 0.082
+          },
+          "dcfPath": {
+            "rev_b": 201.0,
+            "rev_path": [
+              0.3,
+              0.26,
+              0.21,
+              0.17,
+              0.14
+            ],
+            "op_margin": [
+              0.42,
+              0.43,
+              0.44,
+              0.45,
+              0.45
+            ],
+            "wacc_path": [
+              0.082,
+              0.082,
+              0.082,
+              0.082,
+              0.082
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              65.325,
+              92.187,
+              119.513,
+              149.153,
+              175.348
+            ],
+            "cash": 81.6,
+            "net_debt": 58.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 2450,
+            "distress": 0.0,
+            "pv_fcf": [
+              60.374,
+              78.744,
+              94.348,
+              108.824,
+              118.24
+            ],
+            "sum_pv_fcf": 460.53,
+            "terminal_value": 4341.95,
+            "pv_terminal": 2927.85,
+            "op_ev": 3388.38,
+            "total_equity": 3411.28,
+            "dcf_per_share": 1392.36
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              7.5,
+              7.0,
+              6.5,
+              6.0,
+              5.8
+            ],
+            "ev_fcf_multiple": [
+              30.0,
+              28.0,
+              26.0,
+              25.0,
+              25.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Digital advertising / social platforms - Meta (3B+ user social graph, ~$55B/qtr ads, 41% margin) vs Alphabet/Google, Amazon ads, TikTok/ByteDance, and Snap/Pinterest/Reddit; auditing a branding + network-economies + scale Power against the AI-capex ROI question.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 4,
+            "note": "Massive: ~$200B revenue and a global ad/infra base spread fixed R&D and compute across 3B+ users; AI capex deepens the cost-per-impression advantage if it earns out."
+          },
+          "networkEconomies": {
+            "score": 4,
+            "note": "The core Power: the social graph compounds - more users and content make each app more valuable to users and advertisers; cross-app (FB/IG/WhatsApp) reinforces it."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the mobile-social disruptor; now the incumbent being counter-positioned by TikTok's algorithmic feed, which forced the Reels response."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Moderate: social graph + content history + creator relationships create stickiness, but users multi-home and attention is contestable."
+          },
+          "branding": {
+            "score": 3,
+            "note": "Real: Instagram/WhatsApp are category-defining consumer brands with global mindshare, though the corporate brand is contested and ad-trust is a perennial overhang."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "The 3B+ user behavioral/interest dataset and the social graph itself are hard to replicate; tempered by privacy regulation (DMA, ATT) constraining its use."
+          },
+          "processPower": {
+            "score": 3,
+            "note": "AI ad-ranking, creative (Muse Spark) and infra are a compounding learning curve; the open question is whether the capex turns this into durable monetization."
+          }
+        },
+        "dominantPower": "network_economies",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Alphabet (GOOGL)",
+            "kind": "public",
+            "note": "The other ad duopolist - Search/YouTube + full AI stack; the scale/margin benchmark and direct ad-budget competitor.",
+            "growth": 0.15,
+            "margin": 0.32,
+            "multiple": "~26x EV/FCF"
+          },
+          {
+            "name": "Amazon (AMZN)",
+            "kind": "public",
+            "note": "Fastest-growing large ad platform (retail-media), taking share of performance budgets at the margin.",
+            "growth": 0.13,
+            "margin": 0.11,
+            "multiple": "~3x EV/sales"
+          },
+          {
+            "name": "ByteDance / TikTok",
+            "kind": "private",
+            "note": "The attention threat that forced Reels; algorithmic short-form competing directly for engagement and ad dollars.",
+            "growth": null,
+            "margin": null,
+            "multiple": "private"
+          },
+          {
+            "name": "Snap / Pinterest / Reddit",
+            "kind": "public",
+            "note": "Sub-scale social-ad peers; pressure on incremental ad budgets, not the core graph.",
+            "growth": 0.15,
+            "margin": 0.08,
+            "multiple": "~5x EV/sales"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "network_economies",
+            "who": "ByteDance / TikTok (attention)",
+            "falsifier": "Family DAP growth stalls or turns negative as engagement and time-spent shift to short-form rivals, capping the impression base."
+          },
+          {
+            "vector": "process_power",
+            "who": "AI-capex ROI (Alphabet's full stack)",
+            "falsifier": "Ad growth decelerates while D&A from the ~$130B/yr buildout keeps climbing - the spend fails to convert to durable monetization."
+          },
+          {
+            "vector": "cornered_resource",
+            "who": "Privacy regulation (DMA, ATT, FTC appeal)",
+            "falsifier": "EU 'pay or consent' / signal-loss erodes ad targeting and pricing, or the FTC appeal reopens the structural-separation risk."
+          }
+        ],
+        "takeaway": "Meta's network-economies Power is genuinely durable (high): the 3B+ social graph compounds, reinforced by scale across a ~$200B ad base and the Instagram/WhatsApp brands - and Q1'26's accelerating ads show the engine isn't decelerating. The Audit: network economies dominates, scale and branding reinforce it, and the live threats are TikTok's pull on attention, privacy regulation, and above all the ~$130B/yr AI-capex ROI. The market prices that capex fear - the cheapest mega-cap on normalized FCF at a high-teens EV/FCF - so the DCF tests whether AI lifts ads faster than the D&A weighs: a weighted +14.6%, base ~+8%, a fat right tail."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Cheapest mega-cap on normalized FCF.",
+            "body": "-18% TTM to a high-teens EV/FCF while ad revenue accelerates to +33% - priced as if the ad engine were decelerating."
+          },
+          {
+            "label": "The capex ROI is the whole question.",
+            "body": "~$130B/yr spend (~2x prior year) with uncertain return is the bear; Q1'26's accelerating volume AND price is the first datapoint."
+          },
+          {
+            "label": "41% margins self-fund the buildout.",
+            "body": "Meta pays for the AI capex out of operating cash flow at a 41% margin while still buying back ~$26B + paying ~$5B dividends."
+          },
+          {
+            "label": "AI is already monetizing in the core ad stack.",
+            "body": "Proprietary Muse Spark ad-creative and AI ranking are live; adopters doubled to ~8M, with impressions +19% and price/ad +12% Q1'26."
+          },
+          {
+            "label": "Breakup risk is materially reduced.",
+            "body": "Meta won the FTC antitrust trial (Nov-2025) and keeps Instagram/WhatsApp; the Jan-2026 appeal leaves a tail, not the breakup case."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "ad revenue stays >=20% with BOTH impressions and price/ad rising · operating margin holds >=40% through the D&A step-up · FCF margin inflects above ~25% as capex peaks · AI-ad adoption keeps compounding"
+          },
+          {
+            "label": "Bear validation",
+            "body": "ad growth decelerates into the mid-single digits · operating margin falls below ~38% as D&A outruns operating · FCF margin stuck near ~20% as capex keeps stepping up · Reality Labs loss widens beyond ~$24B/yr"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if the ~$130B/yr capex visibly fails to earn its cost of capital - ad growth fades while D&A keeps climbing - re-rate the terminal toward a slow-growth, capex-heavy ad utility"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Family of Apps",
+          "definition": "Meta's core ad business - Facebook, Instagram, WhatsApp, Messenger (~99% of revenue, 41%+ margin); the social-graph ad engine the DCF rests on."
+        },
+        {
+          "term": "Reality Labs",
+          "definition": "The AR/VR/metaverse segment (~$24B/yr operating loss, ~$80B cumulative); a structural drag on margin and the bear's concrete cost line."
+        },
+        {
+          "term": "AI capex / ROI",
+          "definition": "The $125-145B FY26 buildout (~2x the prior ~$72B) of AI compute; whether it earns its cost of capital via faster, higher-priced ads is the biggest swing."
+        },
+        {
+          "term": "Impressions x price/ad",
+          "definition": "The two ad-revenue drivers (Q1'26 +19% volume, +12% price); AI lifting both is the bull mechanism, a soft cycle the bear."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~23% FY25, down from ~33% as capex stepped up); the swing factor - whether the buildout converts to FCF as D&A scales."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-14_20-19",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "AMZN",
+    "slug": "amzn",
+    "company": "Amazon.com",
+    "exchange": "NASDAQ",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "amzn-memo__v001__2026-06-14_20-19.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$2561B",
+      "shares": "10.73B",
+      "cash": "$123B cash, $68.4B net debt · $123B cash vs ~$54B net cash after lease/debt; ~10.73B shares; no dividend, capital is plowed into capex not buyback; Revenue $716.9B FY25 (+12%); GAAP op margin 11.2% (record); FCF crushed to ~$7.7B (~1%) by the ~$200B AI capex surge; ~$238.55, +14% TTM, down ~10% over 30 days on capex fears; 52-wk range $196-$279"
+    },
+    "spot": {
+      "price": 238.55,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 222.01,
+      "deltaPct": -6.9
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 331.0,
+        "mult": 1.39
+      },
+      {
+        "y": 10,
+        "value": 493.71,
+        "mult": 2.07
+      },
+      {
+        "y": 15,
+        "value": 736.73,
+        "mult": 3.09
+      },
+      {
+        "y": 20,
+        "value": 1099.87,
+        "mult": 4.61
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "platform-marketplace-tech",
+        "ai-compute"
+      ],
+      "themeNames": [
+        "Platform & Marketplace Tech",
+        "AI & Compute"
+      ],
+      "primaryTheme": "platform-marketplace-tech",
+      "primaryThemeName": "Platform & Marketplace Tech",
+      "umbrella": "digital-platforms",
+      "umbrellaName": "Digital & Platforms"
+    },
+    "ai": null,
+    "question": "Does Amazon's ~$200B/yr AI-infrastructure capex earn its cost of capital as AWS reaccelerates — or compress returns into an overbuild before FCF recovers off the FY25 trough?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 12,
+        "price": 59.2,
+        "headline": "AI overbuild; FCF stays trough-bound.",
+        "why": "The structural-overbuild case: capex jumped +77% YoY with a 6-24 month monetization lag, the FTC Buy-Box trial opens Oct 2026, and International OI is already declining. 12% weight on the build failing to earn its cost of capital.",
+        "what": [
+          "The ~$200B capex never earns its cost of capital: AI demand cools or commoditizes, AWS growth fades back toward the teens, depreciation outruns monetization, and an FTC/EU overhang drags. FCF margin barely lifts off the ~1% FY25 trough toward 5% as the build keeps absorbing cash. Revenue still compounds ~6% on retail/ads but operating margin stalls near 10%.",
+          "An overbuilt hyperscaler whose capital doesn't convert earns a low-growth ~15x terminal FCF multiple -> DCF ~$59 (-75%). The net cash sets a floor, but a stranded-asset AI build cannot be discounted away."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 26,
+        "price": 118.75,
+        "headline": "AWS holds; FCF recovers slowly.",
+        "why": "AWS keeps share but the capex digestion period drags FCF recovery, with the antitrust and International-margin overhangs intact. 26% as the plausible 'grows but cash conversion lags' path.",
+        "what": [
+          "AWS grows but decelerates off the +28% print, capex stays elevated for several years, and depreciation keeps a lid on margins, so FCF margin claws only partway back toward 8%. Retail and advertising keep expanding but can't fully offset the AI-infrastructure drag. Revenue compounds ~9% to ~$1.1T at a still-suppressed FCF margin.",
+          "DCF ~$119 (-50%) - a hyperscaler whose free cash flow lags its revenue while it digests a multi-year build is worth well below today's price; the market's capex worry is warranted if FCF recovers only slowly."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 34,
+        "price": 209.08,
+        "headline": "AWS reaccelerates; FCF normalizes to ~11%.",
+        "why": "Requires AWS to hold high-20s% growth and FCF to normalize off the trough as the build monetizes - consistent with the +28% print, Trainium sold-out demand, and the capex peaking, but not a step-change. 34% as the central, near-fair outcome.",
+        "what": [
+          "The modal path: AWS sustains high-20s% growth on AI demand, Trainium economics defend its ~38% margin, the capex wave peaks and FCF margin normalizes off the trough toward ~11% as the build monetizes, while retail margins (NA 9.0%) and ~$70B advertising scale. Revenue compounds ~11% to ~$1.2T.",
+          "DCF ~$209 (-12%) - roughly fair-to-slightly-rich. AWS reacceleration and a normalizing FCF margin are genuinely valuable, but at the modal recovery and a ~21x terminal FCF multiple the model lands just below today's price; the capex still has to earn its return for spot to be fair."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 20,
+        "price": 369.75,
+        "headline": "AI ROIC compounds; margin re-rates.",
+        "why": "AWS AI demand sustains the growth, Trainium defends/expands margins, and the capex converts to high-ROIC capacity rather than overbuild - the demonstrated AWS franchise plus custom silicon make it credible. 20% weight on the AI infrastructure earning its return.",
+        "what": [
+          "The AI capex earns a high return: AWS holds high-teens-to-20s% growth with triple-digit AI revenue, Trainium vertical integration lifts AWS margins above 38%, retail/ads operating leverage compounds, and FCF margin inflects toward ~14% as monetization catches the depreciation. Revenue compounds ~14% to ~$1.4T.",
+          "DCF ~$370 (+55%) - if the ~$200B build clearly earns its cost of capital, the FCF normalization plus an AI-platform margin re-rate carry the stock well above spot; this is the core of the bull."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 487.39,
+        "headline": "AWS AI platform; full re-rate.",
+        "why": "Everything works - AWS AI platform leadership AND Trainium margin expansion AND advertising AND retail leverage AND a multiple re-rate, the AWS/Starlink-class compounding outcome. ~8%, the long-duration tail.",
+        "what": [
+          "The full second act: AWS becomes the dominant AI-compute platform on Trainium economics, advertising scales into a third profit engine, retail margins keep climbing, and Amazon re-rates to a high-FCF-margin platform at ~16% margin. Revenue compounds ~16% to ~$1.5T.",
+          "DCF ~$487 (+104%) - the AI-infrastructure bet pays off in full and the FCF machine re-rates to a platform multiple; ~8% probability, the asymmetric upside the trough FCF is masking."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 26 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "Amazon trades at ~$2.56T (~$238.55, +14% TTM, down ~10% in 30 days on capex fear) - but the FCF multiple is distorted: FY25 free cash flow was crushed to ~$7.7B (from ~$33B in FY24) by a ~$200B AI-data-center build. The DCF models FCF margin recovering off that trough as AWS reaccelerates (+28%) and retail/ads margins expand. The finding is roughly fair (-6.9%): the modal base ~-12% as depreciation lags monetization, a wide spread either way.",
+    "historicalPrices": {
+      "xMin": -6.2,
+      "ipoMarker": "IPO May '97",
+      "points": [
+        [
+          -6.0,
+          95.0
+        ],
+        [
+          -5.0,
+          160.0
+        ],
+        [
+          -4.0,
+          170.0
+        ],
+        [
+          -3.3,
+          85.0
+        ],
+        [
+          -2.5,
+          130.0
+        ],
+        [
+          -1.5,
+          180.0
+        ],
+        [
+          -0.8,
+          230.0
+        ],
+        [
+          -0.3,
+          196.0
+        ],
+        [
+          -0.1,
+          278.0
+        ],
+        [
+          -0.02,
+          238.55
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 12%",
+        "body": "AI overbuild; FCF stays trough-bound; ~$59 (-75%)."
+      },
+      {
+        "label": "Bear 26%",
+        "body": "AWS holds but FCF recovers slowly; ~$119 (-50%)."
+      },
+      {
+        "label": "Base 34%",
+        "body": "AWS reaccelerates; FCF normalizes to ~11%; ~$209 (-12%)."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "AI ROIC compounds; margin re-rates; ~$370 (+55%)."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "AWS AI platform; full re-rate; ~$487 (+104%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end Dec · Q1 2026 results",
+      "sources": "Sources: SEC XBRL company facts (CIK 1018724; revenue, GAAP operating income/margin, cash flow, debt), Amazon Q1 2026 release (net sales $181.5B +17%, AWS $37.6B +28% at ~37.7% margin, consolidated op margin 13.1% record, capex $44.2B +77%, ~$200B FY2026 capex guide, advertising ~$70B annualized). Revenue modeled as a growth path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs MSFT/GOOGL.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          469.8,
+          514.0,
+          574.8,
+          638.0,
+          716.9
+        ],
+        "historyOpMargin": [
+          5.3,
+          2.4,
+          6.4,
+          10.8,
+          11.2
+        ],
+        "historyFcf": [
+          -14.7,
+          -16.9,
+          32.2,
+          32.9,
+          7.7
+        ],
+        "historyEvRev": [
+          3.6,
+          1.7,
+          2.7,
+          3.4,
+          3.4
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "AWS",
+        "segmentB": "Retail + Ads",
+        "histEntSplit": [
+          0.13,
+          0.15,
+          0.16,
+          0.165,
+          0.167
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 222.01,
+        "upsidePct": -6.9
+      },
+      "market": {
+        "marketCapBillion": 2561.0,
+        "sharesOutstandingMillion": 10734.9,
+        "cashBillion": 123.0,
+        "netDebtBillion": 68.4
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.12,
+          "expectedPerShare": 59.2,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 6.8,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 716.9,
+            "rev_path": [
+              0.1,
+              0.08,
+              0.06,
+              0.05,
+              0.05
+            ],
+            "op_margin": [
+              0.09,
+              0.09,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              15.772,
+              25.55,
+              36.111,
+              47.396,
+              49.766
+            ],
+            "cash": 123.0,
+            "net_debt": 68.4,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 10900,
+            "distress": 0.0,
+            "pv_fcf": [
+              14.404,
+              21.309,
+              27.504,
+              32.967,
+              31.613
+            ],
+            "sum_pv_fcf": 127.8,
+            "terminal_value": 728.72,
+            "pv_terminal": 462.9,
+            "op_ev": 590.7,
+            "total_equity": 645.3,
+            "dcf_per_share": 59.2
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.0,
+              1.8,
+              1.6,
+              1.5,
+              1.4
+            ],
+            "ev_fcf_multiple": [
+              18.0,
+              16.0,
+              15.0,
+              15.0,
+              15.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.26,
+          "expectedPerShare": 118.75,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 9.6,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 716.9,
+            "rev_path": [
+              0.13,
+              0.11,
+              0.09,
+              0.08,
+              0.07
+            ],
+            "op_margin": [
+              0.1,
+              0.11,
+              0.11,
+              0.12,
+              0.12
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              24.303,
+              44.96,
+              58.808,
+              74.098,
+              90.612
+            ],
+            "cash": 123.0,
+            "net_debt": 68.4,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 10800,
+            "distress": 0.0,
+            "pv_fcf": [
+              22.296,
+              37.842,
+              45.411,
+              52.493,
+              58.892
+            ],
+            "sum_pv_fcf": 216.93,
+            "terminal_value": 1555.51,
+            "pv_terminal": 1010.97,
+            "op_ev": 1227.9,
+            "total_equity": 1282.5,
+            "dcf_per_share": 118.75
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.5,
+              2.3,
+              2.1,
+              2.0,
+              1.9
+            ],
+            "ev_fcf_multiple": [
+              22.0,
+              20.0,
+              18.0,
+              17.0,
+              17.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.34,
+          "expectedPerShare": 209.08,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 11.6,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 716.9,
+            "rev_path": [
+              0.15,
+              0.13,
+              0.11,
+              0.1,
+              0.09
+            ],
+            "op_margin": [
+              0.11,
+              0.12,
+              0.13,
+              0.14,
+              0.14
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              32.977,
+              55.897,
+              82.727,
+              113.75,
+              136.386
+            ],
+            "cash": 123.0,
+            "net_debt": 68.4,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 10750,
+            "distress": 0.0,
+            "pv_fcf": [
+              30.394,
+              47.482,
+              64.768,
+              82.079,
+              90.703
+            ],
+            "sum_pv_fcf": 315.43,
+            "terminal_value": 2823.19,
+            "pv_terminal": 1877.55,
+            "op_ev": 2192.98,
+            "total_equity": 2247.58,
+            "dcf_per_share": 209.08
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.0,
+              2.8,
+              2.6,
+              2.4,
+              2.3
+            ],
+            "ev_fcf_multiple": [
+              26.0,
+              24.0,
+              22.0,
+              21.0,
+              21.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 369.75,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 14.2,
+            "wacc": 0.08
+          },
+          "dcfPath": {
+            "rev_b": 716.9,
+            "rev_path": [
+              0.18,
+              0.16,
+              0.14,
+              0.12,
+              0.11
+            ],
+            "op_margin": [
+              0.12,
+              0.13,
+              0.15,
+              0.16,
+              0.17
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              42.297,
+              78.503,
+              123.054,
+              162.879,
+              194.703
+            ],
+            "cash": 123.0,
+            "net_debt": 68.4,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 10700,
+            "distress": 0.0,
+            "pv_fcf": [
+              39.164,
+              67.304,
+              97.684,
+              119.721,
+              132.512
+            ],
+            "sum_pv_fcf": 456.38,
+            "terminal_value": 5062.28,
+            "pv_terminal": 3445.3,
+            "op_ev": 3901.68,
+            "total_equity": 3956.28,
+            "dcf_per_share": 369.75
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.5,
+              3.3,
+              3.1,
+              2.9,
+              2.8
+            ],
+            "ev_fcf_multiple": [
+              30.0,
+              28.0,
+              26.0,
+              26.0,
+              26.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 487.39,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 16.2,
+            "wacc": 0.078
+          },
+          "dcfPath": {
+            "rev_b": 716.9,
+            "rev_path": [
+              0.2,
+              0.18,
+              0.16,
+              0.14,
+              0.13
+            ],
+            "op_margin": [
+              0.13,
+              0.14,
+              0.16,
+              0.17,
+              0.18
+            ],
+            "wacc_path": [
+              0.078,
+              0.078,
+              0.078,
+              0.078,
+              0.078
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              51.617,
+              101.513,
+              153.082,
+              201.361,
+              242.708
+            ],
+            "cash": 123.0,
+            "net_debt": 68.4,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 10650,
+            "distress": 0.0,
+            "pv_fcf": [
+              47.882,
+              87.354,
+              122.199,
+              149.108,
+              166.721
+            ],
+            "sum_pv_fcf": 573.26,
+            "terminal_value": 6642.53,
+            "pv_terminal": 4562.89,
+            "op_ev": 5136.15,
+            "total_equity": 5190.75,
+            "dcf_per_share": 487.39
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.0,
+              3.8,
+              3.6,
+              3.4,
+              3.3
+            ],
+            "ev_fcf_multiple": [
+              32.0,
+              30.0,
+              28.0,
+              27.0,
+              27.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Cloud infrastructure + e-commerce/advertising - Amazon (AWS cloud leader, the largest US marketplace, fast-growing ad business) vs Microsoft Azure, Google Cloud, and retail rivals Walmart/Shopify; auditing scale, switching, and network Powers against a ~$200B AI capex bet and an FTC trial.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 4,
+            "note": "Strong: AWS infrastructure scale + Trainium vertical integration lower unit cost; fulfillment/logistics scale across the largest US marketplace - a genuine, compounding cost advantage."
+          },
+          "networkEconomies": {
+            "score": 3,
+            "note": "The marketplace two-sided network (more buyers -> more sellers -> more selection) is real and self-reinforcing, though weaker than a pure social network and contestable by Walmart/Shopify."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the e-commerce disruptor; now the incumbent - little counter-positioning left, and AWS faces well-capitalized Azure/GCP, not a slow legacy."
+          },
+          "switchingCosts": {
+            "score": 4,
+            "note": "High in AWS: embedded workloads, data gravity, committed-spend contracts, and re-architecture cost make migration painful - the stickiest Power, the AWS retention moat."
+          },
+          "branding": {
+            "score": 2,
+            "note": "Trust/convenience (Prime) is a real consumer asset, but cloud is bought on price/performance, not brand; modest as a pricing Power."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Custom silicon (Trainium) + Prime membership + first-party logistics are valuable and hard to copy, but not uniquely cornered against Azure/GCP/Walmart."
+          },
+          "processPower": {
+            "score": 3,
+            "note": "Decades of logistics/operations and cloud-operations learning curves (fulfillment, AWS reliability, custom hardware) are a real, hard-to-replicate process advantage."
+          }
+        },
+        "dominantPower": "switching_costs",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Microsoft (Azure)",
+            "kind": "public",
+            "note": "The #1 cloud rival; Azure + OpenAI is the AWS AI-compute benchmark and the main switching-cost threat.",
+            "growth": 0.16,
+            "margin": 0.45,
+            "multiple": "~35x EV/FCF"
+          },
+          {
+            "name": "Alphabet (Google Cloud)",
+            "kind": "public",
+            "note": "#3 cloud growing fast with a full AI stack/TPUs; pressures AWS growth and margins on AI workloads.",
+            "growth": 0.13,
+            "margin": 0.32,
+            "multiple": "~25x EV/FCF"
+          },
+          {
+            "name": "Walmart",
+            "kind": "public",
+            "note": "Largest US retailer; scaled e-commerce + advertising + marketplace - the network/scale challenger on the retail side.",
+            "growth": 0.05,
+            "margin": 0.04,
+            "multiple": "~35x P/E"
+          },
+          {
+            "name": "Shopify",
+            "kind": "private",
+            "note": "Arms the long tail of independent merchants against the Amazon marketplace; the network-economies pressure on retail.",
+            "growth": 0.25,
+            "margin": 0.12,
+            "multiple": "~60x EV/FCF"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "switching_costs",
+            "who": "Microsoft Azure / Google Cloud (AI workloads)",
+            "falsifier": "AWS growth decelerates back toward the teens as AI workloads shift to Azure/GCP, signaling the migration cost is being overcome."
+          },
+          {
+            "vector": "network_economies",
+            "who": "Walmart + Shopify (marketplace)",
+            "falsifier": "US marketplace/seller share erodes as Walmart's network and Shopify's merchant base take third-party GMV."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "AI capex overbuild / FTC antitrust",
+            "falsifier": "FCF fails to recover off the trough for 2+ years, or the Oct-2026 FTC Buy-Box trial forces structural marketplace changes that dent unit economics."
+          }
+        ],
+        "takeaway": "Amazon's Powers are genuine and durable: AWS switching costs (data gravity, committed spend) are the stickiest, layered on scale (AWS infrastructure + Trainium, fulfillment) and a self-reinforcing marketplace network. The Audit: switching_costs is the dominant, high-durability Power - hard for Azure/GCP to dislodge - but the live threat is the ~$200B AI-capex bet and whether AWS AI demand earns its cost of capital before rivals erode growth. That squares with the DCF: the franchise isn't in question, the return on the build is, and the modal case lands ~-12% (roughly fair) because spot already assumes the capex monetizes and FCF normalizes off the FY25 trough."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The FCF multiple is distorted by the capex trough.",
+            "body": "FY25 FCF was crushed to ~$7.7B (from ~$33B in FY24) by the ~$200B build; the DCF prices the recovery off the trough, not the depressed print - that's why the multiple looks extreme."
+          },
+          {
+            "label": "AWS reaccelerating is the whole bull.",
+            "body": "AWS +28% (fastest in 15 quarters) at ~$150B run-rate and ~37.7% margin, with triple-digit AI revenue growth - the question is whether that demand justifies the depreciation."
+          },
+          {
+            "label": "Trainium is the margin defense.",
+            "body": "Custom silicon (Trainium/Graviton/Nitro) is >$20B run-rate with ~$225B commitments and Trainium2 sold out - vertical integration lowers AI cost and defends AWS margins as the build scales."
+          },
+          {
+            "label": "Advertising is a high-margin third engine.",
+            "body": "~$70B annualized and growing fast, structurally high-margin - it scales operating income independent of the AWS capex cycle."
+          },
+          {
+            "label": "The swing is AWS AI ROIC, not solvency.",
+            "body": "~$54B net cash and a record 11.2% op margin mean no balance-sheet risk; the downside is whether ~$200B/yr of capex earns its cost of capital, not survival."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "AWS growth holds high-20s% with expanding margin · FCF margin recovers off the ~1% trough toward 10%+ · Trainium commitments convert to revenue · advertising sustains 20%+ growth"
+          },
+          {
+            "label": "Bear validation",
+            "body": "AWS growth decelerates back toward the teens · capex keeps rising while FCF stays trough-bound · depreciation compresses AWS margin below ~35% · adverse FTC/EU cloud ruling"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if AWS AI demand cools or commoditizes and the ~$200B build becomes a visible overbuild (FCF fails to recover 2+ years), re-rate the terminal toward a low-ROIC capital-heavy multiple"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "AWS",
+          "definition": "Amazon Web Services - the cloud-infrastructure segment (~$150B run-rate, ~38% operating margin, ~16-17% of revenue but the majority of operating income); reaccelerated to +28% on AI demand, the central swing."
+        },
+        {
+          "term": "Capex / AI infrastructure",
+          "definition": "Capital expenditure on AI data centers and chips (~$200B guided FY26, ~+50% YoY); the cash drag that crushed FY25 FCF, with a 6-24 month lag to monetization - the bear's mechanism."
+        },
+        {
+          "term": "Trainium",
+          "definition": "Amazon's custom AI training silicon (with Graviton/Nitro, >$20B run-rate, ~$225B commitments, Trainium2 sold out); vertical integration that lowers AI cost and defends AWS margins."
+        },
+        {
+          "term": "AI ROIC",
+          "definition": "Whether the ~$200B/yr AI-infrastructure build earns its cost of capital; the biggest 5-year swing factor."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~1% in FY25 at the capex trough vs ~5% in FY24); the bet is recovery off the trough."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-14_20-19",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "GOOGL",
+    "slug": "googl",
+    "company": "Alphabet",
+    "exchange": "NASDAQ",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "googl-memo__v001__2026-06-14_20-19.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$4348B",
+      "shares": "12.09B",
+      "cash": "$126.8B cash, $48.5B net debt · $126.8B cash vs $48.5B debt (~$78.3B net cash); ~12.09B shares (Class A+B+C), buyback + a small dividend; Revenue $402.8B FY25 (+15%); GAAP op margin 32.0%; FCF $73.3B; capex ~$91B and guided to ~$190B in FY26; Up ~28% YTD and ~130-160% TTM to ~$360 / ~$4.35T cap; ATH close $402.38 (May-2026), re-rated on owning the full AI stack"
+    },
+    "spot": {
+      "price": 359.68,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 282.54,
+      "deltaPct": -21.4
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 414.92,
+        "mult": 1.15
+      },
+      {
+        "y": 10,
+        "value": 609.49,
+        "mult": 1.69
+      },
+      {
+        "y": 15,
+        "value": 895.58,
+        "mult": 2.49
+      },
+      {
+        "y": 20,
+        "value": 1316.37,
+        "mult": 3.66
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "platform-marketplace-tech",
+        "ai-compute"
+      ],
+      "themeNames": [
+        "Platform & Marketplace Tech",
+        "AI & Compute"
+      ],
+      "primaryTheme": "platform-marketplace-tech",
+      "primaryThemeName": "Platform & Marketplace Tech",
+      "umbrella": "digital-platforms",
+      "umbrellaName": "Digital & Platforms"
+    },
+    "ai": null,
+    "question": "Does Alphabet's full AI stack (TPUs->Gemini->Cloud->apps) defend and monetize Search faster than generative-AI assistants erode its query and ad economics?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 13,
+        "price": 103.95,
+        "headline": "AI assistants gut Search economics.",
+        "why": "The genuine bear: Search is ~60%+ of revenue, the capex commitment is now ~$190B and 'significantly higher' in 2027, and chatbots are a live substitution threat. 13% weight on the AI shift impairing the core.",
+        "what": [
+          "Generative-AI assistants take real query share and lower ad load: Search growth stalls toward low-single-digit, AI Overviews monetize below legacy CPCs, and the ~$190B capex ramp lands while revenue decelerates - so FCF margin sinks to ~15-17% off the ~18% base. Cloud keeps growing but can't offset a structurally impaired core.",
+          "A franchise whose primary cash engine is being disrupted earns a low-growth, ~16x terminal multiple -> DCF ~$104 (-71%). The net cash sets a floor but can't offset a Search that loses its economics while capex stays committed."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 25,
+        "price": 171.32,
+        "headline": "Search slows; capex caps returns.",
+        "why": "Search holds share but the shift compresses ad economics while ~$190B capex weighs on returns - the plausible 'defends but de-rates' path. 25% given the antitrust overhang and the capex trajectory.",
+        "what": [
+          "Search defends volume but ad load and CPCs drift lower as queries route through AI surfaces, growth decelerates to high-single-digit, and the capex ramp holds FCF margin near 18-20% even as Cloud scales. The AI stack works but the blended economics are lower than the past decade's.",
+          "DCF ~$171 (-52%) - a still-dominant platform that grows slower and converts less of revenue to free cash flow at ~19x FCF is worth well below today's price; the post-run multiple already prices the win."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 34,
+        "price": 286.32,
+        "headline": "Search defends; Cloud compounds.",
+        "why": "Requires Search to monetize AI at near-parity and Cloud to keep compounding while capex stays productive - consistent with Q1'26 (Search +19%, Cloud +63%, margin doubling). 34% as the central, near-spot outcome.",
+        "what": [
+          "The modal path: Search defends and monetizes the AI transition at roughly parity (Q1'26's +19% argues defense is winning), Cloud keeps compounding off the ~$462B backlog with expanding margins, and FCF margin recovers from the capex trough toward ~24% as the ~$190B spend builds capacity that fills. Revenue compounds low-double-digit to ~$680B.",
+          "DCF ~$286 (-20%) - the modal case lands right at spot. A franchise growing low-double-digit at a recovering ~24% FCF margin and a ~23x multiple is worth about today's price; the 2026 run priced the franchise in, leaving little margin of safety at the modal outcome."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 20,
+        "price": 422.99,
+        "headline": "AI stack compounds; Cloud re-rates.",
+        "why": "Cloud's +63% and doubling margin plus a defended, AI-monetized Search make a genuine compounding case credible. 20% weight on the full AI stack delivering on both legs.",
+        "what": [
+          "The full stack pays off: TPUs lower the cost of serving Gemini, Cloud sustains hyper-growth and operating leverage off the backlog, AI Mode/Overviews lift Search monetization above legacy rates, and FCF margin climbs toward ~27% once the capex wave is absorbed. Revenue compounds mid-teens to ~$730B.",
+          "DCF ~$423 (+18%) - if Search not only defends but Cloud + the AI stack compound into a second profit engine, the franchise is worth meaningfully above spot at a ~27x multiple; this is the bull the re-rating is paying for."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 553.18,
+        "headline": "Full-stack AI platform; multiple re-rates.",
+        "why": "Everything works - Search monetizes AI above parity AND Cloud compounds AND TPUs/Gemini/Waymo add value AND the multiple holds. ~8%, the long-duration tail.",
+        "what": [
+          "Everything compounds: Gemini + AI Mode expand Search economics, Cloud becomes a durable second franchise at scale, Waymo and the model/TPU stack add optionality, and FCF margin reaches ~29% as the capex cycle turns into high-return capacity. Revenue compounds high-teens to ~$790B.",
+          "DCF ~$553 (+54%) - Alphabet re-rates as the broadest full-stack AI platform; ~8% probability, the asymmetric upside that owning chips through apps could deliver."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 25 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "Alphabet trades at ~$4.35T (~$360, +28% YTD and ~130-160% TTM) - roughly 60x EV/FCF on $402.8B revenue growing ~15%, 32% operating margins, net cash, $73.3B FCF before a capex ramp to ~$190B. Cloud just re-accelerated to +63% with a ~$462B backlog and the AI stack re-rated the name, but Search is still ~60%+ of revenue and the price embeds the win. The DCF asks whether Search holds its economics through the generative-AI shift while Cloud compounds. The finding lands -21.4% (weighted ~$286): the modal base sits right at spot, so the run priced in the franchise and then some.",
+    "historicalPrices": {
+      "xMin": -6.2,
+      "ipoMarker": "IPO Aug '04",
+      "points": [
+        [
+          -6.0,
+          70.0
+        ],
+        [
+          -5.0,
+          145.0
+        ],
+        [
+          -4.0,
+          90.0
+        ],
+        [
+          -3.0,
+          100.0
+        ],
+        [
+          -2.0,
+          140.0
+        ],
+        [
+          -1.0,
+          200.0
+        ],
+        [
+          -0.5,
+          280.0
+        ],
+        [
+          -0.1,
+          402.0
+        ],
+        [
+          -0.02,
+          359.68
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 13%",
+        "body": "AI assistants erode Search economics; ~$104 (-71%)."
+      },
+      {
+        "label": "Bear 25%",
+        "body": "Search slows; capex caps returns; ~$171 (-52%)."
+      },
+      {
+        "label": "Base 34%",
+        "body": "Search defends; Cloud compounds; ~$286 (-20%)."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "AI stack compounds; Cloud re-rates; ~$423 (+18%)."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "Full-stack AI platform re-rates; ~$553 (+54%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end Dec · Q1 2026 results",
+      "sources": "Sources: SEC XBRL company facts (CIK 1652044; revenue, GAAP operating income/margin, cash flow, debt), Alphabet Q1 2026 release (revenue $109.9B/+22%, op margin 36.1%, Search & other +19% to $60.4B, Cloud +63% to $20.0B at 32.9% margin, backlog ~$462B, FY26 capex guided ~$190B). Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs mega-cap platform peers (MSFT/META/AMZN).",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          257.6,
+          282.8,
+          307.4,
+          350.0,
+          402.8
+        ],
+        "historyOpMargin": [
+          30.6,
+          26.5,
+          27.4,
+          32.1,
+          32.0
+        ],
+        "historyFcf": [
+          67.0,
+          60.0,
+          69.5,
+          72.8,
+          73.3
+        ],
+        "historyEvRev": [
+          7.4,
+          4.1,
+          5.7,
+          6.6,
+          8.0
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Search + YouTube",
+        "segmentB": "Cloud",
+        "histEntSplit": [
+          0.92,
+          0.91,
+          0.9,
+          0.88,
+          0.86
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 282.54,
+        "upsidePct": -21.4
+      },
+      "market": {
+        "marketCapBillion": 4348.0,
+        "sharesOutstandingMillion": 12088.0,
+        "cashBillion": 126.8,
+        "netDebtBillion": 48.5
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.13,
+          "expectedPerShare": 103.95,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 4.8,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 402.8,
+            "rev_path": [
+              0.08,
+              0.06,
+              0.04,
+              0.03,
+              0.03
+            ],
+            "op_margin": [
+              0.28,
+              0.28,
+              0.29,
+              0.29,
+              0.3
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              65.254,
+              69.169,
+              76.731,
+              83.973,
+              86.492
+            ],
+            "cash": 126.8,
+            "net_debt": 48.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 12100,
+            "distress": 0.0,
+            "pv_fcf": [
+              59.866,
+              58.218,
+              59.25,
+              59.489,
+              56.214
+            ],
+            "sum_pv_fcf": 293.04,
+            "terminal_value": 1363.91,
+            "pv_terminal": 886.45,
+            "op_ev": 1179.49,
+            "total_equity": 1257.79,
+            "dcf_per_share": 103.95
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.0,
+              3.5,
+              3.0,
+              2.8,
+              2.6
+            ],
+            "ev_fcf_multiple": [
+              18.0,
+              16.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.25,
+          "expectedPerShare": 171.32,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 9.6,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 402.8,
+            "rev_path": [
+              0.13,
+              0.11,
+              0.09,
+              0.08,
+              0.07
+            ],
+            "op_margin": [
+              0.3,
+              0.3,
+              0.31,
+              0.31,
+              0.32
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              77.378,
+              90.942,
+              104.634,
+              118.952,
+              127.278
+            ],
+            "cash": 126.8,
+            "net_debt": 48.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 12050,
+            "distress": 0.0,
+            "pv_fcf": [
+              71.316,
+              77.251,
+              81.919,
+              85.833,
+              84.646
+            ],
+            "sum_pv_fcf": 400.96,
+            "terminal_value": 2383.57,
+            "pv_terminal": 1585.18,
+            "op_ev": 1986.14,
+            "total_equity": 2064.44,
+            "dcf_per_share": 171.32
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.0,
+              4.5,
+              4.0,
+              3.8,
+              3.6
+            ],
+            "ev_fcf_multiple": [
+              22.0,
+              20.0,
+              19.0,
+              19.0,
+              19.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.34,
+          "expectedPerShare": 286.32,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 13.4,
+            "wacc": 0.08
+          },
+          "dcfPath": {
+            "rev_b": 402.8,
+            "rev_path": [
+              0.18,
+              0.15,
+              0.13,
+              0.11,
+              0.1
+            ],
+            "op_margin": [
+              0.32,
+              0.32,
+              0.33,
+              0.34,
+              0.34
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              90.308,
+              109.32,
+              135.885,
+              157.688,
+              180.998
+            ],
+            "cash": 126.8,
+            "net_debt": 48.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 12000,
+            "distress": 0.0,
+            "pv_fcf": [
+              83.619,
+              93.724,
+              107.87,
+              115.905,
+              123.184
+            ],
+            "sum_pv_fcf": 524.3,
+            "terminal_value": 4162.95,
+            "pv_terminal": 2833.24,
+            "op_ev": 3357.54,
+            "total_equity": 3435.84,
+            "dcf_per_share": 286.32
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.0,
+              5.5,
+              5.0,
+              4.8,
+              4.6
+            ],
+            "ev_fcf_multiple": [
+              26.0,
+              24.0,
+              23.0,
+              23.0,
+              23.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 422.99,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 16.2,
+            "wacc": 0.078
+          },
+          "dcfPath": {
+            "rev_b": 402.8,
+            "rev_path": [
+              0.21,
+              0.18,
+              0.16,
+              0.14,
+              0.12
+            ],
+            "op_margin": [
+              0.33,
+              0.34,
+              0.35,
+              0.36,
+              0.36
+            ],
+            "wacc_path": [
+              0.078,
+              0.078,
+              0.078,
+              0.078,
+              0.078
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              97.478,
+              126.526,
+              160.113,
+              197.739,
+              229.986
+            ],
+            "cash": 126.8,
+            "net_debt": 48.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 11900,
+            "distress": 0.0,
+            "pv_fcf": [
+              90.425,
+              108.879,
+              127.812,
+              146.426,
+              157.982
+            ],
+            "sum_pv_fcf": 631.52,
+            "terminal_value": 6294.35,
+            "pv_terminal": 4323.72,
+            "op_ev": 4955.24,
+            "total_equity": 5033.54,
+            "dcf_per_share": 422.99
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              7.0,
+              6.5,
+              6.0,
+              5.8,
+              5.6
+            ],
+            "ev_fcf_multiple": [
+              30.0,
+              28.0,
+              27.0,
+              27.0,
+              27.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 553.18,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 18.7,
+            "wacc": 0.075
+          },
+          "dcfPath": {
+            "rev_b": 402.8,
+            "rev_path": [
+              0.24,
+              0.21,
+              0.19,
+              0.16,
+              0.14
+            ],
+            "op_margin": [
+              0.34,
+              0.35,
+              0.36,
+              0.37,
+              0.37
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              104.889,
+              145.047,
+              186.989,
+              233.593,
+              275.807
+            ],
+            "cash": 126.8,
+            "net_debt": 48.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 11800,
+            "distress": 0.0,
+            "pv_fcf": [
+              97.571,
+              125.514,
+              150.519,
+              174.915,
+              192.116
+            ],
+            "sum_pv_fcf": 740.63,
+            "terminal_value": 8195.41,
+            "pv_terminal": 5708.58,
+            "op_ev": 6449.21,
+            "total_equity": 6527.51,
+            "dcf_per_share": 553.18
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              8.0,
+              7.5,
+              7.0,
+              6.8,
+              6.6
+            ],
+            "ev_fcf_multiple": [
+              32.0,
+              30.0,
+              30.0,
+              30.0,
+              30.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Search + digital advertising and cloud/AI infrastructure - Alphabet (Search, YouTube, Cloud, the TPU->Gemini->apps stack) vs Microsoft/OpenAI, Amazon, Meta, and chatbot challengers; auditing entrenched network/scale/cornered-resource Powers against a generative-AI substitution and a live antitrust threat.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 4,
+            "note": "Massive fixed-cost leverage across the index, ad systems, YouTube, and global data centers; 32% operating margin at $403B revenue - few can match the spend per query."
+          },
+          "networkEconomies": {
+            "score": 4,
+            "note": "Search's two-sided advertiser/user loop, YouTube's creator/viewer flywheel, and Android/Play ecosystems - more users sharpen results and pricing, a genuine network Power."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "The incumbent now being counter-positioned by AI-native assistants (ChatGPT), not the disruptor; AI Overviews is a defensive retrofit, not counter-positioning."
+          },
+          "switchingCosts": {
+            "score": 3,
+            "note": "Workspace/Cloud contracts and the ~$462B backlog lock enterprises in; consumer Search switching is low, but Android/Chrome/account defaults raise friction."
+          },
+          "branding": {
+            "score": 3,
+            "note": "'Google' is a verb and a default trust signal, but brand alone won't hold queries if an assistant answers better - durable yet not the binding Power."
+          },
+          "corneredResource": {
+            "score": 4,
+            "note": "The crawl index, decades of query/click data, custom TPUs, and frontier Gemini models - assets rivals cannot quickly replicate; the data + silicon edge is the deepest moat."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Deep ML/infra engineering capability, but increasingly a contested field rather than a unique repeatable process."
+          }
+        },
+        "dominantPower": "network_economies",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Microsoft / OpenAI",
+            "kind": "public",
+            "note": "Azure + Copilot + OpenAI partnership attack both Cloud and Search via AI assistants; the primary full-stack rival.",
+            "growth": 0.16,
+            "margin": 0.45,
+            "multiple": "~35x P/E"
+          },
+          {
+            "name": "Amazon (AWS)",
+            "kind": "public",
+            "note": "Cloud market leader; the EV/FCF and Cloud-growth benchmark Alphabet's Cloud is measured against.",
+            "growth": 0.15,
+            "margin": 0.11,
+            "multiple": "~30x EV/FCF"
+          },
+          {
+            "name": "Meta Platforms",
+            "kind": "public",
+            "note": "Ad-budget rival and AI-compute peer; competes for advertiser dollars and AI talent/capex.",
+            "growth": 0.2,
+            "margin": 0.41,
+            "multiple": "~24x EV/FCF"
+          },
+          {
+            "name": "OpenAI / Anthropic",
+            "kind": "private",
+            "note": "Frontier-model labs whose assistants are the direct generative-AI substitution threat to Search query volume.",
+            "growth": null,
+            "margin": null,
+            "multiple": "private"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "network_economies",
+            "who": "ChatGPT / AI-native assistants",
+            "falsifier": "Search & other growth decelerates toward low-single-digit or query volume visibly leaks to chatbots, breaking the user/advertiser loop."
+          },
+          {
+            "vector": "cornered_resource",
+            "who": "Frontier labs + merchant silicon (NVIDIA)",
+            "falsifier": "Rivals match Gemini quality and serving cost, eroding the data/TPU advantage as a differentiator."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "DOJ / ad-tech antitrust remedy",
+            "falsifier": "An adverse ad-tech ruling forces an AdX/DFP divestiture or default-distribution bans dent Search's scale and reach."
+          }
+        ],
+        "takeaway": "Alphabet's network and scale Powers are deeply entrenched - a two-sided Search/advertiser loop, YouTube's flywheel, and a cornered-resource stack (index, query data, custom TPUs, Gemini) few rivals can replicate. The Audit: network_economies is durable (high); the live threats are generative-AI assistants substituting for ~60%+-of-revenue Search and an antitrust overhang (DOJ search appeal, a pending ad-tech divestiture) the DCF doesn't price. Q1'26 (Search +19%, Cloud +63%) says the defense is winning - but the ~28% YTD run re-rated the name to ~60x EV/FCF, so the modal case lands at spot: -21.4%, a durable franchise priced for the win."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The run priced the franchise in.",
+            "body": "After +28% YTD / ~130-160% TTM the name is ~60x EV/FCF and the modal DCF is ~-20% - the AI stack is real, but the price already embeds the win, leaving thin margin of safety."
+          },
+          {
+            "label": "Cloud at +63% with doubling margins is the new engine.",
+            "body": "Cloud hit $20.0B/+63% at 32.9% operating margin (from 17.8%) with a ~$462B backlog ~2x QoQ - a credible second franchise that the bull/ultra-bull cases lean on."
+          },
+          {
+            "label": "Search defense is winning so far.",
+            "body": "Q1'26 Search & other still grew +19% to $60.4B with AI Overviews at 2.5B MAU monetizing near parity - the central bear (query/CPC leakage) is not yet visible in the numbers."
+          },
+          {
+            "label": "The ~$190B capex is the FCF swing.",
+            "body": "Capex guided to ~$190B FY26 and higher in 2027 crushes near-term FCF; the bull needs it to convert to high-return capacity."
+          },
+          {
+            "label": "Antitrust is the unpriced tail.",
+            "body": "The DOJ search remedy (default bans + data-sharing, on appeal) and a pending ad-tech remedy (possible AdX/DFP divestiture) sit outside the DCF."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "Cloud growth holds >40% with margin above 30% · Search & other stays >+15% as AI Overviews/AI Mode monetize · FCF margin recovers above ~22% as capex is absorbed · backlog keeps building"
+          },
+          {
+            "label": "Bear validation",
+            "body": "Search & other decelerates toward low-single-digit or CPCs fall · FCF margin stays below ~18% as ~$190B+ capex outruns cash · Cloud growth/margin rolls over · an adverse ad-tech (AdX/DFP) divestiture remedy"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if generative-AI assistants take durable query share and ad load drops, the ~60%-of-revenue Search engine loses its economics - re-rate the terminal toward a slower-growth, lower-FCF-margin platform"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Search & other",
+          "definition": "Alphabet's core search-advertising revenue (~$60.4B in Q1'26, ~60%+ of total); the swing-factor segment the generative-AI shift threatens."
+        },
+        {
+          "term": "Google Cloud",
+          "definition": "The cloud-infrastructure + Workspace segment ($20.0B/+63% in Q1'26 at ~33% operating margin, ~$462B backlog) - the second engine."
+        },
+        {
+          "term": "AI Overviews / AI Mode",
+          "definition": "Gemini-powered answers atop Search (2.5B / 1B MAU) monetizing roughly at Search-parity - how Google defends ad economics through the AI transition."
+        },
+        {
+          "term": "TPU",
+          "definition": "Tensor Processing Unit - Google's custom AI accelerator; serves Gemini and Cloud AI below merchant-silicon cost."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~18% FY25, depressed by the capex ramp); whether ~$190B capex converts to ~24% recovery."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-14_20-19",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "AAPL",
+    "slug": "aapl",
+    "company": "Apple",
+    "exchange": "NASDAQ",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "aapl-memo__v001__2026-06-14_20-19.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$4302B",
+      "shares": "14.78B",
+      "cash": "$54.7B cash, $90.7B net debt · Net debt ~$36B ($54.7B cash vs ~$90.7B total debt); ~14.78B shares, shrinking on a fresh $100B buyback + dividend raise; Revenue $416B FY25 (+6%); GAAP op margin ~32%; FCF ~$99B; Services ~$31B/quarter at ~70%+ gross margin; ~$291 (Jun 2026), +56% TTM, near the ~$315 ATH; iPhone ~50% of revenue, Greater China reaccelerating (+28%)"
+    },
+    "spot": {
+      "price": 291.13,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 190.57,
+      "deltaPct": -34.5
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 279.41,
+        "mult": 0.96
+      },
+      {
+        "y": 10,
+        "value": 409.85,
+        "mult": 1.41
+      },
+      {
+        "y": 15,
+        "value": 601.45,
+        "mult": 2.07
+      },
+      {
+        "y": 20,
+        "value": 883.03,
+        "mult": 3.03
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "premium-consumer-brands",
+        "consumer-experience"
+      ],
+      "themeNames": [
+        "Premium Consumer Brands",
+        "Consumer Experience"
+      ],
+      "primaryTheme": "premium-consumer-brands",
+      "primaryThemeName": "Premium Consumer Brands",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "ai": null,
+    "question": "Does a mid-single-digit grower at ~43x FCF, with AI outsourced to Gemini and a ~$20B/yr Google-payment cliff, justify a premium the modal can't underwrite?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 13,
+        "price": 89.39,
+        "headline": "iPhone stalls; Services tails crystallize.",
+        "why": "The genuine bear: iPhone is ~50% of revenue and partly pulled forward, the search payment must be rebid annually under the DOJ ruling, and App Store fees face regulatory pressure on two continents. 13% weight on the tails crystallizing together.",
+        "what": [
+          "The hardware engine flattens and the twin regulatory tails land: iPhone revenue stagnates as the upgrade super-cycle pays back, the ~$20B/yr Google search payment is cut or competed away, and EU/US App Store fee erosion bites high-margin Services. Revenue grows ~2%/yr and FCF margin compresses toward ~20% as the mix shifts away from the most profitable dollars.",
+          "A flat hardware franchise losing its richest Services rents re-rates to a mid-teens FCF multiple -> DCF ~$89 (-69%). Net debt offers no cushion here; the de-rate is the multiple meeting the growth."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 27,
+        "price": 129.46,
+        "headline": "Low-single-digit growth; multiple compresses.",
+        "why": "Share and ecosystem hold, but mid-single-digit growth can't carry a premium multiple while the search-payment and fee tails hang over Services. 27% as the plausible 'durable but slow' path.",
+        "what": [
+          "Apple keeps the ecosystem but the growth stays muted: iPhone replacement cycles lengthen, Services compounds but off a base partly funded by the at-risk search payment, and tariff/India cost drag (~5-8% premium) trims gross margin. Revenue compounds ~4% at a ~23% FCF margin.",
+          "DCF ~$129 (-55%) — a durable but slow-growing franchise at ~19x terminal FCF is worth well below 43x; the gap between today's multiple and mid-single-digit growth is the whole bear."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 33,
+        "price": 187.74,
+        "headline": "Services compounds; iPhone steady; still rich.",
+        "why": "Requires Services to keep compounding and the iPhone base to stay sticky through the AI-platform shift — consistent with FQ2's record Services and China rebound, but not a re-acceleration. 33% as the central, still-rich outcome.",
+        "what": [
+          "The modal path: Services compounds mid-teens at ~70%+ gross margin on a 2.5B+ installed base, the iPhone 17 cycle and China reacceleration keep hardware steady, and the Gemini-powered Siri keeps users locked in. Revenue compounds ~6% to ~$555B at a ~25% FCF margin, with buybacks shrinking the share count.",
+          "DCF ~$188 (-35%) — even crediting durable Services growth and a defended ecosystem, a ~23x terminal FCF multiple lands well below the ~43x paid today; the modal case says the price embeds quality and safety beyond what the cash flows underwrite."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 19,
+        "price": 279.18,
+        "headline": "AI-era ecosystem deepens; search risk fades.",
+        "why": "Services + the AI-era ecosystem stay sticky, the search payment holds, and China momentum continues — the FQ2 trends extended. ~19% weight on the franchise compounding without the tails biting.",
+        "what": [
+          "The ecosystem wins the AI era on someone else's model: the Gemini-powered Apple Intelligence raises engagement and Services attach, the search payment survives the rebid intact, and the installed base feeds a higher-margin Services mix. Revenue compounds ~8% to ~$600B and FCF margin lifts toward ~27%.",
+          "DCF ~$279 (-4%) — even the bull only reaches roughly today's price; an upper-single-digit grower at a sustained high-20s FCF multiple essentially validates spot rather than beating it."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 362.45,
+        "headline": "Services step-change; FCF/share compounds hard.",
+        "why": "Everything compounds — Services AND margins AND buyback leverage AND no regulatory hit — the quality-compounder outcome. ~8%, the long-duration tail that justifies the premium if it lands.",
+        "what": [
+          "The full upside: Services reaccelerates on AI features and new monetization, hardware finds a fresh wedge (wearables, new categories), gross margin holds near 49%, and the ~$100B buyback compounds FCF/share on a shrinking count. Revenue compounds ~10% to ~$640B at a ~30% FCF margin.",
+          "DCF ~$362 (+25%) — the only scenario that clears spot, and only if Services takes a genuine step-change and the multiple stays in the low-30s. ~8% probability, the asymmetric upside the premium is paying for."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 19 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "Apple trades at ~$4.30T (~$291/sh, +56% TTM) - about 43x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B net debt. Services compounds mid-teens at ~70%+ gross margin, but iPhone is still ~50% of revenue, AI is outsourced to Gemini, and the ~$20B/yr Google search payment faces a DOJ rebid. The DCF resolves whether quality justifies the multiple: weighted -34.5%, modal ~$188 (-35%).",
+    "historicalPrices": {
+      "xMin": -6.2,
+      "ipoMarker": "IPO Dec '80",
+      "points": [
+        [
+          -6.0,
+          75.0
+        ],
+        [
+          -5.0,
+          130.0
+        ],
+        [
+          -4.0,
+          180.0
+        ],
+        [
+          -3.3,
+          130.0
+        ],
+        [
+          -2.5,
+          190.0
+        ],
+        [
+          -1.5,
+          230.0
+        ],
+        [
+          -0.5,
+          250.0
+        ],
+        [
+          -0.1,
+          315.0
+        ],
+        [
+          -0.02,
+          291.13
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 13%",
+        "body": "iPhone stalls and the Services tails crystallize; ~$89 (-69%)."
+      },
+      {
+        "label": "Bear 27%",
+        "body": "Low-single-digit growth; the multiple compresses; ~$129 (-55%)."
+      },
+      {
+        "label": "Base 33%",
+        "body": "Services compounds, iPhone steady, but still rich; ~$188 (-35%)."
+      },
+      {
+        "label": "Bull 19%",
+        "body": "AI-era ecosystem deepens and search risk fades; ~$279 (-4%)."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "Services step-change; FCF/share compounds; ~$362 (+25%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end late Sept · FQ2 2026 (Apr-2026) results",
+      "sources": "Sources: SEC XBRL company facts (CIK 320193; revenue, GAAP operating income/margin, cash flow, debt), Apple FQ2 2026 release (revenue $111.2B +17%, iPhone $56.99B +22%, Services $30.98B +16% at an all-time high, Greater China $20.5B +28%, gross margin 49.3% guided down to 47.5-48.5% on higher memory cost). Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs mega-cap peers (MSFT/GOOGL/NVDA).",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          365.8,
+          394.3,
+          383.3,
+          391.0,
+          416.2
+        ],
+        "historyOpMargin": [
+          29.8,
+          30.3,
+          29.8,
+          31.5,
+          32.0
+        ],
+        "historyFcf": [
+          93.0,
+          111.4,
+          99.6,
+          108.8,
+          98.8
+        ],
+        "historyEvRev": [
+          6.8,
+          6.1,
+          7.0,
+          8.7,
+          9.4
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Products",
+        "segmentB": "Services",
+        "histEntSplit": [
+          0.82,
+          0.81,
+          0.78,
+          0.76,
+          0.74
+        ],
+        "chart6Title": "Equity build (Op EV − net debt)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 190.57,
+        "upsidePct": -34.5
+      },
+      "market": {
+        "marketCapBillion": 4302.0,
+        "sharesOutstandingMillion": 14776.4,
+        "cashBillion": 54.7,
+        "netDebtBillion": 90.7
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.13,
+          "expectedPerShare": 89.39,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 2.0,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 416.2,
+            "rev_path": [
+              0.02,
+              0.02,
+              0.02,
+              0.02,
+              0.02
+            ],
+            "op_margin": [
+              0.3,
+              0.3,
+              0.3,
+              0.31,
+              0.31
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              84.905,
+              86.603,
+              92.752,
+              94.607,
+              96.499
+            ],
+            "cash": 54.7,
+            "net_debt": 90.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 14600,
+            "distress": 0.0,
+            "pv_fcf": [
+              77.894,
+              72.892,
+              71.622,
+              67.022,
+              62.718
+            ],
+            "sum_pv_fcf": 352.15,
+            "terminal_value": 1521.71,
+            "pv_terminal": 989.01,
+            "op_ev": 1341.16,
+            "total_equity": 1305.16,
+            "dcf_per_share": 89.39
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.0,
+              4.5,
+              4.0,
+              3.8,
+              3.6
+            ],
+            "ev_fcf_multiple": [
+              18.0,
+              17.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.27,
+          "expectedPerShare": 129.46,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 4.4,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 416.2,
+            "rev_path": [
+              0.05,
+              0.05,
+              0.04,
+              0.04,
+              0.04
+            ],
+            "op_margin": [
+              0.31,
+              0.31,
+              0.32,
+              0.32,
+              0.32
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              96.142,
+              100.949,
+              109.759,
+              114.15,
+              118.716
+            ],
+            "cash": 54.7,
+            "net_debt": 90.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 14400,
+            "distress": 0.0,
+            "pv_fcf": [
+              88.61,
+              85.752,
+              85.931,
+              82.368,
+              78.952
+            ],
+            "sum_pv_fcf": 421.61,
+            "terminal_value": 2223.23,
+            "pv_terminal": 1478.55,
+            "op_ev": 1900.16,
+            "total_equity": 1864.16,
+            "dcf_per_share": 129.46
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.0,
+              5.5,
+              5.0,
+              4.8,
+              4.6
+            ],
+            "ev_fcf_multiple": [
+              22.0,
+              20.0,
+              19.0,
+              19.0,
+              19.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.33,
+          "expectedPerShare": 187.74,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 6.2,
+            "wacc": 0.08
+          },
+          "dcfPath": {
+            "rev_b": 416.2,
+            "rev_path": [
+              0.07,
+              0.07,
+              0.06,
+              0.06,
+              0.05
+            ],
+            "op_margin": [
+              0.32,
+              0.32,
+              0.33,
+              0.33,
+              0.33
+            ],
+            "wacc_path": [
+              0.08,
+              0.08,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              102.427,
+              114.362,
+              121.224,
+              133.851,
+              140.543
+            ],
+            "cash": 54.7,
+            "net_debt": 90.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 14100,
+            "distress": 0.0,
+            "pv_fcf": [
+              94.84,
+              98.047,
+              96.232,
+              98.384,
+              95.651
+            ],
+            "sum_pv_fcf": 483.15,
+            "terminal_value": 3232.49,
+            "pv_terminal": 2199.98,
+            "op_ev": 2683.13,
+            "total_equity": 2647.13,
+            "dcf_per_share": 187.74
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              7.0,
+              6.5,
+              6.0,
+              5.8,
+              5.6
+            ],
+            "ev_fcf_multiple": [
+              26.0,
+              24.0,
+              23.0,
+              23.0,
+              23.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.19,
+          "expectedPerShare": 279.18,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 8.2,
+            "wacc": 0.076
+          },
+          "dcfPath": {
+            "rev_b": 416.2,
+            "rev_path": [
+              0.09,
+              0.09,
+              0.08,
+              0.08,
+              0.07
+            ],
+            "op_margin": [
+              0.33,
+              0.33,
+              0.34,
+              0.34,
+              0.35
+            ],
+            "wacc_path": [
+              0.076,
+              0.076,
+              0.076,
+              0.076,
+              0.076
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              108.878,
+              123.622,
+              138.852,
+              155.728,
+              166.629
+            ],
+            "cash": 54.7,
+            "net_debt": 90.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 13800,
+            "distress": 0.0,
+            "pv_fcf": [
+              101.188,
+              106.775,
+              111.459,
+              116.176,
+              115.529
+            ],
+            "sum_pv_fcf": 551.13,
+            "terminal_value": 4813.73,
+            "pv_terminal": 3337.49,
+            "op_ev": 3888.62,
+            "total_equity": 3852.62,
+            "dcf_per_share": 279.18
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              8.0,
+              7.5,
+              7.0,
+              6.8,
+              6.6
+            ],
+            "ev_fcf_multiple": [
+              30.0,
+              29.0,
+              29.0,
+              29.0,
+              29.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 362.45,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 10.0,
+            "wacc": 0.074
+          },
+          "dcfPath": {
+            "rev_b": 416.2,
+            "rev_path": [
+              0.11,
+              0.11,
+              0.1,
+              0.09,
+              0.09
+            ],
+            "op_margin": [
+              0.33,
+              0.34,
+              0.35,
+              0.35,
+              0.36
+            ],
+            "wacc_path": [
+              0.074,
+              0.074,
+              0.074,
+              0.074,
+              0.074
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              115.496,
+              133.328,
+              157.942,
+              178.306,
+              201.055
+            ],
+            "cash": 54.7,
+            "net_debt": 90.7,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 13500,
+            "distress": 0.0,
+            "pv_fcf": [
+              107.538,
+              115.588,
+              127.493,
+              134.014,
+              140.7
+            ],
+            "sum_pv_fcf": 625.33,
+            "terminal_value": 6149.92,
+            "pv_terminal": 4303.76,
+            "op_ev": 4929.09,
+            "total_equity": 4893.09,
+            "dcf_per_share": 362.45
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              9.0,
+              8.5,
+              8.0,
+              7.8,
+              7.6
+            ],
+            "ev_fcf_multiple": [
+              32.0,
+              31.0,
+              31.0,
+              31.0,
+              31.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Premium consumer hardware + a high-margin Services ecosystem - Apple vs Samsung/Google (phones), Microsoft/Google (platforms/AI), and the App Store/payments field; auditing a branding + switching-costs Power against the AI-platform shift.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 4,
+            "note": "Massive purchasing/manufacturing and R&D scale across ~$416B revenue; among the deepest in consumer tech, though not the single dominant Power."
+          },
+          "networkEconomies": {
+            "score": 2,
+            "note": "iMessage/FaceTime/AirDrop and the developer ecosystem create modest network pull, but the lock-in is more switching cost than true network effect."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Largely the incumbent now; the privacy-and-integration stance differentiates but rivals can and do copy it - not a structural counter-position."
+          },
+          "switchingCosts": {
+            "score": 4,
+            "note": "Deep ecosystem lock-in: iCloud, App Store purchases, Watch/AirPods/Mac continuity, iMessage - leaving means abandoning a connected device estate; a core durable Power."
+          },
+          "branding": {
+            "score": 5,
+            "note": "The strongest Power: the premium global brand commands pricing power and ~49% gross margin and anchors a 2.5B+ installed base; decades-durable."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "In-house silicon (A/M-series) is a real edge and the developer base is sticky, but neither is a fully cornered, irreplaceable resource."
+          },
+          "processPower": {
+            "score": 3,
+            "note": "World-class supply-chain and silicon-design execution (Cook's operational machine); a genuine but partly replicable advantage."
+          }
+        },
+        "dominantPower": "branding",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Samsung",
+            "kind": "public",
+            "note": "The premium-Android hardware rival; competes on phones/wearables but lacks Apple's Services ecosystem and margin.",
+            "growth": 0.05,
+            "margin": 0.1,
+            "multiple": "~12x P/E"
+          },
+          {
+            "name": "Alphabet (GOOGL)",
+            "kind": "public",
+            "note": "Owns Android + Gemini; the AI-platform threat and Apple's ~$20B search-payment counterparty all at once.",
+            "growth": 0.15,
+            "margin": 0.32,
+            "multiple": "~24x P/E"
+          },
+          {
+            "name": "Microsoft (MSFT)",
+            "kind": "public",
+            "note": "The other quality mega-cap compounder; the platform/AI peer Apple's multiple is benchmarked against.",
+            "growth": 0.13,
+            "margin": 0.45,
+            "multiple": "~33x P/E"
+          },
+          {
+            "name": "Samsung Electronics / Xiaomi",
+            "kind": "public",
+            "note": "High-volume Android OEMs pressuring iPhone share in China/India at lower price points.",
+            "growth": 0.08,
+            "margin": 0.08,
+            "multiple": "~10x P/E"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "switching_costs",
+            "who": "The AI-platform shift (Gemini/agent layer)",
+            "falsifier": "An AI agent layer that disintermediates the iOS interface and erodes ecosystem lock-in - measurable as Services attach/engagement flattening."
+          },
+          {
+            "vector": "branding",
+            "who": "Regulators (DOJ search remedy + EU/US App Store)",
+            "falsifier": "The ~$20B Google search payment is cut on rebid and App Store fee remedies take hold, draining the highest-margin Services dollars."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "Tariffs + India supply shift",
+            "falsifier": "Gross margin slips below ~46% as the ~5-8% India cost premium and tariff drag (~$900M/quarter) outrun price."
+          }
+        ],
+        "takeaway": "Apple's brand is the strongest single Power in this set - a premium global franchise with ~49% gross margin and pricing power - reinforced by deep ecosystem switching costs and immense scale; durability is high. But the live threat is the AI-platform shift: with Apple Intelligence outsourced to Gemini, the next interface may run on someone else's model, and that same counterparty anchors a ~$20B/yr search payment now exposed to a DOJ rebid. The Powers are durable; the question the DCF presses is price, not moat. A mid-single-digit grower at ~43x FCF carries a premium even the bull (~$279, -4%) barely justifies, and the modal case lands ~$188 (-35%)."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The de-rate is the multiple, not the franchise.",
+            "body": "Apple is a genuine quality compounder, but a mid-single-digit grower at ~43x FCF prices safety beyond growth — even the bull only reaches ~$279 (-4%)."
+          },
+          {
+            "label": "The ~$20B Google payment is a discrete cliff.",
+            "body": "It is near-pure-margin Services that must be rebid annually under the DOJ ruling; losing it directly cuts the highest-quality earnings, and the bear/ultra-bear weight it."
+          },
+          {
+            "label": "AI is outsourced, not owned.",
+            "body": "A custom Gemini behind the revamped Siri (~$1B/yr to Google) makes Apple a fast-follower on foundation models; the bull needs the ecosystem to win the AI era on someone else's stack."
+          },
+          {
+            "label": "Services + installed base are the quality.",
+            "body": "~$31B/quarter of Services at ~70%+ gross margin on 2.5B+ devices is durable recurring earnings — the base/bull lean on it compounding mid-teens."
+          },
+          {
+            "label": "iPhone is ~half the revenue and partly pulled forward.",
+            "body": "FQ2 iPhone +22% rode pent-up demand from ~315M users on 4+yr phones; a payback air-pocket is the bear's mechanism once the super-cycle clears."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "Services growth holds mid-teens+ · iPhone upgrade cycle sustains · the Google search payment survives the rebid · gross margin defends ~47%+ · China revenue keeps reaccelerating"
+          },
+          {
+            "label": "Bear validation",
+            "body": "Services decelerates below ~10% · the search payment is cut or competed away · EU/US App Store fee remedies take hold · iPhone goes flat-to-down · gross margin slips below ~46%"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if the AI-platform shift cedes the next interface (a Gemini/agent layer that disintermediates iOS) or Services structurally stalls, re-rate the terminal toward a flat-hardware multiple - the ultra-bear's ~16x"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Services",
+          "definition": "Apple's recurring high-margin revenue (App Store, AppleCare, advertising, payments, subscriptions; ~$31B/quarter at ~70%+ gross margin) on a 2.5B+ device base - the quality engine."
+        },
+        {
+          "term": "Installed base",
+          "definition": "The >2.5B active Apple devices that drive Services attach and switching costs; its growth, not unit sales, anchors the mid-teens Services compounding."
+        },
+        {
+          "term": "Google search payment",
+          "definition": "The ~$20B/yr Google pays to be the default Safari search engine - near-pure-margin Services that must be rebid annually under the DOJ ruling; a discrete cliff."
+        },
+        {
+          "term": "Apple Intelligence",
+          "definition": "Apple's AI feature set; the revamped Siri runs a custom Google Gemini model (~$1B/yr) - AI partnered, not in-house."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~24% FY25); whether the grower defends ~70%+-margin Services against the search-payment tails."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-14_20-19",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "NVDA",
+    "slug": "nvda",
+    "company": "NVIDIA",
+    "exchange": "NASDAQ",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "nvda-memo__v001__2026-06-14_20-19.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$4986B",
+      "shares": "24.30B",
+      "cash": "$10.6B cash, $8.5B net debt · $10.6B cash vs ~$8.5B debt (~$2B net cash); ~24.3B shares; +$80B buyback authorized, $0.25/quarter dividend; Revenue $215.9B FY26 (+65%); GAAP op margin ~60%; FCF ~$96.7B (~45%); Data Center now ~88% of revenue; World's largest company at ~$5.0T; ATH ~$235 (May), ~$205 now (~+45% TTM); slid post-earnings despite the beat"
+    },
+    "spot": {
+      "price": 205.19,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 153.54,
+      "deltaPct": -25.2
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 234.28,
+        "mult": 1.14
+      },
+      {
+        "y": 10,
+        "value": 357.69,
+        "mult": 1.74
+      },
+      {
+        "y": 15,
+        "value": 546.47,
+        "mult": 2.66
+      },
+      {
+        "y": 20,
+        "value": 835.42,
+        "mult": 4.07
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "ai-compute"
+      ],
+      "themeNames": [
+        "AI & Compute"
+      ],
+      "primaryTheme": "ai-compute",
+      "primaryThemeName": "AI & Compute",
+      "umbrella": "ai-compute",
+      "umbrellaName": "AI & Compute"
+    },
+    "ai": null,
+    "question": "Can datacenter AI capex compound for years at high-70s% gross margin to justify ~$5T and ~50x FCF, or does a digestion/air-pocket hit a stock priced for perfection?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 15,
+        "price": 40.37,
+        "headline": "Capex air-pocket; revenue contracts.",
+        "why": "The genuine bear: the entire thesis rides on hyperscaler capex holding, custom silicon (OpenAI-Broadcom 10GW) + AMD (Meta ~$100B, OpenAI 6GW) all land H2-2026, and the stock already slid at $5T despite a +85% quarter. 15% weight on a real digestion/share-loss break.",
+        "what": [
+          "The AI capex cycle hits a digestion air-pocket: hyperscalers pause after over-building, Data Center revenue contracts (-10% then -5%), and custom ASICs plus AMD's H2-2026 launches take share at the margin so gross margin compresses toward the low-70s. China stays a structural $0. The compute giant cyclically resets to a slower-growth, lower-margin base.",
+          "A cyclical semiconductor whose growth has rolled over earns a mid-teens terminal multiple -> DCF ~$40 (-80%). Net cash is immaterial against a ~$5T cap; this is what a priced-for-perfection name does when perfection breaks."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 25,
+        "price": 76.59,
+        "headline": "Growth decelerates hard; share erodes.",
+        "why": "Growth deceleration plus custom-silicon/AMD share loss is the central pull on a name lapping +65% FY26 revenue; even mid-teens forward growth at high margins leaves the price stretched. 25% as the plausible 'grows but normalizes' path.",
+        "what": [
+          "Demand keeps growing but decelerates fast as the first wave of build-out matures: +12% then high-single-digit as custom ASICs and AMD chip away GPU share and pricing, holding gross margin in the high-50s/low-60s operating. The annual cadence ships but each generation no longer doubles the installed base; sovereign + diversified demand cushions, not offsets.",
+          "DCF ~$77 (-63%) - a still-large, still-profitable franchise whose hyper-growth has normalized is worth far below a $5T price; the market's premium assumes years of compounding the bear doesn't deliver."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 32,
+        "price": 158.65,
+        "headline": "Capex holds; cadence extends; still rich.",
+        "why": "Requires hyperscaler + sovereign capex to keep compounding and the cadence to ship without a share break - consistent with a sold-out backlog and FQ2 guide ~$91B, but not a step-change beyond it. 32% as the central, still-negative outcome at a $5T cap.",
+        "what": [
+          "The modal path: datacenter AI capex holds, Blackwell Ultra ramps into Rubin on the annual cadence, and Data Center compounds (+40% then decelerating) at a defended ~60% operating margin while networking (+199% last quarter) extends the full-rack systems franchise. Revenue roughly doubles over the window; China remains $0. A genuinely dominant, fast-growing compute platform - but already priced for it.",
+          "DCF ~$159 (-23%) - even with capex holding and the cadence intact, ~50x FCF and a ~19x terminal multiple on a company this size leaves the modal case below today's price; the franchise is excellent and the entry is rich."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 20,
+        "price": 245.72,
+        "headline": "Capex holds; Rubin extends the cadence.",
+        "why": "Demand outrunning supply, +92% Data Center, +199% networking and a sold-out Blackwell Ultra backlog make sustained compounding credible if the capex cycle doesn't pause. 20% weight on capex holding and Rubin extending the run.",
+        "what": [
+          "Hyperscaler capex holds and broadens: the Rubin generation extends the annual cadence, networking and full-rack systems compound the moat beyond the GPU, sovereign deployments (Saudi HUMAIN ~$20B, UAE) and diversified AI clouds (~50% of Data Center) add a durable second leg, and gross margin stays mid-70s. Demand keeps outrunning supply; CUDA + the developer ecosystem hold share against ASICs and AMD.",
+          "DCF ~$246 (+20%) - if capex holds and the cadence extends, the franchise grows into and past the multiple; this is the core of the bull and where the price is defensible."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 355.27,
+        "headline": "AI build-out runs for years; full platform.",
+        "why": "Everything works - capex compounds for years AND the cadence holds AND CUDA/networking entrench the platform AND ASICs/AMD stay marginal. ~8%, the long-duration AI-infrastructure tail.",
+        "what": [
+          "The full second act: AI infrastructure spend compounds for years across hyperscale, sovereign and enterprise, NVIDIA stays the platform standard through Rubin and beyond, networking + software + the CUDA ecosystem entrench an end-to-end systems moat, and gross margin holds low-to-mid-70s as supply scales. Revenue more than doubles at peak margins with no meaningful share loss.",
+          "DCF ~$355 (+73%) - the build-out runs and NVIDIA captures it as the standard platform; ~8% probability, the asymmetric upside the price embeds beyond the modal case."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 25 / Base 32 / Bull 20 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "NVIDIA trades at ~$4,986B (~$205/sh, ~+45% TTM) - ~50x FCF on $215.9B revenue (+65%), ~60% operating margins, ~$2B net cash. Data Center is ~88% of revenue and grew +92% last quarter at a mid-70s% gross margin. The DCF asks whether hyperscaler + sovereign AI capex keeps compounding or pauses; even at huge growth the modal can't justify ~$5T - weighted -25% (ultra-bear -80% to ultra-bull +73%).",
+    "historicalPrices": {
+      "xMin": -5.2,
+      "ipoMarker": "IPO Jan '99",
+      "points": [
+        [
+          -5.0,
+          13.0
+        ],
+        [
+          -4.3,
+          33.0
+        ],
+        [
+          -3.5,
+          15.0
+        ],
+        [
+          -2.5,
+          50.0
+        ],
+        [
+          -1.5,
+          135.0
+        ],
+        [
+          -0.8,
+          140.0
+        ],
+        [
+          -0.1,
+          235.0
+        ],
+        [
+          -0.02,
+          205.19
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 15%",
+        "body": "Capex air-pocket; revenue contracts; ~$40 (-80%)."
+      },
+      {
+        "label": "Bear 25%",
+        "body": "Growth decelerates hard; share erodes; ~$77 (-63%)."
+      },
+      {
+        "label": "Base 32%",
+        "body": "Capex holds; cadence extends; still rich; ~$159 (-23%)."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "Capex holds; Rubin extends cadence; ~$246 (+20%)."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "AI build-out runs for years; ~$355 (+73%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY22-FY26 history + FY27-FY31 scenario projections · fiscal years end late January · FQ1 FY2027 (rep. May 2026) results",
+      "sources": "Sources: SEC XBRL company facts (CIK 1045810; revenue, GAAP operating income/margin, cash flow, debt), NVIDIA FQ1 FY2027 release (revenue $81.6B +85% YoY, Data Center $75.2B +92% with compute $60.4B / networking $14.8B +199%, non-GAAP gross margin 75.0%, FQ2 guide ~$91B, zero China datacenter revenue), Blackwell Ultra (GB300) sold out through mid-2026. Revenue modeled as a growth path off FY26; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs peers.",
+      "chartReference": {
+        "historyYears": [
+          2022,
+          2023,
+          2024,
+          2025,
+          2026
+        ],
+        "historyRevenue": [
+          26.9,
+          27.0,
+          60.9,
+          130.5,
+          215.9
+        ],
+        "historyOpMargin": [
+          37.3,
+          15.7,
+          54.1,
+          62.4,
+          60.4
+        ],
+        "historyFcf": [
+          8.1,
+          3.8,
+          27.0,
+          60.9,
+          96.7
+        ],
+        "historyEvRev": [
+          28,
+          21,
+          25,
+          25,
+          18
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Data Center",
+        "segmentB": "Gaming + Other",
+        "histEntSplit": [
+          0.39,
+          0.56,
+          0.78,
+          0.88,
+          0.88
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 153.54,
+        "upsidePct": -25.2
+      },
+      "market": {
+        "marketCapBillion": 4986.0,
+        "sharesOutstandingMillion": 24300.0,
+        "cashBillion": 10.6,
+        "netDebtBillion": 8.5
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.15,
+          "expectedPerShare": 40.37,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": -0.6,
+            "wacc": 0.105
+          },
+          "dcfPath": {
+            "rev_b": 215.9,
+            "rev_path": [
+              -0.1,
+              -0.05,
+              0.03,
+              0.05,
+              0.05
+            ],
+            "op_margin": [
+              0.48,
+              0.48,
+              0.5,
+              0.51,
+              0.51
+            ],
+            "wacc_path": [
+              0.105,
+              0.105,
+              0.105,
+              0.105,
+              0.105
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              77.724,
+              73.838,
+              77.954,
+              83.848,
+              88.041
+            ],
+            "cash": 10.6,
+            "net_debt": 8.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 24400,
+            "distress": 0.0,
+            "pv_fcf": [
+              70.338,
+              60.472,
+              57.777,
+              56.24,
+              53.441
+            ],
+            "sum_pv_fcf": 298.27,
+            "terminal_value": 1128.03,
+            "pv_terminal": 684.71,
+            "op_ev": 982.98,
+            "total_equity": 985.08,
+            "dcf_per_share": 40.37
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              8.0,
+              6.0,
+              5.0,
+              4.5,
+              4.0
+            ],
+            "ev_fcf_multiple": [
+              14.0,
+              13.0,
+              13.0,
+              13.0,
+              13.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.25,
+          "expectedPerShare": 76.59,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 7.6,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 215.9,
+            "rev_path": [
+              0.12,
+              0.08,
+              0.06,
+              0.06,
+              0.06
+            ],
+            "op_margin": [
+              0.55,
+              0.56,
+              0.57,
+              0.57,
+              0.58
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              101.559,
+              112.296,
+              121.802,
+              129.11,
+              139.967
+            ],
+            "cash": 10.6,
+            "net_debt": 8.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 24400,
+            "distress": 0.0,
+            "pv_fcf": [
+              92.748,
+              93.656,
+              92.771,
+              89.806,
+              88.911
+            ],
+            "sum_pv_fcf": 457.89,
+            "terminal_value": 2217.94,
+            "pv_terminal": 1408.9,
+            "op_ev": 1866.79,
+            "total_equity": 1868.89,
+            "dcf_per_share": 76.59
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              12.0,
+              10.0,
+              8.0,
+              7.0,
+              6.5
+            ],
+            "ev_fcf_multiple": [
+              18.0,
+              17.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.32,
+          "expectedPerShare": 158.65,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 20.1,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 215.9,
+            "rev_path": [
+              0.4,
+              0.25,
+              0.16,
+              0.12,
+              0.1
+            ],
+            "op_margin": [
+              0.58,
+              0.59,
+              0.6,
+              0.6,
+              0.6
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              132.994,
+              170.021,
+              201.607,
+              230.709,
+              253.78
+            ],
+            "cash": 10.6,
+            "net_debt": 8.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 24300,
+            "distress": 0.0,
+            "pv_fcf": [
+              122.013,
+              143.103,
+              155.678,
+              163.44,
+              164.94
+            ],
+            "sum_pv_fcf": 749.17,
+            "terminal_value": 4775.68,
+            "pv_terminal": 3103.86,
+            "op_ev": 3853.03,
+            "total_equity": 3855.13,
+            "dcf_per_share": 158.65
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              16.0,
+              13.0,
+              11.0,
+              10.0,
+              9.5
+            ],
+            "ev_fcf_multiple": [
+              22.0,
+              20.0,
+              19.0,
+              19.0,
+              19.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 245.72,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 25.3,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 215.9,
+            "rev_path": [
+              0.5,
+              0.32,
+              0.21,
+              0.15,
+              0.12
+            ],
+            "op_margin": [
+              0.6,
+              0.61,
+              0.62,
+              0.62,
+              0.62
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              145.733,
+              200.917,
+              248.281,
+              291.472,
+              326.449
+            ],
+            "cash": 10.6,
+            "net_debt": 8.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 24200,
+            "distress": 0.0,
+            "pv_fcf": [
+              134.316,
+              170.67,
+              194.381,
+              210.319,
+              217.103
+            ],
+            "sum_pv_fcf": 926.79,
+            "terminal_value": 7544.6,
+            "pv_terminal": 5017.5,
+            "op_ev": 5944.29,
+            "total_equity": 5946.39,
+            "dcf_per_share": 245.72
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              20.0,
+              16.0,
+              14.0,
+              12.0,
+              11.0
+            ],
+            "ev_fcf_multiple": [
+              26.0,
+              24.0,
+              23.0,
+              23.0,
+              23.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 355.27,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 32.0,
+            "wacc": 0.082
+          },
+          "dcfPath": {
+            "rev_b": 215.9,
+            "rev_path": [
+              0.58,
+              0.4,
+              0.28,
+              0.21,
+              0.17
+            ],
+            "op_margin": [
+              0.61,
+              0.62,
+              0.63,
+              0.63,
+              0.63
+            ],
+            "wacc_path": [
+              0.082,
+              0.082,
+              0.082,
+              0.082,
+              0.082
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              156.916,
+              229.234,
+              305.646,
+              377.228,
+              441.356
+            ],
+            "cash": 10.6,
+            "net_debt": 8.5,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 24000,
+            "distress": 0.0,
+            "pv_fcf": [
+              145.024,
+              195.805,
+              241.289,
+              275.229,
+              297.614
+            ],
+            "sum_pv_fcf": 1154.96,
+            "terminal_value": 10928.82,
+            "pv_terminal": 7369.48,
+            "op_ev": 8524.44,
+            "total_equity": 8526.54,
+            "dcf_per_share": 355.27
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              24.0,
+              20.0,
+              17.0,
+              15.0,
+              14.0
+            ],
+            "ev_fcf_multiple": [
+              28.0,
+              26.0,
+              25.0,
+              25.0,
+              25.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "AI accelerators / datacenter compute - NVIDIA (GPUs + networking + the CUDA software platform, ~88% Data Center) vs AMD, the hyperscaler custom-ASIC programs (OpenAI-Broadcom, in-house silicon), and Broadcom; auditing a cornered-resource (CUDA) + scale Power against custom silicon and a credible #2.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 4,
+            "note": "Massive R&D and supply scale at $215.9B revenue funds a once-a-year architecture cadence rivals struggle to match; the leader's volume self-reinforces."
+          },
+          "networkEconomies": {
+            "score": 4,
+            "note": "The CUDA developer ecosystem - millions of developers, libraries, frameworks tuned to NVIDIA - is a genuine two-sided network that compounds with installed base."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "None meaningful now - NVIDIA is the incumbent being attacked by lower-cost ASICs/AMD, not the counter-positioner."
+          },
+          "switchingCosts": {
+            "score": 4,
+            "note": "Code, models and full racks are written/optimized to CUDA + NVIDIA networking; re-platforming to ASICs or AMD is costly and risky - a real lock-in."
+          },
+          "branding": {
+            "score": 2,
+            "note": "Strong reputation as the AI-compute standard, but the buy is governed by performance/TCO and ecosystem, not brand premium."
+          },
+          "corneredResource": {
+            "score": 5,
+            "note": "The dominant Power: CUDA + the integrated GPU/networking/software stack is a ~two-decade head start rivals cannot quickly replicate - the moat's foundation."
+          },
+          "processPower": {
+            "score": 3,
+            "note": "Deep systems/packaging and supply-chain (CoWoS) execution feeding the annual cadence; real, but partly bought capacity others can also access."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "AMD",
+            "kind": "public",
+            "note": "The credible #2; MI450/Helios ships H2-2026 with OpenAI (6GW) and Meta (~$100B) commitments - the direct GPU challenger.",
+            "growth": 0.3,
+            "margin": 0.25,
+            "multiple": "~30x EV/FCF"
+          },
+          {
+            "name": "Custom ASICs (hyperscalers)",
+            "kind": "public",
+            "note": "In-house AI silicon (Google TPU, plus new programs) fragmenting GPU procurement; reduces NVIDIA's wallet share at the largest buyers.",
+            "growth": null,
+            "margin": null,
+            "multiple": "captive"
+          },
+          {
+            "name": "OpenAI-Broadcom",
+            "kind": "public",
+            "note": "10GW of custom accelerators (Broadcom-designed) landing H2-2026 - the marquee defection from merchant GPUs to bespoke silicon.",
+            "growth": null,
+            "margin": null,
+            "multiple": "~partnership"
+          },
+          {
+            "name": "Huawei (Ascend)",
+            "kind": "private",
+            "note": "Entrenching in China as the closed-market alternative now that NVIDIA datacenter revenue there is $0; not a US/global threat yet.",
+            "growth": null,
+            "margin": null,
+            "multiple": "private"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "cornered_resource",
+            "who": "Custom ASICs (OpenAI-Broadcom, hyperscaler in-house silicon)",
+            "falsifier": "Custom-silicon deployments take visible Data Center share and slow NVIDIA's growth/pricing as buyers re-platform off CUDA."
+          },
+          {
+            "vector": "switching_costs",
+            "who": "AMD (MI450/Helios, H2-2026)",
+            "falsifier": "Major accounts (OpenAI, Meta) shift meaningful training/inference to AMD, proving the CUDA lock-in is breachable at scale."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "A datacenter AI capex digestion/air-pocket",
+            "falsifier": "Hyperscaler capex pauses, the annual cadence stops compounding the installed base, and the scale advantage stops self-reinforcing."
+          }
+        ],
+        "takeaway": "NVIDIA's dominant Power is a cornered resource - CUDA plus the integrated GPU/networking/software stack, reinforced by switching costs, scale and a developer-ecosystem network - and it's durable (high). The live threat is the H2-2026 wave: AMD's MI450 and the OpenAI-Broadcom custom ASICs erode GPU share at the margin even if NVIDIA stays the standard, and China datacenter is a permanent $0. The Audit squares with the DCF: the Power is real, but the swing factor is whether datacenter AI capex holds or hits an air-pocket, and at ~50x FCF on ~$5T even the modal capex-holds case lands ~-23% - the distribution is the finding, weighted -25%."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "~50x FCF on the world's largest company.",
+            "body": "~$96.7B FCF and ~60% operating margins, but at a ~$5T cap the modal DCF is still ~-23% - the price, not the business, is the constraint; the distribution does the talking."
+          },
+          {
+            "label": "The single swing factor is datacenter capex.",
+            "body": "The whole valuation hinges on hyperscaler + sovereign AI spend compounding for years; capex holding is the bull (+20%), a digestion/air-pocket is the ultra-bear (-80%)."
+          },
+          {
+            "label": "China datacenter is a structural $0.",
+            "body": "Results and guidance assume ~no China; Beijing steered firms away and Huawei is entrenching - a permanently lost ~$15-50B/yr TAM already out of the numbers, not a future risk."
+          },
+          {
+            "label": "Competition all lands H2-2026.",
+            "body": "AMD MI450/Helios (OpenAI 6GW, Meta ~$100B) and OpenAI-Broadcom 10GW custom ASICs ship H2-2026; the GPU monopoly erodes at the margin even if NVIDIA stays the leader."
+          },
+          {
+            "label": "The systems moat is more than the GPU.",
+            "body": "Networking +199% and CUDA + the developer ecosystem make the full-rack platform stickier than a chip - the durability case for the bull/ultra-bull, but already in the price."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "hyperscaler capex guidance keeps rising · Rubin samples Q4-2026 / volumes Q1-2027 on cadence · Data Center + networking stay strong · gross margin holds mid-70s"
+          },
+          {
+            "label": "Bear validation",
+            "body": "a major hyperscaler cuts or pauses AI capex · custom ASICs / AMD take visible Data Center share · gross margin slips toward low-70s · backlog/booking commentary softens"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if datacenter AI capex hits a sustained air-pocket or custom silicon structurally takes share, re-rate the terminal toward a cyclical-semiconductor multiple"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Data Center",
+          "definition": "NVIDIA's dominant segment (~88% of revenue, +92% last quarter) - GPUs + networking; the thesis rides on its growth."
+        },
+        {
+          "term": "Hyperscaler capex",
+          "definition": "Cloud-provider (Microsoft/Amazon/Google/Meta) AI-infrastructure spending - the demand source and biggest swing."
+        },
+        {
+          "term": "Annual cadence (Blackwell -> Rubin)",
+          "definition": "NVIDIA's once-a-year architecture rhythm (Blackwell -> Ultra/GB300 -> Rubin); how it stays ahead of ASICs."
+        },
+        {
+          "term": "Custom ASICs",
+          "definition": "Purpose-built AI chips (OpenAI-Broadcom, hyperscaler in-house) fragmenting GPU procurement; the live threat at the margin."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~45% FY26); the cash-conversion swing factor."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-14_20-19",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "TSLA",
+    "slug": "tsla",
+    "company": "Tesla",
+    "exchange": "NASDAQ",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "tsla-memo__v001__2026-06-14_20-19.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$1525B",
+      "shares": "3.75B",
+      "cash": "$44.1B cash, $1.6B net debt · $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares; Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B; ~$406 (down ~10% YTD, +27% TTM); ~$1.5T market cap trades on the autonomy/robot narrative, not auto fundamentals"
+    },
+    "spot": {
+      "price": 406.43,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 101.42,
+      "deltaPct": -75.0
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 161.2,
+        "mult": 0.4
+      },
+      {
+        "y": 10,
+        "value": 256.45,
+        "mult": 0.63
+      },
+      {
+        "y": 15,
+        "value": 408.36,
+        "mult": 1.0
+      },
+      {
+        "y": 20,
+        "value": 650.87,
+        "mult": 1.6
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "autonomous-vehicles-systems",
+        "humanoid-robotics-physical-ai"
+      ],
+      "themeNames": [
+        "Autonomous Vehicles & Systems",
+        "Humanoid Robotics & Physical AI"
+      ],
+      "primaryTheme": "autonomous-vehicles-systems",
+      "primaryThemeName": "Autonomous Vehicles & Systems",
+      "umbrella": "mobility-aerospace",
+      "umbrellaName": "Mobility & Aerospace"
+    },
+    "ai": null,
+    "question": "At ~$1.5T on a declining ~$95B auto base earning 4.6% margins, does the price hold on auto+energy fundamentals, or only if unsupervised autonomy and Optimus ship into real revenue?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 18,
+        "price": 26.42,
+        "headline": "Deliveries keep falling; pure auto multiple.",
+        "why": "The fundamentals-only floor: two straight delivery declines, Q1'26 FCF negative, beats leaning on warranty true-downs and tariff relief, and the moonshots still slipping. 18% weight on the auto franchise simply re-rating to an auto multiple.",
+        "what": [
+          "The auto base keeps eroding: deliveries fall again as BYD/VW take share and Europe stays depressed (EU registrations -17%, 13th straight monthly decline), the affordable Model Q slips further, and price cuts hold operating margin near the depressed 4.6%. None of robotaxi, unsupervised FSD, or Optimus reaches material revenue inside the window.",
+          "A shrinking car maker with single-digit margins earns a low-double-digit FCF / mid-single EV/sales multiple - DCF ~$26 (-93%). Even ~$42.5B net cash is immaterial against a ~$1.5T price built on optionality that doesn't arrive."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 30,
+        "price": 46.4,
+        "headline": "Auto stabilizes; energy grows; no autonomy revenue.",
+        "why": "The plausible 'auto recovers, robots don't ship in time' path: energy is genuinely compounding and margins can heal, but autonomy keeps slipping (v15 to summer, unsupervised FSD to Q4 at earliest). 30% as the central fundamentals outcome.",
+        "what": [
+          "Deliveries stop falling and resume mid-single-digit growth as the Model Q finally ships, energy storage keeps compounding (+25% YoY, high-margin), and operating margin recovers toward 9% - a respectable car-plus-energy business, but FSD stays supervised and robotaxi stays a ~20-34-vehicle pilot, so no autonomy revenue enters the model.",
+          "DCF ~$46 (-89%) - even a healthier auto+energy franchise at a premium auto multiple (~14-16x FCF) is worth a fraction of today's price; the gap is the un-modeled optionality, not the car business."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 30,
+        "price": 83.38,
+        "headline": "Growth resumes; margins heal; autonomy begins.",
+        "why": "Requires the auto base to inflect AND margins to recover AND early autonomy revenue - credible given the product pipeline and FSD-data flywheel, but each leg is currently slipping. 30% as the central, still-deeply-negative outcome.",
+        "what": [
+          "Volume re-accelerates to low-teens as the affordable model expands the addressable market and energy scales, lifting operating margin back toward the mid-teens; FSD monetization and an early robotaxi ramp begin to contribute, so the business carries a richer-than-auto multiple - but the second act is just starting, not at scale.",
+          "DCF ~$83 (-79%) - the modal case. A re-accelerating Tesla with healing margins and the first autonomy dollars is worth far more than the bear, yet still ~four-fifths below spot, because even this constructive fundamentals path doesn't justify ~$1.5T."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 14,
+        "price": 193.76,
+        "headline": "FSD ships; robotaxi scales; software margins.",
+        "why": "The Power-gated second act: durable FSD-data process power plus the robotaxi/licensing model, if autonomy actually ships and scales. Real but every 2026 datapoint shows it slipping. 14% weight on the platform thesis landing within the window.",
+        "what": [
+          "Unsupervised FSD clears regulators and ships, the robotaxi fleet scales out of pilot into real ride-hail revenue, and high-margin software/licensing lifts blended operating margin toward 20% on >20% revenue growth - the platform repricing the autonomy bulls underwrite. Optimus and energy add to a real second revenue stream.",
+          "DCF ~$194 (-52%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers, yet the entry price still embeds more than this delivers; the autonomy win is necessary but, at ~$1.5T, not sufficient."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 382.51,
+        "headline": "Robotaxi, Optimus, energy compound; platform.",
+        "why": "Everything ships and scales - robotaxi AND Optimus AND energy AND a platform re-rate, the autonomy bull's complete thesis. ~8%, the long-duration tail that the current price already embeds.",
+        "what": [
+          "The full second act: unsupervised autonomy scales nationally into a high-margin ride-hail + FSD-licensing business, Optimus reaches volume as a non-auto TAM, and energy compounds - revenue grows ~30% at platform margins toward the mid-20s, the AI/robotics company the narrative prices.",
+          "DCF ~$383 (-6%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple does the model approach today's price. That this best case still lands modestly below spot is the finding: ~$1.5T fully prices the moonshots succeeding."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 18 / Bear 30 / Base 30 / Bull 14 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "Tesla trades at ~$1.5T (~$406, +27% TTM) - ~16x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight delivery decline (1.64M, -8.6%), with GAAP operating margin compressed to 4.6% from 16.8% in 2022. The DCF underwrites only the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-75%). The robotaxi/FSD/Optimus optionality is real but lives entirely in the ultra-bull second act, and even that lands -6%. What you pay above ~$100 is the autonomy/robot option, not the car business - the modal case, an auto maker re-rating toward an auto multiple, is deeply negative.",
+    "historicalPrices": {
+      "xMin": -5.7,
+      "ipoMarker": "IPO Jun '10",
+      "points": [
+        [
+          -5.5,
+          80.0
+        ],
+        [
+          -5.0,
+          240.0
+        ],
+        [
+          -4.2,
+          410.0
+        ],
+        [
+          -3.3,
+          108.0
+        ],
+        [
+          -2.5,
+          250.0
+        ],
+        [
+          -1.5,
+          250.0
+        ],
+        [
+          -0.8,
+          460.0
+        ],
+        [
+          -0.3,
+          420.0
+        ],
+        [
+          -0.05,
+          406.43
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 18%",
+        "body": "Deliveries keep falling; pure auto multiple; ~$26 (-93%)."
+      },
+      {
+        "label": "Bear 30%",
+        "body": "Auto stabilizes, energy grows, no autonomy revenue; ~$46 (-89%)."
+      },
+      {
+        "label": "Base 30%",
+        "body": "Growth resumes, margins heal, autonomy begins; ~$83 (-79%)."
+      },
+      {
+        "label": "Bull 14%",
+        "body": "FSD ships, robotaxi scales, software margins; ~$194 (-52%)."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "Robotaxi + Optimus + energy compound into a platform; ~$383 (-6%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end Dec · Q1 2026 results (Apr 2026)",
+      "sources": "Sources: SEC XBRL company facts (CIK 1318605; revenue, GAAP operating income/margin, cash flow, debt), Tesla Q1 2026 release (revenue $22.39B +16% YoY, deliveries 358,023 +6.5% YoY but -14% sequentially, FCF negative, FY25 deliveries 1.64M -8.6%, now smaller than BYD). Revenue modeled as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs auto peers (Toyota, BYD, VW) and the autonomy/AI names the multiple implies.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          53.8,
+          81.5,
+          96.8,
+          97.7,
+          94.8
+        ],
+        "historyOpMargin": [
+          12.1,
+          16.8,
+          9.2,
+          7.2,
+          4.6
+        ],
+        "historyFcf": [
+          5.0,
+          7.6,
+          4.4,
+          3.6,
+          6.2
+        ],
+        "historyEvRev": [
+          19.6,
+          4.8,
+          8.2,
+          13.3,
+          15.8
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Automotive",
+        "segmentB": "Energy + Services",
+        "histEntSplit": [
+          0.88,
+          0.85,
+          0.82,
+          0.79,
+          0.74
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 101.42,
+        "upsidePct": -75.0
+      },
+      "market": {
+        "marketCapBillion": 1525.0,
+        "sharesOutstandingMillion": 3752.4,
+        "cashBillion": 44.1,
+        "netDebtBillion": 1.6
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.18,
+          "expectedPerShare": 26.42,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 1.1,
+            "wacc": 0.115
+          },
+          "dcfPath": {
+            "rev_b": 94.8,
+            "rev_path": [
+              -0.05,
+              0.0,
+              0.03,
+              0.04,
+              0.04
+            ],
+            "op_margin": [
+              0.04,
+              0.05,
+              0.06,
+              0.06,
+              0.06
+            ],
+            "wacc_path": [
+              0.115,
+              0.115,
+              0.115,
+              0.115,
+              0.115
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              3.602,
+              4.503,
+              5.566,
+              5.788,
+              6.02
+            ],
+            "cash": 44.1,
+            "net_debt": 1.6,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 3800,
+            "distress": 0.0,
+            "pv_fcf": [
+              3.23,
+              3.622,
+              4.015,
+              3.745,
+              3.493
+            ],
+            "sum_pv_fcf": 18.11,
+            "terminal_value": 68.56,
+            "pv_terminal": 39.78,
+            "op_ev": 57.89,
+            "total_equity": 100.39,
+            "dcf_per_share": 26.42
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.0,
+              3.5,
+              3.0,
+              2.8,
+              2.6
+            ],
+            "ev_fcf_multiple": [
+              12.0,
+              12.0,
+              11.0,
+              11.0,
+              11.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.3,
+          "expectedPerShare": 46.4,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 7.2,
+            "wacc": 0.105
+          },
+          "dcfPath": {
+            "rev_b": 94.8,
+            "rev_path": [
+              0.05,
+              0.07,
+              0.08,
+              0.08,
+              0.08
+            ],
+            "op_margin": [
+              0.06,
+              0.07,
+              0.08,
+              0.09,
+              0.09
+            ],
+            "wacc_path": [
+              0.105,
+              0.105,
+              0.105,
+              0.105,
+              0.105
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              5.972,
+              7.456,
+              9.202,
+              11.181,
+              12.075
+            ],
+            "cash": 44.1,
+            "net_debt": 1.6,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 3800,
+            "distress": 0.0,
+            "pv_fcf": [
+              5.405,
+              6.106,
+              6.82,
+              7.499,
+              7.33
+            ],
+            "sum_pv_fcf": 33.16,
+            "terminal_value": 165.83,
+            "pv_terminal": 100.66,
+            "op_ev": 133.82,
+            "total_equity": 176.32,
+            "dcf_per_share": 46.4
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.0,
+              5.5,
+              5.0,
+              4.8,
+              4.6
+            ],
+            "ev_fcf_multiple": [
+              16.0,
+              15.0,
+              14.0,
+              14.0,
+              14.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.3,
+          "expectedPerShare": 83.38,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 13.0,
+            "wacc": 0.1
+          },
+          "dcfPath": {
+            "rev_b": 94.8,
+            "rev_path": [
+              0.12,
+              0.14,
+              0.14,
+              0.13,
+              0.12
+            ],
+            "op_margin": [
+              0.08,
+              0.1,
+              0.12,
+              0.13,
+              0.14
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              7.432,
+              10.894,
+              15.178,
+              18.711,
+              22.703
+            ],
+            "cash": 44.1,
+            "net_debt": 1.6,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 3850,
+            "distress": 0.0,
+            "pv_fcf": [
+              6.756,
+              9.003,
+              11.403,
+              12.78,
+              14.097
+            ],
+            "sum_pv_fcf": 54.04,
+            "terminal_value": 361.5,
+            "pv_terminal": 224.46,
+            "op_ev": 278.5,
+            "total_equity": 321.0,
+            "dcf_per_share": 83.38
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              9.0,
+              8.0,
+              7.0,
+              6.5,
+              6.0
+            ],
+            "ev_fcf_multiple": [
+              20.0,
+              18.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.14,
+          "expectedPerShare": 193.76,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 21.8,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 94.8,
+            "rev_path": [
+              0.22,
+              0.24,
+              0.23,
+              0.21,
+              0.19
+            ],
+            "op_margin": [
+              0.1,
+              0.13,
+              0.16,
+              0.18,
+              0.2
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              10.409,
+              17.21,
+              26.46,
+              38.42,
+              50.799
+            ],
+            "cash": 44.1,
+            "net_debt": 1.6,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 3900,
+            "distress": 0.0,
+            "pv_fcf": [
+              9.506,
+              14.353,
+              20.153,
+              26.724,
+              32.269
+            ],
+            "sum_pv_fcf": 103.0,
+            "terminal_value": 960.56,
+            "pv_terminal": 610.18,
+            "op_ev": 713.18,
+            "total_equity": 755.68,
+            "dcf_per_share": 193.76
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              12.0,
+              11.0,
+              10.0,
+              9.5,
+              9.0
+            ],
+            "ev_fcf_multiple": [
+              24.0,
+              22.0,
+              19.0,
+              19.0,
+              19.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 382.51,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 28.6,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 94.8,
+            "rev_path": [
+              0.3,
+              0.32,
+              0.3,
+              0.27,
+              0.24
+            ],
+            "op_margin": [
+              0.12,
+              0.16,
+              0.2,
+              0.24,
+              0.26
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.045,
+            "fcf": [
+              12.324,
+              22.775,
+              40.181,
+              61.773,
+              86.59
+            ],
+            "cash": 44.1,
+            "net_debt": 1.6,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 3950,
+            "distress": 0.0,
+            "pv_fcf": [
+              11.306,
+              19.169,
+              31.027,
+              43.762,
+              56.278
+            ],
+            "sum_pv_fcf": 161.54,
+            "terminal_value": 2010.81,
+            "pv_terminal": 1306.89,
+            "op_ev": 1468.43,
+            "total_equity": 1510.93,
+            "dcf_per_share": 382.51
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              15.0,
+              14.0,
+              13.0,
+              12.0,
+              11.0
+            ],
+            "ev_fcf_multiple": [
+              28.0,
+              26.0,
+              23.0,
+              23.0,
+              23.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Global autos + autonomy/AI - Tesla (premium EV brand, FSD-data scale, energy storage) vs Toyota, BYD, Volkswagen in autos and Waymo and the autonomy/robotics field in the second act; auditing a branding + nascent process Power against auto-multiple compression.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 3,
+            "note": "Real manufacturing scale (~1.6M units, gigacasting, vertically integrated batteries) and the largest charging network, but volume is now declining and below BYD."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Supercharger access and fleet effects are mild; cars aren't a network - the FSD data flywheel is the closest thing and is counted as process power."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Was the EV disruptor legacy autos couldn't follow; now the incumbent being counter-positioned on price by BYD and on EVs by everyone."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Weak in autos (next car is a fresh decision); modest stickiness from Supercharging and the app/software ecosystem."
+          },
+          "branding": {
+            "score": 3,
+            "note": "A genuine premium/technology brand with pricing power and a devoted base, but eroding in Europe (registrations -17%, 13th straight monthly decline) and politically polarized."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "Fleet-scale real-world driving data and battery/charging assets - valuable and hard to replicate, though contestable as rivals scale data and fast-charging."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Nascent and the bull's swing factor: manufacturing know-how plus the FSD-data/AI training loop - potentially durable if autonomy ships, unproven at unsupervised scale."
+          }
+        },
+        "dominantPower": "branding",
+        "durability": "medium",
+        "rivals": [
+          {
+            "name": "BYD",
+            "kind": "public",
+            "note": "Now the larger EV maker; cost leader taking global share, especially outside the US - the core auto-compression threat.",
+            "growth": 0.2,
+            "margin": 0.06,
+            "multiple": "~20x P/E"
+          },
+          {
+            "name": "Toyota",
+            "kind": "public",
+            "note": "Scale/quality benchmark; hybrid-led, slow on EVs but vast cash generation - the mature-auto multiple Tesla is measured against.",
+            "growth": 0.05,
+            "margin": 0.1,
+            "multiple": "~9x P/E"
+          },
+          {
+            "name": "Volkswagen",
+            "kind": "public",
+            "note": "Legacy scale leader pushing EVs hard in Europe, where Tesla's brand is weakening.",
+            "growth": 0.02,
+            "margin": 0.05,
+            "multiple": "~4x P/E"
+          },
+          {
+            "name": "Waymo (Alphabet)",
+            "kind": "private",
+            "note": "Furthest-ahead robotaxi operator; the benchmark for whether Tesla's autonomy second act can actually scale.",
+            "growth": null,
+            "margin": null,
+            "multiple": "private"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "branding",
+            "who": "BYD / Volkswagen (price + EV share)",
+            "falsifier": "Deliveries decline a third year as BYD/VW take share and Europe registrations keep falling."
+          },
+          {
+            "vector": "process_power",
+            "who": "Waymo / autonomy slipping",
+            "falsifier": "Unsupervised FSD and robotaxi keep slipping past 2027, so the data flywheel never converts to autonomy revenue."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "BYD cost leadership",
+            "falsifier": "Operating margin stays below ~8% as price cuts continue and volume growth doesn't return."
+          }
+        ],
+        "takeaway": "Tesla's strongest Power is its premium brand, backed by a nascent FSD-data process Power - but the brand is eroding in Europe, volume now trails BYD, and on the auto+energy fundamentals operating margin has compressed to 4.6% across two straight delivery declines. The Audit: branding is durable (medium) and process_power is the live swing factor (the autonomy flywheel), but the threat that dominates the cash flows is auto-multiple compression. The DCF underwrites only those fundamentals and lands ~-75%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act, and even full platform success lands -6% - so the ~$1.5T price embeds the moonshots succeeding, not the car business."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The DCF ignores robotaxi/FSD/Optimus.",
+            "body": "Correct, and that is the point - those cash flows aren't in the auto+energy base, so they sit only in the bull/ultra-bull second act; what you pay above ~$100 IS that optionality, priced explicitly."
+          },
+          {
+            "label": "Energy storage is real and compounding.",
+            "body": "+25% YoY and high-margin, and it is in the model (the Energy + Services segment) - but at ~26% of revenue it can't carry a ~$1.5T cap; even the bear builds energy in and lands -89%."
+          },
+          {
+            "label": "Margins recovered to ~19% ex-credits in Q1'26.",
+            "body": "Auto GM ex-credits did recover, but the Q1'26 beat leaned on ~$230M warranty true-downs and tariff relief while FCF turned negative - margin quality, not just level, is the question."
+          },
+          {
+            "label": "The FSD data flywheel is a real process Power.",
+            "body": "Granted - fleet-scale driving data is a genuine, hard-to-copy edge, which is why the bull/ultra-bull carry a platform multiple; the issue is timing, as unsupervised FSD slipped to Q4 2026 at earliest."
+          },
+          {
+            "label": "Net cash, no solvency risk.",
+            "body": "$44.1B cash vs ~$1.6B debt (~$42.5B net cash) - immaterial against a ~$1.5T price; the downside is multiple/fundamentals, not survival; this is a valuation-vs-optionality memo, not a distress one."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "unsupervised FSD ships to consumers · robotaxi fleet scales past pilot into paid ride-hail at scale · Optimus reaches volume production · auto deliveries return to growth with margin recovery"
+          },
+          {
+            "label": "Bear validation",
+            "body": "deliveries decline a third straight year · robotaxi stays a sub-100-vehicle pilot · unsupervised FSD slips beyond 2027 · operating margin stays below ~8% as price cuts continue"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if autonomy/Optimus ship and scale into material revenue, re-underwrite as a software/robotics platform (origination lens), not a mature auto maker - that is the only path that closes the gap to ~$1.5T"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Robotaxi / FSD",
+          "definition": "Tesla's autonomous ride-hail (~20-34-vehicle pilot) and Full Self-Driving (unsupervised Q4'26+) - the auto-model optionality."
+        },
+        {
+          "term": "Optimus",
+          "definition": "Tesla's humanoid robot (V3 reveal pushed to ~Jul/Aug 2026, production 'quite slow') - a non-auto TAM only in the second act."
+        },
+        {
+          "term": "Deliveries",
+          "definition": "Vehicles delivered per period; FY25 1.64M (-8.6%), the second straight annual decline, Tesla now smaller than BYD."
+        },
+        {
+          "term": "EV/sales",
+          "definition": "Enterprise value / revenue (~16x FY25); extreme for a ~3%-declining, 4.6%-margin auto maker - embeds autonomy optionality."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~6.5% FY25); whether volume and margin recovery (and, in upper cases, software) convert to FCF."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-14_20-19",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "DIS",
+    "slug": "dis",
+    "company": "Walt Disney",
+    "exchange": "NYSE",
+    "category": "fcf-megacap",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "dis-memo__v001__2026-06-14_20-19.pdf",
+      "size": "—",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$178.6B",
+      "shares": "1.79B",
+      "cash": "$5.7B cash, $42B net debt · $5.7B cash against ~$42B total debt (~$36B net debt); ~1,785M shares; dividend raised +50%, buyback >=$8B in FY26; Revenue $94.4B FY25 (+3%); GAAP op margin 18.6% (rising); FCF ~$10.1B; streaming (DTC) OI just crossed 10%; ~$100, down ~9% YTD (52-wk ~$92-125), popped ~7-8% on the May print; the cheap turnaround alongside META"
+    },
+    "spot": {
+      "price": 100.04,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 110.38,
+      "deltaPct": 10.3
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 168.72,
+        "mult": 1.69
+      },
+      {
+        "y": 10,
+        "value": 258.03,
+        "mult": 2.58
+      },
+      {
+        "y": 15,
+        "value": 394.82,
+        "mult": 3.95
+      },
+      {
+        "y": 20,
+        "value": 604.42,
+        "mult": 6.04
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-megacap",
+      "watchlistName": "FCF+ Megacap",
+      "tier": null,
+      "themes": [
+        "consumer-experience"
+      ],
+      "themeNames": [
+        "Consumer Experience"
+      ],
+      "primaryTheme": "consumer-experience",
+      "primaryThemeName": "Consumer Experience",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "ai": null,
+    "question": "Does streaming operating margin scale from ~10% toward mid-teens fast enough to outrun the secular decline of linear TV and cable-affiliate revenue?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 13,
+        "price": 36.38,
+        "headline": "Cable erodes faster than DTC scales.",
+        "why": "The genuine bear: cord-cutting is structural, domestic park visitation already printed -1%, and content is hit-driven. 13% weight on the legacy decline outrunning the DTC turnaround.",
+        "what": [
+          "The secular decline wins: linear TV and cable-affiliate revenue erode faster than streaming margin builds, sports rights costs outrun ESPN DTC ramp, and parks demand softens as domestic attendance keeps slipping. Revenue barely grows (~1%) and the operating margin stalls near 16-17% as the mix shift turns into a mix drag.",
+          "A media-and-parks conglomerate whose growth core never outpaces its declining legacy earns a low terminal multiple -> DCF ~$36 (-64%). The ~$36B net debt amplifies the equity hit when EBITDA disappoints."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 27,
+        "price": 65.91,
+        "headline": "DTC profits, but cable offsets it.",
+        "why": "The DTC turnaround is real but the linear drag and capex timing cap it; parks growth is price-led until 2027-2029. 27% as the plausible 'profits but doesn't compound' path.",
+        "what": [
+          "Streaming holds its ~10% margin and grows, but the affiliate/ad decline at the linear networks offsets most of the gain; parks lean on price (attendance flat) and the $60B capex weighs on near-term free cash flow until the new capacity opens. Revenue compounds ~3% at a low-double-digit FCF margin.",
+          "DCF ~$66 (-34%) — a stabilizing but not-yet-reaccelerating Disney at ~15x FCF is worth less than today's price; the market's discount holds if DTC scaling only treads water against the cable runoff."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 34,
+        "price": 114.23,
+        "headline": "DTC scales toward mid-teens; FCF compounds.",
+        "why": "Requires DTC margin to keep scaling (guided >=10% FY26, +88% YoY OI) and Experiences to hold its record cash flow as capex pays off. 34% as the central, modestly-positive outcome.",
+        "what": [
+          "The modal path: streaming operating margin grinds from ~10% toward mid-teens on operating leverage (ESPN DTC, bundling, Hulu fully owned), Experiences compounds mid-single-digit as the $60B runway adds supply-constrained capacity, and the combined engine outgrows the shrinking linear base. Revenue compounds ~5% and the operating margin climbs past 20%; FCF margin grinds toward 14%.",
+          "DCF ~$114 (+14%) — the cheap-turnaround read. A franchise with a scaling DTC margin and a record cash engine in Experiences, at ~17x FCF, re-rates modestly above today's price once the growth core clears the legacy drag."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 18,
+        "price": 173.2,
+        "headline": "Streaming hits mid-teens; parks reaccelerate.",
+        "why": "DTC scaling plus a $60B-funded Experiences reacceleration and a smooth CEO handoff make a real compounding case credible. ~18% weight on the turnaround landing.",
+        "what": [
+          "The turnaround compounds: streaming margin reaches mid-teens and keeps climbing as the bundle (Disney+/Hulu/ESPN DTC) gains pricing and scale, the new park capacity opens into resilient demand and reaccelerates Experiences past price-led growth, and FCF margin lifts toward 16%. Revenue compounds ~6% at a margin recovering toward the historical peak.",
+          "DCF ~$173 (+73%) - if the DTC engine becomes the durable growth core and Experiences reaccelerates, the de-rated entry re-rates with the fundamentals; this is the core of the bull."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 222.97,
+        "headline": "Full re-rate; streaming a profit machine.",
+        "why": "Everything works - DTC margins AND Experiences reacceleration AND franchise monetization AND a multiple re-rate, the long-duration tail. ~8%.",
+        "what": [
+          "The full second act: streaming becomes a high-teens-margin profit machine, the IP library and franchises monetize across DTC, parks and consumer products, the new $60B of capacity compounds Experiences for a decade, and Disney re-rates to a growth-media multiple as the linear drag fades into irrelevance. Revenue compounds ~7% at peak margins.",
+          "DCF ~$223 (+123%) - the franchise reclaims a premium compounder valuation; ~8% probability, the asymmetric upside the depressed entry is buying."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "Disney trades at ~$178.6B equity (~$100, down ~9% YTD) — ~22x EV/FCF on $94.4B revenue, an 18.6% and rising operating margin, ~$10.1B FCF against ~$36B net debt. Streaming (DTC) operating income just crossed 10% (+88% YoY, guided to keep scaling), Experiences is a record cash engine (~$2.6B quarterly OI) with a $60B capex runway, and the CEO succession overhang is resolved. The DCF asks whether DTC margin scales toward mid-teens before linear TV erodes the base. The modal case lands +14% — the cheap-turnaround read, with the secular cable decline as the live drag.",
+    "historicalPrices": {
+      "xMin": -6.2,
+      "ipoMarker": "NYSE since '57",
+      "points": [
+        [
+          -6.0,
+          110.0
+        ],
+        [
+          -5.0,
+          150.0
+        ],
+        [
+          -4.2,
+          200.0
+        ],
+        [
+          -3.3,
+          90.0
+        ],
+        [
+          -2.5,
+          85.0
+        ],
+        [
+          -1.5,
+          110.0
+        ],
+        [
+          -0.8,
+          120.0
+        ],
+        [
+          -0.3,
+          92.0
+        ],
+        [
+          -0.05,
+          100.04
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 13%",
+        "body": "Cable erodes faster than DTC scales; ~$36 (-64%)."
+      },
+      {
+        "label": "Bear 27%",
+        "body": "DTC profits but linear decline offsets it; ~$66 (-34%)."
+      },
+      {
+        "label": "Base 34%",
+        "body": "DTC scales toward mid-teens; FCF compounds; ~$114 (+14%)."
+      },
+      {
+        "label": "Bull 18%",
+        "body": "Streaming hits mid-teens; parks reaccelerate; ~$173 (+73%)."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "Full re-rate; streaming a profit machine; ~$223 (+123%)."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end late Sept · FQ2 2026 (May'26) results",
+      "sources": "Sources: SEC XBRL company facts (CIK 1744489; revenue, GAAP operating income/margin, cash flow, debt), Disney FQ2 2026 release (DTC revenue $5.49B +13% / operating income $582M +88% / 10.6% margin; Experiences revenue $9.5B +7% / OI $2.6B records; domestic park visitation -1%; dividend +50%, buyback >=$8B; $60B/10-yr Experiences capex). Revenue modeled as a growth path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs NFLX/CMCSA.",
+      "chartReference": {
+        "historyYears": [
+          2021,
+          2022,
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          67.4,
+          82.7,
+          88.9,
+          91.4,
+          94.4
+        ],
+        "historyOpMargin": [
+          11.5,
+          14.7,
+          14.5,
+          17.1,
+          18.6
+        ],
+        "historyFcf": [
+          2.0,
+          1.1,
+          4.9,
+          8.6,
+          10.1
+        ],
+        "historyEvRev": [
+          4.9,
+          2.7,
+          2.2,
+          2.4,
+          2.3
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Entertainment + Sports",
+        "segmentB": "Experiences",
+        "histEntSplit": [
+          0.62,
+          0.63,
+          0.62,
+          0.61,
+          0.6
+        ],
+        "chart6Title": "Equity build (Op EV - net debt)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 110.38,
+        "upsidePct": 10.3
+      },
+      "market": {
+        "marketCapBillion": 178.6,
+        "sharesOutstandingMillion": 1785.3,
+        "cashBillion": 5.7,
+        "netDebtBillion": 42.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.13,
+          "expectedPerShare": 36.38,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 1.0,
+            "wacc": 0.1
+          },
+          "dcfPath": {
+            "rev_b": 94.4,
+            "rev_path": [
+              0.01,
+              0.01,
+              0.01,
+              0.01,
+              0.01
+            ],
+            "op_margin": [
+              0.16,
+              0.16,
+              0.16,
+              0.17,
+              0.17
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "term_g": 0.02,
+            "fcf": [
+              7.628,
+              7.704,
+              7.781,
+              8.841,
+              8.929
+            ],
+            "cash": 5.7,
+            "net_debt": 42.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1790,
+            "distress": 0.0,
+            "pv_fcf": [
+              6.935,
+              6.367,
+              5.846,
+              6.039,
+              5.544
+            ],
+            "sum_pv_fcf": 30.73,
+            "terminal_value": 113.84,
+            "pv_terminal": 70.69,
+            "op_ev": 101.42,
+            "total_equity": 65.12,
+            "dcf_per_share": 36.38
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.0,
+              1.8,
+              1.7,
+              1.6,
+              1.5
+            ],
+            "ev_fcf_multiple": [
+              13.0,
+              13.0,
+              13.0,
+              13.0,
+              13.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.27,
+          "expectedPerShare": 65.91,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 3.0,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 94.4,
+            "rev_path": [
+              0.03,
+              0.03,
+              0.03,
+              0.03,
+              0.03
+            ],
+            "op_margin": [
+              0.18,
+              0.18,
+              0.19,
+              0.19,
+              0.19
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              9.723,
+              10.015,
+              11.347,
+              11.687,
+              12.038
+            ],
+            "cash": 5.7,
+            "net_debt": 42.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1780,
+            "distress": 0.0,
+            "pv_fcf": [
+              8.879,
+              8.353,
+              8.642,
+              8.129,
+              7.647
+            ],
+            "sum_pv_fcf": 41.65,
+            "terminal_value": 176.27,
+            "pv_terminal": 111.97,
+            "op_ev": 153.62,
+            "total_equity": 117.32,
+            "dcf_per_share": 65.91
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.5,
+              2.3,
+              2.2,
+              2.1,
+              2.0
+            ],
+            "ev_fcf_multiple": [
+              16.0,
+              15.0,
+              15.0,
+              15.0,
+              15.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.34,
+          "expectedPerShare": 114.23,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 4.6,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 94.4,
+            "rev_path": [
+              0.05,
+              0.05,
+              0.05,
+              0.04,
+              0.04
+            ],
+            "op_margin": [
+              0.19,
+              0.2,
+              0.21,
+              0.21,
+              0.22
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              10.903,
+              12.489,
+              14.206,
+              14.775,
+              16.548
+            ],
+            "cash": 5.7,
+            "net_debt": 42.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1760,
+            "distress": 0.0,
+            "pv_fcf": [
+              10.003,
+              10.512,
+              10.97,
+              10.467,
+              10.755
+            ],
+            "sum_pv_fcf": 52.71,
+            "terminal_value": 284.07,
+            "pv_terminal": 184.63,
+            "op_ev": 237.34,
+            "total_equity": 201.04,
+            "dcf_per_share": 114.23
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.0,
+              2.8,
+              2.7,
+              2.6,
+              2.5
+            ],
+            "ev_fcf_multiple": [
+              19.0,
+              18.0,
+              17.0,
+              17.0,
+              17.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.18,
+          "expectedPerShare": 173.2,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 5.6,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 94.4,
+            "rev_path": [
+              0.06,
+              0.06,
+              0.06,
+              0.05,
+              0.05
+            ],
+            "op_margin": [
+              0.2,
+              0.21,
+              0.22,
+              0.23,
+              0.23
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              13.008,
+              14.85,
+              16.865,
+              18.889,
+              19.833
+            ],
+            "cash": 5.7,
+            "net_debt": 42.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1740,
+            "distress": 0.0,
+            "pv_fcf": [
+              11.989,
+              12.614,
+              13.204,
+              13.63,
+              13.19
+            ],
+            "sum_pv_fcf": 64.63,
+            "terminal_value": 410.54,
+            "pv_terminal": 273.03,
+            "op_ev": 337.66,
+            "total_equity": 301.36,
+            "dcf_per_share": 173.2
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.5,
+              3.3,
+              3.2,
+              3.1,
+              3.0
+            ],
+            "ev_fcf_multiple": [
+              22.0,
+              21.0,
+              21.0,
+              21.0,
+              21.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 222.97,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 6.6,
+            "wacc": 0.082
+          },
+          "dcfPath": {
+            "rev_b": 94.4,
+            "rev_path": [
+              0.07,
+              0.07,
+              0.07,
+              0.06,
+              0.06
+            ],
+            "op_margin": [
+              0.21,
+              0.22,
+              0.23,
+              0.24,
+              0.25
+            ],
+            "wacc_path": [
+              0.082,
+              0.082,
+              0.082,
+              0.082,
+              0.082
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              14.141,
+              16.212,
+              18.503,
+              20.839,
+              23.389
+            ],
+            "cash": 5.7,
+            "net_debt": 42.0,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 1720,
+            "distress": 0.0,
+            "pv_fcf": [
+              13.069,
+              13.848,
+              14.607,
+              15.204,
+              15.772
+            ],
+            "sum_pv_fcf": 72.5,
+            "terminal_value": 515.06,
+            "pv_terminal": 347.31,
+            "op_ev": 419.81,
+            "total_equity": 383.51,
+            "dcf_per_share": 222.97
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.0,
+              3.8,
+              3.7,
+              3.6,
+              3.5
+            ],
+            "ev_fcf_multiple": [
+              24.0,
+              22.0,
+              22.0,
+              22.0,
+              22.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Media + theme parks - Disney (IP library/franchises, parks, the Disney+/Hulu/ESPN DTC bundle) vs Netflix in streaming, Comcast/Universal in parks, Warner Bros. Discovery and Paramount in legacy media; auditing a cornered-resource/brand Power against the secular decline of linear TV.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 4,
+            "note": "Massive content and capex scale - Disney spreads franchise production, a global parks footprint and DTC tech across the industry's largest revenue base; a genuine cost advantage."
+          },
+          "networkEconomies": {
+            "score": 2,
+            "note": "The Disney+/Hulu/ESPN bundle plus loyalty/MagicBand data create modest cross-sell pull, but streaming is not a hard network - subscribers churn freely."
+          },
+          "counterPositioning": {
+            "score": 0,
+            "note": "None - Disney is the incumbent being disrupted by streaming and cord-cutting, not the disruptor; it had to cannibalize its own cable economics to build DTC."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Weak - streaming is month-to-month and promiscuous; parks/cruise loyalty is real but a small share of revenue."
+          },
+          "branding": {
+            "score": 4,
+            "note": "A top global consumer brand - Disney/Pixar/Marvel/Star Wars command pricing power in parks and a trust premium with families; durable but not converting fast while linear declines."
+          },
+          "corneredResource": {
+            "score": 5,
+            "note": "The dominant Power: an irreplaceable IP/franchise library (a century of characters + ESPN sports rights) that monetizes across DTC, parks and products - the hardest asset in media to replicate."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Decades of theme-park operating and franchise-development know-how; real but not a primary moat versus the IP itself."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Netflix (NFLX)",
+            "kind": "public",
+            "note": "The streaming scale leader and DTC-margin benchmark Disney's turnaround is measured against; far higher streaming margin.",
+            "growth": 0.14,
+            "margin": 0.27,
+            "multiple": "~12x EV/sales"
+          },
+          {
+            "name": "Comcast / Universal (CMCSA)",
+            "kind": "public",
+            "note": "The parks rival (Epic Universe) and a cable peer; the closest media-plus-parks comp, cheaper multiple.",
+            "growth": 0.02,
+            "margin": 0.19,
+            "multiple": "~7x EV/FCF"
+          },
+          {
+            "name": "Warner Bros. Discovery (WBD)",
+            "kind": "public",
+            "note": "Legacy-media peer mid-restructuring; the cautionary 'cable decline + DTC build + leverage' comparison.",
+            "growth": 0.0,
+            "margin": 0.1,
+            "multiple": "~6x EV/EBITDA"
+          },
+          {
+            "name": "Paramount (PARA)",
+            "kind": "public",
+            "note": "Sub-scale legacy media + DTC; the 'left behind by streaming economics' comp.",
+            "growth": 0.0,
+            "margin": 0.08,
+            "multiple": "~7x EV/EBITDA"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "cornered_resource",
+            "who": "Cord-cutting / linear decline",
+            "falsifier": "Cable-affiliate and ad revenue erode faster than DTC + Experiences grow, so the franchise library's legacy monetization shrinks faster than the new channels replace it."
+          },
+          {
+            "vector": "branding",
+            "who": "Netflix / streaming competition",
+            "falsifier": "DTC margin stalls near 10% as bundle pricing and ESPN DTC fail to scale against Netflix's lead, and subscriber growth/churn worsens."
+          },
+          {
+            "vector": "scale_economies",
+            "who": "Parks demand softness",
+            "falsifier": "Domestic attendance stays negative and the $60B capacity opens into a soft consumer, so Experiences growth stays price-led and the cash engine stalls."
+          }
+        ],
+        "takeaway": "Disney's cornered-resource Power is genuine and durable (high) - a century-deep IP/franchise library plus ESPN sports rights that monetize across streaming, parks and consumer products, the hardest asset in media to replicate, backed by a top brand and the industry's largest scale. The Audit: the live threat is the secular decline of linear TV/cable affiliate revenue, and the question is whether the scaling DTC margin (just crossed 10%, +88% YoY) and the record Experiences engine ($2.6B quarterly OI, $60B runway) outgrow that runoff before it erodes the base. The DCF tests the pace; the modal case lands +14% - the cheap-turnaround read, with ~$36B net debt amplifying both tails."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The streaming turnaround is no longer a maybe.",
+            "body": "DTC operating income +88% YoY to a 10.6% margin (first quarter above double digits, guided >=10% FY26) - the central bull thesis is already printing, not projected."
+          },
+          {
+            "label": "Experiences is a record cash engine.",
+            "body": "~$2.6B quarterly OI (a record), a $60B/10-yr capex runway adding supply-constrained capacity - the parks fund the streaming build and anchor the floor."
+          },
+          {
+            "label": "Linear TV is the live drag, not a tail risk.",
+            "body": "Cable-affiliate and ad revenue are in structural decline; the whole question is whether DTC + Experiences outgrow it, and the bear/base fork turns on that pace."
+          },
+          {
+            "label": "The CEO overhang is resolved.",
+            "body": "Josh D'Amaro (28-yr veteran who ran Experiences) named CEO, effective at the March annual meeting - the succession question that hung over the stock is settled, though a first-time CEO carries transition risk."
+          },
+          {
+            "label": "Net debt ~$36B is the amplifier.",
+            "body": "Unlike the net-cash mega-caps, ~$36B of net debt levers the equity to EBITDA - the modal case re-rates above spot, but the downside scenarios bite harder."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "DTC operating margin scales past low-teens toward mid-teens · ESPN DTC + bundle pricing hold · Experiences reaccelerates beyond price-led growth as new capacity opens · FCF compounds despite the $60B capex"
+          },
+          {
+            "label": "Bear validation",
+            "body": "DTC margin stalls near 10% while linear affiliate/ad revenue keeps eroding · domestic park attendance stays negative · content underperforms (hit-driven) · net debt rises on the capex without offsetting EBITDA"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "if linear TV erodes faster than DTC + Experiences can grow - the growth core never clears the legacy drag - re-rate the terminal toward a declining-media-conglomerate multiple rather than a scaling-streamer one"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "DTC / streaming",
+          "definition": "Direct-to-consumer (Disney+, Hulu, ESPN DTC) operating income; just crossed a 10% margin (+88% YoY), the turnaround metric."
+        },
+        {
+          "term": "Linear networks / affiliate",
+          "definition": "Traditional cable/broadcast (ABC, ESPN cable) and carriage fees - in secular decline as cord-cutting erodes the base."
+        },
+        {
+          "term": "Experiences",
+          "definition": "The parks, resorts, cruise and consumer-products segment - a record cash engine (~$2.6B quarterly OI), $60B/10-yr capex runway."
+        },
+        {
+          "term": "Cornered resource (IP)",
+          "definition": "Helmer Power: the franchise/IP library (Disney, Pixar, Marvel, Star Wars, ESPN) monetized across streaming and parks."
+        },
+        {
+          "term": "FCF margin",
+          "definition": "Free cash flow / revenue (~11% FY25, ~$10.1B); what 18.6% operating margin converts to once the $60B capex is funded."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-14_20-19",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
