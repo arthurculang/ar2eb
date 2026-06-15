@@ -662,7 +662,7 @@ function PortfolioPage() {
             the memo's quantitative upside, the operator's conviction, and the
             Arthur Indicator — with a hurdle and per-name cap. Methodology:{' '}
             <a href="https://github.com/arthurculang/ar2eb/blob/main/spec/memo-spec__v023__2026-05-23_21-30.md#12-portfolio-construction-draft"
-               target="_blank" rel="noopener noreferrer">spec §12</a>.
+               target="_blank" rel="noopener noreferrer">the portfolio-construction methodology</a>.
           </p>
         </div>
       </section>
@@ -889,7 +889,7 @@ function IndicatorPage() {
     <>
       <section className="portfolio-head" data-screen-label="Arthur Indicator">
         <div className="wrap">
-          <div className="eyebrow">Valuation screen · §13</div>
+          <div className="eyebrow">Valuation screen</div>
           <h1>The Arthur Indicator</h1>
           <p className="lead">
             One number for a hard question: <em>am I paying a fair price for the
@@ -914,7 +914,7 @@ function IndicatorPage() {
               names beat the richest by a statistically significant margin over a{' '}
               <b>3-year</b> hold. As a <b>broad-market value factor, no</b> — across the
               whole market the edge collapses to a coin flip. So it earns its place as a{' '}
-              <b>gentle, long-horizon tilt</b> in position sizing (§12) — never a
+              <b>gentle, long-horizon tilt</b> in position sizing — never a
               market-wide signal, never a timing tool, never leaned on. The structure,
               evidence, and caveats follow, top-down.
             </p>
@@ -1114,7 +1114,7 @@ function IndicatorPage() {
             On the broad market the cheap-minus-rich spread is a <b>coin flip</b>. So the
             Indicator is <b>not a universal value factor</b> — it's a relative screen that
             works <em>among quality-growth compounders</em> (cheap value/cyclical names are
-            often cheap for a reason). That's the honest scope, and it's exactly why §12
+            often cheap for a reason). That's the honest scope, and it's exactly why the sizing rule
             uses it as a <b>gentle tilt on a growth/quality book</b> — never leaned on hard,
             and never applied as a market-wide signal.
           </p>
@@ -1137,7 +1137,7 @@ function IndicatorPage() {
             at high and stable gross margins and high returns on capital, with a long
             runway to keep reinvesting at those returns — so intrinsic value compounds
             for years. The observable ingredients: gross margin, durable growth, expanding
-            returns on capital, pricing power, and a widening moat (Helmer's 7 Powers, §6d).
+            returns on capital, pricing power, and a widening moat (Helmer's 7 Powers).
           </p>
           <p>
             The honest catch — and a real limit on the comparison above — is that
@@ -1165,9 +1165,9 @@ function IndicatorPage() {
           <p>
             So "compounder" isn't a label you apply with certainty — it's a{' '}
             <b>hypothesis</b>, best identified mid-lifecycle, and only ever probabilistically.
-            Underwriting that hypothesis — with explicit scenarios and falsifiers (§6c), a
-            moat audit (§6d), and a read on whether management can keep reinvesting well
-            (§14 People) — is the whole job of a memo here. You will sometimes be wrong,
+            Underwriting that hypothesis — with explicit scenarios and falsifiers, a
+            moat audit, and a read on whether management can keep reinvesting well
+            (the People scorecard) — is the whole job of a memo here. You will sometimes be wrong,
             which is exactly why the Indicator is a gentle tilt and sizing leans on a
             probability-weighted DCF, not on the label.
           </p>
@@ -1188,7 +1188,7 @@ function IndicatorPage() {
                 Full results and the reproduction commands live in{' '}
                 <a href="https://github.com/arthurculang/ar2eb/blob/main/scripts/_models/ai2_results.md"
                    target="_blank" rel="noopener noreferrer">ai2_results.md</a>;
-                methodology in spec §13.
+                methodology in the spec.
               </p>
             </div>
           </details>
