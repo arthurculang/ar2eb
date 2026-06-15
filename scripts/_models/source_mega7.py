@@ -21,6 +21,10 @@ CIK["DIS"] = 1744489
 CIK["DAL"] = 27904       # Delta Air Lines, Inc.
 CIK["DE"] = 315189       # Deere & Company
 CIK["CART"] = 1579091    # Maplebear Inc. (Instacart)
+CIK["RDDT"] = 1713445    # Reddit, Inc.
+CIK["TOST"] = 1650164    # Toast, Inc.
+CIK["WRBY"] = 1504776    # Warby Parker, Inc.
+CIK["YOU"] = 1856314     # Clear Secure, Inc.
 CIK["U"] = 1810806      # Unity Software Inc. (corrected from research SEC path)
 
 TICKERS = ["META", "AMZN", "GOOGL", "AAPL", "NVDA", "TSLA", "DIS"]
@@ -28,7 +32,8 @@ SPOT = {"META": 566.98, "AMZN": 238.55, "GOOGL": 359.68, "AAPL": 291.13,
         "NVDA": 205.19, "TSLA": 406.43, "DIS": 100.04,
         # FCF+ batch (spots from research; 0 = pending research → mktcap ignored)
         "CMG": 32.0, "DAL": 82.0, "HOOD": 93.0, "DE": 577.0, "ALGN": 176.5,
-        "ADSK": 198.0, "U": 27.91, "CART": 41.90}
+        "ADSK": 198.0, "U": 27.91, "CART": 41.90,
+        "CROX": 126.0, "SHOP": 108.0, "RDDT": 168.0, "TOST": 25.0, "WRBY": 25.3, "YOU": 51.0}
 
 
 def series(ticker):
