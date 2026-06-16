@@ -1,0 +1,592 @@
+ticker: TEM
+company: Tempus AI
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 47.82
+market:
+  market_cap_billion: 8.59
+  shares_outstanding_million: 179.6
+  cash_billion: 0.644
+  net_debt_billion: 0.56
+  extras:
+  - $1.3B revenue FY25 (+83%, Ambry-boosted); FY26 guide $1.59-1.60B (+25%)
+  - Adj-EBITDA inflected positive (FY26 guide ~$65M) but SBC ~$136M/yr -> owner-FCF still negative
+  - Net cash ~$84M ($0.644B cash vs $0.560B Ares term loan); Lefkofsky ~60% voting control
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Low
+  themes:
+  - precision-medicine-oncology
+  primary_theme: precision-medicine-oncology
+central_question: At ~6.6x sales and near-breakeven, is the market paying for proven cash economics, or for a data-moat plus
+  a margin inflection that SBC currently swamps and the modal case doesn't deliver?
+thesis: Tempus AI is AI-precision-oncology diagnostics plus a multimodal health-data flywheel. Revenue is $1.3B, growing 25-36%,
+  adj-EBITDA just inflected positive (FY26 guide ~$65M). But SBC runs ~$136M/yr — more than 10% of revenue and larger than
+  that adj-EBITDA — so true owner free cash flow is still negative. At $47.82 (~$8.6B cap, down ~20% YTD, net cash ~$84M)
+  the modal 5-year DCF is $30.42, about 36% below spot. Only the bull case — sustained 21%+ growth and a ~23% terminal margin
+  — clears the price. You are paying today for continued hypergrowth and an unproven margin turn.
+chart_reference:
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.532
+  - 0.693
+  - 1.303
+  history_op_margin:
+  - -50.0
+  - -29.0
+  - -19.0
+  history_fcf:
+  - -0.21
+  - -0.13
+  - -0.12
+  history_ev_rev:
+  - 10.0
+  - 9.0
+  - 6.5
+page3_chart_config:
+  segment_a: Genomics / Diagnostics
+  segment_b: Data & Applications
+  hist_ent_split:
+  - 0.8
+  - 0.78
+  - 0.75
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY23-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec 31  ·  FY2025 (Feb'26) + Q1'26 results
+  sources: 'Sources: Tempus AI FY2025 10-K + Q1''26 8-K (CIK 1717115), FY2026 guidance. Revenue as a growth-rate path off
+    FY25; FCF = revenue x an SBC-adjusted owner-FCF margin (the ~$136M/yr SBC exceeds the +$65M adj-EBITDA, so the modeled
+    margin starts negative); Gordon terminal at scenario WACC. EV/sales vs precision-diagnostics peers.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.14
+    expected_per_share: 3.45
+    headline: Growth collapses, never durably profitable
+    narrative:
+    - Revenue growth fades toward ~8% as oncology test volume saturates and the data-licensing pipeline stalls. The margin
+      path inches from −8% to only 5% — operating leverage never arrives because SBC and clinical-lab costs scale with revenue.
+    - The company de-rates to a distressed multiple as the market stops paying for a moat that did not compound. Dilution
+      from continued stock comp erodes per-share value. The DCF lands at $3.45, roughly 93% below spot.
+    probability_rationale: A ~14% tail. Requires both the diagnostics franchise to stall and Data and Applications to stop
+      scaling — possible if pharma budgets tighten and foundation-model rivals commoditize the data, but it contradicts the
+      +40%+ data-licensing trend now in evidence.
+    dcf_metrics:
+      cagr_5y: 8.1
+      wacc: 0.115
+    dcf_path:
+      rev_b: 1.3
+      rev_path:
+      - 0.15
+      - 0.1
+      - 0.07
+      - 0.05
+      - 0.04
+      op_margin:
+      - -0.06
+      - -0.02
+      - 0.02
+      - 0.05
+      - 0.07
+      wacc_path:
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      term_g: 0.03
+      fcf:
+      - -0.12
+      - -0.066
+      - 0.0
+      - 0.055
+      - 0.096
+      cash: 0.644
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 200
+      distress: 0.0
+      pv_fcf:
+      - -0.108
+      - -0.053
+      - 0.0
+      - 0.036
+      - 0.056
+      sum_pv_fcf: -0.07
+      terminal_value: 1.16
+      pv_terminal: 0.68
+      op_ev: 0.61
+      total_equity: 0.69
+      dcf_per_share: 3.45
+    chart_data:
+      ev_rev_multiple:
+      - 5.0
+      - 4.0
+      - 3.0
+      - 2.5
+      - 2.0
+      ev_fcf_multiple:
+      - 60.0
+      - 40.0
+      - 30.0
+      - 26.0
+      - 22.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.28
+    expected_per_share: 13.47
+    headline: Decelerates hard, thin margins persist
+    narrative:
+    - Growth slows to ~12% as Guardant, Natera, and Caris pressure diagnostics pricing and reimbursement caps revenue per
+      test. The data flywheel keeps compounding but cannot offset a maturing core diagnostics line.
+    - Margins climb from −4% to ~11% — positive, but far short of software economics, because SBC and lab infrastructure stay
+      heavy. The DCF is $13.47, about 72% below spot. The market re-rates toward a mid-teens-growth diagnostics comp.
+    probability_rationale: A ~28% weight, the second-likeliest outcome. This is the world where TEM is a good but ordinary
+      diagnostics-plus-data business — real growth, real competition, no durable software margin. Pricing pressure is the
+      swing variable.
+    dcf_metrics:
+      cagr_5y: 12.1
+      wacc: 0.105
+    dcf_path:
+      rev_b: 1.3
+      rev_path:
+      - 0.2
+      - 0.15
+      - 0.11
+      - 0.08
+      - 0.07
+      op_margin:
+      - -0.02
+      - 0.02
+      - 0.07
+      - 0.1
+      - 0.13
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.035
+      fcf:
+      - -0.062
+      - 0.0
+      - 0.1
+      - 0.172
+      - 0.253
+      cash: 0.644
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 196
+      distress: 0.0
+      pv_fcf:
+      - -0.056
+      - 0.0
+      - 0.074
+      - 0.115
+      - 0.154
+      sum_pv_fcf: 0.29
+      terminal_value: 3.74
+      pv_terminal: 2.27
+      op_ev: 2.56
+      total_equity: 2.64
+      dcf_per_share: 13.47
+    chart_data:
+      ev_rev_multiple:
+      - 5.5
+      - 5.0
+      - 4.5
+      - 4.0
+      - 3.5
+      ev_fcf_multiple:
+      - 55.0
+      - 38.0
+      - 30.0
+      - 26.0
+      - 22.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 30.42
+    headline: Solid growth, but modal value sits below spot
+    narrative:
+    - Revenue compounds ~16% as oncology volume grows ~28% and Data and Applications scales the ~80%-margin pharma-licensing
+      line. The AstraZeneca-Pathos deal type repeats, and the 7.3M-record library keeps feeding both segments.
+    - Margins ramp from −2% to ~17% as the data mix lifts the blend, but SBC keeps owner-FCF modest early. The DCF is $30.42
+      — a healthy business, about 36% below spot. The modal case simply does not support $47.82.
+    probability_rationale: The single most-likely path at ~33%. It assumes the current trajectory broadly holds — mid-teens
+      growth, a scaling data line, gradual margin gains — without the step-change in operating leverage the bull requires.
+      It is the honest anchor for the finding.
+    dcf_metrics:
+      cagr_5y: 16.3
+      wacc: 0.1
+    dcf_path:
+      rev_b: 1.3
+      rev_path:
+      - 0.25
+      - 0.2
+      - 0.15
+      - 0.12
+      - 0.1
+      op_margin:
+      - 0.0
+      - 0.06
+      - 0.11
+      - 0.15
+      - 0.19
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.04
+      fcf:
+      - -0.033
+      - 0.078
+      - 0.202
+      - 0.327
+      - 0.47
+      cash: 0.644
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 192
+      distress: 0.0
+      pv_fcf:
+      - -0.03
+      - 0.064
+      - 0.152
+      - 0.223
+      - 0.292
+      sum_pv_fcf: 0.7
+      terminal_value: 8.15
+      pv_terminal: 5.06
+      op_ev: 5.76
+      total_equity: 5.84
+      dcf_per_share: 30.42
+    chart_data:
+      ev_rev_multiple:
+      - 6.0
+      - 5.5
+      - 5.0
+      - 4.5
+      - 4.0
+      ev_fcf_multiple:
+      - 50.0
+      - 32.0
+      - 26.0
+      - 22.0
+      - 19.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.17
+    expected_per_share: 61.38
+    headline: Data flywheel drives a real margin inflection
+    narrative:
+    - Growth holds at ~21% as Data and Applications compounds 40%+ and the ~80%-margin data line becomes a larger share of
+      the mix. The multimodal library proves hard to replicate, and pharma standardizes on Tempus for oncology data.
+    - 'Operating leverage finally clears SBC: margins ramp from 2% to ~23%, reaching a durable-profit inflection. The DCF
+      is $61.38, about 28% above spot. This is the lowest scenario that justifies today''s price.'
+    probability_rationale: A ~17% weight. Requires two things at once — sustained high growth AND a genuine terminal margin,
+      not just adj-EBITDA. Plausible if the data moat re-rates the whole company, but it is the entry hurdle, not the expected
+      case.
+    dcf_metrics:
+      cagr_5y: 20.6
+      wacc: 0.095
+    dcf_path:
+      rev_b: 1.3
+      rev_path:
+      - 0.3
+      - 0.25
+      - 0.2
+      - 0.16
+      - 0.13
+      op_margin:
+      - 0.04
+      - 0.1
+      - 0.16
+      - 0.21
+      - 0.25
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.045
+      fcf:
+      - 0.034
+      - 0.169
+      - 0.355
+      - 0.559
+      - 0.764
+      cash: 0.644
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 188
+      distress: 0.0
+      pv_fcf:
+      - 0.031
+      - 0.141
+      - 0.27
+      - 0.389
+      - 0.485
+      sum_pv_fcf: 1.32
+      terminal_value: 15.97
+      pv_terminal: 10.14
+      op_ev: 11.46
+      total_equity: 11.54
+      dcf_per_share: 61.38
+    chart_data:
+      ev_rev_multiple:
+      - 6.5
+      - 6.0
+      - 5.5
+      - 5.0
+      - 4.5
+      ev_fcf_multiple:
+      - 45.0
+      - 30.0
+      - 24.0
+      - 20.0
+      - 17.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 118.12
+    headline: Becomes the oncology-data standard
+    narrative:
+    - 'TEM wins the platform: the multimodal library becomes the default substrate for oncology drug development and clinical
+      decisioning. Revenue compounds ~25%, with Data and Applications the growth engine at software gross margins.'
+    - Margins ramp from 5% to ~29% as the high-margin data mix dominates and scale economics compound. The DCF reaches $118.12,
+      about 147% above spot — a platform-winner outcome, not a diagnostics multiple.
+    probability_rationale: 'An ~8% tail. The data-moat optionality the price already embeds, paid off in full: a network-and-scale
+      flywheel that no rival replicates. Low probability, but it is the asymmetric reason a long position is debated at all.'
+    dcf_metrics:
+      cagr_5y: 25.2
+      wacc: 0.09
+    dcf_path:
+      rev_b: 1.3
+      rev_path:
+      - 0.36
+      - 0.3
+      - 0.25
+      - 0.2
+      - 0.16
+      op_margin:
+      - 0.07
+      - 0.14
+      - 0.21
+      - 0.27
+      - 0.31
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.05
+      fcf:
+      - 0.088
+      - 0.276
+      - 0.546
+      - 0.862
+      - 1.16
+      cash: 0.644
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 186
+      distress: 0.0
+      pv_fcf:
+      - 0.081
+      - 0.232
+      - 0.422
+      - 0.611
+      - 0.754
+      sum_pv_fcf: 2.1
+      terminal_value: 30.45
+      pv_terminal: 19.79
+      op_ev: 21.89
+      total_equity: 21.97
+      dcf_per_share: 118.12
+    chart_data:
+      ev_rev_multiple:
+      - 7.0
+      - 6.5
+      - 6.0
+      - 5.5
+      - 5.0
+      ev_fcf_multiple:
+      - 40.0
+      - 28.0
+      - 22.0
+      - 18.0
+      - 15.0
+historical_prices:
+  ipo_marker: IPO Jun '24
+  x_min: -2.0
+  points:
+  - - -1.9
+    - 37.0
+  - - -1.5
+    - 55.0
+  - - -1.0
+    - 70.0
+  - - -0.7
+    - 103.0
+  - - -0.5
+    - 60.0
+  - - -0.3
+    - 50.0
+  - - -0.05
+    - 47.82
+weighting_rationale:
+- label: Ultra Bear 14%
+  body: Growth fades to ~8%, margin tops out ~5%, distressed re-rate; DCF $3.45.
+- label: Bear 28%
+  body: ~12% growth, pricing pressure, margins ~11% but thin; DCF $13.47.
+- label: Base 33%
+  body: ~16% growth, data line scales, margins ~17%; DCF $30.42 — below spot.
+- label: Bull 17%
+  body: ~21% growth plus a ~23% terminal margin; DCF $61.38 — clears spot.
+- label: Ultra Bull 8%
+  body: ~25% growth, software margins, data standard; DCF $118.12.
+appendix:
+  pushback:
+  - label: The moat is real and hard to replicate
+    body: 7.3M multimodal records (1.3M genomic, 1.4M imaging) feeding an ~80%-margin licensing flywheel is a cornered resource
+      rivals can't quickly assemble.
+  - label: Data and Applications is compounding +40%+
+    body: If data-licensing keeps growing 44% as in Q1'26, the high-margin mix re-rates the whole company toward the bull/ultra-bull
+      path.
+  - label: Ambry adds scale and a funnel
+    body: The ~$600M Ambry deal added hereditary-cancer testing volume that feeds more records into the library — scale economics,
+      not just revenue.
+  - label: Adj-EBITDA already inflected positive
+    body: Q4'25 was +$12.9M and FY26 guides ~$65M; the margin turn the base needs may already be underway, just masked by
+      SBC.
+  - label: Pharma is validating the data, not just buying tests
+    body: The $200M AstraZeneca-Pathos foundation-model deal prices the data asset directly — a repeatable, capital-light
+      revenue type.
+  triggers:
+  - label: Bull validation
+    body: Data and Applications sustains 40%+ growth; gross margin and adj-EBITDA margin both expand while SBC falls as a
+      share of revenue; new multi-year pharma data deals sign.
+  - label: Bear validation
+    body: Diagnostics revenue-per-test compresses under Guardant/Natera/Caris; total growth slips toward the low teens; SBC
+      stays above adj-EBITDA so owner-FCF remains negative.
+  - label: Reframe needed
+    body: Foundation models trained on open or competitor data erode the licensing premium, or reimbursement cuts diagnostics
+      economics — either would collapse the ~80%-margin moat thesis.
+glossary:
+- term: Multimodal data library
+  definition: TEM's 7.3M+ de-identified patient records linking genomic, imaging, and clinical data — the proprietary asset
+    feeding both diagnostics and licensing.
+- term: Data and Applications
+  definition: The pharma data-licensing segment ($87M in Q1'26, +41%); ~80% gross margin, the high-margin flywheel distinct
+    from the diagnostics lab business.
+- term: MRD
+  definition: Minimal residual disease — detecting trace cancer after treatment; a growth vector for oncology testing volume
+    and a competitive battleground.
+- term: Adj-EBITDA vs owner-FCF
+  definition: Adjusted EBITDA adds back ~$136M/yr of stock comp; true owner free cash flow does not, so the headline positive
+    adj-EBITDA still maps to negative cash today.
+- term: SBC
+  definition: Stock-based compensation (~$136M/yr, over 10% of revenue) — a real, recurring, dilutive cost that exceeds adj-EBITDA
+    and currently swamps the margin story.
+- term: Dual-class control
+  definition: Founder-CEO Eric Lefkofsky holds ~60% of the vote via super-voting shares, concentrating control and limiting
+    outside accountability — a governance flag.
+competitive:
+  arena: 'AI-precision-oncology: molecular diagnostics plus a multimodal-data-licensing flywheel, against Guardant, Natera,
+    Caris, Foundation Medicine (Roche), and Exact Sciences.'
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 2
+      note: Larger record base lowers unit cost of model training and licensing; reinforces the data flywheel as volume grows.
+    network_economies:
+      score: 2
+      note: More clinical use feeds more records, which improve products that attract more use — a data network loop, not
+        a user network.
+    counter_positioning:
+      score: 1
+      note: Software-margin data licensing is a model legacy lab-only rivals can't easily adopt without cannibalizing test
+        revenue.
+    switching_costs:
+      score: 1
+      note: Pharma data pipelines and clinician workflow integration create modest stickiness, but contracts are re-competed.
+    branding:
+      score: 1
+      note: Recognized in AI-oncology, but diagnostics buyers decide on accuracy, reimbursement, and price, not brand.
+    cornered_resource:
+      score: 3
+      note: The 7.3M-record multimodal library (1.3M genomic, 1.4M imaging) is the proprietary, hard-to-replicate asset and
+        the dominant Power.
+    process_power:
+      score: 1
+      note: Multimodal data engineering is a capability, but not yet a durable, uncopyable process advantage.
+  dominant_power: cornered_resource
+  durability: medium
+  rivals:
+  - name: Guardant Health
+    kind: public
+    note: Liquid biopsy and MRD; scaling oncology volume
+    growth: 0.2
+    margin: null
+    multiple: ~6x sales
+  - name: Natera
+    kind: public
+    note: Oncology and women's-health molecular testing; near breakeven
+    growth: 0.3
+    margin: 0.0
+    multiple: ~9x sales
+  - name: Foundation Medicine
+    kind: private
+    note: Roche-owned genomic-profiling division; deep-pocketed
+    growth: null
+    margin: null
+    multiple: division of Roche
+  - name: Exact Sciences
+    kind: public
+    note: Cologuard plus oncology; established but slower-growing
+    growth: 0.12
+    margin: null
+    multiple: ~4x sales
+  threats:
+  - vector: cornered_resource erosion
+    who: foundation-model rivals
+    falsifier: Open or competitor-trained oncology models replicate the data edge, commoditizing the ~80%-margin licensing
+      line.
+  - vector: scale_economies / pricing
+    who: Guardant, Natera, Caris
+    falsifier: Diagnostics price competition compresses revenue per test, starving the volume that feeds the data flywheel.
+  - vector: regulatory / reimbursement
+    who: payers and CMS
+    falsifier: Reimbursement cuts to molecular diagnostics undermine the core economics and the funnel that grows the record
+      library.
+  takeaway: 'A durable Power is plausibly present but not proven. The cornered resource — a 7.3M-record multimodal library
+    feeding an ~80%-margin licensing flywheel with a data-network loop — is genuinely hard to replicate, hence the bull case.
+    But durability is medium, not high: the falsifier is foundation models trained on open or rival data closing the gap,
+    or diagnostics pricing pressure starving the volume that feeds it. The moat must keep Data and Applications compounding
+    40%+ to earn the price.'
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-06-16_07-07
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: '001'
+  pdf_timestamp: 2026-06-16_07-07
