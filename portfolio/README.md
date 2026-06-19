@@ -12,10 +12,16 @@ workflows that keep it current. **Live launch epoch: 1 July 2026** (`epoch` in
   Conviction tier (High 2.0…Low 0.35) is the human input; the §13 Indicator zone (green 1.25…red 0.70, neutral
   where undefined) is the validated-OOS overlay. `weights.yml` carries the full per-name breakdown. Run anytime:
   `python portfolio/build_weights.py`. *(The site `<PortfolioPage>` computes the identical rule, interactively.)*
-- **`track_performance.py`** → **`performance.csv`** — daily weighted-portfolio cumulative
-  return vs. a wide multi-asset benchmark sleeve (**D4**: VT · SPY/QQQ/IWM · EFA/EEM · AGG ·
+- **`track_performance.py`** → **`performance.csv`** + **`risk_stats.csv`** — daily weighted-portfolio
+  cumulative return vs. a wide multi-asset benchmark sleeve (**D4**: VT · SPY/QQQ/IWM · EFA/EEM · AGG ·
   SHY/IEF/TLT · TIP · BIL · GLD · DBC · VNQ; BTC-USD optional), from Yahoo split/div-adjusted
-  closes. Deterministic — **no Claude**. `AI_EPOCH=YYYY-MM-DD` overrides the epoch for testing.
+  closes. **Also computes a modified Sortino ratio** for the portfolio vs. the **S&P 500 (SPY)** and
+  **NASDAQ-100 (QQQ)** — `(annualized return − MAR) / annualized downside deviation`, where the downside
+  deviation is the full-sample target semideviation below the MAR (denominator = all N periods, the
+  statistically-correct form), MAR = realized risk-free (BIL) by default, annualized √252; Sharpe +
+  downside-dev + max-drawdown reported alongside, snapshot persisted to `risk_stats.csv`. Deterministic —
+  **no Claude**. `AI_EPOCH=YYYY-MM-DD` overrides the epoch (e.g. a trailing-window Sortino backtest before
+  launch); `AI_MAR=<annual %>` overrides the target; `--sortino` runs only the Sortino comparison.
 
 ## Automation — Claude Routines (cloud), **`ROUTINES.md`** *(v037)*
 
