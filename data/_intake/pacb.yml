@@ -1,0 +1,932 @@
+# PACB — Pacific Biosciences (NASDAQ) · INTAKE (YOUNG; python-modeled; scaffold-ready)
+ticker: PACB
+company: Pacific Biosciences
+exchange: NASDAQ
+dcf_type: young_company
+date: '2026-06-16'
+spot: 1.32
+market:
+  market_cap_billion: 0.41
+  shares_outstanding_million: 310.5
+  cash_billion: 0.276
+  net_debt_billion: 0.644
+  extras:
+  - $0.276B cash vs ~$0.644B convertible notes (due 2029/2030) → ~$0.368B net debt > the equity cap
+  - 'FY25 revenue $160M (+4%): consumables $82M (+16%), instruments $53.8M (-18%)'
+  - Cash-flow-positive targeted 2027; FY26 opex guided $220-225M; ~310M shares, no reverse split
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Low
+  themes:
+  - omics-life-science-infrastructure
+  primary_theme: omics-life-science-infrastructure
+central_question: At $1.32, can long-read consumables reach cash-flow breakeven before the ~$644M of converts mature in 2029/2030
+  — or does the net debt swamp the equity first?
+thesis: 'Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on
+  them — the #3 behind Illumina''s short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B
+  cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered
+  option, not a cheap value stock. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted
+  2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; a
+  fat long-read-wins tail offsets it. Weighted $1.29 vs spot $1.32, modestly negative.'
+chart_reference:
+  tam_billion: 8
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.2
+  - 0.154
+  - 0.16
+  history_fleet:
+  - 0
+  - 0
+  - 0
+page3_chart_config:
+  peer_y: 20
+  peer_text: Illumina-scale sequencing op margin ~20%
+  fleet_anchor: 0
+  fleet_title: Revenue ramp (log)
+  fleet_reference:
+  valn_anchor_y: 4
+  valn_anchor_text: Profitable sequencing EV/sales ~4-6x
+  valn_caption: At $1.32 the equity looks cheap, but ~$368M net debt means the converts, not revenue, set the value.
+  tam_title: $8B long-read sequencing — PACB share
+  tam_legend:
+  - PACB
+  - Illumina / Oxford Nanopore
+  - Other sequencing
+page3:
+  subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  Q1'26 (May 2026) release
+  sources: 'Sources: PACB FY2025 + Q1''26 results (CIK 1299130), convertible-note terms (1.375% 2030 ~$441M + 1.50% 2029 ~$200M),
+    FY26 opex/breakeven guidance. Equity bridge carries the ~$644M converts as net debt. FCF is NOL-shielded pre-tax over
+    the explicit window. TAM: the long-read serviceable slice of the sequencing market, ~$8B.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.18
+    expected_per_share: 0.0
+    headline: Long-read stalls; equity wiped
+    narrative:
+    - Long-read adoption stalls and instrument placements keep shrinking, leaving FY35 revenue near $0.24B at a thin 6% operating
+      margin. Pull-through never funds the cost base, and burn forces small dilutive raises that add shares at a low price
+      while the value migrates to the noteholders.
+    - With a 50% failure probability the ~$0.644B of converts outrank a tiny equity stub, so common is worth ~$0 in restructuring
+      (distress $0.30/share). DCF -$1.06; probability-weighted contribution rounds to $0. The debt, not the business, sets
+      the floor.
+    probability_rationale: 'The razor/blade pivot is real but unproven at scale, and a 50% p_fail reflects a sub-scale #3
+      carrying net debt above its equity cap into a 2029/2030 maturity wall — plausible but not the modal path.'
+    dcf_metrics:
+      tam_share: 3.0
+      p_fail: 50
+      s2c: 1.4
+    dcf_path:
+      rev_path:
+      - 0.16
+      - 0.16
+      - 0.17
+      - 0.18
+      - 0.19
+      - 0.2
+      - 0.21
+      - 0.22
+      - 0.23
+      - 0.24
+      op_margin:
+      - -0.45
+      - -0.3
+      - -0.2
+      - -0.12
+      - -0.06
+      - -0.02
+      - 0.01
+      - 0.03
+      - 0.05
+      - 0.06
+      wacc_path:
+      - 0.14
+      - 0.137
+      - 0.134
+      - 0.132
+      - 0.129
+      - 0.126
+      - 0.123
+      - 0.121
+      - 0.118
+      - 0.115
+      term_g: 0.03
+      nopat:
+      - -0.072
+      - -0.048
+      - -0.034
+      - -0.022
+      - -0.011
+      - -0.004
+      - 0.002
+      - 0.007
+      - 0.012
+      - 0.014
+      reinvest:
+      - 0.0
+      - 0.0
+      - 0.007
+      - 0.007
+      - 0.007
+      - 0.007
+      - 0.007
+      - 0.007
+      - 0.007
+      - 0.007
+      fcf:
+      - -0.072
+      - -0.048
+      - -0.041
+      - -0.029
+      - -0.019
+      - -0.011
+      - -0.005
+      - -0.001
+      - 0.004
+      - 0.007
+      cash: 0.276
+      net_debt: 0.644
+      raise_total: 0.5
+      dilution_pct: 134
+      final_shares: 727
+      distress: 0.3
+      pv_fcf:
+      - -0.063
+      - -0.037
+      - -0.028
+      - -0.017
+      - -0.01
+      - -0.005
+      - -0.002
+      - -0.0
+      - 0.001
+      - 0.002
+      sum_pv_fcf: -0.16
+      terminal_value: 0.08
+      pv_terminal: 0.03
+      op_ev: -0.13
+      total_equity: -0.5
+      dcf_per_share: -0.69
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.1
+      - 0.15
+      - 0.15
+      - 0.1
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 0.0
+      - 0.0
+      - 1.2
+      - 1.2
+      - 1.2
+      - 1.2
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 5.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.32
+    expected_per_share: 0.0
+    headline: Growth too slow for the debt
+    narrative:
+    - Consumables grow modestly to ~$0.49B FY35 revenue at a 19% margin, but the ramp is too slow to cover the converts before
+      they mature. The business limps toward breakeven while the installed base compounds only gradually and instruments stay
+      soft.
+    - At 35% p_fail the equity barely exists once ~$0.644B of debt is serviced or refinanced into dilution; DCF -$0.35, weighted
+      contribution ~$0. A workable product that simply can't out-run its own balance sheet in time.
+    probability_rationale: The largest single bucket. Reflects the central tension — real but unspectacular long-read uptake
+      against a fixed debt wall — where survival is likely but equity value is not, given how little cushion sits above the
+      converts.
+    dcf_metrics:
+      tam_share: 6.125
+      p_fail: 35
+      s2c: 1.5
+    dcf_path:
+      rev_path:
+      - 0.17
+      - 0.18
+      - 0.2
+      - 0.23
+      - 0.27
+      - 0.32
+      - 0.37
+      - 0.42
+      - 0.46
+      - 0.49
+      op_margin:
+      - -0.35
+      - -0.22
+      - -0.12
+      - -0.04
+      - 0.03
+      - 0.08
+      - 0.12
+      - 0.15
+      - 0.17
+      - 0.19
+      wacc_path:
+      - 0.13
+      - 0.128
+      - 0.126
+      - 0.123
+      - 0.121
+      - 0.119
+      - 0.117
+      - 0.114
+      - 0.112
+      - 0.11
+      term_g: 0.035
+      nopat:
+      - -0.059
+      - -0.04
+      - -0.024
+      - -0.009
+      - 0.008
+      - 0.026
+      - 0.044
+      - 0.063
+      - 0.078
+      - 0.093
+      reinvest:
+      - 0.007
+      - 0.007
+      - 0.013
+      - 0.02
+      - 0.027
+      - 0.033
+      - 0.033
+      - 0.033
+      - 0.027
+      - 0.02
+      fcf:
+      - -0.066
+      - -0.046
+      - -0.037
+      - -0.029
+      - -0.019
+      - -0.008
+      - 0.011
+      - 0.03
+      - 0.052
+      - 0.073
+      cash: 0.276
+      net_debt: 0.644
+      raise_total: 0.2
+      dilution_pct: 46
+      final_shares: 453
+      distress: 0.3
+      pv_fcf:
+      - -0.058
+      - -0.036
+      - -0.026
+      - -0.018
+      - -0.011
+      - -0.004
+      - 0.005
+      - 0.012
+      - 0.019
+      - 0.024
+      sum_pv_fcf: -0.09
+      terminal_value: 1.01
+      pv_terminal: 0.32
+      op_ev: 0.23
+      total_equity: -0.14
+      dcf_per_share: -0.31
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.1
+      - 0.1
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 1.4
+      - 1.4
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 5.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.3
+    expected_per_share: 0.6
+    headline: Breakeven ~2027; equity clears
+    narrative:
+    - Steady long-read adoption plus the FY26 cost cuts (opex $220-225M, headcount -16%) reach cash-flow breakeven around
+      2027. FY35 revenue ~$0.62B at a 21% margin as Revio pull-through (~$229K annualized) and a growing Vega base compound
+      high-margin consumables.
+    - At 22% p_fail the equity barely clears the ~$0.644B of converts rather than being consumed by them; DCF $0.62, weighted
+      contribution $0.55. The modal case is survival with thin positive equity — close to today's price, which is why the
+      headline lands near fair.
+    probability_rationale: Requires the consumables flywheel to fund operations on roughly the guided timeline and the converts
+      to be covered or refinanced cleanly. A demanding but reachable path given the restructuring already underway and the
+      2027 breakeven target.
+    dcf_metrics:
+      tam_share: 7.75
+      p_fail: 22
+      s2c: 1.6
+    dcf_path:
+      rev_path:
+      - 0.17
+      - 0.19
+      - 0.22
+      - 0.27
+      - 0.33
+      - 0.4
+      - 0.47
+      - 0.54
+      - 0.59
+      - 0.62
+      op_margin:
+      - -0.3
+      - -0.16
+      - -0.06
+      - 0.02
+      - 0.07
+      - 0.11
+      - 0.14
+      - 0.17
+      - 0.19
+      - 0.21
+      wacc_path:
+      - 0.12
+      - 0.118
+      - 0.117
+      - 0.115
+      - 0.113
+      - 0.112
+      - 0.11
+      - 0.108
+      - 0.107
+      - 0.105
+      term_g: 0.04
+      nopat:
+      - -0.051
+      - -0.03
+      - -0.013
+      - 0.005
+      - 0.023
+      - 0.044
+      - 0.066
+      - 0.092
+      - 0.112
+      - 0.13
+      reinvest:
+      - 0.006
+      - 0.012
+      - 0.019
+      - 0.031
+      - 0.037
+      - 0.044
+      - 0.044
+      - 0.044
+      - 0.031
+      - 0.019
+      fcf:
+      - -0.057
+      - -0.043
+      - -0.032
+      - -0.026
+      - -0.014
+      - 0.0
+      - 0.022
+      - 0.048
+      - 0.081
+      - 0.111
+      cash: 0.276
+      net_debt: 0.644
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 311
+      distress: 0.3
+      pv_fcf:
+      - -0.051
+      - -0.034
+      - -0.023
+      - -0.017
+      - -0.008
+      - 0.0
+      - 0.01
+      - 0.02
+      - 0.031
+      - 0.038
+      sum_pv_fcf: -0.03
+      terminal_value: 1.78
+      pv_terminal: 0.61
+      op_ev: 0.58
+      total_equity: 0.21
+      dcf_per_share: 0.68
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 5.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.13
+    expected_per_share: 2.98
+    headline: Long-read inflects; debt covered
+    narrative:
+    - 'Long-read genuinely inflects: the Revio and Vega base compounds high-margin consumables to ~$0.78B FY35 revenue at
+      a 26% margin. Operating leverage turns the razor/blade model cash-generative well ahead of the maturity wall.'
+    - At 12% p_fail the converts are comfortably covered and the equity captures the upside above them; DCF $3.25, weighted
+      contribution $2.90. This is the first scenario where financial leverage works for the common holder rather than against
+      it.
+    probability_rationale: 'Needs durable consumable pull-through growth and a clinical/research shift toward long-read accuracy
+      that PACB captures as the #3 — a real but lower-probability inflection, hence 13%.'
+    dcf_metrics:
+      tam_share: 9.75
+      p_fail: 12
+      s2c: 1.8
+    dcf_path:
+      rev_path:
+      - 0.18
+      - 0.21
+      - 0.25
+      - 0.31
+      - 0.39
+      - 0.48
+      - 0.57
+      - 0.65
+      - 0.72
+      - 0.78
+      op_margin:
+      - -0.25
+      - -0.1
+      - 0.02
+      - 0.09
+      - 0.14
+      - 0.18
+      - 0.21
+      - 0.23
+      - 0.25
+      - 0.26
+      wacc_path:
+      - 0.115
+      - 0.113
+      - 0.112
+      - 0.11
+      - 0.108
+      - 0.107
+      - 0.105
+      - 0.103
+      - 0.102
+      - 0.1
+      term_g: 0.05
+      nopat:
+      - -0.045
+      - -0.021
+      - 0.005
+      - 0.028
+      - 0.055
+      - 0.086
+      - 0.12
+      - 0.15
+      - 0.18
+      - 0.203
+      reinvest:
+      - 0.011
+      - 0.017
+      - 0.022
+      - 0.033
+      - 0.044
+      - 0.05
+      - 0.05
+      - 0.044
+      - 0.039
+      - 0.033
+      fcf:
+      - -0.056
+      - -0.038
+      - -0.017
+      - -0.005
+      - 0.01
+      - 0.036
+      - 0.07
+      - 0.105
+      - 0.141
+      - 0.169
+      cash: 0.276
+      net_debt: 0.644
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 311
+      distress: 0.3
+      pv_fcf:
+      - -0.05
+      - -0.031
+      - -0.012
+      - -0.003
+      - 0.006
+      - 0.019
+      - 0.034
+      - 0.046
+      - 0.056
+      - 0.061
+      sum_pv_fcf: 0.13
+      terminal_value: 3.55
+      pv_terminal: 1.28
+      op_ev: 1.41
+      total_equity: 1.04
+      dcf_per_share: 3.34
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 5.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.07
+    expected_per_share: 10.32
+    headline: Long-read wins WGS; re-rating
+    narrative:
+    - Long-read takes a large share of whole-genome sequencing and PACB rides ~6x revenue growth to ~$1.05B FY35 at a 31%
+      margin. The installed base becomes a consumables annuity and the equity re-rates as the debt shrinks to a rounding error
+      against cash flow.
+    - At 6% p_fail the converts are trivially covered; DCF $10.83, weighted contribution $10.20. The fat tail that, alongside
+      the bull, carries the distribution and offsets the ~50% of mass worth ~$0.
+    probability_rationale: 'The lowest-probability outcome: long-read displacing short-read at population scale against Illumina''s
+      entrenched economics. Low odds, but the operating and financial leverage make the payoff large enough to matter to the
+      weighted value.'
+    dcf_metrics:
+      tam_share: 13.125
+      p_fail: 6
+      s2c: 2.0
+    dcf_path:
+      rev_path:
+      - 0.19
+      - 0.23
+      - 0.29
+      - 0.38
+      - 0.5
+      - 0.64
+      - 0.78
+      - 0.9
+      - 0.99
+      - 1.05
+      op_margin:
+      - -0.18
+      - 0.0
+      - 0.09
+      - 0.16
+      - 0.21
+      - 0.25
+      - 0.28
+      - 0.3
+      - 0.31
+      - 0.31
+      wacc_path:
+      - 0.11
+      - 0.108
+      - 0.107
+      - 0.105
+      - 0.103
+      - 0.102
+      - 0.1
+      - 0.098
+      - 0.097
+      - 0.095
+      term_g: 0.06
+      nopat:
+      - -0.034
+      - 0.0
+      - 0.026
+      - 0.061
+      - 0.105
+      - 0.16
+      - 0.218
+      - 0.27
+      - 0.307
+      - 0.326
+      reinvest:
+      - 0.015
+      - 0.02
+      - 0.03
+      - 0.045
+      - 0.06
+      - 0.07
+      - 0.07
+      - 0.06
+      - 0.045
+      - 0.03
+      fcf:
+      - -0.049
+      - -0.02
+      - -0.004
+      - 0.016
+      - 0.045
+      - 0.09
+      - 0.148
+      - 0.21
+      - 0.262
+      - 0.295
+      cash: 0.276
+      net_debt: 0.644
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 311
+      distress: 0.3
+      pv_fcf:
+      - -0.044
+      - -0.016
+      - -0.003
+      - 0.011
+      - 0.027
+      - 0.049
+      - 0.074
+      - 0.095
+      - 0.108
+      - 0.111
+      sum_pv_fcf: 0.41
+      terminal_value: 8.93
+      pv_terminal: 3.37
+      op_ev: 3.78
+      total_equity: 3.41
+      dcf_per_share: 10.96
+    chart_data:
+      raises:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 5.0
+historical_prices:
+  ipo_marker: IPO '10
+  x_min: -5.2
+  points:
+  - - -5.0
+    - 22.0
+  - - -4.5
+    - 15.0
+  - - -4.0
+    - 8.0
+  - - -3.0
+    - 5.0
+  - - -2.5
+    - 3.0
+  - - -2.0
+    - 2.0
+  - - -1.0
+    - 1.5
+  - - -0.5
+    - 1.8
+  - - -0.05
+    - 1.32
+weighting_rationale:
+- label: Ultra Bear 18%
+  body: Long-read stalls; converts wipe out equity.
+- label: Bear 32%
+  body: Growth too slow to clear the debt in time.
+- label: Base 30%
+  body: Breakeven ~2027; equity just clears converts.
+- label: Bull 13%
+  body: Long-read inflects; consumables beat the debt.
+- label: Ultra Bull 7%
+  body: Long-read wins big WGS share; a re-rating.
+appendix:
+  pushback:
+  - label: Converts were already refinanced
+    body: The 2028 SoftBank wall was pushed to 2029/2030, buying runway — but ~$644M still outranks a $410M equity cap and
+      must be cleared.
+  - label: Consumables are inflecting now
+    body: Consumables grew +16% to $82M while instruments fell -18% — the razor/blade pivot is visibly underway, the bull's
+      required first step.
+  - label: Restructuring de-risks the burn
+    body: FY26 opex guided down to $220-225M with headcount -16% targets cash-flow-positive in 2027 — if hit, base-case equity
+      survives.
+  - label: Long-read accuracy is a real edge
+    body: 'HiFi reads solve problems short-read can''t; if whole-genome sequencing shifts to long-read, the #3 still captures
+      a growing consumables annuity.'
+  - label: It is a barbell, not sticker-cheap
+    body: The $1.32 looks cheap, but net debt above the equity cap means ~half the mass is ~$0 — the price reflects leverage,
+      not a bargain.
+  triggers:
+  - label: Bull validation
+    body: Consumable pull-through accelerates above ~$229K/Revio; adj-EBITDA turns positive; the FY27 cash-flow-positive target
+      is reaffirmed; converts refinanced non-dilutively.
+  - label: Bear validation
+    body: Instrument declines persist; pull-through flattens; burn stays ~$45M/qtr; a dilutive equity or convert refinancing
+      before 2029.
+  - label: Reframe needed
+    body: A larger-than-expected raise, a covenant or maturity event, or a credible buyer for the long-read franchise — any
+      of which resets the equity thesis.
+glossary:
+- term: long-read / HiFi sequencing
+  definition: DNA sequencing that reads long, highly accurate fragments (HiFi), resolving regions short-read instruments struggle
+    with.
+- term: consumable pull-through
+  definition: Recurring high-margin reagent/kit revenue each installed instrument generates per year — the 'blade' in the
+    razor/blade model.
+- term: Revio
+  definition: PACB's high-throughput long-read sequencer (346 installed); the main pull-through driver at ~$229K annualized.
+- term: convertible notes
+  definition: Debt that can convert to equity; ~$644M here (due 2029/2030) that outranks common holders until repaid or converted.
+- term: razor/blade model
+  definition: Selling instruments (razor) to drive recurring consumable sales (blade); the pivot underway as consumables grow
+    and instruments shrink.
+- term: p_fail
+  definition: Modeled probability the equity is wiped out (distress ~$0.30/share) before the scenario's terminal year — elevated
+    here by net debt above the equity cap.
+competitive:
+  arena: Long-read DNA sequencing within the broader sequencing market — PACB (HiFi/SMRT) versus Illumina's dominant short-read
+    scale and Oxford Nanopore in direct long-read.
+  lens: power_origination
+  powers:
+    scale_economies:
+      score: 1
+      note: 'Sub-scale #3 at ~$160M revenue; Illumina''s ~$4.5B base buys cost and R&D advantages PACB can''t match.'
+    network_economies:
+      score: 1
+      note: Some ecosystem pull from published HiFi methods and installed-base data, but no strong cross-side network.
+    counter_positioning:
+      score: 1
+      note: Long-read is structurally different from short-read, but Illumina can and does add long-read offerings, blunting
+        the wedge.
+    switching_costs:
+      score: 2
+      note: Installed Revio/Vega plus validated lab workflows create real stickiness, anchoring recurring consumable pull-through.
+    branding:
+      score: 1
+      note: Credible accuracy reputation in long-read, but no pricing-power brand against the incumbent.
+    cornered_resource:
+      score: 2
+      note: HiFi/SMRT IP and accuracy are the asset PACB is trying to turn into Power, but contested by Nanopore and Illumina.
+    process_power:
+      score: 1
+      note: Manufacturing and chemistry know-how exist; not yet a durable, hard-to-replicate process advantage at scale.
+  dominant_power: cornered_resource
+  window: closing
+  rivals:
+  - name: Illumina
+    kind: public
+    note: Short-read scale leader, ~$4.5B revenue; dominant economics, adding long-read
+    share_now: 0.85
+    share_terminal: 0.7
+    capital: strong cash flow, self-funded
+  - name: Oxford Nanopore
+    kind: public
+    note: Direct long-read rival (LSE); portable, real-time reads
+    share_now: 0.05
+    share_terminal: 0.12
+    capital: public, funded but pre-profit
+  - name: Pacific Biosciences
+    kind: public
+    note: 'The #3; HiFi accuracy edge, net-debt-constrained'
+    share_now: 0.1
+    share_terminal: 0.18
+    capital: net debt ~$368M; burning cash
+  lead_lag:
+  - metric: Long-read accuracy (HiFi)
+    company: Leading on accuracy
+    best_rival: Oxford Nanopore
+    verdict: leading
+  - metric: Scale / cost per genome
+    company: Sub-scale
+    best_rival: Illumina
+    verdict: lagging
+  - metric: Balance-sheet strength
+    company: Net debt above equity cap
+    best_rival: Illumina
+    verdict: lagging
+  takeaway: A Power is being attempted, not yet originated. PACB is trying to convert HiFi/SMRT accuracy into a cornered-resource
+    and process Power in long-read, but it lags Illumina's scale economies badly and shares the long-read field with Oxford
+    Nanopore. The falsifier the bull must clear is observable and singular — consumable pull-through compounding fast enough
+    to reach cash-flow breakeven and clear the ~$644M convert wall before 2029/2030. Miss it and the leverage, not the technology,
+    decides the outcome.

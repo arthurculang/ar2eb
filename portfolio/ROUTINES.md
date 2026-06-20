@@ -70,16 +70,17 @@ row; no judgment, so use a cheap/fast model.
 
 ```
 Run `python portfolio/track_performance.py` from the repo root (run
-`pip install pyyaml` first if the import fails). It appends one row to
+`pip install pyyaml` first if the import fails). It upserts one row into
 `portfolio/performance.csv` — the weighted portfolio vs. the benchmark sleeve,
-since the launch epoch.
+since the launch epoch — and, once enough return history has accrued, refreshes
+`portfolio/risk_stats.csv` (the modified Sortino ratio for the portfolio vs. the
+S&P 500 and NASDAQ-100).
 
 Then:
-- If `portfolio/performance.csv` changed, stage ONLY that file, commit with the
-  message `perf: portfolio vs benchmarks <today's UTC date, YYYY-MM-DD>`, and
-  push to `main`.
-- If it did NOT change (pre-launch epoch, weekend, or market holiday), do
-  nothing and end.
+- If `portfolio/performance.csv` and/or `portfolio/risk_stats.csv` changed, stage
+  ONLY those two files, commit with the message
+  `perf: portfolio vs benchmarks <today's UTC date, YYYY-MM-DD>`, and push to `main`.
+- If neither changed (pre-launch epoch, weekend, or market holiday), do nothing and end.
 
 Do not edit any other file, do not reformat anything, and do not make any
 analytical judgment — this is a deterministic data append.

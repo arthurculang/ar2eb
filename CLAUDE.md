@@ -234,9 +234,30 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   in an unquoted YAML scalar → YAML read it as a mapping key → `build_site_data` aborted → the renderer ran on a stale
   `data.js`, making all the trims unreliable). The gen source was always valid; re-scaffolding restored it; a
   YAML-safety rule ("never write `Capitalizedword: ` in a value; confirm build_site_data succeeds after each edit")
-  is now in the trim brief.* Deferred to framework-specific waves: **HHH** (real-estate SOTP), **PACB/SYM** + the
-  **moonshot tier** (TEM/SERV/NVCR/RXRX/BEAM…, young_company DCF), **BLGFF** (a Baillie Gifford closed-end fund — NAV/
+  is now in the trim brief.* Deferred to framework-specific waves: **HHH** (real-estate SOTP), **SYM** + the rest of the
+  **moonshot tier** (SERV/NVCR/TWST/PRME/CAI…, young_company DCF), **BLGFF** (a Baillie Gifford closed-end fund — NAV/
   discount, no operating DCF). Shipped on `claude/fun-speculative-batch`.
+- **Young AI-bio/genomics sub-batch SHIPPED (2026-06-16; tickers 43–46): RXRX, BEAM, PACB (young_company) + TEM (mature).**
+  First wave through the NEW reusable **young builder `scripts/_models/gen_young.py`** (the young analog of `gen_b1`: a
+  compact content spec → `data/_intake/<t>.yml`, numerics via `model_dcf.model_scenario` — 10-yr explicit + Gordon + p_fail/
+  distress + raise/dilution + cash-runway check). Authored from locked numbers (`/tmp/young/model.py`; conviction tiers RXRX/PACB/
+  TEM **Low**, BEAM **Med-Low** — Arthur to confirm) + prose by 4 parallel subagents. **Findings (entry-price-vs-distribution,
+  same logic as every wave; the four span the spectrum):** **BEAM +31.3%** (pre-product base editing; **$1.21B cash ≈ $11.75/sh
+  cushion** makes the ultra-bear *expected* $5.77 despite a negative DCF — the cash IS the distress floor — plus a de-risked
+  BEAM-302/AATD platform tail; clinical failure is the risk, not insolvency); **RXRX +22.3%** (pre-product AI-discovery platform
+  −37% YTD; modal base *below* spot, ~88% of value in the bull/ultra-bull tail — a cheap option on platform validation);
+  **PACB −2.3%** (long-read sequencer; $1.32 sticker hides **~$644M converts vs $276M cash = ~$368M net debt > the equity cap**
+  → ~50% of the mass worth ~0, offset by a long-read-wins tail — a distressed, financially-**levered** option, the leverage
+  is the story); **TEM −28.5%** (rich/priced-for-perfection, the ILMN/RDDT family — $1.3B rev near adj-EBITDA breakeven, but
+  **SBC ~$136M/yr swamps the +$65M adj-EBITDA → owner-FCF still negative**; only the bull clears spot; Lefkofsky ~60% vote).
+  **TEM reclassified young→mature (TXG precedent):** the young cash-runway check uses `prev_rev=0`, which fabricates a phantom
+  ~$0.97B year-1 reinvestment at $1.3B revenue — so a $1.3B-revenue near-breakeven name is a mature_company, not a moonshot.
+  `visual_baseline.json` **now 46 tickers**; validator green; all 4 STRICT-clean (overflow + clips); no drift on the existing 42.
+  *Lessons: (1) **`tam_competitor_share` is $B (absolute, < tam_billion), NOT a %** — set it as 80(%) on PACB's $8B TAM and it
+  plotted as $80B, clipping +823px (the GRAL/IONQ wave-2c class). (2) Young **Page-1 5-scenario** binding when the left column is
+  short is the **scenario-card headlines** below the fixed-height forward chart (trim headlines, not thesis); when the left column
+  is tall it's thesis/weighting — diagnose by which trim moves the px. (3) `final_shares` must reconcile with `shares0 + Σ
+  raise/price` or the validator WARNs — use scalar avg raise-prices and set fs to the implied count.* Shipped on `claude/epic-curie-ouHZL`.
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin

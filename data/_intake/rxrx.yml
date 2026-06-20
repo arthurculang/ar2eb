@@ -1,0 +1,942 @@
+# RXRX — Recursion Pharmaceuticals (NASDAQ) · INTAKE (YOUNG; python-modeled; scaffold-ready)
+ticker: RXRX
+company: Recursion Pharmaceuticals
+exchange: NASDAQ
+dcf_type: young_company
+date: '2026-06-16'
+spot: 3.15
+market:
+  market_cap_billion: 1.61
+  shares_outstanding_million: 510.0
+  cash_billion: 0.665
+  net_debt_billion: 0.0
+  extras:
+  - $0.665B cash (Q1'26); runway into early 2028; burn ~$340M/yr
+  - FY25 revenue $74.7M (+27%) — all collaboration/milestone, no product sales
+  - Down ~37% YTD to ~$3.15; ~510M shares post-Exscientia merger + ATM
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Low
+  themes:
+  - precision-medicine-oncology
+  primary_theme: precision-medicine-oncology
+central_question: At a ~37%-de-rated $3.15 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation,
+  or a platform that funds itself toward dilutive stagnation?
+thesis: Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps
+  cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.15 (~$1.6B
+  cap), down ~37% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early
+  2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful
+  approved drug. Weighted fair value is $3.85, +22% above spot — but the modal base sits below the price, so the answer rides
+  the right tail.
+chart_reference:
+  tam_billion: 50
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.045
+  - 0.059
+  - 0.075
+  history_fleet:
+  - 0
+  - 0
+  - 0
+page3_chart_config:
+  peer_y: 25
+  peer_text: Profitable biopharma op margin ~25-35%
+  fleet_anchor: 0
+  fleet_title: Revenue ramp (log)
+  fleet_reference:
+  valn_anchor_y: 5
+  valn_anchor_text: Mature biopharma P/S ~4-6x
+  valn_caption: At ~21x sales on milestone-only revenue, the price is platform optionality, not fundamentals.
+  tam_title: $50B AI-enabled drug-discovery value — RXRX share
+  tam_legend:
+  - RXRX
+  - Competitors
+  - Other AI-bio / pharma R&D
+page3:
+  subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  Q1'26 (May 2026) release
+  sources: 'Sources: RXRX FY2025 results + Q1''26 8-K (CIK 1601830), company runway/burn guidance. Revenue is collaboration/milestone
+    income (no product sales). FCF is NOL-shielded pre-tax over the explicit window (documented simplification). TAM: a serviceable
+    slice of AI-enabled drug-discovery value, ~$50B.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.15
+    expected_per_share: 0.64
+    headline: Platform never delivers; dilutive grind to the floor
+    narrative:
+    - The Recursion OS produces no approved, economically-meaningful drug. Revenue stays milestone-only and sub-scale — about
+      $0.15B by FY35 at a 3% operating margin — as partnered programs stall and pharma interest in the platform fades. The
+      discovery engine is real but never converts into product royalties.
+    - With nothing to fund itself, the company raises roughly $1.15B over the decade, pushing the share count toward 970M.
+      The DCF lands at −$0.24; the $0.80 distress floor and residual cash drive the expected value to $0.64. The bet expires
+      worthless except for the balance sheet.
+    probability_rationale: A 15% read. The platform has zero approved drugs and NVIDIA fully exited its equity in Feb 2026
+      — a negative external signal. An 85% p_fail reflects that AI-bio has, industry-wide, not yet produced an approved drug.
+    dcf_metrics:
+      tam_share: 0.3
+      p_fail: 85
+      s2c: 1.0
+    dcf_path:
+      rev_path:
+      - 0.06
+      - 0.07
+      - 0.08
+      - 0.09
+      - 0.1
+      - 0.11
+      - 0.12
+      - 0.13
+      - 0.14
+      - 0.15
+      op_margin:
+      - -5.5
+      - -3.8
+      - -2.6
+      - -1.7
+      - -1.1
+      - -0.7
+      - -0.4
+      - -0.2
+      - -0.05
+      - 0.03
+      wacc_path:
+      - 0.145
+      - 0.142
+      - 0.138
+      - 0.135
+      - 0.132
+      - 0.128
+      - 0.125
+      - 0.122
+      - 0.118
+      - 0.115
+      term_g: 0.03
+      nopat:
+      - -0.33
+      - -0.266
+      - -0.208
+      - -0.153
+      - -0.11
+      - -0.077
+      - -0.048
+      - -0.026
+      - -0.007
+      - 0.004
+      reinvest:
+      - -0.015
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      fcf:
+      - -0.315
+      - -0.276
+      - -0.218
+      - -0.163
+      - -0.12
+      - -0.087
+      - -0.058
+      - -0.036
+      - -0.017
+      - -0.005
+      cash: 0.665
+      net_debt: 0.0
+      raise_total: 1.15
+      dilution_pct: 90
+      final_shares: 970
+      distress: 0.8
+      pv_fcf:
+      - -0.275
+      - -0.211
+      - -0.147
+      - -0.097
+      - -0.063
+      - -0.04
+      - -0.024
+      - -0.013
+      - -0.006
+      - -0.001
+      sum_pv_fcf: -0.88
+      terminal_value: -0.06
+      pv_terminal: -0.02
+      op_ev: -0.9
+      total_equity: -0.23
+      dcf_per_share: -0.24
+    chart_data:
+      raises:
+      - 0.0
+      - 0.3
+      - 0.3
+      - 0.25
+      - 0.2
+      - 0.1
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 0.0
+      - 2.5
+      - 2.5
+      - 2.5
+      - 2.5
+      - 2.5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 30.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.3
+    expected_per_share: 0.38
+    headline: A couple small partnered wins; revenue stays sub-scale
+    narrative:
+    - One or two partnered programs reach approval or meaningful royalty, but the platform never becomes a self-sustaining
+      engine. Revenue reaches about $0.50B by FY35 at a 22% operating margin — better than milestone-only, yet far short of
+      the scale needed to justify a platform multiple.
+    - Continued spending forces roughly $1.1B of raises, lifting shares toward 877M and offsetting much of the operating progress.
+      The DCF is −$0.14 and the expected value $0.38. Real science, but the economics never outrun the dilution.
+    probability_rationale: 'A 30% read — the heaviest single weight. Reflects partial platform validation: Roche, Sanofi,
+      and Bayer deals exist and Sanofi paid a fifth milestone in Feb 2026, but a 55% p_fail captures how rarely partnered
+      candidates clear.'
+    dcf_metrics:
+      tam_share: 1.0
+      p_fail: 55
+      s2c: 1.05
+    dcf_path:
+      rev_path:
+      - 0.08
+      - 0.11
+      - 0.15
+      - 0.2
+      - 0.26
+      - 0.32
+      - 0.38
+      - 0.43
+      - 0.47
+      - 0.5
+      op_margin:
+      - -5.0
+      - -3.2
+      - -2.0
+      - -1.1
+      - -0.5
+      - -0.05
+      - 0.1
+      - 0.16
+      - 0.2
+      - 0.22
+      wacc_path:
+      - 0.14
+      - 0.137
+      - 0.133
+      - 0.13
+      - 0.127
+      - 0.123
+      - 0.12
+      - 0.117
+      - 0.113
+      - 0.11
+      term_g: 0.035
+      nopat:
+      - -0.4
+      - -0.352
+      - -0.3
+      - -0.22
+      - -0.13
+      - -0.016
+      - 0.038
+      - 0.069
+      - 0.094
+      - 0.11
+      reinvest:
+      - 0.005
+      - 0.029
+      - 0.038
+      - 0.048
+      - 0.057
+      - 0.057
+      - 0.057
+      - 0.048
+      - 0.038
+      - 0.029
+      fcf:
+      - -0.405
+      - -0.381
+      - -0.338
+      - -0.268
+      - -0.187
+      - -0.073
+      - -0.019
+      - 0.021
+      - 0.056
+      - 0.081
+      cash: 0.665
+      net_debt: 0.0
+      raise_total: 1.1
+      dilution_pct: 72
+      final_shares: 877
+      distress: 0.8
+      pv_fcf:
+      - -0.355
+      - -0.294
+      - -0.23
+      - -0.161
+      - -0.1
+      - -0.035
+      - -0.008
+      - 0.008
+      - 0.019
+      - 0.025
+      sum_pv_fcf: -1.13
+      terminal_value: 1.12
+      pv_terminal: 0.34
+      op_ev: -0.79
+      total_equity: -0.12
+      dcf_per_share: -0.14
+    chart_data:
+      raises:
+      - 0.2
+      - 0.3
+      - 0.3
+      - 0.2
+      - 0.1
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 3.0
+      - 3.0
+      - 3.0
+      - 3.0
+      - 3.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 30.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.32
+    expected_per_share: 0.75
+    headline: Platform validates modestly; still dilutive
+    narrative:
+    - Recursion OS proves itself in a limited way — a couple of pipeline or royalty wins plus expanding pharma partnerships.
+      Revenue reaches about $0.90B by FY35 at a 28% operating margin as collaboration income broadens into early product and
+      royalty streams. The platform earns credibility without becoming dominant.
+    - Growth still outpaces internal funding, so roughly $1.2B is raised and shares drift toward 810M. The DCF is $0.72 and
+      the expected value $0.75 — both below spot. The modal outcome validates the science yet leaves the equity worth less
+      than today's price.
+    probability_rationale: A 32% read, the modal case. A 35% p_fail assumes the platform delivers at least modest product
+      or royalty economics within the decade — consistent with three named pharma partners but no approved drug yet.
+    dcf_metrics:
+      tam_share: 1.8
+      p_fail: 35
+      s2c: 1.1
+    dcf_path:
+      rev_path:
+      - 0.1
+      - 0.14
+      - 0.2
+      - 0.3
+      - 0.42
+      - 0.55
+      - 0.68
+      - 0.78
+      - 0.85
+      - 0.9
+      op_margin:
+      - -4.2
+      - -2.6
+      - -1.5
+      - -0.75
+      - -0.25
+      - 0.06
+      - 0.15
+      - 0.21
+      - 0.25
+      - 0.28
+      wacc_path:
+      - 0.135
+      - 0.132
+      - 0.128
+      - 0.125
+      - 0.122
+      - 0.118
+      - 0.115
+      - 0.112
+      - 0.108
+      - 0.105
+      term_g: 0.04
+      nopat:
+      - -0.42
+      - -0.364
+      - -0.3
+      - -0.225
+      - -0.105
+      - 0.033
+      - 0.102
+      - 0.164
+      - 0.212
+      - 0.252
+      reinvest:
+      - 0.023
+      - 0.036
+      - 0.055
+      - 0.091
+      - 0.109
+      - 0.118
+      - 0.118
+      - 0.091
+      - 0.064
+      - 0.045
+      fcf:
+      - -0.443
+      - -0.4
+      - -0.355
+      - -0.316
+      - -0.214
+      - -0.085
+      - -0.016
+      - 0.073
+      - 0.149
+      - 0.207
+      cash: 0.665
+      net_debt: 0.0
+      raise_total: 1.2
+      dilution_pct: 59
+      final_shares: 810
+      distress: 0.8
+      pv_fcf:
+      - -0.39
+      - -0.311
+      - -0.245
+      - -0.194
+      - -0.117
+      - -0.042
+      - -0.007
+      - 0.029
+      - 0.053
+      - 0.067
+      sum_pv_fcf: -1.16
+      terminal_value: 3.31
+      pv_terminal: 1.07
+      op_ev: -0.09
+      total_equity: 0.58
+      dcf_per_share: 0.72
+    chart_data:
+      raises:
+      - 0.25
+      - 0.35
+      - 0.3
+      - 0.2
+      - 0.1
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 4.0
+      - 4.0
+      - 4.0
+      - 4.0
+      - 4.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 30.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.15
+    expected_per_share: 6.1
+    headline: AI discovery becomes a real engine
+    narrative:
+    - The platform converts into a genuine discovery engine — multiple approvals across the pipeline (REC-617, REC-4881, REC-1245
+      and successors), plus royalty and platform-licensing income. Revenue reaches about $2.50B by FY35 at a 35% operating
+      margin as the Phenomap flywheel compounds into repeatable output.
+    - Milestones and royalties fund more of the spend, so dilution eases and shares settle near 616M. The DCF is $7.03 and
+      the expected value $6.10 — more than double spot. This is the first scenario where platform value clearly exceeds the
+      price paid.
+    probability_rationale: A 15% read. Requires the data flywheel to translate into repeated approvals — a 15% p_fail. Anchored
+      to the combo and registrational readouts due 2026-2027, which would be the first hard evidence the engine produces drugs.
+    dcf_metrics:
+      tam_share: 5.0
+      p_fail: 15
+      s2c: 1.3
+    dcf_path:
+      rev_path:
+      - 0.12
+      - 0.2
+      - 0.32
+      - 0.5
+      - 0.75
+      - 1.05
+      - 1.4
+      - 1.8
+      - 2.15
+      - 2.5
+      op_margin:
+      - -3.5
+      - -1.8
+      - -0.7
+      - -0.05
+      - 0.12
+      - 0.2
+      - 0.26
+      - 0.3
+      - 0.33
+      - 0.35
+      wacc_path:
+      - 0.13
+      - 0.127
+      - 0.123
+      - 0.12
+      - 0.117
+      - 0.113
+      - 0.11
+      - 0.107
+      - 0.103
+      - 0.1
+      term_g: 0.05
+      nopat:
+      - -0.42
+      - -0.36
+      - -0.224
+      - -0.025
+      - 0.09
+      - 0.21
+      - 0.364
+      - 0.54
+      - 0.71
+      - 0.875
+      reinvest:
+      - 0.035
+      - 0.062
+      - 0.092
+      - 0.138
+      - 0.192
+      - 0.231
+      - 0.269
+      - 0.308
+      - 0.269
+      - 0.269
+      fcf:
+      - -0.455
+      - -0.422
+      - -0.316
+      - -0.163
+      - -0.102
+      - -0.021
+      - 0.095
+      - 0.232
+      - 0.44
+      - 0.606
+      cash: 0.665
+      net_debt: 0.0
+      raise_total: 0.95
+      dilution_pct: 21
+      final_shares: 616
+      distress: 0.8
+      pv_fcf:
+      - -0.403
+      - -0.331
+      - -0.221
+      - -0.102
+      - -0.057
+      - -0.011
+      - 0.043
+      - 0.095
+      - 0.163
+      - 0.204
+      sum_pv_fcf: -0.62
+      terminal_value: 12.73
+      pv_terminal: 4.29
+      op_ev: 3.67
+      total_equity: 4.33
+      dcf_per_share: 7.03
+    chart_data:
+      raises:
+      - 0.2
+      - 0.25
+      - 0.25
+      - 0.15
+      - 0.1
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 9.0
+      - 9.0
+      - 9.0
+      - 9.0
+      - 9.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 30.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 31.11
+    headline: A dominant tech-bio platform
+    narrative:
+    - Recursion OS becomes a dominant tech-bio platform — the standard layer for AI-driven discovery, licensed broadly and
+      generating a major pharma-scale outcome. Revenue reaches about $5.20B by FY35 at a 40% operating margin as platform
+      economics, not single drugs, drive the model.
+    - Self-funding largely replaces dilution and the equity compounds toward roughly $19B. The DCF is $33.75 and the expected
+      value $31.11 — roughly ten times spot. This tail is where the bulk of the weighted value lives, and it depends on the
+      platform cornering the discovery resource.
+    probability_rationale: 'An 8% read. The lowest-probability, highest-payoff outcome: an 8% p_fail and a winner-take-most
+      platform result. It assumes the Phenomap data advantage becomes a durable cornered resource the rest of AI-bio cannot
+      replicate.'
+    dcf_metrics:
+      tam_share: 10.4
+      p_fail: 8
+      s2c: 1.5
+    dcf_path:
+      rev_path:
+      - 0.14
+      - 0.26
+      - 0.46
+      - 0.78
+      - 1.25
+      - 1.95
+      - 2.85
+      - 3.8
+      - 4.55
+      - 5.2
+      op_margin:
+      - -2.8
+      - -1.0
+      - 0.0
+      - 0.1
+      - 0.2
+      - 0.27
+      - 0.32
+      - 0.36
+      - 0.38
+      - 0.4
+      wacc_path:
+      - 0.125
+      - 0.122
+      - 0.118
+      - 0.115
+      - 0.112
+      - 0.108
+      - 0.105
+      - 0.102
+      - 0.098
+      - 0.095
+      term_g: 0.06
+      nopat:
+      - -0.392
+      - -0.26
+      - 0.0
+      - 0.078
+      - 0.25
+      - 0.526
+      - 0.912
+      - 1.368
+      - 1.729
+      - 2.08
+      reinvest:
+      - 0.043
+      - 0.08
+      - 0.133
+      - 0.213
+      - 0.313
+      - 0.467
+      - 0.6
+      - 0.633
+      - 0.5
+      - 0.433
+      fcf:
+      - -0.435
+      - -0.34
+      - -0.133
+      - -0.135
+      - -0.063
+      - 0.06
+      - 0.312
+      - 0.735
+      - 1.229
+      - 1.647
+      cash: 0.665
+      net_debt: 0.0
+      raise_total: 0.5
+      dilution_pct: 10
+      final_shares: 560
+      distress: 0.8
+      pv_fcf:
+      - -0.387
+      - -0.269
+      - -0.094
+      - -0.086
+      - -0.036
+      - 0.031
+      - 0.146
+      - 0.311
+      - 0.474
+      - 0.58
+      sum_pv_fcf: 0.67
+      terminal_value: 49.88
+      pv_terminal: 17.57
+      op_ev: 18.24
+      total_equity: 18.9
+      dcf_per_share: 33.75
+    chart_data:
+      raises:
+      - 0.15
+      - 0.2
+      - 0.15
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 10.0
+      - 10.0
+      - 10.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 30.0
+historical_prices:
+  ipo_marker: IPO Apr '21
+  x_min: -5.2
+  points:
+  - - -5.0
+    - 18.0
+  - - -4.5
+    - 12.0
+  - - -4.0
+    - 7.0
+  - - -3.0
+    - 9.0
+  - - -2.5
+    - 15.0
+  - - -2.0
+    - 8.0
+  - - -1.0
+    - 6.0
+  - - -0.5
+    - 5.0
+  - - -0.05
+    - 3.15
+weighting_rationale:
+- label: Ultra Bear 15%
+  body: Platform never delivers; milestone-only revenue, heavy dilution toward the cash floor.
+- label: Bear 30%
+  body: One or two small partnered wins; revenue stays sub-scale and dilution offsets it.
+- label: Base 32%
+  body: Modest validation — a few wins plus broader partnerships; ~$0.9B revenue, still dilutive.
+- label: Bull 15%
+  body: AI discovery becomes a real engine — multiple approvals, royalty and licensing income.
+- label: Ultra Bull 8%
+  body: Recursion OS becomes a dominant tech-bio platform; a pharma-scale outcome.
+appendix:
+  pushback:
+  - label: Cash cushion is real
+    body: ~$1.3/share of net cash and runway to early 2028 mean the near-term risk is dilution, not insolvency — the floor
+      is firm.
+  - label: Three pharma partners paying
+    body: Roche/Genentech ($213M received), Sanofi ($134M, fifth milestone Feb 2026) and Bayer validate that pharma will pay
+      for the platform.
+  - label: De-rated price, fat right tail
+    body: Down ~37% YTD, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced
+      lightly.
+  - label: Compute-scale advantage
+    body: BioHive-2 plus automated Phenomaps generate proprietary phenotypic data at a scale rivals cannot easily match —
+      the raw material of a cornered resource.
+  - label: Milestones could self-fund
+    body: If readouts hit, milestone and royalty income reduce future raises, shrinking the dilution that drags the base and
+      bear.
+  triggers:
+  - label: Bull validation
+    body: REC-617 combo data (1H27) and REC-4881 registrational path (2H26) read out positive; new or expanded pharma deals
+      with upfront and royalty terms; raises shrink as milestones fund spend.
+  - label: Bear validation
+    body: Pipeline readouts slip or disappoint; milestone revenue stays lumpy (Q1'26 was only $6.5M); an equity raise on weak
+      terms confirms dilutive stagnation; partners do not expand.
+  - label: Reframe needed
+    body: A drug actually reaches approval and royalty economics, shifting the story from option-on-platform to cash-flow;
+      or a partner walks and the platform thesis breaks.
+glossary:
+- term: Recursion OS
+  definition: Recursion's integrated platform — automated wet-lab biology plus AI/supercomputing — for finding and advancing
+    drug candidates.
+- term: Phenomap
+  definition: A large map of how cells change appearance (phenotype) under genetic or chemical perturbations, used to spot
+    disease-relevant drug effects.
+- term: Milestone / collaboration revenue
+  definition: Payments from pharma partners (Roche, Sanofi, Bayer) for upfronts and progress, not from selling an approved
+    product — RXRX's only revenue today.
+- term: p_fail
+  definition: The modeled probability the scenario ends in failure (no economically-meaningful drug), driving the equity toward
+    the distress floor.
+- term: Sales-to-capital (s2c)
+  definition: How much new revenue each dollar of reinvested capital produces; sets how fast revenue can grow before fresh
+    capital is needed.
+- term: Distress floor
+  definition: The ~$0.80/share residual value (cash and salvage) the equity defaults to in a failure outcome, setting a floor
+    under the expected value.
+competitive:
+  arena: AI-driven drug discovery — turning proprietary biological data into approved drugs — where RXRX competes with private
+    AI-bio labs, one public peer, and big-pharma in-house AI.
+  lens: power_origination
+  powers:
+    scale_economies:
+      score: 1
+      note: Compute and wet-lab automation scale, but no fixed-cost moat until products generate revenue.
+    network_economies:
+      score: 0
+      note: No two-sided network; more partners help data, but value does not compound across users.
+    counter_positioning:
+      score: 1
+      note: Tech-bio model big pharma is slow to copy, but pharma is building its own AI in parallel.
+    switching_costs:
+      score: 1
+      note: Multi-year collaborations create some stickiness, but partners run several AI vendors at once.
+    branding:
+      score: 0
+      note: No brand power pre-approval; credibility rests on data, not name.
+    cornered_resource:
+      score: 2
+      note: The Phenomap dataset and BioHive-2 are the strongest candidate — proprietary, hard to replicate at scale, but
+        unproven as a drug-output advantage.
+    process_power:
+      score: 1
+      note: Integrated discovery workflow is distinctive but not yet shown to produce approved drugs repeatably.
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+  - name: Insilico Medicine
+    kind: private
+    note: Generative-AI discovery, clinical-stage pipeline; well-funded private rival
+    share_now: 0.0
+    share_terminal: 0.0
+    capital: Private (VC-backed)
+  - name: Isomorphic Labs
+    kind: private
+    note: Alphabet/DeepMind spinout; AlphaFold lineage and deep capital
+    share_now: 0.0
+    share_terminal: 0.0
+    capital: Alphabet-funded
+  - name: Schrodinger
+    kind: public
+    note: Physics-based computational platform plus owned pipeline; the listed comp
+    share_now: 0.0
+    share_terminal: 0.0
+    capital: Public equity
+  - name: Big-pharma in-house AI
+    kind: incumbent-division
+    note: Roche, Sanofi, Novartis building internal AI — partners and potential substitutes
+    share_now: 0.0
+    share_terminal: 0.0
+    capital: Pharma balance sheets
+  lead_lag:
+  - metric: Approved drugs from AI discovery
+    company: Zero
+    best_rival: Zero (Insilico/Isomorphic/Schrodinger)
+    verdict: even
+  - metric: Proprietary phenotypic data scale
+    company: Industry-leading Phenomap library
+    best_rival: Smaller / model-based
+    verdict: leading
+  - metric: Capital and balance-sheet depth
+    company: ~$0.665B cash, dilution-funded
+    best_rival: Deeper (Alphabet, big pharma)
+    verdict: lagging
+  takeaway: 'No durable Power is originated yet — like all AI-bio, RXRX has zero approved drugs, so switching costs, branding
+    and scale economies are still latent. The one candidate is a cornered resource: the Phenomap dataset and BioHive-2 compute
+    generate proprietary phenotypic data at a scale rivals cannot easily match. The bet is whether that data-and-Phenomap
+    flywheel converts into repeatable approved drugs before well-capitalized private labs (Insilico, Isomorphic) or pharma''s
+    own AI close the gap. The falsifier the bull must clear is the 2026-2027 readouts producing real clinical and royalty
+    economics — until a drug ships, the resource is unproven and the Power window stays open, not won.'
