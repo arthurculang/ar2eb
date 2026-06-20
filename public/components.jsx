@@ -58,13 +58,13 @@ function fmtMult(n) {
 
 // ---------- header ----------
 function TopBar({ route }) {
-  const showLogo = route !== '/'; // hide brand on home (logo is the hero)
+  const showLogo = route !== '/'; // home shows plain-text brand (the hero IS the full logo); sub-pages show the box mark only — the wordmark text reads poorly at topbar size
   return (
     <header className="topbar">
       <div className="wrap topbar-inner">
         <Link to="/" className="topbar-logo" aria-label="AR2EB — home">
           {showLogo ? (
-            <img src="assets/logo-mark.svg" alt="AR2EB — Alameda Research 2: Electric Boogaloo" />
+            <img src="assets/logo-box.svg" alt="AR2EB" />
           ) : (
             <span style={{ fontFamily: 'var(--type-mono)', fontSize: 12, letterSpacing: '0.12em', color: 'var(--ink-2)' }}>AR2EB</span>
           )}
