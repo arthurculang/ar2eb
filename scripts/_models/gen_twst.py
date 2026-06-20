@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""TWST — Twist Bioscience (NASDAQ) · MATURE memo (reclassified young->mature: $377M rev near
+adj-EBITDA breakeven, net cash). Numbers via /tmp/moon/mature.py (model_mature, SBC-adjusted).
+Finding: weighted $43.95 vs spot $87.5 = -49.8% — rich/priced-for-perfection (rallied +150%/52wk)."""
+import sys, os; sys.path.insert(0, os.path.dirname(__file__))
+from gen_b1 import build
+
+SPEC = dict(
+ ticker="TWST", company="Twist Bioscience", exch="NASDAQ", spot=87.5, cap=5.45, sh=62.3, cash=0.172, net_debt=0.0, rev_b=0.377,
+ wl="asymmetrical-moonshots", tier="Low", themes=["omics-life-science-infrastructure"],
+ extras=["$377M revenue FY25 (+20%, GM 50.7%); FY26 guide $442-447M; adj-EBITDA breakeven guided Q4 FY26",
+         "Rallied ~+150% over 52wk to ~14x sales while still adj-EBITDA-negative; SBC-heavy (owner-FCF below the headline)",
+         "~$172M net cash; Atlas (DNA data storage) spun out May'25 -> external call option"],
+ cq="Twist tripled over 52 weeks to ~14x sales while still adj-EBITDA-negative — does the platform grow into the price, or has the multiple run past the fundamentals?",
+ thesis=(
+  "Twist Bioscience runs a silicon-based DNA-synthesis platform — miniaturized, high-throughput "
+  "DNA writing — selling into SynBio and NGS. FY2025 revenue was $377M (+20%), gross margin 50.7%, "
+  "adj-EBITDA -$46.9M and improving; management guides adj-EBITDA breakeven for Q4 FY2026 as the new "
+  "Wilsonville factory ramps margins. At ~$87.5 (~$5.4B cap, net cash) the stock has run ~150% over a "
+  "year to ~14x sales while still losing money, and SBC keeps owner-FCF below the adj-EBITDA headline. "
+  "The DCF asks whether 16-24% growth and the margin ramp grow into that price. Weighted fair value "
+  "$43.95, ~50% below spot — only the bull and ultra-bull clear the quote."),
+ chartref=[("history_years", [2023, 2024, 2025]), ("history_revenue", [0.245, 0.313, 0.377]),
+           ("history_op_margin", [-85.0, -67.0, -21.0]), ("history_fcf", [-0.20, -0.18, -0.10]),
+           ("history_ev_rev", [5.0, 7.0, 14.0])],
+ p3cfg=[("segment_a", "DNA Synthesis & Protein"), ("segment_b", "NGS Applications"),
+        ("hist_ent_split", [0.45, 0.42, 0.40]), ("chart6_title", "Equity build (Op EV + net cash)"),
+        ("chart6_type", "matureEquityBuild")],
+ subtitle="FY23-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Sept 30  ·  FY2025 + Q2 FY2026 results",
+ sources="Sources: Twist Bioscience FY2025 (Sept 30) + Q2 FY2026 results (CIK 1581280), FY26 guidance. Revenue as a growth-rate path off FY25; FCF = revenue x an SBC-adjusted owner-FCF margin (starts negative — SBC keeps owner-FCF below the guided adj-EBITDA breakeven); Gordon terminal at scenario WACC. EV/sales vs DNA-synthesis / life-science-tools peers.",
+ ipo="IPO Oct '18", xmin=-7.7,
+ points=[[-7.5, 14.0], [-5.5, 50.0], [-4.6, 180.0], [-3.5, 60.0], [-2.5, 35.0], [-1.5, 25.0], [-1.0, 35.0], [-0.5, 68.0], [-0.05, 87.5]],
+ scn={
+  "ultra_bear": dict(p=0.13, g=[0.11,0.09,0.07,0.06,0.05], fcfm=[-0.08,-0.03,0.02,0.05,0.08], opm=[-0.06,-0.01,0.04,0.07,0.10], wacc=0.110, tg=0.03, fs=68, evr=[10,8,6,5,4], evf=[400,80,40,30,22],
+    hl="Growth stalls; never profitable",
+    narr=["Revenue compounds only ~7.6% as price competition from deep-pocketed IDT and GenScript caps the synthesis franchise and biotech-funding softness slows orders. The factory's margin ramp arrives but is competed away, so owner-FCF starts negative and barely crosses into positive late in the window.",
+          "Owner-FCF margin grinds from about -8% to 8% — real but thin. At a ~7.6% grower that never builds durable platform economics, the DCF supports $7.50, roughly 91% below spot. The 14x-sales multiple was pricing an outcome the business does not reach."],
+    pr="13% — assumes commoditization plus a funding winter that stalls the synthesis franchise. Possible given well-capitalized rivals, but cuts against 13 straight sequential-growth quarters."),
+  "bear": dict(p=0.27, g=[0.16,0.14,0.12,0.10,0.09], fcfm=[-0.03,0.03,0.08,0.12,0.15], opm=[-0.01,0.05,0.10,0.14,0.17], wacc=0.100, tg=0.035, fs=67, evr=[11,9,8,7,6], evf=[120,50,30,22,18],
+    hl="Decelerates; multiple ran ahead",
+    narr=["Growth slows to ~12.2% as the easy share gains mature and competitive pricing pressures the ramp. The Wilsonville factory still drives real gross-margin gains and the company reaches breakeven, but the second-derivative disappoints relative to what ~14x sales embedded.",
+          "Owner-FCF margin climbs from about -3% to 15%, generating genuine cash flow over time. But a low-teens grower at that terminal margin is worth $19.55 on the DCF, roughly 78% below spot — the business executes, the entry multiple does not survive contact with decelerating growth."],
+    pr="27% — the natural deceleration path as a 20% grower matures into a low-teens grower against capable competition. The single most defensible outcome alongside the base."),
+  "base": dict(p=0.33, g=[0.21,0.18,0.16,0.14,0.12], fcfm=[0.0,0.06,0.12,0.17,0.21], opm=[0.02,0.08,0.14,0.19,0.23], wacc=0.095, tg=0.04, fs=66, evr=[12,10,9,8,7], evf=[80,40,25,18,15],
+    hl="Solid growth; factory margin ramp",
+    narr=["Revenue compounds ~16.2% — consistent with the raised FY26 guide of $442-447M extended forward — as Twist holds share across SynBio and NGS and the Factory of the Future delivers its designed margin step. Adj-EBITDA breakeven in Q4 FY2026 converts into sustained, growing operating leverage.",
+          "Owner-FCF margin ramps from roughly 0% to 21%, so the platform finally throws off real cash. Yet the modal value is $37.12, about 58% below spot. This is the crux — even the company executing its plan well leaves a wide gap, because the price already capitalized the success and then some."],
+    pr="33% — the modal path: 13 sequential growth quarters, the guided breakeven, and a factory built to lift margins. Carries the most weight precisely because it is the management plan working."),
+  "bull": dict(p=0.18, g=[0.26,0.23,0.20,0.17,0.15], fcfm=[0.04,0.12,0.19,0.25,0.29], opm=[0.06,0.14,0.21,0.27,0.31], wacc=0.090, tg=0.045, fs=65, evr=[13,11,10,9,8], evf=[60,30,20,15,13],
+    hl="High growth; cost leadership",
+    narr=["Growth holds ~20.1% as silicon synthesis cements its picks-and-shovels cost advantage and Twist takes share at the expense of higher-cost methods. NGS Applications scales and Protein Solutions adds a higher-value mix, pulling gross margin and operating leverage up together past breakeven into clear profitability.",
+          "Owner-FCF margin reaches about 29% as fixed factory costs lever across a much larger revenue base. A durable 20% grower with platform margins supports $73.69, still ~16% below spot — the bull case nearly justifies the quote but does not fully clear it."],
+    pr="18% — requires growth to hold at 20%+ AND the factory to convert into 29% owner-FCF margins. A demanding but coherent cost-leader outcome; the steelman the price needs."),
+  "ultra_bull": dict(p=0.09, g=[0.32,0.28,0.24,0.20,0.17], fcfm=[0.08,0.17,0.25,0.31,0.35], opm=[0.10,0.19,0.27,0.33,0.37], wacc=0.085, tg=0.05, fs=64, evr=[14,12,11,10,9], evf=[45,25,16,13,11],
+    hl="Dominant utility; Atlas windfall",
+    narr=["Twist becomes the default DNA-synthesis utility — the silicon platform's cost and throughput advantage compounds into share dominance across research and applied markets, with platform-grade margins. Growth compounds ~24.1% and the Atlas Data Storage equity stake, spun out in May 2025, commercializes into a real call-option windfall.",
+          "Owner-FCF margin reaches ~35% as a dominant utility with pricing power. This combination supports $135.31, about 55% above spot — the only scenario that materially beats the price, and it requires both the utility outcome and the data-storage option paying off."],
+    pr="9% — stacks utility-grade dominance, 24% growth, and an Atlas commercialization that is currently an external option Twist only holds equity in. Low-probability by construction; the right tail, not the expectation."),
+ },
+ wr=[("Ultra Bear 13%", "Stall at ~7.6% growth; never durably profitable."),
+     ("Bear 27%", "Decelerate to ~12%; margins up but multiple ran ahead."),
+     ("Base 33%", "~16% growth + factory margin ramp; modal, ~58% below spot."),
+     ("Bull 18%", "Hold ~20% growth; cost-leader operating leverage."),
+     ("Ultra Bull 9%", "Dominant utility + Atlas; the only case above spot.")],
+ pb=[("Cost-leader picks-and-shovels", "A cheaper way to write DNA — a 51%-GM platform selling shovels to every genomics buyer, not one drug."),
+     ("Real breakeven inflection", "Q4 FY2026 adj-EBITDA breakeven is real; 13 sequential growth quarters and the Wilsonville factory make the margin ramp credible."),
+     ("Free Atlas optionality", "Data storage spun out as Atlas in May 2025; Twist holds equity, so any commercialization is upside the DCF ignores."),
+     ("Multiple, not the business", "The bear case is about price, not execution — at ~14x sales even a well-run 16% grower is worth far less than spot."),
+     ("SBC gap to owner-FCF", "Adj-EBITDA flatters: heavy stock comp keeps owner-FCF below the headline, so 'breakeven' precedes positive owner cash flow.")],
+ tr=[("Bull validation", "Growth sustained at 20%+ with adj-EBITDA durably positive; gross margin marching toward platform levels; Atlas gaining traction."),
+     ("Bear validation", "Growth decelerating toward low-teens; the margin ramp stalling under IDT/GenScript pricing; SBC keeping owner-FCF negative well past the guided breakeven."),
+     ("Reframe needed", "Sustained price competition on gross margin, or a biotech-funding winter cutting orders, moves this from rich-but-executing to challenged.")],
+ gloss=[("Silicon DNA synthesis", "Twist's core platform — DNA written on a miniaturized silicon chip, enabling high throughput at low cost per base versus older column methods."),
+        ("SynBio / NGS segments", "The two demand areas: synthetic biology (DNA Synthesis and Protein Solutions) and next-generation sequencing applications (target enrichment, library prep)."),
+        ("Factory of the Future", "The new Wilsonville, Oregon plant built to scale capacity and step up gross margin — the engine behind the modeled margin ramp."),
+        ("Atlas (DNA data storage)", "The DNA-data-storage venture spun out as independent Atlas Data Storage in May 2025; Twist retains equity, so it is now an external call option, not in-house."),
+        ("Adj-EBITDA vs owner-FCF", "Adj-EBITDA adds back stock comp (breakeven Q4 FY2026); owner-FCF subtracts real SBC + capex, so it turns positive later."),
+        ("SBC", "Stock-based compensation — a real cost to owners via dilution that adj-EBITDA excludes; deducted here from owner FCF.")],
+ arena="High-throughput DNA synthesis (plus NGS tools) — Twist's silicon platform versus IDT/Danaher, GenScript, and enzymatic-synthesis challengers Ansa and DNA Script.",
+ powers=[("scale_economies", 2, "Silicon chip + the Wilsonville factory spread fixed cost across high volume — the core cost advantage, still ramping."),
+         ("network_economies", 0, "Essentially none — a DNA supplier's value does not rise with other customers' usage."),
+         ("counter_positioning", 1, "Silicon synthesis is a structurally different, lower-cost method legacy column players cannot easily match without cannibalizing."),
+         ("switching_costs", 1, "Some workflow and validation lock-in for NGS and protein customers, but DNA is largely a fungible input across vendors."),
+         ("branding", 1, "Strong quality reputation for synthesis fidelity, but buyers are price- and spec-driven, not brand-driven."),
+         ("cornered_resource", 2, "The proprietary silicon-synthesis process and IP — the throughput-per-cost engine rivals have not replicated at scale."),
+         ("process_power", 1, "Accumulated manufacturing know-how in miniaturized synthesis, but a process advantage rather than an unassailable one.")],
+ dom="cornered_resource", dur="medium",
+ rivals=[("IDT (Danaher)", "private", "Deep-pocketed synthesis leader inside Danaher; can fund price competition", None, None, "division of Danaher"),
+         ("GenScript", "public", "Broad gene-synthesis and CRO scale; mid-teens grower", 0.15, None, "public, well-funded"),
+         ("Ansa Biotechnologies", "private", "Enzymatic synthesis — a potentially lower-cost long-DNA method", None, None, "venture-backed"),
+         ("DNA Script", "private", "Enzymatic benchtop synthesis; alternative platform path", None, None, "venture-backed")],
+ threats=[("scale_economies / pricing", "IDT (Danaher), GenScript", "Gross margin failing to advance toward platform levels as well-capitalized rivals compete on price during the factory ramp."),
+          ("cornered_resource erosion", "Ansa, DNA Script", "Enzymatic synthesis reaching commercial cost/throughput parity, neutralizing the silicon platform's structural advantage."),
+          ("optionality never lands", "Atlas Data Storage", "DNA data storage failing to commercialize, leaving the spun-out equity stake worth little and removing the right-tail.")],
+ take="Twist holds a real but medium-durability Power: a cornered silicon-synthesis process backed by scale economies the Wilsonville factory is still building. The audit verdict is a credible cost-leader, not yet an unassailable moat — DNA is partly fungible and a Danaher-owned IDT can fund a price war. The falsifier the bull must clear is the gross-margin ramp: if margins advance toward platform levels while 20%+ growth holds, the Power is durable; if pricing competition flattens the margin curve, it is a strong franchise priced as if it were a moat.",
+)
+build(SPEC)

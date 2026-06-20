@@ -1,0 +1,588 @@
+ticker: SYM
+company: Symbotic
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 41.63
+market:
+  market_cap_billion: 24.6
+  shares_outstanding_million: 591.0
+  cash_billion: 1.2
+  net_debt_billion: 0.0
+  extras:
+  - $2.247B revenue FY25 (+26%) but GM only 18.8% (systems/construction-like); ~$22.5B backlog
+  - SBC $184M > adj-EBITDA $147M -> ex-SBC owner-FCF ~0 (the $867M OCF is customer-funded billings, not owner cash)
+  - Walmart >84% of revenue (extreme concentration); GreenBox JV; Nov'24 restatement; ~591M Up-C units, net cash $1.2B
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Low
+  themes:
+  - real-economy-hard-assets
+  primary_theme: real-economy-hard-assets
+central_question: Is a 19%-gross-margin systems integrator priced at ~11x sales worth that multiple on owner cash flow, or
+  only with a software-margin transformation?
+thesis: Symbotic sells AI-powered warehouse-automation systems, installed and Walmart-anchored (>84% of FY25 revenue). Revenue
+  is $2.25B (+26%), backlog ~$22.5B, net cash ~$1.2B, and Q2 FY26 turned GAAP-positive. But the $867M operating cash flow
+  is customer-funded milestone billings (working capital), not owner cash; SBC of $184M exceeds the $147M adj-EBITDA, so ex-SBC
+  owner FCF is roughly zero. At $41.63 (~591M Up-C units) the market pays a software multiple for a thin-margin integrator.
+  The DCF asks whether margins inflect; weighted fair value $13.32, −68% to spot.
+chart_reference:
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 1.18
+  - 1.79
+  - 2.247
+  history_op_margin:
+  - -12.0
+  - -8.0
+  - -5.0
+  history_fcf:
+  - -0.1
+  - 0.0
+  - 0.1
+  history_ev_rev:
+  - 15.0
+  - 12.0
+  - 11.0
+page3_chart_config:
+  segment_a: Systems (Walmart)
+  segment_b: GreenBox WaaS
+  hist_ent_split:
+  - 0.95
+  - 0.92
+  - 0.88
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY23-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end late Sept  ·  FY2025 + Q2 FY2026 results
+  sources: 'Sources: Symbotic FY2025 (ended 9/27/25) + Q2 FY2026 results (CIK 1837240). Revenue as a growth-rate path off
+    FY25; FCF = revenue x an SBC-adjusted owner-FCF margin (thin — gross margin is ~19%; the $867M operating cash flow is
+    customer-funded milestone-billing timing, not owner cash); Gordon terminal at scenario WACC. Per-share on the ~591M Up-C
+    economic unit base, not the Class A float. EV/sales vs automation peers.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.13
+    expected_per_share: 2.89
+    headline: Margin never inflects; Walmart bites
+    narrative:
+    - Revenue grows only ~5% to FY30 as Walmart slows new-system orders and renegotiates terms. The 19% gross margin holds
+      or compresses under construction-like execution risk, and SBC keeps owner FCF near zero through the period.
+    - GreenBox stalls, recurring mix never materializes, and the business stays a low-return integrator dependent on one buyer.
+      At a thin terminal FCF margin the equity is worth $2.89 per share, ~93% below spot.
+    probability_rationale: Requires Walmart to throttle deployments and margins to stay systems-like. Backed by the restatement
+      history and the structural 19% gross margin, but the $22.5B backlog makes a near-flat path a tail outcome.
+    dcf_metrics:
+      cagr_5y: 5.4
+      wacc: 0.115
+    dcf_path:
+      rev_b: 2.247
+      rev_path:
+      - 0.08
+      - 0.06
+      - 0.05
+      - 0.04
+      - 0.04
+      op_margin:
+      - -0.06
+      - -0.04
+      - -0.02
+      - 0.0
+      - 0.01
+      wacc_path:
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      - 0.115
+      term_g: 0.03
+      fcf:
+      - -0.097
+      - -0.051
+      - 0.0
+      - 0.056
+      - 0.088
+      cash: 1.2
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 615
+      distress: 0.0
+      pv_fcf:
+      - -0.087
+      - -0.041
+      - 0.0
+      - 0.036
+      - 0.051
+      sum_pv_fcf: -0.04
+      terminal_value: 1.07
+      pv_terminal: 0.62
+      op_ev: 0.58
+      total_equity: 1.78
+      dcf_per_share: 2.89
+    chart_data:
+      ev_rev_multiple:
+      - 9.0
+      - 7.0
+      - 5.0
+      - 4.0
+      - 3.0
+      ev_fcf_multiple:
+      - 200.0
+      - 80.0
+      - 40.0
+      - 28.0
+      - 20.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 5.79
+    headline: Backlog converts slowly; thin margins
+    narrative:
+    - Revenue compounds ~10% as backlog converts on a slow cadence, but gross margin stays in the high teens and only modest
+      operating leverage appears. SBC continues to absorb most of the gain, so owner FCF inches up but stays thin.
+    - Walmart remains the overwhelming customer and GreenBox adds little recurring economics within the window. A slow-converting,
+      low-margin integrator discounts to $5.79 per share, ~86% below spot.
+    probability_rationale: The path if execution is fine but the economics never improve. The labor-automation tailwind and
+      visible backlog support double-digit growth; the thin margin and concentration cap the value.
+    dcf_metrics:
+      cagr_5y: 10.2
+      wacc: 0.105
+    dcf_path:
+      rev_b: 2.247
+      rev_path:
+      - 0.14
+      - 0.12
+      - 0.1
+      - 0.08
+      - 0.07
+      op_margin:
+      - -0.03
+      - 0.0
+      - 0.02
+      - 0.03
+      - 0.04
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.035
+      fcf:
+      - -0.026
+      - 0.057
+      - 0.126
+      - 0.17
+      - 0.219
+      cash: 1.2
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 610
+      distress: 0.0
+      pv_fcf:
+      - -0.024
+      - 0.047
+      - 0.093
+      - 0.114
+      - 0.133
+      sum_pv_fcf: 0.36
+      terminal_value: 3.24
+      pv_terminal: 1.97
+      op_ev: 2.33
+      total_equity: 3.53
+      dcf_per_share: 5.79
+    chart_data:
+      ev_rev_multiple:
+      - 10.0
+      - 8.0
+      - 7.0
+      - 6.0
+      - 5.0
+      ev_fcf_multiple:
+      - 120.0
+      - 50.0
+      - 32.0
+      - 24.0
+      - 18.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 11.09
+    headline: Backlog converts; margins improve
+    narrative:
+    - Revenue compounds ~14.5% as the $22.5B backlog converts on schedule and modest scale lifts the owner-FCF margin toward
+      10% by FY30. GreenBox begins contributing recurring warehouse-as-a-service revenue alongside the systems business.
+    - This is solid operational execution, but a ~19%-gross-margin systems business compounding in the mid-teens is worth
+      far less than ~11x sales on owner cash flow. The DCF settles at $11.09 per share, ~73% below spot.
+    probability_rationale: 'The modal case: backlog converts, the labor tailwind holds, GreenBox helps at the margin. It carries
+      the most weight because the contracted backlog makes mid-teens growth the central expectation.'
+    dcf_metrics:
+      cagr_5y: 14.5
+      wacc: 0.1
+    dcf_path:
+      rev_b: 2.247
+      rev_path:
+      - 0.2
+      - 0.17
+      - 0.14
+      - 0.12
+      - 0.1
+      op_margin:
+      - -0.02
+      - 0.01
+      - 0.04
+      - 0.06
+      - 0.08
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.04
+      fcf:
+      - 0.0
+      - 0.095
+      - 0.216
+      - 0.322
+      - 0.443
+      cash: 1.2
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 605
+      distress: 0.0
+      pv_fcf:
+      - 0.0
+      - 0.079
+      - 0.162
+      - 0.22
+      - 0.275
+      sum_pv_fcf: 0.74
+      terminal_value: 7.68
+      pv_terminal: 4.77
+      op_ev: 5.51
+      total_equity: 6.71
+      dcf_per_share: 11.09
+    chart_data:
+      ev_rev_multiple:
+      - 11.0
+      - 9.0
+      - 8.0
+      - 7.0
+      - 6.0
+      ev_fcf_multiple:
+      - 80.0
+      - 40.0
+      - 26.0
+      - 20.0
+      - 16.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.18
+    expected_per_share: 22.02
+    headline: Margins inflect; GreenBox recurs
+    narrative:
+    - Revenue compounds ~18.7% and the owner-FCF margin climbs toward 15% as systems standardize, software content rises,
+      and GreenBox shifts the mix toward recurring WaaS economics. Operating leverage finally outruns SBC.
+    - The labor-automation demand is structural and the backlog funds the ramp, so a genuine margin inflection becomes visible.
+      At a richer terminal margin the equity is worth $22.02 per share, still ~47% below spot.
+    probability_rationale: Requires margins to begin the transformation, not just revenue to grow. Plausible given backlog
+      visibility and rising recurring mix, but it asks the integrator economics to start behaving like a platform.
+    dcf_metrics:
+      cagr_5y: 18.7
+      wacc: 0.095
+    dcf_path:
+      rev_b: 2.247
+      rev_path:
+      - 0.26
+      - 0.22
+      - 0.18
+      - 0.15
+      - 0.13
+      op_margin:
+      - 0.0
+      - 0.04
+      - 0.08
+      - 0.11
+      - 0.13
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.045
+      fcf:
+      - 0.057
+      - 0.207
+      - 0.408
+      - 0.609
+      - 0.795
+      cash: 1.2
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 600
+      distress: 0.0
+      pv_fcf:
+      - 0.052
+      - 0.173
+      - 0.311
+      - 0.424
+      - 0.505
+      sum_pv_fcf: 1.46
+      terminal_value: 16.62
+      pv_terminal: 10.55
+      op_ev: 12.01
+      total_equity: 13.21
+      dcf_per_share: 22.02
+    chart_data:
+      ev_rev_multiple:
+      - 12.0
+      - 10.0
+      - 9.0
+      - 8.0
+      - 7.0
+      ev_fcf_multiple:
+      - 60.0
+      - 32.0
+      - 22.0
+      - 17.0
+      - 14.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.09
+    expected_per_share: 41.78
+    headline: Platform; software-like margins
+    narrative:
+    - Revenue compounds ~22.6% and gross margin expands from ~19% toward 30%+ as Symbotic becomes the standard warehouse-automation
+      platform, with high-margin software and recurring GreenBox WaaS dominating the mix. The owner-FCF margin reaches ~20%.
+    - 'This is a full economic transformation, not just scale: the systems integrator turns into a software-economics platform.
+      Only this outcome justifies the price, reaching $41.78 per share, ~flat to spot.'
+    probability_rationale: The lowest-weight tail because it requires gross margin to roughly double from a systems base.
+      The structural tailwind and backlog make platform scale conceivable, but software-like margins are unproven here.
+    dcf_metrics:
+      cagr_5y: 22.6
+      wacc: 0.09
+    dcf_path:
+      rev_b: 2.247
+      rev_path:
+      - 0.32
+      - 0.27
+      - 0.22
+      - 0.18
+      - 0.15
+      op_margin:
+      - 0.02
+      - 0.07
+      - 0.12
+      - 0.16
+      - 0.18
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.05
+      fcf:
+      - 0.119
+      - 0.339
+      - 0.643
+      - 0.976
+      - 1.247
+      cash: 1.2
+      net_debt: 0.0
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 595
+      distress: 0.0
+      pv_fcf:
+      - 0.109
+      - 0.285
+      - 0.497
+      - 0.691
+      - 0.81
+      sum_pv_fcf: 2.39
+      terminal_value: 32.73
+      pv_terminal: 21.27
+      op_ev: 23.66
+      total_equity: 24.86
+      dcf_per_share: 41.78
+    chart_data:
+      ev_rev_multiple:
+      - 13.0
+      - 11.0
+      - 10.0
+      - 9.0
+      - 8.0
+      ev_fcf_multiple:
+      - 45.0
+      - 26.0
+      - 18.0
+      - 14.0
+      - 12.0
+historical_prices:
+  ipo_marker: SPAC Jun '22
+  x_min: -4.0
+  points:
+  - - -3.9
+    - 10.0
+  - - -3.0
+    - 20.0
+  - - -2.0
+    - 45.0
+  - - -1.5
+    - 60.0
+  - - -1.0
+    - 88.0
+  - - -0.5
+    - 50.0
+  - - -0.05
+    - 41.63
+weighting_rationale:
+- label: Ultra Bear 13%
+  body: Margin never inflects; Walmart bites.
+- label: Bear 27%
+  body: Backlog converts slowly; high-teens margin persists.
+- label: Base 33%
+  body: Backlog converts; ~10% owner-FCF margin; GreenBox helps.
+- label: Bull 18%
+  body: Margins inflect toward 15%, recurring WaaS mix grows; $22.02.
+- label: Ultra Bull 9%
+  body: Software-like margins; gross margin toward 30%+.
+appendix:
+  pushback:
+  - label: Backlog gives rare visibility
+    body: A ~$22.5B backlog (Walmart + GreenBox) is multiples of revenue, an unusually contracted forward book that de-risks
+      the growth path.
+  - label: Labor automation is structural
+    body: Warehouse-labor scarcity and rising fulfillment volume make AI automation a durable, multi-decade demand tailwind,
+      not a cycle.
+  - label: GAAP just turned positive
+    body: Q2 FY26 net income of +$9M marks the inflection from years of losses; operating leverage may now compound.
+  - label: GreenBox adds recurring mix
+    body: The SoftBank WaaS JV (~$11.6B backlog) shifts the model toward recurring, higher-margin revenue versus one-time
+      system sales.
+  - label: Cash flow is real cash
+    body: Operating cash flow was +$867M; even if milestone-timed, it funds the ramp without dilution or debt.
+  triggers:
+  - label: Bull validation
+    body: Gross margin climbing above the low-20s; GreenBox recurring revenue scaling; a second large anchor customer beyond
+      Walmart.
+  - label: Bear validation
+    body: Walmart order cadence slowing or terms renegotiated; gross margin stuck near 19%; another restatement or control
+      deficiency.
+  - label: Reframe needed
+    body: Sustained software-like gross margin (30%+) with ex-SBC owner FCF turning durably positive would move this from
+      systems integrator to platform.
+glossary:
+- term: Systems-integrator model / gross margin
+  definition: Designs, builds, and installs automation systems; margins are construction-like (~19% here), not software-like,
+    because hardware and integration dominate cost.
+- term: Backlog
+  definition: Contracted but not-yet-recognized revenue (~$22.5B), giving forward visibility; converts to revenue as systems
+    are deployed over multiple years.
+- term: Up-C dual-class economic units
+  definition: 'An Up-C structure: economic ownership spans Class A plus Class V units (~591M total), so per-share value uses
+    ~591M, not the smaller Class A float.'
+- term: GreenBox (warehouse-as-a-service)
+  definition: SoftBank JV offering automated warehousing as an outsourced, recurring service (~$11.6B of backlog) rather than
+    a one-time system sale.
+- term: Adj-EBITDA vs owner FCF; customer-funded OCF
+  definition: Adj-EBITDA ($147M) excludes SBC ($184M); the $867M operating cash flow is customer milestone prepayments (working
+    capital), not sustainable owner cash.
+- term: SBC (stock-based compensation)
+  definition: Non-cash pay in stock ($184M, exceeding adj-EBITDA); it dilutes owners and is the main driver of the GAAP operating
+    loss.
+competitive:
+  arena: Warehouse-automation systems for large retailers and 3PLs; Symbotic competes with incumbent material-handling integrators
+    and in-house programs from the largest buyers.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 2
+      note: Largest dedicated automation deployments fund R&D and standardization, but a 19% gross margin shows limited cost
+        advantage so far.
+    network_economies:
+      score: 1
+      note: Some data and operational learning across sites, but no cross-customer network effect that compounds value as
+        installs grow.
+    counter_positioning:
+      score: 1
+      note: Full-stack AI-robotics integrator differs from legacy hardware vendors, but incumbents can adopt similar AI without
+        a business-model conflict.
+    switching_costs:
+      score: 2
+      note: Installed multi-year systems are deeply embedded and costly to rip out, but that locks the customer, not new wins.
+    branding:
+      score: 1
+      note: Credibility from the Walmart reference, but enterprise buyers procure on proof and economics, not brand.
+    cornered_resource:
+      score: 2
+      note: The Walmart relationship and contracted backlog are a privileged asset, but the same dependence is the concentration
+        risk.
+    process_power:
+      score: 1
+      note: Integration and software know-how exist, but a thin gross margin and the restatement history argue the process
+        advantage is not yet durable.
+  dominant_power: cornered_resource
+  durability: medium
+  rivals:
+  - name: Amazon Robotics
+    kind: private
+    note: In-house automation at the largest buyer; not for sale but sets the build-vs-buy bar.
+    growth: null
+    margin: null
+    multiple: deep parent balance sheet
+  - name: Dematic (KION)
+    kind: public
+    note: Established material-handling integrator, low-margin hardware-led model.
+    growth: 0.08
+    margin: 0.06
+    multiple: ~6-8% division margin
+  - name: Honeywell Intelligrated
+    kind: private
+    note: Division of a diversified industrial; scaled integrator with broad install base.
+    growth: 0.05
+    margin: 0.07
+    multiple: industrial-conglomerate margins
+  - name: AutoStore
+    kind: public
+    note: Higher-margin modular ASRS vendor, mid-teens growth, software-like economics.
+    growth: 0.14
+    margin: 0.4
+    multiple: ~40% EBITDA margin
+  threats:
+  - vector: cornered_resource
+    who: Walmart
+    falsifier: Walmart in-sources automation or renegotiates terms, collapsing the >84% revenue concentration.
+  - vector: process_power
+    who: execution / controls
+    falsifier: Another restatement, deployment delay, or material-weakness recurrence signals integration is not yet a durable
+      advantage.
+  - vector: scale_economies
+    who: margin structure
+    falsifier: Gross margin stays near 19% through scale, proving the model never reaches software-like, platform economics.
+  takeaway: 'A cornered-resource relationship with Walmart plus the largest contracted backlog is real Power, but it cuts
+    both ways: the same dependence is an extreme concentration risk, and a 19% gross margin shows scale has not yet produced
+    a durable cost or process advantage. Durability is medium at best. The falsifier the bull must clear is margin: gross
+    margin expanding well beyond the high teens with ex-SBC owner FCF turning durably positive, ideally alongside a second
+    large anchor customer.'
+stamp:
+  footer_version: '001'
+  footer_timestamp: 2026-06-20_06-33
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: '001'
+  pdf_timestamp: 2026-06-20_06-33

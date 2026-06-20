@@ -1,0 +1,934 @@
+# PRME — Prime Medicine (NASDAQ) · INTAKE (YOUNG; python-modeled; scaffold-ready)
+ticker: PRME
+company: Prime Medicine
+exchange: NASDAQ
+dcf_type: young_company
+date: '2026-06-16'
+spot: 3.16
+market:
+  market_cap_billion: 0.57
+  shares_outstanding_million: 180.6
+  cash_billion: 0.149
+  net_debt_billion: 0.0
+  extras:
+  - ~$149M cash = ~9-month runway; FY2025 10-K flags GOING-CONCERN doubt; $200M ATM
+  - Pre-product prime editing (search-and-replace; David Liu / Broad lineage); burn ~$43M/qtr
+  - PM359 first-ever clinical prime edit (NEJM Dec'25); May'25 restructuring -> in-vivo liver (Wilson/AATD)
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Low
+  themes:
+  - precision-medicine-oncology
+  primary_theme: precision-medicine-oncology
+central_question: PRME proved the first-in-human prime edit, but holds only ~9 months of cash against a going-concern flag
+  and a $200M ATM — does the platform tail survive the dilution before it pays off?
+thesis: Prime Medicine is a clinical-stage prime-editing biotech — the precise 'search-and-replace' gene edit (no double-strand
+  break), David Liu's sister technology to BEAM's base editing. Pre-revenue at $3.16 (~$585M cap), it proved the first-ever
+  clinical prime edit (PM359, NEJM Dec 2025). But cash is ~$149M (~9 months), the FY2025 10-K flags going-concern doubt, and
+  a $200M ATM means severe dilution at a ~$3 stock; a May 2025 restructuring refocused it on in-vivo liver (Wilson's, AATD).
+  The DCF asks whether the platform tail can outrun forced dilution. Weighted fair value $3.39 vs $3.16 — roughly fair, an
+  option where the platform almost exactly offsets the balance sheet.
+chart_reference:
+  tam_billion: 30
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.01
+  - 0.015
+  - 0.005
+  history_fleet:
+  - 0
+  - 0
+  - 0
+page3_chart_config:
+  peer_y: 32
+  peer_text: Profitable biopharma op margin ~30-40%
+  fleet_anchor: 0
+  fleet_title: Revenue ramp (log)
+  fleet_reference:
+  valn_anchor_y: 5
+  valn_anchor_text: Commercial biotech P/S ~4-6x
+  valn_caption: 'Pre-product: the ~$585M cap is pipeline value over a thin $149M cash floor.'
+  tam_title: $30B genetic-disease therapeutics — PRME share
+  tam_legend:
+  - PRME
+  - Gene-editing rivals
+  - Other genetic medicine
+page3:
+  subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  Q1'26 (May 2026) release
+  sources: 'Sources: PRME FY2025 10-K (going-concern) + Q1''26 results (CIK 1894562), PM359 CGD data (NEJM Dec 2025), May''25
+    restructuring, BMS/CFF agreements. Revenue is minimal collaboration income; product revenue modeled post-approval; raises
+    auto-sized (the $200M ATM dilution path). FCF is NOL-shielded pre-tax over the explicit window. TAM: a serviceable slice
+    of genetic-disease therapeutics, ~$30B.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.16
+    expected_per_share: 0.28
+    headline: Programs fail; dilutive death-march
+    narrative:
+    - Clinical programs miss and the cash runs out before any partner steps in. With ~9 months of runway and a going-concern
+      flag, the $200M ATM is tapped repeatedly into a falling stock, sinking the equity toward the $0.40 distress floor.
+    - FY35 product revenue stalls at ~$0.11B and p_fail is 90% — survival itself is the bet, not just the science. The share
+      count balloons from 180M to ~702M, so even residual value is spread thin. DCF −$0.81; the distress-weighted expected
+      value is ~$0.28.
+    probability_rationale: 16% — the combination of 9-month runway, going-concern doubt, and clinical-stage risk makes near-term
+      insolvency or a dilutive collapse a genuine, not tail, outcome.
+    dcf_metrics:
+      tam_share: 0.367
+      p_fail: 90
+      s2c: 1.0
+    dcf_path:
+      rev_path:
+      - 0.02
+      - 0.03
+      - 0.04
+      - 0.05
+      - 0.06
+      - 0.07
+      - 0.08
+      - 0.09
+      - 0.1
+      - 0.11
+      op_margin:
+      - -7.0
+      - -5.0
+      - -3.5
+      - -2.5
+      - -1.8
+      - -1.3
+      - -0.9
+      - -0.6
+      - -0.4
+      - -0.25
+      wacc_path:
+      - 0.155
+      - 0.151
+      - 0.147
+      - 0.143
+      - 0.139
+      - 0.136
+      - 0.132
+      - 0.128
+      - 0.124
+      - 0.12
+      term_g: 0.03
+      nopat:
+      - -0.14
+      - -0.15
+      - -0.14
+      - -0.125
+      - -0.108
+      - -0.091
+      - -0.072
+      - -0.054
+      - -0.04
+      - -0.028
+      reinvest:
+      - 0.0
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      fcf:
+      - -0.14
+      - -0.16
+      - -0.15
+      - -0.135
+      - -0.118
+      - -0.101
+      - -0.082
+      - -0.064
+      - -0.05
+      - -0.037
+      cash: 0.149
+      net_debt: 0.0
+      raise_total: 0.939
+      dilution_pct: 289
+      final_shares: 702.3
+      distress: 0.4
+      pv_fcf:
+      - -0.121
+      - -0.12
+      - -0.098
+      - -0.077
+      - -0.059
+      - -0.045
+      - -0.032
+      - -0.022
+      - -0.015
+      - -0.01
+      sum_pv_fcf: -0.6
+      terminal_value: -0.42
+      pv_terminal: -0.12
+      op_ev: -0.72
+      total_equity: -0.57
+      dcf_per_share: -0.81
+    chart_data:
+      raises:
+      - 0.041
+      - 0.16
+      - 0.15
+      - 0.135
+      - 0.118
+      - 0.101
+      - 0.082
+      - 0.064
+      - 0.05
+      - 0.038
+      raise_prices:
+      - 1.8
+      - 1.8
+      - 1.8
+      - 1.8
+      - 1.8
+      - 1.8
+      - 1.8
+      - 1.8
+      - 1.8
+      - 1.8
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 15.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.3
+    expected_per_share: 0.14
+    headline: One program limps; dilution wins
+    narrative:
+    - A single program advances but slowly, forcing repeated capital raises through the ATM at depressed prices. The platform
+      partly works, yet the financing dominates the equity story — every milestone is paid for in shares.
+    - FY35 revenue reaches ~$0.31B with p_fail still 70%. The share count rises to ~568M, diluting surviving holders before
+      economics arrive. DCF −$0.46; expected value ~$0.14 — value is created, but new shares capture most of it.
+    probability_rationale: '30% — the most likely single path: the science shows enough to keep going but not enough to raise
+      cheaply, so dilution erodes the per-share claim faster than value compounds.'
+    dcf_metrics:
+      tam_share: 1.033
+      p_fail: 70
+      s2c: 1.1
+    dcf_path:
+      rev_path:
+      - 0.03
+      - 0.05
+      - 0.08
+      - 0.12
+      - 0.16
+      - 0.2
+      - 0.24
+      - 0.27
+      - 0.29
+      - 0.31
+      op_margin:
+      - -6.5
+      - -4.0
+      - -2.5
+      - -1.4
+      - -0.7
+      - -0.15
+      - 0.12
+      - 0.2
+      - 0.25
+      - 0.29
+      wacc_path:
+      - 0.145
+      - 0.142
+      - 0.138
+      - 0.135
+      - 0.132
+      - 0.128
+      - 0.125
+      - 0.122
+      - 0.118
+      - 0.115
+      term_g: 0.035
+      nopat:
+      - -0.195
+      - -0.2
+      - -0.2
+      - -0.168
+      - -0.112
+      - -0.03
+      - 0.029
+      - 0.054
+      - 0.072
+      - 0.09
+      reinvest:
+      - 0.009
+      - 0.018
+      - 0.027
+      - 0.036
+      - 0.036
+      - 0.036
+      - 0.036
+      - 0.027
+      - 0.018
+      - 0.018
+      fcf:
+      - -0.204
+      - -0.218
+      - -0.227
+      - -0.204
+      - -0.148
+      - -0.066
+      - -0.008
+      - 0.027
+      - 0.054
+      - 0.072
+      cash: 0.149
+      net_debt: 0.0
+      raise_total: 0.968
+      dilution_pct: 214
+      final_shares: 567.8
+      distress: 0.4
+      pv_fcf:
+      - -0.178
+      - -0.167
+      - -0.153
+      - -0.121
+      - -0.077
+      - -0.031
+      - -0.003
+      - 0.01
+      - 0.018
+      - 0.021
+      sum_pv_fcf: -0.68
+      terminal_value: 0.93
+      pv_terminal: 0.27
+      op_ev: -0.41
+      total_equity: -0.26
+      dcf_per_share: -0.46
+    chart_data:
+      raises:
+      - 0.103
+      - 0.218
+      - 0.228
+      - 0.204
+      - 0.148
+      - 0.067
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 2.5
+      - 2.5
+      - 2.5
+      - 2.5
+      - 2.5
+      - 2.5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 15.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.3
+    expected_per_share: 0.6
+    headline: A liver program ships; dilution offsets
+    narrative:
+    - A Wilson's or AATD in-vivo program reaches market and BMS milestones (>$3.5B potential) start landing, validating prime
+      editing as a real modality. The business survives and generates revenue at ~37% drug margins.
+    - But getting there costs ~$0.9B of dilutive raises at depressed prices, nearly tripling the share count to ~500M. FY35
+      revenue ~$0.50B; p_fail 55%. DCF $0.84, expected ~$0.60 — per-share value lands just below spot because dilution claims
+      the upside.
+    probability_rationale: '30% — co-equal modal case: clinical proof exists (PM359) and the liver targets are credible, but
+      the model auto-sizes the raises needed to fund them, and that dilution is the binding constraint on per-share value.'
+    dcf_metrics:
+      tam_share: 1.667
+      p_fail: 55
+      s2c: 1.2
+    dcf_path:
+      rev_path:
+      - 0.04
+      - 0.07
+      - 0.11
+      - 0.17
+      - 0.24
+      - 0.32
+      - 0.4
+      - 0.45
+      - 0.48
+      - 0.5
+      op_margin:
+      - -5.5
+      - -3.2
+      - -1.8
+      - -0.8
+      - -0.15
+      - 0.12
+      - 0.22
+      - 0.28
+      - 0.33
+      - 0.37
+      wacc_path:
+      - 0.135
+      - 0.132
+      - 0.128
+      - 0.125
+      - 0.122
+      - 0.118
+      - 0.115
+      - 0.112
+      - 0.108
+      - 0.105
+      term_g: 0.04
+      nopat:
+      - -0.22
+      - -0.224
+      - -0.198
+      - -0.136
+      - -0.036
+      - 0.038
+      - 0.088
+      - 0.126
+      - 0.158
+      - 0.185
+      reinvest:
+      - 0.017
+      - 0.025
+      - 0.033
+      - 0.05
+      - 0.058
+      - 0.067
+      - 0.067
+      - 0.042
+      - 0.025
+      - 0.017
+      fcf:
+      - -0.237
+      - -0.249
+      - -0.231
+      - -0.186
+      - -0.094
+      - -0.028
+      - 0.021
+      - 0.084
+      - 0.133
+      - 0.168
+      cash: 0.149
+      net_debt: 0.0
+      raise_total: 0.895
+      dilution_pct: 177
+      final_shares: 500.2
+      distress: 0.4
+      pv_fcf:
+      - -0.209
+      - -0.194
+      - -0.159
+      - -0.114
+      - -0.051
+      - -0.014
+      - 0.009
+      - 0.033
+      - 0.047
+      - 0.054
+      sum_pv_fcf: -0.6
+      terminal_value: 2.69
+      pv_terminal: 0.87
+      op_ev: 0.27
+      total_equity: 0.42
+      dcf_per_share: 0.84
+    chart_data:
+      raises:
+      - 0.134
+      - 0.249
+      - 0.232
+      - 0.186
+      - 0.094
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 2.8
+      - 2.8
+      - 2.8
+      - 2.8
+      - 2.8
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 15.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.16
+    expected_per_share: 5.14
+    headline: Liver successes; platform validates
+    narrative:
+    - Several in-vivo liver programs succeed and the platform partly validates as a versatile precise editor, drawing partners
+      and pricing power. Revenue scales toward ~$1.00B at 40% margins, and earlier validation means raises come at higher
+      prices.
+    - Because the equity is less distressed, dilution is milder — the share count rises only to ~372M, not the 500M+ of the
+      base. p_fail falls to 30%. DCF $7.17, expected ~$5.14 — the first scenario where the platform clearly outruns the balance
+      sheet.
+    probability_rationale: 16% — requires both clinical breadth across liver targets and a financing path that improves as
+      proof accumulates; plausible given the NEJM precedent, but it needs the science to de-risk before the cash forces bad
+      raises.
+    dcf_metrics:
+      tam_share: 3.333
+      p_fail: 30
+      s2c: 1.4
+    dcf_path:
+      rev_path:
+      - 0.05
+      - 0.09
+      - 0.17
+      - 0.3
+      - 0.46
+      - 0.64
+      - 0.8
+      - 0.9
+      - 0.96
+      - 1.0
+      op_margin:
+      - -4.5
+      - -2.2
+      - -0.8
+      - 0.05
+      - 0.18
+      - 0.26
+      - 0.32
+      - 0.36
+      - 0.38
+      - 0.4
+      wacc_path:
+      - 0.125
+      - 0.122
+      - 0.119
+      - 0.117
+      - 0.114
+      - 0.111
+      - 0.108
+      - 0.106
+      - 0.103
+      - 0.1
+      term_g: 0.05
+      nopat:
+      - -0.225
+      - -0.198
+      - -0.136
+      - 0.015
+      - 0.083
+      - 0.166
+      - 0.256
+      - 0.324
+      - 0.365
+      - 0.4
+      reinvest:
+      - 0.021
+      - 0.029
+      - 0.057
+      - 0.093
+      - 0.114
+      - 0.129
+      - 0.114
+      - 0.071
+      - 0.043
+      - 0.029
+      fcf:
+      - -0.246
+      - -0.227
+      - -0.193
+      - -0.078
+      - -0.031
+      - 0.038
+      - 0.142
+      - 0.253
+      - 0.322
+      - 0.371
+      cash: 0.149
+      net_debt: 0.0
+      raise_total: 0.671
+      dilution_pct: 106
+      final_shares: 372.3
+      distress: 0.4
+      pv_fcf:
+      - -0.219
+      - -0.18
+      - -0.137
+      - -0.049
+      - -0.018
+      - 0.019
+      - 0.066
+      - 0.106
+      - 0.122
+      - 0.128
+      sum_pv_fcf: -0.16
+      terminal_value: 7.79
+      pv_terminal: 2.68
+      op_ev: 2.52
+      total_equity: 2.67
+      dcf_per_share: 7.17
+    chart_data:
+      raises:
+      - 0.142
+      - 0.226
+      - 0.193
+      - 0.078
+      - 0.032
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 3.5
+      - 3.5
+      - 3.5
+      - 3.5
+      - 3.5
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 15.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 28.74
+    headline: Prime editing wins broadly in-vivo
+    narrative:
+    - Prime editing establishes itself as a broad in-vivo platform across many edit types, the durable advantage David Liu's
+      chemistry promises. Revenue reaches ~$2.00B at 45% margins, and validation lets PRME fund growth without punishing dilution.
+    - The share count rises only to ~285M — the cleanest balance-sheet outcome — and p_fail drops to 18%. DCF $34.96, expected
+      ~$28.74. This is the platform-wins tail that the distressed entry price makes cheap to own.
+    probability_rationale: '8% — the platform-validation tail: requires prime editing to beat base editing and nuclease approaches
+      on versatility and safety at scale, and the equity to survive intact long enough to capture it.'
+    dcf_metrics:
+      tam_share: 6.667
+      p_fail: 18
+      s2c: 1.6
+    dcf_path:
+      rev_path:
+      - 0.06
+      - 0.12
+      - 0.24
+      - 0.44
+      - 0.7
+      - 1.05
+      - 1.45
+      - 1.75
+      - 1.92
+      - 2.0
+      op_margin:
+      - -3.5
+      - -1.4
+      - -0.2
+      - 0.14
+      - 0.24
+      - 0.32
+      - 0.38
+      - 0.41
+      - 0.43
+      - 0.45
+      wacc_path:
+      - 0.12
+      - 0.117
+      - 0.114
+      - 0.112
+      - 0.109
+      - 0.106
+      - 0.103
+      - 0.101
+      - 0.098
+      - 0.095
+      term_g: 0.06
+      nopat:
+      - -0.21
+      - -0.168
+      - -0.048
+      - 0.062
+      - 0.168
+      - 0.336
+      - 0.551
+      - 0.717
+      - 0.826
+      - 0.9
+      reinvest:
+      - 0.025
+      - 0.037
+      - 0.075
+      - 0.125
+      - 0.162
+      - 0.219
+      - 0.25
+      - 0.188
+      - 0.106
+      - 0.05
+      fcf:
+      - -0.235
+      - -0.205
+      - -0.123
+      - -0.063
+      - 0.006
+      - 0.117
+      - 0.301
+      - 0.53
+      - 0.719
+      - 0.85
+      cash: 0.149
+      net_debt: 0.0
+      raise_total: 0.52
+      dilution_pct: 58
+      final_shares: 284.6
+      distress: 0.4
+      pv_fcf:
+      - -0.21
+      - -0.164
+      - -0.088
+      - -0.041
+      - 0.003
+      - 0.062
+      - 0.143
+      - 0.23
+      - 0.284
+      - 0.306
+      sum_pv_fcf: 0.52
+      terminal_value: 25.74
+      pv_terminal: 9.28
+      op_ev: 9.8
+      total_equity: 9.95
+      dcf_per_share: 34.96
+    chart_data:
+      raises:
+      - 0.129
+      - 0.205
+      - 0.123
+      - 0.063
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      raise_prices:
+      - 5.0
+      - 5.0
+      - 5.0
+      - 5.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      - 0.0
+      rev_per_unit:
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      - 1.0
+      tam_competitor_share: 15.0
+historical_prices:
+  ipo_marker: IPO Oct '22
+  x_min: -3.7
+  points:
+  - - -3.6
+    - 17.0
+  - - -3.0
+    - 9.0
+  - - -2.2
+    - 5.0
+  - - -1.5
+    - 3.5
+  - - -1.0
+    - 2.2
+  - - -0.5
+    - 5.5
+  - - -0.25
+    - 4.0
+  - - -0.05
+    - 3.16
+weighting_rationale:
+- label: Ultra Bear 16%
+  body: Programs fail or cash runs out; ATM dilutes to the $0.40 floor.
+- label: Bear 30%
+  body: One program limps; repeated raises at low prices overwhelm holders.
+- label: Base 30%
+  body: A liver program clears + BMS pays, but ~$0.9B of raises nearly triples shares.
+- label: Bull 16%
+  body: Multiple liver successes; milder dilution as proof lifts the financing price.
+- label: Ultra Bull 8%
+  body: Prime editing wins broadly in-vivo; cleanest share count, platform terminal.
+appendix:
+  pushback:
+  - label: First-in-class proof is real
+    body: PM359 restored NADPH-oxidase activity in the first-ever clinical prime edit (NEJM Dec 2025) — the core chemistry
+      works in humans, not just in vitro.
+  - label: Liver refocus de-risks delivery
+    body: The May 2025 pivot to in-vivo liver (Wilson's, AATD) targets the best-validated delivery route, where LNP-to-liver
+      is a solved problem for rivals.
+  - label: Non-dilutive capital exists
+    body: BMS ($55M upfront, $55M equity, >$3.5B milestones) and CFF (up to $39M) offset some burn — not every dollar of progress
+      must come from the ATM.
+  - label: The de-rating prices the distress
+    body: At $3.16, down from a $6.94 high, much of the going-concern risk is already in the stock; the platform tail is being
+      bought cheaply.
+  - label: David Liu lineage
+    body: The Broad-Institute prime-editing IP and scientific lead are a genuine cornered resource that a partner or acquirer
+      could fund through the cash crunch.
+  triggers:
+  - label: Bull validation
+    body: A partnered or approved liver program (Wilson's/AATD), a PM359 partner/BLA path, or a financing/partnership that
+      closes the runway gap before the ATM is leaned on.
+  - label: Bear validation
+    body: Repeated ATM draws at sub-$3 prices, a clinical setback in the lead liver programs, or runway slipping below two
+      quarters without a partner.
+  - label: Reframe needed
+    body: Insolvency, a recap, or a take-under would move this from 'distressed option' to 'broken' — re-underwrite from the
+      floor, not the platform tail.
+glossary:
+- term: prime editing
+  definition: Precise 'search-and-replace' gene edit that rewrites DNA without a double-strand break; makes many edit types.
+    David Liu / Broad lineage.
+- term: PM359 / CGD
+  definition: PRME's program for chronic granulomatous disease; the first-ever clinical prime edit (NEJM Dec 2025). Deprioritized;
+    now seeking a partner/BLA path.
+- term: in-vivo liver editing
+  definition: Editing genes directly inside the body in the liver — the focus after the May 2025 refocus (Wilson's disease
+    PM577, AATD PM647).
+- term: going-concern
+  definition: Auditor/management doubt, flagged in the FY2025 10-K, that the company has enough cash to operate for the next
+    12 months.
+- term: ATM / forced dilution
+  definition: An 'at-the-market' equity program ($200M here) that sells new shares into the open market; at a ~$3 stock it
+    heavily dilutes existing holders.
+- term: p_fail
+  definition: Modeled probability the scenario ends in failure or insolvency before economics arrive — elevated here because
+    surviving the cash crunch is itself uncertain.
+competitive:
+  arena: In-vivo and ex-vivo precise gene editing for genetic disease, against base editors (BEAM), nuclease editors (Intellia,
+    CRISPR Therapeutics) and editing platforms (Editas).
+  lens: power_origination
+  powers:
+    scale_economies:
+      score: 1
+      note: Sub-scale and cash-starved; forced to cut ~25% of staff and the pipeline in May 2025.
+    network_economies:
+      score: 0
+      note: No network effects in a therapeutics platform; value is clinical proof, not adoption density.
+    counter_positioning:
+      score: 2
+      note: Prime editing avoids double-strand breaks and makes edit types base editing cannot — a model rivals can't simply
+        copy.
+    switching_costs:
+      score: 1
+      note: Switching costs accrue only post-approval, per indication; none yet with zero approved products.
+    branding:
+      score: 0
+      note: No commercial brand; pre-revenue clinical-stage with reputational, not pricing, recognition.
+    cornered_resource:
+      score: 2
+      note: David Liu / Broad prime-editing IP and know-how are a genuine scarce asset — but underfunded to exploit.
+    process_power:
+      score: 1
+      note: Editing-design and delivery know-how is real but early and not yet a durable manufacturing advantage.
+  dominant_power: cornered_resource
+  window: closing
+  rivals:
+  - name: BEAM (base editing)
+    kind: public
+    note: Same gene-editing family; $1.21B cash vs PRME's $149M — far better capitalized.
+    share_now: 0.3
+    share_terminal: 0.3
+    capital: $1.21B cash, runway to ~2029
+  - name: Intellia / NTLA
+    kind: public
+    note: In-vivo CRISPR nuclease editing; deeper clinical pipeline and balance sheet.
+    share_now: 0.25
+    share_terminal: 0.25
+    capital: well-funded, partnered
+  - name: CRISPR Therapeutics
+    kind: public
+    note: Approved ex-vivo product (Casgevy) and substantial cash; nuclease leader.
+    share_now: 0.25
+    share_terminal: 0.2
+    capital: product revenue + large cash
+  - name: Editas Medicine
+    kind: public
+    note: Editing platform peer; also capital-constrained and restructuring.
+    share_now: 0.1
+    share_terminal: 0.05
+    capital: constrained
+  lead_lag:
+  - metric: Clinical first
+    company: PM359 first-ever clinical prime edit (NEJM)
+    best_rival: Base/nuclease peers further in pivotal trials
+    verdict: even
+  - metric: Balance sheet
+    company: ~$149M / ~9 months / going-concern
+    best_rival: BEAM ~$1.21B / runway to ~2029
+    verdict: lagging
+  - metric: In-vivo delivery
+    company: Refocused to liver, pre-clinical-readout
+    best_rival: NTLA/peers with in-vivo human data
+    verdict: lagging
+  takeaway: PRME is trying to originate a cornered-resource/process Power in versatile, precise editing — the David Liu prime-editing
+    platform is a genuine scarce asset, and PM359 proves the chemistry works in humans. But the company is cash-starved and
+    was forced to cut its pipeline, so the Power-origination window is closing faster than the science is maturing. The falsifier
+    the bull must clear is concrete — reach a partnered or approved program before the balance sheet forces value-destroying
+    dilution. Same family as BEAM, opposite balance sheet.

@@ -257,7 +257,34 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   plotted as $80B, clipping +823px (the GRAL/IONQ wave-2c class). (2) Young **Page-1 5-scenario** binding when the left column is
   short is the **scenario-card headlines** below the fixed-height forward chart (trim headlines, not thesis); when the left column
   is tall it's thesis/weighting — diagnose by which trim moves the px. (3) `final_shares` must reconcile with `shares0 + Σ
-  raise/price` or the validator WARNs — use scalar avg raise-prices and set fs to the implied count.* Shipped on `claude/epic-curie-ouHZL`.
+  raise/price` or the validator WARNs — use scalar avg raise-prices and set fs to the implied count.* **MERGED to main via PR #54**
+  (2026-06-16, with the Schwager-Sortino tracker below).
+- **Portfolio tracker — Schwager modified Sortino vs S&P/NASDAQ (2026-06-16; merged PR #54).** `portfolio/track_performance.py`
+  now reconstructs the buy-and-hold (drifting-weight) portfolio's daily returns and computes **Schwager's modified Sortino ratio**
+  (from *Unknown Market Wizards*): `(annualized return − MAR) / (√2 × annualized downside deviation)` — the **√2 makes it directly
+  Sharpe-comparable** (equal for a symmetric distribution, above Sharpe only with positive skew). MAR = realized risk-free (BIL);
+  vs SPY (S&P 500) + QQQ (NASDAQ-100); snapshot persisted to `risk_stats.csv`; runs in the daily routine + via `AI_EPOCH=<date>
+  --sortino` for a trailing-window backtest. Trailing-12mo backtest (today's weights × trailing prices, NOT the live book):
+  Portfolio Sortino **0.55** vs SPY **1.71** / QQQ **1.88** — the concentrated book's ~3× downside deviation drags its
+  downside-risk-adjusted return well below the indices. Lower Sortino = worse (return per unit of downside risk). README/ROUTINES updated.
+- **Moonshot-tier batch SHIPPED (2026-06-20; tickers 47–50): SERV, PRME (young_company) + TWST, SYM (mature).** Second wave through
+  the reusable young builder + the mature builder; "frontier automation + synthetic/gene biology" slate. Authored from locked numbers
+  (`/tmp/moon/model.py` young + `/tmp/moon/mature.py`) + prose by 4 parallel subagents; conviction tiers all **Low** (speculative;
+  Arthur to confirm). **Findings (entry-price-vs-distribution; two frontier moonshots, two rallied names screening expensive):**
+  **SERV +29.2%** (pre-scale sidewalk-delivery robots; modal base −63% on a half-idle 2,000-robot fleet + brutal forced dilution +
+  thin LOGISTICS margins, but a fat tail if utilization inflects — a cheap option on the fleet scaling); **PRME +7.2%** (the
+  **anti-BEAM** — same gene-editing family, opposite balance sheet: $149M / ~9-mo runway / GOING-CONCERN flag / $200M ATM vs BEAM's
+  $1.21B; forced dilution doubles-to-triples the share count + a $0.40 distress floor almost exactly offset the platform tail → fair);
+  **TWST −49.8%** (rich/priced-for-perfection — rallied +150%/52wk to ~14× sales while still adj-EBITDA-negative; the ILMN/RDDT/TEM
+  family); **SYM −68.0%** (richest — a thin-margin 19%-GM systems integrator priced ~11× sales like software; SBC > adj-EBITDA so
+  owner-FCF ~0, the $867M OCF is customer-funded backlog timing; only a margin transformation reaches spot; >84% Walmart concentration).
+  **TWST + SYM reclassified young→mature** (TEM/TXG precedent: high-rev, near/at breakeven, net cash → the prev_rev=0 cash-runway check
+  is an artifact). `visual_baseline.json` **now 50 tickers**; validator green; all 4 STRICT-clean; no drift on the existing 46.
+  *Lessons: (1) thin-cash heavy-burn young names (SERV/PRME) need an **auto-raise sizer** — greedily raise just enough to keep the
+  validator cash path ≥0, set final_shares to the implied diluted count — so the dilution drag is honest (without it the tails are
+  wildly overstated). (2) **Calibrate terminal op margins to the BUSINESS**: a delivery-robot NETWORK is LOGISTICS (~15-24% op margin),
+  not software (45%) — the wrong margin 10×'d SERV's tail. (3) **Page-6 back-matter binding row = PUSHBACK row 1 (items 0-2)**, not
+  row 2 — the disclaimers section is fixed/shared; trim the tallest cell in the binding row.* Shipped on `claude/epic-curie-ouHZL`.
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin
