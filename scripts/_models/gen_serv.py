@@ -15,7 +15,7 @@ SPEC = dict(
  extras=["~$197M liquidity (~$47M cash + securities); ~1.2yr runway; burn ~$41M/qtr",
          "~2,000 robots deployed across 44 cities but only ~812 daily-active (<half utilized)",
          "FY26 guide $26M (~9x FY25); heavy dilution (24.8M -> 77.4M shares in 2yr; $150M ATM)"],
- wl="asymmetrical-moonshots", tier="Low", themes=["autonomous-vehicles-systems"],
+ wl="asymmetrical-moonshots", tier="Med-Low", themes=["autonomous-vehicles-systems"],
  cq="With a fleet of ~2,000 robots already built but fewer than half daily-active, is SERV a cheap option on utilization inflecting to profitable unit economics, or a dilutive grind where the modal case loses money?",
  thesis=(
    "Serve Robotics runs autonomous sidewalk delivery robots, spun out of Uber/Postmates and Nvidia-backed. It trades "
