@@ -8,16 +8,19 @@ adjusted closes (keyless — same source proven in the AI 2.0 work). Upserts tod
 row into portfolio/performance.csv (one row per date).
 
 It ALSO reconstructs the (buy-and-hold, drifting-weight) portfolio's daily return
-series and computes a **modified Sortino ratio** for the portfolio vs SPY (S&P 500)
-and QQQ (NASDAQ-100), persisting the snapshot to portfolio/risk_stats.csv.
+series and computes **Schwager's modified Sortino ratio** (from *Unknown Market
+Wizards*) for the portfolio vs SPY (S&P 500) and QQQ (NASDAQ-100), persisting the
+snapshot to portfolio/risk_stats.csv.
 
-  Modified Sortino = (annualized return − MAR) / annualized downside deviation,
-  where the downside deviation is the FULL-SAMPLE target semideviation below the MAR
-  —  DD = sqrt( (1/N) · Σ_t min(0, r_t − τ)² )  —  summed over ALL N periods (not just
-  down periods; the statistically-correct form), annualized by √252. The target τ is
-  the per-period MAR; MAR defaults to the realized risk-free rate (BIL) over the
-  window, with the SAME target in numerator and denominator (a consistent-target
-  Sortino). Sharpe, downside deviation, and max drawdown are reported alongside.
+  modified Sortino = (annualized return − MAR) / (√2 × annualized downside deviation)
+
+  The downside deviation is the standard target semideviation below the MAR —
+  DD = sqrt( (1/N) · Σ_t min(0, r_t − τ)² ) over ALL N periods — annualized by √252.
+  Schwager's √2 factor makes the ratio directly comparable to the Sharpe ratio: for a
+  symmetric distribution DD ≈ σ/√2, so modified Sortino = Sharpe; it exceeds Sharpe
+  only with positive skew (sporadic big gains, controlled losses — his traders'
+  signature). MAR (target τ) defaults to the realized risk-free rate (BIL) over the
+  window. Sharpe, downside deviation, and max drawdown are reported alongside.
 
 No-op before the epoch or on a day with no new close (weekend/holiday). Deterministic
 arithmetic — NO Claude (§15: the daily job is a plain scheduled script).
@@ -45,6 +48,7 @@ BENCHMARKS = ["VT", "SPY", "QQQ", "IWM", "EFA", "EEM", "AGG",
               "SHY", "IEF", "TLT", "TIP", "BIL", "GLD", "DBC", "VNQ"]
 RISKFREE_TICKER = "BIL"   # 1-3mo T-bill ETF — realized risk-free proxy for the Sortino MAR
 ANN = 252                 # trading days/yr for annualization
+SQRT2 = math.sqrt(2.0)    # Schwager's adjustment factor (makes the ratio Sharpe-comparable)
 SORTINO_BENCH = {"SPY": "S&P 500", "QQQ": "NASDAQ-100"}   # the head-to-head comparison set
 UA = "Mozilla/5.0 (compatible; ar2eb-perf; arthurculang@gmail.com)"
 
@@ -89,11 +93,19 @@ def _returns(levels: list[float]) -> list[float]:
 
 
 def modified_sortino(rets: list[float], tau: float, ann: int = ANN) -> dict | None:
-    """Annualized modified Sortino over `rets`, target (per-period MAR) `tau`.
+    """Schwager's MODIFIED (adjusted) Sortino ratio over `rets`, target (per-period
+    MAR) `tau` — the metric from *Unknown Market Wizards* (appendix on performance
+    statistics):
 
-    Downside deviation = FULL-SAMPLE target semideviation below tau (denominator =
-    all N periods, the statistically-correct form). Consistent target in numerator
-    and denominator. Returns Sharpe, downside dev, vol, max drawdown alongside."""
+        modified Sortino = (annualized return − MAR) / (√2 × downside deviation)
+
+    The downside deviation is the standard target semideviation below tau,
+    DD = sqrt( (1/N) · Σ min(0, r−tau)² ) over ALL N periods. The √2 factor is
+    Schwager's adjustment: for a symmetric return distribution DD ≈ σ/√2, so the
+    √2 cancels and the modified Sortino EQUALS the Sharpe ratio — making the two
+    directly comparable (the conventional Sortino is not). It rises above Sharpe
+    only with positive skew (sporadic big gains, controlled losses). Sharpe,
+    downside dev, vol, and max drawdown are returned alongside."""
     n = len(rets)
     if n < 2:
         return None
@@ -103,7 +115,7 @@ def modified_sortino(rets: list[float], tau: float, ann: int = ANN) -> dict | No
     dvar = sum(min(0.0, r - tau) ** 2 for r in rets) / n          # target semivariance over ALL n
     dd_ann = math.sqrt(dvar) * math.sqrt(ann)
     vol_ann = statistics.pstdev(rets) * math.sqrt(ann)
-    sortino = (ann_ret - mar_ann) / dd_ann if dd_ann > 0 else float("inf")
+    sortino = (ann_ret - mar_ann) / (SQRT2 * dd_ann) if dd_ann > 0 else float("inf")  # Schwager √2-adjusted
     sharpe = (ann_ret - mar_ann) / vol_ann if vol_ann > 0 else float("inf")
     v, peak, mdd = 1.0, 1.0, 0.0                                   # max drawdown of the compounded path
     for r in rets:
@@ -157,7 +169,7 @@ def sortino_compare(weights: dict, series: dict[str, dict], epoch: dt.date,
 
     meta = {"asof": common[-1], "start": common[0], "n": len(common), "tau": tau,
             "mar_annual": (mar_annual if mar_annual is not None else rf_daily * ann * 100), "dropped": dropped}
-    print(f"  Modified Sortino — portfolio vs S&P 500 (SPY) vs NASDAQ-100 (QQQ)")
+    print(f"  Schwager modified Sortino (√2-adjusted, Sharpe-comparable) — portfolio vs S&P 500 vs NASDAQ-100")
     print(f"    window {common[0]} → {common[-1]}  ·  {len(common)} trading days  ·  MAR = {mar_lbl}")
     if dropped:
         print(f"    note: no price for {dropped} on the window — excluded (portfolio under-weighted by their weight)")

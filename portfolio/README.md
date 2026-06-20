@@ -15,13 +15,14 @@ workflows that keep it current. **Live launch epoch: 1 July 2026** (`epoch` in
 - **`track_performance.py`** → **`performance.csv`** + **`risk_stats.csv`** — daily weighted-portfolio
   cumulative return vs. a wide multi-asset benchmark sleeve (**D4**: VT · SPY/QQQ/IWM · EFA/EEM · AGG ·
   SHY/IEF/TLT · TIP · BIL · GLD · DBC · VNQ; BTC-USD optional), from Yahoo split/div-adjusted
-  closes. **Also computes a modified Sortino ratio** for the portfolio vs. the **S&P 500 (SPY)** and
-  **NASDAQ-100 (QQQ)** — `(annualized return − MAR) / annualized downside deviation`, where the downside
-  deviation is the full-sample target semideviation below the MAR (denominator = all N periods, the
-  statistically-correct form), MAR = realized risk-free (BIL) by default, annualized √252; Sharpe +
-  downside-dev + max-drawdown reported alongside, snapshot persisted to `risk_stats.csv`. Deterministic —
-  **no Claude**. `AI_EPOCH=YYYY-MM-DD` overrides the epoch (e.g. a trailing-window Sortino backtest before
-  launch); `AI_MAR=<annual %>` overrides the target; `--sortino` runs only the Sortino comparison.
+  closes. **Also computes Schwager's modified Sortino ratio** (from *Unknown Market Wizards*) for the
+  portfolio vs. the **S&P 500 (SPY)** and **NASDAQ-100 (QQQ)** — `(annualized return − MAR) / (√2 ×
+  annualized downside deviation)`, where the downside deviation is the target semideviation below the MAR
+  and the **√2 makes it directly Sharpe-comparable** (equal to Sharpe for a symmetric distribution; above
+  it only with positive skew — sporadic big gains, controlled losses). MAR = realized risk-free (BIL) by
+  default; Sharpe + downside-dev + max-drawdown reported alongside, snapshot persisted to `risk_stats.csv`.
+  Deterministic — **no Claude**. `AI_EPOCH=YYYY-MM-DD` overrides the epoch (e.g. a trailing-window Sortino
+  backtest before launch); `AI_MAR=<annual %>` overrides the target; `--sortino` runs only the comparison.
 
 ## Automation — Claude Routines (cloud), **`ROUTINES.md`** *(v037)*
 
