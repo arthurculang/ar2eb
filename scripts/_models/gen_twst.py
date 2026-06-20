@@ -7,7 +7,7 @@ from gen_b1 import build
 
 SPEC = dict(
  ticker="TWST", company="Twist Bioscience", exch="NASDAQ", spot=87.5, cap=5.45, sh=62.3, cash=0.172, net_debt=0.0, rev_b=0.377,
- wl="asymmetrical-moonshots", tier="Low", themes=["omics-life-science-infrastructure"],
+ wl="asymmetrical-moonshots", tier="Med-Low", themes=["omics-life-science-infrastructure"],
  extras=["$377M revenue FY25 (+20%, GM 50.7%); FY26 guide $442-447M; adj-EBITDA breakeven guided Q4 FY26",
          "Rallied ~+150% over 52wk to ~14x sales while still adj-EBITDA-negative; SBC-heavy (owner-FCF below the headline)",
          "~$172M net cash; Atlas (DNA data storage) spun out May'25 -> external call option"],

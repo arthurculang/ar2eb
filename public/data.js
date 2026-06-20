@@ -41597,7 +41597,7 @@ const MEMOS = [
     "publishedLabel": "June 16, 2026",
     "pdf": {
       "file": "serv-memo__v001__2026-06-20_06-29.pdf",
-      "size": "—",
+      "size": "369 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -41638,7 +41638,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Low",
+      "tier": "Med-Low",
       "themes": [
         "autonomous-vehicles-systems"
       ],
@@ -42808,7 +42808,7 @@ const MEMOS = [
     "publishedLabel": "June 16, 2026",
     "pdf": {
       "file": "prme-memo__v001__2026-06-20_06-33.pdf",
-      "size": "—",
+      "size": "372 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -44019,7 +44019,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "twst-memo__v001__2026-06-20_06-33.pdf",
-      "size": "—",
+      "size": "276 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -44060,7 +44060,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Low",
+      "tier": "Med-Low",
       "themes": [
         "omics-life-science-infrastructure"
       ],
@@ -44820,7 +44820,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "sym-memo__v001__2026-06-20_06-33.pdf",
-      "size": "—",
+      "size": "276 KB",
       "priorVersions": []
     },
     "metrics": {
