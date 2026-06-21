@@ -867,15 +867,16 @@ function IndicatorPage() {
   const { MEMOS } = D();
 
   // Backtest results of record (scripts/_models/ai2_results.md + the robustness
-  // run). Static research output — not live data. Significance is measured on a
-  // point-in-time QUARTERLY panel (61 cross-sections / FY2009–2024, Newey-West
-  // overlap-corrected); the zone-return table below is the intuitive read on the
-  // same 111-name universe.
+  // run). Static research output — not live data. Everything here is measured on
+  // one point-in-time QUARTERLY panel (103 names / 61 cross-sections / FY2009–2024,
+  // 3,399 obs). The zone-return table is the intuitive read; r3 = mean 3-yr forward
+  // return over all rows in the zone, w3 = share of NON-OVERLAPPING 3-yr windows
+  // (≥3yr apart per name) that finished positive. (scripts/_models/zone_returns.py)
   const ZONES = [
-    { z: 'green',  label: 'Green — extremely undervalued', band: '< 6',     r1: '+38%', w1: '74%', r3: '+159%', w3: '87%' },
-    { z: 'yellow', label: 'Yellow — somewhat undervalued',  band: '6 – 10',  r1: '+28%', w1: '69%', r3: '+106%', w3: '83%' },
-    { z: 'orange', label: 'Orange — somewhat overvalued',   band: '10 – 15', r1: '+31%', w1: '70%', r3: '+93%',  w3: '84%' },
-    { z: 'red',    label: 'Red — extremely overvalued',     band: '> 15',    r1: '+14%', w1: '57%', r3: '+48%',  w3: '58%' },
+    { z: 'green',  label: 'Green — extremely undervalued', band: '< 6',     r3: '+124%', w3: '82%' },
+    { z: 'yellow', label: 'Yellow — somewhat undervalued',  band: '6 – 10',  r3: '+89%',  w3: '82%' },
+    { z: 'orange', label: 'Orange — somewhat overvalued',   band: '10 – 15', r3: '+92%',  w3: '76%' },
+    { z: 'red',    label: 'Red — extremely overvalued',     band: '> 15',    r3: '+41%',  w3: '67%' },
   ];
 
   // Live snapshot: where today's covered names sit on the Indicator.
@@ -989,27 +990,26 @@ function IndicatorPage() {
         <div className="wrap">
           <h2 className="section-h">Does it actually work? — the backtest</h2>
           <p>
-            Tested on a panel of <b>111 companies</b> across <b>FY2009–2025</b>{' '}
-            (~1,500 company-years). The method: each year, rank every name from
-            cheapest to richest on the Indicator, and see whether the cheap ones
-            actually went on to outperform. Judged <b>out-of-sample</b> — the test
-            never sees the year it's scoring.
+            Tested on a <b>point-in-time</b> panel of <b>103 companies</b>,
+            rebalanced every quarter-end across <b>2009–2024</b> (61 cross-sections,
+            3,399 observations). The method: each quarter, rank every name from
+            cheapest to richest on the Indicator — using only the fundamentals
+            already filed with the SEC by that date (no look-ahead) — and see whether
+            the cheap ones went on to outperform.
           </p>
-          <p><b>Forward return by zone</b> (the practical read):</p>
+          <p><b>3-year forward return by zone</b> (the practical read — value is a
+          slow signal, so the 3-year hold is the one that matters):</p>
           <table className="ptable">
             <thead>
               <tr>
                 <th>Zone</th>
-                <th className="num">1-yr return</th><th className="num col-secondary">1-yr win</th>
-                <th className="num">3-yr return</th><th className="num col-secondary">3-yr win</th>
+                <th className="num">3-yr return</th><th className="num col-secondary">3-yr win-rate</th>
               </tr>
             </thead>
             <tbody>
               {ZONES.map(z => (
                 <tr key={z.z}>
                   <td><span className={`ai-dot ai-zone-${z.z}`} aria-hidden="true" /> {z.label}</td>
-                  <td className="num mono delta-pos">{z.r1}</td>
-                  <td className="num mono col-secondary">{z.w1}</td>
                   <td className="num mono delta-pos">{z.r3}</td>
                   <td className="num mono col-secondary">{z.w3}</td>
                 </tr>
@@ -1017,8 +1017,12 @@ function IndicatorPage() {
             </tbody>
           </table>
           <p className="hint">
-            Green clearly best, red clearly worst — the ordering is the result. Absolute
-            returns are inflated by a 2009–25 bull sample; what's durable is that cheaper → higher forward return.
+            Green clearly best, red clearly worst, and the ordering falls straight down
+            the zones — that monotonic decline <em>is</em> the result. Return is the mean
+            across every quarterly observation in the zone; win-rate is the share of{' '}
+            <b>non-overlapping</b> 3-year windows (one per name every 3 years, ~320 in
+            all) that finished positive. Absolute returns are inflated by a 2009–24 bull
+            sample; what's durable is that cheaper&nbsp;→&nbsp;higher forward return.
           </p>
         </div>
       </section>
