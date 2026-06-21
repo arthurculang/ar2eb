@@ -628,6 +628,16 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
    <EmbeddedMemo> scales the inner wrapper to fit the container. The
    memo-page footer is print-only (absolute positioned overlapping
    content); the site uses normal flow so we re-flow the page chrome. */
+/* The memo is the page's main content, so let its column break out wider
+   than the 1180px chrome (header / CTA / disclaimers stay centered above and
+   below). A wide, low-gutter column lets the landscape memo render near or
+   above native size — comfortably readable — instead of the ~0.74 it was
+   squeezed to inside the standard .wrap. Centered, so it shares the page axis. */
+.memo-embed-section > .wrap {
+  max-width: min(1680px, 96vw);
+  padding-left: var(--gutter-sm);
+  padding-right: var(--gutter-sm);
+}
 .memo-embed-section .memo-embed-wrap {
   overflow: hidden;
   /* Height is set in JS (EmbeddedMemo) to the scaled content height, so it
