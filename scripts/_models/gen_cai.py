@@ -7,7 +7,7 @@ from gen_b1 import build
 
 SPEC = dict(
  ticker="CAI", company="Caris Life Sciences", exch="NASDAQ", spot=18.33, cap=5.10, sh=278.0, cash=0.80, net_debt=0.3785, rev_b=0.812,
- wl="asymmetrical-moonshots", tier="Low", themes=["precision-medicine-oncology"],
+ wl="asymmetrical-moonshots", tier="Med-Low", themes=["precision-medicine-oncology"],
  extras=["FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven",
          "IPO Jun-2025 @ $21; now $18.33 (~13% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash",
          "Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups"],

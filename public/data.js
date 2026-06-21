@@ -45613,7 +45613,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "nvcr-memo__v001__2026-06-21_02-34.pdf",
-      "size": "—",
+      "size": "277 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -46418,7 +46418,7 @@ const MEMOS = [
     "publishedLabel": "June 1, 2026",
     "pdf": {
       "file": "cai-memo__v001__2026-06-21_02-34.pdf",
-      "size": "—",
+      "size": "280 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -46459,7 +46459,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Low",
+      "tier": "Med-Low",
       "themes": [
         "precision-medicine-oncology"
       ],
