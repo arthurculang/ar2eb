@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
-changelog-driven — currently at logical **v033**) are the source of truth.
+changelog-driven — currently at logical **v042**) are the source of truth.
 
 ## What this is
 
@@ -415,7 +415,7 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   ILMN 2 post-GRAIL → ISRG/UBER/RKLB/ABNB/ZM 4). `PagePOCD` in `memo_pdf.jsx` (+ site parity in `pages.jsx`),
   gated on a `pocd:` block, placed last so it never renumbers existing pages. Extend to more tickers as People data is sourced.
 - **Spec §15 (v036, DRAFT) — operating cadence & automation + 1 July 2026 "launch" (Arthur's ask).**
-  **Monthly (22nd):** archive prior month → mechanically re-price + re-render all memos → update §12 weights →
+  **Monthly (22nd):** bump each re-priced ticker (= archive: grows the on-site "Prior versions" panel; replaces the `archive/YYYY-MM/` move — v042) → mechanically re-price + re-render all memos → update §12 weights →
   deploy. **Daily (after close):** track the weighted portfolio vs. a wide multi-asset benchmark set
   (VT · SPY/QQQ/IWM · EFA/EEM · AGG · SHY/IEF/TLT · TIP · BIL · GLD · DBC · VNQ · opt. BTC). **Mechanism
   (v037 re-platform): Claude Code Routines (cloud), NOT GitHub Actions and NOT `/loop`** — per Arthur's

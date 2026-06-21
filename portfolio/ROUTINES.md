@@ -107,16 +107,28 @@ stale enough to warrant human re-research). Opens a PR; does **not** self-merge.
 Monthly ar2eb rebuild (spec §15, conviction-neutral §3.5 B). Open a PR titled
 "Monthly rebuild <YYYY-MM>" containing, in order:
 
-1. ARCHIVE the prior month — move the currently published memos into
-   archive/<YYYY-MM>/ (an immutable record; do not delete history).
+1. BUMP = ARCHIVE — for each public data/<ticker>.yml (skip
+   private_prevaluation names), run `python scripts/bump_pdf_version.py
+   <ticker>`. This IS the archive step: the bump snapshots the OUTGOING stamp
+   (version, timestamp, as-of date, spot) into stamp.prior_versions and
+   increments the version, so the prior PDF stays in public/memos/ as immutable
+   history AND the memo page's "Prior versions (N)" download panel gains one
+   entry. Do NOT move PDFs into an archive/ directory — the prior_versions panel
+   IS the on-site archive; a move would pull old PDFs out of public/memos/ and
+   build_site_data.py would then drop those entries (it 404-guards each prior
+   entry against disk).
 
-2. MECHANICAL RE-PRICE (judgment only on edge cases) — for each public
-   data/<ticker>.yml, refresh `spot` and `market.market_cap_billion`
-   (= current price × shares) from current Yahoo prices. SURGICALLY edit only
-   those numeric lines — do NOT reformat the file or touch the theses/scenarios.
-   Skip private_prevaluation names. Then re-render via the pipeline:
-   validate.py → build_site_data.py → `node build.js` →
-   `python scripts/rebuild_all.py --strict-layout` (STRICT_LAYOUT=1).
+2. MECHANICAL RE-PRICE (judgment only on edge cases) — for those same tickers,
+   refresh `spot` and `market.market_cap_billion` (= current price × shares)
+   from current Yahoo prices, and advance the top-level `date:` to today so each
+   archived version carries its true as-of date. SURGICALLY edit only those
+   numeric lines — do NOT reformat the file or touch the theses/scenarios.
+   (Order matters: BUMP before RE-PRICE — the bump files the outgoing spot/date
+   under the old version; the new spot/date belong to the new version.) Then
+   re-render via the pipeline: validate.py → build_site_data.py →
+   `node build.js` → `python scripts/rebuild_all.py --strict-layout`
+   (STRICT_LAYOUT=1; every ticker was bumped, so each renders to its new
+   versioned filename).
 
 3. RE-WEIGHT — run `python portfolio/build_weights.py` to refresh
    portfolio/weights.yml from the new findings.
