@@ -1,0 +1,536 @@
+# NVCR — NovoCure (NASDAQ) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: NVCR
+company: NovoCure
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 14.33
+market:
+  market_cap_billion: 1.65
+  shares_outstanding_million: 109.0
+  cash_billion: 1.03
+  net_debt_billion: 0.56
+  extras:
+  - $655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH (p_fail~0)
+  - '4 FDA-approved/filed indications: Optune Gio (GBM), Lua (NSCLC, early), Pax (pancreatic), METIS (brain mets)'
+  - 'FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr'
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Low
+  themes:
+  - medical-devices
+  primary_theme: medical-devices
+central_question: NovoCure trades at ~2.5x sales with net cash and an unproven new-indication tail — does the optionality
+  beyond glioblastoma justify the price, or does it stay a loss-making device story?
+thesis: NovoCure sells Tumor Treating Fields (TTFields), a wearable oncology device anchored by Optune Gio in glioblastoma.
+  FY2025 revenue was $655M (+8%) at a 78% gross margin, yet it posted a $136M GAAP loss — funded by ~$0.47B net cash, not
+  insolvency risk. At $14.33 the stock is cheap on sales; the upside lives in new FDA-approved indications (Optune Lua/lung,
+  Pax/pancreatic, METIS) multiplying the TAM beyond GBM. Weighted fair value $14.97, ~4.5% above spot — fair, with the June
+  2026 TRIDENT miss capping the GBM leg.
+chart_reference:
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.539
+  - 0.605
+  - 0.655
+  history_op_margin:
+  - -15.0
+  - -18.0
+  - -21.0
+  history_fcf:
+  - -0.05
+  - -0.1
+  - -0.13
+  history_ev_rev:
+  - 4.0
+  - 3.0
+  - 2.5
+page3_chart_config:
+  segment_a: Optune Gio (GBM)
+  segment_b: New indications (Lua/Pax)
+  hist_ent_split:
+  - 0.98
+  - 0.96
+  - 0.94
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY23-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec 31  ·  FY2025 + Q1'26 results
+  sources: 'Sources: NovoCure FY2025 10-K + Q1''26 results (CIK 1645113), FY26 guidance, TRIDENT/PANOVA-3/METIS readouts.
+    Revenue as a growth-rate path off FY25; FCF = revenue x an SBC-adjusted owner-FCF margin (starts negative — device operating
+    leverage is unproven and SBC is ~$100M+/yr); Gordon terminal at scenario WACC. EV/sales vs med-tech / oncology peers.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.14
+    expected_per_share: 4.2
+    headline: GBM erodes; new indications fail
+    narrative:
+    - Revenue grows only ~1.8% as the post-TRIDENT GBM base flattens and the newer labels fail to convert into real prescriptions.
+      Active patients stall near today's ~4,800, and continuous-wear compliance keeps real-world uptake well below the approved
+      population.
+    - Owner-FCF margin starts at -10% and crawls to 2% — the operating leverage never arrives after a decade of losses. At
+      ~1.8% growth and a barely-positive terminal margin the DCF is $4.20, ~71% below spot. Net cash prevents distress, but
+      the equity is worth little if TTFields stays a single-indication niche.
+    probability_rationale: Roughly one-in-seven. Requires both the GBM franchise softening after TRIDENT and the new indications
+      stalling, while the gross margin never translates into operating profit — plausible given the long loss history, but
+      it ignores three already-approved labels.
+    dcf_metrics:
+      cagr_5y: 1.8
+      wacc: 0.105
+    dcf_path:
+      rev_b: 0.655
+      rev_path:
+      - 0.01
+      - 0.01
+      - 0.02
+      - 0.02
+      - 0.03
+      op_margin:
+      - -0.08
+      - -0.05
+      - -0.01
+      - 0.02
+      - 0.04
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.025
+      fcf:
+      - -0.066
+      - -0.047
+      - -0.02
+      - 0.0
+      - 0.014
+      cash: 1.03
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 112
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.5
+      - 2.2
+      - 1.9
+      - 1.7
+      - 1.5
+      ev_fcf_multiple:
+      - 40.0
+      - 30.0
+      - 24.0
+      - 20.0
+      - 17.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.28
+    expected_per_share: 9.19
+    headline: Slow adoption, thin operating leverage
+    narrative:
+    - 'Device adoption stays sluggish: Optune Lua is still only ~$3M a quarter, and Pax ramps slowly against entrenched chemo
+      and radiation pathways. Revenue compounds ~4% as new indications add patients but oncologist and patient inertia caps
+      the pace.'
+    - 'The owner-FCF margin moves from -5% to 7% — positive eventually, but thin, because SBC over $100M a year keeps true
+      owner cash well below the adj-EBITDA headline. The DCF lands at $9.19, ~36% below spot: a real, funded business that
+      simply doesn''t earn enough to support the current price.'
+    probability_rationale: About 28%. The modal disappointment path — labels exist but real-world wear, reimbursement gating,
+      and heavy stock comp blunt the margin inflection. Consistent with a company that has grown revenue but never produced
+      operating profit.
+    dcf_metrics:
+      cagr_5y: 4.0
+      wacc: 0.1
+    dcf_path:
+      rev_b: 0.655
+      rev_path:
+      - 0.04
+      - 0.04
+      - 0.04
+      - 0.04
+      - 0.04
+      op_margin:
+      - -0.03
+      - 0.01
+      - 0.04
+      - 0.07
+      - 0.09
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.03
+      fcf:
+      - -0.034
+      - -0.007
+      - 0.015
+      - 0.038
+      - 0.056
+      cash: 1.03
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 111
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.6
+      - 2.4
+      - 2.2
+      - 2.0
+      - 1.9
+      ev_fcf_multiple:
+      - 60.0
+      - 32.0
+      - 24.0
+      - 19.0
+      - 16.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 14.0
+    headline: New indications ramp; margin inflects
+    narrative:
+    - Revenue compounds ~5.6% as Optune Lua and Pax build a modest second and third leg on top of GBM, and METIS adds an NSCLC-brain-mets
+      indication after its PMA filing. Active-patient growth continues at roughly the current single-digit pace across a widening
+      label set.
+    - The owner-FCF margin inflects from -2% toward 10% as the 78% gross margin starts to cover a more fixed cost base. That
+      yields a $14.00 DCF, ~2% below spot — essentially fair value. The market is paying for moderate multi-indication adoption
+      and a believable, if late, path to profitability.
+    probability_rationale: The plurality outcome at ~33%. New indications adopt at a moderate, not heroic, rate and the long-promised
+      operating leverage finally shows up around 10% — neither the post-TRIDENT erosion nor a platform breakout, just steady
+      execution on approved labels.
+    dcf_metrics:
+      cagr_5y: 5.6
+      wacc: 0.095
+    dcf_path:
+      rev_b: 0.655
+      rev_path:
+      - 0.06
+      - 0.06
+      - 0.06
+      - 0.05
+      - 0.05
+      op_margin:
+      - 0.0
+      - 0.04
+      - 0.07
+      - 0.1
+      - 0.12
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.035
+      fcf:
+      - -0.014
+      - 0.015
+      - 0.039
+      - 0.066
+      - 0.086
+      cash: 1.03
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 110
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.7
+      - 2.5
+      - 2.3
+      - 2.1
+      - 2.0
+      ev_fcf_multiple:
+      - 80.0
+      - 38.0
+      - 27.0
+      - 21.0
+      - 17.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.17
+    expected_per_share: 23.58
+    headline: Lua/Pax adopt; the margin levers
+    narrative:
+    - Optune Lua and Pax adopt well in their approved settings, and METIS converts, so revenue compounds ~8.2%. Active patients
+      climb materially as TTFields becomes a routine option in multiple tumor types rather than a GBM-only therapy, with reimbursement
+      coverage broadening alongside the labels.
+    - 'Operating leverage finally arrives: the owner-FCF margin runs from 1% to 14% as the high gross margin drops through
+      a stable cost base. The DCF is $23.58, ~65% above spot. This requires the device-adoption gap (labels outrunning real
+      prescriptions) to close, which it has not yet across the newer indications.'
+    probability_rationale: About 17%. Needs genuine commercial traction in the new indications plus the first durable operating
+      profit in the company's history — both observable in active-patient counts and segment revenue, neither yet demonstrated
+      at scale.
+    dcf_metrics:
+      cagr_5y: 8.2
+      wacc: 0.09
+    dcf_path:
+      rev_b: 0.655
+      rev_path:
+      - 0.09
+      - 0.09
+      - 0.08
+      - 0.08
+      - 0.07
+      op_margin:
+      - 0.03
+      - 0.07
+      - 0.11
+      - 0.14
+      - 0.16
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.04
+      fcf:
+      - 0.007
+      - 0.039
+      - 0.076
+      - 0.109
+      - 0.136
+      cash: 1.03
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 109
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 2.9
+      - 2.7
+      - 2.5
+      - 2.3
+      - 2.2
+      ev_fcf_multiple:
+      - 60.0
+      - 30.0
+      - 22.0
+      - 17.0
+      - 15.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.08
+    expected_per_share: 39.81
+    headline: TTFields a multi-indication standard
+    narrative:
+    - TTFields establishes itself as a standard modality across several solid tumors, with positive trials extending the platform
+      beyond today's labels. Revenue compounds ~10.8% as the addressable population multiplies and continuous-wear devices
+      become a routine part of oncology protocols.
+    - 'The owner-FCF margin scales from 3% to 18% as a unique, patented modality earns device-like economics on a much larger
+      base. The DCF reaches $39.81, ~178% above spot. This is the platform outcome: the IP and clinical-evidence moat compounding
+      across indications rather than defending a single one.'
+    probability_rationale: About 9%. The full platform thesis — TTFields as a multi-tumor standard of care with proven leverage.
+      The low weight reflects unproven leverage and the fresh TRIDENT miss, not the absence of a plausible mechanism.
+    dcf_metrics:
+      cagr_5y: 10.8
+      wacc: 0.085
+    dcf_path:
+      rev_b: 0.655
+      rev_path:
+      - 0.12
+      - 0.12
+      - 0.11
+      - 0.1
+      - 0.09
+      op_margin:
+      - 0.05
+      - 0.1
+      - 0.15
+      - 0.18
+      - 0.2
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.045
+      fcf:
+      - 0.022
+      - 0.066
+      - 0.119
+      - 0.16
+      - 0.197
+      cash: 1.03
+      net_debt: 0.56
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 108
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 3.1
+      - 2.9
+      - 2.7
+      - 2.5
+      - 2.4
+      ev_fcf_multiple:
+      - 50.0
+      - 26.0
+      - 18.0
+      - 15.0
+      - 13.0
+historical_prices:
+  ipo_marker: IPO Oct '15
+  x_min: -10.7
+  points:
+  - - -10.5
+    - 22.0
+  - - -8.0
+    - 35.0
+  - - -5.0
+    - 100.0
+  - - -4.5
+    - 200.0
+  - - -3.5
+    - 70.0
+  - - -2.5
+    - 15.0
+  - - -1.5
+    - 14.0
+  - - -1.0
+    - 19.0
+  - - -0.4
+    - 16.0
+  - - -0.05
+    - 14.33
+weighting_rationale:
+- label: Ultra Bear 14%
+  body: GBM erodes post-TRIDENT; new indications never adopt; $4.20.
+- label: Bear 28%
+  body: Slow adoption, thin leverage; small owner-FCF; $9.19.
+- label: Base 33%
+  body: Moderate new-indication ramp; margin ~10%; ~fair, $14.00.
+- label: Bull 17%
+  body: Lua and Pax adopt, the 78% margin levers to 14%; $23.58.
+- label: Ultra Bull 9%
+  body: TTFields a multi-indication standard; $39.81.
+appendix:
+  pushback:
+  - label: Cheap with a bounded floor
+    body: At ~2.5x sales, net cash, 78% GM — the downside is capped, no insolvency risk even in the bear.
+  - label: Multiple shots on goal
+    body: GBM, lung, pancreatic, brain-mets are four approved/filed indications; one real ramp re-rates the thesis.
+  - label: First pancreatic therapy in ~30 years
+    body: PANOVA-3 made Optune Pax the first new locally-advanced pancreatic therapy in ~30 years — a differentiated position.
+  - label: Unproven operating leverage
+    body: The bull needs the first durable operating profit in company history; a decade of losses and SBC over $100M a year
+      mean that leverage is asserted, not demonstrated.
+  - label: Adoption lags labels
+    body: Continuous-wear compliance keeps real prescriptions below approved populations — Optune Lua is still only ~$3M a
+      quarter despite full FDA approval.
+  triggers:
+  - label: Bull validation
+    body: Active patients accelerating above ~4,800; Lua/Pax revenue ramping to tens of millions; owner-FCF turning durably
+      positive.
+  - label: Bear validation
+    body: Active-patient growth flattening; Lua/Pax stuck in single-digit millions; adj-EBITDA staying negative; reimbursement
+      gating.
+  - label: Reframe needed
+    body: A second pivotal trial missing (after TRIDENT) in a new indication, or GBM revenue declining — collapses the multi-indication
+      TAM-expansion thesis.
+glossary:
+- term: Tumor Treating Fields (TTFields)
+  definition: Low-intensity alternating electric fields, via a wearable device, that disrupt cancer-cell division.
+- term: Optune Gio / Lua / Pax
+  definition: 'The approved products: Gio (glioblastoma, the base), Lua (metastatic NSCLC, early ramp), Pax (locally-advanced
+    pancreatic, newly approved).'
+- term: Active patients
+  definition: The key device KPI — patients currently on therapy (~4,791 in Q1 2026); revenue scales with this count, not
+    with label approvals alone.
+- term: TRIDENT / PANOVA-3
+  definition: Phase 3 trials — TRIDENT (newly-diagnosed GBM + radiation) MISSED its endpoint June 2026; PANOVA-3 (pancreatic)
+    succeeded and enabled Optune Pax.
+- term: adj-EBITDA vs owner-FCF
+  definition: Adjusted EBITDA (-$34M FY25) excludes stock comp; owner-FCF subtracts the ~$100M+/yr of SBC, so true owner cash
+    starts well below the headline.
+- term: SBC
+  definition: Stock-based compensation — a real, dilutive cost (a $43M charge hit Q1'26 on the Optune Pax approval) that the
+    adj-EBITDA figure adds back.
+competitive:
+  arena: Solid-tumor oncology, where a wearable TTFields device competes for oncologist and patient mindshare against systemic
+    drugs and radiation, not against a rival device.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 1
+      note: Some fixed-cost leverage in R&D and field operations, but the model is still loss-making after years.
+    network_economies:
+      score: 0
+      note: No network effect; value to one patient does not rise with the number of other users.
+    counter_positioning:
+      score: 2
+      note: A non-systemic modality incumbents (pharma, radiation) cannot easily add without cannibalizing or re-tooling around
+        drugs.
+    switching_costs:
+      score: 1
+      note: Modest — an in-progress treatment course is sticky, but adoption is per-line and physician-driven, not locked-in.
+    branding:
+      score: 1
+      note: Optune has oncology recognition, but prescribing follows clinical evidence and reimbursement, not brand.
+    cornered_resource:
+      score: 3
+      note: The TTFields IP and patented device platform are unique — no direct device competitor delivers this modality.
+    process_power:
+      score: 1
+      note: Accumulated regulatory and trial know-how across indications, but reproducible by a well-funded entrant over time.
+  dominant_power: cornered_resource
+  durability: medium
+  rivals:
+  - name: Standard chemo / radiation
+    kind: incumbent
+    note: The real competition for oncologist mindshare; entrenched, reimbursed, default pathway.
+    growth:
+    margin:
+    multiple: n/a (standard of care)
+  - name: Pharma oncology (IO / targeted)
+    kind: public
+    note: Systemic drugs competing for the same treatment line; vastly larger R&D budgets.
+    growth:
+    margin:
+    multiple: large-cap pharma multiples
+  - name: Other neuro-oncology device / trials
+    kind: private
+    note: Few direct device rivals today; the threat is future entrants replicating the modality.
+    growth:
+    margin:
+    multiple: early-stage / venture
+  - name: Build-vs-adopt inertia
+    kind: incumbent
+    note: Continuous-wear compliance and physician habit, not a competitor, gate real-world uptake.
+    growth:
+    margin:
+    multiple: n/a
+  threats:
+  - vector: cornered_resource
+    who: Future device entrants
+    falsifier: A competing electric-field or wearable modality clearing trials and eroding the patent/platform exclusivity.
+  - vector: counter_positioning
+    who: Payers / reimbursement
+    falsifier: Coverage restrictions or denials gating new indications, which keeps real prescriptions below approved populations.
+  - vector: process_power
+    who: New-indication trial risk
+    falsifier: A second pivotal miss after TRIDENT in lung, pancreatic, or brain mets — undercutting the clinical-evidence
+      moat that justifies each new label.
+  takeaway: 'NovoCure has a genuine cornered resource — the TTFields IP and the only approved device for this modality — reinforced
+    by a per-indication clinical-evidence moat (PANOVA-3, METIS). That makes the modality largely uncontested by direct device
+    rivals. But the Power is medium-durability, not high: real-world adoption lags labels, reimbursement gates uptake, and
+    the June 2026 TRIDENT miss shows the moat must be re-won trial by trial. The falsifier is a second pivotal miss or flat
+    active-patient growth — either would prove the platform cannot extend beyond GBM.'

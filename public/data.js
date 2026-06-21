@@ -45601,6 +45601,1604 @@ const MEMOS = [
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
+  },
+  {
+    "ticker": "NVCR",
+    "slug": "nvcr",
+    "company": "NovoCure",
+    "exchange": "NASDAQ",
+    "category": "asymmetrical-moonshots",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "nvcr-memo__v001__2026-06-21_02-34.pdf",
+      "size": "277 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$1.65B",
+      "shares": "109M",
+      "cash": "$1.03B cash, $560M net debt · $655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH (p_fail~0); 4 FDA-approved/filed indications: Optune Gio (GBM), Lua (NSCLC, early), Pax (pancreatic), METIS (brain mets); FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr"
+    },
+    "spot": {
+      "price": 14.33,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 14.97,
+      "deltaPct": 4.5
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 23.34,
+        "mult": 1.63
+      },
+      {
+        "y": 10,
+        "value": 36.41,
+        "mult": 2.54
+      },
+      {
+        "y": 15,
+        "value": 56.83,
+        "mult": 3.97
+      },
+      {
+        "y": 20,
+        "value": 88.76,
+        "mult": 6.19
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "Low",
+      "themes": [
+        "medical-devices"
+      ],
+      "themeNames": [
+        "Medical Devices"
+      ],
+      "primaryTheme": "medical-devices",
+      "primaryThemeName": "Medical Devices",
+      "umbrella": "life-sciences-health",
+      "umbrellaName": "Life Sciences & Health"
+    },
+    "ai": null,
+    "question": "NovoCure trades at ~2.5x sales with net cash and an unproven new-indication tail — does the optionality beyond glioblastoma justify the price, or does it stay a loss-making device story?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 14,
+        "price": 4.2,
+        "headline": "GBM erodes; new indications fail",
+        "why": "Roughly one-in-seven. Requires both the GBM franchise softening after TRIDENT and the new indications stalling, while the gross margin never translates into operating profit — plausible given the long loss history, but it ignores three already-approved labels.",
+        "what": [
+          "Revenue grows only ~1.8% as the post-TRIDENT GBM base flattens and the newer labels fail to convert into real prescriptions. Active patients stall near today's ~4,800, and continuous-wear compliance keeps real-world uptake well below the approved population.",
+          "Owner-FCF margin starts at -10% and crawls to 2% — the operating leverage never arrives after a decade of losses. At ~1.8% growth and a barely-positive terminal margin the DCF is $4.20, ~71% below spot. Net cash prevents distress, but the equity is worth little if TTFields stays a single-indication niche."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 28,
+        "price": 9.19,
+        "headline": "Slow adoption, thin operating leverage",
+        "why": "About 28%. The modal disappointment path — labels exist but real-world wear, reimbursement gating, and heavy stock comp blunt the margin inflection. Consistent with a company that has grown revenue but never produced operating profit.",
+        "what": [
+          "Device adoption stays sluggish: Optune Lua is still only ~$3M a quarter, and Pax ramps slowly against entrenched chemo and radiation pathways. Revenue compounds ~4% as new indications add patients but oncologist and patient inertia caps the pace.",
+          "The owner-FCF margin moves from -5% to 7% — positive eventually, but thin, because SBC over $100M a year keeps true owner cash well below the adj-EBITDA headline. The DCF lands at $9.19, ~36% below spot: a real, funded business that simply doesn't earn enough to support the current price."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 33,
+        "price": 14.0,
+        "headline": "New indications ramp; margin inflects",
+        "why": "The plurality outcome at ~33%. New indications adopt at a moderate, not heroic, rate and the long-promised operating leverage finally shows up around 10% — neither the post-TRIDENT erosion nor a platform breakout, just steady execution on approved labels.",
+        "what": [
+          "Revenue compounds ~5.6% as Optune Lua and Pax build a modest second and third leg on top of GBM, and METIS adds an NSCLC-brain-mets indication after its PMA filing. Active-patient growth continues at roughly the current single-digit pace across a widening label set.",
+          "The owner-FCF margin inflects from -2% toward 10% as the 78% gross margin starts to cover a more fixed cost base. That yields a $14.00 DCF, ~2% below spot — essentially fair value. The market is paying for moderate multi-indication adoption and a believable, if late, path to profitability."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 17,
+        "price": 23.58,
+        "headline": "Lua/Pax adopt; the margin levers",
+        "why": "About 17%. Needs genuine commercial traction in the new indications plus the first durable operating profit in the company's history — both observable in active-patient counts and segment revenue, neither yet demonstrated at scale.",
+        "what": [
+          "Optune Lua and Pax adopt well in their approved settings, and METIS converts, so revenue compounds ~8.2%. Active patients climb materially as TTFields becomes a routine option in multiple tumor types rather than a GBM-only therapy, with reimbursement coverage broadening alongside the labels.",
+          "Operating leverage finally arrives: the owner-FCF margin runs from 1% to 14% as the high gross margin drops through a stable cost base. The DCF is $23.58, ~65% above spot. This requires the device-adoption gap (labels outrunning real prescriptions) to close, which it has not yet across the newer indications."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 39.81,
+        "headline": "TTFields a multi-indication standard",
+        "why": "About 9%. The full platform thesis — TTFields as a multi-tumor standard of care with proven leverage. The low weight reflects unproven leverage and the fresh TRIDENT miss, not the absence of a plausible mechanism.",
+        "what": [
+          "TTFields establishes itself as a standard modality across several solid tumors, with positive trials extending the platform beyond today's labels. Revenue compounds ~10.8% as the addressable population multiplies and continuous-wear devices become a routine part of oncology protocols.",
+          "The owner-FCF margin scales from 3% to 18% as a unique, patented modality earns device-like economics on a much larger base. The DCF reaches $39.81, ~178% above spot. This is the platform outcome: the IP and clinical-evidence moat compounding across indications rather than defending a single one."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: June 1, 2026 close.",
+    "thesis": "NovoCure sells Tumor Treating Fields (TTFields), a wearable oncology device anchored by Optune Gio in glioblastoma. FY2025 revenue was $655M (+8%) at a 78% gross margin, yet it posted a $136M GAAP loss — funded by ~$0.47B net cash, not insolvency risk. At $14.33 the stock is cheap on sales; the upside lives in new FDA-approved indications (Optune Lua/lung, Pax/pancreatic, METIS) multiplying the TAM beyond GBM. Weighted fair value $14.97, ~4.5% above spot — fair, with the June 2026 TRIDENT miss capping the GBM leg.",
+    "historicalPrices": {
+      "xMin": -10.7,
+      "ipoMarker": "IPO Oct '15",
+      "points": [
+        [
+          -10.5,
+          22.0
+        ],
+        [
+          -8.0,
+          35.0
+        ],
+        [
+          -5.0,
+          100.0
+        ],
+        [
+          -4.5,
+          200.0
+        ],
+        [
+          -3.5,
+          70.0
+        ],
+        [
+          -2.5,
+          15.0
+        ],
+        [
+          -1.5,
+          14.0
+        ],
+        [
+          -1.0,
+          19.0
+        ],
+        [
+          -0.4,
+          16.0
+        ],
+        [
+          -0.05,
+          14.33
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 14%",
+        "body": "GBM erodes post-TRIDENT; new indications never adopt; $4.20."
+      },
+      {
+        "label": "Bear 28%",
+        "body": "Slow adoption, thin leverage; small owner-FCF; $9.19."
+      },
+      {
+        "label": "Base 33%",
+        "body": "Moderate new-indication ramp; margin ~10%; ~fair, $14.00."
+      },
+      {
+        "label": "Bull 17%",
+        "body": "Lua and Pax adopt, the 78% margin levers to 14%; $23.58."
+      },
+      {
+        "label": "Ultra Bull 9%",
+        "body": "TTFields a multi-indication standard; $39.81."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY23-FY25 history + FY26-FY30 scenario projections · fiscal years end Dec 31 · FY2025 + Q1'26 results",
+      "sources": "Sources: NovoCure FY2025 10-K + Q1'26 results (CIK 1645113), FY26 guidance, TRIDENT/PANOVA-3/METIS readouts. Revenue as a growth-rate path off FY25; FCF = revenue x an SBC-adjusted owner-FCF margin (starts negative — device operating leverage is unproven and SBC is ~$100M+/yr); Gordon terminal at scenario WACC. EV/sales vs med-tech / oncology peers.",
+      "chartReference": {
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          0.539,
+          0.605,
+          0.655
+        ],
+        "historyOpMargin": [
+          -15.0,
+          -18.0,
+          -21.0
+        ],
+        "historyFcf": [
+          -0.05,
+          -0.1,
+          -0.13
+        ],
+        "historyEvRev": [
+          4.0,
+          3.0,
+          2.5
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Optune Gio (GBM)",
+        "segmentB": "New indications (Lua/Pax)",
+        "histEntSplit": [
+          0.98,
+          0.96,
+          0.94
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 14.97,
+        "upsidePct": 4.5
+      },
+      "market": {
+        "marketCapBillion": 1.65,
+        "sharesOutstandingMillion": 109.0,
+        "cashBillion": 1.03,
+        "netDebtBillion": 0.56
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.14,
+          "expectedPerShare": 4.2,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 1.8,
+            "wacc": 0.105
+          },
+          "dcfPath": {
+            "rev_b": 0.655,
+            "rev_path": [
+              0.01,
+              0.01,
+              0.02,
+              0.02,
+              0.03
+            ],
+            "op_margin": [
+              -0.08,
+              -0.05,
+              -0.01,
+              0.02,
+              0.04
+            ],
+            "wacc_path": [
+              0.105,
+              0.105,
+              0.105,
+              0.105,
+              0.105
+            ],
+            "term_g": 0.025,
+            "fcf": [
+              -0.066,
+              -0.047,
+              -0.02,
+              0.0,
+              0.014
+            ],
+            "cash": 1.03,
+            "net_debt": 0.56,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 112,
+            "distress": 0.0,
+            "pv_fcf": [
+              -0.06,
+              -0.038,
+              -0.015,
+              0.0,
+              0.008
+            ],
+            "sum_pv_fcf": -0.11,
+            "terminal_value": 0.18,
+            "pv_terminal": 0.11,
+            "op_ev": 0.0,
+            "total_equity": 0.47,
+            "dcf_per_share": 4.2
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.5,
+              2.2,
+              1.9,
+              1.7,
+              1.5
+            ],
+            "ev_fcf_multiple": [
+              40.0,
+              30.0,
+              24.0,
+              20.0,
+              17.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.28,
+          "expectedPerShare": 9.19,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 4.0,
+            "wacc": 0.1
+          },
+          "dcfPath": {
+            "rev_b": 0.655,
+            "rev_path": [
+              0.04,
+              0.04,
+              0.04,
+              0.04,
+              0.04
+            ],
+            "op_margin": [
+              -0.03,
+              0.01,
+              0.04,
+              0.07,
+              0.09
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              -0.034,
+              -0.007,
+              0.015,
+              0.038,
+              0.056
+            ],
+            "cash": 1.03,
+            "net_debt": 0.56,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 111,
+            "distress": 0.0,
+            "pv_fcf": [
+              -0.031,
+              -0.006,
+              0.011,
+              0.026,
+              0.035
+            ],
+            "sum_pv_fcf": 0.04,
+            "terminal_value": 0.82,
+            "pv_terminal": 0.51,
+            "op_ev": 0.55,
+            "total_equity": 1.02,
+            "dcf_per_share": 9.19
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.6,
+              2.4,
+              2.2,
+              2.0,
+              1.9
+            ],
+            "ev_fcf_multiple": [
+              60.0,
+              32.0,
+              24.0,
+              19.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.33,
+          "expectedPerShare": 14.0,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 5.6,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 0.655,
+            "rev_path": [
+              0.06,
+              0.06,
+              0.06,
+              0.05,
+              0.05
+            ],
+            "op_margin": [
+              0.0,
+              0.04,
+              0.07,
+              0.1,
+              0.12
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              -0.014,
+              0.015,
+              0.039,
+              0.066,
+              0.086
+            ],
+            "cash": 1.03,
+            "net_debt": 0.56,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 110,
+            "distress": 0.0,
+            "pv_fcf": [
+              -0.013,
+              0.013,
+              0.03,
+              0.046,
+              0.055
+            ],
+            "sum_pv_fcf": 0.13,
+            "terminal_value": 1.48,
+            "pv_terminal": 0.94,
+            "op_ev": 1.07,
+            "total_equity": 1.54,
+            "dcf_per_share": 14.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.7,
+              2.5,
+              2.3,
+              2.1,
+              2.0
+            ],
+            "ev_fcf_multiple": [
+              80.0,
+              38.0,
+              27.0,
+              21.0,
+              17.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.17,
+          "expectedPerShare": 23.58,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 8.2,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 0.655,
+            "rev_path": [
+              0.09,
+              0.09,
+              0.08,
+              0.08,
+              0.07
+            ],
+            "op_margin": [
+              0.03,
+              0.07,
+              0.11,
+              0.14,
+              0.16
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              0.007,
+              0.039,
+              0.076,
+              0.109,
+              0.136
+            ],
+            "cash": 1.03,
+            "net_debt": 0.56,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 109,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.006,
+              0.033,
+              0.059,
+              0.077,
+              0.088
+            ],
+            "sum_pv_fcf": 0.26,
+            "terminal_value": 2.83,
+            "pv_terminal": 1.84,
+            "op_ev": 2.1,
+            "total_equity": 2.57,
+            "dcf_per_share": 23.58
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              2.9,
+              2.7,
+              2.5,
+              2.3,
+              2.2
+            ],
+            "ev_fcf_multiple": [
+              60.0,
+              30.0,
+              22.0,
+              17.0,
+              15.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 39.81,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 10.8,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 0.655,
+            "rev_path": [
+              0.12,
+              0.12,
+              0.11,
+              0.1,
+              0.09
+            ],
+            "op_margin": [
+              0.05,
+              0.1,
+              0.15,
+              0.18,
+              0.2
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.045,
+            "fcf": [
+              0.022,
+              0.066,
+              0.119,
+              0.16,
+              0.197
+            ],
+            "cash": 1.03,
+            "net_debt": 0.56,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 108,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.02,
+              0.056,
+              0.093,
+              0.115,
+              0.131
+            ],
+            "sum_pv_fcf": 0.41,
+            "terminal_value": 5.15,
+            "pv_terminal": 3.42,
+            "op_ev": 3.83,
+            "total_equity": 4.3,
+            "dcf_per_share": 39.81
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              3.1,
+              2.9,
+              2.7,
+              2.5,
+              2.4
+            ],
+            "ev_fcf_multiple": [
+              50.0,
+              26.0,
+              18.0,
+              15.0,
+              13.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Solid-tumor oncology, where a wearable TTFields device competes for oncologist and patient mindshare against systemic drugs and radiation, not against a rival device.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "Some fixed-cost leverage in R&D and field operations, but the model is still loss-making after years."
+          },
+          "networkEconomies": {
+            "score": 0,
+            "note": "No network effect; value to one patient does not rise with the number of other users."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "A non-systemic modality incumbents (pharma, radiation) cannot easily add without cannibalizing or re-tooling around drugs."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Modest — an in-progress treatment course is sticky, but adoption is per-line and physician-driven, not locked-in."
+          },
+          "branding": {
+            "score": 1,
+            "note": "Optune has oncology recognition, but prescribing follows clinical evidence and reimbursement, not brand."
+          },
+          "corneredResource": {
+            "score": 3,
+            "note": "The TTFields IP and patented device platform are unique — no direct device competitor delivers this modality."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Accumulated regulatory and trial know-how across indications, but reproducible by a well-funded entrant over time."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "durability": "medium",
+        "rivals": [
+          {
+            "name": "Standard chemo / radiation",
+            "kind": "incumbent",
+            "note": "The real competition for oncologist mindshare; entrenched, reimbursed, default pathway.",
+            "growth": null,
+            "margin": null,
+            "multiple": "n/a (standard of care)"
+          },
+          {
+            "name": "Pharma oncology (IO / targeted)",
+            "kind": "public",
+            "note": "Systemic drugs competing for the same treatment line; vastly larger R&D budgets.",
+            "growth": null,
+            "margin": null,
+            "multiple": "large-cap pharma multiples"
+          },
+          {
+            "name": "Other neuro-oncology device / trials",
+            "kind": "private",
+            "note": "Few direct device rivals today; the threat is future entrants replicating the modality.",
+            "growth": null,
+            "margin": null,
+            "multiple": "early-stage / venture"
+          },
+          {
+            "name": "Build-vs-adopt inertia",
+            "kind": "incumbent",
+            "note": "Continuous-wear compliance and physician habit, not a competitor, gate real-world uptake.",
+            "growth": null,
+            "margin": null,
+            "multiple": "n/a"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "cornered_resource",
+            "who": "Future device entrants",
+            "falsifier": "A competing electric-field or wearable modality clearing trials and eroding the patent/platform exclusivity."
+          },
+          {
+            "vector": "counter_positioning",
+            "who": "Payers / reimbursement",
+            "falsifier": "Coverage restrictions or denials gating new indications, which keeps real prescriptions below approved populations."
+          },
+          {
+            "vector": "process_power",
+            "who": "New-indication trial risk",
+            "falsifier": "A second pivotal miss after TRIDENT in lung, pancreatic, or brain mets — undercutting the clinical-evidence moat that justifies each new label."
+          }
+        ],
+        "takeaway": "NovoCure has a genuine cornered resource — the TTFields IP and the only approved device for this modality — reinforced by a per-indication clinical-evidence moat (PANOVA-3, METIS). That makes the modality largely uncontested by direct device rivals. But the Power is medium-durability, not high: real-world adoption lags labels, reimbursement gates uptake, and the June 2026 TRIDENT miss shows the moat must be re-won trial by trial. The falsifier is a second pivotal miss or flat active-patient growth — either would prove the platform cannot extend beyond GBM."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Cheap with a bounded floor",
+            "body": "At ~2.5x sales, net cash, 78% GM — the downside is capped, no insolvency risk even in the bear."
+          },
+          {
+            "label": "Multiple shots on goal",
+            "body": "GBM, lung, pancreatic, brain-mets are four approved/filed indications; one real ramp re-rates the thesis."
+          },
+          {
+            "label": "First pancreatic therapy in ~30 years",
+            "body": "PANOVA-3 made Optune Pax the first new locally-advanced pancreatic therapy in ~30 years — a differentiated position."
+          },
+          {
+            "label": "Unproven operating leverage",
+            "body": "The bull needs the first durable operating profit in company history; a decade of losses and SBC over $100M a year mean that leverage is asserted, not demonstrated."
+          },
+          {
+            "label": "Adoption lags labels",
+            "body": "Continuous-wear compliance keeps real prescriptions below approved populations — Optune Lua is still only ~$3M a quarter despite full FDA approval."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "Active patients accelerating above ~4,800; Lua/Pax revenue ramping to tens of millions; owner-FCF turning durably positive."
+          },
+          {
+            "label": "Bear validation",
+            "body": "Active-patient growth flattening; Lua/Pax stuck in single-digit millions; adj-EBITDA staying negative; reimbursement gating."
+          },
+          {
+            "label": "Reframe needed",
+            "body": "A second pivotal trial missing (after TRIDENT) in a new indication, or GBM revenue declining — collapses the multi-indication TAM-expansion thesis."
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Tumor Treating Fields (TTFields)",
+          "definition": "Low-intensity alternating electric fields, via a wearable device, that disrupt cancer-cell division."
+        },
+        {
+          "term": "Optune Gio / Lua / Pax",
+          "definition": "The approved products: Gio (glioblastoma, the base), Lua (metastatic NSCLC, early ramp), Pax (locally-advanced pancreatic, newly approved)."
+        },
+        {
+          "term": "Active patients",
+          "definition": "The key device KPI — patients currently on therapy (~4,791 in Q1 2026); revenue scales with this count, not with label approvals alone."
+        },
+        {
+          "term": "TRIDENT / PANOVA-3",
+          "definition": "Phase 3 trials — TRIDENT (newly-diagnosed GBM + radiation) MISSED its endpoint June 2026; PANOVA-3 (pancreatic) succeeded and enabled Optune Pax."
+        },
+        {
+          "term": "adj-EBITDA vs owner-FCF",
+          "definition": "Adjusted EBITDA (-$34M FY25) excludes stock comp; owner-FCF subtracts the ~$100M+/yr of SBC, so true owner cash starts well below the headline."
+        },
+        {
+          "term": "SBC",
+          "definition": "Stock-based compensation — a real, dilutive cost (a $43M charge hit Q1'26 on the Optune Pax approval) that the adj-EBITDA figure adds back."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-21_02-34",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "CAI",
+    "slug": "cai",
+    "company": "Caris Life Sciences",
+    "exchange": "NASDAQ",
+    "category": "asymmetrical-moonshots",
+    "dcfType": "Mature-Company DCF",
+    "publishedISO": "2026-06-01",
+    "publishedLabel": "June 1, 2026",
+    "pdf": {
+      "file": "cai-memo__v001__2026-06-21_02-34.pdf",
+      "size": "280 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$5.1B",
+      "shares": "278M",
+      "cash": "$800M cash, $378M net debt · FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven; IPO Jun-2025 @ $21; now $18.33 (~13% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash; Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups"
+    },
+    "spot": {
+      "price": 18.33,
+      "asOf": "June 1, 2026 close"
+    },
+    "expected": {
+      "fair": 23.63,
+      "deltaPct": 28.9
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 36.62,
+        "mult": 2.0
+      },
+      {
+        "y": 10,
+        "value": 56.81,
+        "mult": 3.1
+      },
+      {
+        "y": 15,
+        "value": 88.16,
+        "mult": 4.81
+      },
+      {
+        "y": 20,
+        "value": 136.92,
+        "mult": 7.47
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "asymmetrical-moonshots",
+      "watchlistName": "Asymmetrical Moonshots",
+      "tier": "Med-Low",
+      "themes": [
+        "precision-medicine-oncology"
+      ],
+      "themeNames": [
+        "Precision Medicine & Oncology"
+      ],
+      "primaryTheme": "precision-medicine-oncology",
+      "primaryThemeName": "Precision Medicine & Oncology",
+      "umbrella": "life-sciences-health",
+      "umbrellaName": "Life Sciences & Health"
+    },
+    "ai": null,
+    "question": "Caris trades at ~6.5x sales like Tempus, yet screens positive where Tempus screened rich — is being FCF-positive at GAAP breakeven, with a real 47%-to-65% margin inflection, enough to justify the price?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 13,
+        "price": 5.25,
+        "headline": "Growth collapses; true-up reverses",
+        "why": "Requires the volume engine to stall near term and the true-up to be a one-off rather than a recurring feature of payer settlements. Possible given the steep step-down already guided, but the cash-positive base makes outright collapse less likely than for a pre-breakeven peer.",
+        "what": [
+          "Revenue compounds only ~6.6% as test-volume growth stalls and reimbursement true-ups reverse rather than recur. The ~$33M of 2025 revenue tied to prior-year reimbursement catch-ups proves non-repeatable, and the reported growth rate is exposed as flattered.",
+          "Margins barely move off the floor, holding near 0% owner-FCF as price competition from Tempus, Guardant and Foundation erodes the gross-margin gains. The ~6.5x sales multiple compresses hard against a decelerating, low-margin base. DCF lands at $5.25, down 71%."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 27,
+        "price": 10.28,
+        "headline": "Decelerates; multiple ran ahead",
+        "why": "The honest deceleration case — going from +97% to a +24% guide is a steep step, and a further undershoot plus pricing pressure is plausible. Weighted at 27% as the most credible downside if the data moat proves shallower than bulls assume.",
+        "what": [
+          "Revenue grows ~11.9% — well below the +24% guide — as competition pressures per-test pricing and the easy share gains slow. The margin inflection partly holds, reaching mid-teens owner-FCF, but not fast enough to outrun a contracting multiple.",
+          "The market re-rates a ~6.5x-sales name toward something closer to a low-double-digit grower, and the IPO-era premium unwinds. At a 4%-to-15% margin path the DCF is $10.28, down 44%. The setup is a quality business that was simply priced ahead of its delivery."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 33,
+        "price": 19.41,
+        "headline": "Solid growth, the margin inflection holds",
+        "why": "Centered on management hitting the FY26 guide and sustaining the volume KPI while margins keep inflecting — the continuation of what the last two years already showed. Carries the plurality 33% weight as the most likely path.",
+        "what": [
+          "Revenue compounds ~16.7%, roughly in line with the guided range, as clinical test volume grows around 20% and Caris Assure and MI Cancer Seek add incremental lives. The 47%-to-65% gross-margin move continues toward 21% owner-FCF as fixed lab and data costs leverage.",
+          "This is the modal outcome — a real growth-plus-margin story that delivers, not a moonshot. At $19.41 the DCF sits just above the $18.33 price, so the base case is roughly fair. The market is paying about what the business is worth if it simply executes the plan."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 18,
+        "price": 39.65,
+        "headline": "Hypergrowth + data-moat leverage",
+        "why": "Needs growth to stay above 20% well past the guide and the gross-margin gains to keep compounding into operating leverage. Plausible if the data asset is a genuine cornered resource, but it asks the company to outrun a steep deceleration; 18%.",
+        "what": [
+          "Revenue compounds ~22% as the proprietary whole-exome/transcriptome data asset and the ADAPT platform drive both test volume and pharma partnership revenue, while comprehensive profiling takes share from narrower NGS panels.",
+          "Operating leverage on a fixed data and lab base pushes owner-FCF toward 29%, software-like for diagnostics. The market rewards durable hypergrowth plus a widening margin with an expanded multiple. DCF reaches $39.65, up 116%, as the data-moat thesis starts to show in the financials."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 9,
+        "price": 73.64,
+        "headline": "Becomes the oncology-data standard",
+        "why": "The full platform win — durable hypergrowth, a true data-network effect, and software-like margins together. Each is individually demanding and the combination is a tail, so it carries 9% — meaningful upside optionality, not a central expectation.",
+        "what": [
+          "Revenue compounds ~27% as Caris establishes its molecular database as the reference standard for oncology decision-making, with comprehensive profiling, blood-based MRD and the ADAPT AI layer compounding into a network where more tests improve the data and the data wins more tests.",
+          "Owner-FCF margins reach ~35%, approaching software economics as the data and AI layer scales near-zero-marginal-cost. At $73.64 the DCF is triple the price. This is the platform outcome where the cornered data resource and scale economics fully express."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: June 1, 2026 close.",
+    "thesis": "Caris Life Sciences is an AI precision-oncology diagnostics company — whole-exome and whole-transcriptome tumor profiling plus blood-based testing — that IPO'd June 2025 at $21.00 and now trades $18.33, ~13% below its offer. FY2025 revenue grew 97% to $812M, gross margin expanded 47%->65%, and unlike most diagnostics scalers it is already free-cash-flow positive with +$138M adj-EBITDA, near GAAP breakeven. The DCF asks whether the margin inflection holds as growth steps down to a +24% guide. Weighted fair value $23.63, ~29% above spot — base ~fair, the upside in the data-moat tail.",
+    "historicalPrices": {
+      "xMin": -1.05,
+      "ipoMarker": "IPO Jun '25",
+      "points": [
+        [
+          -1.0,
+          21.0
+        ],
+        [
+          -0.85,
+          42.5
+        ],
+        [
+          -0.65,
+          30.0
+        ],
+        [
+          -0.45,
+          22.0
+        ],
+        [
+          -0.25,
+          16.0
+        ],
+        [
+          -0.1,
+          17.0
+        ],
+        [
+          -0.05,
+          18.33
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Ultra Bear 13%",
+        "body": "Growth ~6.6%, the reimbursement true-up reverses, margins stay near zero — DCF $5.25."
+      },
+      {
+        "label": "Bear 27%",
+        "body": "Decelerates to ~11.9%, pricing pressure bites, the multiple re-rates down — DCF $10.28."
+      },
+      {
+        "label": "Base 33%",
+        "body": "~16.7% growth, margin inflection holds to 21% owner-FCF — DCF $19.41, roughly fair at spot."
+      },
+      {
+        "label": "Bull 18%",
+        "body": "~22% hypergrowth, the data moat drives operating leverage — DCF $39.65."
+      },
+      {
+        "label": "Ultra Bull 9%",
+        "body": "~27% growth, oncology-data standard, software-like 35% margins — DCF $73.64."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY23-FY25 history + FY26-FY30 scenario projections · fiscal years end Dec 31 · FY2025 + Q1'26 results (IPO Jun'25)",
+      "sources": "Sources: Caris Life Sciences FY2025 results + Q1'26 (CIK 2019410), IPO 424B4 (Jun 2025), FY26 guidance. Revenue as a growth-rate path off FY25 ($812M, +97%); FCF = revenue x an SBC-adjusted owner-FCF margin (already positive; SBC ~$70M deducted); Gordon terminal at scenario WACC. Pre-IPO history/EV-rev are notional. EV/sales vs precision-diagnostics peers.",
+      "chartReference": {
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          0.306,
+          0.412,
+          0.812
+        ],
+        "historyOpMargin": [
+          -40.0,
+          -25.0,
+          -8.0
+        ],
+        "historyFcf": [
+          -0.1,
+          -0.05,
+          0.04
+        ],
+        "historyEvRev": [
+          8.0,
+          7.0,
+          6.0
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "Molecular profiling",
+        "segmentB": "Pharma / data (ADAPT)",
+        "histEntSplit": [
+          0.95,
+          0.94,
+          0.94
+        ],
+        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Type": "matureEquityBuild"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 23.63,
+        "upsidePct": 28.9
+      },
+      "market": {
+        "marketCapBillion": 5.1,
+        "sharesOutstandingMillion": 278.0,
+        "cashBillion": 0.8,
+        "netDebtBillion": 0.3785
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.13,
+          "expectedPerShare": 5.25,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 6.6,
+            "wacc": 0.105
+          },
+          "dcfPath": {
+            "rev_b": 0.812,
+            "rev_path": [
+              0.1,
+              0.08,
+              0.06,
+              0.05,
+              0.04
+            ],
+            "op_margin": [
+              0.02,
+              0.05,
+              0.08,
+              0.1,
+              0.12
+            ],
+            "wacc_path": [
+              0.105,
+              0.105,
+              0.105,
+              0.105,
+              0.105
+            ],
+            "term_g": 0.03,
+            "fcf": [
+              0.0,
+              0.029,
+              0.061,
+              0.086,
+              0.112
+            ],
+            "cash": 0.8,
+            "net_debt": 0.3785,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 295,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.0,
+              0.024,
+              0.045,
+              0.058,
+              0.068
+            ],
+            "sum_pv_fcf": 0.2,
+            "terminal_value": 1.54,
+            "pv_terminal": 0.93,
+            "op_ev": 1.13,
+            "total_equity": 1.55,
+            "dcf_per_share": 5.25
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              7.0,
+              6.0,
+              5.0,
+              4.5,
+              4.0
+            ],
+            "ev_fcf_multiple": [
+              60.0,
+              35.0,
+              26.0,
+              21.0,
+              18.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.27,
+          "expectedPerShare": 10.28,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 11.9,
+            "wacc": 0.1
+          },
+          "dcfPath": {
+            "rev_b": 0.812,
+            "rev_path": [
+              0.18,
+              0.14,
+              0.11,
+              0.09,
+              0.08
+            ],
+            "op_margin": [
+              0.06,
+              0.09,
+              0.12,
+              0.15,
+              0.17
+            ],
+            "wacc_path": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.1
+            ],
+            "term_g": 0.035,
+            "fcf": [
+              0.038,
+              0.076,
+              0.121,
+              0.172,
+              0.214
+            ],
+            "cash": 0.8,
+            "net_debt": 0.3785,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 290,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.035,
+              0.063,
+              0.091,
+              0.117,
+              0.133
+            ],
+            "sum_pv_fcf": 0.44,
+            "terminal_value": 3.41,
+            "pv_terminal": 2.12,
+            "op_ev": 2.56,
+            "total_equity": 2.98,
+            "dcf_per_share": 10.28
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              7.5,
+              6.5,
+              6.0,
+              5.5,
+              5.0
+            ],
+            "ev_fcf_multiple": [
+              55.0,
+              34.0,
+              26.0,
+              21.0,
+              18.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.33,
+          "expectedPerShare": 19.41,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 16.7,
+            "wacc": 0.095
+          },
+          "dcfPath": {
+            "rev_b": 0.812,
+            "rev_path": [
+              0.24,
+              0.2,
+              0.16,
+              0.13,
+              0.11
+            ],
+            "op_margin": [
+              0.08,
+              0.12,
+              0.16,
+              0.2,
+              0.23
+            ],
+            "wacc_path": [
+              0.095,
+              0.095,
+              0.095,
+              0.095,
+              0.095
+            ],
+            "term_g": 0.04,
+            "fcf": [
+              0.06,
+              0.121,
+              0.196,
+              0.285,
+              0.369
+            ],
+            "cash": 0.8,
+            "net_debt": 0.3785,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 288,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.055,
+              0.101,
+              0.149,
+              0.198,
+              0.234
+            ],
+            "sum_pv_fcf": 0.74,
+            "terminal_value": 6.98,
+            "pv_terminal": 4.43,
+            "op_ev": 5.17,
+            "total_equity": 5.59,
+            "dcf_per_share": 19.41
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              8.0,
+              7.0,
+              6.5,
+              6.0,
+              5.5
+            ],
+            "ev_fcf_multiple": [
+              50.0,
+              30.0,
+              22.0,
+              17.0,
+              14.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.18,
+          "expectedPerShare": 39.65,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 22.1,
+            "wacc": 0.09
+          },
+          "dcfPath": {
+            "rev_b": 0.812,
+            "rev_path": [
+              0.3,
+              0.26,
+              0.22,
+              0.18,
+              0.15
+            ],
+            "op_margin": [
+              0.1,
+              0.16,
+              0.22,
+              0.27,
+              0.31
+            ],
+            "wacc_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "term_g": 0.045,
+            "fcf": [
+              0.084,
+              0.186,
+              0.325,
+              0.479,
+              0.639
+            ],
+            "cash": 0.8,
+            "net_debt": 0.3785,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 285,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.077,
+              0.157,
+              0.251,
+              0.339,
+              0.415
+            ],
+            "sum_pv_fcf": 1.24,
+            "terminal_value": 14.84,
+            "pv_terminal": 9.64,
+            "op_ev": 10.88,
+            "total_equity": 11.3,
+            "dcf_per_share": 39.65
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              9.0,
+              8.0,
+              7.5,
+              7.0,
+              6.5
+            ],
+            "ev_fcf_multiple": [
+              45.0,
+              28.0,
+              20.0,
+              16.0,
+              13.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.09,
+          "expectedPerShare": 73.64,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 26.8,
+            "wacc": 0.085
+          },
+          "dcfPath": {
+            "rev_b": 0.812,
+            "rev_path": [
+              0.36,
+              0.32,
+              0.27,
+              0.22,
+              0.18
+            ],
+            "op_margin": [
+              0.12,
+              0.2,
+              0.27,
+              0.33,
+              0.37
+            ],
+            "wacc_path": [
+              0.085,
+              0.085,
+              0.085,
+              0.085,
+              0.085
+            ],
+            "term_g": 0.05,
+            "fcf": [
+              0.11,
+              0.262,
+              0.463,
+              0.7,
+              0.933
+            ],
+            "cash": 0.8,
+            "net_debt": 0.3785,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 283,
+            "distress": 0.0,
+            "pv_fcf": [
+              0.101,
+              0.223,
+              0.362,
+              0.505,
+              0.62
+            ],
+            "sum_pv_fcf": 1.81,
+            "terminal_value": 27.99,
+            "pv_terminal": 18.61,
+            "op_ev": 20.42,
+            "total_equity": 20.84,
+            "dcf_per_share": 73.64
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              10.0,
+              9.0,
+              8.0,
+              7.5,
+              7.0
+            ],
+            "ev_fcf_multiple": [
+              40.0,
+              24.0,
+              17.0,
+              14.0,
+              12.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Comprehensive molecular diagnostics and oncology data — Caris competes with Tempus, Guardant, Roche's Foundation Medicine, Natera and Exact Sciences for tumor-profiling and liquid-biopsy volume.",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Fixed lab and data-platform costs leverage as test volume compounds; +97% growth drove gross margin 47% to 65%."
+          },
+          "networkEconomies": {
+            "score": 2,
+            "note": "More tests enrich the molecular database, which sharpens the ADAPT AI and wins more clinician and pharma demand."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "Whole-exome/transcriptome depth is hard for pure-NGS-panel incumbents to match without re-tooling, but not a true business-model trap."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Clinician workflow integration and longitudinal patient data create some stickiness, modest versus entrenched EHR or pathway tools."
+          },
+          "branding": {
+            "score": 1,
+            "note": "Growing reputation in oncology decision support, but clinical results and reimbursement, not brand, drive adoption."
+          },
+          "corneredResource": {
+            "score": 2,
+            "note": "The proprietary whole-exome/transcriptome dataset plus the ADAPT platform — the deepest differentiator and the basis of the data moat."
+          },
+          "processPower": {
+            "score": 1,
+            "note": "Integrated profiling-plus-AI workflow is hard to replicate quickly, but rivals are closing on capability."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "durability": "medium",
+        "rivals": [
+          {
+            "name": "Tempus (TEM)",
+            "kind": "public",
+            "note": "AI-precision-oncology data peer; near-breakeven, the direct comp",
+            "growth": 0.25,
+            "margin": null,
+            "multiple": "~6x sales"
+          },
+          {
+            "name": "Guardant Health",
+            "kind": "public",
+            "note": "Liquid-biopsy leader, still loss-making, overlaps in blood-based testing",
+            "growth": 0.2,
+            "margin": -0.1,
+            "multiple": "~6x sales"
+          },
+          {
+            "name": "Foundation Medicine",
+            "kind": "private",
+            "note": "Roche-owned tumor-profiling division; deep-pocketed incumbent, not standalone-priced",
+            "growth": null,
+            "margin": null,
+            "multiple": "division"
+          },
+          {
+            "name": "Natera",
+            "kind": "public",
+            "note": "Genetic testing and MRD; faster-growing, ~breakeven, richer multiple",
+            "growth": 0.3,
+            "margin": null,
+            "multiple": "~9x sales"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "scale/pricing",
+            "who": "Tempus, Guardant, Foundation",
+            "falsifier": "Per-test reimbursement or list pricing falls under competitive and payer pressure, halting the gross-margin inflection."
+          },
+          {
+            "vector": "cornered_resource",
+            "who": "Tempus, Roche, Natera",
+            "falsifier": "A rival assembles a comparable comprehensive-profiling dataset, commoditizing the data moat before scale and network effects lock in."
+          },
+          {
+            "vector": "network_economies",
+            "who": "well-capitalized incumbents",
+            "falsifier": "Volume growth stalls below ~20%, so the data and scale flywheel never reaches the operating leverage the bull case needs."
+          }
+        ],
+        "takeaway": "Caris is originating a plausible cornered resource — a proprietary whole-exome/transcriptome dataset feeding the ADAPT AI — with scale and network economics building as volume compounds, already visible in the 47%-to-65% gross-margin move. Durability is medium, not high — Foundation has Roche's balance sheet, Tempus and Natera are building comparable data, and reimbursement pricing is the shared vulnerability. The falsifier the bull must clear is sustained ~20%+ volume growth with the gross margin holding 65%+; if growth decelerates below that or pricing erodes margin, the moat commoditizes before it locks in."
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Already FCF-positive, unlike Tempus",
+            "body": "Caris is FCF-positive at GAAP breakeven with +97% growth, where the similarly-priced Tempus was barely breakeven — same multiple, further along."
+          },
+          {
+            "label": "The margin inflection is real",
+            "body": "Gross margin went 47%->65% in a year and Q1'26 posted positive GAAP operating income — observed operating leverage, not promised."
+          },
+          {
+            "label": "Comprehensive profiling is differentiated",
+            "body": "Whole-exome + whole-transcriptome is deeper than rivals' pure-NGS panels, and the data asset compounds — a cornered resource as volume scales."
+          },
+          {
+            "label": "Priced below the IPO",
+            "body": "At $18.33 versus a $21.00 offer eight months ago, the base case is roughly fair and the hypergrowth and data-moat tails are not richly priced in."
+          },
+          {
+            "label": "The true-up flatters the trend",
+            "body": "About $33M of 2025 revenue was prior-year reimbursement catch-ups, and SBC of ~$70M flatters adj-EBITDA — the underlying organic, owner-economics trend is softer than the headlines."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bull validation",
+            "body": "Test volume sustaining ~20%+ past the FY26 guide; gross margin holding 65%+ and converting to rising owner-FCF."
+          },
+          {
+            "label": "Bear validation",
+            "body": "Growth undershooting the +24% guide; per-test pricing eroding; the 2025 reimbursement true-up not recurring."
+          },
+          {
+            "label": "Reframe needed",
+            "body": "Margin gains reversing, or SBC/dilution making owner-FCF negative despite positive adj-EBITDA — the Tempus 'priced-for-perfection' read."
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Comprehensive molecular profiling",
+          "definition": "Whole-exome (all coding genes) + whole-transcriptome (all RNA) tumor sequencing — broader than rivals' targeted NGS panels."
+        },
+        {
+          "term": "MI Cancer Seek",
+          "definition": "Caris's combined DNA/RNA tumor-profiling assay; reimbursement reach is measured in covered lives (>225M)."
+        },
+        {
+          "term": "Caris Assure",
+          "definition": "The blood-based liquid-biopsy line, including minimal-residual-disease (MRD) monitoring — detecting cancer DNA in blood to track recurrence."
+        },
+        {
+          "term": "Test-volume KPI",
+          "definition": "Clinical test volume growth (~20% guided) — the operating metric that drives diagnostics revenue, watched independently of price/mix."
+        },
+        {
+          "term": "Adj-EBITDA vs owner-FCF",
+          "definition": "Adj-EBITDA adds back ~$70M of stock comp; owner-FCF treats SBC as a real cost, so it is the more conservative read of cash economics."
+        },
+        {
+          "term": "Reimbursement true-ups",
+          "definition": "Catch-up revenue booked when payers settle prior-period claims; ~$33M in 2025 — non-recurring, so it flatters the reported growth rate."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-21_02-34",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   }
 ];
 
