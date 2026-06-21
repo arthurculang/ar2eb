@@ -45654,7 +45654,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Low",
+      "tier": "Med-Low",
       "themes": [
         "medical-devices"
       ],

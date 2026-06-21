@@ -7,7 +7,7 @@ from gen_b1 import build
 
 SPEC = dict(
  ticker="NVCR", company="NovoCure", exch="NASDAQ", spot=14.33, cap=1.65, sh=109.0, cash=1.03, net_debt=0.56, rev_b=0.655,
- wl="asymmetrical-moonshots", tier="Low", themes=["medical-devices"],
+ wl="asymmetrical-moonshots", tier="Med-Low", themes=["medical-devices"],
  extras=["$655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH (p_fail~0)",
          "4 FDA-approved/filed indications: Optune Gio (GBM), Lua (NSCLC, early), Pax (pancreatic), METIS (brain mets)",
          "FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr"],
