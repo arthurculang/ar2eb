@@ -867,17 +867,15 @@ function IndicatorPage() {
   const { MEMOS } = D();
 
   // Backtest results of record (scripts/_models/ai2_results.md + the robustness
-  // run). Static research output — not live data. Panel: 111 tickers / 1,483
-  // name-years / FY2009–2025; rank-IC judged leave-one-year-out out-of-sample.
+  // run). Static research output — not live data. Significance is measured on a
+  // point-in-time QUARTERLY panel (61 cross-sections / FY2009–2024, Newey-West
+  // overlap-corrected); the zone-return table below is the intuitive read on the
+  // same 111-name universe.
   const ZONES = [
     { z: 'green',  label: 'Green — extremely undervalued', band: '< 6',     r1: '+38%', w1: '74%', r3: '+159%', w3: '87%' },
     { z: 'yellow', label: 'Yellow — somewhat undervalued',  band: '6 – 10',  r1: '+28%', w1: '69%', r3: '+106%', w3: '83%' },
     { z: 'orange', label: 'Orange — somewhat overvalued',   band: '10 – 15', r1: '+31%', w1: '70%', r3: '+93%',  w3: '84%' },
     { z: 'red',    label: 'Red — extremely overvalued',     band: '> 15',    r1: '+14%', w1: '57%', r3: '+48%',  w3: '58%' },
-  ];
-  const IC = [
-    { h: '1-year forward', ic: '+0.063', t: '+1.14', pos: '59%', n: '17' },
-    { h: '3-year forward', ic: '+0.044', t: '+0.90', pos: '47%', n: '15' },
   ];
 
   // Live snapshot: where today's covered names sit on the Indicator.
@@ -1035,22 +1033,6 @@ function IndicatorPage() {
             ordering lines up with the best-to-worst forward-return ordering. It runs
             from −1 (perfectly backwards) through 0 (noise) to +1 (perfect).
           </p>
-          <table className="ptable">
-            <thead>
-              <tr><th>Horizon</th><th className="num">Out-of-sample IC</th><th className="num">t-stat</th><th className="num col-secondary">years positive</th><th className="num col-secondary">N years</th></tr>
-            </thead>
-            <tbody>
-              {IC.map(r => (
-                <tr key={r.h}>
-                  <td>{r.h}</td>
-                  <td className="num mono delta-pos">{r.ic}</td>
-                  <td className="num mono">{r.t}</td>
-                  <td className="num mono col-secondary">{r.pos}</td>
-                  <td className="num mono col-secondary">{r.n}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
           <p>
             An IC near <b>+0.05</b> means that on any single pair of names you'd call
             the winner ~52% of the time — barely above a coin flip. The edge is small
@@ -1061,18 +1043,12 @@ function IndicatorPage() {
           </p>
           <p>
             <b>But is it significant?</b> The <b>t-stat</b> asks whether a positive
-            average could just be luck — above ~2 is the conventional bar for "real."
-            On the annual panel alone, this signal is at only <b>~1.1</b> (1-yr) and{' '}
-            <b>~0.9</b> (3-yr): directionally positive, but <b>not</b> significant. The
-            value effect runs hot and cold year to year (the yearly IC swings from −0.31
-            to +0.56), and ~16 annual cross-sections can't pin a +0.05 average down.
-          </p>
-          <p>
-            So we extended the test to <b>quarterly</b> rebalancing — ~4× the
-            cross-sections (61 vs 16), point-in-time by SEC filing date, with a{' '}
-            <b>Newey-West correction</b> for the fact that overlapping forward windows
-            would otherwise inflate the t-stat. The result is sharper and economically
-            sensible:
+            average could just be luck — above ~2 is the conventional bar for "real." We
+            measure it on a <b>point-in-time quarterly panel</b> — 61 cross-sections,
+            each company's fundamentals lagged to its actual SEC filing date (no
+            look-ahead), with a <b>Newey-West correction</b> so the overlapping forward
+            windows don't inflate the t-stat. Only the <b>3-year</b> horizon clears the
+            bar; one quarter and one year are noise, because <b>value is a slow signal</b>:
           </p>
           <table className="ptable">
             <thead>
@@ -1092,8 +1068,7 @@ function IndicatorPage() {
             compounders — that 3-year spread is <b>+51%, t ≈ 2.2</b> (and the cheap bucket
             beat the S&amp;P by +98%… but so did the <em>expensive</em> bucket by +47%, so
             most of the raw outperformance is the universe and the bull market, not the
-            Indicator — the <b>spread</b> is the actual edge). At one quarter and one year
-            it's noise: <b>value is a slow signal</b>.
+            Indicator — the <b>spread</b> is the actual edge).
           </p>
           <p>
             <b>But does it generalize?</b> We re-ran the whole test on a <b>broad,
