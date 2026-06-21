@@ -116,31 +116,32 @@ nested grid-LOYO (best grid w chosen per train fold, scored OOS):
 **negatively** ("worse margins = cheaper"): noise-fitting. Nested OOS, the best still wins one
 horizon (3y +0.084) and loses the other (1y +0.032). The random search missed nothing.
 
-## 5. Empirical valuation zones  — `ai2_backtest.py --zones`
+## 5. Empirical valuation zones  — `zone_returns.py` (point-in-time quarterly)
 
-Forward return by AI 1.0 *level* — grounds the green/yellow/orange/red bands.
+Forward return by AI 1.0 *level* — grounds the green/yellow/orange/red bands. This is the
+**point-in-time quarterly** cut (the one the `/indicator` page shows): mean over all quarterly
+rows in the zone (overlap is unbiased for a mean), win-rate over NON-OVERLAPPING windows only
+(one per name every 3 years → honest hit-rate at a true smaller N).
 
 ```
-AI 1.0 valuation zones — forward return by band  (AI 1.0 = EV / (Rev × (GrossMargin + RevGrowth)))
+AI 1.0 valuation zones — 3y forward return by band  (point-in-time quarterly panel; 103 names / 61 xs)
 
-  -- 1y forward return --
-  band                                      n     mean   median   win%
-  GREEN  · extremely undervalued (<6)     471   +38.2%   +21.4%    74%
-  YELLOW · somewhat undervalued (6-10)    291   +28.3%   +20.6%    69%
-  ORANGE · somewhat overvalued (10-15)    166   +31.0%   +21.0%    70%
-  RED    · extremely overvalued (>15)     143   +14.4%    +9.6%    57%
-
-  -- 3y forward return --
-  GREEN  · extremely undervalued (<6)     413  +158.9%   +78.7%    87%
-  YELLOW · somewhat undervalued (6-10)    236  +105.5%   +77.2%    83%
-  ORANGE · somewhat overvalued (10-15)    127   +93.2%   +61.6%    84%
-  RED    · extremely overvalued (>15)     103   +47.7%   +16.3%    58%
+  band                                      n     mean   median   win%(N, non-overlap)
+  GREEN  · extremely undervalued (<6)    1194  +124.4%   +70.1%   82%  (146)
+  YELLOW · somewhat undervalued (6-10)    616   +89.0%   +66.9%   82%   (89)
+  ORANGE · somewhat overvalued (10-15)    454   +91.8%   +62.0%   76%   (54)
+  RED    · extremely overvalued (>15)     486   +41.2%   +14.6%   67%   (30)
 ```
 
-GREEN clearly best, RED clearly worst (~coin-flip 57% win); the middle two are close — the signal
-is strongest at the **extremes**. Absolute returns are inflated by the 2007–25 bull sample; the
-durable takeaway is the **ordering** (cheaper → higher forward return), the effect the rank-IC
-validated. A screen, not a timing tool — confirm with the memo DCF (§6) before acting.
+GREEN clearly best, RED clearly worst, and the ordering falls **straight down the zones** (the
+mean 3y return and the non-overlapping win-rate both decline monotonically). Median 3y is even
+cleaner (+70/+67/+62/+15) — RED's +41% mean is propped up by a few outliers. Absolute returns are
+inflated by the 2009–24 bull sample; the durable takeaway is the **ordering** (cheaper → higher
+forward return), the effect the rank-IC validated. A screen, not a timing tool — confirm with the
+memo DCF (§6) before acting.
+
+*(The legacy annual `ai2_backtest.py --zones` cut read GREEN 3y +159%/87% → RED +48%/58% — same
+shape, higher absolutes; superseded by the point-in-time quarterly table above.)*
 
 **Bands (validated):** GREEN < 6 · YELLOW 6–10 · ORANGE 10–15 · RED > 15 (EV / (Rev × (GM + growth))).
 
