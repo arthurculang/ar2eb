@@ -1020,6 +1020,62 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
 }
 .portfolio-method .method-body p .mono { color: var(--ink); font-weight: 500; }
 
+/* ---- Universe matrix: conviction (rows) × category (cols) ---- */
+.portfolio-matrix { padding: 8px 0 16px; }
+.portfolio-matrix .eyebrow { margin-bottom: 8px; }
+.portfolio-matrix .section-h { margin: 0 0 12px; }
+.matrix-intro {
+  color: var(--ink-2); max-width: 64ch; margin: 0 0 22px;
+  font-size: 15px; line-height: 1.6;
+}
+.matrix-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.matrix {
+  border-collapse: separate; border-spacing: 0; width: 100%; min-width: 660px;
+}
+table.matrix th.matrix-corner {
+  width: 86px; border-bottom: 1px solid var(--rule-2);
+}
+table.matrix th.matrix-col {
+  font: 600 11px/1 var(--type-display);
+  letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted);
+  text-align: left; padding: 0 10px 9px; vertical-align: bottom;
+  border-bottom: 1px solid var(--rule-2); white-space: nowrap;
+}
+table.matrix th.matrix-tier {
+  text-align: left; font: 600 13px/1.2 var(--type-display); color: var(--ink);
+  white-space: nowrap; padding: 11px 14px 11px 12px; vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+/* conviction intensity rail on the tier label (High strongest → Low faint) */
+.matrix-row.tier-high     th.matrix-tier { box-shadow: inset 3px 0 0 var(--accent); }
+.matrix-row.tier-medhigh  th.matrix-tier { box-shadow: inset 3px 0 0 rgba(61,70,184,0.70); }
+.matrix-row.tier-med      th.matrix-tier { box-shadow: inset 3px 0 0 rgba(61,70,184,0.48); }
+.matrix-row.tier-medlow   th.matrix-tier { box-shadow: inset 3px 0 0 rgba(61,70,184,0.30); }
+.matrix-row.tier-low      th.matrix-tier { box-shadow: inset 3px 0 0 rgba(61,70,184,0.16); }
+.matrix-row.tier-untiered th.matrix-tier { box-shadow: inset 3px 0 0 var(--rule-2); color: var(--muted); }
+table.matrix td.matrix-cell {
+  padding: 9px 10px 4px; vertical-align: top;
+  border-bottom: 1px solid var(--rule); border-left: 1px solid var(--rule);
+}
+table.matrix td.matrix-cell.is-empty { background: rgba(0,0,0,0.012); }
+table.matrix tbody tr:last-child td.matrix-cell { border-bottom: none; }
+/* ticker chips */
+.matrix .tk {
+  display: inline-block; font: 600 12px/1 var(--type-mono);
+  padding: 4px 7px 4px 6px; margin: 0 5px 5px 0; border-radius: var(--r-sm);
+  border: 1px solid var(--rule-2); border-left-width: 3px; background: #fff;
+  color: var(--ink-2); text-decoration: none;
+  transition: border-color 120ms, color 120ms;
+}
+.matrix .tk:hover { border-color: var(--accent); color: var(--accent-ink); }
+.matrix .tk.tk-pos  { border-left-color: var(--pos); }
+.matrix .tk.tk-neg  { border-left-color: var(--neg); }
+.matrix .tk.tk-flat { border-left-color: var(--rule-2); }
+.matrix .tk.tk-legend { cursor: default; margin: 0 2px; }
+.matrix .tk.tk-legend.tk-pos { color: var(--pos); }
+.matrix .tk.tk-legend.tk-neg { color: var(--neg); }
+.matrix .tk.tk-legend:hover { border-color: var(--rule-2); }
+
 /* Export — link-style, tertiary visual weight */
 .portfolio-export { padding: 4px 0 64px; }
 .portfolio-export .export-row {

@@ -33,7 +33,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 BASELINE = REPO / "tests" / "visual_baseline.json"
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "coin", "anthropic", "ionq", "isrg", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak", "meta", "amzn", "googl", "aapl", "nvda", "tsla", "dis", "cmg", "dal", "hood", "de", "algn", "adsk", "cart", "u", "crox", "rddt", "tost", "wrby", "you", "shop", "rxrx", "beam", "pacb", "tem", "serv", "prme", "twst", "sym", "nvcr", "cai"]
+TICKERS = ["joby", "aur", "lth", "zm", "naut", "coin", "anthropic", "ionq", "isrg", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak", "meta", "amzn", "googl", "aapl", "nvda", "tsla", "dis", "cmg", "dal", "hood", "de", "algn", "adsk", "cart", "u", "crox", "rddt", "tost", "wrby", "you", "shop", "rxrx", "beam", "pacb", "tem", "serv", "prme", "twst", "sym", "nvcr", "cai", "hhh"]
 DPI = 150
 
 

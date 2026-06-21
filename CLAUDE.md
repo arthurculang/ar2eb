@@ -300,7 +300,25 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   78% GM allows ~15-18% owner FCF, but a 19%-GM systems integrator (SYM) cannot; calibrate the ceiling to the GM. (2) A fresh trial
   miss (TRIDENT) is a real, datable negative — bake it into the bear/base, not just a footnote. (3) the same ~6.5× sales multiple
   yields opposite findings (CAI +29% vs TEM −28%) purely on where each sits on the FCF curve — FCF-positivity is the swing.* Conviction
-  tiers all **Low** (Arthur to confirm; CAI's strength could argue Med-Low). Shipped on `claude/epic-curie-ouHZL`.
+  tiers (Arthur): **CAI + NVCR both Med-Low** (PR #58 set CAI; NVCR bumped Low→Med-Low via PR #60). Shipped on `claude/epic-curie-ouHZL`.
+- **Indicator simplification + Portfolio universe matrix + HHH SHIPPED (2026-06-21; ticker 53).** (1) **/indicator narrowed to the
+  quarterly backtest** (PR #59, merged): dropped the annual-IC sausage-making; the zone-return "practical read" now reads off the same
+  point-in-time quarterly panel (103 names / 61 xs), **3y-only**, with a NON-OVERLAPPING win-rate (green→red +124/+89/+92/+41%, win
+  82/82/76/67%; reproduce `scripts/_models/zone_returns.py`). (2) **NVCR Low→Med-Low** (PR #60, merged). (3) **Portfolio universe matrix**
+  (`/portfolio`): a conviction×category grid — 5 watchlist columns × 5 tier rows + an Untiered band for megacap/private — each ticker a
+  chip tinted by DCF upside (`buildMatrix` in pages.jsx; site-only, no PDF/baseline change). (4) **HHH — Howard Hughes Holdings**, 53rd
+  ticker, the **first real-estate / discount-to-NAV SOTP** (mature_company_sotp, `fcf-plus-plus-growth` / `real-economy-hard-assets`, tier
+  **High** per Arthur). Finding **+41%** (weighted $94.31 vs $66.86): cheap, asymmetric — ~1.05× book but a ~37% discount to the company's
+  own $104 SOTP NAV (~80% land / ~20% the new Vantage insurer), Ackman's $100 cash buy-in (May-2025, 48% premium) the floor, the
+  Berkshire-style holdco conversion the catalyst; bear is the 15-yr value-trap, tail is Ackman's $211-by-2030. SEC-XBRL sourced (6 research
+  subagents), modeled in `scripts/_models/model_hhh_sotp.py` (terminal = exit multiple / cap rate, not Gordon; all validator identities tie).
+  **First NET-DEBT SOTP** (vs net-cash ZM/COIN). Renderer generalized (SOTP special-asset label now data-driven via `dcf_metrics.special_label`
+  — "Vantage insurance" not hardcoded "Anthropic stake"; a special_label-gated exit-multiple row replaces "Terminal growth") — **ZM + COIN
+  byte-identical** (COIN carries exit_fcf_multiple but has always shown term_g; the gate preserves it). 7pp, STRICT-clean; `visual_baseline.json`
+  **now 53 tickers**; full `--check` clean (no drift on the existing 52). *Lessons: (1) forcing a land-bank NAV through a Gordon DCF makes the
+  intermediate fields (term_g, starting FCF) read backwards — model RE on a stable run-rate FCF + an exit multiple (cap rate) instead.
+  (2) Page-7 is the BACK MATTER (Page5BackMatter renders AFTER PagePOCD), not the POCD page — its binding rows are the pushback grid + the
+  glossary term count.* Shipped on `claude/epic-curie-ouHZL`.
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin
