@@ -493,6 +493,43 @@ function computePortfolio(memos, opts = {}) {
   return { rows, cashWeight, portfolioUpside, totalScore };
 }
 
+// ---------- UNIVERSE MATRIX (conviction × category) ----------
+// Organizes every covered name into a grid: columns = watchlist category,
+// rows = conviction tier. The three tiered watchlists lead; the two tier-less
+// ones (megacap, private — allows_tiers:false) only populate the "Untiered"
+// row, which reads as a clean second block. Pure view over MEMOS; no sizing.
+const MATRIX_COLS = [
+  { wl: 'asymmetrical-moonshots', short: 'Moonshots' },
+  { wl: 'fcf-plus-plus-growth',   short: 'FCF++' },
+  { wl: 'fun-speculative',        short: 'Fun/Spec' },
+  { wl: 'fcf-megacap',            short: 'Megacap' },
+  { wl: 'private-wishlist',       short: 'Private' },
+];
+const MATRIX_TIERS = ['High', 'Med-High', 'Med', 'Med-Low', 'Low', null]; // null = untiered band
+
+function tierSlug(tier) {
+  return tier ? tier.toLowerCase().replace(/[^a-z]/g, '') : 'untiered';
+}
+
+// → { [watchlist]: { [tierKey]: [{ticker, slug, company, upside}] } }, cells
+// sorted cheapest-first by the memo's probability-weighted upside.
+function buildMatrix(memos) {
+  const grid = {};
+  memos.forEach(m => {
+    const wl = (m.taxonomy && m.taxonomy.watchlist) || 'fcf-plus-plus-growth';
+    const tier = (m.taxonomy && m.taxonomy.tier) || null;
+    const key = tier || '_none';
+    (grid[wl] = grid[wl] || {});
+    (grid[wl][key] = grid[wl][key] || []).push({
+      ticker: m.ticker, slug: m.slug, company: m.company,
+      upside: (m.expected && typeof m.expected.deltaPct === 'number') ? m.expected.deltaPct : null,
+    });
+  });
+  Object.values(grid).forEach(col => Object.values(col).forEach(
+    arr => arr.sort((a, b) => (b.upside ?? -1e9) - (a.upside ?? -1e9))));
+  return grid;
+}
+
 // Renders three buttons that copy the current portfolio state to the
 // clipboard in different formats: JSON (machine-readable, full math),
 // CSV (spreadsheet-pasteable), and a deep-link URL (shareable).
@@ -638,6 +675,9 @@ function PortfolioPage() {
 
   // Sort the table by raw score desc so the strongest names lead.
   const sortedRows = [...portfolio.rows].sort((a, b) => b.score - a.score);
+
+  // Universe matrix — every name (incl. private/megacap), by tier × category.
+  const matrix = React.useMemo(() => buildMatrix(MEMOS), [MEMOS]);
 
   // Allocation segments for the stacked bar — longs first, cash last.
   // The two-tone indigo palette keeps longs visually grouped while still
@@ -828,6 +868,65 @@ function PortfolioPage() {
               )}
             </tbody>
           </table>
+        </div>
+      </section>
+
+      <section className="portfolio-matrix">
+        <div className="wrap">
+          <div className="eyebrow">The universe</div>
+          <h2 className="section-h">Every name, by conviction &amp; category</h2>
+          <p className="matrix-intro">
+            The whole book at a glance — columns are the five watchlist categories,
+            rows are the conviction tiers (the one human input). Mega-caps and private
+            names aren't conviction-tiered, so they sit in their own band below. Each
+            chip tints by the memo's probability-weighted upside:{' '}
+            <span className="tk tk-pos tk-legend">cheap</span>{' '}
+            <span className="tk tk-neg tk-legend">rich</span>.
+          </p>
+          <div className="matrix-scroll">
+            <table className="matrix">
+              <thead>
+                <tr>
+                  <th className="matrix-corner" aria-hidden="true" />
+                  {MATRIX_COLS.map(c => (
+                    <th key={c.wl} className="matrix-col" scope="col">{c.short}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {MATRIX_TIERS.map(tier => {
+                  const key = tier || '_none';
+                  return (
+                    <tr key={key} className={`matrix-row tier-${tierSlug(tier)}`}>
+                      <th className="matrix-tier" scope="row">{tier || 'Untiered'}</th>
+                      {MATRIX_COLS.map(c => {
+                        const names = (matrix[c.wl] && matrix[c.wl][key]) || [];
+                        return (
+                          <td key={c.wl} className={names.length ? 'matrix-cell' : 'matrix-cell is-empty'}>
+                            {names.map(n => {
+                              const t = n.upside == null ? 'flat' : n.upside > 0.5 ? 'pos' : n.upside < -0.5 ? 'neg' : 'flat';
+                              return (
+                                <a key={n.slug} href={'#/memo/' + n.slug}
+                                   className={`tk tk-${t}`}
+                                   title={`${n.company}${n.upside == null ? '' : ` · ${n.upside > 0 ? '+' : ''}${n.upside.toFixed(0)}% vs spot`}`}>
+                                  {n.ticker}
+                                </a>
+                              );
+                            })}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="hint">
+            {MEMOS.length} names. Sized weights (above) come only from the tiered,
+            publicly-buyable book; this map includes every covered name. Click any
+            ticker for its memo.
+          </p>
         </div>
       </section>
 
