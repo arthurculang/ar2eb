@@ -284,7 +284,23 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   validator cash path ≥0, set final_shares to the implied diluted count — so the dilution drag is honest (without it the tails are
   wildly overstated). (2) **Calibrate terminal op margins to the BUSINESS**: a delivery-robot NETWORK is LOGISTICS (~15-24% op margin),
   not software (45%) — the wrong margin 10×'d SERV's tail. (3) **Page-6 back-matter binding row = PUSHBACK row 1 (items 0-2)**, not
-  row 2 — the disclaimers section is fixed/shared; trim the tallest cell in the binding row.* Shipped on `claude/epic-curie-ouHZL`.
+  row 2 — the disclaimers section is fixed/shared; trim the tallest cell in the binding row.* **MERGED to main via PR #55**
+  (2026-06-20); conviction tiers later set (Arthur): SERV + TWST **Med-Low**, PRME + SYM **Low** (site-only, PR #57).
+- **Moonshot tier COMPLETE — finishing pair SHIPPED (2026-06-21; tickers 51–52): NVCR + CAI (both mature).** The last two
+  named deferred moonshot-tier candidates (NVCR/CAI; "INFQ" was never a real entry). Both classify **mature** (TEM/TXG precedent:
+  high-rev, unprofitable-but-net-cash). Sourced (SEC XBRL + web), modeled through the mature engine (SBC-adjusted ex-SBC owner FCF),
+  prose by 2 parallel subagents. **Findings — notably the cheap/fair side of the ledger (breaking the "everything's rich" streak):**
+  **NVCR +4.5%** (NovoCure; TTFields oncology device — *cheap* at ~2.5× sales, **net cash**, 78% GM; modal base ~fair with new-indication
+  optionality (Optune Lua/Pax/METIS multiplying the TAM beyond GBM), held in check by the **fresh Jun-18-2026 Phase-3 TRIDENT GBM MISS**
+  + years of unproven device operating leverage); **CAI +28.9%** (Caris Life Sciences; AI precision-oncology diagnostics, IPO Jun-2025
+  @ $21, now ~$18 — **the anti-TEM**: same ~6.5× sales multiple, opposite finding because Caris is further along — already **FCF-positive
+  at GAAP breakeven** on **+97%** growth with a real 47%→65% GM inflection, so the market is under-pricing the margin story; bear =
+  reimbursement true-ups + steep deceleration + Halbert ~42% vote). `visual_baseline.json` **now 52 tickers**; validator green; both
+  STRICT-clean; no drift on the existing 50. *Lessons: (1) device/diagnostics terminal FCF margins are GROSS-margin-capped — NVCR's
+  78% GM allows ~15-18% owner FCF, but a 19%-GM systems integrator (SYM) cannot; calibrate the ceiling to the GM. (2) A fresh trial
+  miss (TRIDENT) is a real, datable negative — bake it into the bear/base, not just a footnote. (3) the same ~6.5× sales multiple
+  yields opposite findings (CAI +29% vs TEM −28%) purely on where each sits on the FCF curve — FCF-positivity is the swing.* Conviction
+  tiers all **Low** (Arthur to confirm; CAI's strength could argue Med-Low). Shipped on `claude/epic-curie-ouHZL`.
 - **Arthur Indicator — AI 1.0 LIVE, AI 2.0 DRAFT (2026-06-04; spec §13).** Lightweight
   valuation-efficiency *screen* complementing the DCF: `AI_1.0 = EV/(Rev×(GM+RevGrowth))` — "am I
   paying a fair price for the *quality* of this business?" (product-economics EV/Rev ÷ gross-margin

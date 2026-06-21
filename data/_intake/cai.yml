@@ -1,0 +1,538 @@
+# CAI — Caris Life Sciences (NASDAQ) · INTAKE (MATURE; python-modeled; scaffold-ready)
+ticker: CAI
+company: Caris Life Sciences
+exchange: NASDAQ
+dcf_type: mature_company
+date: '2026-06-01'
+spot: 18.33
+market:
+  market_cap_billion: 5.1
+  shares_outstanding_million: 278.0
+  cash_billion: 0.8
+  net_debt_billion: 0.3785
+  extras:
+  - FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven
+  - IPO Jun-2025 @ $21; now $18.33 (~13% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash
+  - Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups
+taxonomy:
+  watchlist: asymmetrical-moonshots
+  tier: Low
+  themes:
+  - precision-medicine-oncology
+  primary_theme: precision-medicine-oncology
+central_question: Caris trades at ~6.5x sales like Tempus, yet screens positive where Tempus screened rich — is being FCF-positive
+  at GAAP breakeven, with a real 47%-to-65% margin inflection, enough to justify the price?
+thesis: Caris Life Sciences is an AI precision-oncology diagnostics company — whole-exome and whole-transcriptome tumor profiling
+  plus blood-based testing — that IPO'd June 2025 at $21.00 and now trades $18.33, ~13% below its offer. FY2025 revenue grew
+  97% to $812M, gross margin expanded 47%->65%, and unlike most diagnostics scalers it is already free-cash-flow positive
+  with +$138M adj-EBITDA, near GAAP breakeven. The DCF asks whether the margin inflection holds as growth steps down to a
+  +24% guide. Weighted fair value $23.63, ~29% above spot — base ~fair, the upside in the data-moat tail.
+chart_reference:
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_revenue:
+  - 0.306
+  - 0.412
+  - 0.812
+  history_op_margin:
+  - -40.0
+  - -25.0
+  - -8.0
+  history_fcf:
+  - -0.1
+  - -0.05
+  - 0.04
+  history_ev_rev:
+  - 8.0
+  - 7.0
+  - 6.0
+page3_chart_config:
+  segment_a: Molecular profiling
+  segment_b: Pharma / data (ADAPT)
+  hist_ent_split:
+  - 0.95
+  - 0.94
+  - 0.94
+  chart6_title: Equity build (Op EV + net cash)
+  chart6_type: matureEquityBuild
+page3:
+  subtitle: FY23-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec 31  ·  FY2025 + Q1'26 results (IPO
+    Jun'25)
+  sources: 'Sources: Caris Life Sciences FY2025 results + Q1''26 (CIK 2019410), IPO 424B4 (Jun 2025), FY26 guidance. Revenue
+    as a growth-rate path off FY25 ($812M, +97%); FCF = revenue x an SBC-adjusted owner-FCF margin (already positive; SBC
+    ~$70M deducted); Gordon terminal at scenario WACC. Pre-IPO history/EV-rev are notional. EV/sales vs precision-diagnostics
+    peers.'
+scenarios:
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.13
+    expected_per_share: 5.25
+    headline: Growth collapses; true-up reverses
+    narrative:
+    - Revenue compounds only ~6.6% as test-volume growth stalls and reimbursement true-ups reverse rather than recur. The
+      ~$33M of 2025 revenue tied to prior-year reimbursement catch-ups proves non-repeatable, and the reported growth rate
+      is exposed as flattered.
+    - Margins barely move off the floor, holding near 0% owner-FCF as price competition from Tempus, Guardant and Foundation
+      erodes the gross-margin gains. The ~6.5x sales multiple compresses hard against a decelerating, low-margin base. DCF
+      lands at $5.25, down 71%.
+    probability_rationale: Requires the volume engine to stall near term and the true-up to be a one-off rather than a recurring
+      feature of payer settlements. Possible given the steep step-down already guided, but the cash-positive base makes outright
+      collapse less likely than for a pre-breakeven peer.
+    dcf_metrics:
+      cagr_5y: 6.6
+      wacc: 0.105
+    dcf_path:
+      rev_b: 0.812
+      rev_path:
+      - 0.1
+      - 0.08
+      - 0.06
+      - 0.05
+      - 0.04
+      op_margin:
+      - 0.02
+      - 0.05
+      - 0.08
+      - 0.1
+      - 0.12
+      wacc_path:
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      - 0.105
+      term_g: 0.03
+      fcf:
+      - 0.0
+      - 0.029
+      - 0.061
+      - 0.086
+      - 0.112
+      cash: 0.8
+      net_debt: 0.3785
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 295
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 7.0
+      - 6.0
+      - 5.0
+      - 4.5
+      - 4.0
+      ev_fcf_multiple:
+      - 60.0
+      - 35.0
+      - 26.0
+      - 21.0
+      - 18.0
+  bear:
+    label: Bear
+    short_label: Bear
+    probability: 0.27
+    expected_per_share: 10.28
+    headline: Decelerates; multiple ran ahead
+    narrative:
+    - Revenue grows ~11.9% — well below the +24% guide — as competition pressures per-test pricing and the easy share gains
+      slow. The margin inflection partly holds, reaching mid-teens owner-FCF, but not fast enough to outrun a contracting
+      multiple.
+    - The market re-rates a ~6.5x-sales name toward something closer to a low-double-digit grower, and the IPO-era premium
+      unwinds. At a 4%-to-15% margin path the DCF is $10.28, down 44%. The setup is a quality business that was simply priced
+      ahead of its delivery.
+    probability_rationale: The honest deceleration case — going from +97% to a +24% guide is a steep step, and a further undershoot
+      plus pricing pressure is plausible. Weighted at 27% as the most credible downside if the data moat proves shallower
+      than bulls assume.
+    dcf_metrics:
+      cagr_5y: 11.9
+      wacc: 0.1
+    dcf_path:
+      rev_b: 0.812
+      rev_path:
+      - 0.18
+      - 0.14
+      - 0.11
+      - 0.09
+      - 0.08
+      op_margin:
+      - 0.06
+      - 0.09
+      - 0.12
+      - 0.15
+      - 0.17
+      wacc_path:
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      - 0.1
+      term_g: 0.035
+      fcf:
+      - 0.038
+      - 0.076
+      - 0.121
+      - 0.172
+      - 0.214
+      cash: 0.8
+      net_debt: 0.3785
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 290
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 7.5
+      - 6.5
+      - 6.0
+      - 5.5
+      - 5.0
+      ev_fcf_multiple:
+      - 55.0
+      - 34.0
+      - 26.0
+      - 21.0
+      - 18.0
+  base:
+    label: Base
+    short_label: Base
+    probability: 0.33
+    expected_per_share: 19.41
+    headline: Solid growth, the margin inflection holds
+    narrative:
+    - Revenue compounds ~16.7%, roughly in line with the guided range, as clinical test volume grows around 20% and Caris
+      Assure and MI Cancer Seek add incremental lives. The 47%-to-65% gross-margin move continues toward 21% owner-FCF as
+      fixed lab and data costs leverage.
+    - This is the modal outcome — a real growth-plus-margin story that delivers, not a moonshot. At $19.41 the DCF sits just
+      above the $18.33 price, so the base case is roughly fair. The market is paying about what the business is worth if it
+      simply executes the plan.
+    probability_rationale: Centered on management hitting the FY26 guide and sustaining the volume KPI while margins keep
+      inflecting — the continuation of what the last two years already showed. Carries the plurality 33% weight as the most
+      likely path.
+    dcf_metrics:
+      cagr_5y: 16.7
+      wacc: 0.095
+    dcf_path:
+      rev_b: 0.812
+      rev_path:
+      - 0.24
+      - 0.2
+      - 0.16
+      - 0.13
+      - 0.11
+      op_margin:
+      - 0.08
+      - 0.12
+      - 0.16
+      - 0.2
+      - 0.23
+      wacc_path:
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      - 0.095
+      term_g: 0.04
+      fcf:
+      - 0.06
+      - 0.121
+      - 0.196
+      - 0.285
+      - 0.369
+      cash: 0.8
+      net_debt: 0.3785
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 288
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 8.0
+      - 7.0
+      - 6.5
+      - 6.0
+      - 5.5
+      ev_fcf_multiple:
+      - 50.0
+      - 30.0
+      - 22.0
+      - 17.0
+      - 14.0
+  bull:
+    label: Bull
+    short_label: Bull
+    probability: 0.18
+    expected_per_share: 39.65
+    headline: Hypergrowth + data-moat leverage
+    narrative:
+    - Revenue compounds ~22% as the proprietary whole-exome/transcriptome data asset and the ADAPT platform drive both test
+      volume and pharma partnership revenue, while comprehensive profiling takes share from narrower NGS panels.
+    - Operating leverage on a fixed data and lab base pushes owner-FCF toward 29%, software-like for diagnostics. The market
+      rewards durable hypergrowth plus a widening margin with an expanded multiple. DCF reaches $39.65, up 116%, as the data-moat
+      thesis starts to show in the financials.
+    probability_rationale: Needs growth to stay above 20% well past the guide and the gross-margin gains to keep compounding
+      into operating leverage. Plausible if the data asset is a genuine cornered resource, but it asks the company to outrun
+      a steep deceleration; 18%.
+    dcf_metrics:
+      cagr_5y: 22.1
+      wacc: 0.09
+    dcf_path:
+      rev_b: 0.812
+      rev_path:
+      - 0.3
+      - 0.26
+      - 0.22
+      - 0.18
+      - 0.15
+      op_margin:
+      - 0.1
+      - 0.16
+      - 0.22
+      - 0.27
+      - 0.31
+      wacc_path:
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      - 0.09
+      term_g: 0.045
+      fcf:
+      - 0.084
+      - 0.186
+      - 0.325
+      - 0.479
+      - 0.639
+      cash: 0.8
+      net_debt: 0.3785
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 285
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 9.0
+      - 8.0
+      - 7.5
+      - 7.0
+      - 6.5
+      ev_fcf_multiple:
+      - 45.0
+      - 28.0
+      - 20.0
+      - 16.0
+      - 13.0
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UltBull
+    probability: 0.09
+    expected_per_share: 73.64
+    headline: Becomes the oncology-data standard
+    narrative:
+    - Revenue compounds ~27% as Caris establishes its molecular database as the reference standard for oncology decision-making,
+      with comprehensive profiling, blood-based MRD and the ADAPT AI layer compounding into a network where more tests improve
+      the data and the data wins more tests.
+    - Owner-FCF margins reach ~35%, approaching software economics as the data and AI layer scales near-zero-marginal-cost.
+      At $73.64 the DCF is triple the price. This is the platform outcome where the cornered data resource and scale economics
+      fully express.
+    probability_rationale: The full platform win — durable hypergrowth, a true data-network effect, and software-like margins
+      together. Each is individually demanding and the combination is a tail, so it carries 9% — meaningful upside optionality,
+      not a central expectation.
+    dcf_metrics:
+      cagr_5y: 26.8
+      wacc: 0.085
+    dcf_path:
+      rev_b: 0.812
+      rev_path:
+      - 0.36
+      - 0.32
+      - 0.27
+      - 0.22
+      - 0.18
+      op_margin:
+      - 0.12
+      - 0.2
+      - 0.27
+      - 0.33
+      - 0.37
+      wacc_path:
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      - 0.085
+      term_g: 0.05
+      fcf:
+      - 0.11
+      - 0.262
+      - 0.463
+      - 0.7
+      - 0.933
+      cash: 0.8
+      net_debt: 0.3785
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 283
+      distress: 0.0
+    chart_data:
+      ev_rev_multiple:
+      - 10.0
+      - 9.0
+      - 8.0
+      - 7.5
+      - 7.0
+      ev_fcf_multiple:
+      - 40.0
+      - 24.0
+      - 17.0
+      - 14.0
+      - 12.0
+historical_prices:
+  ipo_marker: IPO Jun '25
+  x_min: -1.05
+  points:
+  - - -1.0
+    - 21.0
+  - - -0.85
+    - 42.5
+  - - -0.65
+    - 30.0
+  - - -0.45
+    - 22.0
+  - - -0.25
+    - 16.0
+  - - -0.1
+    - 17.0
+  - - -0.05
+    - 18.33
+weighting_rationale:
+- label: Ultra Bear 13%
+  body: Growth ~6.6%, the reimbursement true-up reverses, margins stay near zero — DCF $5.25.
+- label: Bear 27%
+  body: Decelerates to ~11.9%, pricing pressure bites, the multiple re-rates down — DCF $10.28.
+- label: Base 33%
+  body: ~16.7% growth, margin inflection holds to 21% owner-FCF — DCF $19.41, roughly fair at spot.
+- label: Bull 18%
+  body: ~22% hypergrowth, the data moat drives operating leverage — DCF $39.65.
+- label: Ultra Bull 9%
+  body: ~27% growth, oncology-data standard, software-like 35% margins — DCF $73.64.
+appendix:
+  pushback:
+  - label: Already FCF-positive, unlike Tempus
+    body: Caris is FCF-positive at GAAP breakeven with +97% growth, where the similarly-priced Tempus was barely breakeven
+      — same multiple, further along.
+  - label: The margin inflection is real
+    body: Gross margin went 47%->65% in a year and Q1'26 posted positive GAAP operating income — observed operating leverage,
+      not promised.
+  - label: Comprehensive profiling is differentiated
+    body: Whole-exome + whole-transcriptome is deeper than rivals' pure-NGS panels, and the data asset compounds — a cornered
+      resource as volume scales.
+  - label: Priced below the IPO
+    body: At $18.33 versus a $21.00 offer eight months ago, the base case is roughly fair and the hypergrowth and data-moat
+      tails are not richly priced in.
+  - label: The true-up flatters the trend
+    body: About $33M of 2025 revenue was prior-year reimbursement catch-ups, and SBC of ~$70M flatters adj-EBITDA — the underlying
+      organic, owner-economics trend is softer than the headlines.
+  triggers:
+  - label: Bull validation
+    body: Test volume sustaining ~20%+ past the FY26 guide; gross margin holding 65%+ and converting to rising owner-FCF.
+  - label: Bear validation
+    body: Growth undershooting the +24% guide; per-test pricing eroding; the 2025 reimbursement true-up not recurring.
+  - label: Reframe needed
+    body: Margin gains reversing, or SBC/dilution making owner-FCF negative despite positive adj-EBITDA — the Tempus 'priced-for-perfection'
+      read.
+glossary:
+- term: Comprehensive molecular profiling
+  definition: Whole-exome (all coding genes) + whole-transcriptome (all RNA) tumor sequencing — broader than rivals' targeted
+    NGS panels.
+- term: MI Cancer Seek
+  definition: Caris's combined DNA/RNA tumor-profiling assay; reimbursement reach is measured in covered lives (>225M).
+- term: Caris Assure
+  definition: The blood-based liquid-biopsy line, including minimal-residual-disease (MRD) monitoring — detecting cancer DNA
+    in blood to track recurrence.
+- term: Test-volume KPI
+  definition: Clinical test volume growth (~20% guided) — the operating metric that drives diagnostics revenue, watched independently
+    of price/mix.
+- term: Adj-EBITDA vs owner-FCF
+  definition: Adj-EBITDA adds back ~$70M of stock comp; owner-FCF treats SBC as a real cost, so it is the more conservative
+    read of cash economics.
+- term: Reimbursement true-ups
+  definition: Catch-up revenue booked when payers settle prior-period claims; ~$33M in 2025 — non-recurring, so it flatters
+    the reported growth rate.
+competitive:
+  arena: Comprehensive molecular diagnostics and oncology data — Caris competes with Tempus, Guardant, Roche's Foundation
+    Medicine, Natera and Exact Sciences for tumor-profiling and liquid-biopsy volume.
+  lens: power_audit
+  powers:
+    scale_economies:
+      score: 2
+      note: Fixed lab and data-platform costs leverage as test volume compounds; +97% growth drove gross margin 47% to 65%.
+    network_economies:
+      score: 2
+      note: More tests enrich the molecular database, which sharpens the ADAPT AI and wins more clinician and pharma demand.
+    counter_positioning:
+      score: 1
+      note: Whole-exome/transcriptome depth is hard for pure-NGS-panel incumbents to match without re-tooling, but not a true
+        business-model trap.
+    switching_costs:
+      score: 1
+      note: Clinician workflow integration and longitudinal patient data create some stickiness, modest versus entrenched
+        EHR or pathway tools.
+    branding:
+      score: 1
+      note: Growing reputation in oncology decision support, but clinical results and reimbursement, not brand, drive adoption.
+    cornered_resource:
+      score: 2
+      note: The proprietary whole-exome/transcriptome dataset plus the ADAPT platform — the deepest differentiator and the
+        basis of the data moat.
+    process_power:
+      score: 1
+      note: Integrated profiling-plus-AI workflow is hard to replicate quickly, but rivals are closing on capability.
+  dominant_power: cornered_resource
+  durability: medium
+  rivals:
+  - name: Tempus (TEM)
+    kind: public
+    note: AI-precision-oncology data peer; near-breakeven, the direct comp
+    growth: 0.25
+    margin:
+    multiple: ~6x sales
+  - name: Guardant Health
+    kind: public
+    note: Liquid-biopsy leader, still loss-making, overlaps in blood-based testing
+    growth: 0.2
+    margin: -0.1
+    multiple: ~6x sales
+  - name: Foundation Medicine
+    kind: private
+    note: Roche-owned tumor-profiling division; deep-pocketed incumbent, not standalone-priced
+    growth:
+    margin:
+    multiple: division
+  - name: Natera
+    kind: public
+    note: Genetic testing and MRD; faster-growing, ~breakeven, richer multiple
+    growth: 0.3
+    margin:
+    multiple: ~9x sales
+  threats:
+  - vector: scale/pricing
+    who: Tempus, Guardant, Foundation
+    falsifier: Per-test reimbursement or list pricing falls under competitive and payer pressure, halting the gross-margin
+      inflection.
+  - vector: cornered_resource
+    who: Tempus, Roche, Natera
+    falsifier: A rival assembles a comparable comprehensive-profiling dataset, commoditizing the data moat before scale and
+      network effects lock in.
+  - vector: network_economies
+    who: well-capitalized incumbents
+    falsifier: Volume growth stalls below ~20%, so the data and scale flywheel never reaches the operating leverage the bull
+      case needs.
+  takeaway: Caris is originating a plausible cornered resource — a proprietary whole-exome/transcriptome dataset feeding the
+    ADAPT AI — with scale and network economics building as volume compounds, already visible in the 47%-to-65% gross-margin
+    move. Durability is medium, not high — Foundation has Roche's balance sheet, Tempus and Natera are building comparable
+    data, and reimbursement pricing is the shared vulnerability. The falsifier the bull must clear is sustained ~20%+ volume
+    growth with the gross margin holding 65%+; if growth decelerates below that or pricing erodes margin, the moat commoditizes
+    before it locks in.
