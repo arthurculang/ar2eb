@@ -15,7 +15,7 @@ market:
   - 'FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr'
 taxonomy:
   watchlist: asymmetrical-moonshots
-  tier: Low
+  tier: Med-Low
   themes:
   - medical-devices
   primary_theme: medical-devices
