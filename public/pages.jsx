@@ -139,6 +139,12 @@ function EmbeddedMemo({ memo }) {
   const innerRef = React.useRef(null);
   const [scale, setScale] = React.useState(1);
   const NATIVE_W = 14 * 96; // 14 inches at 96 dpi = 1344px
+  // The landscape memo may scale UP past native (1.0) so it fills the wide
+  // memo column and stays readable on desktop — it's HTML/SVG, so upscaling
+  // is crisp, not blurry. The container's max-width (see .memo-embed-section
+  // > .wrap) is the real bound; MAX_SCALE is just a ceiling for ultra-wide
+  // screens. On narrow screens w/NATIVE_W < 1 still shrinks the memo to fit.
+  const MAX_SCALE = 1.25;
   // Mirror the PDF gate (memo_pdf.jsx → hasCompetitive): the §6d page renders
   // only when the ticker carries a `competitive` block, so 5- and 6-page memos
   // both come out right.
@@ -149,7 +155,7 @@ function EmbeddedMemo({ memo }) {
     const update = () => {
       if (!containerRef.current) return;
       const w = containerRef.current.clientWidth;
-      const s = Math.min(1, w / NATIVE_W);
+      const s = Math.min(MAX_SCALE, w / NATIVE_W);
       setScale(s);
       // transform: scale() is visual only and doesn't reserve flow space, so
       // size the wrap explicitly to the scaled content height. scrollHeight is
