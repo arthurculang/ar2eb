@@ -198,8 +198,17 @@ function assumptionsRows(scn, dcfType, tamBillion) {
     ['5y revenue CAGR (%)',     `${signS}${m.cagr_5y.toFixed(1)}`],
     ['Year-5 op margin (%)',    (p.op_margin[p.op_margin.length - 1] * 100).toFixed(1)],
     ['WACC (%)',                (m.wacc * 100).toFixed(1)],
-    ['Terminal growth (%)',     (p.term_g * 100).toFixed(1)],
-    ['Anthropic stake ($B)',    (m.anthropic_stake ?? 0).toFixed(1)],
+    // Real-estate / cap-rate SOTP names (marked by special_label, e.g. HHH) value
+    // the terminal on an exit multiple, not a Gordon growth. Gated on special_label
+    // so COIN — which carries exit_fcf_multiple but has always shown term_g — is
+    // byte-identical.
+    (m.special_label && m.exit_fcf_multiple !== undefined
+      ? ['Exit FCF multiple (×)', m.exit_fcf_multiple.toFixed(0)]
+      : ['Terminal growth (%)',   (p.term_g * 100).toFixed(1)]),
+    // Special-asset label is data-driven (ZM: Anthropic stake; HHH: Vantage).
+    (m.special_label
+      ? [`${m.special_label} ($B)`, (p.special_assets ?? 0).toFixed(1)]
+      : ['Anthropic stake ($B)',    (m.anthropic_stake ?? 0).toFixed(1)]),
     ['Starting revenue ($B)',   p.rev_b.toFixed(2)],
     ['Scenario probability (%)', probPct],
   ];
@@ -254,8 +263,9 @@ function equityBuildRows(scn, dcfType) {
     );
     return rows;
   }
-  // mature_company_sotp
-  const saLabel = scn.dcfMetrics.anthropic_stake != null ? '+ Anthropic stake' : '+ Special assets';
+  // mature_company_sotp — special-asset label is data-driven (ZM: Anthropic; HHH: Vantage).
+  const saLabel = scn.dcfMetrics.special_label ? ('+ ' + scn.dcfMetrics.special_label)
+    : (scn.dcfMetrics.anthropic_stake != null ? '+ Anthropic stake' : '+ Special assets');
   const rowsS = [
     ['Operating EV',             `$${p.op_ev.toFixed(2)}B`,        'normal'],
     ['+ Cash & investments',     `$${p.cash.toFixed(2)}B`,         'normal'],

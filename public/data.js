@@ -47199,6 +47199,885 @@ const MEMOS = [
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
+  },
+  {
+    "ticker": "HHH",
+    "slug": "hhh",
+    "company": "Howard Hughes Holdings",
+    "exchange": "NYSE",
+    "category": "fcf-plus-plus-growth",
+    "dcfType": "Mature-Company DCF · SOTP",
+    "publishedISO": "2026-06-21",
+    "publishedLabel": "June 21, 2026",
+    "pdf": {
+      "file": "hhh-memo__v001__2026-06-21_00-00.pdf",
+      "size": "290 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$3.99B",
+      "shares": "60M",
+      "cash": "$1.84B cash, $3.95B net debt · ~37% discount to $104 NAV"
+    },
+    "spot": {
+      "price": 66.86,
+      "asOf": "June 21, 2026 close"
+    },
+    "expected": {
+      "fair": 94.31,
+      "deltaPct": 41.1
+    },
+    "compound": [
+      {
+        "y": 5,
+        "value": 135.4,
+        "mult": 2.03
+      },
+      {
+        "y": 10,
+        "value": 194.38,
+        "mult": 2.91
+      },
+      {
+        "y": 15,
+        "value": 279.06,
+        "mult": 4.17
+      },
+      {
+        "y": 20,
+        "value": 400.62,
+        "mult": 5.99
+      }
+    ],
+    "taxonomy": {
+      "watchlist": "fcf-plus-plus-growth",
+      "watchlistName": "FCF++Growth",
+      "tier": "High",
+      "themes": [
+        "real-economy-hard-assets"
+      ],
+      "themeNames": [
+        "Real Economy & Hard Assets"
+      ],
+      "primaryTheme": "real-economy-hard-assets",
+      "primaryThemeName": "Real Economy & Hard Assets",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "ai": null,
+    "question": "Howard Hughes trades at a ~37% discount to its own $104 sum-of-the-parts NAV — is Bill Ackman's Berkshire-style holding-company conversion the catalyst that finally closes a fifteen-year discount on this land bank, or a value trap with a new fee?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 10,
+        "price": 50.74,
+        "headline": "Value trap confirmed; NAV marks down; −24%.",
+        "why": "Joint conjunction of three fault lines: a real-estate / rate shock that actually marks the land down (not just slows sales); a Vantage underwriting stumble in its first years; and the discount staying wide as the fee and the litigation weigh. Each is individually plausible; together ~10%. Lower than bear because the hard-asset land bank and Ackman's $100 cost basis cushion the downside — this is the levered, marked-down case, not insolvency.",
+        "what": [
+          "The fifteen-year discount is fifteen years old for a reason. In the ultra-bear, rates stay high or rise, Houston and Las Vegas housing freeze, and land sales stall — Summerlin superpad pricing rolls back from the FY2025 ~$1.7M/acre record toward bulk-sale levels (~$434K/acre), and operating-asset cap rates widen. The NAV itself is re-appraised lower, toward ~$86/share, as the land marks down. Vantage stumbles in its first underwriting years — insurance is hard, and a green float book can post losses — marking to ~$0.9B.",
+          "Meanwhile the Pershing management fee accrues against a shrinking equity base and the governance overhang (the Delaware control-premium suit) deters the marginal buyer. The market keeps a ~40% discount on a now-lower NAV → ~$51/share, a −24% tail. This is a drawdown, not an impairment: the land does not go to zero, and Ackman's $100 cost basis sits far above it — but conviction in the catalyst would be tested."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "BEAR",
+        "prob": 22,
+        "price": 71.77,
+        "headline": "The discount simply persists; +7%.",
+        "why": "The honest, history-anchored bear: a wide discount on this land bank has been the actual outcome for fifteen years, and one new shareholder — however large — does not automatically re-rate it. Weighted 22%, the second-largest bucket, because the structural reasons for the discount (illiquidity, complexity, cost of capital) are real and the fee is a new, permanent drag.",
+        "what": [
+          "The base-rate bear for a discount-to-NAV holding company: nothing breaks, but nothing closes the gap either. NAV compounds slowly — mid-single digits — toward ~$104/share as land monetizes and NOI grows, but the market keeps its structural ~30% discount. The complexity, the illiquidity of a decades-long land bank, and now the management fee plus the owner-chairman-manager conflict keep the cost-of-capital penalty firmly on.",
+          "Vantage integrates but adds little visible value early; the Berkshire comparison stays a slide, not a number the market underwrites. You earn roughly the NAV growth minus the fee drag → ~$72/share, a small gain over spot. This is, candidly, what happened for the prior fifteen years — Clark Street Value's \"perennial value trap\" verdict holds, and the catalyst is judged not yet proven."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE",
+        "prob": 40,
+        "price": 90.4,
+        "headline": "Partial re-rating; the gap halves; +35%.",
+        "why": "The most likely single outcome at 40%. The catalyst is real and datable (unlike the prior fifteen years of inertia), and a halving of the discount to the analyst-consensus level is a moderate, well-supported step — not a heroic one. Full closure to NAV is left to the bull; persistence is left to the bear.",
+        "what": [
+          "The modal case. The Ackman catalyst is genuinely new — control, an Executive-Chairman seat, and a live insurance float engine — and it earns a partial re-rating that the prior fifteen years never had. NAV compounds to ~$113/share on record land pricing, growing NOI, the Ward Village backlog, and a contributing Vantage; and the discount narrows from ~37% toward ~20% as the holding-company story gets credit.",
+          "That lands at ~$90/share — almost exactly the sell-side consensus (~$90; Piper Sandler and BMO at $95, JPMorgan at $89). Not full NAV: the market still discounts a land bank and a thin near-term cash yield. But the gap roughly halves, and you are paid the difference between buying at a ~37% discount and exiting at ~20%."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL",
+        "prob": 20,
+        "price": 118.8,
+        "headline": "Discount closes toward NAV; +78%.",
+        "why": "Requires the discount to genuinely close toward NAV and NAV to keep growing — both within reach given the catalyst, but both requiring multi-year execution the market has not yet seen. 20%.",
+        "what": [
+          "Vantage's float compounds, MPC land keeps hitting records, Ward Village delivers its ~$1.3B profit backlog, and the market re-rates HHH toward a ~10% discount on a ~$132/share NAV. This is the \"land-backed compounding\" thesis — the Seeking Alpha ~$135 DCF — playing out: the irreplaceable Summerlin/Bridgeland land is finally valued near its worth rather than at a developer's punitive cost of capital.",
+          "The re-rate is as much about who owns it as what it owns: a permanent-capital vehicle with a controlling, aligned owner deploying float starts to be valued like a compounder, not a homebuilder-adjacent developer. At ~$119/share you have captured most of the discount and some NAV growth on top."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 169.1,
+        "headline": "The modern-day Berkshire; +153%.",
+        "why": "The Berkshire model is unproven and multi-year, and Ackman's $211-by-2030 is his own promotional number — so it is the tail, not the modal. 8%: a real but small probability that the conversion fully works and the market pays up for it.",
+        "what": [
+          "The full flywheel. Vantage float funds accretive acquisitions, the land bank compounds at record pricing, and HHH trades at — or above — NAV as a Berkshire-style permanent-capital compounder. NAV reaches ~$178/share, with Vantage rising toward a third of total value (per the company's own 2030 framework, where insurance grows from ~20% to ~60% of the mix).",
+          "This is the partial realization of Ackman's stated path to ~$211/share of intrinsic value by 2030 — explicitly his promotional case, carried here as the low-probability tail, not the base. At ~$169/share the market is paying for a proven compounding engine, not a discounted land bank."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 10 / Bear 22 / Base 40 / Bull 20 / Ultra Bull 8. Spot price reference: June 21, 2026 close.",
+    "thesis": "Howard Hughes trades at $66.86 (~$4.0B market cap) — roughly book (~$63/sh) but a ~37% discount to the company's own $104/share sum-of-the-parts NAV (~80% irreplaceable master-planned-community land + operating assets, ~20% the new Vantage insurer). The land bank monetizes at records — FY2025 MPC EBT a record $476M, NOI a record $276M. The hard floor: Pershing Square (Ackman, ~47%, Executive Chairman) paid $900M for stock at $100 — a 48% premium — in May 2025, then closed Vantage ($2.1B insurer, Jun-2026) to start a Buffett-style float engine. The bear is the fifteen-year-old one: an illiquid land bank the market won't pay NAV for, plus rate, concentration, fee, and governance risks. Sum-of-the-parts below; five scenarios, weighted.",
+    "historicalPrices": {
+      "xMin": -6.0,
+      "ipoMarker": "HHC→HHH '23",
+      "points": [
+        [
+          -5.75,
+          78.0
+        ],
+        [
+          -5.5,
+          95.0
+        ],
+        [
+          -5.25,
+          84.0
+        ],
+        [
+          -5.0,
+          64.0
+        ],
+        [
+          -4.75,
+          92.0
+        ],
+        [
+          -4.5,
+          98.0
+        ],
+        [
+          -4.25,
+          76.0
+        ],
+        [
+          -4.0,
+          58.0
+        ],
+        [
+          -3.75,
+          72.0
+        ],
+        [
+          -3.5,
+          88.0
+        ],
+        [
+          -3.25,
+          70.0
+        ],
+        [
+          -3.0,
+          54.0
+        ],
+        [
+          -2.75,
+          76.0
+        ],
+        [
+          -2.5,
+          82.0
+        ],
+        [
+          -2.25,
+          64.0
+        ],
+        [
+          -2.0,
+          78.0
+        ],
+        [
+          -1.75,
+          85.0
+        ],
+        [
+          -1.5,
+          80.0
+        ],
+        [
+          -1.25,
+          67.0
+        ],
+        [
+          -1.0,
+          72.0
+        ],
+        [
+          -0.75,
+          91.0
+        ],
+        [
+          -0.5,
+          78.0
+        ],
+        [
+          -0.25,
+          70.0
+        ]
+      ]
+    },
+    "weightingRationale": [
+      {
+        "label": "Bear 32%",
+        "body": "Discount persists or NAV marks down on a rate/housing shock; cushioned by the land bank + Ackman's $100 basis."
+      },
+      {
+        "label": "Base 40%",
+        "body": "Partial re-rating to a ~20% discount — lands at ~$90, the sell-side consensus."
+      },
+      {
+        "label": "Bull 20%",
+        "body": "Discount closes toward NAV; record land pricing + the Vantage float engine compound."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "The modern-day Berkshire works; toward Ackman's $211-by-2030 — the promotional tail."
+      }
+    ],
+    "page3": {
+      "subtitle": "FY23–FY25 history + FY26–FY30 SOTP scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q, FY25 earnings release",
+      "sources": "Sources: HHH 10-K FY25, Q1 2026 10-Q, FY24/FY25 earnings releases, Investor-Day SOTP, Pershing Square 2025 Annual Report, sell-side targets.",
+      "chartReference": {
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyRevenue": [
+          0.909,
+          1.751,
+          1.475
+        ],
+        "historyOpMargin": [
+          23.0,
+          32.0,
+          22.5
+        ],
+        "historyFcf": [
+          0.3,
+          0.4,
+          0.44
+        ]
+      },
+      "chartConfig": {
+        "segmentA": "MPC + Op Assets",
+        "segmentB": "Strategic Dev",
+        "histEntSplit": [
+          0.95,
+          0.55,
+          0.75
+        ],
+        "chart6Title": "SOTP equity (RE + Vantage + cash − debt)",
+        "chart6Type": "zmSotp"
+      }
+    },
+    "print": {
+      "dcfType": "mature_company_sotp",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 94.31,
+        "upsidePct": 41.1
+      },
+      "market": {
+        "marketCapBillion": 3.99,
+        "sharesOutstandingMillion": 59.63,
+        "cashBillion": 1.84,
+        "netDebtBillion": 3.95
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.1,
+          "expectedPerShare": 50.74,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": 0.0,
+            "wacc": 0.075,
+            "exit_fcf_multiple": 14.79,
+            "special_label": "Vantage insurance"
+          },
+          "dcfPath": {
+            "rev_b": 1.5,
+            "rev_path": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "op_margin": [
+              0.38,
+              0.38,
+              0.38,
+              0.38,
+              0.38
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              0.57,
+              0.57,
+              0.57,
+              0.57,
+              0.57
+            ],
+            "pv_fcf": [
+              0.53,
+              0.493,
+              0.459,
+              0.427,
+              0.397
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 2.306,
+            "terminal_value": 8.43,
+            "pv_terminal": 5.872,
+            "op_ev": 8.178,
+            "cash": 1.84,
+            "net_debt": 5.79,
+            "special_assets": 0.9,
+            "total_equity": 5.128,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 59.63,
+            "dcf_per_share": 86.0,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.0,
+              4.0,
+              4.0,
+              4.0,
+              4.0
+            ],
+            "ev_fcf_multiple": [
+              12.0,
+              12.0,
+              12.0,
+              12.0,
+              13.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.22,
+          "expectedPerShare": 71.77,
+          "label": "Bear",
+          "shortLabel": "Bear",
+          "dcfMetrics": {
+            "cagr_5y": 2.0,
+            "wacc": 0.075,
+            "exit_fcf_multiple": 14.86,
+            "special_label": "Vantage insurance"
+          },
+          "dcfPath": {
+            "rev_b": 1.5,
+            "rev_path": [
+              0.02,
+              0.02,
+              0.02,
+              0.02,
+              0.02
+            ],
+            "op_margin": [
+              0.38,
+              0.38,
+              0.38,
+              0.38,
+              0.38
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              0.581,
+              0.593,
+              0.605,
+              0.617,
+              0.629
+            ],
+            "pv_fcf": [
+              0.54,
+              0.513,
+              0.487,
+              0.462,
+              0.438
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 2.44,
+            "terminal_value": 9.349,
+            "pv_terminal": 6.512,
+            "op_ev": 8.952,
+            "cash": 1.84,
+            "net_debt": 5.79,
+            "special_assets": 1.2,
+            "total_equity": 6.202,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 59.63,
+            "dcf_per_share": 104.01,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              4.5,
+              4.6,
+              4.7,
+              4.8,
+              4.9
+            ],
+            "ev_fcf_multiple": [
+              13.0,
+              13.0,
+              14.0,
+              14.0,
+              14.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.4,
+          "expectedPerShare": 90.4,
+          "label": "Base",
+          "shortLabel": "Base",
+          "dcfMetrics": {
+            "cagr_5y": 4.0,
+            "wacc": 0.075,
+            "exit_fcf_multiple": 13.66,
+            "special_label": "Vantage insurance"
+          },
+          "dcfPath": {
+            "rev_b": 1.5,
+            "rev_path": [
+              0.04,
+              0.04,
+              0.04,
+              0.04,
+              0.04
+            ],
+            "op_margin": [
+              0.38,
+              0.38,
+              0.38,
+              0.38,
+              0.38
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              0.593,
+              0.616,
+              0.641,
+              0.667,
+              0.694
+            ],
+            "pv_fcf": [
+              0.552,
+              0.533,
+              0.516,
+              0.499,
+              0.483
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 2.583,
+            "terminal_value": 9.482,
+            "pv_terminal": 6.605,
+            "op_ev": 9.188,
+            "cash": 1.84,
+            "net_debt": 5.79,
+            "special_assets": 1.5,
+            "total_equity": 6.738,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 59.63,
+            "dcf_per_share": 113.0,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.0,
+              5.2,
+              5.4,
+              5.6,
+              5.8
+            ],
+            "ev_fcf_multiple": [
+              14.0,
+              14.0,
+              15.0,
+              15.0,
+              15.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 118.8,
+          "label": "Bull",
+          "shortLabel": "Bull",
+          "dcfMetrics": {
+            "cagr_5y": 6.0,
+            "wacc": 0.075,
+            "exit_fcf_multiple": 13.34,
+            "special_label": "Vantage insurance"
+          },
+          "dcfPath": {
+            "rev_b": 1.5,
+            "rev_path": [
+              0.06,
+              0.06,
+              0.06,
+              0.06,
+              0.06
+            ],
+            "op_margin": [
+              0.38,
+              0.38,
+              0.38,
+              0.38,
+              0.38
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              0.604,
+              0.64,
+              0.679,
+              0.72,
+              0.763
+            ],
+            "pv_fcf": [
+              0.562,
+              0.554,
+              0.547,
+              0.539,
+              0.531
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 2.733,
+            "terminal_value": 10.176,
+            "pv_terminal": 7.088,
+            "op_ev": 9.821,
+            "cash": 1.84,
+            "net_debt": 5.79,
+            "special_assets": 2.0,
+            "total_equity": 7.871,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 59.63,
+            "dcf_per_share": 132.0,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              5.5,
+              5.8,
+              6.1,
+              6.4,
+              6.7
+            ],
+            "ev_fcf_multiple": [
+              15.0,
+              15.0,
+              16.0,
+              16.0,
+              16.0
+            ]
+          },
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 169.1,
+          "label": "Ultra Bull",
+          "shortLabel": "UltBull",
+          "dcfMetrics": {
+            "cagr_5y": 9.0,
+            "wacc": 0.075,
+            "exit_fcf_multiple": 13.08,
+            "special_label": "Vantage insurance"
+          },
+          "dcfPath": {
+            "rev_b": 1.5,
+            "rev_path": [
+              0.09,
+              0.09,
+              0.09,
+              0.09,
+              0.09
+            ],
+            "op_margin": [
+              0.38,
+              0.38,
+              0.38,
+              0.38,
+              0.38
+            ],
+            "wacc_path": [
+              0.075,
+              0.075,
+              0.075,
+              0.075,
+              0.075
+            ],
+            "fcf": [
+              0.621,
+              0.677,
+              0.738,
+              0.804,
+              0.877
+            ],
+            "pv_fcf": [
+              0.578,
+              0.586,
+              0.594,
+              0.602,
+              0.611
+            ],
+            "term_g": 0.02,
+            "sum_pv_fcf": 2.971,
+            "terminal_value": 11.475,
+            "pv_terminal": 7.993,
+            "op_ev": 10.964,
+            "cash": 1.84,
+            "net_debt": 5.79,
+            "special_assets": 3.6,
+            "total_equity": 10.614,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 59.63,
+            "dcf_per_share": 178.0,
+            "distress": 0.0
+          },
+          "chartData": {
+            "ev_rev_multiple": [
+              6.0,
+              6.5,
+              7.0,
+              7.6,
+              8.2
+            ],
+            "ev_fcf_multiple": [
+              16.0,
+              17.0,
+              18.0,
+              19.0,
+              20.0
+            ]
+          },
+          "revPerUnit": null
+        }
+      },
+      "competitive": {
+        "arena": "Large-scale master-planned land development — HHH owns irreplaceable, decades- entitled land in the best US growth markets (Las Vegas, Houston, Phoenix) and sells finished superpads to homebuilders. The competitive question is not displacement (the land is unique) but whether the public market ever pays NAV for an illiquid, long-duration land bank — the cost-of-capital problem the Ackman holdco conversion is built to solve.\n",
+        "lens": "power_audit",
+        "powers": {
+          "scaleEconomies": {
+            "score": 2,
+            "note": "Large contiguous land positions spread infrastructure + entitlement cost."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Community amenity flywheel is modest; not a true network."
+          },
+          "counterPositioning": {
+            "score": 1,
+            "note": "No incumbent to disrupt; the holdco conversion is novel but imitable."
+          },
+          "switchingCosts": {
+            "score": 1,
+            "note": "Homebuilders can buy land elsewhere; entitled superpads at scale are the scarcity."
+          },
+          "branding": {
+            "score": 2,
+            "note": "Summerlin / Ward Village are premium, decades-built community brands."
+          },
+          "corneredResource": {
+            "score": 4,
+            "note": "Irreplaceable entitled land at scale (22,500-acre Summerlin, 11,500-acre Bridgeland, 37,000-acre Teravalis) — a multi-decade moat that cannot be recreated."
+          },
+          "processPower": {
+            "score": 2,
+            "note": "Master-planning + multi-decade entitlement + phasing expertise."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "durability": "high",
+        "rivals": [
+          {
+            "name": "Private MPC developers (Irvine Co., etc.)",
+            "kind": "private",
+            "note": "Few public peers at this scale; mostly private land owners.",
+            "growth": 0.03,
+            "margin": 0.4,
+            "multiple": "n/a (private)"
+          },
+          {
+            "name": "Homebuilders (Lennar, D.R. Horton)",
+            "kind": "public",
+            "note": "Customers more than rivals — they buy HHH's superpads.",
+            "growth": 0.05,
+            "margin": 0.15,
+            "multiple": "~9x"
+          },
+          {
+            "name": "Diversified REITs / land",
+            "kind": "public",
+            "note": "Compete for the real-estate capital allocation, not the land.",
+            "growth": 0.04,
+            "margin": 0.3,
+            "multiple": "~14x"
+          },
+          {
+            "name": "Berkshire-style holdcos",
+            "kind": "public",
+            "note": "The conversion comp — permanent-capital compounders using float.",
+            "growth": 0.08,
+            "margin": 0.2,
+            "multiple": "~NAV"
+          }
+        ],
+        "threats": [
+          {
+            "vector": "cornered_resource",
+            "who": "Macro / housing cycle",
+            "falsifier": "Land sales stall and superpad pricing reverts toward bulk levels for multiple years, marking the land NAV down."
+          },
+          {
+            "vector": "counter_positioning",
+            "who": "Cost of capital / market",
+            "falsifier": "The discount to NAV stays > 30% indefinitely — the market refuses to pay for the land bank even post-conversion."
+          }
+        ],
+        "takeaway": "The durable Power is the irreplaceable, decades-entitled land bank (cornered resource) — a genuine multi-decade moat, not a competitive contest. The whole debate is not displacement but realization: whether the public market ever pays NAV for an illiquid land bank, which is precisely the cost-of-capital problem the Berkshire-style conversion (control + insurance float + permanent capital) is designed to fix. Discount-to-NAV and MPC pricing are the gauges.\n"
+      },
+      "pocd": {
+        "people": {
+          "ceo": "David R. O'Reilly",
+          "founderLed": false,
+          "tenureYears": 6,
+          "insiderOwnershipPct": 47.0,
+          "capitalAllocation": "O'Reilly's 2019 Transformation Plan cut overhead and refocused on the high-margin MPCs; the 2024 Seaport spinoff removed a chronic NOI value-drainer; FY2025 delivered record MPC EBT ($476M) and NOI ($276M). Controlling owner Pershing Square paid a 48% premium ($100/share) for new stock, deploying it into Vantage insurance.",
+          "incentiveAlignment": "Pershing's ~47% economic stake is the alignment — the largest holder is the operator of record; O'Reilly carries a 5x-salary ownership requirement. The asterisk: Ackman is simultaneously largest shareholder, Executive Chairman, AND the fee-receiving external manager (PSCM).",
+          "governanceFlags": [
+            "tri-hatted Ackman conflict: largest owner (~47%) + Executive Chairman + fee-earning external manager (PSCM)",
+            "10-yr Services Agreement fee: $15M/yr base + 0.375%/qtr of equity-mkt-cap growth above a $66.1453 reference",
+            "Delaware class action: alleges the 2025 control transfer carried no premium for minorities (dismissal pending)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "A controlling owner (Pershing ~47%, who paid a 48% cash premium) actively closing the discount via a Berkshire-style conversion, paired with a capable operator (O'Reilly) posting record MPC EBT and NOI — strong alignment and execution. The offsets are material: Ackman's tri-hatted conflict (owner + Chairman + fee-earning manager), a permanent fee, and a Delaware suit alleging the control transfer paid minorities no premium."
+        },
+        "opportunityRef": "The scenario distribution (+41%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI",
+        "contextRef": "The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion",
+        "deal": "Open-market purchase at a ~37% discount to NAV vs. the scenario distribution + §12 sizing. (Ackman's own entry: $100/share, a 48% premium.)"
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The land is irreplaceable and monetizing at records.",
+            "body": "Summerlin + Bridgeland are perennial top-selling US MPCs; FY2025 MPC EBT a record $476M, superpads at a record ~$1.7M/acre. A 22,500-acre entitled Summerlin can't be recreated."
+          },
+          {
+            "label": "Ackman's $100 is a hard, recent floor.",
+            "body": "A controlling holder paid $900M cash at $100/share — a 48% premium — in May 2025, and has held since the 2010 GGP spinoff. Not a flipper."
+          },
+          {
+            "label": "Vantage is a real float engine, not a slide.",
+            "body": "A $2.1B insurer (closed Jun-2026), PSCM managing the float fee-free — the Buffett mechanism, now operational. Execution, not concept, is the question."
+          },
+          {
+            "label": "The discount is structural, but the catalyst is new.",
+            "body": "Fifteen years of discount — but never with Pershing at ~47%, Ackman as Executive Chairman, and an insurer to deploy float. The setup changed."
+          },
+          {
+            "label": "Trades near book, deep discount to NAV.",
+            "body": "At $66.86 the stock is ~1.05× book (~$63), but land is carried at decades-old cost; the SOTP marks it to ~$104–118."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "MPC EBT / NOI roll over · superpad pricing reverts to bulk levels · Vantage posts underwriting losses · the discount stays > 30% · the fee + Delaware suit weigh"
+          },
+          {
+            "label": "Bull validation",
+            "body": "the discount narrows toward NAV · Vantage float compounds + funds M&A · Ward Village delivers its ~$1.3B backlog · NAV compounds toward the $211-by-2030 path"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "A major Vantage-funded acquisition that changes the asset mix — the thesis shifts from land-bank-re-rating to holdco-compounder, and both bear and bull get rewritten"
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "SOTP / NAV",
+          "definition": "Sum-of-the-parts / net-asset-value: each piece (land, op assets, condos, Vantage) + cash − debt = equity — the lens when asset value, not cash flow, holds the worth."
+        },
+        {
+          "term": "MPC",
+          "definition": "Master-planned community — a large, decades-entitled land development (Summerlin, Bridgeland). HHH sells finished \"superpads\" to homebuilders."
+        },
+        {
+          "term": "MPC EBT",
+          "definition": "MPC earnings before tax — HHH's headline land-segment profit. Record $476M in FY2025 (+36%)."
+        },
+        {
+          "term": "Operating Assets NOI",
+          "definition": "NOI from HHH's owned office / retail / multifamily. Record $276M in FY2025 (+8%)."
+        },
+        {
+          "term": "Ward Village",
+          "definition": "HHH's ~60-acre Honolulu condo plan. ~$5B future gross revenue / ~$1.3B est. profit, 2026–2030."
+        },
+        {
+          "term": "Vantage / float",
+          "definition": "A $2.1B insurer HHH bought (Jun-2026); its premium 'float' funds Pershing-managed investments — the Berkshire model."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-21_00-00",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
   }
 ];
 
