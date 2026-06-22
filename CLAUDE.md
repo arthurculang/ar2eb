@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
-changelog-driven — currently at logical **v042**) are the source of truth.
+changelog-driven — currently at logical **v043**) are the source of truth.
 
 ## What this is
 
@@ -96,6 +96,20 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 
 ## Status / open items
 
+- **Portfolio-tab overhaul SHIPPED (2026-06-22; spec v043, §16 NEW).** (1) **Two new watchlist categories** — `competitors`
+  (ACHR, PACB moved here — rivals to core holdings) and `crypto`. (2) **Category sizing tilt** = a 4th §12 weight factor
+  `× category_mult` (fun-speculative 0.5 · competitors 0.3 · crypto 0.5 · core 1.0), in both `build_weights.py` and
+  `pages.jsx` `computePortfolio`; conviction-neutral. (3) **Crypto valuation (§16) — non-DCF, NOT manual:** BTC = gold-anchored
+  store-of-value TAM-penetration, ZRO = fee/network multiple; each scenario target **discounted to a PV** (BTC 30%/7yr → **+105%**;
+  ZRO 35%/4yr → **−55%**) so upside is comparable to the DCF book, then run through the identical §12 rule (Indicator neutral 1.0,
+  crypto category 0.5). Source = `data/_crypto.yml` → `build_site_data.build_crypto()` → a separate `CRYPTO` array (no PDF/memo
+  page) merged into the matrix + portfolio. **BTC sizes to ~5%; ZRO earns no weight** (rich risk-adjusted, shows red in the matrix).
+  Crypto is **site-only** — NOT in the tracked book (`weights.yml`/daily perf) yet; needs a price feed (BTC-USD Yahoo; **ZRO TBD**).
+  (4) **Conviction tiers (Arthur):** SHAK Med-Low, TEM **High** (DCF −28% → still 0 weight in the long-only book — conviction ≠ DCF),
+  BEAM Low, RXRX/PACB Low. (5) **Colored legends** on all 3 Portfolio graphics (allocation = indigo ramp for any count; Math-table
+  key; matrix cheap/fair/rich key). Validator green (53 pass); site-only (no memo PDF/baseline change). *Open: confirm crypto
+  conviction tiers + the BTC discount rate/horizon (the biggest lever); wire crypto into the tracked book before launch (ZRO feed);
+  PACB resolved to `competitors` (you'd named it both Fun/Spec and Competitors).* Research subagent sourced the crypto numbers (web).
 - **DNS housekeeping — DONE (2026-05-31).** `www → apex` 301 redirect live; null-MX +
   SPF `-all` + DMARC `p=reject` live; Cloudflare DNS panel clean. (Posture recorded
   under Git & deploy above.)

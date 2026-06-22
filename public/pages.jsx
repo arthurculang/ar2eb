@@ -432,6 +432,16 @@ function NotFoundPage() {
 // ────────────────────────────────────────────────────────────────────
 const CONVICTION_MULT = { 'High': 2.0, 'Med-High': 1.5, 'Med': 1.0, 'Med-Low': 0.6, 'Low': 0.35 };
 const AI_ZONE_MULT = { green: 1.25, yellow: 1.10, orange: 0.90, red: 0.70 };
+// Category sizing tilt — speculative / non-core buckets sized below the core
+// book. Core categories (moonshots · FCF++ · megacap · private) are neutral 1.0.
+// Mirrors CATEGORY_MULT in portfolio/build_weights.py.
+const CATEGORY_MULT = { 'fun-speculative': 0.5, 'competitors': 0.3, 'crypto': 0.5 };
+// Allocation segment color — an indigo lightness ramp so ANY number of holdings
+// gets a distinct, on-brand swatch (the CSS palette only defined 4 fixed shades).
+function allocColor(i, n) {
+  const f = n <= 1 ? 0 : i / (n - 1);
+  return `hsl(234, ${(50 - f * 16).toFixed(1)}%, ${(48 + f * 37).toFixed(1)}%)`;
+}
 
 function computePortfolio(memos, opts = {}) {
   const { maxPosition = 0.15, hurdleFrac = 0 } = opts;
@@ -443,12 +453,14 @@ function computePortfolio(memos, opts = {}) {
     const passesHurdle = upsidePct > hurdleFrac * 100;
     const tier = (m.taxonomy && m.taxonomy.tier) || null;
     const convMult = CONVICTION_MULT[tier] != null ? CONVICTION_MULT[tier] : 1.0;
+    const wl = (m.taxonomy && m.taxonomy.watchlist) || null;
+    const catMult = CATEGORY_MULT[wl] != null ? CATEGORY_MULT[wl] : 1.0;
     const ai = m.ai || null;                                   // {value, zone} | null
     const aiMult = ai ? (AI_ZONE_MULT[ai.zone] != null ? AI_ZONE_MULT[ai.zone] : 1.0) : 1.0;
-    const score = (passesHurdle && upsidePct > 0) ? upsidePct * convMult * aiMult : 0;
+    const score = (passesHurdle && upsidePct > 0) ? upsidePct * convMult * aiMult * catMult : 0;
     return {
-      ticker: m.ticker, slug: m.slug, company: m.company,
-      spot, expected, upsidePct, tier, convMult, ai, aiMult, score,
+      ticker: m.ticker, slug: m.slug, company: m.company, crypto: !!m.crypto,
+      spot, expected, upsidePct, tier, convMult, wl, catMult, ai, aiMult, score,
       passesHurdle, rawWeight: 0, weight: 0,
     };
   });
@@ -501,10 +513,13 @@ function computePortfolio(memos, opts = {}) {
 const MATRIX_COLS = [
   { wl: 'asymmetrical-moonshots', short: 'Moonshots' },
   { wl: 'fcf-plus-plus-growth',   short: 'FCF++' },
-  { wl: 'fun-speculative',        short: 'Fun/Spec' },
   { wl: 'fcf-megacap',            short: 'Megacap' },
+  { wl: 'fun-speculative',        short: 'Fun/Spec' },
+  { wl: 'competitors',            short: 'Competitors' },
+  { wl: 'crypto',                 short: 'Crypto' },
   { wl: 'private-wishlist',       short: 'Private' },
 ];
+const WL_SHORT = Object.fromEntries(MATRIX_COLS.map(c => [c.wl, c.short]));
 const MATRIX_TIERS = ['High', 'Med-High', 'Med', 'Med-Low', 'Low', null]; // null = untiered band
 
 function tierSlug(tier) {
@@ -521,7 +536,7 @@ function buildMatrix(memos) {
     const key = tier || '_none';
     (grid[wl] = grid[wl] || {});
     (grid[wl][key] = grid[wl][key] || []).push({
-      ticker: m.ticker, slug: m.slug, company: m.company,
+      ticker: m.ticker, slug: m.slug, company: m.company, crypto: !!m.crypto,
       upside: (m.expected && typeof m.expected.deltaPct === 'number') ? m.expected.deltaPct : null,
     });
   });
@@ -628,7 +643,8 @@ function PortfolioExport({ portfolio, maxPosition, hurdleFrac }) {
 
 function PortfolioPage() {
   const { fmtUSD, fmtPct } = L();
-  const { MEMOS } = D();
+  const { MEMOS, CRYPTO } = D();
+  const crypto = React.useMemo(() => CRYPTO || [], [CRYPTO]);
 
   // URL state — read initial values from the hash query (`#/portfolio?cap=0.6&hurdle=0.05`).
   // Lets a particular allocation be bookmarked or shared.
@@ -665,8 +681,8 @@ function PortfolioPage() {
   // excluded from the conviction-weighted long portfolio — it allocates across
   // positions you can actually take.
   const publicMemos = React.useMemo(
-    () => MEMOS.filter(m => !m.taxonomy || m.taxonomy.watchlist !== 'private-wishlist'),
-    [MEMOS]
+    () => [...MEMOS.filter(m => !m.taxonomy || m.taxonomy.watchlist !== 'private-wishlist'), ...crypto],
+    [MEMOS, crypto]
   );
   const portfolio = React.useMemo(
     () => computePortfolio(publicMemos, { maxPosition, hurdleFrac }),
@@ -676,8 +692,8 @@ function PortfolioPage() {
   // Sort the table by raw score desc so the strongest names lead.
   const sortedRows = [...portfolio.rows].sort((a, b) => b.score - a.score);
 
-  // Universe matrix — every name (incl. private/megacap), by tier × category.
-  const matrix = React.useMemo(() => buildMatrix(MEMOS), [MEMOS]);
+  // Universe matrix — every name (incl. private/megacap/crypto), by tier × category.
+  const matrix = React.useMemo(() => buildMatrix([...MEMOS, ...crypto]), [MEMOS, crypto]);
 
   // Allocation segments for the stacked bar — longs first, cash last.
   // The two-tone indigo palette keeps longs visually grouped while still
@@ -686,8 +702,8 @@ function PortfolioPage() {
     .filter(r => r.weight > 0)
     .map((r, i) => ({
       key: r.slug, slug: r.slug, label: r.ticker,
-      sublabel: r.company, weight: r.weight,
-      shade: i,  // 0 = primary accent, 1 = secondary accent, etc.
+      sublabel: r.company, weight: r.weight, crypto: r.crypto,
+      shade: i,  // index into the indigo ramp (allocColor)
     }));
   const cashSegment = portfolio.cashWeight > 0.001
     ? { key: 'cash', label: 'Cash', weight: portfolio.cashWeight, sublabel: 'unallocated' }
@@ -753,8 +769,8 @@ function PortfolioPage() {
                    aria-label={`Allocation: ${longSegments.map(s => `${s.label} ${(s.weight*100).toFixed(0)}%`).join(', ')}${cashSegment ? `, cash ${(cashSegment.weight*100).toFixed(0)}%` : ''}`}>
                 {longSegments.map(s => (
                   <div key={s.key}
-                       className={`alloc-seg alloc-seg-long alloc-shade-${s.shade}`}
-                       style={{ width: (s.weight * 100) + '%' }}>
+                       className="alloc-seg alloc-seg-long"
+                       style={{ width: (s.weight * 100) + '%', background: allocColor(s.shade, longCount) }}>
                     <span className="alloc-seg-label">
                       <span className="t">{s.label}</span>
                       <span className="p mono">{(s.weight * 100).toFixed(0)}%</span>
@@ -773,9 +789,11 @@ function PortfolioPage() {
               </div>
               <ul className="alloc-legend">
                 {longSegments.map(s => (
-                  <li key={s.key} className={`alloc-legend-row alloc-shade-${s.shade}`}>
-                    <span className="swatch" aria-hidden="true" />
-                    <a href={'#/memo/' + s.slug} className="t mono">{s.label}</a>
+                  <li key={s.key} className="alloc-legend-row">
+                    <span className="swatch" aria-hidden="true" style={{ background: allocColor(s.shade, longCount) }} />
+                    {s.crypto
+                      ? <span className="t mono">{s.label}</span>
+                      : <a href={'#/memo/' + s.slug} className="t mono">{s.label}</a>}
                     <span className="sub">{s.sublabel}</span>
                     <span className="p mono">{(s.weight * 100).toFixed(1)}%</span>
                   </li>
@@ -829,6 +847,16 @@ function PortfolioPage() {
       <section className="portfolio-table">
         <div className="wrap">
           <div className="eyebrow">Math</div>
+          <div className="ptable-legend" aria-hidden="true">
+            <span className="lg"><i className="dot dot-pos" /> undervalued</span>
+            <span className="lg"><i className="dot dot-neg" /> overvalued</span>
+            <span className="lg-sep">·</span>
+            <span className="lg-cap">Indicator</span>
+            <span className="lg"><i className="dot dot-green" /> cheap</span>
+            <span className="lg"><i className="dot dot-yellow" /> fair</span>
+            <span className="lg"><i className="dot dot-orange" /> rich</span>
+            <span className="lg"><i className="dot dot-red" /> expensive</span>
+          </div>
           <table className="ptable">
             <thead>
               <tr>
@@ -846,7 +874,9 @@ function PortfolioPage() {
               {sortedRows.map(r => (
                 <tr key={r.slug} className={r.passesHurdle ? '' : 'row-out'}>
                   <td>
-                    <a href={'#/memo/' + r.slug}>{r.ticker}</a>
+                    {r.crypto
+                      ? <span className="crypto-tk">{r.ticker}</span>
+                      : <a href={'#/memo/' + r.slug}>{r.ticker}</a>}
                   </td>
                   <td className="num mono">{fmtUSD(r.spot)}</td>
                   <td className="num mono">{fmtUSD(r.expected)}</td>
@@ -876,13 +906,17 @@ function PortfolioPage() {
           <div className="eyebrow">The universe</div>
           <h2 className="section-h">Every name, by conviction &amp; category</h2>
           <p className="matrix-intro">
-            The whole book at a glance — columns are the five watchlist categories,
+            The whole book at a glance — columns are the seven watchlist categories,
             rows are the conviction tiers (the one human input). Mega-caps and private
-            names aren't conviction-tiered, so they sit in their own band below. Each
-            chip tints by the memo's probability-weighted upside:{' '}
-            <span className="tk tk-pos tk-legend">cheap</span>{' '}
-            <span className="tk tk-neg tk-legend">rich</span>.
+            names aren't conviction-tiered, so they sit in their own band below.
           </p>
+          <div className="matrix-legend" aria-hidden="true">
+            <span className="ml-cap">Chip tint = probability-weighted upside</span>
+            <span className="tk tk-pos tk-legend">cheap</span>
+            <span className="tk tk-flat tk-legend">fair</span>
+            <span className="tk tk-neg tk-legend">rich</span>
+            <span className="ml-note">Crypto valued crypto-native (§16), not by DCF.</span>
+          </div>
           <div className="matrix-scroll">
             <table className="matrix">
               <thead>
@@ -905,12 +939,11 @@ function PortfolioPage() {
                           <td key={c.wl} className={names.length ? 'matrix-cell' : 'matrix-cell is-empty'}>
                             {names.map(n => {
                               const t = n.upside == null ? 'flat' : n.upside > 0.5 ? 'pos' : n.upside < -0.5 ? 'neg' : 'flat';
-                              return (
-                                <a key={n.slug} href={'#/memo/' + n.slug}
-                                   className={`tk tk-${t}`}
-                                   title={`${n.company}${n.upside == null ? '' : ` · ${n.upside > 0 ? '+' : ''}${n.upside.toFixed(0)}% vs spot`}`}>
-                                  {n.ticker}
-                                </a>
+                              const title = `${n.company}${n.upside == null ? '' : ` · ${n.upside > 0 ? '+' : ''}${n.upside.toFixed(0)}% vs spot`}${n.crypto ? ' · crypto (no memo page)' : ''}`;
+                              return n.crypto ? (
+                                <span key={n.slug} className={`tk tk-${t} tk-crypto`} title={title}>{n.ticker}</span>
+                              ) : (
+                                <a key={n.slug} href={'#/memo/' + n.slug} className={`tk tk-${t}`} title={title}>{n.ticker}</a>
                               );
                             })}
                           </td>
@@ -923,12 +956,66 @@ function PortfolioPage() {
             </table>
           </div>
           <p className="hint">
-            {MEMOS.length} names. Sized weights (above) come only from the tiered,
-            publicly-buyable book; this map includes every covered name. Click any
-            ticker for its memo.
+            {MEMOS.length + crypto.length} names. Sized weights (above) come from the
+            publicly-buyable book (incl. crypto); this map includes every covered name.
+            Click any ticker for its memo (crypto has no memo page).
           </p>
         </div>
       </section>
+
+      {crypto.length > 0 && (
+      <section className="portfolio-crypto">
+        <div className="wrap">
+          <div className="eyebrow">Crypto valuation</div>
+          <h2 className="section-h">Valued crypto-native, not by DCF</h2>
+          <p className="matrix-intro">
+            Crypto has no cash flows, so each asset is valued with the accepted
+            best-practice framework for its type, scenario-weighted, then discounted
+            to a present value so its upside is comparable to the DCF book (spec §16).
+          </p>
+          {crypto.map(c => {
+            const cv = c.cryptoValuation;
+            const dec = (n) => ({ decimals: n >= 100 ? 0 : 2 });
+            return (
+              <details key={c.slug} className="crypto-card">
+                <summary>
+                  <span className="cc-tk mono">{c.ticker}</span>
+                  <span className="cc-name">{c.company}</span>
+                  <span className={'cc-up mono ' + (c.expected.deltaPct >= 0 ? 'delta-pos' : 'delta-neg')}>
+                    {fmtPct(c.expected.deltaPct)} <span className="cc-up-sub">vs spot</span>
+                  </span>
+                  <span className="cc-method">{cv.methodShort}</span>
+                </summary>
+                <div className="crypto-body">
+                  <p>{cv.method}</p>
+                  <p className="crypto-params mono">
+                    spot {fmtUSD(c.spot.price, dec(c.spot.price))} · weighted PV {fmtUSD(c.expected.fair, dec(c.expected.fair))}
+                    {' '}· horizon {cv.horizonYears}y · discount {(cv.discountRate * 100).toFixed(0)}%
+                  </p>
+                  <table className="crypto-scen">
+                    <thead>
+                      <tr><th>Scenario</th><th className="num">Prob</th><th className="num">Target</th><th className="num">PV today</th><th>Assumption</th></tr>
+                    </thead>
+                    <tbody>
+                      {cv.scenarios.map(s => (
+                        <tr key={s.key}>
+                          <td>{s.label}</td>
+                          <td className="num mono">{s.probability}%</td>
+                          <td className="num mono">{fmtUSD(s.target, dec(s.target))}</td>
+                          <td className="num mono">{fmtUSD(s.presentValue, dec(s.presentValue))}</td>
+                          <td className="crypto-assum">{s.assumption}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <p className="crypto-src">Sources: {cv.sources}</p>
+                </div>
+              </details>
+            );
+          })}
+        </div>
+      </section>
+      )}
 
       <section className="portfolio-method">
         <div className="wrap">

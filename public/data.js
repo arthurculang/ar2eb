@@ -11067,7 +11067,7 @@ const MEMOS = [
     "slug": "achr",
     "company": "Archer Aviation",
     "exchange": "NYSE",
-    "category": "asymmetrical-moonshots",
+    "category": "competitors",
     "dcfType": "Young-Company DCF (Damodaran)",
     "publishedISO": "2026-05-31",
     "publishedLabel": "May 31, 2026",
@@ -11112,8 +11112,8 @@ const MEMOS = [
       }
     ],
     "taxonomy": {
-      "watchlist": "asymmetrical-moonshots",
-      "watchlistName": "Asymmetrical Moonshots",
+      "watchlist": "competitors",
+      "watchlistName": "Competitors",
       "tier": "Low",
       "themes": [
         "evtol-advanced-air-mobility",
@@ -19398,7 +19398,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fun-speculative",
       "watchlistName": "Fun / Speculative",
-      "tier": "Low",
+      "tier": "Med-Low",
       "themes": [
         "premium-consumer-brands"
       ],
@@ -38423,7 +38423,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-Low",
+      "tier": "Low",
       "themes": [
         "precision-medicine-oncology"
       ],
@@ -39591,7 +39591,7 @@ const MEMOS = [
     "slug": "pacb",
     "company": "Pacific Biosciences",
     "exchange": "NASDAQ",
-    "category": "asymmetrical-moonshots",
+    "category": "competitors",
     "dcfType": "Young-Company DCF (Damodaran)",
     "publishedISO": "2026-06-16",
     "publishedLabel": "June 16, 2026",
@@ -39636,8 +39636,8 @@ const MEMOS = [
       }
     ],
     "taxonomy": {
-      "watchlist": "asymmetrical-moonshots",
-      "watchlistName": "Asymmetrical Moonshots",
+      "watchlist": "competitors",
+      "watchlistName": "Competitors",
       "tier": "Low",
       "themes": [
         "omics-life-science-infrastructure"
@@ -40845,7 +40845,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Low",
+      "tier": "High",
       "themes": [
         "precision-medicine-oncology"
       ],
@@ -48081,6 +48081,131 @@ const MEMOS = [
   }
 ];
 
+const CRYPTO = [
+  {
+    "ticker": "BTC",
+    "slug": "btc",
+    "company": "Bitcoin",
+    "crypto": true,
+    "spot": {
+      "price": 64200.0,
+      "asOf": "2026-06-21"
+    },
+    "expected": {
+      "fair": 131875.63,
+      "deltaPct": 105.4
+    },
+    "ai": null,
+    "taxonomy": {
+      "watchlist": "crypto",
+      "watchlistName": "Crypto",
+      "tier": "Med"
+    },
+    "cryptoValuation": {
+      "methodShort": "Store-of-value TAM penetration (gold-anchored)",
+      "method": "Bitcoin is valued as an emerging monetary asset competing for a share of the global store-of-value pool. Target market cap = (gold's monetary market cap) × (BTC capture %); target price = that ÷ effective supply. Capture % is the only judgment — exactly what the scenarios span. The accepted best-practice approach (Fidelity Digital Assets, NYDIG, ARK) precisely because BTC has no cash flows. Conviction-neutral: every input observable.",
+      "horizonYears": 7.0,
+      "discountRate": 0.3,
+      "sources": "Spot ~$64.2k & circulating ~20.0M BTC (CoinMarketCap, Blockchain.com, Jun-2026); gold monetary market cap anchored ~$30T (range $23–35T; World Gold Council / companiesmarketcap); effective float ~19.7M (21M cap − ~1.3M lost). Sanity check: ARK 2030 cases $0.5M / $1.2M / $2.4M.",
+      "scenarios": [
+        {
+          "key": "bear",
+          "label": "Bear",
+          "probability": 25,
+          "target": 213000.0,
+          "presentValue": 33945.03,
+          "assumption": "~14% of a $30T gold market; no broader pools"
+        },
+        {
+          "key": "base",
+          "label": "Base",
+          "probability": 40,
+          "target": 508000.0,
+          "presentValue": 80958.09,
+          "assumption": "~33% of a $30T gold market (≈ half ARK's 60% digital-gold leg)"
+        },
+        {
+          "key": "bull",
+          "label": "Bull",
+          "probability": 25,
+          "target": 1269000.0,
+          "presentValue": 202235.86,
+          "assumption": "~67% of gold ($20T) + ~$5T from bonds/wealth pools = $25T"
+        },
+        {
+          "key": "ultra",
+          "label": "Ultra Bull",
+          "probability": 10,
+          "target": 2538000.0,
+          "presentValue": 404471.71,
+          "assumption": "Parity-plus: ~$50T total monetary capture (gold + broader SoV)"
+        }
+      ]
+    }
+  },
+  {
+    "ticker": "ZRO",
+    "slug": "zro",
+    "company": "LayerZero",
+    "crypto": true,
+    "spot": {
+      "price": 0.92,
+      "asOf": "2026-06-22"
+    },
+    "expected": {
+      "fair": 0.42,
+      "deltaPct": -54.6
+    },
+    "ai": null,
+    "taxonomy": {
+      "watchlist": "crypto",
+      "watchlistName": "Crypto",
+      "tier": "Low"
+    },
+    "cryptoValuation": {
+      "methodShort": "Fee / network multiple (gated on the fee switch)",
+      "method": "LayerZero is an omnichain messaging protocol; ZRO is its value-capture token. Valued on a fee multiple: target FDV = (captured annual protocol revenue at scale) × (price-to-fees multiple from infra comps), ÷ a 1.0B fully-diluted supply. Load-bearing caveat: the protocol take rate is currently 0% (the fee switch is OFF; an activation vote failed, re-vote ~6 months out), so today's capturable revenue is ~zero — the model is a probability tree on fee activation × volume scaling × multiple.",
+      "horizonYears": 4.0,
+      "discountRate": 0.35,
+      "sources": "Spot ~$0.92 & total supply 1.0B ZRO (CoinGecko, CoinMarketCap, Jun-2026); gross messaging fees ~$2.4M/yr with a 0% protocol take (DefiLlama); comp Chainlink ~100× price-to-fees. Modeled on 1.0B FDV (circulating supply is disputed ~250–350M; FDV basis is the conservative choice given unlocks).",
+      "scenarios": [
+        {
+          "key": "bear",
+          "label": "Bear",
+          "probability": 35,
+          "target": 0.3,
+          "presentValue": 0.09,
+          "assumption": "Fee switch fails again; trades as a low-utility governance token"
+        },
+        {
+          "key": "base",
+          "label": "Base",
+          "probability": 35,
+          "target": 0.95,
+          "presentValue": 0.29,
+          "assumption": "Fee switch passes, ~15% take, ~3× volume; ≈ today's FDV"
+        },
+        {
+          "key": "bull",
+          "label": "Bull",
+          "probability": 22,
+          "target": 2.5,
+          "presentValue": 0.75,
+          "assumption": "~25% take, ~10× volume; becomes the interop standard"
+        },
+        {
+          "key": "ultra",
+          "label": "Ultra Bull",
+          "probability": 8,
+          "target": 5.0,
+          "presentValue": 1.51,
+          "assumption": "The 'Chainlink of messaging' — ~$50M captured revenue × ~100×"
+        }
+      ]
+    }
+  }
+];
+
 const CATEGORIES = {
   "asymmetrical-moonshots": {
     "slug": "asymmetrical-moonshots",
@@ -48116,6 +48241,13 @@ const CATEGORIES = {
     "sub": "Smaller speculative positions — high variance, sized small.",
     "short": "Smaller speculative positions — high variance, sized small.",
     "long": "Speculative or just-plain-fun positions held in small size: high-variance names where the thesis is more lottery-ticket than core holding. Tiered by conviction like the rest, but never sized as an anchor position."
+  },
+  "competitors": {
+    "slug": "competitors",
+    "name": "Competitors",
+    "sub": "Rivals to core holdings — tracked, sized smaller.",
+    "short": "Rivals to core holdings — tracked, sized smaller.",
+    "long": "Direct competitors to names held in the core book. Tracked because understanding the rival sharpens the thesis on the position held — and occasionally the competitor is itself the better-priced expression of the same structural bet. Valued on the same probability-weighted DCF as any name, but sized below the core categories in the portfolio."
   }
 };
 
@@ -48169,4 +48301,4 @@ const PDF_DISCLAIMERS = [
   }
 ];
 
-window.AR2EB_DATA = { MEMOS, CATEGORIES, DISCLAIMER_BLOCKS, PDF_DISCLAIMERS };
+window.AR2EB_DATA = { MEMOS, CRYPTO, CATEGORIES, DISCLAIMER_BLOCKS, PDF_DISCLAIMERS };
