@@ -44,6 +44,11 @@ EXCLUDE = {"taxonomy"}
 CONVICTION_MULT = {"High": 2.0, "Med-High": 1.5, "Med": 1.0, "Med-Low": 0.6,
                    "Low": 0.35, None: 1.0}
 
+# Category sizing tilt (spec §12). Speculative / non-core buckets are sized below
+# the core book. Core categories (moonshots · FCF++ · megacap · private) are
+# neutral 1.0. Mirrors CATEGORY_MULT in public/pages.jsx.
+CATEGORY_MULT = {"fun-speculative": 0.5, "competitors": 0.3, "crypto": 0.5}
+
 
 def weighted_dcf(d: dict) -> float:
     return sum(s["probability"] * s["expected_per_share"] for s in d["scenarios"].values())
@@ -94,16 +99,21 @@ def main() -> int:
         u = upside(d)
         if u is None:
             continue
-        tier = (d.get("taxonomy") or {}).get("tier")
+        tax = d.get("taxonomy") or {}
+        tier = tax.get("tier")
         conv = CONVICTION_MULT.get(tier, 1.0)
+        wl = tax.get("watchlist")
+        cat_mult = CATEGORY_MULT.get(wl, 1.0)
         ai = compute_ai(d, t)
         ai_mult = ai_weight_mult(ai)
-        raw = max(0.0, u) * conv * ai_mult        # upside × conviction × indicator
+        raw = max(0.0, u) * conv * ai_mult * cat_mult   # upside × conviction × indicator × category
         findings[t] = {"spot": float(d["spot"]),
                        "weighted_dcf": round(weighted_dcf(d), 2),
                        "upside": round(u, 4),
                        "tier": tier,
                        "conviction_mult": conv,
+                       "watchlist": wl,
+                       "category_mult": cat_mult,
                        "ai": round(ai, 2) if ai is not None else None,
                        "ai_zone": ai_zone(ai),
                        "ai_mult": ai_mult,
@@ -120,10 +130,11 @@ def main() -> int:
     out = {
         "as_of": dt.date.today().isoformat(),
         "epoch": EPOCH,
-        "rule": (f"weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_indicator_mult, "
+        "rule": (f"weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_indicator_mult × category_mult, "
                  f"cap {CAP:.0%}/name, cash residual (spec §12 / §15 D1). "
                  f"conviction: High 2.0 · Med-High 1.5 · Med 1.0 · Med-Low 0.6 · Low 0.35. "
-                 f"indicator zone: green 1.25 · yellow 1.10 · orange 0.90 · red 0.70 · n/a 1.0."),
+                 f"indicator zone: green 1.25 · yellow 1.10 · orange 0.90 · red 0.70 · n/a 1.0. "
+                 f"category: fun-speculative 0.5 · competitors 0.3 · crypto 0.5 · core 1.0."),
         "weights": {**dict(sorted(weights.items(), key=lambda kv: -kv[1])), "cash": cash},
         "excluded_private": sorted(excluded),   # no public price → not in the tracked book
         "findings": dict(sorted(findings.items(),

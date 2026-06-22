@@ -1,0 +1,100 @@
+# ═════════════════════════════════════════════════════════════════════════════
+# _crypto.yml — crypto holdings, valued with crypto-native (NON-DCF) frameworks
+# ═════════════════════════════════════════════════════════════════════════════
+#
+# Crypto assets produce no cash flows, so a DCF is undefined. Each is valued with
+# the accepted best-practice framework for its type, scenario-weighted exactly
+# like the equity memos — then the at-maturity target is DISCOUNTED to a present
+# value at a crypto-appropriate required return, so "upside vs spot" is directly
+# comparable to the DCF book (which already states a today-intrinsic value). See
+# spec §16. These are NOT memos: no PDF, no memo page — portfolio-only entries
+# that flow into the universe matrix and the conviction-weighted allocation.
+#
+# Per scenario: present_value = target / (1 + discount_rate) ** horizon_years.
+# expected_fair = Σ probability × present_value;  upside = expected_fair/spot − 1.
+# The underscore-prefixed filename keeps this out of the memo TICKERS list
+# (validate.py / build_site_data.py / rebuild_all.py never treat it as a memo);
+# scripts/build_site_data.py reads it explicitly via build_crypto().
+# ═════════════════════════════════════════════════════════════════════════════
+
+assets:
+  - ticker: BTC
+    name: Bitcoin
+    slug: btc
+    watchlist: crypto
+    tier: High                # conviction (human input) — Arthur
+    spot: 64200
+    spot_date: "2026-06-21"
+    method_short: "Store-of-value TAM penetration (gold-anchored)"
+    method: >
+      Bitcoin is valued as an emerging monetary asset competing for a share of
+      the global store-of-value pool. Target market cap = (gold's monetary market
+      cap) × (BTC capture %); target price = that ÷ effective supply. Capture %
+      is the only judgment — exactly what the scenarios span. The accepted
+      best-practice approach (Fidelity Digital Assets, NYDIG, ARK) precisely
+      because BTC has no cash flows. Conviction-neutral: every input observable.
+    horizon_years: 7          # ~2033 monetary maturation
+    discount_rate: 0.30       # crypto required return (BTC volatility/risk)
+    sources: >
+      Spot ~$64.2k & circulating ~20.0M BTC (CoinMarketCap, Blockchain.com, Jun-2026);
+      gold monetary market cap anchored ~$30T (range $23–35T; World Gold Council /
+      companiesmarketcap); effective float ~19.7M (21M cap − ~1.3M lost). Sanity
+      check: ARK 2030 cases $0.5M / $1.2M / $2.4M.
+    scenarios:
+      bear:
+        probability: 0.25
+        target: 213000
+        assumption: "~14% of a $30T gold market; no broader pools"
+      base:
+        probability: 0.40
+        target: 508000
+        assumption: "~33% of a $30T gold market (≈ half ARK's 60% digital-gold leg)"
+      bull:
+        probability: 0.25
+        target: 1269000
+        assumption: "~67% of gold ($20T) + ~$5T from bonds/wealth pools = $25T"
+      ultra_bull:
+        probability: 0.10
+        target: 2538000
+        assumption: "Parity-plus: ~$50T total monetary capture (gold + broader SoV)"
+
+  - ticker: ZRO
+    name: LayerZero
+    slug: zro
+    watchlist: crypto
+    tier: Low                 # conviction (human input) — Arthur to confirm
+    spot: 0.92
+    spot_date: "2026-06-22"
+    method_short: "Fee / network multiple (gated on the fee switch)"
+    method: >
+      LayerZero is an omnichain messaging protocol; ZRO is its value-capture
+      token. Valued on a fee multiple: target FDV = (captured annual protocol
+      revenue at scale) × (price-to-fees multiple from infra comps), ÷ a 1.0B
+      fully-diluted supply. Load-bearing caveat: the protocol take rate is
+      currently 0% (the fee switch is OFF; an activation vote failed, re-vote
+      ~6 months out), so today's capturable revenue is ~zero — the model is a
+      probability tree on fee activation × volume scaling × multiple.
+    horizon_years: 4          # ~2030 fee activation + scaling
+    discount_rate: 0.35       # higher required return — early-stage token risk
+    sources: >
+      Spot ~$0.92 & total supply 1.0B ZRO (CoinGecko, CoinMarketCap, Jun-2026);
+      gross messaging fees ~$2.4M/yr with a 0% protocol take (DefiLlama); comp
+      Chainlink ~100× price-to-fees. Modeled on 1.0B FDV (circulating supply is
+      disputed ~250–350M; FDV basis is the conservative choice given unlocks).
+    scenarios:
+      bear:
+        probability: 0.35
+        target: 0.30
+        assumption: "Fee switch fails again; trades as a low-utility governance token"
+      base:
+        probability: 0.35
+        target: 0.95
+        assumption: "Fee switch passes, ~15% take, ~3× volume; ≈ today's FDV"
+      bull:
+        probability: 0.22
+        target: 2.50
+        assumption: "~25% take, ~10× volume; becomes the interop standard"
+      ultra_bull:
+        probability: 0.08
+        target: 5.00
+        assumption: "The 'Chainlink of messaging' — ~$50M captured revenue × ~100×"

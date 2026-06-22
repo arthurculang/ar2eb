@@ -22,8 +22,8 @@
 # discovery.
 # ═════════════════════════════════════════════════════════════════════════════
 
-# ── Watchlists (5) ─────────────────────────────────────────────────────────
-# The four columns of the Helm Matrix; each becomes a category slug on the
+# ── Watchlists (7) ─────────────────────────────────────────────────────────
+# The columns of the Helm Matrix; each becomes a category slug on the
 # site. The site only surfaces a category in nav/home once a memo populates
 # it (built dynamically by build_site_data.py — no empty categories shown).
 watchlists:
@@ -79,6 +79,30 @@ watchlists:
       Speculative or just-plain-fun positions held in small size: high-variance
       names where the thesis is more lottery-ticket than core holding. Tiered by
       conviction like the rest, but never sized as an anchor position.
+    allows_tiers: true
+
+  competitors:
+    name: "Competitors"
+    short: "Competitors"
+    sub: "Rivals to core holdings — tracked, sized smaller."
+    long: >
+      Direct competitors to names held in the core book. Tracked because
+      understanding the rival sharpens the thesis on the position held — and
+      occasionally the competitor is itself the better-priced expression of the
+      same structural bet. Valued on the same probability-weighted DCF as any
+      name, but sized below the core categories in the portfolio.
+    allows_tiers: true
+
+  crypto:
+    name: "Crypto"
+    short: "Crypto"
+    sub: "Digital assets. Valued crypto-native, not by DCF."
+    long: >
+      Digital assets, valued with crypto-native (non-DCF) frameworks: a
+      store-of-value total-addressable-market penetration model for monetary
+      assets (Bitcoin captures a scenario-weighted share of gold's monetary
+      premium), and a fee / network-multiple model for productive protocol
+      tokens. Scenario-weighted like every other position; sized small.
     allows_tiers: true
 
 # ── Conviction tiers (5) ───────────────────────────────────────────────────
