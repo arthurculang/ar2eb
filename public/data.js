@@ -48099,7 +48099,7 @@ const CRYPTO = [
     "taxonomy": {
       "watchlist": "crypto",
       "watchlistName": "Crypto",
-      "tier": "Med"
+      "tier": "High"
     },
     "cryptoValuation": {
       "methodShort": "Store-of-value TAM penetration (gold-anchored)",

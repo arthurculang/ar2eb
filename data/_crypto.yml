@@ -22,7 +22,7 @@ assets:
     name: Bitcoin
     slug: btc
     watchlist: crypto
-    tier: Med                 # conviction (human input) — Arthur to confirm
+    tier: High                # conviction (human input) — Arthur
     spot: 64200
     spot_date: "2026-06-21"
     method_short: "Store-of-value TAM penetration (gold-anchored)"

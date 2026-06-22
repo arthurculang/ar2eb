@@ -106,9 +106,9 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   page) merged into the matrix + portfolio. **BTC sizes to ~5%; ZRO earns no weight** (rich risk-adjusted, shows red in the matrix).
   Crypto is **site-only** — NOT in the tracked book (`weights.yml`/daily perf) yet; needs a price feed (BTC-USD Yahoo; **ZRO TBD**).
   (4) **Conviction tiers (Arthur):** SHAK Med-Low, TEM **High** (DCF −28% → still 0 weight in the long-only book — conviction ≠ DCF),
-  BEAM Low, RXRX/PACB Low. (5) **Colored legends** on all 3 Portfolio graphics (allocation = indigo ramp for any count; Math-table
-  key; matrix cheap/fair/rich key). Validator green (53 pass); site-only (no memo PDF/baseline change). *Open: confirm crypto
-  conviction tiers + the BTC discount rate/horizon (the biggest lever); wire crypto into the tracked book before launch (ZRO feed);
+  BEAM Low, RXRX/PACB Low. **Crypto tiers:** BTC **High** (Arthur), ZRO Low (confirm). (5) **Colored legends** on all 3 Portfolio graphics (allocation = indigo ramp for any count; Math-table
+  key; matrix cheap/fair/rich key). Validator green (53 pass); site-only (no memo PDF/baseline change). *Open: confirm ZRO
+  conviction tier + the BTC discount rate/horizon (the biggest lever); wire crypto into the tracked book before launch (ZRO feed);
   PACB resolved to `competitors` (you'd named it both Fun/Spec and Competitors).* Research subagent sourced the crypto numbers (web).
 - **DNS housekeeping — DONE (2026-05-31).** `www → apex` 301 redirect live; null-MX +
   SPF `-all` + DMARC `p=reject` live; Cloudflare DNS panel clean. (Posture recorded
