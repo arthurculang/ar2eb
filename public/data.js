@@ -16073,7 +16073,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "travel-mobility-services"
       ],
@@ -20219,7 +20219,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "Med",
       "themes": [
         "platform-marketplace-tech",
         "ai-compute"
@@ -21034,7 +21034,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "platform-marketplace-tech",
         "ai-compute"
@@ -21849,7 +21849,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "platform-marketplace-tech",
         "ai-compute"
@@ -22660,7 +22660,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "premium-consumer-brands",
         "consumer-experience"
@@ -23471,7 +23471,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "ai-compute"
       ],
@@ -24276,7 +24276,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "autonomous-vehicles-systems",
         "humanoid-robotics-physical-ai"
@@ -25087,7 +25087,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "Med",
       "themes": [
         "consumer-experience"
       ],

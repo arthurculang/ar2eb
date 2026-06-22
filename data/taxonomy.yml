@@ -59,7 +59,7 @@ watchlists:
       Established mega-cap businesses with structural cash-flow advantages.
       Segment-economics rich; efficient-market dampens edge but durability
       and capital return make the math worth doing.
-    allows_tiers: false
+    allows_tiers: true
 
   private-wishlist:
     name: "Private Wishlist"
