@@ -48090,7 +48090,7 @@ const MEMOS = [
     "publishedLabel": "June 22, 2026",
     "pdf": {
       "file": "zipline-memo__v001__2026-06-22_00-00.pdf",
-      "size": "—",
+      "size": "234 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -48610,7 +48610,7 @@ const MEMOS = [
     "publishedLabel": "June 22, 2026",
     "pdf": {
       "file": "pyka-memo__v001__2026-06-22_00-00.pdf",
-      "size": "—",
+      "size": "234 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -49102,7 +49102,7 @@ const MEMOS = [
     "publishedLabel": "June 22, 2026",
     "pdf": {
       "file": "blgff-memo__v001__2026-06-22_00-00.pdf",
-      "size": "—",
+      "size": "202 KB",
       "priorVersions": []
     },
     "metrics": {
