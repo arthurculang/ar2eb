@@ -176,10 +176,11 @@ def export(dest: Path | None) -> Path:
 
 # ── --flip ──────────────────────────────────────────────────────────────
 
-# stamp.prior_versions block: optional preceding blank line, the key line,
+# stamp.prior_versions block: optional preceding blank line, the key line
+# (either `prior_versions:` opening a block, or an inline `prior_versions: []`),
 # then every entry line ("  - ..." dash lines and their "    ..." children).
 _PRIOR_RE = re.compile(
-    r"(?:^[ \t]*\n)?^[ ]{2}prior_versions:[^\S\n]*\n"
+    r"(?:^[ \t]*\n)?^[ ]{2}prior_versions:[^\n]*\n"
     r"(?:^[ ]{2}-[^\n]*\n|^[ ]{4}[^\n]*\n)*",
     re.M,
 )

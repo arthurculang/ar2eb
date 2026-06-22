@@ -478,6 +478,11 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   `ar2eb-archive` CREATED by Arthur (2026-06-12, via the Claude-for-Chrome runbook) — D3 prereq DONE.**
   **Remaining: just the 1-July day-of run (LAUNCH.md).** Live epoch
   t₀ = 2026-07-01 (the daily routine no-ops until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
+  **Launch DRY-RUN rehearsed (2026-06-22):** `--export` snapshots the current book (56 memos / 77 PDFs / MANIFEST);
+  `--flip` dry-run plan clean; stamp-transform now verified on ALL 56 live YMLs. *Fixed a real bug the rehearsal caught:*
+  `_PRIOR_RE` didn't match the **inline-empty `prior_versions: []`** the newest memos (hhh/blgff/pyka) ship, which would
+  have tripped the flip's internal `assert "prior_versions" not in st` mid-launch — regex broadened to `prior_versions:[^\n]*`.
+  Re-price (LAUNCH.md step 1) stays the June-30 judgment step (a dry-run re-price now would just be overwritten July 1).
 - **Cleanup backlog — DONE (2026-06-12, via the Claude-for-Chrome runbook).** All 36 stale `claude/*`
   branches deleted (incl. `_probe-workflows`, the #21-squashed `ionq-ultra-bull-pressure-test`, the three
   #33-salvaged branches, and the #27-superseded `sweet-noether-80vbp` — verified superseded: ionq renders
