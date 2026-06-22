@@ -1,0 +1,388 @@
+ticker: PYKA
+company: Pyka
+exchange: PRIVATE
+dcf_type: private_prevaluation
+date: 2026-06-22
+spot: 4.0
+spot_kind: last_round_mark
+spot_as_of: '2024-09-23'
+spot_round: Series B (est.)
+spot_caveat: 'Pyka''s post-money is UNDISCLOSED. $4.00 is an ESTIMATE — a ~$200M post-money (band $150-300M) on the Sept-2024
+  $40M Series B ÷ ~50M est. fully-diluted shares. Treat the whole valuation as low-confidence; heavy future dilution is the
+  key risk.
+
+  '
+market:
+  market_cap_billion: 0.20
+  shares_outstanding_million: 50
+  cash_billion: 0.0
+  net_debt_billion: 0.0
+  extras:
+  - $40M Series B Sept-2024 (Obvious Ventures); ~$88M raised total
+  - Valuation UNDISCLOSED — ~$200M est.
+taxonomy:
+  watchlist: private-wishlist
+  tier: Med-Low
+  themes:
+  - autonomous-vehicles-systems
+  primary_theme: autonomous-vehicles-systems
+central_question: 'Is an ESTIMATED ~$200M post-money (~$4/share, undisclosed) defensible against a probability-weighted distribution
+  of exits over 3-6 years — for an already-flying, FAA-authorized, revenue-generating autonomous-aircraft maker facing heavy
+  dilution and a long full-certification road?
+
+  '
+thesis: 'Pyka is the rare autonomous-aircraft company that already flies, sells, and earns revenue — ~$7.5M est. across ag
+  spraying (Pelican 2) and middle-mile cargo (Pelican Cargo) on four continents, FAA-authorized as the largest UAS cleared
+  for US commercial operation, on ~$88M raised (capital-efficient versus eVTOL peers burning billions). The valuation is undisclosed,
+  so the dominant variable is not an operating DCF but the exit distribution against an estimated mark. Real today (flying,
+  regulated, two beachhead markets, an emerging dual-use defense leg) de-risks it versus pre-revenue eVTOLs; the bear is that
+  it stays tiny and niche, faces a multi-year road to full type certification, and dilutes heavily. Probability-weighted PV
+  lands near the estimated mark — a speculative option with a fat tail, where heavy dilution offsets large company-value exits.
+  Five exit scenarios, weighted; show your work. The estimate itself is the load-bearing uncertainty.
+
+  '
+funding_history:
+  first_round_marker: YC '17
+  x_min: -7.0
+  rounds:
+  - x: -7.0
+    ps: 0.3
+    name: Seed
+    pm: 0.01
+    lead: Y Combinator
+  - x: -2.2
+    ps: 1.5
+    name: Series A
+    pm: 0.08
+    lead: Piva / Prelude
+  - x: 0.0
+    ps: 4.0
+    name: Series B
+    pm: 0.20
+    lead: Obvious Ventures
+chart_reference:
+  history_years:
+  - 2023
+  - 2024
+  - 2025
+  history_arr_billion:
+  - 0.004
+  - 0.006
+  - 0.0075
+  history_employees:
+  - 40
+  - 60
+  - 74
+page3_chart_config:
+  chart_type: funding_and_exit_fan
+  exit_fan_title: Exit valuation distribution (post-money $B)
+  arr_title: Revenue build to scenario exit (est. run-rate $B)
+scenarios:
+  ultra_bear:
+    label: Wipeout
+    short_label: Wipeout
+    probability: 0.20
+    headline: Capital-starved; fire-sale.
+    narrative:
+    - 'Full type certification proves slower and dearer than aerospace history predicts. Ag and cargo orders stay soft and
+      lumpy — the 2023 Skyports pre-commitments never firm — while DJI/XAG ag-drones compress from below and Zipline out-scales
+      in light-payload logistics. Burn outruns a thin balance sheet; a 2028 bridge prices below the last mark, the defense
+      pilots don''t convert to programs, and the company is acqui-hired or wound down.
+
+      '
+    - 'At a ~$60M outcome, common per share falls to ~$0.90 nominal — discounted three years at a 30% venture-WACC (illiquidity
+      + execution + dilution overhang) and after a 35% within-scenario write-to-zero probability, expected PV is ~$0.37, roughly
+      a tenth of the estimated mark.
+
+      '
+    - 'Certification stall + order softness + capital starvation is a compound event sized at ~20%.
+
+      '
+    probability_rationale: 'Certification stall + chronically soft orders + capital starvation is a compound 3-vector tail.
+      Each individually 30-45% plausible for a sub-$10M-revenue, ~74-person aerospace company; joint near 20%. The dominant
+      risk is running out of runway before full type certification — one binary, not slow erosion. Capital-efficiency and an
+      already-shipping product temper it below a typical pre-revenue moonshot.
+
+      '
+    exit_terms:
+      kind: wipeout
+      exit_year: 2029
+      years_to_exit: 3.0
+      exit_post_money_billion: 0.06
+      exit_per_share_nominal: 0.9
+      fds_at_exit_million: 65
+      dilution_pct_from_today: 30
+      venture_wacc: 0.30
+      lp_haircut_pct: 0
+      p_total_loss: 0.35
+      distress_per_share: 0.3
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 0.41
+    expected_per_share: 0.37
+  bear:
+    label: Soft Exit
+    short_label: SoftExit
+    probability: 0.27
+    headline: Modest acqui-sale; dilution bites.
+    narrative:
+    - 'Pyka executes but stays a niche specialist. The Synerjet Brazil backlog delivers and ag revenue grows, but cargo and
+      defense scale slowly and the markets prove smaller and more price-competitive than hoped. Reaching full certification
+      and scale takes another two funding rounds; cumulative dilution runs ~70%. A strategic acquirer — an aerospace prime,
+      an ag-equipment OEM, or a logistics player — buys the team and the regulatory position at a modest premium.
+
+      '
+    - 'At a ~$350M outcome, common per share is ~$4.10 nominal — discounted three years at a 26% venture-WACC and after a 10%
+      residual loss probability, expected PV is ~$1.84, well below the estimated $4.00 mark even as the company-level outcome
+      tops it. Dilution is what erodes the per-share figure.
+
+      '
+    - 'The underappreciated case: a good company, a mediocre equity outcome, because the cap table grows.
+
+      '
+    probability_rationale: 'The modal "executes but stays niche" path. Conditions: the firm backlog converts, ag grows steadily,
+      but cargo/defense stay sub-scale and two more dilutive rounds are needed before an exit. Each individually 60-75%; joint
+      near 27%. Heavy dilution is the mechanism that turns a respectable company outcome into a sub-mark equity return — the
+      single most important driver of this case.
+
+      '
+    exit_terms:
+      kind: acquisition
+      exit_year: 2029
+      years_to_exit: 3.0
+      exit_post_money_billion: 0.35
+      exit_per_share_nominal: 4.1
+      fds_at_exit_million: 85
+      dilution_pct_from_today: 70
+      venture_wacc: 0.26
+      lp_haircut_pct: 0
+      p_total_loss: 0.10
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 2.05
+    expected_per_share: 1.84
+  base:
+    label: Base Exit
+    short_label: BaseExit
+    probability: 0.30
+    headline: 2030 strategic buy at ~$1B.
+    narrative:
+    - 'Pyka''s two beachheads both work. Pelican 2 becomes the standard autonomous ag aircraft in the Americas as the Synerjet/SLC
+      relationships expand, cargo wins repeatable middle-mile routes, and the AFWERX/Sierra Nevada defense leg matures into
+      a real "RumRunner" dual-use program. The regulatory first-mover position holds while competitors are still certifying.
+      A strategic acquirer takes the company at a ~$1.05B post-money in 2030.
+
+      '
+    - 'Per share at exit ≈ $9.50 nominal; PV back to today at a 24% venture-WACC over ~4 years = ~$4.02. That is ~1× the estimated
+      $4.00 mark — the source of the "roughly fair" finding: a strong company outcome, but ~120% cumulative dilution lands
+      the per-share value near today''s estimate.
+
+      '
+    - 'Modal-good outcome; dilution and the certification timeline are the variables.
+
+      '
+    probability_rationale: 'Modal-good outcome. Conditions: both beachhead markets scale, the defense leg becomes a real program,
+      the regulatory lead persists, and a strategic acquirer emerges around 2030. Each individually ~60-70%; joint near 30%.
+      This IS the base case but not overwhelming — Pyka can slide into the soft-exit case if cargo/defense underdeliver or
+      dilution runs ahead of the company outcome.
+
+      '
+    exit_terms:
+      kind: acquisition
+      exit_year: 2030
+      years_to_exit: 4.0
+      exit_post_money_billion: 1.05
+      exit_per_share_nominal: 9.5
+      fds_at_exit_million: 110
+      dilution_pct_from_today: 120
+      venture_wacc: 0.24
+      lp_haircut_pct: 0
+      p_total_loss: 0.0
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 4.02
+    expected_per_share: 4.02
+  bull:
+    label: Bull Exit
+    short_label: BullExit
+    probability: 0.15
+    headline: 2031 buy at ~$2.8B; category leader.
+    narrative:
+    - 'Pyka becomes the category-defining autonomous electric aircraft company across ag, cargo, and contested-logistics defense.
+      Full type certification clears, opening unrestricted commercial operation; the order book firms across continents; the
+      Sierra Nevada / DoD relationship scales into multi-aircraft contested-logistics contracts. Vertical integration (autonomy,
+      airframe, motors, batteries) yields a cost and iteration-speed moat as volumes rise. A prime or a major logistics buyer
+      acquires it at a ~$2.8B post-money in 2031.
+
+      '
+    - 'Per share at exit ≈ $22.40 nominal; PV at a 22% venture-WACC over 5 years = ~$8.29 — a ~2× outcome on the estimated
+      mark. Higher floor than a typical venture bull because Pyka already flies, is FAA-authorized, and earns revenue that
+      pre-revenue eVTOLs do not.
+
+      '
+    - 'Requires certification, scale, and the defense leg to compound together.
+
+      '
+    probability_rationale: 'Requires conjunction: full type certification clears, all three markets (ag, cargo, defense) scale,
+      vertical integration converts to a durable cost moat, and a high-value acquirer emerges by 2031. Each individually 40-55%;
+      joint near 15%. Higher floor than a typical young-company bull because Pyka already has flying, FAA-authorized, revenue-generating
+      product — the "real today" premium.
+
+      '
+    exit_terms:
+      kind: acquisition
+      exit_year: 2031
+      years_to_exit: 5.0
+      exit_post_money_billion: 2.80
+      exit_per_share_nominal: 22.4
+      fds_at_exit_million: 125
+      dilution_pct_from_today: 150
+      venture_wacc: 0.22
+      lp_haircut_pct: 0
+      p_total_loss: 0.0
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 8.29
+    expected_per_share: 8.29
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UBull
+    probability: 0.08
+    headline: Platform IPO; ~$6.5B.
+    narrative:
+    - 'The genuine tail. Pyka''s autonomy and airframe platform generalizes beyond ag and cargo — contested-logistics defense
+      becomes a large program of record, the regulatory lead compounds into a durable moat as the FAA framework for autonomous
+      cargo flight matures, and Pyka holds a credible option on autonomous regional passenger flight later. Revenue inflects
+      from sub-$10M to hundreds of millions; the company IPOs in 2032 at a ~$6.5B post-money.
+
+      '
+    - 'Per share at IPO ≈ $46.40 nominal; PV at a 22% venture-WACC over 6 years = ~$14.07 — a ~3.5× outcome on the estimated
+      mark. Contributes the largest single slice of weighted value despite only 8% probability — compound-conditional-tail
+      behavior typical of frontier hardware.
+
+      '
+    - 'Tail of tails; acknowledges Pyka''s real, already-flying head start.
+
+      '
+    probability_rationale: 'Tail of tails. Requires the Bull conditions AND the autonomy platform generalizing into a large
+      defense program AND a durable regulatory moat AND a public-market window receptive to autonomous-aviation hardware. 5-10%
+      feels right; 8% acknowledges Pyka''s genuine head start (flying, FAA-authorized, revenue) without over-weighting a six-year
+      tail.
+
+      '
+    exit_terms:
+      kind: ipo
+      exit_year: 2032
+      years_to_exit: 6.0
+      exit_post_money_billion: 6.50
+      exit_per_share_nominal: 46.4
+      fds_at_exit_million: 140
+      dilution_pct_from_today: 180
+      venture_wacc: 0.22
+      lp_haircut_pct: 0
+      p_total_loss: 0.0
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 14.07
+    expected_per_share: 14.07
+weighting_rationale:
+- label: Wipeout 20%
+  body: Certification stall + soft orders + capital starvation — compound 3-vector tail.
+- label: Soft Exit 27%
+  body: 'Executes but niche; ~$350M acqui-sale, ~70% dilution lands it sub-mark.'
+- label: Base Exit 30%
+  body: 'Modal: both beachheads scale + defense leg, ~$1B strategic buy 2030, ~1× mark.'
+- label: Bull Exit 15%
+  body: Certification clears, category leader across ag/cargo/defense; ~$2.8B 2031.
+- label: Ultra Bull 8%
+  body: Autonomy platform generalizes + regulatory moat; ~$6.5B platform IPO 2032.
+page3:
+  subtitle: Funding-round history + exit-scenario distribution  ·  no operating DCF (valuation undisclosed; revenue est.)  ·  the
+    estimated mark + discount rate are the load-bearing inputs
+  sources: 'Sources: Pyka press releases, Obvious Ventures / Piva / Prelude announcements, AFWERX / Agility Prime + Sierra
+    Nevada releases, Synerjet & Skyports announcements, FAA authorizations, TechCrunch, aggregator revenue/headcount estimates
+    (low confidence).'
+appendix:
+  pushback:
+  - label: Already flying, FAA-authorized, earning revenue.
+    body: Largest UAS cleared for US commercial operation; ~$7.5M est. across four continents — de-risked versus pre-revenue
+      eVTOLs.
+  - label: Capital-efficient for aerospace.
+    body: ~$88M raised total versus eVTOL peers (Joby/Archer) burning billions and Zipline at ~$7.6B — far less dilution per
+      unit of progress.
+  - label: Two beachheads + an emerging dual-use defense leg.
+    body: Ag (Pelican 2) and cargo (Pelican Cargo) today; AFWERX lease + Sierra Nevada "RumRunner" militarized variant for
+      DoD contested logistics.
+  - label: Regulatory first-mover is the moat.
+    body: Operational FAA authorization while competitors are still certifying — vertically integrated autonomy, airframe,
+      motors, and batteries.
+  triggers:
+  - label: Bear validation
+    body: 'A bridge round below the last mark  ·  the 2023 cargo pre-commitments lapse unconverted  ·  DJI/XAG ag-drones take
+      share from below  ·  defense pilots don''t become programs'
+  - label: Bull validation
+    body: 'Full type certification clears  ·  the Synerjet/SLC backlog expands into repeat orders  ·  a Sierra Nevada / DoD
+      program of record  ·  a priced up-round disclosing the mark'
+  - label: Reframe needed
+    body: An actual disclosed valuation — the entire analysis is anchored to a ~$200M ESTIMATE; a real mark (above or below)
+      resets the per-share base and the finding.
+glossary:
+- term: Pelican 2 / Pelican Spray
+  definition: Pyka's autonomous all-electric ag aircraft — 300L / ~660lb payload, up to 100 ha/hr, ~$550K list; billed as
+    the world's largest autonomous ag aircraft (Feb 2025).
+- term: Pelican Cargo
+  definition: Pyka's autonomous all-electric middle-mile cargo airplane — ~400lb payload, 200-mi range; billed as the world's
+    largest zero-emission cargo airplane (Jan 2023).
+- term: FAA authorization (vs type certification)
+  definition: Operational clearance to fly/operate commercially under defined conditions — NOT full type certification, which
+    is a separate multi-year road to unrestricted operation.
+- term: AFWERX / Agility Prime
+  definition: US Air Force programs accelerating electric/autonomous aircraft; Pyka delivered Pelican Cargo on lease (2024)
+    — the basis of the dual-use defense leg.
+- term: RumRunner
+  definition: Militarized Pyka variant developed with Sierra Nevada Corporation (2024) for DoD contested-logistics resupply
+    — the defense scale-up call option.
+- term: Last-round mark (estimated)
+  definition: Per-share value implied by the latest round (post-money ÷ fully-diluted). Pyka's post-money is undisclosed,
+    so $4.00 is an estimate, not a disclosed or market price.
+stamp:
+  footer_version: "001"
+  footer_timestamp: "2026-06-22_00-00"
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: "001"
+  pdf_timestamp: "2026-06-22_00-00"
+
+  prior_versions: []
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Origination lens (private_prevaluation).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Autonomous electric aircraft — Pyka vs Zipline, Reliable Robotics / Merlin (autonomy),
+    DJI / XAG (ag-drones), and eVTOL + defense primes; the race to field certified,
+    revenue-generating autonomous flight in ag spraying and middle-mile cargo.
+  lens: power_origination
+  powers:
+    scale_economies:     { score: 1, note: "Tiny — ~$7.5M est. revenue, ~74 people; no volume advantage yet." }
+    network_economies:   { score: 1, note: "Minimal; no platform network effect in ag/cargo operations." }
+    counter_positioning: { score: 2, note: "Autonomous electric flight vs incumbent piloted ag aviation — a model rivals can't easily copy." }
+    switching_costs:     { score: 2, note: "Ag-distributor relationships + integrated fleet operations create stickiness once embedded." }
+    branding:            { score: 1, note: "Recognized in autonomous-aviation niche; little broad brand power." }
+    cornered_resource:   { score: 3, note: "The only large FAA-authorized autonomous fixed-wing electric aircraft actually selling units." }
+    process_power:       { score: 3, note: "Vertically integrated autonomy, airframe, motors, and batteries — a hard-to-replicate stack." }
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+    - { name: "Zipline", kind: private, note: "Far larger/later (~$7.6B) but light-payload medical/retail logistics, not heavy ag/cargo.", share_now: 0.30, share_terminal: 0.28, capital: "~$7.6B raised" }
+    - { name: "Reliable Robotics / Merlin", kind: private, note: "Autonomy retrofit for existing aircraft — automation rival, not electric airframes.", share_now: 0.08, share_terminal: 0.12, capital: "$ hundreds of M" }
+    - { name: "DJI / XAG", kind: incumbent, note: "Small ag-spray drones from below — cheap, scaled, lower payload/range.", share_now: 0.20, share_terminal: 0.22, capital: "Large balance sheets" }
+    - { name: "eVTOL / defense primes", kind: mixed, note: "Joby/Archer (passenger) + primes (defense logistics) — richer stories, adjacent or pre-revenue.", share_now: 0.10, share_terminal: 0.14, capital: "$ billions" }
+  lead_lag:
+    - { metric: "Certified, revenue-generating autonomous aircraft", company: "leading", best_rival: "behind", verdict: leading }
+    - { metric: "Scale / capital", company: "tiny (~$88M)", best_rival: "far larger", verdict: lagging }
+    - { metric: "Capital efficiency per unit of progress", company: "high", best_rival: "lower", verdict: leading }
+  takeaway: >
+    Pyka is originating a real cornered-resource and process-power position — the only large
+    FAA-authorized autonomous electric aircraft actually selling units, vertically integrated —
+    but it is tiny and early versus better-capitalized rivals (Zipline above, DJI/XAG below);
+    the window is open while it leads on certification, and capital starvation before full type
+    certification is the falsifier for whether the scarcity endures.
