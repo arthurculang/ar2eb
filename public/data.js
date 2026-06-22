@@ -8088,7 +8088,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "private-wishlist",
       "watchlistName": "Private Wishlist",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "ai-compute"
       ],
@@ -16073,7 +16073,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "travel-mobility-services"
       ],
@@ -20219,7 +20219,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "Med",
       "themes": [
         "platform-marketplace-tech",
         "ai-compute"
@@ -21034,7 +21034,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "platform-marketplace-tech",
         "ai-compute"
@@ -21849,7 +21849,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "platform-marketplace-tech",
         "ai-compute"
@@ -22660,7 +22660,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "premium-consumer-brands",
         "consumer-experience"
@@ -23471,7 +23471,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "ai-compute"
       ],
@@ -24276,7 +24276,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "autonomous-vehicles-systems",
         "humanoid-robotics-physical-ai"
@@ -25087,7 +25087,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-megacap",
       "watchlistName": "FCF+ Megacap",
-      "tier": null,
+      "tier": "Med",
       "themes": [
         "consumer-experience"
       ],
@@ -48075,6 +48075,1429 @@ const MEMOS = [
       "stamp": {
         "footerVersion": "001",
         "footerTimestamp": "2026-06-21_00-00",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "ZIPLINE",
+    "slug": "zipline",
+    "company": "Zipline",
+    "exchange": "PRIVATE",
+    "category": "private-wishlist",
+    "dcfType": "Private Pre-Valuation (exit-scenario)",
+    "publishedISO": "2026-06-22",
+    "publishedLabel": "June 22, 2026",
+    "pdf": {
+      "file": "zipline-memo__v001__2026-06-22_00-00.pdf",
+      "size": "234 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$7.6B",
+      "shares": "117M",
+      "cash": "$1B cash, zero debt · Series H $7.6B post-money (Jan/Mar 2026); Secondaries ~$50/sh — a ~23% discount to the mark"
+    },
+    "spot": {
+      "price": 50.0,
+      "asOf": "June 22, 2026 close"
+    },
+    "expected": {
+      "fair": 58.49,
+      "deltaPct": 17.0
+    },
+    "compound": [],
+    "taxonomy": {
+      "watchlist": "private-wishlist",
+      "watchlistName": "Private Wishlist",
+      "tier": "High",
+      "themes": [
+        "autonomous-vehicles-systems"
+      ],
+      "themeNames": [
+        "Autonomous Vehicles & Systems"
+      ],
+      "primaryTheme": "autonomous-vehicles-systems",
+      "primaryThemeName": "Autonomous Vehicles & Systems",
+      "umbrella": "mobility-aerospace",
+      "umbrellaName": "Mobility & Aerospace"
+    },
+    "ai": null,
+    "question": "Is the Series H $7.6B mark (~$65/share) defensible against a probability-weighted exit distribution over 3-5 years — and, given secondaries already trade ~23% under the mark at ~$50, is the discount itself the opportunity?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "DOWN ROUND",
+        "prob": 10,
+        "price": 10.78,
+        "headline": "Scale economics fail; down-round.",
+        "why": "Cost-curve failure + a capital-market squeeze + BVLOS delay is a compound 3-vector event. Each individually 20-35% over three years; joint at ~10%. The dominant risk for a pre-profit hardware-logistics network is that scale economies never arrive before the cash does — one binary, not slow erosion. The live >2M-delivery base and net-cash balance sheet keep this off the modal path.",
+        "what": [
+          "Unit economics stall above ~$13/delivery — the droid fleet doesn't hit the density that drives cost toward $2-4, and a capital-intensive build (~$1.8B raised) collides with a tighter funding market. FAA BVLOS rule-making slows the US expansion; Walmart caps the rollout at a handful of metros rather than five states. Alphabet Wing and Amazon Prime Air undercut on subsidized economics. A planned 2029 listing is pulled; a bridge round prices below the Series H mark, triggering dilution and a quiet strategic sale.",
+          "At the resulting $3B post-money, common-equity per share falls to ~$22.7 nominal — discounted three years at a 25% venture-WACC (illiquidity + execution + dilution), and after a 15% within-scenario write-to-zero probability, expected PV is ~$10.8/share, roughly a fifth of the secondary."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "STAY PRIVATE",
+        "prob": 22,
+        "price": 18.14,
+        "headline": "Stays private 4y+; no liquidity.",
+        "why": "Stripe is the analog: a high mark and no IPO years on. A capital-intensive network can keep raising from crossover funds without a listing if the window stays shut. Plausible over 4 years but not over 5+; eventually holders demand liquidity and the ~97% IPO-likelihood read reasserts. 22% reflects the real chance the build simply takes longer than the market window allows.",
+        "what": [
+          "The \"stays private\" path. Zipline raises one or two more growth rounds at marks that grow modestly — a Series I around $5.5B by 2030 — but no IPO appears credible (a depressed listing window, BVLOS scale-up taking longer than planned, or a decision that public-market quarterly pressure conflicts with the long build-out). Secondaries create episodic liquidity at steep discounts to the mark.",
+          "The network is real — deliveries compound and the droid scales — but without an IPO catalyst the holder faces ~4 years of illiquidity and dilution. PV at a 22% venture discount: ~$19, below both the secondary and the mark even as the nominal round price grows. This is the underappreciated outcome for a capital-intensive private."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE IPO",
+        "prob": 40,
+        "price": 58.8,
+        "headline": "2029 IPO at $13B; ~1.7× secondary.",
+        "why": "Modal outcome. Conditions: US delivery growth holds through 2027-2028; the droid economics trend toward target; the FAA BVLOS framework matures; the logistics-IPO window opens. Each individually ~65-80%; joint ~40%. 40% reflects that this IS the base case but the US-density ramp and BVLOS timing could push it into stay_private or pull it toward the bull.",
+        "what": [
+          "Zipline IPOs in 2029 on the back of a US-density inflection — Walmart scaling past DFW and Atlanta into Houston, Phoenix, and five states, the State Dept partnership tripling African healthcare facilities, and the Platform 2 droid proving precise home delivery at volume. Lead underwriters anchor a $13B post-money — roughly 1.7× the Series H valuation — reflecting delivery growth, the largest live autonomous network, and a re-opened logistics-tech IPO window.",
+          "Per-share at IPO ≈ $101.6 nominal. PV back to today at a 20% venture-WACC over ~3 years = ~$58.8 — above the ~$50 secondary and near the ~$65 mark. That is why secondary buyers paying ~$50 capture the discount: the modal good outcome already clears the entry price."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL IPO",
+        "prob": 20,
+        "price": 97.69,
+        "headline": "2030 IPO at $25B; network compounds.",
+        "why": "Requires conjunction: the cost curve reaches $2-4; Walmart scales nationally; the droid sustains precise home delivery at volume; the 2030 IPO window receives the cohort favorably. Each 40-55% individually; joint ~20%. Higher floor than a typical young-company bull because the network and anchor customer already exist.",
+        "what": [
+          "Zipline's network advantage consolidates. The droid drives delivery cost to the low end of the $2-4 range, Walmart goes national, Chipotle/Sweetgreen and the health systems (Cleveland Clinic, Mayo, Advocate, Intermountain) deepen, and the seven-country footprint compounds. The business looks like a logistics platform with software-like unit economics rather than a drone start-up. A 2030 IPO at $25B reflects scaled volume and multiple expansion.",
+          "Per-share at IPO ≈ $189.4 nominal; PV at 18% over 4 years = ~$97.7. A ~2× outcome on the secondary — material upside that justifies paying through the discount today."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 129.52,
+        "headline": "Default delivery layer; $40B acquisition.",
+        "why": "Tail of tails. Each Bull condition AND the cost curve clearing decisively AND a multi-year regulatory/safety moat that makes the network the category default AND a strategic acquirer willing to pay for the rails. 5-10% feels right; 8% acknowledges the real BVLOS head start without over-weighting the tail.",
+        "what": [
+          "The genuine tail. Zipline becomes the default autonomous last-mile layer — the droid network is to delivery what a utility is to power. Walmart, the QSR partners, and health systems route a structural share of last-mile through it; the seven-country base compounds and new geographies open. A strategic acquirer (a retailer, a logistics incumbent, or a cloud/autonomy platform) pays $40B in 2031 to own the rails rather than rebuild them.",
+          "Per-share ≈ $296.3 nominal; PV at 18% over 5 years = ~$129.5 — a ~2.6× outcome on the secondary. Contributes an outsized slice of weighted value despite only 8% probability — compound-conditional-tail behavior."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Private Pre-Valuation (exit-scenario). Probability weighting: Ultra Bear 10 / Bear 22 / Base 40 / Bull 20 / Ultra Bull 8. Spot price reference: June 22, 2026 close.",
+    "thesis": "Zipline runs the world's largest autonomous logistics network — >2M commercial deliveries and >120M autonomous miles by Jan 2026, US volume now exceeding the rest of the world combined and growing ~15%/week for ~7 months. The dominant variable in valuing the equity today is not an operating DCF (revenue is undisclosed, ~$50M ARR is an estimate) but the exit distribution: an IPO between 2029 and 2030 at $13-25B is the modal good outcome (PitchBook puts IPO likelihood ~97%; the Series H crossover syndicate — Fidelity, Tiger — is the classic pre-IPO setup). The Walmart anchor plus the Platform 2 droid (precise ~1m home delivery, commercial since Apr 2025) give it a line-of-sight to $2-4/delivery from ~$13.50 today. The bear is not erosion but capital intensity meeting unproven scale economics, FAA BVLOS dependency, and heavyweight competition. Probability-weighted PV lands near $58 — above the ~$50 secondary, below the ~$65 mark. The load-bearing input is the discount rate, not the exit valuations. Five exit scenarios, weighted; show your work.",
+    "historicalPrices": null,
+    "weightingRationale": [
+      {
+        "label": "Down Round 10%",
+        "body": "Scale economics fail + funding squeeze + BVLOS delay — compound 3-vector tail."
+      },
+      {
+        "label": "Stay Private 22%",
+        "body": "Stripe analog: capital-intensive build stays private, holders illiquid."
+      },
+      {
+        "label": "Base IPO 40%",
+        "body": "Modal: 2029 IPO at ~$13B, ~1.7× last-round, on US-density inflection."
+      },
+      {
+        "label": "Bull IPO 20%",
+        "body": "Cost curve hits $2-4, Walmart national, $25B IPO 2030."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "Default last-mile layer; $40B strategic acquisition for the rails."
+      }
+    ],
+    "page3": {
+      "subtitle": "Funding-round history + exit-scenario distribution · no operating-business DCF (revenue undisclosed) · discount rate is the load-bearing input",
+      "sources": "Sources: PitchBook, Forge, Nasdaq Private Market, TechCrunch, Bloomberg, Zipline blog, Walmart/State Dept announcements.",
+      "chartReference": {
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyArrBillion": [
+          0.03,
+          0.05,
+          0.08
+        ],
+        "historyEmployees": [
+          700,
+          900,
+          1200
+        ]
+      },
+      "chartConfig": {
+        "chartType": "funding_and_exit_fan",
+        "exitFanTitle": "Exit valuation distribution (post-money $B)",
+        "arrTitle": "ARR build to scenario exit (run-rate $B, est.)"
+      }
+    },
+    "print": {
+      "dcfType": "private_prevaluation",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 58.49,
+        "upsidePct": 17.0
+      },
+      "market": {
+        "marketCapBillion": 7.6,
+        "sharesOutstandingMillion": 117.0,
+        "cashBillion": 1.0,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.1,
+          "expectedPerShare": 10.78,
+          "label": "Down Round",
+          "shortLabel": "DownRnd",
+          "exitTerms": {
+            "kind": "down_round",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 3.0,
+            "exitPerShareNominal": 22.7,
+            "fdsAtExitMillion": 132,
+            "dilutionPctFromToday": 13,
+            "ventureWacc": 0.25,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.15,
+            "distressPerShare": 6.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 11.62
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.22,
+          "expectedPerShare": 18.14,
+          "label": "Stay Private",
+          "shortLabel": "StayPriv",
+          "exitTerms": {
+            "kind": "stay_private",
+            "exitYear": 2030,
+            "yearsToExit": 4.0,
+            "exitPostMoneyBillion": 5.5,
+            "exitPerShareNominal": 42.3,
+            "fdsAtExitMillion": 130,
+            "dilutionPctFromToday": 11,
+            "ventureWacc": 0.22,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.05,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 19.09
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.4,
+          "expectedPerShare": 58.8,
+          "label": "Base IPO",
+          "shortLabel": "BaseIPO",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 13.0,
+            "exitPerShareNominal": 101.6,
+            "fdsAtExitMillion": 128,
+            "dilutionPctFromToday": 9,
+            "ventureWacc": 0.2,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 58.8
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.2,
+          "expectedPerShare": 97.69,
+          "label": "Bull IPO",
+          "shortLabel": "BullIPO",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2030,
+            "yearsToExit": 4.0,
+            "exitPostMoneyBillion": 25.0,
+            "exitPerShareNominal": 189.4,
+            "fdsAtExitMillion": 132,
+            "dilutionPctFromToday": 13,
+            "ventureWacc": 0.18,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 97.69
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 129.52,
+          "label": "Ultra Bull",
+          "shortLabel": "UBull",
+          "exitTerms": {
+            "kind": "acquisition",
+            "exitYear": 2031,
+            "yearsToExit": 5.0,
+            "exitPostMoneyBillion": 40.0,
+            "exitPerShareNominal": 296.3,
+            "fdsAtExitMillion": 135,
+            "dilutionPctFromToday": 15,
+            "ventureWacc": 0.18,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 129.52
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        }
+      },
+      "private": {
+        "spotKind": "secondary_market_mark",
+        "spotAsOf": "2026-06-21",
+        "spotRound": "Secondary (vs Series H)",
+        "spotCaveat": "$50 is the secondary-market per-share (Forge ~$49.49 / Nasdaq Private ~$51.40, Jun 2026) — a ~23% discount to the ~$65/share Series H primary mark ($7.6B post-money ÷ ~117M fully-diluted). The discount to the mark IS the entry: the same exit distribution that values the mark fully is positive against $50. FDS is an estimate (undisclosed).",
+        "lastPostMoneyBillion": 7.6,
+        "fdsMillion": 117.0
+      },
+      "fundingHistory": {
+        "firstRoundMarker": "Seed '16",
+        "xMin": -10.0,
+        "rounds": [
+          {
+            "x": -10.0,
+            "ps": 1.5,
+            "name": "Series A",
+            "pm": 0.1,
+            "lead": "Sequoia"
+          },
+          {
+            "x": -9.6,
+            "ps": 3.0,
+            "name": "Series B",
+            "pm": 0.3,
+            "lead": "a16z"
+          },
+          {
+            "x": -8.2,
+            "ps": 9.0,
+            "name": "Series C",
+            "pm": 1.2,
+            "lead": "Temasek / Baillie Gifford"
+          },
+          {
+            "x": -5.0,
+            "ps": 26.0,
+            "name": "Series E",
+            "pm": 2.75,
+            "lead": "Baillie Gifford"
+          },
+          {
+            "x": -3.2,
+            "ps": 40.2,
+            "name": "Series F",
+            "pm": 4.2,
+            "lead": "a16z / Sequoia / GV"
+          },
+          {
+            "x": -0.4,
+            "ps": 65.0,
+            "name": "Series H",
+            "pm": 7.6,
+            "lead": "Fidelity / Baillie Gifford / Tiger"
+          },
+          {
+            "x": -0.05,
+            "ps": 50.0,
+            "name": "Secondary",
+            "pm": 5.85,
+            "lead": "Forge / Nasdaq Private"
+          }
+        ]
+      },
+      "competitive": {
+        "arena": "Autonomous drone logistics — Zipline vs Alphabet Wing, Amazon Prime Air, DoorDash/Flytrex, and Matternet/UPS Flight Forward; the race to own scaled, certified, low-cost last-mile delivery.\n",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 3,
+            "note": "Fleet + network density amortize fixed autonomy/ops cost; the largest live network by volume."
+          },
+          "networkEconomies": {
+            "score": 2,
+            "note": "Hub density compounds — more sites per metro lowers cost and widens coverage."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Full-stack autonomy vs incumbent van logistics; hard for asset-heavy delivery to copy."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Integrated into Walmart and health-system operations and SKUs; rip-out cost rises with depth."
+          },
+          "branding": {
+            "score": 2,
+            "note": "Trusted healthcare + retail delivery brand across seven countries."
+          },
+          "corneredResource": {
+            "score": 3,
+            "note": "Years of certified BVLOS ops + the largest live autonomous network — not quickly replicable."
+          },
+          "processPower": {
+            "score": 3,
+            "note": "Autonomy stack + droid precision engineering refined over >120M miles."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "Alphabet Wing",
+            "kind": "incumbent-division",
+            "note": "~350k deliveries vs Zipline's >2M; Alphabet balance sheet + distribution.",
+            "shareNow": 0.1,
+            "shareTerminal": 0.18,
+            "capital": "Alphabet balance sheet"
+          },
+          {
+            "name": "Amazon Prime Air",
+            "kind": "incumbent-division",
+            "note": "MK30 drone + Amazon logistics scale; slow to certify at volume.",
+            "shareNow": 0.08,
+            "shareTerminal": 0.2,
+            "capital": "Amazon balance sheet"
+          },
+          {
+            "name": "DoorDash / Flytrex",
+            "kind": "private",
+            "note": "Restaurant/retail delivery network adding drones via Flytrex.",
+            "shareNow": 0.05,
+            "shareTerminal": 0.1,
+            "capital": "$ billions"
+          },
+          {
+            "name": "Matternet / UPS Flight Forward",
+            "kind": "incumbent-division",
+            "note": "Healthcare/B2B drone routes; narrower consumer footprint.",
+            "shareNow": 0.04,
+            "shareTerminal": 0.07,
+            "capital": "UPS balance sheet"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Delivery volume / autonomous miles",
+            "company": ">2M / >120M",
+            "bestRival": "~350k",
+            "verdict": "leading"
+          },
+          {
+            "metric": "Certified BVLOS operating base",
+            "company": "7 countries, multi-year",
+            "bestRival": "limited",
+            "verdict": "leading"
+          },
+          {
+            "metric": "Balance-sheet / distribution scale",
+            "company": "~$1B cash",
+            "bestRival": "far larger",
+            "verdict": "lagging"
+          }
+        ],
+        "takeaway": "Zipline is originating a real cornered-resource position — the largest live, certified, multi-country autonomous network and a refined autonomy/droid stack — anchored by Walmart and scaling US density; it lags Alphabet and Amazon on balance-sheet and distribution scale, so the window is open while the frontier moves — whether Wing or Prime Air closes the certified-volume gap is the falsifier.\n"
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Largest autonomous network by a wide margin.",
+            "body": ">2M deliveries and >120M miles dwarf Wing's ~350k — a multi-year safety and regulatory head start rivals can't buy."
+          },
+          {
+            "label": "Walmart anchor plus a national runway.",
+            "body": "30-min delivery live across ~17 DFW cities + Atlanta, expanding to Houston, Phoenix, and five states — a named scaling customer."
+          },
+          {
+            "label": "Platform 2 droid solves precise home delivery.",
+            "body": "VTOL-to-fixed-wing lowering a tethered droid into a ~1m circle (≤8 lb, ~10-mi radius) — the unlock for dense home routes since Apr 2025."
+          },
+          {
+            "label": "Line-of-sight to $2-4/delivery.",
+            "body": "~$13.50 today; droid density targets $2-4 at scale (est.) — Chipotle delivery cost reportedly down 30-40%."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "Delivery cost stalls above ~$10 · Walmart caps the rollout · FAA BVLOS rule-making slips materially"
+          },
+          {
+            "label": "Bull validation",
+            "body": "ARR crosses ~$100M (est. target) · a confidential S-1 surfaces · Walmart goes national or droid cost reaches $2-4"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "A capability/economics miss that forces a down-round — the 'stay private' or down-round path becomes modal, inverting the discount-rate logic and depressing PV."
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "BVLOS",
+          "definition": "Beyond Visual Line of Sight — FAA authorization to fly drones past an operator's view. The regulatory gate for scaling autonomous delivery; Zipline holds multi-year operating approvals."
+        },
+        {
+          "term": "Platform 2 (droid)",
+          "definition": "Zipline's home-delivery aircraft (commercial since Apr 2025) — VTOL-to-fixed-wing that lowers a tethered, self-steering droid to place a package in a ~1m circle (≤8 lb, ~10-mi radius)."
+        },
+        {
+          "term": "Last-round mark",
+          "definition": "Per-share value implied by the latest round (post-money ÷ fully-diluted). A preferred, illiquid, single-counterparty price — not a market quote."
+        },
+        {
+          "term": "Secondary mark",
+          "definition": "Per-share price in secondary transactions (Forge / Nasdaq Private Market) between existing holders and buyers — here ~23% below the Series H primary mark."
+        },
+        {
+          "term": "Venture-WACC",
+          "definition": "The discount rate applied to a future private/IPO exit — bundles illiquidity, execution risk, and dilution overhang. The load-bearing editorial input."
+        },
+        {
+          "term": "Cornered resource",
+          "definition": "A 7-Powers source — preferential access to a coveted asset. Here, the live, certified, multi-country autonomous network rivals cannot replicate quickly."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-22_00-00",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "PYKA",
+    "slug": "pyka",
+    "company": "Pyka",
+    "exchange": "PRIVATE",
+    "category": "private-wishlist",
+    "dcfType": "Private Pre-Valuation (exit-scenario)",
+    "publishedISO": "2026-06-22",
+    "publishedLabel": "June 22, 2026",
+    "pdf": {
+      "file": "pyka-memo__v001__2026-06-22_00-00.pdf",
+      "size": "234 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$200M",
+      "shares": "50M",
+      "cash": "$0M cash, zero debt · $40M Series B Sept-2024 (Obvious Ventures); ~$88M raised total; Valuation UNDISCLOSED — ~$200M est."
+    },
+    "spot": {
+      "price": 4.0,
+      "asOf": "June 22, 2026 close"
+    },
+    "expected": {
+      "fair": 4.15,
+      "deltaPct": 3.6
+    },
+    "compound": [],
+    "taxonomy": {
+      "watchlist": "private-wishlist",
+      "watchlistName": "Private Wishlist",
+      "tier": "Med-Low",
+      "themes": [
+        "autonomous-vehicles-systems"
+      ],
+      "themeNames": [
+        "Autonomous Vehicles & Systems"
+      ],
+      "primaryTheme": "autonomous-vehicles-systems",
+      "primaryThemeName": "Autonomous Vehicles & Systems",
+      "umbrella": "mobility-aerospace",
+      "umbrellaName": "Mobility & Aerospace"
+    },
+    "ai": null,
+    "question": "Is an ESTIMATED ~$200M post-money (~$4/share, undisclosed) defensible against a probability-weighted distribution of exits over 3-6 years — for an already-flying, FAA-authorized, revenue-generating autonomous-aircraft maker facing heavy dilution and a long full-certification road?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "WIPEOUT",
+        "prob": 20,
+        "price": 0.37,
+        "headline": "Capital-starved; fire-sale.",
+        "why": "Certification stall + chronically soft orders + capital starvation is a compound 3-vector tail. Each individually 30-45% plausible for a sub-$10M-revenue, ~74-person aerospace company; joint near 20%. The dominant risk is running out of runway before full type certification — one binary, not slow erosion. Capital-efficiency and an already-shipping product temper it below a typical pre-revenue moonshot.",
+        "what": [
+          "Full type certification proves slower and dearer than aerospace history predicts. Ag and cargo orders stay soft and lumpy — the 2023 Skyports pre-commitments never firm — while DJI/XAG ag-drones compress from below and Zipline out-scales in light-payload logistics. Burn outruns a thin balance sheet; a 2028 bridge prices below the last mark, the defense pilots don't convert to programs, and the company is acqui-hired or wound down.",
+          "At a ~$60M outcome, common per share falls to ~$0.90 nominal — discounted three years at a 30% venture-WACC (illiquidity + execution + dilution overhang) and after a 35% within-scenario write-to-zero probability, expected PV is ~$0.37, roughly a tenth of the estimated mark."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "SOFT EXIT",
+        "prob": 27,
+        "price": 1.84,
+        "headline": "Modest acqui-sale; dilution bites.",
+        "why": "The modal \"executes but stays niche\" path. Conditions: the firm backlog converts, ag grows steadily, but cargo/defense stay sub-scale and two more dilutive rounds are needed before an exit. Each individually 60-75%; joint near 27%. Heavy dilution is the mechanism that turns a respectable company outcome into a sub-mark equity return — the single most important driver of this case.",
+        "what": [
+          "Pyka executes but stays a niche specialist. The Synerjet Brazil backlog delivers and ag revenue grows, but cargo and defense scale slowly and the markets prove smaller and more price-competitive than hoped. Reaching full certification and scale takes another two funding rounds; cumulative dilution runs ~70%. A strategic acquirer — an aerospace prime, an ag-equipment OEM, or a logistics player — buys the team and the regulatory position at a modest premium.",
+          "At a ~$350M outcome, common per share is ~$4.10 nominal — discounted three years at a 26% venture-WACC and after a 10% residual loss probability, expected PV is ~$1.84, well below the estimated $4.00 mark even as the company-level outcome tops it. Dilution is what erodes the per-share figure."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "BASE EXIT",
+        "prob": 30,
+        "price": 4.02,
+        "headline": "2030 strategic buy at ~$1B.",
+        "why": "Modal-good outcome. Conditions: both beachhead markets scale, the defense leg becomes a real program, the regulatory lead persists, and a strategic acquirer emerges around 2030. Each individually ~60-70%; joint near 30%. This IS the base case but not overwhelming — Pyka can slide into the soft-exit case if cargo/defense underdeliver or dilution runs ahead of the company outcome.",
+        "what": [
+          "Pyka's two beachheads both work. Pelican 2 becomes the standard autonomous ag aircraft in the Americas as the Synerjet/SLC relationships expand, cargo wins repeatable middle-mile routes, and the AFWERX/Sierra Nevada defense leg matures into a real \"RumRunner\" dual-use program. The regulatory first-mover position holds while competitors are still certifying. A strategic acquirer takes the company at a ~$1.05B post-money in 2030.",
+          "Per share at exit ≈ $9.50 nominal; PV back to today at a 24% venture-WACC over ~4 years = ~$4.02. That is ~1× the estimated $4.00 mark — the source of the \"roughly fair\" finding: a strong company outcome, but ~120% cumulative dilution lands the per-share value near today's estimate."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "BULL EXIT",
+        "prob": 15,
+        "price": 8.29,
+        "headline": "2031 buy at ~$2.8B; category leader.",
+        "why": "Requires conjunction: full type certification clears, all three markets (ag, cargo, defense) scale, vertical integration converts to a durable cost moat, and a high-value acquirer emerges by 2031. Each individually 40-55%; joint near 15%. Higher floor than a typical young-company bull because Pyka already has flying, FAA-authorized, revenue-generating product — the \"real today\" premium.",
+        "what": [
+          "Pyka becomes the category-defining autonomous electric aircraft company across ag, cargo, and contested-logistics defense. Full type certification clears, opening unrestricted commercial operation; the order book firms across continents; the Sierra Nevada / DoD relationship scales into multi-aircraft contested-logistics contracts. Vertical integration (autonomy, airframe, motors, batteries) yields a cost and iteration-speed moat as volumes rise. A prime or a major logistics buyer acquires it at a ~$2.8B post-money in 2031.",
+          "Per share at exit ≈ $22.40 nominal; PV at a 22% venture-WACC over 5 years = ~$8.29 — a ~2× outcome on the estimated mark. Higher floor than a typical venture bull because Pyka already flies, is FAA-authorized, and earns revenue that pre-revenue eVTOLs do not."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "ULTRA BULL",
+        "prob": 8,
+        "price": 14.07,
+        "headline": "Platform IPO; ~$6.5B.",
+        "why": "Tail of tails. Requires the Bull conditions AND the autonomy platform generalizing into a large defense program AND a durable regulatory moat AND a public-market window receptive to autonomous-aviation hardware. 5-10% feels right; 8% acknowledges Pyka's genuine head start (flying, FAA-authorized, revenue) without over-weighting a six-year tail.",
+        "what": [
+          "The genuine tail. Pyka's autonomy and airframe platform generalizes beyond ag and cargo — contested-logistics defense becomes a large program of record, the regulatory lead compounds into a durable moat as the FAA framework for autonomous cargo flight matures, and Pyka holds a credible option on autonomous regional passenger flight later. Revenue inflects from sub-$10M to hundreds of millions; the company IPOs in 2032 at a ~$6.5B post-money.",
+          "Per share at IPO ≈ $46.40 nominal; PV at a 22% venture-WACC over 6 years = ~$14.07 — a ~3.5× outcome on the estimated mark. Contributes the largest single slice of weighted value despite only 8% probability — compound-conditional-tail behavior typical of frontier hardware."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Private Pre-Valuation (exit-scenario). Probability weighting: Ultra Bear 20 / Bear 27 / Base 30 / Bull 15 / Ultra Bull 8. Spot price reference: June 22, 2026 close.",
+    "thesis": "Pyka is the rare autonomous-aircraft company that already flies, sells, and earns revenue — ~$7.5M est. across ag spraying (Pelican 2) and middle-mile cargo (Pelican Cargo) on four continents, FAA-authorized as the largest UAS cleared for US commercial operation, on ~$88M raised (capital-efficient versus eVTOL peers burning billions). The valuation is undisclosed, so the dominant variable is not an operating DCF but the exit distribution against an estimated mark. Real today (flying, regulated, two beachhead markets, an emerging dual-use defense leg) de-risks it versus pre-revenue eVTOLs; the bear is that it stays tiny and niche, faces a multi-year road to full type certification, and dilutes heavily. Probability-weighted PV lands near the estimated mark — a speculative option with a fat tail, where heavy dilution offsets large company-value exits. Five exit scenarios, weighted; show your work. The estimate itself is the load-bearing uncertainty.",
+    "historicalPrices": null,
+    "weightingRationale": [
+      {
+        "label": "Wipeout 20%",
+        "body": "Certification stall + soft orders + capital starvation — compound 3-vector tail."
+      },
+      {
+        "label": "Soft Exit 27%",
+        "body": "Executes but niche; ~$350M acqui-sale, ~70% dilution lands it sub-mark."
+      },
+      {
+        "label": "Base Exit 30%",
+        "body": "Modal: both beachheads scale + defense leg, ~$1B strategic buy 2030, ~1× mark."
+      },
+      {
+        "label": "Bull Exit 15%",
+        "body": "Certification clears, category leader across ag/cargo/defense; ~$2.8B 2031."
+      },
+      {
+        "label": "Ultra Bull 8%",
+        "body": "Autonomy platform generalizes + regulatory moat; ~$6.5B platform IPO 2032."
+      }
+    ],
+    "page3": {
+      "subtitle": "Funding-round history + exit-scenario distribution · no operating DCF (valuation undisclosed; revenue est.) · the estimated mark + discount rate are the load-bearing inputs",
+      "sources": "Sources: Pyka press releases, Obvious Ventures / Piva / Prelude announcements, AFWERX / Agility Prime + Sierra Nevada releases, Synerjet & Skyports announcements, FAA authorizations, TechCrunch, aggregator revenue/headcount estimates (low confidence).",
+      "chartReference": {
+        "historyYears": [
+          2023,
+          2024,
+          2025
+        ],
+        "historyArrBillion": [
+          0.004,
+          0.006,
+          0.0075
+        ],
+        "historyEmployees": [
+          40,
+          60,
+          74
+        ]
+      },
+      "chartConfig": {
+        "chartType": "funding_and_exit_fan",
+        "exitFanTitle": "Exit valuation distribution (post-money $B)",
+        "arrTitle": "Revenue build to scenario exit (est. run-rate $B)"
+      }
+    },
+    "print": {
+      "dcfType": "private_prevaluation",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 4.15,
+        "upsidePct": 3.6
+      },
+      "market": {
+        "marketCapBillion": 0.2,
+        "sharesOutstandingMillion": 50.0,
+        "cashBillion": 0.0,
+        "netDebtBillion": 0.0
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.2,
+          "expectedPerShare": 0.37,
+          "label": "Wipeout",
+          "shortLabel": "Wipeout",
+          "exitTerms": {
+            "kind": "wipeout",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 0.06,
+            "exitPerShareNominal": 0.9,
+            "fdsAtExitMillion": 65,
+            "dilutionPctFromToday": 30,
+            "ventureWacc": 0.3,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.35,
+            "distressPerShare": 0.3,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 0.41
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.27,
+          "expectedPerShare": 1.84,
+          "label": "Soft Exit",
+          "shortLabel": "SoftExit",
+          "exitTerms": {
+            "kind": "acquisition",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 0.35,
+            "exitPerShareNominal": 4.1,
+            "fdsAtExitMillion": 85,
+            "dilutionPctFromToday": 70,
+            "ventureWacc": 0.26,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.1,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 2.05
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.3,
+          "expectedPerShare": 4.02,
+          "label": "Base Exit",
+          "shortLabel": "BaseExit",
+          "exitTerms": {
+            "kind": "acquisition",
+            "exitYear": 2030,
+            "yearsToExit": 4.0,
+            "exitPostMoneyBillion": 1.05,
+            "exitPerShareNominal": 9.5,
+            "fdsAtExitMillion": 110,
+            "dilutionPctFromToday": 120,
+            "ventureWacc": 0.24,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 4.02
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.15,
+          "expectedPerShare": 8.29,
+          "label": "Bull Exit",
+          "shortLabel": "BullExit",
+          "exitTerms": {
+            "kind": "acquisition",
+            "exitYear": 2031,
+            "yearsToExit": 5.0,
+            "exitPostMoneyBillion": 2.8,
+            "exitPerShareNominal": 22.4,
+            "fdsAtExitMillion": 125,
+            "dilutionPctFromToday": 150,
+            "ventureWacc": 0.22,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 8.29
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.08,
+          "expectedPerShare": 14.07,
+          "label": "Ultra Bull",
+          "shortLabel": "UBull",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2032,
+            "yearsToExit": 6.0,
+            "exitPostMoneyBillion": 6.5,
+            "exitPerShareNominal": 46.4,
+            "fdsAtExitMillion": 140,
+            "dilutionPctFromToday": 180,
+            "ventureWacc": 0.22,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 14.07
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        }
+      },
+      "private": {
+        "spotKind": "last_round_mark",
+        "spotAsOf": "2024-09-23",
+        "spotRound": "Series B (est.)",
+        "spotCaveat": "Pyka's post-money is UNDISCLOSED. $4.00 is an ESTIMATE — a ~$200M post-money (band $150-300M) on the Sept-2024 $40M Series B ÷ ~50M est. fully-diluted shares. Treat the whole valuation as low-confidence; heavy future dilution is the key risk.",
+        "lastPostMoneyBillion": 0.2,
+        "fdsMillion": 50.0
+      },
+      "fundingHistory": {
+        "firstRoundMarker": "YC '17",
+        "xMin": -7.0,
+        "rounds": [
+          {
+            "x": -7.0,
+            "ps": 0.3,
+            "name": "Seed",
+            "pm": 0.01,
+            "lead": "Y Combinator"
+          },
+          {
+            "x": -2.2,
+            "ps": 1.5,
+            "name": "Series A",
+            "pm": 0.08,
+            "lead": "Piva / Prelude"
+          },
+          {
+            "x": 0.0,
+            "ps": 4.0,
+            "name": "Series B",
+            "pm": 0.2,
+            "lead": "Obvious Ventures"
+          }
+        ]
+      },
+      "competitive": {
+        "arena": "Autonomous electric aircraft — Pyka vs Zipline, Reliable Robotics / Merlin (autonomy), DJI / XAG (ag-drones), and eVTOL + defense primes; the race to field certified, revenue-generating autonomous flight in ag spraying and middle-mile cargo.\n",
+        "lens": "power_origination",
+        "powers": {
+          "scaleEconomies": {
+            "score": 1,
+            "note": "Tiny — ~$7.5M est. revenue, ~74 people; no volume advantage yet."
+          },
+          "networkEconomies": {
+            "score": 1,
+            "note": "Minimal; no platform network effect in ag/cargo operations."
+          },
+          "counterPositioning": {
+            "score": 2,
+            "note": "Autonomous electric flight vs incumbent piloted ag aviation — a model rivals can't easily copy."
+          },
+          "switchingCosts": {
+            "score": 2,
+            "note": "Ag-distributor relationships + integrated fleet operations create stickiness once embedded."
+          },
+          "branding": {
+            "score": 1,
+            "note": "Recognized in autonomous-aviation niche; little broad brand power."
+          },
+          "corneredResource": {
+            "score": 3,
+            "note": "The only large FAA-authorized autonomous fixed-wing electric aircraft actually selling units."
+          },
+          "processPower": {
+            "score": 3,
+            "note": "Vertically integrated autonomy, airframe, motors, and batteries — a hard-to-replicate stack."
+          }
+        },
+        "dominantPower": "cornered_resource",
+        "window": "open",
+        "rivals": [
+          {
+            "name": "Zipline",
+            "kind": "private",
+            "note": "Far larger/later (~$7.6B) but light-payload medical/retail logistics, not heavy ag/cargo.",
+            "shareNow": 0.3,
+            "shareTerminal": 0.28,
+            "capital": "~$7.6B raised"
+          },
+          {
+            "name": "Reliable Robotics / Merlin",
+            "kind": "private",
+            "note": "Autonomy retrofit for existing aircraft — automation rival, not electric airframes.",
+            "shareNow": 0.08,
+            "shareTerminal": 0.12,
+            "capital": "$ hundreds of M"
+          },
+          {
+            "name": "DJI / XAG",
+            "kind": "incumbent",
+            "note": "Small ag-spray drones from below — cheap, scaled, lower payload/range.",
+            "shareNow": 0.2,
+            "shareTerminal": 0.22,
+            "capital": "Large balance sheets"
+          },
+          {
+            "name": "eVTOL / defense primes",
+            "kind": "mixed",
+            "note": "Joby/Archer (passenger) + primes (defense logistics) — richer stories, adjacent or pre-revenue.",
+            "shareNow": 0.1,
+            "shareTerminal": 0.14,
+            "capital": "$ billions"
+          }
+        ],
+        "leadLag": [
+          {
+            "metric": "Certified, revenue-generating autonomous aircraft",
+            "company": "leading",
+            "bestRival": "behind",
+            "verdict": "leading"
+          },
+          {
+            "metric": "Scale / capital",
+            "company": "tiny (~$88M)",
+            "bestRival": "far larger",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Capital efficiency per unit of progress",
+            "company": "high",
+            "bestRival": "lower",
+            "verdict": "leading"
+          }
+        ],
+        "takeaway": "Pyka is originating a real cornered-resource and process-power position — the only large FAA-authorized autonomous electric aircraft actually selling units, vertically integrated — but it is tiny and early versus better-capitalized rivals (Zipline above, DJI/XAG below); the window is open while it leads on certification, and capital starvation before full type certification is the falsifier for whether the scarcity endures.\n"
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "Already flying, FAA-authorized, earning revenue.",
+            "body": "Largest UAS cleared for US commercial operation; ~$7.5M est. across four continents — de-risked versus pre-revenue eVTOLs."
+          },
+          {
+            "label": "Capital-efficient for aerospace.",
+            "body": "~$88M raised total versus eVTOL peers (Joby/Archer) burning billions and Zipline at ~$7.6B — far less dilution per unit of progress."
+          },
+          {
+            "label": "Two beachheads + an emerging dual-use defense leg.",
+            "body": "Ag (Pelican 2) and cargo (Pelican Cargo) today; AFWERX lease + Sierra Nevada \"RumRunner\" militarized variant for DoD contested logistics."
+          },
+          {
+            "label": "Regulatory first-mover is the moat.",
+            "body": "Operational FAA authorization while competitors are still certifying — vertically integrated autonomy, airframe, motors, and batteries."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "A bridge round below the last mark · the 2023 cargo pre-commitments lapse unconverted · DJI/XAG ag-drones take share from below · defense pilots don't become programs"
+          },
+          {
+            "label": "Bull validation",
+            "body": "Full type certification clears · the Synerjet/SLC backlog expands into repeat orders · a Sierra Nevada / DoD program of record · a priced up-round disclosing the mark"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "An actual disclosed valuation — the entire analysis is anchored to a ~$200M ESTIMATE; a real mark (above or below) resets the per-share base and the finding."
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "Pelican 2 / Pelican Spray",
+          "definition": "Pyka's autonomous all-electric ag aircraft — 300L / ~660lb payload, up to 100 ha/hr, ~$550K list; billed as the world's largest autonomous ag aircraft (Feb 2025)."
+        },
+        {
+          "term": "Pelican Cargo",
+          "definition": "Pyka's autonomous all-electric middle-mile cargo airplane — ~400lb payload, 200-mi range; billed as the world's largest zero-emission cargo airplane (Jan 2023)."
+        },
+        {
+          "term": "FAA authorization (vs type certification)",
+          "definition": "Operational clearance to fly/operate commercially under defined conditions — NOT full type certification, which is a separate multi-year road to unrestricted operation."
+        },
+        {
+          "term": "AFWERX / Agility Prime",
+          "definition": "US Air Force programs accelerating electric/autonomous aircraft; Pyka delivered Pelican Cargo on lease (2024) — the basis of the dual-use defense leg."
+        },
+        {
+          "term": "RumRunner",
+          "definition": "Militarized Pyka variant developed with Sierra Nevada Corporation (2024) for DoD contested-logistics resupply — the defense scale-up call option."
+        },
+        {
+          "term": "Last-round mark (estimated)",
+          "definition": "Per-share value implied by the latest round (post-money ÷ fully-diluted). Pyka's post-money is undisclosed, so $4.00 is an estimate, not a disclosed or market price."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-22_00-00",
+        "canonicalJsx": "public/memo_pdf.jsx"
+      }
+    }
+  },
+  {
+    "ticker": "BLGFF",
+    "slug": "blgff",
+    "company": "Baillie Gifford US Growth Trust",
+    "exchange": "LSE: USA / OTC: BLGFF",
+    "category": "fun-speculative",
+    "dcfType": "Private Pre-Valuation (exit-scenario)",
+    "publishedISO": "2026-06-22",
+    "publishedLabel": "June 22, 2026",
+    "pdf": {
+      "file": "blgff-memo__v001__2026-06-22_00-00.pdf",
+      "size": "202 KB",
+      "priorVersions": []
+    },
+    "metrics": {
+      "mktCap": "$1.13B",
+      "shares": "277M",
+      "cash": "$0M cash, $50M net debt · NAV $4.61/sh (~344p), ~2-3% discount; Saba Capital ~29% — discount-control catalyst; ~30-40% private: SpaceX 16.5%, Anthropic 7.4%"
+    },
+    "spot": {
+      "price": 4.25,
+      "asOf": "June 22, 2026 close"
+    },
+    "expected": {
+      "fair": 4.18,
+      "deltaPct": -1.6
+    },
+    "compound": [],
+    "taxonomy": {
+      "watchlist": "fun-speculative",
+      "watchlistName": "Fun / Speculative",
+      "tier": "High",
+      "themes": [
+        "investment-vehicles-funds"
+      ],
+      "themeNames": [
+        "Investment Vehicles & Funds"
+      ],
+      "primaryTheme": "investment-vehicles-funds",
+      "primaryThemeName": "Investment Vehicles & Funds",
+      "umbrella": "consumer-real-economy",
+      "umbrellaName": "Consumer & Real Economy"
+    },
+    "ai": null,
+    "question": "Is the ~2-3% discount to a 343.91p NAV defensible against a probability-weighted distribution of NAV-realization outcomes over 3-4 years — when the easy re-rating is largely spent and the NAV itself leans on illiquid private marks (SpaceX at ~2× third-party fair value)?",
+    "scenarios": [
+      {
+        "key": "ultra_bear",
+        "label": "CRASH REDUX",
+        "prob": 12,
+        "price": 2.04,
+        "headline": "Growth crash; private marks cut.",
+        "why": "A growth drawdown, a private-mark reset, and a discount re-widening are correlated — the same risk-off regime drives all three — which is why the tail is fatter than for a single binary. Each is 30-45% plausible over three years; jointly ~12%. The 5-yr annualised NAV record (+3.9% vs benchmark +14.5%) proves the 2022-style drawdown is a lived outcome here, not a hypothetical, so the a-priori sits above a typical equity fund's.",
+        "what": [
+          "A 2022 redux. US growth equities draw down hard; the SpaceX 16.5% and Anthropic 7.4% marks — already rich (BG carries SpaceX at ~$1.6T vs Morningstar's ~$780B fair value) — get written toward third-party levels as a delayed IPO or down-round resets the carry. Net gearing (~3%) amplifies the fall. Saba, having compressed the discount, either exits or shifts tactics; with buybacks no longer enough to hold it, the discount re-widens toward the ~20% it carried in 2023 and the AIC North-America peer average (~20.8%).",
+          "NAV falls to ~$3.35/sh and the discount re-opens to ~20%, so the share-price \"exit\" lands near $2.68 nominal in 2029 — discounted three years at the 9.5% fund required return, expected PV is ~$2.04/share, roughly half today. No total-loss term: a diversified equity portfolio doesn't go to zero."
+        ]
+      },
+      {
+        "key": "bear",
+        "label": "FLAT NAV",
+        "prob": 25,
+        "price": 3.08,
+        "headline": "NAV flat; discount widens to ~12%.",
+        "why": "Modal-adjacent over three years. The activist overhang makes a full 2023-style blowout unlikely, but a drift to low-teens is easy if NAV stops compounding and buyback cadence slows. The realistic lever is Saba's posture — a tender or wind-down resolves the discount, but a quiet exit re-opens it. 25% reflects that \"flat and re-widening\" is a live, often-ignored middle.",
+        "what": [
+          "The \"treads water\" path. US growth de-rates modestly and the private sleeve is held flat — no SpaceX IPO to crystallize the carry, Anthropic marks paused — so NAV ends 2029 roughly where it started. With nothing compounding and Saba's presence less decisive (or its buyback firepower spent), the discount drifts back out to ~12% — wider than today but short of the 2023 blowout, since the activist overhang still caps it below the ~20.8% peer average.",
+          "NAV holds near $4.60/sh but a ~12% discount puts the share-price exit at ~$4.05 nominal in 2029. PV at the 9.5% fund discount over three years: ~$3.08 — meaningfully below today even though NAV barely moved, because the discount, not the portfolio, does the work. This is the underappreciated outcome: you can be right on NAV and still lose on the re-rating."
+        ]
+      },
+      {
+        "key": "base",
+        "label": "COMPOUNDER",
+        "prob": 38,
+        "price": 4.38,
+        "headline": "NAV +10%/yr; discount ~5%.",
+        "why": "Modal. Conditions: US growth compounds at a mid-cycle pace, no private-mark reset, the discount holds single-digit under continued buybacks. Each individually ~65-80%; jointly ~38%. This IS the base case but not overwhelming — the trust can slide into FlatNAV if buybacks slow or into the bull cases if a SpaceX IPO crystallizes the carry.",
+        "what": [
+          "The portfolio does its job. US growth holdings — Amazon, Meta, Shopify, Nvidia, Netflix, DoorDash — compound NAV ~10%/yr, the private sleeve holds or appreciates modestly (Anthropic marks firm, SpaceX steady), and the discount settles around ~5% as Saba's buyback discipline persists without a full closure event. No re-rating windfall and no write-down — just the book working over three years, which is the honest base for a trust already trading near par.",
+          "NAV compounds from $4.61 to ~$6.05/sh by 2029; at a ~5% residual discount the share-price exit is ~$5.75 nominal. PV at the 9.5% fund discount over three years: ~$4.38 — about 3% above today. The modest premium to spot is the point: with the discount already compressed, the return now comes from NAV compounding, not the re-rating that drove the last two years."
+        ]
+      },
+      {
+        "key": "bull",
+        "label": "SPACEX IPO",
+        "prob": 18,
+        "price": 5.64,
+        "headline": "SpaceX IPO; discount → par.",
+        "why": "Requires a SpaceX IPO (or a credible secondary at/above carry) inside the window plus continued public-book compounding plus a discount that closes rather than re-opens. Each 40-60% individually; jointly ~18%. A SpaceX listing is plausibly catalytic but timing is the binary — it could slip past 2029, which pushes this into the ultra-bull's longer horizon.",
+        "what": [
+          "The private sleeve crystallizes. A SpaceX IPO (toward $1.6-1.75T) validates BG's carry rather than cutting it, the Anthropic mark continues to re-rate (it more than doubled from 3.3% to 7.4% in Apr-2026), and the public book compounds alongside. With the private marks proven and Saba's pressure intact, the discount closes to par — buybacks at a tightening discount stay NAV-accretive.",
+          "NAV reaches ~$7.40/sh by 2029 and the discount goes to ~0, so the share-price exit ≈ $7.40 nominal. PV at the 9.5% fund discount over three years: ~$5.64 — about 1.3× today. The upside is real but bounded: even crystallizing the single richest mark, the holder captures NAV compounding plus the last few points of discount, not a venture multiple."
+        ]
+      },
+      {
+        "key": "ultra",
+        "label": "BOTH IPO",
+        "prob": 7,
+        "price": 6.96,
+        "headline": "SpaceX + Anthropic IPO above carry.",
+        "why": "Tail of tails. Both anchor names listing above carry AND a strong AI tape AND the discount flipping to a premium — a four-vector conjunction over a longer horizon. 5-10% feels right; 7% acknowledges the real optionality in the SpaceX + Anthropic marks without pretending two clean IPOs above carry are likely.",
+        "what": [
+          "The genuine tail. Both anchor private names list above carry — SpaceX at the top of its range and Anthropic via its own IPO above the 7.4% mark — while the US growth book runs with a strong AI tape. The discount not only closes but flips to a small premium as the market chases a trust that just printed two private-to-public windfalls; buybacks pause as the shares trade above NAV.",
+          "NAV compounds to ~$9.5/sh and a small premium puts the four-year share-price exit near $10.0 nominal. PV at the 9.5% fund discount over four years: ~$6.96 — about 1.6× today. It contributes a meaningful slice of weighted value despite only 7% probability, but it is bounded by being a fund, not a single moonshot: the tail is two IPOs landing right, not one company going parabolic."
+        ]
+      }
+    ],
+    "methodology": "DCF framework: Private Pre-Valuation (exit-scenario). Probability weighting: Ultra Bear 12 / Bear 25 / Base 38 / Bull 18 / Ultra Bull 7. Spot price reference: June 22, 2026 close.",
+    "thesis": "USA is a closed-end US-growth trust whose share price ($4.25) sits a few points below a 343.91p NAV ($4.61). The dominant variable is not an operating DCF — there is no operating business, only a portfolio — but the NAV-realization distribution: you buy at a discount and \"exit\" by realizing NAV as the discount narrows and the book compounds over 3-4 years. The hook is the ~30-40% unlisted sleeve (27-28 names): SpaceX 16.5% and Anthropic 7.4% are ~24% of assets in two illiquid marks. Saba's ~29% activist stake has already compressed the discount from ~20% (2023) to ~2-3%, so the re-rating money is largely spent. The bear is not slow erosion but a 2022 redux — a growth drawdown plus stale private marks written down — with the discount re-widening. Probability-weighted PV lands ~$4.18, ≈ the price. The single most consequential editorial input is the private-mark realism, not the discount. Five NAV-realization scenarios, weighted; show your work.",
+    "historicalPrices": null,
+    "weightingRationale": [
+      {
+        "label": "Crash Redux 12%",
+        "body": "2022 redux — growth drawdown + private marks cut + discount re-widens to ~20%."
+      },
+      {
+        "label": "Flat NAV 25%",
+        "body": "NAV treads water; discount drifts back to ~12% if buybacks slow or Saba exits."
+      },
+      {
+        "label": "Compounder 38%",
+        "body": "Modal: NAV compounds ~10%/yr, discount holds ~5%; return is portfolio, not re-rating."
+      },
+      {
+        "label": "SpaceX IPO 18%",
+        "body": "SpaceX lists at/above carry, marks crystallize, discount closes to par."
+      },
+      {
+        "label": "Both IPO 7%",
+        "body": "SpaceX + Anthropic both IPO above carry; discount flips to a small premium."
+      }
+    ],
+    "page3": {
+      "subtitle": "NAV-per-share history + NAV-realization distribution · no operating DCF (a fund, not a business) · private-mark realism is the load-bearing input",
+      "sources": "Sources: Baillie Gifford US Growth Trust factsheets & RNS, AIC, Morningstar, Saba Capital 13D/RNS disclosures, LSE pricing, SpaceX/Anthropic secondary marks.",
+      "chartReference": {
+        "historyYears": [
+          2024,
+          2025,
+          2026
+        ],
+        "historyArrBillion": [
+          0.85,
+          1.08,
+          1.13
+        ],
+        "historyEmployees": [
+          24,
+          27,
+          28
+        ]
+      },
+      "chartConfig": {
+        "chartType": "funding_and_exit_fan",
+        "exitFanTitle": "NAV-realization distribution (per share, USD)",
+        "arrTitle": "NAV per share history (USD; marks, not raises)"
+      }
+    },
+    "print": {
+      "dcfType": "private_prevaluation",
+      "dcfPeriodYears": 5,
+      "tamBillion": null,
+      "weighted": {
+        "expected": 4.18,
+        "upsidePct": -1.6
+      },
+      "market": {
+        "marketCapBillion": 1.13,
+        "sharesOutstandingMillion": 277.0,
+        "cashBillion": 0.0,
+        "netDebtBillion": 0.05
+      },
+      "scenarios": {
+        "ultra_bear": {
+          "probability": 0.12,
+          "expectedPerShare": 2.04,
+          "label": "Crash Redux",
+          "shortLabel": "Crash",
+          "exitTerms": {
+            "kind": "down_round",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 0.93,
+            "exitPerShareNominal": 2.68,
+            "fdsAtExitMillion": 277,
+            "dilutionPctFromToday": 0,
+            "ventureWacc": 0.095,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 2.04
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bear": {
+          "probability": 0.25,
+          "expectedPerShare": 3.08,
+          "label": "Flat NAV",
+          "shortLabel": "FlatNAV",
+          "exitTerms": {
+            "kind": "stay_private",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 1.28,
+            "exitPerShareNominal": 4.05,
+            "fdsAtExitMillion": 277,
+            "dilutionPctFromToday": 0,
+            "ventureWacc": 0.095,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 3.08
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "base": {
+          "probability": 0.38,
+          "expectedPerShare": 4.38,
+          "label": "Compounder",
+          "shortLabel": "Compound",
+          "exitTerms": {
+            "kind": "stay_private",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 1.68,
+            "exitPerShareNominal": 5.75,
+            "fdsAtExitMillion": 277,
+            "dilutionPctFromToday": 0,
+            "ventureWacc": 0.095,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 4.38
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "bull": {
+          "probability": 0.18,
+          "expectedPerShare": 5.64,
+          "label": "SpaceX IPO",
+          "shortLabel": "SpcXIPO",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2029,
+            "yearsToExit": 3.0,
+            "exitPostMoneyBillion": 2.05,
+            "exitPerShareNominal": 7.4,
+            "fdsAtExitMillion": 277,
+            "dilutionPctFromToday": 0,
+            "ventureWacc": 0.095,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 5.64
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        },
+        "ultra_bull": {
+          "probability": 0.07,
+          "expectedPerShare": 6.96,
+          "label": "Both IPO",
+          "shortLabel": "BothIPO",
+          "exitTerms": {
+            "kind": "ipo",
+            "exitYear": 2030,
+            "yearsToExit": 4.0,
+            "exitPostMoneyBillion": 2.91,
+            "exitPerShareNominal": 10.0,
+            "fdsAtExitMillion": 277,
+            "dilutionPctFromToday": 0,
+            "ventureWacc": 0.095,
+            "lpHaircutPct": 0,
+            "pTotalLoss": 0.0,
+            "distressPerShare": 0.0,
+            "ipoUnderperformanceHaircutPct": 0,
+            "pvPerShare": 6.96
+          },
+          "dcfMetrics": {},
+          "dcfPath": {},
+          "chartData": {},
+          "revPerUnit": null
+        }
+      },
+      "private": {
+        "spotKind": "market_price",
+        "spotAsOf": "2026-04-24",
+        "spotRound": "NAV 343.91p (Jun-2026); ~2-3% discount",
+        "spotCaveat": "$4.25 = the 316.8p LSE share price (line \"USA\") in USD at GBP/USD ~1.34. Current NAV ~343.91p ($4.61), so the trust trades at only a ~2-3% discount to NAV — historically far wider (~20% in 2023). GBp-quoted but holds ~entirely USD assets (unhedged FX). The thin BLGFF OTC USD line is illiquid/stale; the LSE line (USA) is the real market. All per-share figures are USD-converted.",
+        "lastPostMoneyBillion": 1.13,
+        "fdsMillion": 277.0
+      },
+      "fundingHistory": {
+        "firstRoundMarker": "Launch '18",
+        "xMin": -8.0,
+        "rounds": [
+          {
+            "x": -8.0,
+            "ps": 1.49,
+            "name": "Launch",
+            "pm": 0.36,
+            "lead": "NAV at IPO"
+          },
+          {
+            "x": -3.0,
+            "ps": 2.1,
+            "name": "FY-May '23",
+            "pm": 0.55,
+            "lead": "Drawdown / ~20% disc"
+          },
+          {
+            "x": -0.6,
+            "ps": 4.4,
+            "name": "Nov '25",
+            "pm": 1.08,
+            "lead": "NAV / 6.3% disc"
+          },
+          {
+            "x": -0.2,
+            "ps": 4.55,
+            "name": "Apr '26",
+            "pm": 1.12,
+            "lead": "NAV / ~3% disc"
+          },
+          {
+            "x": 0.0,
+            "ps": 4.61,
+            "name": "Jun '26",
+            "pm": 1.13,
+            "lead": "NAV / ~2-3% disc"
+          }
+        ]
+      },
+      "appendix": {
+        "pushback": [
+          {
+            "label": "The easy re-rating is already spent.",
+            "body": "Saba compressed the discount from ~20% (2023) to ~2-3%, vs the ~20.8% AIC peer average — little discount left to harvest."
+          },
+          {
+            "label": "The private marks are rich, not conservative.",
+            "body": "BG marks SpaceX at ~$1.6T vs Morningstar's ~$780B (~2×); SpaceX + Anthropic ≈ 24% of NAV in two illiquid marks — concentration + valuation risk."
+          },
+          {
+            "label": "The 5-year record lags badly.",
+            "body": "5-yr annualised NAV +3.9% vs benchmark +14.5% (the 2022 crash); the recent recovery isn't yet a re-rating of the manager."
+          },
+          {
+            "label": "Saba is catalyst and risk in one.",
+            "body": "~29% stake forces buybacks/tenders that keep the discount tight — but a Saba exit/wind-down is the single largest re-widening trigger."
+          }
+        ],
+        "triggers": [
+          {
+            "label": "Bear validation",
+            "body": "US growth drawdown ≥20% · SpaceX/Anthropic marks written toward third-party fair value · Saba exits and the discount re-opens past ~12%"
+          },
+          {
+            "label": "Bull validation",
+            "body": "SpaceX IPO at/above carry · Anthropic mark re-rates again · discount holds ≤5% on sustained NAV-accretive buybacks"
+          },
+          {
+            "label": "Reframe needed",
+            "body": "A Saba-forced wind-down/continuation vote — converts the thesis from \"narrowing discount + compounding\" to a one-time NAV-realization event, collapsing the holding period and the distribution."
+          }
+        ]
+      },
+      "glossary": [
+        {
+          "term": "NAV (net asset value)",
+          "definition": "Per-share portfolio value (assets minus liabilities). For USA ~343.91p ($4.61) — the yardstick a closed-end fund is measured against."
+        },
+        {
+          "term": "Discount / premium to NAV",
+          "definition": "Gap between share price and NAV. USA trades ~2-3% below NAV; closing the discount is return independent of the portfolio."
+        },
+        {
+          "term": "Closed-end investment trust",
+          "definition": "A UK listed fund with a fixed share count, so the price floats on supply/demand and can diverge from NAV (unlike an open-end fund)."
+        },
+        {
+          "term": "The private sleeve / unlisted holdings",
+          "definition": "The ~30-40% of assets in unlisted companies (SpaceX, Anthropic, Stripe, Databricks), manager-valued between funding events — illiquid and mark-dependent (mandate allows up to 50%)."
+        },
+        {
+          "term": "Saba Capital (activist)",
+          "definition": "An activist holding ~29% of USA, pressing discount-control (buybacks, tenders) — both why the discount is tight and a re-widening risk if it exits."
+        }
+      ],
+      "stamp": {
+        "footerVersion": "001",
+        "footerTimestamp": "2026-06-22_00-00",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

@@ -807,6 +807,10 @@ function PortfolioPage() {
                   </li>
                 )}
               </ul>
+              <div className="color-legend">
+                <span className="cl-item"><span className="cl-swatch cl-long" />long position <span className="cl-dim">— bar width = portfolio weight</span></span>
+                <span className="cl-item"><span className="cl-swatch cl-cash" />unallocated cash</span>
+              </div>
             </>
           )}
         </div>
@@ -907,15 +911,19 @@ function PortfolioPage() {
           <h2 className="section-h">Every name, by conviction &amp; category</h2>
           <p className="matrix-intro">
             The whole book at a glance — columns are the seven watchlist categories,
-            rows are the conviction tiers (the one human input). Mega-caps and private
-            names aren't conviction-tiered, so they sit in their own band below.
+            rows are the conviction tiers (the one human input). Names a category
+            doesn't tier sit in the Untiered band. Each chip links to its memo and
+            tints by the memo's probability-weighted DCF upside.
           </p>
-          <div className="matrix-legend" aria-hidden="true">
-            <span className="ml-cap">Chip tint = probability-weighted upside</span>
-            <span className="tk tk-pos tk-legend">cheap</span>
-            <span className="tk tk-flat tk-legend">fair</span>
-            <span className="tk tk-neg tk-legend">rich</span>
-            <span className="ml-note">Crypto valued crypto-native (§16), not by DCF.</span>
+          <div className="color-legend" role="img"
+               aria-label="Key: green chip = positive DCF upside, red = negative, gray = not applicable; left rail darkness = conviction tier; crypto valued crypto-native">
+            <span className="cl-item"><span className="cl-chip tk-pos" />positive upside <span className="cl-dim">(cheap)</span></span>
+            <span className="cl-item"><span className="cl-chip tk-neg" />negative <span className="cl-dim">(rich)</span></span>
+            <span className="cl-item"><span className="cl-chip tk-flat" />n/a <span className="cl-dim">(private)</span></span>
+            <span className="cl-gap" aria-hidden="true" />
+            <span className="cl-item"><span className="cl-rail" />conviction <span className="cl-dim">— darker rail = higher</span></span>
+            <span className="cl-gap" aria-hidden="true" />
+            <span className="cl-item cl-dim">Crypto valued crypto-native (§16), not by DCF.</span>
           </div>
           <div className="matrix-scroll">
             <table className="matrix">
@@ -930,6 +938,8 @@ function PortfolioPage() {
               <tbody>
                 {MATRIX_TIERS.map(tier => {
                   const key = tier || '_none';
+                  // Hide the Untiered band once nothing is untiered (e.g. after megacaps/private get tiers).
+                  if (tier === null && !MATRIX_COLS.some(c => ((matrix[c.wl] && matrix[c.wl]['_none']) || []).length)) return null;
                   return (
                     <tr key={key} className={`matrix-row tier-${tierSlug(tier)}`}>
                       <th className="matrix-tier" scope="row">{tier || 'Untiered'}</th>
