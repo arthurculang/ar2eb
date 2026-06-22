@@ -373,10 +373,10 @@ function AboutPage() {
         <p>Publishing the same probability-weighted DCF research used internally — so the work gets read, critiqued, and improved by a smarter readership than the four walls of a private doc.</p>
 
         <h3>Method</h3>
-        <p>Probability-weighted DCFs with explicit scenarios — Bear, Base, Bull, and an Ultra Bull conditional tail. Damodaran young-company framework where the company is pre-revenue or pre-profitability; mature-company 5-year explicit DCFs with SOTP framing where significant non-operating value is present.</p>
+        <p>Probability-weighted DCFs with explicit scenarios — Bear, Base, Bull, and, where the asymmetry warrants, Ultra Bear and Ultra Bull tails. Damodaran young-company framework where the company is pre-revenue or pre-profitability; mature-company 5-year explicit DCFs, with sum-of-the-parts framing where significant non-operating value is present.</p>
 
         <h3>Cadence</h3>
-        <p>Irregular. Research is published when conviction crystallizes, not on a schedule. Expect long quiet stretches punctuated by a memo or two.</p>
+        <p>New coverage stays opportunistic — a name is published when conviction crystallizes, not on a schedule, so expect quiet stretches between first memos. Once a name is covered, though, it is re-priced on a monthly cycle: spot prices and the resulting probability-weighted findings refresh mechanically each month, while a thesis itself is rewritten only when the facts change. Every refresh is kept as version-stamped history — each memo page links its prior versions — and the conviction-weighted portfolio is tracked daily against a broad multi-asset benchmark set.</p>
 
         <div className="kv">
           <div className="k">Contact</div>
