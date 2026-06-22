@@ -608,6 +608,33 @@ competitive:
     - is why the bull (+39%) and the ultra-bear (-71%) span such a wide range on the same fact. The Audit: a genuinely strong,
     durable Power, but priced for the win - the ~30% YTD de-rate to ~30x forward FCF still embeds a premium that the modal
     case (-18%) doesn''t quite support, so the weighted finding lands -15.1%.'
+pocd:
+  people:
+    ceo: 'Tobi Lütke'
+    founder_led: true
+    tenure_years: 20
+    insider_ownership_pct: 6.1
+    capital_allocation: 'No dividend, no buyback — has never returned capital; cash funds R&D, marketable
+      securities, and equity/merchant-lending investments. The notable observable course-correction: the 2022
+      ~$2.1B Deliverr acquisition (its largest ever) was reversed in 2023, selling Shopify Logistics to Flexport
+      for a ~13% Flexport equity stake. SBC ~$546M in FY2024 (down ~30% YoY).'
+    incentive_alignment: 'US$1 salary, no cash bonus; paid in equity grants (~$20M/yr — FY2023 total comp
+      $20,000,008 = $1 cash + ~$20M equity). Carries the combined title of Chair, CEO, and Head of R&D. Alignment
+      runs through the founder stake rather than fresh cash pay.'
+    governance_flags:
+      - 'dual-class: Class B multiple-voting shares = 10 votes each (~9.5% of equity, ~51% of votes)'
+      - '2022 founder share tops Lütke up to ~40% of votes for life while he serves as director/officer/consultant — holds even if his economic stake falls to ~1.1%'
+      - 'combined Chair + CEO (also Head of R&D)'
+      - 'founder share is non-transferable; sunsets only if Lütke leaves the company'
+    key_person_risk: high
+    score: 3
+    takeaway: 'Founder-CEO holding ~6.1% economic but ~40% of the vote via Class B multiple-voting shares plus the
+      2022 founder share (which floors his voting control near 40% regardless of dilution); $1 salary, equity-paid,
+      no dividend or buyback, with the 2023 Flexport logistics divestiture as the observable capital-allocation
+      course-correction.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -15.1% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-15_06-24

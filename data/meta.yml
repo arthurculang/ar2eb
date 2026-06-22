@@ -612,6 +612,36 @@ competitive:
     privacy regulation, and above all the ~$130B/yr AI-capex ROI. The market prices that capex fear - the cheapest mega-cap
     on normalized FCF at a high-teens EV/FCF - so the DCF tests whether AI lifts ads faster than the D&A weighs: a weighted
     +14.6%, base ~+8%, a fat right tail.'
+pocd:
+  people:
+    ceo: 'Mark Zuckerberg'
+    founder_led: true
+    tenure_years: 22
+    insider_ownership_pct: 14.0
+    capital_allocation: 'Turned shareholder-return on aggressively: a $50B buyback authorization (Feb 2024)
+      on top of prior programs, with ~$29.75B of Class A repurchased in FY2024 (and ~$23B in H1 FY2025 alone),
+      plus the first-ever dividend ($0.50/quarter, initiated Feb 2024; ~$5.07B FY2024 incl. dividend
+      equivalents). M&A built the franchise (Instagram 2012, WhatsApp 2014, Oculus 2014); subsequent deals drew
+      FTC/antitrust scrutiny. Heavy R&D/capex — large multi-year AI/datacenter spend and the Reality Labs
+      segment running deep operating losses. SBC ~$16.7B FY2024 (+19% YoY).'
+    incentive_alignment: 'Pay is not the alignment lever — the founder stake is: FY2024 salary was $1 (by his
+      request), $0 bonus, $0 new equity; reported other compensation (~$27.2M) is overwhelmingly personal
+      security and aircraft costs, not incentive pay. No PSU/TSR program for the CEO (he takes no equity grants).'
+    governance_flags:
+      - 'super-voting dual-class (Class B = 10 votes vs Class A = 1) → ~61% founder voting control on ~14% economics'
+      - 'Zuckerberg owns ~99.8% of Class B — voting control is non-dilutable by outside Class A issuance'
+      - 'combined Chair + CEO (founder holds both roles)'
+      - 'controlled company under Nasdaq rules — exempt from majority-independent-board requirements (Meta opts in anyway; board majority-independent)'
+      - 'no independent shareholder check — the controller carries every shareholder vote'
+    key_person_risk: high
+    score: 2
+    takeaway: 'Founder-Chair-CEO with ~14% economics but ~61% non-dilutable voting control via Class B (10:1) —
+      outsiders cannot force change and every shareholder vote is pre-decided. Aligned through the stake (not pay:
+      $1 salary, $0 equity) and aggressive returns (a $50B buyback + the 2024 first-ever dividend), but the
+      governance offsets stack: super-voting control, combined Chair/CEO, and controlled-company status.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +14.6% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_20-19

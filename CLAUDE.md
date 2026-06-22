@@ -445,7 +445,15 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   out to 9 tickers** (founder-led RKLB/COIN/ABNB/ZM/DASH + mature UBER/ISRG/LULU/ILMN; 7pp each,
   STRICT_LAYOUT clean, observable/sourced People data, baselines green; observable scores discriminate —
   ILMN 2 post-GRAIL → ISRG/UBER/RKLB/ABNB/ZM 4). `PagePOCD` in `memo_pdf.jsx` (+ site parity in `pages.jsx`),
-  gated on a `pocd:` block, placed last so it never renumbers existing pages. Extend to more tickers as People data is sourced.
+  gated on a `pocd:` block, rendered just before the back matter. Extend to more tickers as People data is sourced.
+  - **POCD rollout batch 1 — megacaps SHIPPED to the site (2026-06-22): META, GOOGL, AMZN, NVDA, TSLA, SHOP** (+ HHH earlier = 16 with POCD now).
+    Observable People data web/SEC-sourced by 6 parallel subagents; scores discriminate as designed — **NVDA/AMZN 4** (clean single-class,
+    split or LID-mitigated governance) · **GOOGL/SHOP 3** (dual-class with mitigants) · **META/TSLA 2** (most-entrenched: META super-voting
+    +combined Chair/CEO+controlled-co; TSLA the Tornetta pay saga + related-party web + split attention). `founder_led:false` for the
+    non-founder CEOs (Pichai, Jassy, Musk). All 6 STRICT-render 7pp clean. **Site-only this batch:** the embedded site memo shows POCD from
+    `data.js`; the **PDFs + visual_baseline were NOT regenerated — this container has no poppler/pdftoppm**, so the on-disk 6pp PDFs stay in
+    sync with the baseline and refresh at the launch flip (poppler env, July 1) or a future render pass. *Open: confirm the score notches
+    (META 2 vs COIN 3 — the one subjective call) + the `founder_led` convention for control-retaining founders. Remaining ~40 memos = later batches.*
 - **Spec §15 (v036, DRAFT) — operating cadence & automation + 1 July 2026 "launch" (Arthur's ask).**
   **Monthly (22nd):** bump each re-priced ticker (= archive: grows the on-site "Prior versions" panel; replaces the `archive/YYYY-MM/` move — v042) → mechanically re-price + re-render all memos → update §12 weights →
   deploy. **Daily (after close):** track the weighted portfolio vs. a wide multi-asset benchmark set

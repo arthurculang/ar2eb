@@ -611,6 +611,33 @@ competitive:
     and China datacenter is a permanent $0. The Audit squares with the DCF: the Power is real, but the swing factor is whether
     datacenter AI capex holds or hits an air-pocket, and at ~50x FCF on ~$5T even the modal capex-holds case lands ~-23% -
     the distribution is the finding, weighted -25%.'
+pocd:
+  people:
+    ceo: 'Jensen Huang'
+    founder_led: true
+    tenure_years: 33
+    insider_ownership_pct: 3.77
+    capital_allocation: 'Buyback-led: a $50.0B authorization (Aug 2024) then an additional $60.0B (Aug 2025),
+      both no-expiration; token quarterly dividend of $0.01/share (post-10:1 split); R&D-intensive (FY2025 R&D up
+      sharply on more compute/infra and new-product engineering); SBC $4.74B in FY2025 (+33% YoY); M&A record
+      mixed — Mellanox ($6.9B, closed 2020) completed, the $40B Arm acquisition abandoned 2022 on antitrust opposition.'
+    incentive_alignment: 'FY2025 total comp $49.9M: base salary $1.5M (first raise in 10 years), non-equity
+      incentive $6.0M, stock awards $38.8M, ~$3.5M other (security, driver, vehicle). Equity granted as RSUs plus
+      PSUs tied to corporate financial-performance targets and market-condition (TSR) PSUs.'
+    governance_flags:
+      - 'single class of common stock, one vote per share; no preferred outstanding; no cumulative voting'
+      - 'Huang ~3.77% economic stake (~923M of ~24.46B shares, Mar 2025) — control rests on the operating role, not super-voting shares'
+      - 'no separate independent Chair; Huang is President & CEO and the only non-independent director — mitigated by a designated Lead Independent Director running executive sessions without the CEO'
+      - 'board of 13 with 12 independent directors'
+    key_person_risk: high
+    score: 4
+    takeaway: 'Founder-CEO since 1993 (~33-year tenure) with a ~3.77% economic stake under a clean single-class
+      one-share-one-vote structure and a 12-of-13 independent board with a Lead Independent Director; capital
+      return is buyback-led ($110B authorized across 2024-2025) with a token dividend, and Huang is the singular
+      face of strategy, so key-person concentration is high.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_20-19

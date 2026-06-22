@@ -611,6 +611,40 @@ competitive:
     (the autonomy flywheel), but the threat that dominates the cash flows is auto-multiple compression. The DCF underwrites
     only those fundamentals and lands ~-75%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
     and even full platform success lands -6% - so the ~$1.5T price embeds the moonshots succeeding, not the car business.'
+pocd:
+  people:
+    ceo: 'Elon Musk'
+    founder_led: false
+    tenure_years: 18
+    insider_ownership_pct: 13.0
+    capital_allocation: 'No dividend, no buyback in company history; cash is plowed into capex and AI/compute.
+      FY2024 capex ~$11.3B (~$5B AI); spend guided AI/robotics-tilted (~$20-25B/yr toward robotaxi, Optimus,
+      compute). The in-house Dojo supercomputer was disbanded (Aug 2025) and compute outsourced to Nvidia/AMD/Samsung.
+      Prior major M&A was the 2016 all-stock SolarCity buy (~$2.1B), a related-party deal (Musk was SolarCity
+      chairman and largest holder) upheld entirely fair by Delaware (2022/2023). Stock-based comp is large and
+      episodic via the CEO awards.'
+    incentive_alignment: 'Base salary $0 since 2019; pay is 100% milestone stock options. The 2018 CEO Performance
+      Award (options on ~304M split-adjusted shares at $23.34) hit all 12 milestones; rescinded by Delaware Chancery
+      (Tornetta v. Musk, Jan 2024, ~$56B) then reinstated by the Delaware Supreme Court (Dec 2025); Musk exercised
+      all ~304M options Jun 16 2026 (shares restricted, multi-year lockup). A 2025 interim award (96M shares) was
+      forfeited once the 2018 award delivered. A new 2025 CEO Performance Award (up to ~423.7M shares, requiring up
+      to an $8.5T market cap and milestones like 1M Optimus robots) was approved by ~75% of the vote Nov 2025.'
+    governance_flags:
+      - 'single class of stock (one share, one vote) — no super-voting; Musk ~13% direct economic stake (rises to ~20% after the Jun-2026 2018-award exercise, up to ~28-29% if all granted awards vest)'
+      - 'Delaware Chancery rescinded the 2018 award (Tornetta v. Musk, Jan 2024) finding the board not independent of Musk on pay; reversed on appeal (Dec 2025)'
+      - 'board-independence concerns: directors include brother Kimbal Musk and several long-time Musk associates; Musk + Kimbal recused from the 2025 award votes'
+      - 'Chair separated from CEO since 2018 (Robyn Denholm is Chair; Musk remains CEO)'
+      - 'related-party web among Musk entities: ~$573M of Tesla revenue from his companies in 2025 (xAI + SpaceX, per the 10-K/A)'
+      - 'Musk attention split across xAI/X, SpaceX, Neuralink, The Boring Company, and a 2025 DOGE government role (stepped down May 2025)'
+    key_person_risk: high
+    score: 2
+    takeaway: 'Founder-CEO economically concentrated (~13% direct, ~20% with the just-exercised 2018 award) on a
+      single-class register, paired with the most-litigated executive-pay record in US corporate history (the
+      Delaware Tornetta rescission then 2025 reversal; a new ~$1T award), a board with multiple Musk ties, a
+      related-party transaction web across his companies, and attention divided over xAI/SpaceX/X.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  context_ref: 'The 7 Powers analysis'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_20-19

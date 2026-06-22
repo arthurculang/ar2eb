@@ -604,6 +604,33 @@ competitive:
     overhang (DOJ search appeal, a pending ad-tech divestiture) the DCF doesn''t price. Q1''26 (Search +19%, Cloud +63%) says
     the defense is winning - but the ~28% YTD run re-rated the name to ~60x EV/FCF, so the modal case lands at spot: -21.4%,
     a durable franchise priced for the win.'
+pocd:
+  people:
+    ceo: 'Sundar Pichai'
+    founder_led: false
+    tenure_years: 6
+    insider_ownership_pct: 6.0
+    capital_allocation: 'Capital return ramping off a long no-payout history: initiated the first-ever dividend
+      April 2024 ($0.20/qtr, raised 5% to $0.21 in 2025), alongside two consecutive $70B buyback authorizations
+      (April 2024 + April 2025). Simultaneously a record capex build — FY2025 guidance raised $75B to $85B to
+      $91-93B for AI infrastructure (TPUs/GPUs, data centers). Selective tuck-in M&A; SBC a multi-billion annual cost.'
+    incentive_alignment: 'Non-founder CEO paid mostly in equity: FY2024 total comp $10.73M on a $2M base, the
+      remainder equity. PSUs granted on a ~3-year cycle (2024 was an off-grant year; the 2022 grant pushed total
+      comp to ~$226M); long-term grants carry performance/TSR conditions. Pichai holds Class A/C from comp, not
+      the super-voting Class B.'
+    governance_flags:
+      - 'triple-class: Class A (1 vote, GOOGL) · Class B (10 votes, founder-held, unlisted) · Class C (0 votes, GOOG)'
+      - 'founders Page + Brin control ~52.7% of votes via Class B (Page 27.1% + Brin 25.2%) on ~6% economics — majority voting control'
+      - 'CEO Pichai operates but holds no Class B; founders, not the CEO, hold control and cannot be outvoted by outside holders'
+      - 'public Class C (GOOG) carries no vote at all'
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Founders Page and Brin retain ~52.7% combined voting control via 10-vote Class B on roughly 6%
+      economic ownership, while non-founder CEO Pichai (Alphabet CEO since Dec 2019) runs operations; capital
+      return is ramping (first dividend 2024, repeated $70B buybacks) against a record AI capex build.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_20-19
