@@ -8088,7 +8088,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "private-wishlist",
       "watchlistName": "Private Wishlist",
-      "tier": null,
+      "tier": "High",
       "themes": [
         "ai-compute"
       ],

@@ -1028,6 +1028,30 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   color: var(--ink-2); max-width: 64ch; margin: 0 0 22px;
   font-size: 15px; line-height: 1.6;
 }
+/* ---- shared color legend (universe matrix + allocation) ---- */
+.color-legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 7px 18px;
+  margin: 0 0 18px; font-size: 12px; color: var(--ink-2);
+}
+.portfolio-allocation .color-legend { margin: 16px 0 0; }
+.color-legend .cl-item { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; }
+.color-legend .cl-dim { color: var(--muted); }
+.color-legend .cl-gap { width: 1px; align-self: center; height: 14px; background: var(--rule-2); }
+.cl-chip {
+  width: 13px; height: 13px; border-radius: var(--r-sm); flex-shrink: 0;
+  border: 1px solid var(--rule-2); border-left-width: 3px; background: #fff;
+}
+.cl-chip.tk-pos  { border-left-color: var(--pos); }
+.cl-chip.tk-neg  { border-left-color: var(--neg); }
+.cl-chip.tk-flat { border-left-color: var(--rule-2); }
+.cl-rail {
+  width: 13px; height: 13px; border-radius: 2px; flex-shrink: 0;
+  background: linear-gradient(var(--accent), rgba(61,70,184,0.16));
+}
+.cl-swatch { width: 13px; height: 13px; border-radius: var(--r-sm); flex-shrink: 0; }
+.cl-swatch.cl-long { background: var(--accent); }
+.cl-swatch.cl-cash { background: var(--paper-2); border: 1px solid var(--rule-2); }
+
 .matrix-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 table.matrix {
   border-collapse: separate; border-spacing: 0; width: 100%; min-width: 660px;
