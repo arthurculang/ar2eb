@@ -21,7 +21,7 @@ market:
   - 'Lead: Lightspeed; Google, Salesforce, Amazon participating'
 taxonomy:
   watchlist: private-wishlist
-  tier: null
+  tier: High
   themes:
   - ai-compute
   primary_theme: ai-compute

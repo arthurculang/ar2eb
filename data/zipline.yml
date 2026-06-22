@@ -1,0 +1,392 @@
+ticker: ZIPLINE
+company: Zipline
+exchange: PRIVATE
+dcf_type: private_prevaluation
+date: 2026-06-22
+spot: 50.0
+spot_kind: secondary_market_mark
+spot_as_of: '2026-06-21'
+spot_round: Secondary (vs Series H)
+spot_caveat: '$50 is the secondary-market per-share (Forge ~$49.49 / Nasdaq Private ~$51.40, Jun 2026) — a ~23% discount to
+  the ~$65/share Series H primary mark ($7.6B post-money ÷ ~117M fully-diluted). The discount to the mark IS the entry: the
+  same exit distribution that values the mark fully is positive against $50. FDS is an estimate (undisclosed).
+
+  '
+market:
+  market_cap_billion: 7.6
+  shares_outstanding_million: 117
+  cash_billion: 1.0
+  net_debt_billion: 0.0
+  extras:
+  - Series H $7.6B post-money (Jan/Mar 2026)
+  - Secondaries ~$50/sh — a ~23% discount to the mark
+taxonomy:
+  watchlist: private-wishlist
+  tier: High
+  themes:
+  - autonomous-vehicles-systems
+  primary_theme: autonomous-vehicles-systems
+central_question: 'Is the Series H $7.6B mark (~$65/share) defensible against a probability-weighted exit distribution over
+  3-5 years — and, given secondaries already trade ~23% under the mark at ~$50, is the discount itself the opportunity?
+
+  '
+thesis: 'Zipline runs the world''s largest autonomous logistics network — >2M commercial deliveries and >120M autonomous miles
+  by Jan 2026, US volume now exceeding the rest of the world combined and growing ~15%/week for ~7 months. The dominant variable
+  in valuing the equity today is not an operating DCF (revenue is undisclosed, ~$50M ARR is an estimate) but the exit distribution:
+  an IPO between 2029 and 2030 at $13-25B is the modal good outcome (PitchBook puts IPO likelihood ~97%; the Series H crossover
+  syndicate — Fidelity, Tiger — is the classic pre-IPO setup). The Walmart anchor plus the Platform 2 droid (precise ~1m home
+  delivery, commercial since Apr 2025) give it a line-of-sight to $2-4/delivery from ~$13.50 today. The bear is not erosion
+  but capital intensity meeting unproven scale economics, FAA BVLOS dependency, and heavyweight competition. Probability-weighted
+  PV lands near $58 — above the ~$50 secondary, below the ~$65 mark. The load-bearing input is the discount rate, not the
+  exit valuations. Five exit scenarios, weighted; show your work.
+
+  '
+funding_history:
+  first_round_marker: Seed '16
+  x_min: -10.0
+  rounds:
+  - x: -10.0
+    ps: 1.5
+    name: Series A
+    pm: 0.1
+    lead: Sequoia
+  - x: -9.6
+    ps: 3.0
+    name: Series B
+    pm: 0.3
+    lead: a16z
+  - x: -8.2
+    ps: 9.0
+    name: Series C
+    pm: 1.2
+    lead: Temasek / Baillie Gifford
+  - x: -5.0
+    ps: 26.0
+    name: Series E
+    pm: 2.75
+    lead: Baillie Gifford
+  - x: -3.2
+    ps: 40.2
+    name: Series F
+    pm: 4.2
+    lead: a16z / Sequoia / GV
+  - x: -0.4
+    ps: 65.0
+    name: Series H
+    pm: 7.6
+    lead: Fidelity / Baillie Gifford / Tiger
+  - x: -0.05
+    ps: 50.0
+    name: Secondary
+    pm: 5.85
+    lead: Forge / Nasdaq Private
+chart_reference:
+  history_years:
+  - 2024
+  - 2025
+  - 2026
+  history_arr_billion:
+  - 0.03
+  - 0.05
+  - 0.08
+  history_employees:
+  - 700
+  - 900
+  - 1200
+page3_chart_config:
+  chart_type: funding_and_exit_fan
+  exit_fan_title: Exit valuation distribution (post-money $B)
+  arr_title: ARR build to scenario exit (run-rate $B, est.)
+scenarios:
+  ultra_bear:
+    label: Down Round
+    short_label: DownRnd
+    probability: 0.1
+    headline: Scale economics fail; down-round.
+    narrative:
+    - 'Unit economics stall above ~$13/delivery — the droid fleet doesn''t hit the density that drives cost toward $2-4, and
+      a capital-intensive build (~$1.8B raised) collides with a tighter funding market. FAA BVLOS rule-making slows the US
+      expansion; Walmart caps the rollout at a handful of metros rather than five states. Alphabet Wing and Amazon Prime Air
+      undercut on subsidized economics. A planned 2029 listing is pulled; a bridge round prices below the Series H mark, triggering
+      dilution and a quiet strategic sale.
+
+      '
+    - 'At the resulting $3B post-money, common-equity per share falls to ~$22.7 nominal — discounted three years at a 25% venture-WACC
+      (illiquidity + execution + dilution), and after a 15% within-scenario write-to-zero probability, expected PV is ~$10.8/share,
+      roughly a fifth of the secondary.
+
+      '
+    - 'Scale-economics failure + funding-market tightening + regulatory delay is a compound event sized at ~10%.
+
+      '
+    probability_rationale: 'Cost-curve failure + a capital-market squeeze + BVLOS delay is a compound 3-vector event. Each
+      individually 20-35% over three years; joint at ~10%. The dominant risk for a pre-profit hardware-logistics network is
+      that scale economies never arrive before the cash does — one binary, not slow erosion. The live >2M-delivery base and
+      net-cash balance sheet keep this off the modal path.
+
+      '
+    exit_terms:
+      kind: down_round
+      exit_year: 2029
+      years_to_exit: 3.0
+      exit_post_money_billion: 3.0
+      exit_per_share_nominal: 22.7
+      fds_at_exit_million: 132
+      dilution_pct_from_today: 13
+      venture_wacc: 0.25
+      lp_haircut_pct: 0
+      p_total_loss: 0.15
+      distress_per_share: 6.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 11.62
+    expected_per_share: 10.78
+  bear:
+    label: Stay Private
+    short_label: StayPriv
+    probability: 0.22
+    headline: Stays private 4y+; no liquidity.
+    narrative:
+    - 'The "stays private" path. Zipline raises one or two more growth rounds at marks that grow modestly — a Series I around
+      $5.5B by 2030 — but no IPO appears credible (a depressed listing window, BVLOS scale-up taking longer than planned, or
+      a decision that public-market quarterly pressure conflicts with the long build-out). Secondaries create episodic liquidity
+      at steep discounts to the mark.
+
+      '
+    - 'The network is real — deliveries compound and the droid scales — but without an IPO catalyst the holder faces ~4 years
+      of illiquidity and dilution. PV at a 22% venture discount: ~$19, below both the secondary and the mark even as the nominal
+      round price grows. This is the underappreciated outcome for a capital-intensive private.
+
+      '
+    - 'Stripe is the canonical case: a rich mark, no IPO years later.
+
+      '
+    probability_rationale: 'Stripe is the analog: a high mark and no IPO years on. A capital-intensive network can keep raising
+      from crossover funds without a listing if the window stays shut. Plausible over 4 years but not over 5+; eventually holders
+      demand liquidity and the ~97% IPO-likelihood read reasserts. 22% reflects the real chance the build simply takes longer
+      than the market window allows.
+
+      '
+    exit_terms:
+      kind: stay_private
+      exit_year: 2030
+      years_to_exit: 4.0
+      exit_post_money_billion: 5.5
+      exit_per_share_nominal: 42.3
+      fds_at_exit_million: 130
+      dilution_pct_from_today: 11
+      venture_wacc: 0.22
+      lp_haircut_pct: 0
+      p_total_loss: 0.05
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 19.09
+    expected_per_share: 18.14
+  base:
+    label: Base IPO
+    short_label: BaseIPO
+    probability: 0.4
+    headline: 2029 IPO at $13B; ~1.7× secondary.
+    narrative:
+    - 'Zipline IPOs in 2029 on the back of a US-density inflection — Walmart scaling past DFW and Atlanta into Houston, Phoenix,
+      and five states, the State Dept partnership tripling African healthcare facilities, and the Platform 2 droid proving
+      precise home delivery at volume. Lead underwriters anchor a $13B post-money — roughly 1.7× the Series H valuation — reflecting
+      delivery growth, the largest live autonomous network, and a re-opened logistics-tech IPO window.
+
+      '
+    - 'Per-share at IPO ≈ $101.6 nominal. PV back to today at a 20% venture-WACC over ~3 years = ~$58.8 — above the ~$50 secondary
+      and near the ~$65 mark. That is why secondary buyers paying ~$50 capture the discount: the modal good outcome already
+      clears the entry price.
+
+      '
+    - 'Modal outcome; the US density curve is the variable.
+
+      '
+    probability_rationale: 'Modal outcome. Conditions: US delivery growth holds through 2027-2028; the droid economics trend
+      toward target; the FAA BVLOS framework matures; the logistics-IPO window opens. Each individually ~65-80%; joint ~40%.
+      40% reflects that this IS the base case but the US-density ramp and BVLOS timing could push it into stay_private or pull
+      it toward the bull.
+
+      '
+    exit_terms:
+      kind: ipo
+      exit_year: 2029
+      years_to_exit: 3.0
+      exit_post_money_billion: 13.0
+      exit_per_share_nominal: 101.6
+      fds_at_exit_million: 128
+      dilution_pct_from_today: 9
+      venture_wacc: 0.2
+      lp_haircut_pct: 0
+      p_total_loss: 0.0
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 58.80
+    expected_per_share: 58.80
+  bull:
+    label: Bull IPO
+    short_label: BullIPO
+    probability: 0.2
+    headline: 2030 IPO at $25B; network compounds.
+    narrative:
+    - 'Zipline''s network advantage consolidates. The droid drives delivery cost to the low end of the $2-4 range, Walmart
+      goes national, Chipotle/Sweetgreen and the health systems (Cleveland Clinic, Mayo, Advocate, Intermountain) deepen, and
+      the seven-country footprint compounds. The business looks like a logistics platform with software-like unit economics
+      rather than a drone start-up. A 2030 IPO at $25B reflects scaled volume and multiple expansion.
+
+      '
+    - 'Per-share at IPO ≈ $189.4 nominal; PV at 18% over 4 years = ~$97.7. A ~2× outcome on the secondary — material upside
+      that justifies paying through the discount today.
+
+      '
+    - 'Higher floor than a typical venture bull because Zipline already has the largest live network and a named anchor in
+      Walmart.
+
+      '
+    probability_rationale: 'Requires conjunction: the cost curve reaches $2-4; Walmart scales nationally; the droid sustains
+      precise home delivery at volume; the 2030 IPO window receives the cohort favorably. Each 40-55% individually; joint ~20%.
+      Higher floor than a typical young-company bull because the network and anchor customer already exist.
+
+      '
+    exit_terms:
+      kind: ipo
+      exit_year: 2030
+      years_to_exit: 4.0
+      exit_post_money_billion: 25.0
+      exit_per_share_nominal: 189.4
+      fds_at_exit_million: 132
+      dilution_pct_from_today: 13
+      venture_wacc: 0.18
+      lp_haircut_pct: 0
+      p_total_loss: 0.0
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 97.69
+    expected_per_share: 97.69
+  ultra_bull:
+    label: Ultra Bull
+    short_label: UBull
+    probability: 0.08
+    headline: Default delivery layer; $40B acquisition.
+    narrative:
+    - 'The genuine tail. Zipline becomes the default autonomous last-mile layer — the droid network is to delivery what a utility
+      is to power. Walmart, the QSR partners, and health systems route a structural share of last-mile through it; the seven-country
+      base compounds and new geographies open. A strategic acquirer (a retailer, a logistics incumbent, or a cloud/autonomy
+      platform) pays $40B in 2031 to own the rails rather than rebuild them.
+
+      '
+    - 'Per-share ≈ $296.3 nominal; PV at 18% over 5 years = ~$129.5 — a ~2.6× outcome on the secondary. Contributes an outsized
+      slice of weighted value despite only 8% probability — compound-conditional-tail behavior.
+
+      '
+    - 'Tail of tails; acknowledges the multi-year safety/regulatory head start in BVLOS operations.
+
+      '
+    probability_rationale: 'Tail of tails. Each Bull condition AND the cost curve clearing decisively AND a multi-year regulatory/safety
+      moat that makes the network the category default AND a strategic acquirer willing to pay for the rails. 5-10% feels right;
+      8% acknowledges the real BVLOS head start without over-weighting the tail.
+
+      '
+    exit_terms:
+      kind: acquisition
+      exit_year: 2031
+      years_to_exit: 5.0
+      exit_post_money_billion: 40.0
+      exit_per_share_nominal: 296.3
+      fds_at_exit_million: 135
+      dilution_pct_from_today: 15
+      venture_wacc: 0.18
+      lp_haircut_pct: 0
+      p_total_loss: 0.0
+      distress_per_share: 0.0
+      ipo_underperformance_haircut_pct: 0
+      pv_per_share: 129.52
+    expected_per_share: 129.52
+weighting_rationale:
+- label: Down Round 10%
+  body: Scale economics fail + funding squeeze + BVLOS delay — compound 3-vector tail.
+- label: Stay Private 22%
+  body: 'Stripe analog: capital-intensive build stays private, holders illiquid.'
+- label: Base IPO 40%
+  body: 'Modal: 2029 IPO at ~$13B, ~1.7× last-round, on US-density inflection.'
+- label: Bull IPO 20%
+  body: Cost curve hits $2-4, Walmart national, $25B IPO 2030.
+- label: Ultra Bull 8%
+  body: Default last-mile layer; $40B strategic acquisition for the rails.
+page3:
+  subtitle: Funding-round history + exit-scenario distribution  ·  no operating-business DCF (revenue undisclosed)  ·  discount
+    rate is the load-bearing input
+  sources: 'Sources: PitchBook, Forge, Nasdaq Private Market, TechCrunch, Bloomberg, Zipline blog, Walmart/State Dept announcements.'
+appendix:
+  pushback:
+  - label: Largest autonomous network by a wide margin.
+    body: '>2M deliveries and >120M miles dwarf Wing''s ~350k — a multi-year safety and regulatory head start rivals can''t buy.'
+  - label: Walmart anchor plus a national runway.
+    body: 30-min delivery live across ~17 DFW cities + Atlanta, expanding to Houston, Phoenix, and five states — a named scaling customer.
+  - label: Platform 2 droid solves precise home delivery.
+    body: VTOL-to-fixed-wing lowering a tethered droid into a ~1m circle (≤8 lb, ~10-mi radius) — the unlock for dense home routes since Apr 2025.
+  - label: Line-of-sight to $2-4/delivery.
+    body: ~$13.50 today; droid density targets $2-4 at scale (est.) — Chipotle delivery cost reportedly down 30-40%.
+  triggers:
+  - label: Bear validation
+    body: Delivery cost stalls above ~$10  ·  Walmart caps the rollout  ·  FAA BVLOS rule-making slips materially
+  - label: Bull validation
+    body: ARR crosses ~$100M (est. target)  ·  a confidential S-1 surfaces  ·  Walmart goes national or droid cost reaches $2-4
+  - label: Reframe needed
+    body: A capability/economics miss that forces a down-round — the 'stay private' or down-round path becomes modal, inverting the discount-rate logic and depressing PV.
+glossary:
+- term: BVLOS
+  definition: Beyond Visual Line of Sight — FAA authorization to fly drones past an operator's view. The regulatory gate for
+    scaling autonomous delivery; Zipline holds multi-year operating approvals.
+- term: Platform 2 (droid)
+  definition: Zipline's home-delivery aircraft (commercial since Apr 2025) — VTOL-to-fixed-wing that lowers a tethered, self-steering
+    droid to place a package in a ~1m circle (≤8 lb, ~10-mi radius).
+- term: Last-round mark
+  definition: Per-share value implied by the latest round (post-money ÷ fully-diluted). A preferred, illiquid, single-counterparty
+    price — not a market quote.
+- term: Secondary mark
+  definition: Per-share price in secondary transactions (Forge / Nasdaq Private Market) between existing holders and buyers
+    — here ~23% below the Series H primary mark.
+- term: Venture-WACC
+  definition: The discount rate applied to a future private/IPO exit — bundles illiquidity, execution risk, and dilution overhang.
+    The load-bearing editorial input.
+- term: Cornered resource
+  definition: A 7-Powers source — preferential access to a coveted asset. Here, the live, certified, multi-country autonomous
+    network rivals cannot replicate quickly.
+stamp:
+  footer_version: "001"
+  footer_timestamp: "2026-06-22_00-00"
+  canonical_jsx: public/memo_pdf.jsx
+  pdf_version: "001"
+  pdf_timestamp: "2026-06-22_00-00"
+# ═════════════════════════════════════════════════════════════════════════════
+# Page 4 — Competitive landscape (§6d). Power Origination lens (private_prevaluation).
+# ═════════════════════════════════════════════════════════════════════════════
+competitive:
+  arena: >
+    Autonomous drone logistics — Zipline vs Alphabet Wing, Amazon Prime Air, DoorDash/Flytrex,
+    and Matternet/UPS Flight Forward; the race to own scaled, certified, low-cost last-mile delivery.
+  lens: power_origination
+  powers:
+    scale_economies:     { score: 3, note: "Fleet + network density amortize fixed autonomy/ops cost; the largest live network by volume." }
+    network_economies:   { score: 2, note: "Hub density compounds — more sites per metro lowers cost and widens coverage." }
+    counter_positioning: { score: 2, note: "Full-stack autonomy vs incumbent van logistics; hard for asset-heavy delivery to copy." }
+    switching_costs:     { score: 2, note: "Integrated into Walmart and health-system operations and SKUs; rip-out cost rises with depth." }
+    branding:            { score: 2, note: "Trusted healthcare + retail delivery brand across seven countries." }
+    cornered_resource:   { score: 3, note: "Years of certified BVLOS ops + the largest live autonomous network — not quickly replicable." }
+    process_power:       { score: 3, note: "Autonomy stack + droid precision engineering refined over >120M miles." }
+  dominant_power: cornered_resource
+  window: open
+  rivals:
+    - { name: "Alphabet Wing", kind: incumbent-division, note: "~350k deliveries vs Zipline's >2M; Alphabet balance sheet + distribution.", share_now: 0.10, share_terminal: 0.18, capital: "Alphabet balance sheet" }
+    - { name: "Amazon Prime Air", kind: incumbent-division, note: "MK30 drone + Amazon logistics scale; slow to certify at volume.", share_now: 0.08, share_terminal: 0.20, capital: "Amazon balance sheet" }
+    - { name: "DoorDash / Flytrex", kind: private, note: "Restaurant/retail delivery network adding drones via Flytrex.", share_now: 0.05, share_terminal: 0.10, capital: "$ billions" }
+    - { name: "Matternet / UPS Flight Forward", kind: incumbent-division, note: "Healthcare/B2B drone routes; narrower consumer footprint.", share_now: 0.04, share_terminal: 0.07, capital: "UPS balance sheet" }
+  lead_lag:
+    - { metric: "Delivery volume / autonomous miles", company: ">2M / >120M", best_rival: "~350k", verdict: leading }
+    - { metric: "Certified BVLOS operating base", company: "7 countries, multi-year", best_rival: "limited", verdict: leading }
+    - { metric: "Balance-sheet / distribution scale", company: "~$1B cash", best_rival: "far larger", verdict: lagging }
+  takeaway: >
+    Zipline is originating a real cornered-resource position — the largest live, certified, multi-country
+    autonomous network and a refined autonomy/droid stack — anchored by Walmart and scaling US density;
+    it lags Alphabet and Amazon on balance-sheet and distribution scale, so the window is open while the
+    frontier moves — whether Wing or Prime Air closes the certified-volume gap is the falsifier.
