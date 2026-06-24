@@ -457,8 +457,9 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   - **POCD rollout batch 2 — tracked holdings (2026-06-22): NAUT, YETI, CROX, CART, CAI shipped to the site** (+these = 21 with POCD).
     Scores: **NAUT/YETI/CROX 4** (NAUT single-class + founder buying; YETI professionalized single-class, founders off-board; CROX clean single-class
     + buybacks, HEYDUDE-impairment offset) · **CART 3** (clean single-class but brand-new combined Chair/CEO Chris Rogers + concentrated VC board) ·
-    **CAI 3** (founder Halbert ~44% econ / ~80-88% vote via Class B, offset by an FCF inflection + new $100M buyback + fully-independent committees;
-    note: the prior CLAUDE.md "~42% vote" was actually his *economic* stake — voting is super-majority via Class B).
+    **CAI 3** (founder Halbert ~44% econ ≈ vote on a clean SINGLE-class one-vote register — combined Chair/CEO + 44% concentration the flags; FCF
+    inflection + new $100M buyback + fully-independent committees keep it off a 2. *Verification caught an error: the first agent's "Class B 10-vote /
+    ~80-88% vote / controlled-company" was S-1 boilerplate bleed — primary XBRL + Exhibit 4.2 confirm single-class, one vote/share, likely NOT a controlled company.*)
     Site-only (same poppler caveat as batch 1). **GRAL HELD from the batch — and flagged: thesis-changing event the committed memo predates** —
     NHS-Galleri MISSED its primary endpoint (Feb 2026), stock ~$100→~$50, CEO changed (Ragusa→Ofman); GRAL is a ~4.2% tracked holding so the stale
     +9%/$73 finding mis-sizes the book → needs a re-research/re-price (not just POCD) before adding its scorecard.

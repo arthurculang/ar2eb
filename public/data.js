@@ -47365,16 +47365,16 @@ const MEMOS = [
           "capitalAllocation": "IPO'd Jun-2025 at $21.00, raising ~$494M gross (23.5M Class A shares); FY2025 cash & equivalents jumped to $796.3M (from $64.0M FY24), ~$418M net cash. The inflection: FY2025 operating cash flow turned positive at +$83.2M (vs -$245.2M FY24) and, against ~$16.3M capex, free cash flow went positive ~+$67M near GAAP breakeven. R&D $101.6M FY25. No dividend; first capital return came post-period — a $100M buyback authorized Jun-2026. SBC $70.0M FY25 (up from $18.6M FY24, IPO-driven), which flatters adjusted EBITDA.",
           "incentiveAlignment": "FY2025 total compensation ~$20.35M, ~96% equity/option awards granted around the June 2025 IPO and only ~3.8% (~$0.77M) base salary — a normal salary, not a nominal $1. The dominant alignment lever is the founder stake (~44% economic, ~$2.3B at the FY2025 price), not annual cash pay.",
           "governanceFlags": [
-            "super-voting dual-class: Class A = 1 vote, Class B = 10 votes (converts to Class A on transfer)",
-            "founder David Halbert holds ~44% economically (almost all Class B) → an estimated ~80-88% of voting power (exact figure redacted in accessible filings)",
-            "directors, officers + 5%+ holders together owned ~66% economically at IPO (a controlling voting bloc on a Class-B basis)",
+            "single class of common stock, one vote per share (no dual-class / super-voting) — per the Exhibit 4.2 description of securities and SEC XBRL (one common class, ~2.8B authorized, no Class A/B split)",
+            "founder David Halbert is the largest holder at ~44% economically and, single-class, ~44% of the vote — effective controlling influence but below an outright majority",
             "combined Founder + Chairman + CEO (Halbert holds all three roles)",
-            "controlled company under Nasdaq rules — qualifies but does NOT rely on the exemptions: majority-independent board, fully independent Audit + Compensation committees, lead independent director (Peter Castleman)",
+            "directors, officers + 5%+ holders together held ~66% economically at IPO; a pre-IPO voting agreement (Apr 2025: Halbert + Sixth Street + J.H. Whitney + Highland) — unverified whether it survived the IPO",
+            "governance complies as if independent: majority-independent board, fully independent Audit + Compensation committees, lead independent director (Peter Castleman); likely NOT a Nasdaq controlled company (no confirmed >50% voting bloc)",
             "family/related-party: Jon Halbert (AdvancePCS co-founder) on the board since 2014"
           ],
           "keyPersonRisk": "high",
           "score": 3,
-          "takeaway": "Founder-Chair-CEO with ~44% economics but, via Class B 10-vote stock, an estimated ~80-88% of the vote — outsiders cannot force change; aligned through the stake (FY2025 pay ~96% IPO equity on a normal salary) and a fresh +$67M FCF inflection plus a new $100M buyback, offset by combined Chair/CEO, controlled-company status (committees independent anyway), and a related family director."
+          "takeaway": "Founder-Chair-CEO Halbert is the largest holder at ~44% economic on a clean single-class one-share-one-vote register (so ~44% of the vote, not a super-majority) — effective controlling influence below an outright majority; aligned through the stake (FY2025 pay ~96% IPO equity on a normal salary) and a fresh +$67M FCF inflection plus a new $100M buyback, with combined Chair/CEO and a family director the main governance offsets."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
