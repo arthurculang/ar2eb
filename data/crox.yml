@@ -603,6 +603,35 @@ competitive:
     the downside is de-risked and the brand re-rate is the upside. That squares with the +56.8% finding: at ~9x EV/FCF the
     market prices a fading business, while the normalized cash flow of a still-growing core brand underwrites materially more
     — the flat consolidated optics, not the cash, are the discount.'
+pocd:
+  people:
+    ceo: 'Andrew Rees'
+    founder_led: false
+    tenure_years: 9
+    insider_ownership_pct: 3.1
+    capital_allocation: 'No dividend; capital returned almost entirely via buyback — ~$2.97B / 56.4M shares
+      repurchased program-to-date (~82% of authorization), incl. $577M / 6.5M sh in FY25 and >$550M in FY24,
+      $747M remaining at YE25. The 2022 HEYDUDE acquisition (~$2.5B, debt-funded) is the one large M&A move; the
+      company has since deleveraged (~$320M paid down in FY24) but still carries ~$1.3B borrowings (Q1-2026) vs
+      ~$0.13B cash. HEYDUDE was written down $737M in Q2-2025 ($430M trademark + $307M goodwill) as the brand
+      declined ~13% — a non-cash impairment of an acquisition Rees led.'
+    incentive_alignment: 'FY25 CEO total comp $10.96M (down ~13% YoY); ~90% at-risk — base ~$1.1M, the remainder
+      equity + non-equity incentive, no stock options. LTIP PSUs earned on Adjusted-EBIT operating-margin and
+      three one-year adjusted-revenue targets (2025-2027), with a 3-yr relative-TSR modifier on the whole award
+      (the 2025 EBIT-margin PSU paid at 97.1%). Hedging/pledging prohibited; clawback policy in place.'
+    governance_flags:
+      - 'single class of common stock, one vote per share (no dual-class)'
+      - 'independent Chair (Thomas Smach, director since 2005) separate from the CEO; board of 9, majority independent'
+      - 'classified / staggered board (three classes, three-year terms) — a takeover-defense flag'
+      - 'directors + officers as a group (14) own 3.1% (Rees ~2.5%); no activist campaign on record'
+    key_person_risk: medium
+    score: 4
+    takeaway: 'Clean single-class governance, an independent chair, ~90%-at-risk PSU / relative-TSR pay and
+      aggressive buybacks, modestly offset by the debt-funded HEYDUDE acquisition that required a $737M impairment
+      and a classified board.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-15_06-53
