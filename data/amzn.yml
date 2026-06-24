@@ -611,6 +611,37 @@ competitive:
     and whether AWS AI demand earns its cost of capital before rivals erode growth. That squares with the DCF: the franchise
     isn''t in question, the return on the build is, and the modal case lands ~-12% (roughly fair) because spot already assumes
     the capex monetizes and FCF normalizes off the FY25 trough.'
+pocd:
+  people:
+    ceo: 'Andy Jassy'
+    founder_led: false
+    tenure_years: 5
+    insider_ownership_pct: 9.0
+    capital_allocation: 'No dividend ever paid; the sole return program is a $10B buyback authorization (March
+      2022, no expiration) that has gone largely unused — ~$6.1B still remaining in 2025, no repurchases in the
+      quarters ended March 2024 or 2025. Cash is reinvested instead: FY2025 capex $128.3B (vs $77.7B FY2024, the
+      step driven by AI/AWS infrastructure), ~$200B guided for FY2026; D&A $41.9B FY2025. SBC $19.5B FY2025
+      (down ~12% YoY). M&A: MGM ($8.5B, closed Mar 2022), One Medical ($3.9B, closed Feb 2023); the iRobot deal
+      was terminated Jan 2024 ($94M break fee paid).'
+    incentive_alignment: 'No new annual equity grant — no RSU award since 2021. Pay rests on a single 10-year
+      grant made when he became CEO in 2021 (originally valued ~$212M), vesting through 2031 on a fixed schedule
+      regardless of stock performance. FY2024 realized comp ~$40.1M (that grant vesting plus stock appreciation);
+      the FY2025 Summary Comp Table figure was ~$2.1M (base ~$365K plus security/travel) since no new award was
+      made. Heavily equity-front-loaded, time-based.'
+    governance_flags:
+      - 'single-class common stock (one share, one vote) — no dual-class / super-voting, a structural positive vs the dual-class mega-cap peers'
+      - 'founder Jeff Bezos is Executive Chair (stepped down as CEO July 2021); Chair and CEO roles are split'
+      - 'Bezos beneficially owns ~9% — fell below 10% for the first time in 2025 via scheduled sales'
+      - 'Jamie Gorelick is lead independent director; majority-independent board'
+    key_person_risk: medium
+    score: 4
+    takeaway: 'Andy Jassy has been CEO since July 2021 and founder Jeff Bezos is Executive Chair holding ~9%, on
+      a clean single-class one-share-one-vote register with a split Chair/CEO structure and a lead independent
+      director; capital is directed to reinvestment (FY2025 capex $128.3B, ~$200B guided 2026) over capital
+      return — no dividend and a largely-unused buyback.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_20-19

@@ -20915,6 +20915,29 @@ const MEMOS = [
         ],
         "takeaway": "Meta's network-economies Power is genuinely durable (high): the 3B+ social graph compounds, reinforced by scale across a ~$200B ad base and the Instagram/WhatsApp brands - and Q1'26's accelerating ads show the engine isn't decelerating. The Audit: network economies dominates, scale and branding reinforce it, and the live threats are TikTok's pull on attention, privacy regulation, and above all the ~$130B/yr AI-capex ROI. The market prices that capex fear - the cheapest mega-cap on normalized FCF at a high-teens EV/FCF - so the DCF tests whether AI lifts ads faster than the D&A weighs: a weighted +14.6%, base ~+8%, a fat right tail."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Mark Zuckerberg",
+          "founderLed": true,
+          "tenureYears": 22,
+          "insiderOwnershipPct": 14.0,
+          "capitalAllocation": "Turned shareholder-return on aggressively: a $50B buyback authorization (Feb 2024) on top of prior programs, with ~$29.75B of Class A repurchased in FY2024 (and ~$23B in H1 FY2025 alone), plus the first-ever dividend ($0.50/quarter, initiated Feb 2024; ~$5.07B FY2024 incl. dividend equivalents). M&A built the franchise (Instagram 2012, WhatsApp 2014, Oculus 2014); subsequent deals drew FTC/antitrust scrutiny. Heavy R&D/capex — large multi-year AI/datacenter spend and the Reality Labs segment running deep operating losses. SBC ~$16.7B FY2024 (+19% YoY).",
+          "incentiveAlignment": "Pay is not the alignment lever — the founder stake is: FY2024 salary was $1 (by his request), $0 bonus, $0 new equity; reported other compensation (~$27.2M) is overwhelmingly personal security and aircraft costs, not incentive pay. No PSU/TSR program for the CEO (he takes no equity grants).",
+          "governanceFlags": [
+            "super-voting dual-class (Class B = 10 votes vs Class A = 1) → ~61% founder voting control on ~14% economics",
+            "Zuckerberg owns ~99.8% of Class B — voting control is non-dilutable by outside Class A issuance",
+            "combined Chair + CEO (founder holds both roles)",
+            "controlled company under Nasdaq rules — exempt from majority-independent-board requirements (Meta opts in anyway; board majority-independent)",
+            "no independent shareholder check — the controller carries every shareholder vote"
+          ],
+          "keyPersonRisk": "high",
+          "score": 2,
+          "takeaway": "Founder-Chair-CEO with ~14% economics but ~61% non-dilutable voting control via Class B (10:1) — outsiders cannot force change and every shareholder vote is pre-decided. Aligned through the stake (not pay: $1 salary, $0 equity) and aggressive returns (a $50B buyback + the 2024 first-ever dividend), but the governance offsets stack: super-voting control, combined Chair/CEO, and controlled-company status."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +14.6% finding) + §12 position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -21730,6 +21753,28 @@ const MEMOS = [
         ],
         "takeaway": "Amazon's Powers are genuine and durable: AWS switching costs (data gravity, committed spend) are the stickiest, layered on scale (AWS infrastructure + Trainium, fulfillment) and a self-reinforcing marketplace network. The Audit: switching_costs is the dominant, high-durability Power - hard for Azure/GCP to dislodge - but the live threat is the ~$200B AI-capex bet and whether AWS AI demand earns its cost of capital before rivals erode growth. That squares with the DCF: the franchise isn't in question, the return on the build is, and the modal case lands ~-12% (roughly fair) because spot already assumes the capex monetizes and FCF normalizes off the FY25 trough."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Andy Jassy",
+          "founderLed": false,
+          "tenureYears": 5,
+          "insiderOwnershipPct": 9.0,
+          "capitalAllocation": "No dividend ever paid; the sole return program is a $10B buyback authorization (March 2022, no expiration) that has gone largely unused — ~$6.1B still remaining in 2025, no repurchases in the quarters ended March 2024 or 2025. Cash is reinvested instead: FY2025 capex $128.3B (vs $77.7B FY2024, the step driven by AI/AWS infrastructure), ~$200B guided for FY2026; D&A $41.9B FY2025. SBC $19.5B FY2025 (down ~12% YoY). M&A: MGM ($8.5B, closed Mar 2022), One Medical ($3.9B, closed Feb 2023); the iRobot deal was terminated Jan 2024 ($94M break fee paid).",
+          "incentiveAlignment": "No new annual equity grant — no RSU award since 2021. Pay rests on a single 10-year grant made when he became CEO in 2021 (originally valued ~$212M), vesting through 2031 on a fixed schedule regardless of stock performance. FY2024 realized comp ~$40.1M (that grant vesting plus stock appreciation); the FY2025 Summary Comp Table figure was ~$2.1M (base ~$365K plus security/travel) since no new award was made. Heavily equity-front-loaded, time-based.",
+          "governanceFlags": [
+            "single-class common stock (one share, one vote) — no dual-class / super-voting, a structural positive vs the dual-class mega-cap peers",
+            "founder Jeff Bezos is Executive Chair (stepped down as CEO July 2021); Chair and CEO roles are split",
+            "Bezos beneficially owns ~9% — fell below 10% for the first time in 2025 via scheduled sales",
+            "Jamie Gorelick is lead independent director; majority-independent board"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 4,
+          "takeaway": "Andy Jassy has been CEO since July 2021 and founder Jeff Bezos is Executive Chair holding ~9%, on a clean single-class one-share-one-vote register with a split Chair/CEO structure and a lead independent director; capital is directed to reinvestment (FY2025 capex $128.3B, ~$200B guided 2026) over capital return — no dividend and a largely-unused buyback."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + §12 position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -22540,6 +22585,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "Alphabet's network and scale Powers are deeply entrenched - a two-sided Search/advertiser loop, YouTube's flywheel, and a cornered-resource stack (index, query data, custom TPUs, Gemini) few rivals can replicate. The Audit: network_economies is durable (high); the live threats are generative-AI assistants substituting for ~60%+-of-revenue Search and an antitrust overhang (DOJ search appeal, a pending ad-tech divestiture) the DCF doesn't price. Q1'26 (Search +19%, Cloud +63%) says the defense is winning - but the ~28% YTD run re-rated the name to ~60x EV/FCF, so the modal case lands at spot: -21.4%, a durable franchise priced for the win."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Sundar Pichai",
+          "founderLed": false,
+          "tenureYears": 6,
+          "insiderOwnershipPct": 6.0,
+          "capitalAllocation": "Capital return ramping off a long no-payout history: initiated the first-ever dividend April 2024 ($0.20/qtr, raised 5% to $0.21 in 2025), alongside two consecutive $70B buyback authorizations (April 2024 + April 2025). Simultaneously a record capex build — FY2025 guidance raised $75B to $85B to $91-93B for AI infrastructure (TPUs/GPUs, data centers). Selective tuck-in M&A; SBC a multi-billion annual cost.",
+          "incentiveAlignment": "Non-founder CEO paid mostly in equity: FY2024 total comp $10.73M on a $2M base, the remainder equity. PSUs granted on a ~3-year cycle (2024 was an off-grant year; the 2022 grant pushed total comp to ~$226M); long-term grants carry performance/TSR conditions. Pichai holds Class A/C from comp, not the super-voting Class B.",
+          "governanceFlags": [
+            "triple-class: Class A (1 vote, GOOGL) · Class B (10 votes, founder-held, unlisted) · Class C (0 votes, GOOG)",
+            "founders Page + Brin control ~52.7% of votes via Class B (Page 27.1% + Brin 25.2%) on ~6% economics — majority voting control",
+            "CEO Pichai operates but holds no Class B; founders, not the CEO, hold control and cannot be outvoted by outside holders",
+            "public Class C (GOOG) carries no vote at all"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Founders Page and Brin retain ~52.7% combined voting control via 10-vote Class B on roughly 6% economic ownership, while non-founder CEO Pichai (Alphabet CEO since Dec 2019) runs operations; capital return is ramping (first dividend 2024, repeated $70B buybacks) against a record AI capex build."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + §12 position sizing."
       },
       "appendix": {
         "pushback": [
@@ -24157,6 +24224,28 @@ const MEMOS = [
         ],
         "takeaway": "NVIDIA's dominant Power is a cornered resource - CUDA plus the integrated GPU/networking/software stack, reinforced by switching costs, scale and a developer-ecosystem network - and it's durable (high). The live threat is the H2-2026 wave: AMD's MI450 and the OpenAI-Broadcom custom ASICs erode GPU share at the margin even if NVIDIA stays the standard, and China datacenter is a permanent $0. The Audit squares with the DCF: the Power is real, but the swing factor is whether datacenter AI capex holds or hits an air-pocket, and at ~50x FCF on ~$5T even the modal capex-holds case lands ~-23% - the distribution is the finding, weighted -25%."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Jensen Huang",
+          "founderLed": true,
+          "tenureYears": 33,
+          "insiderOwnershipPct": 3.77,
+          "capitalAllocation": "Buyback-led: a $50.0B authorization (Aug 2024) then an additional $60.0B (Aug 2025), both no-expiration; token quarterly dividend of $0.01/share (post-10:1 split); R&D-intensive (FY2025 R&D up sharply on more compute/infra and new-product engineering); SBC $4.74B in FY2025 (+33% YoY); M&A record mixed — Mellanox ($6.9B, closed 2020) completed, the $40B Arm acquisition abandoned 2022 on antitrust opposition.",
+          "incentiveAlignment": "FY2025 total comp $49.9M: base salary $1.5M (first raise in 10 years), non-equity incentive $6.0M, stock awards $38.8M, ~$3.5M other (security, driver, vehicle). Equity granted as RSUs plus PSUs tied to corporate financial-performance targets and market-condition (TSR) PSUs.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share; no preferred outstanding; no cumulative voting",
+            "Huang ~3.77% economic stake (~923M of ~24.46B shares, Mar 2025) — control rests on the operating role, not super-voting shares",
+            "no separate independent Chair; Huang is President & CEO and the only non-independent director — mitigated by a designated Lead Independent Director running executive sessions without the CEO",
+            "board of 13 with 12 independent directors"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-CEO since 1993 (~33-year tenure) with a ~3.77% economic stake under a clean single-class one-share-one-vote structure and a 12-of-13 independent board with a Lead Independent Director; capital return is buyback-led ($110B authorized across 2024-2025) with a token dividend, and Huang is the singular face of strategy, so key-person concentration is high."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + §12 position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -24967,6 +25056,30 @@ const MEMOS = [
           }
         ],
         "takeaway": "Tesla's strongest Power is its premium brand, backed by a nascent FSD-data process Power - but the brand is eroding in Europe, volume now trails BYD, and on the auto+energy fundamentals operating margin has compressed to 4.6% across two straight delivery declines. The Audit: branding is durable (medium) and process_power is the live swing factor (the autonomy flywheel), but the threat that dominates the cash flows is auto-multiple compression. The DCF underwrites only those fundamentals and lands ~-75%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act, and even full platform success lands -6% - so the ~$1.5T price embeds the moonshots succeeding, not the car business."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Elon Musk",
+          "founderLed": false,
+          "tenureYears": 18,
+          "insiderOwnershipPct": 13.0,
+          "capitalAllocation": "No dividend, no buyback in company history; cash is plowed into capex and AI/compute. FY2024 capex ~$11.3B (~$5B AI); spend guided AI/robotics-tilted (~$20-25B/yr toward robotaxi, Optimus, compute). The in-house Dojo supercomputer was disbanded (Aug 2025) and compute outsourced to Nvidia/AMD/Samsung. Prior major M&A was the 2016 all-stock SolarCity buy (~$2.1B), a related-party deal (Musk was SolarCity chairman and largest holder) upheld entirely fair by Delaware (2022/2023). Stock-based comp is large and episodic via the CEO awards.",
+          "incentiveAlignment": "Base salary $0 since 2019; pay is 100% milestone stock options. The 2018 CEO Performance Award (options on ~304M split-adjusted shares at $23.34) hit all 12 milestones; rescinded by Delaware Chancery (Tornetta v. Musk, Jan 2024, ~$56B) then reinstated by the Delaware Supreme Court (Dec 2025); Musk exercised all ~304M options Jun 16 2026 (shares restricted, multi-year lockup). A 2025 interim award (96M shares) was forfeited once the 2018 award delivered. A new 2025 CEO Performance Award (up to ~423.7M shares, requiring up to an $8.5T market cap and milestones like 1M Optimus robots) was approved by ~75% of the vote Nov 2025.",
+          "governanceFlags": [
+            "single class of stock (one share, one vote) — no super-voting; Musk ~13% direct economic stake (rises to ~20% after the Jun-2026 2018-award exercise, up to ~28-29% if all granted awards vest)",
+            "Delaware Chancery rescinded the 2018 award (Tornetta v. Musk, Jan 2024) finding the board not independent of Musk on pay; reversed on appeal (Dec 2025)",
+            "board-independence concerns: directors include brother Kimbal Musk and several long-time Musk associates; Musk + Kimbal recused from the 2025 award votes",
+            "Chair separated from CEO since 2018 (Robyn Denholm is Chair; Musk remains CEO)",
+            "related-party web among Musk entities: ~$573M of Tesla revenue from his companies in 2025 (xAI + SpaceX, per the 10-K/A)",
+            "Musk attention split across xAI/X, SpaceX, Neuralink, The Boring Company, and a 2025 DOGE government role (stepped down May 2025)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 2,
+          "takeaway": "Founder-CEO economically concentrated (~13% direct, ~20% with the just-exercised 2018 award) on a single-class register, paired with the most-litigated executive-pay record in US corporate history (the Delaware Tornetta rescission then 2025 reversal; a new ~$1T award), a board with multiple Musk ties, a related-party transaction web across his companies, and attention divided over xAI/SpaceX/X."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + §12 position sizing."
       },
       "appendix": {
         "pushback": [
@@ -37088,6 +37201,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "Shopify's dominant Power is network economies - a two-sided merchant + app/partner/developer ecosystem reinforced by high switching costs (a merchant's whole operation lives on the platform, ~$212M MRR at low churn) - and that moat is durable (high). The live threat is the same agentic-AI variable that drives the scenarios: AI shopping agents either transact through Shopify's rails (deepening the network) or route around the storefront (disintermediating it), with AI traffic +8x / orders +15x YoY the early, unresolved signal. That single swing factor - expand-distribution vs disintermediate - is why the bull (+39%) and the ultra-bear (-71%) span such a wide range on the same fact. The Audit: a genuinely strong, durable Power, but priced for the win - the ~30% YTD de-rate to ~30x forward FCF still embeds a premium that the modal case (-18%) doesn't quite support, so the weighted finding lands -15.1%."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Tobi Lütke",
+          "founderLed": true,
+          "tenureYears": 20,
+          "insiderOwnershipPct": 6.1,
+          "capitalAllocation": "No dividend, no buyback — has never returned capital; cash funds R&D, marketable securities, and equity/merchant-lending investments. The notable observable course-correction: the 2022 ~$2.1B Deliverr acquisition (its largest ever) was reversed in 2023, selling Shopify Logistics to Flexport for a ~13% Flexport equity stake. SBC ~$546M in FY2024 (down ~30% YoY).",
+          "incentiveAlignment": "US$1 salary, no cash bonus; paid in equity grants (~$20M/yr — FY2023 total comp $20,000,008 = $1 cash + ~$20M equity). Carries the combined title of Chair, CEO, and Head of R&D. Alignment runs through the founder stake rather than fresh cash pay.",
+          "governanceFlags": [
+            "dual-class: Class B multiple-voting shares = 10 votes each (~9.5% of equity, ~51% of votes)",
+            "2022 founder share tops Lütke up to ~40% of votes for life while he serves as director/officer/consultant — holds even if his economic stake falls to ~1.1%",
+            "combined Chair + CEO (also Head of R&D)",
+            "founder share is non-transferable; sunsets only if Lütke leaves the company"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "Founder-CEO holding ~6.1% economic but ~40% of the vote via Class B multiple-voting shares plus the 2022 founder share (which floors his voting control near 40% regardless of dilution); $1 salary, equity-paid, no dividend or buyback, with the 2023 Flexport logistics divestiture as the observable capital-allocation course-correction."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -15.1% finding) + §12 position sizing."
       },
       "appendix": {
         "pushback": [
