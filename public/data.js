@@ -1121,29 +1121,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 6.65,
-      "deltaPct": -14.0
+      "fair": 8.12,
+      "deltaPct": 5.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 9.68,
-        "mult": 1.25
+        "value": 11.84,
+        "mult": 1.53
       },
       {
         "y": 10,
-        "value": 14.1,
-        "mult": 1.82
+        "value": 17.27,
+        "mult": 2.23
       },
       {
         "y": 15,
-        "value": 20.54,
-        "mult": 2.65
+        "value": 25.2,
+        "mult": 3.26
       },
       {
         "y": 20,
-        "value": 29.93,
-        "mult": 3.87
+        "value": 36.78,
+        "mult": 4.75
       }
     ],
     "taxonomy": {
@@ -1204,12 +1204,12 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 20.76,
-        "headline": "Dominant US; software-take-rate.",
+        "price": 69.74,
+        "headline": "Dominant US platform; category default.",
         "why": "Tail of tails: commercial launch on schedule (50%) AND Aurora Driver becomes the default software on PACCAR/Volvo fleets reaching ~20% of autonomous miles / ~6–7% take-rate share of TAM by 2036 (30% conditional on launch) AND software-take-rate model wins (40%) AND multiple expansion to software/aerospace-hybrid premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
         "what": [
-          "The ultra-bull case is that Aurora becomes the dominant US autonomous trucking platform AND wins the software-take-rate game. Commercial launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by 2028 + Aurora Driver running on ~20% of US autonomous long-haul miles by 2036, monetized via per-mile take-rate (~6–7% revenue-share of TAM) with PACCAR/Volvo/FedEx fleet partners rather than capex-heavy direct ownership. By FY36 Aurora generates $8B+ revenue at 40%+ software-like margins.",
-          "Compound conditional: each piece individually plausible at 50-65%; joint at 3-4%. Reflected here at 3%. This is the scenario where Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but 'Aurora wins the autonomy market.' Contributes $3.00 to weighted ($100 × 3%) — the asymmetric tail."
+          "The ultra-bull case is that Aurora becomes the dominant US autonomous trucking platform — the category's default Driver. Commercial launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by 2028 + by FY36 Aurora runs the dominant share of US autonomous long-haul, monetized through a hybrid of owned capacity in the densest lanes and per-mile take-rate elsewhere with PACCAR/Volvo/FedEx. As autonomy penetrates the full long-haul market, Aurora books ~$50B revenue at ~40% margins — well above the bull, as a dominant platform must be.",
+          "Compound conditional: each piece individually plausible at 50-65%; joint at 3-4%. Reflected here at 3%. This is the scenario where Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but 'Aurora wins the autonomy market.' Contributes $2.09 to weighted (~$70 × 3%) — the asymmetric tail."
         ]
       }
     ],
@@ -1357,8 +1357,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 160,
       "weighted": {
-        "expected": 6.65,
-        "upsidePct": -14.0
+        "expected": 8.12,
+        "upsidePct": 5.0
       },
       "market": {
         "marketCapBillion": 13.2,
@@ -1852,26 +1852,26 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 20.76,
+          "expectedPerShare": 69.74,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 6.6,
+            "tam_share": 31.25,
             "p_fail": 3,
             "s2c": 2.5
           },
           "dcfPath": {
             "rev_path": [
-              0.03,
-              0.15,
-              0.5,
+              0.04,
+              0.2,
+              0.6,
               1.5,
-              3.0,
-              5.0,
-              7.0,
-              8.5,
-              9.5,
-              10.5
+              3.5,
+              7.5,
+              15.0,
+              26.0,
+              38.0,
+              50.0
             ],
             "op_margin": [
               -2.5,
@@ -1899,64 +1899,64 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "nopat": [
-              -0.075,
-              -0.12,
-              -0.15,
+              -0.1,
+              -0.16,
+              -0.18,
               0.0,
-              0.45,
-              1.25,
-              2.24,
-              3.06,
-              3.61,
-              4.2
+              0.525,
+              1.875,
+              4.8,
+              9.36,
+              14.44,
+              20.0
             ],
             "reinvest": [
-              0.03,
-              0.12,
-              0.35,
-              0.75,
-              1.2,
-              1.5,
-              1.4,
-              1.25,
-              1.0,
-              0.75
+              0.016,
+              0.064,
+              0.16,
+              0.36,
+              0.8,
+              1.6,
+              3.0,
+              4.4,
+              4.8,
+              4.8
             ],
             "fcf": [
-              -0.105,
-              -0.24,
-              -0.5,
-              -0.75,
-              -0.75,
-              -0.25,
-              0.84,
-              1.81,
-              2.61,
-              3.45
+              -0.116,
+              -0.224,
+              -0.34,
+              -0.36,
+              -0.275,
+              0.275,
+              1.8,
+              4.96,
+              9.64,
+              15.2
             ],
             "pv_fcf": [
-              -0.093,
-              -0.191,
-              -0.357,
-              -0.488,
-              -0.444,
-              -0.135,
-              0.413,
-              0.815,
-              1.082,
-              1.327
+              -0.103,
+              -0.178,
+              -0.242,
+              -0.231,
+              -0.16,
+              0.145,
+              0.867,
+              2.192,
+              3.927,
+              5.734
             ],
-            "sum_pv_fcf": 1.929,
-            "terminal_value": 105.0,
-            "pv_terminal": 40.4,
-            "op_ev": 42.33,
+            "sum_pv_fcf": 11.95,
+            "terminal_value": 349.6,
+            "pv_terminal": 131.87,
+            "op_ev": 143.82,
             "cash": 1.28,
             "net_debt": 0.65,
-            "total_equity": 42.96,
+            "total_equity": 144.45,
             "raise_total": 2.0,
             "dilution_pct": 18,
             "final_shares": 2010,
-            "dcf_per_share": 21.37,
+            "dcf_per_share": 71.87,
             "distress": 0.98
           },
           "chartData": {
@@ -3924,29 +3924,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 5.69,
-      "deltaPct": 136.9
+      "fair": 6.58,
+      "deltaPct": 174.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 8.34,
-        "mult": 3.47
+        "value": 9.63,
+        "mult": 4.01
       },
       {
         "y": 10,
-        "value": 12.24,
-        "mult": 5.1
+        "value": 14.1,
+        "mult": 5.88
       },
       {
         "y": 15,
-        "value": 17.97,
-        "mult": 7.49
+        "value": 20.67,
+        "mult": 8.61
       },
       {
         "y": 20,
-        "value": 26.4,
-        "mult": 11.0
+        "value": 30.31,
+        "mult": 12.63
       }
     ],
     "taxonomy": {
@@ -3995,7 +3995,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 17.39,
+        "price": 19.93,
         "headline": "Single-molecule wins proteoforms.",
         "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands to 10-15+ proteoforms by 2030 (60% conditional) AND mature margins reach 20-25% (40% conditional) AND the market gives NAUT credit via acquisition or re-rating (50%). Joint at 10-15%, reflected at 12%. The bull requires conjunctive execution AND a favorable backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single-molecule frontier. 12% (vs JOBY's 12%): structurally similar compound venture-bet, but a clearer near-term path (launch ~6 months out vs JOBY's still-pending Type Certification).",
         "what": [
@@ -4007,12 +4007,12 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 86.0,
+        "price": 105.52,
         "headline": "Dominant + multiomics + take-rate.",
-        "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 3%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
+        "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 4%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
         "what": [
           "The ultra-bull case requires Voyager to become the dominant single-molecule proteomics platform AND for multiomics integration (proteomics + sequencing + cell biology) to emerge as the standard for both research and diagnostics. By 2030 NAUT operates 5,000+ instruments globally. By 2034, an instrument-as-a-service / assay-take-rate model emerges with software-economics on a meaningful fraction of revenue — the Mobileye/Illumina platform-take-rate analog.",
-          "Compound conditional: Voyager wins the single-molecule race (30% conditional on Tau success) AND multiomics becomes routine (40% conditional on platform success) AND NAUT captures dominant share at 3%+ of $130B TAM (25% conditional on both) AND multiple expansion from tools to platform (50% conditional on all above). Joint at 1.5-3%. Reflected here at 3%."
+          "Compound conditional: Voyager wins the single-molecule race (30% conditional on Tau success) AND multiomics becomes routine (40% conditional on platform success) AND NAUT captures dominant share at 4%+ of $130B TAM (25% conditional on both) AND multiple expansion from tools to platform (50% conditional on all above). Joint at 1.5-3%. Reflected here at 3%."
         ]
       }
     ],
@@ -4169,8 +4169,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 130,
       "weighted": {
-        "expected": 5.69,
-        "upsidePct": 136.9
+        "expected": 6.58,
+        "upsidePct": 174.0
       },
       "market": {
         "marketCapBillion": 0.302,
@@ -4503,11 +4503,11 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.12,
-          "expectedPerShare": 17.39,
+          "expectedPerShare": 19.93,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "tam_share": 1.5,
+            "tam_share": 2.15,
             "p_fail": 8,
             "s2c": 1.4
           },
@@ -4518,11 +4518,11 @@ const MEMOS = [
               0.22,
               0.5,
               0.95,
-              1.45,
-              1.8,
+              1.5,
               1.95,
-              2.0,
-              2.0
+              2.35,
+              2.65,
+              2.8
             ],
             "op_margin": [
               -2.0,
@@ -4554,60 +4554,60 @@ const MEMOS = [
               -0.075,
               -0.066,
               0.025,
-              0.124,
-              0.261,
-              0.378,
-              0.429,
-              0.44,
-              0.44
+              0.123,
+              0.27,
+              0.409,
+              0.517,
+              0.583,
+              0.616
             ],
             "reinvest": [
-              0.008,
+              0.009,
               0.045,
               0.104,
               0.2,
               0.321,
-              0.357,
-              0.25,
-              0.107,
-              0.036,
-              0.0
+              0.393,
+              0.321,
+              0.286,
+              0.214,
+              0.107
             ],
             "fcf": [
-              -0.032,
+              -0.033,
               -0.12,
               -0.17,
               -0.175,
-              -0.197,
-              -0.096,
-              0.128,
-              0.322,
-              0.404,
-              0.44
+              -0.198,
+              -0.123,
+              0.088,
+              0.231,
+              0.369,
+              0.509
             ],
             "pv_fcf": [
               -0.029,
               -0.096,
               -0.123,
               -0.114,
-              -0.116,
-              -0.052,
-              0.063,
-              0.146,
-              0.169,
-              0.171
+              -0.118,
+              -0.067,
+              0.044,
+              0.106,
+              0.157,
+              0.2
             ],
-            "sum_pv_fcf": 0.019,
-            "terminal_value": 9.06,
-            "pv_terminal": 3.52,
-            "op_ev": 3.54,
+            "sum_pv_fcf": -0.04,
+            "terminal_value": 10.49,
+            "pv_terminal": 4.12,
+            "op_ev": 4.08,
             "cash": 0.143,
             "net_debt": 0.0,
-            "total_equity": 3.68,
+            "total_equity": 4.22,
             "raise_total": 0.75,
             "dilution_pct": 36,
             "final_shares": 196,
-            "dcf_per_share": 18.78,
+            "dcf_per_share": 21.53,
             "distress": 1.5
           },
           "chartData": {
@@ -4664,11 +4664,11 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 86.0,
+          "expectedPerShare": 105.52,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 3.1,
+            "tam_share": 4.15,
             "p_fail": 3,
             "s2c": 1.6
           },
@@ -4679,11 +4679,11 @@ const MEMOS = [
               0.35,
               0.9,
               1.8,
-              2.8,
-              3.5,
+              2.9,
               3.9,
-              4.0,
-              4.0
+              4.7,
+              5.1,
+              5.4
             ],
             "op_margin": [
               -1.5,
@@ -4711,64 +4711,64 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "nopat": [
-              -0.023,
+              -0.022,
               -0.05,
               0.0,
               0.09,
               0.324,
-              0.672,
-              0.945,
-              1.131,
-              1.2,
-              1.2
+              0.696,
+              1.053,
+              1.363,
+              1.53,
+              1.62
             ],
             "reinvest": [
               0.009,
               0.053,
               0.156,
               0.344,
-              0.563,
+              0.562,
+              0.687,
               0.625,
-              0.438,
+              0.5,
               0.25,
-              0.063,
-              0.0
+              0.188
             ],
             "fcf": [
               -0.032,
               -0.103,
               -0.156,
               -0.254,
-              -0.239,
-              0.047,
-              0.507,
-              0.881,
-              1.137,
-              1.2
+              -0.238,
+              0.009,
+              0.428,
+              0.863,
+              1.28,
+              1.432
             ],
             "pv_fcf": [
               -0.029,
               -0.083,
               -0.114,
-              -0.167,
-              -0.143,
-              0.026,
-              0.255,
-              0.402,
-              0.484,
-              0.475
+              -0.169,
+              -0.144,
+              0.005,
+              0.22,
+              0.41,
+              0.566,
+              0.589
             ],
-            "sum_pv_fcf": 1.106,
-            "terminal_value": 31.05,
-            "pv_terminal": 12.3,
-            "op_ev": 13.41,
+            "sum_pv_fcf": 1.25,
+            "terminal_value": 37.05,
+            "pv_terminal": 15.24,
+            "op_ev": 16.49,
             "cash": 0.143,
             "net_debt": 0.0,
-            "total_equity": 13.55,
+            "total_equity": 16.63,
             "raise_total": 0.65,
             "dilution_pct": 18,
             "final_shares": 153,
-            "dcf_per_share": 88.56,
+            "dcf_per_share": 108.69,
             "distress": 3.0
           },
           "chartData": {
@@ -39867,29 +39867,29 @@ const MEMOS = [
       "asOf": "June 16, 2026 close"
     },
     "expected": {
-      "fair": 1.29,
-      "deltaPct": -2.3
+      "fair": 2.09,
+      "deltaPct": 58.7
     },
     "compound": [
       {
         "y": 5,
-        "value": 2.06,
-        "mult": 1.56
+        "value": 3.33,
+        "mult": 2.53
       },
       {
         "y": 10,
-        "value": 3.28,
-        "mult": 2.49
+        "value": 5.3,
+        "mult": 4.02
       },
       {
         "y": 15,
-        "value": 5.24,
-        "mult": 3.97
+        "value": 8.44,
+        "mult": 6.4
       },
       {
         "y": 20,
-        "value": 8.37,
-        "mult": 6.34
+        "value": 13.45,
+        "mult": 10.19
       }
     ],
     "taxonomy": {
@@ -39950,24 +39950,24 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 13,
-        "price": 2.98,
+        "price": 4.74,
         "headline": "Long-read inflects; debt covered",
         "why": "Needs durable consumable pull-through growth and a clinical/research shift toward long-read accuracy that PACB captures as the #3 — a real but lower-probability inflection, hence 13%.",
         "what": [
-          "Long-read genuinely inflects: the Revio and Vega base compounds high-margin consumables to ~$0.78B FY35 revenue at a 26% margin. Operating leverage turns the razor/blade model cash-generative well ahead of the maturity wall.",
-          "At 12% p_fail the converts are comfortably covered and the equity captures the upside above them; DCF $3.25, weighted contribution $2.90. This is the first scenario where financial leverage works for the common holder rather than against it."
+          "Long-read genuinely inflects: the Revio and Vega base compounds high-margin consumables to ~$1.05B FY35 revenue at a 26% margin. Operating leverage turns the razor/blade model cash-generative well ahead of the maturity wall.",
+          "At 12% p_fail the converts are comfortably covered and the equity captures the upside above them; DCF $5.34, weighted contribution $4.74. This is the first scenario where financial leverage works for the common holder rather than against it."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 7,
-        "price": 10.32,
+        "price": 18.55,
         "headline": "Long-read wins WGS; re-rating",
         "why": "The lowest-probability outcome: long-read displacing short-read at population scale against Illumina's entrenched economics. Low odds, but the operating and financial leverage make the payoff large enough to matter to the weighted value.",
         "what": [
-          "Long-read takes a large share of whole-genome sequencing and PACB rides ~6x revenue growth to ~$1.05B FY35 at a 31% margin. The installed base becomes a consumables annuity and the equity re-rates as the debt shrinks to a rounding error against cash flow.",
-          "At 6% p_fail the converts are trivially covered; DCF $10.83, weighted contribution $10.20. The fat tail that, alongside the bull, carries the distribution and offsets the ~50% of mass worth ~$0."
+          "Long-read takes a large share of whole-genome sequencing and PACB rides ~12x revenue growth to ~$1.9B FY35 at a 31% margin. The installed base becomes a consumables annuity and the equity re-rates as the debt shrinks to a rounding error against cash flow.",
+          "At 6% p_fail the converts are trivially covered; DCF $19.71, weighted contribution $18.55. The fat tail that, alongside the bull, carries the distribution and offsets the ~50% of mass worth ~$0."
         ]
       }
     ],
@@ -40080,8 +40080,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 8,
       "weighted": {
-        "expected": 1.29,
-        "upsidePct": -2.3
+        "expected": 2.09,
+        "upsidePct": 58.7
       },
       "market": {
         "marketCapBillion": 0.41,
@@ -40575,26 +40575,26 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.13,
-          "expectedPerShare": 2.98,
+          "expectedPerShare": 4.74,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "tam_share": 9.75,
+            "tam_share": 13.12,
             "p_fail": 12,
             "s2c": 1.8
           },
           "dcfPath": {
             "rev_path": [
               0.18,
-              0.21,
-              0.25,
-              0.31,
-              0.39,
-              0.48,
-              0.57,
+              0.22,
+              0.28,
+              0.37,
+              0.5,
               0.65,
-              0.72,
-              0.78
+              0.8,
+              0.93,
+              1.0,
+              1.05
             ],
             "op_margin": [
               -0.25,
@@ -40623,39 +40623,39 @@ const MEMOS = [
             "term_g": 0.05,
             "nopat": [
               -0.045,
-              -0.021,
-              0.005,
-              0.028,
-              0.055,
-              0.086,
-              0.12,
-              0.15,
-              0.18,
-              0.203
+              -0.022,
+              0.006,
+              0.033,
+              0.07,
+              0.117,
+              0.168,
+              0.214,
+              0.25,
+              0.273
             ],
             "reinvest": [
               0.011,
-              0.017,
               0.022,
               0.033,
-              0.044,
               0.05,
-              0.05,
-              0.044,
+              0.072,
+              0.083,
+              0.083,
+              0.072,
               0.039,
-              0.033
+              0.028
             ],
             "fcf": [
               -0.056,
-              -0.038,
+              -0.044,
+              -0.028,
               -0.017,
-              -0.005,
-              0.01,
-              0.036,
-              0.07,
-              0.105,
-              0.141,
-              0.169
+              -0.002,
+              0.034,
+              0.085,
+              0.142,
+              0.211,
+              0.245
             ],
             "cash": 0.276,
             "net_debt": 0.644,
@@ -40665,22 +40665,22 @@ const MEMOS = [
             "distress": 0.3,
             "pv_fcf": [
               -0.05,
-              -0.031,
-              -0.012,
-              -0.003,
-              0.006,
-              0.019,
-              0.034,
-              0.046,
-              0.056,
-              0.061
+              -0.035,
+              -0.02,
+              -0.011,
+              -0.001,
+              0.018,
+              0.041,
+              0.062,
+              0.084,
+              0.088
             ],
-            "sum_pv_fcf": 0.13,
-            "terminal_value": 3.55,
-            "pv_terminal": 1.28,
-            "op_ev": 1.41,
-            "total_equity": 1.04,
-            "dcf_per_share": 3.34
+            "sum_pv_fcf": 0.18,
+            "terminal_value": 5.14,
+            "pv_terminal": 1.85,
+            "op_ev": 2.03,
+            "total_equity": 1.66,
+            "dcf_per_share": 5.34
           },
           "chartData": {
             "raises": [
@@ -40736,26 +40736,26 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.07,
-          "expectedPerShare": 10.32,
+          "expectedPerShare": 18.55,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 13.125,
+            "tam_share": 23.75,
             "p_fail": 6,
             "s2c": 2.0
           },
           "dcfPath": {
             "rev_path": [
               0.19,
-              0.23,
-              0.29,
-              0.38,
-              0.5,
-              0.64,
-              0.78,
-              0.9,
-              0.99,
-              1.05
+              0.24,
+              0.33,
+              0.48,
+              0.7,
+              0.95,
+              1.25,
+              1.55,
+              1.75,
+              1.9
             ],
             "op_margin": [
               -0.18,
@@ -40785,38 +40785,38 @@ const MEMOS = [
             "nopat": [
               -0.034,
               0.0,
-              0.026,
-              0.061,
-              0.105,
-              0.16,
-              0.218,
-              0.27,
-              0.307,
-              0.326
+              0.03,
+              0.077,
+              0.147,
+              0.237,
+              0.35,
+              0.465,
+              0.542,
+              0.589
             ],
             "reinvest": [
               0.015,
-              0.02,
-              0.03,
+              0.025,
               0.045,
-              0.06,
-              0.07,
-              0.07,
-              0.06,
-              0.045,
-              0.03
+              0.075,
+              0.11,
+              0.125,
+              0.15,
+              0.15,
+              0.1,
+              0.075
             ],
             "fcf": [
               -0.049,
-              -0.02,
-              -0.004,
-              0.016,
-              0.045,
-              0.09,
-              0.148,
-              0.21,
-              0.262,
-              0.295
+              -0.025,
+              -0.015,
+              0.002,
+              0.037,
+              0.112,
+              0.2,
+              0.315,
+              0.443,
+              0.514
             ],
             "cash": 0.276,
             "net_debt": 0.644,
@@ -40826,22 +40826,22 @@ const MEMOS = [
             "distress": 0.3,
             "pv_fcf": [
               -0.044,
-              -0.016,
-              -0.003,
-              0.011,
-              0.027,
-              0.049,
-              0.074,
-              0.095,
-              0.108,
-              0.111
+              -0.02,
+              -0.011,
+              0.001,
+              0.022,
+              0.061,
+              0.099,
+              0.143,
+              0.183,
+              0.194
             ],
-            "sum_pv_fcf": 0.41,
-            "terminal_value": 8.93,
-            "pv_terminal": 3.37,
-            "op_ev": 3.78,
-            "total_equity": 3.41,
-            "dcf_per_share": 10.96
+            "sum_pv_fcf": 0.63,
+            "terminal_value": 15.57,
+            "pv_terminal": 5.87,
+            "op_ev": 6.5,
+            "total_equity": 6.13,
+            "dcf_per_share": 19.71
           },
           "chartData": {
             "raises": [

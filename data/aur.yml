@@ -290,24 +290,25 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.03
-    expected_per_share: 20.76
-    headline: "Dominant US; software-take-rate."
+    expected_per_share: 69.74
+    headline: "Dominant US platform; category default."
     narrative:
       - >
         The ultra-bull case is that Aurora becomes the dominant US autonomous
-        trucking platform AND wins the software-take-rate game. Commercial
-        launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous
-        miles by 2028 + Aurora Driver running on ~20% of US autonomous
-        long-haul miles by 2036, monetized via per-mile take-rate (~6–7%
-        revenue-share of TAM) with PACCAR/Volvo/FedEx fleet partners rather
-        than capex-heavy direct ownership. By FY36 Aurora generates $8B+
-        revenue at 40%+ software-like margins.
+        trucking platform — the category's default Driver. Commercial launch
+        on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by
+        2028 + by FY36 Aurora runs the dominant share of US autonomous
+        long-haul, monetized through a hybrid of owned capacity in the densest
+        lanes and per-mile take-rate elsewhere with PACCAR/Volvo/FedEx. As
+        autonomy penetrates the full long-haul market, Aurora books ~$50B
+        revenue at ~40% margins — well above the bull, as a dominant platform
+        must be.
       - >
         Compound conditional: each piece individually plausible at 50-65%;
         joint at 3-4%. Reflected here at 3%. This is the scenario where
         Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but
-        'Aurora wins the autonomy market.' Contributes $3.00 to weighted
-        ($100 × 3%) — the asymmetric tail.
+        'Aurora wins the autonomy market.' Contributes $2.09 to weighted
+        (~$70 × 3%) — the asymmetric tail.
     probability_rationale: >
       Tail of tails: commercial launch on schedule (50%) AND Aurora Driver
       becomes the default software on PACCAR/Volvo fleets reaching ~20% of
@@ -318,35 +319,35 @@ scenarios:
       a category-defining Big Tech-tier company.
 
     dcf_metrics:
-      # tam_share is the revenue-share of FY36 US autonomous long-haul TAM
-      # (~$160B per McKinsey 2024). Aurora's ultra-bull is software-take-rate
-      # at ~$0.50/mi blended, so it touches ~20% of autonomous miles but books
-      # only ~6.6% of TAM revenue. The full validator check: rev_path[-1] of
-      # $10.5B = $160B × 6.6%.
-      tam_share: 6.6
+      # tam_share is the FY36 revenue-share of the US autonomous long-haul TAM
+      # (~$160B per McKinsey 2024). The ultra-bull is the dominant platform on a
+      # hybrid owned-capacity + take-rate model, booking ~$50B = ~31% of the
+      # (fully-penetrating) TAM — above the bull, as the best case must be.
+      # Validator check: rev_path[-1] $50B = $160B × 31.25%.
+      tam_share: 31.25
       p_fail: 3
       s2c: 2.5
 
     dcf_path:
-      rev_path:    [0.030, 0.150, 0.500, 1.500, 3.000, 5.000, 7.000, 8.500, 9.500, 10.500]
+      rev_path:    [0.04, 0.2, 0.6, 1.5, 3.5, 7.5, 15.0, 26.0, 38.0, 50.0]
       op_margin:   [-2.5, -0.80, -0.30, 0.00, 0.15, 0.25, 0.32, 0.36, 0.38, 0.40]
       wacc_path:   [0.125, 0.120, 0.115, 0.110, 0.105, 0.100, 0.095, 0.090, 0.085, 0.080]
       term_g: 0.035
-      nopat:       [-0.075, -0.120, -0.150, 0.000, 0.450, 1.250, 2.240, 3.060, 3.610, 4.200]
-      reinvest:    [0.030, 0.120, 0.350, 0.750, 1.200, 1.500, 1.400, 1.250, 1.000, 0.750]
-      fcf:         [-0.105, -0.240, -0.500, -0.750, -0.750, -0.250, 0.840, 1.810, 2.610, 3.450]
-      pv_fcf:      [-0.093, -0.191, -0.357, -0.488, -0.444, -0.135, 0.413, 0.815, 1.082, 1.327]
-      sum_pv_fcf: 1.929
-      terminal_value: 105.0
-      pv_terminal: 40.40
-      op_ev: 42.33
+      nopat:       [-0.1, -0.16, -0.18, 0.0, 0.525, 1.875, 4.8, 9.36, 14.44, 20.0]
+      reinvest:    [0.016, 0.064, 0.16, 0.36, 0.8, 1.6, 3.0, 4.4, 4.8, 4.8]
+      fcf:         [-0.116, -0.224, -0.34, -0.36, -0.275, 0.275, 1.8, 4.96, 9.64, 15.2]
+      pv_fcf:      [-0.103, -0.178, -0.242, -0.231, -0.16, 0.145, 0.867, 2.192, 3.927, 5.734]
+      sum_pv_fcf: 11.95
+      terminal_value: 349.6
+      pv_terminal: 131.87
+      op_ev: 143.82
       cash: 1.28
       net_debt: 0.65        # AUR ultra_bull is the only AUR scenario with net debt (rounding)
-      total_equity: 42.96
+      total_equity: 144.45
       raise_total: 2.0
       dilution_pct: 18
       final_shares: 2010
-      dcf_per_share: 21.37
+      dcf_per_share: 71.87
       distress: 0.98
 
     chart_data:

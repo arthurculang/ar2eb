@@ -498,6 +498,24 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
             warns.append(f"  [{key}]")
             warns.extend(scen_w)
 
+    # §6c.11.2 — scenario monotonicity: terminal revenue and dcf_per_share must
+    # be non-decreasing across ultra_bear ≤ bear ≤ base ≤ bull ≤ ultra_bull. A
+    # "best case" worth less than the case below it is a modeling error (the AUR
+    # v044 class: ultra_bull revenue/value below the bull).
+    present = [k for k in SCEN_KEYS_ALL if k in data["scenarios"]]
+    for label, field in (("terminal revenue", "rev_path"), ("dcf_per_share", "dcf_per_share")):
+        seq = []
+        for k in present:
+            dp = data["scenarios"][k].get("dcf_path", {})
+            v = dp.get("rev_path", [None])[-1] if field == "rev_path" else dp.get("dcf_per_share")
+            if v is not None:
+                seq.append((k, v))
+        for (k0, v0), (k1, v1) in zip(seq, seq[1:]):
+            if v1 < v0 - 1e-9:
+                warns.append(
+                    f"  [scenario separation] {label} not monotonic: {k1} ({v1}) "
+                    f"< {k0} ({v0}) — best case worth less than the one below it (§6c.11.2)")
+
     return errors, warns
 
 
