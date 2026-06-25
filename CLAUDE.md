@@ -454,6 +454,15 @@ Present decisions as a **table** so I can approve in bulk. Columns:
     `data.js`; the **PDFs + visual_baseline were NOT regenerated — this container has no poppler/pdftoppm**, so the on-disk 6pp PDFs stay in
     sync with the baseline and refresh at the launch flip (poppler env, July 1) or a future render pass. *Open: confirm the score notches
     (META 2 vs COIN 3 — the one subjective call) + the `founder_led` convention for control-retaining founders. Remaining ~40 memos = later batches.*
+  - **POCD rollout batch 2 — tracked holdings (2026-06-22): NAUT, YETI, CROX, CART, CAI shipped to the site** (+these = 21 with POCD).
+    Scores: **NAUT/YETI/CROX 4** (NAUT single-class + founder buying; YETI professionalized single-class, founders off-board; CROX clean single-class
+    + buybacks, HEYDUDE-impairment offset) · **CART 3** (clean single-class but brand-new combined Chair/CEO Chris Rogers + concentrated VC board) ·
+    **CAI 3** (founder Halbert ~44% econ ≈ vote on a clean SINGLE-class one-vote register — combined Chair/CEO + 44% concentration the flags; FCF
+    inflection + new $100M buyback + fully-independent committees keep it off a 2. *Verification caught an error: the first agent's "Class B 10-vote /
+    ~80-88% vote / controlled-company" was S-1 boilerplate bleed — primary XBRL + Exhibit 4.2 confirm single-class, one vote/share, likely NOT a controlled company.*)
+    Site-only (same poppler caveat as batch 1). **GRAL HELD from the batch — and flagged: thesis-changing event the committed memo predates** —
+    NHS-Galleri MISSED its primary endpoint (Feb 2026), stock ~$100→~$50, CEO changed (Ragusa→Ofman); GRAL is a ~4.2% tracked holding so the stale
+    +9%/$73 finding mis-sizes the book → needs a re-research/re-price (not just POCD) before adding its scorecard.
 - **Spec §15 (v036, DRAFT) — operating cadence & automation + 1 July 2026 "launch" (Arthur's ask).**
   **Monthly (22nd):** bump each re-priced ticker (= archive: grows the on-site "Prior versions" panel; replaces the `archive/YYYY-MM/` move — v042) → mechanically re-price + re-render all memos → update §12 weights →
   deploy. **Daily (after close):** track the weighted portfolio vs. a wide multi-asset benchmark set

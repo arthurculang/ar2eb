@@ -578,6 +578,36 @@ competitive:
     25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~17x FCF
     the modal growth/margin-recovery path lands near spot — roughly fair, with the sign hinging on whether the +2% FY25 was
     a trough (Q1'26 +8%) or a new normal.
+pocd:
+  people:
+    ceo: 'Matt Reintjes'
+    founder_led: false
+    tenure_years: 10
+    insider_ownership_pct: 18.0
+    capital_allocation: 'No dividend; capital returned via buybacks — ~$500M / ~13M shares repurchased over
+      FY2024-FY2025 (~14% of shares out), incl. 8.2M shares / ~$298M in FY2025; the board re-loaded the
+      authorization to $500M available as of May 2026. M&A is small/tuck-in and cash-funded: Mystery Ranch (bags)
+      + Butter Pat (cast-iron cookware), ~$48.5M total cash (Q1 2024) — new-category capability, not
+      transformational. Net cash (~$114M); capex funds capacity and new categories.'
+    incentive_alignment: 'Reintjes FY2024 total ~$7.8M ($1.03M salary · ~$1.67M bonus · ~$5.12M stock) —
+      ~85%+ at-risk/equity. LTI is 75% performance RSUs / 25% time RSUs; the PBRSUs vest on 3-yr cumulative
+      free-cash-flow with a relative-TSR modifier (90%-of-target threshold, 200% cap, 3-yr cliff).
+      Pay-for-performance, FCF + TSR-linked.'
+    governance_flags:
+      - 'single-class — one share, one vote (no super-voting / dual-class)'
+      - 'independent Chair (Robert Shearer) separate from the CEO; board of 10, 9 independent'
+      - 'classified / staggered board (three classes, three-year terms)'
+      - 'founders no longer on the board — Roy Seiders resigned as a director eff. May 2021 (no disagreement); Ryan Seiders not a director'
+      - 'founders retain large economic stakes (Ryan ~15%, Roy ~2%); Cortec Group (PE, majority 2012) fully exited; now institutionally held'
+    key_person_risk: low
+    score: 4
+    takeaway: 'Professionalized, single-class, founder-aligned: a 10-yr hired CEO on FCF + relative-TSR pay, an
+      independent chair, a clean one-share-one-vote register with no controller and PE fully exited, disciplined
+      ~$500M buybacks and only small cash-funded tuck-ins — the demerits are a classified board and that the deep
+      brand expertise still sits with the now-absent founders.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-03_15-50

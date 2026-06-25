@@ -476,6 +476,38 @@ taxonomy:
   themes: [omics-life-science-infrastructure]
   primary_theme: omics-life-science-infrastructure
 
+pocd:
+  people:
+    ceo: 'Sujal Patel'
+    founder_led: true
+    tenure_years: 5
+    insider_ownership_pct: 14.8
+    capital_allocation: 'Pre-revenue (FY2026 revenue guided ~$0.5M, effectively zero). Q1 2026 cash &
+      investments $143.4M (~47% of the ~$0.30B market cap); Q1 burn $12.8M (opex $16.1M, down 14% YoY); runway
+      guided through 2027. No dividend or buyback (pre-revenue); spend is R&D on the Voyager / single-molecule
+      proteomics platform toward commercial launch. Originally funded by a $350M SPAC/PIPE in 2021 ($200M PIPE
+      led by Perceptive); scenarios assume additional equity raises / dilution to fund operations past 2027.'
+    incentive_alignment: 'Founder-CEO holds ~14.8% beneficial economic stake (10.34M direct + 1.81M via the
+      Sujal Patel 2020 Children''s Trust + 5.28M via PFV I, LLC); bought 200,000 shares open-market Sept 2025.
+      FY2025 total compensation ~$1.96M, equity-weighted (~27% salary). Specific PSU/TSR vs. time-based equity
+      terms not separately disclosed in accessible sources.'
+    governance_flags:
+      - 'SPAC origin (ARYA Sciences Acquisition Corp III; closed Jun 2021)'
+      - 'single class of common stock (one share = one vote; no super-voting / dual-class)'
+      - 'independent Chair (Matthew Posard) separate from the CEO'
+      - 'board of 9, 7 independent; 2 insiders (Patel CEO, Mallick co-founder / Chief Scientist)'
+      - 'classified board — three staggered classes (an anti-takeover structure)'
+      - 'insiders own ~29% of shares in aggregate'
+    key_person_risk: high
+    score: 4
+    takeaway: 'Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class
+      one-share-one-vote structure, an independent Chair, and a 7-of-9 independent board — clean alignment and
+      governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder
+      Mallick are the platform) and a structural dilution path, the pre-revenue burn funded by equity raises
+      beyond the 2027 runway.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  context_ref: 'The 7 Powers analysis (Power Origination)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + §12 position sizing.'
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-05-31_17-10"

@@ -610,6 +610,33 @@ competitive:
     compounds, and the swing factor is whether high-margin advertising keeps scaling on the GTV base. The DCF tests exactly
     that - and even the competitive ultra-bear is -28% while the modal flywheel lands +57%, with reported FCF honestly discounted
     to ~15-19% ex-SBC owner margin and the $3.5B buyback offsetting dilution.'
+pocd:
+  people:
+    ceo: 'Chris Rogers'
+    founder_led: false
+    tenure_years: 0
+    insider_ownership_pct: 60
+    capital_allocation: 'No dividend. Aggressive buyback: authorization expanded to $3.5B (Q1 2026, up from
+      $2.5B); ~9.37M shares retired for ~$402M in Q1 2026, and net share count fell ~280M (Sep-2023 IPO) to
+      ~235M (2026) despite SBC. Bolt-on M&A only (Caper AI smart carts, Eversight, Wynshop). FY2025
+      GAAP-profitable (Q1 2026 GAAP net income $144M).'
+    incentive_alignment: 'CEO Rogers 2025 package ~$1.37M base + ~$15M performance-vesting equity. Heavy SBC,
+      now normalized post-IPO and outpaced by buyback: FY2023 $2,756M SBC was a one-time IPO RSU recognition;
+      FY2024 $300M, FY2025 $352M (~3.5% of revenue). IPO equity overhang largely cleared.'
+    governance_flags:
+      - 'single class of common stock, one vote per share — no dual-class / super-voting / sunset (the pre-IPO multi-class converted at the 2023 IPO)'
+      - 'combined Chair + CEO since Nov 2025 (Rogers holds both); Lily Sarafan is Lead Independent Director; 9-member board, majority independent'
+      - 'brand-new CEO: Chris Rogers (eff. Aug 2025, ex-CBO / ex-Apple) succeeded Fidji Simo, who left to be OpenAI CEO of Applications and resigned the board Nov 2025'
+      - 'founder Apoorva Mehta cut all ties at the Sep-2023 IPO — retains ~8.8% as a passive holder, off the board'
+      - 'concentrated VC board influence: Sequoia (Gupta, Moritz) and D1 (Sundheim); the ~60% insider-group figure is VC-driven, not management skin-in-the-game'
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Clean one-share-one-vote governance and a shareholder-friendly buyback (net share count falling
+      despite SBC), offset by a brand-new combined Chair/CEO (Rogers, sub-1-year tenure) and concentrated VC
+      board influence; founder Mehta is fully gone (~8.8%, passive).'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-03

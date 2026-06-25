@@ -4915,6 +4915,30 @@ const MEMOS = [
         ],
         "takeaway": "Nautilus is originating a genuinely differentiated single-molecule platform with strong IP and a funded balance sheet, but it is pre-commercial and lags shipping rivals on every demonstrated metric; the window is open only while the cash lasts and before incumbents close the coverage gap — a launched, validated instrument is the falsifier.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Sujal Patel",
+          "founderLed": true,
+          "tenureYears": 5,
+          "insiderOwnershipPct": 14.8,
+          "capitalAllocation": "Pre-revenue (FY2026 revenue guided ~$0.5M, effectively zero). Q1 2026 cash & investments $143.4M (~47% of the ~$0.30B market cap); Q1 burn $12.8M (opex $16.1M, down 14% YoY); runway guided through 2027. No dividend or buyback (pre-revenue); spend is R&D on the Voyager / single-molecule proteomics platform toward commercial launch. Originally funded by a $350M SPAC/PIPE in 2021 ($200M PIPE led by Perceptive); scenarios assume additional equity raises / dilution to fund operations past 2027.",
+          "incentiveAlignment": "Founder-CEO holds ~14.8% beneficial economic stake (10.34M direct + 1.81M via the Sujal Patel 2020 Children's Trust + 5.28M via PFV I, LLC); bought 200,000 shares open-market Sept 2025. FY2025 total compensation ~$1.96M, equity-weighted (~27% salary). Specific PSU/TSR vs. time-based equity terms not separately disclosed in accessible sources.",
+          "governanceFlags": [
+            "SPAC origin (ARYA Sciences Acquisition Corp III; closed Jun 2021)",
+            "single class of common stock (one share = one vote; no super-voting / dual-class)",
+            "independent Chair (Matthew Posard) separate from the CEO",
+            "board of 9, 7 independent; 2 insiders (Patel CEO, Mallick co-founder / Chief Scientist)",
+            "classified board — three staggered classes (an anti-takeover structure)",
+            "insiders own ~29% of shares in aggregate"
+          ],
+          "keyPersonRisk": "high",
+          "score": 4,
+          "takeaway": "Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class one-share-one-vote structure, an independent Chair, and a 7-of-9 independent board — clean alignment and governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder Mallick are the platform) and a structural dilution path, the pre-revenue burn funded by equity raises beyond the 2027 runway."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + §12 position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -17607,6 +17631,29 @@ const MEMOS = [
           }
         ],
         "takeaway": "YETI's brand Power is durable in coolers/outdoor gear but genuinely contestable in its fad-cyclical drinkware core (~58% of sales), where viral heat rotates (Stanley->Owala) and dupes arbitrage the premium. International (toward 25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~17x FCF the modal growth/margin-recovery path lands near spot — roughly fair, with the sign hinging on whether the +2% FY25 was a trough (Q1'26 +8%) or a new normal."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Matt Reintjes",
+          "founderLed": false,
+          "tenureYears": 10,
+          "insiderOwnershipPct": 18.0,
+          "capitalAllocation": "No dividend; capital returned via buybacks — ~$500M / ~13M shares repurchased over FY2024-FY2025 (~14% of shares out), incl. 8.2M shares / ~$298M in FY2025; the board re-loaded the authorization to $500M available as of May 2026. M&A is small/tuck-in and cash-funded: Mystery Ranch (bags) + Butter Pat (cast-iron cookware), ~$48.5M total cash (Q1 2024) — new-category capability, not transformational. Net cash (~$114M); capex funds capacity and new categories.",
+          "incentiveAlignment": "Reintjes FY2024 total ~$7.8M ($1.03M salary · ~$1.67M bonus · ~$5.12M stock) — ~85%+ at-risk/equity. LTI is 75% performance RSUs / 25% time RSUs; the PBRSUs vest on 3-yr cumulative free-cash-flow with a relative-TSR modifier (90%-of-target threshold, 200% cap, 3-yr cliff). Pay-for-performance, FCF + TSR-linked.",
+          "governanceFlags": [
+            "single-class — one share, one vote (no super-voting / dual-class)",
+            "independent Chair (Robert Shearer) separate from the CEO; board of 10, 9 independent",
+            "classified / staggered board (three classes, three-year terms)",
+            "founders no longer on the board — Roy Seiders resigned as a director eff. May 2021 (no disagreement); Ryan Seiders not a director",
+            "founders retain large economic stakes (Ryan ~15%, Roy ~2%); Cortec Group (PE, majority 2012) fully exited; now institutionally held"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "Professionalized, single-class, founder-aligned: a 10-yr hired CEO on FCF + relative-TSR pay, an independent chair, a clean one-share-one-vote register with no controller and PE fully exited, disciplined ~$500M buybacks and only small cash-funded tuck-ins — the demerits are a classified board and that the deep brand expertise still sits with the now-absent founders."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + §12 position sizing."
       },
       "appendix": {
         "pushback": [
@@ -31555,6 +31602,29 @@ const MEMOS = [
         ],
         "takeaway": "Instacart's network Power is genuine - the largest pure-play grocery-delivery GTV ($10B+/qtr) running a two-sided retailer/shopper marketplace that feeds a nascent cornered resource (first-party purchase data -> an ~80%-margin ad engine) and is stickied by enterprise integrations (Carrot, Caper). But the field is the deepest-pocketed in retail - DoorDash, Uber, Amazon, Walmart - and the ~7% take rate plus a guided ad deceleration (11-14% vs the 27%/34% era) are the live threats. The Audit: network_economies is durable but contestable (medium), the ad-data cornered resource is the real prize if it compounds, and the swing factor is whether high-margin advertising keeps scaling on the GTV base. The DCF tests exactly that - and even the competitive ultra-bear is -28% while the modal flywheel lands +57%, with reported FCF honestly discounted to ~15-19% ex-SBC owner margin and the $3.5B buyback offsetting dilution."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Chris Rogers",
+          "founderLed": false,
+          "tenureYears": 0,
+          "insiderOwnershipPct": 60,
+          "capitalAllocation": "No dividend. Aggressive buyback: authorization expanded to $3.5B (Q1 2026, up from $2.5B); ~9.37M shares retired for ~$402M in Q1 2026, and net share count fell ~280M (Sep-2023 IPO) to ~235M (2026) despite SBC. Bolt-on M&A only (Caper AI smart carts, Eversight, Wynshop). FY2025 GAAP-profitable (Q1 2026 GAAP net income $144M).",
+          "incentiveAlignment": "CEO Rogers 2025 package ~$1.37M base + ~$15M performance-vesting equity. Heavy SBC, now normalized post-IPO and outpaced by buyback: FY2023 $2,756M SBC was a one-time IPO RSU recognition; FY2024 $300M, FY2025 $352M (~3.5% of revenue). IPO equity overhang largely cleared.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class / super-voting / sunset (the pre-IPO multi-class converted at the 2023 IPO)",
+            "combined Chair + CEO since Nov 2025 (Rogers holds both); Lily Sarafan is Lead Independent Director; 9-member board, majority independent",
+            "brand-new CEO: Chris Rogers (eff. Aug 2025, ex-CBO / ex-Apple) succeeded Fidji Simo, who left to be OpenAI CEO of Applications and resigned the board Nov 2025",
+            "founder Apoorva Mehta cut all ties at the Sep-2023 IPO — retains ~8.8% as a passive holder, off the board",
+            "concentrated VC board influence: Sequoia (Gupta, Moritz) and D1 (Sundheim); the ~60% insider-group figure is VC-driven, not management skin-in-the-game"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Clean one-share-one-vote governance and a shareholder-friendly buyback (net share count falling despite SBC), offset by a brand-new combined Chair/CEO (Rogers, sub-1-year tenure) and concentrated VC board influence; founder Mehta is fully gone (~8.8%, passive)."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + §12 position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -33174,6 +33244,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "Crocs's brand Power is genuine and dominant — a globally recognized footwear brand with ~57% gross margin, real pricing power, and Jibbitz personalization, and it is essentially the entire cash engine (~83% of revenue, ~$0.7-0.9B FCF). The Audit: branding is durable but rated medium, not high, because it is concentrated in a single silhouette exposed to fad risk and bolted to a structurally declining HEYDUDE. The live threats are a N.A. taste shift (already -6%) and further HEYDUDE value destruction — but HEYDUDE is already impaired ($737M taken) and international is +7%, which is why the downside is de-risked and the brand re-rate is the upside. That squares with the +56.8% finding: at ~9x EV/FCF the market prices a fading business, while the normalized cash flow of a still-growing core brand underwrites materially more — the flat consolidated optics, not the cash, are the discount."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Andrew Rees",
+          "founderLed": false,
+          "tenureYears": 9,
+          "insiderOwnershipPct": 3.1,
+          "capitalAllocation": "No dividend; capital returned almost entirely via buyback — ~$2.97B / 56.4M shares repurchased program-to-date (~82% of authorization), incl. $577M / 6.5M sh in FY25 and >$550M in FY24, $747M remaining at YE25. The 2022 HEYDUDE acquisition (~$2.5B, debt-funded) is the one large M&A move; the company has since deleveraged (~$320M paid down in FY24) but still carries ~$1.3B borrowings (Q1-2026) vs ~$0.13B cash. HEYDUDE was written down $737M in Q2-2025 ($430M trademark + $307M goodwill) as the brand declined ~13% — a non-cash impairment of an acquisition Rees led.",
+          "incentiveAlignment": "FY25 CEO total comp $10.96M (down ~13% YoY); ~90% at-risk — base ~$1.1M, the remainder equity + non-equity incentive, no stock options. LTIP PSUs earned on Adjusted-EBIT operating-margin and three one-year adjusted-revenue targets (2025-2027), with a 3-yr relative-TSR modifier on the whole award (the 2025 EBIT-margin PSU paid at 97.1%). Hedging/pledging prohibited; clawback policy in place.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share (no dual-class)",
+            "independent Chair (Thomas Smach, director since 2005) separate from the CEO; board of 9, majority independent",
+            "classified / staggered board (three classes, three-year terms) — a takeover-defense flag",
+            "directors + officers as a group (14) own 3.1% (Rees ~2.5%); no activist campaign on record"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 4,
+          "takeaway": "Clean single-class governance, an independent chair, ~90%-at-risk PSU / relative-TSR pay and aggressive buybacks, modestly offset by the debt-funded HEYDUDE acquisition that required a $737M impairment and a classified board."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + §12 position sizing."
       },
       "appendix": {
         "pushback": [
@@ -47263,6 +47355,29 @@ const MEMOS = [
           }
         ],
         "takeaway": "Caris is originating a plausible cornered resource — a proprietary whole-exome/transcriptome dataset feeding the ADAPT AI — with scale and network economics building as volume compounds, already visible in the 47%-to-65% gross-margin move. Durability is medium, not high — Foundation has Roche's balance sheet, Tempus and Natera are building comparable data, and reimbursement pricing is the shared vulnerability. The falsifier the bull must clear is sustained ~20%+ volume growth with the gross margin holding 65%+; if growth decelerates below that or pricing erodes margin, the moat commoditizes before it locks in."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "David D. Halbert",
+          "founderLed": true,
+          "tenureYears": 18,
+          "insiderOwnershipPct": 44.0,
+          "capitalAllocation": "IPO'd Jun-2025 at $21.00, raising ~$494M gross (23.5M Class A shares); FY2025 cash & equivalents jumped to $796.3M (from $64.0M FY24), ~$418M net cash. The inflection: FY2025 operating cash flow turned positive at +$83.2M (vs -$245.2M FY24) and, against ~$16.3M capex, free cash flow went positive ~+$67M near GAAP breakeven. R&D $101.6M FY25. No dividend; first capital return came post-period — a $100M buyback authorized Jun-2026. SBC $70.0M FY25 (up from $18.6M FY24, IPO-driven), which flatters adjusted EBITDA.",
+          "incentiveAlignment": "FY2025 total compensation ~$20.35M, ~96% equity/option awards granted around the June 2025 IPO and only ~3.8% (~$0.77M) base salary — a normal salary, not a nominal $1. The dominant alignment lever is the founder stake (~44% economic, ~$2.3B at the FY2025 price), not annual cash pay.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share (no dual-class / super-voting) — confirmed across the final 424B4, the post-IPO charter, Form 8-A12B (listed security = plain \"common stock\"), the 10-K Exhibit 4.2, the proxy share count, and SEC XBRL; the Class A/B 10-vote language existed only in the draft S-1 and was dropped before the IPO",
+            "founder David Halbert is the largest holder at ~44.6% economic = ~44.6% of the vote (single-class) — significant influence, below an outright majority; insiders together ~66%",
+            "combined Founder + Chairman + CEO (Halbert), with a lead independent director (Peter Castleman) as the counterweight",
+            "the IPO prospectus used conditional \"may become a controlled company\" language (never an affirmative claim); governance is run with a majority-independent board (8 of 10), fully independent Audit + Compensation committees, and no standing nominating committee (nominations by the independent directors)",
+            "related-party: aircraft agreements with Halbert-affiliated entities (Caris Air), ~$1.6-2.1M/yr net; co-founder Jon Halbert on the board since 2014"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "Founder-Chair-CEO Halbert is the largest holder at ~44.6% on a clean single-class one-vote register (no super-voting — the draft S-1's dual-class was dropped before the IPO), giving significant influence below an outright majority; the board keeps fully-independent Audit/Comp, 8-of-10 independence and a lead independent director, and he is aligned via the stake + a fresh FCF inflection + a new $100M buyback — with the combined Chair/CEO, the ~44.6% concentration, and a Halbert-affiliated aircraft related-party the offsets."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + §12 position sizing."
       },
       "appendix": {
         "pushback": [

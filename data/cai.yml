@@ -595,6 +595,36 @@ competitive:
     data, and reimbursement pricing is the shared vulnerability. The falsifier the bull must clear is sustained ~20%+ volume
     growth with the gross margin holding 65%+; if growth decelerates below that or pricing erodes margin, the moat commoditizes
     before it locks in.
+pocd:
+  people:
+    ceo: 'David D. Halbert'
+    founder_led: true
+    tenure_years: 18
+    insider_ownership_pct: 44.0
+    capital_allocation: 'IPO''d Jun-2025 at $21.00, raising ~$494M gross (23.5M Class A shares); FY2025 cash &
+      equivalents jumped to $796.3M (from $64.0M FY24), ~$418M net cash. The inflection: FY2025 operating cash
+      flow turned positive at +$83.2M (vs -$245.2M FY24) and, against ~$16.3M capex, free cash flow went positive
+      ~+$67M near GAAP breakeven. R&D $101.6M FY25. No dividend; first capital return came post-period — a $100M
+      buyback authorized Jun-2026. SBC $70.0M FY25 (up from $18.6M FY24, IPO-driven), which flatters adjusted EBITDA.'
+    incentive_alignment: 'FY2025 total compensation ~$20.35M, ~96% equity/option awards granted around the June
+      2025 IPO and only ~3.8% (~$0.77M) base salary — a normal salary, not a nominal $1. The dominant alignment
+      lever is the founder stake (~44% economic, ~$2.3B at the FY2025 price), not annual cash pay.'
+    governance_flags:
+      - 'single class of common stock, one vote per share (no dual-class / super-voting) — confirmed across the final 424B4, the post-IPO charter, Form 8-A12B (listed security = plain "common stock"), the 10-K Exhibit 4.2, the proxy share count, and SEC XBRL; the Class A/B 10-vote language existed only in the draft S-1 and was dropped before the IPO'
+      - 'founder David Halbert is the largest holder at ~44.6% economic = ~44.6% of the vote (single-class) — significant influence, below an outright majority; insiders together ~66%'
+      - 'combined Founder + Chairman + CEO (Halbert), with a lead independent director (Peter Castleman) as the counterweight'
+      - 'the IPO prospectus used conditional "may become a controlled company" language (never an affirmative claim); governance is run with a majority-independent board (8 of 10), fully independent Audit + Compensation committees, and no standing nominating committee (nominations by the independent directors)'
+      - 'related-party: aircraft agreements with Halbert-affiliated entities (Caris Air), ~$1.6-2.1M/yr net; co-founder Jon Halbert on the board since 2014'
+    key_person_risk: high
+    score: 3
+    takeaway: 'Founder-Chair-CEO Halbert is the largest holder at ~44.6% on a clean single-class one-vote register
+      (no super-voting — the draft S-1''s dual-class was dropped before the IPO), giving significant influence
+      below an outright majority; the board keeps fully-independent Audit/Comp, 8-of-10 independence and a lead
+      independent director, and he is aligned via the stake + a fresh FCF inflection + a new $100M buyback — with
+      the combined Chair/CEO, the ~44.6% concentration, and a Halbert-affiliated aircraft related-party the offsets.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + §12 position sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-21_02-34
