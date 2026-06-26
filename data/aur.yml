@@ -21,7 +21,7 @@ market:
   market_cap_billion: 13.2
   shares_outstanding_million: 1710        # 1.71B sh
   cash_billion: 1.28
-  net_debt_billion: 0.65                  # AUR has $0.65B debt (unlike JOBY)
+  net_debt_billion: 0.0                   # ~$0 funded debt (Q1'26 10-Q); the $1B 0% convertible is Uber's exchangeable note, not Aurora's
   extras: []
 
 # ── Page 1 narrative content ────────────────────────────────────────────────
@@ -290,7 +290,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.03
-    expected_per_share: 69.74
+    expected_per_share: 70.05
     headline: "Dominant US platform; category default."
     narrative:
       - >
@@ -307,16 +307,16 @@ scenarios:
         Compound conditional: each piece individually plausible at 50-65%;
         joint at 3-4%. Reflected here at 3%. This is the scenario where
         Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but
-        'Aurora wins the autonomy market.' Contributes $2.09 to weighted
+        'Aurora wins the autonomy market.' Contributes $2.10 to weighted
         (~$70 × 3%) — the asymmetric tail.
     probability_rationale: >
-      Tail of tails: commercial launch on schedule (50%) AND Aurora Driver
-      becomes the default software on PACCAR/Volvo fleets reaching ~20% of
-      autonomous miles / ~6–7% take-rate share of TAM by 2036 (30% conditional
-      on launch) AND software-take-rate model wins (40%) AND multiple
-      expansion to software/aerospace-hybrid premium (50%). Each individually
-      plausible; joint at 3-4%. Captures the scenario where Aurora becomes
-      a category-defining Big Tech-tier company.
+      Tail of tails: commercial launch on schedule (50%) AND Aurora becomes the
+      dominant US autonomous long-haul platform — owned capacity in the densest
+      lanes plus per-mile take-rate elsewhere, ~31% of the fully-penetrating TAM
+      by 2036 (30% conditional on launch) AND the hybrid platform scales at ~40%
+      margins (40%) AND multiple expansion to a platform premium (50%). Each
+      individually plausible; joint at 3-4%. Captures the scenario where Aurora
+      becomes a category-defining Big Tech-tier company.
 
     dcf_metrics:
       # tam_share is the FY36 revenue-share of the US autonomous long-haul TAM
@@ -342,12 +342,12 @@ scenarios:
       pv_terminal: 131.87
       op_ev: 143.82
       cash: 1.28
-      net_debt: 0.65        # AUR ultra_bull is the only AUR scenario with net debt (rounding)
-      total_equity: 144.45
+      net_debt: 0.0         # ~$0 funded debt (Q1'26 10-Q); Uber's $1B exchangeable note is not Aurora's
+      total_equity: 145.1
       raise_total: 2.0
       dilution_pct: 18
       final_shares: 2010
-      dcf_per_share: 71.87
+      dcf_per_share: 72.19
       distress: 0.98
 
     chart_data:

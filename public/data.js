@@ -1114,36 +1114,36 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$13.2B",
       "shares": "1.71B",
-      "cash": "$1.28B cash, $650M net debt"
+      "cash": "$1.28B cash, zero debt"
     },
     "spot": {
       "price": 7.74,
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 8.12,
-      "deltaPct": 5.0
+      "fair": 8.13,
+      "deltaPct": 5.1
     },
     "compound": [
       {
         "y": 5,
-        "value": 11.84,
+        "value": 11.86,
         "mult": 1.53
       },
       {
         "y": 10,
-        "value": 17.27,
+        "value": 17.29,
         "mult": 2.23
       },
       {
         "y": 15,
-        "value": 25.2,
+        "value": 25.23,
         "mult": 3.26
       },
       {
         "y": 20,
-        "value": 36.78,
-        "mult": 4.75
+        "value": 36.82,
+        "mult": 4.76
       }
     ],
     "taxonomy": {
@@ -1204,12 +1204,12 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 69.74,
+        "price": 70.05,
         "headline": "Dominant US platform; category default.",
-        "why": "Tail of tails: commercial launch on schedule (50%) AND Aurora Driver becomes the default software on PACCAR/Volvo fleets reaching ~20% of autonomous miles / ~6–7% take-rate share of TAM by 2036 (30% conditional on launch) AND software-take-rate model wins (40%) AND multiple expansion to software/aerospace-hybrid premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
+        "why": "Tail of tails: commercial launch on schedule (50%) AND Aurora becomes the dominant US autonomous long-haul platform — owned capacity in the densest lanes plus per-mile take-rate elsewhere, ~31% of the fully-penetrating TAM by 2036 (30% conditional on launch) AND the hybrid platform scales at ~40% margins (40%) AND multiple expansion to a platform premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
         "what": [
           "The ultra-bull case is that Aurora becomes the dominant US autonomous trucking platform — the category's default Driver. Commercial launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by 2028 + by FY36 Aurora runs the dominant share of US autonomous long-haul, monetized through a hybrid of owned capacity in the densest lanes and per-mile take-rate elsewhere with PACCAR/Volvo/FedEx. As autonomy penetrates the full long-haul market, Aurora books ~$50B revenue at ~40% margins — well above the bull, as a dominant platform must be.",
-          "Compound conditional: each piece individually plausible at 50-65%; joint at 3-4%. Reflected here at 3%. This is the scenario where Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but 'Aurora wins the autonomy market.' Contributes $2.09 to weighted (~$70 × 3%) — the asymmetric tail."
+          "Compound conditional: each piece individually plausible at 50-65%; joint at 3-4%. Reflected here at 3%. This is the scenario where Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but 'Aurora wins the autonomy market.' Contributes $2.10 to weighted (~$70 × 3%) — the asymmetric tail."
         ]
       }
     ],
@@ -1357,14 +1357,14 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 160,
       "weighted": {
-        "expected": 8.12,
-        "upsidePct": 5.0
+        "expected": 8.13,
+        "upsidePct": 5.1
       },
       "market": {
         "marketCapBillion": 13.2,
         "sharesOutstandingMillion": 1710.0,
         "cashBillion": 1.28,
-        "netDebtBillion": 0.65
+        "netDebtBillion": 0.0
       },
       "scenarios": {
         "bear": {
@@ -1852,7 +1852,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 69.74,
+          "expectedPerShare": 70.05,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -1951,12 +1951,12 @@ const MEMOS = [
             "pv_terminal": 131.87,
             "op_ev": 143.82,
             "cash": 1.28,
-            "net_debt": 0.65,
-            "total_equity": 144.45,
+            "net_debt": 0.0,
+            "total_equity": 145.1,
             "raise_total": 2.0,
             "dilution_pct": 18,
             "final_shares": 2010,
-            "dcf_per_share": 71.87,
+            "dcf_per_share": 72.19,
             "distress": 0.98
           },
           "chartData": {
