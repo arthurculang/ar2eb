@@ -1121,29 +1121,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 6.65,
-      "deltaPct": -14.0
+      "fair": 8.12,
+      "deltaPct": 5.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 9.68,
-        "mult": 1.25
+        "value": 11.84,
+        "mult": 1.53
       },
       {
         "y": 10,
-        "value": 14.1,
-        "mult": 1.82
+        "value": 17.27,
+        "mult": 2.23
       },
       {
         "y": 15,
-        "value": 20.54,
-        "mult": 2.65
+        "value": 25.2,
+        "mult": 3.26
       },
       {
         "y": 20,
-        "value": 29.93,
-        "mult": 3.87
+        "value": 36.78,
+        "mult": 4.75
       }
     ],
     "taxonomy": {
@@ -1204,12 +1204,12 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 20.76,
-        "headline": "Dominant US; software-take-rate.",
+        "price": 69.74,
+        "headline": "Dominant US platform; category default.",
         "why": "Tail of tails: commercial launch on schedule (50%) AND Aurora Driver becomes the default software on PACCAR/Volvo fleets reaching ~20% of autonomous miles / ~6–7% take-rate share of TAM by 2036 (30% conditional on launch) AND software-take-rate model wins (40%) AND multiple expansion to software/aerospace-hybrid premium (50%). Each individually plausible; joint at 3-4%. Captures the scenario where Aurora becomes a category-defining Big Tech-tier company.",
         "what": [
-          "The ultra-bull case is that Aurora becomes the dominant US autonomous trucking platform AND wins the software-take-rate game. Commercial launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by 2028 + Aurora Driver running on ~20% of US autonomous long-haul miles by 2036, monetized via per-mile take-rate (~6–7% revenue-share of TAM) with PACCAR/Volvo/FedEx fleet partners rather than capex-heavy direct ownership. By FY36 Aurora generates $8B+ revenue at 40%+ software-like margins.",
-          "Compound conditional: each piece individually plausible at 50-65%; joint at 3-4%. Reflected here at 3%. This is the scenario where Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but 'Aurora wins the autonomy market.' Contributes $3.00 to weighted ($100 × 3%) — the asymmetric tail."
+          "The ultra-bull case is that Aurora becomes the dominant US autonomous trucking platform — the category's default Driver. Commercial launch on schedule by 2027 + Aurora Driver reaches 1M+ autonomous miles by 2028 + by FY36 Aurora runs the dominant share of US autonomous long-haul, monetized through a hybrid of owned capacity in the densest lanes and per-mile take-rate elsewhere with PACCAR/Volvo/FedEx. As autonomy penetrates the full long-haul market, Aurora books ~$50B revenue at ~40% margins — well above the bull, as a dominant platform must be.",
+          "Compound conditional: each piece individually plausible at 50-65%; joint at 3-4%. Reflected here at 3%. This is the scenario where Aurora joins the Tesla/Nvidia tier — not just 'autonomy works,' but 'Aurora wins the autonomy market.' Contributes $2.09 to weighted (~$70 × 3%) — the asymmetric tail."
         ]
       }
     ],
@@ -1357,8 +1357,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 160,
       "weighted": {
-        "expected": 6.65,
-        "upsidePct": -14.0
+        "expected": 8.12,
+        "upsidePct": 5.0
       },
       "market": {
         "marketCapBillion": 13.2,
@@ -1852,26 +1852,26 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 20.76,
+          "expectedPerShare": 69.74,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 6.6,
+            "tam_share": 31.25,
             "p_fail": 3,
             "s2c": 2.5
           },
           "dcfPath": {
             "rev_path": [
-              0.03,
-              0.15,
-              0.5,
+              0.04,
+              0.2,
+              0.6,
               1.5,
-              3.0,
-              5.0,
-              7.0,
-              8.5,
-              9.5,
-              10.5
+              3.5,
+              7.5,
+              15.0,
+              26.0,
+              38.0,
+              50.0
             ],
             "op_margin": [
               -2.5,
@@ -1899,64 +1899,64 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "nopat": [
-              -0.075,
-              -0.12,
-              -0.15,
+              -0.1,
+              -0.16,
+              -0.18,
               0.0,
-              0.45,
-              1.25,
-              2.24,
-              3.06,
-              3.61,
-              4.2
+              0.525,
+              1.875,
+              4.8,
+              9.36,
+              14.44,
+              20.0
             ],
             "reinvest": [
-              0.03,
-              0.12,
-              0.35,
-              0.75,
-              1.2,
-              1.5,
-              1.4,
-              1.25,
-              1.0,
-              0.75
+              0.016,
+              0.064,
+              0.16,
+              0.36,
+              0.8,
+              1.6,
+              3.0,
+              4.4,
+              4.8,
+              4.8
             ],
             "fcf": [
-              -0.105,
-              -0.24,
-              -0.5,
-              -0.75,
-              -0.75,
-              -0.25,
-              0.84,
-              1.81,
-              2.61,
-              3.45
+              -0.116,
+              -0.224,
+              -0.34,
+              -0.36,
+              -0.275,
+              0.275,
+              1.8,
+              4.96,
+              9.64,
+              15.2
             ],
             "pv_fcf": [
-              -0.093,
-              -0.191,
-              -0.357,
-              -0.488,
-              -0.444,
-              -0.135,
-              0.413,
-              0.815,
-              1.082,
-              1.327
+              -0.103,
+              -0.178,
+              -0.242,
+              -0.231,
+              -0.16,
+              0.145,
+              0.867,
+              2.192,
+              3.927,
+              5.734
             ],
-            "sum_pv_fcf": 1.929,
-            "terminal_value": 105.0,
-            "pv_terminal": 40.4,
-            "op_ev": 42.33,
+            "sum_pv_fcf": 11.95,
+            "terminal_value": 349.6,
+            "pv_terminal": 131.87,
+            "op_ev": 143.82,
             "cash": 1.28,
             "net_debt": 0.65,
-            "total_equity": 42.96,
+            "total_equity": 144.45,
             "raise_total": 2.0,
             "dilution_pct": 18,
             "final_shares": 2010,
-            "dcf_per_share": 21.37,
+            "dcf_per_share": 71.87,
             "distress": 0.98
           },
           "chartData": {
@@ -3924,29 +3924,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 5.69,
-      "deltaPct": 136.9
+      "fair": 6.58,
+      "deltaPct": 174.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 8.34,
-        "mult": 3.47
+        "value": 9.63,
+        "mult": 4.01
       },
       {
         "y": 10,
-        "value": 12.24,
-        "mult": 5.1
+        "value": 14.1,
+        "mult": 5.88
       },
       {
         "y": 15,
-        "value": 17.97,
-        "mult": 7.49
+        "value": 20.67,
+        "mult": 8.61
       },
       {
         "y": 20,
-        "value": 26.4,
-        "mult": 11.0
+        "value": 30.31,
+        "mult": 12.63
       }
     ],
     "taxonomy": {
@@ -3995,7 +3995,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 12,
-        "price": 17.39,
+        "price": 19.93,
         "headline": "Single-molecule wins proteoforms.",
         "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands to 10-15+ proteoforms by 2030 (60% conditional) AND mature margins reach 20-25% (40% conditional) AND the market gives NAUT credit via acquisition or re-rating (50%). Joint at 10-15%, reflected at 12%. The bull requires conjunctive execution AND a favorable backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single-molecule frontier. 12% (vs JOBY's 12%): structurally similar compound venture-bet, but a clearer near-term path (launch ~6 months out vs JOBY's still-pending Type Certification).",
         "what": [
@@ -4007,12 +4007,12 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 86.0,
+        "price": 105.52,
         "headline": "Dominant + multiomics + take-rate.",
-        "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 3%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
+        "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 4%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
         "what": [
           "The ultra-bull case requires Voyager to become the dominant single-molecule proteomics platform AND for multiomics integration (proteomics + sequencing + cell biology) to emerge as the standard for both research and diagnostics. By 2030 NAUT operates 5,000+ instruments globally. By 2034, an instrument-as-a-service / assay-take-rate model emerges with software-economics on a meaningful fraction of revenue — the Mobileye/Illumina platform-take-rate analog.",
-          "Compound conditional: Voyager wins the single-molecule race (30% conditional on Tau success) AND multiomics becomes routine (40% conditional on platform success) AND NAUT captures dominant share at 3%+ of $130B TAM (25% conditional on both) AND multiple expansion from tools to platform (50% conditional on all above). Joint at 1.5-3%. Reflected here at 3%."
+          "Compound conditional: Voyager wins the single-molecule race (30% conditional on Tau success) AND multiomics becomes routine (40% conditional on platform success) AND NAUT captures dominant share at 4%+ of $130B TAM (25% conditional on both) AND multiple expansion from tools to platform (50% conditional on all above). Joint at 1.5-3%. Reflected here at 3%."
         ]
       }
     ],
@@ -4169,8 +4169,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 130,
       "weighted": {
-        "expected": 5.69,
-        "upsidePct": 136.9
+        "expected": 6.58,
+        "upsidePct": 174.0
       },
       "market": {
         "marketCapBillion": 0.302,
@@ -4503,11 +4503,11 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.12,
-          "expectedPerShare": 17.39,
+          "expectedPerShare": 19.93,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "tam_share": 1.5,
+            "tam_share": 2.15,
             "p_fail": 8,
             "s2c": 1.4
           },
@@ -4518,11 +4518,11 @@ const MEMOS = [
               0.22,
               0.5,
               0.95,
-              1.45,
-              1.8,
+              1.5,
               1.95,
-              2.0,
-              2.0
+              2.35,
+              2.65,
+              2.8
             ],
             "op_margin": [
               -2.0,
@@ -4554,60 +4554,60 @@ const MEMOS = [
               -0.075,
               -0.066,
               0.025,
-              0.124,
-              0.261,
-              0.378,
-              0.429,
-              0.44,
-              0.44
+              0.123,
+              0.27,
+              0.409,
+              0.517,
+              0.583,
+              0.616
             ],
             "reinvest": [
-              0.008,
+              0.009,
               0.045,
               0.104,
               0.2,
               0.321,
-              0.357,
-              0.25,
-              0.107,
-              0.036,
-              0.0
+              0.393,
+              0.321,
+              0.286,
+              0.214,
+              0.107
             ],
             "fcf": [
-              -0.032,
+              -0.033,
               -0.12,
               -0.17,
               -0.175,
-              -0.197,
-              -0.096,
-              0.128,
-              0.322,
-              0.404,
-              0.44
+              -0.198,
+              -0.123,
+              0.088,
+              0.231,
+              0.369,
+              0.509
             ],
             "pv_fcf": [
               -0.029,
               -0.096,
               -0.123,
               -0.114,
-              -0.116,
-              -0.052,
-              0.063,
-              0.146,
-              0.169,
-              0.171
+              -0.118,
+              -0.067,
+              0.044,
+              0.106,
+              0.157,
+              0.2
             ],
-            "sum_pv_fcf": 0.019,
-            "terminal_value": 9.06,
-            "pv_terminal": 3.52,
-            "op_ev": 3.54,
+            "sum_pv_fcf": -0.04,
+            "terminal_value": 10.49,
+            "pv_terminal": 4.12,
+            "op_ev": 4.08,
             "cash": 0.143,
             "net_debt": 0.0,
-            "total_equity": 3.68,
+            "total_equity": 4.22,
             "raise_total": 0.75,
             "dilution_pct": 36,
             "final_shares": 196,
-            "dcf_per_share": 18.78,
+            "dcf_per_share": 21.53,
             "distress": 1.5
           },
           "chartData": {
@@ -4664,11 +4664,11 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 86.0,
+          "expectedPerShare": 105.52,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 3.1,
+            "tam_share": 4.15,
             "p_fail": 3,
             "s2c": 1.6
           },
@@ -4679,11 +4679,11 @@ const MEMOS = [
               0.35,
               0.9,
               1.8,
-              2.8,
-              3.5,
+              2.9,
               3.9,
-              4.0,
-              4.0
+              4.7,
+              5.1,
+              5.4
             ],
             "op_margin": [
               -1.5,
@@ -4711,64 +4711,64 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "nopat": [
-              -0.023,
+              -0.022,
               -0.05,
               0.0,
               0.09,
               0.324,
-              0.672,
-              0.945,
-              1.131,
-              1.2,
-              1.2
+              0.696,
+              1.053,
+              1.363,
+              1.53,
+              1.62
             ],
             "reinvest": [
               0.009,
               0.053,
               0.156,
               0.344,
-              0.563,
+              0.562,
+              0.687,
               0.625,
-              0.438,
+              0.5,
               0.25,
-              0.063,
-              0.0
+              0.188
             ],
             "fcf": [
               -0.032,
               -0.103,
               -0.156,
               -0.254,
-              -0.239,
-              0.047,
-              0.507,
-              0.881,
-              1.137,
-              1.2
+              -0.238,
+              0.009,
+              0.428,
+              0.863,
+              1.28,
+              1.432
             ],
             "pv_fcf": [
               -0.029,
               -0.083,
               -0.114,
-              -0.167,
-              -0.143,
-              0.026,
-              0.255,
-              0.402,
-              0.484,
-              0.475
+              -0.169,
+              -0.144,
+              0.005,
+              0.22,
+              0.41,
+              0.566,
+              0.589
             ],
-            "sum_pv_fcf": 1.106,
-            "terminal_value": 31.05,
-            "pv_terminal": 12.3,
-            "op_ev": 13.41,
+            "sum_pv_fcf": 1.25,
+            "terminal_value": 37.05,
+            "pv_terminal": 15.24,
+            "op_ev": 16.49,
             "cash": 0.143,
             "net_debt": 0.0,
-            "total_equity": 13.55,
+            "total_equity": 16.63,
             "raise_total": 0.65,
             "dilution_pct": 18,
             "final_shares": 153,
-            "dcf_per_share": 88.56,
+            "dcf_per_share": 108.69,
             "distress": 3.0
           },
           "chartData": {
@@ -12330,46 +12330,46 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-05-31",
-    "publishedLabel": "May 31, 2026",
+    "publishedISO": "2026-06-25",
+    "publishedLabel": "June 25, 2026",
     "pdf": {
       "file": "gral-memo__v001__2026-05-31_20-47.pdf",
       "size": "375 KB",
       "priorVersions": []
     },
     "metrics": {
-      "mktCap": "$3.1B",
+      "mktCap": "$2.7B",
       "shares": "44M",
-      "cash": "$823M cash, zero debt · $0.823B cash, no debt; ~43M shares (low float); Illumina holds ~12.5%; Revenue-generating: $147M FY25 (+17%), Galleri self-pay; burn ~$300M/yr (~2.5yr); NHS-Galleri missed primary endpoint (Feb'26); FDA PMA filed; Medicare law signed"
+      "cash": "$823M cash, zero debt · $0.823B cash (Q1'26), no debt; ~44M shares (low float); Illumina ~14.5% at the 2024 spin; Revenue-generating: $147M FY25 (+17%), Galleri self-pay ~$949; burn ~$300M/yr (~2.5yr runway); NHS-Galleri missed primary endpoint (Feb'26); FDA PMA accepted; Medicare law (≥2028, ~$509 parity); Abbott bought Exact"
     },
     "spot": {
-      "price": 73.0,
-      "asOf": "May 31, 2026 close"
+      "price": 62.0,
+      "asOf": "June 25, 2026 close"
     },
     "expected": {
-      "fair": 79.54,
-      "deltaPct": 9.0
+      "fair": 65.99,
+      "deltaPct": 6.4
     },
     "compound": [
       {
         "y": 5,
-        "value": 123.72,
-        "mult": 1.69
+        "value": 102.64,
+        "mult": 1.66
       },
       {
         "y": 10,
-        "value": 192.59,
-        "mult": 2.64
+        "value": 159.77,
+        "mult": 2.58
       },
       {
         "y": 15,
-        "value": 300.05,
-        "mult": 4.11
+        "value": 248.91,
+        "mult": 4.01
       },
       {
         "y": 20,
-        "value": 467.89,
-        "mult": 6.41
+        "value": 388.13,
+        "mult": 6.26
       }
     ],
     "taxonomy": {
@@ -12388,7 +12388,7 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": null,
-    "question": "Does ~$3B / ~20x sales price GRAIL's multi-gate regulatory option fairly — after the NHS-Galleri miss, but with the FDA filing and Medicare law in hand?",
+    "question": "Does ~$2.7B / ~18x sales price GRAIL's multi-gate regulatory option fairly — after the NHS-Galleri miss, but with the FDA filing accepted and the Medicare law in hand?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -12399,7 +12399,7 @@ const MEMOS = [
         "why": "The NHS-Galleri miss is a real, fired datapoint — the only RCT of any MCED failed its stage-shift primary endpoint, hardening FDA and payer skepticism. 40% within-scenario failure reflects genuine PMA-rejection risk. 20% scenario weight.",
         "what": [
           "The FDA PMA is rejected or stalled — the NHS-Galleri primary-endpoint miss (no significant stage III+IV reduction) hardens FDA/USPSTF skepticism about clinical utility, and Galleri stays a self-pay LDT niche. Test volume plateaus, the Medicare benefit never activates (it is gated on FDA approval), and GRAIL burns its ~$823M cash defending the franchise.",
-          "With a 40% within-scenario failure probability and revenue stalled near $0.3B, the equity collapses toward the cash-and-distress floor — a near-total loss from today's $73."
+          "With a 40% within-scenario failure probability and revenue stalled near $0.3B, the equity collapses toward the cash-and-distress floor — a near-total loss from today's $62."
         ]
       },
       {
@@ -12418,41 +12418,41 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 34,
-        "price": 73.13,
+        "price": 58.34,
         "headline": "FDA 2027 + Medicare 2028; category leader.",
         "why": "Requires FDA approval (on PATHFINDER 2, which was positive) + Medicare activation (the law is already signed) + broad coverage — the machinery is in motion. 12% failure probability. 34% weight as the central, modal outcome.",
         "what": [
-          "The modal path: the FDA approves Galleri (~2027) on the PATHFINDER 2 evidence, Medicare coverage activates (~2028), and broad private coverage follows — Galleri becomes the leading reimbursed MCED test at ~$2.6B revenue by 2035 (~10% of a ~$25B screening market) at ~30% operating margins.",
-          "DCF ~$82/share — roughly today's price. The market is pricing this modal regulatory-success case; the small ~50M share count makes the per-share value swing hard on each gate."
+          "The modal path: the FDA approves Galleri (~2027) on the PATHFINDER 2 evidence, Medicare coverage activates (~2028), and broad private coverage follows — Galleri becomes the leading reimbursed MCED test at ~$2.05B revenue by 2035 (~8% of a ~$25B screening market) at ~30% operating margins, blended ASP settling toward the ~$509 Medicare parity rate.",
+          "DCF ~$65/share — modestly above today's $62. The market is pricing this modal regulatory-success case; the small ~50M share count makes the per-share value swing hard on each gate."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 13,
-        "price": 219.48,
+        "price": 182.48,
         "headline": "Broad adoption; annual-repeat screening.",
         "why": "A chain: clean FDA + Medicare + broad private coverage + annual-repeat adoption + category leadership. Each plausible at 50-70%; jointly ~13%. GRAIL's breadth and only-RCT dataset are the edge.",
         "what": [
-          "The bull: FDA + Medicare clear cleanly, broad private coverage and annual-repeat screening take hold, and GRAIL extends its first-mover, broadest-test, only-RCT-dataset lead — ~$4.5B revenue by 2035 at ~36% operating margins. The screening category compounds and GRAIL leads it.",
-          "DCF ~$232/share — ~3× today's price. This is the scenario the regulatory machinery (PMA filed + Medicare law) keeps alive despite the NHS miss."
+          "The bull: FDA + Medicare clear cleanly, broad private coverage and annual-repeat screening take hold, and GRAIL extends its first-mover, broadest-test, only-RCT-dataset lead — ~$3.6B revenue by 2035 at ~36% operating margins. The screening category compounds and GRAIL leads it even as ASP holds near parity.",
+          "DCF ~$193/share — ~3× today's price. This is the scenario the regulatory machinery (PMA accepted + Medicare law) keeps alive despite the NHS miss."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 444.35,
+        "price": 370.13,
         "headline": "MCED standard of care; GRAIL dominant.",
         "why": "Tail of tails: MCED standard of care + eventual mortality proof + GRAIL dominance + premium terminal. Individually 40-60%; jointly ~5%. The asymmetric upside the ~43M share count amplifies.",
         "what": [
-          "The tail: MCED becomes standard of care, the extended NHS follow-up eventually shows a mortality benefit, and GRAIL is the dominant platform — ~$6.8B revenue by 2035 at ~40% margins with a premium terminal.",
-          "DCF ~$457/share — ~6× spot. The asymmetric upside the low share count amplifies; individually each gate is plausible, jointly ~5%."
+          "The tail: MCED becomes standard of care, the extended NHS follow-up eventually shows a mortality benefit, and GRAIL is the dominant platform — ~$5.6B revenue by 2035 at ~40% margins with a premium terminal.",
+          "DCF ~$381/share — ~6× spot. The asymmetric upside the low share count amplifies; individually each gate is plausible, jointly ~5%."
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 28 / Base 34 / Bull 13 / Ultra Bull 5. Spot price reference: May 31, 2026 close.",
-    "thesis": "GRAIL trades at ~$3B (≈$73/sh on just ~43M shares) on ~$147M FY25 revenue and ~$823M cash. Galleri — a blood test for 50+ cancers, self-pay today — is a multi-gate regulatory option: FDA PMA (filed Jan 2026) → Medicare coverage (signed Feb 2026; ≥2028) → broad adoption. The shape is unusual: the pivotal NHS-Galleri trial MISSED its endpoint (-50% stock), but the FDA filing rests on the positive PATHFINDER 2 and the Medicare law passed — partly broken, partly de-risked. The finding: at $73 the market roughly prices the modal regulatory-success case, with FDA-rejection downside and broad-adoption upside about balanced.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 28 / Base 34 / Bull 13 / Ultra Bull 5. Spot price reference: June 25, 2026 close.",
+    "thesis": "GRAIL trades at ~$2.7B (≈$62/sh on just ~44M shares) on ~$147M FY25 revenue and ~$823M cash. Galleri — a blood test for 50+ cancers, self-pay today — is a multi-gate option: FDA PMA (filed Jan 2026, now accepted) → Medicare coverage (signed Feb 2026; ≥2028 at ~$509 parity) → broad adoption. The pivotal NHS-Galleri trial MISSED its primary endpoint (-50% stock), but the PMA rests on positive PATHFINDER 2 and the law passed — broken yet de-risked. Re-modeled on ~$509 parity (Abbott now backs Cancerguard), at $62 the market roughly prices the modal regulatory-success case — FDA-rejection downside and broad-adoption upside balanced.",
     "historicalPrices": {
       "xMin": -2.05,
       "ipoMarker": "Spin Jun '24",
@@ -12494,8 +12494,16 @@ const MEMOS = [
           65.0
         ],
         [
-          -0.05,
+          -0.1,
           73.0
+        ],
+        [
+          -0.04,
+          67.0
+        ],
+        [
+          -0.01,
+          62.0
         ]
       ]
     },
@@ -12523,7 +12531,7 @@ const MEMOS = [
     ],
     "page3": {
       "subtitle": "FY26-FY35 scenario projections (revenue-generating; pre-profit) · fiscal years end Dec 31 · Q1 2026 10-Q, FY25 results",
-      "sources": "Sources: GRAIL Q1 2026 10-Q (cash $0.823B), FY2025 results ($147M revenue, net loss), NHS-Galleri (primary endpoint missed Feb'26) + PATHFINDER 2 (positive) readouts, FDA PMA filing, Medicare MCED Coverage Act. Revenue modeled as reimbursed test volume x ASP; FCF NOL-shielded pre-tax over the window (documented simplification). TAM: MCED screening serviceable slice, ~$25B annual by FY35.",
+      "sources": "Sources: GRAIL Q1 2026 10-Q (cash $0.823B), FY2025 results ($147M revenue, net loss), NHS-Galleri (primary endpoint missed Feb'26) + PATHFINDER 2 (positive) readouts, FDA PMA (accepted), Medicare MCED Coverage Act (≥2028, ~$509 parity). Revenue modeled as reimbursed test volume x ASP compressing toward ~$509; FCF NOL-shielded pre-tax (documented simplification). TAM: MCED screening slice ~$25B by FY35 (GRAIL low-teens share).",
       "chartReference": {
         "tamBillion": 25.0,
         "historyYears": [
@@ -12550,7 +12558,7 @@ const MEMOS = [
         "fleetReference": null,
         "valnAnchorY": 8,
         "valnAnchorText": "Mature dx P/S ~5-10x",
-        "valnCaption": "At ~20x sales today, every scenario implies the multiple resolves only as reimbursed test volume arrives.",
+        "valnCaption": "At ~18x sales today, every scenario implies the multiple resolves only as reimbursed test volume arrives.",
         "tamTitle": "$25B FY35 MCED screening TAM — GRAIL share",
         "tamLegend": [
           "GRAIL",
@@ -12564,11 +12572,11 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 25.0,
       "weighted": {
-        "expected": 79.54,
-        "upsidePct": 9.0
+        "expected": 65.99,
+        "upsidePct": 6.4
       },
       "market": {
-        "marketCapBillion": 3.1,
+        "marketCapBillion": 2.7,
         "sharesOutstandingMillion": 44.0,
         "cashBillion": 0.823,
         "netDebtBillion": 0.0
@@ -12898,11 +12906,11 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.34,
-          "expectedPerShare": 73.13,
+          "expectedPerShare": 58.34,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
-            "tam_share": 10.4,
+            "tam_share": 8.2,
             "p_fail": 12,
             "s2c": 1.3
           },
@@ -12910,14 +12918,14 @@ const MEMOS = [
             "rev_path": [
               0.2,
               0.3,
-              0.48,
-              0.75,
-              1.15,
-              1.6,
-              2.0,
-              2.3,
-              2.5,
-              2.6
+              0.46,
+              0.68,
+              0.95,
+              1.25,
+              1.55,
+              1.8,
+              1.95,
+              2.05
             ],
             "op_margin": [
               -1.0,
@@ -12947,38 +12955,38 @@ const MEMOS = [
             "nopat": [
               -0.2,
               -0.15,
-              -0.072,
-              0.038,
-              0.172,
-              0.352,
-              0.52,
-              0.667,
-              0.75,
-              0.78
+              -0.069,
+              0.034,
+              0.142,
+              0.275,
+              0.403,
+              0.522,
+              0.585,
+              0.615
             ],
             "reinvest": [
               0.041,
               0.077,
-              0.138,
+              0.123,
+              0.169,
               0.208,
-              0.308,
-              0.346,
-              0.308,
               0.231,
-              0.154,
+              0.231,
+              0.192,
+              0.115,
               0.077
             ],
             "fcf": [
               -0.241,
               -0.227,
-              -0.21,
-              -0.17,
+              -0.192,
               -0.135,
-              0.006,
-              0.212,
-              0.436,
-              0.596,
-              0.703
+              -0.065,
+              0.044,
+              0.172,
+              0.33,
+              0.47,
+              0.538
             ],
             "cash": 0.823,
             "net_debt": 0.0,
@@ -12989,21 +12997,21 @@ const MEMOS = [
             "pv_fcf": [
               -0.213,
               -0.178,
-              -0.147,
-              -0.106,
-              -0.075,
-              0.003,
-              0.096,
-              0.178,
-              0.221,
-              0.237
+              -0.134,
+              -0.084,
+              -0.036,
+              0.022,
+              0.078,
+              0.135,
+              0.174,
+              0.181
             ],
-            "sum_pv_fcf": 0.02,
-            "terminal_value": 9.61,
-            "pv_terminal": 3.24,
-            "op_ev": 3.26,
-            "total_equity": 4.08,
-            "dcf_per_share": 81.6
+            "sum_pv_fcf": -0.06,
+            "terminal_value": 7.35,
+            "pv_terminal": 2.48,
+            "op_ev": 2.42,
+            "total_equity": 3.24,
+            "dcf_per_share": 64.8
           },
           "chartData": {
             "raises": [
@@ -13059,11 +13067,11 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.13,
-          "expectedPerShare": 219.48,
+          "expectedPerShare": 182.48,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "tam_share": 18.0,
+            "tam_share": 14.4,
             "p_fail": 6,
             "s2c": 1.5
           },
@@ -13071,14 +13079,14 @@ const MEMOS = [
             "rev_path": [
               0.21,
               0.35,
-              0.6,
-              1.0,
-              1.7,
-              2.5,
-              3.2,
-              3.8,
-              4.2,
-              4.5
+              0.58,
+              0.92,
+              1.45,
+              2.05,
+              2.6,
+              3.05,
+              3.4,
+              3.6
             ],
             "op_margin": [
               -0.8,
@@ -13108,38 +13116,38 @@ const MEMOS = [
             "nopat": [
               -0.168,
               -0.105,
-              0.03,
-              0.18,
-              0.442,
-              0.775,
-              1.088,
-              1.33,
-              1.512,
-              1.62
+              0.029,
+              0.166,
+              0.377,
+              0.635,
+              0.884,
+              1.067,
+              1.224,
+              1.296
             ],
             "reinvest": [
               0.042,
               0.093,
-              0.167,
-              0.267,
-              0.467,
-              0.533,
-              0.467,
+              0.153,
+              0.227,
+              0.353,
               0.4,
-              0.267,
-              0.2
+              0.367,
+              0.3,
+              0.233,
+              0.133
             ],
             "fcf": [
               -0.21,
               -0.198,
-              -0.137,
-              -0.087,
-              -0.025,
-              0.242,
-              0.621,
-              0.93,
-              1.245,
-              1.42
+              -0.124,
+              -0.061,
+              0.024,
+              0.236,
+              0.517,
+              0.768,
+              0.991,
+              1.163
             ],
             "cash": 0.823,
             "net_debt": 0.0,
@@ -13150,21 +13158,21 @@ const MEMOS = [
             "pv_fcf": [
               -0.187,
               -0.157,
-              -0.097,
-              -0.055,
-              -0.014,
-              0.126,
-              0.293,
-              0.4,
-              0.489,
-              0.512
+              -0.088,
+              -0.039,
+              0.014,
+              0.123,
+              0.244,
+              0.33,
+              0.389,
+              0.419
             ],
-            "sum_pv_fcf": 1.31,
-            "terminal_value": 24.38,
-            "pv_terminal": 8.79,
-            "op_ev": 10.1,
-            "total_equity": 10.92,
-            "dcf_per_share": 232.34
+            "sum_pv_fcf": 1.05,
+            "terminal_value": 19.96,
+            "pv_terminal": 7.2,
+            "op_ev": 8.25,
+            "total_equity": 9.07,
+            "dcf_per_share": 192.98
           },
           "chartData": {
             "raises": [
@@ -13220,11 +13228,11 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 444.35,
+          "expectedPerShare": 370.13,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 27.2,
+            "tam_share": 22.4,
             "p_fail": 3,
             "s2c": 1.7
           },
@@ -13232,14 +13240,14 @@ const MEMOS = [
             "rev_path": [
               0.22,
               0.4,
-              0.72,
-              1.3,
-              2.2,
-              3.3,
-              4.4,
-              5.4,
-              6.2,
-              6.8
+              0.7,
+              1.2,
+              1.95,
+              2.85,
+              3.7,
+              4.5,
+              5.1,
+              5.6
             ],
             "op_margin": [
               -0.6,
@@ -13269,38 +13277,38 @@ const MEMOS = [
             "nopat": [
               -0.132,
               -0.04,
-              0.108,
-              0.351,
-              0.726,
-              1.221,
-              1.716,
-              2.16,
-              2.48,
-              2.72
+              0.105,
+              0.324,
+              0.643,
+              1.054,
+              1.443,
+              1.8,
+              2.04,
+              2.24
             ],
             "reinvest": [
               0.043,
               0.106,
-              0.188,
-              0.341,
+              0.176,
+              0.294,
+              0.441,
               0.529,
-              0.647,
-              0.647,
-              0.588,
+              0.5,
               0.471,
-              0.353
+              0.353,
+              0.294
             ],
             "fcf": [
               -0.175,
               -0.146,
-              -0.08,
-              0.01,
-              0.197,
-              0.574,
-              1.069,
-              1.572,
-              2.009,
-              2.367
+              -0.071,
+              0.03,
+              0.202,
+              0.525,
+              0.943,
+              1.329,
+              1.687,
+              1.946
             ],
             "cash": 0.823,
             "net_debt": 0.0,
@@ -13311,21 +13319,21 @@ const MEMOS = [
             "pv_fcf": [
               -0.157,
               -0.118,
-              -0.058,
-              0.007,
-              0.118,
-              0.312,
-              0.531,
-              0.716,
-              0.841,
-              0.913
+              -0.052,
+              0.02,
+              0.121,
+              0.286,
+              0.469,
+              0.605,
+              0.706,
+              0.751
             ],
-            "sum_pv_fcf": 3.11,
-            "terminal_value": 44.33,
-            "pv_terminal": 17.1,
-            "op_ev": 20.21,
-            "total_equity": 21.03,
-            "dcf_per_share": 457.17
+            "sum_pv_fcf": 2.63,
+            "terminal_value": 36.44,
+            "pv_terminal": 14.06,
+            "op_ev": 16.69,
+            "total_equity": 17.51,
+            "dcf_per_share": 380.65
           },
           "chartData": {
             "raises": [
@@ -13381,7 +13389,7 @@ const MEMOS = [
         }
       },
       "competitive": {
-        "arena": "Multi-cancer early detection (MCED) blood screening — GRAIL (Galleri, 50+ cancers, only RCT) vs Exact Sciences (Cancerguard + Cologuard cash engine), Guardant (Shield, FDA-approved CRC -> MCED), Freenome, Delfi; the race to originate the first FDA-approved, reimbursed MCED franchise.",
+        "arena": "Multi-cancer early detection (MCED) blood screening — GRAIL (Galleri, 50+ cancers, only RCT) vs Abbott/Exact (Cancerguard + Cologuard cash engine), Guardant (Shield, FDA-approved CRC -> MCED), Freenome, Delfi; the race to originate the first FDA-approved, reimbursed MCED franchise.",
         "lens": "power_origination",
         "powers": {
           "scaleEconomies": {
@@ -13417,12 +13425,12 @@ const MEMOS = [
         "window": "open",
         "rivals": [
           {
-            "name": "Exact Sciences",
+            "name": "Abbott / Exact Sciences",
             "kind": "public",
-            "note": "Cancerguard MCED (LDT, launched 2025) funded by the profitable Cologuard franchise; huge commercial muscle.",
+            "note": "Cancerguard MCED (LDT, launched Sep'25, $689) now owned by Abbott (deal closed Mar'26) — a 160-country distributor behind the Cologuard franchise.",
             "shareNow": 0.05,
-            "shareTerminal": 0.25,
-            "capital": "~$3B-rev co.; self-funded"
+            "shareTerminal": 0.27,
+            "capital": "Abbott-backed; global scale"
           },
           {
             "name": "Guardant Health",
@@ -13458,7 +13466,7 @@ const MEMOS = [
           },
           {
             "metric": "FDA approval",
-            "company": "PMA filed (decision 2026-27)",
+            "company": "PMA accepted (decision 2026-27)",
             "bestRival": "Guardant Shield approved (CRC)",
             "verdict": "roughly level"
           },
@@ -13469,7 +13477,29 @@ const MEMOS = [
             "verdict": "lagging"
           }
         ],
-        "takeaway": "GRAIL is originating the MCED category — the broadest test (50+ cancers), the only randomized dataset, and the first PMA — but the NHS-Galleri primary-endpoint miss dented the 'proven population benefit' narrative, and Exact (Cologuard cash engine) and Guardant (FDA + Medicare in CRC) are scaling MCED behind it. The origination window is open but closing: GRAIL must convert the PMA into approval + Medicare coverage before better-capitalized rivals scale, and the extended NHS mortality follow-up is the falsifier that could reopen — or close — the whole thesis."
+        "takeaway": "GRAIL is originating the MCED category — the broadest test (50+ cancers), the only randomized dataset, and the first PMA — but the NHS-Galleri primary-endpoint miss dented the 'proven population benefit' narrative, and Abbott/Exact (Cancerguard on a 160-country distributor) and Guardant (FDA + Medicare in CRC) are scaling MCED behind it. The origination window is open but closing: GRAIL must convert the PMA into approval + Medicare coverage before better-capitalized rivals scale, and the extended NHS mortality follow-up is the falsifier that could reopen — or close — the whole thesis."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Josh Ofman",
+          "founderLed": false,
+          "tenureYears": 0,
+          "insiderOwnershipPct": 1.8,
+          "capitalAllocation": "GRAIL is pre-profit and cash-burning. It was spun out of Illumina in June 2024 (Illumina had paid ~$8B in 2021; the public market now values GRAIL near ~$2.7B — heavy value destruction under prior ownership, pre-spin). Current management has roughly halved the cash burn to ~$300M/yr and holds ~$823M cash with no debt, funding the company into the ~2028 Medicare window without an imminent raise. FY25 revenue $147M (+17%). No dividend or buyback — appropriate for a pre-scale development-stage screener.",
+          "incentiveAlignment": "CEO pay is predominantly equity (RSU grants per Form 4 filings); Ofman directly owns ~0.4M shares (~1%). Total insider ownership is low (~1.8%) — typical of a corporate spinco and weaker skin-in-the-game than a founder-led name, with no founder block on the register.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class or super-voting",
+            "independent Chair (Greg Summe) is separate from the CEO — the Chair and CEO roles are split",
+            "brand-new CEO: Josh Ofman became CEO 1 June 2026 (Bob Ragusa retired); ~7 years at GRAIL prior (CMO/President since 2019), but under a month in the top seat during the post-NHS-miss period",
+            "pending securities class-action litigation following the NHS-Galleri primary-endpoint miss (lead-plaintiff deadline Aug 2026)",
+            "Illumina retained ~14.5% at the June-2024 spin (a diminishing overhang as it divests); the franchise carries the history of ~$8B destroyed under Illumina ownership in 2021-2024 (pre-spin)"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Professional management on a clean single-class register with an independent Chair (Summe) split from the CEO — but a brand-new CEO (Ofman, June 2026), thin insider ownership (~1.8%, no founder block), a fresh post-NHS securities class action, and the spinco history of ~$8B destroyed under Illumina hold it at a middling 3; the offsets are the split Chair/CEO, the disciplined ~$823M cash runway, and the absence of dual-class."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)"
       },
       "appendix": {
         "pushback": [
@@ -13483,7 +13513,7 @@ const MEMOS = [
           },
           {
             "label": "Medicare law already signed.",
-            "body": "The MCED coverage benefit is law (Feb 2026); coverage is gated on FDA approval and earliest 2028, but the legislative risk is retired."
+            "body": "The MCED coverage benefit is law (Feb 2026); coverage is gated on FDA approval and earliest 2028 at ~$509 mt-stool-DNA parity, but the legislative risk is retired."
           },
           {
             "label": "Cash-funded into the coverage window.",
@@ -13501,7 +13531,7 @@ const MEMOS = [
           },
           {
             "label": "Bear validation",
-            "body": "PMA rejected/delayed · Medicare coverage narrow or post-2028 · private payers demand mortality data"
+            "body": "PMA rejected/delayed · Medicare narrow/post-2028 or stuck at ~$509 parity · Abbott-backed Cancerguard scales · private payers demand mortality data"
           },
           {
             "label": "Reframe needed",
@@ -13512,7 +13542,7 @@ const MEMOS = [
       "glossary": [
         {
           "term": "Galleri",
-          "definition": "GRAIL's blood test screening for 50+ cancers from one draw; sold self-pay (~$949) today as an LDT, FDA PMA filed Jan 2026."
+          "definition": "GRAIL's blood test screening for 50+ cancers from one draw; sold self-pay (~$949) today as an LDT, FDA PMA filed Jan 2026 (accepted)."
         },
         {
           "term": "MCED",
@@ -13524,7 +13554,7 @@ const MEMOS = [
         },
         {
           "term": "PMA / NCD",
-          "definition": "FDA Premarket Approval (filed Jan 2026) and Medicare National Coverage Determination (earliest 2028) — the two gates to reimbursed scale."
+          "definition": "FDA Premarket Approval (filed Jan 2026, now accepted) and Medicare National Coverage Determination (earliest 2028, ~$509 mt-stool-DNA parity through 2030) — the two gates to reimbursed scale."
         },
         {
           "term": "Sales-to-capital (s2c)",
@@ -39837,29 +39867,29 @@ const MEMOS = [
       "asOf": "June 16, 2026 close"
     },
     "expected": {
-      "fair": 1.29,
-      "deltaPct": -2.3
+      "fair": 2.09,
+      "deltaPct": 58.7
     },
     "compound": [
       {
         "y": 5,
-        "value": 2.06,
-        "mult": 1.56
+        "value": 3.33,
+        "mult": 2.53
       },
       {
         "y": 10,
-        "value": 3.28,
-        "mult": 2.49
+        "value": 5.3,
+        "mult": 4.02
       },
       {
         "y": 15,
-        "value": 5.24,
-        "mult": 3.97
+        "value": 8.44,
+        "mult": 6.4
       },
       {
         "y": 20,
-        "value": 8.37,
-        "mult": 6.34
+        "value": 13.45,
+        "mult": 10.19
       }
     ],
     "taxonomy": {
@@ -39920,24 +39950,24 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 13,
-        "price": 2.98,
+        "price": 4.74,
         "headline": "Long-read inflects; debt covered",
         "why": "Needs durable consumable pull-through growth and a clinical/research shift toward long-read accuracy that PACB captures as the #3 — a real but lower-probability inflection, hence 13%.",
         "what": [
-          "Long-read genuinely inflects: the Revio and Vega base compounds high-margin consumables to ~$0.78B FY35 revenue at a 26% margin. Operating leverage turns the razor/blade model cash-generative well ahead of the maturity wall.",
-          "At 12% p_fail the converts are comfortably covered and the equity captures the upside above them; DCF $3.25, weighted contribution $2.90. This is the first scenario where financial leverage works for the common holder rather than against it."
+          "Long-read genuinely inflects: the Revio and Vega base compounds high-margin consumables to ~$1.05B FY35 revenue at a 26% margin. Operating leverage turns the razor/blade model cash-generative well ahead of the maturity wall.",
+          "At 12% p_fail the converts are comfortably covered and the equity captures the upside above them; DCF $5.34, weighted contribution $4.74. This is the first scenario where financial leverage works for the common holder rather than against it."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 7,
-        "price": 10.32,
+        "price": 18.55,
         "headline": "Long-read wins WGS; re-rating",
         "why": "The lowest-probability outcome: long-read displacing short-read at population scale against Illumina's entrenched economics. Low odds, but the operating and financial leverage make the payoff large enough to matter to the weighted value.",
         "what": [
-          "Long-read takes a large share of whole-genome sequencing and PACB rides ~6x revenue growth to ~$1.05B FY35 at a 31% margin. The installed base becomes a consumables annuity and the equity re-rates as the debt shrinks to a rounding error against cash flow.",
-          "At 6% p_fail the converts are trivially covered; DCF $10.83, weighted contribution $10.20. The fat tail that, alongside the bull, carries the distribution and offsets the ~50% of mass worth ~$0."
+          "Long-read takes a large share of whole-genome sequencing and PACB rides ~12x revenue growth to ~$1.9B FY35 at a 31% margin. The installed base becomes a consumables annuity and the equity re-rates as the debt shrinks to a rounding error against cash flow.",
+          "At 6% p_fail the converts are trivially covered; DCF $19.71, weighted contribution $18.55. The fat tail that, alongside the bull, carries the distribution and offsets the ~50% of mass worth ~$0."
         ]
       }
     ],
@@ -40050,8 +40080,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 8,
       "weighted": {
-        "expected": 1.29,
-        "upsidePct": -2.3
+        "expected": 2.09,
+        "upsidePct": 58.7
       },
       "market": {
         "marketCapBillion": 0.41,
@@ -40545,26 +40575,26 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.13,
-          "expectedPerShare": 2.98,
+          "expectedPerShare": 4.74,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "tam_share": 9.75,
+            "tam_share": 13.12,
             "p_fail": 12,
             "s2c": 1.8
           },
           "dcfPath": {
             "rev_path": [
               0.18,
-              0.21,
-              0.25,
-              0.31,
-              0.39,
-              0.48,
-              0.57,
+              0.22,
+              0.28,
+              0.37,
+              0.5,
               0.65,
-              0.72,
-              0.78
+              0.8,
+              0.93,
+              1.0,
+              1.05
             ],
             "op_margin": [
               -0.25,
@@ -40593,39 +40623,39 @@ const MEMOS = [
             "term_g": 0.05,
             "nopat": [
               -0.045,
-              -0.021,
-              0.005,
-              0.028,
-              0.055,
-              0.086,
-              0.12,
-              0.15,
-              0.18,
-              0.203
+              -0.022,
+              0.006,
+              0.033,
+              0.07,
+              0.117,
+              0.168,
+              0.214,
+              0.25,
+              0.273
             ],
             "reinvest": [
               0.011,
-              0.017,
               0.022,
               0.033,
-              0.044,
               0.05,
-              0.05,
-              0.044,
+              0.072,
+              0.083,
+              0.083,
+              0.072,
               0.039,
-              0.033
+              0.028
             ],
             "fcf": [
               -0.056,
-              -0.038,
+              -0.044,
+              -0.028,
               -0.017,
-              -0.005,
-              0.01,
-              0.036,
-              0.07,
-              0.105,
-              0.141,
-              0.169
+              -0.002,
+              0.034,
+              0.085,
+              0.142,
+              0.211,
+              0.245
             ],
             "cash": 0.276,
             "net_debt": 0.644,
@@ -40635,22 +40665,22 @@ const MEMOS = [
             "distress": 0.3,
             "pv_fcf": [
               -0.05,
-              -0.031,
-              -0.012,
-              -0.003,
-              0.006,
-              0.019,
-              0.034,
-              0.046,
-              0.056,
-              0.061
+              -0.035,
+              -0.02,
+              -0.011,
+              -0.001,
+              0.018,
+              0.041,
+              0.062,
+              0.084,
+              0.088
             ],
-            "sum_pv_fcf": 0.13,
-            "terminal_value": 3.55,
-            "pv_terminal": 1.28,
-            "op_ev": 1.41,
-            "total_equity": 1.04,
-            "dcf_per_share": 3.34
+            "sum_pv_fcf": 0.18,
+            "terminal_value": 5.14,
+            "pv_terminal": 1.85,
+            "op_ev": 2.03,
+            "total_equity": 1.66,
+            "dcf_per_share": 5.34
           },
           "chartData": {
             "raises": [
@@ -40706,26 +40736,26 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.07,
-          "expectedPerShare": 10.32,
+          "expectedPerShare": 18.55,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "tam_share": 13.125,
+            "tam_share": 23.75,
             "p_fail": 6,
             "s2c": 2.0
           },
           "dcfPath": {
             "rev_path": [
               0.19,
-              0.23,
-              0.29,
-              0.38,
-              0.5,
-              0.64,
-              0.78,
-              0.9,
-              0.99,
-              1.05
+              0.24,
+              0.33,
+              0.48,
+              0.7,
+              0.95,
+              1.25,
+              1.55,
+              1.75,
+              1.9
             ],
             "op_margin": [
               -0.18,
@@ -40755,38 +40785,38 @@ const MEMOS = [
             "nopat": [
               -0.034,
               0.0,
-              0.026,
-              0.061,
-              0.105,
-              0.16,
-              0.218,
-              0.27,
-              0.307,
-              0.326
+              0.03,
+              0.077,
+              0.147,
+              0.237,
+              0.35,
+              0.465,
+              0.542,
+              0.589
             ],
             "reinvest": [
               0.015,
-              0.02,
-              0.03,
+              0.025,
               0.045,
-              0.06,
-              0.07,
-              0.07,
-              0.06,
-              0.045,
-              0.03
+              0.075,
+              0.11,
+              0.125,
+              0.15,
+              0.15,
+              0.1,
+              0.075
             ],
             "fcf": [
               -0.049,
-              -0.02,
-              -0.004,
-              0.016,
-              0.045,
-              0.09,
-              0.148,
-              0.21,
-              0.262,
-              0.295
+              -0.025,
+              -0.015,
+              0.002,
+              0.037,
+              0.112,
+              0.2,
+              0.315,
+              0.443,
+              0.514
             ],
             "cash": 0.276,
             "net_debt": 0.644,
@@ -40796,22 +40826,22 @@ const MEMOS = [
             "distress": 0.3,
             "pv_fcf": [
               -0.044,
-              -0.016,
-              -0.003,
-              0.011,
-              0.027,
-              0.049,
-              0.074,
-              0.095,
-              0.108,
-              0.111
+              -0.02,
+              -0.011,
+              0.001,
+              0.022,
+              0.061,
+              0.099,
+              0.143,
+              0.183,
+              0.194
             ],
-            "sum_pv_fcf": 0.41,
-            "terminal_value": 8.93,
-            "pv_terminal": 3.37,
-            "op_ev": 3.78,
-            "total_equity": 3.41,
-            "dcf_per_share": 10.96
+            "sum_pv_fcf": 0.63,
+            "terminal_value": 15.57,
+            "pv_terminal": 5.87,
+            "op_ev": 6.5,
+            "total_equity": 6.13,
+            "dcf_per_share": 19.71
           },
           "chartData": {
             "raises": [
