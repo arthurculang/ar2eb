@@ -5958,7 +5958,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-High",
+      "tier": "Med",
       "themes": [
         "quantum-computing"
       ],
@@ -12375,7 +12375,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-High",
+      "tier": "Med",
       "themes": [
         "precision-medicine-oncology"
       ],
@@ -26086,7 +26086,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med",
+      "tier": "Med-High",
       "themes": [
         "premium-consumer-brands"
       ],
@@ -46716,7 +46716,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-Low",
+      "tier": "Low",
       "themes": [
         "precision-medicine-oncology"
       ],
@@ -49402,7 +49402,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fun-speculative",
       "watchlistName": "Fun / Speculative",
-      "tier": "High",
+      "tier": "Med",
       "themes": [
         "investment-vehicles-funds"
       ],
