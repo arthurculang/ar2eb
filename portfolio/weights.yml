@@ -8,13 +8,13 @@ rule: 'weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_ind
 weights:
   lulu: 0.15
   naut: 0.15
-  coin: 0.1188
+  coin: 0.1187
   uber: 0.1165
   abnb: 0.0816
-  hhh: 0.0796
+  hhh: 0.0795
   cart: 0.0559
   crox: 0.055
-  zm: 0.0356
+  zm: 0.0355
   adsk: 0.0182
   serv: 0.017
   meta: 0.0141
@@ -22,8 +22,8 @@ weights:
   tost: 0.0123
   beam: 0.0106
   dis: 0.01
+  aur: 0.0098
   cai: 0.0098
-  aur: 0.0096
   yeti: 0.0084
   rxrx: 0.0076
   you: 0.0066
@@ -32,7 +32,7 @@ weights:
   nvcr: 0.0026
   prme: 0.0025
   achr: 0.0018
-  cash: -0.0
+  cash: 0.0001
 excluded_private:
 - anthropic
 - blgff
@@ -77,7 +77,7 @@ findings:
     ai_zone: green
     ai_mult: 1.25
     raw_score: 1.226
-    weight: 0.1188
+    weight: 0.1187
   uber:
     spot: 70.4
     weighted_dcf: 104.27
@@ -116,7 +116,7 @@ findings:
     ai_zone: n/a
     ai_mult: 1.0
     raw_score: 0.8212
-    weight: 0.0796
+    weight: 0.0795
   cart:
     spot: 41.25
     weighted_dcf: 65.05
@@ -155,7 +155,7 @@ findings:
     ai_zone: yellow
     ai_mult: 1.1
     raw_score: 0.367
-    weight: 0.0356
+    weight: 0.0355
   adsk:
     spot: 198.43
     weighted_dcf: 304.79
@@ -262,8 +262,8 @@ findings:
     weight: 0.0098
   aur:
     spot: 7.74
-    weighted_dcf: 8.12
-    upside: 0.0496
+    weighted_dcf: 8.13
+    upside: 0.0508
     tier: High
     conviction_mult: 2.0
     watchlist: asymmetrical-moonshots
@@ -271,8 +271,8 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.0993
-    weight: 0.0096
+    raw_score: 0.1017
+    weight: 0.0098
   yeti:
     spot: 48.0
     weighted_dcf: 49.67
