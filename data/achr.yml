@@ -942,6 +942,39 @@ competitive:
     Joby has flown conforming aircraft for TIA; Archer hasn''t), and on cash/runway; the category just killed the under-capitalized
     Lilium. The window is open as the close #2 with a defense call option, but certification and the ~$727M/yr burn are the
     falsifiers the whole bull case must clear.'
+pocd:
+  people:
+    ceo: Adam Goldstein
+    founder_led: true
+    tenure_years: 8
+    insider_ownership_pct: 5.55
+    capital_allocation: 'Co-founder Adam Goldstein (founded Archer 2018; sole CEO since April 2022, Chair & CEO since
+      the 2021 listing) runs a pre-revenue eVTOL developer. Capital is going into certification and manufacturing:
+      a large cash balance (~$1B+, strategic-backed), heavy ATM and strategic raises (the dilution cost), a Stellantis
+      manufacturing partnership plus equity, and United Airlines orders. ~$727M/yr burn; no dividend or buyback.'
+    incentive_alignment: 'Founder-led with alignment now matching economics: Goldstein holds ~4.9% and the director/officer
+      group ~5.55% (March 2026). Because the super-voting Class B sunset at the end of 2024, his voting power now
+      equals his economic stake — the former ~37% founder voting control has lapsed.'
+    governance_flags:
+    - single class, one vote per share since December 31, 2024 — the former Class B (10-vote) super-voting auto-converted
+      when it fell below the 10% threshold (a governance improvement)
+    - combined Chair & CEO (Goldstein holds both)
+    - classified / staggered board (three classes), 7 directors, with a lead independent director (Diaz) and independent
+      Audit/Comp/Nominating committees
+    - Stellantis holds a contractual board-nomination right alongside its manufacturing partnership and equity — a
+      strategic related-party relationship
+    - co-founder Brett Adcock departed in 2022; pre-revenue execution is concentrated on the founder-CEO
+    key_person_risk: high
+    score: 3
+    takeaway: The headline positive is that the dual-class super-voting sunset to clean one-share-one-vote at the
+      end of 2024, so the founder’s votes now equal his ~5% economics; a majority-independent board with independent
+      committees and a lead independent director backs that up. The offsets are a combined Chair/CEO, a classified/staggered
+      board, and high key-person risk — a pre-revenue, cash-burning certification story concentrated on the founder-CEO
+      after the other co-founder left in 2022.
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  context_ref: The 7 Powers analysis (Power Origination)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +17.7% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-05-31_20-31
