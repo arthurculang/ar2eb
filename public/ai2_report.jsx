@@ -223,7 +223,7 @@ function PageZones() {
             middle two are close: the signal lives at the <b>extremes</b>, so treat yellow/orange as “fair, leaning.”
             Absolute returns are flattered by the 2007–25 bull sample — the durable takeaway is the <b>ordering</b>
             (cheaper → higher forward return), the same effect the rank-IC validated. A screen, not a timing tool:
-            confirm with the memo DCF (§6) before acting.</div>
+            confirm with the memo DCF before acting.</div>
         </div>
       </div>
 

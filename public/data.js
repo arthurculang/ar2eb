@@ -2123,7 +2123,8 @@ const MEMOS = [
           "takeaway": "Founder-CEO Urmson is strongly economically aligned (minimal cash comp, large founder stake, open-market buying) and the board is unusually credentialed (Hoffman, Eschenbach, Volpi, Wehner) - real positives. Held to a 3 by a stacked-entrenchment structure (10:1 super-voting + combined Chair/CEO + staggered board), high key-person dependence amplified by co-founder Anderson's 2025 exit, the Uber overhang, and a pre-revenue deep-burn profile."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
-        "contextRef": "The 7 Powers analysis (Power Origination)"
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +5.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -4959,7 +4960,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -13521,7 +13522,8 @@ const MEMOS = [
           "takeaway": "Professional management on a clean single-class register with an independent Chair (Summe) split from the CEO — but a brand-new CEO (Ofman, June 2026), thin insider ownership (~1.8%, no founder block), a fresh post-NHS securities class action, and the spinco history of ~$8B destroyed under Illumina hold it at a middling 3; the offsets are the split Chair/CEO, the disciplined ~$823M cash runway, and the absence of dual-class."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
-        "contextRef": "The 7 Powers analysis (Power Origination)"
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +6.4% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -17705,7 +17707,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -21035,7 +21037,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +14.6% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +14.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -21872,7 +21874,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -22705,7 +22707,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -24343,7 +24345,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -25178,7 +25180,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -26009,7 +26011,8 @@ const MEMOS = [
           "takeaway": "Clean single-class one-vote register with an independent Chair (Gorman) split from the CEO, a ~90%-independent annually-elected board, a decisive 2024 activist-fight win, and restored dividend + buyback discipline - all positives. Held to a middling 3 by Disney's documented history of botched CEO successions (now resolved to an as-yet-unproven insider, D'Amaro), thin insider ownership, the Fox goodwill impairment, and ~80% say-on-pay friction."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +10.3% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -30891,7 +30894,8 @@ const MEMOS = [
           "takeaway": "Structurally clean governance - single-class one-vote, an independent Chair split from a long-tenured professional CEO, a ~91%-independent declassified board, and buyback discipline that shrinks the share count. Held to a 3 by the FY2024 free-cash-flow / non-GAAP-margin reporting investigation (no restatement, but a real control-environment flag), the CFO turnover around it, and the Starboard campaign that had to force accountability."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +53.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -31719,7 +31723,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -33361,7 +33365,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -34991,7 +34995,8 @@ const MEMOS = [
           "takeaway": "Founder-CEO (Narang) with two co-founders still operating (President, CTO), heavily equity-aligned, on a net-cash balance sheet with a disciplined buyback and declining SBC, under a separate independent Chair - a solid founder-led profile. Held at 3 by the 10x super-voting dual-class (sub-majority ~40.6% of votes, though sunsetting in 2028), a classified board, and the unresolved 2023 fee-reversal securities investigations."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +25.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -37432,7 +37437,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -15.1% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -15.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -39880,7 +39885,8 @@ const MEMOS = [
           "takeaway": "Clean single-class one-vote register, an independent Chair (Cooper) split from a long-tenured professional CEO (Evans, since 2017), and a ~88%-independent fully-independent-committee board on a well-funded balance sheet (cash to mid-2029). Held at 3 by thin insider alignment (low ownership, sell-only Form 4s), a classified board, and the Broad/Harvard base-editing IP + scientific-founder related-party concentration. The platform depends on the founders' science (reputational) but none run day-to-day."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +31.3% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -43113,7 +43119,8 @@ const MEMOS = [
           "takeaway": "A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
-        "contextRef": "The 7 Powers analysis (Power Origination)"
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +29.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -47539,7 +47546,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -48418,7 +48425,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution (+41%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI",
         "contextRef": "The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion",
-        "deal": "Open-market purchase at a ~37% discount to NAV vs. the scenario distribution + §12 sizing. (Ackman's own entry: $100/share, a 48% premium.)"
+        "deal": "Open-market purchase at a ~37% discount to NAV vs. the scenario distribution + position sizing. (Ackman's own entry: $100/share, a 48% premium.)"
       },
       "appendix": {
         "pushback": [
