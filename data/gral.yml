@@ -15,7 +15,7 @@ market:
   - NHS-Galleri missed primary endpoint (Feb'26); FDA PMA accepted; Medicare law (≥2028, ~$509 parity); Abbott bought Exact
 taxonomy:
   watchlist: asymmetrical-moonshots
-  tier: Med-High
+  tier: Med
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology

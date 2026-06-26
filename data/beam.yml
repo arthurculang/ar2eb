@@ -940,6 +940,25 @@ competitive:
     window is open: no rival has shown a durable in-vivo corrective edit. The falsifier the bull must clear is concrete —
     BEAM-302 must show durable AAT correction with a clean in-vivo safety profile, and risto-cel must launch differentiated
     against Casgevy. Without durability the resource is not yet cornered.'
+pocd:
+  people:
+    ceo: 'John Evans'
+    founder_led: false
+    tenure_years: 9
+    insider_ownership_pct: 2.0
+    capital_allocation: 'Pre-product clinical-stage; the job is funding the platform without over-diluting. ~$1.2B cash (Mar 2026) funds operations into mid-2029, helped by a March 2025 ~$500M equity follow-on, a Feb 2026 Sixth Street $500M senior secured debt facility ($100M funded, the rest milestone-gated, non-dilutive), and the Pfizer collaboration ($300M upfront in 2022; Pfizer exercised its license option Dec 2025). Share count grew ~88M to ~103M. No buyback or dividend, appropriate at this stage.'
+    incentive_alignment: 'CEO 2025 total comp ~$5.8M on a $755K base, the remainder predominantly equity. Insider Form 4 activity is routine 10b5-1 tax-withholding selling on RSU vesting (~$1.3M over the trailing year) with no open-market buying. Insider ownership is low (~75% institutional; CEO ~1%, scientific-founder stakes diluted from ~6-9% at the 2020 IPO) - the ~2% figure is approximate (the proxy group total was not separately sourced).'
+    governance_flags:
+      - 'single class of common stock, one vote per share'
+      - 'independent Chair (Graham Cooper) separate from the CEO; 8-member board, 7 independent (~88%), all committees fully independent'
+      - 'classified / staggered board (three classes)'
+      - 'foundational base-editing IP is in-licensed from the Broad Institute / Harvard, and the scientific founders (Liu, Zhang, Joung) are affiliated with those institutions while holding founders'' equity + consulting roles - an IP/related-party concentration; broader CRISPR-Cas patent-landscape FTO exposure is a sector risk'
+      - 'no going-concern doubt (funded to mid-2029)'
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Clean single-class one-vote register, an independent Chair (Cooper) split from a long-tenured professional CEO (Evans, since 2017), and a ~88%-independent fully-independent-committee board on a well-funded balance sheet (cash to mid-2029). Held at 3 by thin insider alignment (low ownership, sell-only Form 4s), a classified board, and the Broad/Harvard base-editing IP + scientific-founder related-party concentration. The platform depends on the founders'' science (reputational) but none run day-to-day.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-16_07-05

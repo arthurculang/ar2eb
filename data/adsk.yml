@@ -610,6 +610,25 @@ competitive:
     stalling. The ~31% de-rate to ~17x FCF prices maturing growth heavily; the DCF tests lock-in plus the margin catalyst,
     and even the bear is +9% with the modal case +53% on the lower underlying growth — cheap quality with a catalyst, with
     activist/execution noise the watch-out.'
+pocd:
+  people:
+    ceo: 'Andrew Anagnost'
+    founder_led: false
+    tenure_years: 9
+    insider_ownership_pct: 0.5
+    capital_allocation: 'Disciplined capital return. No dividend since 2004; buybacks are the primary return and are accelerating ($1.4B in FY2026 against a $10B authorization), outpacing heavy SBC ($788M FY2026) so the share count net-declines (~229M in 2009 to ~211M in 2026). Balance sheet is roughly net-cash (~$3.0B cash + securities vs ~$2.5B notes). M&A is programmatic tuck-ins, not transformational.'
+    incentive_alignment: 'CEO pay is heavily equity-weighted (FY2026 total ~$30.1M, ~90% stock, ~4% salary). Say-on-pay passed in 2026. Insider Form 4 activity is mostly grants + tax-withholding; a recent alignment signal is CFO Janesh Moorjani''s open-market BUY of 2,500 shares (~$0.5M) in Jun 2026.'
+    governance_flags:
+      - 'single class, one vote per share; no controlling or super-voting holder'
+      - 'strong structure: an independent Chair (Stacy Smith) separate from the CEO, 11 directors with 10 independent (~91%), all-independent committees, and an annually-elected (declassified) board'
+      - 'central flag - a FY2024 audit-committee investigation into free-cash-flow / non-GAAP operating-margin practices (FY2022-24): discretionary spend, collections, and AP timing were informed by their effect on FCF/margin targets; NO restatement, but remedial measures and an NT 10-K / delayed 10-K resulted'
+      - 'CFO turnover around the probe (Clifford -> interim Rafael -> permanent Moorjani, 2024)'
+      - 'Starboard Value activist campaign (2024-25, ~$500M stake, publicly urged a CEO change) settled Apr 2025 with two new independent directors (Epstein, Simons) + a standstill'
+    key_person_risk: low
+    score: 3
+    takeaway: 'Structurally clean governance - single-class one-vote, an independent Chair split from a long-tenured professional CEO, a ~91%-independent declassified board, and buyback discipline that shrinks the share count. Held to a 3 by the FY2024 free-cash-flow / non-GAAP-margin reporting investigation (no restatement, but a real control-environment flag), the CFO turnover around it, and the Starboard campaign that had to force accountability.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-05

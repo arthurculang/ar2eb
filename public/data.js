@@ -2103,6 +2103,28 @@ const MEMOS = [
         ],
         "takeaway": "A genuine first-to-driverless and OEM-partnership lead, but scale and network power are unbuilt and the model is deeply capital-hungry; the window is open while Aurora out-executes — a safety or capital stumble cedes it.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Chris Urmson",
+          "founderLed": true,
+          "tenureYears": 9,
+          "insiderOwnershipPct": 15.0,
+          "capitalAllocation": "Pre-/early-commercial AV (Aurora Driver for Freight launched Apr 2025; FY2025 revenue only ~$3M). The job is funding to scale without over-diluting: ~$1.3B liquidity (Q1 2026) against ~$160-220M/quarter cash use, guided to positive FCF in 2028. Aurora carries essentially no funded debt of its own (the $1.0B 0% exchangeable notes are Uber's liability, exchangeable into AUR shares, not Aurora debt). Heavy equity dilution funded the build - a 2023 ~$820M raise, a 2024 ~$483M Class A offering at $3.60, plus an ATM - taking the share count toward ~1.96B. No buyback or dividend.",
+          "incentiveAlignment": "Founder-CEO takes minimal, cash-heavy comp (FY2024 total only ~$879K, no options) - aligned through his founder stake, not annual pay. Notable open-market BUYING: Urmson bought 258,000 Class A shares (~$1M) in Nov 2025, the largest insider purchase in the prior year; no large discretionary CEO selling found. Say-on-pay passed at >96% (2024).",
+          "governanceFlags": [
+            "three anti-takeover features stacked: 10:1 Class B super-voting concentrated in the founder (Urmson ~31% of votes on ~7-8% economic), a COMBINED Chair/CEO, and a classified/staggered board",
+            "high board quality offsets the structure: only Urmson is a management director; independents include Reid Hoffman (Greylock, SPAC co-sponsor), Carl Eschenbach (Sequoia), Mike Volpi (Index), David Wehner (Meta)",
+            "co-founder departure: Sterling Anderson (technical co-founder) left June 2025 to become GM Chief Product Officer; Drew Bagnell remains Chief Scientist",
+            "Uber related-party / overhang: a former board seat (Khosrowshahi resigned Dec 2024), a commercial partner, and ~15.6% of Class A after a ~$479M block sale in Jun 2026",
+            "repeated commercial-launch delays (original end-2024 -> Apr 2025, now scaling through 2026); PACCAR/Volvo/Continental commercial + equity ties"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "Founder-CEO Urmson is strongly economically aligned (minimal cash comp, large founder stake, open-market buying) and the board is unusually credentialed (Hoffman, Eschenbach, Volpi, Wehner) - real positives. Held to a 3 by a stacked-entrenchment structure (10:1 super-voting + combined Chair/CEO + staggered board), high key-person dependence amplified by co-founder Anderson's 2025 exit, the Uber overhang, and a pre-revenue deep-burn profile."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)"
+      },
       "appendix": {
         "pushback": [
           {
@@ -5958,7 +5980,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-High",
+      "tier": "Med",
       "themes": [
         "quantum-computing"
       ],
@@ -12375,7 +12397,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-High",
+      "tier": "Med",
       "themes": [
         "precision-medicine-oncology"
       ],
@@ -25967,6 +25989,28 @@ const MEMOS = [
         ],
         "takeaway": "Disney's cornered-resource Power is genuine and durable (high) - a century-deep IP/franchise library plus ESPN sports rights that monetize across streaming, parks and consumer products, the hardest asset in media to replicate, backed by a top brand and the industry's largest scale. The Audit: the live threat is the secular decline of linear TV/cable affiliate revenue, and the question is whether the scaling DTC margin (just crossed 10%, +88% YoY) and the record Experiences engine ($2.6B quarterly OI, $60B runway) outgrow that runoff before it erodes the base. The DCF tests the pace; the modal case lands +14% - the cheap-turnaround read, with ~$36B net debt amplifying both tails."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Josh D'Amaro",
+          "founderLed": false,
+          "tenureYears": 0,
+          "insiderOwnershipPct": 0.1,
+          "capitalAllocation": "Mature capital-return machine. Dividend reinstated in 2023 after the COVID suspension and raised toward ~$1.00/yr; a $3B buyback was authorized for FY2024 (the first since 2018). The 21st Century Fox acquisition (~$71B, 2019) carried a ~$5B FY2020 goodwill impairment; Disney bought out Comcast to take full ownership of Hulu (closed mid-2025). Total debt deleveraged from ~$58B (FY2021) to ~$45B (FY2025), and streaming (DTC) turned profitable at ~+$1.3B operating income in FY2025 from a ~$4B loss three years earlier.",
+          "incentiveAlignment": "CEO pay is predominantly equity (Iger FY2025 total ~$45.8M). Director-and-officer ownership is a fraction of a percent (mega-cap norm), so alignment is via pay design, not a meaningful equity stake. The 2024 say-on-pay vote passed at only ~80% (below the S&P 500 median that year) - a recurring pay-friction point across Iger's tenure.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share; no controlling shareholder",
+            "independent Chair (James Gorman, since Jan 2025) is separate from the CEO; board ~90% independent (9 of 10), elected annually (no classified board)",
+            "decisively won the 2024 Nelson Peltz / Trian proxy fight (Peltz lost ~2:1); ValueAct backed the company slate",
+            "repeated CEO-succession failures historically (Chapek named 2020, ousted 2022, Iger recalled) - now resolved via a ~2-year board-led process to insider Josh D'Amaro (CEO since 18 Mar 2026; Iger advises through end-2026)",
+            "capital-allocation negative: the ~$5B FY2020 goodwill impairment on the 21st Century Fox deal; Disney v. DeSantis litigation settled 2024"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Clean single-class one-vote register with an independent Chair (Gorman) split from the CEO, a ~90%-independent annually-elected board, a decisive 2024 activist-fight win, and restored dividend + buyback discipline - all positives. Held to a middling 3 by Disney's documented history of botched CEO successions (now resolved to an as-yet-unproven insider, D'Amaro), thin insider ownership, the Fox goodwill impairment, and ~80% say-on-pay friction."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)"
+      },
       "appendix": {
         "pushback": [
           {
@@ -26086,7 +26130,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fcf-plus-plus-growth",
       "watchlistName": "FCF++Growth",
-      "tier": "Med",
+      "tier": "Med-High",
       "themes": [
         "premium-consumer-brands"
       ],
@@ -30827,6 +30871,28 @@ const MEMOS = [
         ],
         "takeaway": "Autodesk's dominant Power is switching costs — CAD/file-format lock-in (.dwg/.rvt), trained workforces, BIM mandates, and deep workflow integration make its ~98%-recurring base sticky and mission-critical, durability high — reinforced by category-defining branding and real scale. The live audit question is not whether the moat holds but whether two things stack on top of it: a maturing top line (the +18% as-reported figure is flattered by the billing change; underlying is ~8-12%) and a Starboard-forced lift toward ~45% operating margin, a process-power catalyst that is unproven at target. The threats are a cloud-CAD/open-format challenge to lock-in, a construction/manufacturing cycle, and the activist program stalling. The ~31% de-rate to ~17x FCF prices maturing growth heavily; the DCF tests lock-in plus the margin catalyst, and even the bear is +9% with the modal case +53% on the lower underlying growth — cheap quality with a catalyst, with activist/execution noise the watch-out."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Andrew Anagnost",
+          "founderLed": false,
+          "tenureYears": 9,
+          "insiderOwnershipPct": 0.5,
+          "capitalAllocation": "Disciplined capital return. No dividend since 2004; buybacks are the primary return and are accelerating ($1.4B in FY2026 against a $10B authorization), outpacing heavy SBC ($788M FY2026) so the share count net-declines (~229M in 2009 to ~211M in 2026). Balance sheet is roughly net-cash (~$3.0B cash + securities vs ~$2.5B notes). M&A is programmatic tuck-ins, not transformational.",
+          "incentiveAlignment": "CEO pay is heavily equity-weighted (FY2026 total ~$30.1M, ~90% stock, ~4% salary). Say-on-pay passed in 2026. Insider Form 4 activity is mostly grants + tax-withholding; a recent alignment signal is CFO Janesh Moorjani's open-market BUY of 2,500 shares (~$0.5M) in Jun 2026.",
+          "governanceFlags": [
+            "single class, one vote per share; no controlling or super-voting holder",
+            "strong structure: an independent Chair (Stacy Smith) separate from the CEO, 11 directors with 10 independent (~91%), all-independent committees, and an annually-elected (declassified) board",
+            "central flag - a FY2024 audit-committee investigation into free-cash-flow / non-GAAP operating-margin practices (FY2022-24): discretionary spend, collections, and AP timing were informed by their effect on FCF/margin targets; NO restatement, but remedial measures and an NT 10-K / delayed 10-K resulted",
+            "CFO turnover around the probe (Clifford -> interim Rafael -> permanent Moorjani, 2024)",
+            "Starboard Value activist campaign (2024-25, ~$500M stake, publicly urged a CEO change) settled Apr 2025 with two new independent directors (Epstein, Simons) + a standstill"
+          ],
+          "keyPersonRisk": "low",
+          "score": 3,
+          "takeaway": "Structurally clean governance - single-class one-vote, an independent Chair split from a long-tenured professional CEO, a ~91%-independent declassified board, and buyback discipline that shrinks the share count. Held to a 3 by the FY2024 free-cash-flow / non-GAAP-margin reporting investigation (no restatement, but a real control-environment flag), the CFO turnover around it, and the Starboard campaign that had to force accountability."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)"
+      },
       "appendix": {
         "pushback": [
           {
@@ -34904,6 +34970,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "Toast's switching-cost Power is genuine and dominant - once it is the restaurant's POS, payments, payroll and ordering operating system, ripping it out mid-service is costly, which underpins high retention and the take rate the model rides on, supported by real scale (171k locations, $51B+ GPV). The Audit: switching_costs is durable (high), scale_economies funded a demonstrated margin inflection (-7% -> 21% GAAP op margin), and a network/data leg (ToastIQ) is nascent; the live threat is payments take-rate competition from Block/Square, Clover and Shift4 against an ~80%-payments revenue base. The ~40% TTM de-rate met that proven inflection, and the modal DCF lands +24% - the distribution says the sell-off overshot a real operating-leverage story, gated on the take rate holding as Toast scales."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Aman Narang",
+          "founderLed": true,
+          "tenureYears": 2,
+          "insiderOwnershipPct": 10.0,
+          "capitalAllocation": "Founder-led and net cash (~$1.35B cash + ~$0.64B securities, no debt). A Class A buyback began in 2024 (~8M shares / ~$235M to date) and the board added a $500M authorization in Feb 2026; no dividend. M&A is a consistent small bolt-on pattern (xtraCHEF, Sling, Delphi). SBC is declining ($287M FY2023 to $258M FY2024) and buybacks offset issuance, holding net dilution to ~3%/yr.",
+          "incentiveAlignment": "CEO comp is ~96% equity / ~4% salary (Narang FY2024 total ~$11.3M on a $400K base) - heavily equity-weighted, low base. Say-on-pay passed at the 2026 meeting. Insider Form 4 activity is routine (10b5-1 / sell-to-cover on RSU vesting plus an estate-planning gift), not discretionary cash-outs.",
+          "governanceFlags": [
+            "dual-class: Class B carries 10 votes/share; the officer-and-director group holds ~40.6% of total voting power on ~10% economic ownership (a sub-majority control block)",
+            "mitigant: the dual-class has a defined sunset - Class B converts to Class A on the earlier of 24 Sep 2028 or a two-thirds Class B vote, and 1:1 on transfer",
+            "separate independent Chair / Lead Independent Director (Mark Hawkins), distinct from the CEO; 9-member board, 7 independent (~78%), with two founder seats (Narang, Fredette) and VC reps (Bessemer, TCV)",
+            "classified / staggered board",
+            "2023 securities law-firm investigations tied to the $0.99 online-order fee reversal (no sourced outcome); related-party section not independently verified"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Founder-CEO (Narang) with two co-founders still operating (President, CTO), heavily equity-aligned, on a net-cash balance sheet with a disciplined buyback and declining SBC, under a separate independent Chair - a solid founder-led profile. Held at 3 by the 10x super-voting dual-class (sub-majority ~40.6% of votes, though sunsetting in 2028), a classified board, and the unresolved 2023 fee-reversal securities investigations."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)"
       },
       "appendix": {
         "pushback": [
@@ -39772,6 +39860,28 @@ const MEMOS = [
         ],
         "takeaway": "Beam is trying to originate a cornered-resource and process Power in precise in-vivo editing — foundational base-editing IP plus a repeatable LNP correction process that, if it replicates, turns each genetic target into a shot on goal. The window is open: no rival has shown a durable in-vivo corrective edit. The falsifier the bull must clear is concrete — BEAM-302 must show durable AAT correction with a clean in-vivo safety profile, and risto-cel must launch differentiated against Casgevy. Without durability the resource is not yet cornered."
       },
+      "pocd": {
+        "people": {
+          "ceo": "John Evans",
+          "founderLed": false,
+          "tenureYears": 9,
+          "insiderOwnershipPct": 2.0,
+          "capitalAllocation": "Pre-product clinical-stage; the job is funding the platform without over-diluting. ~$1.2B cash (Mar 2026) funds operations into mid-2029, helped by a March 2025 ~$500M equity follow-on, a Feb 2026 Sixth Street $500M senior secured debt facility ($100M funded, the rest milestone-gated, non-dilutive), and the Pfizer collaboration ($300M upfront in 2022; Pfizer exercised its license option Dec 2025). Share count grew ~88M to ~103M. No buyback or dividend, appropriate at this stage.",
+          "incentiveAlignment": "CEO 2025 total comp ~$5.8M on a $755K base, the remainder predominantly equity. Insider Form 4 activity is routine 10b5-1 tax-withholding selling on RSU vesting (~$1.3M over the trailing year) with no open-market buying. Insider ownership is low (~75% institutional; CEO ~1%, scientific-founder stakes diluted from ~6-9% at the 2020 IPO) - the ~2% figure is approximate (the proxy group total was not separately sourced).",
+          "governanceFlags": [
+            "single class of common stock, one vote per share",
+            "independent Chair (Graham Cooper) separate from the CEO; 8-member board, 7 independent (~88%), all committees fully independent",
+            "classified / staggered board (three classes)",
+            "foundational base-editing IP is in-licensed from the Broad Institute / Harvard, and the scientific founders (Liu, Zhang, Joung) are affiliated with those institutions while holding founders' equity + consulting roles - an IP/related-party concentration; broader CRISPR-Cas patent-landscape FTO exposure is a sector risk",
+            "no going-concern doubt (funded to mid-2029)"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Clean single-class one-vote register, an independent Chair (Cooper) split from a long-tenured professional CEO (Evans, since 2017), and a ~88%-independent fully-independent-committee board on a well-funded balance sheet (cash to mid-2029). Held at 3 by thin insider alignment (low ownership, sell-only Form 4s), a classified board, and the Broad/Harvard base-editing IP + scientific-founder related-party concentration. The platform depends on the founders' science (reputational) but none run day-to-day."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)"
+      },
       "appendix": {
         "pushback": [
           {
@@ -42982,6 +43092,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "SERV is trying to originate a scale-economies plus cornered-resource Power — a first-mover commercial fleet, contracted Uber and DoorDash demand, and an exclusive Magna/Nvidia build stack — but no durable Power exists yet, because under half the fleet is utilized and unit economics at scale are unproven. The demand and the stack are contractual, not owned, and the platforms are funding their own autonomy, so the moat is contestable. The falsifier the bull must clear is utilized-fleet unit economics turning durably profitable — sub-$1/delivery on a high-utilization fleet — before dilution exhausts holders. Until that prints, the fleet is a built option, not a won Power, and the window stays open."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Ali Kashani",
+          "founderLed": true,
+          "tenureYears": 5,
+          "insiderOwnershipPct": 4.3,
+          "capitalAllocation": "Pre-profit sidewalk-delivery robotics - dilution is the story. The share count has grown ~15x in three years (~5M pre-SPAC to ~77M by May 2026; ~+36% in the trailing year) via a SPAC, warrants, a $150M ATM (terminated after ~$91M sold), and repeated follow-ons. Cash ~$106M (Dec 2025) / ~$47M (Mar 2026); ~$260M cash + securities at year-end 2025; operating burn ~$80M in FY2025 and ~$41M in Q1 2026 alone. Acquired Diligent Robotics (~$25.7M, 2026). No buyback or dividend.",
+          "incentiveAlignment": "Founder-CEO comp is overwhelmingly equity (FY2024 total ~$8.7M on a ~$237K base). Insider Form 4 activity is routine sell-to-cover on RSU vesting - no open-market buying and no large discretionary selling surfaced; the proxy states no insider pledging, margin accounts, or hedging.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share (no dual-class / super-voting) - a structural positive",
+            "but a COMBINED Chair/CEO (Kashani) and a classified/staggered board (3 classes) concentrate leadership",
+            "majority-independent board: only the two insiders (Kashani CEO, Parang President/COO) are non-independent",
+            "related-party / commercial concentration: Uber (largest customer via an Uber Eats 2,000-robot deal, and a former >5% holder via Postmates, now ~3.4%), Magna (exclusive contract manufacturer), Nvidia (former supplier + ~10% holder, fully exited end-2024)",
+            "going-concern doubt was flagged in the FY2023 10-K; cash is larger now (~12-month runway stated) but the FY2025 audit-opinion status was not independently confirmed"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)"
       },
       "appendix": {
         "pushback": [
@@ -46716,7 +46848,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "asymmetrical-moonshots",
       "watchlistName": "Asymmetrical Moonshots",
-      "tier": "Med-Low",
+      "tier": "Low",
       "themes": [
         "precision-medicine-oncology"
       ],
@@ -49402,7 +49534,7 @@ const MEMOS = [
     "taxonomy": {
       "watchlist": "fun-speculative",
       "watchlistName": "Fun / Speculative",
-      "tier": "High",
+      "tier": "Med",
       "themes": [
         "investment-vehicles-funds"
       ],
