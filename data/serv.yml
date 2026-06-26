@@ -942,6 +942,25 @@ competitive:
     the platforms are funding their own autonomy, so the moat is contestable. The falsifier the bull must clear is utilized-fleet
     unit economics turning durably profitable — sub-$1/delivery on a high-utilization fleet — before dilution exhausts holders.
     Until that prints, the fleet is a built option, not a won Power, and the window stays open.
+pocd:
+  people:
+    ceo: 'Ali Kashani'
+    founder_led: true
+    tenure_years: 5
+    insider_ownership_pct: 4.3
+    capital_allocation: 'Pre-profit sidewalk-delivery robotics - dilution is the story. The share count has grown ~15x in three years (~5M pre-SPAC to ~77M by May 2026; ~+36% in the trailing year) via a SPAC, warrants, a $150M ATM (terminated after ~$91M sold), and repeated follow-ons. Cash ~$106M (Dec 2025) / ~$47M (Mar 2026); ~$260M cash + securities at year-end 2025; operating burn ~$80M in FY2025 and ~$41M in Q1 2026 alone. Acquired Diligent Robotics (~$25.7M, 2026). No buyback or dividend.'
+    incentive_alignment: 'Founder-CEO comp is overwhelmingly equity (FY2024 total ~$8.7M on a ~$237K base). Insider Form 4 activity is routine sell-to-cover on RSU vesting - no open-market buying and no large discretionary selling surfaced; the proxy states no insider pledging, margin accounts, or hedging.'
+    governance_flags:
+      - 'single class of common stock, one vote per share (no dual-class / super-voting) - a structural positive'
+      - 'but a COMBINED Chair/CEO (Kashani) and a classified/staggered board (3 classes) concentrate leadership'
+      - 'majority-independent board: only the two insiders (Kashani CEO, Parang President/COO) are non-independent'
+      - 'related-party / commercial concentration: Uber (largest customer via an Uber Eats 2,000-robot deal, and a former >5% holder via Postmates, now ~3.4%), Magna (exclusive contract manufacturer), Nvidia (former supplier + ~10% holder, fully exited end-2024)'
+      - 'going-concern doubt was flagged in the FY2023 10-K; cash is larger now (~12-month runway stated) but the FY2025 audit-opinion status was not independently confirmed'
+    key_person_risk: high
+    score: 3
+    takeaway: 'A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  context_ref: 'The 7 Powers analysis (Power Origination)'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-20_06-29

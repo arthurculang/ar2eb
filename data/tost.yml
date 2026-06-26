@@ -609,6 +609,25 @@ competitive:
     live threat is payments take-rate competition from Block/Square, Clover and Shift4 against an ~80%-payments revenue base.
     The ~40% TTM de-rate met that proven inflection, and the modal DCF lands +24% - the distribution says the sell-off overshot
     a real operating-leverage story, gated on the take rate holding as Toast scales.'
+pocd:
+  people:
+    ceo: 'Aman Narang'
+    founder_led: true
+    tenure_years: 2
+    insider_ownership_pct: 10.0
+    capital_allocation: 'Founder-led and net cash (~$1.35B cash + ~$0.64B securities, no debt). A Class A buyback began in 2024 (~8M shares / ~$235M to date) and the board added a $500M authorization in Feb 2026; no dividend. M&A is a consistent small bolt-on pattern (xtraCHEF, Sling, Delphi). SBC is declining ($287M FY2023 to $258M FY2024) and buybacks offset issuance, holding net dilution to ~3%/yr.'
+    incentive_alignment: 'CEO comp is ~96% equity / ~4% salary (Narang FY2024 total ~$11.3M on a $400K base) - heavily equity-weighted, low base. Say-on-pay passed at the 2026 meeting. Insider Form 4 activity is routine (10b5-1 / sell-to-cover on RSU vesting plus an estate-planning gift), not discretionary cash-outs.'
+    governance_flags:
+      - 'dual-class: Class B carries 10 votes/share; the officer-and-director group holds ~40.6% of total voting power on ~10% economic ownership (a sub-majority control block)'
+      - 'mitigant: the dual-class has a defined sunset - Class B converts to Class A on the earlier of 24 Sep 2028 or a two-thirds Class B vote, and 1:1 on transfer'
+      - 'separate independent Chair / Lead Independent Director (Mark Hawkins), distinct from the CEO; 9-member board, 7 independent (~78%), with two founder seats (Narang, Fredette) and VC reps (Bessemer, TCV)'
+      - 'classified / staggered board'
+      - '2023 securities law-firm investigations tied to the $0.99 online-order fee reversal (no sourced outcome); related-party section not independently verified'
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Founder-CEO (Narang) with two co-founders still operating (President, CTO), heavily equity-aligned, on a net-cash balance sheet with a disciplined buyback and declining SBC, under a separate independent Chair - a solid founder-led profile. Held at 3 by the 10x super-voting dual-class (sub-majority ~40.6% of votes, though sunsetting in 2028), a classified board, and the unresolved 2023 fee-reversal securities investigations.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-15_06-22

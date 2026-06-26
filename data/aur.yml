@@ -427,6 +427,25 @@ taxonomy:
   themes: [autonomous-vehicles-systems]
   primary_theme: autonomous-vehicles-systems
 
+pocd:
+  people:
+    ceo: 'Chris Urmson'
+    founder_led: true
+    tenure_years: 9
+    insider_ownership_pct: 15.0
+    capital_allocation: 'Pre-/early-commercial AV (Aurora Driver for Freight launched Apr 2025; FY2025 revenue only ~$3M). The job is funding to scale without over-diluting: ~$1.3B liquidity (Q1 2026) against ~$160-220M/quarter cash use, guided to positive FCF in 2028. Aurora carries essentially no funded debt of its own (the $1.0B 0% exchangeable notes are Uber''s liability, exchangeable into AUR shares, not Aurora debt). Heavy equity dilution funded the build - a 2023 ~$820M raise, a 2024 ~$483M Class A offering at $3.60, plus an ATM - taking the share count toward ~1.96B. No buyback or dividend.'
+    incentive_alignment: 'Founder-CEO takes minimal, cash-heavy comp (FY2024 total only ~$879K, no options) - aligned through his founder stake, not annual pay. Notable open-market BUYING: Urmson bought 258,000 Class A shares (~$1M) in Nov 2025, the largest insider purchase in the prior year; no large discretionary CEO selling found. Say-on-pay passed at >96% (2024).'
+    governance_flags:
+      - 'three anti-takeover features stacked: 10:1 Class B super-voting concentrated in the founder (Urmson ~31% of votes on ~7-8% economic), a COMBINED Chair/CEO, and a classified/staggered board'
+      - 'high board quality offsets the structure: only Urmson is a management director; independents include Reid Hoffman (Greylock, SPAC co-sponsor), Carl Eschenbach (Sequoia), Mike Volpi (Index), David Wehner (Meta)'
+      - 'co-founder departure: Sterling Anderson (technical co-founder) left June 2025 to become GM Chief Product Officer; Drew Bagnell remains Chief Scientist'
+      - 'Uber related-party / overhang: a former board seat (Khosrowshahi resigned Dec 2024), a commercial partner, and ~15.6% of Class A after a ~$479M block sale in Jun 2026'
+      - 'repeated commercial-launch delays (original end-2024 -> Apr 2025, now scaling through 2026); PACCAR/Volvo/Continental commercial + equity ties'
+    key_person_risk: high
+    score: 3
+    takeaway: 'Founder-CEO Urmson is strongly economically aligned (minimal cash comp, large founder stake, open-market buying) and the board is unusually credentialed (Hoffman, Eschenbach, Volpi, Wehner) - real positives. Held to a 3 by a stacked-entrenchment structure (10:1 super-voting + combined Chair/CEO + staggered board), high key-person dependence amplified by co-founder Anderson''s 2025 exit, the Uber overhang, and a pre-revenue deep-burn profile.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  context_ref: 'The 7 Powers analysis (Power Origination)'
 stamp:
   footer_version: "024"
   footer_timestamp: "2026-05-31_17-10"

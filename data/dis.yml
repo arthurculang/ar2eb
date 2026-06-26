@@ -607,6 +607,25 @@ competitive:
     affiliate revenue, and the question is whether the scaling DTC margin (just crossed 10%, +88% YoY) and the record Experiences
     engine ($2.6B quarterly OI, $60B runway) outgrow that runoff before it erodes the base. The DCF tests the pace; the modal
     case lands +14% - the cheap-turnaround read, with ~$36B net debt amplifying both tails.'
+pocd:
+  people:
+    ceo: 'Josh D''Amaro'
+    founder_led: false
+    tenure_years: 0
+    insider_ownership_pct: 0.1
+    capital_allocation: 'Mature capital-return machine. Dividend reinstated in 2023 after the COVID suspension and raised toward ~$1.00/yr; a $3B buyback was authorized for FY2024 (the first since 2018). The 21st Century Fox acquisition (~$71B, 2019) carried a ~$5B FY2020 goodwill impairment; Disney bought out Comcast to take full ownership of Hulu (closed mid-2025). Total debt deleveraged from ~$58B (FY2021) to ~$45B (FY2025), and streaming (DTC) turned profitable at ~+$1.3B operating income in FY2025 from a ~$4B loss three years earlier.'
+    incentive_alignment: 'CEO pay is predominantly equity (Iger FY2025 total ~$45.8M). Director-and-officer ownership is a fraction of a percent (mega-cap norm), so alignment is via pay design, not a meaningful equity stake. The 2024 say-on-pay vote passed at only ~80% (below the S&P 500 median that year) - a recurring pay-friction point across Iger''s tenure.'
+    governance_flags:
+      - 'single class of common stock, one vote per share; no controlling shareholder'
+      - 'independent Chair (James Gorman, since Jan 2025) is separate from the CEO; board ~90% independent (9 of 10), elected annually (no classified board)'
+      - 'decisively won the 2024 Nelson Peltz / Trian proxy fight (Peltz lost ~2:1); ValueAct backed the company slate'
+      - 'repeated CEO-succession failures historically (Chapek named 2020, ousted 2022, Iger recalled) - now resolved via a ~2-year board-led process to insider Josh D''Amaro (CEO since 18 Mar 2026; Iger advises through end-2026)'
+      - 'capital-allocation negative: the ~$5B FY2020 goodwill impairment on the 21st Century Fox deal; Disney v. DeSantis litigation settled 2024'
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Clean single-class one-vote register with an independent Chair (Gorman) split from the CEO, a ~90%-independent annually-elected board, a decisive 2024 activist-fight win, and restored dividend + buyback discipline - all positives. Held to a middling 3 by Disney''s documented history of botched CEO successions (now resolved to an as-yet-unproven insider, D''Amaro), thin insider ownership, the Fox goodwill impairment, and ~80% say-on-pay friction.'
+  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  context_ref: 'The 7 Powers analysis (Power Audit)'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_20-19
