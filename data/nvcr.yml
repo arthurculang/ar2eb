@@ -593,6 +593,42 @@ competitive:
     rivals. But the Power is medium-durability, not high: real-world adoption lags labels, reimbursement gates uptake, and
     the June 2026 TRIDENT miss shows the moat must be re-won trial by trial. The falsifier is a second pivotal miss or flat
     active-patient growth — either would prove the platform cannot extend beyond GBM.'
+pocd:
+  people:
+    ceo: Frank Leonard
+    founder_led: false
+    tenure_years: 0
+    insider_ownership_pct: 22.7
+    capital_allocation: Frank Leonard became CEO on December 1, 2025 — a 15-year NovoCure veteran (prior President/COO/CFO)
+      who replaced Ashley Cordova after her sub-one-year tenure (CEO Jan-Nov 2025), itself following founder-era CEO
+      Asaf Danziger (2002-2024). Capital funds the TTFields oncology-device franchise and new-indication trials (~78%
+      gross margin, net cash); no dividend or buyback. The fresh Phase-3 TRIDENT GBM miss (June 18, 2026 — overall
+      survival 17.7 vs 17.5 months, primary endpoint not met) is the key recent operating event.
+    incentive_alignment: New CEO Leonard is on a CHF 750,000 base with a 90%-of-base target bonus and standard change-of-control
+      terms. The dominant ownership figure is Executive Chairman William Doyle’s ~22.7% beneficial stake (largely
+      via WFD Ventures Fund II, over which he holds sole voting power) — concentration at the non-independent chair,
+      not the CEO. Recent insider Form 4 activity has been routine selling.
+    governance_flags:
+    - single class of ordinary shares, one vote per share (Jersey-incorporated); no controlling shareholder — largest
+      holder Soleus ~9.1%
+    - non-independent Executive Chairman (Doyle, since 2016) holding ~22.7% beneficially via WFD Ventures Fund II
+      — concentration at the chair
+    - 'CEO instability: two transitions in ~13 months (Danziger → Cordova Jan 2025 → Leonard Dec 2025)'
+    - 8 of 11 directors independent (~73%), board declassified (annual election), with a separate lead independent
+      director (Madden, since Feb 2026)
+    - founder Yoram Palti is off the board since 2018 (now CTO/consultant); his consulting fee is no longer a disclosed
+      related-party item
+    key_person_risk: medium
+    score: 3
+    takeaway: Clean single-class one-vote shares, a ~73%-independent declassified board and a separate lead independent
+      director are the positives. Holding the score at 3 are a non-independent Executive Chairman with a ~22.7% concentrated
+      stake and back-to-back CEO turnover (two changes in ~13 months) — though the new CEO is a 15-year insider and
+      the device franchise is institutionalized, so key-person risk is moderate. The June 2026 TRIDENT miss is an
+      operating, not a governance, event.
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +4.5% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-21_02-34

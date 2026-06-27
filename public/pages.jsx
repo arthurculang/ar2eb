@@ -320,7 +320,7 @@ function ThesisPage() {
         <h1>Long horizons. Structural shifts. Imagination.</h1>
 
         <p className="thesis-lead">
-          Three words seed everything published here. They are not a slogan — they are the filter every position passes through. We underwrite individual equities on a multi-year, probability-weighted basis: a concentrated book of asymmetric bets and free-cash-flow compounders, each one valued in the open with the work shown.
+          Three ideas seed everything published here. They are not a slogan — they are the filter every position passes through. We underwrite individual equities on a multi-year, probability-weighted basis: a concentrated book of asymmetric bets and free-cash-flow compounders, each one valued in the open with the work shown.
         </p>
 
         <h3>Long horizons</h3>
@@ -367,10 +367,10 @@ function AboutPage() {
         </p>
 
         <h3>Who</h3>
-        <p>An individual investor running a single-operator portfolio with a concentrated, single-name conviction approach. No external capital, no fund vehicle, no benchmark to chase.</p>
+        <p>An individual investor running a concentrated, single-name portfolio. No external capital, no fund vehicle, no benchmark to chase.</p>
 
         <h3>What</h3>
-        <p>Publishing the same probability-weighted DCF research used internally — so the work gets read, critiqued, and improved by a smarter readership than the four walls of a private doc.</p>
+        <p>Publishing the same probability-weighted DCF research used internally — so the work is read, critiqued, and sharpened in public rather than sitting unexamined in a private file.</p>
 
         <h3>Method</h3>
         <p>Probability-weighted DCFs with explicit scenarios — Bear, Base, Bull, and, where the asymmetry warrants, Ultra Bear and Ultra Bull tails. Damodaran young-company framework where the company is pre-revenue or pre-profitability; mature-company 5-year explicit DCFs, with sum-of-the-parts framing where significant non-operating value is present.</p>
@@ -722,9 +722,8 @@ function PortfolioPage() {
           <p className="lead">
             One portfolio. Each position sized by three transparent factors —
             the memo's quantitative upside, the operator's conviction, and the
-            Arthur Indicator — with a hurdle and per-name cap. Methodology:{' '}
-            <a href="https://github.com/arthurculang/ar2eb/blob/main/spec/memo-spec__v023__2026-05-23_21-30.md#12-portfolio-construction-draft"
-               target="_blank" rel="noopener noreferrer">the portfolio-construction methodology</a>.
+            Arthur Indicator — with a hurdle and per-name cap. The full
+            calculation is shown in the table below.
           </p>
         </div>
       </section>
@@ -923,7 +922,7 @@ function PortfolioPage() {
             <span className="cl-gap" aria-hidden="true" />
             <span className="cl-item"><span className="cl-rail" />conviction <span className="cl-dim">— darker rail = higher</span></span>
             <span className="cl-gap" aria-hidden="true" />
-            <span className="cl-item cl-dim">Crypto valued crypto-native (§16), not by DCF.</span>
+            <span className="cl-item cl-dim">Crypto valued crypto-native, not by DCF.</span>
           </div>
           <div className="matrix-scroll">
             <table className="matrix">
@@ -981,7 +980,7 @@ function PortfolioPage() {
           <p className="matrix-intro">
             Crypto has no cash flows, so each asset is valued with the accepted
             best-practice framework for its type, scenario-weighted, then discounted
-            to a present value so its upside is comparable to the DCF book (spec §16).
+            to a present value so its upside is comparable to the DCF book.
           </p>
           {crypto.map(c => {
             const cv = c.cryptoValuation;
@@ -1366,10 +1365,9 @@ function IndicatorPage() {
                 research-sourced; the rest reads from each memo. The screen overlaps the
                 DCF's own cheapness signal, so its unique value is the divergences (a
                 name the DCF likes but the Indicator flags red gets trimmed in sizing).
-                Full results and the reproduction commands live in{' '}
+                Full results and the reproduction commands are published in{' '}
                 <a href="https://github.com/arthurculang/ar2eb/blob/main/scripts/_models/ai2_results.md"
-                   target="_blank" rel="noopener noreferrer">ai2_results.md</a>;
-                methodology in the spec.
+                   target="_blank" rel="noopener noreferrer">the open results file</a>.
               </p>
             </div>
           </details>

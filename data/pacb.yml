@@ -929,6 +929,37 @@ competitive:
     Nanopore. The falsifier the bull must clear is observable and singular — consumable pull-through compounding fast enough
     to reach cash-flow breakeven and clear the ~$644M convert wall before 2029/2030. Miss it and the leverage, not the technology,
     decides the outcome.
+pocd:
+  people:
+    ceo: Christian O. Henry
+    founder_led: false
+    tenure_years: 6
+    insider_ownership_pct: 1.0
+    capital_allocation: 'CEO since September 2020 (prior: Illumina executive 2005-2017 — CFO, Chief Commercial Officer,
+      GM of Life Sciences). The capital priority is reaching cash-flow breakeven, targeted 2027: FY25 revenue $160M
+      (+4%), a ~16% headcount reduction and FY26 opex guided to $220-225M, run against ~$276M cash versus ~$644M of
+      convertible notes due 2029/2030 (~$368M net debt). No dividend or buyback — cash is being preserved to fund
+      the consumables ramp and clear the convert wall.'
+    incentive_alignment: Insiders hold under 1% of the company; the CEO is the largest individual holder at roughly
+      1.2% (~3.6M shares). Alignment runs through equity awards rather than a founding stake, and the thin insider
+      holding is itself a flag — limited owner-operator skin in the game against the balance-sheet risk.
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class or super-voting
+    - combined Chairman and CEO (Henry holds both), with a lead independent director as the counterweight
+    - board expanded to 10 members in March 2026; largest holder is BlackRock (~7.7%), no founder control block
+    - 'levered balance sheet: ~$644M convertible notes due 2029/2030 exceed the modeled equity value — the central
+      capital-allocation overhang'
+    key_person_risk: low
+    score: 3
+    takeaway: Professional, experienced management (CEO Henry is ex-Illumina) on a clean single-class one-vote register
+      with a majority-independent 10-member board — the governance positives. The offsets are a combined Chair/CEO,
+      insiders below 1% (thin owner-operator alignment), and a levered balance sheet where the converts exceed the
+      modeled equity, so capital allocation is dominated by the race to breakeven before 2029/2030. The technology
+      is institutionalized, so key-person risk is low.
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  context_ref: The 7 Powers analysis (Power Origination)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +58.7% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-16_07-05

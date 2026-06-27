@@ -2123,7 +2123,8 @@ const MEMOS = [
           "takeaway": "Founder-CEO Urmson is strongly economically aligned (minimal cash comp, large founder stake, open-market buying) and the board is unusually credentialed (Hoffman, Eschenbach, Volpi, Wehner) - real positives. Held to a 3 by a stacked-entrenchment structure (10:1 super-voting + combined Chair/CEO + staggered board), high key-person dependence amplified by co-founder Anderson's 2025 exit, the Uber overhang, and a pre-revenue deep-burn profile."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
-        "contextRef": "The 7 Powers analysis (Power Origination)"
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +5.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -4959,7 +4960,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -12278,6 +12279,29 @@ const MEMOS = [
         ],
         "takeaway": "Archer is originating a credible #2 eVTOL position plus a distinctive defense dual-use leg (Anduril) that Joby lacks — at roughly half Joby's market cap. But it lags Joby on the one Power that matters first (FAA certification — Joby has flown conforming aircraft for TIA; Archer hasn't), and on cash/runway; the category just killed the under-capitalized Lilium. The window is open as the close #2 with a defense call option, but certification and the ~$727M/yr burn are the falsifiers the whole bull case must clear."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Adam Goldstein",
+          "founderLed": true,
+          "tenureYears": 8,
+          "insiderOwnershipPct": 5.55,
+          "capitalAllocation": "Co-founder Adam Goldstein (founded Archer 2018; sole CEO since April 2022, Chair & CEO since the 2021 listing) runs a pre-revenue eVTOL developer. Capital is going into certification and manufacturing: a large cash balance (~$1B+, strategic-backed), heavy ATM and strategic raises (the dilution cost), a Stellantis manufacturing partnership plus equity, and United Airlines orders. ~$727M/yr burn; no dividend or buyback.",
+          "incentiveAlignment": "Founder-led with alignment now matching economics: Goldstein holds ~4.9% and the director/officer group ~5.55% (March 2026). Because the super-voting Class B sunset at the end of 2024, his voting power now equals his economic stake — the former ~37% founder voting control has lapsed.",
+          "governanceFlags": [
+            "single class, one vote per share since December 31, 2024 — the former Class B (10-vote) super-voting auto-converted when it fell below the 10% threshold (a governance improvement)",
+            "combined Chair & CEO (Goldstein holds both)",
+            "classified / staggered board (three classes), 7 directors, with a lead independent director (Diaz) and independent Audit/Comp/Nominating committees",
+            "Stellantis holds a contractual board-nomination right alongside its manufacturing partnership and equity — a strategic related-party relationship",
+            "co-founder Brett Adcock departed in 2022; pre-revenue execution is concentrated on the founder-CEO"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "The headline positive is that the dual-class super-voting sunset to clean one-share-one-vote at the end of 2024, so the founder’s votes now equal his ~5% economics; a majority-independent board with independent committees and a lead independent director backs that up. The offsets are a combined Chair/CEO, a classified/staggered board, and high key-person risk — a pre-revenue, cash-burning certification story concentrated on the founder-CEO after the other co-founder left in 2022."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +17.7% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -13521,7 +13545,8 @@ const MEMOS = [
           "takeaway": "Professional management on a clean single-class register with an independent Chair (Summe) split from the CEO — but a brand-new CEO (Ofman, June 2026), thin insider ownership (~1.8%, no founder block), a fresh post-NHS securities class action, and the spinco history of ~$8B destroyed under Illumina hold it at a middling 3; the offsets are the split Chair/CEO, the disciplined ~$823M cash runway, and the absence of dual-class."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
-        "contextRef": "The 7 Powers analysis (Power Origination)"
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +6.4% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -17705,7 +17730,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -21035,7 +21060,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +14.6% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +14.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -21872,7 +21897,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -22705,7 +22730,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -24343,7 +24368,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -25178,7 +25203,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -26009,7 +26034,8 @@ const MEMOS = [
           "takeaway": "Clean single-class one-vote register with an independent Chair (Gorman) split from the CEO, a ~90%-independent annually-elected board, a decisive 2024 activist-fight win, and restored dividend + buyback discipline - all positives. Held to a middling 3 by Disney's documented history of botched CEO successions (now resolved to an as-yet-unproven insider, D'Amaro), thin insider ownership, the Fox goodwill impairment, and ~80% say-on-pay friction."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +10.3% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -30891,7 +30917,8 @@ const MEMOS = [
           "takeaway": "Structurally clean governance - single-class one-vote, an independent Chair split from a long-tenured professional CEO, a ~91%-independent declassified board, and buyback discipline that shrinks the share count. Held to a 3 by the FY2024 free-cash-flow / non-GAAP-margin reporting investigation (no restatement, but a real control-environment flag), the CFO turnover around it, and the Starboard campaign that had to force accountability."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +53.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -31719,7 +31746,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -33361,7 +33388,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -34991,7 +35018,8 @@ const MEMOS = [
           "takeaway": "Founder-CEO (Narang) with two co-founders still operating (President, CTO), heavily equity-aligned, on a net-cash balance sheet with a disciplined buyback and declining SBC, under a separate independent Chair - a solid founder-led profile. Held at 3 by the 10x super-voting dual-class (sub-majority ~40.6% of votes, though sunsetting in 2028), a classified board, and the unresolved 2023 fee-reversal securities investigations."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +25.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -36607,6 +36635,29 @@ const MEMOS = [
         ],
         "takeaway": "Clear Secure's Powers are switching costs (an enrolled biometric identity + the renewing membership habit) and a cornered resource (the enrolled-identity dataset + secured airport footprint) — genuine but airport-contingent. The Audit: the cornered resource is durable (medium) only as long as the airport network holds and the platform extends it; the live threats are US frequent-flyer saturation and, more pointedly, TSA's own free touchless ID commoditizing the paid lane. That fork drives the terminal growth rate, and the DCF prices both sides — a saturating single-product subscription in the ultra-bear (-22%) against a horizontal identity network in the bull/ultra-bull (+92% / +136%). The modal case has members compounding while the platform begins to carry (+40%), so a ~30%-FCF-margin, net-cash, capital-returning compounder at ~13x EV/FCF screens as cheap quality despite the YTD run. Standing caveats on any per-share read: dual-class governance (founder voting control over minority economic holders) and a ~95M economic share count that is an estimate."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Caryn Seidman-Becker",
+          "founderLed": true,
+          "tenureYears": 16,
+          "insiderOwnershipPct": 20.4,
+          "capitalAllocation": "Founder-operator: Seidman-Becker has been Chair & CEO since acquiring the assets and rebuilding the company in 2010 (with co-founder Ken Cornick), through the 2021 IPO to today. Capital allocation is shareholder-friendly for the category — a net-cash, FCF-positive (~30% FCF margin) business that pays a dividend and buys back stock while reinvesting in the identity network.",
+          "incentiveAlignment": "The founders’ economic stake (~20% of the company as a group) is the dominant alignment lever, reinforced by the dividend and buyback. The flip side is control: the same founders hold ~82.8% of the votes through super-voting shares — alignment on economics, but a wide gap between voting power and economic ownership.",
+          "governanceFlags": [
+            "four-class structure with 20-vote super-voting (Class B and Class D = 20 votes each); Class A and C = 1 vote",
+            "Class D carries 20 votes but NO economic rights — a pure voting-control leg of the Up-C structure",
+            "founders hold ~82.8% of combined voting power on ~20% economic ownership — a large vote/economics gap",
+            "NYSE “controlled company” (uses exemptions) though Audit/Compensation/Nominating committees are run fully independent in practice",
+            "combined Chair & CEO; directors elected annually (board is not staggered)"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 2,
+          "takeaway": "A genuine founder-operator with real economic alignment (~20% stake) running a net-cash, FCF-positive, capital-returning business — the positives. But the governance sits in the most-entrenched tier: a four-class, 20-vote super-voting structure gives the founders ~82.8% of the votes on ~20% of the economics (Class D even carries votes with no economic rights), the company is an NYSE controlled company, and the Chair/CEO roles are combined. The vote/economics decoupling, not the operator quality, drives the score."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +38.8% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -37432,7 +37483,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -15.1% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -15.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -38644,6 +38695,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "No durable Power is originated yet — like all AI-bio, RXRX has zero approved drugs, so switching costs, branding and scale economies are still latent. The one candidate is a cornered resource: the Phenomap dataset and BioHive-2 compute generate proprietary phenotypic data at a scale rivals cannot easily match. The bet is whether that data-and-Phenomap flywheel converts into repeatable approved drugs before well-capitalized private labs (Insilico, Isomorphic) or pharma's own AI close the gap. The falsifier the bull must clear is the 2026-2027 readouts producing real clinical and royalty economics — until a drug ships, the resource is unproven and the Power window stays open, not won."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Najat Khan, Ph.D.",
+          "founderLed": false,
+          "tenureYears": 0,
+          "insiderOwnershipPct": 1.0,
+          "capitalAllocation": "A leadership transition is in progress: co-founder Chris Gibson stepped down as CEO and Najat Khan (non-founder; joined 2024 as Chief R&D/Commercial Officer, ex-J&J Chief Data Science Officer, ex-BCG) became President & CEO effective January 1, 2026. Capital goes to the AI drug-discovery platform and the 2026-2027 clinical readouts; the all-stock Exscientia acquisition closed in early 2025 (Recursion holders ~74% / Exscientia ~26%). Pre-product and cash-consuming — no dividend or buyback. NVIDIA fully exited its stake in February 2026.",
+          "incentiveAlignment": "Insider economic ownership is low: founder Gibson held ~1% economically after his June 2026 filing, and the new CEO’s alignment is option-heavy rather than a founding stake. The dominant alignment lever the thesis relied on — the founder — is being removed as Gibson exits.",
+          "governanceFlags": [
+            "dual-class (Class B = 10 votes) but effectively collapsed: only ~5.5M Class B remain versus ~522M Class A, and the structure auto-sunsets by ~2027",
+            "co-founder Chris Gibson stepped down as CEO (Jan 2026) and did not seek re-election to the board at the June 2026 annual meeting — founder leaving entirely",
+            "CEO handed to a non-founder professional (Khan) after ~12 years of founder leadership — a transition year",
+            "NVIDIA fully exited its equity stake (February 2026)"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "A transition year: the founder is stepping off both the CEO seat (January 2026) and the board (June 2026), and a non-founder professional now runs the company — which removes the founder-alignment leg but also retires the dual-class super-voting (already nearly fully converted, sunsetting ~2027) toward one-share-one-vote. Insider economic ownership is low. The platform, not any individual, is the asset, so key-person risk is moderate rather than high."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +22.3% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -39880,7 +39953,8 @@ const MEMOS = [
           "takeaway": "Clean single-class one-vote register, an independent Chair (Cooper) split from a long-tenured professional CEO (Evans, since 2017), and a ~88%-independent fully-independent-committee board on a well-funded balance sheet (cash to mid-2029). Held at 3 by thin insider alignment (low ownership, sell-only Form 4s), a classified board, and the Broad/Harvard base-editing IP + scientific-founder related-party concentration. The platform depends on the founders' science (reputational) but none run day-to-day."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
-        "contextRef": "The 7 Powers analysis (Power Audit)"
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +31.3% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -41088,6 +41162,28 @@ const MEMOS = [
           }
         ],
         "takeaway": "A Power is being attempted, not yet originated. PACB is trying to convert HiFi/SMRT accuracy into a cornered-resource and process Power in long-read, but it lags Illumina's scale economies badly and shares the long-read field with Oxford Nanopore. The falsifier the bull must clear is observable and singular — consumable pull-through compounding fast enough to reach cash-flow breakeven and clear the ~$644M convert wall before 2029/2030. Miss it and the leverage, not the technology, decides the outcome."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Christian O. Henry",
+          "founderLed": false,
+          "tenureYears": 6,
+          "insiderOwnershipPct": 1.0,
+          "capitalAllocation": "CEO since September 2020 (prior: Illumina executive 2005-2017 — CFO, Chief Commercial Officer, GM of Life Sciences). The capital priority is reaching cash-flow breakeven, targeted 2027: FY25 revenue $160M (+4%), a ~16% headcount reduction and FY26 opex guided to $220-225M, run against ~$276M cash versus ~$644M of convertible notes due 2029/2030 (~$368M net debt). No dividend or buyback — cash is being preserved to fund the consumables ramp and clear the convert wall.",
+          "incentiveAlignment": "Insiders hold under 1% of the company; the CEO is the largest individual holder at roughly 1.2% (~3.6M shares). Alignment runs through equity awards rather than a founding stake, and the thin insider holding is itself a flag — limited owner-operator skin in the game against the balance-sheet risk.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class or super-voting",
+            "combined Chairman and CEO (Henry holds both), with a lead independent director as the counterweight",
+            "board expanded to 10 members in March 2026; largest holder is BlackRock (~7.7%), no founder control block",
+            "levered balance sheet: ~$644M convertible notes due 2029/2030 exceed the modeled equity value — the central capital-allocation overhang"
+          ],
+          "keyPersonRisk": "low",
+          "score": 3,
+          "takeaway": "Professional, experienced management (CEO Henry is ex-Illumina) on a clean single-class one-vote register with a majority-independent 10-member board — the governance positives. The offsets are a combined Chair/CEO, insiders below 1% (thin owner-operator alignment), and a levered balance sheet where the converts exceed the modeled equity, so capital allocation is dominated by the race to breakeven before 2029/2030. The technology is institutionalized, so key-person risk is low."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +58.7% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -43113,7 +43209,8 @@ const MEMOS = [
           "takeaway": "A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model."
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
-        "contextRef": "The 7 Powers analysis (Power Origination)"
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +29.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -44325,6 +44422,29 @@ const MEMOS = [
           }
         ],
         "takeaway": "PRME is trying to originate a cornered-resource/process Power in versatile, precise editing — the David Liu prime-editing platform is a genuine scarce asset, and PM359 proves the chemistry works in humans. But the company is cash-starved and was forced to cut its pipeline, so the Power-origination window is closing faster than the science is maturing. The falsifier the bull must clear is concrete — reach a partnered or approved program before the balance sheet forces value-destroying dilution. Same family as BEAM, opposite balance sheet."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Allan Reine, M.D.",
+          "founderLed": false,
+          "tenureYears": 1,
+          "insiderOwnershipPct": 15.61,
+          "capitalAllocation": "Allan Reine became CEO in May 2025 (prior CFO, Jan 2024-May 2025), replacing scientific-founder CEO Keith Gottesdiener in a restructuring that shelved the lead clinical program and refocused the pipeline on liver targets. The company is cash-starved — a going-concern flag and a ~$200M ATM facility — so capital allocation is dominated by survival and dilution management. Pre-revenue; no dividend or buyback.",
+          "incentiveAlignment": "Directors and officers as a group hold ~15.6% (11 persons, Feb 2026). The clearest positive alignment signal is scientific co-founder David Liu — filed as a director and 10% owner, ~11.2% (~20.2M shares), the largest individual holder — making open-market purchases in June 2025. The new CEO’s pay is option-weighted (a 1.3M-share grant in February 2026).",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class (Delaware)",
+            "classified / staggered board (three classes) — a director-entrenchment flag",
+            "going-concern condition with a ~$200M ATM — forced-dilution overhang is the central capital-allocation risk",
+            "co-founder David Liu filed as director / 10% owner (also the operating SAB chair) and made open-market purchases June 2025",
+            "ARCH Venture (~10.2%) and GV / Google Ventures (~9.2%) are the largest outside holders"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "A clean single-class one-vote register and a genuine founder-alignment signal (co-founder David Liu, the largest holder, buying in the open market) are the positives. Against them sit a classified/staggered board, a recent CEO change-plus-restructuring, and — most of all — a going-concern balance sheet with a ~$200M ATM, so capital allocation is hostage to dilution. Key-person risk is high: the prime-editing platform is founder-science led and the clinical pipeline was just cut to one focus."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +7.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -46725,6 +46845,29 @@ const MEMOS = [
         ],
         "takeaway": "NovoCure has a genuine cornered resource — the TTFields IP and the only approved device for this modality — reinforced by a per-indication clinical-evidence moat (PANOVA-3, METIS). That makes the modality largely uncontested by direct device rivals. But the Power is medium-durability, not high: real-world adoption lags labels, reimbursement gates uptake, and the June 2026 TRIDENT miss shows the moat must be re-won trial by trial. The falsifier is a second pivotal miss or flat active-patient growth — either would prove the platform cannot extend beyond GBM."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Frank Leonard",
+          "founderLed": false,
+          "tenureYears": 0,
+          "insiderOwnershipPct": 22.7,
+          "capitalAllocation": "Frank Leonard became CEO on December 1, 2025 — a 15-year NovoCure veteran (prior President/COO/CFO) who replaced Ashley Cordova after her sub-one-year tenure (CEO Jan-Nov 2025), itself following founder-era CEO Asaf Danziger (2002-2024). Capital funds the TTFields oncology-device franchise and new-indication trials (~78% gross margin, net cash); no dividend or buyback. The fresh Phase-3 TRIDENT GBM miss (June 18, 2026 — overall survival 17.7 vs 17.5 months, primary endpoint not met) is the key recent operating event.",
+          "incentiveAlignment": "New CEO Leonard is on a CHF 750,000 base with a 90%-of-base target bonus and standard change-of-control terms. The dominant ownership figure is Executive Chairman William Doyle’s ~22.7% beneficial stake (largely via WFD Ventures Fund II, over which he holds sole voting power) — concentration at the non-independent chair, not the CEO. Recent insider Form 4 activity has been routine selling.",
+          "governanceFlags": [
+            "single class of ordinary shares, one vote per share (Jersey-incorporated); no controlling shareholder — largest holder Soleus ~9.1%",
+            "non-independent Executive Chairman (Doyle, since 2016) holding ~22.7% beneficially via WFD Ventures Fund II — concentration at the chair",
+            "CEO instability: two transitions in ~13 months (Danziger → Cordova Jan 2025 → Leonard Dec 2025)",
+            "8 of 11 directors independent (~73%), board declassified (annual election), with a separate lead independent director (Madden, since Feb 2026)",
+            "founder Yoram Palti is off the board since 2018 (now CTO/consultant); his consulting fee is no longer a disclosed related-party item"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Clean single-class one-vote shares, a ~73%-independent declassified board and a separate lead independent director are the positives. Holding the score at 3 are a non-independent Executive Chairman with a ~22.7% concentrated stake and back-to-back CEO turnover (two changes in ~13 months) — though the new CEO is a 15-year insider and the device franchise is institutionalized, so key-person risk is moderate. The June 2026 TRIDENT miss is an operating, not a governance, event."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4.5% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -47539,7 +47682,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + §12 position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -48418,7 +48561,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution (+41%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI",
         "contextRef": "The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion",
-        "deal": "Open-market purchase at a ~37% discount to NAV vs. the scenario distribution + §12 sizing. (Ackman's own entry: $100/share, a 48% premium.)"
+        "deal": "Open-market purchase at a ~37% discount to NAV vs. the scenario distribution + position sizing. (Ackman's own entry: $100/share, a 48% premium.)"
       },
       "appendix": {
         "pushback": [

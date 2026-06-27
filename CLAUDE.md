@@ -77,6 +77,15 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   the headline expected value — that lives only in §12 position sizing.
 - Governing build principle (spec §3.5): all axis limits / page bounds / layout
   containers compute from data; never hardcoded.
+- **The site is EXTERNAL — ar2eb.com is public-facing.** Rendered copy must read
+  for an outside reader. **Never expose internal-spec jargon** (`§6d`, `§12`,
+  `§16`, `spec §X`, bare section numbers, internal file/anchor names like
+  `...-draft`) in anything that renders: the site pages (`pages.jsx`,
+  `components.jsx`, `ai2_report.jsx`) or memo fields that show on the page
+  (thesis, narratives, takeaways, the POCD O/C/D legs incl. `deal`, `sources`,
+  captions). Source-code `//`/`#` comments may keep `§`-refs (not rendered).
+  Hold all site/memo prose to a **PhD-level editorial bar** — accurate (e.g. don't
+  say "three words" for a three-*idea* tagline), economical, no mixed metaphors.
 
 ## Git & deploy
 

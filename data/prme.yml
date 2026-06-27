@@ -931,6 +931,38 @@ competitive:
     was forced to cut its pipeline, so the Power-origination window is closing faster than the science is maturing. The falsifier
     the bull must clear is concrete — reach a partnered or approved program before the balance sheet forces value-destroying
     dilution. Same family as BEAM, opposite balance sheet.
+pocd:
+  people:
+    ceo: Allan Reine, M.D.
+    founder_led: false
+    tenure_years: 1
+    insider_ownership_pct: 15.61
+    capital_allocation: Allan Reine became CEO in May 2025 (prior CFO, Jan 2024-May 2025), replacing scientific-founder
+      CEO Keith Gottesdiener in a restructuring that shelved the lead clinical program and refocused the pipeline
+      on liver targets. The company is cash-starved — a going-concern flag and a ~$200M ATM facility — so capital
+      allocation is dominated by survival and dilution management. Pre-revenue; no dividend or buyback.
+    incentive_alignment: Directors and officers as a group hold ~15.6% (11 persons, Feb 2026). The clearest positive
+      alignment signal is scientific co-founder David Liu — filed as a director and 10% owner, ~11.2% (~20.2M shares),
+      the largest individual holder — making open-market purchases in June 2025. The new CEO’s pay is option-weighted
+      (a 1.3M-share grant in February 2026).
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class (Delaware)
+    - classified / staggered board (three classes) — a director-entrenchment flag
+    - going-concern condition with a ~$200M ATM — forced-dilution overhang is the central capital-allocation risk
+    - co-founder David Liu filed as director / 10% owner (also the operating SAB chair) and made open-market purchases
+      June 2025
+    - ARCH Venture (~10.2%) and GV / Google Ventures (~9.2%) are the largest outside holders
+    key_person_risk: high
+    score: 3
+    takeaway: 'A clean single-class one-vote register and a genuine founder-alignment signal (co-founder David Liu,
+      the largest holder, buying in the open market) are the positives. Against them sit a classified/staggered board,
+      a recent CEO change-plus-restructuring, and — most of all — a going-concern balance sheet with a ~$200M ATM,
+      so capital allocation is hostage to dilution. Key-person risk is high: the prime-editing platform is founder-science
+      led and the clinical pipeline was just cut to one focus.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  context_ref: The 7 Powers analysis (Power Origination)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +7.2% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-20_06-33

@@ -939,6 +939,38 @@ competitive:
     flywheel converts into repeatable approved drugs before well-capitalized private labs (Insilico, Isomorphic) or pharma''s
     own AI close the gap. The falsifier the bull must clear is the 2026-2027 readouts producing real clinical and royalty
     economics — until a drug ships, the resource is unproven and the Power window stays open, not won.'
+pocd:
+  people:
+    ceo: Najat Khan, Ph.D.
+    founder_led: false
+    tenure_years: 0
+    insider_ownership_pct: 1.0
+    capital_allocation: 'A leadership transition is in progress: co-founder Chris Gibson stepped down as CEO and Najat
+      Khan (non-founder; joined 2024 as Chief R&D/Commercial Officer, ex-J&J Chief Data Science Officer, ex-BCG) became
+      President & CEO effective January 1, 2026. Capital goes to the AI drug-discovery platform and the 2026-2027
+      clinical readouts; the all-stock Exscientia acquisition closed in early 2025 (Recursion holders ~74% / Exscientia
+      ~26%). Pre-product and cash-consuming — no dividend or buyback. NVIDIA fully exited its stake in February 2026.'
+    incentive_alignment: 'Insider economic ownership is low: founder Gibson held ~1% economically after his June 2026
+      filing, and the new CEO’s alignment is option-heavy rather than a founding stake. The dominant alignment lever
+      the thesis relied on — the founder — is being removed as Gibson exits.'
+    governance_flags:
+    - 'dual-class (Class B = 10 votes) but effectively collapsed: only ~5.5M Class B remain versus ~522M Class A,
+      and the structure auto-sunsets by ~2027'
+    - co-founder Chris Gibson stepped down as CEO (Jan 2026) and did not seek re-election to the board at the June
+      2026 annual meeting — founder leaving entirely
+    - CEO handed to a non-founder professional (Khan) after ~12 years of founder leadership — a transition year
+    - NVIDIA fully exited its equity stake (February 2026)
+    key_person_risk: medium
+    score: 3
+    takeaway: 'A transition year: the founder is stepping off both the CEO seat (January 2026) and the board (June
+      2026), and a non-founder professional now runs the company — which removes the founder-alignment leg but also
+      retires the dual-class super-voting (already nearly fully converted, sunsetting ~2027) toward one-share-one-vote.
+      Insider economic ownership is low. The platform, not any individual, is the asset, so key-person risk is moderate
+      rather than high.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  context_ref: The 7 Powers analysis (Power Origination)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +22.3% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-16_07-02

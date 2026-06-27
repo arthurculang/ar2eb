@@ -610,6 +610,38 @@ competitive:
     members compounding while the platform begins to carry (+40%), so a ~30%-FCF-margin, net-cash, capital-returning compounder
     at ~13x EV/FCF screens as cheap quality despite the YTD run. Standing caveats on any per-share read: dual-class governance
     (founder voting control over minority economic holders) and a ~95M economic share count that is an estimate.'
+pocd:
+  people:
+    ceo: Caryn Seidman-Becker
+    founder_led: true
+    tenure_years: 16
+    insider_ownership_pct: 20.4
+    capital_allocation: 'Founder-operator: Seidman-Becker has been Chair & CEO since acquiring the assets and rebuilding
+      the company in 2010 (with co-founder Ken Cornick), through the 2021 IPO to today. Capital allocation is shareholder-friendly
+      for the category — a net-cash, FCF-positive (~30% FCF margin) business that pays a dividend and buys back stock
+      while reinvesting in the identity network.'
+    incentive_alignment: 'The founders’ economic stake (~20% of the company as a group) is the dominant alignment
+      lever, reinforced by the dividend and buyback. The flip side is control: the same founders hold ~82.8% of the
+      votes through super-voting shares — alignment on economics, but a wide gap between voting power and economic
+      ownership.'
+    governance_flags:
+    - four-class structure with 20-vote super-voting (Class B and Class D = 20 votes each); Class A and C = 1 vote
+    - Class D carries 20 votes but NO economic rights — a pure voting-control leg of the Up-C structure
+    - founders hold ~82.8% of combined voting power on ~20% economic ownership — a large vote/economics gap
+    - NYSE “controlled company” (uses exemptions) though Audit/Compensation/Nominating committees are run fully independent
+      in practice
+    - combined Chair & CEO; directors elected annually (board is not staggered)
+    key_person_risk: medium
+    score: 2
+    takeaway: 'A genuine founder-operator with real economic alignment (~20% stake) running a net-cash, FCF-positive,
+      capital-returning business — the positives. But the governance sits in the most-entrenched tier: a four-class,
+      20-vote super-voting structure gives the founders ~82.8% of the votes on ~20% of the economics (Class D even
+      carries votes with no economic rights), the company is an NYSE controlled company, and the Chair/CEO roles are
+      combined. The vote/economics decoupling, not the operator quality, drives the score.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +38.8% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-15_06-24
