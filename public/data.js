@@ -40051,29 +40051,29 @@ const MEMOS = [
       "asOf": "June 16, 2026 close"
     },
     "expected": {
-      "fair": 2.09,
-      "deltaPct": 58.7
+      "fair": 1.72,
+      "deltaPct": 30.6
     },
     "compound": [
       {
         "y": 5,
-        "value": 3.33,
-        "mult": 2.53
+        "value": 2.75,
+        "mult": 2.08
       },
       {
         "y": 10,
-        "value": 5.3,
-        "mult": 4.02
+        "value": 4.39,
+        "mult": 3.32
       },
       {
         "y": 15,
-        "value": 8.44,
-        "mult": 6.4
+        "value": 7.0,
+        "mult": 5.3
       },
       {
         "y": 20,
-        "value": 13.45,
-        "mult": 10.19
+        "value": 11.17,
+        "mult": 8.46
       }
     ],
     "taxonomy": {
@@ -40109,7 +40109,7 @@ const MEMOS = [
       {
         "key": "bear",
         "label": "BEAR",
-        "prob": 32,
+        "prob": 34,
         "price": 0.0,
         "headline": "Growth too slow for the debt",
         "why": "The largest single bucket. Reflects the central tension — real but unspectacular long-read uptake against a fixed debt wall — where survival is likely but equity value is not, given how little cushion sits above the converts.",
@@ -40145,7 +40145,7 @@ const MEMOS = [
       {
         "key": "ultra",
         "label": "ULTRA BULL",
-        "prob": 7,
+        "prob": 5,
         "price": 18.55,
         "headline": "Long-read wins WGS; re-rating",
         "why": "The lowest-probability outcome: long-read displacing short-read at population scale against Illumina's entrenched economics. Low odds, but the operating and financial leverage make the payoff large enough to matter to the weighted value.",
@@ -40155,8 +40155,8 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 18 / Bear 32 / Base 30 / Bull 13 / Ultra Bull 7. Spot price reference: June 16, 2026 close.",
-    "thesis": "Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on them — the #3 behind Illumina's short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered option, not a cheap value stock. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; a fat long-read-wins tail offsets it. Weighted $1.29 vs spot $1.32, modestly negative.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 18 / Bear 34 / Base 30 / Bull 13 / Ultra Bull 5. Spot price reference: June 16, 2026 close.",
+    "thesis": "Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on them — the #3 behind Illumina's short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered setup. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; nearly all the value sits in the ~18% long-read-wins tail. Weighted $1.72 vs spot $1.32 (+31%) — a cheap levered option, not a value stock.",
     "historicalPrices": {
       "xMin": -5.2,
       "ipoMarker": "IPO '10",
@@ -40205,7 +40205,7 @@ const MEMOS = [
         "body": "Long-read stalls; converts wipe out equity."
       },
       {
-        "label": "Bear 32%",
+        "label": "Bear 34%",
         "body": "Growth too slow to clear the debt in time."
       },
       {
@@ -40217,7 +40217,7 @@ const MEMOS = [
         "body": "Long-read inflects; consumables beat the debt."
       },
       {
-        "label": "Ultra Bull 7%",
+        "label": "Ultra Bull 5%",
         "body": "Long-read wins big WGS share; a re-rating."
       }
     ],
@@ -40264,8 +40264,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 8,
       "weighted": {
-        "expected": 2.09,
-        "upsidePct": 58.7
+        "expected": 1.72,
+        "upsidePct": 30.6
       },
       "market": {
         "marketCapBillion": 0.41,
@@ -40436,7 +40436,7 @@ const MEMOS = [
           ]
         },
         "bear": {
-          "probability": 0.32,
+          "probability": 0.34,
           "expectedPerShare": 0.0,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -40919,7 +40919,7 @@ const MEMOS = [
           ]
         },
         "ultra_bull": {
-          "probability": 0.07,
+          "probability": 0.05,
           "expectedPerShare": 18.55,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
@@ -41183,7 +41183,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +58.7% finding) + position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +30.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
