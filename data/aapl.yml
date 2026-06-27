@@ -607,6 +607,41 @@ competitive:
     model, and that same counterparty anchors a ~$20B/yr search payment now exposed to a DOJ rebid. The Powers are durable;
     the question the DCF presses is price, not moat. A mid-single-digit grower at ~43x FCF carries a premium even the bull
     (~$279, -4%) barely justifies, and the modal case lands ~$188 (-35%).'
+pocd:
+  people:
+    ceo: Tim Cook
+    founder_led: false
+    tenure_years: 15
+    insider_ownership_pct: 0.1
+    capital_allocation: 'Tim Cook has been CEO since August 2011 (founder Steve Jobs died that year). A dated succession
+      is now underway: announced April 2026, effective September 1, 2026, Cook becomes Executive Chairman and John
+      Ternus (SVP Hardware Engineering, a 25-year Apple insider) becomes CEO, with Arthur Levinson moving to lead
+      independent director. Capital allocation is best-in-class scale return: FY2025 ~$89B buybacks + ~$15B dividends
+      (~$105B total), a fresh $100B buyback authorization, against ~$132B cash/securities versus ~$100B debt (~$32B
+      net cash) and ~$35B R&D.'
+    incentive_alignment: Cook’s FY2025 total compensation was ~$74M (≈$3M salary, ~$12M cash incentive, ~$57M equity),
+      with the equity majority in performance RSUs tied to relative total shareholder return. Insider selling is routine
+      and pre-scheduled (Rule 10b5-1 / sell-to-cover on RSU vesting). Insider ownership is under 0.1% — normal for
+      a company this size and not a flag.
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class, no super-voting, no controlling shareholder
+      (largest holders Vanguard ~9%, BlackRock ~8%)
+    - Chair and CEO are currently separated (independent Chairman Levinson) — a positive
+    - 'dated CEO succession: Cook → Executive Chairman and John Ternus → CEO effective September 1, 2026; Levinson
+      → lead independent director (the chair role becomes a non-independent insider at that point)'
+    - 7 of 8 directors independent; all directors elected annually (board not staggered)
+    - the broadest executive-leadership turnover since 2011 (CEO, COO and CFO all refilled from within in 2025-2026)
+    key_person_risk: low
+    score: 4
+    takeaway: 'Clean, shareholder-friendly governance: single-class one-vote stock, no controlling holder, a 7-of-8
+      independent board, and — uncommon among megacaps — a chair currently separate from the CEO. Key-person risk
+      is low because succession is not just planned but executed: a named internal CEO (Ternus) takes over on a fixed
+      date, every senior role was backfilled from within, and no individual controls the company. The one notch to
+      watch is that the chair becomes a non-independent Executive Chairman (Cook) in September 2026.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -34.5% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_20-19

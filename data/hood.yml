@@ -604,6 +604,43 @@ competitive:
     rate cut) plus bigger brokers. The Audit: the scale Power is medium-durable, diversification is genuine but early, and
     that squares with a DCF where ~52x FCF prices a durable platform the modal case (-59%) doesn''t deliver - only the ultra-bull
     (-14%), where the cyclicality truly fades, approaches today''s price.'
+pocd:
+  people:
+    ceo: Vlad Tenev
+    founder_led: true
+    tenure_years: 13
+    insider_ownership_pct: 12.0
+    capital_allocation: 'Co-founder Vlad Tenev is Chairman, CEO and President (co-founded 2013). The company is now
+      profitable (FY2025 revenue ~$4.5B, adjusted EBITDA ~$2.5B) with ~$5B cash and minimal debt. Capital return began
+      post-profit: a $1B buyback authorized May 2024, raised to $1.5B by March 2026 (~$1.2B executed), no dividend.
+      Recent acquisitions include Bitstamp (~$200M) and TradePMR (~$300M); crypto is an expanding line. Co-founder
+      Baiju Bhatt left management in 2024 (to found Aetherflux) but remains a director.'
+    incentive_alignment: 'A notable shareholder-friendly action: the 2021 founder mega-RSU award (~$4.7B at grant,
+      vesting on $120-$300 price targets) was voluntarily cancelled in 2023 with none of it vested. Tenev holds ~6%
+      economic / ~24% of the vote; the co-founders together control a majority of votes. Insider selling is recurring
+      and 10b5-1-scheduled.'
+    governance_flags:
+    - 'three-class structure with Class B = 10 votes (held only by the co-founders): Tenev ~24% of the vote on ~6%
+      economics, and the co-founders together control a majority of votes'
+    - combined Chair & CEO (Tenev), mitigated by a long-tenured lead independent director (Jonathan Rubinstein)
+    - the super-voting sunset is distant (2036), so founder voting control persists for years
+    - co-founder Bhatt left management (2024) but remains a director and is selling down his Class B stake
+    - CEO split attention — Tenev is also executive chairman of a separate AI company (Harmonic)
+    - extensive regulatory history (SEC $65M in 2020; FINRA $70M in 2021 and ~$30M in 2025 — payment-for-order-flow,
+      supervision, AML)
+    - 'shareholder-friendly offset: the 2021 ~$4.7B founder mega-RSU award was voluntarily cancelled in 2023, unvested'
+    key_person_risk: medium
+    score: 3
+    takeaway: 'A dual-class super-voting structure with the founders controlling a majority of votes, plus a combined
+      Chair/CEO, are the entrenchment flags. They are offset enough to hold a 3 rather than drop lower: a long-tenured
+      lead independent director, an 8-of-10 independent board with annual elections, the genuinely shareholder-friendly
+      cancellation of the 2021 mega-award, and a now-profitable business returning capital. The extensive regulatory
+      history is an operating/compliance flag rather than a structural one. Key-person risk is moderate given the
+      deep, professionalized bench.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -57.7% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-03
