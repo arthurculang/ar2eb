@@ -594,6 +594,38 @@ competitive:
     DNA is partly fungible and a Danaher-owned IDT can fund a price war. The falsifier the bull must clear is the gross-margin
     ramp: if margins advance toward platform levels while 20%+ growth holds, the Power is durable; if pricing competition
     flattens the margin curve, it is a strong franchise priced as if it were a moat.'
+pocd:
+  people:
+    ceo: Emily Leproust
+    founder_led: true
+    tenure_years: 13
+    insider_ownership_pct: 2.4
+    capital_allocation: Co-founder Emily Leproust has been CEO since 2013 and Chair since 2018; co-founder Bill Banyai
+      remains an executive and director (the DNA-data-storage "Atlas" spinout). The synthetic-DNA business is past
+      early stage (~$377M revenue, +20%) and targeting adjusted-EBITDA breakeven by late FY2026, on ~$232M cash. Funding
+      is via an active $200M ATM (ongoing dilution); no dividend or buyback.
+    incentive_alignment: Leproust’s FY2025 compensation was ~$13.8M (equity-heavy; up on a large stock grant), with
+      ~94% say-on-pay support. Insiders hold only ~2.4% of the company; alignment is through equity awards, not a
+      founding control block. Insider trading is net selling under a 10b5-1 plan (much of it RSU tax withholding),
+      no open-market buying.
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class or super-voting; no controlling shareholder
+      (largest holder ARK ~12%)
+    - combined Chair & CEO (Leproust), mitigated by a lead independent director (Robert Chess)
+    - classified / staggered board (three classes) — an entrenchment feature
+    - 7 of 9 directors independent; ongoing ATM dilution with no buyback to offset
+    - a securities class action (following a short-seller report) was allowed to proceed — an open litigation flag
+    - 'director interlock: a sitting director (Ragusa) is CEO of another company in the watchlist (GRAIL)'
+    key_person_risk: medium
+    score: 3
+    takeaway: A clean one-share-one-vote register with no controlling holder, a 7-of-9 independent board, and a lead
+      independent director are the positives. Holding it at 3 are a combined Chair/CEO, a classified board, ongoing
+      ATM dilution, and an open securities class action. Key-person risk is moderate — a founder Chair/CEO, but a
+      second co-founder still active, an institutionalized board, and a business past early stage (~$377M revenue).
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.8% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-20_06-33

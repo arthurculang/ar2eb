@@ -14452,6 +14452,30 @@ const MEMOS = [
         ],
         "takeaway": "10x's Scale-Economies Power — a >7,900-instrument installed base throwing off ~85% recurring, 70%-margin consumables — is real and durable, and its IP estate bankrupted NanoString. But the Power is being audited in real time: single-cell consumables are declining, instrument placements are frozen by the NIH funding shock, and instrument-free entrants (Parse — and 10x's own ScaleBio acquisition) attack the razor model the annuity depends on. The market pays ~5x EV/sales for a spatial re-acceleration the base case doesn't yet support; the durability of the consumables annuity through the academic-funding shock is the falsifier the valuation rests on."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Serge Saxonov",
+          "founderLed": true,
+          "tenureYears": 14,
+          "insiderOwnershipPct": 8.3,
+          "capitalAllocation": "Co-founder Serge Saxonov has been CEO since founding 10x in 2012; co-founder Ben Hindson is President & CSO. The balance sheet is a fortress — ~$540M cash and no debt — funding heavy R&D (~$239M) as the business narrows losses toward profitability (FY2025 net loss $43.5M, improving; Q1 2026 operating cash flow turned positive). No dividend or buyback. A defining feature is its patent estate: 10x won its long-running suits (Bio-Rad settled and cross-licensed; the NanoString case ended with acquirer Bruker paying 10x $68M).",
+          "incentiveAlignment": "Saxonov’s FY2024 compensation was ~$7.9M (~92% equity). Insider trading is programmatic 10b5-1 selling (partly RSU tax withholding), no open-market buying. The founders are aligned through their super-voting Class B stake rather than economic ownership — insiders hold under ~8% of the economics but the super-voting class carries the large majority of the votes.",
+          "governanceFlags": [
+            "dual-class super-voting: Class B = 10 votes per share; the Class B block holds the large majority of voting power while public Class A holds a small minority",
+            "mitigant: Chair and CEO are SEPARATED — an independent Chairman (John Stuelpnagel), not the founder-CEO",
+            "no single majority controller — the founder’s individual voting power is a minority; the super-voting is spread across early holders",
+            "classified / staggered board (three classes) — an entrenchment feature",
+            "no time-based dual-class sunset — Class B converts only on transfer or a co-founder’s death/disability",
+            "6 of 8 directors independent; all three standing committees fully independent"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Better-governed than most dual-class names: an independent Chairman separate from the CEO, fully-independent committees, a net-cash balance sheet, and a patent estate that won its wars. The cap at 3 is structural — the super-voting Class B disenfranchises public holders, and the board is classified with no time-based sunset. But no single person controls a majority (the founders’ individual votes are a minority), which is why it sits at the top of the 3 tier. Key-person risk is moderate — two founders in the CEO/CSO seats, but a deep independent board and institutional bench."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.2% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -32683,6 +32707,29 @@ const MEMOS = [
         ],
         "takeaway": "Unity's most genuine Power is a cornered resource - the ad-data plus engine install base feeding Vector - but it is nascent and being actively contested, and the branding leg (the default game engine) was damaged by the runtime fee and is eroding to Godot and Unreal. The Audit: the dominant Power is the contested ad-data/install-base resource (durability low), the live threats are engine-share erosion plus a developer exodus and ~56%-in-five-years SBC dilution, and ~$2.2B convertibles mature into ~$2.15B cash in Nov-2026. That squares with the DCF: even with Vector working and GAAP turning, the base lands -60% because the model carries a thinner ex-SBC margin and a growing share count - this is the most speculative name in the batch, a turnaround bet on Vector with a very wide -93% to +47% distribution, not an FCF compounder."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Matthew Bromberg",
+          "founderLed": false,
+          "tenureYears": 2,
+          "insiderOwnershipPct": 20.14,
+          "capitalAllocation": "Matthew Bromberg (ex-Zynga COO) became CEO in May 2024, brought in to fix the business after founder-era CEO John Riccitiello was ousted in October 2023 over the \"Runtime Fee\" pricing debacle. The turnaround is showing: Q1 2026 revenue +17%, ~27% adjusted-EBITDA margin, positive free cash flow — though GAAP is still a loss (an ironSource-related impairment). Capital allocation is deleveraging: ~$2.1B cash against ~$2.2B convertibles, with maturities pushed to 2030 via repurchases; a $250M buyback ran in 2024; no dividend.",
+          "incentiveAlignment": "Bromberg’s package is turnaround-style — $850K base, an $2M sign-on, and large option grants vesting on $35/$50/$60/$75 stock-price hurdles through 2030, tying most upside to a recovery. Insider trading is sell-to-cover on vesting, no open-market buying. The largest holders are strategic (Sequoia’s Botha ~9%, Silver Lake ~9%), whose 2022 convertible financing drew a Delaware disclosure suit.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no super-voting; no controlling shareholder (largest holder ~9%)",
+            "management-instability history: founder-era CEO ousted in 2023 over the Runtime-Fee debacle, an interim CEO, then the current turnaround CEO (2024)",
+            "Chair and CEO are separated, but the Chair (Whitehurst) is an Executive (non-independent) Chair — independent oversight runs through the lead independent director (Botha)",
+            "classified / staggered board (three classes) — an entrenchment feature",
+            "strategic-investor board seats (Silver Lake, Sequoia) tied to a 2022 convertible deal that drew Delaware litigation; heavy stock-based comp and ~4-6%/yr dilution"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "A single-share-one-vote company with no controlling holder — public shareholders keep full voting power, which keeps it clear of the entrenched tier. But it is not a clean 4: a non-independent Executive Chair, a classified board, recent management instability (the 2023 Runtime-Fee CEO ouster), strategic-investor board seats from a litigated convertible deal, and heavy stock-comp dilution. The board did hold the prior CEO accountable, a positive signal. Key-person risk is moderate — the turnaround is closely identified with Bromberg."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -56.5% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -35974,6 +36021,29 @@ const MEMOS = [
           }
         ],
         "takeaway": "Warby Parker's brand Power is genuine — a premium, vertically-integrated DTC eyewear name with real pricing power and a nascent process edge from in-house design/lens labs/optometry — but a brand does not convert to free cash flow while the adjusted-EBITDA margin sits near ~12% and GAAP profit flips between a few million dollars and breakeven. The Audit: branding is durable (medium), process_power (store-led vertical integration) is the emerging swing factor, and the live threats are capital/SBC intensity capping the margin inflection plus price-led share loss to Zenni/value optical; the Google AI-glasses program is upside optionality, not the base, and it chases a Meta-EssilorLuxottica leader. At ~3x sales the price already embeds the margin ramp and some of the glasses optionality, so the weighted DCF is -42.1% and the modal case lands -43% — only the ultra-bull's full inflection-plus-second-act clears spot."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Neil Blumenthal & Dave Gilboa (co-CEOs)",
+          "founderLed": true,
+          "tenureYears": 15,
+          "insiderOwnershipPct": 18.0,
+          "capitalAllocation": "Co-founders Neil Blumenthal and Dave Gilboa have run Warby Parker as co-CEOs since 2010 (and are co-chairs of the board). FY2025 was the first full GAAP-profitable year (+$1.6M), on ~$872M revenue (+13%) and a net-cash balance sheet (~$286M, no debt). Capital return just began — a first-ever $100M buyback (Feb 2026), no dividend. A new Google/Samsung smart-glasses partnership brings up to $75M of product-development funding plus an optional up-to-$75M equity investment.",
+          "incentiveAlignment": "The co-CEOs are modestly paid (~$1.5M each, FY2024) with long-term incentives tied to multi-year stock-price hurdles. Their alignment is the founding stake; insider trading is programmatic 10b5-1 selling, no open-market buying. A seasoned external CFO (ex-Macy’s) was added in early 2026, deepening the bench.",
+          "governanceFlags": [
+            "multi-class super-voting: Class B = 10 votes per share (founders); the co-founders together hold ~48% of the vote on a smaller economic stake — significant but below a majority",
+            "co-CEO structure, and the co-CEOs are also co-chairs of the board (combined Chair/CEO) — mitigated by a lead independent director (Ronald Williams)",
+            "a fixed dual-class sunset (Oct 2031), plus transfer and death/disability triggers — a real positive vs. no-sunset peers",
+            "classified / staggered board (three classes) — an entrenchment feature",
+            "7 of 9 directors independent; below the 50% controlled-company threshold (does not appear to rely on controlled-company exemptions)"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "Dual-class super-voting with the co-founders also serving as co-chairs caps it below the clean tier, but it is a solid 3: the founders hold ~48% of the vote (below a controlling majority, so not a controlled company), there is a fixed 2031 sunset (which most dual-class names lack), a 7-of-9 independent board with a lead independent director, and the company just turned profitable with its first buyback. Key-person risk is moderate — dependence on the two-founder partnership, but split across two people with a professionalized bench."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -42.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -42123,6 +42193,30 @@ const MEMOS = [
         ],
         "takeaway": "A durable Power is plausibly present but not proven. The cornered resource — a 7.3M-record multimodal library feeding an ~80%-margin licensing flywheel with a data-network loop — is genuinely hard to replicate, hence the bull case. But durability is medium, not high: the falsifier is foundation models trained on open or rival data closing the gap, or diagnostics pricing pressure starving the volume that feeds it. The moat must keep Data and Applications compounding 40%+ to earn the price."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Eric Lefkofsky",
+          "founderLed": true,
+          "tenureYears": 11,
+          "insiderOwnershipPct": 24.0,
+          "capitalAllocation": "Founder Eric Lefkofsky is Chairman & CEO (founded 2015; serial founder of Groupon, Lightbank, Mediaocean and Pathos AI). Capital funds rapid growth and acquisitions (Ambry Genetics ~$672M, Paige, OneOme) against ~$605M cash; FY2025 revenue $1.27B (+83%) at roughly adjusted-EBITDA breakeven. No dividend or buyback, and the share count is rising from deal stock plus heavy stock-based comp — FY2025 SBC of ~$125M far exceeds the ~$7M adjusted-EBITDA loss, so owner cash economics are weaker than the adjusted figure implies.",
+          "incentiveAlignment": "Lefkofsky took no base salary in 2024 and an $800K base + $800K target from 2025; alignment is via his stake. But the related-party web is the standout flag: Tempus COO Ryan Fukushima simultaneously runs Lefkofsky-founded Pathos AI, which is contracted to pay Tempus ~$200M over three years; there is also a SoftBank JV and possible affiliated landlord. Insider trading is programmatic 10b5-1 selling. An active securities suit alleges AI-washing / round-tripping (unadjudicated).",
+          "governanceFlags": [
+            "multi-class super-voting: Class B = 30 votes per share; Lefkofsky controls ~59.9% of the vote on ~24% economics — majority single-person control",
+            "combined Chair & CEO (Lefkofsky); no confirmed lead independent director",
+            "the Class B sunset is person-tied to Lefkofsky (converts only when he exits or drops below 10M shares) — no fixed-date sunset",
+            "dense related-party web around Lefkofsky entities (Pathos AI via a shared COO, ~$200M contract; SoftBank JV) — the subject of an active securities suit",
+            "stock-based comp (~$125M FY2025) exceeds the adjusted-EBITDA result; no buyback to offset dilution",
+            "mitigants: the controlled-company exemption was declined; 8 of 9 directors independent; board declassified (annual elections)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 2,
+          "takeaway": "The most-entrenched tier: founder-CEO Lefkofsky holds ~59.9% of the vote on ~24% economics through 30-vote Class B, combines Chair and CEO, and sits at the center of a dense related-party web (a shared COO running a Lefkofsky company contracted to pay Tempus ~$200M) now under securities litigation. Real mitigants keep it a 2-with-mitigants rather than lower — the controlled-company exemption was declined, the board is 8-of-9 independent and declassified — but majority single-person control plus the related-party concentration drive the score. Key-person risk is high."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -28.5% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -45392,6 +45486,30 @@ const MEMOS = [
         ],
         "takeaway": "Twist holds a real but medium-durability Power: a cornered silicon-synthesis process backed by scale economies the Wilsonville factory is still building. The audit verdict is a credible cost-leader, not yet an unassailable moat — DNA is partly fungible and a Danaher-owned IDT can fund a price war. The falsifier the bull must clear is the gross-margin ramp: if margins advance toward platform levels while 20%+ growth holds, the Power is durable; if pricing competition flattens the margin curve, it is a strong franchise priced as if it were a moat."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Emily Leproust",
+          "founderLed": true,
+          "tenureYears": 13,
+          "insiderOwnershipPct": 2.4,
+          "capitalAllocation": "Co-founder Emily Leproust has been CEO since 2013 and Chair since 2018; co-founder Bill Banyai remains an executive and director (the DNA-data-storage \"Atlas\" spinout). The synthetic-DNA business is past early stage (~$377M revenue, +20%) and targeting adjusted-EBITDA breakeven by late FY2026, on ~$232M cash. Funding is via an active $200M ATM (ongoing dilution); no dividend or buyback.",
+          "incentiveAlignment": "Leproust’s FY2025 compensation was ~$13.8M (equity-heavy; up on a large stock grant), with ~94% say-on-pay support. Insiders hold only ~2.4% of the company; alignment is through equity awards, not a founding control block. Insider trading is net selling under a 10b5-1 plan (much of it RSU tax withholding), no open-market buying.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class or super-voting; no controlling shareholder (largest holder ARK ~12%)",
+            "combined Chair & CEO (Leproust), mitigated by a lead independent director (Robert Chess)",
+            "classified / staggered board (three classes) — an entrenchment feature",
+            "7 of 9 directors independent; ongoing ATM dilution with no buyback to offset",
+            "a securities class action (following a short-seller report) was allowed to proceed — an open litigation flag",
+            "director interlock: a sitting director (Ragusa) is CEO of another company in the watchlist (GRAIL)"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "A clean one-share-one-vote register with no controlling holder, a 7-of-9 independent board, and a lead independent director are the positives. Holding it at 3 are a combined Chair/CEO, a classified board, ongoing ATM dilution, and an open securities class action. Key-person risk is moderate — a founder Chair/CEO, but a second co-founder still active, an institutionalized board, and a business past early stage (~$377M revenue)."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.8% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -46184,6 +46302,30 @@ const MEMOS = [
           }
         ],
         "takeaway": "A cornered-resource relationship with Walmart plus the largest contracted backlog is real Power, but it cuts both ways: the same dependence is an extreme concentration risk, and a 19% gross margin shows scale has not yet produced a durable cost or process advantage. Durability is medium at best. The falsifier the bull must clear is margin: gross margin expanding well beyond the high teens with ex-SBC owner FCF turning durably positive, ideally alongside a second large anchor customer."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Rick Cohen",
+          "founderLed": true,
+          "tenureYears": 18,
+          "insiderOwnershipPct": 7.7,
+          "capitalAllocation": "Founder Rick Cohen is Chairman & CEO (founded 2007; concurrently Executive Chairman of family-owned C&S Wholesale Grocers — split attention). The balance sheet is strong — ~$1.2B cash at FY2025 (~$2.0B after a Dec-2025 raise), no debt — but the business sits near adjusted-EBITDA breakeven (~$147M on $2.25B revenue) and GAAP-unprofitable, with revenue ~85% concentrated in Walmart and a ~$22.5B backlog. No dividend or buyback. A 2024 restatement (premature revenue recognition) produced a material weakness in internal controls that remained unremediated through Q3 FY2025.",
+          "incentiveAlignment": "Cohen takes $0 compensation — no salary, bonus or equity — a genuine anti-extraction signal; his alignment is entirely his founder equity. Against that sits a dense related-party web: C&S Wholesale Grocers (Cohen-controlled — aircraft agreements, a customer, and GreenBox’s first customer), Walmart (largest customer and a holder), and the GreenBox JV (SoftBank 65% / Symbotic 35%, a ~$7.5B+ purchase commitment). Insider trading is selling, led by SoftBank steadily exiting; no insider buying.",
+          "governanceFlags": [
+            "Up-C super-voting: Class V-3 = 3 votes per share; the Cohen-led insider classes control roughly 86-91% of the vote on ~20% economics, while public Class A holds under 9% of the vote",
+            "combined Chair & CEO (Cohen), and a controlled-company-eligible structure (Cohen group > 50% of the vote)",
+            "a 2024 financial restatement with a material weakness in internal controls still unremediated through Q3 FY2025 — an integrity flag the other entrenched names lack",
+            "dense related-party web: C&S Wholesale Grocers (Cohen-controlled), Walmart, and the GreenBox JV (SoftBank)",
+            "extreme customer concentration — Walmart ~85% of revenue and most of the backlog",
+            "mitigants: a Class V-3 sunset to single-vote ~2029, a majority-independent board (~7 of 9) with fully-independent committees, declassified annual elections, and $0 CEO pay"
+          ],
+          "keyPersonRisk": "high",
+          "score": 2,
+          "takeaway": "The most-entrenched tier, and the weakest of it: founder-CEO Cohen controls ~86-91% of the vote on ~20% economics via a 3-vote Up-C class, combines Chair and CEO, splits attention with C&S, and sits in a dense C&S/Walmart/GreenBox related-party web — on top of a 2024 restatement whose material weakness was still unremediated into FY2025, an integrity flag the cleaner controlled companies do not carry. The mitigants are real (a 2029 sunset, a majority-independent board with independent committees, declassified elections, and a founder who takes $0 pay), which is why it holds a 2 rather than lower. Key-person risk is high."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -68.0% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
