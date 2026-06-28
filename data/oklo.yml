@@ -961,6 +961,42 @@ competitive:
     AI-power demand pull. But it lags NuScale on design approval, has no operating reactor, was denied once by the NRC, and
     its ~14 GW pipeline is overwhelmingly non-binding; first-of-a-kind execution and HALEU-fuel supply are the falsifiers
     the whole bull case must clear.
+pocd:
+  people:
+    ceo: Jacob DeWitte
+    founder_led: true
+    tenure_years: 13
+    insider_ownership_pct: 12.2
+    capital_allocation: 'Co-founder Jake DeWitte is CEO and (since April 2025) Chairman; co-founder Caroline Cochran
+      is COO and a director — the two are married and hold the top two operating roles plus board seats. Pre-revenue
+      (the Aurora powerhouse is not yet operating): ~$2.5B cash at Q1 2026 against FY2026 guidance of ~$80-100M operating
+      burn plus ~$350-450M capex, funded by heavy ATM issuance (a ~$1.18B 2025 program completed, a new ~$1B program
+      filed). Customer demand is ~14 GW of non-binding letters of intent (Switch, Equinix, Meta). No dividend or buyback.'
+    incentive_alignment: DeWitte’s FY2025 compensation was ~$7M, equity-heavy and milestone-linked, on a modest ~$625K
+      base. The founders retain a ~12.2% combined stake — meaningful alignment — but the only observed insider trading
+      is programmatic selling (Rule 10b5-1); no open-market buying surfaced.
+    governance_flags:
+    - single class of common stock, one vote per share — no super-voting; founders’ voting power equals their ~12.2%
+      economic stake (a positive)
+    - combined Chair & CEO (DeWitte since April 2025), mitigated by a lead independent director (Michael Thompson)
+    - classified / staggered board (three classes), directors removable only for cause — an entrenchment feature
+    - Sam Altman resigned as Chairman AND left the board entirely (April 2025) to clear an OpenAI conflict of interest;
+      reported to retain equity (size not disclosed)
+    - the two co-founders are married and together hold the CEO, COO and two board seats — concentrated control and
+      key-person exposure
+    - pre-revenue and funded by heavy equity dilution; customer commitments are non-binding letters of intent
+    key_person_risk: high
+    score: 3
+    takeaway: A one-share-one-vote register (no super-voting) and a majority-independent board (8 of 9) with a lead
+      independent director are the positives, and the founders are aligned via a ~12.2% stake. Holding it at 3 are
+      a combined Chair/CEO, a classified board with for-cause-only removal, and control concentrated in two married
+      co-founders who run the company and sit on the board. Key-person risk is high — pre-revenue, narrative- and
+      regulatory-execution-dependent on the founders, with no commercial operations yet to diffuse it. Altman’s full
+      board exit removed a high-profile but conflicted chair.
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  context_ref: The 7 Powers analysis (Power Origination)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -53.0% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-05-31_20-03

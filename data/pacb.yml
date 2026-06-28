@@ -24,9 +24,9 @@ central_question: At $1.32, can long-read consumables reach cash-flow breakeven 
 thesis: 'Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on
   them — the #3 behind Illumina''s short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B
   cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered
-  option, not a cheap value stock. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted
-  2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; a
-  fat long-read-wins tail offsets it. Weighted $1.29 vs spot $1.32, modestly negative.'
+  setup. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the
+  converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; nearly all the value
+  sits in the ~18% long-read-wins tail. Weighted $1.72 vs spot $1.32 (+31%) — a cheap levered option, not a value stock.'
 chart_reference:
   tam_billion: 8
   history_years:
@@ -209,7 +209,7 @@ scenarios:
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.32
+    probability: 0.34
     expected_per_share: 0.0
     headline: Growth too slow for the debt
     narrative:
@@ -644,7 +644,7 @@ scenarios:
   ultra_bull:
     label: Ultra Bull
     short_label: UltBull
-    probability: 0.07
+    probability: 0.05
     expected_per_share: 18.55
     headline: Long-read wins WGS; re-rating
     narrative:
@@ -811,13 +811,13 @@ historical_prices:
 weighting_rationale:
 - label: Ultra Bear 18%
   body: Long-read stalls; converts wipe out equity.
-- label: Bear 32%
+- label: Bear 34%
   body: Growth too slow to clear the debt in time.
 - label: Base 30%
   body: Breakeven ~2027; equity just clears converts.
 - label: Bull 13%
   body: Long-read inflects; consumables beat the debt.
-- label: Ultra Bull 7%
+- label: Ultra Bull 5%
   body: Long-read wins big WGS share; a re-rating.
 appendix:
   pushback:
@@ -958,7 +958,7 @@ pocd:
       is institutionalized, so key-person risk is low.
   opportunity_ref: The scenario distribution · the Page-3 business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +58.7% finding) + position
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +30.6% finding) + position
     sizing.'
 stamp:
   footer_version: '001'

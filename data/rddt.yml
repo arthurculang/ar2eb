@@ -605,6 +605,45 @@ competitive:
     with the DCF: a 91%-gross-margin, +62%-growth franchise priced at ~43x FCF lands the modal case at ~-23%, because the
     price embeds the bull''s monetization-plus-licensing inflection while carrying an existential, observable traffic risk
     the distribution puts real weight on.'
+pocd:
+  people:
+    ceo: Steve Huffman
+    founder_led: true
+    tenure_years: 11
+    insider_ownership_pct: 3.3
+    capital_allocation: 'Co-founder Steve Huffman has been CEO since returning in 2015 (co-founded 2005); co-founder
+      Alexis Ohanian left the board in 2020. The company turned GAAP-profitable in FY2025 (revenue ~$2.2B, +69%; net
+      income ~$530M) and is net cash (~$2.8B, ~zero debt). Capital allocation is early: a first $1B buyback authorized
+      February 2026 (barely begun), no dividend. AI data-licensing (Google ~$60M/year, OpenAI ~$70M/year) is a high-margin
+      revenue stream — and a strategic dependence.'
+    incentive_alignment: Huffman’s ~$193M 2023 equity award drew public backlash; it is price-hurdle-vesting ($45/$60/$90)
+      through ~2028. His 2025 base is ~$569K with a 150%-of-salary target bonus. He owns only ~3% economically yet
+      controls ~70.7% of the vote (his super-voting Class B plus an irrevocable proxy over Advance Publications’ shares)
+      — a very wide vote/economics gap. Insider selling is small and programmatic (10b5-1).
+    governance_flags:
+    - 'three-class structure: Class B = 10 votes, Class C = no votes; the high-vote class held ~97% of the vote at
+      IPO'
+    - founder-CEO Huffman controls ~70.7% of the vote on ~3% direct economic ownership — via super-voting Class B
+      plus an irrevocable proxy over Advance Publications’ shares
+    - eligible NYSE “controlled company” (Huffman votes a majority) — but voluntarily complies with all independence
+      requirements
+    - 'mitigant: Chair and CEO are separated — independent Chair (Habiger) plus a Vice-Chair; 7 of 8 directors independent;
+      annual elections'
+    - the charter requires Advance’s (and, while he is CEO, Huffman’s) written approval to select any Chairperson
+    - 'CEO pay: the ~$193M 2023 award drew backlash and is price-hurdle-vesting through ~2028'
+    - business dependence on Google search referrals and AI data-licensing (Google / OpenAI)
+    key_person_risk: high
+    score: 2
+    takeaway: 'The defining fact is control: founder-CEO Huffman directs ~70.7% of the vote — his super-voting class
+      plus an irrevocable proxy over Advance’s shares — on roughly 3% economic ownership, and Reddit is a controlled
+      company, which places it in the most-entrenched tier alongside the super-voting megacaps. The mitigants are
+      real and more than most controlled companies offer: the Chair and CEO are separated under an independent chair,
+      7 of 8 directors are independent, and the company complies with independence rules despite the exemptions —
+      which is why it is a 2 with strong mitigants rather than a 1. Key-person risk is high.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -20.2% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-15_06-22

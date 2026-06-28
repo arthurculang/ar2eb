@@ -441,6 +441,44 @@ taxonomy:
   themes: [evtol-advanced-air-mobility]
   primary_theme: evtol-advanced-air-mobility
 
+pocd:
+  people:
+    ceo: JoeBen Bevirt
+    founder_led: true
+    tenure_years: 17
+    insider_ownership_pct: 9.4
+    capital_allocation: 'Founder JoeBen Bevirt has been CEO since founding Joby in 2009. Pre-revenue eVTOL developer:
+      ~$2.5B cash at Q1 2026 against a ~$160M/quarter burn, funded by equity, convertible and ATM issuance (~$1.3B
+      raised in Q1 2026) plus Toyota’s ~$894M of cumulative strategic investment. FAA type certification is at stage
+      4 of 5, with conforming-aircraft flight testing underway and a type certificate targeted for late 2026. No dividend
+      or buyback (cash is preserved for certification and launch).'
+    incentive_alignment: Bevirt’s FY2025 compensation was ~$3.7M with no cash bonus (a cash-preservation policy pays
+      short-term incentives in RSUs), under a 5x-salary ownership guideline and strict anti-hedging/anti-pledging
+      rules. He is aligned via a ~9-12% economic stake (co-founder Paul Sciarra holds another ~5.7%). Insider activity
+      is programmatic 10b5-1 selling, no open-market buying; the company also leases office space from Bevirt-owned
+      entities (~$0.6M/year).
+    governance_flags:
+    - single class of common stock, one vote per share — no super-voting; the founder’s influence tracks his ~9-12%
+      economic stake (notably cleaner than dual-class eVTOL peer Archer)
+    - Chair and CEO are separated, but the Executive Chairman (co-founder Sciarra) is non-independent — independent
+      oversight runs through the lead independent director (Michael Huerta, former FAA Administrator)
+    - classified / staggered board (three classes) — an entrenchment feature
+    - Toyota is simultaneously the largest outside shareholder (~$894M invested), holds a contractual board seat (Ogawa),
+      and is a key component supplier — concentration plus related-party complexity
+    - 'founder-CEO related-party: office space leased from Bevirt-owned entities (~$0.6M/year)'
+    - pre-revenue, funded by ongoing equity and convertible dilution
+    key_person_risk: medium
+    score: 4
+    takeaway: 'Structurally the cleanest of the frontier names: one share, one vote (no founder super-voting), a chair
+      separated from the CEO, a credentialed lead independent director (a former FAA Administrator), a 6-of-9 independent
+      board, and strict anti-hedging/ownership rules. That separation and clean share class are why it scores above
+      combined-Chair/CEO peer Archer. The offsets that keep it from a 5 are a classified board, a founder-related-party
+      office lease, and Toyota’s triple role as top shareholder, director and supplier. Key-person risk is moderate
+      — real founder dependence, but leadership is shared with an executive co-founder.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  context_ref: The 7 Powers analysis (Power Origination)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -19.6% finding) + position
+    sizing.'
 stamp:
   footer_version: "030"
   footer_timestamp: "2026-05-31_17-10"

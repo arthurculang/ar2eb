@@ -1018,6 +1018,30 @@ const MEMOS = [
         ],
         "takeaway": "Joby leads on certification progress and a Toyota-backed capital/manufacturing position, but the network-economics moat is unoriginated and Archer is close; the window stays open through type certification — the gating falsifier for the whole category.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "JoeBen Bevirt",
+          "founderLed": true,
+          "tenureYears": 17,
+          "insiderOwnershipPct": 9.4,
+          "capitalAllocation": "Founder JoeBen Bevirt has been CEO since founding Joby in 2009. Pre-revenue eVTOL developer: ~$2.5B cash at Q1 2026 against a ~$160M/quarter burn, funded by equity, convertible and ATM issuance (~$1.3B raised in Q1 2026) plus Toyota’s ~$894M of cumulative strategic investment. FAA type certification is at stage 4 of 5, with conforming-aircraft flight testing underway and a type certificate targeted for late 2026. No dividend or buyback (cash is preserved for certification and launch).",
+          "incentiveAlignment": "Bevirt’s FY2025 compensation was ~$3.7M with no cash bonus (a cash-preservation policy pays short-term incentives in RSUs), under a 5x-salary ownership guideline and strict anti-hedging/anti-pledging rules. He is aligned via a ~9-12% economic stake (co-founder Paul Sciarra holds another ~5.7%). Insider activity is programmatic 10b5-1 selling, no open-market buying; the company also leases office space from Bevirt-owned entities (~$0.6M/year).",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no super-voting; the founder’s influence tracks his ~9-12% economic stake (notably cleaner than dual-class eVTOL peer Archer)",
+            "Chair and CEO are separated, but the Executive Chairman (co-founder Sciarra) is non-independent — independent oversight runs through the lead independent director (Michael Huerta, former FAA Administrator)",
+            "classified / staggered board (three classes) — an entrenchment feature",
+            "Toyota is simultaneously the largest outside shareholder (~$894M invested), holds a contractual board seat (Ogawa), and is a key component supplier — concentration plus related-party complexity",
+            "founder-CEO related-party: office space leased from Bevirt-owned entities (~$0.6M/year)",
+            "pre-revenue, funded by ongoing equity and convertible dilution"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 4,
+          "takeaway": "Structurally the cleanest of the frontier names: one share, one vote (no founder super-voting), a chair separated from the CEO, a credentialed lead independent director (a former FAA Administrator), a 6-of-9 independent board, and strict anti-hedging/ownership rules. That separation and clean share class are why it scores above combined-Chair/CEO peer Archer. The offsets that keep it from a 5 are a classified board, a founder-related-party office lease, and Toyota’s triple role as top shareholder, director and supplier. Key-person risk is moderate — real founder dependence, but leadership is shared with an executive co-founder."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -19.6% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -7120,6 +7144,30 @@ const MEMOS = [
         ],
         "takeaway": "Real trapped-ion cornered-resource and counter-positioning leads, but network and scale power are unoriginated and Quantinuum's logical-qubit edge is the falsifier to watch; the origination window is open, but not indefinitely.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Niccolo de Masi",
+          "founderLed": false,
+          "tenureYears": 1,
+          "insiderOwnershipPct": 3.5,
+          "capitalAllocation": "Niccolo de Masi became CEO in February 2025 (a director since 2021, from the SPAC-sponsor family that took IonQ public) and added the Chairman role in August 2025 when prior CEO Peter Chapman exited the board. Both academic co-founders had already left (Christopher Monroe 2023, Jungsang Kim 2024). Capital allocation is an aggressive, equity-funded acquisition roll-up: ~$3.5B cash pro forma after a $2B October 2025 raise, with mostly-stock deals (Oxford Ionics ~$1.06B, SkyWater ~$1.8B, plus Lightsynq/Qubitekk/ID Quantique) driving heavy dilution. No dividend or buyback.",
+          "incentiveAlignment": "CEO pay is overwhelmingly equity (the exact Summary-Compensation-Table figure was not retrievable; an aggregator put it near $90M). After ~64% say-on-pay support in 2025, the committee shifted PSU weighting toward revenue and cut maximum payouts. Insiders sold heavily in 2025 (~$400M, including ~$269M by the departing prior CEO and ~$105M by de Masi); 2026 selling is smaller, mostly RSU tax withholding. Insider ownership is a derived ~3-4% (it was ~11.6% in 2024 before the share count nearly doubled).",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no super-voting, no controlling shareholder (largest holders Vanguard ~10%, BlackRock ~8%)",
+            "combined Chair & CEO (de Masi consolidated both in August 2025) with no confirmed lead independent director since early 2025 — an independent-oversight gap",
+            "classified / staggered board (three classes) — an entrenchment feature",
+            "both academic co-founders departed (2023, 2024) and the prior CEO fully exited (2025) — wholesale leadership turnover",
+            "recurring say-on-pay pushback (~64% support in 2025) and ~$400M of 2025 insider selling",
+            "aggressive stock-funded acquisition roll-up — repeated, material dilution"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "The structural positive is genuine — one share, one vote, no controlling block, so shareholders are not disenfranchised. But this is a weak 3 on practice: a combined Chair/CEO with no confirmed lead independent director, a classified board, a ~64% say-on-pay vote, ~$400M of 2025 insider selling, and a strategy concentrated in a CEO of under two years pursuing a heavily dilutive acquisition roll-up. Key-person risk is moderate — the science survived both founders’ departures, so it is the governance concentration, not individual dependence, that is the bigger flag."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -86.9% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -11041,6 +11089,30 @@ const MEMOS = [
           }
         ],
         "takeaway": "Oklo is originating a genuine build-own-operate AI-baseload-nuclear position — the only commercial advanced-fission site under construction, a model that captures more value than equipment-sale SMR peers, $2.54B to fund it, and the structural AI-power demand pull. But it lags NuScale on design approval, has no operating reactor, was denied once by the NRC, and its ~14 GW pipeline is overwhelmingly non-binding; first-of-a-kind execution and HALEU-fuel supply are the falsifiers the whole bull case must clear."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Jacob DeWitte",
+          "founderLed": true,
+          "tenureYears": 13,
+          "insiderOwnershipPct": 12.2,
+          "capitalAllocation": "Co-founder Jake DeWitte is CEO and (since April 2025) Chairman; co-founder Caroline Cochran is COO and a director — the two are married and hold the top two operating roles plus board seats. Pre-revenue (the Aurora powerhouse is not yet operating): ~$2.5B cash at Q1 2026 against FY2026 guidance of ~$80-100M operating burn plus ~$350-450M capex, funded by heavy ATM issuance (a ~$1.18B 2025 program completed, a new ~$1B program filed). Customer demand is ~14 GW of non-binding letters of intent (Switch, Equinix, Meta). No dividend or buyback.",
+          "incentiveAlignment": "DeWitte’s FY2025 compensation was ~$7M, equity-heavy and milestone-linked, on a modest ~$625K base. The founders retain a ~12.2% combined stake — meaningful alignment — but the only observed insider trading is programmatic selling (Rule 10b5-1); no open-market buying surfaced.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no super-voting; founders’ voting power equals their ~12.2% economic stake (a positive)",
+            "combined Chair & CEO (DeWitte since April 2025), mitigated by a lead independent director (Michael Thompson)",
+            "classified / staggered board (three classes), directors removable only for cause — an entrenchment feature",
+            "Sam Altman resigned as Chairman AND left the board entirely (April 2025) to clear an OpenAI conflict of interest; reported to retain equity (size not disclosed)",
+            "the two co-founders are married and together hold the CEO, COO and two board seats — concentrated control and key-person exposure",
+            "pre-revenue and funded by heavy equity dilution; customer commitments are non-binding letters of intent"
+          ],
+          "keyPersonRisk": "high",
+          "score": 3,
+          "takeaway": "A one-share-one-vote register (no super-voting) and a majority-independent board (8 of 9) with a lead independent director are the positives, and the founders are aligned via a ~12.2% stake. Holding it at 3 are a combined Chair/CEO, a classified board with for-cause-only removal, and control concentrated in two married co-founders who run the company and sit on the board. Key-person risk is high — pre-revenue, narrative- and regulatory-execution-dependent on the founders, with no commercial operations yet to diffuse it. Altman’s full board exit removed a high-profile but conflicted chair."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "contextRef": "The 7 Powers analysis (Power Origination)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -53.0% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -23543,6 +23615,29 @@ const MEMOS = [
         ],
         "takeaway": "Apple's brand is the strongest single Power in this set - a premium global franchise with ~49% gross margin and pricing power - reinforced by deep ecosystem switching costs and immense scale; durability is high. But the live threat is the AI-platform shift: with Apple Intelligence outsourced to Gemini, the next interface may run on someone else's model, and that same counterparty anchors a ~$20B/yr search payment now exposed to a DOJ rebid. The Powers are durable; the question the DCF presses is price, not moat. A mid-single-digit grower at ~43x FCF carries a premium even the bull (~$279, -4%) barely justifies, and the modal case lands ~$188 (-35%)."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Tim Cook",
+          "founderLed": false,
+          "tenureYears": 15,
+          "insiderOwnershipPct": 0.1,
+          "capitalAllocation": "Tim Cook has been CEO since August 2011 (founder Steve Jobs died that year). A dated succession is now underway: announced April 2026, effective September 1, 2026, Cook becomes Executive Chairman and John Ternus (SVP Hardware Engineering, a 25-year Apple insider) becomes CEO, with Arthur Levinson moving to lead independent director. Capital allocation is best-in-class scale return: FY2025 ~$89B buybacks + ~$15B dividends (~$105B total), a fresh $100B buyback authorization, against ~$132B cash/securities versus ~$100B debt (~$32B net cash) and ~$35B R&D.",
+          "incentiveAlignment": "Cook’s FY2025 total compensation was ~$74M (≈$3M salary, ~$12M cash incentive, ~$57M equity), with the equity majority in performance RSUs tied to relative total shareholder return. Insider selling is routine and pre-scheduled (Rule 10b5-1 / sell-to-cover on RSU vesting). Insider ownership is under 0.1% — normal for a company this size and not a flag.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class, no super-voting, no controlling shareholder (largest holders Vanguard ~9%, BlackRock ~8%)",
+            "Chair and CEO are currently separated (independent Chairman Levinson) — a positive",
+            "dated CEO succession: Cook → Executive Chairman and John Ternus → CEO effective September 1, 2026; Levinson → lead independent director (the chair role becomes a non-independent insider at that point)",
+            "7 of 8 directors independent; all directors elected annually (board not staggered)",
+            "the broadest executive-leadership turnover since 2011 (CEO, COO and CFO all refilled from within in 2025-2026)"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "Clean, shareholder-friendly governance: single-class one-vote stock, no controlling holder, a 7-of-8 independent board, and — uncommon among megacaps — a chair currently separate from the CEO. Key-person risk is low because succession is not just planned but executed: a named internal CEO (Ternus) takes over on a fixed date, every senior role was backfilled from within, and no individual controls the company. The one notch to watch is that the chair becomes a non-independent Executive Chairman (Cook) in September 2026."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -34.5% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -28459,6 +28554,31 @@ const MEMOS = [
           }
         ],
         "takeaway": "Robinhood's Power is scale_economies - 27.4M funded customers and ~$4.5B revenue across fixed tech/clearing cost throw off a ~50% EBITDA margin and the FCF that supports the case - plus a nascent network/branding edge in the app and Gold ecosystem. But the moat is weak: switching costs are near zero (ACATS portability), the zero-commission counter-positioning has been copied, and the live threat is the transaction/rate cycle itself (crypto -47% last quarter, ~$40M/qtr per 25bp rate cut) plus bigger brokers. The Audit: the scale Power is medium-durable, diversification is genuine but early, and that squares with a DCF where ~52x FCF prices a durable platform the modal case (-59%) doesn't deliver - only the ultra-bull (-14%), where the cyclicality truly fades, approaches today's price."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Vlad Tenev",
+          "founderLed": true,
+          "tenureYears": 13,
+          "insiderOwnershipPct": 12.0,
+          "capitalAllocation": "Co-founder Vlad Tenev is Chairman, CEO and President (co-founded 2013). The company is now profitable (FY2025 revenue ~$4.5B, adjusted EBITDA ~$2.5B) with ~$5B cash and minimal debt. Capital return began post-profit: a $1B buyback authorized May 2024, raised to $1.5B by March 2026 (~$1.2B executed), no dividend. Recent acquisitions include Bitstamp (~$200M) and TradePMR (~$300M); crypto is an expanding line. Co-founder Baiju Bhatt left management in 2024 (to found Aetherflux) but remains a director.",
+          "incentiveAlignment": "A notable shareholder-friendly action: the 2021 founder mega-RSU award (~$4.7B at grant, vesting on $120-$300 price targets) was voluntarily cancelled in 2023 with none of it vested. Tenev holds ~6% economic / ~24% of the vote; the co-founders together control a majority of votes. Insider selling is recurring and 10b5-1-scheduled.",
+          "governanceFlags": [
+            "three-class structure with Class B = 10 votes (held only by the co-founders): Tenev ~24% of the vote on ~6% economics, and the co-founders together control a majority of votes",
+            "combined Chair & CEO (Tenev), mitigated by a long-tenured lead independent director (Jonathan Rubinstein)",
+            "the super-voting sunset is distant (2036), so founder voting control persists for years",
+            "co-founder Bhatt left management (2024) but remains a director and is selling down his Class B stake",
+            "CEO split attention — Tenev is also executive chairman of a separate AI company (Harmonic)",
+            "extensive regulatory history (SEC $65M in 2020; FINRA $70M in 2021 and ~$30M in 2025 — payment-for-order-flow, supervision, AML)",
+            "shareholder-friendly offset: the 2021 ~$4.7B founder mega-RSU award was voluntarily cancelled in 2023, unvested"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "A dual-class super-voting structure with the founders controlling a majority of votes, plus a combined Chair/CEO, are the entrenchment flags. They are offset enough to hold a 3 rather than drop lower: a long-tenured lead independent director, an 8-of-10 independent board with annual elections, the genuinely shareholder-friendly cancellation of the 2021 mega-award, and a now-profitable business returning capital. The extensive regulatory history is an operating/compliance flag rather than a structural one. Key-person risk is moderate given the deep, professionalized bench."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -57.7% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -34190,6 +34310,31 @@ const MEMOS = [
           }
         ],
         "takeaway": "Reddit's network-economies Power is real — a self-reinforcing community/UGC graph and a scarce human-generated corpus (cornered_resource) that AI labs pay to train on. But the Audit's tension is that the same corpus is discovered mostly through Google: ~40-50% of traffic is referral, so AI-search answer-boxes can disintermediate the front door even as the data itself gets more valuable (the Q4-2025 algorithm change already dented user growth). Durability is medium, not high — the graph compounds but its discovery layer is rented from a counterparty that is also a competitor. That squares with the DCF: a 91%-gross-margin, +62%-growth franchise priced at ~43x FCF lands the modal case at ~-23%, because the price embeds the bull's monetization-plus-licensing inflection while carrying an existential, observable traffic risk the distribution puts real weight on."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Steve Huffman",
+          "founderLed": true,
+          "tenureYears": 11,
+          "insiderOwnershipPct": 3.3,
+          "capitalAllocation": "Co-founder Steve Huffman has been CEO since returning in 2015 (co-founded 2005); co-founder Alexis Ohanian left the board in 2020. The company turned GAAP-profitable in FY2025 (revenue ~$2.2B, +69%; net income ~$530M) and is net cash (~$2.8B, ~zero debt). Capital allocation is early: a first $1B buyback authorized February 2026 (barely begun), no dividend. AI data-licensing (Google ~$60M/year, OpenAI ~$70M/year) is a high-margin revenue stream — and a strategic dependence.",
+          "incentiveAlignment": "Huffman’s ~$193M 2023 equity award drew public backlash; it is price-hurdle-vesting ($45/$60/$90) through ~2028. His 2025 base is ~$569K with a 150%-of-salary target bonus. He owns only ~3% economically yet controls ~70.7% of the vote (his super-voting Class B plus an irrevocable proxy over Advance Publications’ shares) — a very wide vote/economics gap. Insider selling is small and programmatic (10b5-1).",
+          "governanceFlags": [
+            "three-class structure: Class B = 10 votes, Class C = no votes; the high-vote class held ~97% of the vote at IPO",
+            "founder-CEO Huffman controls ~70.7% of the vote on ~3% direct economic ownership — via super-voting Class B plus an irrevocable proxy over Advance Publications’ shares",
+            "eligible NYSE “controlled company” (Huffman votes a majority) — but voluntarily complies with all independence requirements",
+            "mitigant: Chair and CEO are separated — independent Chair (Habiger) plus a Vice-Chair; 7 of 8 directors independent; annual elections",
+            "the charter requires Advance’s (and, while he is CEO, Huffman’s) written approval to select any Chairperson",
+            "CEO pay: the ~$193M 2023 award drew backlash and is price-hurdle-vesting through ~2028",
+            "business dependence on Google search referrals and AI data-licensing (Google / OpenAI)"
+          ],
+          "keyPersonRisk": "high",
+          "score": 2,
+          "takeaway": "The defining fact is control: founder-CEO Huffman directs ~70.7% of the vote — his super-voting class plus an irrevocable proxy over Advance’s shares — on roughly 3% economic ownership, and Reddit is a controlled company, which places it in the most-entrenched tier alongside the super-voting megacaps. The mitigants are real and more than most controlled companies offer: the Chair and CEO are separated under an independent chair, 7 of 8 directors are independent, and the company complies with independence rules despite the exemptions — which is why it is a 2 with strong mitigants rather than a 1. Key-person risk is high."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -20.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -40051,29 +40196,29 @@ const MEMOS = [
       "asOf": "June 16, 2026 close"
     },
     "expected": {
-      "fair": 2.09,
-      "deltaPct": 58.7
+      "fair": 1.72,
+      "deltaPct": 30.6
     },
     "compound": [
       {
         "y": 5,
-        "value": 3.33,
-        "mult": 2.53
+        "value": 2.75,
+        "mult": 2.08
       },
       {
         "y": 10,
-        "value": 5.3,
-        "mult": 4.02
+        "value": 4.39,
+        "mult": 3.32
       },
       {
         "y": 15,
-        "value": 8.44,
-        "mult": 6.4
+        "value": 7.0,
+        "mult": 5.3
       },
       {
         "y": 20,
-        "value": 13.45,
-        "mult": 10.19
+        "value": 11.17,
+        "mult": 8.46
       }
     ],
     "taxonomy": {
@@ -40109,7 +40254,7 @@ const MEMOS = [
       {
         "key": "bear",
         "label": "BEAR",
-        "prob": 32,
+        "prob": 34,
         "price": 0.0,
         "headline": "Growth too slow for the debt",
         "why": "The largest single bucket. Reflects the central tension — real but unspectacular long-read uptake against a fixed debt wall — where survival is likely but equity value is not, given how little cushion sits above the converts.",
@@ -40145,7 +40290,7 @@ const MEMOS = [
       {
         "key": "ultra",
         "label": "ULTRA BULL",
-        "prob": 7,
+        "prob": 5,
         "price": 18.55,
         "headline": "Long-read wins WGS; re-rating",
         "why": "The lowest-probability outcome: long-read displacing short-read at population scale against Illumina's entrenched economics. Low odds, but the operating and financial leverage make the payoff large enough to matter to the weighted value.",
@@ -40155,8 +40300,8 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 18 / Bear 32 / Base 30 / Bull 13 / Ultra Bull 7. Spot price reference: June 16, 2026 close.",
-    "thesis": "Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on them — the #3 behind Illumina's short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered option, not a cheap value stock. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; a fat long-read-wins tail offsets it. Weighted $1.29 vs spot $1.32, modestly negative.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 18 / Bear 34 / Base 30 / Bull 13 / Ultra Bull 5. Spot price reference: June 16, 2026 close.",
+    "thesis": "Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on them — the #3 behind Illumina's short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered setup. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; nearly all the value sits in the ~18% long-read-wins tail. Weighted $1.72 vs spot $1.32 (+31%) — a cheap levered option, not a value stock.",
     "historicalPrices": {
       "xMin": -5.2,
       "ipoMarker": "IPO '10",
@@ -40205,7 +40350,7 @@ const MEMOS = [
         "body": "Long-read stalls; converts wipe out equity."
       },
       {
-        "label": "Bear 32%",
+        "label": "Bear 34%",
         "body": "Growth too slow to clear the debt in time."
       },
       {
@@ -40217,7 +40362,7 @@ const MEMOS = [
         "body": "Long-read inflects; consumables beat the debt."
       },
       {
-        "label": "Ultra Bull 7%",
+        "label": "Ultra Bull 5%",
         "body": "Long-read wins big WGS share; a re-rating."
       }
     ],
@@ -40264,8 +40409,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 8,
       "weighted": {
-        "expected": 2.09,
-        "upsidePct": 58.7
+        "expected": 1.72,
+        "upsidePct": 30.6
       },
       "market": {
         "marketCapBillion": 0.41,
@@ -40436,7 +40581,7 @@ const MEMOS = [
           ]
         },
         "bear": {
-          "probability": 0.32,
+          "probability": 0.34,
           "expectedPerShare": 0.0,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -40919,7 +41064,7 @@ const MEMOS = [
           ]
         },
         "ultra_bull": {
-          "probability": 0.07,
+          "probability": 0.05,
           "expectedPerShare": 18.55,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
@@ -41183,7 +41328,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +58.7% finding) + position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +30.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [

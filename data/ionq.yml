@@ -959,6 +959,45 @@ glossary:
 - term: Tempo / Forte
   definition: IonQ system generations. Forte = current commercial (AQ#36). Tempo = next-gen, AQ#64 demonstrated, 256-qubit chip.
 
+pocd:
+  people:
+    ceo: Niccolo de Masi
+    founder_led: false
+    tenure_years: 1
+    insider_ownership_pct: 3.5
+    capital_allocation: 'Niccolo de Masi became CEO in February 2025 (a director since 2021, from the SPAC-sponsor
+      family that took IonQ public) and added the Chairman role in August 2025 when prior CEO Peter Chapman exited
+      the board. Both academic co-founders had already left (Christopher Monroe 2023, Jungsang Kim 2024). Capital
+      allocation is an aggressive, equity-funded acquisition roll-up: ~$3.5B cash pro forma after a $2B October 2025
+      raise, with mostly-stock deals (Oxford Ionics ~$1.06B, SkyWater ~$1.8B, plus Lightsynq/Qubitekk/ID Quantique)
+      driving heavy dilution. No dividend or buyback.'
+    incentive_alignment: CEO pay is overwhelmingly equity (the exact Summary-Compensation-Table figure was not retrievable;
+      an aggregator put it near $90M). After ~64% say-on-pay support in 2025, the committee shifted PSU weighting
+      toward revenue and cut maximum payouts. Insiders sold heavily in 2025 (~$400M, including ~$269M by the departing
+      prior CEO and ~$105M by de Masi); 2026 selling is smaller, mostly RSU tax withholding. Insider ownership is
+      a derived ~3-4% (it was ~11.6% in 2024 before the share count nearly doubled).
+    governance_flags:
+    - single class of common stock, one vote per share — no super-voting, no controlling shareholder (largest holders
+      Vanguard ~10%, BlackRock ~8%)
+    - combined Chair & CEO (de Masi consolidated both in August 2025) with no confirmed lead independent director
+      since early 2025 — an independent-oversight gap
+    - classified / staggered board (three classes) — an entrenchment feature
+    - both academic co-founders departed (2023, 2024) and the prior CEO fully exited (2025) — wholesale leadership
+      turnover
+    - recurring say-on-pay pushback (~64% support in 2025) and ~$400M of 2025 insider selling
+    - aggressive stock-funded acquisition roll-up — repeated, material dilution
+    key_person_risk: medium
+    score: 3
+    takeaway: 'The structural positive is genuine — one share, one vote, no controlling block, so shareholders are
+      not disenfranchised. But this is a weak 3 on practice: a combined Chair/CEO with no confirmed lead independent
+      director, a classified board, a ~64% say-on-pay vote, ~$400M of 2025 insider selling, and a strategy concentrated
+      in a CEO of under two years pursuing a heavily dilutive acquisition roll-up. Key-person risk is moderate — the
+      science survived both founders’ departures, so it is the governance concentration, not individual dependence,
+      that is the bigger flag.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  context_ref: The 7 Powers analysis (Power Origination)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -86.9% finding) + position
+    sizing.'
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-05-31_17-03"
