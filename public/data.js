@@ -46313,11 +46313,11 @@ const MEMOS = [
           "incentiveAlignment": "Cohen takes $0 compensation — no salary, bonus or equity — a genuine anti-extraction signal; his alignment is entirely his founder equity. Against that sits a dense related-party web: C&S Wholesale Grocers (Cohen-controlled — aircraft agreements, a customer, and GreenBox’s first customer), Walmart (largest customer and a holder), and the GreenBox JV (SoftBank 65% / Symbotic 35%, a ~$7.5B+ purchase commitment). Insider trading is selling, led by SoftBank steadily exiting; no insider buying.",
           "governanceFlags": [
             "Up-C super-voting: Class V-3 = 3 votes per share; the Cohen-led insider classes control roughly 86-91% of the vote on ~20% economics, while public Class A holds under 9% of the vote",
-            "combined Chair & CEO (Cohen), and a controlled-company-eligible structure (Cohen group > 50% of the vote)",
+            "combined Chair & CEO (Cohen) with no lead independent director designated, and a controlled-company-eligible structure (Cohen group > 50% of the vote)",
             "a 2024 financial restatement with a material weakness in internal controls still unremediated through Q3 FY2025 — an integrity flag the other entrenched names lack",
             "dense related-party web: C&S Wholesale Grocers (Cohen-controlled), Walmart, and the GreenBox JV (SoftBank)",
             "extreme customer concentration — Walmart ~85% of revenue and most of the backlog",
-            "mitigants: a Class V-3 sunset to single-vote ~2029, a majority-independent board (~7 of 9) with fully-independent committees, declassified annual elections, and $0 CEO pay"
+            "mitigants: a Class V-3 sunset to single-vote ~2029, an 8-of-9 independent board with fully-independent committees, declassified annual elections, and $0 CEO pay"
           ],
           "keyPersonRisk": "high",
           "score": 2,
