@@ -603,6 +603,42 @@ competitive:
     — and 10x''s own ScaleBio acquisition) attack the razor model the annuity depends on. The market pays ~5x EV/sales for
     a spatial re-acceleration the base case doesn''t yet support; the durability of the consumables annuity through the academic-funding
     shock is the falsifier the valuation rests on.'
+pocd:
+  people:
+    ceo: Serge Saxonov
+    founder_led: true
+    tenure_years: 14
+    insider_ownership_pct: 8.3
+    capital_allocation: 'Co-founder Serge Saxonov has been CEO since founding 10x in 2012; co-founder Ben Hindson
+      is President & CSO. The balance sheet is a fortress — ~$540M cash and no debt — funding heavy R&D (~$239M) as
+      the business narrows losses toward profitability (FY2025 net loss $43.5M, improving; Q1 2026 operating cash
+      flow turned positive). No dividend or buyback. A defining feature is its patent estate: 10x won its long-running
+      suits (Bio-Rad settled and cross-licensed; the NanoString case ended with acquirer Bruker paying 10x $68M).'
+    incentive_alignment: Saxonov’s FY2024 compensation was ~$7.9M (~92% equity). Insider trading is programmatic 10b5-1
+      selling (partly RSU tax withholding), no open-market buying. The founders are aligned through their super-voting
+      Class B stake rather than economic ownership — insiders hold under ~8% of the economics but the super-voting
+      class carries the large majority of the votes.
+    governance_flags:
+    - 'dual-class super-voting: Class B = 10 votes per share; the Class B block holds the large majority of voting
+      power while public Class A holds a small minority'
+    - 'mitigant: Chair and CEO are SEPARATED — an independent Chairman (John Stuelpnagel), not the founder-CEO'
+    - no single majority controller — the founder’s individual voting power is a minority; the super-voting is spread
+      across early holders
+    - classified / staggered board (three classes) — an entrenchment feature
+    - no time-based dual-class sunset — Class B converts only on transfer or a co-founder’s death/disability
+    - 6 of 8 directors independent; all three standing committees fully independent
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Better-governed than most dual-class names: an independent Chairman separate from the CEO, fully-independent
+      committees, a net-cash balance sheet, and a patent estate that won its wars. The cap at 3 is structural — the
+      super-voting Class B disenfranchises public holders, and the board is classified with no time-based sunset.
+      But no single person controls a majority (the founders’ individual votes are a minority), which is why it sits
+      at the top of the 3 tier. Key-person risk is moderate — two founders in the CEO/CSO seats, but a deep independent
+      board and institutional bench.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.2% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-05-31_21-46

@@ -584,6 +584,45 @@ competitive:
     But durability is medium, not high: the falsifier is foundation models trained on open or rival data closing the gap,
     or diagnostics pricing pressure starving the volume that feeds it. The moat must keep Data and Applications compounding
     40%+ to earn the price.'
+pocd:
+  people:
+    ceo: Eric Lefkofsky
+    founder_led: true
+    tenure_years: 11
+    insider_ownership_pct: 24.0
+    capital_allocation: Founder Eric Lefkofsky is Chairman & CEO (founded 2015; serial founder of Groupon, Lightbank,
+      Mediaocean and Pathos AI). Capital funds rapid growth and acquisitions (Ambry Genetics ~$672M, Paige, OneOme)
+      against ~$605M cash; FY2025 revenue $1.27B (+83%) at roughly adjusted-EBITDA breakeven. No dividend or buyback,
+      and the share count is rising from deal stock plus heavy stock-based comp — FY2025 SBC of ~$125M far exceeds
+      the ~$7M adjusted-EBITDA loss, so owner cash economics are weaker than the adjusted figure implies.
+    incentive_alignment: 'Lefkofsky took no base salary in 2024 and an $800K base + $800K target from 2025; alignment
+      is via his stake. But the related-party web is the standout flag: Tempus COO Ryan Fukushima simultaneously runs
+      Lefkofsky-founded Pathos AI, which is contracted to pay Tempus ~$200M over three years; there is also a SoftBank
+      JV and possible affiliated landlord. Insider trading is programmatic 10b5-1 selling. An active securities suit
+      alleges AI-washing / round-tripping (unadjudicated).'
+    governance_flags:
+    - 'multi-class super-voting: Class B = 30 votes per share; Lefkofsky controls ~59.9% of the vote on ~24% economics
+      — majority single-person control'
+    - combined Chair & CEO (Lefkofsky); no confirmed lead independent director
+    - the Class B sunset is person-tied to Lefkofsky (converts only when he exits or drops below 10M shares) — no
+      fixed-date sunset
+    - dense related-party web around Lefkofsky entities (Pathos AI via a shared COO, ~$200M contract; SoftBank JV)
+      — the subject of an active securities suit
+    - stock-based comp (~$125M FY2025) exceeds the adjusted-EBITDA result; no buyback to offset dilution
+    - 'mitigants: the controlled-company exemption was declined; 8 of 9 directors independent; board declassified
+      (annual elections)'
+    key_person_risk: high
+    score: 2
+    takeaway: 'The most-entrenched tier: founder-CEO Lefkofsky holds ~59.9% of the vote on ~24% economics through
+      30-vote Class B, combines Chair and CEO, and sits at the center of a dense related-party web (a shared COO running
+      a Lefkofsky company contracted to pay Tempus ~$200M) now under securities litigation. Real mitigants keep it
+      a 2-with-mitigants rather than lower — the controlled-company exemption was declined, the board is 8-of-9 independent
+      and declassified — but majority single-person control plus the related-party concentration drive the score.
+      Key-person risk is high.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -28.5% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-16_07-07

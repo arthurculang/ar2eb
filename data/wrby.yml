@@ -610,6 +610,41 @@ competitive:
     optical; the Google AI-glasses program is upside optionality, not the base, and it chases a Meta-EssilorLuxottica leader.
     At ~3x sales the price already embeds the margin ramp and some of the glasses optionality, so the weighted DCF is -42.1%
     and the modal case lands -43% — only the ultra-bull''s full inflection-plus-second-act clears spot.'
+pocd:
+  people:
+    ceo: Neil Blumenthal & Dave Gilboa (co-CEOs)
+    founder_led: true
+    tenure_years: 15
+    insider_ownership_pct: 18.0
+    capital_allocation: Co-founders Neil Blumenthal and Dave Gilboa have run Warby Parker as co-CEOs since 2010 (and
+      are co-chairs of the board). FY2025 was the first full GAAP-profitable year (+$1.6M), on ~$872M revenue (+13%)
+      and a net-cash balance sheet (~$286M, no debt). Capital return just began — a first-ever $100M buyback (Feb
+      2026), no dividend. A new Google/Samsung smart-glasses partnership brings up to $75M of product-development
+      funding plus an optional up-to-$75M equity investment.
+    incentive_alignment: The co-CEOs are modestly paid (~$1.5M each, FY2024) with long-term incentives tied to multi-year
+      stock-price hurdles. Their alignment is the founding stake; insider trading is programmatic 10b5-1 selling,
+      no open-market buying. A seasoned external CFO (ex-Macy’s) was added in early 2026, deepening the bench.
+    governance_flags:
+    - 'multi-class super-voting: Class B = 10 votes per share (founders); the co-founders together hold ~48% of the
+      vote on a smaller economic stake — significant but below a majority'
+    - co-CEO structure, and the co-CEOs are also co-chairs of the board (combined Chair/CEO) — mitigated by a lead
+      independent director (Ronald Williams)
+    - a fixed dual-class sunset (Oct 2031), plus transfer and death/disability triggers — a real positive vs. no-sunset
+      peers
+    - classified / staggered board (three classes) — an entrenchment feature
+    - 7 of 9 directors independent; below the 50% controlled-company threshold (does not appear to rely on controlled-company
+      exemptions)
+    key_person_risk: medium
+    score: 3
+    takeaway: 'Dual-class super-voting with the co-founders also serving as co-chairs caps it below the clean tier,
+      but it is a solid 3: the founders hold ~48% of the vote (below a controlling majority, so not a controlled company),
+      there is a fixed 2031 sunset (which most dual-class names lack), a 7-of-9 independent board with a lead independent
+      director, and the company just turned profitable with its first buyback. Key-person risk is moderate — dependence
+      on the two-founder partnership, but split across two people with a professionalized bench.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -42.1% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-15_06-22

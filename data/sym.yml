@@ -580,6 +580,46 @@ competitive:
     a durable cost or process advantage. Durability is medium at best. The falsifier the bull must clear is margin: gross
     margin expanding well beyond the high teens with ex-SBC owner FCF turning durably positive, ideally alongside a second
     large anchor customer.'
+pocd:
+  people:
+    ceo: Rick Cohen
+    founder_led: true
+    tenure_years: 18
+    insider_ownership_pct: 7.7
+    capital_allocation: Founder Rick Cohen is Chairman & CEO (founded 2007; concurrently Executive Chairman of family-owned
+      C&S Wholesale Grocers — split attention). The balance sheet is strong — ~$1.2B cash at FY2025 (~$2.0B after
+      a Dec-2025 raise), no debt — but the business sits near adjusted-EBITDA breakeven (~$147M on $2.25B revenue)
+      and GAAP-unprofitable, with revenue ~85% concentrated in Walmart and a ~$22.5B backlog. No dividend or buyback.
+      A 2024 restatement (premature revenue recognition) produced a material weakness in internal controls that remained
+      unremediated through Q3 FY2025.
+    incentive_alignment: 'Cohen takes $0 compensation — no salary, bonus or equity — a genuine anti-extraction signal;
+      his alignment is entirely his founder equity. Against that sits a dense related-party web: C&S Wholesale Grocers
+      (Cohen-controlled — aircraft agreements, a customer, and GreenBox’s first customer), Walmart (largest customer
+      and a holder), and the GreenBox JV (SoftBank 65% / Symbotic 35%, a ~$7.5B+ purchase commitment). Insider trading
+      is selling, led by SoftBank steadily exiting; no insider buying.'
+    governance_flags:
+    - 'Up-C super-voting: Class V-3 = 3 votes per share; the Cohen-led insider classes control roughly 86-91% of the
+      vote on ~20% economics, while public Class A holds under 9% of the vote'
+    - combined Chair & CEO (Cohen) with no lead independent director designated, and a controlled-company-eligible
+      structure (Cohen group > 50% of the vote)
+    - a 2024 financial restatement with a material weakness in internal controls still unremediated through Q3 FY2025
+      — an integrity flag the other entrenched names lack
+    - 'dense related-party web: C&S Wholesale Grocers (Cohen-controlled), Walmart, and the GreenBox JV (SoftBank)'
+    - extreme customer concentration — Walmart ~85% of revenue and most of the backlog
+    - 'mitigants: a Class V-3 sunset to single-vote ~2029, an 8-of-9 independent board with fully-independent
+      committees, declassified annual elections, and $0 CEO pay'
+    key_person_risk: high
+    score: 2
+    takeaway: 'The most-entrenched tier, and the weakest of it: founder-CEO Cohen controls ~86-91% of the vote on
+      ~20% economics via a 3-vote Up-C class, combines Chair and CEO, splits attention with C&S, and sits in a dense
+      C&S/Walmart/GreenBox related-party web — on top of a 2024 restatement whose material weakness was still unremediated
+      into FY2025, an integrity flag the cleaner controlled companies do not carry. The mitigants are real (a 2029
+      sunset, a majority-independent board with independent committees, declassified elections, and a founder who
+      takes $0 pay), which is why it holds a 2 rather than lower. Key-person risk is high.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -68.0% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-20_06-33

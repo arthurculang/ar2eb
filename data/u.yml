@@ -611,6 +611,42 @@ competitive:
     convertibles mature into ~$2.15B cash in Nov-2026. That squares with the DCF: even with Vector working and GAAP turning,
     the base lands -60% because the model carries a thinner ex-SBC margin and a growing share count - this is the most speculative
     name in the batch, a turnaround bet on Vector with a very wide -93% to +47% distribution, not an FCF compounder.'
+pocd:
+  people:
+    ceo: Matthew Bromberg
+    founder_led: false
+    tenure_years: 2
+    insider_ownership_pct: 20.14
+    capital_allocation: 'Matthew Bromberg (ex-Zynga COO) became CEO in May 2024, brought in to fix the business after
+      founder-era CEO John Riccitiello was ousted in October 2023 over the "Runtime Fee" pricing debacle. The turnaround
+      is showing: Q1 2026 revenue +17%, ~27% adjusted-EBITDA margin, positive free cash flow — though GAAP is still
+      a loss (an ironSource-related impairment). Capital allocation is deleveraging: ~$2.1B cash against ~$2.2B convertibles,
+      with maturities pushed to 2030 via repurchases; a $250M buyback ran in 2024; no dividend.'
+    incentive_alignment: Bromberg’s package is turnaround-style — $850K base, an $2M sign-on, and large option grants
+      vesting on $35/$50/$60/$75 stock-price hurdles through 2030, tying most upside to a recovery. Insider trading
+      is sell-to-cover on vesting, no open-market buying. The largest holders are strategic (Sequoia’s Botha ~9%,
+      Silver Lake ~9%), whose 2022 convertible financing drew a Delaware disclosure suit.
+    governance_flags:
+    - single class of common stock, one vote per share — no super-voting; no controlling shareholder (largest holder
+      ~9%)
+    - 'management-instability history: founder-era CEO ousted in 2023 over the Runtime-Fee debacle, an interim CEO,
+      then the current turnaround CEO (2024)'
+    - Chair and CEO are separated, but the Chair (Whitehurst) is an Executive (non-independent) Chair — independent
+      oversight runs through the lead independent director (Botha)
+    - classified / staggered board (three classes) — an entrenchment feature
+    - strategic-investor board seats (Silver Lake, Sequoia) tied to a 2022 convertible deal that drew Delaware litigation;
+      heavy stock-based comp and ~4-6%/yr dilution
+    key_person_risk: medium
+    score: 3
+    takeaway: 'A single-share-one-vote company with no controlling holder — public shareholders keep full voting power,
+      which keeps it clear of the entrenched tier. But it is not a clean 4: a non-independent Executive Chair, a classified
+      board, recent management instability (the 2023 Runtime-Fee CEO ouster), strategic-investor board seats from
+      a litigated convertible deal, and heavy stock-comp dilution. The board did hold the prior CEO accountable, a
+      positive signal. Key-person risk is moderate — the turnaround is closely identified with Bromberg.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -56.5% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-03
