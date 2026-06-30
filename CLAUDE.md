@@ -498,13 +498,14 @@ Present decisions as a **table** so I can approve in bulk. Columns:
     EVERY mega-cap segment chart (Arthur flagged NVDA). Wave-2c fixed this class on the Revenue/FCF charts but **missed the segment chart**. Fix = `niceStep` +
     magnitude-aware $M/$B units + data-sized left margin (the same pattern the Revenue/FCF charts already use); affects all 41 mature memos; verified across the
     scale range, all STRICT-clean.
-  - **Ultra-bear sweep investigated & reverted; §6c.18 mechanism documented (2026-06-30, spec v045).** Asked whether NAUT — and the other
-    deep-bear outliers AUR/JOBY/LTH — should carry an ultra-bear; modeled all four through `model_dcf` and confirmed §6c.18's existing exemption is right.
-    **Findings unchanged** (NAUT +174% / AUR +5% / JOBY −20% / LTH −34%), and for NAUT/AUR the ultra-bear required a *fabricated* negative going-concern
-    terminal. Mechanism (now in spec §6c.18): **equity-dilution-funded pre-revenue names have a non-monotonic downside in per-share terms** — negative
-    distressed equity ÷ a larger diluted share count moves per-share *toward* zero, so the bear already sits at the trough; an ultra-bear beneath an
-    already-$0 bear is cosmetic (both floor at $0 EV). **Reverted** to the 4-scenario shape; site/PDF/baseline unchanged. *(Debt-funded PACB is the
-    contrast — constant shares → cleanly monotonic → keeps its §6c.11.2 tail-concentrated finding.)*
+  - **Ultra-bear SHIPPED across the deep-bear outliers (NAUT/AUR/JOBY/LTH) → uniform 5-scenario book (2026-06-30, spec v045; Arthur's call).** Modeled an
+    ultra-bear for all four through `model_dcf` and shipped them. **Findings unchanged** (NAUT +174% / AUR +5% / JOBY −20% / LTH −34%) — on these wipeout-class
+    names the ultra-bear floors at the bear's $0 EV, so it's a **presentation/narrative** scenario (the deeper-failure story), not new analysis. Mechanism (in
+    §6c.18): equity-dilution-funded pre-revenue names have a **non-monotonic downside in per-share terms** — negative distressed equity ÷ a larger diluted share
+    count moves per-share *toward* zero, so the bear already sits at the trough; the ultra-bear is modeled beneath it with a negative going-concern terminal to
+    stay monotonic. Ultra-bear probs split the large bear (NAUT 20 / AUR 15 / JOBY 13 / LTH 8%). Validator green; all four STRICT-clean 7pp (5-col layout fits).
+    Site-only (4 ymls + `data.js`; PDFs/baseline refresh at the launch flip). *(Debt-funded PACB is the contrast — constant shares → cleanly monotonic → its
+    ultra-bear genuinely moves value, the §6c.11.2 tail-concentrated finding.)*
 - **Spec §15 (v036, DRAFT) — operating cadence & automation + 1 July 2026 "launch" (Arthur's ask).**
   **Monthly (22nd):** bump each re-priced ticker (= archive: grows the on-site "Prior versions" panel; replaces the `archive/YYYY-MM/` move — v042) → mechanically re-price + re-render all memos → update §12 weights →
   deploy. **Daily (after close):** track the weighted portfolio vs. a wide multi-asset benchmark set

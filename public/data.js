@@ -35,29 +35,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 8.44,
-      "deltaPct": -19.6
+      "fair": 8.42,
+      "deltaPct": -19.8
     },
     "compound": [
       {
         "y": 5,
-        "value": 12.18,
+        "value": 12.16,
         "mult": 1.16
       },
       {
         "y": 10,
-        "value": 17.6,
-        "mult": 1.68
+        "value": 17.56,
+        "mult": 1.67
       },
       {
         "y": 15,
-        "value": 25.44,
+        "value": 25.38,
         "mult": 2.42
       },
       {
         "y": 20,
-        "value": 36.8,
-        "mult": 3.51
+        "value": 36.72,
+        "mult": 3.5
       }
     ],
     "taxonomy": {
@@ -79,12 +79,24 @@ const MEMOS = [
     "question": "Will Joby capture meaningful share of a $250B global UAM TAM by 2036 — or is today's $10B market cap pricing certainty that competitive eVTOL economics don't support?",
     "scenarios": [
       {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 13,
+        "price": 0.29,
+        "headline": "eVTOL stalls; cash floors a thin value.",
+        "why": "The deepest-failure tail, split from the bear for book-wide consistency. 13% weight reflects genuine certification / manufacturing / unit-economics risk for pre-revenue eVTOL; distinct from the bear in that survival here demands heavier dilution. Within-scenario 48% p_fail; the large cash balance keeps even this tail above zero.",
+        "what": [
+          "The deepest tail: Joby's commercial eVTOL ramp stalls (~$0.82B by FY36) — certification, manufacturing yield or route economics disappoint and adoption never reaches scale, well below the bear's $1.5B niche.",
+          "Surviving the stall requires heavier, more dilutive capital than the bear: successive distressed raises take the share count to ~2.87B (from ~0.9B, ~69% dilution) versus the bear's ~1.5B. Operating EV stays negative with no self-sustaining FCF base."
+        ]
+      },
+      {
         "key": "bear",
         "label": "BEAR",
-        "prob": 30,
+        "prob": 17,
         "price": 0.42,
         "headline": "Cert delays; mfg stumbles; China wins.",
-        "why": "Aerospace startups historically fail at high rates even with funding. SR3 audit timing has slipped industry-wide; Stage 4 final testing routinely extends 12-24 months beyond projections. Manufacturing scaling at Dayton is the hardest unproven part — Tesla took years on Model 3 with mature automotive suppliers. The 30% weight acknowledges that the $2.5B cash + Toyota manufacturing partnership materially reduce execution risk relative to a typical aerospace startup, but eVTOL unit economics remain fundamentally unproven at fleet scale. Even with strong execution, the category itself could fail to generate profitable demand. Within-scenario 35% p_fail captures Joby-specific bankruptcy; the 30% scenario weight captures the broader 'bear world' where eVTOL economics don't scale even if Joby executes.",
+        "why": "Aerospace startups historically fail at high rates even with funding. SR3 audit timing has slipped industry-wide; Stage 4 final testing routinely extends 12-24 months beyond projections. Manufacturing scaling at Dayton is the hardest unproven part — Tesla took years on Model 3 with mature automotive suppliers. The 17% weight acknowledges that the $2.5B cash + Toyota manufacturing partnership materially reduce execution risk relative to a typical aerospace startup, but eVTOL unit economics remain fundamentally unproven at fleet scale. Even with strong execution, the category itself could fail to generate profitable demand. Within-scenario 35% p_fail captures Joby-specific bankruptcy; the 30% scenario weight captures the broader 'bear world' where eVTOL economics don't scale even if Joby executes.",
         "what": [
           "The pessimistic case is brutal for eVTOL economics. FAA Type Certification slips from 2026 into 2027 or later — the SR3 audit is complete but Stage 4 final testing has historically taken longer than companies project. The Dubai launch is real but on a single route; volume builds slowly. Manufacturing in Dayton scales below the 4-aircraft/month target.",
           "Cash burn continues at $700M+ annualized. The $2.5B cash position lasts ~3 years, but commercial scaling requires far more capital. By FY30 Joby has raised another $2-3B at progressively lower prices, diluting holders 50%+. Aerospace economics don't reach software-like margins — at scale operating margin tops out around 5%, similar to legacy regional aviation operators."
@@ -127,7 +139,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 30 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 13 / Bear 17 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
     "thesis": "Joby trades at ~$10.3B against $24M of Q1 2026 revenue and $700M annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise) provides ~3 years of runway. FAA Type Certification is in Stage 4 (final), Dubai exclusive operations begin in 2026, and the Toyota manufacturing partnership unlocks scale. Pre-revenue category-defining companies present a Damodaran problem: the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Three scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -272,8 +284,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 250,
       "weighted": {
-        "expected": 8.44,
-        "upsidePct": -19.6
+        "expected": 8.42,
+        "upsidePct": -19.8
       },
       "market": {
         "marketCapBillion": 10.3,
@@ -282,8 +294,169 @@ const MEMOS = [
         "netDebtBillion": 0.0
       },
       "scenarios": {
+        "ultra_bear": {
+          "probability": 0.13,
+          "expectedPerShare": 0.29,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "tam_share": 0.33,
+            "p_fail": 48,
+            "s2c": 0.8
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.1,
+              0.18,
+              0.28,
+              0.4,
+              0.52,
+              0.62,
+              0.7,
+              0.76,
+              0.8,
+              0.82
+            ],
+            "op_margin": [
+              -4,
+              -2.8,
+              -1.8,
+              -1,
+              -0.5,
+              -0.25,
+              -0.12,
+              -0.05,
+              0,
+              0.02
+            ],
+            "wacc_path": [
+              0.145,
+              0.14,
+              0.135,
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105,
+              0.1
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.4,
+              -0.504,
+              -0.504,
+              -0.4,
+              -0.26,
+              -0.155,
+              -0.084,
+              -0.038,
+              0,
+              0.016
+            ],
+            "reinvest": [
+              -0.175,
+              0.1,
+              0.125,
+              0.15,
+              0.15,
+              0.125,
+              0.1,
+              0.075,
+              0.05,
+              0.025
+            ],
+            "fcf": [
+              -0.225,
+              -0.604,
+              -0.629,
+              -0.55,
+              -0.41,
+              -0.28,
+              -0.184,
+              -0.113,
+              -0.05,
+              -0.009
+            ],
+            "pv_fcf": [
+              -0.197,
+              -0.463,
+              -0.425,
+              -0.329,
+              -0.218,
+              -0.133,
+              -0.078,
+              -0.043,
+              -0.017,
+              -0.003
+            ],
+            "sum_pv_fcf": -1.91,
+            "terminal_value": -0.11,
+            "pv_terminal": -0.04,
+            "op_ev": -1.95,
+            "cash": 2.5,
+            "net_debt": 0.0,
+            "total_equity": 0.55,
+            "raise_total": 3.75,
+            "dilution_pct": 69,
+            "final_shares": 2866,
+            "dcf_per_share": 0.19,
+            "distress": 0.4
+          },
+          "chartData": {
+            "raises": [
+              0,
+              0.6,
+              0.85,
+              0.9,
+              0.9,
+              0.5,
+              0,
+              0,
+              0,
+              0
+            ],
+            "raise_prices": [
+              6,
+              4,
+              3,
+              2,
+              1.5,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "rev_per_aircraft": [
+              2.8,
+              3,
+              3.2,
+              3.4,
+              3.6,
+              3.7,
+              3.8,
+              3.9,
+              3.9,
+              4
+            ],
+            "tam_competitor_share": 45.0
+          },
+          "revPerUnit": [
+            2.8,
+            3,
+            3.2,
+            3.4,
+            3.6,
+            3.7,
+            3.8,
+            3.9,
+            3.9,
+            4
+          ]
+        },
         "bear": {
-          "probability": 0.3,
+          "probability": 0.17,
           "expectedPerShare": 0.42,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -1145,29 +1318,29 @@ const MEMOS = [
       "asOf": "May 16, 2026 close"
     },
     "expected": {
-      "fair": 8.13,
-      "deltaPct": 5.1
+      "fair": 8.12,
+      "deltaPct": 4.9
     },
     "compound": [
       {
         "y": 5,
-        "value": 11.86,
+        "value": 11.83,
         "mult": 1.53
       },
       {
         "y": 10,
-        "value": 17.29,
+        "value": 17.25,
         "mult": 2.23
       },
       {
         "y": 15,
-        "value": 25.23,
-        "mult": 3.26
+        "value": 25.16,
+        "mult": 3.25
       },
       {
         "y": 20,
-        "value": 36.82,
-        "mult": 4.76
+        "value": 36.71,
+        "mult": 4.74
       }
     ],
     "taxonomy": {
@@ -1189,12 +1362,24 @@ const MEMOS = [
     "question": "Will Aurora capture meaningful share of a $160B US autonomous trucking TAM by 2036 — or is today's $13B market cap pricing certainty about driverless commercial economics that hasn't been proven?",
     "scenarios": [
       {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 15,
+        "price": 0.0,
+        "headline": "Autonomy economics never close; wiped.",
+        "why": "The deepest-failure tail, split from the bear so the downside is not one undifferentiated bucket (the book-wide convention). 15% weight reflects genuine \"the economics never close\" risk for capital-intensive L4 autonomy; distinct from the bear (sub-scale but eventually thinly profitable). Within-scenario 55% p_fail captures the binary nature of an unproven autonomy stack.",
+        "what": [
+          "The deepest tail: Aurora reaches some commercial scale (~$2.1B by FY36) but the driverless unit economics never close — the per-mile cost of the autonomy stack, validation and teleoperation stays above what shippers will pay, so the business is perpetually unprofitable rather than the bear's eventual ~8% margin.",
+          "Aurora still draws the full ~$4.25B of dilutive capital (126M → ~3.4B shares, 74% dilution) chasing scale, but the money funds losses against a model that never inflects. Operating EV is deeply negative with no self-sustaining FCF base — the terminal carries negative going-concern value."
+        ]
+      },
+      {
         "key": "bear",
         "label": "BEAR",
-        "prob": 35,
+        "prob": 20,
         "price": 0.11,
         "headline": "Tech doesn't scale, capital exhausts.",
-        "why": "Bearish thesis is compound: tech doesn't scale from supervised highway pilots to driverless at necessary safety thresholds; capital exhausts before commercial validation; dilution at falling prices accelerates as capital needs persist; competitive losses to Kodiak (cargo-focused, well-funded) and Waabi (smaller but capital-efficient). Within-scenario 45% p_fail captures Aurora-specific failure; the 35% scenario weight reflects category-level risk — autonomous trucking economics may not scale for Western operators. Waymo Via's 2023 shutdown was a credible signal of category difficulty. The 35% weight is slightly above JOBY's 30% bear because AUR is earlier-stage (pre-commercial), more capital-dependent, and faces more direct competition.",
+        "why": "Bearish thesis is compound: tech doesn't scale from supervised highway pilots to driverless at necessary safety thresholds; capital exhausts before commercial validation; dilution at falling prices accelerates as capital needs persist; competitive losses to Kodiak (cargo-focused, well-funded) and Waabi (smaller but capital-efficient). Within-scenario 45% p_fail captures Aurora-specific failure; the 35% scenario weight reflects category-level risk — autonomous trucking economics may not scale for Western operators. Waymo Via's 2023 shutdown was a credible signal of category difficulty. The 15% weight is slightly above JOBY's 30% bear because AUR is earlier-stage (pre-commercial), more capital-dependent, and faces more direct competition.",
         "what": [
           "The pessimistic case is brutal. Highway autonomy is harder than demos suggest — five years of 'next year' promises (launch was 2025, then 2026, now 2027), and the long tail of edge cases (night construction, weather, urban surface streets) proves more durable than current systems handle. Commercial routes stay limited to highway-only, daytime, sunbelt-only operation.",
           "Cash burn doesn't moderate. Q1 2026's $640M annualized outflow keeps rising. The $1.28B liquidity needs replenishment by mid-2027. Successive raises come at lower prices — cumulative ~74% dilution by FY36, issuance averaging below $3, destroying per-share value even when the business survives."
@@ -1237,7 +1422,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 20 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
     "thesis": "Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M annualized cash burn. The $1.28B liquidity position needs replenishment by mid-2027 absent commercial conversion. Driverless commercial launch slipped from 2024 to now 2027; the Driver runs supervised highway pilots with PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin, P(failure). Three scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -1381,8 +1566,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 160,
       "weighted": {
-        "expected": 8.13,
-        "upsidePct": 5.1
+        "expected": 8.12,
+        "upsidePct": 4.9
       },
       "market": {
         "marketCapBillion": 13.2,
@@ -1391,8 +1576,169 @@ const MEMOS = [
         "netDebtBillion": 0.0
       },
       "scenarios": {
+        "ultra_bear": {
+          "probability": 0.15,
+          "expectedPerShare": 0.0,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "tam_share": 1.25,
+            "p_fail": 55,
+            "s2c": 1.2
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.013,
+              0.035,
+              0.07,
+              0.13,
+              0.27,
+              0.55,
+              0.95,
+              1.4,
+              1.8,
+              2.1
+            ],
+            "op_margin": [
+              -8,
+              -4.5,
+              -2.6,
+              -1.3,
+              -0.7,
+              -0.35,
+              -0.18,
+              -0.08,
+              0,
+              0.04
+            ],
+            "wacc_path": [
+              0.145,
+              0.145,
+              0.14,
+              0.135,
+              0.13,
+              0.125,
+              0.12,
+              0.115,
+              0.11,
+              0.105
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.104,
+              -0.158,
+              -0.182,
+              -0.169,
+              -0.189,
+              -0.193,
+              -0.171,
+              -0.112,
+              0,
+              0.084
+            ],
+            "reinvest": [
+              -0.026,
+              0.018,
+              0.029,
+              0.05,
+              0.117,
+              0.233,
+              0.333,
+              0.375,
+              0.333,
+              0.25
+            ],
+            "fcf": [
+              -0.078,
+              -0.176,
+              -0.211,
+              -0.219,
+              -0.306,
+              -0.426,
+              -0.504,
+              -0.487,
+              -0.333,
+              -0.166
+            ],
+            "pv_fcf": [
+              -0.068,
+              -0.134,
+              -0.141,
+              -0.129,
+              -0.16,
+              -0.198,
+              -0.209,
+              -0.181,
+              -0.111,
+              -0.05
+            ],
+            "sum_pv_fcf": -1.38,
+            "terminal_value": -1.99,
+            "pv_terminal": -0.6,
+            "op_ev": -1.98,
+            "cash": 1.28,
+            "net_debt": 0.0,
+            "total_equity": -0.7,
+            "raise_total": 4.25,
+            "dilution_pct": 74,
+            "final_shares": 3401,
+            "dcf_per_share": -0.21,
+            "distress": 0.0
+          },
+          "chartData": {
+            "raises": [
+              0.5,
+              0.75,
+              0.75,
+              0.75,
+              0.75,
+              0.5,
+              0.25,
+              0,
+              0,
+              0
+            ],
+            "raise_prices": [
+              5,
+              4,
+              3.5,
+              3,
+              2.5,
+              2,
+              1.75,
+              0,
+              0,
+              0
+            ],
+            "rev_per_truck": [
+              95,
+              103,
+              112,
+              120,
+              128,
+              135,
+              140,
+              143,
+              145,
+              148
+            ],
+            "tam_competitor_share": 30.0
+          },
+          "revPerUnit": [
+            95,
+            103,
+            112,
+            120,
+            128,
+            135,
+            140,
+            143,
+            145,
+            148
+          ]
+        },
         "bear": {
-          "probability": 0.35,
+          "probability": 0.2,
           "expectedPerShare": 0.11,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -2297,12 +2643,24 @@ const MEMOS = [
     "question": "Is Life Time a premium wellness platform with durable luxury economics — or a leveraged real estate vehicle whose positive FCF depends on perpetual $400M/year sale-leasebacks?",
     "scenarios": [
       {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 8,
+        "price": 0.0,
+        "headline": "Leverage bites; deep decline.",
+        "why": "The deepest-failure tail, split from the bear so the downside is not one undifferentiated bucket (the book-wide convention). 8% weight reflects a genuine recession-plus-leverage scenario for a company whose enterprise obligations approach $4B; distinct from the bear (flat-to-soft, equity ~$0) in that revenue actually declines and the SLB engine reverses. Mature names carry no within-scenario failure probability, so the value is the levered DCF floored at zero.",
+        "what": [
+          "The deepest tail: a real recession compresses discretionary luxury-fitness spend, so memberships and revenue do not merely decelerate (the bear) but decline — revenue shrinks at a low-single-digit rate through FY30 and the FCF margin erodes toward the low single digits.",
+          "The sale-leaseback tap closes faster and on worse terms in a downturn: less real-estate value is realized (~$0.55B over five years vs the bear's ~$0.95B) while the rent obligations from prior SLBs keep compounding against a shrinking revenue base — the capital-recycling engine runs in reverse."
+        ]
+      },
+      {
         "key": "bear",
         "label": "BEAR",
-        "prob": 20,
+        "prob": 12,
         "price": 0.0,
         "headline": "Capital recycling, not earnings.",
-        "why": "Bearish thesis is structurally coherent: LTH's headline FCF is dependent on SLB proceeds (~$400M/yr); strip those out and operating FCF is barely positive. Cumulative SLB program is finite (~$2B remaining); each SLB trades one-time cash for permanent rent increase. Net debt + capitalized lease obligations near $4B. If macro slows and luxury fitness spend compresses, FCF margin drops, stock works to $20-25. The 20% weight reflects that this thesis bumps against LTH's actual track record: FY24/25 execution strong, recent S&P upgrade validates the credit story, and new luxury club economics ($25-35M revenue vs $15-20M legacy) genuinely change the unit math.",
+        "why": "Bearish thesis is structurally coherent: LTH's headline FCF is dependent on SLB proceeds (~$400M/yr); strip those out and operating FCF is barely positive. Cumulative SLB program is finite (~$2B remaining); each SLB trades one-time cash for permanent rent increase. Net debt + capitalized lease obligations near $4B. If macro slows and luxury fitness spend compresses, FCF margin drops, stock works to $20-25. The 12% weight reflects that this thesis bumps against LTH's actual track record: FY24/25 execution strong, recent S&P upgrade validates the credit story, and new luxury club economics ($25-35M revenue vs $15-20M legacy) genuinely change the unit math.",
         "what": [
           "The pessimistic case is straightforward. LTH only delivers 'positive FCF' after $400M/year of sale-leaseback proceeds. Strip those out and operating FCF is barely positive — FY25 OCF $870M minus capex ~$870M equals zero before SLB. The reported $206M FY25 FCF is essentially $400M of real estate proceeds offset against expansion capex. This is capital recycling reported as cash generation.",
           "The SLB program is finite. LTH has ~190 clubs, of which perhaps 40-50 remain owned outright after cumulative SLB transactions. At $40M average per club, that's roughly $2B of remaining real estate runway. At the planned $400M/year pace, the tap closes in 4-5 years — exactly the DCF horizon. Meanwhile rent obligations from prior SLBs (~$300M/yr and growing) compound — every SLB trades a one-time cash inflow for a permanent operating expense increase."
@@ -2345,7 +2703,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Bear 20 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 8 / Bear 12 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: May 16, 2026 close.",
     "thesis": "LTH trades at $33.61 ($7.5B mkt cap) on TTM revenue $3.0B and Adj EBITDA $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14 luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear: capital recycling unsustainable, leveraged real estate vehicle. Bull: luxury wellness category-of-one, SLB is smart financing. Today's price requires bull-case execution. Three scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -2560,8 +2918,82 @@ const MEMOS = [
         "netDebtBillion": 1.29
       },
       "scenarios": {
+        "ultra_bear": {
+          "probability": 0.08,
+          "expectedPerShare": 0.0,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "cagr_5y": -3.4,
+            "wacc": 0.115,
+            "slb_total_5y": 0.55
+          },
+          "dcfPath": {
+            "rev_b": 2.995,
+            "rev_path": [
+              0.03,
+              -0.02,
+              -0.05,
+              -0.06,
+              -0.07
+            ],
+            "op_margin": [
+              0.165,
+              0.155,
+              0.145,
+              0.135,
+              0.125
+            ],
+            "wacc_path": [
+              0.115,
+              0.115,
+              0.115,
+              0.115,
+              0.115
+            ],
+            "fcf": [
+              0.12,
+              0.105,
+              0.085,
+              0.065,
+              0.05
+            ],
+            "pv_fcf": [
+              0.108,
+              0.084,
+              0.061,
+              0.042,
+              0.029
+            ],
+            "term_g": 0.01,
+            "sum_pv_fcf": 0.32,
+            "terminal_value": 0.48,
+            "pv_terminal": 0.28,
+            "op_ev": 0.6,
+            "cash": 0.232,
+            "net_debt": 1.29,
+            "total_equity": -0.46,
+            "raise_total": 0.0,
+            "dilution_pct": 0,
+            "final_shares": 222,
+            "dcf_per_share": -2.07,
+            "distress": 0.0
+          },
+          "chartData": {
+            "slb_per_year": [
+              0.2,
+              0.15,
+              0.1,
+              0.05,
+              0.05
+            ],
+            "luxury_club_count_fy30": 60,
+            "fcf_to_ebitda_ratio": 0.08
+          },
+          "revPerUnit": null
+        },
         "bear": {
-          "probability": 0.2,
+          "probability": 0.12,
           "expectedPerShare": 0.0,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -4038,9 +4470,21 @@ const MEMOS = [
     "question": "Will Nautilus capture meaningful share of a $130B global proteomics TAM by 2036 with its Voyager single-molecule platform — or is today's $302M market cap pricing certainty about commercial economics that the late-2026 launch and early-2027 instrument installations haven't yet earned?",
     "scenarios": [
       {
+        "key": "ultra_bear",
+        "label": "ULTRA BEAR",
+        "prob": 20,
+        "price": 0.0,
+        "headline": "Platform fails to validate; deepest wipeout.",
+        "why": "The deepest-failure tail, separated from the bear so the downside is not one undifferentiated bucket (the convention across the rest of the book). 20% weight reflects genuine technical / competitive failure risk for a pre-revenue single-molecule platform whose Voyager launch already slipped and whose competitors (Olink at Thermo, SomaScan at SBT, mass spec) are entrenched. Distinct from the bear (which reaches sub-scale $0.60B but is diluted to zero): here the platform fails outright. Within-scenario 52% p_fail captures Nautilus-specific bankruptcy / wind-down risk at the extreme.",
+        "what": [
+          "The catastrophic tail: Voyager's single-molecule chemistry fails to validate at commercial scale at all. Tau Early Access (2026-27) surfaces disqualifying reproducibility or throughput limits, Broadscale never ships at spec, and customers reject the platform outright for Olink / SomaScan affinity assays and mass spec. Revenue stalls near zero — about $0.30B by FY36, under 0.25% of the $130B proteomics TAM.",
+          "NAUT still raises the ~$1.1B of dilutive capital trying to reach commercial scale (126M to ~1.78B shares, 93% dilution), but the money is spent against a platform that never gains traction — the worst combination of full dilution and a failed product. Operating EV is deeply negative with no self-sustaining FCF base, so the terminal carries negative going-concern value rather than the bear's floored-at-zero."
+        ]
+      },
+      {
         "key": "bear",
         "label": "BEAR",
-        "prob": 35,
+        "prob": 15,
         "price": 0.0,
         "headline": "Capital exhausts; equity wiped.",
         "why": "Pre-revenue single-molecule platforms face a stack of risks the public market knows well — IPO'd peers show the path is hard (Olink acquired by Thermo at a premium; SomaLogic merged into Standard BioTools at a discount; Quantum-Si still pre-revenue). NAUT-specific: Voyager's late-2026 launch already slipped; the Jan 2026 Early Access Program is real but narrow (Tau proteoforms first); $143M cash extends to mid-2029 but commercial scale-up requires a 2027-2028 dilutive raise. Bear case is structural — tech doesn't scale beyond niche, or proteoform analysis stays a research curiosity rather than a clinical workhorse. 35% weight (vs JOBY's 30%): NAUT is one stage earlier, with a smaller cash buffer and more direct competition. Within-scenario 40% p_fail captures Nautilus-specific bankruptcy risk.",
@@ -4086,7 +4530,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Bear 35 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 15 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: May 16, 2026 close.",
     "thesis": "NAUT trades at $2.40 ($302M mkt cap, 47% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029; dilutive raise likely 2027-2028. Mature peers — Olink (Thermo), SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Four scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -4249,8 +4693,169 @@ const MEMOS = [
         "netDebtBillion": 0.0
       },
       "scenarios": {
+        "ultra_bear": {
+          "probability": 0.2,
+          "expectedPerShare": 0.0,
+          "label": "Ultra Bear",
+          "shortLabel": "UltBear",
+          "dcfMetrics": {
+            "tam_share": 0.25,
+            "p_fail": 52,
+            "s2c": 0.7
+          },
+          "dcfPath": {
+            "rev_path": [
+              0.004,
+              0.012,
+              0.03,
+              0.06,
+              0.1,
+              0.14,
+              0.18,
+              0.22,
+              0.26,
+              0.3
+            ],
+            "op_margin": [
+              -3.5,
+              -2.5,
+              -1.8,
+              -1.2,
+              -0.8,
+              -0.5,
+              -0.35,
+              -0.25,
+              -0.18,
+              -0.12
+            ],
+            "wacc_path": [
+              0.15,
+              0.145,
+              0.14,
+              0.14,
+              0.135,
+              0.13,
+              0.13,
+              0.125,
+              0.125,
+              0.12
+            ],
+            "term_g": 0.02,
+            "nopat": [
+              -0.014,
+              -0.03,
+              -0.054,
+              -0.072,
+              -0.08,
+              -0.07,
+              -0.063,
+              -0.055,
+              -0.047,
+              -0.036
+            ],
+            "reinvest": [
+              0.004,
+              0.011,
+              0.026,
+              0.043,
+              0.057,
+              0.057,
+              0.057,
+              0.057,
+              0.057,
+              0.057
+            ],
+            "fcf": [
+              -0.018,
+              -0.041,
+              -0.08,
+              -0.115,
+              -0.137,
+              -0.127,
+              -0.12,
+              -0.112,
+              -0.104,
+              -0.093
+            ],
+            "pv_fcf": [
+              -0.016,
+              -0.031,
+              -0.053,
+              -0.067,
+              -0.071,
+              -0.058,
+              -0.048,
+              -0.04,
+              -0.033,
+              -0.026
+            ],
+            "sum_pv_fcf": -0.44,
+            "terminal_value": -0.95,
+            "pv_terminal": -0.27,
+            "op_ev": -0.71,
+            "cash": 0.143,
+            "net_debt": 0.0,
+            "total_equity": -0.57,
+            "raise_total": 1.1,
+            "dilution_pct": 93,
+            "final_shares": 1777,
+            "dcf_per_share": -0.32,
+            "distress": 0.1
+          },
+          "chartData": {
+            "raises": [
+              0.0,
+              0.1,
+              0.2,
+              0.25,
+              0.25,
+              0.2,
+              0.1,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "raise_prices": [
+              2.0,
+              1.4,
+              1.0,
+              0.8,
+              0.6,
+              0.5,
+              0.4,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rev_per_instrument": [
+              140,
+              148,
+              158,
+              168,
+              178,
+              186,
+              192,
+              198,
+              202,
+              206
+            ],
+            "tam_competitor_share": 75.0
+          },
+          "revPerUnit": [
+            140,
+            148,
+            158,
+            168,
+            178,
+            186,
+            192,
+            198,
+            202,
+            206
+          ]
+        },
         "bear": {
-          "probability": 0.35,
+          "probability": 0.15,
           "expectedPerShare": 0.0,
           "label": "Bear",
           "shortLabel": "Bear",
