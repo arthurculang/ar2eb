@@ -611,6 +611,40 @@ competitive:
     and the threats are cyclicality/fuel + a soft, K-shaped main cabin - all amplified by ~$9B net debt. That tension is exactly
     the DCF finding: cheap at ~14x FCF, but the modal case lands ~-3% (fair) because the cycle and the debt bridge offset
     the multiple until the mix durably shifts.'
+pocd:
+  people:
+    ceo: Ed Bastian
+    founder_led: false
+    tenure_years: 10
+    insider_ownership_pct: 0.5
+    capital_allocation: Ed Bastian has been CEO since 2016 (a career Delta executive, not a founder). Capital allocation
+      in FY2025 balanced a record ~$4.6B free cash flow against deleveraging — adjusted net debt cut ~$3.7B to ~$14.3B
+      (net debt/EBITDA ~1.8x) — plus a reinstated, growing dividend (+15% to $0.86) and ~$5.5B of 2026 reinvestment.
+      The defined-benefit pension is overfunded (+$2.3B). Employee profit-sharing paid $1.3B for FY2025.
+    incentive_alignment: Bastian’s FY2025 compensation was ~$19.2M (heavily equity-weighted); insider trading is routine
+      selling, no open-market buying. Alignment is standard for a widely-held mega-cap (insiders under 1%), reinforced
+      by a clawback policy, anti-hedging/anti-pledging rules, and stock-ownership guidelines. Say-on-pay drew ~95%
+      support.
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class, no controlling shareholder (largest holder
+      Vanguard ~11%)
+    - Chair and CEO are separated, with an INDEPENDENT non-executive Chair (David Taylor, ex-P&G) — a strong structural
+      positive
+    - 12 of 14 directors independent; board declassified (annual elections), majority-vote standard
+    - a pilots-union (ALPA) board seat is the second non-independent director — an unusual but disclosed labor-governance
+      feature
+    - large absolute debt is inherent to a capital-intensive airline (a financial, not governance, flag) and is being
+      steadily reduced
+    key_person_risk: low
+    score: 4
+    takeaway: 'Among the cleanest governance in the book: single-class one-vote stock, a separate INDEPENDENT non-executive
+      Chair, a 12-of-14 independent declassified board with majority voting, and strong pay hygiene (clawback, anti-pledging,
+      ~95% say-on-pay). Key-person risk is low — a named internal heir apparent and a deep, recently-promoted bench.
+      The watch-items are financial (airline debt, cyclicality), not governance.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -8.1% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-03

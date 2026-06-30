@@ -433,6 +433,43 @@ taxonomy:
   themes: [consumer-experience]
   primary_theme: consumer-experience
 
+pocd:
+  people:
+    ceo: Bahram Akradi
+    founder_led: true
+    tenure_years: 30
+    insider_ownership_pct: 7.3
+    capital_allocation: 'Founder Bahram Akradi is Chairman, President and CEO (leading since the 1990s). The post-LBO
+      story is deleveraging — net leverage cut to ~1.6x (from ~2.3x) — funded by operating cash flow and a recurring
+      sale-leaseback real-estate strategy, against heavy new-club capex. Capital return just began: a first-ever $500M
+      buyback (early 2026), no dividend. The PE sponsors (Leonard Green, TPG) that took the company private in 2015
+      are selling down.'
+    incentive_alignment: Akradi’s steady-state pay is modest (~$6.3M FY2024); the headline ~$218M for 2025 was a one-time
+      exercise of 2015 legacy options, not run-rate, and he net-accumulated shares. He owns ~7.3%. The persistent
+      flag is a related-party real-estate web — Life Time leases multiple properties from Akradi-affiliated entities
+      ($0.8-2.6M/yr each) and historically forgave a $17.7M loan to him — with audit-committee oversight.
+    governance_flags:
+    - single class of common stock, one vote per share — no founder super-voting; Akradi’s ~7.3% economic stake equals
+      his vote
+    - controlled-company status ENDED (June 2025) as the sponsor "Voting Group" fell below 50%; Leonard Green retains
+      one board-nomination right, TPG/Partners Group none
+    - founder concentration — Akradi holds all three of Chairman, President and CEO; he also chairs another public
+      company (Northern Oil & Gas)
+    - the lead independent director (Danhakl) is the managing partner of lead sponsor Leonard Green — an independence
+      caveat; board is ~10 of 12-13 independent
+    - classified / staggered board (three classes), plus a recurring related-party real-estate web (Akradi-affiliated
+      leases / sale-leasebacks) under audit-committee oversight
+    key_person_risk: medium
+    score: 3
+    takeaway: 'The positives are real for a founder-led, post-LBO name: single-class one-vote (no super-voting; the
+      founder owns just ~7.3%), controlled-company status already ended, deleveraging done, and a first buyback. Holding
+      it at 3 are the concentration of all three top titles in Akradi, a lead independent director who is the lead
+      sponsor’s managing partner, a classified board, and — most of all — a persistent related-party real-estate web
+      (Akradi-affiliated leases and a historical loan forgiveness). Key-person risk is moderate.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -33.8% finding) + position
+    sizing.'
 stamp:
   footer_version: "023"
   footer_timestamp: "2026-05-31_17-10"

@@ -598,6 +598,40 @@ competitive:
     stock still trades ~30x FCF, and the weighted DCF lands -4.8% - the unit runway is real and the brand is excellent, but
     the modal case (-5.5%) shows the multiple already pays for the runway, leaving the upside in the bull/ultra automation-and-comps
     re-acceleration.'
+pocd:
+  people:
+    ceo: Scott Boatwright
+    founder_led: false
+    tenure_years: 2
+    insider_ownership_pct: 1.0
+    capital_allocation: Scott Boatwright became CEO in November 2024 (interim from August 2024, after Brian Niccol
+      left for Starbucks); an internal promotion, not a founder. The balance sheet is net cash ($0 long-term debt);
+      FY2025 net income $1.54B on $11.9B revenue, ~$1.45B FCF, funding aggressive unit growth and a buyback-only return
+      (a $1.8B authorization added Dec 2025; ~$2.3B repurchased in 2025), no dividend. Ackman’s Pershing Square fully
+      exited in Q4 2025.
+    incentive_alignment: Boatwright’s pay is ~96% variable/equity (FY2024 ~$19M including transition grants; FY2025
+      ~$15.5M). Insider trading is routine 10b5-1 selling. The flag is say-on-pay volatility — two low votes in five
+      years (~51% in 2021, ~55% in 2025, both on one-time equity), each followed by remediation; the 2026 vote recovered
+      to ~95%.
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class, no controlling shareholder (Ackman exited
+      Q4 2025)
+    - Chair and CEO are SEPARATE, with an independent Chair (Scott Maw); 9 of 10 directors independent
+    - board declassified (annual elections since 2016); all committees independent
+    - say-on-pay volatility — two sub-60% votes in five years (2021, 2025), both remediated; a recurring pay-design
+      watch-item
+    - compressed 2024-25 leadership turnover — a new CEO and a new CFO (after a ~24-year CFO) within ~18 months
+    key_person_risk: medium
+    score: 4
+    takeaway: 'Structurally clean: single-class one-vote, a separate independent Chair, a 9-of-10 independent declassified
+      board, net cash, no controlling holder. It sits at the lower end of the clean tier because of two real watch-items
+      — a volatile say-on-pay record (two sub-60% votes in five years, both on one-time equity, since remediated)
+      and a compressed CEO-plus-CFO turnover in 2024-25. Key-person risk is moderate given the recency of that turnover,
+      offset by an internal-promote bench and a clean Niccol-to-Boatwright handoff.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -4.8% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-05

@@ -2932,6 +2932,29 @@ const MEMOS = [
         ],
         "takeaway": "A durable premium brand plus prime-real-estate moat that underwrites the DCF's terminal economics; the live risks are macro down-trade and Equinox at the top end — same-club revenue and churn are the erosion gauges.\n"
       },
+      "pocd": {
+        "people": {
+          "ceo": "Bahram Akradi",
+          "founderLed": true,
+          "tenureYears": 30,
+          "insiderOwnershipPct": 7.3,
+          "capitalAllocation": "Founder Bahram Akradi is Chairman, President and CEO (leading since the 1990s). The post-LBO story is deleveraging — net leverage cut to ~1.6x (from ~2.3x) — funded by operating cash flow and a recurring sale-leaseback real-estate strategy, against heavy new-club capex. Capital return just began: a first-ever $500M buyback (early 2026), no dividend. The PE sponsors (Leonard Green, TPG) that took the company private in 2015 are selling down.",
+          "incentiveAlignment": "Akradi’s steady-state pay is modest (~$6.3M FY2024); the headline ~$218M for 2025 was a one-time exercise of 2015 legacy options, not run-rate, and he net-accumulated shares. He owns ~7.3%. The persistent flag is a related-party real-estate web — Life Time leases multiple properties from Akradi-affiliated entities ($0.8-2.6M/yr each) and historically forgave a $17.7M loan to him — with audit-committee oversight.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no founder super-voting; Akradi’s ~7.3% economic stake equals his vote",
+            "controlled-company status ENDED (June 2025) as the sponsor \"Voting Group\" fell below 50%; Leonard Green retains one board-nomination right, TPG/Partners Group none",
+            "founder concentration — Akradi holds all three of Chairman, President and CEO; he also chairs another public company (Northern Oil & Gas)",
+            "the lead independent director (Danhakl) is the managing partner of lead sponsor Leonard Green — an independence caveat; board is ~10 of 12-13 independent",
+            "classified / staggered board (three classes), plus a recurring related-party real-estate web (Akradi-affiliated leases / sale-leasebacks) under audit-committee oversight"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "The positives are real for a founder-led, post-LBO name: single-class one-vote (no super-voting; the founder owns just ~7.3%), controlled-company status already ended, deleveraging done, and a first buyback. Holding it at 3 are the concentration of all three top titles in Akradi, a lead independent director who is the lead sponsor’s managing partner, a classified board, and — most of all — a persistent related-party real-estate web (Akradi-affiliated leases and a historical loan forgiveness). Key-person risk is moderate."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -33.8% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -4984,7 +5007,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -20320,6 +20343,29 @@ const MEMOS = [
         ],
         "takeaway": "Shake Shack's brand Power is genuine — a premium 'fine casual' name with ~$4.0M AUV well above QSR and real pricing power — but a brand doesn't convert to free cash flow while capex runs 11-12% of revenue to fund a 4x unit runway. The Audit: branding is durable (medium), process_power is the emerging swing factor under Lynch (build-cost cut, drive-thru, digital), and the threats are capital intensity + a soft, value-seeking consumer. The ~55% de-rate to ~13x EBITDA corrected the prior excess to roughly fair; the DCF tests whether the runway converts to FCF, and the modal case lands ~-9% — cheap-looking on the multiple, fair on the cash."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Rob Lynch",
+          "founderLed": false,
+          "tenureYears": 2,
+          "insiderOwnershipPct": 4.4,
+          "capitalAllocation": "Rob Lynch (ex-Papa John’s) became CEO in May 2024 — a professional outside hire; founder Danny Meyer is non-executive Chairman, not CEO. The balance sheet is net cash (~$110M: $358M cash vs $248M of 0% converts due 2028). FY2025 revenue $1.45B (+15%), net income $50M, ~$57M FCF — a thin, capital-intensive profile (heavy unit-growth capex). No dividend or buyback.",
+          "incentiveAlignment": "Lynch’s package is turnaround-weighted (FY2024 ~$13M, ~95% equity/bonus); insider trading is routine RSU tax withholding. Founder-Chairman Meyer is paid as a non-employee director and recently bought ~$2M of stock in the open market (May 2026) after selling into 2025 strength. The structural related-party item is the Up-C Tax Receivable Agreement — Shake Shack pays 85% of realized tax benefits to the continuing LLC owners (incl. Meyer).",
+          "governanceFlags": [
+            "Up-C multi-class structure, but Class B is ONE vote per share (no super-voting) — public Class A holders are not disenfranchised",
+            "founder-Chairman Meyer holds only ~8.3% of the vote, and his director-designation rights were wound down (terminated after the 2025 meeting) via a 2023 activist settlement — a de-escalation of founder control",
+            "Chair and CEO are separated, but the Chair (Meyer) is the non-independent founder; 7 of 8 directors independent with a lead independent director (Flug)",
+            "classified / staggered board (three classes) — an entrenchment feature",
+            "Tax Receivable Agreement (85% of tax benefits to continuing LLC owners) and Union Square Hospitality founder ties — ongoing related-party vectors"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 3,
+          "takeaway": "A cleaner control profile than most founder-influenced names — no super-voting (Class B is one vote), the founder-Chairman holds only ~8.3% of the vote, and his special designation rights were deliberately wound down. But the Up-C structure with its 85% Tax Receivable Agreement, a classified board, a non-independent founder-Chairman, and a ~2-year outside CEO mid-turnaround keep it below the plain single-class blue-chips. Key-person risk is moderate, leaning low."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -10.0% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -26957,6 +27003,29 @@ const MEMOS = [
         ],
         "takeaway": "Chipotle's brand Power is dominant and durable - a best-in-class premium QSR with ~$3M AUV, real scale economies across ~4,100 company-owned units, and pricing power it is deliberately not fully using to defend value. The Audit: branding is durable (high), process_power (throughput, Hyphen automation) is the emerging swing factor, and the live threats are QSR value-wars / value-perception softness plus unrecovered beef/labor inflation that just cut restaurant-level margin 250bps. The franchise quality isn't in question; the price is. Comps barely turned positive (+0.5%, no price) while the stock still trades ~30x FCF, and the weighted DCF lands -4.8% - the unit runway is real and the brand is excellent, but the modal case (-5.5%) shows the multiple already pays for the runway, leaving the upside in the bull/ultra automation-and-comps re-acceleration."
       },
+      "pocd": {
+        "people": {
+          "ceo": "Scott Boatwright",
+          "founderLed": false,
+          "tenureYears": 2,
+          "insiderOwnershipPct": 1.0,
+          "capitalAllocation": "Scott Boatwright became CEO in November 2024 (interim from August 2024, after Brian Niccol left for Starbucks); an internal promotion, not a founder. The balance sheet is net cash ($0 long-term debt); FY2025 net income $1.54B on $11.9B revenue, ~$1.45B FCF, funding aggressive unit growth and a buyback-only return (a $1.8B authorization added Dec 2025; ~$2.3B repurchased in 2025), no dividend. Ackman’s Pershing Square fully exited in Q4 2025.",
+          "incentiveAlignment": "Boatwright’s pay is ~96% variable/equity (FY2024 ~$19M including transition grants; FY2025 ~$15.5M). Insider trading is routine 10b5-1 selling. The flag is say-on-pay volatility — two low votes in five years (~51% in 2021, ~55% in 2025, both on one-time equity), each followed by remediation; the 2026 vote recovered to ~95%.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class, no controlling shareholder (Ackman exited Q4 2025)",
+            "Chair and CEO are SEPARATE, with an independent Chair (Scott Maw); 9 of 10 directors independent",
+            "board declassified (annual elections since 2016); all committees independent",
+            "say-on-pay volatility — two sub-60% votes in five years (2021, 2025), both remediated; a recurring pay-design watch-item",
+            "compressed 2024-25 leadership turnover — a new CEO and a new CFO (after a ~24-year CFO) within ~18 months"
+          ],
+          "keyPersonRisk": "medium",
+          "score": 4,
+          "takeaway": "Structurally clean: single-class one-vote, a separate independent Chair, a 9-of-10 independent declassified board, net cash, no controlling holder. It sits at the lower end of the clean tier because of two real watch-items — a volatile say-on-pay record (two sub-60% votes in five years, both on one-time equity, since remediated) and a compressed CEO-plus-CFO turnover in 2024-25. Key-person risk is moderate given the recency of that turnover, offset by an internal-promote bench and a clean Niccol-to-Boatwright handoff."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -4.8% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -27769,6 +27838,29 @@ const MEMOS = [
           }
         ],
         "takeaway": "Delta's strongest Power is classic airline scale economies - hub density, fleet/maintenance scale, and a global network that LCCs can't match on cost-per-seat - reinforced by quasi-cornered slots/gates and a genuine premium brand. The differentiated bet is the SkyMiles-Amex loyalty annuity (network + cornered-resource): a high-margin, lower-beta payments stream (>$2B/quarter toward $10B) that, with the growing premium cabin, could de-cyclicalize the earnings toward a consumer/payments business. The Audit: scale economies are durable (medium), but the loyalty re-rate is the live, unproven swing factor, and the threats are cyclicality/fuel + a soft, K-shaped main cabin - all amplified by ~$9B net debt. That tension is exactly the DCF finding: cheap at ~14x FCF, but the modal case lands ~-3% (fair) because the cycle and the debt bridge offset the multiple until the mix durably shifts."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Ed Bastian",
+          "founderLed": false,
+          "tenureYears": 10,
+          "insiderOwnershipPct": 0.5,
+          "capitalAllocation": "Ed Bastian has been CEO since 2016 (a career Delta executive, not a founder). Capital allocation in FY2025 balanced a record ~$4.6B free cash flow against deleveraging — adjusted net debt cut ~$3.7B to ~$14.3B (net debt/EBITDA ~1.8x) — plus a reinstated, growing dividend (+15% to $0.86) and ~$5.5B of 2026 reinvestment. The defined-benefit pension is overfunded (+$2.3B). Employee profit-sharing paid $1.3B for FY2025.",
+          "incentiveAlignment": "Bastian’s FY2025 compensation was ~$19.2M (heavily equity-weighted); insider trading is routine selling, no open-market buying. Alignment is standard for a widely-held mega-cap (insiders under 1%), reinforced by a clawback policy, anti-hedging/anti-pledging rules, and stock-ownership guidelines. Say-on-pay drew ~95% support.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class, no controlling shareholder (largest holder Vanguard ~11%)",
+            "Chair and CEO are separated, with an INDEPENDENT non-executive Chair (David Taylor, ex-P&G) — a strong structural positive",
+            "12 of 14 directors independent; board declassified (annual elections), majority-vote standard",
+            "a pilots-union (ALPA) board seat is the second non-independent director — an unusual but disclosed labor-governance feature",
+            "large absolute debt is inherent to a capital-intensive airline (a financial, not governance, flag) and is being steadily reduced"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "Among the cleanest governance in the book: single-class one-vote stock, a separate INDEPENDENT non-executive Chair, a 12-of-14 independent declassified board with majority voting, and strong pay hygiene (clawback, anti-pledging, ~95% say-on-pay). Key-person risk is low — a named internal heir apparent and a deep, recently-promoted bench. The watch-items are financial (airline debt, cyclicality), not governance."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -8.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -29419,6 +29511,29 @@ const MEMOS = [
         ],
         "takeaway": "Deere's scale Power is durable (high) - the #1 ag-equipment maker with a cornered dealer network, the largest installed base, and real switching costs from fleets and JDLink data; the structurally higher trough margins this cycle are evidence the moat is widening. The Audit: the live threats are the ag cycle itself plus ~$1.2B of tariffs (which compress margins regardless of moat), and the contest over whether precision ag (See & Spray, autonomy) scales into a recurring-revenue layer that de-cyclicalizes the mix - or whether rivals (CNH PTx, AGCO) split that prize. That squares with the -21.8% finding: the franchise is excellent, but bought at ~26x trough FCF the modal recovery is already priced, and only the bull's de-cyclicalization (or a strong cycle turn) justifies the full multiple."
       },
+      "pocd": {
+        "people": {
+          "ceo": "John C. May",
+          "founderLed": false,
+          "tenureYears": 6,
+          "insiderOwnershipPct": 0.3,
+          "capitalAllocation": "John May has been CEO since 2019 and Chairman since 2020 (a career Deere executive at a ~188-year-old company). Capital allocation is disciplined through the ag cycle: FY2025 net income $5.0B (−29% in the downturn) and ~$8B free cash flow funded a large buyback ($18B program, ~$10B executed, plus a new authorization in 2026) while the dividend was held flat ($6.48) rather than cut. The ~$43B consolidated debt is overwhelmingly the John Deere Capital captive-finance receivables book, not industrial leverage.",
+          "incentiveAlignment": "May’s FY2025 compensation was ~$27.9M, ~92% at-risk and ~54% performance-based; say-on-pay drew ~92% support. Insiders hold ~0.3% as a group — the aggregator \"12% insiders\" figure simply miscategorizes Gates’ Cascade stake. Largest holder Cascade (~10.8%) holds a board seat (Heuberger).",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class, no controlling shareholder",
+            "combined Chair & CEO (May), mitigated by an independent lead director (Feight) and a 10-of-11 independent board",
+            "board declassified — annual elections (a governance positive)",
+            "the largest holder (Gates’ Cascade, ~10.8%) holds a board seat — disclosed, not control",
+            "pronounced ag-equipment cyclicality (FY2025 net income −29%; dividend frozen) — a financial, not governance, flag"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "Clean blue-chip governance: single-class one-vote, a 10-of-11 independent declassified board, an independent lead director, ~92% say-on-pay, and heavily at-risk pay. The combined Chair/CEO is mitigated exactly as a comparable mega-cap’s is — and there is no founder concentration (insiders ~0.3%). Key-person risk is low for a 188-year-old, professionally-managed institution; the real risk is cyclical, not governance."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.8% finding) + position sizing."
+      },
       "appendix": {
         "pushback": [
           {
@@ -30227,6 +30342,29 @@ const MEMOS = [
           }
         ],
         "takeaway": "Align's brand Power is genuine - Invisalign is the category-defining clear-aligner name with pricing power and consumer demand pull, reinforced by the iTero installed base and patent estate as a cornered resource - but the franchise is decelerating: revenue is flat (+1%), op margin has slid four straight years to 13.5%, and ASPs are guided down under Angelalign + at-home price competition. The Audit: branding is durable (medium) but eroding at the price line; the cornered resource (iTero/scan-data/patents) is the real defense, and the live threats are commoditization + a discretionary-demand market. The ~75% de-rate from the 2021 peak corrected the prior excess to roughly fair, not to a bargain; the DCF tests whether category penetration + the teen/IPE TAM outrun ASP/share erosion, and the modal case lands +1% - de-rated, but priced about right."
+      },
+      "pocd": {
+        "people": {
+          "ceo": "Joseph M. Hogan",
+          "founderLed": false,
+          "tenureYears": 11,
+          "insiderOwnershipPct": 1.9,
+          "capitalAllocation": "Joe Hogan (ex-GE/ABB) has been CEO since 2015 — a professional manager; the founders are long gone. The balance sheet is debt-free (~$1.0B net cash) and FCF-positive (FY2025 revenue $4.0B, GAAP net income $410M). Capital return is buyback-only (a $1B program, ~$800M remaining), no dividend, with a FY2025 restructuring to lift margins.",
+          "incentiveAlignment": "CEO pay is ~91% at-risk/performance-based. The standout alignment signal is positive: Hogan is a net open-market BUYER — he has bought ~$8M of stock since 2021 with no sales — uncommon among large-cap CEOs. Say-on-pay drew ~89% support (a notable ~11% dissent on large equity grants). Activist Elliott built a stake (March 2026), no board seats yet.",
+          "governanceFlags": [
+            "single class of common stock, one vote per share — no dual-class, no controlling shareholder",
+            "Chair and CEO are SEPARATE, with an independent Chair (transitioning to Kevin Conroy mid-2026)",
+            "~90% independent board (9-10 of 10-11); declassified annual elections; all committees independent",
+            "notable say-on-pay dissent (~11%) tied to CEO equity-grant size — a compensation watch-item",
+            "an activist (Elliott) is building a stake — external pressure, outcome unresolved"
+          ],
+          "keyPersonRisk": "low",
+          "score": 4,
+          "takeaway": "Clean structure plus a rare positive: single-class one-vote, a separate independent Chair, a ~90% independent declassified board, a debt-free balance sheet — and a CEO who buys his own stock in the open market (no sales since 2021). The watch-items are a ~11% say-on-pay dissent on pay size and a fresh Elliott activist stake, neither structural. Key-person risk is low — a professional, no-control CEO with a deep bench."
+        },
+        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "contextRef": "The 7 Powers analysis (Power Audit)",
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -1.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [

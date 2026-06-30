@@ -606,6 +606,42 @@ competitive:
     digital), and the threats are capital intensity + a soft, value-seeking consumer. The ~55% de-rate to ~13x EBITDA corrected
     the prior excess to roughly fair; the DCF tests whether the runway converts to FCF, and the modal case lands ~-9% — cheap-looking
     on the multiple, fair on the cash.'
+pocd:
+  people:
+    ceo: Rob Lynch
+    founder_led: false
+    tenure_years: 2
+    insider_ownership_pct: 4.4
+    capital_allocation: 'Rob Lynch (ex-Papa John’s) became CEO in May 2024 — a professional outside hire; founder
+      Danny Meyer is non-executive Chairman, not CEO. The balance sheet is net cash (~$110M: $358M cash vs $248M of
+      0% converts due 2028). FY2025 revenue $1.45B (+15%), net income $50M, ~$57M FCF — a thin, capital-intensive
+      profile (heavy unit-growth capex). No dividend or buyback.'
+    incentive_alignment: Lynch’s package is turnaround-weighted (FY2024 ~$13M, ~95% equity/bonus); insider trading
+      is routine RSU tax withholding. Founder-Chairman Meyer is paid as a non-employee director and recently bought
+      ~$2M of stock in the open market (May 2026) after selling into 2025 strength. The structural related-party item
+      is the Up-C Tax Receivable Agreement — Shake Shack pays 85% of realized tax benefits to the continuing LLC owners
+      (incl. Meyer).
+    governance_flags:
+    - Up-C multi-class structure, but Class B is ONE vote per share (no super-voting) — public Class A holders are
+      not disenfranchised
+    - founder-Chairman Meyer holds only ~8.3% of the vote, and his director-designation rights were wound down (terminated
+      after the 2025 meeting) via a 2023 activist settlement — a de-escalation of founder control
+    - Chair and CEO are separated, but the Chair (Meyer) is the non-independent founder; 7 of 8 directors independent
+      with a lead independent director (Flug)
+    - classified / staggered board (three classes) — an entrenchment feature
+    - Tax Receivable Agreement (85% of tax benefits to continuing LLC owners) and Union Square Hospitality founder
+      ties — ongoing related-party vectors
+    key_person_risk: medium
+    score: 3
+    takeaway: A cleaner control profile than most founder-influenced names — no super-voting (Class B is one vote),
+      the founder-Chairman holds only ~8.3% of the vote, and his special designation rights were deliberately wound
+      down. But the Up-C structure with its 85% Tax Receivable Agreement, a classified board, a non-independent founder-Chairman,
+      and a ~2-year outside CEO mid-turnaround keep it below the plain single-class blue-chips. Key-person risk is
+      moderate, leaning low.
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -10.0% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-11_19-58

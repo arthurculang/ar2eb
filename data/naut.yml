@@ -11,7 +11,7 @@
 #     at $0.00 expected (equity wipeout under heavy dilution).
 #   - Thesis + weighting_rationale trimmed to fit Page 1 left column
 #     (overlap into scenario card band fixed).
-#   - Weighted expected $5.72 / +138% vs spot $2.40 (v001 was $7.02 / +193%).
+#   - Weighted expected $6.58 / +174% vs spot $2.40 (post-§6c.11.2 widening; was $5.72 / +138%; v001 $7.02 / +193%).
 #
 # Same dcf_type/family as JOBY+AUR (young_company). NAUT is materially earlier-
 # stage: fully pre-revenue, commercial launch ~6 months away, ~47% of market
@@ -507,7 +507,7 @@ pocd:
       beyond the 2027 runway.'
   opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + position sizing.'
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing.'
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-05-31_17-10"
