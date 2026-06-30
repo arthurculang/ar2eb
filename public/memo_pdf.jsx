@@ -2298,23 +2298,31 @@ function MatureSegmentsChart({ memo, widthPt = 280, heightPt = 190 }) {
   }
 
   const m = CHART_MARGIN;
-  const plotL = m.left + 8, plotR = widthPt - m.right;
+  const plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
-  const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
   const yMax = Math.max(...segA, ...segB) * 1.15;
   const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
-  const yTickStep = yMax > 4000 ? 1000 : yMax > 2000 ? 500 : yMax > 1000 ? 250 : 100;
+  // Magnitude-aware axis: display $B once a segment reaches $1B (1,000 $M), else $M;
+  // niceStep keeps the tick count ~6 at any scale. (The old fixed step capped at 1,000
+  // and exploded into ~130 gridlines at mega-cap $100B+ segment revenue — spec §3.5.)
+  const useB = yMax >= 1000;
+  const unit = useB ? 'B' : 'M';
+  const div = useB ? 1000 : 1;
+  const yStep = niceStep(yMax);
   const yTicks = [];
-  for (let v = 0; v <= yMax; v += yTickStep) {
-    yTicks.push([v, v >= 1000 ? `${(v / 1000).toFixed(1)}K` : `${v.toFixed(0)}`]);
-  }
+  for (let v = 0; v <= yMax + yStep * 0.5; v += yStep)
+    yTicks.push([v, `$${(v / div).toFixed(yStep / div < 1 ? 1 : 0)}${unit}`]);
+  // Left margin sized to the widest y-label so labels never clip (spec §3.5).
+  const plotL = Math.max(m.left,
+    Math.ceil(Math.max(...yTicks.map(([, l]) => monoTextWidth(l, 5.5)))) + 5);
+  const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
   const xTicks = histYears.map((y, i) => [i, `${y - 2000}`]);
 
   return (
     <svg width={`${widthPt}pt`} height={`${heightPt}pt`}
          viewBox={`0 0 ${widthPt} ${heightPt}`}
          style={{ display: 'block' }}>
-      <ChartTitle>Revenue by segment ($M)</ChartTitle>
+      <ChartTitle>{`Revenue by segment ($${unit})`}</ChartTitle>
       <YGridTicks ticks={yTicks} yScale={yScale} plotL={plotL} plotR={plotR} />
       <XTicks ticks={xTicks} xScale={xScale} plotB={plotB} />
       <path d={pathD(segA.map((v, i) => [i, v]), xScale, yScale)}
