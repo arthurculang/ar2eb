@@ -5007,7 +5007,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +138% finding) + position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
