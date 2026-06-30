@@ -37,13 +37,13 @@ baseline, Chromium present). Work on a branch, e.g. `launch-2026-07`.
 
 ### 1. (Recommended, judgment) Re-price the official set
 
-So the launch memos price off the June 30 close rather than the June 22
-monthly PR: refresh `spot` + `market.market_cap_billion` per public ticker
+So the launch memos price off the June 30 close rather than the last
+committed spot: refresh `spot` + `market.market_cap_billion` per public ticker
 from Yahoo — surgical numeric edits only, theses/scenarios untouched, skip
 `private_prevaluation` (same mechanics as the monthly Routine's step 2).
 Then `python portfolio/build_weights.py` so weights match launch prices.
 Commit this separately *before* the flip. (Skipping is fine — then the
-official set carries the June 22 prices.)
+official set carries the last committed prices.)
 
 ### 2. Export the pre-launch archive  *(safe, idempotent)*
 
@@ -94,7 +94,25 @@ dirty tree. Verifies every official PDF landed before staging.
 - Commit (e.g. `Launch 2026-07-01: official set v+1, pre-launch memos
   archived`), PR, merge → Pages deploys ar2eb.com.
 
-### 6. Post-launch checks
+### 6. Verify both Routines are armed  *(owner — only visible in the cloud UI)*
+
+The repo side is complete, but whether the two Routines are actually live is
+owner-only state — and the monthly has **never demonstrably fired** (no June-22
+"Monthly rebuild" PR). Confirm at **https://claude.ai/code/routines**:
+
+- [ ] Both `ar2eb daily performance` and `ar2eb monthly rebuild` are **enabled**,
+  show `arthurculang/ar2eb` as a **connected source**, and direct push to `main`
+  isn't blocked by branch protection (else switch the daily prompt to "open a PR").
+- [ ] **Daily — "Run now"** after the July-1 close: this both tests the routine
+  and produces the genuine t₀ row (`portfolio/performance.csv` gains one line,
+  benchmarks populated). Keep it.
+- [ ] **Monthly — "Run now" as a one-time smoke test, then CLOSE the PR unmerged.**
+  It does a real bump + re-price + re-weight and opens a "Monthly rebuild 2026-07"
+  PR — which you do *not* want merged on launch day (the flip just set every stamp
+  to v+1). Inspect it to confirm it ran end-to-end, then close it. The first real
+  monthly is the scheduled **2026-07-22** run.
+
+### 7. Post-launch checks
 
 - [ ] Site memo pages show **no "Prior versions" panel**.
 - [ ] An old PDF URL (grab one from the MANIFEST) → **404**.
