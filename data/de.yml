@@ -612,6 +612,37 @@ competitive:
     layer that de-cyclicalizes the mix - or whether rivals (CNH PTx, AGCO) split that prize. That squares with the -21.8%
     finding: the franchise is excellent, but bought at ~26x trough FCF the modal recovery is already priced, and only the
     bull''s de-cyclicalization (or a strong cycle turn) justifies the full multiple.'
+pocd:
+  people:
+    ceo: John C. May
+    founder_led: false
+    tenure_years: 6
+    insider_ownership_pct: 0.3
+    capital_allocation: 'John May has been CEO since 2019 and Chairman since 2020 (a career Deere executive at a ~188-year-old
+      company). Capital allocation is disciplined through the ag cycle: FY2025 net income $5.0B (−29% in the downturn)
+      and ~$8B free cash flow funded a large buyback ($18B program, ~$10B executed, plus a new authorization in 2026)
+      while the dividend was held flat ($6.48) rather than cut. The ~$43B consolidated debt is overwhelmingly the
+      John Deere Capital captive-finance receivables book, not industrial leverage.'
+    incentive_alignment: May’s FY2025 compensation was ~$27.9M, ~92% at-risk and ~54% performance-based; say-on-pay
+      drew ~92% support. Insiders hold ~0.3% as a group — the aggregator "12% insiders" figure simply miscategorizes
+      Gates’ Cascade stake. Largest holder Cascade (~10.8%) holds a board seat (Heuberger).
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class, no controlling shareholder
+    - combined Chair & CEO (May), mitigated by an independent lead director (Feight) and a 10-of-11 independent board
+    - board declassified — annual elections (a governance positive)
+    - the largest holder (Gates’ Cascade, ~10.8%) holds a board seat — disclosed, not control
+    - pronounced ag-equipment cyclicality (FY2025 net income −29%; dividend frozen) — a financial, not governance,
+      flag
+    key_person_risk: low
+    score: 4
+    takeaway: 'Clean blue-chip governance: single-class one-vote, a 10-of-11 independent declassified board, an independent
+      lead director, ~92% say-on-pay, and heavily at-risk pay. The combined Chair/CEO is mitigated exactly as a comparable
+      mega-cap’s is — and there is no founder concentration (insiders ~0.3%). Key-person risk is low for a 188-year-old,
+      professionally-managed institution; the real risk is cyclical, not governance.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.8% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-03

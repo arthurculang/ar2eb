@@ -610,6 +610,36 @@ competitive:
     market. The ~75% de-rate from the 2021 peak corrected the prior excess to roughly fair, not to a bargain; the DCF tests
     whether category penetration + the teen/IPE TAM outrun ASP/share erosion, and the modal case lands +1% - de-rated, but
     priced about right.'
+pocd:
+  people:
+    ceo: Joseph M. Hogan
+    founder_led: false
+    tenure_years: 11
+    insider_ownership_pct: 1.9
+    capital_allocation: Joe Hogan (ex-GE/ABB) has been CEO since 2015 — a professional manager; the founders are long
+      gone. The balance sheet is debt-free (~$1.0B net cash) and FCF-positive (FY2025 revenue $4.0B, GAAP net income
+      $410M). Capital return is buyback-only (a $1B program, ~$800M remaining), no dividend, with a FY2025 restructuring
+      to lift margins.
+    incentive_alignment: 'CEO pay is ~91% at-risk/performance-based. The standout alignment signal is positive: Hogan
+      is a net open-market BUYER — he has bought ~$8M of stock since 2021 with no sales — uncommon among large-cap
+      CEOs. Say-on-pay drew ~89% support (a notable ~11% dissent on large equity grants). Activist Elliott built a
+      stake (March 2026), no board seats yet.'
+    governance_flags:
+    - single class of common stock, one vote per share — no dual-class, no controlling shareholder
+    - Chair and CEO are SEPARATE, with an independent Chair (transitioning to Kevin Conroy mid-2026)
+    - ~90% independent board (9-10 of 10-11); declassified annual elections; all committees independent
+    - notable say-on-pay dissent (~11%) tied to CEO equity-grant size — a compensation watch-item
+    - an activist (Elliott) is building a stake — external pressure, outcome unresolved
+    key_person_risk: low
+    score: 4
+    takeaway: 'Clean structure plus a rare positive: single-class one-vote, a separate independent Chair, a ~90% independent
+      declassified board, a debt-free balance sheet — and a CEO who buys his own stock in the open market (no sales
+      since 2021). The watch-items are a ~11% say-on-pay dissent on pay size and a fresh Elliott activist stake, neither
+      structural. Key-person risk is low — a professional, no-control CEO with a deep bench.'
+  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  context_ref: The 7 Powers analysis (Power Audit)
+  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -1.5% finding) + position
+    sizing.'
 stamp:
   footer_version: '001'
   footer_timestamp: 2026-06-14_23-05

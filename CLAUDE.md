@@ -472,6 +472,32 @@ Present decisions as a **table** so I can approve in bulk. Columns:
     Site-only (same poppler caveat as batch 1). **GRAL HELD from the batch — and flagged: thesis-changing event the committed memo predates** —
     NHS-Galleri MISSED its primary endpoint (Feb 2026), stock ~$100→~$50, CEO changed (Ragusa→Ofman); GRAL is a ~4.2% tracked holding so the stale
     +9%/$73 finding mis-sizes the book → needs a re-research/re-price (not just POCD) before adding its scorecard.
+  - **POCD rollout COMPLETED for all operating-company memos (2026-06-26→27): now 52 of 57 with POCD.** This session added 31 scorecards —
+    PR #72 (gral/dis/tost/beam/aur/serv/adsk, 7) + batches 3-6 (24) — all observable/sourced/conviction-neutral, all four legs, ~6 parallel
+    research subagents per batch, all STRICT 7pp, validator green, site-only (poppler caveat). **GRAL re-priced +6.4% & POCD'd (#72) — supersedes the
+    batch-2 hold above.** Batch 3 (#73): PACB/RXRX/NVCR/PRME/ACHR 3, **YOU 2**. Batch 4 (#74): AAPL/JOBY **4**, OKLO/IONQ/HOOD 3, **RDDT 2**. Batch 5 (#75):
+    **TEM/SYM 2**, TXG/TWST/U/WRBY 3. Batch 6 (#76): **DAL/DE/ALGN/CMG 4**, SHAK/LTH 3. **→ every tracked-book holding now has POCD.**
+    **The now-stable score rubric (observable governance, NOT conviction):** **4** = clean one-share-one-vote + sound board (a combined Chair/CEO is fine if
+    mitigated by an independent lead director, cf NVDA/DE; a separate *independent* chair is best, cf AAPL/DAL/ALGN); **3** = dual-class super-voting WITH
+    mitigants (GOOGL/COIN/TXG/HOOD/WRBY) OR single-class with a structural flag — combined Chair/CEO + concentration, classified board, Up-C/TRA, or a
+    related-party web (CAI/CART/TWST/U/SHAK/LTH); **2** = majority single-person/family voting control + combined Chair/CEO (META/TSLA/YOU/RDDT/TEM/SYM).
+    No **1** used yet — **SYM is the standing candidate** (control entrenchment + a 2024 restatement / unremediated material-weakness integrity flag); Arthur
+    to decide whether to open a "1". Observable corrections caught & folded in: **NVCR CEO now Frank Leonard (Dec-2025)**; **AAPL succession Cook→Ternus
+    (eff Sept-2026)**; RXRX founder Gibson off CEO+board; ACHR super-voting sunset Dec-2024→single-class; OKLO Altman left the board entirely (Apr-2025);
+    **U is NOT founder-led** (Bromberg turnaround CEO after the 2023 Runtime-Fee ouster). **DEFERRED — non-operating-company memos (Arthur's call):** BLGFF
+    (closed-end fund → would need a tailored manager+board variant) + PYKA/ZIPLINE (private, no public proxy → skip the scored rubric). *Lessons:* (1) build
+    the pocd block via **yaml.dump** (auto-handles quoting/colons/apostrophes — kills the CROX `Word: ` bug class); (2) `insider_ownership_pct` = the **economic**
+    %, with voting % carried in `governance_flags` for dual-class names; (3) a few research subagents spawned nested sub-agents and stalled without compiling —
+    resume via SendMessage ("synthesize now from gathered research, don't spawn").
+  - **PACB re-priced +58.7% → +30.6% (#74).** Scenario-separation (#70) had left 62% of FV in the lone 7%-prob ultra-bull; ultra revenue is at the spread-rule
+    floor and the equity convexity is structural (net debt > equity cap), so the one honest lever was the ultra **probability** — 0.07 was peer-inconsistent
+    (lagging ACHR uses 0.04) → trimmed to 0.05, 2% to bear. Also fixed a **stale thesis** #70 left reading the pre-widening "−2.3%, modestly negative." Still
+    tail-driven (the honest shape for a distressed/levered option).
+  - **Segment-chart Y-axis bug FIXED (#76).** `MatureSegmentsChart` ("Revenue by segment") kept a fixed tick step capped at 1,000; segment revenue is in **$M**,
+    so any $10B+ segment exploded into dozens-to-hundreds of stacked gridlines (NVDA ~218, AMZN ~687, GOOGL ~398, AAPL ~367) — an unreadable y-axis smear on
+    EVERY mega-cap segment chart (Arthur flagged NVDA). Wave-2c fixed this class on the Revenue/FCF charts but **missed the segment chart**. Fix = `niceStep` +
+    magnitude-aware $M/$B units + data-sized left margin (the same pattern the Revenue/FCF charts already use); affects all 41 mature memos; verified across the
+    scale range, all STRICT-clean.
 - **Spec §15 (v036, DRAFT) — operating cadence & automation + 1 July 2026 "launch" (Arthur's ask).**
   **Monthly (22nd):** bump each re-priced ticker (= archive: grows the on-site "Prior versions" panel; replaces the `archive/YYYY-MM/` move — v042) → mechanically re-price + re-render all memos → update §12 weights →
   deploy. **Daily (after close):** track the weighted portfolio vs. a wide multi-asset benchmark set
