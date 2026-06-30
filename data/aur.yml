@@ -68,10 +68,60 @@ page3_chart_config:
 scenarios:
 
   # ───────────────────────────────────────────────────────────────────────────
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.15
+    expected_per_share: 0.00
+    headline: "Autonomy economics never close; wiped."
+    narrative:
+      - >
+        The deepest tail: Aurora reaches some commercial scale (~$2.1B by FY36) but the driverless unit economics never close — the per-mile cost of the autonomy stack, validation and teleoperation stays above what shippers will pay, so the business is perpetually unprofitable rather than the bear's eventual ~8% margin.
+      - >
+        Aurora still draws the full ~$4.25B of dilutive capital (126M → ~3.4B shares, 74% dilution) chasing scale, but the money funds losses against a model that never inflects. Operating EV is deeply negative with no self-sustaining FCF base — the terminal carries negative going-concern value.
+      - >
+        With 55% within-scenario distress probability and no residual recovery assumed, expected per-share is $0.00 — a deeper wipeout than the bear, where the platform at least turns the corner to thin profitability. This is the tail where driverless freight does not work as a venture-returns business.
+    probability_rationale: >
+      The deepest-failure tail, split from the bear so the downside is not one undifferentiated bucket (the book-wide convention). 15% weight reflects genuine "the economics never close" risk for capital-intensive L4 autonomy; distinct from the bear (sub-scale but eventually thinly profitable). Within-scenario 55% p_fail captures the binary nature of an unproven autonomy stack.
+
+    dcf_metrics:
+      tam_share: 1.25
+      p_fail: 55
+      s2c: 1.2
+
+    dcf_path:
+      rev_path:    [0.013, 0.035, 0.07, 0.13, 0.27, 0.55, 0.95, 1.4, 1.8, 2.1]
+      op_margin:   [-8, -4.5, -2.6, -1.3, -0.7, -0.35, -0.18, -0.08, 0, 0.04]
+      wacc_path:   [0.145, 0.145, 0.14, 0.135, 0.13, 0.125, 0.12, 0.115, 0.11, 0.105]
+      term_g: 0.02
+      nopat:       [-0.104, -0.158, -0.182, -0.169, -0.189, -0.193, -0.171, -0.112, 0, 0.084]
+      reinvest:    [-0.026, 0.018, 0.029, 0.05, 0.117, 0.233, 0.333, 0.375, 0.333, 0.25]
+      fcf:         [-0.078, -0.176, -0.211, -0.219, -0.306, -0.426, -0.504, -0.487, -0.333, -0.166]
+      pv_fcf:      [-0.068, -0.134, -0.141, -0.129, -0.16, -0.198, -0.209, -0.181, -0.111, -0.05]
+      sum_pv_fcf: -1.38
+      terminal_value: -1.99
+      pv_terminal: -0.6
+      op_ev: -1.98
+      cash: 1.28
+      net_debt: 0.0
+      total_equity: -0.7
+      raise_total: 4.25
+      dilution_pct: 74
+      final_shares: 3401
+      dcf_per_share: -0.21
+      distress: 0.0
+
+    chart_data:
+      raises:             [0.5, 0.75, 0.75, 0.75, 0.75, 0.5, 0.25, 0, 0, 0]
+      raise_prices:       [5, 4, 3.5, 3, 2.5, 2, 1.75, 0, 0, 0]
+      rev_per_truck: [95, 103, 112, 120, 128, 135, 140, 143, 145, 148]
+      tam_competitor_share: 30.0
+
+  # ───────────────────────────────────────────────────────────────────────────
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.35
+    probability: 0.20
     expected_per_share: 0.11
     headline: "Tech doesn't scale, capital exhausts."
     narrative:
@@ -103,7 +153,7 @@ scenarios:
       45% p_fail captures Aurora-specific failure; the 35% scenario weight
       reflects category-level risk — autonomous trucking economics may not
       scale for Western operators. Waymo Via's 2023 shutdown was a credible
-      signal of category difficulty. The 35% weight is slightly above JOBY's
+      signal of category difficulty. The 15% weight is slightly above JOBY's
       30% bear because AUR is earlier-stage (pre-commercial), more
       capital-dependent, and faces more direct competition.
 

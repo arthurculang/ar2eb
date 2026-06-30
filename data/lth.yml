@@ -80,10 +80,78 @@ page3_chart_config:
 scenarios:
 
   # ───────────────────────────────────────────────────────────────────────────
+  ultra_bear:
+    label: Ultra Bear
+    short_label: UltBear
+    probability: 0.08
+    expected_per_share: 0.00
+    headline: "Leverage bites; deep decline."
+    narrative:
+      - >
+        The deepest tail: a real recession compresses discretionary luxury-fitness
+        spend, so memberships and revenue do not merely decelerate (the bear) but
+        decline — revenue shrinks at a low-single-digit rate through FY30 and the
+        FCF margin erodes toward the low single digits.
+      - >
+        The sale-leaseback tap closes faster and on worse terms in a downturn:
+        less real-estate value is realized (~$0.55B over five years vs the bear's
+        ~$0.95B) while the rent obligations from prior SLBs keep compounding
+        against a shrinking revenue base — the capital-recycling engine runs in
+        reverse.
+      - >
+        With ~$1.3B of financial net debt (plus $2.5B+ of capitalized leases)
+        sitting against a declining ~$0.6B operating EV, the equity is deeply
+        underwater — a notional -$2/share. Expected per-share floors at $0.00: a
+        markedly deeper wipeout than the bear, where the business at least holds
+        flat. This is the tail where the leveraged structure, not the brand,
+        decides the outcome.
+    probability_rationale: >
+      The deepest-failure tail, split from the bear so the downside is not one
+      undifferentiated bucket (the book-wide convention). 8% weight reflects a
+      genuine recession-plus-leverage scenario for a company whose enterprise
+      obligations approach $4B; distinct from the bear (flat-to-soft, equity ~$0)
+      in that revenue actually declines and the SLB engine reverses. Mature names
+      carry no within-scenario failure probability, so the value is the levered
+      DCF floored at zero.
+
+    # Mature-Company DCF metrics (LTH variant: third metric is SLB total)
+    dcf_metrics:
+      cagr_5y: -3.4
+      wacc: 0.115
+      slb_total_5y: 0.55          # cumulative SLB proceeds over 5y ($B) — taps out faster in a downturn
+
+    # 5-year DCF path (FY26 → FY30) — length-5 arrays, NOT zero-padded
+    dcf_path:
+      rev_b: 2.995
+      rev_path:    [0.03, -0.02, -0.05, -0.06, -0.07]    # growth rates (revenue declines)
+      op_margin:   [0.165, 0.155, 0.145, 0.135, 0.125]
+      wacc_path:   [0.115, 0.115, 0.115, 0.115, 0.115]
+      fcf:         [0.120, 0.105, 0.085, 0.065, 0.050]
+      pv_fcf:      [0.108, 0.084, 0.061, 0.042, 0.029]
+      term_g: 0.010
+      sum_pv_fcf: 0.32
+      terminal_value: 0.48
+      pv_terminal: 0.28
+      op_ev: 0.60
+      cash: 0.232
+      net_debt: 1.29
+      total_equity: -0.46           # = op_ev + cash - net_debt
+      raise_total: 0.0
+      dilution_pct: 0
+      final_shares: 222
+      dcf_per_share: -2.07
+      distress: 0.0
+
+    chart_data:
+      slb_per_year:           [0.20, 0.15, 0.10, 0.05, 0.05]    # $B SLB proceeds (sums to slb_total_5y)
+      luxury_club_count_fy30: 60                                 # fewer luxury openings in a downturn
+      fcf_to_ebitda_ratio:    0.08
+
+  # ───────────────────────────────────────────────────────────────────────────
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.20
+    probability: 0.12
     expected_per_share: 0.00
     headline: "Capital recycling, not earnings."
     narrative:
@@ -116,7 +184,7 @@ scenarios:
       remaining); each SLB trades one-time cash for permanent rent increase.
       Net debt + capitalized lease obligations near $4B. If macro slows and
       luxury fitness spend compresses, FCF margin drops, stock works to
-      $20-25. The 20% weight reflects that this thesis bumps against LTH's
+      $20-25. The 12% weight reflects that this thesis bumps against LTH's
       actual track record: FY24/25 execution strong, recent S&P upgrade
       validates the credit story, and new luxury club economics ($25-35M
       revenue vs $15-20M legacy) genuinely change the unit math.
