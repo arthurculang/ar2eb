@@ -539,20 +539,12 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -33.8% finding) + position
     sizing.'
 stamp:
-  footer_version: "024"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "025"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "024"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "023"
-    timestamp: "2026-05-31_17-10"
-    asOfDate: "2026-05-16"
-    spotPrice: 33.61
-  - version: "022"
-    timestamp: "2026-05-23_21-14"
-    asOfDate: "2026-05-16"
-    spotPrice: 33.61
+  pdf_version: "025"
+  pdf_timestamp: "2026-07-02_15-17"
+
 glossary:
 - term: SLB
   definition: Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent.

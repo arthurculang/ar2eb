@@ -13,24 +13,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "joby-memo__v031__2026-07-02_06-47.pdf",
-      "size": "395 KB",
-      "priorVersions": [
-        {
-          "version": "030",
-          "file": "joby-memo__v030__2026-05-31_17-10.pdf",
-          "size": "344 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 10.5
-        },
-        {
-          "version": "029",
-          "file": "joby-memo__v029__2026-05-23_21-14.pdf",
-          "size": "320 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 10.5
-        }
-      ]
+      "file": "joby-memo__v032__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$8.7B",
@@ -1287,8 +1272,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "031",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "032",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -1303,24 +1288,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "aur-memo__v025__2026-07-02_06-47.pdf",
-      "size": "390 KB",
-      "priorVersions": [
-        {
-          "version": "024",
-          "file": "aur-memo__v024__2026-05-31_17-10.pdf",
-          "size": "341 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 7.74
-        },
-        {
-          "version": "023",
-          "file": "aur-memo__v023__2026-05-23_21-14.pdf",
-          "size": "317 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 7.74
-        }
-      ]
+      "file": "aur-memo__v026__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$12.09B",
@@ -2575,8 +2545,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "025",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "026",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -2591,24 +2561,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "lth-memo__v024__2026-07-02_06-47.pdf",
-      "size": "298 KB",
-      "priorVersions": [
-        {
-          "version": "023",
-          "file": "lth-memo__v023__2026-05-31_17-10.pdf",
-          "size": "262 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 33.61
-        },
-        {
-          "version": "022",
-          "file": "lth-memo__v022__2026-05-23_21-14.pdf",
-          "size": "240 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 33.61
-        }
-      ]
+      "file": "lth-memo__v025__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$8.89B",
@@ -3473,8 +3428,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "024",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "025",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -3489,38 +3444,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "zm-memo__v025__2026-07-02_06-47.pdf",
-      "size": "297 KB",
-      "priorVersions": [
-        {
-          "version": "024",
-          "file": "zm-memo__v024__2026-05-31_17-10.pdf",
-          "size": "296 KB",
-          "asOfDate": "2026-05-27",
-          "spotPrice": 105.64
-        },
-        {
-          "version": "023",
-          "file": "zm-memo__v023__2026-05-27_19-17.pdf",
-          "size": "255 KB",
-          "asOfDate": "2026-05-27",
-          "spotPrice": 105.64
-        },
-        {
-          "version": "022",
-          "file": "zm-memo__v022__2026-05-27_15-31.pdf",
-          "size": "237 KB",
-          "asOfDate": "2026-05-27",
-          "spotPrice": 105.64
-        },
-        {
-          "version": "021",
-          "file": "zm-memo__v021__2026-05-23_21-14.pdf",
-          "size": "238 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 100.01
-        }
-      ]
+      "file": "zm-memo__v026__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$27.76B",
@@ -4409,8 +4335,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "025",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "026",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -4425,31 +4351,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "naut-memo__v006__2026-07-02_06-47.pdf",
-      "size": "386 KB",
-      "priorVersions": [
-        {
-          "version": "005",
-          "file": "naut-memo__v005__2026-05-31_17-10.pdf",
-          "size": "337 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 2.4
-        },
-        {
-          "version": "004",
-          "file": "naut-memo__v004__2026-05-28_05-25.pdf",
-          "size": "312 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 2.4
-        },
-        {
-          "version": "003",
-          "file": "naut-memo__v003__2026-05-23_21-14.pdf",
-          "size": "314 KB",
-          "asOfDate": "2026-05-16",
-          "spotPrice": 2.4
-        }
-      ]
+      "file": "naut-memo__v007__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$232M",
@@ -5714,8 +5618,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "006",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "007",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -5730,38 +5634,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "isrg-memo__v005__2026-07-02_06-47.pdf",
-      "size": "307 KB",
-      "priorVersions": [
-        {
-          "version": "004",
-          "file": "isrg-memo__v004__2026-05-31_17-03.pdf",
-          "size": "306 KB",
-          "asOfDate": "2026-05-27",
-          "spotPrice": 436.64
-        },
-        {
-          "version": "003",
-          "file": "isrg-memo__v003__2026-05-29_01-52.pdf",
-          "size": "266 KB",
-          "asOfDate": "2026-05-27",
-          "spotPrice": 436.64
-        },
-        {
-          "version": "002",
-          "file": "isrg-memo__v002__2026-05-28_05-26.pdf",
-          "size": "266 KB",
-          "asOfDate": "2026-05-27",
-          "spotPrice": 436.64
-        },
-        {
-          "version": "001",
-          "file": "isrg-memo__v001__2026-05-27_19-30.pdf",
-          "size": "260 KB",
-          "asOfDate": "2026-05-27",
-          "spotPrice": 436.64
-        }
-      ]
+      "file": "isrg-memo__v006__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$142.8B",
@@ -6602,8 +6477,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -6618,31 +6493,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "ionq-memo__v004__2026-07-02_06-47.pdf",
-      "size": "399 KB",
-      "priorVersions": [
-        {
-          "version": "003",
-          "file": "ionq-memo__v003__2026-05-31_17-03.pdf",
-          "size": "379 KB",
-          "asOfDate": "2026-05-29",
-          "spotPrice": 70.14
-        },
-        {
-          "version": "002",
-          "file": "ionq-memo__v002__2026-05-30_00-02.pdf",
-          "size": "351 KB",
-          "asOfDate": "2026-05-29",
-          "spotPrice": 70.14
-        },
-        {
-          "version": "001",
-          "file": "ionq-memo__v001__2026-05-29_23-02.pdf",
-          "size": "351 KB",
-          "asOfDate": "2026-05-29",
-          "spotPrice": 70.14
-        }
-      ]
+      "file": "ionq-memo__v005__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$19.18B",
@@ -7910,8 +7763,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -7926,24 +7779,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "coin-memo__v003__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "002",
-          "file": "coin-memo__v002__2026-05-31_17-11.pdf",
-          "size": "302 KB",
-          "asOfDate": "2026-05-29",
-          "spotPrice": 182.25
-        },
-        {
-          "version": "001",
-          "file": "coin-memo__v001__2026-05-29_23-20.pdf",
-          "size": "263 KB",
-          "asOfDate": "2026-05-29",
-          "spotPrice": 182.25
-        }
-      ]
+      "file": "coin-memo__v004__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$41.94B",
@@ -8822,8 +8660,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "003",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "004",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -8838,17 +8676,9 @@ const MEMOS = [
     "publishedISO": "2026-05-29",
     "publishedLabel": "May 29, 2026",
     "pdf": {
-      "file": "anthropic-memo__v002__2026-05-31_17-11.pdf",
-      "size": "233 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "anthropic-memo__v001__2026-05-29_23-44.pdf",
-          "size": "204 KB",
-          "asOfDate": "2026-05-29",
-          "spotPrice": 165.0
-        }
-      ]
+      "file": "anthropic-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$61.5B",
@@ -9350,8 +9180,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-05-31_17-11",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -9366,17 +9196,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "rklb-memo__v002__2026-07-02_06-47.pdf",
-      "size": "388 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "rklb-memo__v001__2026-05-31_18-52.pdf",
-          "size": "388 KB",
-          "asOfDate": "2026-05-31",
-          "spotPrice": 142.0
-        }
-      ]
+      "file": "rklb-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$57.34B",
@@ -10606,8 +10428,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -10622,17 +10444,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "oklo-memo__v002__2026-07-02_06-47.pdf",
-      "size": "399 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "oklo-memo__v001__2026-05-31_20-03.pdf",
-          "size": "380 KB",
-          "asOfDate": "2026-05-31",
-          "spotPrice": 67.2
-        }
-      ]
+      "file": "oklo-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$9.44B",
@@ -11875,8 +11689,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -11891,17 +11705,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "achr-memo__v002__2026-07-02_06-47.pdf",
-      "size": "393 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "achr-memo__v001__2026-05-31_20-31.pdf",
-          "size": "376 KB",
-          "asOfDate": "2026-05-31",
-          "spotPrice": 6.81
-        }
-      ]
+      "file": "achr-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$3.89B",
@@ -13143,8 +12949,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -13159,17 +12965,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "gral-memo__v002__2026-07-02_06-47.pdf",
-      "size": "394 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "gral-memo__v001__2026-05-31_20-47.pdf",
-          "size": "375 KB",
-          "asOfDate": "2026-06-25",
-          "spotPrice": 62.0
-        }
-      ]
+      "file": "gral-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$3B",
@@ -14397,8 +14195,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -14413,17 +14211,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "txg-memo__v002__2026-07-02_06-47.pdf",
-      "size": "295 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "txg-memo__v001__2026-05-31_21-46.pdf",
-          "size": "275 KB",
-          "asOfDate": "2026-05-31",
-          "spotPrice": 28.11
-        }
-      ]
+      "file": "txg-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4.96B",
@@ -15261,8 +15051,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -15277,17 +15067,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "lulu-memo__v002__2026-07-02_06-47.pdf",
-      "size": "290 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "lulu-memo__v001__2026-06-03_15-38.pdf",
-          "size": "290 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 127.0
-        }
-      ]
+      "file": "lulu-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$13.27B",
@@ -16110,8 +15892,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -16126,17 +15908,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "abnb-memo__v002__2026-07-02_06-47.pdf",
-      "size": "291 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "abnb-memo__v001__2026-06-03_15-44.pdf",
-          "size": "291 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 133.0
-        }
-      ]
+      "file": "abnb-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$95.75B",
@@ -16952,8 +16726,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -16968,17 +16742,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "uber-memo__v002__2026-07-02_06-47.pdf",
-      "size": "291 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "uber-memo__v001__2026-06-03_15-44.pdf",
-          "size": "291 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 70.4
-        }
-      ]
+      "file": "uber-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$147.9B",
@@ -17798,8 +17564,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -17814,17 +17580,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "yeti-memo__v002__2026-07-02_06-47.pdf",
-      "size": "290 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "yeti-memo__v001__2026-06-03_15-50.pdf",
-          "size": "272 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 48.0
-        }
-      ]
+      "file": "yeti-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$3.73B",
@@ -18645,8 +18403,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -18661,17 +18419,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "dash-memo__v002__2026-07-02_06-47.pdf",
-      "size": "293 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "dash-memo__v001__2026-06-03_15-50.pdf",
-          "size": "292 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 159.0
-        }
-      ]
+      "file": "dash-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$78.38B",
@@ -19487,8 +19237,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -19503,17 +19253,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "ilmn-memo__v002__2026-07-02_06-47.pdf",
-      "size": "296 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "ilmn-memo__v001__2026-06-03_15-50.pdf",
-          "size": "295 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 144.83
-        }
-      ]
+      "file": "ilmn-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$27.77B",
@@ -20332,8 +20074,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -20348,17 +20090,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "shak-memo__v002__2026-07-02_06-47.pdf",
-      "size": "296 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "shak-memo__v001__2026-06-11_19-58.pdf",
-          "size": "277 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 54.7
-        }
-      ]
+      "file": "shak-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$2.43B",
@@ -21184,8 +20918,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -21200,17 +20934,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "meta-memo__v002__2026-07-02_06-47.pdf",
-      "size": "301 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "meta-memo__v001__2026-06-14_20-19.pdf",
-          "size": "286 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 566.98
-        }
-      ]
+      "file": "meta-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1545.1B",
@@ -22030,8 +21756,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -22046,17 +21772,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "amzn-memo__v002__2026-07-02_06-47.pdf",
-      "size": "301 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "amzn-memo__v001__2026-06-14_20-19.pdf",
-          "size": "295 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 238.55
-        }
-      ]
+      "file": "amzn-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$2594.6B",
@@ -22875,8 +22593,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -22891,17 +22609,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "googl-memo__v002__2026-07-02_06-47.pdf",
-      "size": "300 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "googl-memo__v001__2026-06-14_20-19.pdf",
-          "size": "290 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 359.68
-        }
-      ]
+      "file": "googl-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4366.3B",
@@ -23716,8 +23426,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -23732,17 +23442,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "aapl-memo__v002__2026-07-02_06-47.pdf",
-      "size": "299 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "aapl-memo__v001__2026-06-14_20-19.pdf",
-          "size": "287 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 291.13
-        }
-      ]
+      "file": "aapl-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4349.9B",
@@ -24558,8 +24260,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -24574,17 +24276,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "nvda-memo__v002__2026-07-02_06-47.pdf",
-      "size": "300 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "nvda-memo__v001__2026-06-14_20-19.pdf",
-          "size": "287 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 205.19
-        }
-      ]
+      "file": "nvda-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4801.2B",
@@ -25393,8 +25087,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -25409,17 +25103,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "tsla-memo__v002__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "tsla-memo__v001__2026-06-14_20-19.pdf",
-          "size": "283 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 406.43
-        }
-      ]
+      "file": "tsla-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1595.9B",
@@ -26236,8 +25922,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -26252,17 +25938,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "dis-memo__v002__2026-07-02_06-47.pdf",
-      "size": "301 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "dis-memo__v001__2026-06-14_20-19.pdf",
-          "size": "284 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 100.04
-        }
-      ]
+      "file": "dis-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$170.9B",
@@ -27076,8 +26754,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -27092,17 +26770,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "cmg-memo__v002__2026-07-02_06-47.pdf",
-      "size": "298 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "cmg-memo__v001__2026-06-14_23-05.pdf",
-          "size": "278 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 32.23
-        }
-      ]
+      "file": "cmg-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$45.58B",
@@ -27908,8 +27578,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -27924,17 +27594,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "dal-memo__v002__2026-07-02_06-47.pdf",
-      "size": "301 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "dal-memo__v001__2026-06-14_23-03.pdf",
-          "size": "284 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 83.06
-        }
-      ]
+      "file": "dal-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$60.78B",
@@ -28752,8 +28414,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -28768,17 +28430,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "hood-memo__v002__2026-07-02_06-47.pdf",
-      "size": "301 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "hood-memo__v001__2026-06-14_23-03.pdf",
-          "size": "281 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 93.19
-        }
-      ]
+      "file": "hood-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$96.54B",
@@ -29594,8 +29248,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -29610,17 +29264,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "de-memo__v002__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "de-memo__v001__2026-06-14_23-03.pdf",
-          "size": "285 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 577.48
-        }
-      ]
+      "file": "de-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$169.7B",
@@ -30440,8 +30086,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -30456,17 +30102,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "algn-memo__v002__2026-07-02_06-47.pdf",
-      "size": "298 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "algn-memo__v001__2026-06-14_23-05.pdf",
-          "size": "280 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 174.84
-        }
-      ]
+      "file": "algn-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$12.94B",
@@ -31280,8 +30918,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -31296,17 +30934,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "adsk-memo__v002__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "adsk-memo__v001__2026-06-14_23-05.pdf",
-          "size": "283 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 198.43
-        }
-      ]
+      "file": "adsk-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$42.15B",
@@ -32124,8 +31754,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -32140,17 +31770,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "cart-memo__v002__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "cart-memo__v001__2026-06-14_23-03.pdf",
-          "size": "285 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 41.25
-        }
-      ]
+      "file": "cart-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$10.79B",
@@ -32960,8 +32582,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -32976,17 +32598,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "u-memo__v002__2026-07-02_06-47.pdf",
-      "size": "304 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "u-memo__v001__2026-06-14_23-03.pdf",
-          "size": "284 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 27.24
-        }
-      ]
+      "file": "u-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$13.07B",
@@ -33806,8 +33420,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -33822,17 +33436,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "crox-memo__v002__2026-07-02_06-47.pdf",
-      "size": "299 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "crox-memo__v001__2026-06-15_06-53.pdf",
-          "size": "281 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 124.71
-        }
-      ]
+      "file": "crox-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$6.23B",
@@ -34641,8 +34247,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -34657,17 +34263,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "rddt-memo__v002__2026-07-02_06-47.pdf",
-      "size": "304 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "rddt-memo__v001__2026-06-15_06-22.pdf",
-          "size": "283 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 162.1
-        }
-      ]
+      "file": "rddt-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$36.86B",
@@ -35475,8 +35073,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -35491,17 +35089,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "tost-memo__v002__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "tost-memo__v001__2026-06-15_06-22.pdf",
-          "size": "283 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 24.82
-        }
-      ]
+      "file": "tost-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$16.71B",
@@ -36313,8 +35903,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -36329,17 +35919,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "wrby-memo__v002__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "wrby-memo__v001__2026-06-15_06-22.pdf",
-          "size": "281 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 26.46
-        }
-      ]
+      "file": "wrby-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$3.6B",
@@ -37153,8 +36735,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -37169,17 +36751,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "you-memo__v002__2026-07-02_06-47.pdf",
-      "size": "301 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "you-memo__v001__2026-06-15_06-24.pdf",
-          "size": "282 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 50.25
-        }
-      ]
+      "file": "you-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$5.29B",
@@ -37989,8 +37563,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -38005,17 +37579,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "shop-memo__v002__2026-07-02_06-47.pdf",
-      "size": "303 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "shop-memo__v001__2026-06-15_06-24.pdf",
-          "size": "285 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 108.24
-        }
-      ]
+      "file": "shop-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$158B",
@@ -38824,8 +38390,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -38840,17 +38406,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "rxrx-memo__v002__2026-07-02_06-47.pdf",
-      "size": "391 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "rxrx-memo__v001__2026-06-16_07-02.pdf",
-          "size": "373 KB",
-          "asOfDate": "2026-06-16",
-          "spotPrice": 3.15
-        }
-      ]
+      "file": "rxrx-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1.87B",
@@ -40069,8 +39627,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -40085,17 +39643,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "beam-memo__v002__2026-07-02_06-47.pdf",
-      "size": "385 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "beam-memo__v001__2026-06-16_07-05.pdf",
-          "size": "366 KB",
-          "asOfDate": "2026-06-16",
-          "spotPrice": 30.0
-        }
-      ]
+      "file": "beam-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$3.45B",
@@ -41315,8 +40865,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -41331,17 +40881,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "pacb-memo__v002__2026-07-02_06-47.pdf",
-      "size": "384 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "pacb-memo__v001__2026-06-16_07-05.pdf",
-          "size": "366 KB",
-          "asOfDate": "2026-06-16",
-          "spotPrice": 1.32
-        }
-      ]
+      "file": "pacb-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$540M",
@@ -42552,8 +42094,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -42568,17 +42110,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "tem-memo__v002__2026-07-02_06-47.pdf",
-      "size": "300 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "tem-memo__v001__2026-06-16_07-07.pdf",
-          "size": "278 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 47.82
-        }
-      ]
+      "file": "tem-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$11.06B",
@@ -43377,8 +42911,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -43393,17 +42927,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "serv-memo__v002__2026-07-02_06-47.pdf",
-      "size": "386 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "serv-memo__v001__2026-06-20_06-29.pdf",
-          "size": "369 KB",
-          "asOfDate": "2026-06-16",
-          "spotPrice": 7.22
-        }
-      ]
+      "file": "serv-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$503M",
@@ -44619,8 +44145,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -44635,17 +44161,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "prme-memo__v002__2026-07-02_06-47.pdf",
-      "size": "388 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "prme-memo__v001__2026-06-20_06-33.pdf",
-          "size": "372 KB",
-          "asOfDate": "2026-06-16",
-          "spotPrice": 3.16
-        }
-      ]
+      "file": "prme-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$703M",
@@ -45861,8 +45379,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -45877,17 +45395,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "twst-memo__v002__2026-07-02_06-47.pdf",
-      "size": "296 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "twst-memo__v001__2026-06-20_06-33.pdf",
-          "size": "276 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 87.5
-        }
-      ]
+      "file": "twst-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$6.37B",
@@ -46694,8 +46204,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -46710,17 +46220,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "sym-memo__v002__2026-07-02_06-47.pdf",
-      "size": "298 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "sym-memo__v001__2026-06-20_06-33.pdf",
-          "size": "276 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 41.63
-        }
-      ]
+      "file": "sym-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$26.57B",
@@ -47519,8 +47021,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -47535,17 +47037,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "nvcr-memo__v002__2026-07-02_06-47.pdf",
-      "size": "297 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "nvcr-memo__v001__2026-06-21_02-34.pdf",
-          "size": "277 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 14.33
-        }
-      ]
+      "file": "nvcr-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1.72B",
@@ -48355,8 +47849,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -48371,17 +47865,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "cai-memo__v002__2026-07-02_06-47.pdf",
-      "size": "302 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "cai-memo__v001__2026-06-21_02-34.pdf",
-          "size": "280 KB",
-          "asOfDate": "2026-06-01",
-          "spotPrice": 18.33
-        }
-      ]
+      "file": "cai-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$5.2B",
@@ -49179,8 +48665,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -49195,17 +48681,9 @@ const MEMOS = [
     "publishedISO": "2026-07-02",
     "publishedLabel": "July 2, 2026",
     "pdf": {
-      "file": "hhh-memo__v002__2026-07-02_06-47.pdf",
-      "size": "290 KB",
-      "priorVersions": [
-        {
-          "version": "001",
-          "file": "hhh-memo__v001__2026-06-21_00-00.pdf",
-          "size": "290 KB",
-          "asOfDate": "2026-06-21",
-          "spotPrice": 66.86
-        }
-      ]
+      "file": "hhh-memo__v003__2026-07-02_15-17.pdf",
+      "size": "—",
+      "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4.32B",
@@ -50066,8 +49544,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "002",
-        "footerTimestamp": "2026-07-02_06-47",
+        "footerVersion": "003",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -50082,8 +49560,8 @@ const MEMOS = [
     "publishedISO": "2026-06-22",
     "publishedLabel": "June 22, 2026",
     "pdf": {
-      "file": "zipline-memo__v001__2026-06-22_00-00.pdf",
-      "size": "234 KB",
+      "file": "zipline-memo__v002__2026-07-02_15-17.pdf",
+      "size": "—",
       "priorVersions": []
     },
     "metrics": {
@@ -50586,8 +50064,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "001",
-        "footerTimestamp": "2026-06-22_00-00",
+        "footerVersion": "002",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -50602,8 +50080,8 @@ const MEMOS = [
     "publishedISO": "2026-06-22",
     "publishedLabel": "June 22, 2026",
     "pdf": {
-      "file": "pyka-memo__v001__2026-06-22_00-00.pdf",
-      "size": "234 KB",
+      "file": "pyka-memo__v002__2026-07-02_15-17.pdf",
+      "size": "—",
       "priorVersions": []
     },
     "metrics": {
@@ -51078,8 +50556,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "001",
-        "footerTimestamp": "2026-06-22_00-00",
+        "footerVersion": "002",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -51094,8 +50572,8 @@ const MEMOS = [
     "publishedISO": "2026-06-22",
     "publishedLabel": "June 22, 2026",
     "pdf": {
-      "file": "blgff-memo__v001__2026-06-22_00-00.pdf",
-      "size": "202 KB",
+      "file": "blgff-memo__v002__2026-07-02_15-17.pdf",
+      "size": "—",
       "priorVersions": []
     },
     "metrics": {
@@ -51489,8 +50967,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "001",
-        "footerTimestamp": "2026-06-22_00-00",
+        "footerVersion": "002",
+        "footerTimestamp": "2026-07-02_15-17",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

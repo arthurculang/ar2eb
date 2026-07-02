@@ -609,13 +609,9 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + position sizing.'
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "003"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "001"
-    timestamp: "2026-06-03_15-50"
-    asOfDate: "2026-06-01"
-    spotPrice: 48.0
+  pdf_version: "003"
+  pdf_timestamp: "2026-07-02_15-17"
+

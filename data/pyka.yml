@@ -345,13 +345,12 @@ glossary:
   definition: Per-share value implied by the latest round (post-money ÷ fully-diluted). Pyka's post-money is undisclosed,
     so $4.00 is an estimate, not a disclosed or market price.
 stamp:
-  footer_version: "001"
-  footer_timestamp: "2026-06-22_00-00"
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "001"
-  pdf_timestamp: "2026-06-22_00-00"
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_15-17"
 
-  prior_versions: []
 # ═════════════════════════════════════════════════════════════════════════════
 # Page 4 — Competitive landscape (§6d). Power Origination lens (private_prevaluation).
 # ═════════════════════════════════════════════════════════════════════════════

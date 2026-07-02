@@ -352,10 +352,9 @@ glossary:
 - term: Saba Capital (activist)
   definition: An activist holding ~29% of USA, pressing discount-control (buybacks, tenders) — both why the discount is tight and a re-widening risk if it exits.
 stamp:
-  footer_version: "001"
-  footer_timestamp: "2026-06-22_00-00"
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "001"
-  pdf_timestamp: "2026-06-22_00-00"
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_15-17"
 
-  prior_versions: []

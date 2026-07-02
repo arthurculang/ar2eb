@@ -530,20 +530,12 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -19.6% finding) + position
     sizing.'
 stamp:
-  footer_version: "031"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "032"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "031"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "030"
-    timestamp: "2026-05-31_17-10"
-    asOfDate: "2026-05-16"
-    spotPrice: 10.50
-  - version: "029"
-    timestamp: "2026-05-23_21-14"
-    asOfDate: "2026-05-16"
-    spotPrice: 10.50
+  pdf_version: "032"
+  pdf_timestamp: "2026-07-02_15-17"
+
 glossary:
 - term: eVTOL
   definition: Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range.

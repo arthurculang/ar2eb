@@ -582,16 +582,12 @@ competitive:
     meaningful AV-disruption risk; the sign of the memo hinges on whether autonomy commoditizes the driver-supply side (ultra-bear
     -44%) or Uber tolls the cheaper AV rides (base +55%).'
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "003"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "001"
-    timestamp: "2026-06-03_15-44"
-    asOfDate: "2026-06-01"
-    spotPrice: 70.4
+  pdf_version: "003"
+  pdf_timestamp: "2026-07-02_15-17"
+
 pocd:
   people:
     ceo: 'Dara Khosrowshahi'
