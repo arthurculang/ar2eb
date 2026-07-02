@@ -360,17 +360,12 @@ glossary:
   definition: Per-share value implied by the latest round (post-money ÷ fully-diluted). A preferred, illiquid, single-counterparty
     price — not a market quote.
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-05-31_17-11"
+  footer_version: "003"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-05-31_17-11"
+  pdf_version: "003"
+  pdf_timestamp: "2026-07-02_15-17"
 
-  prior_versions:
-  - version: "001"
-    timestamp: "2026-05-29_23-44"
-    asOfDate: "2026-05-29"
-    spotPrice: 165.0
 # ═════════════════════════════════════════════════════════════════════════════
 # Page 4 — Competitive landscape (§6d). Power Origination lens (private_prevaluation).
 # ═════════════════════════════════════════════════════════════════════════════

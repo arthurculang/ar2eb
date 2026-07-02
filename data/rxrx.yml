@@ -972,13 +972,9 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +22.3% finding) + position
     sizing.'
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "003"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "001"
-    timestamp: "2026-06-16_07-02"
-    asOfDate: "2026-06-16"
-    spotPrice: 3.15
+  pdf_version: "003"
+  pdf_timestamp: "2026-07-02_15-17"
+

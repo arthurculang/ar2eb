@@ -580,25 +580,12 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing.'
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "007"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "006"
-  pdf_timestamp: "2026-07-02_06-47"
+  pdf_version: "007"
+  pdf_timestamp: "2026-07-02_15-17"
 
-  prior_versions:
-  - version: "005"
-    timestamp: "2026-05-31_17-10"
-    asOfDate: "2026-05-16"
-    spotPrice: 2.40
-  - version: "004"
-    timestamp: "2026-05-28_05-25"
-    asOfDate: "2026-05-16"
-    spotPrice: 2.40
-  - version: "003"
-    timestamp: "2026-05-23_21-14"
-    asOfDate: "2026-05-16"
-    spotPrice: 2.40
 glossary:
   - term: "Voyager"
     definition: "NAUT's single-molecule proteomics platform — instrument + reagents + assays + software for proteoform analysis."

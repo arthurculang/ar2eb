@@ -584,16 +584,12 @@ competitive:
     the brand stabilizes — and even a real-impairment ultra-bear is only -34%, while the modal stabilization implies the sell-off
     overshot.
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "003"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "001"
-    timestamp: "2026-06-03_15-38"
-    asOfDate: "2026-06-01"
-    spotPrice: 127.0
+  pdf_version: "003"
+  pdf_timestamp: "2026-07-02_15-17"
+
 pocd:
   people:
     ceo: 'Interim co-CEOs (M. Frank, A. Maestrini)'

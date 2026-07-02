@@ -525,29 +525,12 @@ taxonomy:
   primary_theme: medical-devices
 
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "006"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "005"
-  pdf_timestamp: "2026-07-02_06-47"
+  pdf_version: "006"
+  pdf_timestamp: "2026-07-02_15-17"
 
-  prior_versions:
-  - version: "004"
-    timestamp: "2026-05-31_17-03"
-    asOfDate: "2026-05-27"
-    spotPrice: 436.64
-  - version: "003"
-    timestamp: "2026-05-29_01-52"
-    asOfDate: "2026-05-27"
-    spotPrice: 436.64
-  - version: "002"
-    timestamp: "2026-05-28_05-26"
-    asOfDate: "2026-05-27"
-    spotPrice: 436.64
-  - version: "001"
-    timestamp: "2026-05-27_19-30"
-    asOfDate: "2026-05-27"
-    spotPrice: 436.64
 glossary:
 - term: da Vinci 5
   definition: ISRG's 5th-gen surgical robot (2024). Force feedback, on-board insufflation, Iris imaging. ~1,500 installed; driving +4% US utilization.

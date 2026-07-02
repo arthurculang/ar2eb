@@ -105,6 +105,26 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 
 ## Status / open items
 
+- **LAUNCHED 2026-07-02 (t₀ epoch 2026-07-01) + both Routines VERIFIED LIVE.** The 1-July "start fresh" ran a day late, end-to-end from a
+  web session — **poppler IS installable in these containers** (`apt-get update && apt-get install -y poppler-utils`), so the "no poppler →
+  site-only" caveat class that governed June is dead; PDFs + `visual_baseline.json` are maintainable again. Sequence: (1) **Routines
+  root-cause found by Arthur — the repo was never BOUND to either routine** (every daily run Jun-17→30 red-X'd; monthly's Jun-22 ✗; the stale
+  pre-v042 prompt was a second, latent bug — also fixed by re-pasting from `ROUTINES.md`). **Daily verified live:** t₀ row committed to main
+  (`c40a615`, 2026-07-01 all-zeros baseline); writes nightly from 07-02. **Monthly verified live:** its first real run opened **PR #78
+  "Monthly rebuild 2026-07"** — 52 bumps + re-price to the 07-01 close + re-weight (**22 holdings**; GRAL/PACB/NVCR/PRME dropped, upside ≤ 0)
+  + two real `bump_pdf_version.py` fixes (single-quoted `date:` leaked quotes into `prior_versions.asOfDate`; inline-empty
+  `prior_versions: []` got a duplicate key YAML silently drops) + a CAI page-1 precision fix + 9 judgment flags. **#78 was MERGED as the
+  launch re-price** (LAUNCH.md step 1) — the earlier close-unmerged plan was reversed on inspection: the flip erases the extra bump anyway,
+  and merging the re-weighted book *before* nonzero perf rows accrue is the clean moment for tracking integrity. (2) `--export` →
+  `archive-export/prelaunch-2026-07-02/` (238 files / 44 MB / 56 tickers / 129 PDFs; MANIFEST @ `63facb0`). (3) `--flip --yes`: all 56
+  stamps → v+1 @ shared `2026-07-02_15-17`, `prior_versions` cleared, 129 pre-launch PDFs removed, official set re-rendered
+  STRICT + baseline regenerated. **OWNER ITEM — private-archive push (D3) still pending:** the launch session had no `add_repo`
+  (claude-code-remote MCP absent), and the export is byte-reconstructible from public git (`git checkout 63facb0 &&
+  python scripts/launch_archive.py --export`); push from a session scoped to both repos, or locally per LAUNCH.md step 3 Path B.
+  **Re-research queue from #78 (pure entry-price moves; theses untouched):** first **TXG** (−49→−63% after a +39%/mo rally — smells like
+  news), **PACB** (+31→−1% sign flip; the levered stub is hyper-price-sensitive), **NAUT** (+174→+258% at $1.84 — a 15%-cap holding on a
+  stale thesis); then RKLB / ACHR / PRME (moonshot news risk); then TEM / ILMN / ZM (valuation-only). **Routine drift to sync in the UI
+  (low):** daily prompt omits `risk_stats.csv` staging; schedule is daily-2PM-PDT vs the spec'd weekdays-22:00-UTC (weekend runs no-op).
 - **Portfolio-tab overhaul SHIPPED (2026-06-22; spec v043, §16 NEW).** (1) **Two new watchlist categories** — `competitors`
   (ACHR, PACB moved here — rivals to core holdings) and `crypto`. (2) **Category sizing tilt** = a 4th §12 weight factor
   `× category_mult` (fun-speculative 0.5 · competitors 0.3 · crypto 0.5 · core 1.0), in both `build_weights.py` and
@@ -536,8 +556,8 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   PRIVATE repo `ar2eb-archive` (Claude's GitHub scope is ar2eb-only — launch session can `add_repo` it);
   pre-launch memos stay in public git history regardless (no rewrite — decided).* **Private repo
   `ar2eb-archive` CREATED by Arthur (2026-06-12, via the Claude-for-Chrome runbook) — D3 prereq DONE.**
-  **Remaining: just the 1-July day-of run (LAUNCH.md).** Live epoch
-  t₀ = 2026-07-01 (the daily routine no-ops until then). *(POCD scorecard page §14 is DONE — 9 tickers.)*
+  **DONE — launch executed 2026-07-02; see the LAUNCHED bullet at the top of this section.** Live epoch
+  t₀ = 2026-07-01 (daily routine live, first row committed). *(POCD scorecard page §14 is DONE — 52 tickers.)*
   **Launch DRY-RUN rehearsed (2026-06-22):** `--export` snapshots the current book (56 memos / 77 PDFs / MANIFEST);
   `--flip` dry-run plan clean; stamp-transform now verified on ALL 56 live YMLs. *Fixed a real bug the rehearsal caught:*
   `_PRIOR_RE` didn't match the **inline-empty `prior_versions: []`** the newest memos (hhh/blgff/pyka) ship, which would

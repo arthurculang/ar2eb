@@ -498,20 +498,12 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +5.1% finding) + position sizing.'
 stamp:
-  footer_version: "025"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "026"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "025"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "024"
-    timestamp: "2026-05-31_17-10"
-    asOfDate: "2026-05-16"
-    spotPrice: 7.74
-  - version: "023"
-    timestamp: "2026-05-23_21-14"
-    asOfDate: "2026-05-16"
-    spotPrice: 7.74
+  pdf_version: "026"
+  pdf_timestamp: "2026-07-02_15-17"
+
 glossary:
 - term: Aurora Driver
   definition: Aurora's autonomy software + hardware stack. Currently runs supervised on highway pilots with PACCAR, Volvo, and FedEx.

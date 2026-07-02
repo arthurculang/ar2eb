@@ -574,16 +574,12 @@ competitive:
     SBC dilution. At ~33x EV/FCF the 20%+ growth + margin inflection roughly cover the entry — fair, with the sign on the
     2H'26 inflection.
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "003"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "001"
-    timestamp: "2026-06-03_15-50"
-    asOfDate: "2026-06-01"
-    spotPrice: 159.0
+  pdf_version: "003"
+  pdf_timestamp: "2026-07-02_15-17"
+
 pocd:
   people:
     ceo: 'Tony Xu'

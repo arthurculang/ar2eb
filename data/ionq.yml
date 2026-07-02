@@ -999,24 +999,12 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -86.9% finding) + position
     sizing.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-02_06-47"
+  footer_version: "005"
+  footer_timestamp: "2026-07-02_15-17"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-02_06-47"
-  prior_versions:
-  - version: "003"
-    timestamp: "2026-05-31_17-03"
-    asOfDate: "2026-05-29"
-    spotPrice: 70.14
-  - version: "002"
-    timestamp: "2026-05-30_00-02"
-    asOfDate: "2026-05-29"
-    spotPrice: 70.14
-  - version: "001"
-    timestamp: "2026-05-29_23-02"
-    asOfDate: "2026-05-29"
-    spotPrice: 70.14
+  pdf_version: "005"
+  pdf_timestamp: "2026-07-02_15-17"
+
 
 # ═════════════════════════════════════════════════════════════════════════════
 # Page 4 — Competitive landscape (§6d). Power Origination lens (young_company).
