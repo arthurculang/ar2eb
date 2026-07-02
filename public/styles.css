@@ -669,6 +669,16 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   break-after: auto;
 }
 .memo-embed-section .memo-page:last-child { margin-bottom: 0; }
+/* Mobile: run the memo edge-to-edge — no beige gutter between the memo card and
+   the screen edge (the memo's own white 1in/0.55in internal frame is the margin).
+   Desktop keeps the centered 96vw column above. */
+@media (max-width: 760px) {
+  .memo-embed-section > .wrap {
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 /* ── Portfolio page ─────────────────────────────────────────────────────
    Cross-asset weighting per spec §12. Result-first hierarchy: hero block
