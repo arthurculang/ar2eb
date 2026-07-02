@@ -2,10 +2,10 @@ ticker: BEAM
 company: Beam Therapeutics
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-06-16'
-spot: 30.0
+date: '2026-07-02'
+spot: 33.48
 market:
-  market_cap_billion: 3.09
+  market_cap_billion: 3.45
   shares_outstanding_million: 103.0
   cash_billion: 1.21
   net_debt_billion: 0.1
@@ -961,8 +961,13 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +31.3% finding) + position sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-16_07-05
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-16_07-05
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-16_07-05"
+    asOfDate: "2026-06-16"
+    spotPrice: 30.0

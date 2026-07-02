@@ -1,4 +1,4 @@
-as_of: '2026-06-26'
+as_of: '2026-07-02'
 epoch: '2026-07-01'
 rule: 'weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_indicator_mult
   × category_mult, cap 15%/name, cash residual (spec §12 / §15 D1). conviction: High
@@ -6,33 +6,29 @@ rule: 'weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_ind
   · yellow 1.10 · orange 0.90 · red 0.70 · n/a 1.0. category: fun-speculative 0.5
   · competitors 0.3 · crypto 0.5 · core 1.0.'
 weights:
+  coin: 0.15
   lulu: 0.15
   naut: 0.15
-  coin: 0.1187
-  uber: 0.1165
-  abnb: 0.0816
-  hhh: 0.0795
-  cart: 0.0559
-  crox: 0.055
-  zm: 0.0355
-  adsk: 0.0182
-  serv: 0.017
-  meta: 0.0141
-  isrg: 0.0137
-  tost: 0.0123
-  beam: 0.0106
-  dis: 0.01
-  aur: 0.0098
-  cai: 0.0098
-  yeti: 0.0084
-  rxrx: 0.0076
-  you: 0.0066
-  gral: 0.0062
-  pacb: 0.006
-  nvcr: 0.0026
-  prme: 0.0025
-  achr: 0.0018
-  cash: 0.0001
+  uber: 0.111
+  zm: 0.0631
+  hhh: 0.0613
+  crox: 0.0587
+  abnb: 0.0558
+  cart: 0.046
+  aur: 0.0302
+  serv: 0.0262
+  isrg: 0.0218
+  adsk: 0.0188
+  dis: 0.0156
+  cai: 0.0093
+  achr: 0.0067
+  beam: 0.0063
+  meta: 0.0061
+  you: 0.0045
+  tost: 0.0043
+  yeti: 0.0023
+  rxrx: 0.0018
+  cash: 0.0002
 excluded_private:
 - anthropic
 - blgff
@@ -40,9 +36,9 @@ excluded_private:
 - zipline
 findings:
   naut:
-    spot: 2.4
+    spot: 1.84
     weighted_dcf: 6.58
-    upside: 1.7405
+    upside: 2.5746
     tier: High
     conviction_mult: 2.0
     watchlist: asymmetrical-moonshots
@@ -50,64 +46,64 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 3.481
+    raw_score: 5.1491
     weight: 0.15
   lulu:
-    spot: 127.0
+    spot: 116.4
     weighted_dcf: 209.94
-    upside: 0.6531
+    upside: 0.8036
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 1.95
+    ai: 1.67
     ai_zone: green
     ai_mult: 1.25
-    raw_score: 1.6327
+    raw_score: 2.009
     weight: 0.15
   coin:
-    spot: 182.25
+    spot: 159.24
     weighted_dcf: 271.62
-    upside: 0.4904
+    upside: 0.7058
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 4.97
+    ai: 4.17
     ai_zone: green
     ai_mult: 1.25
-    raw_score: 1.226
-    weight: 0.1187
+    raw_score: 1.7644
+    weight: 0.15
   uber:
-    spot: 70.4
+    spot: 72.66
     weighted_dcf: 104.27
-    upside: 0.481
+    upside: 0.435
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-megacap
     category_mult: 1.0
-    ai: 4.72
+    ai: 4.81
     ai_zone: green
     ai_mult: 1.25
-    raw_score: 1.2026
-    weight: 0.1165
-  abnb:
-    spot: 133.0
-    weighted_dcf: 183.95
-    upside: 0.3831
-    tier: High
-    conviction_mult: 2.0
+    raw_score: 1.0874
+    weight: 0.111
+  zm:
+    spot: 90.13
+    weighted_dcf: 164.39
+    upside: 0.8239
+    tier: Med-Low
+    conviction_mult: 0.6
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 6.17
-    ai_zone: yellow
-    ai_mult: 1.1
-    raw_score: 0.8428
-    weight: 0.0816
+    ai: 5.16
+    ai_zone: green
+    ai_mult: 1.25
+    raw_score: 0.6179
+    weight: 0.0631
   hhh:
-    spot: 66.86
+    spot: 72.53
     weighted_dcf: 94.31
-    upside: 0.4106
+    upside: 0.3003
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-plus-plus-growth
@@ -115,25 +111,12 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.8212
-    weight: 0.0795
-  cart:
-    spot: 41.25
-    weighted_dcf: 65.05
-    upside: 0.5769
-    tier: Med
-    conviction_mult: 1.0
-    watchlist: fcf-plus-plus-growth
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.5769
-    weight: 0.0559
+    raw_score: 0.6006
+    weight: 0.0613
   crox:
-    spot: 124.71
+    spot: 124.17
     weighted_dcf: 195.55
-    upside: 0.568
+    upside: 0.5748
     tier: High
     conviction_mult: 2.0
     watchlist: fun-speculative
@@ -141,38 +124,51 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.568
-    weight: 0.055
-  zm:
-    spot: 105.64
-    weighted_dcf: 164.39
-    upside: 0.5561
-    tier: Med-Low
-    conviction_mult: 0.6
+    raw_score: 0.5748
+    weight: 0.0587
+  abnb:
+    spot: 147.31
+    weighted_dcf: 183.95
+    upside: 0.2487
+    tier: High
+    conviction_mult: 2.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 6.39
+    ai: 7.66
     ai_zone: yellow
     ai_mult: 1.1
-    raw_score: 0.367
-    weight: 0.0355
-  adsk:
-    spot: 198.43
-    weighted_dcf: 304.79
-    upside: 0.536
-    tier: Low
-    conviction_mult: 0.35
+    raw_score: 0.5472
+    weight: 0.0558
+  cart:
+    spot: 44.83
+    weighted_dcf: 65.05
+    upside: 0.451
+    tier: Med
+    conviction_mult: 1.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.1876
-    weight: 0.0182
+    raw_score: 0.451
+    weight: 0.046
+  aur:
+    spot: 7.07
+    weighted_dcf: 8.12
+    upside: 0.1481
+    tier: High
+    conviction_mult: 2.0
+    watchlist: asymmetrical-moonshots
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.2962
+    weight: 0.0302
   serv:
-    spot: 7.22
+    spot: 6.53
     weighted_dcf: 9.33
-    upside: 0.2918
+    upside: 0.4283
     tier: Med-Low
     conviction_mult: 0.6
     watchlist: asymmetrical-moonshots
@@ -180,64 +176,38 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.1751
-    weight: 0.017
-  meta:
-    spot: 566.98
-    weighted_dcf: 649.72
-    upside: 0.1459
-    tier: Med
-    conviction_mult: 1.0
-    watchlist: fcf-megacap
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.1459
-    weight: 0.0141
+    raw_score: 0.257
+    weight: 0.0262
   isrg:
-    spot: 436.64
+    spot: 402.38
     weighted_dcf: 525.14
-    upside: 0.2027
+    upside: 0.3051
     tier: Med
     conviction_mult: 1.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 17.54
+    ai: 16.1
     ai_zone: red
     ai_mult: 0.7
-    raw_score: 0.1419
-    weight: 0.0137
-  tost:
-    spot: 24.82
-    weighted_dcf: 31.14
-    upside: 0.2548
-    tier: Med
-    conviction_mult: 1.0
-    watchlist: fun-speculative
-    category_mult: 0.5
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.1274
-    weight: 0.0123
-  beam:
-    spot: 30.0
-    weighted_dcf: 39.38
-    upside: 0.3128
+    raw_score: 0.2136
+    weight: 0.0218
+  adsk:
+    spot: 199.76
+    weighted_dcf: 304.79
+    upside: 0.5258
     tier: Low
     conviction_mult: 0.35
-    watchlist: asymmetrical-moonshots
+    watchlist: fcf-plus-plus-growth
     category_mult: 1.0
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.1095
-    weight: 0.0106
+    raw_score: 0.184
+    weight: 0.0188
   dis:
-    spot: 100.04
+    spot: 95.71
     weighted_dcf: 110.38
-    upside: 0.1033
+    upside: 0.1532
     tier: Med
     conviction_mult: 1.0
     watchlist: fcf-megacap
@@ -245,12 +215,12 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.1033
-    weight: 0.01
+    raw_score: 0.1532
+    weight: 0.0156
   cai:
-    spot: 18.33
+    spot: 18.75
     weighted_dcf: 23.63
-    upside: 0.289
+    upside: 0.2602
     tier: Low
     conviction_mult: 0.35
     watchlist: asymmetrical-moonshots
@@ -258,38 +228,25 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.1012
-    weight: 0.0098
-  aur:
-    spot: 7.74
-    weighted_dcf: 8.13
-    upside: 0.0508
-    tier: High
-    conviction_mult: 2.0
-    watchlist: asymmetrical-moonshots
-    category_mult: 1.0
+    raw_score: 0.0911
+    weight: 0.0093
+  achr:
+    spot: 4.92
+    weighted_dcf: 8.01
+    upside: 0.6287
+    tier: Low
+    conviction_mult: 0.35
+    watchlist: competitors
+    category_mult: 0.3
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.1017
-    weight: 0.0098
-  yeti:
-    spot: 48.0
-    weighted_dcf: 49.67
-    upside: 0.0348
-    tier: High
-    conviction_mult: 2.0
-    watchlist: fcf-plus-plus-growth
-    category_mult: 1.0
-    ai: 3.01
-    ai_zone: green
-    ai_mult: 1.25
-    raw_score: 0.0869
-    weight: 0.0084
-  rxrx:
-    spot: 3.15
-    weighted_dcf: 3.85
-    upside: 0.2234
+    raw_score: 0.066
+    weight: 0.0067
+  beam:
+    spot: 33.48
+    weighted_dcf: 39.38
+    upside: 0.1763
     tier: Low
     conviction_mult: 0.35
     watchlist: asymmetrical-moonshots
@@ -297,12 +254,25 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.0782
-    weight: 0.0076
+    raw_score: 0.0617
+    weight: 0.0063
+  meta:
+    spot: 612.91
+    weighted_dcf: 649.72
+    upside: 0.0601
+    tier: Med
+    conviction_mult: 1.0
+    watchlist: fcf-megacap
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0601
+    weight: 0.0061
   you:
-    spot: 50.25
+    spot: 55.66
     weighted_dcf: 69.76
-    upside: 0.3883
+    upside: 0.2534
     tier: Low
     conviction_mult: 0.35
     watchlist: fun-speculative
@@ -310,12 +280,64 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.068
-    weight: 0.0066
+    raw_score: 0.0443
+    weight: 0.0045
+  tost:
+    spot: 28.71
+    weighted_dcf: 31.14
+    upside: 0.0848
+    tier: Med
+    conviction_mult: 1.0
+    watchlist: fun-speculative
+    category_mult: 0.5
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0424
+    weight: 0.0043
+  yeti:
+    spot: 49.22
+    weighted_dcf: 49.67
+    upside: 0.0091
+    tier: High
+    conviction_mult: 2.0
+    watchlist: fcf-plus-plus-growth
+    category_mult: 1.0
+    ai: 3.12
+    ai_zone: green
+    ai_mult: 1.25
+    raw_score: 0.0228
+    weight: 0.0023
+  rxrx:
+    spot: 3.67
+    weighted_dcf: 3.85
+    upside: 0.0501
+    tier: Low
+    conviction_mult: 0.35
+    watchlist: asymmetrical-moonshots
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0175
+    weight: 0.0018
+  pacb:
+    spot: 1.74
+    weighted_dcf: 1.72
+    upside: -0.0094
+    tier: Low
+    conviction_mult: 0.35
+    watchlist: competitors
+    category_mult: 0.3
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
   gral:
-    spot: 62.0
+    spot: 68.11
     weighted_dcf: 65.99
-    upside: 0.0644
+    upside: -0.0311
     tier: Med
     conviction_mult: 1.0
     watchlist: asymmetrical-moonshots
@@ -323,80 +345,54 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
-    raw_score: 0.0644
-    weight: 0.0062
-  pacb:
-    spot: 1.32
-    weighted_dcf: 2.09
-    upside: 0.5869
-    tier: Low
-    conviction_mult: 0.35
-    watchlist: competitors
-    category_mult: 0.3
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0616
-    weight: 0.006
-  nvcr:
-    spot: 14.33
-    weighted_dcf: 14.97
-    upside: 0.045
-    tier: Med-Low
-    conviction_mult: 0.6
-    watchlist: asymmetrical-moonshots
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.027
-    weight: 0.0026
-  prme:
-    spot: 3.16
-    weighted_dcf: 3.39
-    upside: 0.0723
-    tier: Low
-    conviction_mult: 0.35
-    watchlist: asymmetrical-moonshots
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0253
-    weight: 0.0025
-  achr:
-    spot: 6.81
-    weighted_dcf: 8.01
-    upside: 0.1767
-    tier: Low
-    conviction_mult: 0.35
-    watchlist: competitors
-    category_mult: 0.3
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0186
-    weight: 0.0018
-  dash:
-    spot: 159.0
-    weighted_dcf: 156.7
-    upside: -0.0145
+    raw_score: 0.0
+    weight: 0.0
+  joby:
+    spot: 8.84
+    weighted_dcf: 8.42
+    upside: -0.0472
     tier: High
     conviction_mult: 2.0
-    watchlist: fcf-plus-plus-growth
+    watchlist: asymmetrical-moonshots
     category_mult: 1.0
-    ai: 6.48
-    ai_zone: yellow
-    ai_mult: 1.1
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
   algn:
-    spot: 174.84
+    spot: 181.49
     weighted_dcf: 172.27
-    upside: -0.0147
+    upside: -0.0508
     tier: Low
     conviction_mult: 0.35
     watchlist: fcf-plus-plus-growth
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  nvcr:
+    spot: 15.78
+    weighted_dcf: 14.97
+    upside: -0.051
+    tier: Med-Low
+    conviction_mult: 0.6
+    watchlist: asymmetrical-moonshots
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  amzn:
+    spot: 241.7
+    weighted_dcf: 222.01
+    upside: -0.0815
+    tier: High
+    conviction_mult: 2.0
+    watchlist: fcf-megacap
     category_mult: 1.0
     ai: null
     ai_zone: n/a
@@ -404,9 +400,9 @@ findings:
     raw_score: 0.0
     weight: 0.0
   cmg:
-    spot: 32.23
+    spot: 35.0
     weighted_dcf: 30.68
-    upside: -0.0481
+    upside: -0.1235
     tier: Med-High
     conviction_mult: 1.5
     watchlist: fcf-plus-plus-growth
@@ -416,26 +412,13 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
-  amzn:
-    spot: 238.55
-    weighted_dcf: 222.01
-    upside: -0.0693
-    tier: High
-    conviction_mult: 2.0
-    watchlist: fcf-megacap
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0
-    weight: 0.0
-  dal:
-    spot: 83.06
-    weighted_dcf: 76.35
-    upside: -0.0807
-    tier: Med
-    conviction_mult: 1.0
-    watchlist: fcf-plus-plus-growth
+  prme:
+    spot: 3.89
+    weighted_dcf: 3.39
+    upside: -0.1289
+    tier: Low
+    conviction_mult: 0.35
+    watchlist: asymmetrical-moonshots
     category_mult: 1.0
     ai: null
     ai_zone: n/a
@@ -443,9 +426,9 @@ findings:
     raw_score: 0.0
     weight: 0.0
   shak:
-    spot: 54.7
+    spot: 56.79
     weighted_dcf: 49.21
-    upside: -0.1004
+    upside: -0.1335
     tier: Med-Low
     conviction_mult: 0.6
     watchlist: fun-speculative
@@ -455,62 +438,23 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
-  shop:
-    spot: 108.24
-    weighted_dcf: 91.88
-    upside: -0.1511
-    tier: Med
-    conviction_mult: 1.0
-    watchlist: fun-speculative
-    category_mult: 0.5
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0
-    weight: 0.0
-  joby:
-    spot: 10.5
-    weighted_dcf: 8.44
-    upside: -0.1962
+  dash:
+    spot: 188.87
+    weighted_dcf: 156.7
+    upside: -0.1703
     tier: High
     conviction_mult: 2.0
-    watchlist: asymmetrical-moonshots
+    watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
+    ai: 7.81
+    ai_zone: yellow
+    ai_mult: 1.1
     raw_score: 0.0
     weight: 0.0
-  rddt:
-    spot: 162.1
-    weighted_dcf: 129.4
-    upside: -0.2017
-    tier: Med
-    conviction_mult: 1.0
-    watchlist: fun-speculative
-    category_mult: 0.5
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0
-    weight: 0.0
-  googl:
-    spot: 359.68
-    weighted_dcf: 282.54
-    upside: -0.2145
-    tier: High
-    conviction_mult: 2.0
-    watchlist: fcf-megacap
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0
-    weight: 0.0
-  de:
-    spot: 577.48
-    weighted_dcf: 451.41
-    upside: -0.2183
+  dal:
+    spot: 93.06
+    weighted_dcf: 76.35
+    upside: -0.1795
     tier: Med
     conviction_mult: 1.0
     watchlist: fcf-plus-plus-growth
@@ -520,10 +464,10 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
-  nvda:
-    spot: 205.19
-    weighted_dcf: 153.54
-    upside: -0.2517
+  googl:
+    spot: 361.21
+    weighted_dcf: 282.54
+    upside: -0.2178
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-megacap
@@ -533,10 +477,101 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
+  nvda:
+    spot: 197.58
+    weighted_dcf: 153.54
+    upside: -0.2229
+    tier: High
+    conviction_mult: 2.0
+    watchlist: fcf-megacap
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  shop:
+    spot: 121.63
+    weighted_dcf: 91.88
+    upside: -0.2446
+    tier: Med
+    conviction_mult: 1.0
+    watchlist: fun-speculative
+    category_mult: 0.5
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  de:
+    spot: 627.63
+    weighted_dcf: 451.41
+    upside: -0.2808
+    tier: Med
+    conviction_mult: 1.0
+    watchlist: fcf-plus-plus-growth
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  rddt:
+    spot: 197.76
+    weighted_dcf: 129.4
+    upside: -0.3457
+    tier: Med
+    conviction_mult: 1.0
+    watchlist: fun-speculative
+    category_mult: 0.5
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  aapl:
+    spot: 294.38
+    weighted_dcf: 190.57
+    upside: -0.3526
+    tier: High
+    conviction_mult: 2.0
+    watchlist: fcf-megacap
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  oklo:
+    spot: 52.45
+    weighted_dcf: 31.58
+    upside: -0.398
+    tier: Low
+    conviction_mult: 0.35
+    watchlist: asymmetrical-moonshots
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  lth:
+    spot: 40.04
+    weighted_dcf: 22.26
+    upside: -0.4439
+    tier: High
+    conviction_mult: 2.0
+    watchlist: fcf-plus-plus-growth
+    category_mult: 1.0
+    ai: null
+    ai_zone: n/a
+    ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
   tem:
-    spot: 47.82
+    spot: 61.6
     weighted_dcf: 34.18
-    upside: -0.2853
+    upside: -0.4452
     tier: High
     conviction_mult: 2.0
     watchlist: asymmetrical-moonshots
@@ -547,48 +582,22 @@ findings:
     raw_score: 0.0
     weight: 0.0
   ilmn:
-    spot: 144.83
+    spot: 183.89
     weighted_dcf: 101.53
-    upside: -0.299
+    upside: -0.4479
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 7.08
+    ai: 8.91
     ai_zone: yellow
     ai_mult: 1.1
     raw_score: 0.0
     weight: 0.0
-  lth:
-    spot: 33.61
-    weighted_dcf: 22.26
-    upside: -0.3376
-    tier: High
-    conviction_mult: 2.0
-    watchlist: fcf-plus-plus-growth
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0
-    weight: 0.0
-  aapl:
-    spot: 291.13
-    weighted_dcf: 190.57
-    upside: -0.3454
-    tier: High
-    conviction_mult: 2.0
-    watchlist: fcf-megacap
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0
-    weight: 0.0
   wrby:
-    spot: 26.46
+    spot: 29.37
     weighted_dcf: 15.33
-    upside: -0.4207
+    upside: -0.4781
     tier: Med
     conviction_mult: 1.0
     watchlist: fun-speculative
@@ -598,23 +607,23 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
-  txg:
-    spot: 28.11
-    weighted_dcf: 14.28
-    upside: -0.4919
+  rklb:
+    spot: 100.07
+    weighted_dcf: 52.04
+    upside: -0.48
     tier: Med-High
     conviction_mult: 1.5
-    watchlist: fcf-plus-plus-growth
+    watchlist: asymmetrical-moonshots
     category_mult: 1.0
-    ai: 7.03
-    ai_zone: yellow
-    ai_mult: 1.1
+    ai: 138.04
+    ai_zone: red
+    ai_mult: 0.7
     raw_score: 0.0
     weight: 0.0
   twst:
-    spot: 87.5
+    spot: 102.25
     weighted_dcf: 43.95
-    upside: -0.4978
+    upside: -0.5702
     tier: Med-Low
     conviction_mult: 0.6
     watchlist: asymmetrical-moonshots
@@ -624,23 +633,10 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
-  oklo:
-    spot: 67.2
-    weighted_dcf: 31.58
-    upside: -0.5301
-    tier: Low
-    conviction_mult: 0.35
-    watchlist: asymmetrical-moonshots
-    category_mult: 1.0
-    ai: null
-    ai_zone: n/a
-    ai_mult: 1.0
-    raw_score: 0.0
-    weight: 0.0
   u:
-    spot: 27.24
+    spot: 30.19
     weighted_dcf: 11.86
-    upside: -0.5647
+    upside: -0.6072
     tier: Low
     conviction_mult: 0.35
     watchlist: fcf-plus-plus-growth
@@ -650,10 +646,23 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
+  txg:
+    spot: 39.05
+    weighted_dcf: 14.28
+    upside: -0.6342
+    tier: Med-High
+    conviction_mult: 1.5
+    watchlist: fcf-plus-plus-growth
+    category_mult: 1.0
+    ai: 10.25
+    ai_zone: orange
+    ai_mult: 0.9
+    raw_score: 0.0
+    weight: 0.0
   hood:
-    spot: 93.19
+    spot: 108.65
     weighted_dcf: 39.45
-    upside: -0.5767
+    upside: -0.6369
     tier: Med
     conviction_mult: 1.0
     watchlist: fcf-plus-plus-growth
@@ -663,23 +672,10 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
-  rklb:
-    spot: 142.0
-    weighted_dcf: 52.04
-    upside: -0.6335
-    tier: Med-High
-    conviction_mult: 1.5
-    watchlist: asymmetrical-moonshots
-    category_mult: 1.0
-    ai: 196.82
-    ai_zone: red
-    ai_mult: 0.7
-    raw_score: 0.0
-    weight: 0.0
   sym:
-    spot: 41.63
+    spot: 44.96
     weighted_dcf: 13.32
-    upside: -0.68
+    upside: -0.7037
     tier: Low
     conviction_mult: 0.35
     watchlist: asymmetrical-moonshots
@@ -690,9 +686,9 @@ findings:
     raw_score: 0.0
     weight: 0.0
   tsla:
-    spot: 406.43
+    spot: 425.3
     weighted_dcf: 101.42
-    upside: -0.7505
+    upside: -0.7615
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-megacap
@@ -703,14 +699,14 @@ findings:
     raw_score: 0.0
     weight: 0.0
   ionq:
-    spot: 70.14
+    spot: 51.4
     weighted_dcf: 9.18
-    upside: -0.8691
+    upside: -0.8214
     tier: Med
     conviction_mult: 1.0
     watchlist: asymmetrical-moonshots
     category_mult: 1.0
-    ai: 154.42
+    ai: 109.03
     ai_zone: red
     ai_mult: 0.7
     raw_score: 0.0

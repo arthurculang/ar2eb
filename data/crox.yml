@@ -2,10 +2,10 @@ ticker: CROX
 company: Crocs, Inc.
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-06-01'
-spot: 124.71
+date: '2026-07-02'
+spot: 124.17
 market:
-  market_cap_billion: 6.26
+  market_cap_billion: 6.23
   shares_outstanding_million: 50.2
   cash_billion: 0.13
   net_debt_billion: 1.231
@@ -633,8 +633,13 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + position sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-15_06-53
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-15_06-53
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-15_06-53"
+    asOfDate: "2026-06-01"
+    spotPrice: 124.71

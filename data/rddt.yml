@@ -2,10 +2,10 @@ ticker: RDDT
 company: Reddit, Inc.
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-06-01'
-spot: 162.1
+date: '2026-07-02'
+spot: 197.76
 market:
-  market_cap_billion: 30.22
+  market_cap_billion: 36.86
   shares_outstanding_million: 186.4
   cash_billion: 0.954
   net_debt_billion: 0.0
@@ -645,8 +645,13 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -20.2% finding) + position
     sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-15_06-22
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-15_06-22
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-15_06-22"
+    asOfDate: "2026-06-01"
+    spotPrice: 162.1

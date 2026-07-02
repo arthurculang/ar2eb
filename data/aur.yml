@@ -13,12 +13,12 @@ ticker: AUR
 company: Aurora Innovation
 exchange: NASDAQ
 dcf_type: young_company
-date: 2026-05-16
-spot: 7.74
+date: '2026-07-02'
+spot: 7.07
 
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 13.2
+  market_cap_billion: 12.09
   shares_outstanding_million: 1710        # 1.71B sh
   cash_billion: 1.28
   net_debt_billion: 0.0                   # ~$0 funded debt (Q1'26 10-Q); the $1B 0% convertible is Uber's exchangeable note, not Aurora's
@@ -498,12 +498,16 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +5.1% finding) + position sizing.'
 stamp:
-  footer_version: "024"
-  footer_timestamp: "2026-05-31_17-10"
+  footer_version: "025"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "024"
-  pdf_timestamp: "2026-05-31_17-10"
+  pdf_version: "025"
+  pdf_timestamp: "2026-07-02_06-47"
   prior_versions:
+  - version: "024"
+    timestamp: "2026-05-31_17-10"
+    asOfDate: "2026-05-16"
+    spotPrice: 7.74
   - version: "023"
     timestamp: "2026-05-23_21-14"
     asOfDate: "2026-05-16"

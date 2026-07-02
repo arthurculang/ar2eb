@@ -2,10 +2,10 @@ ticker: WRBY
 company: Warby Parker
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-06-01'
-spot: 26.46
+date: '2026-07-02'
+spot: 29.37
 market:
-  market_cap_billion: 3.25
+  market_cap_billion: 3.6
   shares_outstanding_million: 122.7
   cash_billion: 0.286
   net_debt_billion: 0.0
@@ -646,8 +646,13 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -42.1% finding) + position
     sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-15_06-22
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-15_06-22
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-15_06-22"
+    asOfDate: "2026-06-01"
+    spotPrice: 26.46

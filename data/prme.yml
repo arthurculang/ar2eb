@@ -2,10 +2,10 @@ ticker: PRME
 company: Prime Medicine
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-06-16'
-spot: 3.16
+date: '2026-07-02'
+spot: 3.89
 market:
-  market_cap_billion: 0.57
+  market_cap_billion: 0.703
   shares_outstanding_million: 180.6
   cash_billion: 0.149
   net_debt_billion: 0.0
@@ -964,8 +964,13 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +7.2% finding) + position
     sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-20_06-33
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-20_06-33
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-20_06-33"
+    asOfDate: "2026-06-16"
+    spotPrice: 3.16

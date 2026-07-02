@@ -33,8 +33,11 @@ from pathlib import Path
 
 
 def _read_top_scalar(text: str, key: str) -> str | None:
-    """Read a top-level scalar like `spot: 100.01` or `date: 2026-05-16`."""
-    m = re.search(rf'^{key}:\s*"?([^"\n#]+?)"?\s*(?:#.*)?$', text, re.M)
+    """Read a top-level scalar like `spot: 100.01` or `date: '2026-05-16'`."""
+    # Tolerate unquoted, "double"-, and 'single'-quoted scalars (most memos
+    # ship a single-quoted `date:`; the old regex leaked the quotes into
+    # prior_versions.asOfDate as `"'2026-06-01'"`).
+    m = re.search(rf'''^{key}:\s*["']?([^"'\n#]+?)["']?\s*(?:#.*)?$''', text, re.M)
     return m.group(1).strip() if m else None
 
 
@@ -59,6 +62,15 @@ def _insert_prior_version(text: str, entry: dict) -> str:
         f'    asOfDate: "{entry["asOfDate"]}"\n'
         f'    spotPrice: {entry["spotPrice"]}\n'
     )
+    # Inline-empty `prior_versions: []` (the form new memos scaffold with) —
+    # expand it to a block so we don't insert a second, duplicate key that
+    # YAML would resolve by silently dropping the archived entry.
+    if re.search(r'^[ \t]+prior_versions:[ \t]*\[\][ \t]*\n', text, re.M):
+        return re.sub(
+            r'^[ \t]+prior_versions:[ \t]*\[\][ \t]*\n',
+            f'  prior_versions:\n{snippet}',
+            text, count=1, flags=re.M,
+        )
     if re.search(r'^\s+prior_versions:\s*$', text, re.M):
         return re.sub(
             r'(^\s+prior_versions:\s*\n)',

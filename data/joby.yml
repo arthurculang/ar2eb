@@ -16,13 +16,13 @@ ticker: JOBY
 company: Joby Aviation
 exchange: NYSE
 dcf_type: young_company  # young_company | mature_company
-date: 2026-05-16
-spot: 10.50
+date: '2026-07-02'
+spot: 8.84
 
 # ── Market data ─────────────────────────────────────────────────────────────
 # Structured, not formatted. Generator formats per layout rules.
 market:
-  market_cap_billion: 10.3
+  market_cap_billion: 8.7
   shares_outstanding_million: 984
   cash_billion: 2.5
   net_debt_billion: 0.0
@@ -530,12 +530,16 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -19.6% finding) + position
     sizing.'
 stamp:
-  footer_version: "030"
-  footer_timestamp: "2026-05-31_17-10"
+  footer_version: "031"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "030"
-  pdf_timestamp: "2026-05-31_17-10"
+  pdf_version: "031"
+  pdf_timestamp: "2026-07-02_06-47"
   prior_versions:
+  - version: "030"
+    timestamp: "2026-05-31_17-10"
+    asOfDate: "2026-05-16"
+    spotPrice: 10.50
   - version: "029"
     timestamp: "2026-05-23_21-14"
     asOfDate: "2026-05-16"
