@@ -33,12 +33,12 @@ ticker: ISRG
 company: Intuitive Surgical
 exchange: NASDAQ
 dcf_type: mature_company
-date: 2026-05-27
-spot: 436.64
+date: '2026-07-02'
+spot: 402.38
 
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 154.8
+  market_cap_billion: 142.8
   shares_outstanding_million: 355
   cash_billion: 9.5               # cash + investments, Q1 2026 10-Q
   net_debt_billion: 0.0           # zero long-term debt; pristine balance sheet
@@ -525,13 +525,17 @@ taxonomy:
   primary_theme: medical-devices
 
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-05-31_17-03"
+  footer_version: "005"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "004"
-  pdf_timestamp: "2026-05-31_17-03"
+  pdf_version: "005"
+  pdf_timestamp: "2026-07-02_06-47"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-05-31_17-03"
+    asOfDate: "2026-05-27"
+    spotPrice: 436.64
   - version: "003"
     timestamp: "2026-05-29_01-52"
     asOfDate: "2026-05-27"

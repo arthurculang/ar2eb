@@ -2,10 +2,10 @@ ticker: DAL
 company: Delta Air Lines
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-06-01'
-spot: 83.06
+date: '2026-07-02'
+spot: 93.06
 market:
-  market_cap_billion: 54.25
+  market_cap_billion: 60.78
   shares_outstanding_million: 653.1
   cash_billion: 4.31
   net_debt_billion: 13.31
@@ -646,8 +646,13 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -8.1% finding) + position
     sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-14_23-03
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-14_23-03
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-14_23-03"
+    asOfDate: "2026-06-01"
+    spotPrice: 83.06

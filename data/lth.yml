@@ -20,12 +20,12 @@ ticker: LTH
 company: Life Time Group Holdings
 exchange: NYSE
 dcf_type: mature_company          # young_company | mature_company | mature_company_sotp
-date: 2026-05-16
-spot: 33.61
+date: '2026-07-02'
+spot: 40.04
 
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 7.46
+  market_cap_billion: 8.89
   shares_outstanding_million: 222
   cash_billion: 0.232
   net_debt_billion: 1.29
@@ -539,12 +539,16 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -33.8% finding) + position
     sizing.'
 stamp:
-  footer_version: "023"
-  footer_timestamp: "2026-05-31_17-10"
+  footer_version: "024"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "023"
-  pdf_timestamp: "2026-05-31_17-10"
+  pdf_version: "024"
+  pdf_timestamp: "2026-07-02_06-47"
   prior_versions:
+  - version: "023"
+    timestamp: "2026-05-31_17-10"
+    asOfDate: "2026-05-16"
+    spotPrice: 33.61
   - version: "022"
     timestamp: "2026-05-23_21-14"
     asOfDate: "2026-05-16"

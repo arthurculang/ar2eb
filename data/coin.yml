@@ -2,10 +2,10 @@ ticker: COIN
 company: Coinbase Global
 exchange: NASDAQ
 dcf_type: mature_company_sotp
-date: 2026-05-29
-spot: 182.25
+date: '2026-07-02'
+spot: 159.24
 market:
-  market_cap_billion: 48.0
+  market_cap_billion: 41.94
   shares_outstanding_million: 263.4
   cash_billion: 10.2
   net_debt_billion: 0.0
@@ -636,13 +636,17 @@ glossary:
   definition: COIN holds ~8.4M CRCL shares from the 2023 Centre dissolution. ~$1B at $120/share (range $0.5-2.5B). Marked
     as a strategic investment.
 stamp:
-  footer_version: "002"
-  footer_timestamp: "2026-05-31_17-11"
+  footer_version: "003"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "002"
-  pdf_timestamp: "2026-05-31_17-11"
+  pdf_version: "003"
+  pdf_timestamp: "2026-07-02_06-47"
 
   prior_versions:
+  - version: "002"
+    timestamp: "2026-05-31_17-11"
+    asOfDate: "2026-05-29"
+    spotPrice: 182.25
   - version: "001"
     timestamp: "2026-05-29_23-20"
     asOfDate: "2026-05-29"

@@ -2,10 +2,10 @@ ticker: UBER
 company: Uber Technologies
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-06-01'
-spot: 70.4
+date: '2026-07-02'
+spot: 72.66
 market:
-  market_cap_billion: 145.0
+  market_cap_billion: 147.9
   shares_outstanding_million: 2036.0
   cash_billion: 2.7
   net_debt_billion: 0.0
@@ -582,11 +582,16 @@ competitive:
     meaningful AV-disruption risk; the sign of the memo hinges on whether autonomy commoditizes the driver-supply side (ultra-bear
     -44%) or Uber tolls the cheaper AV rides (base +55%).'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-03_15-44
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-03_15-44
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-03_15-44"
+    asOfDate: "2026-06-01"
+    spotPrice: 70.4
 pocd:
   people:
     ceo: 'Dara Khosrowshahi'

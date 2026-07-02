@@ -2,10 +2,10 @@ ticker: ABNB
 company: Airbnb
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-06-01'
-spot: 133.0
+date: '2026-07-02'
+spot: 147.31
 market:
-  market_cap_billion: 79.0
+  market_cap_billion: 95.75
   shares_outstanding_million: 650.0
   cash_billion: 9.5
   net_debt_billion: 0.0
@@ -580,11 +580,16 @@ competitive:
     quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds
     in the teens or decays to GDP-plus.
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-03_15-44
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-03_15-44
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-03_15-44"
+    asOfDate: "2026-06-01"
+    spotPrice: 133.0
 pocd:
   people:
     ceo: 'Brian Chesky'

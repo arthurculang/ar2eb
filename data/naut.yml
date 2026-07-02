@@ -23,12 +23,12 @@ ticker: NAUT
 company: Nautilus Biotechnology
 exchange: NASDAQ
 dcf_type: young_company   # young_company | mature_company | mature_company_sotp
-date: 2026-05-16
-spot: 2.40
+date: '2026-07-02'
+spot: 1.84
 
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 0.302
+  market_cap_billion: 0.232
   shares_outstanding_million: 126
   cash_billion: 0.143        # Q1 2026 cash & equivalents ($143.4M)
   net_debt_billion: 0.0
@@ -580,13 +580,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing.'
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-05-31_17-10"
+  footer_version: "006"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "005"
-  pdf_timestamp: "2026-05-31_17-10"
+  pdf_version: "006"
+  pdf_timestamp: "2026-07-02_06-47"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-05-31_17-10"
+    asOfDate: "2026-05-16"
+    spotPrice: 2.40
   - version: "004"
     timestamp: "2026-05-28_05-25"
     asOfDate: "2026-05-16"

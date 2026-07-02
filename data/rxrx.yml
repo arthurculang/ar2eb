@@ -2,10 +2,10 @@ ticker: RXRX
 company: Recursion Pharmaceuticals
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-06-16'
-spot: 3.15
+date: '2026-07-02'
+spot: 3.67
 market:
-  market_cap_billion: 1.61
+  market_cap_billion: 1.87
   shares_outstanding_million: 510.0
   cash_billion: 0.665
   net_debt_billion: 0.0
@@ -972,8 +972,13 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +22.3% finding) + position
     sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-06-16_07-02
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-06-16_07-02
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-06-16_07-02"
+    asOfDate: "2026-06-16"
+    spotPrice: 3.15

@@ -2,10 +2,10 @@ ticker: RKLB
 company: Rocket Lab
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-05-31'
-spot: 142.0
+date: '2026-07-02'
+spot: 100.07
 market:
-  market_cap_billion: 81.4
+  market_cap_billion: 57.34
   shares_outstanding_million: 573.0
   cash_billion: 0.83
   net_debt_billion: 0.0
@@ -960,8 +960,13 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the −63% finding) + position sizing.'
 stamp:
-  footer_version: '001'
-  footer_timestamp: 2026-05-31_18-52
+  footer_version: "002"
+  footer_timestamp: "2026-07-02_06-47"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: '001'
-  pdf_timestamp: 2026-05-31_18-52
+  pdf_version: "002"
+  pdf_timestamp: "2026-07-02_06-47"
+  prior_versions:
+  - version: "001"
+    timestamp: "2026-05-31_18-52"
+    asOfDate: "2026-05-31"
+    spotPrice: 142.0
