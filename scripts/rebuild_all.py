@@ -30,7 +30,11 @@ from pathlib import Path
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak", "meta", "amzn", "googl", "aapl", "nvda", "tsla", "dis", "cmg", "dal", "hood", "de", "algn", "adsk", "cart", "u", "crox", "rddt", "tost", "wrby", "you", "shop", "rxrx", "beam", "pacb", "tem", "serv", "prme", "twst", "sym", "nvcr", "cai", "hhh", "zipline", "pyka", "blgff"]
+# Derived from data/*.yml so a new memo is always rendered (a hand-kept list
+# could silently skip one — the site would link a 404 PDF).
+TICKERS = sorted(
+    p.stem for p in (REPO / "data").glob("*.yml")
+    if not p.stem.startswith("_") and p.stem != "taxonomy")
 FORCE = bool(os.environ.get("MEMO_FORCE"))
 MEMOS_DIR = REPO / "public" / "memos"
 
@@ -52,6 +56,13 @@ def main() -> None:
     # ALL tickers (their cross-cutting checks shouldn't skip).
     strict = "--strict-validate" in sys.argv
     strict_layout = "--strict-layout" in sys.argv
+    unknown = [a for a in sys.argv[1:] if a.startswith("--")
+               and a not in ("--strict-validate", "--strict-layout")]
+    if unknown:
+        # A misspelled --strict-layout must not silently run an ungated build.
+        print(f"unknown flag(s): {unknown}  "
+              f"(valid: --strict-validate, --strict-layout)", file=sys.stderr)
+        sys.exit(2)
     positional = [a for a in sys.argv[1:] if not a.startswith("--")]
     bad = [t for t in positional if t not in TICKERS]
     if bad:
@@ -75,6 +86,11 @@ def main() -> None:
     print("\n[site] regenerating public/data.js")
     run([sys.executable, "scripts/build_site_data.py"])
 
+    # 2b. Bundles — the print harness loads the pre-compiled bundle, so a
+    # stale committed bundle would render outdated JSX (and re-stamp data.js).
+    print("\n[bundle] node build.js")
+    run(["node", "build.js"])
+
     # 3. PDFs.
     MEMOS_DIR.mkdir(parents=True, exist_ok=True)
     built, skipped = [], []
@@ -97,6 +113,16 @@ def main() -> None:
         if src.exists():
             shutil.copyfile(src, pdf)
         built.append(t)
+
+    # 4. Site data again — data.js embeds each PDF's size and 404-guards the
+    # prior-versions list against disk, so it must be regenerated AFTER the
+    # renders land (running it only before left "size": "—" on every fresh
+    # PDF — the launch flip shipped that em-dash to the live site).
+    if built:
+        print("\n[site] regenerating public/data.js (post-render sizes)")
+        run([sys.executable, "scripts/build_site_data.py"])
+        # ...and restamp the ?v= cache-bust hashes, since data.js just changed.
+        run(["node", "build.js"])
 
     print(f"\nrebuild-all done — built: {built or 'none'}  "
           f"skipped (unchanged): {skipped or 'none'}")

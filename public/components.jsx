@@ -25,6 +25,9 @@ function useRoute() {
 }
 function Link({ to, className, children, ...rest }) {
   const onClick = (e) => {
+    // Only hijack a plain left-click — modifier clicks (cmd/ctrl/shift/alt) and
+    // middle-click keep their native open-in-new-tab/window behavior.
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
     e.preventDefault();
     if (location.hash === '#' + to) {
       window.scrollTo({ top: 0, behavior: 'smooth' });

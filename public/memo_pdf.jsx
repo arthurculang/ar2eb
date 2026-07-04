@@ -1799,11 +1799,19 @@ function YoungValuationChart({ memo, widthPt = 280, heightPt = 190 }) {
   const plotL = m.left, plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
 
-  // Y axis: 0 → max(9, ratios×1.2), with ticks at 0/2/4/6/8.
+  // Y axis: 0 → max(9, ratios×1.2), domain snapped to a round top tick. Ticks are
+  // niceStep-derived, not a fixed 0/2/4/6/8 list — an ultra_bear's near-zero FY36
+  // revenue puts its P/S at 50–120×, which left ~90% of the axis unscaled (spec §3.5).
   const maxR = Math.max(...ratios.map(r => r.mult));
-  const yMax = Math.max(9, maxR * 1.2);
+  const rawMax = Math.max(9, maxR * 1.2);
+  const yStep = niceStep(rawMax);
+  const yMax = Math.ceil(rawMax / yStep) * yStep;
   const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
-  const yTicks = [0, 2, 4, 6, 8].filter(v => v <= yMax).map(v => [v, `${v}×`]);
+  const yTicks = [];
+  for (let i = 0; i * yStep <= yMax; i++) {
+    const v = i * yStep;
+    yTicks.push([v, `${v.toFixed(yStep < 1 ? 1 : 0)}×`]);
+  }
 
   // Bars: equal spacing across plot width.
   const barW = (plotR - plotL) / (ratios.length + 1.5);
@@ -2213,12 +2221,18 @@ function MatureRevenueChart({ memo, widthPt = 280, heightPt = 190 }) {
   const plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
   const allVals = [...histRev, ...Object.values(projByScn).flat()];
-  const yMax = Math.max(...allVals) * 1.1;
+  // Domain top snaps to a round tick so the last gridline lands ON the axis top —
+  // the old `v <= yMax + step*0.5` loop could draw a tick above the domain, whose
+  // unclamped extrapolation put a gridline + label through the chart title.
+  const rawMax = Math.max(...allVals) * 1.1;
+  const yStep = niceStep(rawMax);
+  const yMax = Math.ceil(rawMax / yStep) * yStep;
   const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
-  const yStep = niceStep(yMax);
   const yTicks = [];
-  for (let v = 0; v <= yMax + yStep * 0.5; v += yStep)
+  for (let i = 0; i * yStep <= yMax; i++) {
+    const v = i * yStep;
     yTicks.push([v, `$${v.toFixed(yStep < 1 ? 1 : 0)}B`]);
+  }
   // Left margin sized to the widest y-label so $100B–$1T labels never clip (spec §3.5).
   const plotL = Math.max(m.left,
     Math.ceil(Math.max(...yTicks.map(([, l]) => monoTextWidth(l, 5.5)))) + 5);
@@ -2300,18 +2314,22 @@ function MatureSegmentsChart({ memo, widthPt = 280, heightPt = 190 }) {
   const m = CHART_MARGIN;
   const plotR = widthPt - m.right;
   const plotT = m.top, plotB = heightPt - m.bottom;
-  const yMax = Math.max(...segA, ...segB) * 1.15;
-  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
   // Magnitude-aware axis: display $B once a segment reaches $1B (1,000 $M), else $M;
   // niceStep keeps the tick count ~6 at any scale. (The old fixed step capped at 1,000
   // and exploded into ~130 gridlines at mega-cap $100B+ segment revenue — spec §3.5.)
+  // Domain top snaps to a round tick so no gridline extrapolates into the title band.
+  const rawMax = Math.max(...segA, ...segB) * 1.15;
+  const yStep = niceStep(rawMax);
+  const yMax = Math.ceil(rawMax / yStep) * yStep;
+  const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
   const useB = yMax >= 1000;
   const unit = useB ? 'B' : 'M';
   const div = useB ? 1000 : 1;
-  const yStep = niceStep(yMax);
   const yTicks = [];
-  for (let v = 0; v <= yMax + yStep * 0.5; v += yStep)
+  for (let i = 0; i * yStep <= yMax; i++) {
+    const v = i * yStep;
     yTicks.push([v, `$${(v / div).toFixed(yStep / div < 1 ? 1 : 0)}${unit}`]);
+  }
   // Left margin sized to the widest y-label so labels never clip (spec §3.5).
   const plotL = Math.max(m.left,
     Math.ceil(Math.max(...yTicks.map(([, l]) => monoTextWidth(l, 5.5)))) + 5);
@@ -2471,13 +2489,21 @@ function MatureBalanceChart({ memo, widthPt = 280, heightPt = 190 }) {
   } else {
     vals = [memo.print.market.cashBillion]; title = 'Net cash ($B)';
   }
-  const yMax = Math.max(...vals) * 1.2;
-  const yMin = Math.min(0, Math.min(...vals));
+  // Domain always spans 0 with headroom on the SPAN (a bare max×1.2 flips sign on
+  // all-negative FCF history — TEM/TWST/NVCR — pushing yScale(0) off-canvas), and
+  // both ends snap to tick multiples so ticks are round and stay inside the plot.
+  const hi = Math.max(0, ...vals);
+  const lo = Math.min(0, ...vals);
+  const span = (hi - lo) || 1;
+  const yStep = niceStep(span);
+  const yMax = Math.ceil((hi + 0.15 * span) / yStep) * yStep;
+  const yMin = Math.floor(lo / yStep) * yStep;
   const yScale = mkLinearScale([yMin, yMax], [plotB, plotT]);
-  const yStep = niceStep(yMax - yMin);
   const yTicks = [];
-  for (let v = yMin; v <= yMax + yStep * 0.5; v += yStep)
+  for (let i = 0; i <= Math.round((yMax - yMin) / yStep); i++) {
+    const v = yMin + i * yStep;
     yTicks.push([v, `$${v.toFixed(yStep < 1 ? 1 : 0)}B`]);
+  }
   const plotL = Math.max(m.left,
     Math.ceil(Math.max(...yTicks.map(([, l]) => monoTextWidth(l, 5.5)))) + 5);
   const xScale = mkLinearScale([-0.5, nHist - 0.5], [plotL, plotR]);
@@ -2533,11 +2559,17 @@ function MatureEvMultiplesChart({ memo, widthPt = 280, heightPt = 190 }) {
     );
   }
   const validVals = evRev.filter(v => v != null);
-  const yMax = Math.max(...validVals) * 1.2;
+  // niceStep, matching the Revenue/FCF/segment charts — the old fixed `yMax>8 ? 2 : 1`
+  // ladder drew ~25 near-touching labels on high-multiple names like SHOP (spec §3.5).
+  const rawMax = Math.max(...validVals) * 1.2;
+  const yStep = niceStep(rawMax);
+  const yMax = Math.ceil(rawMax / yStep) * yStep;
   const yScale = mkLinearScale([0, yMax], [plotB, plotT]);
-  const yTickStep = yMax > 8 ? 2 : 1;
   const yTicks = [];
-  for (let v = 0; v <= yMax; v += yTickStep) yTicks.push([v, `${v.toFixed(0)}×`]);
+  for (let i = 0; i * yStep <= yMax; i++) {
+    const v = i * yStep;
+    yTicks.push([v, `${v.toFixed(yStep < 1 ? 1 : 0)}×`]);
+  }
   const xTicks = histYears.map((y, i) => [i, `${y - 2000}`]);
   const linePts = evRev.map((v, i) => [i, v]).filter(([, v]) => v != null);
 
@@ -2641,7 +2673,12 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
     const yTicks = [0, 50, 100, 150, 200].filter(v => v <= yMax).map(v => [v, `${v}`]);
     const allLabels = [...yrs.map(y => y.slice(2)), '26', '27', '28', '29', '30'];
     const xTicks = allLabels.map((l, i) => [i, l]);
-    const luxFY30 = { bear: 50, base: 80, bull: 130, ultra_bull: 180 };
+    // Per-scenario FY30 luxury-club endpoints come from each scenario's
+    // chart_data.luxury_club_count_fy30 in the yml (compute-from-data, spec §3.5 —
+    // the old hardcoded dict had drifted from the authored values AND lacked
+    // ultra_bear, whose NaN path silently dropped the fifth fan line).
+    const luxFY30 = Object.fromEntries(scnKeysFor(memo).map(k =>
+      [k, memo.print.scenarios[k].chartData?.luxury_club_count_fy30]));
     const stdFY30 = ref.clubStandardProjFy30 || standard.at(-1);
 
     return (
@@ -2656,7 +2693,7 @@ function MatureTerminalChart({ memo, widthPt = 280, heightPt = 190 }) {
               stroke={PALETTE.muted} strokeWidth="1.4" fill="none" />
         <path d={pathD(luxury.map((v, i) => [i, v]), xScale, yScale)}
               stroke={PALETTE.accent} strokeWidth="1.6" fill="none" />
-        {scnKeysFor(memo).map(k => (
+        {scnKeysFor(memo).filter(k => luxFY30[k] != null).map(k => (
           <path key={`lx-${k}`}
                 d={pathD([[yrs.length - 1, luxury.at(-1)],
                           [yrs.length + 4, luxFY30[k]]], xScale, yScale)}

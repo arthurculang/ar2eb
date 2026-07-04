@@ -27,6 +27,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from arthur_indicator import compute_ai, ai_zone  # noqa: E402  (Arthur Indicator §13, for the portfolio page)
 
 TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak", "meta", "amzn", "googl", "aapl", "nvda", "tsla", "dis", "cmg", "dal", "hood", "de", "algn", "adsk", "cart", "u", "crox", "rddt", "tost", "wrby", "you", "shop", "rxrx", "beam", "pacb", "tem", "serv", "prme", "twst", "sym", "nvcr", "cai", "hhh", "zipline", "pyka", "blgff"]
+# TICKERS encodes the curated site display order — but it must cover every
+# memo on disk, or a new memo silently never ships. Reconcile against data/.
+_on_disk = {p.stem for p in (REPO / "data").glob("*.yml")
+            if not p.stem.startswith("_") and p.stem != "taxonomy"}
+_missing, _phantom = _on_disk - set(TICKERS), set(TICKERS) - _on_disk
+if _missing or _phantom:
+    raise SystemExit(f"TICKERS out of sync with data/*.yml — "
+                     f"missing from list: {sorted(_missing) or 'none'}; "
+                     f"listed but no file: {sorted(_phantom) or 'none'}")
 # Canonical scenario order — worst to best. Each ticker subsets this list
 # based on which keys appear in scenarios.* (e.g. ZM has all five, JOBY/AUR/
 # LTH/NAUT have the standard four). The order here drives display order
@@ -164,7 +173,11 @@ def _fmt_b(b: float) -> str:
 def fmt_cash(mk: dict) -> str:
     cash = mk["cash_billion"]
     nd = mk["net_debt_billion"]
-    s = f"{_fmt_b(cash)} cash, " + ("zero debt" if nd == 0 else f"{_fmt_b(nd)} net debt")
+    # Label the figure plain "debt": the ymls are inconsistent about whether
+    # net_debt_billion carries gross debt (AAPL 90.7 = total) or true net
+    # (CROX 1.23 = net of cash) — "net debt" was self-contradicting AAPL's own
+    # extras on the public card. The extras carry the precise decomposition.
+    s = f"{_fmt_b(cash)} cash, " + ("zero debt" if nd == 0 else f"{_fmt_b(nd)} debt")
     extras = [e for e in mk.get("extras", []) if e]
     if extras:
         s += " · " + "; ".join(extras)

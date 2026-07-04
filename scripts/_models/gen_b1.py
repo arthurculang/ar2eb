@@ -118,4 +118,5 @@ dict(ticker="LULU",company="Lululemon Athletica",exch="NASDAQ",spot=127.0,cap=15
           ("scale_economies","Nike / macro down-trade","International growth decelerates below 10% while the US keeps shrinking.")],
  take="lululemon's brand Power is genuinely durable internationally (China +29%, only 16% of revenue) and underpinned by cornered-resource fabrics, but it is eroding in the saturated US where Alo/Vuori and dupes are taking DTC share and the founder calls the product stale. The ~60% de-rating to ~10x FCF prices structural impairment; the DCF tests whether the brand stabilizes — and even a real-impairment ultra-bear is only -34%, while the modal stabilization implies the sell-off overshot."),
 ]
-for sp in SPECS: build(sp)
+if __name__ == "__main__":   # don't regenerate stale intakes on `from gen_b1 import build`
+    for sp in SPECS: build(sp)

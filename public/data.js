@@ -14,7 +14,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "joby-memo__v032__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "395 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -1289,7 +1289,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "aur-memo__v026__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "390 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -2562,13 +2562,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "lth-memo__v025__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "299 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$8.89B",
       "shares": "222M",
-      "cash": "$232M cash, $1.29B net debt · BB- credit"
+      "cash": "$232M cash, $1.29B debt · BB- credit"
     },
     "spot": {
       "price": 40.04,
@@ -3445,7 +3445,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "zm-memo__v026__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "297 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -4352,7 +4352,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "naut-memo__v007__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "386 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -5635,7 +5635,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "isrg-memo__v006__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "307 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -6494,7 +6494,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "ionq-memo__v005__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "399 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -7780,7 +7780,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "coin-memo__v004__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "302 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -8677,7 +8677,7 @@ const MEMOS = [
     "publishedLabel": "May 29, 2026",
     "pdf": {
       "file": "anthropic-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "233 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -9197,7 +9197,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "rklb-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "388 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -10445,7 +10445,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "oklo-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "399 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -11706,13 +11706,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "achr-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "393 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$3.89B",
       "shares": "790M",
-      "cash": "$1.78B cash, $80M net debt · $1.78B cash ($0.95B + $0.83B ST inv), low debt; ~760M basic / ~790M diluted; Pre-revenue (Q1'26 first $1.6M); ~$727M/yr burn, ~2.4yr runway; Anduril defense JV + $142M USAF; ~$6B order book (mostly LOIs)"
+      "cash": "$1.78B cash, $80M debt · $1.78B cash ($0.95B + $0.83B ST inv), low debt; ~760M basic / ~790M diluted; Pre-revenue (Q1'26 first $1.6M); ~$727M/yr burn, ~2.4yr runway; Anduril defense JV + $142M USAF; ~$6B order book (mostly LOIs)"
     },
     "spot": {
       "price": 4.92,
@@ -12966,7 +12966,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "gral-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "394 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -14212,7 +14212,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "txg-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "294 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -15068,7 +15068,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "lulu-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "290 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -15909,7 +15909,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "abnb-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "290 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -16743,7 +16743,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "uber-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "291 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -17581,7 +17581,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "yeti-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "290 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -18420,7 +18420,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "dash-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "293 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -19254,13 +19254,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "ilmn-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "296 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$27.77B",
       "shares": "151M",
-      "cash": "$1.16B cash, $1.99B net debt · ~$0.83B net debt; ~151M shares; ~$700M/yr buyback (no dividend); Revenue $4.34B FY25 (~flat 4yrs; Q1'26 +4.8% re-accel); ~23% non-GAAP op margin, ~70% gross, ~$0.9-1.0B FCF; Rallied ~80% off lows on the clinical/NovaSeq-X turnaround; ~5x EV/sales, ~22x FCF"
+      "cash": "$1.16B cash, $1.99B debt · ~$0.83B net debt; ~151M shares; ~$700M/yr buyback (no dividend); Revenue $4.34B FY25 (~flat 4yrs; Q1'26 +4.8% re-accel); ~23% non-GAAP op margin, ~70% gross, ~$0.9-1.0B FCF; Rallied ~80% off lows on the clinical/NovaSeq-X turnaround; ~5x EV/sales, ~22x FCF"
     },
     "spot": {
       "price": 183.89,
@@ -20091,13 +20091,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "shak-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "296 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$2.43B",
       "shares": "43M",
-      "cash": "$314M cash, $250M net debt · Net cash +$64M ($314M cash vs $250M 0% convert, out-of-the-money); ~42.8M fully-diluted shares; Revenue $1.445B FY25 (+15%); GAAP op margin back to 4.3%; FCF +$57M (~4%); capex ~11.5% of revenue; Down ~55% YoY, near the 52-week low after the June-2026 guidance cut"
+      "cash": "$314M cash, $250M debt · Net cash +$64M ($314M cash vs $250M 0% convert, out-of-the-money); ~42.8M fully-diluted shares; Revenue $1.445B FY25 (+15%); GAAP op margin back to 4.3%; FCF +$57M (~4%); capex ~11.5% of revenue; Down ~55% YoY, near the 52-week low after the June-2026 guidance cut"
     },
     "spot": {
       "price": 56.79,
@@ -20935,13 +20935,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "meta-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "301 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1545.1B",
       "shares": "2.52B",
-      "cash": "$81.6B cash, $58.7B net debt · Net cash +$22.9B ($81.6B cash vs $58.7B debt); ~2.52B shares; ~$26B buybacks + ~$5B dividends FY25; Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF ~$46.1B after capex stepping from ~$72B toward $125-145B; ~$567 mid-June 2026: +12.6% YTD but -18% TTM, off the $796 Aug-2025 high, bounced off the $520 Mar-2026 low"
+      "cash": "$81.6B cash, $58.7B debt · Net cash +$22.9B ($81.6B cash vs $58.7B debt); ~2.52B shares; ~$26B buybacks + ~$5B dividends FY25; Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF ~$46.1B after capex stepping from ~$72B toward $125-145B; ~$567 mid-June 2026: +12.6% YTD but -18% TTM, off the $796 Aug-2025 high, bounced off the $520 Mar-2026 low"
     },
     "spot": {
       "price": 612.91,
@@ -21773,13 +21773,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "amzn-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "301 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$2594.6B",
       "shares": "10.73B",
-      "cash": "$123B cash, $68.4B net debt · $123B cash vs ~$54B net cash after lease/debt; ~10.73B shares; no dividend, capital is plowed into capex not buyback; Revenue $716.9B FY25 (+12%); GAAP op margin 11.2% (record); FCF crushed to ~$7.7B (~1%) by the ~$200B AI capex surge; ~$238.55, +14% TTM, down ~10% over 30 days on capex fears; 52-wk range $196-$279"
+      "cash": "$123B cash, $68.4B debt · $123B cash vs ~$54B net cash after lease/debt; ~10.73B shares; no dividend, capital is plowed into capex not buyback; Revenue $716.9B FY25 (+12%); GAAP op margin 11.2% (record); FCF crushed to ~$7.7B (~1%) by the ~$200B AI capex surge; ~$238.55, +14% TTM, down ~10% over 30 days on capex fears; 52-wk range $196-$279"
     },
     "spot": {
       "price": 241.7,
@@ -22610,13 +22610,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "googl-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "300 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4366.3B",
       "shares": "12.09B",
-      "cash": "$126.8B cash, $48.5B net debt · $126.8B cash vs $48.5B debt (~$78.3B net cash); ~12.09B shares (Class A+B+C), buyback + a small dividend; Revenue $402.8B FY25 (+15%); GAAP op margin 32.0%; FCF $73.3B; capex ~$91B and guided to ~$190B in FY26; Up ~28% YTD and ~130-160% TTM to ~$360 / ~$4.35T cap; ATH close $402.38 (May-2026), re-rated on owning the full AI stack"
+      "cash": "$126.8B cash, $48.5B debt · $126.8B cash vs $48.5B debt (~$78.3B net cash); ~12.09B shares (Class A+B+C), buyback + a small dividend; Revenue $402.8B FY25 (+15%); GAAP op margin 32.0%; FCF $73.3B; capex ~$91B and guided to ~$190B in FY26; Up ~28% YTD and ~130-160% TTM to ~$360 / ~$4.35T cap; ATH close $402.38 (May-2026), re-rated on owning the full AI stack"
     },
     "spot": {
       "price": 361.21,
@@ -23443,13 +23443,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "aapl-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "299 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4349.9B",
       "shares": "14.78B",
-      "cash": "$54.7B cash, $90.7B net debt · Net debt ~$36B ($54.7B cash vs ~$90.7B total debt); ~14.78B shares, shrinking on a fresh $100B buyback + dividend raise; Revenue $416B FY25 (+6%); GAAP op margin ~32%; FCF ~$99B; Services ~$31B/quarter at ~70%+ gross margin; ~$291 (Jun 2026), +56% TTM, near the ~$315 ATH; iPhone ~50% of revenue, Greater China reaccelerating (+28%)"
+      "cash": "$54.7B cash, $90.7B debt · Net debt ~$36B ($54.7B cash vs ~$90.7B total debt); ~14.78B shares, shrinking on a fresh $100B buyback + dividend raise; Revenue $416B FY25 (+6%); GAAP op margin ~32%; FCF ~$99B; Services ~$31B/quarter at ~70%+ gross margin; ~$291 (Jun 2026), +56% TTM, near the ~$315 ATH; iPhone ~50% of revenue, Greater China reaccelerating (+28%)"
     },
     "spot": {
       "price": 294.38,
@@ -24277,13 +24277,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "nvda-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "300 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4801.2B",
       "shares": "24.30B",
-      "cash": "$10.6B cash, $8.5B net debt · $10.6B cash vs ~$8.5B debt (~$2B net cash); ~24.3B shares; +$80B buyback authorized, $0.25/quarter dividend; Revenue $215.9B FY26 (+65%); GAAP op margin ~60%; FCF ~$96.7B (~45%); Data Center now ~88% of revenue; World's largest company at ~$5.0T; ATH ~$235 (May), ~$205 now (~+45% TTM); slid post-earnings despite the beat"
+      "cash": "$10.6B cash, $8.5B debt · $10.6B cash vs ~$8.5B debt (~$2B net cash); ~24.3B shares; +$80B buyback authorized, $0.25/quarter dividend; Revenue $215.9B FY26 (+65%); GAAP op margin ~60%; FCF ~$96.7B (~45%); Data Center now ~88% of revenue; World's largest company at ~$5.0T; ATH ~$235 (May), ~$205 now (~+45% TTM); slid post-earnings despite the beat"
     },
     "spot": {
       "price": 197.58,
@@ -25104,13 +25104,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "tsla-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "302 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1595.9B",
       "shares": "3.75B",
-      "cash": "$44.1B cash, $1.6B net debt · $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares; Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B; ~$406 (down ~10% YTD, +27% TTM); ~$1.5T market cap trades on the autonomy/robot narrative, not auto fundamentals"
+      "cash": "$44.1B cash, $1.6B debt · $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares; Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B; ~$406 (down ~10% YTD, +27% TTM); ~$1.5T market cap trades on the autonomy/robot narrative, not auto fundamentals"
     },
     "spot": {
       "price": 425.3,
@@ -25939,13 +25939,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "dis-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "301 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$170.9B",
       "shares": "1.79B",
-      "cash": "$5.7B cash, $42B net debt · $5.7B cash against ~$42B total debt (~$36B net debt); ~1,785M shares; dividend raised +50%, buyback >=$8B in FY26; Revenue $94.4B FY25 (+3%); GAAP op margin 18.6% (rising); FCF ~$10.1B; streaming (DTC) OI just crossed 10%; ~$100, down ~9% YTD (52-wk ~$92-125), popped ~7-8% on the May print; the cheap turnaround alongside META"
+      "cash": "$5.7B cash, $42B debt · $5.7B cash against ~$42B total debt (~$36B net debt); ~1,785M shares; dividend raised +50%, buyback >=$8B in FY26; Revenue $94.4B FY25 (+3%); GAAP op margin 18.6% (rising); FCF ~$10.1B; streaming (DTC) OI just crossed 10%; ~$100, down ~9% YTD (52-wk ~$92-125), popped ~7-8% on the May print; the cheap turnaround alongside META"
     },
     "spot": {
       "price": 95.71,
@@ -26771,7 +26771,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "cmg-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "298 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -27595,13 +27595,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "dal-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "301 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$60.78B",
       "shares": "653M",
-      "cash": "$4.31B cash, $13.31B net debt · $4.31B cash vs $13.31B gross debt+leases -> ~$9.0B net debt (adjusted net debt below 2019, investment-grade at all 3 agencies); ~653M shares; Revenue $63.4B FY25 (GAAP, grossed up by third-party refinery sales); GAAP op margin ~9.2%; FCF ~$3.8B; Down ~6% YTD, up ~79% TTM (52-wk $45.28-$83.83); FY26 guide EPS $6.50-7.50 (+20%), FCF $3-4B"
+      "cash": "$4.31B cash, $13.31B debt · $4.31B cash vs $13.31B gross debt+leases -> ~$9.0B net debt (adjusted net debt below 2019, investment-grade at all 3 agencies); ~653M shares; Revenue $63.4B FY25 (GAAP, grossed up by third-party refinery sales); GAAP op margin ~9.2%; FCF ~$3.8B; Down ~6% YTD, up ~79% TTM (52-wk $45.28-$83.83); FY26 guide EPS $6.50-7.50 (+20%), FCF $3-4B"
     },
     "spot": {
       "price": 93.06,
@@ -28431,7 +28431,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "hood-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "300 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -29265,13 +29265,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "de-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "302 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$169.7B",
       "shares": "270M",
-      "cash": "$8.28B cash, $13.8B net debt · $8.28B cash; ~$13.8B modeled equipment-ops debt (excludes the ~$45B captive lender; see pushback); ~270M shares; Revenue $45.7B FY25 (-12%, third down-year off the FY23 $61.3B peak); GAAP op margin 14.0% (trough); FCF ~$6.1B (~13%); ~$577, YTD ~+10.5%, TTM ~+19%; 52-week $433-$674 (ATH $660 Feb 2026), ~26x trough FCF"
+      "cash": "$8.28B cash, $13.8B debt · $8.28B cash; ~$13.8B modeled equipment-ops debt (excludes the ~$45B captive lender; see pushback); ~270M shares; Revenue $45.7B FY25 (-12%, third down-year off the FY23 $61.3B peak); GAAP op margin 14.0% (trough); FCF ~$6.1B (~13%); ~$577, YTD ~+10.5%, TTM ~+19%; 52-week $433-$674 (ATH $660 Feb 2026), ~26x trough FCF"
     },
     "spot": {
       "price": 627.63,
@@ -30103,7 +30103,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "algn-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "297 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -30935,13 +30935,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "adsk-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "302 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$42.15B",
       "shares": "211M",
-      "cash": "$2.6B cash, $2.5B net debt · $2.60B cash vs $2.50B debt — roughly net-cash-neutral (~$0.1B net cash); ~211M shares; ~$448M buyback in Q1 FY27; Revenue $7.21B FY26 (+18% as-reported); GAAP op margin ~21.9%, non-GAAP ~39%; FCF $2.4B; ~98% subscription/recurring; Down ~31% YTD to ~$198, near the 52-week low (~$205-$329 range); Starboard (~$500M, proxy fight) pushing margins"
+      "cash": "$2.6B cash, $2.5B debt · $2.60B cash vs $2.50B debt — roughly net-cash-neutral (~$0.1B net cash); ~211M shares; ~$448M buyback in Q1 FY27; Revenue $7.21B FY26 (+18% as-reported); GAAP op margin ~21.9%, non-GAAP ~39%; FCF $2.4B; ~98% subscription/recurring; Down ~31% YTD to ~$198, near the 52-week low (~$205-$329 range); Starboard (~$500M, proxy fight) pushing margins"
     },
     "spot": {
       "price": 199.76,
@@ -31771,7 +31771,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "cart-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "303 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -32599,13 +32599,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "u-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "303 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$13.07B",
       "shares": "433M",
-      "cash": "$2.06B cash, $2.24B net debt · ~$2.06B cash vs ~$2.24B convertibles (net debt ~$0.18B); 2026 Notes mature Nov-2026; ~433M shares, up ~56% over 5 years on SBC; Revenue $1.85B FY25 (+3%); GAAP op margin still -25.9% (loss); FCF +$0.4B (~22%) but ex-SBC FCF far thinner; adj EBITDA ~27%; ~$27, down ~58% YTD (52-wk ~$15-$52); IPO'd Sep-2020 at $52 — a GAAP-loss turnaround, the most speculative name in this batch"
+      "cash": "$2.06B cash, $2.24B debt · ~$2.06B cash vs ~$2.24B convertibles (net debt ~$0.18B); 2026 Notes mature Nov-2026; ~433M shares, up ~56% over 5 years on SBC; Revenue $1.85B FY25 (+3%); GAAP op margin still -25.9% (loss); FCF +$0.4B (~22%) but ex-SBC FCF far thinner; adj EBITDA ~27%; ~$27, down ~58% YTD (52-wk ~$15-$52); IPO'd Sep-2020 at $52 — a GAAP-loss turnaround, the most speculative name in this batch"
     },
     "spot": {
       "price": 30.19,
@@ -33437,13 +33437,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "crox-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "299 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$6.23B",
       "shares": "50M",
-      "cash": "$130M cash, $1.231B net debt · ~$0.13B cash vs ~$1.34B total debt -> ~$1.2B net debt (deleveraging the HEYDUDE deal); ~50.2M shares; Revenue $4.04B FY25 (~flat); GAAP op margin 3.7% but adjusted ~22% (the $737M non-cash HEYDUDE impairment); FCF ~$0.7-0.9B; ~$125, near the 52-week high ($73-$129), +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)"
+      "cash": "$130M cash, $1.231B debt · ~$0.13B cash vs ~$1.34B total debt -> ~$1.2B net debt (deleveraging the HEYDUDE deal); ~50.2M shares; Revenue $4.04B FY25 (~flat); GAAP op margin 3.7% but adjusted ~22% (the $737M non-cash HEYDUDE impairment); FCF ~$0.7-0.9B; ~$125, near the 52-week high ($73-$129), +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)"
     },
     "spot": {
       "price": 124.17,
@@ -34264,7 +34264,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "rddt-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "303 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -35090,7 +35090,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "tost-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "302 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -35920,7 +35920,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "wrby-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "302 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -36752,7 +36752,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "you-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "301 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -37580,7 +37580,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "shop-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "303 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -38407,7 +38407,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "rxrx-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "391 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -39644,13 +39644,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "beam-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "385 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$3.45B",
       "shares": "103M",
-      "cash": "$1.21B cash, $100M net debt · $1.21B cash (Q1'26) vs ~$0.10B debt → net cash ~$11.75/share; runway to mid-2029; Pre-product base editing; FY25 collaboration revenue $139.7M; R&D burn ~$400M/yr; risto-cel SCD BLA as early as YE2026; BEAM-302 (AATD) pivotal cohort H2 2026"
+      "cash": "$1.21B cash, $100M debt · $1.21B cash (Q1'26) vs ~$0.10B debt → net cash ~$11.75/share; runway to mid-2029; Pre-product base editing; FY25 collaboration revenue $139.7M; R&D burn ~$400M/yr; risto-cel SCD BLA as early as YE2026; BEAM-302 (AATD) pivotal cohort H2 2026"
     },
     "spot": {
       "price": 33.48,
@@ -40882,13 +40882,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "pacb-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "384 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$540M",
       "shares": "310M",
-      "cash": "$276M cash, $644M net debt · $0.276B cash vs ~$0.644B convertible notes (due 2029/2030) → ~$0.368B net debt > the equity cap; FY25 revenue $160M (+4%): consumables $82M (+16%), instruments $53.8M (-18%); Cash-flow-positive targeted 2027; FY26 opex guided $220-225M; ~310M shares, no reverse split"
+      "cash": "$276M cash, $644M debt · $0.276B cash vs ~$0.644B convertible notes (due 2029/2030) → ~$0.368B net debt > the equity cap; FY25 revenue $160M (+4%): consumables $82M (+16%), instruments $53.8M (-18%); Cash-flow-positive targeted 2027; FY26 opex guided $220-225M; ~310M shares, no reverse split"
     },
     "spot": {
       "price": 1.74,
@@ -42111,13 +42111,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "tem-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "299 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$11.06B",
       "shares": "180M",
-      "cash": "$644M cash, $560M net debt · $1.3B revenue FY25 (+83%, Ambry-boosted); FY26 guide $1.59-1.60B (+25%); Adj-EBITDA inflected positive (FY26 guide ~$65M) but SBC ~$136M/yr -> owner-FCF still negative; Net cash ~$84M ($0.644B cash vs $0.560B Ares term loan); Lefkofsky ~60% voting control"
+      "cash": "$644M cash, $560M debt · $1.3B revenue FY25 (+83%, Ambry-boosted); FY26 guide $1.59-1.60B (+25%); Adj-EBITDA inflected positive (FY26 guide ~$65M) but SBC ~$136M/yr -> owner-FCF still negative; Net cash ~$84M ($0.644B cash vs $0.560B Ares term loan); Lefkofsky ~60% voting control"
     },
     "spot": {
       "price": 61.6,
@@ -42928,7 +42928,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "serv-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "386 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -44162,7 +44162,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "prme-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "388 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -45396,7 +45396,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "twst-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "296 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -46221,7 +46221,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "sym-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "298 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -47038,13 +47038,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "nvcr-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "297 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1.72B",
       "shares": "109M",
-      "cash": "$1.03B cash, $560M net debt · $655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH (p_fail~0); 4 FDA-approved/filed indications: Optune Gio (GBM), Lua (NSCLC, early), Pax (pancreatic), METIS (brain mets); FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr"
+      "cash": "$1.03B cash, $560M debt · $655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH (p_fail~0); 4 FDA-approved/filed indications: Optune Gio (GBM), Lua (NSCLC, early), Pax (pancreatic), METIS (brain mets); FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr"
     },
     "spot": {
       "price": 15.78,
@@ -47866,13 +47866,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "cai-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "302 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$5.2B",
       "shares": "278M",
-      "cash": "$800M cash, $378M net debt · FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven; IPO Jun-2025 @ $21; now $18.33 (~13% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash; Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups"
+      "cash": "$800M cash, $378M debt · FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven; IPO Jun-2025 @ $21; now $18.33 (~13% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash; Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups"
     },
     "spot": {
       "price": 18.75,
@@ -48682,13 +48682,13 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "hhh-memo__v003__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "290 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$4.32B",
       "shares": "60M",
-      "cash": "$1.84B cash, $3.95B net debt · ~37% discount to $104 NAV"
+      "cash": "$1.84B cash, $3.95B debt · ~37% discount to $104 NAV"
     },
     "spot": {
       "price": 72.53,
@@ -49561,7 +49561,7 @@ const MEMOS = [
     "publishedLabel": "June 22, 2026",
     "pdf": {
       "file": "zipline-memo__v002__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "234 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -50081,7 +50081,7 @@ const MEMOS = [
     "publishedLabel": "June 22, 2026",
     "pdf": {
       "file": "pyka-memo__v002__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "234 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -50573,13 +50573,13 @@ const MEMOS = [
     "publishedLabel": "June 22, 2026",
     "pdf": {
       "file": "blgff-memo__v002__2026-07-02_15-17.pdf",
-      "size": "—",
+      "size": "202 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$1.13B",
       "shares": "277M",
-      "cash": "$0M cash, $50M net debt · NAV $4.61/sh (~344p), ~2-3% discount; Saba Capital ~29% — discount-control catalyst; ~30-40% private: SpaceX 16.5%, Anthropic 7.4%"
+      "cash": "$0M cash, $50M debt · NAV $4.61/sh (~344p), ~2-3% discount; Saba Capital ~29% — discount-control catalyst; ~30-40% private: SpaceX 16.5%, Anthropic 7.4%"
     },
     "spot": {
       "price": 4.25,

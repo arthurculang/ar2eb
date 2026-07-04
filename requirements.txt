@@ -1,0 +1,5 @@
+# Python dependencies for the ar2eb pipeline (validate → site data → render → portfolio).
+# Chromium is pre-provisioned in the Claude web containers (PLAYWRIGHT_BROWSERS_PATH);
+# locally, `playwright install chromium` fetches it.
+pyyaml>=6.0
+playwright>=1.48
