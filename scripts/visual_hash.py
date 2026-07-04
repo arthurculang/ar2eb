@@ -33,7 +33,11 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 BASELINE = REPO / "tests" / "visual_baseline.json"
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "coin", "anthropic", "ionq", "isrg", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak", "meta", "amzn", "googl", "aapl", "nvda", "tsla", "dis", "cmg", "dal", "hood", "de", "algn", "adsk", "cart", "u", "crox", "rddt", "tost", "wrby", "you", "shop", "rxrx", "beam", "pacb", "tem", "serv", "prme", "twst", "sym", "nvcr", "cai", "hhh", "zipline", "pyka", "blgff"]
+# Derived from data/*.yml so a new memo is always baselined/checked.
+from pathlib import Path as _Path
+TICKERS = sorted(
+    p.stem for p in (_Path(__file__).resolve().parent.parent / "data").glob("*.yml")
+    if not p.stem.startswith("_") and p.stem != "taxonomy")
 DPI = 150
 
 
@@ -113,7 +117,11 @@ def check_baseline(tickers: list[str]) -> int:
 def main() -> int:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     check = "--check" in sys.argv
-    tickers = [args[0].lower()] if args else TICKERS
+    unknown = [a for a in sys.argv[1:] if a.startswith("--") and a != "--check"]
+    if unknown:
+        print(f"unknown flag(s): {unknown}  (valid: --check)", file=sys.stderr)
+        return 2
+    tickers = [a.lower() for a in args] if args else TICKERS
     if check:
         return check_baseline(tickers)
     write_baseline(tickers)

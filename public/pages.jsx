@@ -415,7 +415,7 @@ function NotFoundPage() {
 // ────────────────────────────────────────────────────────────────────
 // PORTFOLIO — human conviction × quantitative forecast (spec §12).
 //
-//   weight ∝ max(0, upside) × conviction_mult × indicator_mult
+//   weight ∝ max(0, upside) × conviction_mult × indicator_mult × category_mult
 //
 //   · upside           — the AI memo's probability-weighted fair value vs spot
 //                        (the quantitative forecast).
@@ -520,6 +520,15 @@ const MATRIX_COLS = [
   { wl: 'private-wishlist',       short: 'Private' },
 ];
 const WL_SHORT = Object.fromEntries(MATRIX_COLS.map(c => [c.wl, c.short]));
+// Rendered columns = the curated order above plus any watchlist present in the
+// data but not yet listed (label = prettified slug) — a new taxonomy watchlist
+// shows up automatically instead of silently dropping its names from the grid.
+function matrixColsFor(matrix) {
+  const known = new Set(MATRIX_COLS.map(c => c.wl));
+  const extras = Object.keys(matrix).filter(wl => !known.has(wl)).sort()
+    .map(wl => ({ wl, short: wl.replace(/-/g, ' ').replace(/\b\w/g, ch => ch.toUpperCase()) }));
+  return [...MATRIX_COLS, ...extras];
+}
 const MATRIX_TIERS = ['High', 'Med-High', 'Med', 'Med-Low', 'Low', null]; // null = untiered band
 
 function tierSlug(tier) {
@@ -569,14 +578,15 @@ function PortfolioExport({ portfolio, maxPosition, hurdleFrac }) {
       upside_pct: r.upsidePct,
       tier: r.tier, conviction_mult: r.convMult,
       indicator: r.ai ? r.ai.value : null, indicator_zone: r.ai ? r.ai.zone : 'n/a',
-      indicator_mult: r.aiMult, score: r.score,
+      indicator_mult: r.aiMult,
+      category: r.wl, category_mult: r.catMult, score: r.score,
       raw_weight: r.rawWeight, weight: r.weight,
       passes_hurdle: r.passesHurdle,
     })),
   }, null, 2);
 
   const buildCsv = () => {
-    const header = 'ticker,spot,expected,upside_pct,tier,conviction_mult,indicator,indicator_zone,indicator_mult,score,raw_weight,weight';
+    const header = 'ticker,spot,expected,upside_pct,tier,conviction_mult,indicator,indicator_zone,indicator_mult,category,category_mult,score,raw_weight,weight';
     const lines = portfolio.rows.map(r => [
       r.ticker,
       r.spot.toFixed(2),
@@ -587,6 +597,8 @@ function PortfolioExport({ portfolio, maxPosition, hurdleFrac }) {
       r.ai ? r.ai.value.toFixed(2) : '',
       r.ai ? r.ai.zone : 'n/a',
       r.aiMult.toFixed(2),
+      r.wl || '',
+      r.catMult.toFixed(2),
       r.score.toFixed(2),
       r.rawWeight.toFixed(4),
       r.weight.toFixed(4),
@@ -677,11 +689,13 @@ function PortfolioPage() {
     }
   }, [maxPosition, hurdleFrac]);
 
-  // Private companies (private-wishlist) aren't publicly buyable, so they're
-  // excluded from the conviction-weighted long portfolio — it allocates across
-  // positions you can actually take.
+  // Private companies aren't publicly buyable, so they're excluded from the
+  // conviction-weighted long portfolio — it allocates across positions you can
+  // actually take. Same predicate as portfolio/build_weights.py (dcf_type ==
+  // private_prevaluation), so the site allocation matches the tracked book —
+  // a watchlist test misses BLGFF (private_prevaluation but fun-speculative).
   const publicMemos = React.useMemo(
-    () => [...MEMOS.filter(m => !m.taxonomy || m.taxonomy.watchlist !== 'private-wishlist'), ...crypto],
+    () => [...MEMOS.filter(m => m.print?.dcfType !== 'private_prevaluation'), ...crypto],
     [MEMOS, crypto]
   );
   const portfolio = React.useMemo(
@@ -694,6 +708,7 @@ function PortfolioPage() {
 
   // Universe matrix — every name (incl. private/megacap/crypto), by tier × category.
   const matrix = React.useMemo(() => buildMatrix([...MEMOS, ...crypto]), [MEMOS, crypto]);
+  const matrixCols = React.useMemo(() => matrixColsFor(matrix), [matrix]);
 
   // Allocation segments for the stacked bar — longs first, cash last.
   // The two-tone indigo palette keeps longs visually grouped while still
@@ -869,6 +884,7 @@ function PortfolioPage() {
                 <th className="num">Upside <span className="muted">(quant)</span></th>
                 <th className="num">Conviction <span className="muted">(human)</span></th>
                 <th className="num">Indicator <span className="muted">(quant)</span></th>
+                <th className="num col-secondary">Category</th>
                 <th className="num col-secondary">Raw</th>
                 <th className="num">Weight</th>
               </tr>
@@ -888,6 +904,7 @@ function PortfolioPage() {
                   </td>
                   <td className="num mono">{r.tier || '—'} <span className="muted">×{r.convMult.toFixed(2)}</span></td>
                   <td className="num mono">{r.ai ? `${r.ai.zone} ${r.ai.value.toFixed(1)}` : 'n/a'} <span className="muted">×{r.aiMult.toFixed(2)}</span></td>
+                  <td className="num mono col-secondary">{(r.wl && WL_SHORT[r.wl]) || r.wl || '—'} <span className="muted">×{r.catMult.toFixed(2)}</span></td>
                   <td className="num mono col-secondary">{r.score > 0 ? (r.rawWeight * 100).toFixed(1) + '%' : '—'}</td>
                   <td className="num mono"><b>{r.weight > 0 ? (r.weight * 100).toFixed(1) + '%' : '—'}</b></td>
                 </tr>
@@ -929,7 +946,7 @@ function PortfolioPage() {
               <thead>
                 <tr>
                   <th className="matrix-corner" aria-hidden="true" />
-                  {MATRIX_COLS.map(c => (
+                  {matrixCols.map(c => (
                     <th key={c.wl} className="matrix-col" scope="col">{c.short}</th>
                   ))}
                 </tr>
@@ -938,11 +955,11 @@ function PortfolioPage() {
                 {MATRIX_TIERS.map(tier => {
                   const key = tier || '_none';
                   // Hide the Untiered band once nothing is untiered (e.g. after megacaps/private get tiers).
-                  if (tier === null && !MATRIX_COLS.some(c => ((matrix[c.wl] && matrix[c.wl]['_none']) || []).length)) return null;
+                  if (tier === null && !matrixCols.some(c => ((matrix[c.wl] && matrix[c.wl]['_none']) || []).length)) return null;
                   return (
                     <tr key={key} className={`matrix-row tier-${tierSlug(tier)}`}>
                       <th className="matrix-tier" scope="row">{tier || 'Untiered'}</th>
-                      {MATRIX_COLS.map(c => {
+                      {matrixCols.map(c => {
                         const names = (matrix[c.wl] && matrix[c.wl][key]) || [];
                         return (
                           <td key={c.wl} className={names.length ? 'matrix-cell' : 'matrix-cell is-empty'}>
@@ -1034,12 +1051,14 @@ function PortfolioPage() {
             </summary>
             <div className="method-body">
               <p>
-                <span className="mono">weight ∝ max(0, upside) × conviction × indicator</span>.
-                Three transparent factors: the memo's probability-weighted{' '}
+                <span className="mono">weight ∝ max(0, upside) × conviction × indicator × category</span>.
+                Four transparent factors: the memo's probability-weighted{' '}
                 <b>upside</b> (the machine's forecast), the operator's{' '}
                 <b>conviction</b> tier (High&nbsp;2.0 · Med-High&nbsp;1.5 · Med&nbsp;1.0 · Med-Low&nbsp;0.6 · Low&nbsp;0.35),
-                and the <b>Arthur Indicator</b> valuation zone (green&nbsp;1.25 · yellow&nbsp;1.10 · orange&nbsp;0.90 · red&nbsp;0.70;
-                neutral for pre-revenue names). Conviction is the only human number and it
+                the <b>Arthur Indicator</b> valuation zone (green&nbsp;1.25 · yellow&nbsp;1.10 · orange&nbsp;0.90 · red&nbsp;0.70;
+                neutral for pre-revenue names), and a <b>category</b> tilt that sizes the
+                non-core buckets below the core book (speculative&nbsp;0.5 · competitor&nbsp;0.3 · crypto&nbsp;0.5 ·
+                core&nbsp;1.0). Conviction is the only human number and it
                 enters only here, never the analysis. Names below the hurdle score zero; raw
                 weights are <span className="mono">score / Σ score</span>; the cap is applied
                 iteratively with proportional redistribution; the rest is cash.

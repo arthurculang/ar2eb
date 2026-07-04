@@ -80,11 +80,24 @@ def render(ticker: str, out_path: Path | None = None) -> Path:
         with sync_playwright() as p:
             browser = p.chromium.launch(executable_path=CHROMIUM_PATH)
             page = browser.new_page()
+            # Buffer console output + JS errors so a bundle throw (bad data.js,
+            # component error) surfaces its root cause instead of dying as an
+            # opaque wait_for_function timeout.
+            page_logs = []
+            page.on("console", lambda m: page_logs.append(f"[console.{m.type}] {m.text}"))
+            page.on("pageerror", lambda e: page_logs.append(f"[pageerror] {e}"))
             page.goto(url, wait_until="networkidle")
             # Wait for memo_pdf.jsx to signal ready (fonts loaded + React mounted)
-            page.wait_for_function(
-                "document.body.dataset.ready === '1'", timeout=15_000
-            )
+            try:
+                page.wait_for_function(
+                    "document.body.dataset.ready === '1'", timeout=15_000
+                )
+            except Exception:
+                print(f"[{ticker}] page never signaled ready — captured page output:",
+                      file=sys.stderr)
+                for line in page_logs[-30:]:
+                    print(f"    {line}", file=sys.stderr)
+                raise
             # Spec §3.5 A safe-zones: every .memo-page must keep its content
             # inside the page height AND clear of the footer band. Two distinct
             # failure modes:

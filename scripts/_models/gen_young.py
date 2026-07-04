@@ -24,7 +24,7 @@ Scenario spec (compact) — each of ultra_bear/bear/base/bull/ultra_bull:
     rprices raise_prices: 10 $/sh, OR a scalar (applied where raises>0)
     dil   dilution_pct (informational; carried to YAML)
     fs    final_shares (M)
-    tam   tam_share (% of TAM at FY+10)   comp  tam_competitor_share (%)
+    tam   tam_share (% of TAM at FY+10)   comp  tam_competitor_share ($B ABSOLUTE, < tam — NOT a %)
     rpu   rev_per_unit chart series (10), default [1.0]*10
     hl narr pr   headline / narrative (list) / probability_rationale
 

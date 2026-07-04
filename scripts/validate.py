@@ -38,7 +38,12 @@ from typing import Any
 import yaml
 
 REPO = Path(__file__).resolve().parent.parent
-TICKERS = ["joby", "aur", "lth", "zm", "naut", "isrg", "ionq", "coin", "anthropic", "rklb", "oklo", "achr", "gral", "txg", "lulu", "abnb", "uber", "yeti", "dash", "ilmn", "shak", "meta", "amzn", "googl", "aapl", "nvda", "tsla", "dis", "cmg", "dal", "hood", "de", "algn", "adsk", "cart", "u", "crox", "rddt", "tost", "wrby", "you", "shop", "rxrx", "beam", "pacb", "tem", "serv", "prme", "twst", "sym", "nvcr", "cai", "hhh", "zipline", "pyka", "blgff"]
+# Derived from data/*.yml so a new memo can never be silently skipped
+# (underscore-prefixed files and taxonomy.yml are not memos).
+from pathlib import Path as _Path
+TICKERS = sorted(
+    p.stem for p in (_Path(__file__).resolve().parent.parent / "data").glob("*.yml")
+    if not p.stem.startswith("_") and p.stem != "taxonomy")
 # Required scenario keys (every ticker must have these four). `ultra_bear`
 # is an optional 5th — present on ZM, may be added to other tickers later.
 SCEN_KEYS = ["bear", "base", "bull", "ultra_bull"]
@@ -419,6 +424,13 @@ def check_scenario(key: str, sc: dict, data: dict) -> tuple[list[str], list[str]
                     f"rev_path[-1] (tam {tam} * tam_share {dm['tam_share']}% = {rev10_calc:.2f}B)",
                     f"{rev10_calc:.2f}", f"{dp['rev_path'][-1]:.2f}",
                     f"{err_pct:.1f}% off"))
+            # WARN: tam_competitor_share is ABSOLUTE $B (< tam_billion), NOT a
+            # percent — the unit bug that clipped the PACB/GRAL/IONQ TAM charts.
+            comp = (sc.get("chart_data") or {}).get("tam_competitor_share")
+            if comp is not None and comp >= tam:
+                warns.append(
+                    f"  [chart units] tam_competitor_share {comp} >= tam_billion {tam}"
+                    f" — this field is absolute $B, not a percent")
 
     # Variant A (mature): rev_path is growth rates, rev_b is starting revenue.
     # Validate: rev_b * prod(1+rev_path[i]) ~ rev_b * (1+cagr_5y/100)^5
@@ -522,7 +534,15 @@ def validate_ticker(ticker: str) -> tuple[list[str], list[str]]:
 def main() -> int:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     strict = "--strict" in sys.argv
-    targets = [args[0].lower()] if args else TICKERS
+    unknown = [a for a in sys.argv[1:] if a.startswith("--") and a != "--strict"]
+    if unknown:
+        print(f"unknown flag(s): {unknown}  (valid: --strict)", file=sys.stderr)
+        return 2
+    bad = [a for a in args if a.lower() not in TICKERS]
+    if bad:
+        print(f"unknown ticker(s): {bad}", file=sys.stderr)
+        return 2
+    targets = [a.lower() for a in args] if args else TICKERS
 
     total_err = 0
     total_warn_tickers = 0

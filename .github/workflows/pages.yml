@@ -44,6 +44,21 @@ jobs:
       - name: Install deps
         run: npm ci
 
+      # Deploy gate: the site serves the committed public/data.js, so CI must
+      # catch (a) memos that fail Math QC and (b) a data.js that drifted from
+      # data/*.yml — neither was checked before, so a stale/invalid data.js
+      # could ship silently.
+      - name: Math QC (validate memos)
+        run: |
+          python3 -m pip install --quiet pyyaml
+          python3 scripts/validate.py
+
+      - name: Verify data.js in sync with data/*.yml
+        run: |
+          python3 scripts/build_site_data.py
+          git diff --exit-code public/data.js || {
+            echo "::error::public/data.js is stale — run scripts/build_site_data.py + node build.js and commit."; exit 1; }
+
       - name: Build bundle
         run: npm run build
 

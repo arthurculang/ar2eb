@@ -132,6 +132,13 @@ def sortino_compare(weights: dict, series: dict[str, dict], epoch: dt.date,
     override with `mar_annual` (annual %). Returns (rows, meta) and prints a table."""
     holdings = {t: w for t, w in weights.items() if t != "cash" and w}
     cashw = float(weights.get("cash", 0.0) or 0.0)
+    # A failed benchmark fetch leaves an empty series that the intersection
+    # below silently drops — then series["BIL"][d] would KeyError. Skip the
+    # refresh instead (it's a supplementary stat; last snapshot stands).
+    missing_bench = [t for t in [RISKFREE_TICKER, *SORTINO_BENCH] if not series.get(t.upper())]
+    if missing_bench:
+        print(f"  sortino: benchmark fetch failed for {missing_bench} — skipping this refresh.")
+        return [], {}
     need = list(holdings) + list(SORTINO_BENCH) + [RISKFREE_TICKER]
     sets = [{d for d in series.get(t.upper(), {}) if d >= epoch} for t in need]
     sets = [s for s in sets if s]
@@ -241,15 +248,24 @@ def main() -> int:
         return 0
 
     # ── cumulative-return tracking (existing behaviour) ──
-    port, asof = 0.0, None
+    port, asof, missing = 0.0, None, []
     for t, w in holdings.items():
         cr, d = cum_return(series.get(t.upper(), {}), epoch)
-        if cr is not None:
-            port += w * cr
-            asof = d if (asof is None or (d and d > asof)) else asof
+        if cr is None:
+            missing.append(t)
+            continue
+        port += w * cr
+        asof = d if (asof is None or (d and d > asof)) else asof
     if asof is None:
         print("no holding prices on/after epoch yet — skipping.")
         return 0
+    if missing:
+        # performance.csv is the permanent public record — a row computed
+        # without a weighted holding is silently wrong forever. Fail loud,
+        # write nothing; the next healthy run upserts the correct row.
+        print(f"ERROR: no post-epoch prices for weighted holding(s) {', '.join(sorted(missing))} — "
+              f"refusing to write a partial portfolio row.")
+        return 1
 
     row = {"date": asof.isoformat(), "portfolio": round(port, 5)}
     for b in BENCHMARKS:
@@ -260,7 +276,11 @@ def main() -> int:
     cols = ["date", "portfolio"] + BENCHMARKS
     rows = {}
     if csvp.exists():
-        rows = {r["date"]: r for r in csv.DictReader(csvp.open())}
+        rdr = csv.DictReader(csvp.open())
+        rows = {r["date"]: r for r in rdr}
+        # Preserve historical columns no longer in the current benchmark set —
+        # rewriting with only the current schema would erase their history.
+        cols += [c for c in (rdr.fieldnames or []) if c not in cols]
     rows[row["date"]] = row
     with csvp.open("w", newline="") as fh:
         wr = csv.DictWriter(fh, fieldnames=cols)

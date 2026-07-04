@@ -125,6 +125,31 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   news), **PACB** (+31→−1% sign flip; the levered stub is hyper-price-sensitive), **NAUT** (+174→+258% at $1.84 — a 15%-cap holding on a
   stale thesis); then RKLB / ACHR / PRME (moonshot news risk); then TEM / ILMN / ZM (valuation-only). **Routine drift to sync in the UI
   (low):** daily prompt omits `risk_stats.csv` staging; schedule is daily-2PM-PDT vs the spec'd weekdays-22:00-UTC (weekend runs no-op).
+- **Full-codebase adversarial review + fix wave SHIPPED (2026-07-02; day-1 post-launch hotfix).** 65-agent review (10 code units → findings →
+  1-2 skeptics each → completeness critic): **26 confirmed · 10 refuted · 13 low-sev deferred**; every confirmed HIGH fixed same-day. **Rendering
+  (PDFs hot-fixed IN PLACE at the launch stamp — no bump, findings/copy untouched):** (1) MatureBalanceChart all-negative FCF domain (`max×1.2`
+  flips sign → TEM/TWST/NVCR page-3 FCF chart drew one full-column bar + invisible bars since they shipped; STRICT gates can't see vertical
+  in-chart overflow); (2) YoungValuationChart hardcoded `[0,2,4,6,8]` ticks vs ultra_bear P/S 50–126× (OKLO/ACHR/IONQ/RKLB axis ~90% unscaled —
+  exposed by the 5-scenario ship); (3) lthClubs fan endpoints were hardcoded AND wrong (50/80/130/180 vs authored 77/97/107/117) and NaN-dropped
+  ultra_bear — now reads `scenarios[k].chartData.luxury_club_count_fy30`; (4) tick-above-domain-top gridlines through titles (~10 mature memos;
+  revenue/segments/balance domains now snap to a round top tick); (5) EvMultiples fixed tick ladder → `niceStep` (SHOP had ~25 touching labels).
+  **Site:** Math table/exports/method text now show the 4th (category) multiplier the score always used; BLGFF excluded from the site allocation
+  via the same `dcf_type` predicate as `build_weights.py` (watchlist test had site book ≠ tracked book); `Link` keeps cmd/ctrl/shift/middle-click
+  native; matrix columns auto-extend to new watchlists; `build.js` now `?v=`-stamps **styles.css + data.js** (were unversioned → stale-cache class).
+  **Masthead:** `market.net_debt_billion` is GROSS on some ymls (AAPL 90.7 self-contradicted its own extras on the live card) and NET on others
+  (CROX) → `fmt_cash` says plain "debt"; **normalizing that field book-wide is an open data audit.** **Pipeline:** `validate.py` CLI honored only
+  argv[1] (the "all 1 ticker(s)" tell — multi-ticker runs silently validated one), now all + unknown-flag/ticker rejection + a
+  `tam_competitor_share ≥ tam` unit WARN; TICKERS lists derive from `data/*.yml` (validate/rebuild_all/visual_hash; build_site_data keeps curated
+  order but hard-fails on drift); `rebuild_all` runs `node build.js` (stale-bundle class killed), re-runs `build_site_data` AFTER renders (**fixes
+  the `size: "—"` the flip shipped on every live Download card**), then restamps; `render_memo_pdf` dumps console/pageerror on mount-timeout;
+  `track_performance` **refuses to write a partial perf row when a weighted holding's fetch fails** (the CSV is the permanent record), skips
+  Sortino gracefully on a failed benchmark fetch (was a KeyError crash), preserves legacy CSV columns on upsert; `gen_b1` import no longer
+  regenerates stale intakes; `gen_young` docstring had tam_competitor_share as % (the PACB-clip recipe) → $B; `requirements.txt` added;
+  **pages.yml CI now gates deploys on validate.py + data.js-in-sync** (a stale/invalid data.js could previously deploy silently); 2 dead
+  `oneoff_*.py` removed. **Notable refutations:** the Indicator's 12-name GM table is documented neutral-where-undefined behavior (NOT a bug);
+  the Sortino common-window intersection is the intended fair-comparison design. **Deferred (low):** scenario color map in triplicate (1 hex
+  drifted); dup CAGR row in the mature assumptions fallback; YoungTamChart x-tick buckets (PACB shows a single $0B tick); dead CSS cluster;
+  crypto-yml QC bypass; `ai2_panel(_sourced).csv` name consolidation; the net_debt field normalization audit above.
 - **Portfolio-tab overhaul SHIPPED (2026-06-22; spec v043, §16 NEW).** (1) **Two new watchlist categories** — `competitors`
   (ACHR, PACB moved here — rivals to core holdings) and `crypto`. (2) **Category sizing tilt** = a 4th §12 weight factor
   `× category_mult` (fun-speculative 0.5 · competitors 0.3 · crypto 0.5 · core 1.0), in both `build_weights.py` and
