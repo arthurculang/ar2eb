@@ -622,9 +622,9 @@ pocd:
       independent director are the positives. Holding it at 3 are a combined Chair/CEO, a classified board, ongoing
       ATM dilution, and an open securities class action. Key-person risk is moderate — a founder Chair/CEO, but a
       second co-founder still active, an institutionalized board, and a business past early stage (~$377M revenue).
-  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.8% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -49.8% finding) + position
     sizing.'
 stamp:
   footer_version: "003"

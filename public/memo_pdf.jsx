@@ -174,7 +174,8 @@ function assumptionsRows(scn, dcfType, tamBillion) {
     } else if (m.anthropic_stake !== undefined) {
       diagRow = ['Anthropic stake ($B)', m.anthropic_stake.toFixed(1)];
     } else {
-      diagRow = ['5y revenue CAGR (%)', `${sign}${m.cagr_5y.toFixed(1)}`];
+      // Non-redundant default — the 5y CAGR is already row 1, so show terminal FCF instead.
+      diagRow = ['Terminal FCF ($B)', `$${p.fcf[p.fcf.length - 1].toFixed(2)}B`];
     }
     const rows = [
       ['5y revenue CAGR (%)',     `${sign}${m.cagr_5y.toFixed(1)}`],
@@ -254,7 +255,7 @@ function equityBuildRows(scn, dcfType) {
       ['+ Cash & investments',   `$${p.cash.toFixed(2)}B`,         'normal'],
     ];
     if ((p.net_debt || 0) > 0) {
-      rows.push(['− Net debt',   `$${p.net_debt.toFixed(2)}B`,     'normal']);
+      rows.push(['− Total debt', `$${p.net_debt.toFixed(2)}B`,     'normal']);
     }
     rows.push(
       ['= Equity value',         `$${p.total_equity.toFixed(2)}B`, 'subtotal'],
@@ -272,7 +273,7 @@ function equityBuildRows(scn, dcfType) {
     [saLabel,                    `$${(p.special_assets || 0).toFixed(2)}B`, 'normal'],
   ];
   if ((p.net_debt || 0) > 0) {
-    rowsS.push(['− Net debt',    `$${p.net_debt.toFixed(2)}B`,     'normal']);
+    rowsS.push(['− Total debt',  `$${p.net_debt.toFixed(2)}B`,     'normal']);
   }
   rowsS.push(
     ['= Equity value',           `$${p.total_equity.toFixed(2)}B`, 'subtotal'],
@@ -726,7 +727,9 @@ function ForwardValueChart({ memo, widthPt = 415, heightPt = 290 }) {
   // line (since bear tends to sit lowest); others go above.
   const annotate = (pts, color, pos) => {
     const dy = pos === 'above' ? -4 : 8;
-    return pts.filter(([t]) => [5, 10, 15].includes(t)).map(([t, v]) => (
+    // Suppress the ×-annotation on a wiped-out scenario (rounds to 0.00×) — the
+    // repeated "0.00×" overprinted on NAUT's floored lines; the end-label suffices.
+    return pts.filter(([t, v]) => [5, 10, 15].includes(t) && Math.abs(v / spot) >= 0.005).map(([t, v]) => (
       <text key={`${color}-${t}-${pos}`}
             x={x(t)} y={y(v) + dy}
             fontFamily={FONT_MONO} fontSize="5.5pt" fill={color}

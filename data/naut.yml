@@ -49,7 +49,7 @@ thesis: >
   2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029;
   dilutive raise likely 2027-2028. Mature peers — Olink (Thermo),
   SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and
-  TAM. Young-company DCF: TAM × margin × P(fail). Four scenarios,
+  TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios,
   weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
@@ -577,9 +577,9 @@ pocd:
       governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder
       Mallick are the platform) and a structural dilution path, the pre-revenue burn funded by equity raises
       beyond the 2027 runway.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +174% finding), then position-sized.'
 stamp:
   footer_version: "007"
   footer_timestamp: "2026-07-02_15-17"

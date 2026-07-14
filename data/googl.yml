@@ -628,9 +628,9 @@ pocd:
     takeaway: 'Founders Page and Brin retain ~52.7% combined voting control via 10-vote Class B on roughly 6%
       economic ownership, while non-founder CEO Pichai (Alphabet CEO since Dec 2019) runs operations; capital
       return is ramping (first dividend 2024, repeated $70B buybacks) against a record AI capex build.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -21.4% finding), then position-sized.'
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-07-02_15-17"

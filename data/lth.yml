@@ -28,7 +28,7 @@ market:
   market_cap_billion: 8.89
   shares_outstanding_million: 222
   cash_billion: 0.232
-  net_debt_billion: 1.29
+  net_debt_billion: 1.52
   extras:
     - "BB- credit"                 # LTH-specific masthead extra (credit rating)
 
@@ -40,13 +40,13 @@ central_question: >
   $400M/year sale-leasebacks?
 
 thesis: >
-  LTH trades at $33.61 ($7.5B mkt cap) on TTM revenue $3.0B and Adj EBITDA
+  LTH trades at $40.04 ($8.9B mkt cap) on TTM revenue $3.0B and Adj EBITDA
   $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14
   luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback
   proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear:
   capital recycling unsustainable, leveraged real estate vehicle. Bull:
   luxury wellness category-of-one, SLB is smart financing. Today's price
-  requires bull-case execution. Three scenarios, weighted; show your work.
+  requires bull-case execution. Five scenarios, weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:
@@ -134,12 +134,12 @@ scenarios:
       pv_terminal: 0.28
       op_ev: 0.60
       cash: 0.232
-      net_debt: 1.29
-      total_equity: -0.46           # = op_ev + cash - net_debt
+      net_debt: 1.522
+      total_equity: -0.69           # = op_ev + cash - net_debt
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 222
-      dcf_per_share: -2.07
+      dcf_per_share: -3.11
       distress: 0.0
 
     chart_data:
@@ -209,12 +209,12 @@ scenarios:
       pv_terminal: 0.49
       op_ev: 0.98
       cash: 0.232
-      net_debt: 1.29
-      total_equity: -0.08           # = op_ev + cash - net_debt (negative for bear)
+      net_debt: 1.522
+      total_equity: -0.31           # = op_ev + cash - net_debt (negative for bear)
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 222
-      dcf_per_share: -0.36
+      dcf_per_share: -1.4
       distress: 0.0
 
     chart_data:
@@ -229,7 +229,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.55
-    expected_per_share: 15.00
+    expected_per_share: 13.96
     headline: "Premium platform, leveraged structure."
     narrative:
       - >
@@ -248,7 +248,7 @@ scenarios:
         leverage stays in the 1.5-2.0x EBITDA target.
       - >
         The math: $4.39B op EV + $0.23B cash − $1.29B net debt = $3.33B
-        equity ÷ 222M sh = $15.0/share. Materially below today's $33.61 —
+        equity ÷ 222M sh = $13.96/share. Materially below today's $40.04 —
         meaning the current price requires bull-case assumptions. The base
         case is well-run but priced for steady-state execution. Modest
         upside requires the bull narrative to convert.
@@ -281,12 +281,12 @@ scenarios:
       pv_terminal: 3.24
       op_ev: 4.39
       cash: 0.232
-      net_debt: 1.29
-      total_equity: 3.33
+      net_debt: 1.522
+      total_equity: 3.1
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 222
-      dcf_per_share: 15.00
+      dcf_per_share: 13.96
       distress: 0.0
 
     chart_data:
@@ -299,7 +299,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.20   # reduced from 0.25 for ultra_bull (20+5=25)
-    expected_per_share: 46.04
+    expected_per_share: 45.0
     headline: "Luxury wellness platform compounds."
     narrative:
       - >
@@ -353,12 +353,12 @@ scenarios:
       pv_terminal: 9.38
       op_ev: 11.28
       cash: 0.232
-      net_debt: 1.29
-      total_equity: 10.22
+      net_debt: 1.522
+      total_equity: 9.99
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 222
-      dcf_per_share: 46.04
+      dcf_per_share: 45.0
       distress: 0.0
 
     chart_data:
@@ -371,7 +371,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 96.13
+    expected_per_share: 95.14
     headline: "Luxury category-of-one; 15x re-rate."
     narrative:
       - >
@@ -414,15 +414,14 @@ scenarios:
       pv_terminal: 20.90
       op_ev: 23.65
       cash: 0.23
-      net_debt: 1.29
-      total_equity: 22.59
+      net_debt: 1.522
+      total_equity: 22.358
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 235
-      dcf_per_share: 96.13        # raw DCF
+      dcf_per_share: 95.14        # raw DCF
       distress: 0.0
-      # expected_per_share ($90.00) ≠ dcf_per_share ($96.10) — manual rounding
-      # for display. Generator uses expected_per_share for weighted math.
+      # expected_per_share == dcf_per_share (no manual rounding)
 
     chart_data:
       slb_per_year:           [0.60, 0.60, 0.60, 0.60, 0.60]    # sums to ~3.00 (steady)
@@ -534,9 +533,9 @@ pocd:
       it at 3 are the concentration of all three top titles in Akradi, a lead independent director who is the lead
       sponsor’s managing partner, a classified board, and — most of all — a persistent related-party real-estate web
       (Akradi-affiliated leases and a historical loan forgiveness). Key-person risk is moderate.'
-  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+  opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -33.8% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -46.5% finding) + position
     sizing.'
 stamp:
   footer_version: "025"

@@ -177,6 +177,9 @@ def fmt_cash(mk: dict) -> str:
     # net_debt_billion carries gross debt (AAPL 90.7 = total) or true net
     # (CROX 1.23 = net of cash) — "net debt" was self-contradicting AAPL's own
     # extras on the public card. The extras carry the precise decomposition.
+    # net_debt_billion is GROSS total debt (convention, spec §5). Label it plain
+    # "debt"; the extras carry the net decomposition where it matters. (A derived
+    # "(net $X)" here overflowed the page-1 masthead on debt-heavy memos.)
     s = f"{_fmt_b(cash)} cash, " + ("zero debt" if nd == 0 else f"{_fmt_b(nd)} debt")
     extras = [e for e in mk.get("extras", []) if e]
     if extras:

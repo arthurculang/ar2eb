@@ -956,9 +956,9 @@ pocd:
       insiders below 1% (thin owner-operator alignment), and a levered balance sheet where the converts exceed the
       modeled equity, so capital allocation is dominated by the race to breakeven before 2029/2030. The technology
       is institutionalized, so key-person risk is low.
-  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +30.6% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +30.6% finding) + position
     sizing.'
 stamp:
   footer_version: "003"

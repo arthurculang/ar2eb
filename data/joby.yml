@@ -46,7 +46,7 @@ thesis: >
   a Damodaran problem: the standard 5-year DCF generates nonsense. The
   young-company framework asks what mature TAM share is plausible, what
   terminal margins look like at scale, and what probability of outright
-  failure. Three scenarios, weighted; show your work.
+  failure. Five scenarios, weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 # Ticker-constant data the Page 3 chart builder needs.
@@ -525,9 +525,9 @@ pocd:
       combined-Chair/CEO peer Archer. The offsets that keep it from a 5 are a classified board, a founder-related-party
       office lease, and Toyota’s triple role as top shareholder, director and supplier. Key-person risk is moderate
       — real founder dependence, but leadership is shared with an executive co-founder.'
-  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -19.6% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -19.6% finding) + position
     sizing.'
 stamp:
   footer_version: "032"

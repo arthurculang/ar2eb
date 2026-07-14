@@ -959,9 +959,9 @@ pocd:
     key_person_risk: high
     score: 3
     takeaway: 'A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +29.2% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +29.2% finding), then position-sized.'
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-07-02_15-17"
