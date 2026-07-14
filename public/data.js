@@ -4352,7 +4352,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "naut-memo__v007__2026-07-02_15-17.pdf",
-      "size": "386 KB",
+      "size": "387 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -5543,7 +5543,8 @@ const MEMOS = [
             "independent Chair (Matthew Posard) separate from the CEO",
             "board of 9, 7 independent; 2 insiders (Patel CEO, Mallick co-founder / Chief Scientist)",
             "classified board — three staggered classes (an anti-takeover structure)",
-            "insiders own ~29% of shares in aggregate"
+            "insiders own ~29% of shares in aggregate",
+            "a16z (early backer) trimmed via a ~3.59M-share secondary block at $2.00 (Jun 2026, 13D/A); ~7.1% residual stake is a soft supply overhang, not a control/structure change"
           ],
           "keyPersonRisk": "high",
           "score": 4,
@@ -5579,7 +5580,7 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP count flat YoY"
+            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP count flat YoY · a dilutive raise struck below ~$2 (more punishing than the modeled $2.00-$3.00 raise path)"
           },
           {
             "label": "Bull validation",
@@ -14212,7 +14213,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "txg-memo__v003__2026-07-02_15-17.pdf",
-      "size": "294 KB",
+      "size": "295 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -14225,29 +14226,29 @@ const MEMOS = [
       "asOf": "July 2, 2026 close"
     },
     "expected": {
-      "fair": 14.28,
-      "deltaPct": -63.4
+      "fair": 17.76,
+      "deltaPct": -54.5
     },
     "compound": [
       {
         "y": 5,
-        "value": 22.37,
-        "mult": 0.57
+        "value": 27.47,
+        "mult": 0.7
       },
       {
         "y": 10,
-        "value": 35.14,
-        "mult": 0.9
+        "value": 42.62,
+        "mult": 1.09
       },
       {
         "y": 15,
-        "value": 55.39,
-        "mult": 1.42
+        "value": 66.35,
+        "mult": 1.7
       },
       {
         "y": 20,
-        "value": 87.6,
-        "mult": 2.24
+        "value": 103.64,
+        "mult": 2.65
       }
     ],
     "taxonomy": {
@@ -14269,7 +14270,7 @@ const MEMOS = [
       "value": 10.25,
       "zone": "orange"
     },
-    "question": "Is the market paying a spatial-growth multiple (~5x EV/sales) for a single-cell-decline reality — or correctly pricing a margin inflection plus spatial re-acceleration?",
+    "question": "Is the market paying a spatial-plus-clinical multiple (~8x EV/sales) for a single-cell core that is flat-to-declining — or correctly pricing a margin inflection and a genuine diagnostics second act?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -14298,10 +14299,10 @@ const MEMOS = [
       {
         "key": "base",
         "label": "BASE",
-        "prob": 33,
+        "prob": 30,
         "price": 13.86,
         "headline": "Slow ~3% grind; margins recover.",
-        "why": "Guidance holds (0-4%), cost discipline converts to FCF, spatial roughly offsets single-cell. 33% as the central, modal outcome — consistent with consensus ~3.8% CAGR.",
+        "why": "Guidance holds (0-4%), cost discipline converts to FCF, spatial roughly offsets single-cell. 30% as the central, modal outcome — consistent with consensus ~3.8% CAGR.",
         "what": [
           "The modal path: FY26 guidance holds (0-4% growth), spatial roughly offsets single-cell decline, and the 17% opex cut plus modest top-line growth converts the 70% gross margin toward a low-teens FCF margin — revenue ~$0.68B by FY30 at ~3% CAGR.",
           "DCF ~$14/share — ~50% below spot. The franchise is real and finally profitable, but a 3%-grower at a low-teens FCF margin doesn't support ~5x EV/sales. The market is paying for a re-acceleration the base case doesn't deliver."
@@ -14311,29 +14312,29 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 17,
-        "price": 26.06,
-        "headline": "Spatial re-accelerates the total.",
-        "why": "Requires spatial (Xenium) to re-accelerate the TOTAL to ~8% AND NIH to stabilize AND operating leverage to land. Each plausible; jointly ~17%.",
+        "price": 31.89,
+        "headline": "Spatial plus the clinical second act.",
+        "why": "Requires the core to re-accelerate to ~10% AND the clinical/multiomic second act to begin converting AND operating leverage to land. Each plausible; jointly ~17%.",
         "what": [
-          "The bull: Xenium spatial (and the ScaleBio instrument-free chemistry) re-accelerate the whole company to ~8% CAGR, NIH funding stabilizes, instrument placements resume, and operating leverage drives the FCF margin toward ~20% — revenue ~$0.88B by FY30.",
-          "DCF ~$26/share — roughly today's price. This is the scenario the recent triple is pricing; it requires spatial to actually move the total, not just grow within a flat mix."
+          "The bull: Xenium spatial and instrument-free chemistry re-accelerate the core to ~10% CAGR, NIH funding stabilizes, and the second act begins to contribute — the early-2027 CLIA diagnostics lab and multiomic (Proteintech) same-sample pull-through layer reimbursed revenue on top of the tools franchise, lifting the FCF margin toward ~23% and revenue to ~$0.97B by FY30.",
+          "DCF ~$32/share. The Power gate is a single-cell + spatial installed base with multiomic same-sample lock-in; the falsifier is CLIA reimbursement/coverage failing to materialize, or the Atera Q4 contribution slipping."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
-        "prob": 5,
-        "price": 43.23,
-        "headline": "Clinical spatial inflection.",
-        "why": "Tail: spatial inflects into clinical/translational use + peak-tools margins. ~5% — the secular-platform thesis fully realized.",
+        "prob": 8,
+        "price": 63.31,
+        "headline": "Diagnostics platform inflection.",
+        "why": "Tail: the clinical/multiomic second act becomes a durable reimbursed platform at peak margins. ~8% — the platform thesis fully realized, held modest because the pivot is early and unproven.",
         "what": [
-          "The tail: spatial biology inflects from research into translational/clinical use, 10x's installed-base + IP moat compounds, and revenue reaches mid-teens CAGR (~$1.05B by FY30) at peak-tools margins (~27% FCF).",
-          "DCF ~$43/share — ~+54% above spot. The genuine 'secular-growth platform' outcome the bulls envision; ~5% probability."
+          "The tail: the clinical-diagnostics and multiomic second act inflects into a durable reimbursed platform on top of the spatial franchise — 10x's installed-base and IP moat compound, and revenue reaches ~14% CAGR (~$1.14B by FY30) at platform margins (~28% FCF).",
+          "DCF ~$63/share — well above spot. The genuine 'research tools become a diagnostics platform' outcome; ~8% probability, trimmed from the base and sized modestly given a pivot that is early, unproven, and ~a year out."
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 33 / Bull 17 / Ultra Bull 5. Spot price reference: July 2, 2026 close.",
-    "thesis": "10x trades at ~$3.6B (≈$28/sh) — ~5x EV/sales on ~$600M revenue now flat-to-declining for three years. A dominant tools franchise: >7,900 instruments and ~85% recurring 70%-gross-margin consumables, net-cash and cash-generative after a 17% opex cut. The mature DCF asks whether revenue re-accelerates and margins convert to operating profit — against an NIH-funding shock and instrument-free rivals. The finding: the recent triple prices a spatial re-acceleration the base case (~3% grind) doesn't support — only the bull (~8%) approaches spot, the ultra-bull clears it.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 30 / Bull 17 / Ultra Bull 8. Spot price reference: July 2, 2026 close.",
+    "thesis": "10x trades at ~$5.0B (≈$39/sh) — ~8x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools franchise: >7,900 instruments, ~85% recurring 70%-margin consumables, net-cash and cash-generative after a 17% opex cut. The mature DCF holds the flat core and asks whether the second act the market now pays for — a clinical-diagnostics pivot (CLIA lab targeted early-2027), a multiomic Proteintech expansion, and the Atera spatial launch — becomes a durable reimbursed platform. The finding: even crediting that optionality in the tail, the recent triple prices execution the ~3%-grind base doesn't support — the modal case sits ~55% below spot.",
     "historicalPrices": {
       "xMin": -6.8,
       "ipoMarker": "IPO Sep '19",
@@ -14406,16 +14407,16 @@ const MEMOS = [
         "body": "Flat revenue, thin margins; dominant ex-growth; ~$8."
       },
       {
-        "label": "Base 33%",
-        "body": "Slow ~3% grind; margins recover; ~$14 (≈-50%)."
+        "label": "Base 30%",
+        "body": "Slow ~3% grind; margins recover; ~$14 (≈-65%)."
       },
       {
         "label": "Bull 17%",
-        "body": "Spatial re-accelerates to ~8%; ~$26 (≈spot)."
+        "body": "Core to ~10% + clinical second act begins; ~$32 (≈-18%)."
       },
       {
-        "label": "Ultra Bull 5%",
-        "body": "Clinical spatial inflection; mid-teens; ~$43."
+        "label": "Ultra Bull 8%",
+        "body": "Diagnostics platform inflection (~14%); ~$63 (≈+62%)."
       }
     ],
     "page3": {
@@ -14477,8 +14478,8 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 14.28,
-        "upsidePct": -63.4
+        "expected": 17.76,
+        "upsidePct": -54.5
       },
       "market": {
         "marketCapBillion": 4.96,
@@ -14644,7 +14645,7 @@ const MEMOS = [
           "revPerUnit": null
         },
         "base": {
-          "probability": 0.33,
+          "probability": 0.3,
           "expectedPerShare": 13.86,
           "label": "Base",
           "shortLabel": "Base",
@@ -14723,11 +14724,11 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.17,
-          "expectedPerShare": 26.06,
+          "expectedPerShare": 31.89,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "cagr_5y": 8.0,
+            "cagr_5y": 10.1,
             "wacc": 0.085
           },
           "dcfPath": {
@@ -14735,16 +14736,16 @@ const MEMOS = [
             "rev_path": [
               0.04,
               0.07,
-              0.09,
-              0.1,
-              0.1
+              0.11,
+              0.14,
+              0.15
             ],
             "op_margin": [
               -0.02,
               0.05,
-              0.11,
-              0.17,
-              0.22
+              0.12,
+              0.18,
+              0.23
             ],
             "wacc_path": [
               0.085,
@@ -14753,13 +14754,13 @@ const MEMOS = [
               0.085,
               0.085
             ],
-            "term_g": 0.03,
+            "term_g": 0.033,
             "fcf": [
               0.025,
               0.053,
-              0.095,
-              0.144,
-              0.193
+              0.11,
+              0.17,
+              0.233
             ],
             "cash": 0.54,
             "net_debt": 0.0,
@@ -14770,16 +14771,16 @@ const MEMOS = [
             "pv_fcf": [
               0.023,
               0.045,
-              0.074,
-              0.104,
-              0.128
+              0.086,
+              0.123,
+              0.155
             ],
-            "sum_pv_fcf": 0.37,
-            "terminal_value": 3.61,
-            "pv_terminal": 2.4,
-            "op_ev": 2.77,
-            "total_equity": 3.31,
-            "dcf_per_share": 26.06
+            "sum_pv_fcf": 0.43,
+            "terminal_value": 4.63,
+            "pv_terminal": 3.08,
+            "op_ev": 3.51,
+            "total_equity": 4.05,
+            "dcf_per_share": 31.89
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -14800,29 +14801,29 @@ const MEMOS = [
           "revPerUnit": null
         },
         "ultra_bull": {
-          "probability": 0.05,
-          "expectedPerShare": 43.23,
+          "probability": 0.08,
+          "expectedPerShare": 63.31,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "cagr_5y": 11.7,
+            "cagr_5y": 13.7,
             "wacc": 0.08
           },
           "dcfPath": {
             "rev_b": 0.599,
             "rev_path": [
               0.06,
-              0.1,
-              0.14,
-              0.15,
-              0.14
+              0.11,
+              0.16,
+              0.18,
+              0.18
             ],
             "op_margin": [
               0.0,
-              0.08,
-              0.15,
-              0.22,
-              0.27
+              0.09,
+              0.16,
+              0.23,
+              0.28
             ],
             "wacc_path": [
               0.08,
@@ -14831,13 +14832,13 @@ const MEMOS = [
               0.08,
               0.08
             ],
-            "term_g": 0.035,
+            "term_g": 0.04,
             "fcf": [
               0.038,
-              0.077,
-              0.127,
-              0.202,
-              0.282
+              0.088,
+              0.16,
+              0.265,
+              0.385
             ],
             "cash": 0.54,
             "net_debt": 0.0,
@@ -14847,17 +14848,17 @@ const MEMOS = [
             "distress": 0.0,
             "pv_fcf": [
               0.035,
-              0.066,
-              0.101,
-              0.148,
-              0.192
+              0.075,
+              0.127,
+              0.195,
+              0.262
             ],
-            "sum_pv_fcf": 0.54,
-            "terminal_value": 6.49,
-            "pv_terminal": 4.41,
-            "op_ev": 4.95,
-            "total_equity": 5.49,
-            "dcf_per_share": 43.23
+            "sum_pv_fcf": 0.69,
+            "terminal_value": 10.01,
+            "pv_terminal": 6.81,
+            "op_ev": 7.5,
+            "total_equity": 8.04,
+            "dcf_per_share": 63.31
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -14988,7 +14989,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.2% finding) + position sizing."
+        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -54.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
