@@ -735,10 +735,10 @@ function PortfolioPage() {
           <div className="eyebrow">Cross-asset · Portfolio construction</div>
           <h1>Weighted portfolio</h1>
           <p className="lead">
-            One portfolio. Each position sized by three transparent factors —
-            the memo's quantitative upside, the operator's conviction, and the
-            Arthur Indicator — with a hurdle and per-name cap. The full
-            calculation is shown in the table below.
+            One portfolio. Each position sized by four transparent factors —
+            the memo's quantitative upside, the operator's conviction, the
+            Arthur Indicator, and a category tilt — with a hurdle and per-name
+            cap. The full calculation is shown in the table below.
           </p>
         </div>
       </section>
@@ -882,9 +882,9 @@ function PortfolioPage() {
                 <th className="num">Spot</th>
                 <th className="num">Expected</th>
                 <th className="num">Upside <span className="muted">(quant)</span></th>
-                <th className="num">Conviction <span className="muted">(human)</span></th>
-                <th className="num">Indicator <span className="muted">(quant)</span></th>
-                <th className="num col-secondary">Category</th>
+                <th className="col-tertiary">Conviction <span className="muted">(human)</span></th>
+                <th className="col-tertiary">Indicator <span className="muted">(quant)</span></th>
+                <th className="col-secondary">Category</th>
                 <th className="num col-secondary">Raw</th>
                 <th className="num">Weight</th>
               </tr>
@@ -902,9 +902,9 @@ function PortfolioPage() {
                   <td className={'num mono ' + (r.upsidePct >= 0 ? 'delta-pos' : 'delta-neg')}>
                     {fmtPct(r.upsidePct)}
                   </td>
-                  <td className="num mono">{r.tier || '—'} <span className="muted">×{r.convMult.toFixed(2)}</span></td>
-                  <td className="num mono">{r.ai ? `${r.ai.zone} ${r.ai.value.toFixed(1)}` : 'n/a'} <span className="muted">×{r.aiMult.toFixed(2)}</span></td>
-                  <td className="num mono col-secondary">{(r.wl && WL_SHORT[r.wl]) || r.wl || '—'} <span className="muted">×{r.catMult.toFixed(2)}</span></td>
+                  <td className="mono col-tertiary">{r.tier || '—'} <span className="muted">×{r.convMult.toFixed(2)}</span></td>
+                  <td className="mono col-tertiary">{r.ai ? `${r.ai.zone} ${r.ai.value.toFixed(1)}` : 'n/a'} <span className="muted">×{r.aiMult.toFixed(2)}</span></td>
+                  <td className="mono col-secondary">{(r.wl && WL_SHORT[r.wl]) || r.wl || '—'} <span className="muted">×{r.catMult.toFixed(2)}</span></td>
                   <td className="num mono col-secondary">{r.score > 0 ? (r.rawWeight * 100).toFixed(1) + '%' : '—'}</td>
                   <td className="num mono"><b>{r.weight > 0 ? (r.weight * 100).toFixed(1) + '%' : '—'}</b></td>
                 </tr>

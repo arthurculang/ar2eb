@@ -43,17 +43,20 @@ function Link({ to, className, children, ...rest }) {
 }
 
 // ---------- formatting ----------
+// Negatives use a true minus (U+2212), not a hyphen-minus — the finance-site
+// glyph standard. Build from the magnitude so the sign is always the real glyph.
 function fmtUSD(n, opts = {}) {
   const { decimals = 2 } = opts;
   if (n == null) return '—';
   const abs = Math.abs(n);
-  return (n < 0 ? '-' : '') + '$' + abs.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  return (n < 0 ? '−' : '') + '$' + abs.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
 }
 function fmtPct(n, opts = {}) {
   const { sign = true, decimals = 1 } = opts;
   if (n == null) return '—';
-  const v = n.toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
-  return (sign && n > 0 ? '+' : '') + v + '%';
+  const abs = Math.abs(n).toLocaleString('en-US', { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+  const prefix = n < 0 ? '−' : (sign && n > 0 ? '+' : '');
+  return prefix + abs + '%';
 }
 function fmtMult(n) {
   return n.toFixed(2) + '\u00d7';

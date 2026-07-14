@@ -4,6 +4,9 @@ Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
 changelog-driven — currently at logical **v045**) are the source of truth.
+(The `__v023` filename is a **frozen fossil**; the top of the spec's in-file
+changelog is the version of record. There is exactly one spec file — the old
+`__v020` was removed 2026-07-05. Renaming to a stable name is open decision #6.)
 
 ## What this is
 
@@ -104,6 +107,36 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   `ar2eb.com` would require revisiting that DMARC/SPF/MX lockdown first.
 
 ## Status / open items
+
+> **Read this header first; everything under "Build log" below is dated history (newest first), not live state.**
+
+### Current state (2026-07-05)
+- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Both Routines verified live: *daily perf* commits nightly; *monthly rebuild* = the July re-price (PR #78). Site deploy-gated by CI (validate + data.js-in-sync, PR #81).
+- **poppler IS installable here** (`apt-get update && apt-get install -y poppler-utils`) — the June "no-poppler → site-only, can't touch the baseline" caveat class is **DEAD**. Every PDF + `visual_baseline.json` was regenerated at the July-1 flip and in each fix wave since; the on-disk set is current. **Ignore the "site-only / poppler caveat" phrasing in the older build-log bullets below.**
+- **Memo/ticker count: derive from `ls data/*.yml`** (currently 56 memos) — the TICKERS lists in validate/rebuild_all/visual_hash derive from it (PR #81); never hardcode a count.
+- Newest waves: **PR #81** (22-defect full-review fix wave), **Wave B** (TXG second-act re-model → −54.5%; NAUT a16z/dilution flags), **Wave C** (site design system + this restructure).
+
+### Open decisions (awaiting Arthur)
+| # | Question | Recommendation |
+|---|---|---|
+| 1 | Ratify **GROSS total debt** as the single `net_debt_billion` convention book-wide? | **Yes** — 18/21 non-zero memos already gross + the validator equity bridge assumes it. Then normalize the 4 masthead non-conformers (HHH, COIN, +2) + the CROX/LTH dcf_path. |
+| 2 | **CROX / LTH dcf_path double-count cash** (net_debt is net but the bridge re-adds cash) — equity overstated ~3% / $0.23B | Fix to gross. CROX finding +56.8% → ~+54%; LTH ~unchanged. A correctness fix that moves CROX's finding — your sign-off. |
+| 3 | **BTC discount rate/horizon (30%/7yr)** + **ZRO conviction tier** | The biggest §16 lever; confirm before wiring crypto into the *tracked* book (BTC-USD feed ready). |
+| 4 | **NAUT downside is a null partition** — ultra_bear & bear both floor at $0 EV | Collapse to one bear (sub-partition in prose), or model a small survival stub in the bear. |
+| 5 | **LULU probability skew** — base (33%) ≈ bear (32%), upside-skewed off a non-modal base | Re-examine the base-rate for a decelerating premium brand; likely raise base toward ~45–50%. |
+| 6 | **Spec filename convention** — `__v023` frozen while content is logical v045 | Rename to stable `spec/memo-spec.md`; declare "in-file changelog top = version of record"; cap the in-file changelog at ~5, older → `spec/CHANGELOG.md`. |
+| 7 | **Tail-EV companion statistic** (e.g. P(≤spot)) on Page 1 for tail-driven names (NAUT/PACB) | Add to §6b — a required companion line when the top scenario's EV share ≥ ~2.5× its probability. |
+| 8 | **SYM as the first POCD "1"** tier | Your call (control entrenchment + a 2024 restatement/material-weakness integrity flag). |
+
+### Authoring gotchas (durable — promoted from scattered batch bullets; do NOT re-derive)
+- **Page-1 5-scenario overflow is prose-driven** — trim the ticker's OWN central_question / thesis / scenario-card headlines toward ~RKLB length, never the shared layout. Diagnose by which trim moves the px (STRICT reports the overflow px).
+- **`tam_competitor_share` is absolute $B (must be < `tam_billion`), NOT a %** — the GRAL/IONQ/PACB TAM-chart clip class. `validate.py` now WARNs on `≥ tam`.
+- **Never write `Capitalizedword: ` in an unquoted YAML value** (the CROX `Bull:` bug → `build_site_data` aborts → renderer runs on stale `data.js`). Build POCD/pocd blocks via `yaml.dump`.
+- **Back-matter (Page 6/7) and Page-1 are stretched-row CSS grids** — row height = tallest cell; trim the TALLEST cell in the binding row, not a short one.
+- **A mechanical re-price leaves prose STALE** — after any `spot`/`market_cap` change, grep the memo's `thesis` / `weighting_rationale` / `pocd.deal` for hardcoded `$`/`%` and sync them (the recurring "stale thesis vs re-priced finding" bug — hit on PACB #74, TXG Wave B).
+- **`final_shares` must reconcile with `shares0 + Σ(raise/price)`** or the validator WARNs — use scalar avg raise-prices and set `final_shares` to the implied diluted count.
+
+### Build log (historical — newest first; superseded phrasing above wins)
 
 - **LAUNCHED 2026-07-02 (t₀ epoch 2026-07-01) + both Routines VERIFIED LIVE.** The 1-July "start fresh" ran a day late, end-to-end from a
   web session — **poppler IS installable in these containers** (`apt-get update && apt-get install -y poppler-utils`), so the "no poppler →
