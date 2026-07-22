@@ -37,16 +37,16 @@ market:
 
 central_question: >
   Will Nautilus capture meaningful share of a $130B global proteomics TAM by
-  2036 with its Voyager single-molecule platform — or is today's $302M market
-  cap pricing certainty about commercial economics that the late-2026 launch
-  and early-2027 instrument installations haven't yet earned?
+  2036 with its Voyager single-molecule platform — or does today's ~$215M market
+  cap, now de-rated toward the cash floor, still price commercial economics that
+  the late-2026 launch and early-2027 instrument installations haven't yet earned?
 
 thesis: >
-  NAUT trades at $2.40 ($302M mkt cap, 47% in cash) on essentially zero
+  NAUT trades at $1.71 (~$215M mkt cap, ~66% in cash) on essentially zero
   revenue. The Voyager single-molecule platform: Tau Early Access since
   Jan 2026; commercial launch late 2026, first instrument installs early
-  2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029;
-  dilutive raise likely 2027-2028. Mature peers — Olink (Thermo),
+  2027, Broadscale (10B-protein mapping) H1 2027. Cash runway through
+  2027; dilutive raise likely 2027. Mature peers — Olink (Thermo),
   SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and
   TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios,
   weighted; show your work.
@@ -194,8 +194,8 @@ scenarios:
       Thermo at a premium; SomaLogic merged into Standard BioTools at a
       discount; Quantum-Si still pre-revenue). NAUT-specific: Voyager's
       late-2026 launch already slipped; the Jan 2026 Early Access Program is
-      real but narrow (Tau proteoforms first); $143M cash extends to mid-2029
-      but commercial scale-up requires a 2027-2028 dilutive raise. Bear case
+      real but narrow (Tau proteoforms first); $143M cash extends the runway
+      through 2027, and commercial scale-up requires a 2027 dilutive raise. Bear case
       is structural — tech doesn't scale beyond niche, or proteoform analysis
       stays a research curiosity rather than a clinical workhorse. 35% weight
       (vs JOBY's 30%): NAUT is one stage earlier, with a smaller cash buffer
@@ -263,9 +263,10 @@ scenarios:
       - >
         The math: FY36 $1.55B revenue (1.2% of $130B TAM) at 16% op margin.
         Terminal value $3.1B at 9% WACC. PV terminal $1.18B, op_ev $0.57B,
-        total equity $0.71B. DCF $2.22/share. With 18% within-scenario p_fail
-        and $0.30 distress: $1.87 expected — close to today's $2.40 spot,
-        implying current price largely reflects base-case execution. NAUT
+        total equity $0.71B. DCF $2.42/share. With 18% within-scenario p_fail
+        and $0.30 distress: $2.04 expected — about 19% above today's $1.71 spot,
+        so even the modal case now implies upside as the stock has de-rated toward
+        its cash floor. NAUT
         becomes a real Olink/SomaScan/Quantum-Si peer at smaller scale —
         acquired by a major or remaining independent in a diversified
         proteomics ecosystem.
@@ -521,7 +522,7 @@ page3:
 appendix:
   pushback:
     - label: "Best-funded single-molecule platform."
-      body: "$143M cash, zero debt, cost discipline (16% headcount cut, Q1 burn $12.8M). Runway to mid-2029. Peers are less funded relative to need."
+      body: "$143M cash, zero debt, cost discipline (16% headcount cut, Q1 burn $12.8M). Runway through 2027. Peers are less funded relative to need."
     - label: "Early Access is real, not vaporware."
       body: "Tau proteoforms EAP live since Jan 2026 with academic + biopharma partners. Post-tech-risk (instrument works), pre-commercial-scale."
     - label: "First-mover in proteoform single-molecule."
@@ -529,10 +530,10 @@ appendix:
     - label: "Tau strategic positioning."
       body: "Alzheimer's biomarker market $10B+; proteoform analysis is what makes Tau actionable. Single-product launch anchors adoption in a large research market."
     - label: "Cash floor is real downside protection."
-      body: "$1.13/share cash vs $2.40 spot = 47% of mkt cap is liquid. Operating EV ~$1.27/share for a real platform. Hard to lose money permanently here."
+      body: "$1.13/share cash vs $1.71 spot = ~66% of mkt cap is liquid. Operating EV ~$0.57/share for a real platform. Hard to lose money permanently here."
   triggers:
     - label: "Bear validation"
-      body: "Voyager pre-orders < $10M by Q1 2027  ·  Cash < $80M EOY 2027  ·  Broadscale slips to 2028+  ·  Tau EAP count flat YoY  ·  a dilutive raise struck below ~$2 (more punishing than the modeled $2.00-$3.00 raise path)"
+      body: "Voyager pre-orders < $10M by Q1 2027  ·  Cash < $80M EOY 2027  ·  Broadscale slips to 2028+  ·  Tau EAP count flat YoY  ·  a dilutive raise below ~$2 — now armed (spot $1.71); watch the ~$125M S-3 ATM and Q2 (Jul 28 2026)."
     - label: "Bull validation"
       body: "Pre-orders > $30M by Q1 2027  ·  100+ instruments installed EOY 2027  ·  second pharma/OEM partnership  ·  multi-year take-rate deal disclosed"
     - label: "Reframe needed"
@@ -553,7 +554,7 @@ pocd:
     tenure_years: 5
     insider_ownership_pct: 14.8
     capital_allocation: 'Pre-revenue (FY2026 revenue guided ~$0.5M, effectively zero). Q1 2026 cash &
-      investments $143.4M (~47% of the ~$0.30B market cap); Q1 burn $12.8M (opex $16.1M, down 14% YoY); runway
+      investments $143.4M (~66% of the ~$0.22B market cap); Q1 burn $12.8M (opex $16.1M, down 14% YoY); runway
       guided through 2027. No dividend or buyback (pre-revenue); spend is R&D on the Voyager / single-molecule
       proteomics platform toward commercial launch. Originally funded by a $350M SPAC/PIPE in 2021 ($200M PIPE
       led by Perceptive); scenarios assume additional equity raises / dilution to fund operations past 2027.'
@@ -568,7 +569,7 @@ pocd:
       - 'board of 9, 7 independent; 2 insiders (Patel CEO, Mallick co-founder / Chief Scientist)'
       - 'classified board — three staggered classes (an anti-takeover structure)'
       - 'insiders own ~29% of shares in aggregate'
-      - 'a16z (early backer) trimmed via a ~3.59M-share secondary block at $2.00 (Jun 2026, 13D/A); ~7.1% residual stake is a soft supply overhang, not a control/structure change'
+      - 'a16z (early backer) roughly halved its stake from ~14% to ~7.1% via two June-2026 secondary blocks (5.0M shares at $2.35 on Jun 2; 3.59M at $2.00 on Jun 26; 13D/A) — secondary sales, no new dilution; a soft supply overhang, not a control/structure change'
     key_person_risk: high
     score: 4
     takeaway: 'Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class
@@ -580,13 +581,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +174% finding), then position-sized.'
 stamp:
-  footer_version: "008"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "009"
+  footer_timestamp: "2026-07-22_16-44"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "008"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "009"
+  pdf_timestamp: "2026-07-22_16-44"
 
   prior_versions:
+  - version: "008"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 1.71
   - version: "007"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
@@ -625,7 +630,7 @@ competitive:
   dominant_power: cornered_resource
   window: closing
   rivals:
-    - { name: "Seer", kind: public, note: "Proteograph shipping with revenue; nanoparticle enrichment + MS.", share_now: 0.0, share_terminal: 0.20, capital: "public; cash-funded" }
+    - { name: "Seer", kind: public, note: "Proteograph shipping with revenue; nanoparticle enrichment + MS. Apr-2026 PRECISE-SG100K biobank deployment (Proteograph + Orbitrap Astral MS, 10,000 samples) entrenches incumbent distribution while NAUT is pre-launch; Thermo's ~$3.1B Olink buyout deepens it.", share_now: 0.0, share_terminal: 0.20, capital: "public; cash-funded" }
     - { name: "Olink (Thermo Fisher)", kind: incumbent-division, note: "Established PEA panels (~5k proteins); NGS readout; Thermo distribution.", share_now: 0.0, share_terminal: 0.25, capital: "Thermo balance sheet" }
     - { name: "SomaLogic / Standard BioTools", kind: public, note: "Aptamer SomaScan (~11k); merged scale.", share_now: 0.0, share_terminal: 0.20, capital: "public; merged" }
     - { name: "Quantum-Si", kind: public, note: "Semiconductor protein sequencing; also early.", share_now: 0.0, share_terminal: 0.10, capital: "public" }

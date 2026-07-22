@@ -12,7 +12,7 @@ market:
   extras:
   - ~$149M cash = ~9-month runway; FY2025 10-K flags GOING-CONCERN doubt; $200M ATM
   - Pre-product prime editing (search-and-replace; David Liu / Broad lineage); burn ~$43M/qtr
-  - PM359 first-ever clinical prime edit (NEJM Dec'25); May'25 restructuring -> in-vivo liver (Wilson/AATD)
+  - PM359 first clinical prime edit (NEJM Dec'25, FDA RMAT Jun'26); May'25 pivot -> in-vivo liver (Wilson/AATD)
 taxonomy:
   watchlist: asymmetrical-moonshots
   tier: Low
@@ -21,12 +21,13 @@ taxonomy:
   primary_theme: precision-medicine-oncology
 central_question: PRME proved the first-in-human prime edit, but holds only ~9 months of cash against a going-concern flag
   and a $200M ATM — does the platform tail survive the dilution before it pays off?
-thesis: Prime Medicine is a clinical-stage prime-editing biotech — the precise 'search-and-replace' gene edit (no double-strand
-  break), David Liu's sister technology to BEAM's base editing. Pre-revenue at $3.16 (~$585M cap), it proved the first-ever
-  clinical prime edit (PM359, NEJM Dec 2025). But cash is ~$149M (~9 months), the FY2025 10-K flags going-concern doubt, and
-  a $200M ATM means severe dilution at a ~$3 stock; a May 2025 restructuring refocused it on in-vivo liver (Wilson's, AATD).
-  The DCF asks whether the platform tail can outrun forced dilution. Weighted fair value $3.39 vs $3.16 — roughly fair, an
-  option where the platform almost exactly offsets the balance sheet.
+thesis: Prime Medicine is a clinical-stage prime-editing biotech — the precise 'search-and-replace' gene edit, David Liu's
+  sister tech to BEAM's base editing. Pre-revenue at $3.12 (~$564M cap), it proved the first-ever clinical prime edit (PM359,
+  NEJM Dec 2025). Cash is ~$149M (~9 months), the FY2025 10-K flags going-concern doubt, and a $200M ATM means severe dilution
+  at a ~$3 stock; a May 2025 restructuring refocused it on in-vivo liver (Wilson's, AATD). Since then authorizations have
+  accrued — first in-vivo CTA, AATD arbitration win, PM359 RMAT — but not efficacy data, and the financing constraint is
+  unchanged, so the scenario set holds. The DCF asks whether the platform tail can outrun forced dilution. Weighted fair
+  value $3.39 vs $3.12 — roughly fair.
 chart_reference:
   tam_billion: 30
   history_years:
@@ -816,8 +817,8 @@ weighting_rationale:
 appendix:
   pushback:
   - label: First-in-class proof is real
-    body: PM359 restored NADPH-oxidase activity in the first-ever clinical prime edit (NEJM Dec 2025) — the core chemistry
-      works in humans, not just in vitro.
+    body: PM359 restored NADPH-oxidase activity — the first-ever clinical prime edit (NEJM Dec 2025); FDA RMAT (June 2026)
+      adds a non-dilutive path.
   - label: Liver refocus de-risks delivery
     body: The May 2025 pivot to in-vivo liver (Wilson's, AATD) targets the best-validated delivery route, where LNP-to-liver
       is a solved problem for rivals.
@@ -825,15 +826,15 @@ appendix:
     body: BMS ($55M upfront, $55M equity, >$3.5B milestones) and CFF (up to $39M) offset some burn — not every dollar of progress
       must come from the ATM.
   - label: The de-rating prices the distress
-    body: At $3.16, down from a $6.94 high, much of the going-concern risk is already in the stock; the platform tail is being
+    body: At $3.12, down from a $6.94 high, much of the going-concern risk is already in the stock; the platform tail is being
       bought cheaply.
   - label: David Liu lineage
     body: The Broad-Institute prime-editing IP and scientific lead are a genuine cornered resource that a partner or acquirer
       could fund through the cash crunch.
   triggers:
   - label: Bull validation
-    body: A partnered or approved liver program (Wilson's/AATD), a PM359 partner/BLA path, or a financing/partnership that
-      closes the runway gap before the ATM is leaned on.
+    body: PM577a Phase 1/2 (2H26) and a PM647 IND/CTA (Q3 2026) advance toward 2027 data — but the binding trigger is a
+      financing or partnership that closes the runway gap first.
   - label: Bear validation
     body: Repeated ATM draws at sub-$3 prices, a clinical setback in the lead liver programs, or runway slipping below two
       quarters without a partner.
@@ -845,11 +846,11 @@ glossary:
   definition: Precise 'search-and-replace' gene edit that rewrites DNA without a double-strand break; makes many edit types.
     David Liu / Broad lineage.
 - term: PM359 / CGD
-  definition: PRME's program for chronic granulomatous disease; the first-ever clinical prime edit (NEJM Dec 2025). Deprioritized;
-    now seeking a partner/BLA path.
+  definition: PRME's program for chronic granulomatous disease; the first-ever clinical prime edit (NEJM Dec 2025).
+    Partner-seeking; FDA RMAT (June 2026) aids the BLA path.
 - term: in-vivo liver editing
-  definition: Editing genes directly inside the body in the liver — the focus after the May 2025 refocus (Wilson's disease
-    PM577, AATD PM647).
+  definition: Editing genes inside the body in the liver (Wilson's PM577a, AATD PM647). NZ Medsafe cleared the PM577a
+    application June 2026 — PRME's first in-vivo clinical authorization.
 - term: going-concern
   definition: Auditor/management doubt, flagged in the FY2025 10-K, that the company has enough cash to operate for the next
     12 months.
@@ -891,7 +892,9 @@ competitive:
   rivals:
   - name: BEAM (base editing)
     kind: public
-    note: Same gene-editing family; $1.21B cash vs PRME's $149M — far better capitalized.
+    note: Same gene-editing family; $1.21B cash vs PRME's $149M — far better capitalized. A July 2026 binding arbitration
+      put PM647/AATD within PRME's Field (no breach, no damages owed), clearing an AATD IND/CTA for Q3 2026; but Beam-302,
+      the direct AATD rival, advanced to pivotal development (60mg dose), so Beam stays clinically ahead in AATD.
     share_now: 0.3
     share_terminal: 0.3
     capital: $1.21B cash, runway to ~2029
@@ -923,14 +926,15 @@ competitive:
     best_rival: BEAM ~$1.21B / runway to ~2029
     verdict: lagging
   - metric: In-vivo delivery
-    company: Refocused to liver, pre-clinical-readout
+    company: First in-vivo prime-editing CTA cleared (NZ, PM577a/Wilson); Phase 1/2 from 2H26
     best_rival: NTLA/peers with in-vivo human data
     verdict: lagging
   takeaway: PRME is trying to originate a cornered-resource/process Power in versatile, precise editing — the David Liu prime-editing
     platform is a genuine scarce asset, and PM359 proves the chemistry works in humans. But the company is cash-starved and
     was forced to cut its pipeline, so the Power-origination window is closing faster than the science is maturing. The falsifier
     the bull must clear is concrete — reach a partnered or approved program before the balance sheet forces value-destroying
-    dilution. Same family as BEAM, opposite balance sheet.
+    dilution. A July 2026 arbitration win (PM647/AATD within PRME's Field) and the cleared in-vivo CTA move the pipeline toward
+    that bar, but neither is a partnership or an approval, so the window stays closing. Same family as BEAM, opposite balance sheet.
 pocd:
   people:
     ceo: Allan Reine, M.D.
@@ -961,16 +965,20 @@ pocd:
       led and the clinical pipeline was just cut to one focus.'
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +7.2% finding) + position
-    sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the roughly-fair +8.6% finding)
+    + position sizing.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-07-22_16-44"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-07-22_16-44"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 3.12
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

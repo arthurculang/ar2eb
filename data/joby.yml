@@ -33,15 +33,16 @@ market:
 
 central_question: >
   Will Joby capture meaningful share of a $250B global UAM TAM by 2036 —
-  or is today's $10B market cap pricing certainty that competitive eVTOL
+  or is today's ~$7.5B market cap pricing certainty that competitive eVTOL
   economics don't support?
 
 thesis: >
-  Joby trades at ~$10.3B against $24M of Q1 2026 revenue and $700M
+  Joby trades at ~$7.5B against $24M of Q1 2026 revenue and $700M
   annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise)
-  provides ~3 years of runway. FAA Type Certification is in Stage 4 (final),
-  Dubai exclusive operations begin in 2026, and the Toyota manufacturing
-  partnership unlocks scale. Pre-revenue category-defining companies present
+  provides ~3 years of runway. FAA certification entered Stage 5 (TIA) in
+  March 2026 with the type certificate guided late 2026, Dubai exclusive
+  operations begin in 2026, and the June 2026 Toyota manufacturing joint
+  venture unlocks scale. Pre-revenue category-defining companies present
   a Damodaran problem: the standard 5-year DCF generates nonsense. The
   young-company framework asks what mature TAM share is plausible, what
   terminal margins look like at scale, and what probability of outright
@@ -54,7 +55,7 @@ thesis: >
 chart_reference:
   tam_billion: 250  # global UAM TAM at FY36
   history_years: [2024, 2025, 2026]  # FY24-26 actuals on Page 3 charts
-  history_revenue: [0.080, 0.150, 0.240]  # $B actuals
+  history_revenue: [0.080, 0.150, 0.110]  # $B actuals; FY26 = midpoint of reaffirmed $105-115M guidance (Q1'26 release)
   history_fleet: [12, 28, 50]  # cumulative aircraft delivered
 
 # ── Page 3 chart-aesthetic config (Phase 4: migrated out of JSX) ────────
@@ -139,8 +140,8 @@ scenarios:
     narrative:
       - >
         The pessimistic case is brutal for eVTOL economics. FAA Type Certification
-        slips from 2026 into 2027 or later — the SR3 audit is complete but Stage 4
-        final testing has historically taken longer than companies project. The
+        slips from 2026 into 2027 or later — Stage 5 (TIA) was entered in March 2026,
+        but for-credit FAA testing has historically taken longer than companies project. The
         Dubai launch is real but on a single route; volume builds slowly.
         Manufacturing in Dayton scales below the 4-aircraft/month target.
       - >
@@ -157,7 +158,7 @@ scenarios:
         expected per-share is near-zero.
     probability_rationale: >
       Aerospace startups historically fail at high rates even with funding. SR3
-      audit timing has slipped industry-wide; Stage 4 final testing routinely
+      audit timing has slipped industry-wide; TIA for-credit testing routinely
       extends 12-24 months beyond projections. Manufacturing scaling at Dayton
       is the hardest unproven part — Tesla took years on Model 3 with mature
       automotive suppliers. The 17% weight acknowledges that the $2.5B cash +
@@ -165,9 +166,10 @@ scenarios:
       to a typical aerospace startup, but eVTOL unit economics remain
       fundamentally unproven at fleet scale. Even with strong execution, the
       category itself could fail to generate profitable demand. Within-scenario
-      35% p_fail captures Joby-specific bankruptcy; the 30% scenario weight
-      captures the broader 'bear world' where eVTOL economics don't scale even
-      if Joby executes.
+      35% p_fail captures Joby-specific bankruptcy; the 17% bear weight —
+      with a further 13% ultra-bear split out beneath it — captures the
+      broader 'bear world' where eVTOL economics don't scale even if Joby
+      executes.
 
     # Young-Company DCF metrics
     dcf_metrics:
@@ -228,11 +230,11 @@ scenarios:
         software (25%+). This is what the Damodaran framework produces with
         defensible peer-set anchors.
       - >
-        The math: $8.5B operating EV, $2.5B cash, 1.28B FY36 fully-diluted
-        shares (31% dilution from $3.75B raises). DCF $2.33 per share. With 18%
-        failure probability, expected per-share $2.00 — materially below today's
-        $10.50. The current price requires substantially more bullish
-        assumptions to hold.
+        The math: $3.1B operating EV, $2.5B cash, 1.28B FY36 fully-diluted
+        shares (31% dilution from $3.75B raises). DCF $4.34 per share. With 18%
+        failure probability, expected per-share $3.65 — well below today's
+        price. The base case alone does not carry the valuation; the upper
+        scenarios do.
     probability_rationale: >
       Modal outcome given de-risking factors already in place. FAA Type Cert
       progresses on schedule or slightly delayed; Toyota manufacturing scales
@@ -304,10 +306,11 @@ scenarios:
         model on partner-operated aircraft, reaching software-like margins.
         Mature operating margin reaches 28%.
       - >
-        The math: $34B operating EV, $2.5B cash, 1.09B FY36 shares (11%
-        dilution). DCF $35.35/share. With 8% failure probability, expected
-        per-share $32.61. The bull case implies today's $10.50 undervalues the
-        trajectory — but only with meaningful probability weight on dominance.
+        The math: $33B operating EV, $2.5B cash, 1.09B FY36 shares (11%
+        dilution). DCF $32.58/share. With 8% failure probability, expected
+        per-share $30.05. The bull case implies today's price deeply
+        undervalues the trajectory — but only with meaningful probability
+        weight on dominance.
     probability_rationale: >
       The bull case requires a chain of conditional events: FAA Type Cert on
       schedule by end-2026 AND Toyota Dayton scales to full 500-aircraft/year
@@ -377,7 +380,7 @@ scenarios:
         Compound conditional: each piece individually plausible at 60-75%;
         joint at 3-5%. Reflected here at 3%. This is the genuine tail — not a
         'mild upside,' but the scenario where Joby joins the aerospace/software
-        giants club. Contributes $2.70 to the $7.81 weighted expected
+        giants club. Contributes $2.70 to the $8.42 weighted expected
         ($90 × 3%).
     probability_rationale: >
       Tail of tails: requires every Bull condition to hit AND multiple
@@ -447,8 +450,10 @@ historical_prices:
 
 # ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
 weighting_rationale:
-  - label: "Bear 30%"
-    body: "Aerospace startups historically fail at high rates; SR3 timing slipped industry-wide."
+  - label: "Ultra Bear 13%"
+    body: "Deepest tail: heavier distressed dilution to survive; the $2.5B cash floor keeps it above zero."
+  - label: "Bear 17%"
+    body: "Aerospace startups historically fail at high rates; for-credit testing routinely runs long."
   - label: "Base 55%"
     body: "Modal outcome: Joby + Archer split US with aerospace-blend margins."
   - label: "Bull 12%"
@@ -465,7 +470,7 @@ page3:
 appendix:
   pushback:
     - label: "Type Cert is imminent."
-      body: "Stage 4 in progress, SR3 audit complete Q1'26. Conforming aircraft already flying. Removes the largest single bear risk."
+      body: "Stage 5 (TIA) entered March 2026; conforming aircraft flying since March 11. For-credit FAA testing pending; certificate guided late 2026."
     - label: "Best capitalized eVTOL."
       body: "$2.5B cash exceeds Archer ($1.8B) and Vertical (+$850M raise). Multi-year runway through commercial scaling."
     - label: "Partnership stack is unique."
@@ -476,11 +481,11 @@ appendix:
       body: "Base case 13% reflects aerospace blend. If software-take-rate on partner aircraft scales, terminal margin could be 20%+."
   triggers:
     - label: "Bear validation"
-      body: "Type Cert slips to 2027+  ·  Cash < $1.5B by EOY 2026  ·  Dubai passenger volume disappoints (< 50K rides FY27)"
+      body: "Type Cert slips to 2027+  ·  Cash < $1.5B by EOY 2026  ·  Toyota's second $250M tranche fails to close by YE 2026  ·  Dubai passenger volume disappoints (< 50K rides FY27)"
     - label: "Bull validation"
-      body: "Type Cert achieved by Q3 2026  ·  Dayton facility hits 4 aircraft/month  ·  Second exclusive country contract signed"
+      body: "Type Cert achieved by Q3 2026  ·  Dayton facility hits 4 aircraft/month  ·  Second Dubai-style market-exclusive operating award (an exclusive airline partnership, e.g. Virgin Atlantic Jul 2026, is adjacent — not this)"
     - label: "Reframe needed"
-      body: "If Archer achieves Type Cert first — Joby's first-mover advantage in US erodes; share-of-TAM math compresses"
+      body: "If Archer achieves FAA Type Certification first — Joby's US first-mover advantage erodes; share-of-TAM math compresses. Archer flying UAE passengers under its RTC alone does not trip this."
 
 # ── Footer stamp + Page-5 glossary (migration v005 decisions #2/#3/#5) ──────────
 # ── Taxonomy (Helm v33b) ────────────────────────────────────────────────────
@@ -498,9 +503,11 @@ pocd:
     insider_ownership_pct: 9.4
     capital_allocation: 'Founder JoeBen Bevirt has been CEO since founding Joby in 2009. Pre-revenue eVTOL developer:
       ~$2.5B cash at Q1 2026 against a ~$160M/quarter burn, funded by equity, convertible and ATM issuance (~$1.3B
-      raised in Q1 2026) plus Toyota’s ~$894M of cumulative strategic investment. FAA type certification is at stage
-      4 of 5, with conforming-aircraft flight testing underway and a type certificate targeted for late 2026. No dividend
-      or buyback (cash is preserved for certification and launch).'
+      raised in Q1 2026) plus Toyota’s ~$894M of cumulative strategic investment — the second $250M tranche of Toyota’s
+      Oct 2024 $500M commitment is not yet closed, expected before year-end 2026. In June 2026 manufacturing moved into
+      a Toyota-majority joint venture (Toyota 51% / Joby 49%) holding exclusive S4-series production rights. FAA type
+      certification is in Stage 5 (TIA), with conforming-aircraft flight testing underway and a type certificate targeted
+      for late 2026. No dividend or buyback (cash is preserved for certification and launch).'
     incentive_alignment: Bevirt’s FY2025 compensation was ~$3.7M with no cash bonus (a cash-preservation policy pays
       short-term incentives in RSUs), under a 5x-salary ownership guideline and strict anti-hedging/anti-pledging
       rules. He is aligned via a ~9-12% economic stake (co-founder Paul Sciarra holds another ~5.7%). Insider activity
@@ -512,8 +519,10 @@ pocd:
     - Chair and CEO are separated, but the Executive Chairman (co-founder Sciarra) is non-independent — independent
       oversight runs through the lead independent director (Michael Huerta, former FAA Administrator)
     - classified / staggered board (three classes) — an entrenchment feature
-    - Toyota is simultaneously the largest outside shareholder (~$894M invested), holds a contractual board seat (Ogawa),
-      and is a key component supplier — concentration plus related-party complexity
+    - Toyota is simultaneously the largest outside shareholder (13.1% per its June 2026 13D/A), holds a contractual board
+      seat (Ogawa), is a key component supplier, and — via the June 2026 joint venture (51% Toyota, 3 of 5 JV board seats,
+      exclusive S4-series manufacturing rights, royalty-free license to Joby manufacturing IP) — majority-controls Joby's
+      manufacturing; concentration plus deep related-party complexity
     - 'founder-CEO related-party: office space leased from Bevirt-owned entities (~$0.6M/year)'
     - pre-revenue, funded by ongoing equity and convertible dilution
     key_person_risk: medium
@@ -522,20 +531,25 @@ pocd:
       separated from the CEO, a credentialed lead independent director (a former FAA Administrator), a 6-of-9 independent
       board, and strict anti-hedging/ownership rules. That separation and clean share class are why it scores above
       combined-Chair/CEO peer Archer. The offsets that keep it from a 5 are a classified board, a founder-related-party
-      office lease, and Toyota’s triple role as top shareholder, director and supplier. Key-person risk is moderate
+      office lease, and Toyota’s quadruple role as top shareholder, director, supplier and — since the June 2026 joint
+      venture — majority owner of Joby’s manufacturing. Key-person risk is moderate
       — real founder dependence, but leadership is shared with an executive co-founder.'
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -19.6% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value of the scenario set + position
     sizing.'
 stamp:
-  footer_version: "033"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "034"
+  footer_timestamp: "2026-07-22_16-44"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "033"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "034"
+  pdf_timestamp: "2026-07-22_16-44"
 
   prior_versions:
+  - version: "033"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 7.67
   - version: "032"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
@@ -544,13 +558,13 @@ glossary:
 - term: eVTOL
   definition: Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range.
 - term: Type Certification
-  definition: FAA approval to operate a new aircraft design commercially. Joby is in Stage 4 (final) of 4-stage process.
+  definition: FAA approval to operate a new aircraft design commercially. Joby entered Stage 5 (TIA) of the 5-stage process in March 2026; certificate guided late 2026.
 - term: eIPP
   definition: eVTOL Integration Pilot Program. White House-backed initiative letting Joby fly in US states pre-Type Cert.
 - term: Dubai RTA
   definition: Roads & Transport Authority. Awarded Joby exclusive eVTOL air-taxi rights in Dubai through 2032.
 - term: Toyota partnership
-  definition: $894M total investment. Joint manufacturing program at Dayton, Ohio facility for production scale.
+  definition: ~$894M invested; second $250M tranche of a $500M commitment expected by YE 2026. June 2026 joint venture (Toyota 51%) holds exclusive S4 manufacturing rights at Dayton, Ohio.
 - term: Blade
   definition: Helicopter-based mobility business acquired in 2024 — gives Joby existing routes (NYC-airport) for early ops.
 
@@ -564,21 +578,21 @@ competitive:
   lens: power_origination
   powers:
     scale_economies:     { score: 1, note: "Manufacturing scale years away; unit economics unproven." }
-    network_economies:   { score: 1, note: "Vertiport/route network is the eventual moat; not yet originated." }
+    network_economies:   { score: 1, note: "Eventual moat, not yet originated: Dubai VDX vertiport certified Jul 2026 (Joby-exclusive market) — but the ACES 250-site US charging consortium (Archer + Beta, Jul 2026) is forming without Joby." }
     counter_positioning: { score: 2, note: "Vertically integrated OEM-plus-operator model legacy aero/airlines can't easily copy." }
     switching_costs:     { score: 1, note: "No installed base yet; future pilot/fleet lock-in." }
     branding:            { score: 2, note: "Joby + Toyota/Delta halo; acquired Uber Elevate brand." }
-    cornered_resource:   { score: 2, note: "Toyota manufacturing partnership + capital; Delta tie-up; FAA cert lead; powertrain IP." }
+    cornered_resource:   { score: 2, note: "Toyota joint venture (Jun 2026) formalizes exclusive S4 manufacturing — deeper barrier, 51% control ceded; Delta tie-up; Virgin Atlantic exclusive UK partnership (Jul 2026); FAA cert lead; powertrain IP." }
     process_power:       { score: 1, note: "Manufacturing learning curve just beginning." }
   dominant_power: cornered_resource
   window: open
   rivals:
-    - { name: "Archer Aviation", kind: public, note: "United + Stellantis manufacturing + US Army; close behind on cert.", share_now: 0.0, share_terminal: 0.20, capital: "well-funded; Stellantis" }
-    - { name: "Beta Technologies", kind: private, note: "Cargo/eCTOL first; building a charging network.", share_now: 0.0, share_terminal: 0.12, capital: "~$1B+ raised" }
+    - { name: "Archer Aviation", kind: public, note: "United + Stellantis + US Army; behind on FAA track; first UAE RTC (May 2026) — limited Abu Dhabi ops possible in 2026.", share_now: 0.0, share_terminal: 0.20, capital: "well-funded; Stellantis" }
+    - { name: "Beta Technologies", kind: public, note: "Cargo/eCTOL first; first eIPP operational flights Jul 2026 (organs, with United Therapeutics); building a charging network.", share_now: 0.0, share_terminal: 0.12, capital: "~$1B post-IPO" }
     - { name: "Vertical Aerospace", kind: public, note: "UK; VX4; smaller balance sheet.", share_now: 0.0, share_terminal: 0.08, capital: "constrained" }
     - { name: "Eve (Embraer)", kind: incumbent-division, note: "OEM heritage + order book; later to fly.", share_now: 0.0, share_terminal: 0.10, capital: "Embraer-backed" }
   lead_lag:
-    - { metric: "FAA type certification stage", company: "for-credit testing", best_rival: "for-credit testing", verdict: even }
+    - { metric: "FAA type certification stage", company: "Stage 5 (TIA) since Mar 2026; for-credit flying pending", best_rival: "Archer: 100% MoC accepted Mar 2026; behind on FAA track", verdict: leading }
     - { metric: "Manufacturing partner", company: "Toyota", best_rival: "Stellantis", verdict: even }
     - { metric: "Cash runway (yrs at burn)", company: 3, best_rival: 2, verdict: leading }
   takeaway: >

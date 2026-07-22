@@ -236,7 +236,14 @@ function equityBuildRows(scn, dcfType) {
   if (dcfType === 'young_company') {
     return [
       ['Operating EV',           `$${p.op_ev.toFixed(2)}B`,        'normal'],
-      ['+ Cash & investments',   `$${p.cash.toFixed(2)}B`,         'normal'],
+      // Deal/acquisition debt (e.g. RKLB×Iridium pro-forma) folds into the cash
+      // row so the walk still sums — gated so every net_debt:0 young memo
+      // renders byte-identical (spec §3.5: from data).
+      ((p.net_debt || 0) > 0
+        ? ['+ Cash − total debt',
+           `${p.cash - p.net_debt < 0 ? '−' : ''}$${Math.abs(p.cash - p.net_debt).toFixed(2)}B`,
+           'normal']
+        : ['+ Cash & investments', `$${p.cash.toFixed(2)}B`,       'normal']),
       ['= Equity value',         `$${p.total_equity.toFixed(2)}B`, 'subtotal'],
       ['Raised over period',     `$${p.raise_total.toFixed(2)}B`,  'normal'],
       ['Dilution by FY36',       `+${p.dilution_pct}%`,            'normal'],
