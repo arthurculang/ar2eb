@@ -151,7 +151,7 @@ scenarios:
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.32
+    probability: 0.27
     expected_per_share: 157.77
     headline: Share loss continues; US shrinks; capped.
     narrative:
@@ -225,7 +225,7 @@ scenarios:
   base:
     label: Base
     short_label: Base
-    probability: 0.33
+    probability: 0.45
     expected_per_share: 235.52
     headline: US stabilizes; China/international compounds.
     narrative:
@@ -299,7 +299,7 @@ scenarios:
   bull:
     label: Bull
     short_label: Bull
-    probability: 0.15
+    probability: 0.1
     expected_per_share: 324.02
     headline: New-CEO turnaround; margin recovery.
     narrative:
@@ -372,7 +372,7 @@ scenarios:
   ultra_bull:
     label: Ultra Bull
     short_label: UltBull
-    probability: 0.05
+    probability: 0.03
     expected_per_share: 409.07
     headline: Full re-rate; China + footwear scale.
     narrative:
@@ -612,6 +612,6 @@ pocd:
       governance moment: CEO Calvin McDonald is out (Jan 2026; interim co-CEOs + external search), a founder
       proxy fight just settled (Chip Wilson ~8.7%, two board seats), a classified board, the failed Mirror deal,
       and slipping say-on-pay support.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (LULU 1.95)'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (LULU 1.95)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +65% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +65% finding), then position-sized.'

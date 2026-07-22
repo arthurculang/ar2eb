@@ -21,7 +21,7 @@ market:
   market_cap_billion: 4.32       # 59.63M sh × $72.53
   shares_outstanding_million: 59.63   # Q1'26 10-Q (Mar-31-2026)
   cash_billion: 1.84             # cash & equivalents (Q1'26)
-  net_debt_billion: 3.95         # total debt $5.79B − cash $1.84B
+  net_debt_billion: 5.79         # total debt $5.79B − cash $1.84B
   extras:
     - "~37% discount to $104 NAV"   # the structural story; SOTP non-operating context
 

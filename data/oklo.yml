@@ -993,9 +993,9 @@ pocd:
       co-founders who run the company and sit on the board. Key-person risk is high — pre-revenue, narrative- and
       regulatory-execution-dependent on the founders, with no commercial operations yet to diffuse it. Altman’s full
       board exit removed a high-profile but conflicted chair.
-  opportunity_ref: The scenario distribution · the Page-3 business snapshot
+  opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -53.0% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -53.0% finding) + position
     sizing.'
 stamp:
   footer_version: "003"

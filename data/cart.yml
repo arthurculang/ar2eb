@@ -634,9 +634,9 @@ pocd:
     takeaway: 'Clean one-share-one-vote governance and a shareholder-friendly buyback (net share count falling
       despite SBC), offset by a brand-new combined Chair/CEO (Rogers, sub-1-year tenure) and concentrated VC
       board influence; founder Mehta is fully gone (~8.8%, passive).'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +57.7% finding), then position-sized.'
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-07-02_15-17"

@@ -635,9 +635,9 @@ pocd:
       one-share-one-vote structure and a 12-of-13 independent board with a Lead Independent Director; capital
       return is buyback-led ($110B authorized across 2024-2025) with a token dividend, and Huang is the singular
       face of strategy, so key-person concentration is high.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -25.2% finding), then position-sized.'
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-07-02_15-17"

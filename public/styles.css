@@ -9,13 +9,17 @@
   --ink:     #0e0e0e;
   --ink-2:   #2a2a2a;
   --muted:   #6b6b66;
-  --muted-2: #9a9a93;
+  --muted-2: #84847c;   /* raised from #9a9a93 to ~4:1 on paper (small uppercase labels) */
   --rule:    #e3e0d8;
   --rule-2:  #d3cfc4;
   --accent:  #3d46b8;    /* desaturated dark indigo */
   --accent-ink: #2d3499;
   --neg:     #b8403f;    /* muted red */
   --pos:     #2f8f4f;    /* muted green */
+  --zone-green:  var(--pos);
+  --zone-yellow: #c4a028;
+  --zone-orange: #c87828;
+  --zone-red:    var(--neg);
   --ultra:   #7629a6;    /* deep purple — ULTRA BULL only */
 
   --r-sm: 4px;
@@ -719,7 +723,7 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
   flex-direction: column;
   gap: 16px;
   padding: 28px 32px;
-  background: linear-gradient(180deg, #fcfbf8 0%, #fafafa 100%);
+  background: linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
   border: 0.5pt solid var(--rule);
   border-radius: 8px;
 }
@@ -891,6 +895,12 @@ p { margin: 0 0 1em 0; text-wrap: pretty; }
     font-size: 12px;
   }
   .portfolio-allocation .alloc-legend-row .sub { display: none; }
+  /* On phones the in-bar labels smear; the legend row below carries them. */
+  .portfolio-allocation .alloc-seg-label { display: none; }
+}
+/* Phone: shed the tertiary Math-table columns so the essentials don't clip. */
+@media (max-width: 560px) {
+  .ptable .col-tertiary { display: none; }
 }
 
 /* Controls — compact, secondary visual weight */
@@ -1124,8 +1134,8 @@ table.matrix tbody tr:last-child td.matrix-cell { border-bottom: none; }
 .dot.dot-pos { background: var(--pos); }
 .dot.dot-neg { background: var(--neg); }
 .dot.dot-green { background: var(--pos); }
-.dot.dot-yellow { background: #c4a028; }
-.dot.dot-orange { background: #c87828; }
+.dot.dot-yellow { background: var(--zone-yellow); }
+.dot.dot-orange { background: var(--zone-orange); }
 .dot.dot-red { background: var(--neg); }
 
 .portfolio-matrix .matrix-legend {
@@ -1215,7 +1225,7 @@ table.matrix tbody tr:last-child td.matrix-cell { border-bottom: none; }
 /* ── Arthur Indicator page ───────────────────────────────────────────── */
 .ai-equation {
   margin: 22px 0 4px; padding: 18px 22px;
-  background: var(--paper-2); border: 1px solid var(--line, #e4e1d9);
+  background: var(--paper-2); border: 1px solid var(--rule);
   border-radius: 8px; text-align: center;
 }
 .ai-equation .mono { font-size: 15px; color: var(--ink); letter-spacing: 0.01em; }

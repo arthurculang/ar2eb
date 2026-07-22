@@ -624,9 +624,9 @@ pocd:
     key_person_risk: medium
     score: 3
     takeaway: 'Clean single-class one-vote register with an independent Chair (Gorman) split from the CEO, a ~90%-independent annually-elected board, a decisive 2024 activist-fight win, and restored dividend + buyback discipline - all positives. Held to a middling 3 by Disney''s documented history of botched CEO successions (now resolved to an as-yet-unproven insider, D''Amaro), thin insider ownership, the Fox goodwill impairment, and ~80% say-on-pay friction.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +10.3% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +10.3% finding), then position-sized.'
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-07-02_15-17"

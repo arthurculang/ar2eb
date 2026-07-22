@@ -2,8 +2,10 @@
 
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
-this file + `spec/memo-spec__v023__2026-05-23_21-30.md` (the methodology spec,
-changelog-driven — currently at logical **v045**) are the source of truth.
+this file + `spec/memo-spec.md` (the methodology spec, changelog-driven —
+currently at logical **v046**) are the source of truth. The **top of the spec's
+in-file changelog is the version of record** (the filename is stable now — the
+old `__v023`/`__v020` versioned names were retired 2026-07-05).
 
 ## What this is
 
@@ -105,6 +107,52 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 
 ## Status / open items
 
+> **Read this header first; everything under "Build log" below is dated history (newest first), not live state.**
+
+### Current state (2026-07-05)
+- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Both Routines verified live: *daily perf* commits nightly; *monthly rebuild* = the July re-price (PR #78). Site deploy-gated by CI (validate + data.js-in-sync, PR #81).
+- **poppler IS installable here** (`apt-get update && apt-get install -y poppler-utils`) — the June "no-poppler → site-only, can't touch the baseline" caveat class is **DEAD**. Every PDF + `visual_baseline.json` was regenerated at the July-1 flip and in each fix wave since; the on-disk set is current. **Ignore the "site-only / poppler caveat" phrasing in the older build-log bullets below.**
+- **Memo/ticker count: derive from `ls data/*.yml`** (currently 56 memos) — the TICKERS lists in validate/rebuild_all/visual_hash derive from it (PR #81); never hardcode a count.
+- Newest waves: **PR #81** (22-defect full-review fix wave), **Wave B** (TXG second-act re-model → −54.5%; NAUT a16z/dilution flags), **Wave C** (site design system + this restructure).
+
+### Open decisions
+Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status noted.
+| # | Question | Resolution |
+|---|---|---|
+| 1 | GROSS total-debt convention book-wide? | ✅ **Ratified** (spec §5 / v046). Masthead COIN/HHH normalized; `fmt_cash` shows derived net. |
+| 2 | CROX/LTH dcf_path cash double-count | ✅ **Fixed to gross.** CROX +56.8% → **+55.5%**; LTH −34% → **−46.5%** (incl. a stale-spot $33.61→$40.04 catch-up). |
+| 3 | **BTC discount rate/horizon (30%/7yr) + ZRO tier** | ⏳ **HELD (still open)** — the biggest §16 lever; not wiring crypto into the tracked book until confirmed. The one live decision. |
+| 4 | NAUT null-partition (bear & ultra_bear both $0) | ✅ **Kept $0 floor** — modeling showed a positive stub isn't honestly supportable (ramp-burn > cash + niche terminal), consistent with §6c.18. Differentiated in narrative only. |
+| 5 | LULU probability skew | ✅ **Reweighted** base 33→45%, trimmed bear + upside tail; finding +80% → **+77%**. |
+| 6 | Spec filename convention | ✅ **Renamed** to `spec/memo-spec.md`; in-file changelog top = version of record (v046). |
+| 7 | Tail-EV companion statistic on Page 1 | ◑ **Spec rule added (§6b, v046)**; the Page-1 companion-line *renderer* is a tracked follow-up. |
+| 8 | SYM as the first POCD "1" | ✅ **Set to 1** (near-total vote control + an unremediated 2024 material weakness = the one integrity flag in the book). |
+
+**Deferred to a later polish batch (from the four-lens analysis; non-blocking):** young-company theses in formula-shorthand → prose parity; NAUT page-3 TAM-legend / cash-axis chart collisions; SOTP page-3 archetype grid (two uninformative cells) + footer branch; masthead `extras` that now duplicate the derived net position; the §6b Page-1 companion-line renderer.
+
+### Authoring gotchas (durable — promoted from scattered batch bullets; do NOT re-derive)
+- **Page-1 5-scenario overflow is prose-driven** — trim the ticker's OWN central_question / thesis / scenario-card headlines toward ~RKLB length, never the shared layout. Diagnose by which trim moves the px (STRICT reports the overflow px).
+- **`tam_competitor_share` is absolute $B (must be < `tam_billion`), NOT a %** — the GRAL/IONQ/PACB TAM-chart clip class. `validate.py` now WARNs on `≥ tam`.
+- **Never write `Capitalizedword: ` in an unquoted YAML value** (the CROX `Bull:` bug → `build_site_data` aborts → renderer runs on stale `data.js`). Build POCD/pocd blocks via `yaml.dump`.
+- **Back-matter (Page 6/7) and Page-1 are stretched-row CSS grids** — row height = tallest cell; trim the TALLEST cell in the binding row, not a short one.
+- **A mechanical re-price leaves prose STALE** — after any `spot`/`market_cap` change, grep the memo's `thesis` / `weighting_rationale` / `pocd.deal` for hardcoded `$`/`%` and sync them (the recurring "stale thesis vs re-priced finding" bug — hit on PACB #74, TXG Wave B).
+- **`final_shares` must reconcile with `shares0 + Σ(raise/price)`** or the validator WARNs — use scalar avg raise-prices and set `final_shares` to the implied diluted count.
+
+### Build log (historical — newest first; superseded phrasing above wins)
+
+- **Full analysis + optimization (four-lens) — Waves B/C/D SHIPPED (2026-07-05; spec v046).** Two Fable workflows: a 6-agent re-research of the
+  monthly's flagged movers, and a 9-agent four-lens analysis (memory / content / memo-format / site / net-debt → 47 findings + synthesis).
+  **Wave B (PR #82, re-research):** TXG re-modeled with a Power-gated clinical-diagnostics + multiomic second act (the +39%/mo rally IS real news —
+  CLIA lab early-2027, Proteintech, Atera; core intact) → bull $26→$32, ultra_bull $43→$63, prob 5→8%, finding **−63% → −54.5%**; NAUT a16z/dilution
+  flags (no scenario change); PACB left (noise). **Wave C (PR #82, site+memory, no baseline):** true-minus glyph site-wide (`fmtUSD`/`fmtPct`),
+  contrast + zone tokens + Math-table alignment + mobile fixes; CLAUDE.md restructured (this header) + orphaned `__v020` spec removed.
+  **Wave D (baseline regen):** net-debt ratified **GROSS** book-wide (v046) — COIN/HHH mastheads normalized (COIN no longer "zero debt"), CROX/LTH
+  `dcf_path` cash double-count fixed (**CROX +56.8%→+55.5%**, **LTH −34%→−46.5%** incl. a stale-spot $33.61→$40.04 catch-up); LULU reweighted
+  (base 33→45%, +80%→+77%); SYM → POCD **1**; **POCD deal-leg de-circularized + `Page-3` locator dropped across 51 memos**; scenario-count errors
+  in 4 theses fixed (Three/Four→Five); renderer: dup-CAGR row → terminal FCF, forward-chart 0.00× overprint guard, equity-build row '− Net debt' →
+  '− Total debt'; spec renamed to `spec/memo-spec.md` + §6b tail-companion rule. NAUT null-partition: the survival stub is **not honestly modelable**
+  (ramp-burn > cash + niche terminal) so the $0 floor stands (§6c.18) — the one rec I reversed. All 56 STRICT-clean; baseline regenerated; validator
+  green. *fmt_cash "(net $X)" reverted — it overflowed the page-1 masthead on debt-heavy memos.* **The one live open decision: BTC discount/ZRO tier (#3).**
 - **LAUNCHED 2026-07-02 (t₀ epoch 2026-07-01) + both Routines VERIFIED LIVE.** The 1-July "start fresh" ran a day late, end-to-end from a
   web session — **poppler IS installable in these containers** (`apt-get update && apt-get install -y poppler-utils`), so the "no poppler →
   site-only" caveat class that governed June is dead; PDFs + `visual_baseline.json` are maintainable again. Sequence: (1) **Routines

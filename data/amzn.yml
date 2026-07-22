@@ -639,9 +639,9 @@ pocd:
       a clean single-class one-share-one-vote register with a split Chair/CEO structure and a lead independent
       director; capital is directed to reinvestment (FY2025 capex $128.3B, ~$200B guided 2026) over capital
       return — no dividend and a largely-unused buyback.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot · the Arthur Indicator'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -6.9% finding), then position-sized.'
 stamp:
   footer_version: "003"
   footer_timestamp: "2026-07-02_15-17"

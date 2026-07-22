@@ -609,16 +609,16 @@ pocd:
     - 'mitigants: a Class V-3 sunset to single-vote ~2029, an 8-of-9 independent board with fully-independent
       committees, declassified annual elections, and $0 CEO pay'
     key_person_risk: high
-    score: 2
+    score: 1
     takeaway: 'The most-entrenched tier, and the weakest of it: founder-CEO Cohen controls ~86-91% of the vote on
       ~20% economics via a 3-vote Up-C class, combines Chair and CEO, splits attention with C&S, and sits in a dense
       C&S/Walmart/GreenBox related-party web — on top of a 2024 restatement whose material weakness was still unremediated
       into FY2025, an integrity flag the cleaner controlled companies do not carry. The mitigants are real (a 2029
       sunset, a majority-independent board with independent committees, declassified elections, and a founder who
-      takes $0 pay), which is why it holds a 2 rather than lower. Key-person risk is high.'
-  opportunity_ref: The scenario distribution · the Page-3 business snapshot · the Arthur Indicator
+      takes $0 pay), but near-total vote control combined with an unremediated material weakness makes SYM the one name in the book where governance integrity, not merely entrenchment, is in question — which is why it sits at 1, the floor. Key-person risk is high.'
+  opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -68.0% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -68.0% finding) + position
     sizing.'
 stamp:
   footer_version: "003"

@@ -132,7 +132,7 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 13 / Bear 17 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: July 2, 2026 close.",
-    "thesis": "Joby trades at ~$10.3B against $24M of Q1 2026 revenue and $700M annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise) provides ~3 years of runway. FAA Type Certification is in Stage 4 (final), Dubai exclusive operations begin in 2026, and the Toyota manufacturing partnership unlocks scale. Pre-revenue category-defining companies present a Damodaran problem: the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Three scenarios, weighted; show your work.",
+    "thesis": "Joby trades at ~$10.3B against $24M of Q1 2026 revenue and $700M annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise) provides ~3 years of runway. FAA Type Certification is in Stage 4 (final), Dubai exclusive operations begin in 2026, and the Toyota manufacturing partnership unlocks scale. Pre-revenue category-defining companies present a Damodaran problem: the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
       "ipoMarker": "IPO Aug '21",
@@ -1203,9 +1203,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Structurally the cleanest of the frontier names: one share, one vote (no founder super-voting), a chair separated from the CEO, a credentialed lead independent director (a former FAA Administrator), a 6-of-9 independent board, and strict anti-hedging/ownership rules. That separation and clean share class are why it scores above combined-Chair/CEO peer Archer. The offsets that keep it from a 5 are a classified board, a founder-related-party office lease, and Toyota’s triple role as top shareholder, director and supplier. Key-person risk is moderate — real founder dependence, but leadership is shared with an executive co-founder."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -19.6% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -19.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -1289,7 +1289,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "aur-memo__v026__2026-07-02_15-17.pdf",
-      "size": "390 KB",
+      "size": "388 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -1407,7 +1407,7 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 20 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: July 2, 2026 close.",
-    "thesis": "Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M annualized cash burn. The $1.28B liquidity position needs replenishment by mid-2027 absent commercial conversion. Driverless commercial launch slipped from 2024 to now 2027; the Driver runs supervised highway pilots with PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin, P(failure). Three scenarios, weighted; show your work.",
+    "thesis": "Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M annualized cash burn. The $1.28B liquidity position needs replenishment by mid-2027 absent commercial conversion. Driverless commercial launch slipped from 2024 to now 2027; the Driver runs supervised highway pilots with PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin, P(failure). Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
       "ipoMarker": "IPO Nov '21",
@@ -2476,9 +2476,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-CEO Urmson is strongly economically aligned (minimal cash comp, large founder stake, open-market buying) and the board is unusually credentialed (Hoffman, Eschenbach, Volpi, Wehner) - real positives. Held to a 3 by a stacked-entrenchment structure (10:1 super-voting + combined Chair/CEO + staggered board), high key-person dependence amplified by co-founder Anderson's 2025 exit, the Uber overhang, and a pre-revenue deep-burn profile."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +5.1% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +5.1% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -2562,42 +2562,42 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "lth-memo__v025__2026-07-02_15-17.pdf",
-      "size": "299 KB",
+      "size": "296 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$8.89B",
       "shares": "222M",
-      "cash": "$232M cash, $1.29B debt · BB- credit"
+      "cash": "$232M cash, $1.52B debt · BB- credit"
     },
     "spot": {
       "price": 40.04,
       "asOf": "July 2, 2026 close"
     },
     "expected": {
-      "fair": 22.26,
-      "deltaPct": -44.4
+      "fair": 21.44,
+      "deltaPct": -46.5
     },
     "compound": [
       {
         "y": 5,
-        "value": 33.42,
-        "mult": 0.83
+        "value": 32.14,
+        "mult": 0.8
       },
       {
         "y": 10,
-        "value": 50.23,
-        "mult": 1.25
+        "value": 48.26,
+        "mult": 1.21
       },
       {
         "y": 15,
-        "value": 75.62,
-        "mult": 1.89
+        "value": 72.58,
+        "mult": 1.81
       },
       {
         "y": 20,
-        "value": 114.0,
-        "mult": 2.85
+        "value": 109.31,
+        "mult": 2.73
       }
     ],
     "taxonomy": {
@@ -2646,7 +2646,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 55,
-        "price": 15.0,
+        "price": 13.96,
         "headline": "Premium platform, leveraged structure.",
         "why": "Modal outcome. LTH executes guidance: revenue grows 11% FY26, decelerating to mid-single-digits. EBITDA margin holds 28-30% (top quartile for consumer services). New 2026 club openings (1.2M sq ft, mostly luxury) mature over 3-4 years. SLB cadence holds for 2-3 more years then tapers. Net debt leverage stays in the 1.5-2.0x EBITDA target. The 55% weight reflects that this requires the least faith — sequential execution on plans already in motion. The base case is well-run but priced for steady-state execution; the multiple stays compressed.",
         "what": [
@@ -2658,7 +2658,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 20,
-        "price": 46.04,
+        "price": 45.0,
         "headline": "Luxury wellness platform compounds.",
         "why": "Multi-decade luxury wellness platform compounding. LTH is genuinely a category-of-one — no other US operator at premium luxury athletic country club scale (Equinox is private and smaller; gym chains are budget-positioned; boutique concepts are single-discipline). In-center revenue (Dynamic PT, MIORA hormone optimization, swim lessons, pickleball clinics, spa, cafe) compounds faster than dues. EBITDA margin expands toward 30%+ as new-club mix shifts to higher-revenue luxury formats. The SLB flywheel sustains: 12-14 new luxury clubs/year become future SLB inventory 5-7 years later. The 25% weight reflects that multiple expansion (15x P/E to 22-25x) is plausible but requires both execution AND market re-rating — the conjunction is demanding.",
         "what": [
@@ -2670,7 +2670,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 96.13,
+        "price": 95.14,
         "headline": "Luxury category-of-one; 15x re-rate.",
         "why": "Joint conditional: 250+ clubs by 2030 (40%) AND ARPU $6,500+ achieved via medspa/recovery upsell (50% conditional on club growth) AND SLB self-funded with bank capital (60%) AND multiple expansion to 15x EV/EBITDA (50%). Joint at 4-6%, reflected here at 5%. Tail of tails: LTH stops being a 'leveraged real estate compounder' and becomes a 'luxury wellness software-like compounder.'",
         "what": [
@@ -2680,7 +2680,7 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 8 / Bear 12 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: July 2, 2026 close.",
-    "thesis": "LTH trades at $33.61 ($7.5B mkt cap) on TTM revenue $3.0B and Adj EBITDA $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14 luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear: capital recycling unsustainable, leveraged real estate vehicle. Bull: luxury wellness category-of-one, SLB is smart financing. Today's price requires bull-case execution. Three scenarios, weighted; show your work.",
+    "thesis": "LTH trades at $40.04 ($8.9B mkt cap) on TTM revenue $3.0B and Adj EBITDA $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14 luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear: capital recycling unsustainable, leveraged real estate vehicle. Bull: luxury wellness category-of-one, SLB is smart financing. Today's price requires bull-case execution. Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
       "ipoMarker": "IPO Oct '21",
@@ -2884,14 +2884,14 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 22.26,
-        "upsidePct": -44.4
+        "expected": 21.44,
+        "upsidePct": -46.5
       },
       "market": {
         "marketCapBillion": 8.89,
         "sharesOutstandingMillion": 222.0,
         "cashBillion": 0.232,
-        "netDebtBillion": 1.29
+        "netDebtBillion": 1.52
       },
       "scenarios": {
         "ultra_bear": {
@@ -2947,12 +2947,12 @@ const MEMOS = [
             "pv_terminal": 0.28,
             "op_ev": 0.6,
             "cash": 0.232,
-            "net_debt": 1.29,
-            "total_equity": -0.46,
+            "net_debt": 1.522,
+            "total_equity": -0.69,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 222,
-            "dcf_per_share": -2.07,
+            "dcf_per_share": -3.11,
             "distress": 0.0
           },
           "chartData": {
@@ -3021,12 +3021,12 @@ const MEMOS = [
             "pv_terminal": 0.49,
             "op_ev": 0.98,
             "cash": 0.232,
-            "net_debt": 1.29,
-            "total_equity": -0.08,
+            "net_debt": 1.522,
+            "total_equity": -0.31,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 222,
-            "dcf_per_share": -0.36,
+            "dcf_per_share": -1.4,
             "distress": 0.0
           },
           "chartData": {
@@ -3044,7 +3044,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.55,
-          "expectedPerShare": 15.0,
+          "expectedPerShare": 13.96,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -3095,12 +3095,12 @@ const MEMOS = [
             "pv_terminal": 3.24,
             "op_ev": 4.39,
             "cash": 0.232,
-            "net_debt": 1.29,
-            "total_equity": 3.33,
+            "net_debt": 1.522,
+            "total_equity": 3.1,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 222,
-            "dcf_per_share": 15.0,
+            "dcf_per_share": 13.96,
             "distress": 0.0
           },
           "chartData": {
@@ -3118,7 +3118,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.2,
-          "expectedPerShare": 46.04,
+          "expectedPerShare": 45.0,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -3169,12 +3169,12 @@ const MEMOS = [
             "pv_terminal": 9.38,
             "op_ev": 11.28,
             "cash": 0.232,
-            "net_debt": 1.29,
-            "total_equity": 10.22,
+            "net_debt": 1.522,
+            "total_equity": 9.99,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 222,
-            "dcf_per_share": 46.04,
+            "dcf_per_share": 45.0,
             "distress": 0.0
           },
           "chartData": {
@@ -3192,7 +3192,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 96.13,
+          "expectedPerShare": 95.14,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -3243,12 +3243,12 @@ const MEMOS = [
             "pv_terminal": 20.9,
             "op_ev": 23.65,
             "cash": 0.23,
-            "net_debt": 1.29,
-            "total_equity": 22.59,
+            "net_debt": 1.522,
+            "total_equity": 22.358,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 235,
-            "dcf_per_share": 96.13,
+            "dcf_per_share": 95.14,
             "distress": 0.0
           },
           "chartData": {
@@ -3359,9 +3359,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "The positives are real for a founder-led, post-LBO name: single-class one-vote (no super-voting; the founder owns just ~7.3%), controlled-company status already ended, deleveraging done, and a first buyback. Holding it at 3 are the concentration of all three top titles in Akradi, a lead independent director who is the lead sponsor’s managing partner, a classified board, and — most of all — a persistent related-party real-estate web (Akradi-affiliated leases and a historical loan forgiveness). Key-person risk is moderate."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -33.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -46.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -4266,9 +4266,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Founder-owner-operator (~8% economic, $10k salary) returning the $7.7B cash hoard via buybacks, with a majority-independent board — disciplined and aligned; the offsets are super-voting control (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ZM 6.4)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ZM 6.4)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +56% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -4352,7 +4352,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "naut-memo__v007__2026-07-02_15-17.pdf",
-      "size": "386 KB",
+      "size": "385 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -4470,7 +4470,7 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 15 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: July 2, 2026 close.",
-    "thesis": "NAUT trades at $2.40 ($302M mkt cap, 47% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029; dilutive raise likely 2027-2028. Mature peers — Olink (Thermo), SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Four scenarios, weighted; show your work.",
+    "thesis": "NAUT trades at $2.40 ($302M mkt cap, 47% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029; dilutive raise likely 2027-2028. Mature peers — Olink (Thermo), SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
       "ipoMarker": "IPO Jun '21",
@@ -5543,15 +5543,16 @@ const MEMOS = [
             "independent Chair (Matthew Posard) separate from the CEO",
             "board of 9, 7 independent; 2 insiders (Patel CEO, Mallick co-founder / Chief Scientist)",
             "classified board — three staggered classes (an anti-takeover structure)",
-            "insiders own ~29% of shares in aggregate"
+            "insiders own ~29% of shares in aggregate",
+            "a16z (early backer) trimmed via a ~3.59M-share secondary block at $2.00 (Jun 2026, 13D/A); ~7.1% residual stake is a soft supply overhang, not a control/structure change"
           ],
           "keyPersonRisk": "high",
           "score": 4,
           "takeaway": "Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class one-share-one-vote structure, an independent Chair, and a 7-of-9 independent board — clean alignment and governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder Mallick are the platform) and a structural dilution path, the pre-revenue burn funded by equity raises beyond the 2027 runway."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +174% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -5579,7 +5580,7 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP count flat YoY"
+            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP count flat YoY · a dilutive raise struck below ~$2 (more punishing than the modeled $2.00-$3.00 raise path)"
           },
           {
             "label": "Bull validation",
@@ -6408,9 +6409,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "The cleanest governance of the cohort: single-class, declassified annual elections, ~93% say-on-pay, performance-weighted equity, net-cash discipline, and an orderly internal CEO handoff (Rosa) — institutionalized, not person-dependent. Mild demerits: low insider skin-in-the-game and a now non-independent (Executive) chair."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ISRG 17.5 — rarely screens cheap)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ISRG 17.5 — rarely screens cheap)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +20% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +20% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -7694,9 +7695,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "The structural positive is genuine — one share, one vote, no controlling block, so shareholders are not disenfranchised. But this is a weak 3 on practice: a combined Chair/CEO with no confirmed lead independent director, a classified board, a ~64% say-on-pay vote, ~$400M of 2025 insider selling, and a strategy concentrated in a CEO of under two years pursuing a heavily dilutive acquisition roll-up. Key-person risk is moderate — the science survived both founders’ departures, so it is the governance concentration, not individual dependence, that is the bigger flag."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -86.9% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -86.9% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -7786,7 +7787,7 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$41.94B",
       "shares": "263M",
-      "cash": "$10.2B cash, zero debt · $7.2B converts/notes (~$3B net cash); ~17K BTC treasury (~$1.3B); Circle (CRCL) stake (~$1B)"
+      "cash": "$10.2B cash, $7.2B debt · $7.2B converts/notes (~$3B net cash); ~17K BTC treasury (~$1.3B); Circle (CRCL) stake (~$1B)"
     },
     "spot": {
       "price": 159.24,
@@ -7834,7 +7835,7 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": {
-      "value": 4.17,
+      "value": 5.12,
       "zone": "green"
     },
     "question": "Is Coinbase the durable monopoly rail layer for crypto — $19B USDC float, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock whose Q1 2026 just printed a $394M loss?",
@@ -8081,7 +8082,7 @@ const MEMOS = [
         "marketCapBillion": 41.94,
         "sharesOutstandingMillion": 263.4,
         "cashBillion": 10.2,
-        "netDebtBillion": 0.0
+        "netDebtBillion": 7.2
       },
       "scenarios": {
         "ultra_bear": {
@@ -8591,9 +8592,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack: majority control, a steady 10b5-1 sell-down, and capital flowing to M&A + a crypto treasury rather than returns."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (COIN 4.97)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (COIN 4.97)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +49% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +49% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -10363,9 +10364,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Founder-owner-operator (~10%, salary cut to $1 in 2026) with a majority-independent board — strongly aligned; the offsets are acute key-person concentration (Beck is CEO / Chair / de-facto CTO / public face) and steady dilution from stock-funded M&A."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the −63% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the −63% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -11624,9 +11625,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A one-share-one-vote register (no super-voting) and a majority-independent board (8 of 9) with a lead independent director are the positives, and the founders are aligned via a ~12.2% stake. Holding it at 3 are a combined Chair/CEO, a classified board with for-cause-only removal, and control concentrated in two married co-founders who run the company and sit on the board. Key-person risk is high — pre-revenue, narrative- and regulatory-execution-dependent on the founders, with no commercial operations yet to diffuse it. Altman’s full board exit removed a high-profile but conflicted chair."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -53.0% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -53.0% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -12884,9 +12885,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "The headline positive is that the dual-class super-voting sunset to clean one-share-one-vote at the end of 2024, so the founder’s votes now equal his ~5% economics; a majority-independent board with independent committees and a lead independent director backs that up. The offsets are a combined Chair/CEO, a classified/staggered board, and high key-person risk — a pre-revenue, cash-burning certification story concentrated on the founder-CEO after the other co-founder left in 2022."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +17.7% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +17.7% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -14130,9 +14131,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Professional management on a clean single-class register with an independent Chair (Summe) split from the CEO — but a brand-new CEO (Ofman, June 2026), thin insider ownership (~1.8%, no founder block), a fresh post-NHS securities class action, and the spinco history of ~$8B destroyed under Illumina hold it at a middling 3; the offsets are the split Chair/CEO, the disciplined ~$823M cash runway, and the absence of dual-class."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +6.4% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +6.4% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -14212,7 +14213,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "txg-memo__v003__2026-07-02_15-17.pdf",
-      "size": "294 KB",
+      "size": "295 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -14225,29 +14226,29 @@ const MEMOS = [
       "asOf": "July 2, 2026 close"
     },
     "expected": {
-      "fair": 14.28,
-      "deltaPct": -63.4
+      "fair": 17.76,
+      "deltaPct": -54.5
     },
     "compound": [
       {
         "y": 5,
-        "value": 22.37,
-        "mult": 0.57
+        "value": 27.47,
+        "mult": 0.7
       },
       {
         "y": 10,
-        "value": 35.14,
-        "mult": 0.9
+        "value": 42.62,
+        "mult": 1.09
       },
       {
         "y": 15,
-        "value": 55.39,
-        "mult": 1.42
+        "value": 66.35,
+        "mult": 1.7
       },
       {
         "y": 20,
-        "value": 87.6,
-        "mult": 2.24
+        "value": 103.64,
+        "mult": 2.65
       }
     ],
     "taxonomy": {
@@ -14269,7 +14270,7 @@ const MEMOS = [
       "value": 10.25,
       "zone": "orange"
     },
-    "question": "Is the market paying a spatial-growth multiple (~5x EV/sales) for a single-cell-decline reality — or correctly pricing a margin inflection plus spatial re-acceleration?",
+    "question": "Is the market paying a spatial-plus-clinical multiple (~8x EV/sales) for a single-cell core that is flat-to-declining — or correctly pricing a margin inflection and a genuine diagnostics second act?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -14298,10 +14299,10 @@ const MEMOS = [
       {
         "key": "base",
         "label": "BASE",
-        "prob": 33,
+        "prob": 30,
         "price": 13.86,
         "headline": "Slow ~3% grind; margins recover.",
-        "why": "Guidance holds (0-4%), cost discipline converts to FCF, spatial roughly offsets single-cell. 33% as the central, modal outcome — consistent with consensus ~3.8% CAGR.",
+        "why": "Guidance holds (0-4%), cost discipline converts to FCF, spatial roughly offsets single-cell. 30% as the central, modal outcome — consistent with consensus ~3.8% CAGR.",
         "what": [
           "The modal path: FY26 guidance holds (0-4% growth), spatial roughly offsets single-cell decline, and the 17% opex cut plus modest top-line growth converts the 70% gross margin toward a low-teens FCF margin — revenue ~$0.68B by FY30 at ~3% CAGR.",
           "DCF ~$14/share — ~50% below spot. The franchise is real and finally profitable, but a 3%-grower at a low-teens FCF margin doesn't support ~5x EV/sales. The market is paying for a re-acceleration the base case doesn't deliver."
@@ -14311,29 +14312,29 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 17,
-        "price": 26.06,
-        "headline": "Spatial re-accelerates the total.",
-        "why": "Requires spatial (Xenium) to re-accelerate the TOTAL to ~8% AND NIH to stabilize AND operating leverage to land. Each plausible; jointly ~17%.",
+        "price": 31.89,
+        "headline": "Spatial plus the clinical second act.",
+        "why": "Requires the core to re-accelerate to ~10% AND the clinical/multiomic second act to begin converting AND operating leverage to land. Each plausible; jointly ~17%.",
         "what": [
-          "The bull: Xenium spatial (and the ScaleBio instrument-free chemistry) re-accelerate the whole company to ~8% CAGR, NIH funding stabilizes, instrument placements resume, and operating leverage drives the FCF margin toward ~20% — revenue ~$0.88B by FY30.",
-          "DCF ~$26/share — roughly today's price. This is the scenario the recent triple is pricing; it requires spatial to actually move the total, not just grow within a flat mix."
+          "The bull: Xenium spatial and instrument-free chemistry re-accelerate the core to ~10% CAGR, NIH funding stabilizes, and the second act begins to contribute — the early-2027 CLIA diagnostics lab and multiomic (Proteintech) same-sample pull-through layer reimbursed revenue on top of the tools franchise, lifting the FCF margin toward ~23% and revenue to ~$0.97B by FY30.",
+          "DCF ~$32/share. The Power gate is a single-cell + spatial installed base with multiomic same-sample lock-in; the falsifier is CLIA reimbursement/coverage failing to materialize, or the Atera Q4 contribution slipping."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
-        "prob": 5,
-        "price": 43.23,
-        "headline": "Clinical spatial inflection.",
-        "why": "Tail: spatial inflects into clinical/translational use + peak-tools margins. ~5% — the secular-platform thesis fully realized.",
+        "prob": 8,
+        "price": 63.31,
+        "headline": "Diagnostics platform inflection.",
+        "why": "Tail: the clinical/multiomic second act becomes a durable reimbursed platform at peak margins. ~8% — the platform thesis fully realized, held modest because the pivot is early and unproven.",
         "what": [
-          "The tail: spatial biology inflects from research into translational/clinical use, 10x's installed-base + IP moat compounds, and revenue reaches mid-teens CAGR (~$1.05B by FY30) at peak-tools margins (~27% FCF).",
-          "DCF ~$43/share — ~+54% above spot. The genuine 'secular-growth platform' outcome the bulls envision; ~5% probability."
+          "The tail: the clinical-diagnostics and multiomic second act inflects into a durable reimbursed platform on top of the spatial franchise — 10x's installed-base and IP moat compound, and revenue reaches ~14% CAGR (~$1.14B by FY30) at platform margins (~28% FCF).",
+          "DCF ~$63/share — well above spot. The genuine 'research tools become a diagnostics platform' outcome; ~8% probability, trimmed from the base and sized modestly given a pivot that is early, unproven, and ~a year out."
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 33 / Bull 17 / Ultra Bull 5. Spot price reference: July 2, 2026 close.",
-    "thesis": "10x trades at ~$3.6B (≈$28/sh) — ~5x EV/sales on ~$600M revenue now flat-to-declining for three years. A dominant tools franchise: >7,900 instruments and ~85% recurring 70%-gross-margin consumables, net-cash and cash-generative after a 17% opex cut. The mature DCF asks whether revenue re-accelerates and margins convert to operating profit — against an NIH-funding shock and instrument-free rivals. The finding: the recent triple prices a spatial re-acceleration the base case (~3% grind) doesn't support — only the bull (~8%) approaches spot, the ultra-bull clears it.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 30 / Bull 17 / Ultra Bull 8. Spot price reference: July 2, 2026 close.",
+    "thesis": "10x trades at ~$5.0B (≈$39/sh) — ~8x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools franchise: >7,900 instruments, ~85% recurring 70%-margin consumables, net-cash and cash-generative after a 17% opex cut. The mature DCF holds the flat core and asks whether the second act the market now pays for — a clinical-diagnostics pivot (CLIA lab targeted early-2027), a multiomic Proteintech expansion, and the Atera spatial launch — becomes a durable reimbursed platform. The finding: even crediting that optionality in the tail, the recent triple prices execution the ~3%-grind base doesn't support — the modal case sits ~55% below spot.",
     "historicalPrices": {
       "xMin": -6.8,
       "ipoMarker": "IPO Sep '19",
@@ -14406,16 +14407,16 @@ const MEMOS = [
         "body": "Flat revenue, thin margins; dominant ex-growth; ~$8."
       },
       {
-        "label": "Base 33%",
-        "body": "Slow ~3% grind; margins recover; ~$14 (≈-50%)."
+        "label": "Base 30%",
+        "body": "Slow ~3% grind; margins recover; ~$14 (≈-65%)."
       },
       {
         "label": "Bull 17%",
-        "body": "Spatial re-accelerates to ~8%; ~$26 (≈spot)."
+        "body": "Core to ~10% + clinical second act begins; ~$32 (≈-18%)."
       },
       {
-        "label": "Ultra Bull 5%",
-        "body": "Clinical spatial inflection; mid-teens; ~$43."
+        "label": "Ultra Bull 8%",
+        "body": "Diagnostics platform inflection (~14%); ~$63 (≈+62%)."
       }
     ],
     "page3": {
@@ -14477,8 +14478,8 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 14.28,
-        "upsidePct": -63.4
+        "expected": 17.76,
+        "upsidePct": -54.5
       },
       "market": {
         "marketCapBillion": 4.96,
@@ -14644,7 +14645,7 @@ const MEMOS = [
           "revPerUnit": null
         },
         "base": {
-          "probability": 0.33,
+          "probability": 0.3,
           "expectedPerShare": 13.86,
           "label": "Base",
           "shortLabel": "Base",
@@ -14723,11 +14724,11 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.17,
-          "expectedPerShare": 26.06,
+          "expectedPerShare": 31.89,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "cagr_5y": 8.0,
+            "cagr_5y": 10.1,
             "wacc": 0.085
           },
           "dcfPath": {
@@ -14735,16 +14736,16 @@ const MEMOS = [
             "rev_path": [
               0.04,
               0.07,
-              0.09,
-              0.1,
-              0.1
+              0.11,
+              0.14,
+              0.15
             ],
             "op_margin": [
               -0.02,
               0.05,
-              0.11,
-              0.17,
-              0.22
+              0.12,
+              0.18,
+              0.23
             ],
             "wacc_path": [
               0.085,
@@ -14753,13 +14754,13 @@ const MEMOS = [
               0.085,
               0.085
             ],
-            "term_g": 0.03,
+            "term_g": 0.033,
             "fcf": [
               0.025,
               0.053,
-              0.095,
-              0.144,
-              0.193
+              0.11,
+              0.17,
+              0.233
             ],
             "cash": 0.54,
             "net_debt": 0.0,
@@ -14770,16 +14771,16 @@ const MEMOS = [
             "pv_fcf": [
               0.023,
               0.045,
-              0.074,
-              0.104,
-              0.128
+              0.086,
+              0.123,
+              0.155
             ],
-            "sum_pv_fcf": 0.37,
-            "terminal_value": 3.61,
-            "pv_terminal": 2.4,
-            "op_ev": 2.77,
-            "total_equity": 3.31,
-            "dcf_per_share": 26.06
+            "sum_pv_fcf": 0.43,
+            "terminal_value": 4.63,
+            "pv_terminal": 3.08,
+            "op_ev": 3.51,
+            "total_equity": 4.05,
+            "dcf_per_share": 31.89
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -14800,29 +14801,29 @@ const MEMOS = [
           "revPerUnit": null
         },
         "ultra_bull": {
-          "probability": 0.05,
-          "expectedPerShare": 43.23,
+          "probability": 0.08,
+          "expectedPerShare": 63.31,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "cagr_5y": 11.7,
+            "cagr_5y": 13.7,
             "wacc": 0.08
           },
           "dcfPath": {
             "rev_b": 0.599,
             "rev_path": [
               0.06,
-              0.1,
-              0.14,
-              0.15,
-              0.14
+              0.11,
+              0.16,
+              0.18,
+              0.18
             ],
             "op_margin": [
               0.0,
-              0.08,
-              0.15,
-              0.22,
-              0.27
+              0.09,
+              0.16,
+              0.23,
+              0.28
             ],
             "wacc_path": [
               0.08,
@@ -14831,13 +14832,13 @@ const MEMOS = [
               0.08,
               0.08
             ],
-            "term_g": 0.035,
+            "term_g": 0.04,
             "fcf": [
               0.038,
-              0.077,
-              0.127,
-              0.202,
-              0.282
+              0.088,
+              0.16,
+              0.265,
+              0.385
             ],
             "cash": 0.54,
             "net_debt": 0.0,
@@ -14847,17 +14848,17 @@ const MEMOS = [
             "distress": 0.0,
             "pv_fcf": [
               0.035,
-              0.066,
-              0.101,
-              0.148,
-              0.192
+              0.075,
+              0.127,
+              0.195,
+              0.262
             ],
-            "sum_pv_fcf": 0.54,
-            "terminal_value": 6.49,
-            "pv_terminal": 4.41,
-            "op_ev": 4.95,
-            "total_equity": 5.49,
-            "dcf_per_share": 43.23
+            "sum_pv_fcf": 0.69,
+            "terminal_value": 10.01,
+            "pv_terminal": 6.81,
+            "op_ev": 7.5,
+            "total_equity": 8.04,
+            "dcf_per_share": 63.31
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -14986,9 +14987,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Better-governed than most dual-class names: an independent Chairman separate from the CEO, fully-independent committees, a net-cash balance sheet, and a patent estate that won its wars. The cap at 3 is structural — the super-voting Class B disenfranchises public holders, and the board is classified with no time-based sunset. But no single person controls a majority (the founders’ individual votes are a minority), which is why it sits at the top of the 3 tier. Key-person risk is moderate — two founders in the CEO/CSO seats, but a deep independent board and institutional bench."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.2% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -54.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -15081,29 +15082,29 @@ const MEMOS = [
       "asOf": "July 2, 2026 close"
     },
     "expected": {
-      "fair": 209.94,
-      "deltaPct": 80.4
+      "fair": 205.93,
+      "deltaPct": 76.9
     },
     "compound": [
       {
         "y": 5,
-        "value": 332.91,
-        "mult": 2.86
+        "value": 327.18,
+        "mult": 2.81
       },
       {
         "y": 10,
-        "value": 528.59,
-        "mult": 4.54
+        "value": 520.37,
+        "mult": 4.47
       },
       {
         "y": 15,
-        "value": 840.41,
-        "mult": 7.22
+        "value": 828.57,
+        "mult": 7.12
       },
       {
         "y": 20,
-        "value": 1338.0,
-        "mult": 11.49
+        "value": 1320.84,
+        "mult": 11.35
       }
     ],
     "taxonomy": {
@@ -15142,7 +15143,7 @@ const MEMOS = [
       {
         "key": "bear",
         "label": "BEAR",
-        "prob": 32,
+        "prob": 27,
         "price": 157.77,
         "headline": "Share loss continues; US shrinks; capped.",
         "why": "Share loss continues and the dupe pressure caps the multiple, but the brand doesn't break. 32% weight as the plausible 'stalls but survives' path given the bearish US momentum.",
@@ -15154,7 +15155,7 @@ const MEMOS = [
       {
         "key": "base",
         "label": "BASE",
-        "prob": 33,
+        "prob": 45,
         "price": 235.52,
         "headline": "US stabilizes; China/international compounds.",
         "why": "Requires US stabilization (not re-acceleration) plus continued international compounding — consistent with FY26 guidance. 33% as the central outcome; the brand's cornered-resource fabrics + community don't vanish.",
@@ -15166,7 +15167,7 @@ const MEMOS = [
       {
         "key": "bull",
         "label": "BULL",
-        "prob": 15,
+        "prob": 10,
         "price": 324.02,
         "headline": "New-CEO turnaround; margin recovery.",
         "why": "O'Neill's product fix works and the US re-accelerates while international compounds — a real turnaround. ~15% weight; lululemon has done it before.",
@@ -15178,7 +15179,7 @@ const MEMOS = [
       {
         "key": "ultra",
         "label": "ULTRA BULL",
-        "prob": 5,
+        "prob": 3,
         "price": 409.07,
         "headline": "Full re-rate; China + footwear scale.",
         "why": "Everything works — US turnaround AND China AND categories AND a multiple re-rating. ~5%, the asymmetric upside the depressed entry is buying.",
@@ -15188,7 +15189,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 32 / Base 33 / Bull 15 / Ultra Bull 5. Spot price reference: July 2, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 45 / Bull 10 / Ultra Bull 3. Spot price reference: July 2, 2026 close.",
     "thesis": "Lululemon trades at ~$15B (≈$127/sh, down ~60% from $340) — ~10x FCF on $11.1B revenue, ~22% operating margins, net cash and a heavy buyback. Growth has decelerated hard (+42%→+5%, guided +2-4%): the US is shrinking (-1 to -3%) while China/international compound +20-29%. The mature DCF asks whether the brand stabilizes and defends margins, or whether dupes (Alo, Vuori) and stale product structurally impair it. The finding: even pricing real brand-impairment downside (ultra-bear -34%), the modal stabilization case at 10x FCF implies the de-rating overshot.",
     "historicalPrices": {
       "xMin": -6.5,
@@ -15321,8 +15322,8 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 209.94,
-        "upsidePct": 80.4
+        "expected": 205.93,
+        "upsidePct": 76.9
       },
       "market": {
         "marketCapBillion": 13.27,
@@ -15410,7 +15411,7 @@ const MEMOS = [
           "revPerUnit": null
         },
         "bear": {
-          "probability": 0.32,
+          "probability": 0.27,
           "expectedPerShare": 157.77,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -15488,7 +15489,7 @@ const MEMOS = [
           "revPerUnit": null
         },
         "base": {
-          "probability": 0.33,
+          "probability": 0.45,
           "expectedPerShare": 235.52,
           "label": "Base",
           "shortLabel": "Base",
@@ -15566,7 +15567,7 @@ const MEMOS = [
           "revPerUnit": null
         },
         "bull": {
-          "probability": 0.15,
+          "probability": 0.1,
           "expectedPerShare": 324.02,
           "label": "Bull",
           "shortLabel": "Bull",
@@ -15644,7 +15645,7 @@ const MEMOS = [
           "revPerUnit": null
         },
         "ultra_bull": {
-          "probability": 0.05,
+          "probability": 0.03,
           "expectedPerShare": 409.07,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
@@ -15827,9 +15828,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Professionalized and single-class with an independent chair and disciplined buybacks — but a live governance moment: CEO Calvin McDonald is out (Jan 2026; interim co-CEOs + external search), a founder proxy fight just settled (Chip Wilson ~8.7%, two board seats), a classified board, the failed Mirror deal, and slipping say-on-pay support."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (LULU 1.95)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (LULU 1.95)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +65% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +65% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -16661,9 +16662,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Founder-CEO on a $1 salary, paid only if the stock clears price hurdles, returning capital through large buybacks — strong alignment and capital discipline, with a 2040 sunset on the control. The offset is a ~79% founder voting bloc + combined CEO/Chair concentrating control well above the ~14% economic stake."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ABNB 6.17)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ABNB 6.17)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +38% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +38% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -17499,9 +17500,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "The professionalized-after-the-founder case: a hired CEO who turned Uber to free cash flow and a $20B buyback regime, on a clean single-class register with an independent chair and no controller — the structural opposite of a founder-control name. The only real demerits: low insider skin-in-the-game and some execution-continuity tied to Dara."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (UBER 4.72)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (UBER 4.72)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +48% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +48% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -18338,9 +18339,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Professionalized, single-class, founder-aligned: a 10-yr hired CEO on FCF + relative-TSR pay, an independent chair, a clean one-share-one-vote register with no controller and PE fully exited, disciplined ~$500M buybacks and only small cash-funded tuck-ins — the demerits are a classified board and that the deep brand expertise still sits with the now-absent founders."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +4% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -19172,9 +19173,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-CEO paid only on escalating price hurdles ($0 vested when unmet) and not leaning on the controlled-company exemptions — but the ~54% founder vote is concentrated in one person via an irrevocable proxy, buyback intent has outrun execution, and growth has been bought with dilutive stock."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (DASH 6.48)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (DASH 6.48)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the −1% finding, fairly valued) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the −1% finding, fairly valued) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -20009,9 +20010,9 @@ const MEMOS = [
           "score": 2,
           "takeaway": "The cohort's governance-turnaround story — and the weakest recent record: a board that closed an $8B deal without clearance (forced unwind, ~$4B impairment, an EU fine), failed say-on-pay (2023), and lost a proxy seat to Icahn. Being repaired — new CEO, independent chair, redesigned TSR-linked pay, say-on-pay recovered, activist oversight — but the track record is the observable flag."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator (ILMN 7.08)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ILMN 7.08)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the −30% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the −30% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -20853,9 +20854,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A cleaner control profile than most founder-influenced names — no super-voting (Class B is one vote), the founder-Chairman holds only ~8.3% of the vote, and his special designation rights were deliberately wound down. But the Up-C structure with its 85% Tax Receivable Agreement, a classified board, a non-independent founder-Chairman, and a ~2-year outside CEO mid-turnaround keep it below the plain single-class blue-chips. Key-person risk is moderate, leaning low."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -10.0% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -10.0% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -21691,9 +21692,9 @@ const MEMOS = [
           "score": 2,
           "takeaway": "Founder-Chair-CEO with ~14% economics but ~61% non-dilutable voting control via Class B (10:1) — outsiders cannot force change and every shareholder vote is pre-decided. Aligned through the stake (not pay: $1 salary, $0 equity) and aggressive returns (a $50B buyback + the 2024 first-ever dividend), but the governance offsets stack: super-voting control, combined Chair/CEO, and controlled-company status."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +14.6% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +14.6% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -22528,9 +22529,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Andy Jassy has been CEO since July 2021 and founder Jeff Bezos is Executive Chair holding ~9%, on a clean single-class one-share-one-vote register with a split Chair/CEO structure and a lead independent director; capital is directed to reinvestment (FY2025 capex $128.3B, ~$200B guided 2026) over capital return — no dividend and a largely-unused buyback."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -6.9% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -6.9% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -23361,9 +23362,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founders Page and Brin retain ~52.7% combined voting control via 10-vote Class B on roughly 6% economic ownership, while non-founder CEO Pichai (Alphabet CEO since Dec 2019) runs operations; capital return is ramping (first dividend 2024, repeated $70B buybacks) against a record AI capex build."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -21.4% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -24195,9 +24196,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Clean, shareholder-friendly governance: single-class one-vote stock, no controlling holder, a 7-of-8 independent board, and — uncommon among megacaps — a chair currently separate from the CEO. Key-person risk is low because succession is not just planned but executed: a named internal CEO (Ternus) takes over on a fixed date, every senior role was backfilled from within, and no individual controls the company. The one notch to watch is that the chair becomes a non-independent Executive Chairman (Cook) in September 2026."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -34.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -34.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -25022,9 +25023,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Founder-CEO since 1993 (~33-year tenure) with a ~3.77% economic stake under a clean single-class one-share-one-vote structure and a 12-of-13 independent board with a Lead Independent Director; capital return is buyback-led ($110B authorized across 2024-2025) with a token dividend, and Huang is the singular face of strategy, so key-person concentration is high."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -25.2% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -25857,9 +25858,9 @@ const MEMOS = [
           "score": 2,
           "takeaway": "Founder-CEO economically concentrated (~13% direct, ~20% with the just-exercised 2018 award) on a single-class register, paired with the most-litigated executive-pay record in US corporate history (the Delaware Tornetta rescission then 2025 reversal; a new ~$1T award), a board with multiple Musk ties, a related-party transaction web across his companies, and attention divided over xAI/SpaceX/X."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -26689,9 +26690,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Clean single-class one-vote register with an independent Chair (Gorman) split from the CEO, a ~90%-independent annually-elected board, a decisive 2024 activist-fight win, and restored dividend + buyback discipline - all positives. Held to a middling 3 by Disney's documented history of botched CEO successions (now resolved to an as-yet-unproven insider, D'Amaro), thin insider ownership, the Fox goodwill impairment, and ~80% say-on-pay friction."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +10.3% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +10.3% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -27513,9 +27514,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Structurally clean: single-class one-vote, a separate independent Chair, a 9-of-10 independent declassified board, net cash, no controlling holder. It sits at the lower end of the clean tier because of two real watch-items — a volatile say-on-pay record (two sub-60% votes in five years, both on one-time equity, since remediated) and a compressed CEO-plus-CFO turnover in 2024-25. Key-person risk is moderate given the recency of that turnover, offset by an internal-promote bench and a clean Niccol-to-Boatwright handoff."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -4.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -4.8% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -28349,9 +28350,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Among the cleanest governance in the book: single-class one-vote stock, a separate INDEPENDENT non-executive Chair, a 12-of-14 independent declassified board with majority voting, and strong pay hygiene (clawback, anti-pledging, ~95% say-on-pay). Key-person risk is low — a named internal heir apparent and a deep, recently-promoted bench. The watch-items are financial (airline debt, cyclicality), not governance."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -8.1% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -8.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -28431,7 +28432,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "hood-memo__v003__2026-07-02_15-17.pdf",
-      "size": "300 KB",
+      "size": "301 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -29183,9 +29184,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A dual-class super-voting structure with the founders controlling a majority of votes, plus a combined Chair/CEO, are the entrenchment flags. They are offset enough to hold a 3 rather than drop lower: a long-tenured lead independent director, an 8-of-10 independent board with annual elections, the genuinely shareholder-friendly cancellation of the 2021 mega-award, and a now-profitable business returning capital. The extensive regulatory history is an operating/compliance flag rather than a structural one. Key-person risk is moderate given the deep, professionalized bench."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -57.7% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -57.7% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -30021,9 +30022,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Clean blue-chip governance: single-class one-vote, a 10-of-11 independent declassified board, an independent lead director, ~92% say-on-pay, and heavily at-risk pay. The combined Chair/CEO is mitigated exactly as a comparable mega-cap’s is — and there is no founder concentration (insiders ~0.3%). Key-person risk is low for a 188-year-old, professionally-managed institution; the real risk is cyclical, not governance."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -21.8% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -30853,9 +30854,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Clean structure plus a rare positive: single-class one-vote, a separate independent Chair, a ~90% independent declassified board, a debt-free balance sheet — and a CEO who buys his own stock in the open market (no sales since 2021). The watch-items are a ~11% say-on-pay dissent on pay size and a fresh Elliott activist stake, neither structural. Key-person risk is low — a professional, no-control CEO with a deep bench."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -1.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -1.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -31689,9 +31690,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Structurally clean governance - single-class one-vote, an independent Chair split from a long-tenured professional CEO, a ~91%-independent declassified board, and buyback discipline that shrinks the share count. Held to a 3 by the FY2024 free-cash-flow / non-GAAP-margin reporting investigation (no restatement, but a real control-environment flag), the CFO turnover around it, and the Starboard campaign that had to force accountability."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +53.6% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +53.6% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -32517,9 +32518,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Clean one-share-one-vote governance and a shareholder-friendly buyback (net share count falling despite SBC), offset by a brand-new combined Chair/CEO (Rogers, sub-1-year tenure) and concentrated VC board influence; founder Mehta is fully gone (~8.8%, passive)."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +57.7% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +57.7% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -33355,9 +33356,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A single-share-one-vote company with no controlling holder — public shareholders keep full voting power, which keeps it clear of the entrenched tier. But it is not a clean 4: a non-independent Executive Chair, a classified board, recent management instability (the 2023 Runtime-Fee CEO ouster), strategic-investor board seats from a litigated convertible deal, and heavy stock-comp dilution. The board did hold the prior CEO accountable, a positive signal. Key-person risk is moderate — the turnaround is closely identified with Bromberg."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -56.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -56.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -33437,42 +33438,42 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "crox-memo__v003__2026-07-02_15-17.pdf",
-      "size": "299 KB",
+      "size": "298 KB",
       "priorVersions": []
     },
     "metrics": {
       "mktCap": "$6.23B",
       "shares": "50M",
-      "cash": "$130M cash, $1.231B debt · ~$0.13B cash vs ~$1.34B total debt -> ~$1.2B net debt (deleveraging the HEYDUDE deal); ~50.2M shares; Revenue $4.04B FY25 (~flat); GAAP op margin 3.7% but adjusted ~22% (the $737M non-cash HEYDUDE impairment); FCF ~$0.7-0.9B; ~$125, near the 52-week high ($73-$129), +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)"
+      "cash": "$130M cash, $1.34B debt · ~$0.13B cash vs ~$1.34B total debt -> ~$1.2B net debt (deleveraging the HEYDUDE deal); ~50.2M shares; Revenue $4.04B FY25 (~flat); GAAP op margin 3.7% but adjusted ~22% (the $737M non-cash HEYDUDE impairment); FCF ~$0.7-0.9B; ~$125, near the 52-week high ($73-$129), +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)"
     },
     "spot": {
       "price": 124.17,
       "asOf": "July 2, 2026 close"
     },
     "expected": {
-      "fair": 195.55,
-      "deltaPct": 57.5
+      "fair": 193.07,
+      "deltaPct": 55.5
     },
     "compound": [
       {
         "y": 5,
-        "value": 314.19,
-        "mult": 2.53
+        "value": 310.16,
+        "mult": 2.5
       },
       {
         "y": 10,
-        "value": 505.18,
-        "mult": 4.07
+        "value": 498.63,
+        "mult": 4.02
       },
       {
         "y": 15,
-        "value": 812.87,
-        "mult": 6.55
+        "value": 802.23,
+        "mult": 6.46
       },
       {
         "y": 20,
-        "value": 1308.97,
-        "mult": 10.54
+        "value": 1291.66,
+        "mult": 10.4
       }
     ],
     "taxonomy": {
@@ -33497,60 +33498,60 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 14,
-        "price": 88.96,
+        "price": 86.67,
         "headline": "Fad fades; HEYDUDE keeps bleeding.",
         "why": "The genuine bear: Crocs is a single-silhouette fad with N.A. already -6%, HEYDUDE is guided down again, and tariffs are live. 14% on the cash engine actually rolling over rather than just decelerating.",
         "what": [
           "The Crocs core rolls over in N.A. as the clog cycle peaks and international can't offset it, while HEYDUDE keeps shrinking past the markdown already taken; consolidated revenue declines mid-single-digit before flattening. Tariffs/duties and mix compress margin and FCF margin slides toward ~13-15% as the brand loses pricing power.",
-          "A fashion brand whose lead franchise is fading earns a low single-digit-growth, ~9x FCF terminal -> DCF ~$88.96 (-29%); ~$1.2B net debt deepens the equity hit even with the buyback shrinking the share count."
+          "A fashion brand whose lead franchise is fading earns a low single-digit-growth, ~9x FCF terminal -> DCF ~$86.67 (-30%); ~$1.2B net debt deepens the equity hit even with the buyback shrinking the share count."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
         "prob": 27,
-        "price": 133.91,
+        "price": 131.52,
         "headline": "Flat top line; HEYDUDE a lasting drag.",
         "why": "The plausible 'decelerates but doesn't break' path: Crocs muddles low-single-digit, HEYDUDE stays a drag, margins are tariff-capped. 27% as the realistic muddle-through.",
         "what": [
           "Crocs grows low-single-digit on international while N.A. stays soft, and HEYDUDE's decline is a persistent offset, so consolidated revenue is roughly flat for years. Margin holds in the high-teens/low-20s as tariffs and mix cap operating leverage; the buyback does much of the per-share work.",
-          "DCF ~$133.91 (+7%) — even a flat, HEYDUDE-dragged Crocs at ~10x terminal FCF is modestly above today's price; ~9x entry plus net-cash-funded repurchases provide a floor without a re-rate."
+          "DCF ~$131.52 (+6%) — even a flat, HEYDUDE-dragged Crocs at ~10x terminal FCF is modestly above today's price; ~9x entry plus net-cash-funded repurchases provide a floor without a re-rate."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 34,
-        "price": 200.45,
+        "price": 197.95,
         "headline": "Core compounds; HEYDUDE stabilizes.",
         "why": "Requires Crocs international + DTC to keep the brand growing while a de-risked HEYDUDE merely holds — consistent with +7% international and the raised FY26 guide. 34% as the central case.",
         "what": [
           "The modal path: the Crocs brand sustains mid-single-digit growth led by international and DTC, HEYDUDE stabilizes near its written-down level rather than recovering, and consolidated revenue compounds low-single-digit (~3%). Adjusted operating margin holds ~20-22% as scale offsets tariffs, and FCF margin runs ~16-18%.",
-          "DCF ~$200.45 (+61%) — a still-growing core brand throwing off ~$0.7-0.9B FCF, valued at ~12x terminal FCF after the ~$1.2B net-debt bridge, prices well above ~9x today; the buyback compounds the per-share math. The flat consolidated optics, not the cash, are what the market is discounting."
+          "DCF ~$197.95 (+59%) — a still-growing core brand throwing off ~$0.7-0.9B FCF, valued at ~12x terminal FCF after the ~$1.2B net-debt bridge, prices well above ~9x today; the buyback compounds the per-share math. The flat consolidated optics, not the cash, are what the market is discounting."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 17,
-        "price": 291.67,
+        "price": 289.05,
         "headline": "International runway; brand re-rates.",
         "why": "Crocs international +7% with white space, ~83%-of-revenue cash engine, and a buyback ~$0.75B remaining make a re-rate credible if N.A. fad-fear proves wrong. 17% on the brand durability case landing.",
         "what": [
           "The Crocs brand proves it is a durable global footwear platform, not a N.A. fad: international compounds mid-to-high-single-digit, DTC and Jibbitz personalization lift margin, and HEYDUDE quietly returns to flat-to-positive off its low base. Revenue compounds ~4-5% at a ~23-24% operating margin and FCF margin near 20%.",
-          "DCF ~$291.67 (+134%) — if the market re-rates Crocs toward a branded-compounder multiple (~14x terminal FCF) and the aggressive buyback keeps shrinking the float, the de-rated ~9x entry re-rates hard with the fundamentals."
+          "DCF ~$289.05 (+133%) — if the market re-rates Crocs toward a branded-compounder multiple (~14x terminal FCF) and the aggressive buyback keeps shrinking the float, the de-rated ~9x entry re-rates hard with the fundamentals."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 8,
-        "price": 365.0,
+        "price": 362.25,
         "headline": "Global brand machine; full re-rate.",
         "why": "Everything works — durable international growth AND margin expansion AND a HEYDUDE recovery AND a multiple re-rate, the brand-platform outcome. 8%, the upside tail.",
         "what": [
           "The full second act: Crocs becomes an enduring global brand machine — international and DTC compound high-single-digit, Jibbitz/personalization and collaborations entrench pricing power, HEYDUDE turns into a contributor, and margin pushes toward 25%. Revenue compounds ~6% at a ~25% operating margin, FCF margin ~21%.",
-          "DCF ~$365.00 (+193%) — the asymmetric tail where a fad re-rates into a compounder at ~15x terminal FCF while a buyback retires a large share of the float; ~8% probability, the long-duration upside the ~9x entry is buying."
+          "DCF ~$362.25 (+192%) — the asymmetric tail where a fad re-rates into a compounder at ~15x terminal FCF while a buyback retires a large share of the float; ~8% probability, the long-duration upside the ~9x entry is buying."
         ]
       }
     ],
@@ -33597,23 +33598,23 @@ const MEMOS = [
     "weightingRationale": [
       {
         "label": "Ultra Bear 14%",
-        "body": "Fad fades and HEYDUDE keeps bleeding; ~$88.96 (-29%)."
+        "body": "Fad fades and HEYDUDE keeps bleeding; ~$86.67 (-30%)."
       },
       {
         "label": "Bear 27%",
-        "body": "Flat top line, HEYDUDE a lasting drag; ~$133.91 (+7%)."
+        "body": "Flat top line, HEYDUDE a lasting drag; ~$131.52 (+6%)."
       },
       {
         "label": "Base 34%",
-        "body": "Crocs core compounds, HEYDUDE stabilizes; ~$200.45 (+61%)."
+        "body": "Crocs core compounds, HEYDUDE stabilizes; ~$197.95 (+59%)."
       },
       {
         "label": "Bull 17%",
-        "body": "International runway; the brand re-rates; ~$291.67 (+134%)."
+        "body": "International runway; the brand re-rates; ~$289.05 (+133%)."
       },
       {
         "label": "Ultra Bull 8%",
-        "body": "Global brand machine, full re-rate; ~$365.00 (+193%)."
+        "body": "Global brand machine, full re-rate; ~$362.25 (+192%)."
       }
     ],
     "page3": {
@@ -33675,19 +33676,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 195.55,
-        "upsidePct": 57.5
+        "expected": 193.07,
+        "upsidePct": 55.5
       },
       "market": {
         "marketCapBillion": 6.23,
         "sharesOutstandingMillion": 50.2,
         "cashBillion": 0.13,
-        "netDebtBillion": 1.231
+        "netDebtBillion": 1.34
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.14,
-          "expectedPerShare": 88.96,
+          "expectedPerShare": 86.67,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -33726,7 +33727,7 @@ const MEMOS = [
               0.564
             ],
             "cash": 0.13,
-            "net_debt": 1.231,
+            "net_debt": 1.34,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 48,
@@ -33742,8 +33743,8 @@ const MEMOS = [
             "terminal_value": 6.06,
             "pv_terminal": 3.51,
             "op_ev": 5.37,
-            "total_equity": 4.27,
-            "dcf_per_share": 88.96
+            "total_equity": 4.16,
+            "dcf_per_share": 86.67
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -33765,7 +33766,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.27,
-          "expectedPerShare": 133.91,
+          "expectedPerShare": 131.52,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -33804,7 +33805,7 @@ const MEMOS = [
               0.673
             ],
             "cash": 0.13,
-            "net_debt": 1.231,
+            "net_debt": 1.34,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 46,
@@ -33820,8 +33821,8 @@ const MEMOS = [
             "terminal_value": 8.08,
             "pv_terminal": 4.9,
             "op_ev": 7.26,
-            "total_equity": 6.16,
-            "dcf_per_share": 133.91
+            "total_equity": 6.05,
+            "dcf_per_share": 131.52
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -33843,7 +33844,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.34,
-          "expectedPerShare": 200.45,
+          "expectedPerShare": 197.95,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -33882,7 +33883,7 @@ const MEMOS = [
               0.835
             ],
             "cash": 0.13,
-            "net_debt": 1.231,
+            "net_debt": 1.34,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 44,
@@ -33898,8 +33899,8 @@ const MEMOS = [
             "terminal_value": 11.41,
             "pv_terminal": 7.09,
             "op_ev": 9.92,
-            "total_equity": 8.82,
-            "dcf_per_share": 200.45
+            "total_equity": 8.71,
+            "dcf_per_share": 197.95
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -33921,7 +33922,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.17,
-          "expectedPerShare": 291.67,
+          "expectedPerShare": 289.05,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -33960,7 +33961,7 @@ const MEMOS = [
               1.002
             ],
             "cash": 0.13,
-            "net_debt": 1.231,
+            "net_debt": 1.34,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 42,
@@ -33976,8 +33977,8 @@ const MEMOS = [
             "terminal_value": 15.88,
             "pv_terminal": 10.09,
             "op_ev": 13.35,
-            "total_equity": 12.25,
-            "dcf_per_share": 291.67
+            "total_equity": 12.14,
+            "dcf_per_share": 289.05
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -33999,7 +34000,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.08,
-          "expectedPerShare": 365.0,
+          "expectedPerShare": 362.25,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -34038,7 +34039,7 @@ const MEMOS = [
               1.125
             ],
             "cash": 0.13,
-            "net_debt": 1.231,
+            "net_debt": 1.34,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 40,
@@ -34054,8 +34055,8 @@ const MEMOS = [
             "terminal_value": 18.69,
             "pv_terminal": 12.04,
             "op_ev": 15.7,
-            "total_equity": 14.6,
-            "dcf_per_share": 365.0
+            "total_equity": 14.49,
+            "dcf_per_share": 362.25
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -34162,7 +34163,7 @@ const MEMOS = [
             "falsifier": "Adjusted operating margin falls below ~18%, eroding the FCF margin the whole valuation rests on."
           }
         ],
-        "takeaway": "Crocs's brand Power is genuine and dominant — a globally recognized footwear brand with ~57% gross margin, real pricing power, and Jibbitz personalization, and it is essentially the entire cash engine (~83% of revenue, ~$0.7-0.9B FCF). The Audit: branding is durable but rated medium, not high, because it is concentrated in a single silhouette exposed to fad risk and bolted to a structurally declining HEYDUDE. The live threats are a N.A. taste shift (already -6%) and further HEYDUDE value destruction — but HEYDUDE is already impaired ($737M taken) and international is +7%, which is why the downside is de-risked and the brand re-rate is the upside. That squares with the +56.8% finding: at ~9x EV/FCF the market prices a fading business, while the normalized cash flow of a still-growing core brand underwrites materially more — the flat consolidated optics, not the cash, are the discount."
+        "takeaway": "Crocs's brand Power is genuine and dominant — a globally recognized footwear brand with ~57% gross margin, real pricing power, and Jibbitz personalization, and it is essentially the entire cash engine (~83% of revenue, ~$0.7-0.9B FCF). The Audit: branding is durable but rated medium, not high, because it is concentrated in a single silhouette exposed to fad risk and bolted to a structurally declining HEYDUDE. The live threats are a N.A. taste shift (already -6%) and further HEYDUDE value destruction — but HEYDUDE is already impaired ($737M taken) and international is +7%, which is why the downside is de-risked and the brand re-rate is the upside. That squares with the +55.5% finding: at ~9x EV/FCF the market prices a fading business, while the normalized cash flow of a still-growing core brand underwrites materially more — the flat consolidated optics, not the cash, are the discount."
       },
       "pocd": {
         "people": {
@@ -34182,9 +34183,9 @@ const MEMOS = [
           "score": 4,
           "takeaway": "Clean single-class governance, an independent chair, ~90%-at-risk PSU / relative-TSR pay and aggressive buybacks, modestly offset by the debt-funded HEYDUDE acquisition that required a $737M impairment and a classified board."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +56.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +55.5% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -35008,9 +35009,9 @@ const MEMOS = [
           "score": 2,
           "takeaway": "The defining fact is control: founder-CEO Huffman directs ~70.7% of the vote — his super-voting class plus an irrevocable proxy over Advance’s shares — on roughly 3% economic ownership, and Reddit is a controlled company, which places it in the most-entrenched tier alongside the super-voting megacaps. The mitigants are real and more than most controlled companies offer: the Chair and CEO are separated under an independent chair, 7 of 8 directors are independent, and the company complies with independence rules despite the exemptions — which is why it is a 2 with strong mitigants rather than a 1. Key-person risk is high."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -20.2% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -20.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -35838,9 +35839,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-CEO (Narang) with two co-founders still operating (President, CTO), heavily equity-aligned, on a net-cash balance sheet with a disciplined buyback and declining SBC, under a separate independent Chair - a solid founder-led profile. Held at 3 by the 10x super-voting dual-class (sub-majority ~40.6% of votes, though sunsetting in 2028), a classified board, and the unresolved 2023 fee-reversal securities investigations."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +25.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +25.5% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -36670,9 +36671,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Dual-class super-voting with the co-founders also serving as co-chairs caps it below the clean tier, but it is a solid 3: the founders hold ~48% of the vote (below a controlling majority, so not a controlled company), there is a fixed 2031 sunset (which most dual-class names lack), a 7-of-9 independent board with a lead independent director, and the company just turned profitable with its first buyback. Key-person risk is moderate — dependence on the two-founder partnership, but split across two people with a professionalized bench."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -42.1% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -42.1% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -37498,9 +37499,9 @@ const MEMOS = [
           "score": 2,
           "takeaway": "A genuine founder-operator with real economic alignment (~20% stake) running a net-cash, FCF-positive, capital-returning business — the positives. But the governance sits in the most-entrenched tier: a four-class, 20-vote super-voting structure gives the founders ~82.8% of the votes on ~20% of the economics (Class D even carries votes with no economic rights), the company is an NYSE controlled company, and the Chair/CEO roles are combined. The vote/economics decoupling, not the operator quality, drives the score."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +38.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +38.8% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -38325,9 +38326,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-CEO holding ~6.1% economic but ~40% of the vote via Class B multiple-voting shares plus the 2022 founder share (which floors his voting control near 40% regardless of dilution); $1 salary, equity-paid, no dividend or buyback, with the 2023 Flexport logistics divestiture as the observable capital-allocation course-correction."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -15.1% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -15.1% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -39558,9 +39559,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A transition year: the founder is stepping off both the CEO seat (January 2026) and the board (June 2026), and a non-founder professional now runs the company — which removes the founder-alignment leg but also retires the dual-class super-voting (already nearly fully converted, sunsetting ~2027) toward one-share-one-vote. Insider economic ownership is low. The platform, not any individual, is the asset, so key-person risk is moderate rather than high."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +22.3% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +22.3% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -40796,9 +40797,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Clean single-class one-vote register, an independent Chair (Cooper) split from a long-tenured professional CEO (Evans, since 2017), and a ~88%-independent fully-independent-committee board on a well-funded balance sheet (cash to mid-2029). Held at 3 by thin insider alignment (low ownership, sell-only Form 4s), a classified board, and the Broad/Harvard base-editing IP + scientific-founder related-party concentration. The platform depends on the founders' science (reputational) but none run day-to-day."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +31.3% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +31.3% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -40882,7 +40883,7 @@ const MEMOS = [
     "publishedLabel": "July 2, 2026",
     "pdf": {
       "file": "pacb-memo__v003__2026-07-02_15-17.pdf",
-      "size": "384 KB",
+      "size": "382 KB",
       "priorVersions": []
     },
     "metrics": {
@@ -42025,9 +42026,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Professional, experienced management (CEO Henry is ex-Illumina) on a clean single-class one-vote register with a majority-independent 10-member board — the governance positives. The offsets are a combined Chair/CEO, insiders below 1% (thin owner-operator alignment), and a levered balance sheet where the converts exceed the modeled equity, so capital allocation is dominated by the race to breakeven before 2029/2030. The technology is institutionalized, so key-person risk is low."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +30.6% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +30.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -42842,9 +42843,9 @@ const MEMOS = [
           "score": 2,
           "takeaway": "The most-entrenched tier: founder-CEO Lefkofsky holds ~59.9% of the vote on ~24% economics through 30-vote Class B, combines Chair and CEO, and sits at the center of a dense related-party web (a shared COO running a Lefkofsky company contracted to pay Tempus ~$200M) now under securities litigation. Real mitigants keep it a 2-with-mitigants rather than lower — the controlled-company exemption was declined, the board is 8-of-9 independent and declassified — but majority single-person control plus the related-party concentration drive the score. Key-person risk is high."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -28.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -28.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -44076,9 +44077,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +29.2% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +29.2% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -45310,9 +45311,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A clean single-class one-vote register and a genuine founder-alignment signal (co-founder David Liu, the largest holder, buying in the open market) are the positives. Against them sit a classified/staggered board, a recent CEO change-plus-restructuring, and — most of all — a going-concern balance sheet with a ~$200M ATM, so capital allocation is hostage to dilution. Key-person risk is high: the prime-editing platform is founder-science led and the clinical pipeline was just cut to one focus."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot",
+        "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +7.2% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +7.2% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -46135,9 +46136,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "A clean one-share-one-vote register with no controlling holder, a 7-of-9 independent board, and a lead independent director are the positives. Holding it at 3 are a combined Chair/CEO, a classified board, ongoing ATM dilution, and an open securities class action. Key-person risk is moderate — a founder Chair/CEO, but a second co-founder still active, an institutionalized board, and a business past early stage (~$377M revenue)."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -49.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -49.8% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -46949,12 +46950,12 @@ const MEMOS = [
             "mitigants: a Class V-3 sunset to single-vote ~2029, an 8-of-9 independent board with fully-independent committees, declassified annual elections, and $0 CEO pay"
           ],
           "keyPersonRisk": "high",
-          "score": 2,
-          "takeaway": "The most-entrenched tier, and the weakest of it: founder-CEO Cohen controls ~86-91% of the vote on ~20% economics via a 3-vote Up-C class, combines Chair and CEO, splits attention with C&S, and sits in a dense C&S/Walmart/GreenBox related-party web — on top of a 2024 restatement whose material weakness was still unremediated into FY2025, an integrity flag the cleaner controlled companies do not carry. The mitigants are real (a 2029 sunset, a majority-independent board with independent committees, declassified elections, and a founder who takes $0 pay), which is why it holds a 2 rather than lower. Key-person risk is high."
+          "score": 1,
+          "takeaway": "The most-entrenched tier, and the weakest of it: founder-CEO Cohen controls ~86-91% of the vote on ~20% economics via a 3-vote Up-C class, combines Chair and CEO, splits attention with C&S, and sits in a dense C&S/Walmart/GreenBox related-party web — on top of a 2024 restatement whose material weakness was still unremediated into FY2025, an integrity flag the cleaner controlled companies do not carry. The mitigants are real (a 2029 sunset, a majority-independent board with independent committees, declassified elections, and a founder who takes $0 pay), but near-total vote control combined with an unremediated material weakness makes SYM the one name in the book where governance integrity, not merely entrenchment, is in question — which is why it sits at 1, the floor. Key-person risk is high."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the -68.0% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -68.0% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -47780,9 +47781,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Clean single-class one-vote shares, a ~73%-independent declassified board and a separate lead independent director are the positives. Holding the score at 3 are a non-independent Executive Chairman with a ~22.7% concentrated stake and back-to-back CEO turnover (two changes in ~13 months) — though the new CEO is a 15-year insider and the device franchise is institutionalized, so key-person risk is moderate. The June 2026 TRIDENT miss is an operating, not a governance, event."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +4.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +4.5% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -48596,9 +48597,9 @@ const MEMOS = [
           "score": 3,
           "takeaway": "Founder-Chair-CEO Halbert is the largest holder at ~44.6% on a clean single-class one-vote register (no super-voting — the draft S-1's dual-class was dropped before the IPO), giving significant influence below an outright majority; the board keeps fully-independent Audit/Comp, 8-of-10 independence and a lead independent director, and he is aligned via the stake + a fresh FCF inflection + a new $100M buyback — with the combined Chair/CEO, the ~44.6% concentration, and a Halbert-affiliated aircraft related-party the offsets."
         },
-        "opportunityRef": "The scenario distribution · the Page-3 business snapshot · the Arthur Indicator",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +28.9% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -48688,7 +48689,7 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$4.32B",
       "shares": "60M",
-      "cash": "$1.84B cash, $3.95B debt · ~37% discount to $104 NAV"
+      "cash": "$1.84B cash, $5.79B debt · ~37% discount to $104 NAV"
     },
     "spot": {
       "price": 72.53,
@@ -48966,7 +48967,7 @@ const MEMOS = [
         "marketCapBillion": 4.32,
         "sharesOutstandingMillion": 59.63,
         "cashBillion": 1.84,
-        "netDebtBillion": 3.95
+        "netDebtBillion": 5.79
       },
       "scenarios": {
         "ultra_bear": {

@@ -49,7 +49,7 @@ thesis: >
   2027, Broadscale (10B-protein mapping) H1 2027. Cash to ~mid-2029;
   dilutive raise likely 2027-2028. Mature peers — Olink (Thermo),
   SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and
-  TAM. Young-company DCF: TAM × margin × P(fail). Four scenarios,
+  TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios,
   weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
@@ -533,7 +533,7 @@ appendix:
       body: "$1.13/share cash vs $2.40 spot = 47% of mkt cap is liquid. Operating EV ~$1.27/share for a real platform. Hard to lose money permanently here."
   triggers:
     - label: "Bear validation"
-      body: "Voyager pre-orders < $10M by Q1 2027  ·  Cash < $80M EOY 2027  ·  Broadscale slips to 2028+  ·  Tau EAP count flat YoY"
+      body: "Voyager pre-orders < $10M by Q1 2027  ·  Cash < $80M EOY 2027  ·  Broadscale slips to 2028+  ·  Tau EAP count flat YoY  ·  a dilutive raise struck below ~$2 (more punishing than the modeled $2.00-$3.00 raise path)"
     - label: "Bull validation"
       body: "Pre-orders > $30M by Q1 2027  ·  100+ instruments installed EOY 2027  ·  second pharma/OEM partnership  ·  multi-year take-rate deal disclosed"
     - label: "Reframe needed"
@@ -569,6 +569,7 @@ pocd:
       - 'board of 9, 7 independent; 2 insiders (Patel CEO, Mallick co-founder / Chief Scientist)'
       - 'classified board — three staggered classes (an anti-takeover structure)'
       - 'insiders own ~29% of shares in aggregate'
+      - 'a16z (early backer) trimmed via a ~3.59M-share secondary block at $2.00 (Jun 2026, 13D/A); ~7.1% residual stake is a soft supply overhang, not a control/structure change'
     key_person_risk: high
     score: 4
     takeaway: 'Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class
@@ -576,9 +577,9 @@ pocd:
       governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder
       Mallick are the platform) and a structural dilution path, the pre-revenue burn funded by equity raises
       beyond the 2027 runway.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +174% finding), then position-sized.'
 stamp:
   footer_version: "007"
   footer_timestamp: "2026-07-02_15-17"

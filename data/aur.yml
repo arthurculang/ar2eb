@@ -37,7 +37,7 @@ thesis: >
   mid-2027 absent commercial conversion. Driverless commercial launch slipped
   from 2024 to now 2027; the Driver runs supervised highway pilots with
   PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin,
-  P(failure). Three scenarios, weighted; show your work.
+  P(failure). Five scenarios, weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:
@@ -494,9 +494,9 @@ pocd:
     key_person_risk: high
     score: 3
     takeaway: 'Founder-CEO Urmson is strongly economically aligned (minimal cash comp, large founder stake, open-market buying) and the board is unusually credentialed (Hoffman, Eschenbach, Volpi, Wehner) - real positives. Held to a 3 by a stacked-entrenchment structure (10:1 super-voting + combined Chair/CEO + staggered board), high key-person dependence amplified by co-founder Anderson''s 2025 exit, the Uber overhang, and a pre-revenue deep-burn profile.'
-  opportunity_ref: 'The scenario distribution · the Page-3 business snapshot'
+  opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +5.1% finding) + position sizing.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +5.1% finding), then position-sized.'
 stamp:
   footer_version: "026"
   footer_timestamp: "2026-07-02_15-17"
