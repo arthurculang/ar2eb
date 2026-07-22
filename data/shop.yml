@@ -2,10 +2,10 @@ ticker: SHOP
 company: Shopify Inc.
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 121.63
+date: '2026-07-22'
+spot: 119.20
 market:
-  market_cap_billion: 158.0
+  market_cap_billion: 154.84
   shares_outstanding_million: 1299.0
   cash_billion: 5.778
   net_debt_billion: 0.0
@@ -636,9 +636,14 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -15.1% finding), then position-sized.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_15-02"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 121.63

@@ -2,10 +2,10 @@ ticker: AMZN
 company: Amazon.com
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 241.7
+date: '2026-07-22'
+spot: 244.04
 market:
-  market_cap_billion: 2594.6
+  market_cap_billion: 2619.72
   shares_outstanding_million: 10734.9
   cash_billion: 123.0
   net_debt_billion: 68.4
@@ -643,9 +643,14 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -6.9% finding), then position-sized.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_15-02"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 241.7

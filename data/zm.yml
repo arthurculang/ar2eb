@@ -26,12 +26,11 @@ ticker: ZM
 company: Zoom Communications
 exchange: NASDAQ
 dcf_type: mature_company_sotp   # young_company | mature_company | mature_company_sotp
-date: '2026-07-02'
-spot: 90.13
-
+date: '2026-07-22'
+spot: 86.30
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 27.76
+  market_cap_billion: 26.58
   shares_outstanding_million: 308
   cash_billion: 7.9           # ZM cash & marketable securities (post-Q1 FY27)
   net_debt_billion: 0.0
@@ -548,12 +547,17 @@ taxonomy:
   primary_theme: platform-marketplace-tech
 
 stamp:
-  footer_version: "026"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "027"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "026"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "027"
+  pdf_timestamp: "2026-07-22_15-02"
 
+  prior_versions:
+  - version: "026"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 90.13
 glossary:
 - term: AI Companion / Pro
   definition: ZM's AI assistant. Bundled free into paid plans (Companion) with a premium SKU (Pro). Bundle-not-separate-SKU strategy.

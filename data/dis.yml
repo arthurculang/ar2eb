@@ -2,10 +2,10 @@ ticker: DIS
 company: Walt Disney
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 95.71
+date: '2026-07-22'
+spot: 96.72
 market:
-  market_cap_billion: 170.9
+  market_cap_billion: 172.70
   shares_outstanding_million: 1785.3
   cash_billion: 5.7
   net_debt_billion: 42.0
@@ -628,9 +628,14 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +10.3% finding), then position-sized.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_15-02"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 95.71

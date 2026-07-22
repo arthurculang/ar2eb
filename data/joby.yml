@@ -16,13 +16,12 @@ ticker: JOBY
 company: Joby Aviation
 exchange: NYSE
 dcf_type: young_company  # young_company | mature_company
-date: '2026-07-02'
-spot: 8.84
-
+date: '2026-07-22'
+spot: 7.67
 # ── Market data ─────────────────────────────────────────────────────────────
 # Structured, not formatted. Generator formats per layout rules.
 market:
-  market_cap_billion: 8.7
+  market_cap_billion: 7.54
   shares_outstanding_million: 984
   cash_billion: 2.5
   net_debt_billion: 0.0
@@ -530,12 +529,17 @@ pocd:
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -19.6% finding) + position
     sizing.'
 stamp:
-  footer_version: "032"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "033"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "032"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "033"
+  pdf_timestamp: "2026-07-22_15-02"
 
+  prior_versions:
+  - version: "032"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 8.84
 glossary:
 - term: eVTOL
   definition: Electric Vertical Take-Off and Landing aircraft. Joby's S4 is a 5-seat, 6-rotor design with ~100-mile range.
