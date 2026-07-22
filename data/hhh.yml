@@ -13,12 +13,11 @@ ticker: HHH
 company: Howard Hughes Holdings
 exchange: NYSE
 dcf_type: mature_company_sotp   # young_company | mature_company | mature_company_sotp
-date: '2026-07-02'
-spot: 72.53
-
+date: '2026-07-22'
+spot: 66.59
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 4.32       # 59.63M sh × $72.53
+  market_cap_billion: 3.97       # 59.63M sh × $72.53
   shares_outstanding_million: 59.63   # Q1'26 10-Q (Mar-31-2026)
   cash_billion: 1.84             # cash & equivalents (Q1'26)
   net_debt_billion: 3.95         # total debt $5.79B − cash $1.84B
@@ -426,13 +425,18 @@ taxonomy:
   primary_theme: real-economy-hard-assets
 
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 72.53
 glossary:
 - term: SOTP / NAV
   definition: 'Sum-of-the-parts / net-asset-value: each piece (land, op assets, condos, Vantage) + cash − debt = equity — the lens when asset value, not cash flow, holds the worth.'

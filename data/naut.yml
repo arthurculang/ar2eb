@@ -23,12 +23,11 @@ ticker: NAUT
 company: Nautilus Biotechnology
 exchange: NASDAQ
 dcf_type: young_company   # young_company | mature_company | mature_company_sotp
-date: '2026-07-02'
-spot: 1.84
-
+date: '2026-07-22'
+spot: 1.70
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 0.232
+  market_cap_billion: 0.214
   shares_outstanding_million: 126
   cash_billion: 0.143        # Q1 2026 cash & equivalents ($143.4M)
   net_debt_billion: 0.0
@@ -580,12 +579,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +174% finding) + position sizing.'
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "008"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "007"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "008"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "007"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 1.84
 glossary:
   - term: "Voyager"
     definition: "NAUT's single-molecule proteomics platform — instrument + reagents + assays + software for proteoform analysis."

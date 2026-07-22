@@ -2,10 +2,10 @@ ticker: NVCR
 company: NovoCure
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 15.78
+date: '2026-07-22'
+spot: 16.00
 market:
-  market_cap_billion: 1.72
+  market_cap_billion: 1.74
   shares_outstanding_million: 109.0
   cash_billion: 1.03
   net_debt_billion: 0.56
@@ -630,9 +630,14 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +4.5% finding) + position
     sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 15.78

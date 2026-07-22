@@ -2,10 +2,10 @@ ticker: ACHR
 company: Archer Aviation
 exchange: NYSE
 dcf_type: young_company
-date: '2026-07-02'
-spot: 4.92
+date: '2026-07-22'
+spot: 5.28
 market:
-  market_cap_billion: 3.89
+  market_cap_billion: 4.17
   shares_outstanding_million: 790.0
   cash_billion: 1.78
   net_debt_billion: 0.08
@@ -976,9 +976,14 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +17.7% finding) + position
     sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 4.92

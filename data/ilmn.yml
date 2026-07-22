@@ -2,10 +2,10 @@ ticker: ILMN
 company: Illumina
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 183.89
+date: '2026-07-22'
+spot: 192.53
 market:
-  market_cap_billion: 27.77
+  market_cap_billion: 29.07
   shares_outstanding_million: 151.0
   cash_billion: 1.16
   net_debt_billion: 1.99
@@ -584,12 +584,17 @@ competitive:
     only the bull-or-better clears spot, and the modal base sits ~27% below — the entry, not the franchise, is the problem
     (the TXG mirror).'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 183.89
 pocd:
   people:
     ceo: 'Jacob Thaysen (CEO since Sept 2023)'

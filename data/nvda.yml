@@ -2,10 +2,10 @@ ticker: NVDA
 company: NVIDIA
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 197.58
+date: '2026-07-22'
+spot: 207.29
 market:
-  market_cap_billion: 4801.2
+  market_cap_billion: 5037.1
   shares_outstanding_million: 24300.0
   cash_billion: 10.6
   net_debt_billion: 8.5
@@ -639,9 +639,14 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -25.2% finding) + position sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 197.58

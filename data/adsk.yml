@@ -2,10 +2,10 @@ ticker: ADSK
 company: Autodesk
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 199.76
+date: '2026-07-22'
+spot: 211.15
 market:
-  market_cap_billion: 42.15
+  market_cap_billion: 44.55
   shares_outstanding_million: 211.0
   cash_billion: 2.6
   net_debt_billion: 2.5
@@ -631,9 +631,14 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +53.6% finding) + position sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 199.76

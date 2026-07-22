@@ -2,10 +2,10 @@ ticker: TEM
 company: Tempus AI
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 61.6
+date: '2026-07-22'
+spot: 48.98
 market:
-  market_cap_billion: 11.06
+  market_cap_billion: 8.80
   shares_outstanding_million: 179.6
   cash_billion: 0.644
   net_debt_billion: 0.56
@@ -624,9 +624,14 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -28.5% finding) + position
     sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 61.6

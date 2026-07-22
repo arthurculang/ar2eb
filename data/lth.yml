@@ -20,12 +20,11 @@ ticker: LTH
 company: Life Time Group Holdings
 exchange: NYSE
 dcf_type: mature_company          # young_company | mature_company | mature_company_sotp
-date: '2026-07-02'
-spot: 40.04
-
+date: '2026-07-22'
+spot: 42.28
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 8.89
+  market_cap_billion: 9.39
   shares_outstanding_million: 222
   cash_billion: 0.232
   net_debt_billion: 1.29
@@ -539,12 +538,17 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -33.8% finding) + position
     sizing.'
 stamp:
-  footer_version: "025"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "026"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "025"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "026"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "025"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 40.04
 glossary:
 - term: SLB
   definition: Sale-leaseback. LTH sells owned club property to a REIT and leases it back. Converts capital to liquidity; adds permanent rent.

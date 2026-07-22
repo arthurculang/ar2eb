@@ -2,10 +2,10 @@ ticker: SYM
 company: Symbotic
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 44.96
+date: '2026-07-22'
+spot: 42.86
 market:
-  market_cap_billion: 26.57
+  market_cap_billion: 25.33
   shares_outstanding_million: 591.0
   cash_billion: 1.2
   net_debt_billion: 0.0
@@ -621,9 +621,14 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -68.0% finding) + position
     sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 44.96

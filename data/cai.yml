@@ -2,10 +2,10 @@ ticker: CAI
 company: Caris Life Sciences
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 18.75
+date: '2026-07-22'
+spot: 15.73
 market:
-  market_cap_billion: 5.2
+  market_cap_billion: 4.4
   shares_outstanding_million: 278.0
   cash_billion: 0.8
   net_debt_billion: 0.3785
@@ -626,9 +626,14 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the +28.9% finding) + position sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 18.75

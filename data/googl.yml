@@ -2,10 +2,10 @@ ticker: GOOGL
 company: Alphabet
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 361.21
+date: '2026-07-22'
+spot: 347.15
 market:
-  market_cap_billion: 4366.3
+  market_cap_billion: 4196.3
   shares_outstanding_million: 12088.0
   cash_billion: 126.8
   net_debt_billion: 48.5
@@ -632,9 +632,14 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -21.4% finding) + position sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 361.21

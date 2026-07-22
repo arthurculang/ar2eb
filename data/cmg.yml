@@ -2,10 +2,10 @@ ticker: CMG
 company: Chipotle Mexican Grill
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 35.0
+date: '2026-07-22'
+spot: 33.32
 market:
-  market_cap_billion: 45.58
+  market_cap_billion: 43.40
   shares_outstanding_million: 1302.4
   cash_billion: 1.05
   net_debt_billion: 0.0
@@ -633,9 +633,14 @@ pocd:
   deal: 'Open-market purchase = the deal: entry price vs. the scenario distribution (the -4.8% finding) + position
     sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_13-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_13-13"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 35.0
