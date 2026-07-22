@@ -5,28 +5,28 @@ dcf_type: young_company
 date: '2026-07-22'
 spot: 71.55
 market:
-  market_cap_billion: 41.00
-  shares_outstanding_million: 573.0
-  cash_billion: 0.83
+  market_cap_billion: 41.36
+  shares_outstanding_million: 578.0
+  cash_billion: 1.48
   net_debt_billion: 0.0
   extras:
-  - $1.85B backlog (+73% YoY, FY25)
+  - '>$2.2B backlog (Q1''26)'
+  - Pending ~$8B Iridium acquisition — mid-2027 close
   - Neutron first launch targeted Q4 2026
-  - FY25 revenue $602M (+38%)
 taxonomy:
   watchlist: asymmetrical-moonshots
   tier: Med-High
   themes:
   - space-launch-infrastructure
   primary_theme: space-launch-infrastructure
-central_question: Does ~135x sales (~$81B on $602M FY25 revenue) price a realistic path to a space prime — or a SpaceX-scale
-  outcome a decade of fundamentals can't reach?
-thesis: 'Rocket Lab trades at ~$81B on $602M FY25 revenue — ~135x sales. Electron (#2 small-lift) + Neutron (reusable medium-lift,
-  Q4 2026 debut) + a vertically-integrated Space Systems segment with a path to owned constellations. The DCF asks what scale,
-  prime margins, and — in the upper scenarios — a Starlink-style constellation second act are plausible over a decade. The
-  finding: launch+systems alone is priced beyond ten years; only if RKLB originates an owned constellation does the ultra-bull
-  clear spot (+159%, a ~$213B smaller-SpaceX) — even then the modal base leaves the weighted ~-63%: the market prices near-certain
-  success.'
+central_question: 'Does ~$41B (~45x FY26E revenue) — plus a pending ~$8B debt-and-stock purchase of Iridium''s constellation
+  — price a realistic path to a space prime when the second act is bought, not originated?'
+thesis: 'Rocket Lab has halved to ~$41B at $71.55 — ~68x trailing sales, ~45x the ~$900M FY26 run-rate — while the business
+  accelerated (Q1''26 revenue +64%, backlog >$2.2B). And the second act changed form: rather than originate a constellation,
+  RKLB agreed to buy one — the pending ~$8B Iridium acquisition (mid-2027 close; $871M revenue, ~$495M operational EBITDA,
+  2.6M subscribers), funded by a $3.6B bridge plus up to ~44M collared shares. The DCF asks whether a halved price plus a
+  leveraged, dilutive constellation purchase changes the answer. The finding: it narrows the gap, not the verdict — the weighted
+  sits ~38% below spot; the market still prices near-certain success.'
 chart_reference:
   tam_billion: 120
   history_years:
@@ -49,152 +49,63 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 3
   valn_anchor_text: Mature aero/defense P/S ~2-4x
-  valn_caption: At ~135x sales today, every scenario implies massive multiple compression.
+  valn_caption: At ~68x trailing sales (~45x FY26E), every scenario implies massive multiple compression.
   tam_title: $120B FY35 launch + space-systems TAM — RKLB share
   tam_legend:
   - RKLB
   - Competitors
   - Other space (cargo, gov, etc.)
 page3:
-  subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q4'25 release
-  sources: 'Sources: RKLB FY2025 results (Feb 2026), Q4''25 8-K, company guidance. FCF is NOL-shielded pre-tax over the explicit
-    window (documented simplification). TAM: launch + space-systems serviceable slice, ~$120B by FY35.'
+  subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q1'26 release
+  sources: 'Sources: RKLB FY2025 results (Feb 2026), Q1''26 release (May 2026), Iridium merger announcement (Jun 2026), company
+    guidance. FCF is NOL-shielded pre-tax over the explicit window (documented simplification). Close scenarios carry Iridium
+    pro-forma from mid-2027. TAM: launch + space-systems serviceable slice, ~$120B by FY35.'
 scenarios:
   ultra_bear:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.1
-    expected_per_share: 1.8
-    headline: Neutron fails; dilution; SpaceX runs away.
+    expected_per_share: 2.56
+    headline: Neutron fails; Iridium breaks; SpaceX runs away.
     narrative:
-    - Neutron's tank-test troubles compound into a failed or indefinitely delayed program; RKLB stays a sub-scale small-lift
-      + components shop. Launch cadence stalls, Space Systems growth decelerates as satellite primes in-source, and gross
-      margins stay structurally thin against a fixed-cost manufacturing base.
-    - Repeated dilutive ATM raises fund the burn (start cash $0.83B), share count creeps toward 590M, and by FY35 revenue
-      is ~$1.4B at ~7-8% operating margin. With a 25% probability of an outright restructuring/recap, the expected per-share
-      collapses toward the distress floor — orders of magnitude below today's price.
-    probability_rationale: 'The compound bear: a Neutron failure (the FY26 tank-test failure is a real datapoint) plus Space
-      Systems deceleration plus persistent thin margins. Aerospace hardware is unforgiving and SpaceX''s cost curve is brutal.
-      25% within-scenario failure probability reflects that RKLB, while revenue-generating with $1.85B backlog, is still capital-hungry
-      and Neutron-dependent for the bull thesis.'
+    - 'The compound failure: Neutron''s program stalls for good, and the Iridium deal breaks endogenously — the collared stock
+      consideration collapses through its $67.50 floor, the bridge financing wobbles, and Iridium holders walk. RKLB stays
+      a sub-scale small-lift + components shop while satellite primes in-source and margins stay structurally thin.'
+    - The completed ATM leaves $1.48B of cash, so the floor is a slow burn-down, not sudden insolvency — but defensive raises
+      at collapsed prices (~$30) still dilute, and by FY35 revenue is ~$1.4B at ~7-8% operating margin. With a 25% within-scenario
+      chance of restructuring, expected value sits near the distress floor.
+    probability_rationale: 'The compound bear: a Neutron failure plus a broken Iridium deal plus persistent thin margins.
+      Aerospace hardware is unforgiving and SpaceX''s cost curve is brutal. The deal-break lives here because it is endogenous
+      — the same world that kills Neutron collapses the collared stock consideration. 25% within-scenario failure probability
+      reflects capital hunger after a failed flagship program, cushioned by $1.48B cash.'
     dcf_metrics:
-      tam_share: 1.1
+      tam_share: 1.14
       p_fail: 25
       s2c: 1.7
     dcf_path:
-      rev_path:
-      - 0.8
-      - 0.95
-      - 1.08
-      - 1.18
-      - 1.25
-      - 1.3
-      - 1.33
-      - 1.35
-      - 1.36
-      - 1.37
-      op_margin:
-      - -0.1
-      - -0.06
-      - -0.03
-      - 0.0
-      - 0.02
-      - 0.04
-      - 0.05
-      - 0.06
-      - 0.07
-      - 0.075
-      wacc_path:
-      - 0.13
-      - 0.128
-      - 0.126
-      - 0.124
-      - 0.122
-      - 0.12
-      - 0.117
-      - 0.114
-      - 0.112
-      - 0.11
+      rev_path: [0.89, 1.0, 1.1, 1.19, 1.26, 1.3, 1.33, 1.35, 1.36, 1.37]
+      op_margin: [-0.1, -0.06, -0.03, 0.0, 0.02, 0.04, 0.05, 0.06, 0.07, 0.075]
+      wacc_path: [0.13, 0.128, 0.126, 0.124, 0.122, 0.12, 0.117, 0.114, 0.112, 0.11]
       term_g: 0.025
-      nopat:
-      - -0.08
-      - -0.057
-      - -0.032
-      - 0.0
-      - 0.025
-      - 0.052
-      - 0.067
-      - 0.081
-      - 0.095
-      - 0.103
-      reinvest:
-      - 0.116
-      - 0.088
-      - 0.076
-      - 0.059
-      - 0.041
-      - 0.029
-      - 0.018
-      - 0.012
-      - 0.006
-      - 0.006
-      fcf:
-      - -0.196
-      - -0.145
-      - -0.108
-      - -0.059
-      - -0.016
-      - 0.023
-      - 0.049
-      - 0.069
-      - 0.089
-      - 0.097
-      cash: 0.83
+      nopat: [-0.089, -0.06, -0.033, 0.0, 0.025, 0.052, 0.067, 0.081, 0.095, 0.103]
+      reinvest: [0.169, 0.065, 0.059, 0.053, 0.041, 0.024, 0.018, 0.012, 0.006, 0.006]
+      fcf: [-0.258, -0.125, -0.092, -0.053, -0.016, 0.028, 0.049, 0.069, 0.089, 0.097]
+      cash: 1.48
       net_debt: 0.0
-      raise_total: 1.8
-      dilution_pct: 3
-      final_shares: 588
+      raise_total: 0.974
+      dilution_pct: 4
+      final_shares: 601
       distress: 2.5
-      pv_fcf:
-      - -0.173
-      - -0.114
-      - -0.075
-      - -0.037
-      - -0.009
-      - 0.011
-      - 0.022
-      - 0.027
-      - 0.032
-      - 0.031
-      sum_pv_fcf: -0.28
+      pv_fcf: [-0.228, -0.098, -0.064, -0.033, -0.009, 0.014, 0.022, 0.027, 0.032, 0.031]
+      sum_pv_fcf: -0.31
       terminal_value: 1.17
       pv_terminal: 0.38
-      op_ev: 0.1
-      total_equity: 0.93
-      dcf_per_share: 1.58
+      op_ev: 0.07
+      total_equity: 1.55
+      dcf_per_share: 2.58
     chart_data:
-      raises:
-      - 0.4
-      - 0.5
-      - 0.4
-      - 0.3
-      - 0.2
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      raise_prices:
-      - 120
-      - 120
-      - 120
-      - 120
-      - 120
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
+      raises: [0.474, 0.3, 0.2, 0, 0, 0, 0, 0, 0, 0]
+      raise_prices: [71, 30, 30, 0, 0, 0, 0, 0, 0, 0]
       rev_per_unit:
       - 1.0
       - 1.0
@@ -211,135 +122,48 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.25
-    expected_per_share: 3.7
-    headline: 'Neutron slips; #2 but sub-scale.'
+    expected_per_share: 3.42
+    headline: Neutron slips; Iridium closes at max dilution.
     narrative:
-    - 'Neutron eventually flies but late and at low cadence; RKLB remains a credible #2 launch name and a solid Space Systems
-      supplier, but never escapes SpaceX''s shadow on cost or volume. Revenue compounds to ~$2.85B by FY35 at ~12% operating
-      margin — real, but a fraction of the bull trajectory.'
-    - Modest dilution funds the Neutron ramp. The DCF lands in the low-single-digit dollars per share — the market is pricing
-      a far larger outcome. This is the 'good company, wrong price' world.
+    - 'Neutron flies late and at low cadence; RKLB remains the credible #2 but never escapes SpaceX''s shadow on cost or
+      volume. The Iridium deal still closes mid-2027 — the approvals do not depend on Neutron — but on the worst terms: with
+      the stock below the $67.50 collar floor, Iridium holders receive the maximum 0.40 exchange ratio (~44M new shares)
+      and RKLB carries ~$5B of deal debt.'
+    - Iridium's steady ~$0.45B of annual pre-tax free cash flow services the debt and cushions the downside, but a low-growth
+      constellation bought at ~16x operational EBITDA with depressed stock is mildly value-destructive here. The DCF lands
+      ~$3.30 — the 'good company, wrong price' world, now with leverage.
     probability_rationale: Neutron works but underwhelms on cadence/cost; Space Systems grows steadily without becoming a
-      prime. 12% failure probability — lower than a pre-revenue name given backlog and balance sheet, but Neutron execution
-      risk is real. The 25% weight reflects this as a very plausible 'competent but capped' outcome.
+      prime; the acquisition closes on bear-case terms (maximum collar dilution + ~$5B debt). 12% within-scenario failure
+      probability — the leverage is real but Iridium's recurring EBITDA covers it. The 25% weight reflects this as a very
+      plausible 'competent but capped' outcome.
     dcf_metrics:
-      tam_share: 2.4
+      tam_share: 3.26
       p_fail: 12
       s2c: 1.9
     dcf_path:
-      rev_path:
-      - 0.82
-      - 1.05
-      - 1.3
-      - 1.55
-      - 1.85
-      - 2.1
-      - 2.35
-      - 2.55
-      - 2.7
-      - 2.85
-      op_margin:
-      - -0.07
-      - -0.03
-      - 0.01
-      - 0.04
-      - 0.07
-      - 0.09
-      - 0.105
-      - 0.115
-      - 0.12
-      - 0.125
-      wacc_path:
-      - 0.122
-      - 0.12
-      - 0.118
-      - 0.116
-      - 0.114
-      - 0.112
-      - 0.109
-      - 0.106
-      - 0.104
-      - 0.102
+      rev_path: [0.9, 1.55, 2.25, 2.51, 2.82, 3.08, 3.35, 3.57, 3.74, 3.91]
+      op_margin: [-0.07, 0.124, 0.21, 0.212, 0.216, 0.22, 0.223, 0.225, 0.226, 0.227]
+      wacc_path: [0.122, 0.12, 0.118, 0.116, 0.114, 0.112, 0.109, 0.106, 0.104, 0.102]
       term_g: 0.03
-      nopat:
-      - -0.057
-      - -0.032
-      - 0.013
-      - 0.062
-      - 0.13
-      - 0.189
-      - 0.247
-      - 0.293
-      - 0.324
-      - 0.356
-      reinvest:
-      - 0.115
-      - 0.121
-      - 0.132
-      - 0.132
-      - 0.158
-      - 0.132
-      - 0.132
-      - 0.105
-      - 0.079
-      - 0.079
-      fcf:
-      - -0.172
-      - -0.153
-      - -0.119
-      - -0.07
-      - -0.028
-      - 0.057
-      - 0.115
-      - 0.188
-      - 0.245
-      - 0.277
-      cash: 0.83
-      net_debt: 0.0
-      raise_total: 1.2
-      dilution_pct: 2
-      final_shares: 582
+      nopat: [-0.063, 0.192, 0.472, 0.532, 0.609, 0.678, 0.747, 0.803, 0.845, 0.888]
+      reinvest: [0.157, 0.342, 0.368, 0.137, 0.163, 0.137, 0.142, 0.116, 0.089, 0.089]
+      fcf: [-0.22, -0.15, 0.104, 0.395, 0.446, 0.541, 0.605, 0.687, 0.756, 0.798]
+      cash: 1.48
+      net_debt: 5.0
+      raise_total: 0.474
+      dilution_pct: 9
+      final_shares: 629
       distress: 4.0
-      pv_fcf:
-      - -0.153
-      - -0.122
-      - -0.085
-      - -0.045
-      - -0.016
-      - 0.029
-      - 0.053
-      - 0.079
-      - 0.093
-      - 0.096
-      sum_pv_fcf: -0.07
-      terminal_value: 3.96
-      pv_terminal: 1.37
-      op_ev: 1.3
-      total_equity: 2.13
-      dcf_per_share: 3.66
+      pv_fcf: [-0.196, -0.119, 0.074, 0.252, 0.255, 0.279, 0.281, 0.288, 0.287, 0.275]
+      sum_pv_fcf: 1.68
+      terminal_value: 11.42
+      pv_terminal: 3.94
+      op_ev: 5.62
+      total_equity: 2.1
+      dcf_per_share: 3.34
     chart_data:
-      raises:
-      - 0.3
-      - 0.4
-      - 0.3
-      - 0.2
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      raise_prices:
-      - 140
-      - 140
-      - 140
-      - 140
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
+      raises: [0.474, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      raise_prices: [71, 0, 0, 0, 0, 0, 0, 0, 0, 0]
       rev_per_unit:
       - 1.0
       - 1.0
@@ -356,136 +180,47 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.35
-    expected_per_share: 11.65
-    headline: 'Neutron works; #2 prime; 18% margin.'
+    expected_per_share: 12.02
+    headline: 'Neutron works; #2 prime + bought constellation.'
     narrative:
     - 'The modal path: Neutron certifies and reaches meaningful cadence, RKLB consolidates the clear #2 launch position, and
-      the vertically-integrated Space Systems business scales into a genuine space prime. Revenue compounds ~25% to ~$5.9B
-      by FY35 at an ~18% mature operating margin — aerospace-prime economics, not software.'
-    - Light early dilution; the business self-funds by the late 2020s. DCF ~$12/share. Even this constructive base case sits
-      ~92% below today's $142 — a measure of how much the market is paying for a larger, faster outcome than a successful-but-rational
-      base implies.
+      Space Systems compounds ~25% to ~$5.9B organic revenue by FY35 at an ~18% mature operating margin. Iridium closes mid-2027
+      at roughly today''s collar ratio (~42M new shares) and layers ~$1B of slow-growing, ~50%-margin constellation revenue
+      on top — ~$7.0B combined.'
+    - At ~16x operational EBITDA funded with debt and depressed stock, the purchase is roughly value-neutral in this world
+      — its cash stream about pays for its debt and dilution. DCF ~$12.30. Even this constructive base sits ~83% below today's
+      $71.55 — the market is paying for a far larger outcome than a successful-but-rational base delivers.
     probability_rationale: 'Requires the least faith: Neutron works (not dominates), Space Systems keeps compounding, margins
-      reach an aerospace-prime ~18%. No SpaceX-toppling assumption. 5% failure probability given backlog, cash, and revenue
-      diversification. 35% weight as the central outcome.'
+      reach an aerospace-prime ~18%, and a well-telegraphed merger closes. No SpaceX-toppling assumption. 5% failure probability
+      given $1.48B cash, >$2.2B backlog, and revenue diversification. 35% weight as the central outcome.'
     dcf_metrics:
-      tam_share: 4.9
+      tam_share: 5.8
       p_fail: 5
       s2c: 2.1
     dcf_path:
-      rev_path:
-      - 0.86
-      - 1.2
-      - 1.65
-      - 2.2
-      - 2.85
-      - 3.55
-      - 4.25
-      - 4.9
-      - 5.45
-      - 5.9
-      op_margin:
-      - -0.05
-      - 0.01
-      - 0.05
-      - 0.09
-      - 0.12
-      - 0.145
-      - 0.16
-      - 0.17
-      - 0.175
-      - 0.18
-      wacc_path:
-      - 0.115
-      - 0.113
-      - 0.111
-      - 0.109
-      - 0.107
-      - 0.105
-      - 0.102
-      - 0.099
-      - 0.097
-      - 0.095
+      rev_path: [0.93, 1.7, 2.6, 3.16, 3.82, 4.53, 5.25, 5.92, 6.49, 6.96]
+      op_margin: [-0.05, 0.14, 0.209, 0.212, 0.215, 0.222, 0.225, 0.227, 0.227, 0.229]
+      wacc_path: [0.115, 0.113, 0.111, 0.109, 0.107, 0.105, 0.102, 0.099, 0.097, 0.095]
       term_g: 0.035
-      nopat:
-      - -0.043
-      - 0.012
-      - 0.083
-      - 0.198
-      - 0.342
-      - 0.515
-      - 0.68
-      - 0.833
-      - 0.954
-      - 1.062
-      reinvest:
-      - 0.123
-      - 0.162
-      - 0.214
-      - 0.262
-      - 0.31
-      - 0.333
-      - 0.333
-      - 0.31
-      - 0.262
-      - 0.214
-      fcf:
-      - -0.166
-      - -0.15
-      - -0.131
-      - -0.064
-      - 0.032
-      - 0.182
-      - 0.347
-      - 0.523
-      - 0.692
-      - 0.848
-      cash: 0.83
-      net_debt: 0.0
-      raise_total: 0.75
-      dilution_pct: 1
-      final_shares: 578
+      nopat: [-0.047, 0.238, 0.543, 0.67, 0.821, 1.006, 1.181, 1.344, 1.473, 1.594]
+      reinvest: [0.156, 0.367, 0.429, 0.267, 0.314, 0.338, 0.343, 0.319, 0.271, 0.224]
+      fcf: [-0.203, -0.129, 0.115, 0.403, 0.507, 0.668, 0.838, 1.025, 1.202, 1.37]
+      cash: 1.48
+      net_debt: 5.0
+      raise_total: 0.474
+      dilution_pct: 8
+      final_shares: 627
       distress: 6.0
-      pv_fcf:
-      - -0.149
-      - -0.121
-      - -0.095
-      - -0.042
-      - 0.019
-      - 0.097
-      - 0.168
-      - 0.231
-      - 0.278
-      - 0.312
-      sum_pv_fcf: 0.7
-      terminal_value: 14.63
-      pv_terminal: 5.38
-      op_ev: 6.08
-      total_equity: 6.91
-      dcf_per_share: 11.96
+      pv_fcf: [-0.182, -0.104, 0.083, 0.264, 0.3, 0.357, 0.407, 0.453, 0.484, 0.503]
+      sum_pv_fcf: 2.57
+      terminal_value: 23.63
+      pv_terminal: 8.69
+      op_ev: 11.26
+      total_equity: 7.74
+      dcf_per_share: 12.34
     chart_data:
-      raises:
-      - 0.25
-      - 0.3
-      - 0.2
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      raise_prices:
-      - 155
-      - 155
-      - 155
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
+      raises: [0.474, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      raise_prices: [71, 0, 0, 0, 0, 0, 0, 0, 0, 0]
       rev_per_unit:
       - 1.0
       - 1.0
@@ -501,136 +236,48 @@ scenarios:
   bull:
     label: Bull
     short_label: Bull
-    probability: 0.22
-    expected_per_share: 82.02
-    headline: Neutron scales; owned-constellation second act begins.
+    probability: 0.24
+    expected_per_share: 76.9
+    headline: Neutron scales; constellation act bought, not built.
     narrative:
-    - 'The bull: Neutron''s reusability lands RKLB real medium-lift share, Space Systems becomes a top-tier prime, AND RKLB
-      begins operating its own constellation — recurring, higher-margin data/services revenue layered on launch+systems. Revenue
-      compounds toward ~$16.5B by FY35 at a ~31% blended operating margin.'
-    - Minimal dilution; strong self-funding. DCF ~$82/share — still ~42% below spot, but the owned-constellation second act
-      is now visible in the numbers, not just the story. The launch business is the wedge; the constellation is the business.
-    probability_rationale: 'A chain: Neutron reusability works AND captures share AND Space Systems scales AND an owned constellation
-      begins generating recurring revenue. Each plausible at 50-70%; jointly ~22%. RKLB has the balance sheet, backlog, and
-      vertical integration — but it is conjunctive.'
+    - 'The bull: Neutron''s reusability lands RKLB real medium-lift share, Space Systems becomes a top-tier prime, and the
+      constellation leg — previously the speculative build-your-own story — arrives by purchase: Iridium''s operating network
+      and licensed L-band spectrum, modernized and expanded, make recurring service revenue real from the close. Revenue compounds
+      toward ~$16.5B by FY35 at a ~32% blended margin.'
+    - One conjunctive leg is bought rather than built, conditional only on the close; the offsets are ~$5B of deal debt and
+      ~33M collared shares. DCF ~$79 — barely above today's $71.55. Even the bull is roughly fully priced, which is the entry-price
+      story in one line.
+    probability_rationale: 'A chain: Neutron reusability works AND captures share AND Space Systems scales — with the constellation
+      leg de-risked from ''build one'' to ''integrate the one just bought'' (conditional on close, not on invention). That
+      de-risking is why two points move here from the ultra-bull: 22% to 24%. Still conjunctive on execution.'
     dcf_metrics:
       tam_share: 13.75
       p_fail: 3
       s2c: 2.4
     dcf_path:
-      rev_path:
-      - 0.88
-      - 1.35
-      - 2.05
-      - 3.0
-      - 4.5
-      - 6.5
-      - 9.0
-      - 12.0
-      - 14.5
-      - 16.5
-      op_margin:
-      - -0.03
-      - 0.04
-      - 0.09
-      - 0.13
-      - 0.18
-      - 0.22
-      - 0.26
-      - 0.29
-      - 0.3
-      - 0.31
-      wacc_path:
-      - 0.11
-      - 0.108
-      - 0.106
-      - 0.104
-      - 0.102
-      - 0.1
-      - 0.097
-      - 0.094
-      - 0.092
-      - 0.09
+      rev_path: [0.95, 1.85, 2.97, 3.89, 5.31, 7.18, 9.5, 12.22, 14.64, 16.5]
+      op_margin: [-0.03, 0.152, 0.217, 0.219, 0.238, 0.258, 0.285, 0.308, 0.314, 0.322]
+      wacc_path: [0.11, 0.108, 0.106, 0.104, 0.102, 0.1, 0.097, 0.094, 0.092, 0.09]
       term_g: 0.05
-      nopat:
-      - -0.026
-      - 0.054
-      - 0.184
-      - 0.39
-      - 0.81
-      - 1.43
-      - 2.34
-      - 3.48
-      - 4.35
-      - 5.115
-      reinvest:
-      - 0.116
-      - 0.196
-      - 0.292
-      - 0.396
-      - 0.625
-      - 0.833
-      - 1.042
-      - 1.25
-      - 1.042
-      - 0.833
-      fcf:
-      - -0.142
-      - -0.142
-      - -0.107
-      - -0.006
-      - 0.185
-      - 0.597
-      - 1.298
-      - 2.23
-      - 3.308
-      - 4.282
-      cash: 0.83
-      net_debt: 0.0
-      raise_total: 1.0
-      dilution_pct: 0
-      final_shares: 580
+      nopat: [-0.028, 0.281, 0.644, 0.852, 1.264, 1.852, 2.707, 3.764, 4.597, 5.313]
+      reinvest: [0.145, 0.375, 0.467, 0.383, 0.592, 0.779, 0.967, 1.133, 1.008, 0.775]
+      fcf: [-0.173, -0.094, 0.178, 0.469, 0.672, 1.073, 1.741, 2.63, 3.589, 4.538]
+      cash: 1.48
+      net_debt: 5.0
+      raise_total: 0.474
+      dilution_pct: 7
+      final_shares: 618
       distress: 9.0
-      pv_fcf:
-      - -0.128
-      - -0.115
-      - -0.079
-      - -0.004
-      - 0.112
-      - 0.328
-      - 0.65
-      - 1.021
-      - 1.387
-      - 1.647
-      sum_pv_fcf: 4.82
-      terminal_value: 112.4
-      pv_terminal: 43.23
-      op_ev: 48.05
-      total_equity: 48.88
-      dcf_per_share: 84.28
+      pv_fcf: [-0.156, -0.076, 0.131, 0.312, 0.406, 0.589, 0.872, 1.204, 1.504, 1.745]
+      sum_pv_fcf: 6.53
+      terminal_value: 119.12
+      pv_terminal: 45.81
+      op_ev: 52.34
+      total_equity: 48.82
+      dcf_per_share: 79.0
     chart_data:
-      raises:
-      - 0.2
-      - 0.3
-      - 0.3
-      - 0.2
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      raise_prices:
-      - 180.0
-      - 200.0
-      - 220.0
-      - 240.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
+      raises: [0.474, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      raise_prices: [71, 0, 0, 0, 0, 0, 0, 0, 0, 0]
       rev_per_unit:
       - 1.0
       - 1.0
@@ -646,137 +293,49 @@ scenarios:
   ultra_bull:
     label: Ultra Bull
     short_label: UltBull
-    probability: 0.08
-    expected_per_share: 360.14
-    headline: Starlink-style constellation; smaller-SpaceX by 2035.
+    probability: 0.06
+    expected_per_share: 340.98
+    headline: Next-gen constellation on Iridium spectrum; smaller-SpaceX.
     narrative:
-    - 'The tail (the second act): RKLB originates a Starlink-style owned constellation on top of a vertically-integrated launch+systems
-      prime — recurring data/services revenue at platform margins. Revenue reaches ~$36.5B by FY35 at a ~38% blended margin,
-      with a platform terminal reflecting the originated network-economies Power.'
-    - 'DCF ~$367/share — equity ~$213B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX''s ~23x private mark, most of which
-      is Starlink). The genuine exponential tail, and it finally clears spot (+159%): the value is the constellation, not
-      the rockets.'
-    probability_rationale: 'Tail of tails: every bull condition hits AND RKLB originates an owned constellation at platform
-      scale AND earns a platform terminal as the network-economies Power lands. Individually 50-65%; jointly ~8%. The Starlink
-      analog is the anchor; the constellation lead/lag metrics are the falsifiers.'
+    - 'The re-anchored tail: the originate-a-constellation story is superseded — management bought its second act. Here RKLB
+      integrates Iridium and scales a next-generation data/broadband constellation on the acquired licensed global L-band
+      spectrum and 2.6M-subscriber base, on top of a vertically-integrated launch+systems prime. Revenue reaches ~$36.5B
+      by FY35 at a ~38% blended margin, with a platform terminal gated on the spectrum cornered resource.'
+    - DCF ~$348/share — equity ~$212B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX's ~23x private mark, most of which
+      is Starlink). The exponential tail still clears spot by ~4.9x — but it now requires flawless integration of an $8B
+      leveraged acquisition AND a next-gen build-out, against Starship V3's operational Starlink deployment.
+    probability_rationale: 'Tail of tails, re-anchored: every bull condition hits AND the Iridium platform becomes the springboard
+      for a next-generation constellation at platform scale. The origination gate weakened — management committed ~$8B, a
+      $3.6B bridge, and collared equity to a mature narrowband network just as Starship V3 moved to operational Starlink
+      V3 deployment — so the tail trims from 8% to 6%, with the freed weight moved to the de-risked bull.'
     dcf_metrics:
       tam_share: 30.42
       p_fail: 2
       s2c: 2.5
     dcf_path:
-      rev_path:
-      - 0.92
-      - 1.55
-      - 2.6
-      - 4.1
-      - 6.7
-      - 10.8
-      - 16.8
-      - 24.0
-      - 31.0
-      - 36.5
-      op_margin:
-      - -0.02
-      - 0.06
-      - 0.12
-      - 0.17
-      - 0.22
-      - 0.27
-      - 0.31
-      - 0.34
-      - 0.36
-      - 0.38
-      wacc_path:
-      - 0.105
-      - 0.103
-      - 0.101
-      - 0.099
-      - 0.097
-      - 0.095
-      - 0.092
-      - 0.089
-      - 0.087
-      - 0.085
+      rev_path: [0.97, 2.05, 3.52, 4.99, 7.51, 11.43, 17.2, 24.22, 31.04, 36.5]
+      op_margin: [-0.02, 0.157, 0.219, 0.232, 0.256, 0.29, 0.321, 0.347, 0.365, 0.383]
+      wacc_path: [0.105, 0.103, 0.101, 0.099, 0.097, 0.095, 0.092, 0.089, 0.087, 0.085]
       term_g: 0.06
-      nopat:
-      - -0.018
-      - 0.093
-      - 0.312
-      - 0.697
-      - 1.474
-      - 2.916
-      - 5.208
-      - 8.16
-      - 11.16
-      - 13.87
-      reinvest:
-      - 0.127
-      - 0.252
-      - 0.42
-      - 0.6
-      - 1.04
-      - 1.64
-      - 2.4
-      - 2.88
-      - 2.8
-      - 2.2
-      fcf:
-      - -0.146
-      - -0.159
-      - -0.108
-      - 0.097
-      - 0.434
-      - 1.276
-      - 2.808
-      - 5.28
-      - 8.36
-      - 11.67
-      cash: 0.83
-      net_debt: 0.0
-      raise_total: 1.35
-      dilution_pct: 0
-      final_shares: 580
+      nopat: [-0.019, 0.322, 0.771, 1.158, 1.923, 3.315, 5.521, 8.404, 11.33, 13.979]
+      reinvest: [0.147, 0.432, 0.588, 0.588, 1.008, 1.568, 2.308, 2.808, 2.728, 2.184]
+      fcf: [-0.167, -0.11, 0.183, 0.57, 0.915, 1.747, 3.213, 5.596, 8.602, 11.796]
+      cash: 1.48
+      net_debt: 5.0
+      raise_total: 0.474
+      dilution_pct: 6
+      final_shares: 611
       distress: 12.0
-      pv_fcf:
-      - -0.132
-      - -0.13
-      - -0.08
-      - 0.066
-      - 0.268
-      - 0.72
-      - 1.452
-      - 2.506
-      - 3.651
-      - 4.697
-      sum_pv_fcf: 13.02
-      terminal_value: 494.81
-      pv_terminal: 199.15
-      op_ev: 212.17
-      total_equity: 213.0
-      dcf_per_share: 367.24
+      pv_fcf: [-0.151, -0.09, 0.136, 0.387, 0.566, 0.986, 1.661, 2.656, 3.756, 4.748]
+      sum_pv_fcf: 14.66
+      terminal_value: 500.15
+      pv_terminal: 201.3
+      op_ev: 215.96
+      total_equity: 212.44
+      dcf_per_share: 347.69
     chart_data:
-      raises:
-      - 0.15
-      - 0.3
-      - 0.4
-      - 0.3
-      - 0.2
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      raise_prices:
-      - 210.0
-      - 250.0
-      - 300.0
-      - 350.0
-      - 400.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
-      - 0.0
+      raises: [0.474, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      raise_prices: [71, 0, 0, 0, 0, 0, 0, 0, 0, 0]
       rev_per_unit:
       - 1.0
       - 1.0
@@ -814,24 +373,31 @@ historical_prices:
   - - -0.5
     - 70.0
   - - -0.25
-    - 120.0
-  - - -0.08
-    - 140.0
+    - 125.0
+  - - -0.14
+    - 142.0
+  - - -0.07
+    - 86.0
+  - - -0.06
+    - 100.0
+  - - -0.01
+    - 66.0
 weighting_rationale:
 - label: Ultra Bear 10%
-  body: Neutron fails; dilution; SpaceX runs away.
+  body: Neutron fails; Iridium deal breaks; defensive dilution.
 - label: Bear 25%
-  body: 'Neutron slips; credible #2 but capped.'
+  body: Neutron slips; deal closes at max collar dilution + ~$5B debt.
 - label: Base 35%
-  body: 'Neutron works; #2 + Space Systems prime ~18%.'
-- label: Bull 22%
-  body: Reusable Neutron scales; top-3 + owned constellation begins.
-- label: Ultra Bull 8%
-  body: Starlink-style constellation; ~$213B smaller-SpaceX — clears spot.
+  body: 'Neutron works; #2 prime + a value-neutral bought constellation.'
+- label: Bull 24%
+  body: Reusable Neutron scales; the constellation leg arrives by purchase.
+- label: Ultra Bull 6%
+  body: Next-gen constellation on acquired spectrum; ~$212B smaller-SpaceX.
 appendix:
   pushback:
   - label: Best-capitalized new-space name.
-    body: $0.83B cash + $1.85B backlog + ATM access; far more de-risked than pre-revenue peers.
+    body: $1.48B cash + >$2.2B backlog (Q1'26); ATM complete, $474M equity forward committed — the standalone burn is funded.
+      The $355M 2029 convert and the pending $3.6B deal bridge are the debt to watch.
   - label: Space Systems is the hidden engine.
     body: The majority of revenue is components/satellites, not launch — diversified, growing, and sticky (designed-in).
   - label: Neutron is optionality, not the whole thesis.
@@ -839,15 +405,18 @@ appendix:
   - label: Reusability could reset the cost curve.
     body: If Neutron lands reuse economics, the bull launch-share path opens — the single biggest swing factor.
   - label: Backlog visibility.
-    body: $1.85B backlog (+73% YoY) gives unusual revenue visibility for a 'young' name.
+    body: '>$2.2B backlog at Q1''26 (from $1.85B at FY25) plus a record 36 Q1 launch contracts — unusual revenue visibility
+      for a ''young'' name.'
   triggers:
   - label: Bull validation
-    body: Neutron reaches orbit on schedule (Q4'26)  ·  reuse demonstrated by FY27  ·  Space Systems > $1B annual run-rate
+    body: Iridium close on terms by mid-2027  ·  bridge refinanced at sustainable cost  ·  Neutron orbital debut Q4'26  ·  Q2
+      print Aug 6
   - label: Bear validation
-    body: Neutron slips beyond FY27  ·  gross margin stalls < 35%  ·  Space Systems growth decelerates < 20%
+    body: Deal break, or close at the 0.40 collar floor (max dilution)  ·  pro-forma leverage above ~5x net debt/EBITDA at
+      close  ·  Beck's 10b5-1 completes the remaining ~1.7M shares
   - label: Reframe needed
-    body: If reusable medium-lift cadence approaches Falcon 9 economics, the launch-share ceiling lifts materially — revisit
-      the bull tam_share
+    body: At close the combined company (~$1.8B revenue, ~$400M+ EBITDA, real net debt) reads as a mature operating business
+      — re-underwrite it as one the following quarter
 glossary:
 - term: Electron
   definition: 'RKLB''s small-lift (~300kg) orbital rocket; the established #2 to SpaceX by launch count.'
@@ -857,7 +426,10 @@ glossary:
   definition: 'RKLB''s non-launch segment: satellites, star trackers, solar, separation systems, components — the majority
     of revenue.'
 - term: Backlog
-  definition: Contracted future revenue not yet recognized; RKLB's was $1.85B (+73% YoY) at FY25.
+  definition: Contracted future revenue not yet recognized; RKLB's was >$2.2B at Q1'26 (from $1.85B at FY25).
+- term: Collared stock (Iridium deal)
+  definition: Each Iridium share receives $27 cash plus $27 of RKLB stock within a 0.24-0.40 exchange-ratio collar; below
+    $67.50 the 0.40 floor binds — maximum dilution (~44M new shares).
 - term: Sales-to-capital (s2c)
   definition: 'Damodaran reinvestment efficiency: incremental revenue per dollar of reinvested capital. Higher = more capital-efficient
     growth.'
@@ -872,7 +444,8 @@ competitive:
       note: Electron cadence builds a learning curve; Neutron reusability could reset cost, but it is pre-launch.
     network_economies:
       score: 1
-      note: Owned-constellation/data flywheel — the ultra-bull second act; being originated, not yet established.
+      note: Constellation/data flywheel — now acquire-and-integrate via the pending Iridium deal (mid-2027 close); scores
+        1 until it closes and integrates.
     counter_positioning:
       score: 2
       note: Vertically integrated launch + components + future constellation — few new-space peers can replicate the full
@@ -885,8 +458,8 @@ competitive:
       note: 'The credible #2 launch brand after SpaceX; strong gov/defense trust.'
     cornered_resource:
       score: 2
-      note: Launch sites/licenses, an acquired vertically-integrated component portfolio, Beck-led engineering talent, Neutron
-        IP.
+      note: Launch sites/licenses, component portfolio, Beck-led talent, Neutron IP — plus, pending close, Iridium's licensed
+        global L-band spectrum and 2.6M-subscriber constellation, a textbook cornered resource.
     process_power:
       score: 2
       note: Electron reliability + manufacturing learning curve; a genuine, if narrow, process edge.
@@ -913,39 +486,44 @@ competitive:
     capital: public; funded
   - name: Stoke Space
     kind: private
-    note: Fully reusable from day one; early but ambitious.
+    note: Nova stage-1 proto-qual complete (Jun 2026), end-2026 debut target; fully reusable from day one.
     share_now: 0.0
     share_terminal: 0.05
-    capital: ~$ hundreds M
+    capital: venture-backed; NSSL Lane 1 awardee
   lead_lag:
   - metric: Medium-lift reusable launch
     company: Neutron pre-launch
     best_rival: Falcon 9 + Starship
     verdict: lagging
   - metric: Launch cadence (per yr)
-    company: ~15-20 (Electron)
+    company: ~24-26 pace (Electron, 2026)
     best_rival: '>100 (SpaceX)'
     verdict: lagging
   - metric: Space Systems revenue scale
     company: leading new-space
     best_rival: fragmented
     verdict: leading
-  takeaway: 'Rocket Lab is originating a genuine vertically-integrated space-prime position — the credible #2 to SpaceX —
-    with real Space Systems scale, a $1.85B backlog, and Neutron optionality. But it lags SpaceX by an order of magnitude
-    on launch cadence/reusability, and Neutron is unproven; the window is open as the #2, but SpaceX''s cost-and-scale gravity
-    well is the falsifier the whole bull case must clear.'
+  takeaway: 'Rocket Lab is assembling a vertically-integrated space-prime position — the credible #2 to SpaceX — with record
+    Electron cadence, a >$2.2B backlog, an NSSL Lane 1 seat (ceiling raised $5.6B to $17B; a $266M USAF award), and now a
+    pending purchase of Iridium''s L-band constellation rather than an originated one. But Neutron is unproven (Q4''26 debut
+    holds with slip risk after the July full-duration hot-fire), and Starship V3 has entered operational Starlink deployment
+    — the cost-and-scale gravity well the whole bull case must still clear.'
 pocd:
   people:
     ceo: 'Sir Peter Beck'
     founder_led: true
     tenure_years: 13
-    insider_ownership_pct: 10.0
-    capital_allocation: 'Vertical-integration roll-up (Space Systems): six closed acquisitions — Sinclair,
+    insider_ownership_pct: 9.0
+    capital_allocation: 'Vertical-integration roll-up (Space Systems): six closed tuck-ins — Sinclair,
       ASI, Planetary Systems, SolAero ($80M), Geost ($275M), Mynaric ($155M) — funded partly by a $355M
-      4.25% 2029 convertible (2024). No buyback; share count grows with organic + stock-funded-M&A dilution.'
+      4.25% 2029 convertible (2024). Step-change Jun 2026: the ~$8B Iridium agreement ($27 cash + collared
+      stock, $3.6B bridge) moves to leveraged large-scale M&A. No buyback; share count grows with organic
+      + deal dilution.'
     incentive_alignment: 'Equity-heavy comp (2024 ~$20M, ~97% equity). March 2026: Beck cut salary to $1,
-      waived bonus, and forfeited all unvested RSUs — alignment now rests on his ~10% stake. RSUs time-based
-      (no confirmed TSR/PSU program).'
+      waived bonus, and forfeited all unvested RSUs. July 6-8, 2026: his trust sold 3.28M shares (~$286M)
+      under a 10b5-1 plan adopted 2026-03-27 (up to 5M shares), two trading days after the Iridium
+      announcement — alignment rests on the remaining ~9% stake. RSUs time-based (no confirmed TSR/PSU
+      program).'
     governance_flags:
       - 'SPAC origin (Vector Acquisition, 2021)'
       - 'CEO + Chairman combined (lead independent director)'
@@ -953,20 +531,25 @@ pocd:
       - 'majority-independent board (single insider)'
     key_person_risk: high
     score: 4
-    takeaway: 'Founder-owner-operator (~10%, salary cut to $1 in 2026) with a majority-independent board —
-      strongly aligned; the offsets are acute key-person concentration (Beck is CEO / Chair / de-facto CTO /
-      public face) and steady dilution from stock-funded M&A.'
+    takeaway: 'Founder-owner-operator (~9%, salary cut to $1 in 2026) with a majority-independent board —
+      still strongly aligned; the offsets are acute key-person concentration (Beck is CEO / Chair / de-facto
+      CTO / public face), dilution now stepped up by large-scale M&A, and a 10b5-1 sale program running
+      right behind the Iridium announcement.'
   opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the −63% finding), then position-sized.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -38% finding), then position-sized.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-07-22_16-44"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-07-22_16-44"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 71.55
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

@@ -544,19 +544,6 @@ findings:
     ai_mult: 1.0
     raw_score: 0.0
     weight: 0.0
-  rklb:
-    spot: 71.55
-    weighted_dcf: 52.04
-    upside: -0.2727
-    tier: Med-High
-    conviction_mult: 1.5
-    watchlist: asymmetrical-moonshots
-    category_mult: 1.0
-    ai: 98.13
-    ai_zone: red
-    ai_mult: 0.7
-    raw_score: 0.0
-    weight: 0.0
   oklo:
     spot: 45.21
     weighted_dcf: 31.58
@@ -581,6 +568,19 @@ findings:
     ai: null
     ai_zone: n/a
     ai_mult: 1.0
+    raw_score: 0.0
+    weight: 0.0
+  rklb:
+    spot: 71.55
+    weighted_dcf: 44.23
+    upside: -0.3818
+    tier: Med-High
+    conviction_mult: 1.5
+    watchlist: asymmetrical-moonshots
+    category_mult: 1.0
+    ai: 97.42
+    ai_zone: red
+    ai_mult: 0.7
     raw_score: 0.0
     weight: 0.0
   aapl:
