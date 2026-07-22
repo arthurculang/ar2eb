@@ -2,10 +2,10 @@ ticker: AAPL
 company: Apple
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 294.38
+date: '2026-07-22'
+spot: 325.57
 market:
-  market_cap_billion: 4349.9
+  market_cap_billion: 4810.78
   shares_outstanding_million: 14776.4
   cash_billion: 54.7
   net_debt_billion: 90.7
@@ -643,9 +643,14 @@ pocd:
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -34.5% finding) + position
     sizing.'
 stamp:
-  footer_version: "003"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "004"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "003"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "004"
+  pdf_timestamp: "2026-07-22_15-02"
 
+  prior_versions:
+  - version: "003"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 294.38

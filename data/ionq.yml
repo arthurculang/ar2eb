@@ -2,10 +2,10 @@ ticker: IONQ
 company: IonQ
 exchange: NYSE
 dcf_type: young_company
-date: '2026-07-02'
-spot: 51.4
+date: '2026-07-22'
+spot: 35.43
 market:
-  market_cap_billion: 19.18
+  market_cap_billion: 13.22
   shares_outstanding_million: 373.2
   cash_billion: 2.39
   net_debt_billion: 0.0
@@ -999,13 +999,18 @@ pocd:
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -86.9% finding) + position
     sizing.'
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "006"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "006"
+  pdf_timestamp: "2026-07-22_15-02"
 
 
+  prior_versions:
+  - version: "005"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 51.4
 # ═════════════════════════════════════════════════════════════════════════════
 # Page 4 — Competitive landscape (§6d). Power Origination lens (young_company).
 # ═════════════════════════════════════════════════════════════════════════════

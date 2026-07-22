@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec.md` (the methodology spec, changelog-driven —
-currently at logical **v046**) are the source of truth. The **top of the spec's
+currently at logical **v047**) are the source of truth. The **top of the spec's
 in-file changelog is the version of record** (the filename is stable now — the
 old `__v023`/`__v020` versioned names were retired 2026-07-05).
 
@@ -38,6 +38,9 @@ python scripts/build_site_data.py               # data/*.yml → public/data.js
 node build.js                                    # esbuild → public/assets/bundle/{site,print}.js
 python scripts/render_memo_pdf.py <ticker>       # → out/<ticker>-memo__*.pdf
 python scripts/rebuild_all.py [--strict-layout]  # bump-aware full rebuild → public/memos/
+python scripts/reprice.py [--dry-run|--no-bump]  # book-wide mechanical re-price: Yahoo fetch
+                                                 #   (all-or-nothing) → bump=archive → surgical
+                                                 #   spot/mcap/date → STRICT pipeline → weights → baseline
 ```
 - **After editing `public/memo_pdf.jsx`, run `node build.js` before rendering** —
   the harness loads the pre-compiled bundle, not the raw JSX. (Babel-in-browser
@@ -109,8 +112,9 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 
 > **Read this header first; everything under "Build log" below is dated history (newest first), not live state.**
 
-### Current state (2026-07-05)
-- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Both Routines verified live: *daily perf* commits nightly; *monthly rebuild* = the July re-price (PR #78). Site deploy-gated by CI (validate + data.js-in-sync, PR #81).
+### Current state (2026-07-22)
+- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Routines: *daily perf* commits nightly; *monthly rebuild* opened PR #83 on 07-22 (closed unmerged — superseded: it re-priced the pre-#82 book; the refresh was redone post-merge via `reprice.py`). Site deploy-gated by CI (validate + data.js-in-sync, PR #81).
+- **The cadence now has three layers (spec §15, v047):** daily perf (mechanical) · monthly rebuild (mechanical re-price, PR-gated) · **quarterly re-underwrite (§15.3 — full-book qualitative pressure-test, AUTONOMOUS/self-merging; Routine 3 in `ROUTINES.md`, owner to create in the UI).** `scripts/reprice.py` is the shared mechanical re-price all layers call.
 - **poppler IS installable here** (`apt-get update && apt-get install -y poppler-utils`) — the June "no-poppler → site-only, can't touch the baseline" caveat class is **DEAD**. Every PDF + `visual_baseline.json` was regenerated at the July-1 flip and in each fix wave since; the on-disk set is current. **Ignore the "site-only / poppler caveat" phrasing in the older build-log bullets below.**
 - **Memo/ticker count: derive from `ls data/*.yml`** (currently 56 memos) — the TICKERS lists in validate/rebuild_all/visual_hash derive from it (PR #81); never hardcode a count.
 - Newest waves: **PR #81** (22-defect full-review fix wave), **Wave B** (TXG second-act re-model → −54.5%; NAUT a16z/dilution flags), **Wave C** (site design system + this restructure).

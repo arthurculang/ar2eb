@@ -1,4 +1,4 @@
-# Routines — the two scheduled jobs run from Claude (spec §15, v037)
+# Routines — the three scheduled jobs run from Claude (spec §15, v037/v047)
 
 The §15 cadence runs on **Claude Code Routines** (cloud), not GitHub Actions.
 A Routine is a saved prompt + repo + schedule that Claude runs **unattended on
@@ -7,8 +7,9 @@ restarts. (This replaced `daily-performance.yml` + `monthly-rebuild.yml`, delete
 in v037. The site deploy `pages.yml` stays a plain Action, triggered by the
 Routine's commit.)
 
-> **Status: both Routines created by the owner (2026-06-07).** This file remains
-> the reference config — if you change a routine in the UI, mirror the change here.
+> **Status: Routines 1–2 created by the owner (2026-06-07); Routine 3 (quarterly
+> re-underwrite, v047) awaiting owner creation.** This file remains the reference
+> config — if you change a routine in the UI, mirror the change here.
 
 ## Why Routines (and why this clears your old setup chores)
 
@@ -140,6 +141,81 @@ Monthly ar2eb rebuild (spec §15, conviction-neutral §3.5 B). Open a PR titled
 
 Keep everything observable/fundamentals-only. Leave the PR for review; do not
 self-merge.
+```
+
+---
+
+## Routine 3 — `ar2eb quarterly re-underwrite` *(v047)*
+
+The holistic pass the monthly deliberately is not: a **full qualitative
+re-underwrite** of every public memo — thesis, scenario values and narratives,
+probability weights, competitive landscape (§6d Powers + falsifiers), triggers —
+driven by fresh evidence, not just fresh prices. **Autonomous by design** (owner
+decision, 2026-07-22): it applies its changes and **self-merges**; the PR it
+opens is the audit record, not a gate. The owner intercedes only on a true
+logical or methodological error.
+
+| Field | Value |
+|---|---|
+| **Name** | `ar2eb quarterly re-underwrite` |
+| **Repository** | `arthurculang/ar2eb` |
+| **Model** | Opus (deep agentic research + judgment) |
+| **Schedule** | The 15th of Jan/Apr/Jul/Oct, mid-morning ET. Custom cron: `0 13 15 1,4,7,10 *` (a week ahead of the monthly's 22nd, so the monthly then re-prices the freshly re-underwritten book). |
+| **Env vars** | none |
+
+**Prompt** (paste verbatim):
+
+```
+Quarterly ar2eb re-underwrite (spec §15.3) — the full qualitative pressure-test
+of every public memo. Unlike the monthly rebuild (mechanical re-price only),
+this pass re-underwrites the ANALYSIS: thesis, scenario narratives and values,
+probability weights, competitive landscape (§6d Powers and falsifiers), and
+triggers. It is AUTONOMOUS: apply the changes and self-merge — do not wait for
+human review. Surface only genuine methodology dilemmas, prominently, in the PR
+description.
+
+First read CLAUDE.md and spec/memo-spec.md (§3.5, §6b, §6c, §6d, §15.3). Hard
+rules: conviction-neutral (§3.5 B) — NEVER touch conviction tiers, category
+assignments, or the §12 sizing rule, and no analytical change may rest on
+belief or preference: dated, sourced, observable evidence only. Every changed
+number must be re-modeled through the engines (scripts/_models/ — model_dcf
+for young_company, the mature engine for mature/SOTP) so the validator's
+equity-bridge identities tie to the cent. Never fabricate value to make a
+model work; if evidence is ambiguous, leave the memo unchanged and say why.
+Respect the YAML-safety and page-trim gotchas in CLAUDE.md. The site is
+public-facing: no internal spec jargon in any rendered field.
+
+Per public ticker (every data/*.yml except dcf_type private_prevaluation),
+in batches of ~6 parallel research subagents:
+
+1. TRIAGE — web-research what changed since the memo's date: news, filings,
+   guidance, clinical/regulatory events, competitive moves, capital actions.
+   Verdict per ticker: RE-UNDERWRITE (evidence that a thesis element,
+   scenario, probability, or Power assessment is stale) or CONFIRM (no
+   material qualitative change — record a one-line confirmation with the
+   evidence checked).
+
+2. RE-UNDERWRITE (only where triage says so) — draft the specific yml changes
+   with the evidence for each; ADVERSARIALLY VERIFY before applying (an
+   independent skeptic pass per change: is each cited fact real and datable?
+   is the change methodologically sound — monotonic scenarios, §6c.11.2
+   spread rule, §6c.18 floors, p_fail/dilution honesty? do the numbers tie
+   through the bridge?). Apply only what survives. Re-run
+   scripts/validate.py after each ticker's edits.
+
+3. MECHANICAL REFRESH — after all qualitative edits land, run
+   `python scripts/reprice.py` (installs: pip install playwright pyyaml;
+   npm install; apt-get install -y poppler-utils). It bumps every public
+   memo (the quarterly archive), refreshes spot/market-cap/date from Yahoo,
+   re-renders everything STRICT, re-weights the book, and regenerates the
+   visual baseline — the qualitative edits ride the same bump.
+
+4. SHIP — commit to a feature branch, push, open a PR titled "Quarterly
+   re-underwrite <YYYY-Qn>" whose description lists per ticker: verdict,
+   changes made with their evidence, and finding old → new — then MERGE it
+   (squash). If a ticker's render or validation cannot be fixed after honest
+   attempts, revert that ticker, ship the rest, and list the stragglers in
+   the PR description.
 ```
 
 ---

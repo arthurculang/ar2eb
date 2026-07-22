@@ -33,12 +33,11 @@ ticker: ISRG
 company: Intuitive Surgical
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-02'
-spot: 402.38
-
+date: '2026-07-22'
+spot: 345.74
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 142.8
+  market_cap_billion: 122.70
   shares_outstanding_million: 355
   cash_billion: 9.5               # cash + investments, Q1 2026 10-Q
   net_debt_billion: 0.0           # zero long-term debt; pristine balance sheet
@@ -525,12 +524,17 @@ taxonomy:
   primary_theme: medical-devices
 
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-07-02_15-17"
+  footer_version: "007"
+  footer_timestamp: "2026-07-22_15-02"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "006"
-  pdf_timestamp: "2026-07-02_15-17"
+  pdf_version: "007"
+  pdf_timestamp: "2026-07-22_15-02"
 
+  prior_versions:
+  - version: "006"
+    timestamp: "2026-07-02_15-17"
+    asOfDate: "2026-07-02"
+    spotPrice: 402.38
 glossary:
 - term: da Vinci 5
   definition: ISRG's 5th-gen surgical robot (2024). Force feedback, on-board insufflation, Iris imaging. ~1,500 installed; driving +4% US utilization.
