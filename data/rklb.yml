@@ -57,8 +57,8 @@ page3_chart_config:
   - Other space (cargo, gov, etc.)
 page3:
   subtitle: FY23-FY25 history + FY26-FY35 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q1'26 release
-  sources: 'Sources: RKLB FY2025 results (Feb 2026), Q1''26 release (May 2026), Iridium merger announcement (Jun 2026), company
-    guidance. FCF is NOL-shielded pre-tax over the explicit window (documented simplification). Close scenarios carry Iridium
+  sources: 'Sources: RKLB FY2025 results (Feb 2026), Q1''26 release (May 2026), Iridium merger announcement (Jun 2026), Iridium
+    Q2''26 release (Jul 2026), company guidance. FCF is NOL-shielded pre-tax over the explicit window (documented simplification). Close scenarios carry Iridium
     pro-forma from mid-2027. TAM: launch + space-systems serviceable slice, ~$120B by FY35.'
 scenarios:
   ultra_bear:
@@ -130,8 +130,10 @@ scenarios:
       the stock below the $67.50 collar floor, Iridium holders receive the maximum 0.40 exchange ratio (~44M new shares)
       and RKLB carries ~$5B of deal debt.'
     - Iridium's steady ~$0.45B of annual pre-tax free cash flow services the debt and cushions the downside, but a low-growth
-      constellation bought at ~16x operational EBITDA with depressed stock is mildly value-destructive here. The DCF lands
-      ~$3.30 — the 'good company, wrong price' world, now with leverage.
+      constellation bought at ~16x operational EBITDA with depressed stock is mildly value-destructive here. Its latest standalone
+      print (Q2'26) reads the part — operational EBITDA slightly down YoY ($119.1M vs $121.3M) on +6% subscribers, guidance
+      suspended, plus a $366.7M cash purchase of Aireon (aviation surveillance) closed Jul 2026 inside the deal perimeter.
+      The DCF lands ~$3.30 — the 'good company, wrong price' world, now with leverage.
     probability_rationale: Neutron works but underwhelms on cadence/cost; Space Systems grows steadily without becoming a
       prime; the acquisition closes on bear-case terms (maximum collar dilution + ~$5B debt). 12% within-scenario failure
       probability — the leverage is real but Iridium's recurring EBITDA covers it. The 25% weight reflects this as a very
@@ -303,11 +305,13 @@ scenarios:
       by FY35 at a ~38% blended margin, with a platform terminal gated on the spectrum cornered resource.'
     - DCF ~$348/share — equity ~$212B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX's ~23x private mark, most of which
       is Starlink). The exponential tail still clears spot by ~4.9x — but it now requires flawless integration of an $8B
-      leveraged acquisition AND a next-gen build-out, against Starship V3's operational Starlink deployment.
+      leveraged acquisition AND a next-gen build-out, against a Starship on the cusp of Starlink V3 deployment (first attempt
+      aborted Jul 16, rescheduled to Jul 23-24).
     probability_rationale: 'Tail of tails, re-anchored: every bull condition hits AND the Iridium platform becomes the springboard
       for a next-generation constellation at platform scale. The origination gate weakened — management committed ~$8B, a
-      $3.6B bridge, and collared equity to a mature narrowband network just as Starship V3 moved to operational Starlink
-      V3 deployment — so the tail trims from 8% to 6%, with the freed weight moved to the de-risked bull.'
+      $3.6B bridge, and collared equity to a mature narrowband network just as Starship reached the cusp of Starlink V3
+      deployment (first attempt aborted Jul 16, rescheduled to Jul 23-24) — so the tail trims from 8% to 6%, with the freed
+      weight moved to the de-risked bull.'
     dcf_metrics:
       tam_share: 30.42
       p_fail: 2
@@ -410,7 +414,7 @@ appendix:
   triggers:
   - label: Bull validation
     body: Iridium close on terms by mid-2027  ·  bridge refinanced at sustainable cost  ·  Neutron orbital debut Q4'26  ·  Q2
-      print Aug 6
+      print Mon Aug 10
   - label: Bear validation
     body: Deal break, or close at the 0.40 collar floor (max dilution)  ·  pro-forma leverage above ~5x net debt/EBITDA at
       close  ·  Beck's 10b5-1 completes the remaining ~1.7M shares
@@ -474,7 +478,8 @@ competitive:
     capital: $ tens of B; Starlink cash flow
   - name: ULA / Blue Origin
     kind: incumbent-division
-    note: Vulcan / New Glenn; legacy contracts + Bezos capital.
+    note: Vulcan / New Glenn — an integrated vehicle destroyed in a May 28 hot-fire anomaly, return-to-flight targeted before
+      end-2026; legacy contracts + Bezos capital.
     share_now: 0.0
     share_terminal: 0.12
     capital: Boeing/LM + Bezos
@@ -506,8 +511,9 @@ competitive:
   takeaway: 'Rocket Lab is assembling a vertically-integrated space-prime position — the credible #2 to SpaceX — with record
     Electron cadence, a >$2.2B backlog, an NSSL Lane 1 seat (ceiling raised $5.6B to $17B; a $266M USAF award), and now a
     pending purchase of Iridium''s L-band constellation rather than an originated one. But Neutron is unproven (Q4''26 debut
-    holds with slip risk after the July full-duration hot-fire), and Starship V3 has entered operational Starlink deployment
-    — the cost-and-scale gravity well the whole bull case must still clear.'
+    holds with slip risk after the July full-duration hot-fire), and Starship''s first Starlink V3 deployment attempt (Flight
+    13) aborted Jul 16 and was rescheduled to Jul 23-24 — the cost-and-scale gravity well the bull case must clear is imminent,
+    not yet operational.'
 pocd:
   people:
     ceo: 'Sir Peter Beck'
@@ -539,13 +545,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -38% finding), then position-sized.'
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-07-22_16-44"
+  footer_version: "006"
+  footer_timestamp: "2026-07-24_06-57"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-07-22_16-44"
+  pdf_version: "006"
+  pdf_timestamp: "2026-07-24_06-57"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-07-22_16-44"
+    asOfDate: "2026-07-22"
+    spotPrice: 71.55
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

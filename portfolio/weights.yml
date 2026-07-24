@@ -1,4 +1,4 @@
-as_of: '2026-07-22'
+as_of: '2026-07-24'
 epoch: '2026-07-01'
 rule: 'weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_indicator_mult
   × category_mult, cap 15%/name, cash residual (spec §12 / §15 D1). conviction: High
