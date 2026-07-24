@@ -7,8 +7,8 @@ restarts. (This replaced `daily-performance.yml` + `monthly-rebuild.yml`, delete
 in v037. The site deploy `pages.yml` stays a plain Action, triggered by the
 Routine's commit.)
 
-> **Status: Routines 1–2 created by the owner (2026-06-07); Routine 3 (quarterly
-> re-underwrite, v047) awaiting owner creation.** This file remains the reference
+> **Status: all three Routines created by the owner (1–2 on 2026-06-07; the
+> quarterly re-underwrite on 2026-07-22).** This file remains the reference
 > config — if you change a routine in the UI, mirror the change here.
 
 ## Why Routines (and why this clears your old setup chores)
@@ -160,7 +160,7 @@ logical or methodological error.
 | **Name** | `ar2eb quarterly re-underwrite` |
 | **Repository** | `arthurculang/ar2eb` |
 | **Model** | Opus (deep agentic research + judgment) |
-| **Schedule** | The 15th of Jan/Apr/Jul/Oct, mid-morning ET. Custom cron: `0 13 15 1,4,7,10 *` (a week ahead of the monthly's 22nd, so the monthly then re-prices the freshly re-underwritten book). |
+| **Schedule** | The 15th of Jan/Apr/Jul/Oct (a week ahead of the monthly's 22nd, so the monthly then re-prices the freshly re-underwritten book). **As created (2026-07-22): 1:00 PM PT = `0 20 15 1,4,7,10 *`** — the runbook had proposed 13:00 UTC; the created time stands (date-driven job, hour immaterial). |
 | **Env vars** | none |
 
 **Prompt** (paste verbatim):

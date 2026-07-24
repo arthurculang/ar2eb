@@ -47,7 +47,7 @@ thesis: >
   Jan 2026; commercial launch late 2026, first instrument installs early
   2027, Broadscale (10B-protein mapping) H1 2027. Cash runway through
   2027; dilutive raise likely 2027. Mature peers — Olink (Thermo),
-  SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and
+  SomaScan (Illumina), Quantum-Si, mass spec — anchor terminal margins and
   TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios,
   weighted; show your work.
 
@@ -119,7 +119,7 @@ scenarios:
       one undifferentiated bucket (the convention across the rest of the book).
       20% weight reflects genuine technical / competitive failure risk for a
       pre-revenue single-molecule platform whose Voyager launch already slipped
-      and whose competitors (Olink at Thermo, SomaScan at SBT, mass spec) are
+      and whose competitors (Olink at Thermo, SomaScan at Illumina, mass spec) are
       entrenched. Distinct from the bear (which reaches sub-scale $0.60B but is
       diluted to zero): here the platform fails outright. Within-scenario 52%
       p_fail captures Nautilus-specific bankruptcy / wind-down risk at the extreme.
@@ -170,7 +170,7 @@ scenarios:
         doesn't deliver at commercial scale: Tau Early Access data through
         2026-27 surfaces reproducibility or throughput limitations that cap
         broader adoption. Broadscale (H1 2027) slips or underwhelms. Customers
-        default to affinity platforms (Olink at Thermo, SomaScan at SBT) for
+        default to affinity platforms (Olink at Thermo, SomaScan at Illumina) for
         routine proteomics and to mass spec for high-end research, leaving
         single-molecule proteomics as a research-niche curiosity.
       - >
@@ -192,13 +192,16 @@ scenarios:
       Pre-revenue single-molecule platforms face a stack of risks the public
       market knows well — IPO'd peers show the path is hard (Olink acquired by
       Thermo at a premium; SomaLogic merged into Standard BioTools at a
-      discount; Quantum-Si still pre-revenue). NAUT-specific: Voyager's
+      discount, then acquired by Illumina in Jan 2026 — so both affinity
+      incumbents now carry a giant's global distribution; Quantum-Si still
+      pre-revenue). NAUT-specific: Voyager's
       late-2026 launch already slipped; the Jan 2026 Early Access Program is
       real but narrow (Tau proteoforms first); $143M cash extends the runway
       through 2027, and commercial scale-up requires a 2027 dilutive raise. Bear case
       is structural — tech doesn't scale beyond niche, or proteoform analysis
-      stays a research curiosity rather than a clinical workhorse. 35% weight
-      (vs JOBY's 30%): NAUT is one stage earlier, with a smaller cash buffer
+      stays a research curiosity rather than a clinical workhorse. 15% weight
+      (the deeper-failure 20% now sits in the ultra-bear, so combined downside
+      is 35%): NAUT is one stage earlier than JOBY, with a smaller cash buffer
       and more direct competition. Within-scenario 40% p_fail captures
       Nautilus-specific bankruptcy risk.
 
@@ -281,7 +284,7 @@ scenarios:
       50% weight reflects that this is the modal outcome — most realistic for
       a strong technical team executing on a long timeline, but not requiring
       breakthrough commercial dominance against entrenched affinity-platform
-      competitors (Olink/Thermo, SomaScan/SBT). Base case is well-executed but
+      competitors (Olink/Thermo, SomaScan/Illumina). Base case is well-executed but
       stays a niche player; multiple stays compressed.
 
     dcf_metrics:
@@ -347,7 +350,7 @@ scenarios:
         total equity $4.22B. Cumulative $0.75B raised at $3.50-22/share to
         ~196M shares (36% dilution). DCF $21.53/share. With 8% within-scenario
         p_fail and $1.50 distress: $19.93 expected. Bull case implies today's
-        $2.40 is materially undervaluing the trajectory — but only with
+        $1.71 is materially undervaluing the trajectory — but only with
         meaningful probability weight on dominance.
     probability_rationale: >
       Compound conditional: Voyager establishes single-molecule resolution as
@@ -358,7 +361,7 @@ scenarios:
       (40% conditional) AND the market gives NAUT credit via acquisition or
       re-rating (50%). Joint at 10-15%, reflected at 12%. The bull requires
       conjunctive execution AND a favorable backdrop where affinity platforms
-      (Olink at Thermo, SomaScan at SBT) don't simply absorb the
+      (Olink at Thermo, SomaScan at Illumina) don't simply absorb the
       single-molecule frontier. 12% (vs JOBY's 12%): structurally similar
       compound venture-bet, but a clearer near-term path (launch ~6 months
       out vs JOBY's still-pending Type Certification).
@@ -411,7 +414,12 @@ scenarios:
         both research and diagnostics. By 2030 NAUT operates 5,000+ instruments
         globally. By 2034, an instrument-as-a-service / assay-take-rate model
         emerges with software-economics on a meaningful fraction of revenue —
-        the Mobileye/Illumina platform-take-rate analog.
+        the Mobileye/Illumina platform-take-rate analog. This "multiomics
+        becomes routine" leg is now openly contested: Illumina — which acquired
+        SomaScan in Jan 2026 — is pairing affinity proteomics with its
+        sequencing installed base and DRAGEN software to originate the same
+        platform Power, so the conditional is more likely to occur but less
+        likely to be NAUT-captured (probability held at the 3% tail floor).
       - >
         Compound conditional: Voyager wins the single-molecule race (30%
         conditional on Tau success) AND multiomics becomes routine (40%
@@ -502,10 +510,12 @@ historical_prices:
     - [-0.33, 3.5]
     - [-0.08, 2.5]
 
-# ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
+# ── Page 1 weighting rationale (5 short lines, one per scenario) ────────────
 weighting_rationale:
-  - label: "Bear 35%"
-    body: "Single-molecule unproven at scale; entrenched affinity competition (Olink, SomaScan)."
+  - label: "Ultra Bear 20%"
+    body: "Deepest tail: single-molecule never validates commercially; equity wiped under full dilution."
+  - label: "Bear 15%"
+    body: "Single-molecule stays a research niche; entrenched affinity competition (Olink/Thermo, SomaScan/Illumina)."
   - label: "Base 50%"
     body: "Modal: Voyager launches on schedule, ~1-2% FY36 TAM share, niche-but-real proteomics platform."
   - label: "Bull 12%"
@@ -516,7 +526,7 @@ weighting_rationale:
 # ── Page 3 / Page 4 ticker-specific text ────────────────────────────────────
 page3:
   subtitle: "FY24-FY26 history + FY27-FY36 scenario projections  ·  fiscal years end Dec 31  ·  Q1 2026 10-Q, Voyager press releases, peer market cap data"
-  sources:  "Sources: NAUT 10-K FY25, Q1 2026 10-Q, Voyager Early Access Program press releases (Jan 2026), MarketsandMarkets proteomics market sizing 2030-2035, peer transaction data (Olink/Thermo, SomaLogic/SBT)."
+  sources:  "Sources: NAUT 10-K FY25, Q1 2026 10-Q, Voyager Early Access Program press releases (Jan 2026), MarketsandMarkets proteomics market sizing 2030-2035, peer transaction data (Olink/Thermo, SomaLogic/Illumina)."
 
 # ── Page 4 appendix sections ────────────────────────────────────────────────
 appendix:
@@ -524,7 +534,7 @@ appendix:
     - label: "Best-funded single-molecule platform."
       body: "$143M cash, zero debt, cost discipline (16% headcount cut, Q1 burn $12.8M). Runway through 2027. Peers are less funded relative to need."
     - label: "Early Access is real, not vaporware."
-      body: "Tau proteoforms EAP live since Jan 2026 with academic + biopharma partners. Post-tech-risk (instrument works), pre-commercial-scale."
+      body: "Tau proteoforms EAP live since Jan 2026, now externally validated — Buck Institute field-tested a Voyager; Baylor is first Iterative Mapping EAP customer."
     - label: "First-mover in proteoform single-molecule."
       body: "Quantum-Si is sequencing-focused; affinity platforms (Olink/SomaScan) target a different modality. NAUT leads time-to-market in proteoforms."
     - label: "Tau strategic positioning."
@@ -537,7 +547,7 @@ appendix:
     - label: "Bull validation"
       body: "Pre-orders > $30M by Q1 2027  ·  100+ instruments installed EOY 2027  ·  second pharma/OEM partnership  ·  multi-year take-rate deal disclosed"
     - label: "Reframe needed"
-      body: "If Quantum-Si or a new entrant hits single-molecule resolution at lower cost/higher throughput first — NAUT's first-mover edge erodes; share-of-TAM compresses"
+      body: "Quantum-Si guided Proteus to a commercial launch by end-2026, overlapping NAUT's late-2026 window; a cheaper/faster rival erodes NAUT's edge. QSI: sequencing, not proteoform decode."
 
 # ── Footer stamp + Page-5 glossary (per migration v005 decisions #2/#3/#5) ─
 # ── Taxonomy (Helm v33b) ────────────────────────────────────────────────────
@@ -579,15 +589,19 @@ pocd:
       beyond the 2027 runway.'
   opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +174% finding), then position-sized.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +285% finding at the $1.71 spot), then position-sized.'
 stamp:
-  footer_version: "009"
-  footer_timestamp: "2026-07-22_16-44"
+  footer_version: "010"
+  footer_timestamp: "2026-07-24_06-57"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "009"
-  pdf_timestamp: "2026-07-22_16-44"
+  pdf_version: "010"
+  pdf_timestamp: "2026-07-24_06-57"
 
   prior_versions:
+  - version: "009"
+    timestamp: "2026-07-22_16-44"
+    asOfDate: "2026-07-22"
+    spotPrice: 1.71
   - version: "008"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"
@@ -616,7 +630,7 @@ glossary:
 competitive:
   arena: >
     Broad-scale proteomics — Nautilus's single-molecule protein-analysis platform vs
-    Seer, Olink/Thermo, SomaLogic/Standard BioTools, Quantum-Si; the race to
+    Seer, Olink/Thermo, SomaLogic/Illumina, Quantum-Si; the race to
     high-throughput, deep proteome coverage.
   lens: power_origination
   powers:
@@ -632,14 +646,16 @@ competitive:
   rivals:
     - { name: "Seer", kind: public, note: "Proteograph shipping with revenue; nanoparticle enrichment + MS. Apr-2026 PRECISE-SG100K biobank deployment (Proteograph + Orbitrap Astral MS, 10,000 samples) entrenches incumbent distribution while NAUT is pre-launch; Thermo's ~$3.1B Olink buyout deepens it.", share_now: 0.0, share_terminal: 0.20, capital: "public; cash-funded" }
     - { name: "Olink (Thermo Fisher)", kind: incumbent-division, note: "Established PEA panels (~5k proteins); NGS readout; Thermo distribution.", share_now: 0.0, share_terminal: 0.25, capital: "Thermo balance sheet" }
-    - { name: "SomaLogic / Standard BioTools", kind: public, note: "Aptamer SomaScan (~11k); merged scale.", share_now: 0.0, share_terminal: 0.20, capital: "public; merged" }
-    - { name: "Quantum-Si", kind: public, note: "Semiconductor protein sequencing; also early.", share_now: 0.0, share_terminal: 0.10, capital: "public" }
+    - { name: "SomaScan (Illumina)", kind: incumbent-division, note: "Aptamer SomaScan (~11k proteins); Illumina acquired it from Standard BioTools Jan 2026 (~$425M) and is pairing it with its sequencing/DRAGEN ecosystem for workflow-integrated multiomics.", share_now: 0.0, share_terminal: 0.20, capital: "Illumina balance sheet" }
+    - { name: "Quantum-Si", kind: public, note: "Semiconductor protein sequencing; guided to a Proteus commercial launch by end-2026 (roadshows underway), overlapping NAUT's late-2026 window — but a sequencing modality, not proteoform-affinity decode.", share_now: 0.0, share_terminal: 0.10, capital: "public" }
   lead_lag:
-    - { metric: "Commercial instrument shipping", company: "no (pre-launch)", best_rival: "yes", verdict: lagging }
+    - { metric: "Commercial instrument shipping", company: "no (pre-launch; external field unit validated)", best_rival: "yes", verdict: lagging }
     - { metric: "Demonstrated proteome coverage", company: "limited (dev)", best_rival: "broad (~5-11k)", verdict: lagging }
     - { metric: "Cash runway (yrs at burn)", company: 3, best_rival: 3, verdict: even }
   takeaway: >
     Nautilus is originating a genuinely differentiated single-molecule platform with strong
     IP and a funded balance sheet, but it is pre-commercial and lags shipping rivals on every
     demonstrated metric; the window is open only while the cash lasts and before incumbents
-    close the coverage gap — a launched, validated instrument is the falsifier.
+    close the coverage gap — a launched, validated instrument is the falsifier. A second
+    falsifier now sits above it: Illumina shipping an integrated SomaScan-plus-sequencing
+    multiomics workflow at commercial scale before NAUT originates its take-rate model.

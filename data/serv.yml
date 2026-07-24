@@ -11,7 +11,7 @@ market:
   net_debt_billion: 0.0
   extras:
   - ~$197M liquidity (~$47M cash + securities); ~1.2yr runway; burn ~$41M/qtr
-  - ~2,000 robots deployed across 44 cities but only ~812 daily-active (<half utilized)
+  - ~2,050 robots deployed across 44 cities but only ~812 daily-active (<half utilized)
   - FY26 guide $26M (~9x FY25); heavy dilution (24.8M -> 77.4M shares in 2yr; $150M ATM)
 taxonomy:
   watchlist: asymmetrical-moonshots
@@ -22,11 +22,12 @@ taxonomy:
 central_question: With a fleet of ~2,000 robots already built but fewer than half daily-active, is SERV a cheap option on
   utilization inflecting to profitable unit economics, or a dilutive grind where the modal case loses money?
 thesis: 'Serve Robotics runs autonomous sidewalk delivery robots, spun out of Uber/Postmates and Nvidia-backed. It trades
-  at $7.22 (~$540M cap), down ~23% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter operating burn — a pre-scale
-  company with ~$197M of liquidity and roughly 1.2 years of runway. The build is done: ~2,000 robots sit across 44 cities,
-  but only ~812 are daily-active, so the central question is utilization, not fleet size. Anchor demand from Uber Eats (up-to-2,000-robot
-  deal) and DoorDash exists to fill it. The DCF weighted fair value is $9.33, +29% above spot — but the modal base sits ~63%
-  below the price, so the answer rides the right tail and is paid for with relentless dilution.'
+  at $5.37 (~$414M cap), down ~43% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter burn — a pre-scale company
+  with ~$197M of liquidity and ~1.2 years of runway. The build is done: ~2,050 robots sit across 44 cities, but only ~812
+  are daily-active — the question is utilization, not fleet size. Uber Eats (up-to-2,000-robot deal) and DoorDash demand
+  exists to fill it, though no longer exclusively — Uber Eats now also routes to a rival fleet in Miami. The DCF weighted
+  fair value is $6.77, +26% above spot — but the modal base sits ~62% below the price, so the answer rides the right tail,
+  paid for with relentless dilution.'
 chart_reference:
   tam_billion: 50
   history_years:
@@ -49,7 +50,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 2
   valn_anchor_text: Mature logistics P/S ~1-3x
-  valn_caption: At ~200x sales on a pre-scale fleet, the price is utilization optionality, not fundamentals.
+  valn_caption: At ~150x sales on a pre-scale fleet, the price is utilization optionality, not fundamentals.
   tam_title: $50B last-mile delivery automation — SERV share
   tam_legend:
   - SERV
@@ -65,17 +66,17 @@ scenarios:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.15
-    expected_per_share: 1.08
+    expected_per_share: 1.11
     headline: Utilization stalls; dilutive grind
     narrative:
     - Daily-active robots stay stuck below half the deployed fleet, unit economics never clear the sub-$1/delivery bar, and
       Uber Eats and DoorDash volume fails to fill the built capacity. Revenue reaches only about $0.18B by FY35 at a 6% operating
       margin — sub-scale logistics economics that never earn their cost of capital.
-    - With nothing to fund the burn, the auto-sized raises push the share count from ~77M toward ~227M, nearly tripling the
-      float. The DCF lands at −$1.32; the $1.50 distress floor and residual liquidity drag the expected value to $1.08. The
-      fleet exists, but the equity is diluted toward salvage.
+    - With nothing to fund the burn, the auto-sized raises push the share count from ~77M toward ~276M, more than tripling
+      the float. The DCF lands at −$1.09; the $1.50 distress floor and residual liquidity drag the expected value to $1.11.
+      The fleet exists, but the equity is diluted toward salvage.
     probability_rationale: A 15% read. An 85% p_fail reflects that thin-margin delivery economics at sub-half fleet utilization
-      rarely turn profitable before the cash and a live $150M ATM plus $100M registered-direct are exhausted.
+      rarely turn profitable before the cash and the live $150M ATM are exhausted.
     dcf_metrics:
       tam_share: 0.36
       p_fail: 85
@@ -151,8 +152,8 @@ scenarios:
       cash: 0.197
       net_debt: 0.0
       raise_total: 0.598
-      dilution_pct: 194
-      final_shares: 226.5
+      dilution_pct: 259
+      final_shares: 276.3
       distress: 1.5
       pv_fcf:
       - -0.147
@@ -170,7 +171,7 @@ scenarios:
       pv_terminal: 0.02
       op_ev: -0.5
       total_equity: -0.3
-      dcf_per_share: -1.32
+      dcf_per_share: -1.09
     chart_data:
       raises:
       - 0.0
@@ -185,12 +186,12 @@ scenarios:
       - 0.0
       raise_prices:
       - 0.0
-      - 4.0
-      - 4.0
-      - 4.0
-      - 4.0
-      - 4.0
-      - 4.0
+      - 3.0
+      - 3.0
+      - 3.0
+      - 3.0
+      - 3.0
+      - 3.0
       - 0.0
       - 0.0
       - 0.0
@@ -209,18 +210,20 @@ scenarios:
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.3
-    expected_per_share: 0.65
+    probability: 0.33
+    expected_per_share: 0.68
     headline: Modest scaling; dilution offsets
     narrative:
     - Utilization improves somewhat and a few markets reach reasonable density, but the network never becomes a self-sustaining
       engine. Revenue reaches about $0.42B by FY35 at a 12% operating margin — better than today, yet far short of the scale
       and cost-per-delivery needed to justify a platform valuation.
-    - Continued burn forces heavy raises, lifting shares toward ~154M and offsetting most of the operating progress. The DCF
-      is −$0.39 and the expected value $0.65, both below spot. Real volume growth, but the per-share economics never outrun
+    - Continued burn forces heavy raises, lifting shares toward ~180M and offsetting most of the operating progress. The DCF
+      is −$0.33 and the expected value $0.68, both below spot. Real volume growth, but the per-share economics never outrun
       the dilution.
-    probability_rationale: A 30% read. A 55% p_fail captures partial commercial traction — Uber Eats and DoorDash contracts
-      are signed and FY26 revenue is guided to ~$26M (~9x FY25) — against the risk that scaling stalls short of durable profitability.
+    probability_rationale: A 33% read, raised from 30% in Jul 2026 — the multi-sourced-platform world this scenario describes
+      is now observed, with rival fleets taking platform volume inside Serve's own cities. A 55% p_fail captures partial commercial
+      traction — Uber Eats and DoorDash contracts are signed and FY26 revenue is guided to ~$26M (~9x FY25) — against the
+      risk that scaling stalls short of durable profitability.
     dcf_metrics:
       tam_share: 0.84
       p_fail: 55
@@ -296,8 +299,8 @@ scenarios:
       cash: 0.197
       net_debt: 0.0
       raise_total: 0.464
-      dilution_pct: 100
-      final_shares: 154.3
+      dilution_pct: 134
+      final_shares: 180.1
       distress: 1.5
       pv_fcf:
       - -0.146
@@ -315,7 +318,7 @@ scenarios:
       pv_terminal: 0.17
       op_ev: -0.26
       total_equity: -0.06
-      dcf_per_share: -0.39
+      dcf_per_share: -0.33
     chart_data:
       raises:
       - 0.0
@@ -330,10 +333,10 @@ scenarios:
       - 0.0
       raise_prices:
       - 0.0
-      - 6.0
-      - 6.0
-      - 6.0
-      - 6.0
+      - 4.5
+      - 4.5
+      - 4.5
+      - 4.5
       - 0.0
       - 0.0
       - 0.0
@@ -355,15 +358,15 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.3
-    expected_per_share: 2.24
+    expected_per_share: 2.03
     headline: Utilization inflects; still dilutive
     narrative:
     - Fleet utilization inflects — daily-active robots climb toward the deployed total, Uber Eats and DoorDash demand fills
       the built capacity, and cost-per-delivery falls toward the sub-$1 target so unit economics work. Revenue reaches about
       $0.70B by FY35 at a 15% operating margin as the network earns operating leverage on hardware that is already in the
       ground.
-    - Growth still outpaces internal funding, so the company raises through the decade and shares drift toward ~129M. The
-      DCF is $2.64 and the expected value $2.24 — both well under spot. The modal outcome validates the operating model yet
+    - Growth still outpaces internal funding, so the company raises through the decade and shares drift toward ~146M. The
+      DCF is $2.32 and the expected value $2.03 — both well under spot. The modal outcome validates the operating model yet
       leaves the equity worth roughly a third of today's price, because the dilution caps the per-share value.
     probability_rationale: A 35% p_fail assumes the operating model works within the decade — supported by the demonstrated
       +578% revenue growth and the shift to utilization metrics — but still a coin-flip-plus that profitable unit economics
@@ -443,8 +446,8 @@ scenarios:
       cash: 0.197
       net_debt: 0.0
       raise_total: 0.416
-      dilution_pct: 68
-      final_shares: 129.0
+      dilution_pct: 90
+      final_shares: 146.3
       distress: 1.5
       pv_fcf:
       - -0.146
@@ -462,7 +465,7 @@ scenarios:
       pv_terminal: 0.49
       op_ev: 0.14
       total_equity: 0.34
-      dcf_per_share: 2.64
+      dcf_per_share: 2.32
     chart_data:
       raises:
       - 0.0
@@ -477,10 +480,10 @@ scenarios:
       - 0.0
       raise_prices:
       - 0.0
-      - 8.0
-      - 8.0
-      - 8.0
-      - 8.0
+      - 6.0
+      - 6.0
+      - 6.0
+      - 6.0
       - 0.0
       - 0.0
       - 0.0
@@ -502,15 +505,15 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.17
-    expected_per_share: 15.95
+    expected_per_share: 14.58
     headline: Delivery automation scales regionally
     narrative:
     - Autonomous delivery scales across whole regions — utilization runs high on a much larger fleet, the Magna manufacturing
       and Nvidia compute stack drives hardware cost down, and the Uber Eats and DoorDash channels compound volume. Revenue
       reaches about $1.50B by FY35 at a 20% operating margin as operating leverage on the built network finally shows.
-    - Internal cash funds more of the growth, so dilution eases and shares settle near ~108M. The DCF is $18.50 and the expected
-      value $15.95 — roughly two and a half times spot. This is the first scenario where the value of the network clearly
-      exceeds the price paid plus the dilution to get there.
+    - Internal cash funds more of the growth, so dilution eases and shares settle near ~118M. The DCF is $16.89 and the expected
+      value $14.58 — roughly two and three-quarters times spot. This is the first scenario where the value of the network
+      clearly exceeds the price paid plus the dilution to get there.
     probability_rationale: A 15% p_fail. Requires utilized-fleet unit economics to turn durably profitable and the deployment
       to broaden regionally — anchored to the FY26 utilization and cost-per-delivery targets, which would be the first hard
       evidence the model scales.
@@ -589,8 +592,8 @@ scenarios:
       cash: 0.197
       net_debt: 0.0
       raise_total: 0.373
-      dilution_pct: 40
-      final_shares: 108.1
+      dilution_pct: 54
+      final_shares: 118.4
       distress: 1.5
       pv_fcf:
       - -0.135
@@ -608,7 +611,7 @@ scenarios:
       pv_terminal: 1.92
       op_ev: 1.8
       total_equity: 2.0
-      dcf_per_share: 18.5
+      dcf_per_share: 16.89
     chart_data:
       raises:
       - 0.0
@@ -623,10 +626,10 @@ scenarios:
       - 0.0
       raise_prices:
       - 0.0
-      - 12.0
-      - 12.0
-      - 12.0
-      - 12.0
+      - 9.0
+      - 9.0
+      - 9.0
+      - 9.0
       - 0.0
       - 0.0
       - 0.0
@@ -647,19 +650,20 @@ scenarios:
   ultra_bull:
     label: Ultra Bull
     short_label: UltBull
-    probability: 0.08
-    expected_per_share: 69.83
+    probability: 0.05
+    expected_per_share: 65.84
     headline: DoorDash-scale delivery network
     narrative:
     - Serve becomes a DoorDash-scale autonomous delivery network — on the order of ~7M deliveries per day — the default last-mile
       robotics layer for the food and goods platforms. Revenue reaches about $2.80B by FY35 at a 24% operating margin as network
       density and a first-mover fleet originate genuine scale economies.
-    - Self-funding largely replaces dilution and shares settle near ~94M. The DCF is $75.77 and the expected value $69.83
-      — roughly ten times spot. This tail is where the bulk of the weighted value lives, and it depends on the fleet cornering
+    - Self-funding largely replaces dilution and shares settle near ~100M. The DCF is $71.44 and the expected value $65.84
+      — roughly twelve times spot. This tail is where the bulk of the weighted value lives, and it depends on the fleet cornering
       last-mile delivery before rivals or the platforms' own autonomy close in.
-    probability_rationale: 'An 8% read. The lowest-probability, highest-payoff outcome: an 8% p_fail and a winner-take-most
-      network result, assuming the first-mover fleet plus Uber/DoorDash demand harden into a scale-economies Power that later
-      entrants cannot match.'
+    probability_rationale: A 5% read, trimmed from 8% in Jul 2026. The tail assumes the first-mover fleet plus Uber/DoorDash
+      demand harden into a winner-take-most scale-economies Power later entrants cannot match — a gate that now has dated
+      counter-evidence, with Avride live on Uber Eats inside Serve's Miami market, Coco entering D.C., and DoorDash advancing
+      its in-house Dot robot. An 8% p_fail still governs the scenario's own path.
     dcf_metrics:
       tam_share: 5.6
       p_fail: 8
@@ -735,8 +739,8 @@ scenarios:
       cash: 0.197
       net_debt: 0.0
       raise_total: 0.274
-      dilution_pct: 22
-      final_shares: 94.1
+      dilution_pct: 30
+      final_shares: 99.8
       distress: 1.5
       pv_fcf:
       - -0.124
@@ -754,7 +758,7 @@ scenarios:
       pv_terminal: 6.57
       op_ev: 6.93
       total_equity: 7.13
-      dcf_per_share: 75.77
+      dcf_per_share: 71.44
     chart_data:
       raises:
       - 0.0
@@ -769,9 +773,9 @@ scenarios:
       - 0.0
       raise_prices:
       - 0.0
-      - 16.0
-      - 16.0
-      - 16.0
+      - 12.0
+      - 12.0
+      - 12.0
       - 0.0
       - 0.0
       - 0.0
@@ -813,13 +817,13 @@ historical_prices:
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Utilization never improves; unit economics fail; dilutive grind toward the distress floor.
-- label: Bear 30%
-  body: Modest scaling but stays sub-scale; heavy dilution offsets the operating progress.
+- label: Bear 33%
+  body: Modest scaling, multi-sourced platforms; heavy dilution offsets the operating progress.
 - label: Base 30%
   body: Fleet utilization inflects and unit economics work; ~$0.70B revenue, but dilution caps per-share value below spot.
 - label: Bull 17%
   body: Delivery automation scales regionally; operating leverage on the already-built fleet.
-- label: Ultra Bull 8%
+- label: Ultra Bull 5%
   body: Becomes a DoorDash-scale autonomous delivery network at ~7M deliveries/day.
 appendix:
   pushback:
@@ -833,18 +837,18 @@ appendix:
     body: Revenue grew +578% YoY in Q1'26 and FY26 is guided to ~$26M (~9x FY25); management now reports utilization, not
       fleet size.
   - label: De-rated price, fat right tail
-    body: Down ~23% YTD, the equity is a cheap option — roughly 89% of the expected value sits in the bull and ultra-bull,
+    body: Down ~43% YTD, the equity is a cheap option — roughly 85% of the expected value sits in the bull and ultra-bull,
       priced lightly versus spot.
   - label: A vertically-integrated stack
     body: Magna manufacturing, Nvidia compute, and the Diligent Robotics acquisition build a hardware-and-autonomy stack rivals
       must assemble from scratch.
   triggers:
   - label: Bull validation
-    body: Daily-active robots climb toward the ~2,000 deployed; cost-per-delivery falls through $1; Uber Eats scales toward
-      the 2,000-robot commitment; raises shrink as revenue funds the burn.
+    body: Daily-active robots climb toward the ~2,050 deployed; cost-per-delivery falls through $1 (next checkpoint the Aug-6
+      Q2 print); Uber Eats scales toward the 2,000-robot commitment; raises shrink as revenue funds the burn.
   - label: Bear validation
-    body: Utilization stays stuck below half the fleet; the FY26 ~$26M guide slips; an equity raise on weak terms confirms
-      dilutive stagnation; unit economics stay above $1/delivery.
+    body: Utilization still below half the fleet at the Aug-6 Q2 print; the FY26 ~$26M guide slips; a weak-terms raise (none
+      filed through Jul 2026); a second Serve city shares volume with a rival fleet (Miami first) or Avride tops 1,000 robots.
   - label: Reframe needed
     body: Utilized-fleet unit economics turn durably profitable and self-funding, shifting the story from option-on-fleet
       to cash-flow; or the cash and ATM exhaust before that, breaking the thesis.
@@ -862,8 +866,8 @@ glossary:
   definition: How much new revenue each dollar of reinvested capital produces; it sets how fast revenue can grow before the
     company must raise fresh capital.
 - term: ATM dilution
-  definition: An at-the-market equity program (here a live $150M ATM plus a $100M registered-direct) that funds the burn by
-    selling new shares — the source of the modeled share-count growth.
+  definition: An at-the-market equity program (here a live $150M ATM, May 2026, replacing the terminated Cantor ATM) that
+    funds the burn by selling new shares — the source of the modeled share-count growth.
 - term: p_fail
   definition: The modeled probability the scenario ends in failure (utilization and unit economics never clear), driving the
     equity toward the $1.50 distress floor.
@@ -885,14 +889,16 @@ competitive:
         in parallel.
     switching_costs:
       score: 1
-      note: Multi-year platform deals create some stickiness, but Uber and DoorDash multi-source delivery and can shift volume.
+      note: Multi-year platform deals create some stickiness, but the platforms demonstrably multi-source — Uber Eats now
+        routes orders to Avride's rival fleet inside Serve's Miami market (Jul 2026).
     branding:
       score: 0
       note: No consumer brand power; the order rides on Uber Eats or DoorDash, not the Serve name.
     cornered_resource:
       score: 2
-      note: The Magna exclusive-manufacturing and Nvidia compute stack plus the contracted Uber/DoorDash demand are the strongest
-        candidate, but each is contractual, not owned.
+      note: The Magna exclusive-manufacturing and Nvidia compute stack is the strongest candidate — contractual, not owned.
+        The contracted Uber/DoorDash demand no longer counts as cornered — Avride acquired the same Uber Eats access inside
+        a Serve city (Jul 2026).
     process_power:
       score: 1
       note: An integrated build-and-operate workflow is distinctive but not yet shown to deliver profitably at scale.
@@ -917,16 +923,23 @@ competitive:
     share_now: 0.0
     share_terminal: 0.0
     capital: Private (heavily funded)
-  - name: Avride / Amazon logistics
-    kind: incumbent-division
-    note: Platform and retail-scale autonomy efforts with vast balance sheets
+  - name: Avride
+    kind: private
+    note: Uber Eats robot-delivery partner since late 2024 — 5 US markets, ~500 robots, >600k deliveries; live in Serve's
+      Miami market since Jul 2026
     share_now: 0.0
     share_terminal: 0.0
-    capital: Corporate balance sheets
+    capital: Nebius Group-backed
+  - name: Amazon logistics
+    kind: incumbent-division
+    note: Retail-scale autonomy effort with a vast balance sheet
+    share_now: 0.0
+    share_terminal: 0.0
+    capital: Amazon balance sheet
   lead_lag:
   - metric: Robots deployed in commercial service
-    company: ~2,000 across 44 cities
-    best_rival: Smaller commercial fleets (Coco/Nuro)
+    company: ~2,050 across 44 cities
+    best_rival: Avride ~500 on Uber Eats, 5 US markets
     verdict: leading
   - metric: Profitable utilized-fleet unit economics
     company: Unproven; targeting sub-$1/delivery
@@ -938,10 +951,11 @@ competitive:
     verdict: lagging
   takeaway: SERV is trying to originate a scale-economies plus cornered-resource Power — a first-mover commercial fleet, contracted
     Uber and DoorDash demand, and an exclusive Magna/Nvidia build stack — but no durable Power exists yet, because under half
-    the fleet is utilized and unit economics at scale are unproven. The demand and the stack are contractual, not owned, and
-    the platforms are funding their own autonomy, so the moat is contestable. The falsifier the bull must clear is utilized-fleet
-    unit economics turning durably profitable — sub-$1/delivery on a high-utilization fleet — before dilution exhausts holders.
-    Until that prints, the fleet is a built option, not a won Power, and the window stays open.
+    the fleet is utilized and unit economics at scale are unproven. The demand channel is demonstrably shared — Uber Eats
+    routes to a rival fleet inside Serve's Miami market (Jul 2026) — so the contested moat is observed fact, not risk, and
+    the platforms fund their own autonomy besides. The falsifier the bull must clear is utilized-fleet unit economics turning
+    durably profitable — sub-$1/delivery on a high-utilization fleet — before dilution exhausts holders. Until that prints,
+    the fleet is a built option, not a won Power, and the window stays open.
 pocd:
   people:
     ceo: 'Ali Kashani'
@@ -954,22 +968,26 @@ pocd:
       - 'single class of common stock, one vote per share (no dual-class / super-voting) - a structural positive'
       - 'but a COMBINED Chair/CEO (Kashani) and a classified/staggered board (3 classes) concentrate leadership'
       - 'majority-independent board: only the two insiders (Kashani CEO, Parang President/COO) are non-independent'
-      - 'related-party / commercial concentration: Uber (largest customer via an Uber Eats 2,000-robot deal, and a former >5% holder via Postmates, now ~3.4%), Magna (exclusive contract manufacturer), Nvidia (former supplier + ~10% holder, fully exited end-2024)'
+      - 'related-party / commercial concentration: Uber (largest customer via an Uber Eats 2,000-robot deal, and a former >5% holder via Postmates, now ~3.4%; its autonomy head Maredia resigned from the board eff. Jun 17, 2026 — 8-K states no disagreement — replaced Jun 22 by independent director Andreas Lieber, so no sitting Uber executive remains), Magna (exclusive contract manufacturer), Nvidia (former supplier + ~10% holder, fully exited end-2024)'
       - 'going-concern doubt was flagged in the FY2023 10-K; cash is larger now (~12-month runway stated) but the FY2025 audit-opinion status was not independently confirmed'
     key_person_risk: high
     score: 3
     takeaway: 'A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model.'
   opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +29.2% finding), then position-sized.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +26.1% finding), then position-sized.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-07-24_09-15"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-07-24_09-15"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 5.37
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

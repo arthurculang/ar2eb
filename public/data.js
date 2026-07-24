@@ -13,9 +13,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "joby-memo__v034__2026-07-22_16-44.pdf",
-      "size": "399 KB",
+      "file": "joby-memo__v035__2026-07-24_06-57.pdf",
+      "size": "401 KB",
       "priorVersions": [
+        {
+          "version": "034",
+          "file": "joby-memo__v034__2026-07-22_16-44.pdf",
+          "size": "399 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 7.67
+        },
         {
           "version": "033",
           "file": "joby-memo__v033__2026-07-22_15-02.pdf",
@@ -1137,7 +1144,7 @@ const MEMOS = [
           },
           "corneredResource": {
             "score": 2,
-            "note": "Toyota joint venture (Jun 2026) formalizes exclusive S4 manufacturing — deeper barrier, 51% control ceded; Delta tie-up; Virgin Atlantic exclusive UK partnership (Jul 2026); FAA cert lead; powertrain IP."
+            "note": "Toyota joint venture (Jun 2026) formalizes exclusive S4 manufacturing — deeper barrier, 51% control ceded; Delta tie-up; Virgin Atlantic exclusive UK partnership (Jul 2026); FAA cert lead; powertrain IP — contested by Archer's ITC complaint (allegation, not adjudication; Joby's parallel trade-secret suit survived while Archer's entire countersuit was dismissed, Jun 2026)."
           },
           "processPower": {
             "score": 1,
@@ -1150,7 +1157,7 @@ const MEMOS = [
           {
             "name": "Archer Aviation",
             "kind": "public",
-            "note": "United + Stellantis + US Army; behind on FAA track; first UAE RTC (May 2026) — limited Abu Dhabi ops possible in 2026.",
+            "note": "United + Stellantis + US Army; behind on FAA track; first UAE RTC (May 2026) — limited Abu Dhabi ops possible in 2026; filed ITC Section 337 complaint alleging Joby's imported power-system components infringe five Archer patents (instituted Apr 2026; final determination ~Sept 2027).",
             "shareNow": 0.0,
             "shareTerminal": 0.2,
             "capital": "well-funded; Stellantis"
@@ -1158,7 +1165,7 @@ const MEMOS = [
           {
             "name": "Beta Technologies",
             "kind": "public",
-            "note": "Cargo/eCTOL first; first eIPP operational flights Jul 2026 (organs, with United Therapeutics); building a charging network.",
+            "note": "Cargo/eCTOL first; selected in 7 of the 8 eIPP launch projects (Mar 2026) — most of any developer, including Joby; first eIPP operational flights Jul 2026 (organs, with United Therapeutics); building a charging network.",
             "shareNow": 0.0,
             "shareTerminal": 0.12,
             "capital": "~$1B post-IPO"
@@ -1184,7 +1191,7 @@ const MEMOS = [
           {
             "metric": "FAA type certification stage",
             "company": "Stage 5 (TIA) since Mar 2026; for-credit flying pending",
-            "bestRival": "Archer: 100% MoC accepted Mar 2026; behind on FAA track",
+            "bestRival": "Archer: 100% MoC accepted Jan 2026; behind on FAA track",
             "verdict": "leading"
           },
           {
@@ -1208,7 +1215,7 @@ const MEMOS = [
           "founderLed": true,
           "tenureYears": 17,
           "insiderOwnershipPct": 9.4,
-          "capitalAllocation": "Founder JoeBen Bevirt has been CEO since founding Joby in 2009. Pre-revenue eVTOL developer: ~$2.5B cash at Q1 2026 against a ~$160M/quarter burn, funded by equity, convertible and ATM issuance (~$1.3B raised in Q1 2026) plus Toyota’s ~$894M of cumulative strategic investment — the second $250M tranche of Toyota’s Oct 2024 $500M commitment is not yet closed, expected before year-end 2026. In June 2026 manufacturing moved into a Toyota-majority joint venture (Toyota 51% / Joby 49%) holding exclusive S4-series production rights. FAA type certification is in Stage 5 (TIA), with conforming-aircraft flight testing underway and a type certificate targeted for late 2026. No dividend or buyback (cash is preserved for certification and launch).",
+          "capitalAllocation": "Founder JoeBen Bevirt has been CEO since founding Joby in 2009. Pre-revenue eVTOL developer: ~$2.5B cash at Q1 2026 against a ~$160M/quarter burn, funded by equity, convertible and ATM issuance (~$1.3B raised in Q1 2026) plus Toyota’s ~$894M of cumulative strategic investment — the second $250M tranche of Toyota’s Oct 2024 $500M commitment is not yet closed, expected Q4 2026, conditioned on final approval of a JV manufacturing supply agreement. In June 2026 manufacturing moved into a Toyota-majority joint venture (Toyota 51% / Joby 49%) holding exclusive S4-series production rights. FAA type certification is in Stage 5 (TIA); a type certificate is targeted for late 2026. No dividend or buyback (cash is preserved for certification and launch).",
           "incentiveAlignment": "Bevirt’s FY2025 compensation was ~$3.7M with no cash bonus (a cash-preservation policy pays short-term incentives in RSUs), under a 5x-salary ownership guideline and strict anti-hedging/anti-pledging rules. He is aligned via a ~9-12% economic stake (co-founder Paul Sciarra holds another ~5.7%). Insider activity is programmatic 10b5-1 selling, no open-market buying; the company also leases office space from Bevirt-owned entities (~$0.6M/year).",
           "governanceFlags": [
             "single class of common stock, one vote per share — no super-voting; the founder’s influence tracks his ~9-12% economic stake (notably cleaner than dual-class eVTOL peer Archer)",
@@ -1238,7 +1245,7 @@ const MEMOS = [
           },
           {
             "label": "Partnership stack is unique.",
-            "body": "Toyota ($894M, mfg), Delta ($200M, US distribution), Dubai RTA (exclusive 2032). No other eVTOL has this stack."
+            "body": "Toyota ($894M, mfg), Delta ($200M, US), Dubai RTA (to 2032). No other eVTOL has this stack; Delta warned (May 2026) the ITC case could threaten it."
           },
           {
             "label": "Operator + mfg = wider moat.",
@@ -1252,11 +1259,11 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "Type Cert slips to 2027+ · Cash < $1.5B by EOY 2026 · Toyota's second $250M tranche fails to close by YE 2026 · Dubai passenger volume disappoints (< 50K rides FY27)"
+            "body": "Type Cert slips to 2027+ · Cash < $1.5B by EOY 2026 · Toyota's 2nd $250M tranche not closed by YE 2026 · Dubai volume < 50K rides FY27 · Archer ITC case: adverse ALJ ruling May 2027, or exclusion order ~Sept 2027"
           },
           {
             "label": "Bull validation",
-            "body": "Type Cert achieved by Q3 2026 · Dayton facility hits 4 aircraft/month · Second Dubai-style market-exclusive operating award (an exclusive airline partnership, e.g. Virgin Atlantic Jul 2026, is adjacent — not this)"
+            "body": "Type Cert achieved by Q3 2026 · Dayton facility hits 4 aircraft/month · Second Dubai-style market-exclusive operating award (airline exclusives, e.g. Virgin Atlantic Jul 2026, are adjacent — not this)"
           },
           {
             "label": "Reframe needed",
@@ -1283,7 +1290,7 @@ const MEMOS = [
         },
         {
           "term": "Toyota partnership",
-          "definition": "~$894M invested; second $250M tranche of a $500M commitment expected by YE 2026. June 2026 joint venture (Toyota 51%) holds exclusive S4 manufacturing rights at Dayton, Ohio."
+          "definition": "~$894M invested; second $250M tranche expected Q4 2026, pending a final JV supply agreement. June 2026 joint venture (Toyota 51%) holds exclusive S4 manufacturing rights at Dayton, Ohio."
         },
         {
           "term": "Blade",
@@ -1291,8 +1298,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "034",
-        "footerTimestamp": "2026-07-22_16-44",
+        "footerVersion": "035",
+        "footerTimestamp": "2026-07-24_06-57",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -4394,9 +4401,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "naut-memo__v009__2026-07-22_16-44.pdf",
-      "size": "385 KB",
+      "file": "naut-memo__v010__2026-07-24_06-57.pdf",
+      "size": "388 KB",
       "priorVersions": [
+        {
+          "version": "009",
+          "file": "naut-memo__v009__2026-07-22_16-44.pdf",
+          "size": "385 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 1.71
+        },
         {
           "version": "008",
           "file": "naut-memo__v008__2026-07-22_15-02.pdf",
@@ -4472,7 +4486,7 @@ const MEMOS = [
         "prob": 20,
         "price": 0.0,
         "headline": "Platform fails to validate; deepest wipeout.",
-        "why": "The deepest-failure tail, separated from the bear so the downside is not one undifferentiated bucket (the convention across the rest of the book). 20% weight reflects genuine technical / competitive failure risk for a pre-revenue single-molecule platform whose Voyager launch already slipped and whose competitors (Olink at Thermo, SomaScan at SBT, mass spec) are entrenched. Distinct from the bear (which reaches sub-scale $0.60B but is diluted to zero): here the platform fails outright. Within-scenario 52% p_fail captures Nautilus-specific bankruptcy / wind-down risk at the extreme.",
+        "why": "The deepest-failure tail, separated from the bear so the downside is not one undifferentiated bucket (the convention across the rest of the book). 20% weight reflects genuine technical / competitive failure risk for a pre-revenue single-molecule platform whose Voyager launch already slipped and whose competitors (Olink at Thermo, SomaScan at Illumina, mass spec) are entrenched. Distinct from the bear (which reaches sub-scale $0.60B but is diluted to zero): here the platform fails outright. Within-scenario 52% p_fail captures Nautilus-specific bankruptcy / wind-down risk at the extreme.",
         "what": [
           "The catastrophic tail: Voyager's single-molecule chemistry fails to validate at commercial scale at all. Tau Early Access (2026-27) surfaces disqualifying reproducibility or throughput limits, Broadscale never ships at spec, and customers reject the platform outright for Olink / SomaScan affinity assays and mass spec. Revenue stalls near zero — about $0.30B by FY36, under 0.25% of the $130B proteomics TAM.",
           "NAUT still raises the ~$1.1B of dilutive capital trying to reach commercial scale (126M to ~1.78B shares, 93% dilution), but the money is spent against a platform that never gains traction — the worst combination of full dilution and a failed product. Operating EV is deeply negative with no self-sustaining FCF base, so the terminal carries negative going-concern value rather than the bear's floored-at-zero."
@@ -4484,9 +4498,9 @@ const MEMOS = [
         "prob": 15,
         "price": 0.0,
         "headline": "Capital exhausts; equity wiped.",
-        "why": "Pre-revenue single-molecule platforms face a stack of risks the public market knows well — IPO'd peers show the path is hard (Olink acquired by Thermo at a premium; SomaLogic merged into Standard BioTools at a discount; Quantum-Si still pre-revenue). NAUT-specific: Voyager's late-2026 launch already slipped; the Jan 2026 Early Access Program is real but narrow (Tau proteoforms first); $143M cash extends the runway through 2027, and commercial scale-up requires a 2027 dilutive raise. Bear case is structural — tech doesn't scale beyond niche, or proteoform analysis stays a research curiosity rather than a clinical workhorse. 35% weight (vs JOBY's 30%): NAUT is one stage earlier, with a smaller cash buffer and more direct competition. Within-scenario 40% p_fail captures Nautilus-specific bankruptcy risk.",
+        "why": "Pre-revenue single-molecule platforms face a stack of risks the public market knows well — IPO'd peers show the path is hard (Olink acquired by Thermo at a premium; SomaLogic merged into Standard BioTools at a discount, then acquired by Illumina in Jan 2026 — so both affinity incumbents now carry a giant's global distribution; Quantum-Si still pre-revenue). NAUT-specific: Voyager's late-2026 launch already slipped; the Jan 2026 Early Access Program is real but narrow (Tau proteoforms first); $143M cash extends the runway through 2027, and commercial scale-up requires a 2027 dilutive raise. Bear case is structural — tech doesn't scale beyond niche, or proteoform analysis stays a research curiosity rather than a clinical workhorse. 15% weight (the deeper-failure 20% now sits in the ultra-bear, so combined downside is 35%): NAUT is one stage earlier than JOBY, with a smaller cash buffer and more direct competition. Within-scenario 40% p_fail captures Nautilus-specific bankruptcy risk.",
         "what": [
-          "The pessimistic case is structural. Voyager's single-molecule resolution doesn't deliver at commercial scale: Tau Early Access data through 2026-27 surfaces reproducibility or throughput limitations that cap broader adoption. Broadscale (H1 2027) slips or underwhelms. Customers default to affinity platforms (Olink at Thermo, SomaScan at SBT) for routine proteomics and to mass spec for high-end research, leaving single-molecule proteomics as a research-niche curiosity.",
+          "The pessimistic case is structural. Voyager's single-molecule resolution doesn't deliver at commercial scale: Tau Early Access data through 2026-27 surfaces reproducibility or throughput limitations that cap broader adoption. Broadscale (H1 2027) slips or underwhelms. Customers default to affinity platforms (Olink at Thermo, SomaScan at Illumina) for routine proteomics and to mass spec for high-end research, leaving single-molecule proteomics as a research-niche curiosity.",
           "To maintain solvency through commercial launch, NAUT raises ~$1.1B cumulatively at $0.40-2.00/share — successive dilutive rounds at falling prices as the equity story deteriorates. Share count balloons from 126M to ~1.78B (93% dilution). By FY36 NAUT reaches just 0.5% of the $130B proteomics TAM — $600M revenue at 8% margin, profitable but tiny relative to the diluted share count."
         ]
       },
@@ -4496,7 +4510,7 @@ const MEMOS = [
         "prob": 50,
         "price": 2.04,
         "headline": "Niche-but-real proteomics player.",
-        "why": "Modal outcome. Voyager launches on or near schedule (late 2026 pre-orders, early 2027 installations); proteoform assay portfolio expands to 5-10 assays by 2030; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% share of the $130B FY36 proteomics TAM — meaningful but not dominant. Mature operating margin ~15-18% — between commodity tools (~10%) and high-margin specialty diagnostics (~25%). Dilution from ~$1.08B of 2027-2029 raises at $3-14/share lands at ~57% total. The 50% weight reflects that this is the modal outcome — most realistic for a strong technical team executing on a long timeline, but not requiring breakthrough commercial dominance against entrenched affinity-platform competitors (Olink/Thermo, SomaScan/SBT). Base case is well-executed but stays a niche player; multiple stays compressed.",
+        "why": "Modal outcome. Voyager launches on or near schedule (late 2026 pre-orders, early 2027 installations); proteoform assay portfolio expands to 5-10 assays by 2030; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% share of the $130B FY36 proteomics TAM — meaningful but not dominant. Mature operating margin ~15-18% — between commodity tools (~10%) and high-margin specialty diagnostics (~25%). Dilution from ~$1.08B of 2027-2029 raises at $3-14/share lands at ~57% total. The 50% weight reflects that this is the modal outcome — most realistic for a strong technical team executing on a long timeline, but not requiring breakthrough commercial dominance against entrenched affinity-platform competitors (Olink/Thermo, SomaScan/Illumina). Base case is well-executed but stays a niche player; multiple stays compressed.",
         "what": [
           "The middle path. Voyager launches on or near the late-2026 schedule; pre-orders convert to $5-15M of revenue in 2027 from early adopters (academic + select biopharma). The Tau proteoforms assay drives Alzheimer's research adoption — a credible biomarker hook into a large neuroscience research market. A second proteoform assay extends utility. Broadscale (H1 2027) opens the addressable market beyond niche use cases without yet displacing affinity platforms for routine work.",
           "Through 2028-2030, the installed base grows from ~100 instruments to ~500. Average revenue per instrument settles at $250-400K/yr (instrument + consumables + assay subscriptions). NAUT raises ~$1.08B cumulatively at $3-14/share to fund commercial scale-up, lifting share count to ~293M (57% dilution). Operating margin crosses zero by 2030 and scales toward 16% by 2036 — between commodity tools and specialty diagnostics."
@@ -4508,7 +4522,7 @@ const MEMOS = [
         "prob": 12,
         "price": 19.93,
         "headline": "Single-molecule wins proteoforms.",
-        "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands to 10-15+ proteoforms by 2030 (60% conditional) AND mature margins reach 20-25% (40% conditional) AND the market gives NAUT credit via acquisition or re-rating (50%). Joint at 10-15%, reflected at 12%. The bull requires conjunctive execution AND a favorable backdrop where affinity platforms (Olink at Thermo, SomaScan at SBT) don't simply absorb the single-molecule frontier. 12% (vs JOBY's 12%): structurally similar compound venture-bet, but a clearer near-term path (launch ~6 months out vs JOBY's still-pending Type Certification).",
+        "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands to 10-15+ proteoforms by 2030 (60% conditional) AND mature margins reach 20-25% (40% conditional) AND the market gives NAUT credit via acquisition or re-rating (50%). Joint at 10-15%, reflected at 12%. The bull requires conjunctive execution AND a favorable backdrop where affinity platforms (Olink at Thermo, SomaScan at Illumina) don't simply absorb the single-molecule frontier. 12% (vs JOBY's 12%): structurally similar compound venture-bet, but a clearer near-term path (launch ~6 months out vs JOBY's still-pending Type Certification).",
         "what": [
           "The bull case is that single-molecule resolution becomes the new gold standard for proteoform analysis. Tau success — FDA biomarker validation, mainstream adoption in Alzheimer's drug development — catalyzes broader category acceptance. Broadscale (H1 2027) delivers on the 10B-protein-mapping promise; customers adopt Voyager as the routine high-resolution workhorse alongside (not replacing) Olink and SomaScan.",
           "By 2030, NAUT operates 2,000+ instruments globally at $300-500K/yr each (instrument + reagents + assay subscriptions). Assay catalog expands from 2 to 15+ proteoform assays. Pharma partnerships drive multi-year recurring revenue. Operating margin reaches 22% by FY36 as software/assay mix shifts to higher-margin recurring revenue. NAUT becomes an obvious acquisition target for Thermo / Danaher / Bruker at premium multiples — or remains independent at platform-tools scale."
@@ -4522,13 +4536,13 @@ const MEMOS = [
         "headline": "Dominant + multiomics + take-rate.",
         "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 4%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
         "what": [
-          "The ultra-bull case requires Voyager to become the dominant single-molecule proteomics platform AND for multiomics integration (proteomics + sequencing + cell biology) to emerge as the standard for both research and diagnostics. By 2030 NAUT operates 5,000+ instruments globally. By 2034, an instrument-as-a-service / assay-take-rate model emerges with software-economics on a meaningful fraction of revenue — the Mobileye/Illumina platform-take-rate analog.",
+          "The ultra-bull case requires Voyager to become the dominant single-molecule proteomics platform AND for multiomics integration (proteomics + sequencing + cell biology) to emerge as the standard for both research and diagnostics. By 2030 NAUT operates 5,000+ instruments globally. By 2034, an instrument-as-a-service / assay-take-rate model emerges with software-economics on a meaningful fraction of revenue — the Mobileye/Illumina platform-take-rate analog. This \"multiomics becomes routine\" leg is now openly contested: Illumina — which acquired SomaScan in Jan 2026 — is pairing affinity proteomics with its sequencing installed base and DRAGEN software to originate the same platform Power, so the conditional is more likely to occur but less likely to be NAUT-captured (probability held at the 3% tail floor).",
           "Compound conditional: Voyager wins the single-molecule race (30% conditional on Tau success) AND multiomics becomes routine (40% conditional on platform success) AND NAUT captures dominant share at 4%+ of $130B TAM (25% conditional on both) AND multiple expansion from tools to platform (50% conditional on all above). Joint at 1.5-3%. Reflected here at 3%."
         ]
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 15 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: July 22, 2026 close.",
-    "thesis": "NAUT trades at $1.71 (~$215M mkt cap, ~66% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash runway through 2027; dilutive raise likely 2027. Mature peers — Olink (Thermo), SomaScan (SBT), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios, weighted; show your work.",
+    "thesis": "NAUT trades at $1.71 (~$215M mkt cap, ~66% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash runway through 2027; dilutive raise likely 2027. Mature peers — Olink (Thermo), SomaScan (Illumina), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
       "ipoMarker": "IPO Jun '21",
@@ -4621,8 +4635,12 @@ const MEMOS = [
     },
     "weightingRationale": [
       {
-        "label": "Bear 35%",
-        "body": "Single-molecule unproven at scale; entrenched affinity competition (Olink, SomaScan)."
+        "label": "Ultra Bear 20%",
+        "body": "Deepest tail: single-molecule never validates commercially; equity wiped under full dilution."
+      },
+      {
+        "label": "Bear 15%",
+        "body": "Single-molecule stays a research niche; entrenched affinity competition (Olink/Thermo, SomaScan/Illumina)."
       },
       {
         "label": "Base 50%",
@@ -4639,7 +4657,7 @@ const MEMOS = [
     ],
     "page3": {
       "subtitle": "FY24-FY26 history + FY27-FY36 scenario projections · fiscal years end Dec 31 · Q1 2026 10-Q, Voyager press releases, peer market cap data",
-      "sources": "Sources: NAUT 10-K FY25, Q1 2026 10-Q, Voyager Early Access Program press releases (Jan 2026), MarketsandMarkets proteomics market sizing 2030-2035, peer transaction data (Olink/Thermo, SomaLogic/SBT).",
+      "sources": "Sources: NAUT 10-K FY25, Q1 2026 10-Q, Voyager Early Access Program press releases (Jan 2026), MarketsandMarkets proteomics market sizing 2030-2035, peer transaction data (Olink/Thermo, SomaLogic/Illumina).",
       "chartReference": {
         "tamBillion": 130,
         "historyYears": [
@@ -5497,7 +5515,7 @@ const MEMOS = [
         }
       },
       "competitive": {
-        "arena": "Broad-scale proteomics — Nautilus's single-molecule protein-analysis platform vs Seer, Olink/Thermo, SomaLogic/Standard BioTools, Quantum-Si; the race to high-throughput, deep proteome coverage.\n",
+        "arena": "Broad-scale proteomics — Nautilus's single-molecule protein-analysis platform vs Seer, Olink/Thermo, SomaLogic/Illumina, Quantum-Si; the race to high-throughput, deep proteome coverage.\n",
         "lens": "power_origination",
         "powers": {
           "scaleEconomies": {
@@ -5549,17 +5567,17 @@ const MEMOS = [
             "capital": "Thermo balance sheet"
           },
           {
-            "name": "SomaLogic / Standard BioTools",
-            "kind": "public",
-            "note": "Aptamer SomaScan (~11k); merged scale.",
+            "name": "SomaScan (Illumina)",
+            "kind": "incumbent-division",
+            "note": "Aptamer SomaScan (~11k proteins); Illumina acquired it from Standard BioTools Jan 2026 (~$425M) and is pairing it with its sequencing/DRAGEN ecosystem for workflow-integrated multiomics.",
             "shareNow": 0.0,
             "shareTerminal": 0.2,
-            "capital": "public; merged"
+            "capital": "Illumina balance sheet"
           },
           {
             "name": "Quantum-Si",
             "kind": "public",
-            "note": "Semiconductor protein sequencing; also early.",
+            "note": "Semiconductor protein sequencing; guided to a Proteus commercial launch by end-2026 (roadshows underway), overlapping NAUT's late-2026 window — but a sequencing modality, not proteoform-affinity decode.",
             "shareNow": 0.0,
             "shareTerminal": 0.1,
             "capital": "public"
@@ -5568,7 +5586,7 @@ const MEMOS = [
         "leadLag": [
           {
             "metric": "Commercial instrument shipping",
-            "company": "no (pre-launch)",
+            "company": "no (pre-launch; external field unit validated)",
             "bestRival": "yes",
             "verdict": "lagging"
           },
@@ -5585,7 +5603,7 @@ const MEMOS = [
             "verdict": "even"
           }
         ],
-        "takeaway": "Nautilus is originating a genuinely differentiated single-molecule platform with strong IP and a funded balance sheet, but it is pre-commercial and lags shipping rivals on every demonstrated metric; the window is open only while the cash lasts and before incumbents close the coverage gap — a launched, validated instrument is the falsifier.\n"
+        "takeaway": "Nautilus is originating a genuinely differentiated single-molecule platform with strong IP and a funded balance sheet, but it is pre-commercial and lags shipping rivals on every demonstrated metric; the window is open only while the cash lasts and before incumbents close the coverage gap — a launched, validated instrument is the falsifier. A second falsifier now sits above it: Illumina shipping an integrated SomaScan-plus-sequencing multiomics workflow at commercial scale before NAUT originates its take-rate model.\n"
       },
       "pocd": {
         "people": {
@@ -5610,7 +5628,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +174% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +285% finding at the $1.71 spot), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -5620,7 +5638,7 @@ const MEMOS = [
           },
           {
             "label": "Early Access is real, not vaporware.",
-            "body": "Tau proteoforms EAP live since Jan 2026 with academic + biopharma partners. Post-tech-risk (instrument works), pre-commercial-scale."
+            "body": "Tau proteoforms EAP live since Jan 2026, now externally validated — Buck Institute field-tested a Voyager; Baylor is first Iterative Mapping EAP customer."
           },
           {
             "label": "First-mover in proteoform single-molecule.",
@@ -5646,7 +5664,7 @@ const MEMOS = [
           },
           {
             "label": "Reframe needed",
-            "body": "If Quantum-Si or a new entrant hits single-molecule resolution at lower cost/higher throughput first — NAUT's first-mover edge erodes; share-of-TAM compresses"
+            "body": "Quantum-Si guided Proteus to a commercial launch by end-2026, overlapping NAUT's late-2026 window; a cheaper/faster rival erodes NAUT's edge. QSI: sequencing, not proteoform decode."
           }
         ]
       },
@@ -5677,8 +5695,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "009",
-        "footerTimestamp": "2026-07-22_16-44",
+        "footerVersion": "010",
+        "footerTimestamp": "2026-07-24_06-57",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -5693,9 +5711,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "isrg-memo__v007__2026-07-22_15-02.pdf",
-      "size": "307 KB",
+      "file": "isrg-memo__v008__2026-07-24_09-15.pdf",
+      "size": "309 KB",
       "priorVersions": [
+        {
+          "version": "007",
+          "file": "isrg-memo__v007__2026-07-22_15-02.pdf",
+          "size": "307 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 345.74
+        },
         {
           "version": "006",
           "file": "isrg-memo__v006__2026-07-02_15-17.pdf",
@@ -5708,36 +5733,36 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$122.7B",
       "shares": "355M",
-      "cash": "$9.5B cash, zero debt · 11,106 da Vinci installed base"
+      "cash": "$8.63B cash, zero debt · 11,710 da Vinci installed base"
     },
     "spot": {
       "price": 345.74,
       "asOf": "July 22, 2026 close"
     },
     "expected": {
-      "fair": 525.14,
-      "deltaPct": 51.9
+      "fair": 504.14,
+      "deltaPct": 45.8
     },
     "compound": [
       {
         "y": 5,
-        "value": 767.63,
-        "mult": 2.22
+        "value": 738.53,
+        "mult": 2.14
       },
       {
         "y": 10,
-        "value": 1123.07,
-        "mult": 3.25
+        "value": 1082.9,
+        "mult": 3.13
       },
       {
         "y": 15,
-        "value": 1644.63,
-        "mult": 4.76
+        "value": 1589.4,
+        "mult": 4.6
       },
       {
         "y": 20,
-        "value": 2410.7,
-        "mult": 6.97
+        "value": 2335.16,
+        "mult": 6.75
       }
     ],
     "taxonomy": {
@@ -5758,44 +5783,44 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": {
-      "value": 13.67,
+      "value": 13.77,
       "zone": "orange"
     },
-    "question": "Is Intuitive's near-monopoly in soft-tissue surgical robotics — 11,100 da Vinci systems, ~78% recurring revenue — durable enough to outrun the first credible competitors (Hugo, Ottava, Versius) and justify a 50-60× forward P/FCF, or is this peak-platform pricing?",
+    "question": "Intuitive's soft-tissue near-monopoly — 11,710 da Vinci systems, ~78% recurring revenue — now trades at ~38× forward P/FCF after the market priced in part of the bear's compression. Does that multiple over-discount erosion (Hugo, Ottava, GLP-1s) that Q2 actuals don't yet show, or is the compression only beginning?",
     "scenarios": [
       {
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 6,
-        "price": 144.58,
+        "price": 142.15,
         "headline": "GLP-1s + Hugo + recall.",
-        "why": "Joint conjunction of four largely independent risks: (a) GLP-1 bariatric drag at the high end (~30% volume compression); (b) Hugo + Ottava combined share gain >15% over five years, requiring both to scale and hospitals to multi-source; (c) a quality/recall cycle that compresses the multiple structurally; (d) core-specialty (urology, GYN) procedure mix maturing earlier than expected. Each individually 15-25% conditional on macro; joint at 6%. Lower than bear's 20% because the conjunction requires multiple competitive moats to break simultaneously over a 5-year window — faster than incumbents typically lose share in regulated medtech (historical base rate: 8-12 years for a soft-tissue leader to lose 20+ points of share).",
+        "why": "Joint conjunction of four largely independent risks: (a) GLP-1 bariatric drag at the high end — this scenario needs ~30-40% volume compression, while Q2 2026 put the observed US bariatric decline at high-single-digits; (b) Hugo + Ottava combined share gain >15% over five years, requiring both to scale and hospitals to multi-source; (c) a quality/recall cycle that compresses the multiple structurally; (d) core-specialty (urology, GYN) procedure mix maturing earlier than expected. Each individually 15-25% conditional; joint stays at 6% — the conjunction requires multiple moats to break simultaneously within five years, faster than incumbents typically lose share in regulated medtech (historical base rate: 8-12 years for a soft-tissue leader to lose 20+ points of share).",
         "what": [
           "The ultra-bear is a coordinated shock, not slow erosion. GLP-1 penetration compresses US bariatric volumes 30-40% over five years; Medtronic Hugo wins meaningful urology share (15-20% of new placements by FY28) and gets general-surgery clearance FY27; J&J Ottava launches commercially FY27 and takes 5-8% of share; and a recurring quality/recall cycle (the May 2026 SureForm 30 Class I recall was the warning shot) compresses operator confidence.",
-          "Procedure growth collapses from 17% to ~6% by FY28, then 2% terminal. Installed-base growth halves from 12% to 5-6%. System ASPs compress as competitive bids force Xi-account discounting. Operating margin compresses from 29% to 22% on defensive spend. The multiple resets from ~55× to 28× FCF as the \"monopoly compounder\" narrative breaks. Exit-multiple SOTP: $42B op EV + $9.5B cash = $52B equity ÷ 358M shares = ~$145/share — a -67% tail."
+          "Procedure growth collapses from 17% to ~6% by FY28, then 2% terminal. Installed-base growth halves from 12% to 5-6%. System ASPs compress as competitive bids force Xi-account discounting. Operating margin compresses from 29% to 22% on defensive spend. The multiple resets toward 28× FCF as the \"monopoly compounder\" narrative breaks. Exit-multiple SOTP: $42B op EV + $8.63B cash = $51B equity ÷ 358M shares = ~$142/share — a -59% tail."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
-        "prob": 20,
-        "price": 277.34,
+        "prob": 25,
+        "price": 274.86,
         "headline": "Hugo lands; multiple resets to 33×.",
-        "why": "The competitive landscape genuinely shifted in late 2025: Hugo FDA clearance + J&J Ottava trials + CMR Versius commercial launch. History suggests soft-tissue medtech incumbents lose 5-15 points of share over five years when the first credible competitor lands (analog: Stryker Mako vs Zimmer ROSA in ortho — Stryker held but lost some new-account placements). The 20% weight reflects that competitive entry has already happened — higher base rate than the ultra-bear — but the multiple compression from ~55× to 33× FCF is the dominant driver, more than the revenue erosion. Q1 2026 procedure growth (17%) says we're not in this scenario yet; bear is the FY27-28 thesis.",
+        "why": "The competitive landscape genuinely shifted: Hugo's Dec-2025 urology clearance was followed six months later by GS + GYN 510(k) filings (Jun 2026), and Ottava's FORTE pivotal met its endpoints. History suggests soft-tissue medtech incumbents lose 5-15 points of share over five years when the first credible competitor lands (analog: Stryker Mako vs Zimmer ROSA in ortho). The weight rises from 20% to 25% on management's own words, not price action: FY26 procedure guidance was held but steered to the midpoint — H2 deceleration from H1's ~15% — with US da Vinci +12% vs +16% worldwide, US bariatric down high-single-digits on GLP-1s, and the ACA enhanced-subsidy expiration a named \"modest adverse impact.\" Q2 actuals (procedures +16%, dV5 246 placements) say we're not in this scenario yet; bear is the FY27-28 thesis, and the multiple reset toward 33× is the dominant driver.",
         "what": [
-          "The pessimistic case takes the new competitive landscape seriously. Medtronic Hugo received FDA urology clearance in December 2025 — the first credible US soft-tissue robotics competitor in 25 years. General-surgery and GYN clearances follow within 18-24 months. Hugo takes 8-12% of new system placements by FY28, primarily at price-sensitive community hospitals. J&J Ottava enters trials and erodes the \"no real competition\" narrative; CMR Versius takes multi-specialty community share.",
-          "Revenue growth decelerates from 23% (Q1 2026) toward 9% by FY28 and 5% by FY30 as urology + gynecology mature and general surgery competes with Hugo on price. Operating margin holds at 27-29% — Hugo competitive-bid gross-margin pressure offset by mix toward higher-margin instruments/services on the installed base. The multiple resets from ~55× toward 33× FCF."
+          "The pessimistic case takes the new competitive landscape seriously. Medtronic Hugo received FDA urology clearance in December 2025 — the first credible US soft-tissue robotics competitor in 25 years — and filed general-surgery and GYN 510(k)s just six months later (Jun 2026), the fast end of the clearance clock. Hugo takes 8-12% of new system placements by FY28, primarily at price-sensitive community hospitals. J&J's Ottava — FORTE pivotal met, FDA nod reported Jul 2026 — erodes the \"no real competition\" narrative; CMR Versius takes multi-specialty community share.",
+          "Revenue growth decelerates from 19% (Q2 2026) toward 9% by FY28 and 5% by FY30 as urology + gynecology mature and general surgery competes with Hugo on price. Operating margin holds at 27-29% — Hugo competitive-bid gross-margin pressure offset by mix toward higher-margin instruments/services on the installed base. The multiple resets from ~55× toward 33× FCF."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
-        "prob": 52,
-        "price": 494.74,
+        "prob": 48,
+        "price": 492.27,
         "headline": "Mid-teens growth; razor compounds.",
-        "why": "Modal outcome. Q1 2026 just printed 23% revenue and 17% procedure growth — the base case is in motion, not a future call. FY26 guidance (procedures 13.5-15.5%, gross margin 67.5-68.5%, opex 11-14%) implies a slight deceleration but no inflection. Hugo competitive entry is real but slow — 18-24 months to general-surgery clearance, 3-5 years to material share. da Vinci 5 reaccelerates installed-base utilization. The 52% weight is higher than ZM's base (50%) because (i) Q1 2026 actuals already validate the trajectory and (ii) the moat (surgeon training, switching cost, FDA data) provides more inertia than ZM's seat-based SaaS contracts.",
+        "why": "Modal outcome. Q2 2026 beat every line — revenue $2.89B +19%, non-GAAP EPS +28%, procedures +16%, gross-margin guide raised to 68-69% — and dV5 placements accelerated again (246 after Q1's 232). The trajectory is in motion, not a future call. The weight trims from 52% to 48% because management held FY26 guidance but steered to the midpoint (H2 deceleration from H1's ~15%) and Hugo's clearance clock is running faster than \"slow\" — GS/GYN 510(k)s landed six months after urology. Still the mature-band modal weight (ZM 50, LULU 45): the moat (surgeon training, switching cost, FDA data) provides more inertia than seat-based SaaS contracts, and nothing in Q2 actuals validates the bear yet.",
         "what": [
-          "The middle path: ISRG executes on a near-monopoly that erodes slowly, not catastrophically. FY26 guidance (13.5-15.5% procedure growth) lands at the midpoint. da Vinci 5 keeps ramping — ~1,500 systems today toward ~5,000 by FY30 — driving a mid-single-digit utilization tailwind on the installed base. Ion scales (39% Q1 procedure growth annualizes toward 25-30%). Cardiac clearance opens a ~$2B incremental specialty.",
+          "The middle path: ISRG executes on a near-monopoly that erodes slowly, not catastrophically. FY26 guidance (13.5-15.5% procedure growth) lands at the midpoint management now points to. da Vinci 5 keeps ramping — 246 placements in Q2 2026, toward ~5,000 systems by FY30 — driving a mid-single-digit utilization tailwind on the installed base. Ion scales (+36% Q2 procedure growth annualizes toward 25-30%). Cardiac clearance opens a ~$2B incremental specialty.",
           "Hugo lands, but at the pace medtech rollouts actually run: 5-7% of new placements by FY28, mostly at community hospitals Intuitive was always going to fight for. The installed-base switching cost — surgeon retraining, instrument inventory, service contracts — keeps the 11,000+ existing systems sticky. Recurring mix climbs from 78% to 81% as services and instruments compound on installed-base growth."
         ]
       },
@@ -5803,29 +5828,29 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 16,
-        "price": 800.86,
+        "price": 798.36,
         "headline": "dV5 + general surgery wins; 52× holds.",
-        "why": "da Vinci 5 captures general surgery (vs Hugo's urology-first rollout) AND ISRG holds 85%+ of incremental US placements through FY28 AND Ion scales to ~$1.5B revenue AND the multiple sustains at ~52× FCF. The 16% weight is reasonable because (a) Q1 2026 dV5 placement velocity (232 vs 147 prior year) supports the dV5 thesis, (b) general surgery is the largest unfought TAM and ISRG has a structural advantage, but (c) sustained 50×+ multiples require continued category leadership that competitive entry directly threatens. Not the base case but a real possibility — especially if the May 2026 recall stays contained to one product line.",
+        "why": "da Vinci 5 captures general surgery (vs Hugo's urology-first rollout) AND ISRG holds 85%+ of incremental US placements through FY28 AND Ion scales to ~$1.5B revenue AND the multiple sustains at ~52× FCF. The 16% weight is reasonable because (a) dV5 placement velocity keeps rising (246 in Q2 2026 after 232 in Q1, vs 147 a year ago) and the GS mix shift shows penetration, (b) general surgery is the largest unfought TAM and ISRG has a structural advantage, but (c) sustained 50×+ multiples require continued category leadership that competitive entry directly threatens. Not the base case but a real possibility — especially if the May 2026 recall stays contained to one product line.",
         "what": [
           "The bull case is that da Vinci 5 unlocks the general-surgery TAM — the unfought ~70% of US soft-tissue procedures still done open or laparoscopically — AND ISRG defends share against Hugo. dV5's force feedback, on-board insufflation, and Iris imaging hit critical mass in 2027-28; placements accelerate to 2,500+/yr. Ion sustains 30%+ procedure growth toward a $1.5B revenue line. Cardiac clearance translates to real volume. Japan, Korea, Brazil penetrate at pace.",
-          "Revenue accelerates above guidance: 17-18% CAGR through FY28, moderating to 12% by FY30. Operating margin expands toward 34% as the high-margin instrument/service razor outpaces systems. FCF reaches ~$6.9B by FY30. The market doesn't compress the multiple because growth re-accelerates — ~52× FCF sustains. Exit-multiple SOTP: $269B op EV + $9.5B cash = $279B equity ÷ 348M shares = ~$801/share. +83% from spot."
+          "Revenue accelerates above guidance: 17-18% CAGR through FY28, moderating to 12% by FY30. Operating margin expands toward 34% as the high-margin instrument/service razor outpaces systems. FCF reaches ~$6.9B by FY30. The market doesn't compress the multiple because growth re-accelerates — ~52× FCF sustains. Exit-multiple SOTP: $269B op EV + $8.63B cash = $278B equity ÷ 348M shares = ~$798/share. +131% from spot."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
-        "prob": 6,
-        "price": 1259.91,
+        "prob": 5,
+        "price": 1257.39,
         "headline": "Outside-OR + China + AI; 62× re-rate.",
-        "why": "Joint conditional: outside-OR / ASC deployment scales (40% conditional on a dV5 compact form factor) AND China crosses $2B by FY30 (30% conditional on no geopolitical catastrophe) AND AI / autonomous-surgery monetization gets real (25% conditional on an FDA approval pathway for semi-autonomous assist) AND the multiple re-rates to 60-65× FCF (40%). Joint at 5-7%, reflected at 6%. Tail of tails — but ISRG has the installed base, the data moat, and the cash to actually attempt all three simultaneously.",
+        "why": "Joint conditional: outside-OR / ASC deployment scales (40% conditional on a dV5 compact form factor) AND China crosses $2B by FY30 (trimmed to ~20-25% conditional — MicroPort's Toumai, the leading domestic system with 200+ installations and mid-2026 EU access, contests the uncontested-penetration assumption) AND AI / autonomous-surgery monetization gets real (25% conditional on an FDA approval pathway for semi-autonomous assist) AND the multiple re-rates to 60-65× FCF (40%). Joint now lands at 5% (was 6%). Tail of tails — but ISRG has the installed base, the data moat, and the cash to actually attempt all three simultaneously.",
         "what": [
-          "The ultra-bull is ISRG inflecting on three independent axes at once. (1) Outside-OR / clinic deployment: dV5 compact configurations enable ambulatory-surgical-center placements at $500K-1M (vs $2.5M traditional), tripling the addressable TAM beyond hospital ORs. (2) China + India scale: China revenue grows from <$500M to >$3B by FY30 as the Fosun JV penetrates tier-2/3 cities; India localized manufacturing enables local-market price points. (3) AI / autonomous surgery: ISRG's data moat (17M+ recorded procedures) becomes training data for semi-autonomous assistance — a new SaaS-like recurring line.",
-          "Revenue compounds at ~19% CAGR — $10.1B → $25B+ by FY30. Operating margin reaches 36-37% as 90%+-gross-margin software/AI blends in. FCF: $2.5B → ~$9B. The market re-rates to growth-software multiples: ~62× FCF on a $9B base. Exit-multiple SOTP: $425B op EV + $9.5B cash = $435B equity ÷ 345M shares = ~$1,260/share. +189% from spot. This is the scenario where ISRG stops being \"great mature medtech\" and becomes \"the SaaS-like platform for procedures.\""
+          "The ultra-bull is ISRG inflecting on three independent axes at once. (1) Outside-OR / clinic deployment: dV5 compact configurations enable ambulatory-surgical-center placements at $500K-1M (vs $2.5M traditional), tripling the addressable TAM beyond hospital ORs. (2) China + India scale: China revenue grows from <$500M past $2B by FY30 — a leg that must now outrun domestic rivals (MicroPort's Toumai, 200+ commercial installations and EU market access mid-2026); India localized manufacturing enables local-market price points. (3) AI / autonomous surgery: ISRG's data moat (17M+ recorded procedures) becomes training data for semi-autonomous assistance — a new SaaS-like recurring line.",
+          "Revenue compounds at ~19% CAGR — $10.1B → $25B+ by FY30. Operating margin reaches 36-37% as 90%+-gross-margin software/AI blends in. FCF: $2.5B → ~$9B. The market re-rates to growth-software multiples: ~62× FCF on a $9B base. Exit-multiple SOTP: $425B op EV + $8.63B cash = $434B equity ÷ 345M shares = ~$1,257/share. +264% from spot. This is the scenario where ISRG stops being \"great mature medtech\" and becomes \"the SaaS-like platform for procedures.\""
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 6 / Bear 20 / Base 52 / Bull 16 / Ultra Bull 6. Spot price reference: July 22, 2026 close.",
-    "thesis": "Intuitive trades at $436.64 ($155B mkt cap) on FY25 revenue $10.1B, ~$2.5B FCF, $9.5B cash, zero debt. Structurally enviable: ~78% recurring revenue, an 11,106-system installed base growing 12% YoY, 17% procedure growth in Q1 2026, and a 26-year moat no soft-tissue competitor has broken. But the bear case is finally non-trivial: Medtronic Hugo won FDA urology clearance Dec 2025, J&J Ottava is in trials, GLP-1s threaten bariatric volumes, and a May 2026 Class I recall compressed the multiple. Mature-Company DCF with exit-multiple terminal framing below; five scenarios, weighted; show your work.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 6 / Bear 25 / Base 48 / Bull 16 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "thesis": "Intuitive trades at $345.74 ($122.7B cap) — down ~21% since May, including −14.1% on Jul 17: Q2 beat every line (revenue +19%, non-GAAP EPS +28%, procedures +16%, margin guide raised) yet guidance was steered to the midpoint, implying H2 deceleration. Still: ~78% recurring revenue, 11,710 systems, $8.63B cash, zero debt. But the bear is live: Hugo cleared US urology (Dec 2025), GS/GYN 510(k)s filed (Jun 2026); Ottava passed FORTE, FDA nod reported in July; GLP-1s shave bariatric volumes; a May 2026 Class I recall dented the record. Mature-Company DCF with exit-multiple terminal framing below; five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
       "ipoMarker": "IPO Jun '00",
@@ -5890,11 +5915,11 @@ const MEMOS = [
         "body": "GLP-1s + Hugo + Ottava + recall cycle compound; multiple compresses to ~28× FCF."
       },
       {
-        "label": "Bear 20%",
+        "label": "Bear 25%",
         "body": "Hugo lands at 8-12% of new placements; multiple resets to ~33×; revenue decelerates to 5% by FY30."
       },
       {
-        "label": "Base 52%",
+        "label": "Base 48%",
         "body": "Mid-teens growth holds; dV5 reaccelerates utilization; recurring revenue compounds; multiple ~45×."
       },
       {
@@ -5902,13 +5927,13 @@ const MEMOS = [
         "body": "dV5 wins general-surgery TAM; Ion + cardiac add growth; multiple sustains at ~52×."
       },
       {
-        "label": "Ultra Bull 6%",
+        "label": "Ultra Bull 5%",
         "body": "Outside-OR + China + AI inflect simultaneously; multiple re-rates to ~62×."
       }
     ],
     "page3": {
-      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q, FDA filings, medtech competitive analysis",
-      "sources": "Sources: ISRG 10-K FY25, Q1 2026 8-K/10-Q, Medtronic Hugo FDA clearance Dec 2025, J&J Ottava trial filings, surgical-robotics TAM analysis.",
+      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q2 2026 10-Q, FDA filings, medtech competitive analysis",
+      "sources": "Sources: ISRG 10-K FY25, Q2 2026 8-K/10-Q, Medtronic Hugo FDA clearance Dec 2025 + GS/GYN 510(k) filings Jun 2026, J&J Ottava FORTE/De Novo milestones, surgical-robotics TAM analysis.",
       "chartReference": {
         "historyYears": [
           2021,
@@ -5972,19 +5997,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 525.14,
-        "upsidePct": 51.9
+        "expected": 504.14,
+        "upsidePct": 45.8
       },
       "market": {
         "marketCapBillion": 122.7,
         "sharesOutstandingMillion": 355.0,
-        "cashBillion": 9.5,
+        "cashBillion": 8.63,
         "netDebtBillion": 0.0
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.06,
-          "expectedPerShare": 144.58,
+          "expectedPerShare": 142.15,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -6035,13 +6060,13 @@ const MEMOS = [
             "terminal_value": 55.44,
             "pv_terminal": 33.65,
             "op_ev": 42.26,
-            "cash": 9.5,
+            "cash": 8.63,
             "net_debt": 0.0,
-            "total_equity": 51.76,
+            "total_equity": 50.89,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 358,
-            "dcf_per_share": 144.58,
+            "dcf_per_share": 142.15,
             "distress": 0.0
           },
           "chartData": {
@@ -6063,8 +6088,8 @@ const MEMOS = [
           "revPerUnit": null
         },
         "bear": {
-          "probability": 0.2,
-          "expectedPerShare": 277.34,
+          "probability": 0.25,
+          "expectedPerShare": 274.86,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -6115,13 +6140,13 @@ const MEMOS = [
             "terminal_value": 115.5,
             "pv_terminal": 75.07,
             "op_ev": 87.57,
-            "cash": 9.5,
+            "cash": 8.63,
             "net_debt": 0.0,
-            "total_equity": 97.07,
+            "total_equity": 96.2,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 350,
-            "dcf_per_share": 277.34,
+            "dcf_per_share": 274.86,
             "distress": 0.0
           },
           "chartData": {
@@ -6143,8 +6168,8 @@ const MEMOS = [
           "revPerUnit": null
         },
         "base": {
-          "probability": 0.52,
-          "expectedPerShare": 494.74,
+          "probability": 0.48,
+          "expectedPerShare": 492.27,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -6195,13 +6220,13 @@ const MEMOS = [
             "terminal_value": 218.25,
             "pv_terminal": 148.54,
             "op_ev": 164.65,
-            "cash": 9.5,
+            "cash": 8.63,
             "net_debt": 0.0,
-            "total_equity": 174.15,
+            "total_equity": 173.28,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 352,
-            "dcf_per_share": 494.74,
+            "dcf_per_share": 492.27,
             "distress": 0.0
           },
           "chartData": {
@@ -6224,7 +6249,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.16,
-          "expectedPerShare": 800.86,
+          "expectedPerShare": 798.36,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -6275,13 +6300,13 @@ const MEMOS = [
             "terminal_value": 356.2,
             "pv_terminal": 248.11,
             "op_ev": 269.2,
-            "cash": 9.5,
+            "cash": 8.63,
             "net_debt": 0.0,
-            "total_equity": 278.7,
+            "total_equity": 277.83,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 348,
-            "dcf_per_share": 800.86,
+            "dcf_per_share": 798.36,
             "distress": 0.0
           },
           "chartData": {
@@ -6303,8 +6328,8 @@ const MEMOS = [
           "revPerUnit": null
         },
         "ultra_bull": {
-          "probability": 0.06,
-          "expectedPerShare": 1259.91,
+          "probability": 0.05,
+          "expectedPerShare": 1257.39,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -6355,13 +6380,13 @@ const MEMOS = [
             "terminal_value": 561.1,
             "pv_terminal": 400.06,
             "op_ev": 425.17,
-            "cash": 9.5,
+            "cash": 8.63,
             "net_debt": 0.0,
-            "total_equity": 434.67,
+            "total_equity": 433.8,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 345,
-            "dcf_per_share": 1259.91,
+            "dcf_per_share": 1257.39,
             "distress": 0.0
           },
           "chartData": {
@@ -6384,12 +6409,12 @@ const MEMOS = [
         }
       },
       "competitive": {
-        "arena": "Soft-tissue robotic surgery — da Vinci's installed base vs. emerging challengers (Medtronic Hugo, J&J Ottava, CMR Surgical Versius) for the global multi-specialty minimally-invasive surgery platform standard.\n",
+        "arena": "Soft-tissue robotic surgery — da Vinci's installed base vs. emerging challengers (Medtronic Hugo, J&J Ottava, CMR Surgical Versius, MicroPort Toumai) for the global multi-specialty minimally-invasive surgery platform standard.\n",
         "lens": "power_audit",
         "powers": {
           "scaleEconomies": {
             "score": 3,
-            "note": "~9,500 systems installed; instrument/service volume amortizes R&D no challenger matches."
+            "note": "11,710 systems installed; instrument/service volume amortizes R&D no challenger matches."
           },
           "networkEconomies": {
             "score": 2,
@@ -6422,7 +6447,7 @@ const MEMOS = [
           {
             "name": "Medtronic (Hugo)",
             "kind": "public",
-            "note": "CE-marked; US trials; bundled into a broad device channel.",
+            "note": "FDA-cleared (urology) Dec 2025; GS + GYN 510(k)s filed Jun 2026; bundled into a broad device channel.",
             "growth": 0.1,
             "margin": 0.25,
             "multiple": "~17x EV/EBIT"
@@ -6430,7 +6455,7 @@ const MEMOS = [
           {
             "name": "J&J MedTech (Ottava)",
             "kind": "public",
-            "note": "Delayed; deep surgical channel + Ethicon stapling tie-in.",
+            "note": "FORTE pivotal met May 2026; FDA De Novo grant reported Jul 2026; Ethicon stapling tie-in.",
             "growth": 0.06,
             "margin": 0.28,
             "multiple": "~16x EV/EBIT"
@@ -6442,6 +6467,11 @@ const MEMOS = [
             "growth": 0.3,
             "margin": null,
             "multiple": "private"
+          },
+          {
+            "name": "MicroPort MedBot (Toumai)",
+            "kind": "public",
+            "note": "Leading Chinese domestic system — 200+ global commercial installations, 300+ orders; EU market access mid-2026."
           }
         ],
         "threats": [
@@ -6449,6 +6479,11 @@ const MEMOS = [
             "vector": "counter_positioning",
             "who": "Medtronic / J&J",
             "falsifier": "ISRG procedure growth < 10% for 2 consecutive years while a rival's installed base passes 1,000 systems."
+          },
+          {
+            "vector": "counter_positioning",
+            "who": "MicroPort (Toumai) + domestic Chinese entrants",
+            "falsifier": "ISRG China revenue declines YoY for 2 consecutive years, or Toumai's installed base outside China passes 1,000 systems."
           },
           {
             "vector": "switching_costs",
@@ -6475,15 +6510,15 @@ const MEMOS = [
           "score": 4,
           "takeaway": "The cleanest governance of the cohort: single-class, declassified annual elections, ~93% say-on-pay, performance-weighted equity, net-cash discipline, and an orderly internal CEO handoff (Rosa) — institutionalized, not person-dependent. Mild demerits: low insider skin-in-the-game and a now non-independent (Executive) chair."
         },
-        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ISRG 17.5 — rarely screens cheap)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ISRG 13.8 — orange after the derating, no longer deep-red)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +20% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +46% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
           {
             "label": "Moat is real and measurable.",
-            "body": "11,106 installed base + 17M procedures + 26-year FDA record. Hugo has <50 US systems, one specialty cleared. The asymmetry is enormous."
+            "body": "11,710 installed base + 17M procedures + 26-year FDA record. Hugo has one US specialty cleared (urology; GS/GYN filed). The asymmetry is enormous."
           },
           {
             "label": "Razor-blade is the business.",
@@ -6491,25 +6526,25 @@ const MEMOS = [
           },
           {
             "label": "Balance sheet is a fortress.",
-            "body": "$9.5B cash, zero debt, $4B buyback authorization. Q1 2026 retired $1.1B of stock. Capital return finally at scale."
+            "body": "$8.63B cash, zero debt. Buybacks at scale: $1.1B retired in Q1 2026, ~$0.4B more in Q2. Capital return finally at scale."
           },
           {
             "label": "da Vinci 5 is reaccelerating.",
-            "body": "Q1 2026: 232 dV5 placements vs 147 prior year (+58%). US utilization +4%. Force feedback is a step-function, not incremental."
+            "body": "dV5 placements 246 in Q2 2026 after 232 in Q1 (147 a year ago). Force feedback is a step-function, not incremental."
           },
           {
             "label": "Procedure growth is structural.",
-            "body": "17% Q1 procedure growth on already-trained surgeons. Grows with aging + minimally-invasive penetration. Hard to bend the curve."
+            "body": "16% Q2 procedure growth on already-trained surgeons. Grows with aging + minimally-invasive penetration. Hard to bend the curve."
           }
         ],
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "Hugo wins > 15% of US new placements · dV5 placements < 200/qtr · procedure growth < 10% · another Class I recall on a core line · forward P/FCF < 30×"
+            "body": "Hugo GS/GYN cleared before mid-2027 or > 15% of US new placements · ISRG China revenue declines YoY · dV5 placements < 200/qtr · procedure growth < 10% · another Class I recall on a core line · forward P/FCF < 30×"
           },
           {
             "label": "Bull validation",
-            "body": "dV5 placements > 300/qtr · Ion procedure growth > 40% · cardiac volume > 5,000/yr · general-surgery share grows materially · forward P/FCF > 50×"
+            "body": "dV5 placements > 300/qtr · Ion procedure growth > 40% · cardiac volume > 5,000/yr · general-surgery share grows materially · forward P/FCF > 50× (Q2: dV5 246, Ion +36%)"
           },
           {
             "label": "Reframe needed",
@@ -6520,23 +6555,23 @@ const MEMOS = [
       "glossary": [
         {
           "term": "da Vinci 5",
-          "definition": "ISRG's 5th-gen surgical robot (2024). Force feedback, on-board insufflation, Iris imaging. ~1,500 installed; driving +4% US utilization."
+          "definition": "ISRG's 5th-gen surgical robot (2024). Force feedback, on-board insufflation, Iris imaging. Placements accelerating — 246 in Q2 2026 after 232 in Q1."
         },
         {
           "term": "Ion",
-          "definition": "ISRG's endoluminal robot for minimally invasive lung biopsies. Q1 2026 procedure growth +39% YoY. Separate installed base."
+          "definition": "ISRG's endoluminal robot for minimally invasive lung biopsies. Q2 2026 procedure growth +36% YoY. Separate installed base."
         },
         {
           "term": "Hugo (Medtronic)",
-          "definition": "Medtronic's competing soft-tissue robot. FDA-cleared Dec 2025 for urology — first credible US soft-tissue competitor in 25 years."
+          "definition": "Medtronic's competing soft-tissue robot. FDA-cleared Dec 2025 for urology — first credible US soft-tissue competitor in 25 years. GS + GYN 510(k)s filed Jun 2026."
         },
         {
           "term": "Ottava (J&J)",
-          "definition": "J&J's competing soft-tissue robot. In trials FY26; commercial launch expected FY27-28. Adjacency to J&J's Monarch."
+          "definition": "J&J's competing soft-tissue robot. FORTE pivotal endpoints met May 2026; FDA De Novo grant reported Jul 2026. Adjacency to J&J's Monarch."
         },
         {
           "term": "Installed base",
-          "definition": "da Vinci systems in service worldwide. 11,106 at Dec 2025 (+12% YoY). The denominator that drives recurring-revenue compounding."
+          "definition": "da Vinci systems in service worldwide. 11,710 at Jun 2026 (~+12% YoY). The denominator that drives recurring-revenue compounding."
         },
         {
           "term": "Recurring revenue mix",
@@ -6544,8 +6579,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "007",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "008",
+        "footerTimestamp": "2026-07-24_09-15",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -6560,9 +6595,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "ionq-memo__v006__2026-07-22_15-02.pdf",
-      "size": "399 KB",
+      "file": "ionq-memo__v007__2026-07-24_09-15.pdf",
+      "size": "400 KB",
       "priorVersions": [
+        {
+          "version": "006",
+          "file": "ionq-memo__v006__2026-07-22_15-02.pdf",
+          "size": "399 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 35.43
+        },
         {
           "version": "005",
           "file": "ionq-memo__v005__2026-07-02_15-17.pdf",
@@ -6575,36 +6617,36 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$13.22B",
       "shares": "373M",
-      "cash": "$2.39B cash, zero debt · $470M RPO (+554% YoY) at Q1 2026; SkyWater acq. announced Jan '26 (~$1.8B cash+stock; closes Q2/Q3 2026)"
+      "cash": "$2.39B cash, zero debt · $470M RPO (+554% YoY) at Q1 2026; SkyWater acq. (~$1.8B cash+stock; FTC 2nd Request — unclosed)"
     },
     "spot": {
       "price": 35.43,
       "asOf": "July 22, 2026 close"
     },
     "expected": {
-      "fair": 9.18,
-      "deltaPct": -74.1
+      "fair": 9.07,
+      "deltaPct": -74.4
     },
     "compound": [
       {
         "y": 5,
-        "value": 13.15,
+        "value": 12.99,
         "mult": 0.37
       },
       {
         "y": 10,
-        "value": 18.86,
+        "value": 18.63,
         "mult": 0.53
       },
       {
         "y": 15,
-        "value": 27.07,
-        "mult": 0.76
+        "value": 26.74,
+        "mult": 0.75
       },
       {
         "y": 20,
-        "value": 38.87,
-        "mult": 1.1
+        "value": 38.41,
+        "mult": 1.08
       }
     ],
     "taxonomy": {
@@ -6626,71 +6668,71 @@ const MEMOS = [
       "value": 70.32,
       "zone": "red"
     },
-    "question": "Can IonQ capture meaningful share of a $50B global quantum TAM by 2036 with its trapped-ion stack — or is the $26B market cap pricing certainty Quantinuum, Google, and neutral-atom don't support?",
+    "question": "Can IonQ capture meaningful share of a $50B global quantum TAM by 2036 with its trapped-ion stack — or is a $13B market cap pricing certainty Quantinuum, Google, and neutral-atom don't support?",
     "scenarios": [
       {
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 10,
-        "price": 0.53,
+        "price": 0.55,
         "headline": "Trapped-ion sidelined; equity wiped.",
-        "why": "10% reflects three compounding tail risks specific to trapped-ion: fundamental scaling ceiling around 100-500 qubits — credible physicists still debate this; Quantinuum's commercial dominance within the trapped-ion category after its $12.7B IPO; the broader risk that \"useful\" quantum advantage stays elusive through 2030, starving the whole sector. Each individually 25-35%; conjunctive 8-12%. SkyWater acquisition adds $1.8B of fab opex risk if quantum demand doesn't materialize.",
+        "why": "10% reflects three compounding tail risks specific to trapped-ion: fundamental scaling ceiling around 100-500 qubits — credible physicists still debate this; Quantinuum's commercial dominance within the trapped-ion category after its >$14B Jun 2026 IPO; the broader risk that \"useful\" quantum advantage stays elusive through 2030, starving the whole sector. Each individually 25-35%; conjunctive 8-12%. The FTC's pending Second Request on SkyWater adds a live blocked-deal branch to this tail.",
         "what": [
           "Structural failure. Quantum advantage on commercial problems takes longer than the bull-deck slides project (BCG's revised \"broad advantage 2030-2040\" view); the NISQ era stays a science-fair through 2030. IonQ burns $400-600M annually to AQ#256 with no commensurate revenue ramp. Worse, trapped-ion architecture hits a fundamental scaling wall around AQ#100: ion-shuttling complexity, vacuum-chamber engineering, and laser-stability budgets all degrade nonlinearly. Quantinuum's H-series, with the same physics and Honeywell's industrial-scale manufacturing, edges ahead and consolidates the trapped-ion niche.",
-          "Meanwhile superconducting (IBM Nighthawk, Google Willow) achieves first verified commercial advantage at a price IonQ can't match per-shot. Neutral-atom scales past 2,000 atoms by FY28 and wins the cost curve. IonQ's $470M RPO converts but never grows; FY30 revenue stalls below $400M against $500M+ cash burn including SkyWater fab opex. Cash exhausts mid-2029. Successive raises in 2028-2030 at $40 → $15 → $4 dilute holders 4×. By FY32 the SkyWater fab is sold for parts; IonQ taken private at a token premium. With 60% within-scenario p_fail, distress recovery ~$0.80. Expected per share ~$0.50."
+          "Meanwhile superconducting (IBM Nighthawk, Google Willow) achieves first verified commercial advantage at a price IonQ can't match per-shot. Neutral-atom scales past 2,000 atoms by FY28 and wins the cost curve. The FTC blocks the SkyWater deal, so there is no captive fab — and no fab to salvage. IonQ's $470M RPO converts but never grows; FY30 revenue stalls below $400M against $500M+ cash burn. Cash exhausts mid-2029. Successive raises from $28 down to $2 roughly triple the share count; by FY32 IonQ is taken private at a token premium. With 60% within-scenario p_fail, distress recovery ~$0.80. Expected per share ~$0.55."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
         "prob": 30,
-        "price": 0.84,
+        "price": 0.85,
         "headline": "Quantinuum wins; IonQ #2 niche.",
-        "why": "Quantinuum's IPO at $12.7B with materially better logical-qubit performance (48 logical at 99.92%) is a real competitive shift — Honeywell mfg + Cambridge Quantum SW is the most credible full-stack competitor. The broader quantum TAM consistently underperforms forecasts. IonQ executes technically but the pie is smaller and Quantinuum eats the premium slice. Within-scenario 18% p_fail reflects that even in the bear world, IonQ's cash position and DARPA contracts likely prevent bankruptcy. 30% weight reflects high-base-rate competitive entry has already happened.",
+        "why": "Quantinuum's completed Jun 2026 IPO — priced above range at a >$14B valuation, $1.68B raised — with materially better logical-qubit performance (48 logical at 99.92%) is a real competitive shift — Honeywell mfg + Cambridge Quantum SW is the most credible full-stack competitor. The broader quantum TAM consistently underperforms forecasts. IonQ executes technically but the pie is smaller and Quantinuum eats the premium slice. Within-scenario 18% p_fail reflects that even in the bear world, IonQ's cash position and DARPA contracts likely prevent bankruptcy. 30% weight reflects high-base-rate competitive entry has already happened.",
         "what": [
-          "Execution exists but the market shape disappoints. IonQ delivers AQ#256 by 2027 and the SkyWater 200K-qubit chip in 2028 — real milestones. But commercial demand stays government- and research-heavy: DARPA QBI, DOE, NQI, a handful of pharma POCs. Quantinuum's deeper logical-qubit lead wins enterprise mind-share post-IPO; IonQ becomes the credible #2 in trapped-ion, capturing premium government accounts but losing the big AWS/Azure/GCP enterprise-deployment race to superconducting.",
-          "Revenue ramps to ~$1.4B FY36 — strong absolute growth but tiny vs bull-deck $5B+. SkyWater fab is a mixed asset: useful internally but underutilized as a third-party foundry, dragging margins. Operating margin matures around 8% — better than legacy services but well below cloud-software economics the current multiple implies. Cash burn averages $300-400M through FY29; two raises ($400M + $1.0B) at $50-30 prices add ~25M shares net. Final ~440M. With 18% within-scenario p_fail, DCF/share ~$5; expected ~$4.20."
+          "Execution exists but the market shape disappoints. IonQ delivers AQ#256 by 2027, but the FTC's April 2026 Second Request ends with the SkyWater acquisition blocked or abandoned — no captive fab, no 200K-qubit chip in 2028; the $2.39B cash stays put. Commercial demand stays government- and research-heavy: DARPA QBI, DOE, NQI, a handful of pharma POCs. A Feb 2026 short report alleging most 2022-24 revenue was Pentagon-tied (contested, unconfirmed by any filing; partially offset by the MDA SHIELD and DARPA HARQ wins) is the sharpest dated evidence for that demand shape. Quantinuum's deeper logical-qubit lead wins enterprise mind-share post-IPO; IonQ becomes the credible #2 in trapped-ion, losing the big AWS/Azure/GCP enterprise-deployment race to superconducting.",
+          "Revenue ramps to ~$1.4B FY36 — strong absolute growth but tiny vs bull-deck $5B+. Without the fab, IonQ rents external foundry capacity and the margin ceiling drops. Operating margin matures around 8% — better than legacy services but well below cloud-software economics the current multiple implies. Cash burn averages $300-400M through FY29; two raises ($400M + $1.0B) at $30-20 prices — cash-feasible from a $35 stock — add ~58M shares. Final ~432M. With 18% within-scenario p_fail, DCF/share ~$0.93; expected ~$0.85."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 42,
-        "price": 2.43,
+        "price": 2.42,
         "headline": "Co-leader w/ Quantinuum; ~17% mgn.",
         "why": "Highest single bucket because the base requires no breakthrough — sequential execution on plans in motion (Tempo shipping, SkyWater vertical integration, AQ roadmap ahead of schedule, DARPA QBI participation, RPO converting). Coexistence with Quantinuum mirrors duopoly outcomes in adjacent deep-tech markets (AMD/Intel, ASML/Nikon). 42% sits below typical 50-55% base weights because quantum has more genuine tail risk than most categories — thin middle ground between \"works commercially\" and \"doesn't.\" Five- scenario structure with fatter tails forces base weight down.",
         "what": [
           "Modal outcome. IonQ executes the published roadmap roughly on schedule: AQ#64 done, AQ#256 by 2027, SkyWater fab chips back in 2028, the 200K-qubit-chip class reached 2028-29. Quantinuum is a credible co-leader; the trapped-ion sub-segment becomes a duopoly (~50/50 share), with IonQ winning roughly half the US government, defense, and large-enterprise quantum-cloud business via existing AWS Braket / Azure Quantum / GCP integration. Neutral-atom takes cost-sensitive optimization; superconducting takes most \"deep stack\" enterprise via IBM/Google brand.",
-          "By FY36 IonQ does ~$3.8B revenue (~7.6% of $50B TAM) at 17% mature operating margin — better than legacy hardware but below cloud-SaaS. SkyWater fab supplies internal demand plus third-party defense- electronics revenue. RPO converts steadily; multi-product customer share rises 35% → 60%+. Cash burn troughs at ~$350M in FY28; a $2.5B raise programme across years 1-7 at $35-75 keeps cash≥0. SkyWater stock-portion dilution (~25M) folded in. Final shares ~450M. DCF/share ~$16; with 12% within-scenario p_fail, expected ~$14.70 — well below today's $70 spot."
+          "By FY36 IonQ does ~$3.8B revenue (~7.6% of $50B TAM) at 17% mature operating margin — better than legacy hardware but below cloud-SaaS. SkyWater fab supplies internal demand plus third-party defense- electronics revenue. RPO converts steadily; multi-product customer share rises 35% → 60%+. Cash burn troughs at ~$350M in FY28; a $2.5B raise programme across years 1-7 at $35-65 — starting at spot, recovering as milestones land — keeps cash≥0. SkyWater stock-portion dilution (~25M) folded in. Final shares ~451M. DCF/share ~$2.55; with 12% within-scenario p_fail, expected ~$2.42 — well below today's ~$35 spot."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 15,
-        "price": 26.17,
+        "price": 25.76,
         "headline": "Trapped-ion wins; full-stack mgn.",
         "why": "Chain of conditionals: AQ#256 ~on schedule (~70%), SkyWater 200K-qubit chip delivered 2028 (~60%), IonQ — not Quantinuum — captures the trapped-ion premium position (~50%), trapped-ion beats neutral-atom and superconducting on commercially relevant workloads at scale (~50%), DARPA/DOE flows weighted to IonQ (~60%). Each individually plausible; joint ~6-8% before correlation; correlated upward to ~12-18% because conditional outcomes reinforce. 15% is a real but non-modal tail.",
         "what": [
           "Trapped-ion is correct architecture and SkyWater compounds. By 2028 vertical integration via SkyWater proves out: the 200K-qubit chip arrives on schedule, error correction works, and IonQ demonstrates verifiable commercial quantum advantage on a customer workload (likely chemistry or optimization for a Fortune 50). Quantinuum stays credible #2 within trapped-ion but IonQ's vertical fab + cloud-native distribution wins the platform race. Neutral-atom struggles with fault tolerance; superconducting stalls between AQ-equivalent #500 and #2000 due to error-correction overhead.",
-          "Revenue ramps to ~$8B FY36 (~16% TAM share) with 27% mature operating margin — the SkyWater fab is now monetizing third-party customers as the dominant US trusted quantum-chip foundry. DARPA HARQ scales into a multi-billion national-security program. Federal NQI funding flows disproportionately to IonQ. Cash burn troughs FY28 then turns positive by FY30. A $3.4B raise programme across years 1-7 at $50-90 keeps cash≥0. Final shares ~450M. DCF/share ~$54; with 8% within-scenario p_fail, expected ~$50."
+          "Revenue ramps to ~$8B FY36 (~16% TAM share) with 27% mature operating margin — the SkyWater fab is now monetizing third-party customers as the dominant US trusted quantum-chip foundry. DARPA HARQ scales into a multi-billion national-security program. Federal NQI funding flows disproportionately to IonQ. Cash burn troughs FY28 then turns positive by FY30. A $3.4B raise programme across years 1-7 at $45-75 keeps cash≥0. Final shares ~457M. DCF/share ~$28; with 8% within-scenario p_fail, expected ~$26."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 130.99,
-        "headline": "Dominant quantum pure-play; software-premium re-rate.",
+        "price": 129.21,
+        "headline": "Nvidia-of-quantum; premium re-rate.",
         "why": "Conjunctive bull chain × TAM upside × multiple expansion × competitor collapse. Each piece individually 40-60%; joint ~3-5%. Genuine tail capturing the world where quantum becomes a category- defining tech platform and IonQ is the dominant US pure-play. The asymmetrical-moonshots tier's reason-for-being: real upside that you can't get to without it.",
         "what": [
           "Tail of tails. Every Bull condition hits AND the FY36 TAM is materially larger than consensus (Roots Analysis $198B FY40 trajectory, McKinsey upper-bound $72B by 2035 just for computing) AND IonQ achieves de facto platform monopoly in trapped-ion + becomes a meaningful chip foundry via SkyWater. Quantinuum struggles with IPO-era execution; superconducting hits fault- tolerance walls that trapped-ion's higher native fidelity sidesteps. IonQ becomes the \"Nvidia of quantum\" — vertically integrated, full-stack, with AWS/Azure/GCP installed customer base creating a software flywheel.",
-          "By FY36 IonQ does $16B+ revenue at 33% mature operating margin (full-stack hardware + cloud + software-take-rate on partner apps). SkyWater fab serves the entire US national-security stack. Multiple expansion to software-hybrid premium. Modest $3.1B raise in years 1-6 at $70-100 maintains runway. Final shares ~435M. DCF/share ~$135; with 4% p_fail, expected $130."
+          "By FY36 IonQ does $16B+ revenue at 33% mature operating margin (full-stack hardware + cloud + software-take-rate on partner apps). SkyWater fab serves the entire US national-security stack. Multiple expansion to software-hybrid premium. Modest $3.1B raise in years 1-6 at $55-90 maintains runway. Final shares ~441M. DCF/share ~$134; with 4% p_fail, expected ~$129."
         ]
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 30 / Base 42 / Bull 15 / Ultra Bull 3. Spot price reference: July 22, 2026 close.",
-    "thesis": "IonQ trades at ~$26B against $64.7M Q1 2026 revenue and FY26 guide $260-270M — P/S >95×. $2.39B cash + $470M RPO + the $1.8B SkyWater chip-fab acquisition is the optionality. Trapped-ion gives ~99.9%+ 2Q fidelity; AQ#64 on Tempo hit three months early. But the competitive set is brutal: Quantinuum IPOs at $12.7B with better logical-qubit performance, Google's Willow demonstrated verifiable advantage on chemistry, and neutral-atom scaled past 1,200 qubits. Honest math: cash-feasible raise schedules force heavy dilution before commercial inflection. Five scenarios, weighted; show your work.",
+    "thesis": "IonQ trades at ~$13B against a $260-270M FY26 guide — P/S ~50× after July's sector de-rating halved the quantum complex (no adverse IonQ filing). $2.39B cash + $470M RPO + the $1.8B SkyWater chip-fab deal (FTC review pending) is the optionality. Trapped-ion gives ~99.9%+ 2Q fidelity; AQ#64 hit three months early. But the competitive set is brutal: Quantinuum IPO'd at >$14B with better logical-qubit performance, Google's Willow demonstrated verifiable advantage on chemistry, and neutral-atom scaled past 1,200 qubits. Honest math: cash-feasible raise schedules force heavy dilution before commercial inflection. Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -4.7,
       "ipoMarker": "IPO Oct '21",
@@ -6837,8 +6879,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 50,
       "weighted": {
-        "expected": 9.18,
-        "upsidePct": -74.1
+        "expected": 9.07,
+        "upsidePct": -74.4
       },
       "market": {
         "marketCapBillion": 13.22,
@@ -6849,7 +6891,7 @@ const MEMOS = [
       "scenarios": {
         "ultra_bear": {
           "probability": 0.1,
-          "expectedPerShare": 0.53,
+          "expectedPerShare": 0.55,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -6935,8 +6977,8 @@ const MEMOS = [
             "net_debt": 0.0,
             "special_assets": 0.0,
             "raise_total": 3.5,
-            "dilution_pct": 75,
-            "final_shares": 1492,
+            "dilution_pct": 65,
+            "final_shares": 1052,
             "distress": 0.8,
             "pv_fcf": [
               -0.559,
@@ -6955,7 +6997,7 @@ const MEMOS = [
             "pv_terminal": 0.07,
             "op_ev": -2.21,
             "total_equity": 0.18,
-            "dcf_per_share": 0.12
+            "dcf_per_share": 0.17
           },
           "chartData": {
             "raises": [
@@ -6971,11 +7013,11 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              50.0,
-              25.0,
-              12.0,
-              6.0,
-              3.0,
+              28.0,
+              14.0,
+              7.0,
+              3.5,
+              2.0,
               0.0,
               0.0,
               0.0,
@@ -7011,7 +7053,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.3,
-          "expectedPerShare": 0.84,
+          "expectedPerShare": 0.85,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -7097,8 +7139,8 @@ const MEMOS = [
             "net_debt": 0.0,
             "special_assets": 0.0,
             "raise_total": 1.4,
-            "dilution_pct": 18,
-            "final_shares": 440,
+            "dilution_pct": 16,
+            "final_shares": 432,
             "distress": 0.5,
             "pv_fcf": [
               -0.615,
@@ -7117,7 +7159,7 @@ const MEMOS = [
             "pv_terminal": 0.21,
             "op_ev": -1.99,
             "total_equity": 0.4,
-            "dcf_per_share": 0.91
+            "dcf_per_share": 0.93
           },
           "chartData": {
             "raises": [
@@ -7133,10 +7175,10 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              60.0,
-              45.0,
-              35.0,
-              28.0,
+              0.0,
+              30.0,
+              25.0,
+              20.0,
               0.0,
               0.0,
               0.0,
@@ -7173,7 +7215,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.42,
-          "expectedPerShare": 2.43,
+          "expectedPerShare": 2.42,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -7259,8 +7301,8 @@ const MEMOS = [
             "net_debt": 0.0,
             "special_assets": 0.0,
             "raise_total": 2.5,
-            "dilution_pct": 20,
-            "final_shares": 450,
+            "dilution_pct": 21,
+            "final_shares": 451,
             "distress": 1.5,
             "pv_fcf": [
               -0.606,
@@ -7279,7 +7321,7 @@ const MEMOS = [
             "pv_terminal": 2.13,
             "op_ev": -0.25,
             "total_equity": 1.15,
-            "dcf_per_share": 2.56
+            "dcf_per_share": 2.55
           },
           "chartData": {
             "raises": [
@@ -7295,13 +7337,13 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              75.0,
-              65.0,
-              55.0,
-              50.0,
-              45.0,
-              40.0,
               35.0,
+              40.0,
+              45.0,
+              50.0,
+              55.0,
+              60.0,
+              65.0,
               0.0,
               0.0,
               0.0
@@ -7335,7 +7377,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.15,
-          "expectedPerShare": 26.17,
+          "expectedPerShare": 25.76,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -7421,8 +7463,8 @@ const MEMOS = [
             "net_debt": 0.0,
             "special_assets": 0.0,
             "raise_total": 3.4,
-            "dilution_pct": 21,
-            "final_shares": 450,
+            "dilution_pct": 22,
+            "final_shares": 457,
             "distress": 2.0,
             "pv_fcf": [
               -0.604,
@@ -7441,7 +7483,7 @@ const MEMOS = [
             "pv_terminal": 13.19,
             "op_ev": 11.32,
             "total_equity": 12.72,
-            "dcf_per_share": 28.27
+            "dcf_per_share": 27.83
           },
           "chartData": {
             "raises": [
@@ -7457,13 +7499,13 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              90.0,
-              85.0,
-              75.0,
-              65.0,
-              60.0,
-              55.0,
+              45.0,
               50.0,
+              55.0,
+              60.0,
+              65.0,
+              70.0,
+              75.0,
               0.0,
               0.0,
               0.0
@@ -7497,7 +7539,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 130.99,
+          "expectedPerShare": 129.21,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -7583,8 +7625,8 @@ const MEMOS = [
             "net_debt": 0.0,
             "special_assets": 0.0,
             "raise_total": 3.1,
-            "dilution_pct": 17,
-            "final_shares": 435,
+            "dilution_pct": 18,
+            "final_shares": 441,
             "distress": 3.0,
             "pv_fcf": [
               -0.564,
@@ -7603,7 +7645,7 @@ const MEMOS = [
             "pv_terminal": 55.89,
             "op_ev": 57.9,
             "total_equity": 59.3,
-            "dcf_per_share": 136.32
+            "dcf_per_share": 134.47
           },
           "chartData": {
             "raises": [
@@ -7619,12 +7661,12 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              100.0,
-              95.0,
-              85.0,
-              80.0,
-              75.0,
+              55.0,
+              62.0,
               70.0,
+              78.0,
+              85.0,
+              90.0,
               0.0,
               0.0,
               0.0,
@@ -7696,11 +7738,11 @@ const MEMOS = [
         "rivals": [
           {
             "name": "Quantinuum",
-            "kind": "private",
-            "note": "Helios: 48 logical qubits @ 99.92%; $12.7B IPO; Honeywell-backed.",
+            "kind": "public",
+            "note": "Helios: 48 logical qubits @ 99.92%; >$14B Jun '26 IPO (QNT); Honeywell-backed.",
             "shareNow": 0.0,
             "shareTerminal": 0.2,
-            "capital": "$1.4B+ raised"
+            "capital": "~$3B+ raised incl. $1.68B IPO"
           },
           {
             "name": "Google Quantum AI",
@@ -7743,7 +7785,7 @@ const MEMOS = [
           {
             "metric": "Cash runway (yrs at burn)",
             "company": 4,
-            "bestRival": 6,
+            "bestRival": 5,
             "verdict": "lagging"
           }
         ],
@@ -7771,7 +7813,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -86.9% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -74.4% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -7799,7 +7841,7 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "AQ#256 slips past 2027 · RPO conversion stalls · SkyWater close delays past Q3 2026 · Quantinuum wins a marquee enterprise displacement"
+            "body": "AQ#256 slips past 2027 · RPO stalls · SkyWater unclosed (FTC 2nd Request); no closing 8-K by Sep 30 '26 · Aug 5 federal-revenue detail confirms alleged gap · Quantinuum marquee enterprise win"
           },
           {
             "label": "Bull validation",
@@ -7807,7 +7849,7 @@ const MEMOS = [
           },
           {
             "label": "Reframe needed",
-            "body": "If neutral-atom (QuEra/Atom Computing) achieves fault-tolerance first — trapped-ion premium thesis erodes; revisit TAM share assumptions across all scenarios"
+            "body": "If QuEra's Libra (256+ logical, Jun '26) or Pasqal (200+ by 2029) ships verified fault-tolerance ahead of trapped-ion — trips on shipped capacity, not announcement; revisit TAM share"
           }
         ]
       },
@@ -7826,11 +7868,11 @@ const MEMOS = [
         },
         {
           "term": "Quantinuum",
-          "definition": "Honeywell-backed full-stack trapped-ion competitor. Filed for $12.7B IPO May 2026; better logical-qubit performance (48 logical at 99.92%)."
+          "definition": "Honeywell-backed full-stack trapped-ion competitor. IPO'd Jun 2026 at $60 above range (>$14B; trades as QNT, below issue); better logical-qubit performance (48 logical at 99.92%)."
         },
         {
           "term": "SkyWater",
-          "definition": "US semiconductor foundry IonQ is acquiring (~$1.8B, closes Q2/Q3 2026). Domestic chip fab — enables 200K-qubit chip in 2028."
+          "definition": "US semiconductor foundry IonQ agreed to acquire (~$1.8B; FTC 2nd Request Apr 2026, unclosed as of Jul 2026). Domestic chip fab — the base/bull 200K-qubit-chip path rests on it."
         },
         {
           "term": "Tempo / Forte",
@@ -7838,8 +7880,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "006",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "007",
+        "footerTimestamp": "2026-07-24_09-15",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -9279,9 +9321,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "rklb-memo__v005__2026-07-22_16-44.pdf",
-      "size": "392 KB",
+      "file": "rklb-memo__v006__2026-07-24_06-57.pdf",
+      "size": "393 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "rklb-memo__v005__2026-07-22_16-44.pdf",
+          "size": "392 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 71.55
+        },
         {
           "version": "004",
           "file": "rklb-memo__v004__2026-07-22_15-02.pdf",
@@ -9375,7 +9424,7 @@ const MEMOS = [
         "why": "Neutron works but underwhelms on cadence/cost; Space Systems grows steadily without becoming a prime; the acquisition closes on bear-case terms (maximum collar dilution + ~$5B debt). 12% within-scenario failure probability — the leverage is real but Iridium's recurring EBITDA covers it. The 25% weight reflects this as a very plausible 'competent but capped' outcome.",
         "what": [
           "Neutron flies late and at low cadence; RKLB remains the credible #2 but never escapes SpaceX's shadow on cost or volume. The Iridium deal still closes mid-2027 — the approvals do not depend on Neutron — but on the worst terms: with the stock below the $67.50 collar floor, Iridium holders receive the maximum 0.40 exchange ratio (~44M new shares) and RKLB carries ~$5B of deal debt.",
-          "Iridium's steady ~$0.45B of annual pre-tax free cash flow services the debt and cushions the downside, but a low-growth constellation bought at ~16x operational EBITDA with depressed stock is mildly value-destructive here. The DCF lands ~$3.30 — the 'good company, wrong price' world, now with leverage."
+          "Iridium's steady ~$0.45B of annual pre-tax free cash flow services the debt and cushions the downside, but a low-growth constellation bought at ~16x operational EBITDA with depressed stock is mildly value-destructive here. Its latest standalone print (Q2'26) reads the part — operational EBITDA slightly down YoY ($119.1M vs $121.3M) on +6% subscribers, guidance suspended, plus a $366.7M cash purchase of Aireon (aviation surveillance) closed Jul 2026 inside the deal perimeter. The DCF lands ~$3.30 — the 'good company, wrong price' world, now with leverage."
         ]
       },
       {
@@ -9408,10 +9457,10 @@ const MEMOS = [
         "prob": 6,
         "price": 340.98,
         "headline": "Next-gen constellation on Iridium spectrum; smaller-SpaceX.",
-        "why": "Tail of tails, re-anchored: every bull condition hits AND the Iridium platform becomes the springboard for a next-generation constellation at platform scale. The origination gate weakened — management committed ~$8B, a $3.6B bridge, and collared equity to a mature narrowband network just as Starship V3 moved to operational Starlink V3 deployment — so the tail trims from 8% to 6%, with the freed weight moved to the de-risked bull.",
+        "why": "Tail of tails, re-anchored: every bull condition hits AND the Iridium platform becomes the springboard for a next-generation constellation at platform scale. The origination gate weakened — management committed ~$8B, a $3.6B bridge, and collared equity to a mature narrowband network just as Starship reached the cusp of Starlink V3 deployment (first attempt aborted Jul 16, rescheduled to Jul 23-24) — so the tail trims from 8% to 6%, with the freed weight moved to the de-risked bull.",
         "what": [
           "The re-anchored tail: the originate-a-constellation story is superseded — management bought its second act. Here RKLB integrates Iridium and scales a next-generation data/broadband constellation on the acquired licensed global L-band spectrum and 2.6M-subscriber base, on top of a vertically-integrated launch+systems prime. Revenue reaches ~$36.5B by FY35 at a ~38% blended margin, with a platform terminal gated on the spectrum cornered resource.",
-          "DCF ~$348/share — equity ~$212B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX's ~23x private mark, most of which is Starlink). The exponential tail still clears spot by ~4.9x — but it now requires flawless integration of an $8B leveraged acquisition AND a next-gen build-out, against Starship V3's operational Starlink deployment."
+          "DCF ~$348/share — equity ~$212B, a credible smaller-SpaceX (~5.8x sales, vs SpaceX's ~23x private mark, most of which is Starlink). The exponential tail still clears spot by ~4.9x — but it now requires flawless integration of an $8B leveraged acquisition AND a next-gen build-out, against a Starship on the cusp of Starlink V3 deployment (first attempt aborted Jul 16, rescheduled to Jul 23-24)."
         ]
       }
     ],
@@ -9507,7 +9556,7 @@ const MEMOS = [
     ],
     "page3": {
       "subtitle": "FY23-FY25 history + FY26-FY35 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1'26 release",
-      "sources": "Sources: RKLB FY2025 results (Feb 2026), Q1'26 release (May 2026), Iridium merger announcement (Jun 2026), company guidance. FCF is NOL-shielded pre-tax over the explicit window (documented simplification). Close scenarios carry Iridium pro-forma from mid-2027. TAM: launch + space-systems serviceable slice, ~$120B by FY35.",
+      "sources": "Sources: RKLB FY2025 results (Feb 2026), Q1'26 release (May 2026), Iridium merger announcement (Jun 2026), Iridium Q2'26 release (Jul 2026), company guidance. FCF is NOL-shielded pre-tax over the explicit window (documented simplification). Close scenarios carry Iridium pro-forma from mid-2027. TAM: launch + space-systems serviceable slice, ~$120B by FY35.",
       "chartReference": {
         "tamBillion": 120,
         "historyYears": [
@@ -10411,7 +10460,7 @@ const MEMOS = [
           {
             "name": "ULA / Blue Origin",
             "kind": "incumbent-division",
-            "note": "Vulcan / New Glenn; legacy contracts + Bezos capital.",
+            "note": "Vulcan / New Glenn — an integrated vehicle destroyed in a May 28 hot-fire anomaly, return-to-flight targeted before end-2026; legacy contracts + Bezos capital.",
             "shareNow": 0.0,
             "shareTerminal": 0.12,
             "capital": "Boeing/LM + Bezos"
@@ -10453,7 +10502,7 @@ const MEMOS = [
             "verdict": "leading"
           }
         ],
-        "takeaway": "Rocket Lab is assembling a vertically-integrated space-prime position — the credible #2 to SpaceX — with record Electron cadence, a >$2.2B backlog, an NSSL Lane 1 seat (ceiling raised $5.6B to $17B; a $266M USAF award), and now a pending purchase of Iridium's L-band constellation rather than an originated one. But Neutron is unproven (Q4'26 debut holds with slip risk after the July full-duration hot-fire), and Starship V3 has entered operational Starlink deployment — the cost-and-scale gravity well the whole bull case must still clear."
+        "takeaway": "Rocket Lab is assembling a vertically-integrated space-prime position — the credible #2 to SpaceX — with record Electron cadence, a >$2.2B backlog, an NSSL Lane 1 seat (ceiling raised $5.6B to $17B; a $266M USAF award), and now a pending purchase of Iridium's L-band constellation rather than an originated one. But Neutron is unproven (Q4'26 debut holds with slip risk after the July full-duration hot-fire), and Starship's first Starlink V3 deployment attempt (Flight 13) aborted Jul 16 and was rescheduled to Jul 23-24 — the cost-and-scale gravity well the bull case must clear is imminent, not yet operational."
       },
       "pocd": {
         "people": {
@@ -10503,7 +10552,7 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bull validation",
-            "body": "Iridium close on terms by mid-2027 · bridge refinanced at sustainable cost · Neutron orbital debut Q4'26 · Q2 print Aug 6"
+            "body": "Iridium close on terms by mid-2027 · bridge refinanced at sustainable cost · Neutron orbital debut Q4'26 · Q2 print Mon Aug 10"
           },
           {
             "label": "Bear validation",
@@ -10542,8 +10591,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-22_16-44",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-07-24_06-57",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -10558,9 +10607,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "oklo-memo__v004__2026-07-22_15-02.pdf",
-      "size": "399 KB",
+      "file": "oklo-memo__v005__2026-07-24_09-15.pdf",
+      "size": "402 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "oklo-memo__v004__2026-07-22_15-02.pdf",
+          "size": "399 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 45.21
+        },
         {
           "version": "003",
           "file": "oklo-memo__v003__2026-07-02_15-17.pdf",
@@ -10580,29 +10636,29 @@ const MEMOS = [
       "asOf": "July 22, 2026 close"
     },
     "expected": {
-      "fair": 31.58,
-      "deltaPct": -30.2
+      "fair": 29.84,
+      "deltaPct": -34.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 53.17,
-        "mult": 1.18
+        "value": 50.25,
+        "mult": 1.11
       },
       {
         "y": 10,
-        "value": 89.58,
-        "mult": 1.98
+        "value": 84.66,
+        "mult": 1.87
       },
       {
         "y": 15,
-        "value": 151.07,
-        "mult": 3.34
+        "value": 142.74,
+        "mult": 3.16
       },
       {
         "y": 20,
-        "value": 254.96,
-        "mult": 5.64
+        "value": 240.87,
+        "mult": 5.33
       }
     ],
     "taxonomy": {
@@ -10623,27 +10679,27 @@ const MEMOS = [
       "umbrellaName": "Energy & Power"
     },
     "ai": null,
-    "question": "Does ~$12B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power outcome a decade of fundamentals can't reach?",
+    "question": "Does ~$8B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power outcome a decade of fundamentals can't reach?",
     "scenarios": [
       {
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
-        "prob": 10,
-        "price": 6.4,
+        "prob": 8,
+        "price": 6.06,
         "headline": "Aurora fails; NRC/FOAK setback; cash shell.",
-        "why": "The compound bear: a fast-reactor FOAK failure or regulatory re-denial, plus HALEU-fuel scarcity. Advanced fission has never been commercialized on this build-own-operate model, and the prior 2022 NRC denial is a real datapoint. 38% within-scenario failure reflects that Oklo, though cash-rich and debt-free, is pre-revenue and dependent on never-built technology.",
+        "why": "The compound bear: a fast-reactor FOAK failure plus HALEU-fuel scarcity. DOE approved the Aurora-INL safety case (June 2026), so outright regulatory failure now requires the NRC to block the commercial fleet beyond INL — a narrower kill-path than at authoring, trimming this tail to 8%. 38% within-scenario failure reflects that Oklo, though cash-rich and debt-free, is pre-revenue and dependent on never-built technology.",
         "what": [
-          "First-of-a-kind execution defeats Oklo — a sodium fast-reactor technical setback, a second NRC denial (the 2022 COLA was denied without prejudice), or a HALEU-fuel shortfall (the same constraint that slipped TerraPower) pushes Aurora past 2030 or off the table. The build-own-operate model never reaches commercial power; Oklo subsists as a radioisotope (Atomic Alchemy) and services shell.",
-          "The $2.54B cash is the floor — but dilutive flailing raises and a decade of opex erode it, and a 38% within-scenario probability of restructuring pulls the expected toward the distress floor. Revenue stalls near $0.1B; the equity is worth a fraction of today's ~$12B."
+          "First-of-a-kind execution defeats Oklo — a sodium fast-reactor technical setback, a HALEU-fuel shortfall (the same constraint that slipped TerraPower), or an NRC re-denial blocking the commercial fleet beyond Idaho (the first plant proceeds under DOE authorization, with its safety cases approved mid-2026) pushes commercialization past 2030 or off the table. The build-own-operate model never reaches commercial power; Oklo subsists as a radioisotope (Atomic Alchemy) and services shell.",
+          "The $2.54B cash is the floor — but dilutive flailing raises and a decade of opex erode it, and a 38% within-scenario probability of restructuring pulls the expected toward the distress floor. Revenue stalls near $0.1B; the equity is worth a fraction of today's ~$8B."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
-        "prob": 25,
-        "price": 9.66,
+        "prob": 27,
+        "price": 9.36,
         "headline": "Aurora slips; ~1 GW niche, capped.",
-        "why": "Aurora works but underwhelms on cadence and cost; the ~14 GW pipeline converts only fractionally as binding PPAs prove hard to land. 18% failure probability — lower than a pure science-project given $2.54B cash, DOE support, and a site under construction, but FOAK nuclear execution risk is real. 25% weight as a very plausible 'competent but capped' outcome.",
+        "why": "Aurora works but underwhelms on cadence and cost; the ~14 GW pipeline converts only fractionally as binding PPAs prove hard to land. 18% failure probability — lower than a pure science-project given $2.54B cash, DOE support, and a site under construction, but FOAK execution risk is real and datable — Oklo's Groves pilot unit missed its July 2026 criticality target while four DOE-pilot peers went critical. 27% weight as the very plausible 'competent but capped' outcome.",
         "what": [
           "Aurora certifies and powers up, but late (first power ~2029) and at low cadence; Oklo becomes a credible niche advanced-nuclear operator — ~1 GW deployed by the mid-2030s, real PPA revenue (~$0.8B by FY35) at solid IPP margins — but never converts the headline pipeline. FOAK costs run high and the factory-cost thesis only partly materializes.",
           "Modest dilution funds the slow buildout. The DCF lands ~$10/share — the market is pricing a far larger, faster fleet. This is the 'real company, wrong price' world."
@@ -10653,41 +10709,41 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 34,
-        "price": 15.73,
+        "price": 14.94,
         "headline": "First power ~2028; ~3 GW IPP fleet.",
         "why": "Requires Aurora to work (not dominate) and the build-own-operate model to scale to a few GW — no full-pipeline conversion, no SpaceX-style runaway. 10% failure probability given the cash, DOE/INL momentum, and NRC progress (PDC topical report approved 2026). 34% weight as the central outcome.",
         "what": [
           "The modal path: Aurora reaches first power on roughly the targeted timeline (~2028), and Oklo scales the build-own-operate model to a ~3 GW operating fleet by 2034, selling baseload power to data centers at ~$75-90/MWh and ~50% mature operating margins — genuine IPP economics. FY30 revenue ~$0.42B sits near the (thin) analyst consensus, compounding as reactors come online.",
-          "The buildout is capital-intensive (~$2B/GW, ~$5.7B cumulative reinvestment) funded by ~$2.9B of dilutive raises on top of the $2.54B cash. DCF ~$16/share — ~76% below spot, a measure of how much the market is paying for a fleet larger and faster than a successful-but-rational base implies."
+          "The buildout is capital-intensive (~$2B/GW, ~$5.7B cumulative reinvestment) funded by ~$2.9B of dilutive raises on top of the $2.54B cash. DCF ~$15/share — ~66% below spot, a measure of how much the market is paying for a fleet larger and faster than a successful-but-rational base implies."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 23,
-        "price": 35.83,
+        "price": 33.43,
         "headline": "Factory economics work; ~7 GW AI-power.",
         "why": "A chain: Aurora works AND factory-cost economics materialize AND NRC clears AND the pipeline converts to binding PPAs at scale. Each plausible at 50-70%; jointly ~23%. A real, fundable trajectory — Oklo has the cash, the site, and the AI-power demand backdrop — but it is conjunctive.",
         "what": [
           "The bull: Aurora's factory-built economics prove out (capex per GW falls with cadence), NRC licensing clears, and Oklo converts a real slice of its pipeline — ~7 GW deployed by 2034, powering AI data centers under long-dated PPAs at scale, with fuel-recycling and radioisotope verticals adding optionality. Revenue compounds toward ~$4.8B at a ~58% operating margin.",
-          "Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$37/share — and still ~45% below spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you must extend the horizon or believe a richer terminal."
+          "Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$34/share — and still ~25% below spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you must extend the horizon or believe a richer terminal."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 8,
-        "price": 186.66,
+        "price": 175.8,
         "headline": "13 GW power + HALEU fuel monopoly.",
         "why": "Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly (a cornered resource) is the Power-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.",
         "what": [
           "The tail (the second act): Oklo becomes the dominant AI-baseload-power IPP (~13 GW) AND originates a HALEU fuel-recycling monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource Power.",
-          "DCF ~$191/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +184% above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn't capture."
+          "DCF ~$180/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +298% above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn't capture."
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 34 / Bull 23 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
-    "thesis": "Oklo trades at ~$12B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the only commercial advanced-fission site under construction). The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly, +184%) clears it — the capital-intensive base leaves the weighted ~-53%.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 8 / Bear 27 / Base 34 / Bull 23 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "thesis": "Oklo trades at ~$8B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the first commercial advanced-fission site under construction). The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly, +298%) clears it — the capital-intensive base leaves the weighted ~-34%.",
     "historicalPrices": {
       "xMin": -2.2,
       "ipoMarker": "SPAC May '24",
@@ -10748,11 +10804,11 @@ const MEMOS = [
     },
     "weightingRationale": [
       {
-        "label": "Ultra Bear 10%",
+        "label": "Ultra Bear 8%",
         "body": "Aurora fails / NRC re-denial; cash shell."
       },
       {
-        "label": "Bear 25%",
+        "label": "Bear 27%",
         "body": "Aurora slips; credible niche but ~1 GW capped."
       },
       {
@@ -10765,7 +10821,7 @@ const MEMOS = [
       },
       {
         "label": "Ultra Bull 8%",
-        "body": "13 GW + HALEU fuel monopoly; +184%, clears spot."
+        "body": "13 GW + HALEU fuel monopoly; +298%, clears spot."
       }
     ],
     "page3": {
@@ -10811,8 +10867,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 120.0,
       "weighted": {
-        "expected": 31.58,
-        "upsidePct": -30.2
+        "expected": 29.84,
+        "upsidePct": -34.0
       },
       "market": {
         "marketCapBillion": 8.14,
@@ -10822,8 +10878,8 @@ const MEMOS = [
       },
       "scenarios": {
         "ultra_bear": {
-          "probability": 0.1,
-          "expectedPerShare": 6.4,
+          "probability": 0.08,
+          "expectedPerShare": 6.06,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -10908,8 +10964,8 @@ const MEMOS = [
             "cash": 2.54,
             "net_debt": 0.0,
             "raise_total": 1.0,
-            "dilution_pct": 15,
-            "final_shares": 208,
+            "dilution_pct": 23,
+            "final_shares": 221,
             "distress": 2.0,
             "pv_fcf": [
               -0.147,
@@ -10928,7 +10984,7 @@ const MEMOS = [
             "pv_terminal": 0.01,
             "op_ev": -0.65,
             "total_equity": 1.89,
-            "dcf_per_share": 9.09
+            "dcf_per_share": 8.55
           },
           "chartData": {
             "raises": [
@@ -10944,11 +11000,11 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              55.0,
-              45.0,
-              38.0,
-              32.0,
+              37.0,
               30.0,
+              26.0,
+              22.0,
+              20.0,
               0.0,
               0.0,
               0.0,
@@ -10983,8 +11039,8 @@ const MEMOS = [
           ]
         },
         "bear": {
-          "probability": 0.25,
-          "expectedPerShare": 9.66,
+          "probability": 0.27,
+          "expectedPerShare": 9.36,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -11069,8 +11125,8 @@ const MEMOS = [
             "cash": 2.54,
             "net_debt": 0.0,
             "raise_total": 1.0,
-            "dilution_pct": 8,
-            "final_shares": 195,
+            "dilution_pct": 12,
+            "final_shares": 202,
             "distress": 6.0,
             "pv_fcf": [
               -0.185,
@@ -11089,7 +11145,7 @@ const MEMOS = [
             "pv_terminal": 0.9,
             "op_ev": -0.5,
             "total_equity": 2.04,
-            "dcf_per_share": 10.46
+            "dcf_per_share": 10.1
           },
           "chartData": {
             "raises": [
@@ -11105,13 +11161,13 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              68.0,
-              68.0,
-              68.0,
-              68.0,
-              68.0,
-              68.0,
-              68.0,
+              46.0,
+              46.0,
+              46.0,
+              46.0,
+              46.0,
+              46.0,
+              46.0,
               0.0,
               0.0,
               0.0
@@ -11145,7 +11201,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.34,
-          "expectedPerShare": 15.73,
+          "expectedPerShare": 14.94,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -11230,8 +11286,8 @@ const MEMOS = [
             "cash": 2.54,
             "net_debt": 0.0,
             "raise_total": 2.9,
-            "dilution_pct": 16,
-            "final_shares": 208,
+            "dilution_pct": 22,
+            "final_shares": 220,
             "distress": 12.0,
             "pv_fcf": [
               -0.161,
@@ -11250,7 +11306,7 @@ const MEMOS = [
             "pv_terminal": 2.36,
             "op_ev": 0.82,
             "total_equity": 3.36,
-            "dcf_per_share": 16.15
+            "dcf_per_share": 15.27
           },
           "chartData": {
             "raises": [
@@ -11266,15 +11322,15 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              75.0,
-              80.0,
-              85.0,
-              90.0,
-              100.0,
-              110.0,
-              120.0,
-              130.0,
-              140.0,
+              51.0,
+              54.0,
+              57.0,
+              61.0,
+              67.0,
+              74.0,
+              81.0,
+              88.0,
+              94.0,
               0.0
             ],
             "rev_per_unit": [
@@ -11306,7 +11362,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.23,
-          "expectedPerShare": 35.83,
+          "expectedPerShare": 33.43,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -11391,8 +11447,8 @@ const MEMOS = [
             "cash": 2.54,
             "net_debt": 0.0,
             "raise_total": 7.5,
-            "dilution_pct": 19,
-            "final_shares": 215,
+            "dilution_pct": 28,
+            "final_shares": 231,
             "distress": 22.0,
             "pv_fcf": [
               -0.147,
@@ -11411,7 +11467,7 @@ const MEMOS = [
             "pv_terminal": 6.71,
             "op_ev": 5.32,
             "total_equity": 7.86,
-            "dcf_per_share": 36.56
+            "dcf_per_share": 34.03
           },
           "chartData": {
             "raises": [
@@ -11427,15 +11483,15 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              90.0,
-              120.0,
-              150.0,
-              180.0,
-              200.0,
-              220.0,
-              240.0,
-              260.0,
-              280.0,
+              61.0,
+              81.0,
+              101.0,
+              121.0,
+              135.0,
+              148.0,
+              162.0,
+              175.0,
+              189.0,
               0.0
             ],
             "rev_per_unit": [
@@ -11467,7 +11523,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.08,
-          "expectedPerShare": 186.66,
+          "expectedPerShare": 175.8,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -11552,8 +11608,8 @@ const MEMOS = [
             "cash": 2.54,
             "net_debt": 0.0,
             "raise_total": 11.0,
-            "dilution_pct": 20,
-            "final_shares": 225,
+            "dilution_pct": 33,
+            "final_shares": 239,
             "distress": 40.0,
             "pv_fcf": [
               -0.183,
@@ -11572,7 +11628,7 @@ const MEMOS = [
             "pv_terminal": 40.31,
             "op_ev": 40.48,
             "total_equity": 43.02,
-            "dcf_per_share": 191.2
+            "dcf_per_share": 180.0
           },
           "chartData": {
             "raises": [
@@ -11588,14 +11644,14 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              110.0,
-              140.0,
-              180.0,
-              230.0,
-              280.0,
-              320.0,
-              360.0,
-              400.0,
+              74.0,
+              94.0,
+              121.0,
+              155.0,
+              189.0,
+              216.0,
+              243.0,
+              270.0,
               0.0,
               0.0
             ],
@@ -11666,18 +11722,18 @@ const MEMOS = [
           {
             "name": "NuScale",
             "kind": "public",
-            "note": "Only NRC-approved SMR design (LWR, 77 MWe VOYGR); deploys ~2030; TVA + Romania (RoPower).",
+            "note": "Only NRC-approved SMR design (LWR, 77 MWe VOYGR); deploys ~2030; Q1 2026 revenue $565K (-96% YoY); ~83% off peak.",
             "shareNow": 0.0,
             "shareTerminal": 0.2,
             "capital": "public; Fluor / ENTRA1"
           },
           {
             "name": "X-energy",
-            "kind": "private",
+            "kind": "public",
             "note": "HTGR 80 MWe TRISO pebble; Amazon 5+ GW by 2039; reactor early-2030s.",
             "shareNow": 0.0,
             "shareTerminal": 0.18,
-            "capital": "$985M+; Amazon, DOE"
+            "capital": "public (XE, IPO Apr 2026 @ $23, ~$1.0B gross); Amazon, DOE"
           },
           {
             "name": "Kairos Power",
@@ -11690,7 +11746,7 @@ const MEMOS = [
           {
             "name": "TerraPower (Natrium)",
             "kind": "private",
-            "note": "Sodium fast + molten-salt storage, 345 MWe; ops ~2030+; HALEU-delayed.",
+            "note": "Sodium fast + molten-salt storage, 345 MWe; first NRC construction permit for a commercial non-LWR (Mar 2026); building at Kemmerer, WY; ops ~2030.",
             "shareNow": 0.0,
             "shareTerminal": 0.12,
             "capital": ">$3.4B; Gates, Nvidia, DOE"
@@ -11707,9 +11763,9 @@ const MEMOS = [
         "leadLag": [
           {
             "metric": "Commercial site under construction",
-            "company": "Aurora-INL (ground broken 2025)",
-            "bestRival": "none commercial",
-            "verdict": "leading"
+            "company": "Aurora-INL (ground broken Sep 2025, first)",
+            "bestRival": "TerraPower Natrium (NRC permit Mar 2026; ground broken Apr 2026)",
+            "verdict": "roughly level"
           },
           {
             "metric": "NRC design / license status",
@@ -11719,12 +11775,12 @@ const MEMOS = [
           },
           {
             "metric": "Operating reactor / demo",
-            "company": "none (first power 2027-28)",
-            "bestRival": "Kairos Hermes ~2027",
-            "verdict": "roughly level"
+            "company": "Groves pilot safety case approved Jul 2026; criticality pending",
+            "bestRival": "four DOE-pilot microreactors critical by Jul 2026 (test units, not commercial plants)",
+            "verdict": "lagging"
           }
         ],
-        "takeaway": "Oklo is originating a genuine build-own-operate AI-baseload-nuclear position — the only commercial advanced-fission site under construction, a model that captures more value than equipment-sale SMR peers, $2.54B to fund it, and the structural AI-power demand pull. But it lags NuScale on design approval, has no operating reactor, was denied once by the NRC, and its ~14 GW pipeline is overwhelmingly non-binding; first-of-a-kind execution and HALEU-fuel supply are the falsifiers the whole bull case must clear."
+        "takeaway": "Oklo is originating a genuine build-own-operate AI-baseload-nuclear position — the first commercial advanced-fission site under construction (TerraPower's NRC-permitted Natrium joined it in 2026), a model that captures more value than equipment-sale SMR peers, $2.54B to fund it, and the structural AI-power demand pull. But it lags NuScale on design approval, has no operating reactor — its Groves pilot missed a July 2026 criticality target four DOE-pilot peers met — was denied once by the NRC, and its ~14 GW pipeline is overwhelmingly non-binding; first-of-a-kind execution and HALEU-fuel supply are the falsifiers the whole bull case must clear."
       },
       "pocd": {
         "people": {
@@ -11732,7 +11788,7 @@ const MEMOS = [
           "founderLed": true,
           "tenureYears": 13,
           "insiderOwnershipPct": 12.2,
-          "capitalAllocation": "Co-founder Jake DeWitte is CEO and (since April 2025) Chairman; co-founder Caroline Cochran is COO and a director — the two are married and hold the top two operating roles plus board seats. Pre-revenue (the Aurora powerhouse is not yet operating): ~$2.5B cash at Q1 2026 against FY2026 guidance of ~$80-100M operating burn plus ~$350-450M capex, funded by heavy ATM issuance (a ~$1.18B 2025 program completed, a new ~$1B program filed). Customer demand is ~14 GW of non-binding letters of intent (Switch, Equinix, Meta). No dividend or buyback.",
+          "capitalAllocation": "Co-founder Jake DeWitte is CEO and (since April 2025) Chairman; co-founder Caroline DeWitte (née Cochran) is COO and a director, re-elected June 2026 — the two are married and hold the top two operating roles plus board seats. Pre-revenue (the Aurora powerhouse is not yet operating): ~$2.5B cash at Q1 2026 against FY2026 guidance of ~$80-100M operating burn plus ~$350-450M capex, funded by heavy at-market issuance (the prior ATM facility fully utilized, ~$1.5B raised; a new $1B ATM established May 2026 via Goldman Sachs, BofA, Citigroup and J.P. Morgan — draws undisclosed until the Q2 10-Q). Customer demand is ~14 GW of non-binding letters of intent (Switch, Equinix, Meta). No dividend or buyback.",
           "incentiveAlignment": "DeWitte’s FY2025 compensation was ~$7M, equity-heavy and milestone-linked, on a modest ~$625K base. The founders retain a ~12.2% combined stake — meaningful alignment — but the only observed insider trading is programmatic selling (Rule 10b5-1); no open-market buying surfaced.",
           "governanceFlags": [
             "single class of common stock, one vote per share — no super-voting; founders’ voting power equals their ~12.2% economic stake (a positive)",
@@ -11748,7 +11804,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -53.0% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -34.0% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -11757,8 +11813,8 @@ const MEMOS = [
             "body": "$2.54B cash, debt-free, zero warrants — far more funded than SMR peers; dilution is opportunistic, not existential."
           },
           {
-            "label": "Only commercial advanced-fission site under construction.",
-            "body": "DOE site-use permit + Aurora-INL groundbreaking (Sep 2025) — a structural first-mover lead on physical deployment, not just paper."
+            "label": "First commercial advanced-fission site under construction.",
+            "body": "DOE site-use permit + Aurora-INL groundbreaking (Sep 2025) — first mover on deployment; TerraPower's NRC-permitted Natrium joined it Apr 2026."
           },
           {
             "label": "Build-own-operate captures more value.",
@@ -11776,11 +11832,11 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bull validation",
-            "body": "Aurora-INL first power on schedule (2027-28) · first binding PPA (pipeline → contracted) · factory capex tracking < $2.5B/GW"
+            "body": "Groves pilot criticality (missed Jul 2026 target) · first power on schedule (2027-28) · first binding PPA · Centrus fuel deal turns binding · factory capex < $2.5B/GW"
           },
           {
             "label": "Bear validation",
-            "body": "first power slips beyond 2029 · COLA stalls at NRC · pipeline stays non-binding / churns"
+            "body": "first power slips beyond 2029 · COLA stalls at NRC (the first plant is DOE-authorized) · heavy ATM draws below ~$45 · pipeline stays non-binding / churns"
           },
           {
             "label": "Reframe needed",
@@ -11811,8 +11867,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-07-24_09-15",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -38776,9 +38832,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "rxrx-memo__v004__2026-07-22_15-02.pdf",
-      "size": "392 KB",
+      "file": "rxrx-memo__v005__2026-07-24_09-15.pdf",
+      "size": "395 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "rxrx-memo__v004__2026-07-22_15-02.pdf",
+          "size": "392 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 3.02
+        },
         {
           "version": "003",
           "file": "rxrx-memo__v003__2026-07-02_15-17.pdf",
@@ -38791,7 +38854,7 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$1.54B",
       "shares": "510M",
-      "cash": "$665M cash, zero debt · $0.665B cash (Q1'26); runway into early 2028; burn ~$340M/yr; FY25 revenue $74.7M (+27%) — all collaboration/milestone, no product sales; Down ~37% YTD to ~$3.15; ~510M shares post-Exscientia merger + ATM"
+      "cash": "$665M cash, zero debt · $0.665B cash (Q1'26); runway into early 2028; burn ~$340M/yr; FY25 revenue $74.7M (+27%) — all collaboration/milestone, no product sales; Down ~40% YTD to ~$3.02; ~510M shares post-Exscientia merger + ATM"
     },
     "spot": {
       "price": 3.02,
@@ -38839,7 +38902,7 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": null,
-    "question": "At a ~37%-de-rated $3.15 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation, or a platform that funds itself toward dilutive stagnation?",
+    "question": "At a ~40%-de-rated $3.02 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation, or a platform that funds itself toward dilutive stagnation?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -38903,7 +38966,7 @@ const MEMOS = [
       }
     ],
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 30 / Base 32 / Bull 15 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
-    "thesis": "Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.15 (~$1.6B cap), down ~37% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early 2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful approved drug. Weighted fair value is $3.85, +22% above spot — but the modal base sits below the price, so the answer rides the right tail.",
+    "thesis": "Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.02 (~$1.54B cap), down ~40% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early 2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful approved drug. Weighted fair value is $3.85, +28% above spot — but the modal base sits below the price, so the answer rides the right tail.",
     "historicalPrices": {
       "xMin": -5.2,
       "ipoMarker": "IPO Apr '21",
@@ -39866,7 +39929,7 @@ const MEMOS = [
           {
             "name": "Insilico Medicine",
             "kind": "private",
-            "note": "Generative-AI discovery, clinical-stage pipeline; well-funded private rival",
+            "note": "Generative-AI discovery; launched Phase III of AI-discovered rentosertib (~Jul 2026) and signed an Eli Lilly collaboration worth up to $2.75B (Mar 2026) — a full clinical phase ahead",
             "shareNow": 0.0,
             "shareTerminal": 0.0,
             "capital": "Private (VC-backed)"
@@ -39874,7 +39937,7 @@ const MEMOS = [
           {
             "name": "Isomorphic Labs",
             "kind": "private",
-            "note": "Alphabet/DeepMind spinout; AlphaFold lineage and deep capital",
+            "note": "Alphabet/DeepMind spinout; AlphaFold lineage. $2.1B Series B (May 2026), the largest AI-drug-discovery raise to date; first clinical trials expected end-2026",
             "shareNow": 0.0,
             "shareTerminal": 0.0,
             "capital": "Alphabet-funded"
@@ -39882,7 +39945,7 @@ const MEMOS = [
           {
             "name": "Schrodinger",
             "kind": "public",
-            "note": "Physics-based computational platform plus owned pipeline; the listed comp",
+            "note": "Physics-based computational platform (the listed comp); Simcere collaboration (Jul 2026), pipeline narrowed to two clinical assets, pivoting toward partnership/software",
             "shareNow": 0.0,
             "shareTerminal": 0.0,
             "capital": "Public equity"
@@ -39916,7 +39979,7 @@ const MEMOS = [
             "verdict": "lagging"
           }
         ],
-        "takeaway": "No durable Power is originated yet — like all AI-bio, RXRX has zero approved drugs, so switching costs, branding and scale economies are still latent. The one candidate is a cornered resource: the Phenomap dataset and BioHive-2 compute generate proprietary phenotypic data at a scale rivals cannot easily match. The bet is whether that data-and-Phenomap flywheel converts into repeatable approved drugs before well-capitalized private labs (Insilico, Isomorphic) or pharma's own AI close the gap. The falsifier the bull must clear is the 2026-2027 readouts producing real clinical and royalty economics — until a drug ships, the resource is unproven and the Power window stays open, not won."
+        "takeaway": "No durable Power is originated yet — like all AI-bio, RXRX has zero approved drugs, so switching costs, branding and scale economies are still latent. The one candidate is a cornered resource: the Phenomap dataset and BioHive-2 compute generate proprietary phenotypic data at a scale rivals cannot easily match. The competitive clock is now ticking louder: in mid-2026 Insilico moved a molecule into Phase III (a full clinical phase ahead of Recursion), Isomorphic raised a record $2.1B, and Schrodinger narrowed to a two-asset partnership model — the exact \"well-capitalized rivals close the gap\" pressure the bull thesis names as its falsifier. Yet the window has not closed: no rival has an approved AI-discovered drug either, so the head-to-head on approvals is still a tie at zero, and Recursion's phenotypic-data-scale lead is intact while its capital-depth disadvantage only sharpens. The falsifier the bull must clear is the 2026-2027 readouts producing real clinical and royalty economics — until a drug ships, the resource is unproven and the Power window stays open, not won."
       },
       "pocd": {
         "people": {
@@ -39925,11 +39988,12 @@ const MEMOS = [
           "tenureYears": 0,
           "insiderOwnershipPct": 1.0,
           "capitalAllocation": "A leadership transition is in progress: co-founder Chris Gibson stepped down as CEO and Najat Khan (non-founder; joined 2024 as Chief R&D/Commercial Officer, ex-J&J Chief Data Science Officer, ex-BCG) became President & CEO effective January 1, 2026. Capital goes to the AI drug-discovery platform and the 2026-2027 clinical readouts; the all-stock Exscientia acquisition closed in early 2025 (Recursion holders ~74% / Exscientia ~26%). Pre-product and cash-consuming — no dividend or buyback. NVIDIA fully exited its stake in February 2026.",
-          "incentiveAlignment": "Insider economic ownership is low: founder Gibson held ~1% economically after his June 2026 filing, and the new CEO’s alignment is option-heavy rather than a founding stake. The dominant alignment lever the thesis relied on — the founder — is being removed as Gibson exits.",
+          "incentiveAlignment": "Insider economic ownership is low: founder Gibson held ~1% economically after his June 2026 filing, and the new CEO’s alignment is option-heavy rather than a founding stake. The dominant alignment lever the thesis relied on — the founder — is being removed as Gibson exits. That exit continued visibly through July 2026: Form 144 notices show Gibson disposing of roughly 100k shares a day plus a 340,440-share block into July 1-2, co-founder Borgeson also filing Form 144s, and near-daily insider sale notices across July 10-21 — the supply overhang Yahoo Finance tied to the 7/22 52-week low.",
           "governanceFlags": [
             "dual-class (Class B = 10 votes) but effectively collapsed: only ~5.5M Class B remain versus ~522M Class A, and the structure auto-sunsets by ~2027",
             "co-founder Chris Gibson stepped down as CEO (Jan 2026) and did not seek re-election to the board at the June 2026 annual meeting — founder leaving entirely",
             "CEO handed to a non-founder professional (Khan) after ~12 years of founder leadership — a transition year",
+            "continued founder/insider Form 144 selling through July 2026 (Gibson ~100k shares/day plus a 340,440-share block into Jul 1-2; co-founder Borgeson also filing; near-daily notices Jul 10-21) — an extension of the flagged founder exit",
             "NVIDIA fully exited its equity stake (February 2026)"
           ],
           "keyPersonRisk": "medium",
@@ -39938,7 +40002,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +22.3% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +27.6% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -39952,7 +40016,7 @@ const MEMOS = [
           },
           {
             "label": "De-rated price, fat right tail",
-            "body": "Down ~37% YTD, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced lightly."
+            "body": "Down ~40% YTD, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced lightly."
           },
           {
             "label": "Compute-scale advantage",
@@ -40005,8 +40069,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-07-24_09-15",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -42504,9 +42568,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "tem-memo__v004__2026-07-22_15-02.pdf",
-      "size": "300 KB",
+      "file": "tem-memo__v005__2026-07-24_09-15.pdf",
+      "size": "303 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "tem-memo__v004__2026-07-22_15-02.pdf",
+          "size": "300 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 46.93
+        },
         {
           "version": "003",
           "file": "tem-memo__v003__2026-07-02_15-17.pdf",
@@ -42526,29 +42597,29 @@ const MEMOS = [
       "asOf": "July 22, 2026 close"
     },
     "expected": {
-      "fair": 34.18,
-      "deltaPct": -27.2
+      "fair": 29.72,
+      "deltaPct": -36.7
     },
     "compound": [
       {
         "y": 5,
-        "value": 54.18,
-        "mult": 1.15
+        "value": 47.12,
+        "mult": 1.0
       },
       {
         "y": 10,
-        "value": 85.94,
-        "mult": 1.83
+        "value": 74.74,
+        "mult": 1.59
       },
       {
         "y": 15,
-        "value": 136.4,
-        "mult": 2.91
+        "value": 118.62,
+        "mult": 2.53
       },
       {
         "y": 20,
-        "value": 216.62,
-        "mult": 4.62
+        "value": 188.39,
+        "mult": 4.01
       }
     ],
     "taxonomy": {
@@ -42573,65 +42644,65 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 14,
-        "price": 3.45,
+        "price": 3.0,
         "headline": "Growth collapses, never durably profitable",
         "why": "A ~14% tail. Requires both the diagnostics franchise to stall and Data and Applications to stop scaling — possible if pharma budgets tighten and foundation-model rivals commoditize the data, but it contradicts the +40%+ data-licensing trend now in evidence.",
         "what": [
           "Revenue growth fades toward ~8% as oncology test volume saturates and the data-licensing pipeline stalls. The margin path inches from −8% to only 5% — operating leverage never arrives because SBC and clinical-lab costs scale with revenue.",
-          "The company de-rates to a distressed multiple as the market stops paying for a moat that did not compound. Dilution from continued stock comp erodes per-share value. The DCF lands at $3.45, roughly 93% below spot."
+          "The company de-rates to a distressed multiple as the market stops paying for a moat that did not compound. Dilution from continued stock comp erodes per-share value. The DCF lands at $3.00, roughly 94% below spot."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
         "prob": 28,
-        "price": 13.47,
+        "price": 11.73,
         "headline": "Decelerates hard, thin margins persist",
         "why": "A ~28% weight, the second-likeliest outcome. This is the world where TEM is a good but ordinary diagnostics-plus-data business — real growth, real competition, no durable software margin. Pricing pressure is the swing variable.",
         "what": [
-          "Growth slows to ~12% as Guardant, Natera, and Caris pressure diagnostics pricing and reimbursement caps revenue per test. The data flywheel keeps compounding but cannot offset a maturing core diagnostics line.",
-          "Margins climb from −4% to ~11% — positive, but far short of software economics, because SBC and lab infrastructure stay heavy. The DCF is $13.47, about 72% below spot. The market re-rates toward a mid-teens-growth diagnostics comp."
+          "Growth slows to ~12% as Guardant, Natera, and Caris pressure diagnostics pricing and reimbursement caps revenue per test; Natera's Signatera leads the MRD race Tempus just bought into. The data flywheel keeps compounding but cannot offset a maturing core diagnostics line.",
+          "Margins climb from −4% to ~11% — positive, but far short of software economics, because SBC and lab infrastructure stay heavy and the Personalis integration adds near-term losses. The DCF is $11.73, about 75% below spot. The market re-rates toward a mid-teens-growth diagnostics comp."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 33,
-        "price": 30.42,
+        "price": 26.43,
         "headline": "Solid growth, but modal value sits below spot",
         "why": "The single most-likely path at ~33%. It assumes the current trajectory broadly holds — mid-teens growth, a scaling data line, gradual margin gains — without the step-change in operating leverage the bull requires. It is the honest anchor for the finding.",
         "what": [
           "Revenue compounds ~16% as oncology volume grows ~28% and Data and Applications scales the ~80%-margin pharma-licensing line. The AstraZeneca-Pathos deal type repeats, and the 7.3M-record library keeps feeding both segments.",
-          "Margins ramp from −2% to ~17% as the data mix lifts the blend, but SBC keeps owner-FCF modest early. The DCF is $30.42 — a healthy business, about 36% below spot. The modal case simply does not support $47.82."
+          "Margins ramp from −2% to ~17% as the data mix lifts the blend and the May-2026 FDA tumor-only xT CDx approval adds an estimated ~$200-per-test ASP uplift from 2027, but SBC keeps owner-FCF modest early. The DCF is $26.43 — a healthy business, about 44% below spot once the ~15% Personalis share issuance is absorbed. The modal case simply does not support $46.93."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 17,
-        "price": 61.38,
+        "price": 53.43,
         "headline": "Data flywheel drives a real margin inflection",
         "why": "A ~17% weight. Requires two things at once — sustained high growth AND a genuine terminal margin, not just adj-EBITDA. Plausible if the data moat re-rates the whole company, but it is the entry hurdle, not the expected case.",
         "what": [
-          "Growth holds at ~21% as Data and Applications compounds 40%+ and the ~80%-margin data line becomes a larger share of the mix. The multimodal library proves hard to replicate, and pharma standardizes on Tempus for oncology data.",
-          "Operating leverage finally clears SBC: margins ramp from 2% to ~23%, reaching a durable-profit inflection. The DCF is $61.38, about 28% above spot. This is the lowest scenario that justifies today's price."
+          "Growth holds at ~21% as Data and Applications compounds 40%+ and the ~80%-margin data line becomes a larger share of the mix. The multimodal library proves hard to replicate, NeXT Personal scales Tempus into MRD, and pharma standardizes on Tempus for oncology data.",
+          "Operating leverage finally clears SBC: margins ramp from 2% to ~23%, aided by the xT CDx ASP uplift, reaching a durable-profit inflection. The DCF is $53.43, about 14% above spot even after the Personalis dilution. This is the lowest scenario that justifies today's price."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 8,
-        "price": 118.12,
+        "price": 102.66,
         "headline": "Becomes the oncology-data standard",
         "why": "An ~8% tail. The data-moat optionality the price already embeds, paid off in full: a network-and-scale flywheel that no rival replicates. Low probability, but it is the asymmetric reason a long position is debated at all.",
         "what": [
           "TEM wins the platform: the multimodal library becomes the default substrate for oncology drug development and clinical decisioning. Revenue compounds ~25%, with Data and Applications the growth engine at software gross margins.",
-          "Margins ramp from 5% to ~29% as the high-margin data mix dominates and scale economics compound. The DCF reaches $118.12, about 147% above spot — a platform-winner outcome, not a diagnostics multiple."
+          "Margins ramp from 5% to ~29% as the high-margin data mix dominates and scale economics compound. The DCF reaches $102.66, about 119% above spot — a platform-winner outcome, not a diagnostics multiple."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
-    "thesis": "Tempus AI is AI-precision-oncology diagnostics plus a multimodal health-data flywheel. Revenue is $1.3B, growing 25-36%, adj-EBITDA just inflected positive (FY26 guide ~$65M). But SBC runs ~$136M/yr — more than 10% of revenue and larger than that adj-EBITDA — so true owner free cash flow is still negative. At $47.82 (~$8.6B cap, down ~20% YTD, net cash ~$84M) the modal 5-year DCF is $30.42, about 36% below spot. Only the bull case — sustained 21%+ growth and a ~23% terminal margin — clears the price. You are paying today for continued hypergrowth and an unproven margin turn.",
+    "thesis": "Tempus AI is AI-precision-oncology diagnostics plus a multimodal health-data flywheel. Revenue is $1.3B, growing 25-36%, adj-EBITDA just inflected positive (FY26 guide ~$65M). But SBC runs ~$136M/yr — more than 10% of revenue and larger than that adj-EBITDA — so true owner free cash flow is still negative. In July 2026 Tempus agreed to buy the rest of Personalis for ~$1.5B, mostly stock — entering MRD via NeXT Personal, but a ~15% share issuance dilutes the modal case. At $46.93 the modal DCF is $26.43, ~44% below spot; only the bull case clears the price. You are paying for hypergrowth and an unproven margin turn.",
     "historicalPrices": {
       "xMin": -2.0,
       "ipoMarker": "IPO Jun '24",
@@ -42662,30 +42733,30 @@ const MEMOS = [
         ],
         [
           -0.05,
-          47.82
+          46.93
         ]
       ]
     },
     "weightingRationale": [
       {
         "label": "Ultra Bear 14%",
-        "body": "Growth fades to ~8%, margin tops out ~5%, distressed re-rate; DCF $3.45."
+        "body": "Growth fades to ~8%, margin tops out ~5%, distressed re-rate; DCF $3.00."
       },
       {
         "label": "Bear 28%",
-        "body": "~12% growth, pricing pressure, margins ~11% but thin; DCF $13.47."
+        "body": "~12% growth, pricing pressure, margins ~11% but thin; DCF $11.73."
       },
       {
         "label": "Base 33%",
-        "body": "~16% growth, data line scales, margins ~17%; DCF $30.42 — below spot."
+        "body": "~16% growth, data line scales, margins ~17%; DCF $26.43 — below spot."
       },
       {
         "label": "Bull 17%",
-        "body": "~21% growth plus a ~23% terminal margin; DCF $61.38 — clears spot."
+        "body": "~21% growth plus a ~23% terminal margin; DCF $53.43 — clears spot."
       },
       {
         "label": "Ultra Bull 8%",
-        "body": "~25% growth, software margins, data standard; DCF $118.12."
+        "body": "~25% growth, software margins, data standard; DCF $102.66."
       }
     ],
     "page3": {
@@ -42735,8 +42806,8 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 34.18,
-        "upsidePct": -27.2
+        "expected": 29.72,
+        "upsidePct": -36.7
       },
       "market": {
         "marketCapBillion": 8.43,
@@ -42747,7 +42818,7 @@ const MEMOS = [
       "scenarios": {
         "ultra_bear": {
           "probability": 0.14,
-          "expectedPerShare": 3.45,
+          "expectedPerShare": 3.0,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -42789,7 +42860,7 @@ const MEMOS = [
             "net_debt": 0.56,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 200,
+            "final_shares": 230,
             "distress": 0.0,
             "pv_fcf": [
               -0.108,
@@ -42803,7 +42874,7 @@ const MEMOS = [
             "pv_terminal": 0.68,
             "op_ev": 0.61,
             "total_equity": 0.69,
-            "dcf_per_share": 3.45
+            "dcf_per_share": 3.0
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -42825,7 +42896,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.28,
-          "expectedPerShare": 13.47,
+          "expectedPerShare": 11.73,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -42867,7 +42938,7 @@ const MEMOS = [
             "net_debt": 0.56,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 196,
+            "final_shares": 225,
             "distress": 0.0,
             "pv_fcf": [
               -0.056,
@@ -42881,7 +42952,7 @@ const MEMOS = [
             "pv_terminal": 2.27,
             "op_ev": 2.56,
             "total_equity": 2.64,
-            "dcf_per_share": 13.47
+            "dcf_per_share": 11.73
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -42903,7 +42974,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.33,
-          "expectedPerShare": 30.42,
+          "expectedPerShare": 26.43,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -42945,7 +43016,7 @@ const MEMOS = [
             "net_debt": 0.56,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 192,
+            "final_shares": 221,
             "distress": 0.0,
             "pv_fcf": [
               -0.03,
@@ -42959,7 +43030,7 @@ const MEMOS = [
             "pv_terminal": 5.06,
             "op_ev": 5.76,
             "total_equity": 5.84,
-            "dcf_per_share": 30.42
+            "dcf_per_share": 26.43
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -42981,7 +43052,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.17,
-          "expectedPerShare": 61.38,
+          "expectedPerShare": 53.43,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -43023,7 +43094,7 @@ const MEMOS = [
             "net_debt": 0.56,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 188,
+            "final_shares": 216,
             "distress": 0.0,
             "pv_fcf": [
               0.031,
@@ -43037,7 +43108,7 @@ const MEMOS = [
             "pv_terminal": 10.14,
             "op_ev": 11.46,
             "total_equity": 11.54,
-            "dcf_per_share": 61.38
+            "dcf_per_share": 53.43
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -43059,7 +43130,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.08,
-          "expectedPerShare": 118.12,
+          "expectedPerShare": 102.66,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -43101,7 +43172,7 @@ const MEMOS = [
             "net_debt": 0.56,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 186,
+            "final_shares": 214,
             "distress": 0.0,
             "pv_fcf": [
               0.081,
@@ -43115,7 +43186,7 @@ const MEMOS = [
             "pv_terminal": 19.79,
             "op_ev": 21.89,
             "total_equity": 21.97,
-            "dcf_per_share": 118.12
+            "dcf_per_share": 102.66
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -43137,7 +43208,7 @@ const MEMOS = [
         }
       },
       "competitive": {
-        "arena": "AI-precision-oncology: molecular diagnostics plus a multimodal-data-licensing flywheel, against Guardant, Natera, Caris, Foundation Medicine (Roche), and Exact Sciences.",
+        "arena": "AI-precision-oncology: molecular diagnostics, a multimodal-data-licensing flywheel, and — via the July-2026 Personalis acquisition and its NeXT Personal test — the fast-growing minimal-residual-disease (MRD) arena (a ~$5-8B-by-2035 market), against Guardant, Natera, Caris, Foundation Medicine (Roche), and Exact Sciences.",
         "lens": "power_audit",
         "powers": {
           "scaleEconomies": {
@@ -43162,7 +43233,7 @@ const MEMOS = [
           },
           "corneredResource": {
             "score": 3,
-            "note": "The 7.3M-record multimodal library (1.3M genomic, 1.4M imaging) is the proprietary, hard-to-replicate asset and the dominant Power."
+            "note": "The 7.3M-record multimodal library (1.3M genomic, 1.4M imaging) is the proprietary, hard-to-replicate asset and the dominant Power; the Personalis acquisition folds NeXT Personal MRD and its clinical volume (~80% already routed through Tempus) into it."
           },
           "processPower": {
             "score": 1,
@@ -43175,7 +43246,7 @@ const MEMOS = [
           {
             "name": "Guardant Health",
             "kind": "public",
-            "note": "Liquid biopsy and MRD; scaling oncology volume",
+            "note": "Liquid biopsy and MRD (Guardant Reveal); scaling oncology volume",
             "growth": 0.2,
             "margin": null,
             "multiple": "~6x sales"
@@ -43183,7 +43254,7 @@ const MEMOS = [
           {
             "name": "Natera",
             "kind": "public",
-            "note": "Oncology and women's-health molecular testing; near breakeven",
+            "note": "Direct MRD leader (Signatera PMA filed Feb 2026, raised 2026 outlook, Japan entry); near breakeven",
             "growth": 0.3,
             "margin": 0.0,
             "multiple": "~9x sales"
@@ -43199,7 +43270,7 @@ const MEMOS = [
           {
             "name": "Exact Sciences",
             "kind": "public",
-            "note": "Cologuard plus oncology; established but slower-growing",
+            "note": "Cologuard plus oncology MRD (Oncodetect); established but slower-growing",
             "growth": 0.12,
             "margin": null,
             "multiple": "~4x sales"
@@ -43214,7 +43285,7 @@ const MEMOS = [
           {
             "vector": "scale_economies / pricing",
             "who": "Guardant, Natera, Caris",
-            "falsifier": "Diagnostics price competition compresses revenue per test, starving the volume that feeds the data flywheel."
+            "falsifier": "Diagnostics price competition compresses revenue per test, starving the volume that feeds the data flywheel — sharper now that Tempus has bought directly into the MRD contest against Natera's Signatera."
           },
           {
             "vector": "regulatory / reimbursement",
@@ -43222,7 +43293,7 @@ const MEMOS = [
             "falsifier": "Reimbursement cuts to molecular diagnostics undermine the core economics and the funnel that grows the record library."
           }
         ],
-        "takeaway": "A durable Power is plausibly present but not proven. The cornered resource — a 7.3M-record multimodal library feeding an ~80%-margin licensing flywheel with a data-network loop — is genuinely hard to replicate, hence the bull case. But durability is medium, not high: the falsifier is foundation models trained on open or rival data closing the gap, or diagnostics pricing pressure starving the volume that feeds it. The moat must keep Data and Applications compounding 40%+ to earn the price."
+        "takeaway": "A durable Power is plausibly present but not proven. The cornered resource — a 7.3M-record multimodal library feeding an ~80%-margin licensing flywheel with a data-network loop — is genuinely hard to replicate, hence the bull case. But durability is medium, not high: the falsifier is foundation models trained on open or rival data closing the gap, or diagnostics pricing pressure starving the volume that feeds it. The moat must keep Data and Applications compounding 40%+ to earn the price. The July-2026 Personalis acquisition extends the cornered resource into MRD (NeXT Personal) while buying directly into that price war."
       },
       "pocd": {
         "people": {
@@ -43230,7 +43301,7 @@ const MEMOS = [
           "founderLed": true,
           "tenureYears": 11,
           "insiderOwnershipPct": 24.0,
-          "capitalAllocation": "Founder Eric Lefkofsky is Chairman & CEO (founded 2015; serial founder of Groupon, Lightbank, Mediaocean and Pathos AI). Capital funds rapid growth and acquisitions (Ambry Genetics ~$672M, Paige, OneOme) against ~$605M cash; FY2025 revenue $1.27B (+83%) at roughly adjusted-EBITDA breakeven. No dividend or buyback, and the share count is rising from deal stock plus heavy stock-based comp — FY2025 SBC of ~$125M far exceeds the ~$7M adjusted-EBITDA loss, so owner cash economics are weaker than the adjusted figure implies.",
+          "capitalAllocation": "Founder Eric Lefkofsky is Chairman & CEO (founded 2015; serial founder of Groupon, Lightbank, Mediaocean and Pathos AI). Capital funds rapid growth and acquisitions (Ambry Genetics ~$672M, Paige, OneOme; and in July 2026 a definitive agreement to buy the ~88% of Personalis it does not own for ~$1.5B, mostly stock — the largest deal to date and dilutive) against ~$605M cash; FY2025 revenue $1.27B (+83%) at roughly adjusted-EBITDA breakeven. No dividend or buyback, and the share count is rising from deal stock plus heavy stock-based comp — FY2025 SBC of ~$125M far exceeds the ~$7M adjusted-EBITDA loss, so owner cash economics are weaker than the adjusted figure implies.",
           "incentiveAlignment": "Lefkofsky took no base salary in 2024 and an $800K base + $800K target from 2025; alignment is via his stake. But the related-party web is the standout flag: Tempus COO Ryan Fukushima simultaneously runs Lefkofsky-founded Pathos AI, which is contracted to pay Tempus ~$200M over three years; there is also a SoftBank JV and possible affiliated landlord. Insider trading is programmatic 10b5-1 selling. An active securities suit alleges AI-washing / round-tripping (unadjudicated).",
           "governanceFlags": [
             "multi-class super-voting: Class B = 30 votes per share; Lefkofsky controls ~59.9% of the vote on ~24% economics — majority single-person control",
@@ -43246,7 +43317,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -28.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -37% finding) + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -43274,15 +43345,15 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bull validation",
-            "body": "Data and Applications sustains 40%+ growth; gross margin and adj-EBITDA margin both expand while SBC falls as a share of revenue; new multi-year pharma data deals sign."
+            "body": "Data and Applications holds 40%+ growth; margins expand as SBC falls; new pharma deals sign; NeXT Personal MRD and the xT CDx ASP uplift scale from 2027."
           },
           {
             "label": "Bear validation",
-            "body": "Diagnostics revenue-per-test compresses under Guardant/Natera/Caris; total growth slips toward the low teens; SBC stays above adj-EBITDA so owner-FCF remains negative."
+            "body": "Revenue-per-test compresses under Guardant/Natera/Caris; growth slips to the low teens; SBC exceeds adj-EBITDA, owner-FCF stays negative; Personalis cedes MRD share to Signatera."
           },
           {
             "label": "Reframe needed",
-            "body": "Foundation models trained on open or competitor data erode the licensing premium, or reimbursement cuts diagnostics economics — either would collapse the ~80%-margin moat thesis."
+            "body": "Foundation models on rival data erode the licensing premium, or reimbursement cuts collapse the moat; a mostly-cash Personalis deal or an over-priced one reframes the capital-allocation read."
           }
         ]
       },
@@ -43301,20 +43372,20 @@ const MEMOS = [
         },
         {
           "term": "Adj-EBITDA vs owner-FCF",
-          "definition": "Adjusted EBITDA adds back ~$136M/yr of stock comp; true owner free cash flow does not, so the headline positive adj-EBITDA still maps to negative cash today."
+          "definition": "Adjusted EBITDA adds back ~$136M/yr of stock comp; owner free cash flow does not, so positive adj-EBITDA still maps to negative cash today."
         },
         {
           "term": "SBC",
-          "definition": "Stock-based compensation (~$136M/yr, over 10% of revenue) — a real, recurring, dilutive cost that exceeds adj-EBITDA and currently swamps the margin story."
+          "definition": "Stock-based compensation (~$136M/yr, over 10% of revenue) — a real, recurring, dilutive cost that exceeds adj-EBITDA and swamps the margin story."
         },
         {
           "term": "Dual-class control",
-          "definition": "Founder-CEO Eric Lefkofsky holds ~60% of the vote via super-voting shares, concentrating control and limiting outside accountability — a governance flag."
+          "definition": "Founder-CEO Eric Lefkofsky holds ~60% of the vote via super-voting shares, concentrating control — a governance flag."
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-07-24_09-15",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -43329,9 +43400,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "serv-memo__v004__2026-07-22_15-02.pdf",
-      "size": "386 KB",
+      "file": "serv-memo__v005__2026-07-24_09-15.pdf",
+      "size": "389 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "serv-memo__v004__2026-07-22_15-02.pdf",
+          "size": "386 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 5.37
+        },
         {
           "version": "003",
           "file": "serv-memo__v003__2026-07-02_15-17.pdf",
@@ -43344,36 +43422,36 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$414M",
       "shares": "77M",
-      "cash": "$197M cash, zero debt · ~$197M liquidity (~$47M cash + securities); ~1.2yr runway; burn ~$41M/qtr; ~2,000 robots deployed across 44 cities but only ~812 daily-active (<half utilized); FY26 guide $26M (~9x FY25); heavy dilution (24.8M -> 77.4M shares in 2yr; $150M ATM)"
+      "cash": "$197M cash, zero debt · ~$197M liquidity (~$47M cash + securities); ~1.2yr runway; burn ~$41M/qtr; ~2,050 robots deployed across 44 cities but only ~812 daily-active (<half utilized); FY26 guide $26M (~9x FY25); heavy dilution (24.8M -> 77.4M shares in 2yr; $150M ATM)"
     },
     "spot": {
       "price": 5.37,
       "asOf": "July 22, 2026 close"
     },
     "expected": {
-      "fair": 9.33,
-      "deltaPct": 73.7
+      "fair": 6.77,
+      "deltaPct": 26.1
     },
     "compound": [
       {
         "y": 5,
-        "value": 14.88,
-        "mult": 2.77
+        "value": 10.84,
+        "mult": 2.02
       },
       {
         "y": 10,
-        "value": 23.74,
-        "mult": 4.42
+        "value": 17.37,
+        "mult": 3.23
       },
       {
         "y": 15,
-        "value": 37.89,
-        "mult": 7.06
+        "value": 27.85,
+        "mult": 5.19
       },
       {
         "y": 20,
-        "value": 60.5,
-        "mult": 11.27
+        "value": 44.66,
+        "mult": 8.32
       }
     ],
     "taxonomy": {
@@ -43398,65 +43476,65 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 15,
-        "price": 1.08,
+        "price": 1.11,
         "headline": "Utilization stalls; dilutive grind",
-        "why": "A 15% read. An 85% p_fail reflects that thin-margin delivery economics at sub-half fleet utilization rarely turn profitable before the cash and a live $150M ATM plus $100M registered-direct are exhausted.",
+        "why": "A 15% read. An 85% p_fail reflects that thin-margin delivery economics at sub-half fleet utilization rarely turn profitable before the cash and the live $150M ATM are exhausted.",
         "what": [
           "Daily-active robots stay stuck below half the deployed fleet, unit economics never clear the sub-$1/delivery bar, and Uber Eats and DoorDash volume fails to fill the built capacity. Revenue reaches only about $0.18B by FY35 at a 6% operating margin — sub-scale logistics economics that never earn their cost of capital.",
-          "With nothing to fund the burn, the auto-sized raises push the share count from ~77M toward ~227M, nearly tripling the float. The DCF lands at −$1.32; the $1.50 distress floor and residual liquidity drag the expected value to $1.08. The fleet exists, but the equity is diluted toward salvage."
+          "With nothing to fund the burn, the auto-sized raises push the share count from ~77M toward ~276M, more than tripling the float. The DCF lands at −$1.09; the $1.50 distress floor and residual liquidity drag the expected value to $1.11. The fleet exists, but the equity is diluted toward salvage."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
-        "prob": 30,
-        "price": 0.65,
+        "prob": 33,
+        "price": 0.68,
         "headline": "Modest scaling; dilution offsets",
-        "why": "A 30% read. A 55% p_fail captures partial commercial traction — Uber Eats and DoorDash contracts are signed and FY26 revenue is guided to ~$26M (~9x FY25) — against the risk that scaling stalls short of durable profitability.",
+        "why": "A 33% read, raised from 30% in Jul 2026 — the multi-sourced-platform world this scenario describes is now observed, with rival fleets taking platform volume inside Serve's own cities. A 55% p_fail captures partial commercial traction — Uber Eats and DoorDash contracts are signed and FY26 revenue is guided to ~$26M (~9x FY25) — against the risk that scaling stalls short of durable profitability.",
         "what": [
           "Utilization improves somewhat and a few markets reach reasonable density, but the network never becomes a self-sustaining engine. Revenue reaches about $0.42B by FY35 at a 12% operating margin — better than today, yet far short of the scale and cost-per-delivery needed to justify a platform valuation.",
-          "Continued burn forces heavy raises, lifting shares toward ~154M and offsetting most of the operating progress. The DCF is −$0.39 and the expected value $0.65, both below spot. Real volume growth, but the per-share economics never outrun the dilution."
+          "Continued burn forces heavy raises, lifting shares toward ~180M and offsetting most of the operating progress. The DCF is −$0.33 and the expected value $0.68, both below spot. Real volume growth, but the per-share economics never outrun the dilution."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 30,
-        "price": 2.24,
+        "price": 2.03,
         "headline": "Utilization inflects; still dilutive",
         "why": "A 35% p_fail assumes the operating model works within the decade — supported by the demonstrated +578% revenue growth and the shift to utilization metrics — but still a coin-flip-plus that profitable unit economics arrive before dilution does the damage.",
         "what": [
           "Fleet utilization inflects — daily-active robots climb toward the deployed total, Uber Eats and DoorDash demand fills the built capacity, and cost-per-delivery falls toward the sub-$1 target so unit economics work. Revenue reaches about $0.70B by FY35 at a 15% operating margin as the network earns operating leverage on hardware that is already in the ground.",
-          "Growth still outpaces internal funding, so the company raises through the decade and shares drift toward ~129M. The DCF is $2.64 and the expected value $2.24 — both well under spot. The modal outcome validates the operating model yet leaves the equity worth roughly a third of today's price, because the dilution caps the per-share value."
+          "Growth still outpaces internal funding, so the company raises through the decade and shares drift toward ~146M. The DCF is $2.32 and the expected value $2.03 — both well under spot. The modal outcome validates the operating model yet leaves the equity worth roughly a third of today's price, because the dilution caps the per-share value."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 17,
-        "price": 15.95,
+        "price": 14.58,
         "headline": "Delivery automation scales regionally",
         "why": "A 15% p_fail. Requires utilized-fleet unit economics to turn durably profitable and the deployment to broaden regionally — anchored to the FY26 utilization and cost-per-delivery targets, which would be the first hard evidence the model scales.",
         "what": [
           "Autonomous delivery scales across whole regions — utilization runs high on a much larger fleet, the Magna manufacturing and Nvidia compute stack drives hardware cost down, and the Uber Eats and DoorDash channels compound volume. Revenue reaches about $1.50B by FY35 at a 20% operating margin as operating leverage on the built network finally shows.",
-          "Internal cash funds more of the growth, so dilution eases and shares settle near ~108M. The DCF is $18.50 and the expected value $15.95 — roughly two and a half times spot. This is the first scenario where the value of the network clearly exceeds the price paid plus the dilution to get there."
+          "Internal cash funds more of the growth, so dilution eases and shares settle near ~118M. The DCF is $16.89 and the expected value $14.58 — roughly two and three-quarters times spot. This is the first scenario where the value of the network clearly exceeds the price paid plus the dilution to get there."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
-        "prob": 8,
-        "price": 69.83,
+        "prob": 5,
+        "price": 65.84,
         "headline": "DoorDash-scale delivery network",
-        "why": "An 8% read. The lowest-probability, highest-payoff outcome: an 8% p_fail and a winner-take-most network result, assuming the first-mover fleet plus Uber/DoorDash demand harden into a scale-economies Power that later entrants cannot match.",
+        "why": "A 5% read, trimmed from 8% in Jul 2026. The tail assumes the first-mover fleet plus Uber/DoorDash demand harden into a winner-take-most scale-economies Power later entrants cannot match — a gate that now has dated counter-evidence, with Avride live on Uber Eats inside Serve's Miami market, Coco entering D.C., and DoorDash advancing its in-house Dot robot. An 8% p_fail still governs the scenario's own path.",
         "what": [
           "Serve becomes a DoorDash-scale autonomous delivery network — on the order of ~7M deliveries per day — the default last-mile robotics layer for the food and goods platforms. Revenue reaches about $2.80B by FY35 at a 24% operating margin as network density and a first-mover fleet originate genuine scale economies.",
-          "Self-funding largely replaces dilution and shares settle near ~94M. The DCF is $75.77 and the expected value $69.83 — roughly ten times spot. This tail is where the bulk of the weighted value lives, and it depends on the fleet cornering last-mile delivery before rivals or the platforms' own autonomy close in."
+          "Self-funding largely replaces dilution and shares settle near ~100M. The DCF is $71.44 and the expected value $65.84 — roughly twelve times spot. This tail is where the bulk of the weighted value lives, and it depends on the fleet cornering last-mile delivery before rivals or the platforms' own autonomy close in."
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 30 / Base 30 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
-    "thesis": "Serve Robotics runs autonomous sidewalk delivery robots, spun out of Uber/Postmates and Nvidia-backed. It trades at $7.22 (~$540M cap), down ~23% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter operating burn — a pre-scale company with ~$197M of liquidity and roughly 1.2 years of runway. The build is done: ~2,000 robots sit across 44 cities, but only ~812 are daily-active, so the central question is utilization, not fleet size. Anchor demand from Uber Eats (up-to-2,000-robot deal) and DoorDash exists to fill it. The DCF weighted fair value is $9.33, +29% above spot — but the modal base sits ~63% below the price, so the answer rides the right tail and is paid for with relentless dilution.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 33 / Base 30 / Bull 17 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "thesis": "Serve Robotics runs autonomous sidewalk delivery robots, spun out of Uber/Postmates and Nvidia-backed. It trades at $5.37 (~$414M cap), down ~43% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter burn — a pre-scale company with ~$197M of liquidity and ~1.2 years of runway. The build is done: ~2,050 robots sit across 44 cities, but only ~812 are daily-active — the question is utilization, not fleet size. Uber Eats (up-to-2,000-robot deal) and DoorDash demand exists to fill it, though no longer exclusively — Uber Eats now also routes to a rival fleet in Miami. The DCF weighted fair value is $6.77, +26% above spot — but the modal base sits ~62% below the price, so the answer rides the right tail, paid for with relentless dilution.",
     "historicalPrices": {
       "xMin": -2.6,
       "ipoMarker": "Uplisted '24",
@@ -43501,8 +43579,8 @@ const MEMOS = [
         "body": "Utilization never improves; unit economics fail; dilutive grind toward the distress floor."
       },
       {
-        "label": "Bear 30%",
-        "body": "Modest scaling but stays sub-scale; heavy dilution offsets the operating progress."
+        "label": "Bear 33%",
+        "body": "Modest scaling, multi-sourced platforms; heavy dilution offsets the operating progress."
       },
       {
         "label": "Base 30%",
@@ -43513,7 +43591,7 @@ const MEMOS = [
         "body": "Delivery automation scales regionally; operating leverage on the already-built fleet."
       },
       {
-        "label": "Ultra Bull 8%",
+        "label": "Ultra Bull 5%",
         "body": "Becomes a DoorDash-scale autonomous delivery network at ~7M deliveries/day."
       }
     ],
@@ -43546,7 +43624,7 @@ const MEMOS = [
         "fleetReference": null,
         "valnAnchorY": 2,
         "valnAnchorText": "Mature logistics P/S ~1-3x",
-        "valnCaption": "At ~200x sales on a pre-scale fleet, the price is utilization optionality, not fundamentals.",
+        "valnCaption": "At ~150x sales on a pre-scale fleet, the price is utilization optionality, not fundamentals.",
         "tamTitle": "$50B last-mile delivery automation — SERV share",
         "tamLegend": [
           "SERV",
@@ -43560,8 +43638,8 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 50,
       "weighted": {
-        "expected": 9.33,
-        "upsidePct": 73.7
+        "expected": 6.77,
+        "upsidePct": 26.1
       },
       "market": {
         "marketCapBillion": 0.414,
@@ -43572,7 +43650,7 @@ const MEMOS = [
       "scenarios": {
         "ultra_bear": {
           "probability": 0.15,
-          "expectedPerShare": 1.08,
+          "expectedPerShare": 1.11,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -43657,8 +43735,8 @@ const MEMOS = [
             "cash": 0.197,
             "net_debt": 0.0,
             "raise_total": 0.598,
-            "dilution_pct": 194,
-            "final_shares": 226.5,
+            "dilution_pct": 259,
+            "final_shares": 276.3,
             "distress": 1.5,
             "pv_fcf": [
               -0.147,
@@ -43677,7 +43755,7 @@ const MEMOS = [
             "pv_terminal": 0.02,
             "op_ev": -0.5,
             "total_equity": -0.3,
-            "dcf_per_share": -1.32
+            "dcf_per_share": -1.09
           },
           "chartData": {
             "raises": [
@@ -43694,12 +43772,12 @@ const MEMOS = [
             ],
             "raise_prices": [
               0.0,
-              4.0,
-              4.0,
-              4.0,
-              4.0,
-              4.0,
-              4.0,
+              3.0,
+              3.0,
+              3.0,
+              3.0,
+              3.0,
+              3.0,
               0.0,
               0.0,
               0.0
@@ -43732,8 +43810,8 @@ const MEMOS = [
           ]
         },
         "bear": {
-          "probability": 0.3,
-          "expectedPerShare": 0.65,
+          "probability": 0.33,
+          "expectedPerShare": 0.68,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -43818,8 +43896,8 @@ const MEMOS = [
             "cash": 0.197,
             "net_debt": 0.0,
             "raise_total": 0.464,
-            "dilution_pct": 100,
-            "final_shares": 154.3,
+            "dilution_pct": 134,
+            "final_shares": 180.1,
             "distress": 1.5,
             "pv_fcf": [
               -0.146,
@@ -43838,7 +43916,7 @@ const MEMOS = [
             "pv_terminal": 0.17,
             "op_ev": -0.26,
             "total_equity": -0.06,
-            "dcf_per_share": -0.39
+            "dcf_per_share": -0.33
           },
           "chartData": {
             "raises": [
@@ -43855,10 +43933,10 @@ const MEMOS = [
             ],
             "raise_prices": [
               0.0,
-              6.0,
-              6.0,
-              6.0,
-              6.0,
+              4.5,
+              4.5,
+              4.5,
+              4.5,
               0.0,
               0.0,
               0.0,
@@ -43894,7 +43972,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.3,
-          "expectedPerShare": 2.24,
+          "expectedPerShare": 2.03,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -43979,8 +44057,8 @@ const MEMOS = [
             "cash": 0.197,
             "net_debt": 0.0,
             "raise_total": 0.416,
-            "dilution_pct": 68,
-            "final_shares": 129.0,
+            "dilution_pct": 90,
+            "final_shares": 146.3,
             "distress": 1.5,
             "pv_fcf": [
               -0.146,
@@ -43999,7 +44077,7 @@ const MEMOS = [
             "pv_terminal": 0.49,
             "op_ev": 0.14,
             "total_equity": 0.34,
-            "dcf_per_share": 2.64
+            "dcf_per_share": 2.32
           },
           "chartData": {
             "raises": [
@@ -44016,10 +44094,10 @@ const MEMOS = [
             ],
             "raise_prices": [
               0.0,
-              8.0,
-              8.0,
-              8.0,
-              8.0,
+              6.0,
+              6.0,
+              6.0,
+              6.0,
               0.0,
               0.0,
               0.0,
@@ -44055,7 +44133,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.17,
-          "expectedPerShare": 15.95,
+          "expectedPerShare": 14.58,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -44140,8 +44218,8 @@ const MEMOS = [
             "cash": 0.197,
             "net_debt": 0.0,
             "raise_total": 0.373,
-            "dilution_pct": 40,
-            "final_shares": 108.1,
+            "dilution_pct": 54,
+            "final_shares": 118.4,
             "distress": 1.5,
             "pv_fcf": [
               -0.135,
@@ -44160,7 +44238,7 @@ const MEMOS = [
             "pv_terminal": 1.92,
             "op_ev": 1.8,
             "total_equity": 2.0,
-            "dcf_per_share": 18.5
+            "dcf_per_share": 16.89
           },
           "chartData": {
             "raises": [
@@ -44177,10 +44255,10 @@ const MEMOS = [
             ],
             "raise_prices": [
               0.0,
-              12.0,
-              12.0,
-              12.0,
-              12.0,
+              9.0,
+              9.0,
+              9.0,
+              9.0,
               0.0,
               0.0,
               0.0,
@@ -44215,8 +44293,8 @@ const MEMOS = [
           ]
         },
         "ultra_bull": {
-          "probability": 0.08,
-          "expectedPerShare": 69.83,
+          "probability": 0.05,
+          "expectedPerShare": 65.84,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -44301,8 +44379,8 @@ const MEMOS = [
             "cash": 0.197,
             "net_debt": 0.0,
             "raise_total": 0.274,
-            "dilution_pct": 22,
-            "final_shares": 94.1,
+            "dilution_pct": 30,
+            "final_shares": 99.8,
             "distress": 1.5,
             "pv_fcf": [
               -0.124,
@@ -44321,7 +44399,7 @@ const MEMOS = [
             "pv_terminal": 6.57,
             "op_ev": 6.93,
             "total_equity": 7.13,
-            "dcf_per_share": 75.77
+            "dcf_per_share": 71.44
           },
           "chartData": {
             "raises": [
@@ -44338,9 +44416,9 @@ const MEMOS = [
             ],
             "raise_prices": [
               0.0,
-              16.0,
-              16.0,
-              16.0,
+              12.0,
+              12.0,
+              12.0,
               0.0,
               0.0,
               0.0,
@@ -44394,7 +44472,7 @@ const MEMOS = [
           },
           "switchingCosts": {
             "score": 1,
-            "note": "Multi-year platform deals create some stickiness, but Uber and DoorDash multi-source delivery and can shift volume."
+            "note": "Multi-year platform deals create some stickiness, but the platforms demonstrably multi-source — Uber Eats now routes orders to Avride's rival fleet inside Serve's Miami market (Jul 2026)."
           },
           "branding": {
             "score": 0,
@@ -44402,7 +44480,7 @@ const MEMOS = [
           },
           "corneredResource": {
             "score": 2,
-            "note": "The Magna exclusive-manufacturing and Nvidia compute stack plus the contracted Uber/DoorDash demand are the strongest candidate, but each is contractual, not owned."
+            "note": "The Magna exclusive-manufacturing and Nvidia compute stack is the strongest candidate — contractual, not owned. The contracted Uber/DoorDash demand no longer counts as cornered — Avride acquired the same Uber Eats access inside a Serve city (Jul 2026)."
           },
           "processPower": {
             "score": 1,
@@ -44437,19 +44515,27 @@ const MEMOS = [
             "capital": "Private (heavily funded)"
           },
           {
-            "name": "Avride / Amazon logistics",
-            "kind": "incumbent-division",
-            "note": "Platform and retail-scale autonomy efforts with vast balance sheets",
+            "name": "Avride",
+            "kind": "private",
+            "note": "Uber Eats robot-delivery partner since late 2024 — 5 US markets, ~500 robots, >600k deliveries; live in Serve's Miami market since Jul 2026",
             "shareNow": 0.0,
             "shareTerminal": 0.0,
-            "capital": "Corporate balance sheets"
+            "capital": "Nebius Group-backed"
+          },
+          {
+            "name": "Amazon logistics",
+            "kind": "incumbent-division",
+            "note": "Retail-scale autonomy effort with a vast balance sheet",
+            "shareNow": 0.0,
+            "shareTerminal": 0.0,
+            "capital": "Amazon balance sheet"
           }
         ],
         "leadLag": [
           {
             "metric": "Robots deployed in commercial service",
-            "company": "~2,000 across 44 cities",
-            "bestRival": "Smaller commercial fleets (Coco/Nuro)",
+            "company": "~2,050 across 44 cities",
+            "bestRival": "Avride ~500 on Uber Eats, 5 US markets",
             "verdict": "leading"
           },
           {
@@ -44465,7 +44551,7 @@ const MEMOS = [
             "verdict": "lagging"
           }
         ],
-        "takeaway": "SERV is trying to originate a scale-economies plus cornered-resource Power — a first-mover commercial fleet, contracted Uber and DoorDash demand, and an exclusive Magna/Nvidia build stack — but no durable Power exists yet, because under half the fleet is utilized and unit economics at scale are unproven. The demand and the stack are contractual, not owned, and the platforms are funding their own autonomy, so the moat is contestable. The falsifier the bull must clear is utilized-fleet unit economics turning durably profitable — sub-$1/delivery on a high-utilization fleet — before dilution exhausts holders. Until that prints, the fleet is a built option, not a won Power, and the window stays open."
+        "takeaway": "SERV is trying to originate a scale-economies plus cornered-resource Power — a first-mover commercial fleet, contracted Uber and DoorDash demand, and an exclusive Magna/Nvidia build stack — but no durable Power exists yet, because under half the fleet is utilized and unit economics at scale are unproven. The demand channel is demonstrably shared — Uber Eats routes to a rival fleet inside Serve's Miami market (Jul 2026) — so the contested moat is observed fact, not risk, and the platforms fund their own autonomy besides. The falsifier the bull must clear is utilized-fleet unit economics turning durably profitable — sub-$1/delivery on a high-utilization fleet — before dilution exhausts holders. Until that prints, the fleet is a built option, not a won Power, and the window stays open."
       },
       "pocd": {
         "people": {
@@ -44479,7 +44565,7 @@ const MEMOS = [
             "single class of common stock, one vote per share (no dual-class / super-voting) - a structural positive",
             "but a COMBINED Chair/CEO (Kashani) and a classified/staggered board (3 classes) concentrate leadership",
             "majority-independent board: only the two insiders (Kashani CEO, Parang President/COO) are non-independent",
-            "related-party / commercial concentration: Uber (largest customer via an Uber Eats 2,000-robot deal, and a former >5% holder via Postmates, now ~3.4%), Magna (exclusive contract manufacturer), Nvidia (former supplier + ~10% holder, fully exited end-2024)",
+            "related-party / commercial concentration: Uber (largest customer via an Uber Eats 2,000-robot deal, and a former >5% holder via Postmates, now ~3.4%; its autonomy head Maredia resigned from the board eff. Jun 17, 2026 — 8-K states no disagreement — replaced Jun 22 by independent director Andreas Lieber, so no sitting Uber executive remains), Magna (exclusive contract manufacturer), Nvidia (former supplier + ~10% holder, fully exited end-2024)",
             "going-concern doubt was flagged in the FY2023 10-K; cash is larger now (~12-month runway stated) but the FY2025 audit-opinion status was not independently confirmed"
           ],
           "keyPersonRisk": "high",
@@ -44488,7 +44574,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +29.2% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +26.1% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -44506,7 +44592,7 @@ const MEMOS = [
           },
           {
             "label": "De-rated price, fat right tail",
-            "body": "Down ~23% YTD, the equity is a cheap option — roughly 89% of the expected value sits in the bull and ultra-bull, priced lightly versus spot."
+            "body": "Down ~43% YTD, the equity is a cheap option — roughly 85% of the expected value sits in the bull and ultra-bull, priced lightly versus spot."
           },
           {
             "label": "A vertically-integrated stack",
@@ -44516,11 +44602,11 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bull validation",
-            "body": "Daily-active robots climb toward the ~2,000 deployed; cost-per-delivery falls through $1; Uber Eats scales toward the 2,000-robot commitment; raises shrink as revenue funds the burn."
+            "body": "Daily-active robots climb toward the ~2,050 deployed; cost-per-delivery falls through $1 (next checkpoint the Aug-6 Q2 print); Uber Eats scales toward the 2,000-robot commitment; raises shrink as revenue funds the burn."
           },
           {
             "label": "Bear validation",
-            "body": "Utilization stays stuck below half the fleet; the FY26 ~$26M guide slips; an equity raise on weak terms confirms dilutive stagnation; unit economics stay above $1/delivery."
+            "body": "Utilization still below half the fleet at the Aug-6 Q2 print; the FY26 ~$26M guide slips; a weak-terms raise (none filed through Jul 2026); a second Serve city shares volume with a rival fleet (Miami first) or Avride tops 1,000 robots."
           },
           {
             "label": "Reframe needed",
@@ -44547,7 +44633,7 @@ const MEMOS = [
         },
         {
           "term": "ATM dilution",
-          "definition": "An at-the-market equity program (here a live $150M ATM plus a $100M registered-direct) that funds the burn by selling new shares — the source of the modeled share-count growth."
+          "definition": "An at-the-market equity program (here a live $150M ATM, May 2026, replacing the terminated Cantor ATM) that funds the burn by selling new shares — the source of the modeled share-count growth."
         },
         {
           "term": "p_fail",
@@ -44555,8 +44641,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-07-24_09-15",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -48314,9 +48400,16 @@ const MEMOS = [
     "publishedISO": "2026-07-22",
     "publishedLabel": "July 22, 2026",
     "pdf": {
-      "file": "cai-memo__v004__2026-07-22_15-02.pdf",
-      "size": "302 KB",
+      "file": "cai-memo__v005__2026-07-24_09-15.pdf",
+      "size": "304 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "cai-memo__v004__2026-07-22_15-02.pdf",
+          "size": "302 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 15.38
+        },
         {
           "version": "003",
           "file": "cai-memo__v003__2026-07-02_15-17.pdf",
@@ -48329,7 +48422,7 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$4.27B",
       "shares": "278M",
-      "cash": "$800M cash, $378M debt · FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven; IPO Jun-2025 @ $21; now $18.33 (~13% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash; Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups"
+      "cash": "$800M cash, $378M debt · FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven; IPO Jun-2025 @ $21; now $15.38 (~27% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash; Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups"
     },
     "spot": {
       "price": 15.38,
@@ -48377,7 +48470,7 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": null,
-    "question": "Caris trades at ~6.5x sales like Tempus, yet screens positive where Tempus screened rich — is being FCF-positive at GAAP breakeven, with a real 47%-to-65% margin inflection, enough to justify the price?",
+    "question": "After the July 2026 de-rate Caris trades ~5.5x sales — below the ~6x Tempus comp — while already FCF-positive at GAAP breakeven; cheaper than Tempus and further along, is the market mispricing a real 47%-to-65% margin inflection?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -48388,7 +48481,7 @@ const MEMOS = [
         "why": "Requires the volume engine to stall near term and the true-up to be a one-off rather than a recurring feature of payer settlements. Possible given the steep step-down already guided, but the cash-positive base makes outright collapse less likely than for a pre-breakeven peer.",
         "what": [
           "Revenue compounds only ~6.6% as test-volume growth stalls and reimbursement true-ups reverse rather than recur. The ~$33M of 2025 revenue tied to prior-year reimbursement catch-ups proves non-repeatable, and the reported growth rate is exposed as flattered.",
-          "Margins barely move off the floor, holding near 0% owner-FCF as price competition from Tempus, Guardant and Foundation erodes the gross-margin gains. The ~6.5x sales multiple compresses hard against a decelerating, low-margin base. DCF lands at $5.25, down 71%."
+          "Margins barely move off the floor, holding near 0% owner-FCF as price competition from Tempus, Guardant and Foundation erodes the gross-margin gains. The ~5.5x sales multiple compresses hard against a decelerating, low-margin base. DCF lands at $5.25, down 71%."
         ]
       },
       {
@@ -48400,7 +48493,7 @@ const MEMOS = [
         "why": "The honest deceleration case — going from +97% to a +24% guide is a steep step, and a further undershoot plus pricing pressure is plausible. Weighted at 27% as the most credible downside if the data moat proves shallower than bulls assume.",
         "what": [
           "Revenue grows ~11.9% — well below the +24% guide — as competition pressures per-test pricing and the easy share gains slow. The margin inflection partly holds, reaching mid-teens owner-FCF, but not fast enough to outrun a contracting multiple.",
-          "The market re-rates a ~6.5x-sales name toward something closer to a low-double-digit grower, and the IPO-era premium unwinds. At a 4%-to-15% margin path the DCF is $10.28, down 44%. The setup is a quality business that was simply priced ahead of its delivery."
+          "The market re-rates a ~5.5x-sales name toward something closer to a low-double-digit grower, and the IPO-era premium unwinds. At a 4%-to-15% margin path the DCF is $10.28, down 44%. The setup is a quality business that was simply priced ahead of its delivery."
         ]
       },
       {
@@ -48411,8 +48504,8 @@ const MEMOS = [
         "headline": "Solid growth, the margin inflection holds",
         "why": "Centered on management hitting the FY26 guide and sustaining the volume KPI while margins keep inflecting — the continuation of what the last two years already showed. Carries the plurality 33% weight as the most likely path.",
         "what": [
-          "Revenue compounds ~16.7%, roughly in line with the guided range, as clinical test volume grows around 20% and Caris Assure and MI Cancer Seek add incremental lives. The 47%-to-65% gross-margin move continues toward 21% owner-FCF as fixed lab and data costs leverage.",
-          "This is the modal outcome — a real growth-plus-margin story that delivers, not a moonshot. At $19.41 the DCF sits just above the $18.33 price, so the base case is roughly fair. The market is paying about what the business is worth if it simply executes the plan."
+          "Revenue compounds ~16.7%, roughly in line with the guided range, as clinical test volume grows around 20% and Caris Assure, MI Cancer Seek and the newly MolDX-covered ChromoSeq myeloid assay (May-2026) add incremental lives. The 47%-to-65% gross-margin move continues toward 21% owner-FCF as fixed lab and data costs leverage.",
+          "This is the modal outcome — a real growth-plus-margin story that delivers, not a moonshot. At $19.41 the DCF sits ~26% above the $15.38 price — after the July 2026 de-rate, simply executing the plan clears spot."
         ]
       },
       {
@@ -48435,13 +48528,13 @@ const MEMOS = [
         "headline": "Becomes the oncology-data standard",
         "why": "The full platform win — durable hypergrowth, a true data-network effect, and software-like margins together. Each is individually demanding and the combination is a tail, so it carries 9% — meaningful upside optionality, not a central expectation.",
         "what": [
-          "Revenue compounds ~27% as Caris establishes its molecular database as the reference standard for oncology decision-making, with comprehensive profiling, blood-based MRD and the ADAPT AI layer compounding into a network where more tests improve the data and the data wins more tests.",
+          "Revenue compounds ~27% as Caris establishes its molecular database as the reference standard for oncology decision-making, with comprehensive profiling, blood-based MRD and the ADAPT AI layer compounding into a network where more tests improve the data and the data wins more tests. The Caris Detect multi-cancer screening launch (Jul-2026, versus Grail and Exact) is unpriced optionality on top — no reimbursement or revenue yet, so it is narrated here, not modeled.",
           "Owner-FCF margins reach ~35%, approaching software economics as the data and AI layer scales near-zero-marginal-cost. At $73.64 the DCF is triple the price. This is the platform outcome where the cornered data resource and scale economics fully express."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: July 22, 2026 close.",
-    "thesis": "Caris Life Sciences is an AI precision-oncology diagnostics company — whole-exome and whole-transcriptome tumor profiling plus blood-based testing — that IPO'd June 2025 at $21.00 and now trades $18.33, ~13% below its offer. FY2025 revenue grew 97% to $812M, gross margin expanded 47%->65%, and unlike most diagnostics scalers it is already free-cash-flow positive with +$138M adj-EBITDA, near GAAP breakeven. The DCF asks whether the margin inflection holds as growth steps down to a +24% guide. Weighted fair value $23.63, ~29% above spot — base ~fair, the upside in the data-moat tail.",
+    "thesis": "Caris Life Sciences is an AI precision-oncology diagnostics company — whole-exome and whole-transcriptome tumor profiling plus blood-based testing — that IPO'd June 2025 at $21.00 and now trades $15.38, ~27% below its offer after a July 2026 de-rate on no company-specific news. FY2025 revenue grew 97% to $812M, gross margin expanded 47%->65%, and unlike most diagnostics scalers it is already free-cash-flow positive with +$138M adj-EBITDA, near GAAP breakeven. The DCF asks whether the margin inflection holds as growth steps down to a +24% guide. Weighted fair value $23.63, ~54% above spot — and the base case alone ($19.41) now sits ~26% above the price, so the finding no longer rests on the data-moat tail.",
     "historicalPrices": {
       "xMin": -1.05,
       "ipoMarker": "IPO Jun '25",
@@ -48472,7 +48565,11 @@ const MEMOS = [
         ],
         [
           -0.05,
-          18.33
+          18.75
+        ],
+        [
+          -0.02,
+          15.38
         ]
       ]
     },
@@ -48487,7 +48584,7 @@ const MEMOS = [
       },
       {
         "label": "Base 33%",
-        "body": "~16.7% growth, margin inflection holds to 21% owner-FCF — DCF $19.41, roughly fair at spot."
+        "body": "~16.7% growth, margin inflection holds to 21% owner-FCF — DCF $19.41, ~26% above spot."
       },
       {
         "label": "Bull 18%",
@@ -48947,7 +49044,7 @@ const MEMOS = [
         }
       },
       "competitive": {
-        "arena": "Comprehensive molecular diagnostics and oncology data — Caris competes with Tempus, Guardant, Roche's Foundation Medicine, Natera and Exact Sciences for tumor-profiling and liquid-biopsy volume.",
+        "arena": "Comprehensive molecular diagnostics and oncology data — Caris competes with Tempus, Guardant, Roche's Foundation Medicine, Natera and Exact Sciences for tumor-profiling and liquid-biopsy volume. The Caris Detect launch (Jul-2026) adds a multi-cancer early-detection screening front versus Grail's Galleri and Exact's Cancerguard.",
         "lens": "power_audit",
         "powers": {
           "scaleEconomies": {
@@ -48985,7 +49082,7 @@ const MEMOS = [
           {
             "name": "Tempus (TEM)",
             "kind": "public",
-            "note": "AI-precision-oncology data peer; near-breakeven, the direct comp",
+            "note": "AI-precision-oncology data peer; near-breakeven, the direct comp — buying Personalis (~$1.5B all-stock, Jul-2026) to build MRD",
             "growth": 0.25,
             "margin": null,
             "multiple": "~6x sales"
@@ -49024,7 +49121,7 @@ const MEMOS = [
           {
             "vector": "cornered_resource",
             "who": "Tempus, Roche, Natera",
-            "falsifier": "A rival assembles a comparable comprehensive-profiling dataset, commoditizing the data moat before scale and network effects lock in."
+            "falsifier": "A rival assembles a comparable comprehensive-profiling dataset, commoditizing the data moat before scale and network effects lock in. Tempus's ~$1.5B Personalis deal (announced Jul-2026, closing early 2027) puts that consolidation in motion on the MRD front — a warning shot at Caris Assure, not yet at the core whole-exome/transcriptome moat."
           },
           {
             "vector": "network_economies",
@@ -49055,13 +49152,13 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +28.9% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the ~+54% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
           {
             "label": "Already FCF-positive, unlike Tempus",
-            "body": "Caris is FCF-positive at GAAP breakeven with +97% growth, where the similarly-priced Tempus was barely breakeven — same multiple, further along."
+            "body": "Caris is FCF-positive at GAAP breakeven with +97% growth, where Tempus at a higher multiple was barely breakeven — cheaper multiple, further along."
           },
           {
             "label": "The margin inflection is real",
@@ -49073,7 +49170,7 @@ const MEMOS = [
           },
           {
             "label": "Priced below the IPO",
-            "body": "At $18.33 versus a $21.00 offer eight months ago, the base case is roughly fair and the hypergrowth and data-moat tails are not richly priced in."
+            "body": "At $15.38, ~27% below the $21.00 offer thirteen months on, even the base case now clears spot — and the hypergrowth and data-moat tails are not priced in at all."
           },
           {
             "label": "The true-up flatters the trend",
@@ -49122,8 +49219,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-07-24_09-15",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

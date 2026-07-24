@@ -23,9 +23,10 @@ central_question: At ~6.6x sales and near-breakeven, is the market paying for pr
   a margin inflection that SBC currently swamps and the modal case doesn't deliver?
 thesis: Tempus AI is AI-precision-oncology diagnostics plus a multimodal health-data flywheel. Revenue is $1.3B, growing 25-36%,
   adj-EBITDA just inflected positive (FY26 guide ~$65M). But SBC runs ~$136M/yr — more than 10% of revenue and larger than
-  that adj-EBITDA — so true owner free cash flow is still negative. At $47.82 (~$8.6B cap, down ~20% YTD, net cash ~$84M)
-  the modal 5-year DCF is $30.42, about 36% below spot. Only the bull case — sustained 21%+ growth and a ~23% terminal margin
-  — clears the price. You are paying today for continued hypergrowth and an unproven margin turn.
+  that adj-EBITDA — so true owner free cash flow is still negative. In July 2026 Tempus agreed to buy the rest of Personalis
+  for ~$1.5B, mostly stock — entering MRD via NeXT Personal, but a ~15% share issuance dilutes the modal case. At $46.93 the
+  modal DCF is $26.43, ~44% below spot; only the bull case clears the price. You are paying for hypergrowth and an unproven
+  margin turn.
 chart_reference:
   history_years:
   - 2023
@@ -66,13 +67,13 @@ scenarios:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.14
-    expected_per_share: 3.45
+    expected_per_share: 3.00
     headline: Growth collapses, never durably profitable
     narrative:
     - Revenue growth fades toward ~8% as oncology test volume saturates and the data-licensing pipeline stalls. The margin
       path inches from −8% to only 5% — operating leverage never arrives because SBC and clinical-lab costs scale with revenue.
     - The company de-rates to a distressed multiple as the market stops paying for a moat that did not compound. Dilution
-      from continued stock comp erodes per-share value. The DCF lands at $3.45, roughly 93% below spot.
+      from continued stock comp erodes per-share value. The DCF lands at $3.00, roughly 94% below spot.
     probability_rationale: A ~14% tail. Requires both the diagnostics franchise to stall and Data and Applications to stop
       scaling — possible if pharma budgets tighten and foundation-model rivals commoditize the data, but it contradicts the
       +40%+ data-licensing trend now in evidence.
@@ -110,7 +111,7 @@ scenarios:
       net_debt: 0.56
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 200
+      final_shares: 230
       distress: 0.0
       pv_fcf:
       - -0.108
@@ -123,7 +124,7 @@ scenarios:
       pv_terminal: 0.68
       op_ev: 0.61
       total_equity: 0.69
-      dcf_per_share: 3.45
+      dcf_per_share: 3.00
     chart_data:
       ev_rev_multiple:
       - 5.0
@@ -141,13 +142,15 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.28
-    expected_per_share: 13.47
+    expected_per_share: 11.73
     headline: Decelerates hard, thin margins persist
     narrative:
     - Growth slows to ~12% as Guardant, Natera, and Caris pressure diagnostics pricing and reimbursement caps revenue per
-      test. The data flywheel keeps compounding but cannot offset a maturing core diagnostics line.
+      test; Natera's Signatera leads the MRD race Tempus just bought into. The data flywheel keeps compounding but cannot
+      offset a maturing core diagnostics line.
     - Margins climb from −4% to ~11% — positive, but far short of software economics, because SBC and lab infrastructure stay
-      heavy. The DCF is $13.47, about 72% below spot. The market re-rates toward a mid-teens-growth diagnostics comp.
+      heavy and the Personalis integration adds near-term losses. The DCF is $11.73, about 75% below spot. The market re-rates
+      toward a mid-teens-growth diagnostics comp.
     probability_rationale: A ~28% weight, the second-likeliest outcome. This is the world where TEM is a good but ordinary
       diagnostics-plus-data business — real growth, real competition, no durable software margin. Pricing pressure is the
       swing variable.
@@ -185,7 +188,7 @@ scenarios:
       net_debt: 0.56
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 196
+      final_shares: 225
       distress: 0.0
       pv_fcf:
       - -0.056
@@ -198,7 +201,7 @@ scenarios:
       pv_terminal: 2.27
       op_ev: 2.56
       total_equity: 2.64
-      dcf_per_share: 13.47
+      dcf_per_share: 11.73
     chart_data:
       ev_rev_multiple:
       - 5.5
@@ -216,13 +219,15 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.33
-    expected_per_share: 30.42
+    expected_per_share: 26.43
     headline: Solid growth, but modal value sits below spot
     narrative:
     - Revenue compounds ~16% as oncology volume grows ~28% and Data and Applications scales the ~80%-margin pharma-licensing
       line. The AstraZeneca-Pathos deal type repeats, and the 7.3M-record library keeps feeding both segments.
-    - Margins ramp from −2% to ~17% as the data mix lifts the blend, but SBC keeps owner-FCF modest early. The DCF is $30.42
-      — a healthy business, about 36% below spot. The modal case simply does not support $47.82.
+    - Margins ramp from −2% to ~17% as the data mix lifts the blend and the May-2026 FDA tumor-only xT CDx approval adds an
+      estimated ~$200-per-test ASP uplift from 2027, but SBC keeps owner-FCF modest early. The DCF is $26.43 — a healthy
+      business, about 44% below spot once the ~15% Personalis share issuance is absorbed. The modal case simply does not
+      support $46.93.
     probability_rationale: The single most-likely path at ~33%. It assumes the current trajectory broadly holds — mid-teens
       growth, a scaling data line, gradual margin gains — without the step-change in operating leverage the bull requires.
       It is the honest anchor for the finding.
@@ -260,7 +265,7 @@ scenarios:
       net_debt: 0.56
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 192
+      final_shares: 221
       distress: 0.0
       pv_fcf:
       - -0.03
@@ -273,7 +278,7 @@ scenarios:
       pv_terminal: 5.06
       op_ev: 5.76
       total_equity: 5.84
-      dcf_per_share: 30.42
+      dcf_per_share: 26.43
     chart_data:
       ev_rev_multiple:
       - 6.0
@@ -291,13 +296,15 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.17
-    expected_per_share: 61.38
+    expected_per_share: 53.43
     headline: Data flywheel drives a real margin inflection
     narrative:
     - Growth holds at ~21% as Data and Applications compounds 40%+ and the ~80%-margin data line becomes a larger share of
-      the mix. The multimodal library proves hard to replicate, and pharma standardizes on Tempus for oncology data.
-    - 'Operating leverage finally clears SBC: margins ramp from 2% to ~23%, reaching a durable-profit inflection. The DCF
-      is $61.38, about 28% above spot. This is the lowest scenario that justifies today''s price.'
+      the mix. The multimodal library proves hard to replicate, NeXT Personal scales Tempus into MRD, and pharma standardizes
+      on Tempus for oncology data.
+    - 'Operating leverage finally clears SBC: margins ramp from 2% to ~23%, aided by the xT CDx ASP uplift, reaching a durable-profit
+      inflection. The DCF is $53.43, about 14% above spot even after the Personalis dilution. This is the lowest scenario that
+      justifies today''s price.'
     probability_rationale: A ~17% weight. Requires two things at once — sustained high growth AND a genuine terminal margin,
       not just adj-EBITDA. Plausible if the data moat re-rates the whole company, but it is the entry hurdle, not the expected
       case.
@@ -335,7 +342,7 @@ scenarios:
       net_debt: 0.56
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 188
+      final_shares: 216
       distress: 0.0
       pv_fcf:
       - 0.031
@@ -348,7 +355,7 @@ scenarios:
       pv_terminal: 10.14
       op_ev: 11.46
       total_equity: 11.54
-      dcf_per_share: 61.38
+      dcf_per_share: 53.43
     chart_data:
       ev_rev_multiple:
       - 6.5
@@ -366,13 +373,13 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.08
-    expected_per_share: 118.12
+    expected_per_share: 102.66
     headline: Becomes the oncology-data standard
     narrative:
     - 'TEM wins the platform: the multimodal library becomes the default substrate for oncology drug development and clinical
       decisioning. Revenue compounds ~25%, with Data and Applications the growth engine at software gross margins.'
-    - Margins ramp from 5% to ~29% as the high-margin data mix dominates and scale economics compound. The DCF reaches $118.12,
-      about 147% above spot — a platform-winner outcome, not a diagnostics multiple.
+    - Margins ramp from 5% to ~29% as the high-margin data mix dominates and scale economics compound. The DCF reaches $102.66,
+      about 119% above spot — a platform-winner outcome, not a diagnostics multiple.
     probability_rationale: 'An ~8% tail. The data-moat optionality the price already embeds, paid off in full: a network-and-scale
       flywheel that no rival replicates. Low probability, but it is the asymmetric reason a long position is debated at all.'
     dcf_metrics:
@@ -409,7 +416,7 @@ scenarios:
       net_debt: 0.56
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 186
+      final_shares: 214
       distress: 0.0
       pv_fcf:
       - 0.081
@@ -422,7 +429,7 @@ scenarios:
       pv_terminal: 19.79
       op_ev: 21.89
       total_equity: 21.97
-      dcf_per_share: 118.12
+      dcf_per_share: 102.66
     chart_data:
       ev_rev_multiple:
       - 7.0
@@ -453,18 +460,18 @@ historical_prices:
   - - -0.3
     - 50.0
   - - -0.05
-    - 47.82
+    - 46.93
 weighting_rationale:
 - label: Ultra Bear 14%
-  body: Growth fades to ~8%, margin tops out ~5%, distressed re-rate; DCF $3.45.
+  body: Growth fades to ~8%, margin tops out ~5%, distressed re-rate; DCF $3.00.
 - label: Bear 28%
-  body: ~12% growth, pricing pressure, margins ~11% but thin; DCF $13.47.
+  body: ~12% growth, pricing pressure, margins ~11% but thin; DCF $11.73.
 - label: Base 33%
-  body: ~16% growth, data line scales, margins ~17%; DCF $30.42 — below spot.
+  body: ~16% growth, data line scales, margins ~17%; DCF $26.43 — below spot.
 - label: Bull 17%
-  body: ~21% growth plus a ~23% terminal margin; DCF $61.38 — clears spot.
+  body: ~21% growth plus a ~23% terminal margin; DCF $53.43 — clears spot.
 - label: Ultra Bull 8%
-  body: ~25% growth, software margins, data standard; DCF $118.12.
+  body: ~25% growth, software margins, data standard; DCF $102.66.
 appendix:
   pushback:
   - label: The moat is real and hard to replicate
@@ -484,14 +491,14 @@ appendix:
       revenue type.
   triggers:
   - label: Bull validation
-    body: Data and Applications sustains 40%+ growth; gross margin and adj-EBITDA margin both expand while SBC falls as a
-      share of revenue; new multi-year pharma data deals sign.
+    body: Data and Applications holds 40%+ growth; margins expand as SBC falls; new pharma deals sign; NeXT Personal MRD and
+      the xT CDx ASP uplift scale from 2027.
   - label: Bear validation
-    body: Diagnostics revenue-per-test compresses under Guardant/Natera/Caris; total growth slips toward the low teens; SBC
-      stays above adj-EBITDA so owner-FCF remains negative.
+    body: Revenue-per-test compresses under Guardant/Natera/Caris; growth slips to the low teens; SBC exceeds adj-EBITDA, owner-FCF
+      stays negative; Personalis cedes MRD share to Signatera.
   - label: Reframe needed
-    body: Foundation models trained on open or competitor data erode the licensing premium, or reimbursement cuts diagnostics
-      economics — either would collapse the ~80%-margin moat thesis.
+    body: Foundation models on rival data erode the licensing premium, or reimbursement cuts collapse the moat; a mostly-cash
+      Personalis deal or an over-priced one reframes the capital-allocation read.
 glossary:
 - term: Multimodal data library
   definition: TEM's 7.3M+ de-identified patient records linking genomic, imaging, and clinical data — the proprietary asset
@@ -503,17 +510,18 @@ glossary:
   definition: Minimal residual disease — detecting trace cancer after treatment; a growth vector for oncology testing volume
     and a competitive battleground.
 - term: Adj-EBITDA vs owner-FCF
-  definition: Adjusted EBITDA adds back ~$136M/yr of stock comp; true owner free cash flow does not, so the headline positive
-    adj-EBITDA still maps to negative cash today.
+  definition: Adjusted EBITDA adds back ~$136M/yr of stock comp; owner free cash flow does not, so positive adj-EBITDA still
+    maps to negative cash today.
 - term: SBC
   definition: Stock-based compensation (~$136M/yr, over 10% of revenue) — a real, recurring, dilutive cost that exceeds adj-EBITDA
-    and currently swamps the margin story.
+    and swamps the margin story.
 - term: Dual-class control
-  definition: Founder-CEO Eric Lefkofsky holds ~60% of the vote via super-voting shares, concentrating control and limiting
-    outside accountability — a governance flag.
+  definition: Founder-CEO Eric Lefkofsky holds ~60% of the vote via super-voting shares, concentrating control — a governance
+    flag.
 competitive:
-  arena: 'AI-precision-oncology: molecular diagnostics plus a multimodal-data-licensing flywheel, against Guardant, Natera,
-    Caris, Foundation Medicine (Roche), and Exact Sciences.'
+  arena: 'AI-precision-oncology: molecular diagnostics, a multimodal-data-licensing flywheel, and — via the July-2026 Personalis
+    acquisition and its NeXT Personal test — the fast-growing minimal-residual-disease (MRD) arena (a ~$5-8B-by-2035 market),
+    against Guardant, Natera, Caris, Foundation Medicine (Roche), and Exact Sciences.'
   lens: power_audit
   powers:
     scale_economies:
@@ -536,7 +544,8 @@ competitive:
     cornered_resource:
       score: 3
       note: The 7.3M-record multimodal library (1.3M genomic, 1.4M imaging) is the proprietary, hard-to-replicate asset and
-        the dominant Power.
+        the dominant Power; the Personalis acquisition folds NeXT Personal MRD and its clinical volume (~80% already routed
+        through Tempus) into it.
     process_power:
       score: 1
       note: Multimodal data engineering is a capability, but not yet a durable, uncopyable process advantage.
@@ -545,13 +554,13 @@ competitive:
   rivals:
   - name: Guardant Health
     kind: public
-    note: Liquid biopsy and MRD; scaling oncology volume
+    note: Liquid biopsy and MRD (Guardant Reveal); scaling oncology volume
     growth: 0.2
     margin: null
     multiple: ~6x sales
   - name: Natera
     kind: public
-    note: Oncology and women's-health molecular testing; near breakeven
+    note: Direct MRD leader (Signatera PMA filed Feb 2026, raised 2026 outlook, Japan entry); near breakeven
     growth: 0.3
     margin: 0.0
     multiple: ~9x sales
@@ -563,7 +572,7 @@ competitive:
     multiple: division of Roche
   - name: Exact Sciences
     kind: public
-    note: Cologuard plus oncology; established but slower-growing
+    note: Cologuard plus oncology MRD (Oncodetect); established but slower-growing
     growth: 0.12
     margin: null
     multiple: ~4x sales
@@ -574,7 +583,8 @@ competitive:
       line.
   - vector: scale_economies / pricing
     who: Guardant, Natera, Caris
-    falsifier: Diagnostics price competition compresses revenue per test, starving the volume that feeds the data flywheel.
+    falsifier: Diagnostics price competition compresses revenue per test, starving the volume that feeds the data flywheel
+      — sharper now that Tempus has bought directly into the MRD contest against Natera's Signatera.
   - vector: regulatory / reimbursement
     who: payers and CMS
     falsifier: Reimbursement cuts to molecular diagnostics undermine the core economics and the funnel that grows the record
@@ -583,7 +593,8 @@ competitive:
     feeding an ~80%-margin licensing flywheel with a data-network loop — is genuinely hard to replicate, hence the bull case.
     But durability is medium, not high: the falsifier is foundation models trained on open or rival data closing the gap,
     or diagnostics pricing pressure starving the volume that feeds it. The moat must keep Data and Applications compounding
-    40%+ to earn the price.'
+    40%+ to earn the price. The July-2026 Personalis acquisition extends the cornered resource into MRD (NeXT Personal) while
+    buying directly into that price war.'
 pocd:
   people:
     ceo: Eric Lefkofsky
@@ -591,8 +602,9 @@ pocd:
     tenure_years: 11
     insider_ownership_pct: 24.0
     capital_allocation: Founder Eric Lefkofsky is Chairman & CEO (founded 2015; serial founder of Groupon, Lightbank,
-      Mediaocean and Pathos AI). Capital funds rapid growth and acquisitions (Ambry Genetics ~$672M, Paige, OneOme)
-      against ~$605M cash; FY2025 revenue $1.27B (+83%) at roughly adjusted-EBITDA breakeven. No dividend or buyback,
+      Mediaocean and Pathos AI). Capital funds rapid growth and acquisitions (Ambry Genetics ~$672M, Paige, OneOme; and in
+      July 2026 a definitive agreement to buy the ~88% of Personalis it does not own for ~$1.5B, mostly stock — the largest
+      deal to date and dilutive) against ~$605M cash; FY2025 revenue $1.27B (+83%) at roughly adjusted-EBITDA breakeven. No dividend or buyback,
       and the share count is rising from deal stock plus heavy stock-based comp — FY2025 SBC of ~$125M far exceeds
       the ~$7M adjusted-EBITDA loss, so owner cash economics are weaker than the adjusted figure implies.
     incentive_alignment: 'Lefkofsky took no base salary in 2024 and an $800K base + $800K target from 2025; alignment
@@ -621,16 +633,20 @@ pocd:
       Key-person risk is high.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -28.5% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -37% finding) + position
     sizing.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-07-24_09-15"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-07-24_09-15"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 46.93
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
