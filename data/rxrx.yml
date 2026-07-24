@@ -12,20 +12,20 @@ market:
   extras:
   - $0.665B cash (Q1'26); runway into early 2028; burn ~$340M/yr
   - FY25 revenue $74.7M (+27%) — all collaboration/milestone, no product sales
-  - Down ~37% YTD to ~$3.15; ~510M shares post-Exscientia merger + ATM
+  - Down ~40% YTD to ~$3.02; ~510M shares post-Exscientia merger + ATM
 taxonomy:
   watchlist: asymmetrical-moonshots
   tier: Low
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology
-central_question: At a ~37%-de-rated $3.15 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation,
+central_question: At a ~40%-de-rated $3.02 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation,
   or a platform that funds itself toward dilutive stagnation?
 thesis: Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps
-  cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.15 (~$1.6B
-  cap), down ~37% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early
+  cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.02 (~$1.54B
+  cap), down ~40% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early
   2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful
-  approved drug. Weighted fair value is $3.85, +22% above spot — but the modal base sits below the price, so the answer rides
+  approved drug. Weighted fair value is $3.85, +28% above spot — but the modal base sits below the price, so the answer rides
   the right tail.
 chart_reference:
   tam_billion: 50
@@ -829,7 +829,7 @@ appendix:
     body: Roche/Genentech ($213M received), Sanofi ($134M, fifth milestone Feb 2026) and Bayer validate that pharma will pay
       for the platform.
   - label: De-rated price, fat right tail
-    body: Down ~37% YTD, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced
+    body: Down ~40% YTD, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced
       lightly.
   - label: Compute-scale advantage
     body: BioHive-2 plus automated Phenomaps generate proprietary phenotypic data at a scale rivals cannot easily match —
@@ -898,19 +898,22 @@ competitive:
   rivals:
   - name: Insilico Medicine
     kind: private
-    note: Generative-AI discovery, clinical-stage pipeline; well-funded private rival
+    note: Generative-AI discovery; launched Phase III of AI-discovered rentosertib (~Jul 2026) and signed an Eli Lilly
+      collaboration worth up to $2.75B (Mar 2026) — a full clinical phase ahead
     share_now: 0.0
     share_terminal: 0.0
     capital: Private (VC-backed)
   - name: Isomorphic Labs
     kind: private
-    note: Alphabet/DeepMind spinout; AlphaFold lineage and deep capital
+    note: Alphabet/DeepMind spinout; AlphaFold lineage. $2.1B Series B (May 2026), the largest AI-drug-discovery raise
+      to date; first clinical trials expected end-2026
     share_now: 0.0
     share_terminal: 0.0
     capital: Alphabet-funded
   - name: Schrodinger
     kind: public
-    note: Physics-based computational platform plus owned pipeline; the listed comp
+    note: Physics-based computational platform (the listed comp); Simcere collaboration (Jul 2026), pipeline narrowed to
+      two clinical assets, pivoting toward partnership/software
     share_now: 0.0
     share_terminal: 0.0
     capital: Public equity
@@ -935,10 +938,14 @@ competitive:
     verdict: lagging
   takeaway: 'No durable Power is originated yet — like all AI-bio, RXRX has zero approved drugs, so switching costs, branding
     and scale economies are still latent. The one candidate is a cornered resource: the Phenomap dataset and BioHive-2 compute
-    generate proprietary phenotypic data at a scale rivals cannot easily match. The bet is whether that data-and-Phenomap
-    flywheel converts into repeatable approved drugs before well-capitalized private labs (Insilico, Isomorphic) or pharma''s
-    own AI close the gap. The falsifier the bull must clear is the 2026-2027 readouts producing real clinical and royalty
-    economics — until a drug ships, the resource is unproven and the Power window stays open, not won.'
+    generate proprietary phenotypic data at a scale rivals cannot easily match. The competitive clock is now ticking louder:
+    in mid-2026 Insilico moved a molecule into Phase III (a full clinical phase ahead of Recursion), Isomorphic raised a
+    record $2.1B, and Schrodinger narrowed to a two-asset partnership model — the exact "well-capitalized rivals close the
+    gap" pressure the bull thesis names as its falsifier. Yet the window has not closed: no rival has an approved AI-discovered
+    drug either, so the head-to-head on approvals is still a tie at zero, and Recursion''s phenotypic-data-scale lead is
+    intact while its capital-depth disadvantage only sharpens. The falsifier the bull must clear is the 2026-2027 readouts
+    producing real clinical and royalty economics — until a drug ships, the resource is unproven and the Power window stays
+    open, not won.'
 pocd:
   people:
     ceo: Najat Khan, Ph.D.
@@ -952,13 +959,18 @@ pocd:
       ~26%). Pre-product and cash-consuming — no dividend or buyback. NVIDIA fully exited its stake in February 2026.'
     incentive_alignment: 'Insider economic ownership is low: founder Gibson held ~1% economically after his June 2026
       filing, and the new CEO’s alignment is option-heavy rather than a founding stake. The dominant alignment lever
-      the thesis relied on — the founder — is being removed as Gibson exits.'
+      the thesis relied on — the founder — is being removed as Gibson exits. That exit continued visibly through July
+      2026: Form 144 notices show Gibson disposing of roughly 100k shares a day plus a 340,440-share block into July
+      1-2, co-founder Borgeson also filing Form 144s, and near-daily insider sale notices across July 10-21 — the supply
+      overhang Yahoo Finance tied to the 7/22 52-week low.'
     governance_flags:
     - 'dual-class (Class B = 10 votes) but effectively collapsed: only ~5.5M Class B remain versus ~522M Class A,
       and the structure auto-sunsets by ~2027'
     - co-founder Chris Gibson stepped down as CEO (Jan 2026) and did not seek re-election to the board at the June
       2026 annual meeting — founder leaving entirely
     - CEO handed to a non-founder professional (Khan) after ~12 years of founder leadership — a transition year
+    - continued founder/insider Form 144 selling through July 2026 (Gibson ~100k shares/day plus a 340,440-share block
+      into Jul 1-2; co-founder Borgeson also filing; near-daily notices Jul 10-21) — an extension of the flagged founder exit
     - NVIDIA fully exited its equity stake (February 2026)
     key_person_risk: medium
     score: 3
@@ -969,16 +981,20 @@ pocd:
       rather than high.'
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +22.3% finding) + position
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +27.6% finding) + position
     sizing.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-07-24_09-15"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-07-24_09-15"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 3.02
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
