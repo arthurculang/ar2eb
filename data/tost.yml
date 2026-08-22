@@ -2,10 +2,10 @@ ticker: TOST
 company: Toast, Inc.
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-07-22'
-spot: 29.84
+date: '2026-08-22'
+spot: 36.64
 market:
-  market_cap_billion: 17.36
+  market_cap_billion: 21.32
   shares_outstanding_million: 582.0
   cash_billion: 1.353
   net_debt_billion: 0.0
@@ -630,13 +630,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +25.5% finding), then position-sized.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 29.84
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

@@ -2,10 +2,10 @@ ticker: GOOGL
 company: Alphabet
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-22'
-spot: 348.45
+date: '2026-08-22'
+spot: 344.82
 market:
-  market_cap_billion: 4212.06
+  market_cap_billion: 4168.18
   shares_outstanding_million: 12088.0
   cash_billion: 126.8
   net_debt_billion: 48.5
@@ -632,13 +632,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -21.4% finding), then position-sized.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 348.45
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

@@ -2,10 +2,10 @@ ticker: CART
 company: Instacart (Maplebear)
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-22'
-spot: 44.07
+date: '2026-08-22'
+spot: 49.83
 market:
-  market_cap_billion: 10.61
+  market_cap_billion: 12.00
   shares_outstanding_million: 240.6
   cash_billion: 0.69
   net_debt_billion: 0.0
@@ -638,13 +638,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +57.7% finding), then position-sized.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 44.07
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

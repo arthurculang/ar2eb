@@ -2,10 +2,10 @@ ticker: IONQ
 company: IonQ
 exchange: NYSE
 dcf_type: young_company
-date: '2026-07-22'
-spot: 35.43
+date: '2026-08-22'
+spot: 44.86
 market:
-  market_cap_billion: 13.22
+  market_cap_billion: 16.74
   shares_outstanding_million: 373.2
   cash_billion: 2.39
   net_debt_billion: 0.0
@@ -1005,14 +1005,18 @@ pocd:
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -74.4% finding) + position
     sizing.'
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-07-24_09-15"
+  footer_version: "008"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-07-24_09-15"
+  pdf_version: "008"
+  pdf_timestamp: "2026-08-22_13-10"
 
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-07-24_09-15"
+    asOfDate: "2026-07-22"
+    spotPrice: 35.43
   - version: "006"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

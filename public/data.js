@@ -10,12 +10,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "joby-memo__v035__2026-07-24_06-57.pdf",
+      "file": "joby-memo__v036__2026-08-22_13-10.pdf",
       "size": "401 KB",
       "priorVersions": [
+        {
+          "version": "035",
+          "file": "joby-memo__v035__2026-07-24_06-57.pdf",
+          "size": "401 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 7.67
+        },
         {
           "version": "034",
           "file": "joby-memo__v034__2026-07-22_16-44.pdf",
@@ -40,38 +47,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$7.54B",
+      "mktCap": "$7.4B",
       "shares": "984M",
       "cash": "$2.5B cash, zero debt"
     },
     "spot": {
-      "price": 7.67,
-      "asOf": "July 22, 2026 close"
+      "price": 7.53,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 8.42,
-      "deltaPct": 9.8
+      "deltaPct": 11.9
     },
     "compound": [
       {
         "y": 5,
         "value": 12.16,
-        "mult": 1.58
+        "mult": 1.61
       },
       {
         "y": 10,
         "value": 17.56,
-        "mult": 2.29
+        "mult": 2.33
       },
       {
         "y": 15,
         "value": 25.38,
-        "mult": 3.31
+        "mult": 3.37
       },
       {
         "y": 20,
         "value": 36.72,
-        "mult": 4.79
+        "mult": 4.88
       }
     ],
     "taxonomy": {
@@ -153,7 +160,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 13 / Bear 17 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 13 / Bear 17 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: August 22, 2026 close.",
     "thesis": "Joby trades at ~$7.5B against $24M of Q1 2026 revenue and $700M annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise) provides ~3 years of runway. FAA certification entered Stage 5 (TIA) in March 2026 with the type certificate guided late 2026, Dubai exclusive operations begin in 2026, and the June 2026 Toyota manufacturing joint venture unlocks scale. Pre-revenue category-defining companies present a Damodaran problem: the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -303,10 +310,10 @@ const MEMOS = [
       "tamBillion": 250,
       "weighted": {
         "expected": 8.42,
-        "upsidePct": 9.8
+        "upsidePct": 11.9
       },
       "market": {
-        "marketCapBillion": 7.54,
+        "marketCapBillion": 7.4,
         "sharesOutstandingMillion": 984.0,
         "cashBillion": 2.5,
         "netDebtBillion": 0.0
@@ -1298,8 +1305,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "035",
-        "footerTimestamp": "2026-07-24_06-57",
+        "footerVersion": "036",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -1311,12 +1318,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "aur-memo__v027__2026-07-22_15-02.pdf",
+      "file": "aur-memo__v028__2026-08-22_13-10.pdf",
       "size": "388 KB",
       "priorVersions": [
+        {
+          "version": "027",
+          "file": "aur-memo__v027__2026-07-22_15-02.pdf",
+          "size": "388 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 6.63
+        },
         {
           "version": "026",
           "file": "aur-memo__v026__2026-07-02_15-17.pdf",
@@ -1327,38 +1341,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$11.35B",
+      "mktCap": "$10.68B",
       "shares": "1.71B",
       "cash": "$1.28B cash, zero debt"
     },
     "spot": {
-      "price": 6.63,
-      "asOf": "July 22, 2026 close"
+      "price": 6.24,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 8.12,
-      "deltaPct": 22.4
+      "deltaPct": 30.1
     },
     "compound": [
       {
         "y": 5,
         "value": 11.83,
-        "mult": 1.78
+        "mult": 1.9
       },
       {
         "y": 10,
         "value": 17.25,
-        "mult": 2.6
+        "mult": 2.76
       },
       {
         "y": 15,
         "value": 25.16,
-        "mult": 3.79
+        "mult": 4.03
       },
       {
         "y": 20,
         "value": 36.71,
-        "mult": 5.54
+        "mult": 5.88
       }
     ],
     "taxonomy": {
@@ -1440,7 +1454,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 20 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 20 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: August 22, 2026 close.",
     "thesis": "Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M annualized cash burn. The $1.28B liquidity position needs replenishment by mid-2027 absent commercial conversion. Driverless commercial launch slipped from 2024 to now 2027; the Driver runs supervised highway pilots with PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin, P(failure). Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -1585,10 +1599,10 @@ const MEMOS = [
       "tamBillion": 160,
       "weighted": {
         "expected": 8.12,
-        "upsidePct": 22.4
+        "upsidePct": 30.1
       },
       "market": {
-        "marketCapBillion": 11.35,
+        "marketCapBillion": 10.68,
         "sharesOutstandingMillion": 1710.0,
         "cashBillion": 1.28,
         "netDebtBillion": 0.0
@@ -2579,8 +2593,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "027",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "028",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -2592,12 +2606,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "lth-memo__v026__2026-07-22_15-02.pdf",
+      "file": "lth-memo__v027__2026-08-22_13-10.pdf",
       "size": "296 KB",
       "priorVersions": [
+        {
+          "version": "026",
+          "file": "lth-memo__v026__2026-07-22_15-02.pdf",
+          "size": "296 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 41.63
+        },
         {
           "version": "025",
           "file": "lth-memo__v025__2026-07-02_15-17.pdf",
@@ -2608,38 +2629,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$9.24B",
+      "mktCap": "$10.01B",
       "shares": "222M",
       "cash": "$232M cash, $1.52B debt · BB- credit"
     },
     "spot": {
-      "price": 41.63,
-      "asOf": "July 22, 2026 close"
+      "price": 45.11,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 21.44,
-      "deltaPct": -48.5
+      "deltaPct": -52.5
     },
     "compound": [
       {
         "y": 5,
         "value": 32.14,
-        "mult": 0.77
+        "mult": 0.71
       },
       {
         "y": 10,
         "value": 48.26,
-        "mult": 1.16
+        "mult": 1.07
       },
       {
         "y": 15,
         "value": 72.58,
-        "mult": 1.74
+        "mult": 1.61
       },
       {
         "y": 20,
         "value": 109.31,
-        "mult": 2.63
+        "mult": 2.42
       }
     ],
     "taxonomy": {
@@ -2721,7 +2742,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 8 / Bear 12 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 8 / Bear 12 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "LTH trades at $40.04 ($8.9B mkt cap) on TTM revenue $3.0B and Adj EBITDA $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14 luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear: capital recycling unsustainable, leveraged real estate vehicle. Bull: luxury wellness category-of-one, SLB is smart financing. Today's price requires bull-case execution. Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -2927,10 +2948,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 21.44,
-        "upsidePct": -48.5
+        "upsidePct": -52.5
       },
       "market": {
-        "marketCapBillion": 9.24,
+        "marketCapBillion": 10.01,
         "sharesOutstandingMillion": 222.0,
         "cashBillion": 0.232,
         "netDebtBillion": 1.52
@@ -3470,8 +3491,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "026",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "027",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -3483,12 +3504,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF · SOTP",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "zm-memo__v027__2026-07-22_15-02.pdf",
-      "size": "296 KB",
+      "file": "zm-memo__v028__2026-08-22_13-10.pdf",
+      "size": "297 KB",
       "priorVersions": [
+        {
+          "version": "027",
+          "file": "zm-memo__v027__2026-07-22_15-02.pdf",
+          "size": "296 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 86.3
+        },
         {
           "version": "026",
           "file": "zm-memo__v026__2026-07-02_15-17.pdf",
@@ -3499,38 +3527,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$26.58B",
+      "mktCap": "$33.09B",
       "shares": "308M",
       "cash": "$7.9B cash, zero debt · Anthropic stake (carried)"
     },
     "spot": {
-      "price": 86.3,
-      "asOf": "July 22, 2026 close"
+      "price": 107.43,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 164.39,
-      "deltaPct": 90.5
+      "deltaPct": 53.0
     },
     "compound": [
       {
         "y": 5,
         "value": 247.65,
-        "mult": 2.87
+        "mult": 2.31
       },
       {
         "y": 10,
         "value": 373.71,
-        "mult": 4.33
+        "mult": 3.48
       },
       {
         "y": 15,
         "value": 564.97,
-        "mult": 6.55
+        "mult": 5.26
       },
       {
         "y": 20,
         "value": 855.81,
-        "mult": 9.92
+        "mult": 7.97
       }
     ],
     "taxonomy": {
@@ -3549,8 +3577,8 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": {
-      "value": 4.86,
-      "zone": "green"
+      "value": 6.55,
+      "zone": "yellow"
     },
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
     "scenarios": [
@@ -3615,7 +3643,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "Zoom trades at $105.64 ($32.5B mkt cap) on TTM revenue of ~$4.94B, $1.7B FCF, and $7.9B cash & marketable securities — roughly a quarter of market cap is just cash. Q1 FY27 confirmed the base case: revenue $1.24B (+5.5%, beat), FY27 guidance raised to $5.09B / $5.98 EPS, buyback expanded $1.0B — management returning capital while it waits for the Anthropic mark. On top sits an Anthropic equity stake carried at cost but worth $4-9B across scenarios, pending the IPO mark. The operating business is a stable cash machine (35-40% FCF margin) facing real but slow competition from Teams and Workspace. Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -7.5,
@@ -3806,10 +3834,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 164.39,
-        "upsidePct": 90.5
+        "upsidePct": 53.0
       },
       "market": {
-        "marketCapBillion": 26.58,
+        "marketCapBillion": 33.09,
         "sharesOutstandingMillion": 308.0,
         "cashBillion": 7.9,
         "netDebtBillion": 0.0
@@ -4385,8 +4413,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "027",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "028",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -4398,12 +4426,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "naut-memo__v010__2026-07-24_06-57.pdf",
+      "file": "naut-memo__v011__2026-08-22_13-10.pdf",
       "size": "388 KB",
       "priorVersions": [
+        {
+          "version": "010",
+          "file": "naut-memo__v010__2026-07-24_06-57.pdf",
+          "size": "388 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 1.71
+        },
         {
           "version": "009",
           "file": "naut-memo__v009__2026-07-22_16-44.pdf",
@@ -4428,38 +4463,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$215M",
+      "mktCap": "$120M",
       "shares": "126M",
       "cash": "$143M cash, zero debt"
     },
     "spot": {
-      "price": 1.71,
-      "asOf": "July 22, 2026 close"
+      "price": 0.95,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 6.58,
-      "deltaPct": 284.6
+      "deltaPct": 592.3
     },
     "compound": [
       {
         "y": 5,
         "value": 9.63,
-        "mult": 5.63
+        "mult": 10.13
       },
       {
         "y": 10,
         "value": 14.1,
-        "mult": 8.25
+        "mult": 14.84
       },
       {
         "y": 15,
         "value": 20.67,
-        "mult": 12.09
+        "mult": 21.76
       },
       {
         "y": 20,
         "value": 30.31,
-        "mult": 17.73
+        "mult": 31.91
       }
     ],
     "taxonomy": {
@@ -4541,7 +4576,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 15 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 15 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: August 22, 2026 close.",
     "thesis": "NAUT trades at $1.71 (~$215M mkt cap, ~66% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash runway through 2027; dilutive raise likely 2027. Mature peers — Olink (Thermo), SomaScan (Illumina), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -4699,10 +4734,10 @@ const MEMOS = [
       "tamBillion": 130,
       "weighted": {
         "expected": 6.58,
-        "upsidePct": 284.6
+        "upsidePct": 592.3
       },
       "market": {
-        "marketCapBillion": 0.215,
+        "marketCapBillion": 0.12,
         "sharesOutstandingMillion": 126.0,
         "cashBillion": 0.143,
         "netDebtBillion": 0.0
@@ -5695,8 +5730,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "010",
-        "footerTimestamp": "2026-07-24_06-57",
+        "footerVersion": "011",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -5708,12 +5743,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "isrg-memo__v008__2026-07-24_09-15.pdf",
+      "file": "isrg-memo__v009__2026-08-22_13-10.pdf",
       "size": "309 KB",
       "priorVersions": [
+        {
+          "version": "008",
+          "file": "isrg-memo__v008__2026-07-24_09-15.pdf",
+          "size": "309 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 345.74
+        },
         {
           "version": "007",
           "file": "isrg-memo__v007__2026-07-22_15-02.pdf",
@@ -5731,38 +5773,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$122.7B",
+      "mktCap": "$134.44B",
       "shares": "355M",
       "cash": "$8.63B cash, zero debt · 11,710 da Vinci installed base"
     },
     "spot": {
-      "price": 345.74,
-      "asOf": "July 22, 2026 close"
+      "price": 378.81,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 504.14,
-      "deltaPct": 45.8
+      "deltaPct": 33.1
     },
     "compound": [
       {
         "y": 5,
         "value": 738.53,
-        "mult": 2.14
+        "mult": 1.95
       },
       {
         "y": 10,
         "value": 1082.9,
-        "mult": 3.13
+        "mult": 2.86
       },
       {
         "y": 15,
         "value": 1589.4,
-        "mult": 4.6
+        "mult": 4.2
       },
       {
         "y": 20,
         "value": 2335.16,
-        "mult": 6.75
+        "mult": 6.16
       }
     ],
     "taxonomy": {
@@ -5783,8 +5825,8 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": {
-      "value": 13.77,
-      "zone": "orange"
+      "value": 15.19,
+      "zone": "red"
     },
     "question": "Intuitive's soft-tissue near-monopoly — 11,710 da Vinci systems, ~78% recurring revenue — now trades at ~38× forward P/FCF after the market priced in part of the bear's compression. Does that multiple over-discount erosion (Hugo, Ottava, GLP-1s) that Q2 actuals don't yet show, or is the compression only beginning?",
     "scenarios": [
@@ -5849,7 +5891,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 6 / Bear 25 / Base 48 / Bull 16 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 6 / Bear 25 / Base 48 / Bull 16 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "Intuitive trades at $345.74 ($122.7B cap) — down ~21% since May, including −14.1% on Jul 17: Q2 beat every line (revenue +19%, non-GAAP EPS +28%, procedures +16%, margin guide raised) yet guidance was steered to the midpoint, implying H2 deceleration. Still: ~78% recurring revenue, 11,710 systems, $8.63B cash, zero debt. But the bear is live: Hugo cleared US urology (Dec 2025), GS/GYN 510(k)s filed (Jun 2026); Ottava passed FORTE, FDA nod reported in July; GLP-1s shave bariatric volumes; a May 2026 Class I recall dented the record. Mature-Company DCF with exit-multiple terminal framing below; five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -5998,10 +6040,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 504.14,
-        "upsidePct": 45.8
+        "upsidePct": 33.1
       },
       "market": {
-        "marketCapBillion": 122.7,
+        "marketCapBillion": 134.44,
         "sharesOutstandingMillion": 355.0,
         "cashBillion": 8.63,
         "netDebtBillion": 0.0
@@ -6579,8 +6621,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "008",
-        "footerTimestamp": "2026-07-24_09-15",
+        "footerVersion": "009",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -6592,12 +6634,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "ionq-memo__v007__2026-07-24_09-15.pdf",
+      "file": "ionq-memo__v008__2026-08-22_13-10.pdf",
       "size": "400 KB",
       "priorVersions": [
+        {
+          "version": "007",
+          "file": "ionq-memo__v007__2026-07-24_09-15.pdf",
+          "size": "400 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 35.43
+        },
         {
           "version": "006",
           "file": "ionq-memo__v006__2026-07-22_15-02.pdf",
@@ -6615,38 +6664,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$13.22B",
+      "mktCap": "$16.74B",
       "shares": "373M",
       "cash": "$2.39B cash, zero debt · $470M RPO (+554% YoY) at Q1 2026; SkyWater acq. (~$1.8B cash+stock; FTC 2nd Request — unclosed)"
     },
     "spot": {
-      "price": 35.43,
-      "asOf": "July 22, 2026 close"
+      "price": 44.86,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 9.07,
-      "deltaPct": -74.4
+      "deltaPct": -79.8
     },
     "compound": [
       {
         "y": 5,
         "value": 12.99,
-        "mult": 0.37
+        "mult": 0.29
       },
       {
         "y": 10,
         "value": 18.63,
-        "mult": 0.53
+        "mult": 0.42
       },
       {
         "y": 15,
         "value": 26.74,
-        "mult": 0.75
+        "mult": 0.6
       },
       {
         "y": 20,
         "value": 38.41,
-        "mult": 1.08
+        "mult": 0.86
       }
     ],
     "taxonomy": {
@@ -6665,7 +6714,7 @@ const MEMOS = [
       "umbrellaName": "AI & Compute"
     },
     "ai": {
-      "value": 70.32,
+      "value": 93.18,
       "zone": "red"
     },
     "question": "Can IonQ capture meaningful share of a $50B global quantum TAM by 2036 with its trapped-ion stack — or is a $13B market cap pricing certainty Quantinuum, Google, and neutral-atom don't support?",
@@ -6731,7 +6780,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 30 / Base 42 / Bull 15 / Ultra Bull 3. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 30 / Base 42 / Bull 15 / Ultra Bull 3. Spot price reference: August 22, 2026 close.",
     "thesis": "IonQ trades at ~$13B against a $260-270M FY26 guide — P/S ~50× after July's sector de-rating halved the quantum complex (no adverse IonQ filing). $2.39B cash + $470M RPO + the $1.8B SkyWater chip-fab deal (FTC review pending) is the optionality. Trapped-ion gives ~99.9%+ 2Q fidelity; AQ#64 hit three months early. But the competitive set is brutal: Quantinuum IPO'd at >$14B with better logical-qubit performance, Google's Willow demonstrated verifiable advantage on chemistry, and neutral-atom scaled past 1,200 qubits. Honest math: cash-feasible raise schedules force heavy dilution before commercial inflection. Five scenarios, weighted; show your work.",
     "historicalPrices": {
       "xMin": -4.7,
@@ -6880,10 +6929,10 @@ const MEMOS = [
       "tamBillion": 50,
       "weighted": {
         "expected": 9.07,
-        "upsidePct": -74.4
+        "upsidePct": -79.8
       },
       "market": {
-        "marketCapBillion": 13.22,
+        "marketCapBillion": 16.74,
         "sharesOutstandingMillion": 373.2,
         "cashBillion": 2.39,
         "netDebtBillion": 0.0
@@ -7880,8 +7929,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "007",
-        "footerTimestamp": "2026-07-24_09-15",
+        "footerVersion": "008",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -7893,12 +7942,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF · SOTP",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "coin-memo__v005__2026-07-22_15-02.pdf",
+      "file": "coin-memo__v006__2026-08-22_13-10.pdf",
       "size": "301 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "coin-memo__v005__2026-07-22_15-02.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 169.25
+        },
         {
           "version": "004",
           "file": "coin-memo__v004__2026-07-02_15-17.pdf",
@@ -7909,38 +7965,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$44.58B",
+      "mktCap": "$49.12B",
       "shares": "263M",
       "cash": "$10.2B cash, $7.2B debt · $7.2B converts/notes (~$3B net cash); ~17K BTC treasury (~$1.3B); Circle (CRCL) stake (~$1B)"
     },
     "spot": {
-      "price": 169.25,
-      "asOf": "July 22, 2026 close"
+      "price": 186.49,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 271.62,
-      "deltaPct": 60.5
+      "deltaPct": 45.7
     },
     "compound": [
       {
         "y": 5,
         "value": 415.31,
-        "mult": 2.45
+        "mult": 2.23
       },
       {
         "y": 10,
         "value": 636.04,
-        "mult": 3.76
+        "mult": 3.41
       },
       {
         "y": 15,
         "value": 975.85,
-        "mult": 5.77
+        "mult": 5.23
       },
       {
         "y": 20,
         "value": 1500.15,
-        "mult": 8.86
+        "mult": 8.04
       }
     ],
     "taxonomy": {
@@ -7959,8 +8015,8 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": {
-      "value": 5.46,
-      "zone": "green"
+      "value": 6.06,
+      "zone": "yellow"
     },
     "question": "Is Coinbase the durable monopoly rail layer for crypto — $19B USDC float, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock whose Q1 2026 just printed a $394M loss?",
     "scenarios": [
@@ -8025,7 +8081,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 47 / Bull 18 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 47 / Bull 18 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "Coinbase trades at $182.25 ($48B mkt cap) on FY25 revenue $7.18B and adj EBITDA $2.81B, with a fortress balance sheet (~$10.2B cash, $7.2B debt, ~$3.5B CRCL + BTC + crypto). FY25 was peak-cycle; Q1 2026 broke the spell: revenue $1.4B (-40% from Q4), a $394M net loss as BTC slid $120K to $73K. Bull thesis is structural (SEC case dropped, GENIUS Act USDC moat, Deribit derivatives leadership); bear is equally real (take-rate compression, persistent cycle exposure). Mature-Company SOTP DCF, exit-multiple terminal; five scenarios; show your work.",
     "historicalPrices": {
       "xMin": -5.2,
@@ -8200,10 +8256,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 271.62,
-        "upsidePct": 60.5
+        "upsidePct": 45.7
       },
       "market": {
-        "marketCapBillion": 44.58,
+        "marketCapBillion": 49.12,
         "sharesOutstandingMillion": 263.4,
         "cashBillion": 10.2,
         "netDebtBillion": 7.2
@@ -8785,8 +8841,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -9318,12 +9374,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "rklb-memo__v006__2026-07-24_06-57.pdf",
+      "file": "rklb-memo__v007__2026-08-22_13-10.pdf",
       "size": "393 KB",
       "priorVersions": [
+        {
+          "version": "006",
+          "file": "rklb-memo__v006__2026-07-24_06-57.pdf",
+          "size": "393 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 71.55
+        },
         {
           "version": "005",
           "file": "rklb-memo__v005__2026-07-22_16-44.pdf",
@@ -9348,38 +9411,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$41.36B",
+      "mktCap": "$41.95B",
       "shares": "578M",
       "cash": "$1.48B cash, zero debt · >$2.2B backlog (Q1'26); Pending ~$8B Iridium acquisition — mid-2027 close; Neutron first launch targeted Q4 2026"
     },
     "spot": {
-      "price": 71.55,
-      "asOf": "July 22, 2026 close"
+      "price": 72.57,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 44.23,
-      "deltaPct": -38.2
+      "deltaPct": -39.0
     },
     "compound": [
       {
         "y": 5,
         "value": 67.6,
-        "mult": 0.94
+        "mult": 0.93
       },
       {
         "y": 10,
         "value": 103.36,
-        "mult": 1.44
+        "mult": 1.42
       },
       {
         "y": 15,
         "value": 158.09,
-        "mult": 2.21
+        "mult": 2.18
       },
       {
         "y": 20,
         "value": 241.89,
-        "mult": 3.38
+        "mult": 3.33
       }
     ],
     "taxonomy": {
@@ -9398,7 +9461,7 @@ const MEMOS = [
       "umbrellaName": "Mobility & Aerospace"
     },
     "ai": {
-      "value": 97.42,
+      "value": 98.86,
       "zone": "red"
     },
     "question": "Does ~$41B (~45x FY26E revenue) — plus a pending ~$8B debt-and-stock purchase of Iridium's constellation — price a realistic path to a space prime when the second act is bought, not originated?",
@@ -9464,7 +9527,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 35 / Bull 24 / Ultra Bull 6. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 35 / Bull 24 / Ultra Bull 6. Spot price reference: August 22, 2026 close.",
     "thesis": "Rocket Lab has halved to ~$41B at $71.55 — ~68x trailing sales, ~45x the ~$900M FY26 run-rate — while the business accelerated (Q1'26 revenue +64%, backlog >$2.2B). And the second act changed form: rather than originate a constellation, RKLB agreed to buy one — the pending ~$8B Iridium acquisition (mid-2027 close; $871M revenue, ~$495M operational EBITDA, 2.6M subscribers), funded by a $3.6B bridge plus up to ~44M collared shares. The DCF asks whether a halved price plus a leveraged, dilutive constellation purchase changes the answer. The finding: it narrows the gap, not the verdict — the weighted sits ~38% below spot; the market still prices near-certain success.",
     "historicalPrices": {
       "xMin": -4.5,
@@ -9598,10 +9661,10 @@ const MEMOS = [
       "tamBillion": 120,
       "weighted": {
         "expected": 44.23,
-        "upsidePct": -38.2
+        "upsidePct": -39.0
       },
       "market": {
-        "marketCapBillion": 41.36,
+        "marketCapBillion": 41.95,
         "sharesOutstandingMillion": 578.0,
         "cashBillion": 1.48,
         "netDebtBillion": 0.0
@@ -10591,8 +10654,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "006",
-        "footerTimestamp": "2026-07-24_06-57",
+        "footerVersion": "007",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -10604,12 +10667,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "oklo-memo__v005__2026-07-24_09-15.pdf",
-      "size": "402 KB",
+      "file": "oklo-memo__v006__2026-08-22_13-10.pdf",
+      "size": "401 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "oklo-memo__v005__2026-07-24_09-15.pdf",
+          "size": "402 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 45.21
+        },
         {
           "version": "004",
           "file": "oklo-memo__v004__2026-07-22_15-02.pdf",
@@ -10627,38 +10697,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$8.14B",
+      "mktCap": "$7.58B",
       "shares": "180M",
       "cash": "$2.54B cash, zero debt · $2.54B cash, debt-free; zero warrants (174M basic / ~180M diluted); Pre-revenue; first Aurora power targeted 2027-28; ~14 GW pipeline (mostly non-binding); Equinix $25M prepay"
     },
     "spot": {
-      "price": 45.21,
-      "asOf": "July 22, 2026 close"
+      "price": 42.09,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 29.84,
-      "deltaPct": -34.0
+      "deltaPct": -29.1
     },
     "compound": [
       {
         "y": 5,
         "value": 50.25,
-        "mult": 1.11
+        "mult": 1.19
       },
       {
         "y": 10,
         "value": 84.66,
-        "mult": 1.87
+        "mult": 2.01
       },
       {
         "y": 15,
         "value": 142.74,
-        "mult": 3.16
+        "mult": 3.39
       },
       {
         "y": 20,
         "value": 240.87,
-        "mult": 5.33
+        "mult": 5.72
       }
     ],
     "taxonomy": {
@@ -10742,7 +10812,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 8 / Bear 27 / Base 34 / Bull 23 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 8 / Bear 27 / Base 34 / Bull 23 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Oklo trades at ~$8B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the first commercial advanced-fission site under construction). The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly, +298%) clears it — the capital-intensive base leaves the weighted ~-34%.",
     "historicalPrices": {
       "xMin": -2.2,
@@ -10868,10 +10938,10 @@ const MEMOS = [
       "tamBillion": 120.0,
       "weighted": {
         "expected": 29.84,
-        "upsidePct": -34.0
+        "upsidePct": -29.1
       },
       "market": {
-        "marketCapBillion": 8.14,
+        "marketCapBillion": 7.58,
         "sharesOutstandingMillion": 180.0,
         "cashBillion": 2.54,
         "netDebtBillion": 0.0
@@ -11867,8 +11937,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-24_09-15",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -11880,12 +11950,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "competitors",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "achr-memo__v004__2026-07-22_15-02.pdf",
+      "file": "achr-memo__v005__2026-08-22_13-10.pdf",
       "size": "393 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "achr-memo__v004__2026-07-22_15-02.pdf",
+          "size": "393 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 5.17
+        },
         {
           "version": "003",
           "file": "achr-memo__v003__2026-07-02_15-17.pdf",
@@ -11896,38 +11973,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$4.09B",
+      "mktCap": "$4.98B",
       "shares": "790M",
       "cash": "$1.78B cash, $80M debt · $1.78B cash ($0.95B + $0.83B ST inv), low debt; ~760M basic / ~790M diluted; Pre-revenue (Q1'26 first $1.6M); ~$727M/yr burn, ~2.4yr runway; Anduril defense JV + $142M USAF; ~$6B order book (mostly LOIs)"
     },
     "spot": {
-      "price": 5.17,
-      "asOf": "July 22, 2026 close"
+      "price": 6.3,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 8.01,
-      "deltaPct": 55.0
+      "deltaPct": 27.2
     },
     "compound": [
       {
         "y": 5,
         "value": 11.48,
-        "mult": 2.22
+        "mult": 1.82
       },
       {
         "y": 10,
         "value": 16.47,
-        "mult": 3.19
+        "mult": 2.61
       },
       {
         "y": 15,
         "value": 23.64,
-        "mult": 4.57
+        "mult": 3.75
       },
       {
         "y": 20,
         "value": 33.99,
-        "mult": 6.57
+        "mult": 5.4
       }
     ],
     "taxonomy": {
@@ -12011,7 +12088,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 12 / Bear 31 / Base 42 / Bull 11 / Ultra Bull 4. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 12 / Bear 31 / Base 42 / Bull 11 / Ultra Bull 4. Spot price reference: August 22, 2026 close.",
     "thesis": "Archer trades at ~$5.4B (≈$6.81/sh) on $0 revenue — about half Joby's cap on a near-identical certification position, with $1.78B cash but a ~$727M/yr burn (≈2.4yr runway) and a defense wildcard (the Anduril autonomous-VTOL JV) Joby lacks. The young-company DCF asks what aircraft fleet, UAM-plus-defense revenue, and dilution are plausible over a decade. The finding: 85% of the probability sits well below spot — heavy dilution craters the bear/base outcomes — but Archer is cheap enough that the 15% cert-success-plus-defense tail (paying 4-13×) lifts the weighted expected modestly above today's price.",
     "historicalPrices": {
       "xMin": -4.8,
@@ -12137,10 +12214,10 @@ const MEMOS = [
       "tamBillion": 250.0,
       "weighted": {
         "expected": 8.01,
-        "upsidePct": 55.0
+        "upsidePct": 27.2
       },
       "market": {
-        "marketCapBillion": 4.09,
+        "marketCapBillion": 4.98,
         "sharesOutstandingMillion": 790.0,
         "cashBillion": 1.78,
         "netDebtBillion": 0.08
@@ -13135,8 +13212,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -13148,12 +13225,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "gral-memo__v004__2026-07-22_15-02.pdf",
-      "size": "394 KB",
+      "file": "gral-memo__v005__2026-08-22_13-10.pdf",
+      "size": "395 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "gral-memo__v004__2026-07-22_15-02.pdf",
+          "size": "394 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 71.1
+        },
         {
           "version": "003",
           "file": "gral-memo__v003__2026-07-02_15-17.pdf",
@@ -13164,38 +13248,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$3.13B",
+      "mktCap": "$3.5B",
       "shares": "44M",
       "cash": "$823M cash, zero debt · $0.823B cash (Q1'26), no debt; ~44M shares (low float); Illumina ~14.5% at the 2024 spin; Revenue-generating: $147M FY25 (+17%), Galleri self-pay ~$949; burn ~$300M/yr (~2.5yr runway); NHS-Galleri missed primary endpoint (Feb'26); FDA PMA accepted; Medicare law (≥2028, ~$509 parity); Abbott bought Exact"
     },
     "spot": {
-      "price": 71.1,
-      "asOf": "July 22, 2026 close"
+      "price": 79.54,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 65.99,
-      "deltaPct": -7.2
+      "deltaPct": -17.0
     },
     "compound": [
       {
         "y": 5,
         "value": 102.64,
-        "mult": 1.44
+        "mult": 1.29
       },
       {
         "y": 10,
         "value": 159.77,
-        "mult": 2.25
+        "mult": 2.01
       },
       {
         "y": 15,
         "value": 248.91,
-        "mult": 3.5
+        "mult": 3.13
       },
       {
         "y": 20,
         "value": 388.13,
-        "mult": 5.46
+        "mult": 4.88
       }
     ],
     "taxonomy": {
@@ -13277,7 +13361,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 28 / Base 34 / Bull 13 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 28 / Base 34 / Bull 13 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "GRAIL trades at ~$2.7B (≈$62/sh on just ~44M shares) on ~$147M FY25 revenue and ~$823M cash. Galleri — a blood test for 50+ cancers, self-pay today — is a multi-gate option: FDA PMA (filed Jan 2026, now accepted) → Medicare coverage (signed Feb 2026; ≥2028 at ~$509 parity) → broad adoption. The pivotal NHS-Galleri trial MISSED its primary endpoint (-50% stock), but the PMA rests on positive PATHFINDER 2 and the law passed — broken yet de-risked. Re-modeled on ~$509 parity (Abbott now backs Cancerguard), at $62 the market roughly prices the modal regulatory-success case — FDA-rejection downside and broad-adoption upside balanced.",
     "historicalPrices": {
       "xMin": -2.05,
@@ -13399,10 +13483,10 @@ const MEMOS = [
       "tamBillion": 25.0,
       "weighted": {
         "expected": 65.99,
-        "upsidePct": -7.2
+        "upsidePct": -17.0
       },
       "market": {
-        "marketCapBillion": 3.13,
+        "marketCapBillion": 3.5,
         "sharesOutstandingMillion": 44.0,
         "cashBillion": 0.823,
         "netDebtBillion": 0.0
@@ -14389,8 +14473,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -14402,12 +14486,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "txg-memo__v004__2026-07-22_15-02.pdf",
+      "file": "txg-memo__v005__2026-08-22_13-10.pdf",
       "size": "295 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "txg-memo__v004__2026-07-22_15-02.pdf",
+          "size": "295 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 47.02
+        },
         {
           "version": "003",
           "file": "txg-memo__v003__2026-07-02_15-17.pdf",
@@ -14418,38 +14509,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$5.97B",
+      "mktCap": "$8.27B",
       "shares": "127M",
       "cash": "$540M cash, zero debt · ~$540M net cash, no debt; ~127M shares (dual-class, founder voting control); Revenue ~$600M, flat-to-declining 3yrs; cash-generative (+$26M op cash Q1'26); ~85% recurring consumables (70% gross margin); NIH-funding exposed"
     },
     "spot": {
-      "price": 47.02,
-      "asOf": "July 22, 2026 close"
+      "price": 65.12,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 17.76,
-      "deltaPct": -62.2
+      "deltaPct": -72.7
     },
     "compound": [
       {
         "y": 5,
         "value": 27.47,
-        "mult": 0.58
+        "mult": 0.42
       },
       {
         "y": 10,
         "value": 42.62,
-        "mult": 0.91
+        "mult": 0.65
       },
       {
         "y": 15,
         "value": 66.35,
-        "mult": 1.41
+        "mult": 1.02
       },
       {
         "y": 20,
         "value": 103.64,
-        "mult": 2.2
+        "mult": 1.59
       }
     ],
     "taxonomy": {
@@ -14468,8 +14559,8 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": {
-      "value": 12.59,
-      "zone": "orange"
+      "value": 17.92,
+      "zone": "red"
     },
     "question": "Is the market paying a spatial-plus-clinical multiple (~8x EV/sales) for a single-cell core that is flat-to-declining — or correctly pricing a margin inflection and a genuine diagnostics second act?",
     "scenarios": [
@@ -14534,7 +14625,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 30 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 30 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "10x trades at ~$5.0B (≈$39/sh) — ~8x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools franchise: >7,900 instruments, ~85% recurring 70%-margin consumables, net-cash and cash-generative after a 17% opex cut. The mature DCF holds the flat core and asks whether the second act the market now pays for — a clinical-diagnostics pivot (CLIA lab targeted early-2027), a multiomic Proteintech expansion, and the Atera spatial launch — becomes a durable reimbursed platform. The finding: even crediting that optionality in the tail, the recent triple prices execution the ~3%-grind base doesn't support — the modal case sits ~55% below spot.",
     "historicalPrices": {
       "xMin": -6.8,
@@ -14680,10 +14771,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 17.76,
-        "upsidePct": -62.2
+        "upsidePct": -72.7
       },
       "market": {
-        "marketCapBillion": 5.97,
+        "marketCapBillion": 8.27,
         "sharesOutstandingMillion": 127.0,
         "cashBillion": 0.54,
         "netDebtBillion": 0.0
@@ -15253,8 +15344,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -15266,12 +15357,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "lulu-memo__v004__2026-07-22_15-02.pdf",
+      "file": "lulu-memo__v005__2026-08-22_13-10.pdf",
       "size": "290 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "lulu-memo__v004__2026-07-22_15-02.pdf",
+          "size": "290 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 112.87
+        },
         {
           "version": "003",
           "file": "lulu-memo__v003__2026-07-02_15-17.pdf",
@@ -15282,38 +15380,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$12.87B",
+      "mktCap": "$13.81B",
       "shares": "114M",
       "cash": "$1.8B cash, zero debt · $1.8B cash, no debt; ~114M shares; heavy buyback, no dividend; Revenue $11.1B FY25 (+5%, decelerating from +42%); ~22% op margin, ~$1.58B FCF; Down ~60% from the $340 high; US declining, China/international +20-29%"
     },
     "spot": {
-      "price": 112.87,
-      "asOf": "July 22, 2026 close"
+      "price": 121.07,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 205.93,
-      "deltaPct": 82.5
+      "deltaPct": 70.1
     },
     "compound": [
       {
         "y": 5,
         "value": 327.18,
-        "mult": 2.9
+        "mult": 2.7
       },
       {
         "y": 10,
         "value": 520.37,
-        "mult": 4.61
+        "mult": 4.3
       },
       {
         "y": 15,
         "value": 828.57,
-        "mult": 7.34
+        "mult": 6.84
       },
       {
         "y": 20,
         "value": 1320.84,
-        "mult": 11.7
+        "mult": 10.91
       }
     ],
     "taxonomy": {
@@ -15332,7 +15430,7 @@ const MEMOS = [
       "umbrellaName": "Consumer & Real Economy"
     },
     "ai": {
-      "value": 1.61,
+      "value": 1.75,
       "zone": "green"
     },
     "question": "Is lululemon's ~60% de-rating to ~10x FCF an overshoot on a still-profitable premium brand — or the early innings of structural brand impairment (US decline, Alo/Vuori share loss)?",
@@ -15398,7 +15496,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 45 / Bull 10 / Ultra Bull 3. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 45 / Bull 10 / Ultra Bull 3. Spot price reference: August 22, 2026 close.",
     "thesis": "Lululemon trades at ~$15B (≈$127/sh, down ~60% from $340) — ~10x FCF on $11.1B revenue, ~22% operating margins, net cash and a heavy buyback. Growth has decelerated hard (+42%→+5%, guided +2-4%): the US is shrinking (-1 to -3%) while China/international compound +20-29%. The mature DCF asks whether the brand stabilizes and defends margins, or whether dupes (Alo, Vuori) and stale product structurally impair it. The finding: even pricing real brand-impairment downside (ultra-bear -34%), the modal stabilization case at 10x FCF implies the de-rating overshot.",
     "historicalPrices": {
       "xMin": -6.5,
@@ -15532,10 +15630,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 205.93,
-        "upsidePct": 82.5
+        "upsidePct": 70.1
       },
       "market": {
-        "marketCapBillion": 12.87,
+        "marketCapBillion": 13.81,
         "sharesOutstandingMillion": 114.0,
         "cashBillion": 1.8,
         "netDebtBillion": 0.0
@@ -16102,8 +16200,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -16115,12 +16213,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "abnb-memo__v004__2026-07-22_15-02.pdf",
+      "file": "abnb-memo__v005__2026-08-22_13-10.pdf",
       "size": "290 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "abnb-memo__v004__2026-07-22_15-02.pdf",
+          "size": "290 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 141.25
+        },
         {
           "version": "003",
           "file": "abnb-memo__v003__2026-07-02_15-17.pdf",
@@ -16131,38 +16236,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$91.81B",
+      "mktCap": "$121.74B",
       "shares": "650M",
       "cash": "$9.5B cash, zero debt · ~$9.5B net cash; ~650M diluted shares; ~$3.8B/yr buyback offsets SBC; Revenue $12.24B FY25 (+10%, decel from +40%); 38% FCF margin, $4.6B FCF; ~15x EV/FCF; Experiences/Services relaunch (2025) the swing optionality"
     },
     "spot": {
-      "price": 141.25,
-      "asOf": "July 22, 2026 close"
+      "price": 187.3,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 183.95,
-      "deltaPct": 30.2
+      "deltaPct": -1.8
     },
     "compound": [
       {
         "y": 5,
         "value": 281.78,
-        "mult": 1.99
+        "mult": 1.5
       },
       {
         "y": 10,
         "value": 431.91,
-        "mult": 3.06
+        "mult": 2.31
       },
       {
         "y": 15,
         "value": 662.45,
-        "mult": 4.69
+        "mult": 3.54
       },
       {
         "y": 20,
         "value": 1016.71,
-        "mult": 7.2
+        "mult": 5.43
       }
     ],
     "taxonomy": {
@@ -16181,7 +16286,7 @@ const MEMOS = [
       "umbrellaName": "Consumer & Real Economy"
     },
     "ai": {
-      "value": 7.31,
+      "value": 9.97,
       "zone": "yellow"
     },
     "question": "Does Airbnb's ~15x EV/FCF fairly price a decelerating but FCF-gushing travel network — or is the Experiences/Services optionality + international runway underpriced?",
@@ -16247,7 +16352,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 25 / Base 35 / Bull 20 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 25 / Base 35 / Bull 20 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Airbnb trades at ~$79B (≈$133/sh) — ~15x EV/FCF on a $4.6B-FCF, 38%-margin two-sided travel network with ~$9.5B net cash. Growth has decelerated (+40%→+10%, guided low-mid-teens) and regulation (Barcelona, NYC) caps dense-urban supply. The mature DCF asks whether the verb-grade brand + network defend the FCF and whether Experiences/Services + international re-accelerate growth. The finding: at ~15x FCF for this quality the modal case implies modest undervaluation — the premium-to-Booking is on P/E, not on the cash flow the DCF values.",
     "historicalPrices": {
       "xMin": -5.5,
@@ -16373,10 +16478,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 183.95,
-        "upsidePct": 30.2
+        "upsidePct": -1.8
       },
       "market": {
-        "marketCapBillion": 91.81,
+        "marketCapBillion": 121.74,
         "sharesOutstandingMillion": 650.0,
         "cashBillion": 9.5,
         "netDebtBillion": 0.0
@@ -16944,8 +17049,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -16957,12 +17062,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "uber-memo__v004__2026-07-22_15-02.pdf",
+      "file": "uber-memo__v005__2026-08-22_13-10.pdf",
       "size": "291 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "uber-memo__v004__2026-07-22_15-02.pdf",
+          "size": "291 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 70.62
+        },
         {
           "version": "003",
           "file": "uber-memo__v003__2026-07-02_15-17.pdf",
@@ -16973,38 +17085,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$143.74B",
+      "mktCap": "$160.39B",
       "shares": "2.04B",
       "cash": "$2.7B cash, zero debt · ~$2.7B net cash; ~2.04B shares; $20B buyback authorization (2025); Revenue $52B / gross bookings $193.5B FY25 (+19% GB); $9.76B FCF (+40% YoY), ~14x EV/FCF; Down ~30% from highs on AV fear; ads >$2B run-rate, Uber One ~50M members"
     },
     "spot": {
-      "price": 70.62,
-      "asOf": "July 22, 2026 close"
+      "price": 78.8,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 104.27,
-      "deltaPct": 47.6
+      "deltaPct": 32.3
     },
     "compound": [
       {
         "y": 5,
         "value": 163.54,
-        "mult": 2.32
+        "mult": 2.08
       },
       {
         "y": 10,
         "value": 256.72,
-        "mult": 3.64
+        "mult": 3.26
       },
       {
         "y": 15,
         "value": 403.31,
-        "mult": 5.71
+        "mult": 5.12
       },
       {
         "y": 20,
         "value": 634.11,
-        "mult": 8.98
+        "mult": 8.05
       }
     ],
     "taxonomy": {
@@ -17023,7 +17135,7 @@ const MEMOS = [
       "umbrellaName": "Consumer & Real Economy"
     },
     "ai": {
-      "value": 4.68,
+      "value": 5.23,
       "zone": "green"
     },
     "question": "Is Uber a dominant FCF-inflecting mobility/delivery network at ~14x EV/FCF — or does autonomy commoditize its driver-marketplace and erode the network toll?",
@@ -17089,7 +17201,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: August 22, 2026 close.",
     "thesis": "Uber trades at ~$145B (≈$70/sh, down ~30% on AV fear) — ~14x EV/FCF on $9.76B FCF (growing 40%+), $193.5B gross bookings (+19%), net cash and a $20B buyback. The mature DCF asks whether the two-sided network + advertising (>$2B run-rate) + delivery-margin ramp compound, or whether Waymo/Tesla bypass the marketplace. The finding: at 14x FCF for a network compounding GB ~mid-teens with expanding margins, the modal case implies meaningful undervaluation — but a genuine AV-disruption ultra-bear is -44%, so the sign is a bet on Uber remaining the AV demand-aggregator.",
     "historicalPrices": {
       "xMin": -7.2,
@@ -17219,10 +17331,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 104.27,
-        "upsidePct": 47.6
+        "upsidePct": 32.3
       },
       "market": {
-        "marketCapBillion": 143.74,
+        "marketCapBillion": 160.39,
         "sharesOutstandingMillion": 2036.0,
         "cashBillion": 2.7,
         "netDebtBillion": 0.0
@@ -17790,8 +17902,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -17803,12 +17915,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "yeti-memo__v004__2026-07-22_15-02.pdf",
+      "file": "yeti-memo__v005__2026-08-22_13-10.pdf",
       "size": "290 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "yeti-memo__v004__2026-07-22_15-02.pdf",
+          "size": "290 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 50.71
+        },
         {
           "version": "003",
           "file": "yeti-memo__v003__2026-07-02_15-17.pdf",
@@ -17819,38 +17938,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$3.84B",
+      "mktCap": "$3.31B",
       "shares": "76M",
       "cash": "$114M cash, zero debt · ~$114M net cash; ~76M shares; $500M buyback authorization (no dividend); Revenue $1.87B FY25 (+2% trough; Q1'26 +8%); ~14% adj op margin (tariff-compressed), ~$212M FCF; Stanley/Owala/dupe pressure in US drinkware; China <5% of COGS post de-risking"
     },
     "spot": {
-      "price": 50.71,
-      "asOf": "July 22, 2026 close"
+      "price": 43.76,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 49.67,
-      "deltaPct": -2.1
+      "deltaPct": 13.5
     },
     "compound": [
       {
         "y": 5,
         "value": 78.19,
-        "mult": 1.54
+        "mult": 1.79
       },
       {
         "y": 10,
         "value": 123.2,
-        "mult": 2.43
+        "mult": 2.82
       },
       {
         "y": 15,
         "value": 194.26,
-        "mult": 3.83
+        "mult": 4.44
       },
       {
         "y": 20,
         "value": 306.57,
-        "mult": 6.05
+        "mult": 7.01
       }
     ],
     "taxonomy": {
@@ -17869,7 +17988,7 @@ const MEMOS = [
       "umbrellaName": "Consumer & Real Economy"
     },
     "ai": {
-      "value": 3.22,
+      "value": 2.76,
       "zone": "green"
     },
     "question": "Is YETI a durable premium brand re-accelerating via international + new categories — or a saturated, fad-cyclical US drinkware brand whose +2% trough caps the multiple?",
@@ -17935,7 +18054,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 33 / Bull 17 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 33 / Bull 17 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "YETI trades at ~$3.6B (≈$48/sh) — ~17x FCF on $1.87B revenue, net cash, a $500M buyback. Growth troughed at +2% in FY2025 (US drinkware saturation + Stanley/Owala/dupes) and re-accelerated to +8% in Q1'26 on wholesale + international; tariffs compressed margins (~16.5%->14.4% adj op) but China is now <5% of COGS. The mature DCF asks whether international (20%->25% target) + new categories (bags via Mystery Ranch, cookware) + margin recovery offset the saturating core. The finding: roughly fair — the modal growth/margin-recovery path lands near spot.",
     "historicalPrices": {
       "xMin": -7.5,
@@ -18065,10 +18184,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 49.67,
-        "upsidePct": -2.1
+        "upsidePct": 13.5
       },
       "market": {
-        "marketCapBillion": 3.84,
+        "marketCapBillion": 3.31,
         "sharesOutstandingMillion": 75.7,
         "cashBillion": 0.114,
         "netDebtBillion": 0.0
@@ -18637,8 +18756,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -18650,12 +18769,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "dash-memo__v004__2026-07-22_15-02.pdf",
-      "size": "293 KB",
+      "file": "dash-memo__v005__2026-08-22_13-10.pdf",
+      "size": "292 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "dash-memo__v004__2026-07-22_15-02.pdf",
+          "size": "293 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 179.72
+        },
         {
           "version": "003",
           "file": "dash-memo__v003__2026-07-02_15-17.pdf",
@@ -18666,38 +18792,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$74.58B",
+      "mktCap": "$92.74B",
       "shares": "415M",
       "cash": "$5.5B cash, zero debt · ~$5.5B net cash; ~415M basic / ~442M diluted shares (SBC dilutes ~$1.3B/yr); GOV $102B / revenue $13.72B FY25 (+27% GOV); $1.8B FCF; first +FY GAAP income 2024; Down ~40% from highs; advertising ~$1B run-rate, Deliveroo+Wolt international, ~33x EV/FCF"
     },
     "spot": {
-      "price": 179.72,
-      "asOf": "July 22, 2026 close"
+      "price": 223.49,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 156.7,
-      "deltaPct": -12.8
+      "deltaPct": -29.9
     },
     "compound": [
       {
         "y": 5,
         "value": 245.23,
-        "mult": 1.36
+        "mult": 1.1
       },
       {
         "y": 10,
         "value": 384.04,
-        "mult": 2.14
+        "mult": 1.72
       },
       {
         "y": 15,
         "value": 601.82,
-        "mult": 3.35
+        "mult": 2.69
       },
       {
         "y": 20,
         "value": 943.71,
-        "mult": 5.25
+        "mult": 4.22
       }
     ],
     "taxonomy": {
@@ -18716,7 +18842,7 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": {
-      "value": 7.4,
+      "value": 9.35,
       "zone": "yellow"
     },
     "question": "Is DoorDash a dominant local-commerce network whose profitability is about to inflect — or a high-SBC, ~33x-FCF delivery business punished for spending ahead of returns?",
@@ -18782,7 +18908,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: August 22, 2026 close.",
     "thesis": "DoorDash trades at ~$66B (≈$159/sh, down ~40% from $285) — ~33x EV/FCF on $1.8B FCF, but GOV is still compounding +27% ($102B) and adj-EBITDA hit $2.8B (~2.7% of GOV). The crash is a margin/SBC problem, not a growth one. The mature DCF asks whether advertising (~$1B run-rate) + New-Verticals (grocery) unit economics + international (Deliveroo/Wolt) inflect the 2.4%-of-GOV margin upward, against ~$1.3B/yr SBC dilution. The finding: roughly fair — the 20%+ growth + margin inflection are offset by the premium FCF multiple + dilution.",
     "historicalPrices": {
       "xMin": -5.5,
@@ -18908,10 +19034,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 156.7,
-        "upsidePct": -12.8
+        "upsidePct": -29.9
       },
       "market": {
-        "marketCapBillion": 74.58,
+        "marketCapBillion": 92.74,
         "sharesOutstandingMillion": 415.0,
         "cashBillion": 5.5,
         "netDebtBillion": 0.0
@@ -19479,8 +19605,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -19492,12 +19618,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "ilmn-memo__v004__2026-07-22_15-02.pdf",
+      "file": "ilmn-memo__v005__2026-08-22_13-10.pdf",
       "size": "296 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "ilmn-memo__v004__2026-07-22_15-02.pdf",
+          "size": "296 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 192.88
+        },
         {
           "version": "003",
           "file": "ilmn-memo__v003__2026-07-02_15-17.pdf",
@@ -19508,38 +19641,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$29.13B",
+      "mktCap": "$33.14B",
       "shares": "151M",
       "cash": "$1.16B cash, $1.99B debt · ~$0.83B net debt; ~151M shares; ~$700M/yr buyback (no dividend); Revenue $4.34B FY25 (~flat 4yrs; Q1'26 +4.8% re-accel); ~23% non-GAAP op margin, ~70% gross, ~$0.9-1.0B FCF; Rallied ~80% off lows on the clinical/NovaSeq-X turnaround; ~5x EV/sales, ~22x FCF"
     },
     "spot": {
-      "price": 192.88,
-      "asOf": "July 22, 2026 close"
+      "price": 219.4,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 101.53,
-      "deltaPct": -47.4
+      "deltaPct": -53.7
     },
     "compound": [
       {
         "y": 5,
         "value": 156.27,
-        "mult": 0.81
+        "mult": 0.71
       },
       {
         "y": 10,
         "value": 240.77,
-        "mult": 1.25
+        "mult": 1.1
       },
       {
         "y": 15,
         "value": 371.34,
-        "mult": 1.93
+        "mult": 1.69
       },
       {
         "y": 20,
         "value": 573.33,
-        "mult": 2.97
+        "mult": 2.61
       }
     ],
     "taxonomy": {
@@ -19558,8 +19691,8 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": {
-      "value": 9.33,
-      "zone": "yellow"
+      "value": 10.58,
+      "zone": "orange"
     },
     "question": "Is Illumina's ~80% rally + ~5x EV/sales pricing a durable clinical/NovaSeq-X re-acceleration — or is flat revenue + low-cost-entrant (Ultima/Element) + Roche erosion the reality?",
     "scenarios": [
@@ -19624,7 +19757,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 30 / Base 35 / Bull 18 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 30 / Base 35 / Bull 18 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "Illumina trades at ~$22B (≈$145/sh, up ~80% off the lows) — ~5x EV/sales, ~22x FCF on $4.34B revenue (flat for four years, Q1'26 +4.8%), ~70% gross margin, ~$1B FCF. The mature DCF asks whether the NovaSeq-X consumables pull-through + clinical mix (>65% of sequencing consumables, +20% ex-China) re-accelerate the franchise toward a ~26% margin, against low-cost entrants (Ultima/Element $100 genome), Roche's 2026 SBX re-entry, China decline, and NIH cuts. The finding: the rally has priced the re-acceleration — only the bull-or-better clears spot; the base (modest re-accel) sits ~27% below. The TXG mirror.",
     "historicalPrices": {
       "xMin": -5.5,
@@ -19754,10 +19887,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 101.53,
-        "upsidePct": -47.4
+        "upsidePct": -53.7
       },
       "market": {
-        "marketCapBillion": 29.13,
+        "marketCapBillion": 33.14,
         "sharesOutstandingMillion": 151.0,
         "cashBillion": 1.16,
         "netDebtBillion": 1.99
@@ -20324,8 +20457,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -20337,12 +20470,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "shak-memo__v004__2026-07-22_15-02.pdf",
-      "size": "295 KB",
+      "file": "shak-memo__v005__2026-08-22_13-10.pdf",
+      "size": "296 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "shak-memo__v004__2026-07-22_15-02.pdf",
+          "size": "295 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 55.57
+        },
         {
           "version": "003",
           "file": "shak-memo__v003__2026-07-02_15-17.pdf",
@@ -20353,38 +20493,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$2.38B",
+      "mktCap": "$3.25B",
       "shares": "43M",
       "cash": "$314M cash, $250M debt · Net cash +$64M ($314M cash vs $250M 0% convert, out-of-the-money); ~42.8M fully-diluted shares; Revenue $1.445B FY25 (+15%); GAAP op margin back to 4.3%; FCF +$57M (~4%); capex ~11.5% of revenue; Down ~55% YoY, near the 52-week low after the June-2026 guidance cut"
     },
     "spot": {
-      "price": 55.57,
-      "asOf": "July 22, 2026 close"
+      "price": 75.82,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 49.21,
-      "deltaPct": -11.4
+      "deltaPct": -35.1
     },
     "compound": [
       {
         "y": 5,
         "value": 77.11,
-        "mult": 1.39
+        "mult": 1.02
       },
       {
         "y": 10,
         "value": 120.96,
-        "mult": 2.18
+        "mult": 1.6
       },
       {
         "y": 15,
         "value": 189.95,
-        "mult": 3.42
+        "mult": 2.51
       },
       {
         "y": 20,
         "value": 298.67,
-        "mult": 5.37
+        "mult": 3.94
       }
     ],
     "taxonomy": {
@@ -20466,7 +20606,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 30 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 30 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: August 22, 2026 close.",
     "thesis": "Shake Shack trades at ~$2.34B (~$54.70, down ~55% YoY after a June-2026 guidance cut) — ~13x EV/EBITDA on $1.445B revenue growing ~15%, net cash, operating margin back to 4.3%, FCF positive (~$57M, ~4%). The bull is a 4x US unit runway (~373 -> 1,500), a sub-$2.0M build cost, a new CEO (Rob Lynch, ex-Wingstop); the bear is capital intensity keeping FCF thin while traffic is barely positive. The DCF asks whether the runway converts to free cash flow — the modal case lands ~fair (-9%), so the crash corrected the excess, not created a bargain.",
     "historicalPrices": {
       "xMin": -11.6,
@@ -20604,10 +20744,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 49.21,
-        "upsidePct": -11.4
+        "upsidePct": -35.1
       },
       "market": {
-        "marketCapBillion": 2.38,
+        "marketCapBillion": 3.25,
         "sharesOutstandingMillion": 42.78,
         "cashBillion": 0.314,
         "netDebtBillion": 0.25
@@ -21176,8 +21316,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -21189,12 +21329,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "meta-memo__v004__2026-07-22_15-02.pdf",
+      "file": "meta-memo__v005__2026-08-22_13-10.pdf",
       "size": "301 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "meta-memo__v004__2026-07-22_15-02.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 629.04
+        },
         {
           "version": "003",
           "file": "meta-memo__v003__2026-07-02_15-17.pdf",
@@ -21205,38 +21352,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$1585.76B",
+      "mktCap": "$1386.25B",
       "shares": "2.52B",
       "cash": "$81.6B cash, $58.7B debt · Net cash +$22.9B ($81.6B cash vs $58.7B debt); ~2.52B shares; ~$26B buybacks + ~$5B dividends FY25; Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF ~$46.1B after capex stepping from ~$72B toward $125-145B; ~$567 mid-June 2026: +12.6% YTD but -18% TTM, off the $796 Aug-2025 high, bounced off the $520 Mar-2026 low"
     },
     "spot": {
-      "price": 629.04,
-      "asOf": "July 22, 2026 close"
+      "price": 549.9,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 649.72,
-      "deltaPct": 3.3
+      "deltaPct": 18.2
     },
     "compound": [
       {
         "y": 5,
         "value": 993.57,
-        "mult": 1.58
+        "mult": 1.81
       },
       {
         "y": 10,
         "value": 1520.2,
-        "mult": 2.42
+        "mult": 2.76
       },
       {
         "y": 15,
         "value": 2327.2,
-        "mult": 3.7
+        "mult": 4.23
       },
       {
         "y": 20,
         "value": 3564.49,
-        "mult": 5.67
+        "mult": 6.48
       }
     ],
     "taxonomy": {
@@ -21320,7 +21467,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 27 / Base 34 / Bull 20 / Ultra Bull 7. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 27 / Base 34 / Bull 20 / Ultra Bull 7. Spot price reference: August 22, 2026 close.",
     "thesis": "Meta trades at ~$1.43T (~$567, +12.6% YTD but -18% TTM, off the $796 high) - the cheapest mega-cap on normalized FCF at a high-teens EV/FCF, while Q1'26 ad growth accelerated to +33%. The fork is the capex: guidance jumped to $125-145B (~2x prior year) and the stock flinched on the ROI question, even as 41% margins fund the buildout. The DCF asks whether AI ad efficiency compounds revenue faster than D&A crushes margins: a weighted +14.6%, modal base ~+8%.",
     "historicalPrices": {
       "xMin": -6.2,
@@ -21450,10 +21597,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 649.72,
-        "upsidePct": 3.3
+        "upsidePct": 18.2
       },
       "market": {
-        "marketCapBillion": 1585.76,
+        "marketCapBillion": 1386.25,
         "sharesOutstandingMillion": 2521.0,
         "cashBillion": 81.6,
         "netDebtBillion": 58.7
@@ -22022,8 +22169,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -22035,12 +22182,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "amzn-memo__v004__2026-07-22_15-02.pdf",
+      "file": "amzn-memo__v005__2026-08-22_13-10.pdf",
       "size": "301 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "amzn-memo__v004__2026-07-22_15-02.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 244.04
+        },
         {
           "version": "003",
           "file": "amzn-memo__v003__2026-07-02_15-17.pdf",
@@ -22051,38 +22205,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$2619.72B",
+      "mktCap": "$2776.34B",
       "shares": "10.73B",
       "cash": "$123B cash, $68.4B debt · $123B cash vs ~$54B net cash after lease/debt; ~10.73B shares; no dividend, capital is plowed into capex not buyback; Revenue $716.9B FY25 (+12%); GAAP op margin 11.2% (record); FCF crushed to ~$7.7B (~1%) by the ~$200B AI capex surge; ~$238.55, +14% TTM, down ~10% over 30 days on capex fears; 52-wk range $196-$279"
     },
     "spot": {
-      "price": 244.04,
-      "asOf": "July 22, 2026 close"
+      "price": 258.63,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 222.01,
-      "deltaPct": -9.0
+      "deltaPct": -14.2
     },
     "compound": [
       {
         "y": 5,
         "value": 331.0,
-        "mult": 1.36
+        "mult": 1.28
       },
       {
         "y": 10,
         "value": 493.71,
-        "mult": 2.02
+        "mult": 1.91
       },
       {
         "y": 15,
         "value": 736.73,
-        "mult": 3.02
+        "mult": 2.85
       },
       {
         "y": 20,
         "value": 1099.87,
-        "mult": 4.51
+        "mult": 4.25
       }
     ],
     "taxonomy": {
@@ -22166,7 +22320,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 26 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 26 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Amazon trades at ~$2.56T (~$238.55, +14% TTM, down ~10% in 30 days on capex fear) - but the FCF multiple is distorted: FY25 free cash flow was crushed to ~$7.7B (from ~$33B in FY24) by a ~$200B AI-data-center build. The DCF models FCF margin recovering off that trough as AWS reaccelerates (+28%) and retail/ads margins expand. The finding is roughly fair (-6.9%): the modal base ~-12% as depreciation lags monetization, a wide spread either way.",
     "historicalPrices": {
       "xMin": -6.2,
@@ -22296,10 +22450,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 222.01,
-        "upsidePct": -9.0
+        "upsidePct": -14.2
       },
       "market": {
-        "marketCapBillion": 2619.72,
+        "marketCapBillion": 2776.34,
         "sharesOutstandingMillion": 10734.9,
         "cashBillion": 123.0,
         "netDebtBillion": 68.4
@@ -22867,8 +23021,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -22880,12 +23034,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "googl-memo__v004__2026-07-22_15-02.pdf",
-      "size": "299 KB",
+      "file": "googl-memo__v005__2026-08-22_13-10.pdf",
+      "size": "300 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "googl-memo__v004__2026-07-22_15-02.pdf",
+          "size": "299 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 348.45
+        },
         {
           "version": "003",
           "file": "googl-memo__v003__2026-07-02_15-17.pdf",
@@ -22896,38 +23057,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$4212.06B",
+      "mktCap": "$4168.18B",
       "shares": "12.09B",
       "cash": "$126.8B cash, $48.5B debt · $126.8B cash vs $48.5B debt (~$78.3B net cash); ~12.09B shares (Class A+B+C), buyback + a small dividend; Revenue $402.8B FY25 (+15%); GAAP op margin 32.0%; FCF $73.3B; capex ~$91B and guided to ~$190B in FY26; Up ~28% YTD and ~130-160% TTM to ~$360 / ~$4.35T cap; ATH close $402.38 (May-2026), re-rated on owning the full AI stack"
     },
     "spot": {
-      "price": 348.45,
-      "asOf": "July 22, 2026 close"
+      "price": 344.82,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 282.54,
-      "deltaPct": -18.9
+      "deltaPct": -18.1
     },
     "compound": [
       {
         "y": 5,
         "value": 414.92,
-        "mult": 1.19
+        "mult": 1.2
       },
       {
         "y": 10,
         "value": 609.49,
-        "mult": 1.75
+        "mult": 1.77
       },
       {
         "y": 15,
         "value": 895.58,
-        "mult": 2.57
+        "mult": 2.6
       },
       {
         "y": 20,
         "value": 1316.37,
-        "mult": 3.78
+        "mult": 3.82
       }
     ],
     "taxonomy": {
@@ -23011,7 +23172,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 25 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 25 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Alphabet trades at ~$4.35T (~$360, +28% YTD and ~130-160% TTM) - roughly 60x EV/FCF on $402.8B revenue growing ~15%, 32% operating margins, net cash, $73.3B FCF before a capex ramp to ~$190B. Cloud just re-accelerated to +63% with a ~$462B backlog and the AI stack re-rated the name, but Search is still ~60%+ of revenue and the price embeds the win. The DCF asks whether Search holds its economics through the generative-AI shift while Cloud compounds. The finding lands -21.4% (weighted ~$286): the modal base sits right at spot, so the run priced in the franchise and then some.",
     "historicalPrices": {
       "xMin": -6.2,
@@ -23137,10 +23298,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 282.54,
-        "upsidePct": -18.9
+        "upsidePct": -18.1
       },
       "market": {
-        "marketCapBillion": 4212.06,
+        "marketCapBillion": 4168.18,
         "sharesOutstandingMillion": 12088.0,
         "cashBillion": 126.8,
         "netDebtBillion": 48.5
@@ -23708,8 +23869,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -23721,12 +23882,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "aapl-memo__v004__2026-07-22_15-02.pdf",
+      "file": "aapl-memo__v005__2026-08-22_13-10.pdf",
       "size": "300 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "aapl-memo__v004__2026-07-22_15-02.pdf",
+          "size": "300 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 325.57
+        },
         {
           "version": "003",
           "file": "aapl-memo__v003__2026-07-02_15-17.pdf",
@@ -23737,38 +23905,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$4810.78B",
+      "mktCap": "$4571.11B",
       "shares": "14.78B",
       "cash": "$54.7B cash, $90.7B debt · Net debt ~$36B ($54.7B cash vs ~$90.7B total debt); ~14.78B shares, shrinking on a fresh $100B buyback + dividend raise; Revenue $416B FY25 (+6%); GAAP op margin ~32%; FCF ~$99B; Services ~$31B/quarter at ~70%+ gross margin; ~$291 (Jun 2026), +56% TTM, near the ~$315 ATH; iPhone ~50% of revenue, Greater China reaccelerating (+28%)"
     },
     "spot": {
-      "price": 325.57,
-      "asOf": "July 22, 2026 close"
+      "price": 309.35,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 190.57,
-      "deltaPct": -41.5
+      "deltaPct": -38.4
     },
     "compound": [
       {
         "y": 5,
         "value": 279.41,
-        "mult": 0.86
+        "mult": 0.9
       },
       {
         "y": 10,
         "value": 409.85,
-        "mult": 1.26
+        "mult": 1.32
       },
       {
         "y": 15,
         "value": 601.45,
-        "mult": 1.85
+        "mult": 1.94
       },
       {
         "y": 20,
         "value": 883.03,
-        "mult": 2.71
+        "mult": 2.85
       }
     ],
     "taxonomy": {
@@ -23852,7 +24020,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 19 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 19 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Apple trades at ~$4.30T (~$291/sh, +56% TTM) - about 43x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B net debt. Services compounds mid-teens at ~70%+ gross margin, but iPhone is still ~50% of revenue, AI is outsourced to Gemini, and the ~$20B/yr Google search payment faces a DOJ rebid. The DCF resolves whether quality justifies the multiple: weighted -34.5%, modal ~$188 (-35%).",
     "historicalPrices": {
       "xMin": -6.2,
@@ -23978,10 +24146,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 190.57,
-        "upsidePct": -41.5
+        "upsidePct": -38.4
       },
       "market": {
-        "marketCapBillion": 4810.78,
+        "marketCapBillion": 4571.11,
         "sharesOutstandingMillion": 14776.4,
         "cashBillion": 54.7,
         "netDebtBillion": 90.7
@@ -24550,8 +24718,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -24563,12 +24731,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "nvda-memo__v004__2026-07-22_15-02.pdf",
+      "file": "nvda-memo__v005__2026-08-22_13-10.pdf",
       "size": "300 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "nvda-memo__v004__2026-07-22_15-02.pdf",
+          "size": "300 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 209.52
+        },
         {
           "version": "003",
           "file": "nvda-memo__v003__2026-07-02_15-17.pdf",
@@ -24579,38 +24754,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$5091.34B",
+      "mktCap": "$5217.7B",
       "shares": "24.30B",
       "cash": "$10.6B cash, $8.5B debt · $10.6B cash vs ~$8.5B debt (~$2B net cash); ~24.3B shares; +$80B buyback authorized, $0.25/quarter dividend; Revenue $215.9B FY26 (+65%); GAAP op margin ~60%; FCF ~$96.7B (~45%); Data Center now ~88% of revenue; World's largest company at ~$5.0T; ATH ~$235 (May), ~$205 now (~+45% TTM); slid post-earnings despite the beat"
     },
     "spot": {
-      "price": 209.52,
-      "asOf": "July 22, 2026 close"
+      "price": 214.72,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 153.54,
-      "deltaPct": -26.7
+      "deltaPct": -28.5
     },
     "compound": [
       {
         "y": 5,
         "value": 234.28,
-        "mult": 1.12
+        "mult": 1.09
       },
       {
         "y": 10,
         "value": 357.69,
-        "mult": 1.71
+        "mult": 1.67
       },
       {
         "y": 15,
         "value": 546.47,
-        "mult": 2.61
+        "mult": 2.55
       },
       {
         "y": 20,
         "value": 835.42,
-        "mult": 3.99
+        "mult": 3.89
       }
     ],
     "taxonomy": {
@@ -24692,7 +24867,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 25 / Base 32 / Bull 20 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 25 / Base 32 / Bull 20 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "NVIDIA trades at ~$4,986B (~$205/sh, ~+45% TTM) - ~50x FCF on $215.9B revenue (+65%), ~60% operating margins, ~$2B net cash. Data Center is ~88% of revenue and grew +92% last quarter at a mid-70s% gross margin. The DCF asks whether hyperscaler + sovereign AI capex keeps compounding or pauses; even at huge growth the modal can't justify ~$5T - weighted -25% (ultra-bear -80% to ultra-bull +73%).",
     "historicalPrices": {
       "xMin": -5.2,
@@ -24814,10 +24989,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 153.54,
-        "upsidePct": -26.7
+        "upsidePct": -28.5
       },
       "market": {
-        "marketCapBillion": 5091.34,
+        "marketCapBillion": 5217.7,
         "sharesOutstandingMillion": 24300.0,
         "cashBillion": 10.6,
         "netDebtBillion": 8.5
@@ -25385,8 +25560,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -25398,12 +25573,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "tsla-memo__v004__2026-07-22_15-02.pdf",
+      "file": "tsla-memo__v005__2026-08-22_13-10.pdf",
       "size": "303 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "tsla-memo__v004__2026-07-22_15-02.pdf",
+          "size": "303 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 376.71
+        },
         {
           "version": "003",
           "file": "tsla-memo__v003__2026-07-02_15-17.pdf",
@@ -25414,38 +25596,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$1413.57B",
+      "mktCap": "$1361.6B",
       "shares": "3.75B",
       "cash": "$44.1B cash, $1.6B debt · $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares; Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B; ~$406 (down ~10% YTD, +27% TTM); ~$1.5T market cap trades on the autonomy/robot narrative, not auto fundamentals"
     },
     "spot": {
-      "price": 376.71,
-      "asOf": "July 22, 2026 close"
+      "price": 362.86,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 101.42,
-      "deltaPct": -73.1
+      "deltaPct": -72.1
     },
     "compound": [
       {
         "y": 5,
         "value": 161.2,
-        "mult": 0.43
+        "mult": 0.44
       },
       {
         "y": 10,
         "value": 256.45,
-        "mult": 0.68
+        "mult": 0.71
       },
       {
         "y": 15,
         "value": 408.36,
-        "mult": 1.08
+        "mult": 1.13
       },
       {
         "y": 20,
         "value": 650.87,
-        "mult": 1.73
+        "mult": 1.79
       }
     ],
     "taxonomy": {
@@ -25529,7 +25711,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 18 / Bear 30 / Base 30 / Bull 14 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 18 / Bear 30 / Base 30 / Bull 14 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Tesla trades at ~$1.5T (~$406, +27% TTM) - ~16x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight delivery decline (1.64M, -8.6%), with GAAP operating margin compressed to 4.6% from 16.8% in 2022. The DCF underwrites only the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-75%). The robotaxi/FSD/Optimus optionality is real but lives entirely in the ultra-bull second act, and even that lands -6%. What you pay above ~$100 is the autonomy/robot option, not the car business - the modal case, an auto maker re-rating toward an auto multiple, is deeply negative.",
     "historicalPrices": {
       "xMin": -5.7,
@@ -25655,10 +25837,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 101.42,
-        "upsidePct": -73.1
+        "upsidePct": -72.1
       },
       "market": {
-        "marketCapBillion": 1413.57,
+        "marketCapBillion": 1361.6,
         "sharesOutstandingMillion": 3752.4,
         "cashBillion": 44.1,
         "netDebtBillion": 1.6
@@ -26228,8 +26410,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -26241,12 +26423,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-megacap",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "dis-memo__v004__2026-07-22_15-02.pdf",
+      "file": "dis-memo__v005__2026-08-22_13-10.pdf",
       "size": "301 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "dis-memo__v004__2026-07-22_15-02.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 96.72
+        },
         {
           "version": "003",
           "file": "dis-memo__v003__2026-07-02_15-17.pdf",
@@ -26257,38 +26446,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$172.7B",
+      "mktCap": "$192.45B",
       "shares": "1.79B",
       "cash": "$5.7B cash, $42B debt · $5.7B cash against ~$42B total debt (~$36B net debt); ~1,785M shares; dividend raised +50%, buyback >=$8B in FY26; Revenue $94.4B FY25 (+3%); GAAP op margin 18.6% (rising); FCF ~$10.1B; streaming (DTC) OI just crossed 10%; ~$100, down ~9% YTD (52-wk ~$92-125), popped ~7-8% on the May print; the cheap turnaround alongside META"
     },
     "spot": {
-      "price": 96.72,
-      "asOf": "July 22, 2026 close"
+      "price": 107.78,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 110.38,
-      "deltaPct": 14.1
+      "deltaPct": 2.4
     },
     "compound": [
       {
         "y": 5,
         "value": 168.72,
-        "mult": 1.74
+        "mult": 1.57
       },
       {
         "y": 10,
         "value": 258.03,
-        "mult": 2.67
+        "mult": 2.39
       },
       {
         "y": 15,
         "value": 394.82,
-        "mult": 4.08
+        "mult": 3.66
       },
       {
         "y": 20,
         "value": 604.42,
-        "mult": 6.25
+        "mult": 5.61
       }
     ],
     "taxonomy": {
@@ -26370,7 +26559,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Disney trades at ~$178.6B equity (~$100, down ~9% YTD) — ~22x EV/FCF on $94.4B revenue, an 18.6% and rising operating margin, ~$10.1B FCF against ~$36B net debt. Streaming (DTC) operating income just crossed 10% (+88% YoY, guided to keep scaling), Experiences is a record cash engine (~$2.6B quarterly OI) with a $60B capex runway, and the CEO succession overhang is resolved. The DCF asks whether DTC margin scales toward mid-teens before linear TV erodes the base. The modal case lands +14% — the cheap-turnaround read, with the secular cable decline as the live drag.",
     "historicalPrices": {
       "xMin": -6.2,
@@ -26496,10 +26685,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 110.38,
-        "upsidePct": 14.1
+        "upsidePct": 2.4
       },
       "market": {
-        "marketCapBillion": 172.7,
+        "marketCapBillion": 192.45,
         "sharesOutstandingMillion": 1785.3,
         "cashBillion": 5.7,
         "netDebtBillion": 42.0
@@ -27068,8 +27257,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -27081,12 +27270,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "cmg-memo__v004__2026-07-22_15-02.pdf",
+      "file": "cmg-memo__v005__2026-08-22_13-10.pdf",
       "size": "298 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "cmg-memo__v004__2026-07-22_15-02.pdf",
+          "size": "298 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 32.98
+        },
         {
           "version": "003",
           "file": "cmg-memo__v003__2026-07-02_15-17.pdf",
@@ -27097,38 +27293,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$42.94B",
+      "mktCap": "$48.04B",
       "shares": "1.30B",
       "cash": "$1.05B cash, zero debt · Net cash ~$1.05B, no funded debt; ~1.30B fully-diluted shares (50:1 split-adjusted) — solvency a non-issue; Revenue $11.93B FY25 (+6%); GAAP op margin 16.2% (off the 16.9% peak); FCF ~$1.4B (~12%), capex ~11-12% on new units; Down ~14% YTD / ~36% TTM near the 52-week low ($29.75-$58.42); ~30x FCF, cheapest in years"
     },
     "spot": {
-      "price": 32.98,
-      "asOf": "July 22, 2026 close"
+      "price": 36.9,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 30.68,
-      "deltaPct": -7.0
+      "deltaPct": -16.9
     },
     "compound": [
       {
         "y": 5,
         "value": 46.05,
-        "mult": 1.4
+        "mult": 1.25
       },
       {
         "y": 10,
         "value": 69.17,
-        "mult": 2.1
+        "mult": 1.87
       },
       {
         "y": 15,
         "value": 103.97,
-        "mult": 3.15
+        "mult": 2.82
       },
       {
         "y": 20,
         "value": 156.41,
-        "mult": 4.74
+        "mult": 4.24
       }
     ],
     "taxonomy": {
@@ -27210,7 +27406,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Chipotle trades at ~$41.96B (~$32.23, down ~14% YTD / ~36% TTM, near the 52-week low) — ~30x FCF on $11.93B revenue, net cash, GAAP op margin 16.2% off a 16.9% peak. Q1'26 comps just turned positive (+0.5%, traffic-led, no price), but restaurant-level margin fell 250bps as management declines to fully price mid-single-digit inflation to defend value. The bull is the unit runway (~4,100 -> 7,000 NA) plus throughput/automation; the bear is a maturing concept with structurally low-single-digit same-store growth at a premium multiple. The weighted DCF lands -4.8% — the modal base (-5.5%) only reaches about today's price; the runway is real, the multiple already pays for it.",
     "historicalPrices": {
       "xMin": -5.2,
@@ -27328,10 +27524,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 30.68,
-        "upsidePct": -7.0
+        "upsidePct": -16.9
       },
       "market": {
-        "marketCapBillion": 42.94,
+        "marketCapBillion": 48.04,
         "sharesOutstandingMillion": 1302.4,
         "cashBillion": 1.05,
         "netDebtBillion": 0.0
@@ -27900,8 +28096,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -27913,12 +28109,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "dal-memo__v004__2026-07-22_15-02.pdf",
+      "file": "dal-memo__v005__2026-08-22_13-10.pdf",
       "size": "301 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "dal-memo__v004__2026-07-22_15-02.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 83.72
+        },
         {
           "version": "003",
           "file": "dal-memo__v003__2026-07-02_15-17.pdf",
@@ -27929,38 +28132,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$54.68B",
+      "mktCap": "$53.82B",
       "shares": "653M",
       "cash": "$4.31B cash, $13.31B debt · $4.31B cash vs $13.31B gross debt+leases -> ~$9.0B net debt (adjusted net debt below 2019, investment-grade at all 3 agencies); ~653M shares; Revenue $63.4B FY25 (GAAP, grossed up by third-party refinery sales); GAAP op margin ~9.2%; FCF ~$3.8B; Down ~6% YTD, up ~79% TTM (52-wk $45.28-$83.83); FY26 guide EPS $6.50-7.50 (+20%), FCF $3-4B"
     },
     "spot": {
-      "price": 83.72,
-      "asOf": "July 22, 2026 close"
+      "price": 82.41,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 76.35,
-      "deltaPct": -8.8
+      "deltaPct": -7.3
     },
     "compound": [
       {
         "y": 5,
         "value": 119.61,
-        "mult": 1.43
+        "mult": 1.45
       },
       {
         "y": 10,
         "value": 187.46,
-        "mult": 2.24
+        "mult": 2.27
       },
       {
         "y": 15,
         "value": 293.97,
-        "mult": 3.51
+        "mult": 3.57
       },
       {
         "y": 20,
         "value": 461.24,
-        "mult": 5.51
+        "mult": 5.6
       }
     ],
     "taxonomy": {
@@ -28042,7 +28245,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 16 / Bear 28 / Base 33 / Bull 15 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 16 / Bear 28 / Base 33 / Bull 15 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Delta trades at ~$54.25B equity (~$83.06, ~+79% TTM) -> ~14x FCF on $63.4B GAAP revenue, ~9.2% operating margin, ~$3.8B FCF, but ~$9B net debt drags the equity. The bull is the premium-cabin + SkyMiles-Amex loyalty annuity (premium revenue +14%, Amex remuneration >$2B toward $10B) re-rating earnings toward a lower-beta consumer/payments mix; the bear is reversion to fuel-and-cycle economics with a K-shaped main cabin. The modal case lands ~fair (-3%) - cheap-on-FCF is offset by cyclicality and the debt bridge.",
     "historicalPrices": {
       "xMin": -5.5,
@@ -28172,10 +28375,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 76.35,
-        "upsidePct": -8.8
+        "upsidePct": -7.3
       },
       "market": {
-        "marketCapBillion": 54.68,
+        "marketCapBillion": 53.82,
         "sharesOutstandingMillion": 653.1,
         "cashBillion": 4.31,
         "netDebtBillion": 13.31
@@ -28744,8 +28947,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -28757,12 +28960,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "hood-memo__v004__2026-07-22_15-02.pdf",
-      "size": "301 KB",
+      "file": "hood-memo__v005__2026-08-22_13-10.pdf",
+      "size": "300 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "hood-memo__v004__2026-07-22_15-02.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 104.93
+        },
         {
           "version": "003",
           "file": "hood-memo__v003__2026-07-02_15-17.pdf",
@@ -28773,38 +28983,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$93.24B",
+      "mktCap": "$96.08B",
       "shares": "888M",
       "cash": "$4.26B cash, zero debt · Net cash ~$4.3B, no debt; ~888.5M shares and growing (SBC-dilutive); ~$82.8B market cap; Revenue $4.473B FY25 (+49%); ~50% adj-EBITDA margin in Q1'26 ($534M); FCF positive (~$1.6B), but capital-light and cyclical; Down ~27% YTD to ~$93 (52-wk $63.52-$153.86), giving back part of a ~280% 2025 rally"
     },
     "spot": {
-      "price": 104.93,
-      "asOf": "July 22, 2026 close"
+      "price": 108.13,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 39.45,
-      "deltaPct": -62.4
+      "deltaPct": -63.5
     },
     "compound": [
       {
         "y": 5,
         "value": 63.33,
-        "mult": 0.6
+        "mult": 0.59
       },
       {
         "y": 10,
         "value": 101.75,
-        "mult": 0.97
+        "mult": 0.94
       },
       {
         "y": 15,
         "value": 163.66,
-        "mult": 1.56
+        "mult": 1.51
       },
       {
         "y": 20,
         "value": 263.46,
-        "mult": 2.51
+        "mult": 2.44
       }
     ],
     "taxonomy": {
@@ -28886,7 +29096,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 32 / Bull 18 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 32 / Bull 18 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Robinhood trades at ~$82.8B (~$93, down ~27% YTD after a ~280% 2025 rally) — ~52x FCF on $4.473B revenue growing ~49%, ~50% adj-EBITDA margin, net cash, share count rising (SBC-dilutive). Roughly a third of revenue is rate-sensitive net interest (~$40M/qtr per 25bp Fed cut) and transaction revenue is crypto/rate-cyclical (crypto -47% last quarter). The DCF asks whether events/futures/options/Gold make HOOD a durable platform or it reverts to a transaction broker. The finding: even the bull lands -40%, and only the ultra-bull (-14%) approaches fair — the price embeds a hyper-growth platform the modal case (-59%) doesn't deliver.",
     "historicalPrices": {
       "xMin": -5.0,
@@ -29012,10 +29222,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 39.45,
-        "upsidePct": -62.4
+        "upsidePct": -63.5
       },
       "market": {
-        "marketCapBillion": 93.24,
+        "marketCapBillion": 96.08,
         "sharesOutstandingMillion": 888.5,
         "cashBillion": 4.26,
         "netDebtBillion": 0.0
@@ -29586,8 +29796,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -29599,12 +29809,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "de-memo__v004__2026-07-22_15-02.pdf",
+      "file": "de-memo__v005__2026-08-22_13-10.pdf",
       "size": "302 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "de-memo__v004__2026-07-22_15-02.pdf",
+          "size": "302 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 601.78
+        },
         {
           "version": "003",
           "file": "de-memo__v003__2026-07-02_15-17.pdf",
@@ -29615,38 +29832,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$162.71B",
+      "mktCap": "$175.06B",
       "shares": "270M",
       "cash": "$8.28B cash, $13.8B debt · $8.28B cash; ~$13.8B modeled equipment-ops debt (excludes the ~$45B captive lender; see pushback); ~270M shares; Revenue $45.7B FY25 (-12%, third down-year off the FY23 $61.3B peak); GAAP op margin 14.0% (trough); FCF ~$6.1B (~13%); ~$577, YTD ~+10.5%, TTM ~+19%; 52-week $433-$674 (ATH $660 Feb 2026), ~26x trough FCF"
     },
     "spot": {
-      "price": 601.78,
-      "asOf": "July 22, 2026 close"
+      "price": 647.47,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 451.41,
-      "deltaPct": -25.0
+      "deltaPct": -30.3
     },
     "compound": [
       {
         "y": 5,
         "value": 693.69,
-        "mult": 1.15
+        "mult": 1.07
       },
       {
         "y": 10,
         "value": 1066.8,
-        "mult": 1.77
+        "mult": 1.65
       },
       {
         "y": 15,
         "value": 1641.9,
-        "mult": 2.73
+        "mult": 2.54
       },
       {
         "y": 20,
         "value": 2529.04,
-        "mult": 4.2
+        "mult": 3.91
       }
     ],
     "taxonomy": {
@@ -29730,7 +29947,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Deere trades at ~$156B (~$577, +10.5% YTD into the cycle low) — ~26x trough FCF on $45.7B revenue down 12% in the third year of an ag down-cycle, GAAP operating margin compressed to 14.0%, FCF ~$6.1B. The DCF asks whether the recovery is already priced: the modal case says largely yes (base -23%) — a full multiple on trough earnings already discounts the upturn. The bull is the cycle turning plus precision ag de-cyclicalizing margins. The finding: -21.8%, quality bought rich near a trough.",
     "historicalPrices": {
       "xMin": -5.5,
@@ -29860,10 +30077,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 451.41,
-        "upsidePct": -25.0
+        "upsidePct": -30.3
       },
       "market": {
-        "marketCapBillion": 162.71,
+        "marketCapBillion": 175.06,
         "sharesOutstandingMillion": 270.4,
         "cashBillion": 8.28,
         "netDebtBillion": 13.8
@@ -30432,8 +30649,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -30445,12 +30662,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "algn-memo__v004__2026-07-22_15-02.pdf",
+      "file": "algn-memo__v005__2026-08-22_13-10.pdf",
       "size": "298 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "algn-memo__v004__2026-07-22_15-02.pdf",
+          "size": "298 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 174.23
+        },
         {
           "version": "003",
           "file": "algn-memo__v003__2026-07-02_15-17.pdf",
@@ -30461,38 +30685,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$12.42B",
+      "mktCap": "$11.59B",
       "shares": "71M",
       "cash": "$1.1B cash, zero debt · $1.10B cash, no debt (net cash, p_fail ~0); ~71.3M shares; ~$200M buyback active; Revenue $4.035B FY25 (+1%, flat-lining); GAAP op margin compressed to 13.5% (non-GAAP ~21%); FCF ~$0.5B; ~70% gross margin; ~$175, YTD ~+7-8%, 52-wk $122-$208 - deeply de-rated from the 2021 ~$700 peak (fwd P/E ~15)"
     },
     "spot": {
-      "price": 174.23,
-      "asOf": "July 22, 2026 close"
+      "price": 162.55,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 172.27,
-      "deltaPct": -1.1
+      "deltaPct": 6.0
     },
     "compound": [
       {
         "y": 5,
         "value": 264.49,
-        "mult": 1.52
+        "mult": 1.63
       },
       {
         "y": 10,
         "value": 406.29,
-        "mult": 2.33
+        "mult": 2.5
       },
       {
         "y": 15,
         "value": 624.48,
-        "mult": 3.58
+        "mult": 3.84
       },
       {
         "y": 20,
         "value": 960.41,
-        "mult": 5.51
+        "mult": 5.91
       }
     ],
     "taxonomy": {
@@ -30574,7 +30798,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Align trades at ~$12.5B (~$174.84, deeply de-rated from the 2021 ~$700 peak to ~$175) - ~25x FCF on $4.04B revenue growing low-single-digit, ~70% gross margin, net cash and a buyback. It is the category-defining clear-aligner brand (Invisalign + iTero) in a market still only ~15-20% penetrated, but growth has flat-lined (+1%) as discretionary demand softens and Angelalign/at-home rivals pressure ASPs (-1 to -2% guided). The DCF asks whether category penetration plus the teen/Palatal-Expander TAM outrun price/share erosion. The finding lands ~fair (-1.5%): the modal case is +1%, de-rated but not cheap.",
     "historicalPrices": {
       "xMin": -5.5,
@@ -30700,10 +30924,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 172.27,
-        "upsidePct": -1.1
+        "upsidePct": 6.0
       },
       "market": {
-        "marketCapBillion": 12.42,
+        "marketCapBillion": 11.59,
         "sharesOutstandingMillion": 71.3,
         "cashBillion": 1.1,
         "netDebtBillion": 0.0
@@ -31272,8 +31496,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -31285,12 +31509,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "adsk-memo__v004__2026-07-22_15-02.pdf",
+      "file": "adsk-memo__v005__2026-08-22_13-10.pdf",
       "size": "302 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "adsk-memo__v004__2026-07-22_15-02.pdf",
+          "size": "302 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 205.41
+        },
         {
           "version": "003",
           "file": "adsk-memo__v003__2026-07-02_15-17.pdf",
@@ -31301,38 +31532,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$43.34B",
+      "mktCap": "$53.56B",
       "shares": "211M",
       "cash": "$2.6B cash, $2.5B debt · $2.60B cash vs $2.50B debt — roughly net-cash-neutral (~$0.1B net cash); ~211M shares; ~$448M buyback in Q1 FY27; Revenue $7.21B FY26 (+18% as-reported); GAAP op margin ~21.9%, non-GAAP ~39%; FCF $2.4B; ~98% subscription/recurring; Down ~31% YTD to ~$198, near the 52-week low (~$205-$329 range); Starboard (~$500M, proxy fight) pushing margins"
     },
     "spot": {
-      "price": 205.41,
-      "asOf": "July 22, 2026 close"
+      "price": 253.82,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 304.79,
-      "deltaPct": 48.4
+      "deltaPct": 20.1
     },
     "compound": [
       {
         "y": 5,
         "value": 456.72,
-        "mult": 2.22
+        "mult": 1.8
       },
       {
         "y": 10,
         "value": 684.75,
-        "mult": 3.33
+        "mult": 2.7
       },
       {
         "y": 15,
         "value": 1027.14,
-        "mult": 5.0
+        "mult": 4.05
       },
       {
         "y": 20,
         "value": 1541.57,
-        "mult": 7.5
+        "mult": 6.07
       }
     ],
     "taxonomy": {
@@ -31414,7 +31645,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 26 / Base 34 / Bull 19 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 26 / Base 34 / Bull 19 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Autodesk trades at ~$41.9B (~$198, down ~31% YTD near the 52-week low) — ~17x FCF on $7.21B revenue, a ~98%-recurring CAD/design franchise, roughly net-cash-neutral. The +18% as-reported growth is flattered by an agency->direct billing change; underlying (cc-adjusted) growth is nearer ~8-12%. The bull is durable switching-cost lock-in plus a Starboard-forced lift toward ~45% operating margin by FY28; the bear is maturing growth and activist/execution noise. The finding is +53.6%: even the bear is +9% and the modal case +53% on the lower underlying growth.",
     "historicalPrices": {
       "xMin": -5.5,
@@ -31544,10 +31775,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 304.79,
-        "upsidePct": 48.4
+        "upsidePct": 20.1
       },
       "market": {
-        "marketCapBillion": 43.34,
+        "marketCapBillion": 53.56,
         "sharesOutstandingMillion": 211.0,
         "cashBillion": 2.6,
         "netDebtBillion": 2.5
@@ -32116,8 +32347,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -32129,12 +32360,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "cart-memo__v004__2026-07-22_15-02.pdf",
-      "size": "303 KB",
+      "file": "cart-memo__v005__2026-08-22_13-10.pdf",
+      "size": "304 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "cart-memo__v004__2026-07-22_15-02.pdf",
+          "size": "303 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 44.07
+        },
         {
           "version": "003",
           "file": "cart-memo__v003__2026-07-02_15-17.pdf",
@@ -32145,38 +32383,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$10.61B",
+      "mktCap": "$12B",
       "shares": "241M",
       "cash": "$690M cash, zero debt · Net cash +$0.69B, no debt; ~241M shares held ~flat as a $3.5B buyback (~35% of the market cap) offsets SBC dilution; Revenue $3.74B FY25 (+11%); GAAP op margin 13.3% (12.3->17.9% latest quarter); reported FCF ~$0.9B (heavy SBC add-back); Down ~5% YTD/TTM at ~$41 (52-wk $32.73-$53.50); screens ~11x reported FCF, ~2.7x EV/sales"
     },
     "spot": {
-      "price": 44.07,
-      "asOf": "July 22, 2026 close"
+      "price": 49.83,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 65.05,
-      "deltaPct": 47.6
+      "deltaPct": 30.5
     },
     "compound": [
       {
         "y": 5,
         "value": 101.97,
-        "mult": 2.31
+        "mult": 2.05
       },
       {
         "y": 10,
         "value": 159.94,
-        "mult": 3.63
+        "mult": 3.21
       },
       {
         "y": 15,
         "value": 250.98,
-        "mult": 5.69
+        "mult": 5.04
       },
       {
         "y": 20,
         "value": 394.04,
-        "mult": 8.94
+        "mult": 7.91
       }
     ],
     "taxonomy": {
@@ -32258,7 +32496,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Instacart trades at ~$9.9B (~$41.25, ~-5% YTD) — ~11x reported FCF and ~2.7x EV/sales on $3.74B revenue (+11%), net cash, GAAP operating margin scaling 12.3->17.9%. The engine is ~80%-margin advertising compounding on a $10B+ GTV base, with a $3.5B buyback (~35% of the cap) offsetting SBC dilution so shares stay flat. The DCF asks whether high-margin ad revenue keeps scaling against DoorDash/Uber/Amazon/Walmart and a ~7% take rate. The finding: even pricing the competitive bear (-28%), the modal flywheel lands +57%, on reported FCF discounted to ~15-19% ex-SBC owner margin.",
     "historicalPrices": {
       "xMin": -2.7,
@@ -32380,10 +32618,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 65.05,
-        "upsidePct": 47.6
+        "upsidePct": 30.5
       },
       "market": {
-        "marketCapBillion": 10.61,
+        "marketCapBillion": 12.0,
         "sharesOutstandingMillion": 240.6,
         "cashBillion": 0.69,
         "netDebtBillion": 0.0
@@ -32952,8 +33190,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -32965,12 +33203,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "u-memo__v004__2026-07-22_15-02.pdf",
+      "file": "u-memo__v005__2026-08-22_13-10.pdf",
       "size": "303 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "u-memo__v004__2026-07-22_15-02.pdf",
+          "size": "303 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 29.29
+        },
         {
           "version": "003",
           "file": "u-memo__v003__2026-07-02_15-17.pdf",
@@ -32981,38 +33226,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$12.68B",
+      "mktCap": "$20.32B",
       "shares": "433M",
       "cash": "$2.06B cash, $2.24B debt · ~$2.06B cash vs ~$2.24B convertibles (net debt ~$0.18B); 2026 Notes mature Nov-2026; ~433M shares, up ~56% over 5 years on SBC; Revenue $1.85B FY25 (+3%); GAAP op margin still -25.9% (loss); FCF +$0.4B (~22%) but ex-SBC FCF far thinner; adj EBITDA ~27%; ~$27, down ~58% YTD (52-wk ~$15-$52); IPO'd Sep-2020 at $52 — a GAAP-loss turnaround, the most speculative name in this batch"
     },
     "spot": {
-      "price": 29.29,
-      "asOf": "July 22, 2026 close"
+      "price": 46.93,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 11.86,
-      "deltaPct": -59.5
+      "deltaPct": -74.7
     },
     "compound": [
       {
         "y": 5,
         "value": 19.71,
-        "mult": 0.67
+        "mult": 0.42
       },
       {
         "y": 10,
         "value": 32.79,
-        "mult": 1.12
+        "mult": 0.7
       },
       {
         "y": 15,
         "value": 54.58,
-        "mult": 1.86
+        "mult": 1.16
       },
       {
         "y": 20,
         "value": 90.93,
-        "mult": 3.1
+        "mult": 1.94
       }
     ],
     "taxonomy": {
@@ -33096,7 +33341,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 18 / Bear 28 / Base 30 / Bull 16 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 18 / Bear 28 / Base 30 / Bull 16 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Unity trades at ~$11.8B (~$27, down ~58% YTD) — ~30x FCF on $1.85B revenue, but the FCF flatters a still-GAAP-loss business: shares are up ~56% in five years on stock comp and ~$2.2B convertibles (Nov-2026) sit against ~$2.15B cash. This is a turnaround bet on the Vector AI ad engine (Grow +24%, Vector +80%, ~$1B ARR targeted), not an FCF compounder. The base models a lower ex-SBC FCF margin AND a growing share count, so dilution is the core mechanism. Across a wide distribution the weighted finding is -56.5% — the modal case is still well below spot.",
     "historicalPrices": {
       "xMin": -5.7,
@@ -33226,10 +33471,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 11.86,
-        "upsidePct": -59.5
+        "upsidePct": -74.7
       },
       "market": {
-        "marketCapBillion": 12.68,
+        "marketCapBillion": 20.32,
         "sharesOutstandingMillion": 433.0,
         "cashBillion": 2.06,
         "netDebtBillion": 2.24
@@ -33798,8 +34043,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -33811,12 +34056,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "crox-memo__v004__2026-07-22_15-02.pdf",
+      "file": "crox-memo__v005__2026-08-22_13-10.pdf",
       "size": "298 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "crox-memo__v004__2026-07-22_15-02.pdf",
+          "size": "298 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 134.81
+        },
         {
           "version": "003",
           "file": "crox-memo__v003__2026-07-02_15-17.pdf",
@@ -33827,38 +34079,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$6.76B",
+      "mktCap": "$6.12B",
       "shares": "50M",
       "cash": "$130M cash, $1.34B debt · ~$0.13B cash vs ~$1.34B total debt -> ~$1.2B net debt (deleveraging the HEYDUDE deal); ~50.2M shares; Revenue $4.04B FY25 (~flat); GAAP op margin 3.7% but adjusted ~22% (the $737M non-cash HEYDUDE impairment); FCF ~$0.7-0.9B; ~$125, near the 52-week high ($73-$129), +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)"
     },
     "spot": {
-      "price": 134.81,
-      "asOf": "July 22, 2026 close"
+      "price": 122.11,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 193.07,
-      "deltaPct": 43.2
+      "deltaPct": 58.1
     },
     "compound": [
       {
         "y": 5,
         "value": 310.16,
-        "mult": 2.3
+        "mult": 2.54
       },
       {
         "y": 10,
         "value": 498.63,
-        "mult": 3.7
+        "mult": 4.08
       },
       {
         "y": 15,
         "value": 802.23,
-        "mult": 5.95
+        "mult": 6.57
       },
       {
         "y": 20,
         "value": 1291.66,
-        "mult": 9.58
+        "mult": 10.58
       }
     ],
     "taxonomy": {
@@ -33940,7 +34192,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Crocs trades at ~$6.26B (~$124.71, +45% YTD) — ~9x EV/FCF on $4.04B revenue that is ~flat because HEYDUDE (-12%) offsets a still-growing core (+1%, international +7%). The TTM GAAP P/E is distorted by a $737M non-cash HEYDUDE impairment; adjusted operating margin is ~22%. The bull is the core compounding on international while the written-down HEYDUDE de-risks the downside; the bear is the fad fading plus more HEYDUDE value destruction. On normalized FCF the modal case is ~+61%.",
     "historicalPrices": {
       "xMin": -5.2,
@@ -34062,10 +34314,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 193.07,
-        "upsidePct": 43.2
+        "upsidePct": 58.1
       },
       "market": {
-        "marketCapBillion": 6.76,
+        "marketCapBillion": 6.12,
         "sharesOutstandingMillion": 50.2,
         "cashBillion": 0.13,
         "netDebtBillion": 1.34
@@ -34633,8 +34885,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -34646,12 +34898,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "rddt-memo__v004__2026-07-22_15-02.pdf",
+      "file": "rddt-memo__v005__2026-08-22_13-10.pdf",
       "size": "304 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "rddt-memo__v004__2026-07-22_15-02.pdf",
+          "size": "304 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 168.41
+        },
         {
           "version": "003",
           "file": "rddt-memo__v003__2026-07-02_15-17.pdf",
@@ -34662,38 +34921,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$31.39B",
+      "mktCap": "$28.57B",
       "shares": "186M",
       "cash": "$954M cash, zero debt · Net cash +$954M ($954M cash, no debt); ~186.4M shares, but ~12%-of-revenue SBC keeps diluting the count; Revenue $2.20B FY25 (+62%); GAAP op margin turned positive to ~20%; FCF ~$0.70B headline (~32%), but ~half is SBC; ~$162, down ~28% YTD; hit ~$300 in 2025 then ~halved; 52-wk ~$106-$283 — extremely volatile post-IPO"
     },
     "spot": {
-      "price": 168.41,
-      "asOf": "July 22, 2026 close"
+      "price": 153.29,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 129.4,
-      "deltaPct": -23.2
+      "deltaPct": -15.6
     },
     "compound": [
       {
         "y": 5,
         "value": 206.54,
-        "mult": 1.23
+        "mult": 1.35
       },
       {
         "y": 10,
         "value": 329.93,
-        "mult": 1.96
+        "mult": 2.15
       },
       {
         "y": 15,
         "value": 527.49,
-        "mult": 3.13
+        "mult": 3.44
       },
       {
         "y": 20,
         "value": 844.07,
-        "mult": 5.01
+        "mult": 5.51
       }
     ],
     "taxonomy": {
@@ -34775,7 +35034,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 16 / Bear 27 / Base 32 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 16 / Bear 27 / Base 32 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Reddit trades at ~$30.2B (~$162, down ~28% YTD) — ~43x headline FCF on $2.20B revenue growing ~62% at ~91% gross margin, net cash, GAAP-profitable. The bull is a deeply under-monetized ad engine (ARPU far below Meta) plus high-margin data-licensing/AI deals (Google, OpenAI); the bear is existential — ~40-50% of traffic comes from Google, and AI-search answer-boxes can disintermediate that discovery (a Q4-2025 change already dented growth). On ex-SBC owner FCF, the modal case lands ~-23%: priced for perfection.",
     "historicalPrices": {
       "xMin": -2.3,
@@ -34893,10 +35152,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 129.4,
-        "upsidePct": -23.2
+        "upsidePct": -15.6
       },
       "market": {
-        "marketCapBillion": 31.39,
+        "marketCapBillion": 28.57,
         "sharesOutstandingMillion": 186.4,
         "cashBillion": 0.954,
         "netDebtBillion": 0.0
@@ -35467,8 +35726,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -35480,12 +35739,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "tost-memo__v004__2026-07-22_15-02.pdf",
+      "file": "tost-memo__v005__2026-08-22_13-10.pdf",
       "size": "302 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "tost-memo__v004__2026-07-22_15-02.pdf",
+          "size": "302 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 29.84
+        },
         {
           "version": "003",
           "file": "tost-memo__v003__2026-07-02_15-17.pdf",
@@ -35496,38 +35762,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$17.36B",
+      "mktCap": "$21.32B",
       "shares": "582M",
       "cash": "$1.353B cash, zero debt · Net cash +$1.35B ($1.353B cash, no debt); ~582M shares; SBC ~11% of recurring gross profit is the dilution to watch; Revenue $6.15B FY25 (+23%); GAAP op margin inflected to 4.7% (21% in Q1'26); FCF ~$0.6B; net income $342M (vs $19M FY24); ~$25, down ~29% YTD / ~40% TTM, near the 52-week low ($22.26-$49.66)"
     },
     "spot": {
-      "price": 29.84,
-      "asOf": "July 22, 2026 close"
+      "price": 36.64,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 31.14,
-      "deltaPct": 4.4
+      "deltaPct": -15.0
     },
     "compound": [
       {
         "y": 5,
         "value": 48.78,
-        "mult": 1.63
+        "mult": 1.33
       },
       {
         "y": 10,
         "value": 76.45,
-        "mult": 2.56
+        "mult": 2.09
       },
       {
         "y": 15,
         "value": 119.9,
-        "mult": 4.02
+        "mult": 3.27
       },
       {
         "y": 20,
         "value": 188.16,
-        "mult": 6.31
+        "mult": 5.14
       }
     ],
     "taxonomy": {
@@ -35611,7 +35877,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Toast trades at ~$14.4B (~$24.82, down ~40% TTM, near the 52-week low) — ~2.1x EV/sales on $6.15B revenue growing ~23%, net cash, with a proven margin inflection (GAAP op margin -7% -> 0.3% -> 4.7%, and 21% last quarter). The bull is durable ~20% location growth (171k of 875k+ US restaurants) plus attach (Capital, marketing) lifting ARPU and take rate; the bear is payments take-rate compression and SMB cyclicality against Block/Square, Olo and Shift4. The modal case lands +24%, so the de-rate looks like it overshot a real inflection.",
     "historicalPrices": {
       "xMin": -4.5,
@@ -35733,10 +35999,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 31.14,
-        "upsidePct": 4.4
+        "upsidePct": -15.0
       },
       "market": {
-        "marketCapBillion": 17.36,
+        "marketCapBillion": 21.32,
         "sharesOutstandingMillion": 582.0,
         "cashBillion": 1.353,
         "netDebtBillion": 0.0
@@ -36305,8 +36571,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -36318,12 +36584,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "wrby-memo__v004__2026-07-22_15-02.pdf",
-      "size": "302 KB",
+      "file": "wrby-memo__v005__2026-08-22_13-10.pdf",
+      "size": "303 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "wrby-memo__v004__2026-07-22_15-02.pdf",
+          "size": "302 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 24.08
+        },
         {
           "version": "003",
           "file": "wrby-memo__v003__2026-07-02_15-17.pdf",
@@ -36334,38 +36607,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$2.95B",
+      "mktCap": "$3.36B",
       "shares": "123M",
       "cash": "$286M cash, zero debt · Net cash +$286M (no debt); ~122.7M shares; SBC ~5% of revenue (~$12M/qtr), a live dilution drag; Revenue $872M FY25 (+13%); GAAP op margin -0.6% (still a small loss); FCF +$30M (~3%); adj EBITDA ~12.2%; ~$26, up ~13-16% YTD, 52-wk $14.96-$31.00; added to S&P SmallCap 600 (Jun 2026); ~3x sales"
     },
     "spot": {
-      "price": 24.08,
-      "asOf": "July 22, 2026 close"
+      "price": 27.44,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 15.33,
-      "deltaPct": -36.3
+      "deltaPct": -44.1
     },
     "compound": [
       {
         "y": 5,
         "value": 24.58,
-        "mult": 1.02
+        "mult": 0.9
       },
       {
         "y": 10,
         "value": 39.45,
-        "mult": 1.64
+        "mult": 1.44
       },
       {
         "y": 15,
         "value": 63.37,
-        "mult": 2.63
+        "mult": 2.31
       },
       {
         "y": 20,
         "value": 101.86,
-        "mult": 4.23
+        "mult": 3.71
       }
     ],
     "taxonomy": {
@@ -36447,7 +36720,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Warby Parker trades at ~$3.25B (~$26.46, up ~13-16% YTD) — ~3x sales on $872M revenue growing ~13%, net cash, but only a ~12% adj-EBITDA margin and razor-thin GAAP profit. The bull is store-led operating leverage finally lifting EBITDA toward high-teens/20% as the unit base scales from 323 toward ~900-1,000+, plus a Google AI-smart-glasses call-option outside guidance; the bear is decelerating customer growth (+4.8%), gross-margin compression, and the inflection never arriving. At ~3x sales the price already embeds the ramp, so the weighted finding is -42.1% and the modal case lands -43%.",
     "historicalPrices": {
       "xMin": -4.5,
@@ -36573,10 +36846,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 15.33,
-        "upsidePct": -36.3
+        "upsidePct": -44.1
       },
       "market": {
-        "marketCapBillion": 2.95,
+        "marketCapBillion": 3.36,
         "sharesOutstandingMillion": 122.7,
         "cashBillion": 0.286,
         "netDebtBillion": 0.0
@@ -37145,8 +37418,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -37158,12 +37431,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "you-memo__v004__2026-07-22_15-02.pdf",
+      "file": "you-memo__v005__2026-08-22_13-10.pdf",
       "size": "301 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "you-memo__v004__2026-07-22_15-02.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 55.35
+        },
         {
           "version": "003",
           "file": "you-memo__v003__2026-07-02_15-17.pdf",
@@ -37174,38 +37454,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$5.26B",
+      "mktCap": "$4.11B",
       "shares": "95M",
       "cash": "$800M cash, zero debt · Net cash ~$0.80B (~$171M cash + ~$629M marketable securities), no debt; ~95M economic shares (estimate); Revenue $0.901B FY25 (+19.7% in Q1'26); GAAP op margin 20.7%; FCF ~$0.30B (~30% margin) off the deferred-revenue model; ~$50, YTD ~+55% / TTM ~+41% (52-wk $24.06-$62.73); ~13x EV/FCF; quarterly + special dividend + buyback"
     },
     "spot": {
-      "price": 55.35,
-      "asOf": "July 22, 2026 close"
+      "price": 43.29,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 69.76,
-      "deltaPct": 26.0
+      "deltaPct": 61.2
     },
     "compound": [
       {
         "y": 5,
         "value": 109.7,
-        "mult": 1.98
+        "mult": 2.53
       },
       {
         "y": 10,
         "value": 172.6,
-        "mult": 3.12
+        "mult": 3.99
       },
       {
         "y": 15,
         "value": 271.7,
-        "mult": 4.91
+        "mult": 6.28
       },
       {
         "y": 20,
         "value": 427.95,
-        "mult": 7.73
+        "mult": 9.89
       }
     ],
     "taxonomy": {
@@ -37287,7 +37567,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Clear Secure trades at ~$4.77B (~$50.25, up ~55% YTD / ~41% TTM) — about 13x EV/FCF on $0.901B revenue growing ~20%, with a deferred-revenue membership model that throws off a ~30% FCF margin, net cash ~$0.80B and no debt; capital return is aggressive. The fork the DCF resolves: airport CLEAR Plus saturating against a US frequent-flyer ceiling (with TSA's own free touchless ID commoditizing the lane) versus the identity platform — TSA PreCheck enrollment, biometric eGates, enterprise verification — extending the network. The modal case lands ~+40%, so the distribution leans to cheap quality.",
     "historicalPrices": {
       "xMin": -4.7,
@@ -37409,10 +37689,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 69.76,
-        "upsidePct": 26.0
+        "upsidePct": 61.2
       },
       "market": {
-        "marketCapBillion": 5.26,
+        "marketCapBillion": 4.11,
         "sharesOutstandingMillion": 95.0,
         "cashBillion": 0.8,
         "netDebtBillion": 0.0
@@ -37981,8 +38261,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -37994,12 +38274,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "fun-speculative",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "shop-memo__v004__2026-07-22_15-02.pdf",
+      "file": "shop-memo__v005__2026-08-22_13-10.pdf",
       "size": "303 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "shop-memo__v004__2026-07-22_15-02.pdf",
+          "size": "303 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 119.2
+        },
         {
           "version": "003",
           "file": "shop-memo__v003__2026-07-02_15-17.pdf",
@@ -38010,38 +38297,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$154.84B",
+      "mktCap": "$193.87B",
       "shares": "1.30B",
       "cash": "$5.778B cash, zero debt · Net cash ~$5.8B, no debt; ~1.30B fully-diluted shares; a $2B buyback underway; Revenue $11.56B FY25 (+34%); GAAP op margin 12.7%; FCF ~$2.0B (~17%); ex-SBC owner FCF is the cash signal (SBC ~4-5%); ~$108, down ~30% YTD off the $182 high (TTM ~flat); 52-wk $94-$182; GMV $100.7B/+35% in Q1, Payments 67% of GMV"
     },
     "spot": {
-      "price": 119.2,
-      "asOf": "July 22, 2026 close"
+      "price": 149.25,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 91.88,
-      "deltaPct": -22.9
+      "deltaPct": -38.4
     },
     "compound": [
       {
         "y": 5,
         "value": 140.52,
-        "mult": 1.18
+        "mult": 0.94
       },
       {
         "y": 10,
         "value": 215.06,
-        "mult": 1.8
+        "mult": 1.44
       },
       {
         "y": 15,
         "value": 329.38,
-        "mult": 2.76
+        "mult": 2.21
       },
       {
         "y": 20,
         "value": 504.83,
-        "mult": 4.24
+        "mult": 3.38
       }
     ],
     "taxonomy": {
@@ -38123,7 +38410,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 32 / Bull 18 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 32 / Bull 18 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Shopify trades at ~$140.6B (~$108.24, down ~30% YTD off the $182 high) — ~30x forward / ~67x trailing FCF on revenue and GMV growing ~34-35%, net cash ~$5.8B, FCF ~$2.0B (~17%). The headline GAAP net loss is a non-cash equity-investment mark; ex-that, earnings are ~$360M. The bull is durable 30%+ GMV compounding, take-rate expansion (Payments at 67% of GMV), and agentic commerce making Shopify the rails for AI shopping agents; the bear is AI disintermediating the storefront plus macro cyclicality on GMV. The weighted DCF lands -15.1% (~$92): a great franchise, de-rated but still priced for the win.",
     "historicalPrices": {
       "xMin": -5.2,
@@ -38245,10 +38532,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 91.88,
-        "upsidePct": -22.9
+        "upsidePct": -38.4
       },
       "market": {
-        "marketCapBillion": 154.84,
+        "marketCapBillion": 193.87,
         "sharesOutstandingMillion": 1299.0,
         "cashBillion": 5.778,
         "netDebtBillion": 0.0
@@ -38816,8 +39103,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -38829,12 +39116,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "rxrx-memo__v005__2026-07-24_09-15.pdf",
+      "file": "rxrx-memo__v006__2026-08-22_13-10.pdf",
       "size": "395 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "rxrx-memo__v005__2026-07-24_09-15.pdf",
+          "size": "395 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 3.02
+        },
         {
           "version": "004",
           "file": "rxrx-memo__v004__2026-07-22_15-02.pdf",
@@ -38852,38 +39146,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$1.54B",
+      "mktCap": "$1.78B",
       "shares": "510M",
       "cash": "$665M cash, zero debt · $0.665B cash (Q1'26); runway into early 2028; burn ~$340M/yr; FY25 revenue $74.7M (+27%) — all collaboration/milestone, no product sales; Down ~40% YTD to ~$3.02; ~510M shares post-Exscientia merger + ATM"
     },
     "spot": {
-      "price": 3.02,
-      "asOf": "July 22, 2026 close"
+      "price": 3.5,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 3.85,
-      "deltaPct": 27.6
+      "deltaPct": 10.1
     },
     "compound": [
       {
         "y": 5,
         "value": 6.14,
-        "mult": 2.03
+        "mult": 1.76
       },
       {
         "y": 10,
         "value": 9.8,
-        "mult": 3.25
+        "mult": 2.8
       },
       {
         "y": 15,
         "value": 15.64,
-        "mult": 5.18
+        "mult": 4.47
       },
       {
         "y": 20,
         "value": 24.97,
-        "mult": 8.27
+        "mult": 7.14
       }
     ],
     "taxonomy": {
@@ -38965,7 +39259,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 30 / Base 32 / Bull 15 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 30 / Base 32 / Bull 15 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.02 (~$1.54B cap), down ~40% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early 2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful approved drug. Weighted fair value is $3.85, +28% above spot — but the modal base sits below the price, so the answer rides the right tail.",
     "historicalPrices": {
       "xMin": -5.2,
@@ -39075,10 +39369,10 @@ const MEMOS = [
       "tamBillion": 50,
       "weighted": {
         "expected": 3.85,
-        "upsidePct": 27.6
+        "upsidePct": 10.1
       },
       "market": {
-        "marketCapBillion": 1.54,
+        "marketCapBillion": 1.78,
         "sharesOutstandingMillion": 510.0,
         "cashBillion": 0.665,
         "netDebtBillion": 0.0
@@ -40069,8 +40363,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-24_09-15",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -40082,12 +40376,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "beam-memo__v004__2026-07-22_15-02.pdf",
+      "file": "beam-memo__v005__2026-08-22_13-10.pdf",
       "size": "385 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "beam-memo__v004__2026-07-22_15-02.pdf",
+          "size": "385 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 26.72
+        },
         {
           "version": "003",
           "file": "beam-memo__v003__2026-07-02_15-17.pdf",
@@ -40098,38 +40399,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$2.75B",
+      "mktCap": "$3.06B",
       "shares": "103M",
       "cash": "$1.21B cash, $100M debt · $1.21B cash (Q1'26) vs ~$0.10B debt → net cash ~$11.75/share; runway to mid-2029; Pre-product base editing; FY25 collaboration revenue $139.7M; R&D burn ~$400M/yr; risto-cel SCD BLA as early as YE2026; BEAM-302 (AATD) pivotal cohort H2 2026"
     },
     "spot": {
-      "price": 26.72,
-      "asOf": "July 22, 2026 close"
+      "price": 29.76,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 39.38,
-      "deltaPct": 47.4
+      "deltaPct": 32.3
     },
     "compound": [
       {
         "y": 5,
         "value": 61.81,
-        "mult": 2.31
+        "mult": 2.08
       },
       {
         "y": 10,
         "value": 97.07,
-        "mult": 3.63
+        "mult": 3.26
       },
       {
         "y": 15,
         "value": 152.53,
-        "mult": 5.71
+        "mult": 5.13
       },
       {
         "y": 20,
         "value": 239.81,
-        "mult": 8.97
+        "mult": 8.06
       }
     ],
     "taxonomy": {
@@ -40211,7 +40512,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 16 / Bear 29 / Base 32 / Bull 15 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 16 / Bear 29 / Base 32 / Bull 15 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Beam is a pre-product, clinical-stage base-editing biotech — it precisely rewrites a single DNA base with no double-strand cut. Revenue is lumpy collaboration income ($139.7M FY25); the op loss runs ~$400M/yr. The asset that matters is $1.21B cash (~$11.75/share, runway to mid-2029) plus a pipeline: risto-cel SCD (BLA as early as YE2026) and BEAM-302, the first in-vivo corrective editor, on an FDA-aligned accelerated path. The DCF asks whether the leads reach market before dilution erodes the equity. Weighted fair value is $39.38 vs $30 spot, +31% — asymmetric: the cash raises the floor, the de-risked data builds the right tail, clinical failure is the risk.",
     "historicalPrices": {
       "xMin": -6.3,
@@ -40321,10 +40622,10 @@ const MEMOS = [
       "tamBillion": 30,
       "weighted": {
         "expected": 39.38,
-        "upsidePct": 47.4
+        "upsidePct": 32.3
       },
       "market": {
-        "marketCapBillion": 2.75,
+        "marketCapBillion": 3.06,
         "sharesOutstandingMillion": 103.0,
         "cashBillion": 1.21,
         "netDebtBillion": 0.1
@@ -41315,8 +41616,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -41328,12 +41629,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "competitors",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "pacb-memo__v004__2026-07-22_15-02.pdf",
+      "file": "pacb-memo__v005__2026-08-22_13-10.pdf",
       "size": "381 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "pacb-memo__v004__2026-07-22_15-02.pdf",
+          "size": "381 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 1.38
+        },
         {
           "version": "003",
           "file": "pacb-memo__v003__2026-07-02_15-17.pdf",
@@ -41344,38 +41652,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$430M",
+      "mktCap": "$420M",
       "shares": "310M",
       "cash": "$276M cash, $644M debt · $0.276B cash vs ~$0.644B convertible notes (due 2029/2030) → ~$0.368B net debt > the equity cap; FY25 revenue $160M (+4%): consumables $82M (+16%), instruments $53.8M (-18%); Cash-flow-positive targeted 2027; FY26 opex guided $220-225M; ~310M shares, no reverse split"
     },
     "spot": {
-      "price": 1.38,
-      "asOf": "July 22, 2026 close"
+      "price": 1.35,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 1.72,
-      "deltaPct": 24.9
+      "deltaPct": 27.7
     },
     "compound": [
       {
         "y": 5,
         "value": 2.75,
-        "mult": 1.99
+        "mult": 2.04
       },
       {
         "y": 10,
         "value": 4.39,
-        "mult": 3.18
+        "mult": 3.25
       },
       {
         "y": 15,
         "value": 7.0,
-        "mult": 5.07
+        "mult": 5.18
       },
       {
         "y": 20,
         "value": 11.17,
-        "mult": 8.09
+        "mult": 8.27
       }
     ],
     "taxonomy": {
@@ -41457,7 +41765,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 18 / Bear 34 / Base 30 / Bull 13 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 18 / Bear 34 / Base 30 / Bull 13 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on them — the #3 behind Illumina's short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered setup. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; nearly all the value sits in the ~18% long-read-wins tail. Weighted $1.72 vs spot $1.32 (+31%) — a cheap levered option, not a value stock.",
     "historicalPrices": {
       "xMin": -5.2,
@@ -41567,10 +41875,10 @@ const MEMOS = [
       "tamBillion": 8,
       "weighted": {
         "expected": 1.72,
-        "upsidePct": 24.9
+        "upsidePct": 27.7
       },
       "market": {
-        "marketCapBillion": 0.43,
+        "marketCapBillion": 0.42,
         "sharesOutstandingMillion": 310.5,
         "cashBillion": 0.276,
         "netDebtBillion": 0.644
@@ -42552,8 +42860,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -42565,12 +42873,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "tem-memo__v005__2026-07-24_09-15.pdf",
-      "size": "303 KB",
+      "file": "tem-memo__v006__2026-08-22_13-10.pdf",
+      "size": "302 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "tem-memo__v005__2026-07-24_09-15.pdf",
+          "size": "303 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 46.93
+        },
         {
           "version": "004",
           "file": "tem-memo__v004__2026-07-22_15-02.pdf",
@@ -42588,38 +42903,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$8.43B",
+      "mktCap": "$13.06B",
       "shares": "180M",
       "cash": "$644M cash, $560M debt · $1.3B revenue FY25 (+83%, Ambry-boosted); FY26 guide $1.59-1.60B (+25%); Adj-EBITDA inflected positive (FY26 guide ~$65M) but SBC ~$136M/yr -> owner-FCF still negative; Net cash ~$84M ($0.644B cash vs $0.560B Ares term loan); Lefkofsky ~60% voting control"
     },
     "spot": {
-      "price": 46.93,
-      "asOf": "July 22, 2026 close"
+      "price": 72.69,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 29.72,
-      "deltaPct": -36.7
+      "deltaPct": -59.1
     },
     "compound": [
       {
         "y": 5,
         "value": 47.12,
-        "mult": 1.0
+        "mult": 0.65
       },
       {
         "y": 10,
         "value": 74.74,
-        "mult": 1.59
+        "mult": 1.03
       },
       {
         "y": 15,
         "value": 118.62,
-        "mult": 2.53
+        "mult": 1.63
       },
       {
         "y": 20,
         "value": 188.39,
-        "mult": 4.01
+        "mult": 2.59
       }
     ],
     "taxonomy": {
@@ -42701,7 +43016,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Tempus AI is AI-precision-oncology diagnostics plus a multimodal health-data flywheel. Revenue is $1.3B, growing 25-36%, adj-EBITDA just inflected positive (FY26 guide ~$65M). But SBC runs ~$136M/yr — more than 10% of revenue and larger than that adj-EBITDA — so true owner free cash flow is still negative. In July 2026 Tempus agreed to buy the rest of Personalis for ~$1.5B, mostly stock — entering MRD via NeXT Personal, but a ~15% share issuance dilutes the modal case. At $46.93 the modal DCF is $26.43, ~44% below spot; only the bull case clears the price. You are paying for hypergrowth and an unproven margin turn.",
     "historicalPrices": {
       "xMin": -2.0,
@@ -42807,10 +43122,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 29.72,
-        "upsidePct": -36.7
+        "upsidePct": -59.1
       },
       "market": {
-        "marketCapBillion": 8.43,
+        "marketCapBillion": 13.06,
         "sharesOutstandingMillion": 179.6,
         "cashBillion": 0.644,
         "netDebtBillion": 0.56
@@ -43384,8 +43699,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-24_09-15",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -43397,12 +43712,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "serv-memo__v005__2026-07-24_09-15.pdf",
+      "file": "serv-memo__v006__2026-08-22_13-10.pdf",
       "size": "389 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "serv-memo__v005__2026-07-24_09-15.pdf",
+          "size": "389 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 5.37
+        },
         {
           "version": "004",
           "file": "serv-memo__v004__2026-07-22_15-02.pdf",
@@ -43420,38 +43742,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$414M",
+      "mktCap": "$384M",
       "shares": "77M",
       "cash": "$197M cash, zero debt · ~$197M liquidity (~$47M cash + securities); ~1.2yr runway; burn ~$41M/qtr; ~2,050 robots deployed across 44 cities but only ~812 daily-active (<half utilized); FY26 guide $26M (~9x FY25); heavy dilution (24.8M -> 77.4M shares in 2yr; $150M ATM)"
     },
     "spot": {
-      "price": 5.37,
-      "asOf": "July 22, 2026 close"
+      "price": 4.98,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 6.77,
-      "deltaPct": 26.1
+      "deltaPct": 36.0
     },
     "compound": [
       {
         "y": 5,
         "value": 10.84,
-        "mult": 2.02
+        "mult": 2.18
       },
       {
         "y": 10,
         "value": 17.37,
-        "mult": 3.23
+        "mult": 3.49
       },
       {
         "y": 15,
         "value": 27.85,
-        "mult": 5.19
+        "mult": 5.59
       },
       {
         "y": 20,
         "value": 44.66,
-        "mult": 8.32
+        "mult": 8.97
       }
     ],
     "taxonomy": {
@@ -43533,7 +43855,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 33 / Base 30 / Bull 17 / Ultra Bull 5. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 33 / Base 30 / Bull 17 / Ultra Bull 5. Spot price reference: August 22, 2026 close.",
     "thesis": "Serve Robotics runs autonomous sidewalk delivery robots, spun out of Uber/Postmates and Nvidia-backed. It trades at $5.37 (~$414M cap), down ~43% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter burn — a pre-scale company with ~$197M of liquidity and ~1.2 years of runway. The build is done: ~2,050 robots sit across 44 cities, but only ~812 are daily-active — the question is utilization, not fleet size. Uber Eats (up-to-2,000-robot deal) and DoorDash demand exists to fill it, though no longer exclusively — Uber Eats now also routes to a rival fleet in Miami. The DCF weighted fair value is $6.77, +26% above spot — but the modal base sits ~62% below the price, so the answer rides the right tail, paid for with relentless dilution.",
     "historicalPrices": {
       "xMin": -2.6,
@@ -43639,10 +43961,10 @@ const MEMOS = [
       "tamBillion": 50,
       "weighted": {
         "expected": 6.77,
-        "upsidePct": 26.1
+        "upsidePct": 36.0
       },
       "market": {
-        "marketCapBillion": 0.414,
+        "marketCapBillion": 0.384,
         "sharesOutstandingMillion": 77.0,
         "cashBillion": 0.197,
         "netDebtBillion": 0.0
@@ -44641,8 +44963,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-24_09-15",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -44654,12 +44976,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Young-Company DCF (Damodaran)",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "prme-memo__v005__2026-07-22_16-44.pdf",
+      "file": "prme-memo__v006__2026-08-22_13-10.pdf",
       "size": "390 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "prme-memo__v005__2026-07-22_16-44.pdf",
+          "size": "390 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 3.12
+        },
         {
           "version": "004",
           "file": "prme-memo__v004__2026-07-22_15-02.pdf",
@@ -44677,38 +45006,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$564M",
+      "mktCap": "$613M",
       "shares": "181M",
       "cash": "$149M cash, zero debt · ~$149M cash = ~9-month runway; FY2025 10-K flags GOING-CONCERN doubt; $200M ATM; Pre-product prime editing (search-and-replace; David Liu / Broad lineage); burn ~$43M/qtr; PM359 first clinical prime edit (NEJM Dec'25, FDA RMAT Jun'26); May'25 pivot -> in-vivo liver (Wilson/AATD)"
     },
     "spot": {
-      "price": 3.12,
-      "asOf": "July 22, 2026 close"
+      "price": 3.39,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 3.39,
-      "deltaPct": 8.6
+      "deltaPct": -0.0
     },
     "compound": [
       {
         "y": 5,
         "value": 5.39,
-        "mult": 1.73
+        "mult": 1.59
       },
       {
         "y": 10,
         "value": 8.58,
-        "mult": 2.75
+        "mult": 2.53
       },
       {
         "y": 15,
         "value": 13.67,
-        "mult": 4.38
+        "mult": 4.03
       },
       {
         "y": 20,
         "value": 21.78,
-        "mult": 6.98
+        "mult": 6.43
       }
     ],
     "taxonomy": {
@@ -44790,7 +45119,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 16 / Bear 30 / Base 30 / Bull 16 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 16 / Bear 30 / Base 30 / Bull 16 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Prime Medicine is a clinical-stage prime-editing biotech — the precise 'search-and-replace' gene edit, David Liu's sister tech to BEAM's base editing. Pre-revenue at $3.12 (~$564M cap), it proved the first-ever clinical prime edit (PM359, NEJM Dec 2025). Cash is ~$149M (~9 months), the FY2025 10-K flags going-concern doubt, and a $200M ATM means severe dilution at a ~$3 stock; a May 2025 restructuring refocused it on in-vivo liver (Wilson's, AATD). Since then authorizations have accrued — first in-vivo CTA, AATD arbitration win, PM359 RMAT — but not efficacy data, and the financing constraint is unchanged, so the scenario set holds. The DCF asks whether the platform tail can outrun forced dilution. Weighted fair value $3.39 vs $3.12 — roughly fair.",
     "historicalPrices": {
       "xMin": -3.7,
@@ -44896,10 +45225,10 @@ const MEMOS = [
       "tamBillion": 30,
       "weighted": {
         "expected": 3.39,
-        "upsidePct": 8.6
+        "upsidePct": -0.0
       },
       "market": {
-        "marketCapBillion": 0.564,
+        "marketCapBillion": 0.613,
         "sharesOutstandingMillion": 180.6,
         "cashBillion": 0.149,
         "netDebtBillion": 0.0
@@ -45890,8 +46219,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-22_16-44",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -45903,12 +46232,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "twst-memo__v004__2026-07-22_15-02.pdf",
-      "size": "297 KB",
+      "file": "twst-memo__v005__2026-08-22_13-10.pdf",
+      "size": "296 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "twst-memo__v004__2026-07-22_15-02.pdf",
+          "size": "297 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 94.35
+        },
         {
           "version": "003",
           "file": "twst-memo__v003__2026-07-02_15-17.pdf",
@@ -45919,38 +46255,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$5.88B",
+      "mktCap": "$9.07B",
       "shares": "62M",
       "cash": "$172M cash, zero debt · $377M revenue FY25 (+20%, GM 50.7%); FY26 guide $442-447M; adj-EBITDA breakeven guided Q4 FY26; Rallied ~+150% over 52wk to ~14x sales while still adj-EBITDA-negative; SBC-heavy (owner-FCF below the headline); ~$172M net cash; Atlas (DNA data storage) spun out May'25 -> external call option"
     },
     "spot": {
-      "price": 94.35,
-      "asOf": "July 22, 2026 close"
+      "price": 145.59,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 43.95,
-      "deltaPct": -53.4
+      "deltaPct": -69.8
     },
     "compound": [
       {
         "y": 5,
         "value": 68.15,
-        "mult": 0.72
+        "mult": 0.47
       },
       {
         "y": 10,
         "value": 105.75,
-        "mult": 1.12
+        "mult": 0.73
       },
       {
         "y": 15,
         "value": 164.22,
-        "mult": 1.74
+        "mult": 1.13
       },
       {
         "y": 20,
         "value": 255.2,
-        "mult": 2.7
+        "mult": 1.75
       }
     ],
     "taxonomy": {
@@ -46032,7 +46368,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: August 22, 2026 close.",
     "thesis": "Twist Bioscience runs a silicon-based DNA-synthesis platform — miniaturized, high-throughput DNA writing — selling into SynBio and NGS. FY2025 revenue was $377M (+20%), gross margin 50.7%, adj-EBITDA -$46.9M and improving; management guides adj-EBITDA breakeven for Q4 FY2026 as the new Wilsonville factory ramps margins. At ~$87.5 (~$5.4B cap, net cash) the stock has run ~150% over a year to ~14x sales while still losing money, and SBC keeps owner-FCF below the adj-EBITDA headline. The DCF asks whether 16-24% growth and the margin ramp grow into that price. Weighted fair value $43.95, ~50% below spot — only the bull and ultra-bull clear the quote.",
     "historicalPrices": {
       "xMin": -7.7,
@@ -46146,10 +46482,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 43.95,
-        "upsidePct": -53.4
+        "upsidePct": -69.8
       },
       "market": {
-        "marketCapBillion": 5.88,
+        "marketCapBillion": 9.07,
         "sharesOutstandingMillion": 62.3,
         "cashBillion": 0.172,
         "netDebtBillion": 0.0
@@ -46723,8 +47059,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -46736,12 +47072,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "sym-memo__v004__2026-07-22_15-02.pdf",
-      "size": "297 KB",
+      "file": "sym-memo__v005__2026-08-22_13-10.pdf",
+      "size": "298 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "sym-memo__v004__2026-07-22_15-02.pdf",
+          "size": "297 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 42.03
+        },
         {
           "version": "003",
           "file": "sym-memo__v003__2026-07-02_15-17.pdf",
@@ -46752,23 +47095,23 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$24.84B",
+      "mktCap": "$24.72B",
       "shares": "591M",
       "cash": "$1.2B cash, zero debt · $2.247B revenue FY25 (+26%) but GM only 18.8% (systems/construction-like); ~$22.5B backlog; SBC $184M > adj-EBITDA $147M -> ex-SBC owner-FCF ~0 (the $867M OCF is customer-funded billings, not owner cash); Walmart >84% of revenue (extreme concentration); GreenBox JV; Nov'24 restatement; ~591M Up-C units, net cash $1.2B"
     },
     "spot": {
-      "price": 42.03,
-      "asOf": "July 22, 2026 close"
+      "price": 41.83,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 13.32,
-      "deltaPct": -68.3
+      "deltaPct": -68.2
     },
     "compound": [
       {
         "y": 5,
         "value": 21.14,
-        "mult": 0.5
+        "mult": 0.51
       },
       {
         "y": 10,
@@ -46778,12 +47121,12 @@ const MEMOS = [
       {
         "y": 15,
         "value": 53.36,
-        "mult": 1.27
+        "mult": 1.28
       },
       {
         "y": 20,
         "value": 84.87,
-        "mult": 2.02
+        "mult": 2.03
       }
     ],
     "taxonomy": {
@@ -46865,7 +47208,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: August 22, 2026 close.",
     "thesis": "Symbotic sells AI-powered warehouse-automation systems, installed and Walmart-anchored (>84% of FY25 revenue). Revenue is $2.25B (+26%), backlog ~$22.5B, net cash ~$1.2B, and Q2 FY26 turned GAAP-positive. But the $867M operating cash flow is customer-funded milestone billings (working capital), not owner cash; SBC of $184M exceeds the $147M adj-EBITDA, so ex-SBC owner FCF is roughly zero. At $41.63 (~591M Up-C units) the market pays a software multiple for a thin-margin integrator. The DCF asks whether margins inflect; weighted fair value $13.32, −68% to spot.",
     "historicalPrices": {
       "xMin": -4.0,
@@ -46971,10 +47314,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 13.32,
-        "upsidePct": -68.3
+        "upsidePct": -68.2
       },
       "market": {
-        "marketCapBillion": 24.84,
+        "marketCapBillion": 24.72,
         "sharesOutstandingMillion": 591.0,
         "cashBillion": 1.2,
         "netDebtBillion": 0.0
@@ -47548,8 +47891,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -47561,12 +47904,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "nvcr-memo__v004__2026-07-22_15-02.pdf",
+      "file": "nvcr-memo__v005__2026-08-22_13-10.pdf",
       "size": "297 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "nvcr-memo__v004__2026-07-22_15-02.pdf",
+          "size": "297 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 15.42
+        },
         {
           "version": "003",
           "file": "nvcr-memo__v003__2026-07-02_15-17.pdf",
@@ -47577,38 +47927,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$1.68B",
+      "mktCap": "$1.86B",
       "shares": "109M",
       "cash": "$1.03B cash, $560M debt · $655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH (p_fail~0); 4 FDA-approved/filed indications: Optune Gio (GBM), Lua (NSCLC, early), Pax (pancreatic), METIS (brain mets); FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr"
     },
     "spot": {
-      "price": 15.42,
-      "asOf": "July 22, 2026 close"
+      "price": 17.1,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 14.97,
-      "deltaPct": -2.9
+      "deltaPct": -12.4
     },
     "compound": [
       {
         "y": 5,
         "value": 23.34,
-        "mult": 1.51
+        "mult": 1.37
       },
       {
         "y": 10,
         "value": 36.41,
-        "mult": 2.36
+        "mult": 2.13
       },
       {
         "y": 15,
         "value": 56.83,
-        "mult": 3.69
+        "mult": 3.32
       },
       {
         "y": 20,
         "value": 88.76,
-        "mult": 5.76
+        "mult": 5.19
       }
     ],
     "taxonomy": {
@@ -47690,7 +48040,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "NovoCure sells Tumor Treating Fields (TTFields), a wearable oncology device anchored by Optune Gio in glioblastoma. FY2025 revenue was $655M (+8%) at a 78% gross margin, yet it posted a $136M GAAP loss — funded by ~$0.47B net cash, not insolvency risk. At $14.33 the stock is cheap on sales; the upside lives in new FDA-approved indications (Optune Lua/lung, Pax/pancreatic, METIS) multiplying the TAM beyond GBM. Weighted fair value $14.97, ~4.5% above spot — fair, with the June 2026 TRIDENT miss capping the GBM leg.",
     "historicalPrices": {
       "xMin": -10.7,
@@ -47808,10 +48158,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 14.97,
-        "upsidePct": -2.9
+        "upsidePct": -12.4
       },
       "market": {
-        "marketCapBillion": 1.68,
+        "marketCapBillion": 1.86,
         "sharesOutstandingMillion": 109.0,
         "cashBillion": 1.03,
         "netDebtBillion": 0.56
@@ -48384,8 +48734,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -48397,12 +48747,19 @@ const MEMOS = [
     "exchange": "NASDAQ",
     "category": "asymmetrical-moonshots",
     "dcfType": "Mature-Company DCF",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "cai-memo__v005__2026-07-24_09-15.pdf",
+      "file": "cai-memo__v006__2026-08-22_13-10.pdf",
       "size": "304 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "cai-memo__v005__2026-07-24_09-15.pdf",
+          "size": "304 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 15.38
+        },
         {
           "version": "004",
           "file": "cai-memo__v004__2026-07-22_15-02.pdf",
@@ -48420,38 +48777,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$4.27B",
+      "mktCap": "$7.29B",
       "shares": "278M",
       "cash": "$800M cash, $378M debt · FY25 revenue $812M (+97%!); GM 47%->65%; adj-EBITDA +$138M; FCF-POSITIVE, near GAAP breakeven; IPO Jun-2025 @ $21; now $15.38 (~27% below offer); FY26 guide $1.0-1.02B (+24%); ~$0.42B net cash; Halbert ~42% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups"
     },
     "spot": {
-      "price": 15.38,
-      "asOf": "July 22, 2026 close"
+      "price": 26.27,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 23.63,
-      "deltaPct": 53.6
+      "deltaPct": -10.1
     },
     "compound": [
       {
         "y": 5,
         "value": 36.62,
-        "mult": 2.38
+        "mult": 1.39
       },
       {
         "y": 10,
         "value": 56.81,
-        "mult": 3.69
+        "mult": 2.16
       },
       {
         "y": 15,
         "value": 88.16,
-        "mult": 5.73
+        "mult": 3.36
       },
       {
         "y": 20,
         "value": 136.92,
-        "mult": 8.9
+        "mult": 5.21
       }
     ],
     "taxonomy": {
@@ -48533,7 +48890,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: August 22, 2026 close.",
     "thesis": "Caris Life Sciences is an AI precision-oncology diagnostics company — whole-exome and whole-transcriptome tumor profiling plus blood-based testing — that IPO'd June 2025 at $21.00 and now trades $15.38, ~27% below its offer after a July 2026 de-rate on no company-specific news. FY2025 revenue grew 97% to $812M, gross margin expanded 47%->65%, and unlike most diagnostics scalers it is already free-cash-flow positive with +$138M adj-EBITDA, near GAAP breakeven. The DCF asks whether the margin inflection holds as growth steps down to a +24% guide. Weighted fair value $23.63, ~54% above spot — and the base case alone ($19.41) now sits ~26% above the price, so the finding no longer rests on the data-moat tail.",
     "historicalPrices": {
       "xMin": -1.05,
@@ -48643,10 +49000,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 23.63,
-        "upsidePct": 53.6
+        "upsidePct": -10.1
       },
       "market": {
-        "marketCapBillion": 4.27,
+        "marketCapBillion": 7.29,
         "sharesOutstandingMillion": 278.0,
         "cashBillion": 0.8,
         "netDebtBillion": 0.3785
@@ -49219,8 +49576,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-07-24_09-15",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -49232,12 +49589,19 @@ const MEMOS = [
     "exchange": "NYSE",
     "category": "fcf-plus-plus-growth",
     "dcfType": "Mature-Company DCF · SOTP",
-    "publishedISO": "2026-07-22",
-    "publishedLabel": "July 22, 2026",
+    "publishedISO": "2026-08-22",
+    "publishedLabel": "August 22, 2026",
     "pdf": {
-      "file": "hhh-memo__v004__2026-07-22_15-02.pdf",
+      "file": "hhh-memo__v005__2026-08-22_13-10.pdf",
       "size": "290 KB",
       "priorVersions": [
+        {
+          "version": "004",
+          "file": "hhh-memo__v004__2026-07-22_15-02.pdf",
+          "size": "290 KB",
+          "asOfDate": "2026-07-22",
+          "spotPrice": 65.59
+        },
         {
           "version": "003",
           "file": "hhh-memo__v003__2026-07-02_15-17.pdf",
@@ -49248,38 +49612,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$3.91B",
+      "mktCap": "$3.96B",
       "shares": "60M",
       "cash": "$1.84B cash, $5.79B debt · ~37% discount to $104 NAV"
     },
     "spot": {
-      "price": 65.59,
-      "asOf": "July 22, 2026 close"
+      "price": 66.5,
+      "asOf": "August 22, 2026 close"
     },
     "expected": {
       "fair": 94.31,
-      "deltaPct": 43.8
+      "deltaPct": 41.8
     },
     "compound": [
       {
         "y": 5,
         "value": 135.4,
-        "mult": 2.06
+        "mult": 2.04
       },
       {
         "y": 10,
         "value": 194.38,
-        "mult": 2.96
+        "mult": 2.92
       },
       {
         "y": 15,
         "value": 279.06,
-        "mult": 4.25
+        "mult": 4.2
       },
       {
         "y": 20,
         "value": 400.62,
-        "mult": 6.11
+        "mult": 6.02
       }
     ],
     "taxonomy": {
@@ -49361,7 +49725,7 @@ const MEMOS = [
         ]
       }
     ],
-    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 10 / Bear 22 / Base 40 / Bull 20 / Ultra Bull 8. Spot price reference: July 22, 2026 close.",
+    "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 10 / Bear 22 / Base 40 / Bull 20 / Ultra Bull 8. Spot price reference: August 22, 2026 close.",
     "thesis": "Howard Hughes trades at $66.86 (~$4.0B market cap) — roughly book (~$63/sh) but a ~37% discount to the company's own $104/share sum-of-the-parts NAV (~80% irreplaceable master-planned-community land + operating assets, ~20% the new Vantage insurer). The land bank monetizes at records — FY2025 MPC EBT a record $476M, NOI a record $276M. The hard floor: Pershing Square (Ackman, ~47%, Executive Chairman) paid $900M for stock at $100 — a 48% premium — in May 2025, then closed Vantage ($2.1B insurer, Jun-2026) to start a Buffett-style float engine. The bear is the fifteen-year-old one: an illiquid land bank the market won't pay NAV for, plus rate, concentration, fee, and governance risks. Sum-of-the-parts below; five scenarios, weighted.",
     "historicalPrices": {
       "xMin": -6.0,
@@ -49522,10 +49886,10 @@ const MEMOS = [
       "tamBillion": null,
       "weighted": {
         "expected": 94.31,
-        "upsidePct": 43.8
+        "upsidePct": 41.8
       },
       "market": {
-        "marketCapBillion": 3.91,
+        "marketCapBillion": 3.96,
         "sharesOutstandingMillion": 59.63,
         "cashBillion": 1.84,
         "netDebtBillion": 5.79
@@ -50106,8 +50470,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "004",
-        "footerTimestamp": "2026-07-22_15-02",
+        "footerVersion": "005",
+        "footerTimestamp": "2026-08-22_13-10",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

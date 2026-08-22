@@ -2,10 +2,10 @@ ticker: TSLA
 company: Tesla
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-22'
-spot: 376.71
+date: '2026-08-22'
+spot: 362.86
 market:
-  market_cap_billion: 1413.57
+  market_cap_billion: 1361.60
   shares_outstanding_million: 3752.4
   cash_billion: 44.1
   net_debt_billion: 1.6
@@ -646,13 +646,17 @@ pocd:
   context_ref: 'The 7 Powers analysis'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + position sizing.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 376.71
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
