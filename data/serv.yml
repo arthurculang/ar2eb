@@ -2,10 +2,10 @@ ticker: SERV
 company: Serve Robotics
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-07-22'
-spot: 5.37
+date: '2026-08-22'
+spot: 4.98
 market:
-  market_cap_billion: 0.414
+  market_cap_billion: 0.384
   shares_outstanding_million: 77.0
   cash_billion: 0.197
   net_debt_billion: 0.0
@@ -977,13 +977,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +26.1% finding), then position-sized.'
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-07-24_09-15"
+  footer_version: "006"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-07-24_09-15"
+  pdf_version: "006"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-07-24_09-15"
+    asOfDate: "2026-07-22"
+    spotPrice: 5.37
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

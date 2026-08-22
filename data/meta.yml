@@ -2,10 +2,10 @@ ticker: META
 company: Meta Platforms
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-22'
-spot: 629.04
+date: '2026-08-22'
+spot: 549.90
 market:
-  market_cap_billion: 1585.76
+  market_cap_billion: 1386.25
   shares_outstanding_million: 2521.0
   cash_billion: 81.6
   net_debt_billion: 58.7
@@ -643,13 +643,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +14.6% finding), then position-sized.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 629.04
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

@@ -2,10 +2,10 @@ ticker: DE
 company: Deere & Company
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-07-22'
-spot: 601.78
+date: '2026-08-22'
+spot: 647.47
 market:
-  market_cap_billion: 162.71
+  market_cap_billion: 175.06
   shares_outstanding_million: 270.4
   cash_billion: 8.28
   net_debt_billion: 13.8
@@ -644,13 +644,17 @@ pocd:
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -21.8% finding) + position
     sizing.'
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 601.78
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"

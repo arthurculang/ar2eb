@@ -2,10 +2,10 @@ ticker: DASH
 company: DoorDash
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-07-22'
-spot: 179.72
+date: '2026-08-22'
+spot: 223.49
 market:
-  market_cap_billion: 74.58
+  market_cap_billion: 92.74
   shares_outstanding_million: 415.0
   cash_billion: 5.5
   net_debt_billion: 0.0
@@ -574,13 +574,17 @@ competitive:
     SBC dilution. At ~33x EV/FCF the 20%+ growth + margin inflection roughly cover the entry — fair, with the sign on the
     2H'26 inflection.
 stamp:
-  footer_version: "004"
-  footer_timestamp: "2026-07-22_15-02"
+  footer_version: "005"
+  footer_timestamp: "2026-08-22_13-10"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "004"
-  pdf_timestamp: "2026-07-22_15-02"
+  pdf_version: "005"
+  pdf_timestamp: "2026-08-22_13-10"
 
   prior_versions:
+  - version: "004"
+    timestamp: "2026-07-22_15-02"
+    asOfDate: "2026-07-22"
+    spotPrice: 179.72
   - version: "003"
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
