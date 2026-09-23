@@ -1,4 +1,4 @@
-as_of: '2026-09-22'
+as_of: '2026-09-23'
 epoch: '2026-07-01'
 rule: 'weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_indicator_mult
   × category_mult, cap 15%/name, cash residual (spec §12 / §15 D1). conviction: High
@@ -467,8 +467,8 @@ findings:
     weight: 0.0
   cai:
     spot: 30.65
-    weighted_dcf: 23.63
-    upside: -0.2291
+    weighted_dcf: 23.62
+    upside: -0.2295
     tier: Low
     conviction_mult: 0.35
     watchlist: asymmetrical-moonshots
