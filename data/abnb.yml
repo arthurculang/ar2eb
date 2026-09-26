@@ -20,7 +20,11 @@ taxonomy:
   - travel-mobility-services
   primary_theme: travel-mobility-services
 central_question: At a high-teens EV/FCF, is Airbnb's 2026 re-acceleration durable — or do fading currency and World Cup boosts, AI booking agents and regulation pull growth back to high-single digits?
-thesis: 'Airbnb trades at a high-teens multiple of trailing FCF ($4.8B, a 37% margin before ~$1.8B/yr of stock comp) with ~$9.5B net cash. Growth re-accelerated in 2026 (+18% and +17% in Q1-Q2; guide raised twice to at least mid-teens, ~3 points of it currency) as nights outgrew Booking''s rental business (+10% vs +4% in Q2) and a hotels line launched. The DCF asks whether that pace holds once currency and World Cup boosts fade, AI booking agents launch without Airbnb, and regulation caps city supply. The finding: the modal case still implies undervaluation.'
+thesis: Airbnb trades at a high-teens multiple of trailing FCF ($4.8B, a 37% margin before ~$1.8B/yr of stock comp) with ~$9.5B net
+  cash. Growth re-accelerated in 2026 (+18% and +17% in Q1-Q2; guide raised twice to at least mid-teens, ~3 points of it currency)
+  as nights outgrew Booking's rental business (+10% vs +4% in Q2) and a hotels line launched. The DCF asks whether that pace holds
+  once currency and World Cup boosts fade, AI booking agents launch without Airbnb, and regulation caps city supply. Modal case ~14%
+  above the price; 37% of the probability sits below it.
 chart_reference:
   history_years:
   - 2021
@@ -575,13 +579,17 @@ competitive:
     quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds
     in the teens or decays to GDP-plus.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-26_04-14"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-26_04-14"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 166.84
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

@@ -7977,9 +7977,16 @@ const MEMOS = [
     "publishedISO": "2026-09-22",
     "publishedLabel": "September 22, 2026",
     "pdf": {
-      "file": "coin-memo__v006__2026-09-22_13-16.pdf",
-      "size": "301 KB",
+      "file": "coin-memo__v007__2026-09-26_04-14.pdf",
+      "size": "303 KB",
       "priorVersions": [
+        {
+          "version": "006",
+          "file": "coin-memo__v006__2026-09-22_13-16.pdf",
+          "size": "301 KB",
+          "asOfDate": "2026-09-22",
+          "spotPrice": 201.05
+        },
         {
           "version": "005",
           "file": "coin-memo__v005__2026-07-22_15-02.pdf",
@@ -7997,38 +8004,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$52.96B",
-      "shares": "263M",
-      "cash": "$10.2B cash, $7.2B debt · $7.2B converts/notes (~$3B net cash); ~17K BTC treasury (~$1.3B); Circle (CRCL) stake (~$1B)"
+      "mktCap": "$53.04B",
+      "shares": "264M",
+      "cash": "$8.6B cash, $6B debt · $6.0B converts/notes (~$2.6B net cash); ~17.2K BTC treasury (~$1.5B); Circle (CRCL) stake (≤~$0.8B)"
     },
     "spot": {
       "price": 201.05,
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 271.62,
-      "deltaPct": 35.1
+      "fair": 269.78,
+      "deltaPct": 34.2
     },
     "compound": [
       {
         "y": 5,
-        "value": 415.31,
-        "mult": 2.07
+        "value": 412.39,
+        "mult": 2.05
       },
       {
         "y": 10,
-        "value": 636.04,
-        "mult": 3.16
+        "value": 631.39,
+        "mult": 3.14
       },
       {
         "y": 15,
-        "value": 975.85,
-        "mult": 4.85
+        "value": 968.41,
+        "mult": 4.82
       },
       {
         "y": 20,
-        "value": 1500.15,
-        "mult": 7.46
+        "value": 1488.17,
+        "mult": 7.4
       }
     ],
     "taxonomy": {
@@ -8047,161 +8054,209 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": {
-      "value": 6.56,
+      "value": 6.63,
       "zone": "yellow"
     },
-    "question": "Is Coinbase the durable monopoly rail layer for crypto — $19B USDC float, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock whose Q1 2026 just printed a $394M loss?",
+    "question": "Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock that has now printed back-to-back quarterly losses?",
     "scenarios": [
       {
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 8,
-        "price": 30.41,
+        "price": 27.96,
         "headline": "Crypto winter + take-rate war.",
-        "why": "Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style multi-year bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood gains share AND Hyperliquid-style USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per Coindesk May 2026); (c) GENIUS Act favors bank-issued stablecoins, capping USDC at ~$50B float; (d) Deribit integration friction stalls the derivatives flywheel. Each individually 20-30%; joint at 8%. Higher than ZM's 8% ultra_bear because crypto-cycle volatility has a real historical base rate (2022 was 14 months ago).",
+        "why": "Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style multi-year bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood gains share AND Hyperliquid-style USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per Coindesk May 2026); (c) bank-issued stablecoins take share, shrinking Coinbase-held USDC below $15B; (d) Deribit integration friction stalls the derivatives flywheel. Each individually 20-30%; joint at 8%. Same 8% as ZM's ultra_bear: crypto-cycle volatility has a real historical base rate (the 2022 winter).",
         "what": [
-          "Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down 70%+ from $120K peak to $35-40K) as ETF outflows compound and the post-halving liquidity wave fails to materialize. Transaction revenue collapses from $4.0B FY25 to $1.5B by FY28 as both volume drops 60% AND take-rate compresses 30% under Robinhood/Hyperliquid pressure. The GENIUS Act regime turns hostile in implementation — bank-issued stablecoins take share from USDC and the discount-window asymmetry kills USDC's runway.",
-          "The Circle relationship inverts: Hyperliquid-style direct-USDC deals proliferate across DeFi, compressing Coinbase's 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating margin compresses from 40% (FY25) to 10% by FY28 as Coinbase spends defensively. FCF goes negative two years. The multiple collapses from ~15× FCF normalized to 8× — crypto loses its narrative entirely. Exit-multiple SOTP: ~$52/share, a -71% tail. Mirrors the 2022 winter (COIN traded to $33 from $381 IPO) on a more diversified business."
+          "Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down 70%+ from its $120K+ peak to $35-40K) as ETF outflows compound and the post-halving liquidity wave fails to materialize. Transaction revenue collapses from $4.0B FY25 to $1.5B by FY28 as both volume drops 60% AND take-rate compresses 30% under Robinhood/Hyperliquid pressure. The GENIUS Act regime turns hostile in implementation — bank-issued stablecoins take share from USDC and the discount-window asymmetry kills USDC's runway.",
+          "The Circle relationship inverts at the 2029 renewal: Hyperliquid-style direct-USDC deals proliferate across DeFi, compressing Coinbase's 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating margin compresses to ~10% by FY28 as Coinbase spends defensively, and FCF compresses to ~$0.3-0.4B. The multiple collapses to an 8× FCF exit — crypto loses its narrative entirely. Mirrors the 2022 winter (COIN closed near $33, from a $381 listing-day open) on a more diversified business."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
         "prob": 22,
-        "price": 104.19,
-        "headline": "Cycle bottoms; multiple resets to 18×.",
-        "why": "Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months (median post-peak crypto correction); revenue stays $2.5-3.0B; take-rate compresses 15-20% as Robinhood gains retail share and Hyperliquid-style deals nick institutional flows; USDC float plateaus under the GENIUS Act ceiling; multiple resets from ~20× to 18× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018, 2022 — base rate ~25% per 5-year window), and Q1 2026 already validated some of the cycle thesis.",
+        "price": 102.65,
+        "headline": "Cycle bottoms; multiple resets to 12×.",
+        "why": "Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months (median post-peak crypto correction); revenue stays well below FY25; take-rate compresses 15-20% as Robinhood gains retail share and Hyperliquid-style deals nick institutional flows; Coinbase-held USDC stalls; the exit multiple resets to ~12× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018, 2022 — base rate ~25% per 5-year window), and the H1 2026 losses already validated some of the cycle thesis.",
         "what": [
-          "Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years (a deeper, longer correction than Q1 2026 priced). Transaction revenue runs $2.5-3.0B annually — below FY25's $4.0B peak but above the FY23 winter trough. Coinbase still gains share (regulatory wedge post-SEC dismissal) but on a smaller pie. The everything-exchange thesis holds operationally, but the equity re-rates to 18-22× FCF — crypto stocks lose their growth premium when transaction revenue stops growing.",
-          "The subscription engine partially compensates. USDC float plateaus at $25-30B as the GENIUS Act ceiling caps growth and bank-issued stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume grows as Deribit integrates, but margin profile is structurally lower than spot. FCF cycles $1.5-2.5B/year. Exit-multiple SOTP: ~$138/share, ~24% below spot — a real downside but not catastrophic. The cycle hurts; the platform survives."
+          "Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years, extending the H1 2026 slide. Revenue settles at ~$5.5-6.1B a year — below FY25's $7.18B peak but well above the FY23 winter trough ($3.1B). Coinbase still gains share (regulatory wedge post-SEC dismissal) but on a smaller pie. The everything-exchange thesis holds operationally, but the equity re-rates to a ~12× FCF exit — crypto stocks lose their growth premium when transaction revenue stops growing.",
+          "The subscription engine partially compensates. Coinbase-held USDC stalls near today's ~$20B as bank-issued stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume grows as Deribit integrates, but its margin profile is structurally lower than spot. FCF runs $1.7-2.0B a year. A real downside but not catastrophic: the cycle hurts; the platform survives."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 47,
-        "price": 226.16,
+        "price": 224.59,
         "headline": "Everything-exchange compounds.",
-        "why": "Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is integrating, Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution + cycle. Base assumes BTC ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually but the volume base grows, USDC float grows at a decelerating rate as the ceiling bites, and the multiple holds at 22× FCF. 47% reflects that the thesis is well-priced but in motion — sequential execution, not heroic assumptions.",
+        "why": "Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is integrating, Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution + cycle. Base assumes BTC ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually but the volume base grows, Coinbase-held USDC grows at a decelerating rate, and the exit multiple settles at ~15× FCF. 47% reflects that the thesis is well-priced but in motion — sequential execution, not heroic assumptions.",
         "what": [
-          "The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K (mid-cycle). Transaction revenue runs $3.5-4.5B annually with cycle texture. Subscription & services becomes the structural growth engine — USDC float compounds to $35-40B, stablecoin revenue grows to $1.5-2.0B, staking + custody + interest add another $1.5B+. The Deribit acquisition delivers — derivatives volume grows 40%+ annually with margin converging toward spot over time.",
-          "The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Coinbase International scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, removing the cycle floor on engaged users. Operating margin holds 38-42%. Exit-multiple SOTP: ~$215/share, modest upside vs spot — what a great mature platform offers when the moat is mostly priced. Revenue $7.18B → $10.5B by FY30 (~8% CAGR); FCF $2.55B → $4.0B; multiple 22× sustained."
+          "The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K (mid-cycle). Transaction revenue runs $3.5-4.5B annually with cycle texture. Subscription & services becomes the structural growth engine — Coinbase-held USDC compounds to $35-40B, stablecoin revenue grows to $1.5-2.0B, staking + custody + interest add another $1.5B+. The Deribit acquisition delivers — derivatives volume grows 40%+ annually with margin converging toward spot over time.",
+          "The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Deribit scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, putting a floor under engaged users. Operating margin rises to ~40%. Revenue reaches ~$9.5B by FY30 (5.8% CAGR off FY25's $7.18B); FCF $2.55B → ~$3.8B; ~15× FCF exit — what a great mature platform offers when the moat is mostly priced."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 18,
-        "price": 482.45,
+        "price": 480.0,
         "headline": "Derivatives flywheel + USDC rails.",
-        "why": "Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth (conditional 35%); (b) USDC float compounds to $75B+ driving the subscription engine (conditional 40%); (c) Deribit delivers and derivatives crosses $1.5B revenue (conditional 50% on integration); (d) multiple sustains at 30× FCF (conditional 50%). Joint at 15-20%, weighted 18%. Higher than ZM bull because COIN's bull has one cycle- dependent leg AND one secular leg — they can succeed independently.",
+        "why": "Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth (conditional 35%); (b) Coinbase-held USDC compounds past $50B driving the subscription engine (conditional 40%); (c) Deribit delivers and derivatives crosses $1.5B revenue (conditional 50% on integration); (d) the market sustains a ~20× FCF exit (conditional 50%). Joint at 15-20%, weighted 18%. Higher than ZM bull because COIN's bull has one cycle-dependent leg AND one secular leg — they can succeed independently.",
         "what": [
-          "The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as institutional ETF flows compound. Transaction revenue grows $4.0B → $7.0B by FY30 as volume compounds AND share gains hold. Deribit integration succeeds beyond model — derivatives revenue crosses $1.5B by FY28 with options margin substantially better than spot. Coinbase International captures 15-20% of offshore derivatives flows as US regulatory clarity attracts onshore institutional volume back from Binance.",
-          "The subscription engine inflects. USDC float compounds to $75-100B as the GENIUS Act establishes USDC as the de facto regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30. Coinbase One reaches 4M subs at $30+ ARPU. Operating margin expands to 45%. FCF reaches $6.5B by FY30. The multiple expands — the market recognizes COIN as crypto's Stripe-meets-Nasdaq, sustaining 30× FCF. Exit-multiple SOTP: ~$358/share, +97% from spot. Two engines (cycle-driven transaction + subscription rails) both fire."
+          "The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as institutional ETF flows compound. Transaction revenue grows $4.0B → $7.0B by FY30 as volume compounds AND share gains hold. Deribit integration succeeds beyond model — derivatives revenue crosses $1.5B by FY28 with options margin substantially better than spot. Deribit captures 15-20% of offshore derivatives flows as US regulatory clarity attracts institutional volume back from Binance.",
+          "The subscription engine inflects. Coinbase-held USDC compounds past $50B (from a record $20B) as the GENIUS Act establishes USDC as the de facto regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30. Coinbase One reaches 4M subs at $30+ ARPU. Operating margin expands to 45%. FCF reaches ~$6.6B by FY30. The market recognizes COIN as crypto's Stripe-meets-Nasdaq, sustaining a 20× FCF exit. Two engines (cycle-driven transaction + subscription rails) both fire."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 1062.68,
-        "headline": "Crypto-as-rails; 38× re-rate.",
-        "why": "Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); USDC crosses $150B as regulatory tailwind + EU MICA convert it to the global regulated dollar (25%); Coinbase International captures Binance's offshore institutional share post-regulatory squeeze (30%); multiple re-rates to fintech-infrastructure 35-40× FCF (30%). Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the regulatory wedge, float, derivatives platform, and cash to attempt all four.",
+        "price": 1060.13,
+        "headline": "Crypto-as-rails; 28× re-rate.",
+        "why": "Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); Coinbase-held USDC crosses $100B as the regulatory tailwind + EU MiCA make USDC the global regulated dollar (25%); Deribit captures Binance's offshore institutional share post-regulatory squeeze (30%); the multiple re-rates to a fintech-infrastructure ~28× FCF exit (30%). Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the regulatory wedge, float, derivatives platform, and cash to attempt all four.",
         "what": [
-          "The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US gateway. BTC ranges $200-300K as sovereign treasury adoption institutionalizes. USDC float crosses $150B as GENIUS Act + EU MICA make USDC the global regulated dollar — challenging SWIFT for cross-border. Coinbase International becomes the dominant offshore venue as Binance's regulatory squeeze opens institutional flows. Transaction revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin reaches 50%.",
-          "The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN at 38× FCF on a $9B base. Exit-multiple SOTP: ~$610/share, +235% from spot. The crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase has the regulatory wedge, the float, the derivatives platform, and the cash to attempt all four."
+          "The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US gateway. BTC ranges $200-300K as sovereign treasury adoption institutionalizes. Coinbase-held USDC crosses $100B as the GENIUS Act + EU MiCA make USDC the global regulated dollar — challenging SWIFT for cross-border. Deribit becomes the dominant offshore venue as Binance's regulatory squeeze opens institutional flows. Transaction revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin reaches 50%.",
+          "The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN exits at 28× FCF on ~$10.7B of FY30 FCF. The crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase has the regulatory wedge, the float, the derivatives platform, and the cash to attempt all four."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 47 / Bull 18 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
-    "thesis": "Coinbase trades at $182.25 ($48B mkt cap) on FY25 revenue $7.18B and adj EBITDA $2.81B, with a fortress balance sheet (~$10.2B cash, $7.2B debt, ~$3.5B CRCL + BTC + crypto). FY25 was peak-cycle; Q1 2026 broke the spell: revenue $1.4B (-40% from Q4), a $394M net loss as BTC slid $120K to $73K. Bull thesis is structural (SEC case dropped, GENIUS Act USDC moat, Deribit derivatives leadership); bear is equally real (take-rate compression, persistent cycle exposure). Mature-Company SOTP DCF, exit-multiple terminal; five scenarios; show your work.",
+    "thesis": "Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (-18.5% YoY) and a $360M GAAP loss, the second straight, as BTC fell from above $120K (Oct 2025) to a $58K low before recovering to ~$87K. The structural case firmed in the same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue share renewed unchanged into 2029, on $8.6B cash vs $6.0B debt. The bear: cycle exposure plus new stablecoin rivals. Modal case ~12% above the price; 30% of the probability sits below it. Mature-company SOTP DCF, exit-multiple terminal; five scenarios.",
     "historicalPrices": {
-      "xMin": -5.2,
+      "xMin": -5.5,
       "ipoMarker": "Direct Listing Apr '21 @ $381",
       "points": [
         [
-          -5.13,
-          328.0
+          -5.44,
+          328.28
         ],
         [
-          -4.83,
-          252.0
+          -5.25,
+          222.6
         ],
         [
-          -4.58,
-          251.0
+          -5.17,
+          220.61
         ],
         [
-          -4.33,
-          189.0
+          -5.0,
+          238.46
         ],
         [
-          -4.08,
-          70.0
+          -4.87,
+          357.39
         ],
         [
-          -3.83,
-          64.0
+          -4.75,
+          247.69
         ],
         [
-          -3.58,
-          35.0
+          -4.5,
+          186.08
         ],
         [
-          -3.33,
-          66.0
+          -4.25,
+          51.91
         ],
         [
-          -3.08,
-          60.0
+          -4.0,
+          67.64
         ],
         [
-          -2.83,
-          75.0
+          -3.73,
+          32.53
         ],
         [
-          -2.58,
-          175.0
+          -3.5,
+          66.3
         ],
         [
-          -2.33,
-          240.0
+          -3.25,
+          57.49
         ],
         [
-          -2.08,
-          230.0
+          -3.0,
+          74.42
         ],
         [
-          -1.83,
-          175.0
+          -2.75,
+          175.48
         ],
         [
-          -1.58,
-          275.0
+          -2.63,
+          117.3
         ],
         [
-          -1.33,
-          250.0
+          -2.5,
+          255.51
         ],
         [
-          -1.08,
-          260.0
+          -2.25,
+          225.86
         ],
         [
-          -0.83,
-          420.0
+          -2.0,
+          170.09
         ],
         [
-          -0.58,
-          380.0
+          -1.79,
+          343.62
         ],
         [
-          -0.33,
-          145.0
+          -1.75,
+          278.71
         ],
         [
-          -0.17,
-          175.0
+          -1.5,
+          189.86
+        ],
+        [
+          -1.45,
+          151.47
+        ],
+        [
+          -1.25,
+          308.38
+        ],
+        [
+          -1.18,
+          419.78
+        ],
+        [
+          -1.0,
+          342.46
+        ],
+        [
+          -0.76,
+          245.12
+        ],
+        [
+          -0.68,
+          255.86
+        ],
+        [
+          -0.61,
+          141.09
+        ],
+        [
+          -0.51,
+          197.5
+        ],
+        [
+          -0.32,
+          182.25
+        ],
+        [
+          -0.23,
+          146.19
+        ],
+        [
+          -0.12,
+          153.6
+        ],
+        [
+          -0.02,
+          191.45
         ]
       ]
     },
@@ -8212,24 +8267,24 @@ const MEMOS = [
       },
       {
         "label": "Bear 22%",
-        "body": "Cycle normalizes; transaction revenue stays sub-FY25; multiple resets to ~18× FCF on slower growth."
+        "body": "Cycle normalizes; transaction revenue stays sub-FY25; multiple resets to ~12× FCF on slower growth."
       },
       {
         "label": "Base 47%",
-        "body": "Modal: BTC ranges $80-130K; subscription engine compounds; USDC to $35B; ~15× FCF."
+        "body": "Modal: BTC ranges $80-130K; subscription engine compounds; Coinbase-held USDC to $35B; ~15× FCF."
       },
       {
         "label": "Bull 18%",
-        "body": "BTC $130-200K + USDC >$75B + Deribit delivers; two engines fire independently."
+        "body": "BTC $130-200K + Coinbase-held USDC >$50B + Deribit delivers; two engines fire independently."
       },
       {
         "label": "Ultra Bull 5%",
-        "body": "Crypto-as-rails; sovereign adoption; multiple re-rates to fintech-infrastructure ~38× FCF."
+        "body": "Crypto-as-rails; sovereign adoption; multiple re-rates to fintech-infrastructure ~28× FCF."
       }
     ],
     "page3": {
-      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q1 2026 10-Q/shareholder letter, GENIUS Act, Deribit closing 8-K",
-      "sources": "Sources: COIN 10-K FY25, Q1 2026 shareholder letter, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026.",
+      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q2 2026 10-Q/shareholder letter, Circle Q2 2026 results, GENIUS Act, Deribit closing 8-K",
+      "sources": "Sources: COIN 10-K FY25, Q1 and Q2 2026 10-Qs/shareholder letters, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1 and Q2 2026 results, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026, Yahoo Finance prices.",
       "chartReference": {
         "historyYears": [
           2021,
@@ -8287,19 +8342,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 271.62,
-        "upsidePct": 35.1
+        "expected": 269.78,
+        "upsidePct": 34.2
       },
       "market": {
-        "marketCapBillion": 52.96,
-        "sharesOutstandingMillion": 263.4,
-        "cashBillion": 10.2,
-        "netDebtBillion": 7.2
+        "marketCapBillion": 53.04,
+        "sharesOutstandingMillion": 263.8,
+        "cashBillion": 8.6,
+        "netDebtBillion": 6.0
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.08,
-          "expectedPerShare": 30.41,
+          "expectedPerShare": 27.96,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -8339,8 +8394,8 @@ const MEMOS = [
               0.29,
               0.36
             ],
-            "cash": 9.0,
-            "net_debt": 7.0,
+            "cash": 7.4,
+            "net_debt": 6.0,
             "special_assets": 1.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
@@ -8357,8 +8412,8 @@ const MEMOS = [
             "terminal_value": 2.88,
             "pv_terminal": 1.56,
             "op_ev": 3.95,
-            "total_equity": 7.45,
-            "dcf_per_share": 30.41
+            "total_equity": 6.85,
+            "dcf_per_share": 27.96
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8380,7 +8435,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.22,
-          "expectedPerShare": 104.19,
+          "expectedPerShare": 102.65,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -8420,8 +8475,8 @@ const MEMOS = [
               1.92,
               2.02
             ],
-            "cash": 10.0,
-            "net_debt": 7.2,
+            "cash": 8.4,
+            "net_debt": 6.0,
             "special_assets": 3.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
@@ -8438,8 +8493,8 @@ const MEMOS = [
             "terminal_value": 24.24,
             "pv_terminal": 14.39,
             "op_ev": 21.29,
-            "total_equity": 27.09,
-            "dcf_per_share": 104.19
+            "total_equity": 26.69,
+            "dcf_per_share": 102.65
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8461,7 +8516,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.47,
-          "expectedPerShare": 226.16,
+          "expectedPerShare": 224.59,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -8501,8 +8556,8 @@ const MEMOS = [
               3.55,
               3.83
             ],
-            "cash": 10.5,
-            "net_debt": 7.2,
+            "cash": 8.9,
+            "net_debt": 6.0,
             "special_assets": 5.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
@@ -8519,8 +8574,8 @@ const MEMOS = [
             "terminal_value": 57.45,
             "pv_terminal": 37.34,
             "op_ev": 49.37,
-            "total_equity": 57.67,
-            "dcf_per_share": 226.16
+            "total_equity": 57.27,
+            "dcf_per_share": 224.59
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8542,7 +8597,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.18,
-          "expectedPerShare": 482.45,
+          "expectedPerShare": 480.0,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -8582,8 +8637,8 @@ const MEMOS = [
               6.07,
               6.58
             ],
-            "cash": 11.0,
-            "net_debt": 7.0,
+            "cash": 9.4,
+            "net_debt": 6.0,
             "special_assets": 8.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
@@ -8600,8 +8655,8 @@ const MEMOS = [
             "terminal_value": 131.6,
             "pv_terminal": 87.52,
             "op_ev": 106.2,
-            "total_equity": 118.2,
-            "dcf_per_share": 482.45
+            "total_equity": 117.6,
+            "dcf_per_share": 480.0
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8623,7 +8678,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 1062.68,
+          "expectedPerShare": 1060.13,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -8663,8 +8718,8 @@ const MEMOS = [
               9.03,
               10.65
             ],
-            "cash": 12.0,
-            "net_debt": 7.0,
+            "cash": 10.4,
+            "net_debt": 6.0,
             "special_assets": 15.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
@@ -8681,8 +8736,8 @@ const MEMOS = [
             "terminal_value": 298.2,
             "pv_terminal": 202.95,
             "op_ev": 229.73,
-            "total_equity": 249.73,
-            "dcf_per_share": 1062.68
+            "total_equity": 249.13,
+            "dcf_per_share": 1060.13
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8729,7 +8784,7 @@ const MEMOS = [
           },
           "corneredResource": {
             "score": 2,
-            "note": "US regulatory licenses/compliance estate; Circle/USDC relationship; Base L2."
+            "note": "US regulatory licenses/compliance estate; Circle/USDC relationship (revenue share renewed unchanged into 2029); Base L2."
           },
           "processPower": {
             "score": 2,
@@ -8750,7 +8805,7 @@ const MEMOS = [
           {
             "name": "Robinhood",
             "kind": "public",
-            "note": "Low/zero-fee; gaining US crypto + equities share.",
+            "note": "Low/zero-fee; Q2 crypto revenue -38% YoY; prediction markets now out-earn crypto.",
             "growth": 0.25,
             "margin": 0.3,
             "multiple": "~30x"
@@ -8758,7 +8813,7 @@ const MEMOS = [
           {
             "name": "Spot ETFs (BlackRock/Fidelity)",
             "kind": "incumbent-division",
-            "note": "Disintermediate spot holding/custody for many.",
+            "note": "Disintermediate spot holding/custody; IBIT options open interest briefly topped Deribit's (Apr 2026).",
             "growth": 0.4,
             "margin": null,
             "multiple": "n/a"
@@ -8766,7 +8821,7 @@ const MEMOS = [
           {
             "name": "Kraken",
             "kind": "private",
-            "note": "Established US exchange; IPO-bound.",
+            "note": "Established US exchange; IPO paused Mar 2026; Q2 adj. revenue $508M (+17%).",
             "growth": 0.15,
             "margin": null,
             "multiple": "private"
@@ -8776,15 +8831,20 @@ const MEMOS = [
           {
             "vector": "scale_economies",
             "who": "Robinhood / zero-fee entrants",
-            "falsifier": "Retail take-rate compresses below ~1% on a sustained basis as fee competition bites."
+            "falsifier": "Consumer transaction revenue / consumer spot volume below 1.0% for two straight quarters (~1.75% in Q2 2026)."
           },
           {
             "vector": "counter_positioning",
             "who": "Spot ETFs + DEXs",
             "falsifier": "Coinbase trading-volume share declines 2 consecutive quarters during a crypto bull market."
+          },
+          {
+            "vector": "cornered_resource",
+            "who": "Bank-consortium stablecoin (21 banks) / Open USD",
+            "falsifier": "USDC share of stablecoin supply falls below 20% (24% in Sep 2026), or average USDC held in Coinbase products falls below $15B (record $20B, Q2 2026)."
           }
         ],
-        "takeaway": "A regulated-trust brand plus liquidity/USDC network with real compliance barriers, underpinning the bull terminal value; fee compression and ETF/DEX disintermediation are the durability falsifiers to watch.\n"
+        "takeaway": "A regulated-trust brand plus liquidity/USDC network with real compliance barriers, underpinning the bull terminal value; fee compression, ETF/DEX disintermediation, and bank / Open USD stablecoins taking USDC share are the durability falsifiers to watch.\n"
       },
       "pocd": {
         "people": {
@@ -8792,7 +8852,7 @@ const MEMOS = [
           "founderLed": true,
           "tenureYears": 14,
           "insiderOwnershipPct": 14.0,
-          "capitalAllocation": "M&A-led, not capital-return: a long string of bolt-ons (Xapo, Tagomi, Bison Trails, FairX) culminating in Deribit (~$2.9B, 2025 — the largest crypto-industry deal), funded partly in stock. Holds a long-term crypto treasury (~16,500 BTC). No buyback program — capital goes to M&A + crypto, not returns.",
+          "capitalAllocation": "M&A-led with a growing capital return: bolt-ons (Xapo, Tagomi, Bison Trails, FairX) culminating in Deribit (~$2.9B announced, ~$4.3B at the Aug-2025 close — the largest crypto-industry deal), funded partly in stock. A $4.0B repurchase authorization ($1B Oct 2024 → $2B Oct 2025 → $4B Jan 2026, incl. converts/notes) is half spent: $2.0B through Jun 30 2026, retiring ~10.1M Class A shares; the 2026 converts were repaid in cash. Holds a long-term crypto treasury (~17,200 BTC, Jun 2026).",
           "incentiveAlignment": "Alignment runs through the founder stake, not fresh pay: FY2024 was a $1M salary with $0 bonus and $0 new equity (the bulk of \"other comp\" ~$6.2M is personal security). But Armstrong is a steady seller — a 10b5-1 plan moved ~$550M (>1.5M shares, ~5% of his stake) over the past year.",
           "governanceFlags": [
             "super-voting dual-class (Class B = 20 votes) → majority (~60%+) founder voting control",
@@ -8802,25 +8862,25 @@ const MEMOS = [
           ],
           "keyPersonRisk": "high",
           "score": 3,
-          "takeaway": "Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack: majority control, a steady 10b5-1 sell-down, and capital flowing to M&A + a crypto treasury rather than returns."
+          "takeaway": "Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack: majority control and a steady 10b5-1 sell-down, with capital split across M&A, a crypto treasury and a $4B buyback (half spent)."
         },
-        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (COIN 4.97)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +49% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +34.2% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
           {
             "label": "Subscription engine is structural.",
-            "body": "Sub & services hit $584M Q1 2026 despite trading collapse — counter-cyclical USDC float kept revenue from imploding like 2022. ~44% of net revenue."
+            "body": "Sub & services hit $555M in Q2 2026 (48% of net revenue) despite the trading slump, on a record $20B of Coinbase-held USDC."
           },
           {
             "label": "Regulatory moat is unprecedented.",
-            "body": "SEC dismissed with prejudice Feb 2025; GENIUS Act passed; CFTC derivatives jurisdiction clear. The only fully-regulated US large-scale exchange."
+            "body": "SEC case dropped 2025; GENIUS Act; 2026 SEC tokenized-securities exemption + UK FCA approval. The only fully-regulated big US exchange."
           },
           {
             "label": "Deribit makes COIN the global derivatives leader.",
-            "body": "Acquisition closed Aug 2025 at $4.3B effective. #1 by options open interest and volume. Derivatives are higher-margin and less cycle-correlated than spot."
+            "body": "Closed Aug 2025 (~$4.3B); ~49% of crypto options (IBIT briefly topped its open interest, Apr 2026). Higher-margin, less cyclical than spot."
           },
           {
             "label": "Coinbase One is the cycle hedge.",
@@ -8828,28 +8888,28 @@ const MEMOS = [
           },
           {
             "label": "Balance sheet absorbs cycle.",
-            "body": "$10.2B cash + $1.3B BTC + ~$1B CRCL + ~$1.3B crypto = $13.8B liquid. Survives a 2022-style winter without distress."
+            "body": "$8.6B cash + ~$1.5B BTC + CRCL vs $6.0B debt, after repaying the 2026 converts in cash. Survives a 2022-style winter."
           }
         ],
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "BTC < $60K sustained > 2 quarters · transaction rev < $700M/qtr · take-rate below 10 bps · USDC float < $20B · Hyperliquid-style deals proliferate"
+            "body": "BTC < $60K sustained > 2 quarters · transaction rev < $700M/qtr · take-rate below 10 bps · Coinbase-held USDC < $15B · Hyperliquid-style deals proliferate"
           },
           {
             "label": "Bull validation",
-            "body": "BTC > $150K sustained > 2 quarters · derivatives rev > $400M/qtr · USDC float > $50B · Coinbase One > 2M subs · international flows > 25% of derivatives"
+            "body": "BTC > $150K sustained > 2 quarters · derivatives rev > $400M/qtr · Coinbase-held USDC > $50B · Coinbase One > 2M subs · international flows > 25% of derivatives"
           },
           {
             "label": "Reframe needed",
-            "body": "If banks (JPM, BoA) launch GENIUS-compliant stablecoins at scale taking >20% of USDC share, the rails thesis breaks. Conversely, a major COIN acquisition (>$5B) broadens the thesis."
+            "body": "If bank-issued stablecoins (the 21-bank consortium coin, Open USD) scale and take >20% of USDC's share, the rails thesis breaks. Conversely, a major COIN acquisition (>$5B) broadens the thesis."
           }
         ]
       },
       "glossary": [
         {
           "term": "USDC",
-          "definition": "Circle-issued regulated dollar stablecoin. ~$60B circulating; $19B held within Coinbase products Q1 2026. Federally regulated under the GENIUS Act."
+          "definition": "Circle-issued dollar stablecoin. ~$75B circulating (~24% of stablecoins, Sep 2026); a record ~$20B held in Coinbase products (Q2 2026). GENIUS Act-regulated (effective by Jan 2027)."
         },
         {
           "term": "Transaction revenue",
@@ -8857,11 +8917,11 @@ const MEMOS = [
         },
         {
           "term": "Subscription & services",
-          "definition": "Non-transaction revenue — USDC interest, staking, custody, Coinbase One subs. $2.8B FY25; structurally growing."
+          "definition": "Non-transaction revenue — USDC interest, staking, custody, Coinbase One subs. $2.8B FY25; $555M in Q2 2026 (48% of net revenue) as lower crypto prices and rates offset USDC growth."
         },
         {
           "term": "Deribit",
-          "definition": "Crypto-options exchange acquired Aug 2025 for $4.3B. Global #1 by options open interest. Made COIN the derivatives leader."
+          "definition": "Crypto-options exchange acquired Aug 2025 (~$2.9B announced, ~$4.3B at close). ~49% of crypto options (55% of BTC); IBIT options briefly topped its open interest (Apr 2026)."
         },
         {
           "term": "GENIUS Act",
@@ -8869,12 +8929,12 @@ const MEMOS = [
         },
         {
           "term": "Circle (CRCL) stake",
-          "definition": "COIN holds ~8.4M CRCL shares from the 2023 Centre dissolution. ~$1B at $120/share (range $0.5-2.5B). Marked as a strategic investment."
+          "definition": "CRCL shares received in the 2023 Centre dissolution; part sold Q1 2026. The remainder (≤~8.4M shares) is worth ≤~$0.8B at ~$92 (Sep 2026). Marked as a strategic investment."
         }
       ],
       "stamp": {
-        "footerVersion": "006",
-        "footerTimestamp": "2026-09-22_13-16",
+        "footerVersion": "007",
+        "footerTimestamp": "2026-09-26_04-14",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -16248,9 +16308,16 @@ const MEMOS = [
     "publishedISO": "2026-09-22",
     "publishedLabel": "September 22, 2026",
     "pdf": {
-      "file": "abnb-memo__v005__2026-09-22_13-16.pdf",
-      "size": "290 KB",
+      "file": "abnb-memo__v006__2026-09-26_04-14.pdf",
+      "size": "291 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "abnb-memo__v005__2026-09-22_13-16.pdf",
+          "size": "290 KB",
+          "asOfDate": "2026-09-22",
+          "spotPrice": 166.84
+        },
         {
           "version": "004",
           "file": "abnb-memo__v004__2026-07-22_15-02.pdf",
@@ -16270,36 +16337,36 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$108.44B",
       "shares": "650M",
-      "cash": "$9.5B cash, zero debt · ~$9.5B net cash; ~650M diluted shares; ~$3.8B/yr buyback offsets SBC; Revenue $12.24B FY25 (+10%, decel from +40%); 38% FCF margin, $4.6B FCF; ~15x EV/FCF; Experiences/Services relaunch (2025) the swing optionality"
+      "cash": "$12B cash, $2.5B debt · ~$9.5B net cash; ~650M diluted shares; ~$3.8B/yr buyback offsets SBC; Revenue $12.24B FY25 (+10%, decel from +40%); 38% FCF margin, $4.6B FCF; High-teens EV/FCF; 2026 growth re-accelerated (+18%/+17% in Q1/Q2), guided at least mid-teens"
     },
     "spot": {
       "price": 166.84,
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 183.95,
-      "deltaPct": 10.3
+      "fair": 191.44,
+      "deltaPct": 14.7
     },
     "compound": [
       {
         "y": 5,
-        "value": 281.78,
-        "mult": 1.69
+        "value": 293.32,
+        "mult": 1.76
       },
       {
         "y": 10,
-        "value": 431.91,
-        "mult": 2.59
+        "value": 449.71,
+        "mult": 2.7
       },
       {
         "y": 15,
-        "value": 662.45,
-        "mult": 3.97
+        "value": 689.93,
+        "mult": 4.14
       },
       {
         "y": 20,
-        "value": 1016.71,
-        "mult": 6.09
+        "value": 1059.16,
+        "mult": 6.35
       }
     ],
     "taxonomy": {
@@ -16321,71 +16388,71 @@ const MEMOS = [
       "value": 8.79,
       "zone": "yellow"
     },
-    "question": "Does Airbnb's ~15x EV/FCF fairly price a decelerating but FCF-gushing travel network — or is the Experiences/Services optionality + international runway underpriced?",
+    "question": "At a high-teens EV/FCF, is Airbnb's 2026 re-acceleration durable — or do fading currency and World Cup boosts, AI booking agents and regulation pull growth back to high-single digits?",
     "scenarios": [
       {
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 12,
-        "price": 106.48,
+        "price": 113.54,
         "headline": "Regulation + maturation; growth stalls.",
         "why": "Regulation is the structural bear: NYC listings fell ~92%, Spain fined Airbnb EUR65M. 12% weight on bans + maturation capping the network.",
         "what": [
-          "City STR bans spread (Barcelona's 2028 phase-out as the template), growth decays toward GDP-plus, and Experiences/Services never monetizes. Revenue grows only ~3%; the premium multiple de-rates toward Booking's.",
-          "DCF ~$106 (-20%) — a great FCF machine, but priced for the growth it has stopped delivering."
+          "City STR bans spread (Barcelona's 2028 phase-out as the template), growth decays toward GDP-plus, and Experiences/Services never monetizes. After the 2026 currency and World Cup lift, revenue grows only ~3%; the premium multiple de-rates toward Booking's.",
+          "DCF ~$114 (-32%) — a great FCF machine, but priced for the growth it has stopped delivering."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
         "prob": 25,
-        "price": 136.97,
+        "price": 143.83,
         "headline": "Decelerates to high-single; regulation bites.",
         "why": "The law-of-large-numbers + Booking competition path. 25% weight — a very plausible 'matures gracefully' outcome.",
         "what": [
-          "Growth settles in the high-single digits as Booking out-executes in alternative accommodations and regulation nibbles supply; FCF margin holds ~37%.",
-          "DCF ~$137 (+3%) — roughly fair; the network defends the cash even as growth matures."
+          "After the 2026 lift, growth settles in the high-single digits as Booking out-executes in alternative accommodations and regulation nibbles supply; FCF margin holds ~37%.",
+          "DCF ~$144 (-14%) — below spot; the network defends the cash even as growth matures."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 35,
-        "price": 182.78,
+        "price": 190.45,
         "headline": "Low-mid-teens growth; Experiences ramps.",
-        "why": "Requires the guided low-mid-teens growth + modest Experiences/Services monetization. 35% as the central outcome — the network + brand are genuinely durable.",
+        "why": "Requires the guided mid-teens 2026 to settle near ~10% + modest Experiences/Services monetization. 35% as the central outcome — the network + brand are genuinely durable.",
         "what": [
-          "The modal path: revenue compounds low-mid-teens (the 2026 guide), Experiences/Services begins to monetize, and international under-penetration carries the network at a 38-39% FCF margin.",
-          "DCF ~$183 (+37%). A verb-grade FCF machine at ~15x FCF is mispriced for this quality if growth holds in the teens."
+          "The modal path: revenue grows mid-teens in 2026 (the guide), then ~10% as the currency and World Cup lift fades; Experiences/Services begins to monetize, and international under-penetration carries the network at a 38-39% FCF margin.",
+          "DCF ~$190 (+14%). A verb-grade FCF machine at a high-teens FCF multiple is modestly mispriced if growth holds near 10%."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 20,
-        "price": 242.25,
+        "price": 250.38,
         "headline": "Experiences/Services + international re-accel.",
         "why": "Experiences/Services monetizes into a needle-mover + international compounds. ~20%; the relaunch is early but credible.",
         "what": [
-          "Experiences/Services becomes a real second leg, international scales, and AI-driven conversion lifts the take rate — revenue re-accelerates to the mid-teens at a 40% FCF margin.",
-          "DCF ~$242 (+82%) — the optionality the relaunch is buying actually pays off."
+          "Experiences/Services becomes a real second leg, international scales, and AI-driven conversion lifts the take rate — revenue holds the mid-teens at a 40% FCF margin.",
+          "DCF ~$250 (+50%) — the optionality the relaunch is buying actually pays off."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 8,
-        "price": 306.35,
+        "price": 314.03,
         "headline": "End-to-end travel hub; AI concierge.",
         "why": "The full 'Airbnb everything' hub + AI concierge. ~8%, the asymmetric upside the Experiences/Services bet is really for.",
         "what": [
           "Airbnb becomes an end-to-end travel/lifestyle platform (homes + services + experiences + AI concierge), expanding TAM well beyond rentals at peak network margins.",
-          "DCF ~$306 (+130%) — the platform vision fully realized; ~8% probability."
+          "DCF ~$314 (+88%) — the platform vision fully realized; ~8% probability."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 25 / Base 35 / Bull 20 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
-    "thesis": "Airbnb trades at ~$79B (≈$133/sh) — ~15x EV/FCF on a $4.6B-FCF, 38%-margin two-sided travel network with ~$9.5B net cash. Growth has decelerated (+40%→+10%, guided low-mid-teens) and regulation (Barcelona, NYC) caps dense-urban supply. The mature DCF asks whether the verb-grade brand + network defend the FCF and whether Experiences/Services + international re-accelerate growth. The finding: at ~15x FCF for this quality the modal case implies modest undervaluation — the premium-to-Booking is on P/E, not on the cash flow the DCF values.",
+    "thesis": "Airbnb trades at a high-teens multiple of trailing FCF ($4.8B, a 37% margin before ~$1.8B/yr of stock comp) with ~$9.5B net cash. Growth re-accelerated in 2026 (+18% and +17% in Q1-Q2; guide raised twice to at least mid-teens, ~3 points of it currency) as nights outgrew Booking's rental business (+10% vs +4% in Q2) and a hotels line launched. The DCF asks whether that pace holds once currency and World Cup boosts fade, AI booking agents launch without Airbnb, and regulation caps city supply. Modal case ~14% above the price; 37% of the probability sits below it.",
     "historicalPrices": {
       "xMin": -5.5,
       "ipoMarker": "IPO Dec '20",
@@ -16431,28 +16498,28 @@ const MEMOS = [
     "weightingRationale": [
       {
         "label": "Ultra Bear 12%",
-        "body": "Regulation + maturation; ~$106 (-20%)."
+        "body": "Regulation + maturation; ~$114 (-32%)."
       },
       {
         "label": "Bear 25%",
-        "body": "High-single growth; regulation; ~$137 (+3%)."
+        "body": "High-single growth; regulation; ~$144 (-14%)."
       },
       {
         "label": "Base 35%",
-        "body": "Low-mid-teens; Experiences ramps; ~$183 (+37%)."
+        "body": "Mid-teens 2026, then ~10%; ~$190 (+14%)."
       },
       {
         "label": "Bull 20%",
-        "body": "Experiences/intl re-accel; ~$242 (+82%)."
+        "body": "Experiences/intl re-accel; ~$250 (+50%)."
       },
       {
         "label": "Ultra Bull 8%",
-        "body": "End-to-end travel hub; ~$306 (+130%)."
+        "body": "End-to-end travel hub; ~$314 (+88%)."
       }
     ],
     "page3": {
       "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · calendar fiscal year · FY2025 10-K (Feb'26)",
-      "sources": "Sources: Airbnb FY2025 10-K (revenue $12.24B, FCF $4.6B/38%, ~$9.5B net cash, GBV $91.3B), Q1'26 results. Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin (use ~38% structural, not the seasonal Q1 64%); Gordon terminal. EV/FCF vs Booking/Expedia.",
+      "sources": "Sources: Airbnb FY2025 10-K (revenue $12.24B, FCF $4.6B/38%, ~$9.5B net cash, GBV $91.3B), Q1-Q2'26 8-K/10-Q (FY26 anchored to the raised at-least-mid-teens guide; $2.5B notes, $12.0B cash + ST investments). Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin (use ~38% structural, not the seasonal Q1 64%); Gordon terminal. EV/FCF vs Booking/Expedia.",
       "chartReference": {
         "historyYears": [
           2021,
@@ -16509,29 +16576,29 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 183.95,
-        "upsidePct": 10.3
+        "expected": 191.44,
+        "upsidePct": 14.7
       },
       "market": {
         "marketCapBillion": 108.44,
         "sharesOutstandingMillion": 650.0,
-        "cashBillion": 9.5,
-        "netDebtBillion": 0.0
+        "cashBillion": 12.0,
+        "netDebtBillion": 2.5
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.12,
-          "expectedPerShare": 106.48,
+          "expectedPerShare": 113.54,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
-            "cagr_5y": 3.4,
+            "cagr_5y": 4.9,
             "wacc": 0.1
           },
           "dcfPath": {
             "rev_b": 12.24,
             "rev_path": [
-              0.04,
+              0.12,
               0.04,
               0.03,
               0.03,
@@ -16553,31 +16620,31 @@ const MEMOS = [
             ],
             "term_g": 0.02,
             "fcf": [
-              4.583,
-              4.766,
-              4.909,
-              5.056,
-              5.208
+              4.935,
+              5.133,
+              5.287,
+              5.445,
+              5.608
             ],
-            "cash": 9.5,
-            "net_debt": 0.0,
+            "cash": 12.0,
+            "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 650,
             "distress": 0.0,
             "pv_fcf": [
-              4.166,
-              3.939,
-              3.688,
-              3.453,
-              3.234
+              4.486,
+              4.242,
+              3.972,
+              3.719,
+              3.482
             ],
-            "sum_pv_fcf": 18.48,
-            "terminal_value": 66.4,
-            "pv_terminal": 41.23,
-            "op_ev": 59.71,
-            "total_equity": 69.21,
-            "dcf_per_share": 106.48
+            "sum_pv_fcf": 19.9,
+            "terminal_value": 71.5,
+            "pv_terminal": 44.4,
+            "op_ev": 64.3,
+            "total_equity": 73.8,
+            "dcf_per_share": 113.54
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16599,17 +16666,17 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.25,
-          "expectedPerShare": 136.97,
+          "expectedPerShare": 143.83,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
-            "cagr_5y": 6.2,
+            "cagr_5y": 7.4,
             "wacc": 0.095
           },
           "dcfPath": {
             "rev_b": 12.24,
             "rev_path": [
-              0.07,
+              0.13,
               0.07,
               0.06,
               0.06,
@@ -16631,31 +16698,31 @@ const MEMOS = [
             ],
             "term_g": 0.025,
             "fcf": [
-              4.846,
-              5.185,
-              5.496,
-              5.983,
-              6.283
+              5.117,
+              5.476,
+              5.804,
+              6.319,
+              6.635
             ],
-            "cash": 9.5,
-            "net_debt": 0.0,
+            "cash": 12.0,
+            "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 650,
             "distress": 0.0,
             "pv_fcf": [
-              4.426,
-              4.324,
-              4.186,
-              4.162,
-              3.991
+              4.673,
+              4.567,
+              4.421,
+              4.395,
+              4.215
             ],
-            "sum_pv_fcf": 21.09,
-            "terminal_value": 92.0,
-            "pv_terminal": 58.44,
-            "op_ev": 79.53,
-            "total_equity": 89.03,
-            "dcf_per_share": 136.97
+            "sum_pv_fcf": 22.27,
+            "terminal_value": 97.16,
+            "pv_terminal": 61.72,
+            "op_ev": 83.99,
+            "total_equity": 93.49,
+            "dcf_per_share": 143.83
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16677,17 +16744,17 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.35,
-          "expectedPerShare": 182.78,
+          "expectedPerShare": 190.45,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
-            "cagr_5y": 9.8,
+            "cagr_5y": 10.8,
             "wacc": 0.09
           },
           "dcfPath": {
             "rev_b": 12.24,
             "rev_path": [
-              0.1,
+              0.15,
               0.11,
               0.1,
               0.09,
@@ -16709,31 +16776,31 @@ const MEMOS = [
             ],
             "term_g": 0.03,
             "fcf": [
-              5.116,
-              5.679,
-              6.412,
-              6.988,
-              7.617
+              5.349,
+              5.937,
+              6.703,
+              7.306,
+              7.964
             ],
-            "cash": 9.5,
-            "net_debt": 0.0,
+            "cash": 12.0,
+            "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 650,
             "distress": 0.0,
             "pv_fcf": [
-              4.694,
-              4.78,
-              4.951,
-              4.95,
-              4.951
+              4.907,
+              4.997,
+              5.176,
+              5.176,
+              5.176
             ],
-            "sum_pv_fcf": 24.33,
-            "terminal_value": 130.76,
-            "pv_terminal": 84.98,
-            "op_ev": 109.31,
-            "total_equity": 118.81,
-            "dcf_per_share": 182.78
+            "sum_pv_fcf": 25.43,
+            "terminal_value": 136.72,
+            "pv_terminal": 88.86,
+            "op_ev": 114.29,
+            "total_equity": 123.79,
+            "dcf_per_share": 190.45
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16755,17 +16822,17 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.2,
-          "expectedPerShare": 242.25,
+          "expectedPerShare": 250.38,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
-            "cagr_5y": 12.4,
+            "cagr_5y": 13.2,
             "wacc": 0.085
           },
           "dcfPath": {
             "rev_b": 12.24,
             "rev_path": [
-              0.12,
+              0.16,
               0.14,
               0.13,
               0.12,
@@ -16787,31 +16854,31 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "fcf": [
-              5.209,
-              6.095,
-              7.064,
-              7.912,
-              8.782
+              5.395,
+              6.313,
+              7.316,
+              8.194,
+              9.096
             ],
-            "cash": 9.5,
-            "net_debt": 0.0,
+            "cash": 12.0,
+            "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 650,
             "distress": 0.0,
             "pv_fcf": [
-              4.801,
-              5.177,
-              5.53,
-              5.709,
-              5.84
+              4.972,
+              5.363,
+              5.728,
+              5.913,
+              6.049
             ],
-            "sum_pv_fcf": 27.06,
-            "terminal_value": 181.79,
-            "pv_terminal": 120.9,
-            "op_ev": 147.96,
-            "total_equity": 157.46,
-            "dcf_per_share": 242.25
+            "sum_pv_fcf": 28.03,
+            "terminal_value": 188.29,
+            "pv_terminal": 125.22,
+            "op_ev": 153.25,
+            "total_equity": 162.75,
+            "dcf_per_share": 250.38
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16833,17 +16900,17 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.08,
-          "expectedPerShare": 306.35,
+          "expectedPerShare": 314.03,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
-            "cagr_5y": 15.2,
+            "cagr_5y": 15.8,
             "wacc": 0.08
           },
           "dcfPath": {
             "rev_b": 12.24,
             "rev_path": [
-              0.14,
+              0.17,
               0.17,
               0.16,
               0.15,
@@ -16865,31 +16932,31 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "fcf": [
-              5.442,
-              6.53,
-              7.765,
-              8.929,
-              10.179
+              5.585,
+              6.702,
+              7.969,
+              9.164,
+              10.447
             ],
-            "cash": 9.5,
-            "net_debt": 0.0,
+            "cash": 12.0,
+            "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 650,
             "distress": 0.0,
             "pv_fcf": [
-              5.039,
-              5.598,
-              6.164,
-              6.563,
-              6.928
+              5.171,
+              5.746,
+              6.326,
+              6.736,
+              7.11
             ],
-            "sum_pv_fcf": 30.29,
-            "terminal_value": 234.12,
-            "pv_terminal": 159.34,
-            "op_ev": 189.63,
-            "total_equity": 199.13,
-            "dcf_per_share": 306.35
+            "sum_pv_fcf": 31.09,
+            "terminal_value": 240.28,
+            "pv_terminal": 163.53,
+            "op_ev": 194.62,
+            "total_equity": 204.12,
+            "dcf_per_share": 314.03
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16996,35 +17063,35 @@ const MEMOS = [
             "falsifier": "A flagship metro structurally bans STRs, or registration regimes materially shrink supply."
           }
         ],
-        "takeaway": "Airbnb's network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided liquidity), and the ~38% FCF margin is best-in-class. The terminal-value debate is not a competitor out-networking them — it's regulation (dense-urban supply caps) + growth maturation. At ~15x EV/FCF the cash flow is priced cheaply for the quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds in the teens or decays to GDP-plus."
+        "takeaway": "Airbnb's network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided liquidity), and the ~38% FCF margin is best-in-class. The terminal-value debate is not a competitor out-networking them — it's regulation (dense-urban supply caps) + growth maturation. At a high-teens EV/FCF the cash flow is priced cheaply for the quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds in the teens or decays to GDP-plus."
       },
       "pocd": {
         "people": {
           "ceo": "Brian Chesky",
           "founderLed": true,
-          "tenureYears": 17,
+          "tenureYears": 18,
           "insiderOwnershipPct": 13.7,
-          "capitalAllocation": "Disciplined capital return + organic build: FY2024 buybacks ~$3.4B, a fresh $6B authorization (~$6.6B remaining) steadily cutting the share count, against ~$2.1B product-development reinvestment. Build-not-buy (no transformative M&A); no dividend. SBC ~$1.4B partly offsets the buyback.",
+          "capitalAllocation": "Disciplined capital return: $2.1B of buybacks in 1H26 ($3.4B left on the Aug-2025 $6B program); ~634M fully diluted shares, down ~10% since buybacks began in Q3 2022. $2.5B of A-/Baa1 notes (Mar 2026) refinanced the $2.0B converts. Build-not-buy; no dividend. Stock comp ($897M in 1H26, +15%) partly offsets the buyback.",
           "incentiveAlignment": "$1 salary, no cash bonus; paid via a 2020 ten-year performance RSU (~12M units) that vests only against escalating share-price hurdles (Tranche 2 vested Nov 2024). Chesky has pledged to donate the net proceeds of his CEO equity to charity.",
           "governanceFlags": [
-            "multi-class super-voting (Class B = 20 votes) → founder bloc ~79% voting control (binding agreement)",
-            "CEO + Chairman combined (lead independent director)",
-            "fully-independent board committees; classified board",
-            "sunset: Class B converts by 2040 (or 9 months after a founder's death / disability)"
+            "multi-class super-voting (Class B = 20 votes) → founder bloc ~79% voting control (binding agreement); fixed Dec-2040 sunset",
+            "CEO + Chairman combined, mitigated by a lead independent director (Ken Chenault)",
+            "fully-independent board committees, no controlled-company exemptions used; classified board",
+            "CEO also founding an outside, independently funded AI lab (Jun 2026) — split attention; CTO and business-chief exits within nine months"
           ],
           "keyPersonRisk": "high",
-          "score": 4,
-          "takeaway": "Founder-CEO on a $1 salary, paid only if the stock clears price hurdles, returning capital through large buybacks — strong alignment and capital discipline, with a 2040 sunset on the control. The offset is a ~79% founder voting bloc + combined CEO/Chair concentrating control well above the ~14% economic stake."
+          "score": 3,
+          "takeaway": "Founder-CEO on a $1 salary, paid only if the stock clears price hurdles, with buybacks cutting the fully diluted count ~10% since 2022 — strong alignment and capital discipline. The offsets: a ~79% founder voting bloc + combined CEO/Chair (mitigated by a lead independent director, fully independent committees and a fixed 2040 sunset), and a CEO now also founding an outside AI lab."
         },
-        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ABNB 6.17)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +38% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +14.7% finding), then position-sized."
       },
       "appendix": {
         "pushback": [
           {
-            "label": "~15x EV/FCF, 38% FCF margin.",
-            "body": "A verb-grade two-sided network throwing off $4.6B FCF at a 38% margin — priced like a maturing OTA, not a durable platform."
+            "label": "High-teens EV/FCF, 37% FCF margin.",
+            "body": "A verb-grade two-sided network throwing off $4.8B FCF at a 37% margin — priced like a maturing OTA, not a durable platform."
           },
           {
             "label": "$9.5B net cash, working-capital-positive.",
@@ -17081,8 +17148,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-09-22_13-16",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-09-26_04-14",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -17950,9 +18017,16 @@ const MEMOS = [
     "publishedISO": "2026-09-22",
     "publishedLabel": "September 22, 2026",
     "pdf": {
-      "file": "yeti-memo__v005__2026-09-22_13-17.pdf",
-      "size": "290 KB",
+      "file": "yeti-memo__v006__2026-09-26_04-14.pdf",
+      "size": "293 KB",
       "priorVersions": [
+        {
+          "version": "005",
+          "file": "yeti-memo__v005__2026-09-22_13-17.pdf",
+          "size": "290 KB",
+          "asOfDate": "2026-09-22",
+          "spotPrice": 42.79
+        },
         {
           "version": "004",
           "file": "yeti-memo__v004__2026-07-22_15-02.pdf",
@@ -17970,38 +18044,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$3.24B",
-      "shares": "76M",
-      "cash": "$114M cash, zero debt · ~$114M net cash; ~76M shares; $500M buyback authorization (no dividend); Revenue $1.87B FY25 (+2% trough; Q1'26 +8%); ~14% adj op margin (tariff-compressed), ~$212M FCF; Stanley/Owala/dupe pressure in US drinkware; China <5% of COGS post de-risking"
+      "mktCap": "$3.12B",
+      "shares": "73M",
+      "cash": "$60M cash, $101M debt · ~$41M net debt after a ~$131M Q2 buyback; $370M authorization left (no dividend); Revenue $1.87B FY25 (+2% trough), H1'26 +8.4%; +7-8% FY26 sales outlook held Aug + Sep '26; ~$212M FCF; US drinkware flat on three trend SKUs; Stanley/Owala/dupes; China <5% of COGS"
     },
     "spot": {
       "price": 42.79,
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 49.67,
-      "deltaPct": 16.1
+      "fair": 48.28,
+      "deltaPct": 12.8
     },
     "compound": [
       {
         "y": 5,
-        "value": 78.19,
-        "mult": 1.83
+        "value": 75.99,
+        "mult": 1.78
       },
       {
         "y": 10,
-        "value": 123.2,
-        "mult": 2.88
+        "value": 119.68,
+        "mult": 2.8
       },
       {
         "y": 15,
-        "value": 194.26,
-        "mult": 4.54
+        "value": 188.65,
+        "mult": 4.41
       },
       {
         "y": 20,
-        "value": 306.57,
-        "mult": 7.16
+        "value": 297.62,
+        "mult": 6.96
       }
     ],
     "taxonomy": {
@@ -18020,7 +18094,7 @@ const MEMOS = [
       "umbrellaName": "Consumer & Real Economy"
     },
     "ai": {
-      "value": 2.7,
+      "value": 2.73,
       "zone": "green"
     },
     "question": "Is YETI a durable premium brand re-accelerating via international + new categories — or a saturated, fad-cyclical US drinkware brand whose +2% trough caps the multiple?",
@@ -18029,136 +18103,256 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 15,
-        "price": 23.15,
+        "price": 21.78,
         "headline": "Fad fades; dupes win; US drinkware shrinks.",
         "why": "The fad-cyclical bear: drinkware is ~58% of sales and brand heat rotates fast. 15% weight on the trend turning against YETI.",
         "what": [
           "The viral tumbler trend rotates away (Stanley->Owala->next), RTIC/private-label dupes arbitrage the premium, and the international/category bets don't offset a shrinking US core. Revenue declines; margins stay tariff-pressured.",
-          "DCF ~$23 (-52%) — a fad-exposed brand losing its core earns a distressed multiple."
+          "DCF ~$22 (-49%) — a fad-exposed brand losing its core earns a distressed multiple."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
         "prob": 30,
-        "price": 38.22,
+        "price": 36.85,
         "headline": "US saturated; modest; tariff drag lingers.",
         "why": "US drinkware stays saturated and the trend doesn't reverse. 30% weight — the plausible 'stalls' path given the +2% trough.",
         "what": [
           "The US core stays saturated and tariffs keep margins below peak; international + categories grow but only enough to keep the total roughly flat-to-low.",
-          "DCF ~$38 (-20%) — a dominant-but-stalled brand at ~11x FCF, below today's price."
+          "DCF ~$37 (-14%) — a dominant-but-stalled brand at ~11x FCF, below today's price."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
         "prob": 33,
-        "price": 51.81,
+        "price": 50.42,
         "headline": "International + categories offset US; margin recovers.",
-        "why": "Requires international + new categories + margin recovery, consistent with Q1'26's +8% and China <5% of COGS. 33% as the central, near-spot outcome.",
+        "why": "Requires international + new categories + margin recovery, consistent with H1'26's +8.4% and China <5% of COGS. 33% as the central outcome.",
         "what": [
           "The modal path: international (toward 25% of revenue) + bags/cookware offset a stabilizing US core, and margins recover as tariffs annualize and China-sourcing exits. Revenue compounds ~5%.",
-          "DCF ~$52 (+8%) — roughly fair; the growth/margin-recovery the Q1'26 +8% hints at, priced about right."
+          "DCF ~$50 (+18%) — modestly above today's price; the growth/margin recovery H1'26's +8.4% hints at."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
         "prob": 17,
-        "price": 75.07,
+        "price": 73.66,
         "headline": "International ramps; bags/cookware traction.",
         "why": "International + new categories deliver and margins recover. ~17%; the diversification strategy is credible but unproven at scale.",
         "what": [
           "International scales past 25%, Mystery Ranch bags + cookware become real categories, and margins recover toward mid-teens — the brand proves durable beyond fad-cyclical drinkware.",
-          "DCF ~$75 (+56%) — category + geographic diversification re-rates the brand."
+          "DCF ~$74 (+72%) — category + geographic diversification re-rates the brand."
         ]
       },
       {
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 97.43,
+        "price": 96.0,
         "headline": "Durable multi-category global brand.",
         "why": "Full category + geographic diversification works and the brand de-fads. ~5%, the asymmetric upside.",
         "what": [
           "YETI becomes a durable multi-category premium-outdoor brand (drinkware + coolers + bags + cookware) with international as a second engine, compounding ~10% at recovered margins.",
-          "DCF ~$97 (+103%) — the brand transcends the drinkware fad; ~5% probability."
+          "DCF ~$96 (+124%) — the brand transcends the drinkware fad; ~5% probability."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 33 / Bull 17 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
-    "thesis": "YETI trades at ~$3.6B (≈$48/sh) — ~17x FCF on $1.87B revenue, net cash, a $500M buyback. Growth troughed at +2% in FY2025 (US drinkware saturation + Stanley/Owala/dupes) and re-accelerated to +8% in Q1'26 on wholesale + international; tariffs compressed margins (~16.5%->14.4% adj op) but China is now <5% of COGS. The mature DCF asks whether international (20%->25% target) + new categories (bags via Mystery Ranch, cookware) + margin recovery offset the saturating core. The finding: roughly fair — the modal growth/margin-recovery path lands near spot.",
+    "thesis": "YETI trades at ~$3.1B (≈$42.8/sh), ~15x FY25 free cash flow on $1.87B revenue. Growth troughed at +2% in FY2025 and re-accelerated to +8.4% in H1'26 on wholesale + international. In August management held its +7-8% FY26 sales outlook while reporting flat US drinkware (three trend SKUs cycling out); Q2 margins carried a one-time ~$43M tariff-refund credit. The DCF asks whether international + new categories + margin recovery offset the saturating core. Weighted fair value ~$48 sits ~13% above spot and the modal base ~18% above, with 45% of the probability below the price.",
     "historicalPrices": {
-      "xMin": -7.5,
+      "xMin": -8.0,
       "ipoMarker": "IPO Oct '18",
       "points": [
         [
-          -7.0,
-          17.0
+          -7.91,
+          18.0
         ],
         [
-          -6.0,
-          30.0
+          -7.73,
+          14.84
         ],
         [
-          -5.0,
-          80.0
+          -7.49,
+          30.25
         ],
         [
-          -4.5,
-          100.0
+          -7.24,
+          28.95
         ],
         [
-          -4.0,
-          55.0
+          -6.98,
+          28.0
         ],
         [
-          -3.0,
-          45.0
+          -6.73,
+          34.78
         ],
         [
-          -2.0,
-          38.0
+          -6.48,
+          19.52
         ],
         [
-          -1.0,
-          30.0
+          -6.23,
+          42.73
         ],
         [
-          -0.5,
+          -5.98,
+          45.32
+        ],
+        [
+          -5.72,
+          68.47
+        ],
+        [
+          -5.48,
+          72.21
+        ],
+        [
+          -5.23,
+          91.82
+        ],
+        [
+          -5.06,
+          99.34
+        ],
+        [
+          -4.98,
+          85.69
+        ],
+        [
+          -4.73,
+          82.83
+        ],
+        [
+          -4.48,
+          59.98
+        ],
+        [
+          -4.23,
+          43.27
+        ],
+        [
+          -3.98,
+          28.52
+        ],
+        [
+          -3.73,
+          41.31
+        ],
+        [
+          -3.48,
           40.0
         ],
         [
-          -0.05,
-          48.0
+          -3.23,
+          38.84
+        ],
+        [
+          -2.98,
+          48.22
+        ],
+        [
+          -2.73,
+          51.78
+        ],
+        [
+          -2.49,
+          38.55
+        ],
+        [
+          -2.23,
+          38.15
+        ],
+        [
+          -1.98,
+          41.03
+        ],
+        [
+          -1.72,
+          38.51
+        ],
+        [
+          -1.48,
+          33.1
+        ],
+        [
+          -1.23,
+          31.52
+        ],
+        [
+          -0.98,
+          33.18
+        ],
+        [
+          -0.73,
+          44.17
+        ],
+        [
+          -0.48,
+          36.59
+        ],
+        [
+          -0.31,
+          47.38
+        ],
+        [
+          -0.23,
+          49.56
+        ],
+        [
+          -0.15,
+          48.94
+        ],
+        [
+          -0.12,
+          52.68
+        ],
+        [
+          -0.112,
+          50.84
+        ],
+        [
+          -0.11,
+          45.47
+        ],
+        [
+          -0.06,
+          41.05
+        ],
+        [
+          -0.02,
+          39.39
         ]
       ]
     },
     "weightingRationale": [
       {
         "label": "Ultra Bear 15%",
-        "body": "Fad fades; dupes win; ~$23 (-52%)."
+        "body": "Fad fades; dupes win; ~$22 (-49%)."
       },
       {
         "label": "Bear 30%",
-        "body": "US saturated; tariff drag; ~$38 (-20%)."
+        "body": "US saturated; tariff drag; ~$37 (-14%)."
       },
       {
         "label": "Base 33%",
-        "body": "Intl + categories offset US; ~$52 (+8%)."
+        "body": "Intl + categories offset US; ~$50 (+18%)."
       },
       {
         "label": "Bull 17%",
-        "body": "Intl ramps; bags/cookware; ~$75 (+56%)."
+        "body": "Intl ramps; bags/cookware; ~$74 (+72%)."
       },
       {
         "label": "Ultra Bull 5%",
-        "body": "Durable multi-category global brand; ~$97 (+103%)."
+        "body": "Durable multi-category global brand; ~$96 (+124%)."
       }
     ],
     "page3": {
-      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · 52/53-week fiscal year · FY2025 (Jan'26) + Q1'26 results",
-      "sources": "Sources: YETI FY2025 results (year ended Jan 3, 2026; revenue $1.87B, FCF $212M, net cash ~$114M), Q1'26 (+8.3%). Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal. EV/FCF vs Helen of Troy (Hydro Flask) + Newell.",
+      "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · 52/53-week fiscal year · FY2025 (Jan'26) + H1'26 results",
+      "sources": "Sources: YETI FY2025 results (year ended Jan 3, 2026; revenue $1.87B, FCF $212M); H1'26 10-Q (Jul 4, 2026: cash $60M, debt $101M, 73.0M shares, $68.7M tariff-refund receivable; H1 revenue +8.4%). Bridge cash adds the refund receivable after 24.3% tax (~$52M). Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal. EV/FCF vs Helen of Troy (Hydro Flask) + Newell.",
       "chartReference": {
         "historyYears": [
           2021,
@@ -18206,7 +18400,7 @@ const MEMOS = [
           0.59,
           0.58
         ],
-        "chart6Title": "Equity build (Op EV + net cash)",
+        "chart6Title": "Equity build (Op EV − net debt)",
         "chart6Type": "matureEquityBuild"
       }
     },
@@ -18215,19 +18409,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 49.67,
-        "upsidePct": 16.1
+        "expected": 48.28,
+        "upsidePct": 12.8
       },
       "market": {
-        "marketCapBillion": 3.24,
-        "sharesOutstandingMillion": 75.7,
-        "cashBillion": 0.114,
-        "netDebtBillion": 0.0
+        "marketCapBillion": 3.12,
+        "sharesOutstandingMillion": 73.0,
+        "cashBillion": 0.06,
+        "netDebtBillion": 0.101
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.15,
-          "expectedPerShare": 23.15,
+          "expectedPerShare": 21.78,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -18265,8 +18459,8 @@ const MEMOS = [
               0.178,
               0.178
             ],
-            "cash": 0.114,
-            "net_debt": 0.0,
+            "cash": 0.112,
+            "net_debt": 0.101,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 73,
@@ -18282,8 +18476,8 @@ const MEMOS = [
             "terminal_value": 1.62,
             "pv_terminal": 0.96,
             "op_ev": 1.58,
-            "total_equity": 1.69,
-            "dcf_per_share": 23.15
+            "total_equity": 1.59,
+            "dcf_per_share": 21.78
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -18305,7 +18499,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.3,
-          "expectedPerShare": 38.22,
+          "expectedPerShare": 36.85,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -18343,8 +18537,8 @@ const MEMOS = [
               0.243,
               0.25
             ],
-            "cash": 0.114,
-            "net_debt": 0.0,
+            "cash": 0.112,
+            "net_debt": 0.101,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 73,
@@ -18360,8 +18554,8 @@ const MEMOS = [
             "terminal_value": 2.99,
             "pv_terminal": 1.85,
             "op_ev": 2.68,
-            "total_equity": 2.79,
-            "dcf_per_share": 38.22
+            "total_equity": 2.69,
+            "dcf_per_share": 36.85
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -18383,7 +18577,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.33,
-          "expectedPerShare": 51.81,
+          "expectedPerShare": 50.42,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -18421,8 +18615,8 @@ const MEMOS = [
               0.29,
               0.304
             ],
-            "cash": 0.114,
-            "net_debt": 0.0,
+            "cash": 0.112,
+            "net_debt": 0.101,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 72,
@@ -18438,8 +18632,8 @@ const MEMOS = [
             "terminal_value": 4.13,
             "pv_terminal": 2.63,
             "op_ev": 3.62,
-            "total_equity": 3.73,
-            "dcf_per_share": 51.81
+            "total_equity": 3.63,
+            "dcf_per_share": 50.42
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -18461,7 +18655,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.17,
-          "expectedPerShare": 75.07,
+          "expectedPerShare": 73.66,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -18499,8 +18693,8 @@ const MEMOS = [
               0.343,
               0.393
             ],
-            "cash": 0.114,
-            "net_debt": 0.0,
+            "cash": 0.112,
+            "net_debt": 0.101,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 71,
@@ -18516,8 +18710,8 @@ const MEMOS = [
             "terminal_value": 6.2,
             "pv_terminal": 4.03,
             "op_ev": 5.22,
-            "total_equity": 5.33,
-            "dcf_per_share": 75.07
+            "total_equity": 5.23,
+            "dcf_per_share": 73.66
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -18539,7 +18733,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 97.43,
+          "expectedPerShare": 96.0,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -18577,8 +18771,8 @@ const MEMOS = [
               0.403,
               0.468
             ],
-            "cash": 0.114,
-            "net_debt": 0.0,
+            "cash": 0.112,
+            "net_debt": 0.101,
             "raise_total": 0.0,
             "dilution_pct": 0,
             "final_shares": 70,
@@ -18594,8 +18788,8 @@ const MEMOS = [
             "terminal_value": 7.99,
             "pv_terminal": 5.32,
             "op_ev": 6.71,
-            "total_equity": 6.82,
-            "dcf_per_share": 97.43
+            "total_equity": 6.72,
+            "dcf_per_share": 96.0
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -18671,8 +18865,8 @@ const MEMOS = [
           {
             "name": "Hydro Flask (Helen of Troy)",
             "kind": "public",
-            "note": "Cleanest public peer; Home/Outdoor segment declining (~-7%).",
-            "growth": -0.05,
+            "note": "Cleanest public peer; Home & Outdoor was shrinking (~-7%), but company sales rose 8.2% in the May-2026 quarter and FY27 guidance was raised.",
+            "growth": null,
             "margin": 0.1,
             "multiple": "~9x P/E"
           },
@@ -18689,12 +18883,12 @@ const MEMOS = [
           {
             "vector": "branding",
             "who": "Owala / Stanley / dupes",
-            "falsifier": "US drinkware revenue declines while viral share rotates to challengers."
+            "falsifier": "Management-reported US drinkware sales decline year over year in two consecutive quarters after the year-end re-baseline (FY26-FY27) as viral share rotates to Owala/Stanley."
           },
           {
             "vector": "scale_economies",
             "who": "Tariffs / sourcing",
-            "falsifier": "Margins stay compressed below 14% adj op for 2+ years."
+            "falsifier": "Adjusted operating margin, excluding one-time tariff refunds, stays below 14% in both FY26 and FY27."
           },
           {
             "vector": "counter_positioning",
@@ -18702,7 +18896,7 @@ const MEMOS = [
             "falsifier": "Sustained price competition forces YETI off its full-price model."
           }
         ],
-        "takeaway": "YETI's brand Power is durable in coolers/outdoor gear but genuinely contestable in its fad-cyclical drinkware core (~58% of sales), where viral heat rotates (Stanley->Owala) and dupes arbitrage the premium. International (toward 25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~17x FCF the modal growth/margin-recovery path lands near spot — roughly fair, with the sign hinging on whether the +2% FY25 was a trough (Q1'26 +8%) or a new normal."
+        "takeaway": "YETI's brand Power is durable in coolers/outdoor gear but genuinely contestable in its fad-cyclical drinkware core (~58% of sales), where viral heat rotates (Stanley->Owala) and dupes arbitrage the premium. International (toward 25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~15x FY25 FCF the modal path sits ~18% above spot; the sign hinges on whether growth holds ~5% a year after FY26 (the low end of management's FY26-30 framework) as US drinkware re-baselines."
       },
       "pocd": {
         "people": {
@@ -18710,60 +18904,61 @@ const MEMOS = [
           "founderLed": false,
           "tenureYears": 10,
           "insiderOwnershipPct": 18.0,
-          "capitalAllocation": "No dividend; capital returned via buybacks — ~$500M / ~13M shares repurchased over FY2024-FY2025 (~14% of shares out), incl. 8.2M shares / ~$298M in FY2025; the board re-loaded the authorization to $500M available as of May 2026. M&A is small/tuck-in and cash-funded: Mystery Ranch (bags) + Butter Pat (cast-iron cookware), ~$48.5M total cash (Q1 2024) — new-category capability, not transformational. Net cash (~$114M); capex funds capacity and new categories.",
+          "capitalAllocation": "No dividend; capital returned via buybacks — ~$500M / ~13M shares repurchased over FY2024-FY2025 (~14% of shares out), incl. 8.2M shares / ~$298M in FY2025; the board re-loaded the authorization to $500M (May 2026), then repurchased 2.8M shares at a $46.47 average (~$131M) in Q2 FY26, leaving $370M. M&A is small/tuck-in and cash-funded: Mystery Ranch (bags) + Butter Pat (cast-iron cookware), ~$48.5M total cash (Q1 2024) — new-category capability, not transformational. The Q2 buyback, funded partly by a net $30M revolver draw, took the balance sheet from ~$114M net cash at FY-end to ~$41M net debt at Jul 4 2026; capex funds capacity and new categories.",
           "incentiveAlignment": "Reintjes FY2024 total ~$7.8M ($1.03M salary · ~$1.67M bonus · ~$5.12M stock) — ~85%+ at-risk/equity. LTI is 75% performance RSUs / 25% time RSUs; the PBRSUs vest on 3-yr cumulative free-cash-flow with a relative-TSR modifier (90%-of-target threshold, 200% cap, 3-yr cliff). Pay-for-performance, FCF + TSR-linked.",
           "governanceFlags": [
             "single-class — one share, one vote (no super-voting / dual-class)",
-            "independent Chair (Robert Shearer) separate from the CEO; board of 10, 9 independent",
+            "combined Chair & CEO since Aug 7 2026 (Reintjes named Chair), mitigated by a Lead Independent Director (Robert Shearer, the prior independent Chair); board of 10, 9 independent",
             "classified / staggered board (three classes, three-year terms)",
             "founders no longer on the board — Roy Seiders resigned as a director eff. May 2021 (no disagreement); Ryan Seiders not a director",
             "founders retain large economic stakes (Ryan ~15%, Roy ~2%); Cortec Group (PE, majority 2012) fully exited; now institutionally held"
           ],
           "keyPersonRisk": "low",
-          "score": 4,
-          "takeaway": "Professionalized, single-class, founder-aligned: a 10-yr hired CEO on FCF + relative-TSR pay, an independent chair, a clean one-share-one-vote register with no controller and PE fully exited, disciplined ~$500M buybacks and only small cash-funded tuck-ins — the demerits are a classified board and that the deep brand expertise still sits with the now-absent founders."
+          "score": 3,
+          "takeaway": "Professionalized and single-class: a 10-yr hired CEO on FCF + relative-TSR pay, a clean one-share-one-vote register with no controller and PE fully exited, buybacks (~$630M since FY2024) and only small cash-funded tuck-ins. Scored 3, not 4: since Aug 2026 the CEO also chairs the board, and although a Lead Independent Director mitigates that, it now stacks on a classified board; the deep brand expertise still sits with the now-absent founders."
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +4% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the ~+13% finding; the modal base ~18% above spot, 45% of the probability below it), then position-sized."
       },
       "appendix": {
         "pushback": [
           {
-            "label": "Net cash, ~$212M FCF, $500M buyback.",
-            "body": "Debt-light, cash-generative, shrinking the float at ~17x FCF — capital return is real."
+            "label": "US drinkware is flat.",
+            "body": "Q2 US drinkware was flat on a ~600bp drag from three trend SKUs; the risk is that the year-end 're-baseline' becomes the run-rate in a ~58%-of-sales category."
           },
           {
-            "label": "China sourcing de-risked.",
-            "body": "China now <5% of COGS (Vietnam/Philippines/Mexico) — the tariff drag (~$0.35/sh) is largely an annualization headwind, not structural."
+            "label": "Q2's margin beat was one-time.",
+            "body": "Gross margin of 66.7% (vs 57.8%) includes a ~$43M one-time tariff-refund credit to cost of goods; excluding it, gross margin was roughly flat."
           },
           {
-            "label": "International is the engine.",
-            "body": "~20% of revenue growing mid-teens, Japan greenfield (2025), 25%-by-2027 target — a runway the US-saturation view misses."
+            "label": "SG&A is outrunning sales.",
+            "body": "Q2 SG&A rose 17.1% to 47.3% of sales (from 43.9%) on 8.5% sales growth; margin recovery needs that spend to pay off."
           },
           {
-            "label": "New categories extend the brand.",
-            "body": "Mystery Ranch bags ($9B+ premium-bag TAM) + Butter Pat cookware diversify beyond fad-cyclical drinkware."
+            "label": "Cash is tighter than it looks.",
+            "body": "A ~$131M Q2 buyback took YETI to ~$41M net debt; supplier-finance obligations rose to $90M from $54M in H1, flattering operating cash flow."
           },
           {
-            "label": "Q1'26 re-accelerated to +8%.",
-            "body": "Wholesale +19% (best in 3 years) + international suggest the +2% FY25 was a trough, not a new normal."
+            "label": "H2 must beat H1 to hit the guide.",
+            "body": "FY25's Q4 had 14 weeks ($583.7M); +7-8% for FY26 needs ~10-12% like-week H2 growth, above H1's +8.4%."
           }
         ],
         "triggers": [
           {
             "label": "Bull validation",
-            "body": "international passes 25% of revenue · bags/cookware become reported needle-movers · adj op margin recovers above 16% · wholesale rebound sustains"
+            "body": "international passes 25% of revenue · bags/cookware become reported needle-movers · adj op margin, ex one-time tariff refunds, recovers above 16% · FY26-30 FCF tracks above the $1.4B top of management's framework"
           },
           {
             "label": "Bear validation",
-            "body": "US drinkware stays soft · Owala/Stanley/dupes keep taking share · margins stay tariff-compressed · new categories stall"
+            "body": "US drinkware declines YoY in two straight quarters after the year-end re-baseline · Owala/Stanley/dupes keep taking share · FY26-30 FCF tracks below the $1.2B framework floor · new categories stall"
           },
           {
             "label": "Reframe needed",
             "body": "if drinkware brand heat structurally rotates away (the fad ends), re-rate the core toward a commodity-housewares multiple"
           }
-        ]
+        ],
+        "pushbackSide": "bear"
       },
       "glossary": [
         {
@@ -18788,8 +18983,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "005",
-        "footerTimestamp": "2026-09-22_13-17",
+        "footerVersion": "006",
+        "footerTimestamp": "2026-09-26_04-14",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

@@ -5,14 +5,14 @@ dcf_type: mature_company
 date: '2026-09-22'
 spot: 42.79
 market:
-  market_cap_billion: 3.24
-  shares_outstanding_million: 75.7
-  cash_billion: 0.114
-  net_debt_billion: 0.0
+  market_cap_billion: 3.12
+  shares_outstanding_million: 73.0
+  cash_billion: 0.06
+  net_debt_billion: 0.101
   extras:
-  - ~$114M net cash; ~76M shares; $500M buyback authorization (no dividend)
-  - Revenue $1.87B FY25 (+2% trough; Q1'26 +8%); ~14% adj op margin (tariff-compressed), ~$212M FCF
-  - Stanley/Owala/dupe pressure in US drinkware; China <5% of COGS post de-risking
+  - ~$41M net debt after a ~$131M Q2 buyback; $370M authorization left (no dividend)
+  - Revenue $1.87B FY25 (+2% trough), H1'26 +8.4%; +7-8% FY26 sales outlook held Aug + Sep '26; ~$212M FCF
+  - US drinkware flat on three trend SKUs; Stanley/Owala/dupes; China <5% of COGS
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: High
@@ -21,11 +21,11 @@ taxonomy:
   primary_theme: premium-consumer-brands
 central_question: Is YETI a durable premium brand re-accelerating via international + new categories — or a saturated, fad-cyclical
   US drinkware brand whose +2% trough caps the multiple?
-thesis: 'YETI trades at ~$3.6B (≈$48/sh) — ~17x FCF on $1.87B revenue, net cash, a $500M buyback. Growth troughed at +2% in
-  FY2025 (US drinkware saturation + Stanley/Owala/dupes) and re-accelerated to +8% in Q1''26 on wholesale + international;
-  tariffs compressed margins (~16.5%->14.4% adj op) but China is now <5% of COGS. The mature DCF asks whether international
-  (20%->25% target) + new categories (bags via Mystery Ranch, cookware) + margin recovery offset the saturating core. The
-  finding: roughly fair — the modal growth/margin-recovery path lands near spot.'
+thesis: 'YETI trades at ~$3.1B (≈$42.8/sh), ~15x FY25 free cash flow on $1.87B revenue. Growth troughed at +2% in
+  FY2025 and re-accelerated to +8.4% in H1''26 on wholesale + international. In August management held its +7-8% FY26
+  sales outlook while reporting flat US drinkware (three trend SKUs cycling out); Q2 margins carried a one-time ~$43M
+  tariff-refund credit. The DCF asks whether international + new categories + margin recovery offset the saturating core.
+  Weighted fair value ~$48 sits ~13% above spot and the modal base ~18% above, with 45% of the probability below the price.'
 chart_reference:
   history_years:
   - 2021
@@ -66,24 +66,25 @@ page3_chart_config:
   - 0.6
   - 0.59
   - 0.58
-  chart6_title: Equity build (Op EV + net cash)
+  chart6_title: Equity build (Op EV − net debt)
   chart6_type: matureEquityBuild
 page3:
-  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  52/53-week fiscal year  ·  FY2025 (Jan'26) + Q1'26 results
-  sources: 'Sources: YETI FY2025 results (year ended Jan 3, 2026; revenue $1.87B, FCF $212M, net cash ~$114M), Q1''26 (+8.3%).
-    Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal. EV/FCF vs Helen of Troy (Hydro Flask)
-    + Newell.'
+  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  52/53-week fiscal year  ·  FY2025 (Jan'26) + H1'26 results
+  sources: 'Sources: YETI FY2025 results (year ended Jan 3, 2026; revenue $1.87B, FCF $212M); H1''26 10-Q (Jul 4, 2026:
+    cash $60M, debt $101M, 73.0M shares, $68.7M tariff-refund receivable; H1 revenue +8.4%). Bridge cash adds the refund
+    receivable after 24.3% tax (~$52M). Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin; Gordon terminal.
+    EV/FCF vs Helen of Troy (Hydro Flask) + Newell.'
 scenarios:
   ultra_bear:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.15
-    expected_per_share: 23.15
+    expected_per_share: 21.78
     headline: Fad fades; dupes win; US drinkware shrinks.
     narrative:
     - The viral tumbler trend rotates away (Stanley->Owala->next), RTIC/private-label dupes arbitrage the premium, and the
       international/category bets don't offset a shrinking US core. Revenue declines; margins stay tariff-pressured.
-    - DCF ~$23 (-52%) — a fad-exposed brand losing its core earns a distressed multiple.
+    - DCF ~$22 (-49%) — a fad-exposed brand losing its core earns a distressed multiple.
     probability_rationale: 'The fad-cyclical bear: drinkware is ~58% of sales and brand heat rotates fast. 15% weight on the
       trend turning against YETI.'
     dcf_metrics:
@@ -116,8 +117,8 @@ scenarios:
       - 0.16
       - 0.178
       - 0.178
-      cash: 0.114
-      net_debt: 0.0
+      cash: 0.112
+      net_debt: 0.101
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 73
@@ -132,8 +133,8 @@ scenarios:
       terminal_value: 1.62
       pv_terminal: 0.96
       op_ev: 1.58
-      total_equity: 1.69
-      dcf_per_share: 23.15
+      total_equity: 1.59
+      dcf_per_share: 21.78
     chart_data:
       ev_rev_multiple:
       - 1.0
@@ -151,12 +152,12 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.3
-    expected_per_share: 38.22
+    expected_per_share: 36.85
     headline: US saturated; modest; tariff drag lingers.
     narrative:
     - The US core stays saturated and tariffs keep margins below peak; international + categories grow but only enough to
       keep the total roughly flat-to-low.
-    - DCF ~$38 (-20%) — a dominant-but-stalled brand at ~11x FCF, below today's price.
+    - DCF ~$37 (-14%) — a dominant-but-stalled brand at ~11x FCF, below today's price.
     probability_rationale: US drinkware stays saturated and the trend doesn't reverse. 30% weight — the plausible 'stalls'
       path given the +2% trough.
     dcf_metrics:
@@ -189,8 +190,8 @@ scenarios:
       - 0.216
       - 0.243
       - 0.25
-      cash: 0.114
-      net_debt: 0.0
+      cash: 0.112
+      net_debt: 0.101
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 73
@@ -205,8 +206,8 @@ scenarios:
       terminal_value: 2.99
       pv_terminal: 1.85
       op_ev: 2.68
-      total_equity: 2.79
-      dcf_per_share: 38.22
+      total_equity: 2.69
+      dcf_per_share: 36.85
     chart_data:
       ev_rev_multiple:
       - 1.4
@@ -224,14 +225,14 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.33
-    expected_per_share: 51.81
+    expected_per_share: 50.42
     headline: International + categories offset US; margin recovers.
     narrative:
     - 'The modal path: international (toward 25% of revenue) + bags/cookware offset a stabilizing US core, and margins recover
       as tariffs annualize and China-sourcing exits. Revenue compounds ~5%.'
-    - DCF ~$52 (+8%) — roughly fair; the growth/margin-recovery the Q1'26 +8% hints at, priced about right.
-    probability_rationale: Requires international + new categories + margin recovery, consistent with Q1'26's +8% and China
-      <5% of COGS. 33% as the central, near-spot outcome.
+    - DCF ~$50 (+18%) — modestly above today's price; the growth/margin recovery H1'26's +8.4% hints at.
+    probability_rationale: Requires international + new categories + margin recovery, consistent with H1'26's +8.4% and China
+      <5% of COGS. 33% as the central outcome.
     dcf_metrics:
       cagr_5y: 4.6
       wacc: 0.095
@@ -262,8 +263,8 @@ scenarios:
       - 0.255
       - 0.29
       - 0.304
-      cash: 0.114
-      net_debt: 0.0
+      cash: 0.112
+      net_debt: 0.101
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 72
@@ -278,8 +279,8 @@ scenarios:
       terminal_value: 4.13
       pv_terminal: 2.63
       op_ev: 3.62
-      total_equity: 3.73
-      dcf_per_share: 51.81
+      total_equity: 3.63
+      dcf_per_share: 50.42
     chart_data:
       ev_rev_multiple:
       - 2.0
@@ -297,12 +298,12 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.17
-    expected_per_share: 75.07
+    expected_per_share: 73.66
     headline: International ramps; bags/cookware traction.
     narrative:
     - International scales past 25%, Mystery Ranch bags + cookware become real categories, and margins recover toward mid-teens
       — the brand proves durable beyond fad-cyclical drinkware.
-    - DCF ~$75 (+56%) — category + geographic diversification re-rates the brand.
+    - DCF ~$74 (+72%) — category + geographic diversification re-rates the brand.
     probability_rationale: International + new categories deliver and margins recover. ~17%; the diversification strategy
       is credible but unproven at scale.
     dcf_metrics:
@@ -335,8 +336,8 @@ scenarios:
       - 0.32
       - 0.343
       - 0.393
-      cash: 0.114
-      net_debt: 0.0
+      cash: 0.112
+      net_debt: 0.101
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 71
@@ -351,8 +352,8 @@ scenarios:
       terminal_value: 6.2
       pv_terminal: 4.03
       op_ev: 5.22
-      total_equity: 5.33
-      dcf_per_share: 75.07
+      total_equity: 5.23
+      dcf_per_share: 73.66
     chart_data:
       ev_rev_multiple:
       - 2.6
@@ -370,12 +371,12 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 97.43
+    expected_per_share: 96.0
     headline: Durable multi-category global brand.
     narrative:
     - YETI becomes a durable multi-category premium-outdoor brand (drinkware + coolers + bags + cookware) with international
       as a second engine, compounding ~10% at recovered margins.
-    - DCF ~$97 (+103%) — the brand transcends the drinkware fad; ~5% probability.
+    - DCF ~$96 (+124%) — the brand transcends the drinkware fad; ~5% probability.
     probability_rationale: Full category + geographic diversification works and the brand de-fads. ~5%, the asymmetric upside.
     dcf_metrics:
       cagr_5y: 9.4
@@ -407,8 +408,8 @@ scenarios:
       - 0.366
       - 0.403
       - 0.468
-      cash: 0.114
-      net_debt: 0.0
+      cash: 0.112
+      net_debt: 0.101
       raise_total: 0.0
       dilution_pct: 0
       final_shares: 70
@@ -423,8 +424,8 @@ scenarios:
       terminal_value: 7.99
       pv_terminal: 5.32
       op_ev: 6.71
-      total_equity: 6.82
-      dcf_per_share: 97.43
+      total_equity: 6.72
+      dcf_per_share: 96.0
     chart_data:
       ev_rev_multiple:
       - 3.2
@@ -440,60 +441,82 @@ scenarios:
       - 17.0
 historical_prices:
   ipo_marker: IPO Oct '18
-  x_min: -7.5
-  points:
-  - - -7.0
-    - 17.0
-  - - -6.0
-    - 30.0
-  - - -5.0
-    - 80.0
-  - - -4.5
-    - 100.0
-  - - -4.0
-    - 55.0
-  - - -3.0
-    - 45.0
-  - - -2.0
-    - 38.0
-  - - -1.0
-    - 30.0
-  - - -0.5
-    - 40.0
-  - - -0.05
-    - 48.0
+  x_min: -8.0
+  points:   # Yahoo chart API: quarter-end closes + recent daily anchors; x = years before the 2026-09-22 as-of
+  - [-7.91, 18.00]   # IPO price, Oct 25 2018
+  - [-7.73, 14.84]   # 2018-12-31
+  - [-7.49, 30.25]   # 2019-03-29
+  - [-7.24, 28.95]   # 2019-06-28
+  - [-6.98, 28.00]   # 2019-09-30
+  - [-6.73, 34.78]   # 2019-12-31
+  - [-6.48, 19.52]   # 2020-03-31
+  - [-6.23, 42.73]   # 2020-06-30
+  - [-5.98, 45.32]   # 2020-09-30
+  - [-5.72, 68.47]   # 2020-12-31
+  - [-5.48, 72.21]   # 2021-03-31
+  - [-5.23, 91.82]   # 2021-06-30
+  - [-5.06, 99.34]   # 2021-08-31 (monthly-close peak)
+  - [-4.98, 85.69]   # 2021-09-30
+  - [-4.73, 82.83]   # 2021-12-31
+  - [-4.48, 59.98]   # 2022-03-31
+  - [-4.23, 43.27]   # 2022-06-30
+  - [-3.98, 28.52]   # 2022-09-30
+  - [-3.73, 41.31]   # 2022-12-30
+  - [-3.48, 40.00]   # 2023-03-31
+  - [-3.23, 38.84]   # 2023-06-30
+  - [-2.98, 48.22]   # 2023-09-29
+  - [-2.73, 51.78]   # 2023-12-29
+  - [-2.49, 38.55]   # 2024-03-28
+  - [-2.23, 38.15]   # 2024-06-28
+  - [-1.98, 41.03]   # 2024-09-30
+  - [-1.72, 38.51]   # 2024-12-31
+  - [-1.48, 33.10]   # 2025-03-31
+  - [-1.23, 31.52]   # 2025-06-30
+  - [-0.98, 33.18]   # 2025-09-30
+  - [-0.73, 44.17]   # 2025-12-31
+  - [-0.48, 36.59]   # 2026-03-31
+  - [-0.31, 47.38]   # 2026-06-01
+  - [-0.23, 49.56]   # 2026-06-30
+  - [-0.15, 48.94]   # 2026-07-31
+  - [-0.12, 52.68]   # 2026-08-10 (52-wk closing high)
+  - [-0.112, 50.84]   # 2026-08-12 (pre-Q2 print)
+  - [-0.110, 45.47]   # 2026-08-13 (Q2 print)
+  - [-0.06, 41.05]   # 2026-08-31
+  - [-0.02, 39.39]   # 2026-09-15 (Sep low)
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: Fad fades; dupes win; ~$23 (-52%).
+  body: Fad fades; dupes win; ~$22 (-49%).
 - label: Bear 30%
-  body: US saturated; tariff drag; ~$38 (-20%).
+  body: US saturated; tariff drag; ~$37 (-14%).
 - label: Base 33%
-  body: Intl + categories offset US; ~$52 (+8%).
+  body: Intl + categories offset US; ~$50 (+18%).
 - label: Bull 17%
-  body: Intl ramps; bags/cookware; ~$75 (+56%).
+  body: Intl ramps; bags/cookware; ~$74 (+72%).
 - label: Ultra Bull 5%
-  body: Durable multi-category global brand; ~$97 (+103%).
+  body: Durable multi-category global brand; ~$96 (+124%).
 appendix:
+  pushback_side: bear
   pushback:
-  - label: Net cash, ~$212M FCF, $500M buyback.
-    body: Debt-light, cash-generative, shrinking the float at ~17x FCF — capital return is real.
-  - label: China sourcing de-risked.
-    body: China now <5% of COGS (Vietnam/Philippines/Mexico) — the tariff drag (~$0.35/sh) is largely an annualization headwind,
-      not structural.
-  - label: International is the engine.
-    body: ~20% of revenue growing mid-teens, Japan greenfield (2025), 25%-by-2027 target — a runway the US-saturation view
-      misses.
-  - label: New categories extend the brand.
-    body: Mystery Ranch bags ($9B+ premium-bag TAM) + Butter Pat cookware diversify beyond fad-cyclical drinkware.
-  - label: Q1'26 re-accelerated to +8%.
-    body: Wholesale +19% (best in 3 years) + international suggest the +2% FY25 was a trough, not a new normal.
+  - label: US drinkware is flat.
+    body: Q2 US drinkware was flat on a ~600bp drag from three trend SKUs; the risk is that the year-end 're-baseline' becomes
+      the run-rate in a ~58%-of-sales category.
+  - label: Q2's margin beat was one-time.
+    body: Gross margin of 66.7% (vs 57.8%) includes a ~$43M one-time tariff-refund credit to cost of goods; excluding it, gross
+      margin was roughly flat.
+  - label: SG&A is outrunning sales.
+    body: Q2 SG&A rose 17.1% to 47.3% of sales (from 43.9%) on 8.5% sales growth; margin recovery needs that spend to pay off.
+  - label: Cash is tighter than it looks.
+    body: A ~$131M Q2 buyback took YETI to ~$41M net debt; supplier-finance obligations rose to $90M from $54M in H1, flattering
+      operating cash flow.
+  - label: H2 must beat H1 to hit the guide.
+    body: FY25's Q4 had 14 weeks ($583.7M); +7-8% for FY26 needs ~10-12% like-week H2 growth, above H1's +8.4%.
   triggers:
   - label: Bull validation
-    body: international passes 25% of revenue  ·  bags/cookware become reported needle-movers  ·  adj op margin recovers above
-      16%  ·  wholesale rebound sustains
+    body: international passes 25% of revenue  ·  bags/cookware become reported needle-movers  ·  adj op margin, ex one-time
+      tariff refunds, recovers above 16%  ·  FY26-30 FCF tracks above the $1.4B top of management's framework
   - label: Bear validation
-    body: US drinkware stays soft  ·  Owala/Stanley/dupes keep taking share  ·  margins stay tariff-compressed  ·  new categories
-      stall
+    body: US drinkware declines YoY in two straight quarters after the year-end re-baseline  ·  Owala/Stanley/dupes keep taking
+      share  ·  FY26-30 FCF tracks below the $1.2B framework floor  ·  new categories stall
   - label: Reframe needed
     body: if drinkware brand heat structurally rotates away (the fad ends), re-rate the core toward a commodity-housewares
       multiple
@@ -553,8 +576,9 @@ competitive:
     multiple: private
   - name: Hydro Flask (Helen of Troy)
     kind: public
-    note: Cleanest public peer; Home/Outdoor segment declining (~-7%).
-    growth: -0.05
+    note: Cleanest public peer; Home & Outdoor was shrinking (~-7%), but company sales rose 8.2% in the May-2026 quarter and
+      FY27 guidance was raised.
+    growth: null
     margin: 0.1
     multiple: ~9x P/E
   - name: RTIC / private label
@@ -566,18 +590,19 @@ competitive:
   threats:
   - vector: branding
     who: Owala / Stanley / dupes
-    falsifier: US drinkware revenue declines while viral share rotates to challengers.
+    falsifier: Management-reported US drinkware sales decline year over year in two consecutive quarters after the year-end
+      re-baseline (FY26-FY27) as viral share rotates to Owala/Stanley.
   - vector: scale_economies
     who: Tariffs / sourcing
-    falsifier: Margins stay compressed below 14% adj op for 2+ years.
+    falsifier: Adjusted operating margin, excluding one-time tariff refunds, stays below 14% in both FY26 and FY27.
   - vector: counter_positioning
     who: Private label / RTIC
     falsifier: Sustained price competition forces YETI off its full-price model.
   takeaway: YETI's brand Power is durable in coolers/outdoor gear but genuinely contestable in its fad-cyclical drinkware
     core (~58% of sales), where viral heat rotates (Stanley->Owala) and dupes arbitrage the premium. International (toward
-    25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~17x FCF
-    the modal growth/margin-recovery path lands near spot — roughly fair, with the sign hinging on whether the +2% FY25 was
-    a trough (Q1'26 +8%) or a new normal.
+    25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~15x FY25
+    FCF the modal path sits ~18% above spot; the sign hinges on whether growth holds ~5% a year after FY26 (the low end of
+    management's FY26-30 framework) as US drinkware re-baselines.
 pocd:
   people:
     ceo: 'Matt Reintjes'
@@ -586,36 +611,42 @@ pocd:
     insider_ownership_pct: 18.0
     capital_allocation: 'No dividend; capital returned via buybacks — ~$500M / ~13M shares repurchased over
       FY2024-FY2025 (~14% of shares out), incl. 8.2M shares / ~$298M in FY2025; the board re-loaded the
-      authorization to $500M available as of May 2026. M&A is small/tuck-in and cash-funded: Mystery Ranch (bags)
+      authorization to $500M (May 2026), then repurchased 2.8M shares at a $46.47 average (~$131M) in Q2 FY26,
+      leaving $370M. M&A is small/tuck-in and cash-funded: Mystery Ranch (bags)
       + Butter Pat (cast-iron cookware), ~$48.5M total cash (Q1 2024) — new-category capability, not
-      transformational. Net cash (~$114M); capex funds capacity and new categories.'
+      transformational. The Q2 buyback, funded partly by a net $30M revolver draw, took the balance sheet from ~$114M
+      net cash at FY-end to ~$41M net debt at Jul 4 2026; capex funds capacity and new categories.'
     incentive_alignment: 'Reintjes FY2024 total ~$7.8M ($1.03M salary · ~$1.67M bonus · ~$5.12M stock) —
       ~85%+ at-risk/equity. LTI is 75% performance RSUs / 25% time RSUs; the PBRSUs vest on 3-yr cumulative
       free-cash-flow with a relative-TSR modifier (90%-of-target threshold, 200% cap, 3-yr cliff).
       Pay-for-performance, FCF + TSR-linked.'
     governance_flags:
       - 'single-class — one share, one vote (no super-voting / dual-class)'
-      - 'independent Chair (Robert Shearer) separate from the CEO; board of 10, 9 independent'
+      - 'combined Chair & CEO since Aug 7 2026 (Reintjes named Chair), mitigated by a Lead Independent Director (Robert Shearer, the prior independent Chair); board of 10, 9 independent'
       - 'classified / staggered board (three classes, three-year terms)'
       - 'founders no longer on the board — Roy Seiders resigned as a director eff. May 2021 (no disagreement); Ryan Seiders not a director'
       - 'founders retain large economic stakes (Ryan ~15%, Roy ~2%); Cortec Group (PE, majority 2012) fully exited; now institutionally held'
     key_person_risk: low
-    score: 4
-    takeaway: 'Professionalized, single-class, founder-aligned: a 10-yr hired CEO on FCF + relative-TSR pay, an
-      independent chair, a clean one-share-one-vote register with no controller and PE fully exited, disciplined
-      ~$500M buybacks and only small cash-funded tuck-ins — the demerits are a classified board and that the deep
-      brand expertise still sits with the now-absent founders.'
+    score: 3
+    takeaway: 'Professionalized and single-class: a 10-yr hired CEO on FCF + relative-TSR pay, a clean one-share-one-vote
+      register with no controller and PE fully exited, buybacks (~$630M since FY2024) and only small cash-funded tuck-ins.
+      Scored 3, not 4: since Aug 2026 the CEO also chairs the board, and although a Lead Independent Director mitigates that,
+      it now stacks on a classified board; the deep brand expertise still sits with the now-absent founders.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +4% finding), then position-sized.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the ~+13% finding; the modal base ~18% above spot, 45% of the probability below it), then position-sized.'
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-17"
+  footer_version: "006"
+  footer_timestamp: "2026-09-26_04-14"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-17"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-26_04-14"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-17"
+    asOfDate: "2026-09-22"
+    spotPrice: 42.79
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

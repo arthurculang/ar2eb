@@ -8,19 +8,19 @@ rule: 'weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_ind
 weights:
   lulu: 0.15
   naut: 0.15
-  uber: 0.1119
+  uber: 0.112
   hhh: 0.0831
-  coin: 0.0733
+  coin: 0.0714
   joby: 0.0596
-  zm: 0.0575
+  zm: 0.0576
   crox: 0.0532
   aur: 0.0469
   cart: 0.0406
-  yeti: 0.0381
+  abnb: 0.0308
+  yeti: 0.0305
   serv: 0.0299
-  abnb: 0.0214
   beam: 0.0186
-  isrg: 0.0169
+  isrg: 0.017
   adsk: 0.013
   you: 0.0129
   algn: 0.0057
@@ -29,7 +29,7 @@ weights:
   pacb: 0.0027
   prme: 0.0021
   tost: 0.0021
-  cash: 0.0002
+  cash: -0.0
 excluded_private:
 - anthropic
 - blgff
@@ -74,7 +74,7 @@ findings:
     ai_zone: green
     ai_mult: 1.25
     raw_score: 1.1796
-    weight: 0.1119
+    weight: 0.112
   hhh:
     spot: 65.6
     weighted_dcf: 94.31
@@ -90,17 +90,17 @@ findings:
     weight: 0.0831
   coin:
     spot: 201.05
-    weighted_dcf: 271.62
-    upside: 0.351
+    weighted_dcf: 269.78
+    upside: 0.3419
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 6.56
+    ai: 6.63
     ai_zone: yellow
     ai_mult: 1.1
-    raw_score: 0.7723
-    weight: 0.0733
+    raw_score: 0.7521
+    weight: 0.0714
   joby:
     spot: 6.41
     weighted_dcf: 8.42
@@ -126,7 +126,7 @@ findings:
     ai_zone: green
     ai_mult: 1.25
     raw_score: 0.6063
-    weight: 0.0575
+    weight: 0.0576
   crox:
     spot: 123.69
     weighted_dcf: 193.07
@@ -166,19 +166,32 @@ findings:
     ai_mult: 1.0
     raw_score: 0.4278
     weight: 0.0406
-  yeti:
-    spot: 42.79
-    weighted_dcf: 49.67
-    upside: 0.1608
+  abnb:
+    spot: 166.84
+    weighted_dcf: 191.44
+    upside: 0.1474
     tier: High
     conviction_mult: 2.0
     watchlist: fcf-plus-plus-growth
     category_mult: 1.0
-    ai: 2.7
+    ai: 8.79
+    ai_zone: yellow
+    ai_mult: 1.1
+    raw_score: 0.3244
+    weight: 0.0308
+  yeti:
+    spot: 42.79
+    weighted_dcf: 48.28
+    upside: 0.1284
+    tier: High
+    conviction_mult: 2.0
+    watchlist: fcf-plus-plus-growth
+    category_mult: 1.0
+    ai: 2.73
     ai_zone: green
     ai_mult: 1.25
-    raw_score: 0.4019
-    weight: 0.0381
+    raw_score: 0.3209
+    weight: 0.0305
   serv:
     spot: 4.44
     weighted_dcf: 6.77
@@ -192,19 +205,6 @@ findings:
     ai_mult: 1.0
     raw_score: 0.3149
     weight: 0.0299
-  abnb:
-    spot: 166.84
-    weighted_dcf: 183.95
-    upside: 0.1026
-    tier: High
-    conviction_mult: 2.0
-    watchlist: fcf-plus-plus-growth
-    category_mult: 1.0
-    ai: 8.79
-    ai_zone: yellow
-    ai_mult: 1.1
-    raw_score: 0.2256
-    weight: 0.0214
   beam:
     spot: 25.26
     weighted_dcf: 39.38
@@ -230,7 +230,7 @@ findings:
     ai_zone: red
     ai_mult: 0.7
     raw_score: 0.1786
-    weight: 0.0169
+    weight: 0.017
   adsk:
     spot: 218.85
     weighted_dcf: 304.79

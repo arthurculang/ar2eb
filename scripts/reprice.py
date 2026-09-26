@@ -25,7 +25,12 @@ Per public ticker (dcf_type != private_prevaluation):
 Safety: ALL prices are fetched (with retries) before any file is modified;
 a single failed fetch aborts the whole run unless --partial-ok, so the book
 can't end up half-repriced (same discipline as track_performance's refusal
-to write a partial perf row).
+to write a partial perf row). SPLIT GUARD: the same fetch returns Yahoo's
+split events since each memo's own `date:`; a split counts as a failure,
+because holding shares constant across a split would silently corrupt market
+cap and every per-share comparison (a 1:10 reverse split — the usual cure for
+a sub-$1 Nasdaq listing — would read as a 10x rally against a stale share
+count). Rescale shares and per-share fields first, then re-run.
 
 Usage:
     python scripts/reprice.py                     # full book
@@ -68,14 +73,21 @@ def public_tickers() -> list[str]:
     return out
 
 
-def fetch_price(ticker: str) -> tuple[float, str]:
-    """(latest price, as-of date str) from Yahoo's keyless v8 chart endpoint.
+def memo_date(ticker: str) -> str:
+    """The memo's current top-level `date:` (its as-of date), ISO string."""
+    return str(yaml.safe_load((DATA / f"{ticker}.yml").read_text())["date"])
+
+
+def fetch_price(ticker: str, since: str) -> tuple[float, str, list[tuple[str, str]]]:
+    """(latest price, as-of date str, splits since `since`) from Yahoo's keyless
+    v8 chart endpoint, in ONE request (events=split over the memo-date window).
 
     regularMarketPrice is the live/latest quote; the last daily close is the
     fallback. Retries with exponential backoff — Yahoo throttles bursts.
     """
+    p1 = int(dt.datetime.fromisoformat(since).replace(tzinfo=dt.timezone.utc).timestamp())
     url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ticker.upper()}"
-           f"?range=5d&interval=1d")
+           f"?period1={p1}&period2=9999999999&interval=1d&events=split")
     last_err: Exception | None = None
     for attempt in range(RETRIES):
         try:
@@ -98,7 +110,11 @@ def fetch_price(ticker: str) -> tuple[float, str]:
                 ts, px = pairs[-1]
             asof = (dt.datetime.fromtimestamp(ts, dt.timezone.utc).date().isoformat()
                     if ts else dt.datetime.now(dt.timezone.utc).date().isoformat())
-            return float(px), asof
+            splits = sorted(
+                (dt.datetime.fromtimestamp(ev["date"], dt.timezone.utc).date().isoformat(),
+                 ev.get("splitRatio") or f'{ev["numerator"]}:{ev["denominator"]}')
+                for ev in (res.get("events", {}).get("splits") or {}).values())
+            return float(px), asof, [sp for sp in splits if sp[0] > since]
         except Exception as e:  # noqa: BLE001 — retry any transport/parse error
             last_err = e
             if attempt < RETRIES - 1:
@@ -176,8 +192,14 @@ def main() -> int:
     failed: list[str] = []
     for t in tickers:
         try:
-            prices[t] = fetch_price(t)
-            print(f"  {t.upper():6s} ${prices[t][0]:>10.2f}  (as of {prices[t][1]})")
+            px, asof, splits = fetch_price(t, memo_date(t))
+            if splits:
+                raise RuntimeError(
+                    f"{t}: split(s) since memo date {memo_date(t)}: {splits} — rescale "
+                    f"shares and per-share fields before repricing (holding shares "
+                    f"constant across a split corrupts mcap and every per-share value)")
+            prices[t] = (px, asof)
+            print(f"  {t.upper():6s} ${px:>10.2f}  (as of {asof})")
         except RuntimeError as e:
             print(f"  {t.upper():6s} FETCH FAILED — {e}", file=sys.stderr)
             failed.append(t)
