@@ -4429,9 +4429,16 @@ const MEMOS = [
     "publishedISO": "2026-09-22",
     "publishedLabel": "September 22, 2026",
     "pdf": {
-      "file": "naut-memo__v011__2026-09-22_13-16.pdf",
-      "size": "388 KB",
+      "file": "naut-memo__v012__2026-09-26_00-13.pdf",
+      "size": "393 KB",
       "priorVersions": [
+        {
+          "version": "011",
+          "file": "naut-memo__v011__2026-09-22_13-16.pdf",
+          "size": "388 KB",
+          "asOfDate": "2026-09-22",
+          "spotPrice": 0.95
+        },
         {
           "version": "010",
           "file": "naut-memo__v010__2026-07-24_06-57.pdf",
@@ -4463,38 +4470,38 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$120M",
-      "shares": "126M",
-      "cash": "$143M cash, zero debt"
+      "mktCap": "$121M",
+      "shares": "127M",
+      "cash": "$129M cash, zero debt"
     },
     "spot": {
       "price": 0.95,
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 6.58,
-      "deltaPct": 592.3
+      "fair": 4.46,
+      "deltaPct": 370.0
     },
     "compound": [
       {
         "y": 5,
-        "value": 9.63,
-        "mult": 10.13
+        "value": 6.49,
+        "mult": 6.84
       },
       {
         "y": 10,
-        "value": 14.1,
-        "mult": 14.84
+        "value": 9.45,
+        "mult": 9.94
       },
       {
         "y": 15,
-        "value": 20.67,
-        "mult": 21.76
+        "value": 13.75,
+        "mult": 14.47
       },
       {
         "y": 20,
-        "value": 30.31,
-        "mult": 31.91
+        "value": 20.02,
+        "mult": 21.07
       }
     ],
     "taxonomy": {
@@ -4513,7 +4520,7 @@ const MEMOS = [
       "umbrellaName": "Life Sciences & Health"
     },
     "ai": null,
-    "question": "Will Nautilus capture meaningful share of a $130B global proteomics TAM by 2036 with its Voyager single-molecule platform — or does today's ~$215M market cap, now de-rated toward the cash floor, still price commercial economics that the late-2026 launch and early-2027 instrument installations haven't yet earned?",
+    "question": "Will Nautilus turn a peer-reviewed proteoform method into a shipping Voyager (mid-2027) and meaningful share of a $130B proteomics TAM by 2036 — or will a ~$1 stock and an armed at-market equity program force the dilution the bear cases model before revenue scales?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -4521,45 +4528,45 @@ const MEMOS = [
         "prob": 20,
         "price": 0.0,
         "headline": "Platform fails to validate; deepest wipeout.",
-        "why": "The deepest-failure tail, separated from the bear so the downside is not one undifferentiated bucket (the convention across the rest of the book). 20% weight reflects genuine technical / competitive failure risk for a pre-revenue single-molecule platform whose Voyager launch already slipped and whose competitors (Olink at Thermo, SomaScan at Illumina, mass spec) are entrenched. Distinct from the bear (which reaches sub-scale $0.60B but is diluted to zero): here the platform fails outright. Within-scenario 52% p_fail captures Nautilus-specific bankruptcy / wind-down risk at the extreme.",
+        "why": "The deepest-failure tail, separated from the bear so the downside is not one undifferentiated bucket (the convention across the rest of the book). 20% weight reflects genuine technical / competitive failure risk for a near-pre-revenue single-molecule platform whose Voyager launch has slipped again (shipments now mid-2027) and whose competitors (Olink at Thermo, SomaScan at Illumina, mass spec) are entrenched. Distinct from the bear (which reaches sub-scale $0.60B but is diluted to zero): here the platform fails outright. Within-scenario 52% p_fail captures Nautilus-specific bankruptcy / wind-down risk at the extreme.",
         "what": [
-          "The catastrophic tail: Voyager's single-molecule chemistry fails to validate at commercial scale at all. Tau Early Access (2026-27) surfaces disqualifying reproducibility or throughput limits, Broadscale never ships at spec, and customers reject the platform outright for Olink / SomaScan affinity assays and mass spec. Revenue stalls near zero — about $0.30B by FY36, under 0.25% of the $130B proteomics TAM.",
-          "NAUT still raises the ~$1.1B of dilutive capital trying to reach commercial scale (126M to ~1.78B shares, 93% dilution), but the money is spent against a platform that never gains traction — the worst combination of full dilution and a failed product. Operating EV is deeply negative with no self-sustaining FCF base, so the terminal carries negative going-concern value rather than the bear's floored-at-zero."
+          "The catastrophic tail: Voyager's single-molecule chemistry fails to validate at commercial scale at all. Tau Early Access (2026-27) surfaces disqualifying reproducibility or throughput limits, Broadscale never reaches spec after its Q2 2026 miss, and customers reject the platform outright for Olink / SomaScan affinity assays and mass spec. Revenue stalls near zero — about $0.30B by FY36, under 0.25% of the $130B proteomics TAM.",
+          "NAUT still raises the ~$1.1B of dilutive capital trying to reach commercial scale (127M to ~2.3B shares at $0.34-0.70, 95% dilution), but the money is spent against a platform that never gains traction — the worst combination of full dilution and a failed product. Operating EV is deeply negative with no self-sustaining FCF base, so the terminal carries negative going-concern value rather than the bear's floored-at-zero."
         ]
       },
       {
         "key": "bear",
         "label": "BEAR",
-        "prob": 15,
+        "prob": 23,
         "price": 0.0,
         "headline": "Capital exhausts; equity wiped.",
-        "why": "Pre-revenue single-molecule platforms face a stack of risks the public market knows well — IPO'd peers show the path is hard (Olink acquired by Thermo at a premium; SomaLogic merged into Standard BioTools at a discount, then acquired by Illumina in Jan 2026 — so both affinity incumbents now carry a giant's global distribution; Quantum-Si still pre-revenue). NAUT-specific: Voyager's late-2026 launch already slipped; the Jan 2026 Early Access Program is real but narrow (Tau proteoforms first); $143M cash extends the runway through 2027, and commercial scale-up requires a 2027 dilutive raise. Bear case is structural — tech doesn't scale beyond niche, or proteoform analysis stays a research curiosity rather than a clinical workhorse. 15% weight (the deeper-failure 20% now sits in the ultra-bear, so combined downside is 35%): NAUT is one stage earlier than JOBY, with a smaller cash buffer and more direct competition. Within-scenario 40% p_fail captures Nautilus-specific bankruptcy risk.",
+        "why": "Early-commercial single-molecule platforms face risks the market knows well: Olink sold to Thermo at a premium; SomaLogic merged into Standard BioTools at a discount, then went to Illumina in Jan 2026, so both affinity incumbents carry a giant's distribution; Quantum-Si has pushed Proteus to Q2 2027. NAUT-specific: in Q2 2026 Voyager slipped again (shipments mid-2027) and Broadscale missed spec with no new date, tripping the memo's pre-committed bear trigger on the company's own disclosure. $129M of cash (Jun 2026) funds operations into Q1 2028; management plans a debt and/or equity raise by mid-2027 through a newly filed $125M at- market program, so the bear's financing path is the one now armed. 23% weight, up from 15% (43% combined downside with the ultra- bear): still below the 45-52% downside mass of cash-constrained young peers, given ~6 quarters of runway and no going-concern language. Within-scenario 40% p_fail captures bankruptcy risk.",
         "what": [
-          "The pessimistic case is structural. Voyager's single-molecule resolution doesn't deliver at commercial scale: Tau Early Access data through 2026-27 surfaces reproducibility or throughput limitations that cap broader adoption. Broadscale (H1 2027) slips or underwhelms. Customers default to affinity platforms (Olink at Thermo, SomaScan at Illumina) for routine proteomics and to mass spec for high-end research, leaving single-molecule proteomics as a research-niche curiosity.",
-          "To maintain solvency through commercial launch, NAUT raises ~$1.1B cumulatively at $0.40-2.00/share — successive dilutive rounds at falling prices as the equity story deteriorates. Share count balloons from 126M to ~1.78B (93% dilution). By FY36 NAUT reaches just 0.5% of the $130B proteomics TAM — $600M revenue at 8% margin, profitable but tiny relative to the diluted share count."
+          "The pessimistic case is structural. Voyager's single-molecule resolution doesn't deliver at commercial scale: Tau Early Access data through 2026-27 surfaces reproducibility or throughput limitations that cap broader adoption. Broadscale, which missed spec in Q2 2026, stays undated. Customers default to affinity platforms (Olink at Thermo, SomaScan at Illumina) for routine proteomics and to mass spec for high-end research, leaving single-molecule proteomics as a research-niche curiosity.",
+          "To maintain solvency through commercial launch, NAUT raises ~$1.1B cumulatively at $0.40-0.95/share — the first round by mid-2027 near today's price, then successive dilutive rounds at falling prices as the equity story deteriorates. Share count balloons from 127M to ~1.87B (93% dilution). By FY36 NAUT reaches just 0.5% of the $130B proteomics TAM — $600M revenue at 8% margin, profitable but tiny relative to the diluted share count."
         ]
       },
       {
         "key": "base",
         "label": "BASE",
-        "prob": 50,
-        "price": 2.04,
+        "prob": 44,
+        "price": 0.66,
         "headline": "Niche-but-real proteomics player.",
-        "why": "Modal outcome. Voyager launches on or near schedule (late 2026 pre-orders, early 2027 installations); proteoform assay portfolio expands to 5-10 assays by 2030; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% share of the $130B FY36 proteomics TAM — meaningful but not dominant. Mature operating margin ~15-18% — between commodity tools (~10%) and high-margin specialty diagnostics (~25%). Dilution from ~$1.08B of 2027-2029 raises at $3-14/share lands at ~57% total. The 50% weight reflects that this is the modal outcome — most realistic for a strong technical team executing on a long timeline, but not requiring breakthrough commercial dominance against entrenched affinity-platform competitors (Olink/Thermo, SomaScan/Illumina). Base case is well-executed but stays a niche player; multiple stays compressed.",
+        "why": "Modal outcome. Voyager ships on the reset schedule (pre-orders early 2027, shipments mid-2027); the assay catalog broadens; installed base reaches 500-1000 instruments by 2030. NAUT reaches ~1-2% of the $130B FY36 proteomics TAM. Mature operating margin ~15-18%, between commodity tools (~10%) and specialty diagnostics (~25%). Dilution from ~$1.08B of 2027-2034 raises at $1.10-2.00/share lands at ~85%, priced at the observed ~$1 regime and stepping up no faster than young peers' raise schedules. 44% weight, cut from 50% because the Q2 2026 reset contradicted this case's launch timing, its Broadscale leg and its no-raise- until-2028 financing; still modal, since it needs a strong team executing on a long timeline, not a win over entrenched affinity platforms (Olink/Thermo, SomaScan/Illumina).",
         "what": [
-          "The middle path. Voyager launches on or near the late-2026 schedule; pre-orders convert to $5-15M of revenue in 2027 from early adopters (academic + select biopharma). The Tau proteoforms assay drives Alzheimer's research adoption — a credible biomarker hook into a large neuroscience research market. A second proteoform assay extends utility. Broadscale (H1 2027) opens the addressable market beyond niche use cases without yet displacing affinity platforms for routine work.",
-          "Through 2028-2030, the installed base grows from ~100 instruments to ~500. Average revenue per instrument settles at $250-400K/yr (instrument + consumables + assay subscriptions). NAUT raises ~$1.08B cumulatively at $3-14/share to fund commercial scale-up, lifting share count to ~293M (57% dilution). Operating margin crosses zero by 2030 and scales toward 16% by 2036 — between commodity tools and specialty diagnostics."
+          "The middle path. Voyager ships on the reset schedule (pre- orders early 2027, shipments mid-2027); pre-orders convert to $5-15M of 2027 revenue from early adopters (academic + select biopharma). The Tau proteoforms assay drives Alzheimer's research adoption — a credible biomarker hook into a large neuroscience market — and a ~20-assay catalog by mid-2028 extends utility. A later Broadscale configuration widens the market without displacing affinity platforms for routine work.",
+          "Through 2028-2030, the installed base grows from ~100 instruments to ~500 at $250-400K/yr each (instrument + consumables + assays). NAUT raises ~$1.08B at $1.10-2.00/share, the first tranche by mid-2027 at today's price regime, lifting share count to ~864M (85% dilution; modeled all-equity, the conservative reading of a planned debt-and-equity mix). Operating margin crosses zero by 2030 and reaches 16% by 2036."
         ]
       },
       {
         "key": "bull",
         "label": "BULL",
-        "prob": 12,
-        "price": 19.93,
+        "prob": 10,
+        "price": 15.99,
         "headline": "Single-molecule wins proteoforms.",
-        "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands to 10-15+ proteoforms by 2030 (60% conditional) AND mature margins reach 20-25% (40% conditional) AND the market gives NAUT credit via acquisition or re-rating (50%). Joint at 10-15%, reflected at 12%. The bull requires conjunctive execution AND a favorable backdrop where affinity platforms (Olink at Thermo, SomaScan at Illumina) don't simply absorb the single-molecule frontier. 12% (vs JOBY's 12%): structurally similar compound venture-bet, but a clearer near-term path (launch ~6 months out vs JOBY's still-pending Type Certification).",
+        "why": "Compound conditional: Voyager establishes single-molecule resolution as the new gold standard for proteoform analysis (40-50% conditional on execution) AND Tau success drives Alzheimer's research/biomarker mainstream adoption (50%) AND assay portfolio expands to 10-15+ proteoforms by 2030 (60% conditional) AND mature margins reach 20-25% (40% conditional) AND the market gives NAUT credit via acquisition or re-rating (50%). Joint at 10-15% before the Q2 2026 reset; reflected at 10%, trimmed from 12% because Broadscale — this case's broad-proteome pillar — missed spec and is undated, and shipments slipped to mid-2027. The bull requires conjunctive execution AND a favorable backdrop where affinity platforms (Olink at Thermo, SomaScan at Illumina) don't simply absorb the single-molecule frontier.",
         "what": [
-          "The bull case is that single-molecule resolution becomes the new gold standard for proteoform analysis. Tau success — FDA biomarker validation, mainstream adoption in Alzheimer's drug development — catalyzes broader category acceptance. Broadscale (H1 2027) delivers on the 10B-protein-mapping promise; customers adopt Voyager as the routine high-resolution workhorse alongside (not replacing) Olink and SomaScan.",
+          "The bull case is that single-molecule resolution becomes the new gold standard for proteoform analysis. Tau success — FDA biomarker validation, mainstream adoption in Alzheimer's drug development — catalyzes broader category acceptance. A re-engineered Broadscale recovers from its Q2 2026 spec miss and delivers on the 10B-protein-mapping promise; customers adopt Voyager as the routine high-resolution workhorse alongside (not replacing) Olink and SomaScan.",
           "By 2030, NAUT operates 2,000+ instruments globally at $300-500K/yr each (instrument + reagents + assay subscriptions). Assay catalog expands from 2 to 15+ proteoform assays. Pharma partnerships drive multi-year recurring revenue. Operating margin reaches 22% by FY36 as software/assay mix shifts to higher-margin recurring revenue. NAUT becomes an obvious acquisition target for Thermo / Danaher / Bruker at premium multiples — or remains independent at platform-tools scale."
         ]
       },
@@ -4567,104 +4574,112 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 3,
-        "price": 105.52,
+        "price": 85.84,
         "headline": "Dominant + multiomics + take-rate.",
-        "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 4%+ of $130B TAM AND software-economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. Captures the scenario where NAUT joins the platform-tools tier (Thermo / Danaher / Illumina) rather than remaining a niche tools player. 3% weight matches JOBY's ultra-bull pattern (genuine tail-of-tails reflecting compound conditional + market re-rating).",
+        "why": "Tail of tails: requires every Bull condition to hit AND multiomics integration becomes routine (proteomics + sequencing + cell biology fused as the new research and diagnostic standard) AND NAUT captures dominant share at 4%+ of $130B TAM AND software- economics emerge via instrument-as-a-service / assay-take-rate model AND multiple re-rates from tools to platform. Each individually 30-50% conditional on the prior; joint at 2-4%. 3% weight matches JOBY and the book's tail floor. The broad-proteome leg it needs is the configuration that missed spec in Q2 2026; that risk sits in the 3% weight, while the second-act gate rests on the now peer-reviewed decode method.",
         "what": [
           "The ultra-bull case requires Voyager to become the dominant single-molecule proteomics platform AND for multiomics integration (proteomics + sequencing + cell biology) to emerge as the standard for both research and diagnostics. By 2030 NAUT operates 5,000+ instruments globally. By 2034, an instrument-as-a-service / assay-take-rate model emerges with software-economics on a meaningful fraction of revenue — the Mobileye/Illumina platform-take-rate analog. This \"multiomics becomes routine\" leg is now openly contested: Illumina — which acquired SomaScan in Jan 2026 — is pairing affinity proteomics with its sequencing installed base and DRAGEN software to originate the same platform Power, so the conditional is more likely to occur but less likely to be NAUT-captured (probability held at the 3% tail floor).",
           "Compound conditional: Voyager wins the single-molecule race (30% conditional on Tau success) AND multiomics becomes routine (40% conditional on platform success) AND NAUT captures dominant share at 4%+ of $130B TAM (25% conditional on both) AND multiple expansion from tools to platform (50% conditional on all above). Joint at 1.5-3%. Reflected here at 3%."
         ]
       }
     ],
-    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 15 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: September 22, 2026 close.",
-    "thesis": "NAUT trades at $1.71 (~$215M mkt cap, ~66% in cash) on essentially zero revenue. The Voyager single-molecule platform: Tau Early Access since Jan 2026; commercial launch late 2026, first instrument installs early 2027, Broadscale (10B-protein mapping) H1 2027. Cash runway through 2027; dilutive raise likely 2027. Mature peers — Olink (Thermo), SomaScan (Illumina), Quantum-Si, mass spec — anchor terminal margins and TAM. Young-company DCF: TAM × margin × P(fail). Five scenarios, weighted; show your work.",
+    "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 23 / Base 44 / Bull 10 / Ultra Bull 3. Spot price reference: September 22, 2026 close.",
+    "thesis": "NAUT's ~$1 stock values it at about its last-reported $129M of cash (Jun 30 2026), which a ~$13-14M quarterly burn erodes; first revenue was $0.19M. Q2 2026 reset the plan: Voyager ships mid-2027; Broadscale missed spec, undated. Runway into Q1 2028; a debt and/or equity raise is planned by mid-2027, with a $125M at-market equity program filed. Shipping peers — Olink (Thermo), SomaScan (Illumina), Alamar — anchor margins and TAM. Modal case ~30% below the price; 87% of the probability sits at or below it (43% at $0), so the value is in a 13% tail.",
     "historicalPrices": {
-      "xMin": -5.0,
+      "xMin": -5.3,
       "ipoMarker": "IPO Jun '21",
       "points": [
         [
-          -4.92,
-          9.5
+          -5.23,
+          10.1
         ],
         [
-          -4.83,
-          14.0
+          -4.98,
+          6.14
         ],
         [
-          -4.58,
-          16.0
+          -4.73,
+          5.18
         ],
         [
-          -4.33,
-          12.0
+          -4.48,
+          4.34
         ],
         [
-          -4.08,
-          9.0
+          -4.23,
+          2.69
         ],
         [
-          -3.83,
-          6.0
+          -3.98,
+          2.12
         ],
         [
-          -3.58,
-          4.5
-        ],
-        [
-          -3.33,
-          3.5
-        ],
-        [
-          -3.08,
-          4.5
-        ],
-        [
-          -2.83,
-          3.0
-        ],
-        [
-          -2.58,
-          2.5
-        ],
-        [
-          -2.33,
-          2.0
-        ],
-        [
-          -2.08,
-          1.5
-        ],
-        [
-          -1.83,
-          1.2
-        ],
-        [
-          -1.58,
+          -3.73,
           1.8
         ],
         [
-          -1.33,
-          2.5
+          -3.48,
+          2.77
         ],
         [
-          -1.08,
-          3.5
+          -3.23,
+          3.87
         ],
         [
-          -0.83,
-          4.0
+          -2.98,
+          3.16
         ],
         [
-          -0.58,
-          4.3
+          -2.73,
+          2.99
         ],
         [
-          -0.33,
-          3.5
+          -2.48,
+          2.94
         ],
         [
-          -0.08,
-          2.5
+          -2.23,
+          2.34
+        ],
+        [
+          -1.98,
+          2.85
+        ],
+        [
+          -1.72,
+          1.68
+        ],
+        [
+          -1.48,
+          0.86
+        ],
+        [
+          -1.23,
+          0.73
+        ],
+        [
+          -0.98,
+          0.85
+        ],
+        [
+          -0.73,
+          1.95
+        ],
+        [
+          -0.48,
+          3.88
+        ],
+        [
+          -0.23,
+          1.87
+        ],
+        [
+          -0.15,
+          0.98
+        ],
+        [
+          -0.06,
+          0.97
         ]
       ]
     },
@@ -4674,16 +4689,16 @@ const MEMOS = [
         "body": "Deepest tail: single-molecule never validates commercially; equity wiped under full dilution."
       },
       {
-        "label": "Bear 15%",
-        "body": "Single-molecule stays a research niche; entrenched affinity competition (Olink/Thermo, SomaScan/Illumina)."
+        "label": "Bear 23%",
+        "body": "Research niche under entrenched affinity rivals; the Broadscale trigger tripped and near-$1 raises are armed."
       },
       {
-        "label": "Base 50%",
-        "body": "Modal: Voyager launches on schedule, ~1-2% FY36 TAM share, niche-but-real proteomics platform."
+        "label": "Base 44%",
+        "body": "Modal: Voyager ships mid-2027, ~1% FY36 TAM share — but raising near $1-2 leaves it below spot."
       },
       {
-        "label": "Bull 12%",
-        "body": "Compound conditional: single-molecule wins proteoform race; Tau success catalyzes mainstream adoption."
+        "label": "Bull 10%",
+        "body": "Compound conditional: single-molecule wins proteoforms; Tau success drives adoption. Broadscale miss trims it."
       },
       {
         "label": "Ultra Bull 3%",
@@ -4691,8 +4706,8 @@ const MEMOS = [
       }
     ],
     "page3": {
-      "subtitle": "FY24-FY26 history + FY27-FY36 scenario projections · fiscal years end Dec 31 · Q1 2026 10-Q, Voyager press releases, peer market cap data",
-      "sources": "Sources: NAUT 10-K FY25, Q1 2026 10-Q, Voyager Early Access Program press releases (Jan 2026), MarketsandMarkets proteomics market sizing 2030-2035, peer transaction data (Olink/Thermo, SomaLogic/Illumina).",
+      "subtitle": "FY24-FY26 history + FY27-FY36 scenario projections · fiscal years end Dec 31 · Q2 2026 10-Q and call, Nature Methods (Sep 2026), peer filings",
+      "sources": "Sources: NAUT 10-K FY25, Q2 2026 10-Q and call (Jul 28 2026), 8-K (Sep 11 2026), Nature Methods (Sep 4 2026), MarketsandMarkets proteomics sizing 2030-2035, peer filings (Quantum-Si, Seer, Alamar, Illumina).",
       "chartReference": {
         "tamBillion": 130,
         "historyYears": [
@@ -4719,7 +4734,7 @@ const MEMOS = [
         "fleetReference": null,
         "valnAnchorY": 5,
         "valnAnchorText": "Mature tools P/S ~4-7×",
-        "valnCaption": "Bear, base = stretched on FY36 niche-rev; bull onward = cheap.",
+        "valnCaption": "All paths < 0.5× FY36 sales: the discount is dilution and P(fail).",
         "tamTitle": "$130B global proteomics TAM (FY36) — NAUT share",
         "tamLegend": [
           "NAUT",
@@ -4733,13 +4748,13 @@ const MEMOS = [
       "dcfPeriodYears": 10,
       "tamBillion": 130,
       "weighted": {
-        "expected": 6.58,
-        "upsidePct": 592.3
+        "expected": 4.46,
+        "upsidePct": 370.0
       },
       "market": {
-        "marketCapBillion": 0.12,
-        "sharesOutstandingMillion": 126.0,
-        "cashBillion": 0.143,
+        "marketCapBillion": 0.121,
+        "sharesOutstandingMillion": 127.3,
+        "cashBillion": 0.129,
         "netDebtBillion": 0.0
       },
       "scenarios": {
@@ -4843,19 +4858,19 @@ const MEMOS = [
             "terminal_value": -0.95,
             "pv_terminal": -0.27,
             "op_ev": -0.71,
-            "cash": 0.143,
+            "cash": 0.129,
             "net_debt": 0.0,
-            "total_equity": -0.57,
+            "total_equity": -0.58,
             "raise_total": 1.1,
-            "dilution_pct": 93,
-            "final_shares": 1777,
-            "dcf_per_share": -0.32,
+            "dilution_pct": 95,
+            "final_shares": 2324,
+            "dcf_per_share": -0.25,
             "distress": 0.1
           },
           "chartData": {
             "raises": [
-              0.0,
               0.1,
+              0.0,
               0.2,
               0.25,
               0.25,
@@ -4866,13 +4881,13 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              2.0,
-              1.4,
-              1.0,
-              0.8,
-              0.6,
-              0.5,
+              0.7,
+              0.0,
+              0.65,
+              0.58,
+              0.48,
               0.4,
+              0.34,
               0.0,
               0.0,
               0.0
@@ -4905,7 +4920,7 @@ const MEMOS = [
           ]
         },
         "bear": {
-          "probability": 0.15,
+          "probability": 0.23,
           "expectedPerShare": 0.0,
           "label": "Bear",
           "shortLabel": "Bear",
@@ -4991,32 +5006,32 @@ const MEMOS = [
             "pv_fcf": [
               -0.022,
               -0.06,
-              -0.102,
-              -0.112,
+              -0.101,
+              -0.111,
               -0.097,
               -0.077,
               -0.052,
               -0.033,
-              -0.02,
+              -0.019,
               -0.007
             ],
-            "sum_pv_fcf": -0.582,
+            "sum_pv_fcf": -0.58,
             "terminal_value": 0.0,
             "pv_terminal": 0.0,
             "op_ev": -0.58,
-            "cash": 0.143,
+            "cash": 0.129,
             "net_debt": 0.0,
-            "total_equity": -0.44,
+            "total_equity": -0.45,
             "raise_total": 1.1,
             "dilution_pct": 93,
-            "final_shares": 1777,
-            "dcf_per_share": -0.25,
+            "final_shares": 1868,
+            "dcf_per_share": -0.24,
             "distress": 0.15
           },
           "chartData": {
             "raises": [
-              0.0,
               0.1,
+              0.0,
               0.2,
               0.25,
               0.25,
@@ -5027,10 +5042,10 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              2.0,
-              1.4,
-              1.0,
-              0.8,
+              0.95,
+              0.0,
+              0.85,
+              0.75,
               0.6,
               0.5,
               0.4,
@@ -5066,8 +5081,8 @@ const MEMOS = [
           ]
         },
         "base": {
-          "probability": 0.5,
-          "expectedPerShare": 2.04,
+          "probability": 0.44,
+          "expectedPerShare": 0.66,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -5145,57 +5160,57 @@ const MEMOS = [
               -0.194,
               -0.2,
               -0.157,
-              -0.048,
+              -0.047,
               0.09,
               0.198
             ],
             "pv_fcf": [
               -0.03,
-              -0.1,
-              -0.15,
-              -0.131,
-              -0.108,
-              -0.1,
-              -0.071,
+              -0.101,
+              -0.151,
+              -0.132,
+              -0.11,
+              -0.103,
+              -0.073,
               -0.02,
-              0.034,
-              0.069
+              0.035,
+              0.071
             ],
-            "sum_pv_fcf": -0.608,
-            "terminal_value": 3.13,
-            "pv_terminal": 1.18,
-            "op_ev": 0.57,
-            "cash": 0.143,
+            "sum_pv_fcf": -0.61,
+            "terminal_value": 3.12,
+            "pv_terminal": 1.12,
+            "op_ev": 0.51,
+            "cash": 0.129,
             "net_debt": 0.0,
-            "total_equity": 0.71,
+            "total_equity": 0.64,
             "raise_total": 1.08,
-            "dilution_pct": 57,
-            "final_shares": 293,
-            "dcf_per_share": 2.42,
+            "dilution_pct": 85,
+            "final_shares": 864,
+            "dcf_per_share": 0.74,
             "distress": 0.3
           },
           "chartData": {
             "raises": [
-              0.0,
               0.12,
+              0.0,
               0.18,
               0.22,
               0.18,
+              0.16,
               0.15,
-              0.15,
-              0.08,
+              0.07,
               0.0,
               0.0
             ],
             "raise_prices": [
-              3.0,
-              3.5,
-              4.5,
-              6.0,
-              8.0,
-              10.0,
-              12.0,
-              14.0,
+              1.1,
+              0.0,
+              1.25,
+              1.4,
+              1.55,
+              1.7,
+              1.85,
+              2.0,
               0.0,
               0.0
             ],
@@ -5227,8 +5242,8 @@ const MEMOS = [
           ]
         },
         "bull": {
-          "probability": 0.12,
-          "expectedPerShare": 19.93,
+          "probability": 0.1,
+          "expectedPerShare": 15.99,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -5287,7 +5302,7 @@ const MEMOS = [
               0.616
             ],
             "reinvest": [
-              0.009,
+              0.008,
               0.045,
               0.104,
               0.2,
@@ -5299,7 +5314,7 @@ const MEMOS = [
               0.107
             ],
             "fcf": [
-              -0.033,
+              -0.032,
               -0.12,
               -0.17,
               -0.175,
@@ -5326,19 +5341,19 @@ const MEMOS = [
             "terminal_value": 10.49,
             "pv_terminal": 4.12,
             "op_ev": 4.08,
-            "cash": 0.143,
+            "cash": 0.129,
             "net_debt": 0.0,
-            "total_equity": 4.22,
+            "total_equity": 4.21,
             "raise_total": 0.75,
-            "dilution_pct": 36,
-            "final_shares": 196,
-            "dcf_per_share": 21.53,
+            "dilution_pct": 48,
+            "final_shares": 244,
+            "dcf_per_share": 17.25,
             "distress": 1.5
           },
           "chartData": {
             "raises": [
-              0.0,
               0.12,
+              0.0,
               0.2,
               0.2,
               0.15,
@@ -5349,8 +5364,8 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              3.5,
-              5.5,
+              1.75,
+              0.0,
               9.0,
               14.0,
               18.0,
@@ -5389,7 +5404,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.03,
-          "expectedPerShare": 105.52,
+          "expectedPerShare": 85.84,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -5460,7 +5475,7 @@ const MEMOS = [
               0.188
             ],
             "fcf": [
-              -0.032,
+              -0.031,
               -0.103,
               -0.156,
               -0.254,
@@ -5472,7 +5487,7 @@ const MEMOS = [
               1.432
             ],
             "pv_fcf": [
-              -0.029,
+              -0.028,
               -0.083,
               -0.114,
               -0.169,
@@ -5487,19 +5502,19 @@ const MEMOS = [
             "terminal_value": 37.05,
             "pv_terminal": 15.24,
             "op_ev": 16.49,
-            "cash": 0.143,
+            "cash": 0.129,
             "net_debt": 0.0,
-            "total_equity": 16.63,
+            "total_equity": 16.62,
             "raise_total": 0.65,
-            "dilution_pct": 18,
-            "final_shares": 153,
-            "dcf_per_share": 108.69,
+            "dilution_pct": 32,
+            "final_shares": 188,
+            "dcf_per_share": 88.4,
             "distress": 3.0
           },
           "chartData": {
             "raises": [
-              0.0,
               0.1,
+              0.0,
               0.15,
               0.2,
               0.2,
@@ -5510,8 +5525,8 @@ const MEMOS = [
               0.0
             ],
             "raise_prices": [
-              4.0,
-              9.0,
+              2.25,
+              0.0,
               22.0,
               35.0,
               55.0,
@@ -5550,12 +5565,12 @@ const MEMOS = [
         }
       },
       "competitive": {
-        "arena": "Broad-scale proteomics — Nautilus's single-molecule protein-analysis platform vs Seer, Olink/Thermo, SomaLogic/Illumina, Quantum-Si; the race to high-throughput, deep proteome coverage.\n",
+        "arena": "Broad-scale proteomics — Nautilus's single-molecule protein-analysis platform vs Seer, Olink/Thermo, SomaScan/Illumina, Quantum-Si, Alamar; the race to high-throughput, deep proteome coverage.",
         "lens": "power_origination",
         "powers": {
           "scaleEconomies": {
             "score": 0,
-            "note": "Pre-revenue; no instruments placed, no consumable pull-through yet."
+            "note": "No instruments shipped yet; first revenue $0.19M (Q2 2026), no consumable pull-through."
           },
           "networkEconomies": {
             "score": 0,
@@ -5571,11 +5586,11 @@ const MEMOS = [
           },
           "branding": {
             "score": 1,
-            "note": "Scientific credibility; unproven commercially."
+            "note": "Scientific credibility now peer-reviewed; unproven commercially."
           },
           "corneredResource": {
             "score": 2,
-            "note": "Core IP on the probe-cycling decode method; well-funded cash position pre-launch."
+            "note": "Iterative Mapping decode IP, peer-reviewed for proteoforms (Nature Methods, Sep 2026); the broad Broadscale configuration missed spec and is undated — proven narrow, unproven broad. Cash is no longer part of the moat."
           },
           "processPower": {
             "score": 0,
@@ -5588,7 +5603,7 @@ const MEMOS = [
           {
             "name": "Seer",
             "kind": "public",
-            "note": "Proteograph shipping with revenue; nanoparticle enrichment + MS. Apr-2026 PRECISE-SG100K biobank deployment (Proteograph + Orbitrap Astral MS, 10,000 samples) entrenches incumbent distribution while NAUT is pre-launch; Thermo's ~$3.1B Olink buyout deepens it.",
+            "note": "Proteograph shipping with revenue (nanoparticle enrichment + MS); Q2 2026 revenue $3.1M (−24% YoY on academic-funding headwinds), FY26 guide $16–18M; 100+ customer publications. The Apr-2026 PRECISE-SG100K biobank deployment entrenches incumbent distribution.",
             "shareNow": 0.0,
             "shareTerminal": 0.2,
             "capital": "public; cash-funded"
@@ -5598,13 +5613,13 @@ const MEMOS = [
             "kind": "incumbent-division",
             "note": "Established PEA panels (~5k proteins); NGS readout; Thermo distribution.",
             "shareNow": 0.0,
-            "shareTerminal": 0.25,
+            "shareTerminal": 0.2,
             "capital": "Thermo balance sheet"
           },
           {
             "name": "SomaScan (Illumina)",
             "kind": "incumbent-division",
-            "note": "Aptamer SomaScan (~11k proteins); Illumina acquired it from Standard BioTools Jan 2026 (~$425M) and is pairing it with its sequencing/DRAGEN ecosystem for workflow-integrated multiomics.",
+            "note": "Aptamer SomaScan (~11k proteins); acquired by Illumina Jan 2026 (~$425M), ~$22M revenue in Q2 2026, its first full quarter; being paired with Illumina's sequencing/DRAGEN ecosystem for integrated multiomics.",
             "shareNow": 0.0,
             "shareTerminal": 0.2,
             "capital": "Illumina balance sheet"
@@ -5612,16 +5627,24 @@ const MEMOS = [
           {
             "name": "Quantum-Si",
             "kind": "public",
-            "note": "Semiconductor protein sequencing; guided to a Proteus commercial launch by end-2026 (roadshows underway), overlapping NAUT's late-2026 window — but a sequencing modality, not proteoform-affinity decode.",
+            "note": "Semiconductor protein sequencing; Proteus pushed to Q2 2027 (added design cycle, ~20% RIF), $169.9M cash, runway into Q4 2028 — overlapping NAUT's mid-2027 shipments, but a sequencing modality, not proteoform decode.",
             "shareNow": 0.0,
             "shareTerminal": 0.1,
             "capital": "public"
+          },
+          {
+            "name": "Alamar Biosciences",
+            "kind": "public",
+            "note": "NULISA affinity proteomics; IPO Apr 2026 ($220M); Q2 2026 revenue $29.4M (+82%), FY26 guide $116–120M; launched a blood eMTBR-tau assay Jul 2026 — a shipping rival in NAUT's anchor tau application.",
+            "shareNow": 0.0,
+            "shareTerminal": 0.05,
+            "capital": "public; $220M IPO + revenue"
           }
         ],
         "leadLag": [
           {
             "metric": "Commercial instrument shipping",
-            "company": "no (pre-launch; external field unit validated)",
+            "company": "no (beta 2026; shipments mid-2027)",
             "bestRival": "yes",
             "verdict": "lagging"
           },
@@ -5633,12 +5656,18 @@ const MEMOS = [
           },
           {
             "metric": "Cash runway (yrs at burn)",
-            "company": 3,
-            "bestRival": 3,
-            "verdict": "even"
+            "company": "~1.5 (into Q1 2028)",
+            "bestRival": "unconstrained (Thermo, Illumina)",
+            "verdict": "lagging"
+          },
+          {
+            "metric": "Peer-reviewed publications",
+            "company": "1 flagship (Nature Methods)",
+            "bestRival": "Seer 100+ customer papers",
+            "verdict": "lagging"
           }
         ],
-        "takeaway": "Nautilus is originating a genuinely differentiated single-molecule platform with strong IP and a funded balance sheet, but it is pre-commercial and lags shipping rivals on every demonstrated metric; the window is open only while the cash lasts and before incumbents close the coverage gap — a launched, validated instrument is the falsifier. A second falsifier now sits above it: Illumina shipping an integrated SomaScan-plus-sequencing multiomics workflow at commercial scale before NAUT originates its take-rate model.\n"
+        "takeaway": "Nautilus is originating a genuinely differentiated single-molecule platform whose decode IP is now peer-reviewed, but it is pre-commercial and lags shipping rivals on every demonstrated metric; the window stays open only while the cash lasts — a Voyager shipping to paying customers by mid-2027 is the falsifier. The Power score rests on the proven narrow method; the broad-proteome leg the ultra-bull needs is unproven, which keeps that tail at 3%. Alamar's shipping tau assay contests the anchor application from the affinity side, and Illumina shipping an integrated SomaScan-plus-sequencing workflow at commercial scale remains the second falsifier."
       },
       "pocd": {
         "people": {
@@ -5646,7 +5675,7 @@ const MEMOS = [
           "founderLed": true,
           "tenureYears": 5,
           "insiderOwnershipPct": 14.8,
-          "capitalAllocation": "Pre-revenue (FY2026 revenue guided ~$0.5M, effectively zero). Q1 2026 cash & investments $143.4M (~66% of the ~$0.22B market cap); Q1 burn $12.8M (opex $16.1M, down 14% YoY); runway guided through 2027. No dividend or buyback (pre-revenue); spend is R&D on the Voyager / single-molecule proteomics platform toward commercial launch. Originally funded by a $350M SPAC/PIPE in 2021 ($200M PIPE led by Perceptive); scenarios assume additional equity raises / dilution to fund operations past 2027.",
+          "capitalAllocation": "First revenue Q2 2026 ($0.19M: MJFF alpha-synuclein grant + first Iterative Mapping Early Access customer); opex $15.9M (−7% YoY), net loss $14.5M, 1H26 operating cash outflow $26.8M. Cash + investments $129.2M at 6/30/26 (roughly the market cap at a ~$1 stock); runway guided into Q1 2028, with management anticipating a debt and/or equity raise by mid-2027 and a new $125M at-market program / $300M shelf in place (Sep 2026). Q2 2026 pivot funded by reallocation: Broadscale team halved, proteoform headcount ~tripled. No dividend or buyback; SPAC/PIPE-funded ($350M, 2021).",
           "incentiveAlignment": "Founder-CEO holds ~14.8% beneficial economic stake (10.34M direct + 1.81M via the Sujal Patel 2020 Children's Trust + 5.28M via PFV I, LLC); bought 200,000 shares open-market Sept 2025. FY2025 total compensation ~$1.96M, equity-weighted (~27% salary). Specific PSU/TSR vs. time-based equity terms not separately disclosed in accessible sources.",
           "governanceFlags": [
             "SPAC origin (ARYA Sciences Acquisition Corp III; closed Jun 2021)",
@@ -5655,51 +5684,54 @@ const MEMOS = [
             "board of 9, 7 independent; 2 insiders (Patel CEO, Mallick co-founder / Chief Scientist)",
             "classified board — three staggered classes (an anti-takeover structure)",
             "insiders own ~29% of shares in aggregate",
-            "a16z (early backer) roughly halved its stake from ~14% to ~7.1% via two June-2026 secondary blocks (5.0M shares at $2.35 on Jun 2; 3.59M at $2.00 on Jun 26; 13D/A) — secondary sales, no new dilution; a soft supply overhang, not a control/structure change"
+            "a16z cut its stake from ~14% to ~4.9% during 2026: two June secondary blocks (5.0M at $2.35, 3.59M at $2.00) then open-market sales at ~$0.90–1.12 through Sep 9 (13D/A Nos. 3–4), now below the 5% reporting line; Perceptive (2021 PIPE lead) trimmed to 9.1% (13D/A Aug 14 2026) — secondary supply, no control change",
+            "$125M at-the-market program (TD Cowen, Sep 11 2026) + $300M universal shelf effective Sep 18 — at ~$1 the program alone equals ~100% of shares outstanding; no sales disclosed as of Sep 22",
+            "Nasdaq $1 minimum-bid exposure: 25 consecutive sub-$1 closes Aug 4–Sep 8 (trigger 30); the 2025 deficiency was cured Nov 2025 without a reverse split; no reverse-split authorization on the Jun 2026 ballot",
+            "no insider open-market purchases disclosed since the CEO's 200,000-share buy at $0.65–0.71 (Sep 2025); no Form 4s after the Jun 22 2026 director grants"
           ],
           "keyPersonRisk": "high",
           "score": 4,
-          "takeaway": "Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class one-share-one-vote structure, an independent Chair, and a 7-of-9 independent board — clean alignment and governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder Mallick are the platform) and a structural dilution path, the pre-revenue burn funded by equity raises beyond the 2027 runway."
+          "takeaway": "Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class one-share-one-vote structure, an independent Chair, and a 7-of-9 independent board — clean alignment and governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder Mallick are the platform) and a structural dilution path — the burn is equity-funded, now formalized by a raise planned by mid-2027 and an armed at-market program."
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +285% finding at the $1.71 spot), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized. Tail-driven: ~93% of the expected value sits in the 13% bull/ultra-bull mass, 43% of the mass wipes to $0, and the modal case sits below the ~$1 stock."
       },
       "appendix": {
         "pushback": [
           {
-            "label": "Best-funded single-molecule platform.",
-            "body": "$143M cash, zero debt, cost discipline (16% headcount cut, Q1 burn $12.8M). Runway through 2027. Peers are less funded relative to need."
+            "label": "Funded into Q1 2028, no debt.",
+            "body": "$129M cash + investments (Jun 30 2026), zero debt, opex −7% YoY; runway guided into Q1 2028. No longer best-funded: Quantum-Si holds $170M."
           },
           {
-            "label": "Early Access is real, not vaporware.",
-            "body": "Tau proteoforms EAP live since Jan 2026, now externally validated — Buck Institute field-tested a Voyager; Baylor is first Iterative Mapping EAP customer."
+            "label": "Peer-reviewed and revenue-generating.",
+            "body": "Nature Methods (Sep 4 2026): 130 tau proteoform groups resolved at 0.1% abundance, CV < 5.5%. Q2 2026 booked first revenue ($0.19M)."
           },
           {
             "label": "First-mover in proteoform single-molecule.",
-            "body": "Quantum-Si is sequencing-focused; affinity platforms (Olink/SomaScan) target a different modality. NAUT leads time-to-market in proteoforms."
+            "body": "Quantum-Si (sequencing) slipped to Q2 2027; affinity platforms (Olink/SomaScan/Alamar) read ensembles, not proteoforms."
           },
           {
             "label": "Tau strategic positioning.",
-            "body": "Alzheimer's biomarker market $10B+; proteoform analysis is what makes Tau actionable. Single-product launch anchors adoption in a large research market."
+            "body": "Alzheimer's biomarker market $10B+; proteoform-resolved tau reads deeper than Alamar's shipping tau immunoassay. ~20 assays targeted by mid-2028."
           },
           {
-            "label": "Cash floor is real downside protection.",
-            "body": "$1.13/share cash vs $1.71 spot = ~66% of mkt cap is liquid. Operating EV ~$0.57/share for a real platform. Hard to lose money permanently here."
+            "label": "Cash ≈ market cap.",
+            "body": "$129M cash (Jun 2026) less a ~$13-14M quarterly burn: a ~$1 stock prices the platform near zero. Offset: a $125M at-market program."
           }
         ],
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "Voyager pre-orders < $10M by Q1 2027 · Cash < $80M EOY 2027 · Broadscale slips to 2028+ · Tau EAP count flat YoY · a dilutive raise below ~$2 — now armed (spot $1.71); watch the ~$125M S-3 ATM and Q2 (Jul 28 2026)."
+            "body": "Broadscale trigger MET Jul 28 2026. Next: shipments slip past mid-2027 · pre-orders < $5M by mid-2027 · equity sold below $1 (base models ~$1.10)"
           },
           {
             "label": "Bull validation",
-            "body": "Pre-orders > $30M by Q1 2027 · 100+ instruments installed EOY 2027 · second pharma/OEM partnership · multi-year take-rate deal disclosed"
+            "body": "Pre-orders > $30M by mid-2027 · FY28 revenue ≥ $65M (base path $55M) · a raise at ≥ $1.75 or a pharma/OEM deal · a Broadscale date restored"
           },
           {
             "label": "Reframe needed",
-            "body": "Quantum-Si guided Proteus to a commercial launch by end-2026, overlapping NAUT's late-2026 window; a cheaper/faster rival erodes NAUT's edge. QSI: sequencing, not proteoform decode."
+            "body": "Quantum-Si's Proteus (sequencing) now lands Q2 2027, overlapping NAUT's mid-2027 shipments. Alamar shipped a blood tau assay Jul 2026 — if affinity wins Alzheimer's tau first, reframe."
           }
         ]
       },
@@ -5718,11 +5750,11 @@ const MEMOS = [
         },
         {
           "term": "Early Access Program",
-          "definition": "Limited release to academic + biopharma partners ahead of general availability. Live since Jan 2026 (Tau assay); expands to Broadscale H1 2027."
+          "definition": "Limited pre-GA release to academic + biopharma partners. Tau live since Jan 2026; AKT1 Early Access late 2026; tau kit GA mid-2027."
         },
         {
           "term": "Broadscale",
-          "definition": "Voyager's planned 10-billion-protein-mapping capability for general proteomics, scheduled for H1 2027 general availability."
+          "definition": "Voyager's planned 10-billion-protein-mapping configuration; missed target spec in Q2 2026, commercial timeline undated."
         },
         {
           "term": "S2C (sales-to-capital)",
@@ -5730,8 +5762,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "011",
-        "footerTimestamp": "2026-09-22_13-16",
+        "footerVersion": "012",
+        "footerTimestamp": "2026-09-26_00-13",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }
@@ -48750,9 +48782,16 @@ const MEMOS = [
     "publishedISO": "2026-09-22",
     "publishedLabel": "September 22, 2026",
     "pdf": {
-      "file": "cai-memo__v007__2026-09-23_04-12.pdf",
+      "file": "cai-memo__v008__2026-09-26_00-13.pdf",
       "size": "309 KB",
       "priorVersions": [
+        {
+          "version": "007",
+          "file": "cai-memo__v007__2026-09-23_04-12.pdf",
+          "size": "309 KB",
+          "asOfDate": "2026-09-22",
+          "spotPrice": 30.65
+        },
         {
           "version": "006",
           "file": "cai-memo__v006__2026-09-22_13-16.pdf",
@@ -49496,12 +49535,12 @@ const MEMOS = [
           {
             "vector": "scale/pricing",
             "who": "Tempus, Guardant, Foundation",
-            "falsifier": "Per-test reimbursement or list pricing falls under competitive and payer pressure, halting the gross-margin inflection. First test survived: CMS's preliminary CY2027 fee schedule (Sep-2026) held MI Cancer Seek at $8,455 and raised Caris Assure to $5,250 while cutting ~1,100 codes; record base ASP >$3,850 and GM 68% in Q2'26. Next test = final rates (Nov-2026) and commercial/MA follow-through."
+            "falsifier": "Per-test pricing falls under payer and competitive pressure, halting the margin inflection — trips if gross margin falls below 65% (the FY25 level) for two consecutive quarters, or final CY2027 rates (Nov-2026) land below the preliminary $8,455 for MI Cancer Seek or $5,250 for Caris Assure. First test survived: the preliminary schedule cut ~1,100 codes but held or raised both; Q2'26 gross margin 68%."
           },
           {
             "vector": "cornered_resource",
             "who": "Tempus, Roche, Natera",
-            "falsifier": "A rival assembles a comparable comprehensive-profiling dataset, commoditizing the data moat before scale and network effects lock in. Tempus's ~$1.5B Personalis deal (S-4 filed; closing late-2026/early-2027) consolidates the MRD front, and on Sep-11-2026 Tempus launched a 100,000-whole-genome multimodal dataset effort (1M-genome goal) — the first dated move at the core whole-genome/transcriptome moat. Not tripped: an effort is not a comparable dataset."
+            "falsifier": "A rival assembles a comparable comprehensive-profiling dataset before Caris's scale and network effects lock in — trips when a rival reports a completed dataset of at least 100,000 multimodal whole genomes, Tempus's first stated milestone (effort launched Sep-11-2026; 1M-genome goal). Tempus's ~$1.5B Personalis deal (S-4 filed) separately consolidates the MRD front. Not tripped: an effort is not a dataset."
           },
           {
             "vector": "network_economies",
@@ -49555,8 +49594,8 @@ const MEMOS = [
             "body": "CMS's preliminary 2027 fee schedule held MI Cancer Seek at $8,455 and raised Caris Assure to $5,250 while cutting ~1,100 codes — the pricing leg held."
           },
           {
-            "label": "The true-up flatters the trend",
-            "body": "About $33M of FY25 revenue was prior-year catch-ups and Q4'25 alone carried ~$81M of true-ups; SBC of ~$70M flatters adj-EBITDA — the organic trend is softer."
+            "label": "Detect is upside no scenario carries",
+            "body": "Caris Detect (Jul-2026, $3,500 cash-pay) has demand ahead of plan; the model already charges its build-out (FY26 owner-FCF ~1%) but books its revenue in no scenario — any uptake is upside."
           }
         ],
         "triggers": [
@@ -49601,8 +49640,8 @@ const MEMOS = [
         }
       ],
       "stamp": {
-        "footerVersion": "007",
-        "footerTimestamp": "2026-09-23_04-12",
+        "footerVersion": "008",
+        "footerTimestamp": "2026-09-26_00-13",
         "canonicalJsx": "public/memo_pdf.jsx"
       }
     }

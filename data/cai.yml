@@ -507,9 +507,9 @@ appendix:
   - label: Reimbursement went Caris's way
     body: CMS's preliminary 2027 fee schedule held MI Cancer Seek at $8,455 and raised Caris Assure to $5,250 while cutting
       ~1,100 codes — the pricing leg held.
-  - label: The true-up flatters the trend
-    body: About $33M of FY25 revenue was prior-year catch-ups and Q4'25 alone carried ~$81M of true-ups; SBC of ~$70M flatters
-      adj-EBITDA — the organic trend is softer.
+  - label: Detect is upside no scenario carries
+    body: Caris Detect (Jul-2026, $3,500 cash-pay) has demand ahead of plan; the model already charges its build-out (FY26 owner-FCF
+      ~1%) but books its revenue in no scenario — any uptake is upside.
   triggers:
   - label: Bull validation
     body: Volume re-accelerating from +18% toward ~23%; gross margin holding high-60s; first disclosed Detect revenue; CMS
@@ -603,16 +603,16 @@ competitive:
   threats:
   - vector: scale/pricing
     who: Tempus, Guardant, Foundation
-    falsifier: 'Per-test reimbursement or list pricing falls under competitive and payer pressure, halting the gross-margin
-      inflection. First test survived: CMS''s preliminary CY2027 fee schedule (Sep-2026) held MI Cancer Seek at $8,455 and
-      raised Caris Assure to $5,250 while cutting ~1,100 codes; record base ASP >$3,850 and GM 68% in Q2''26. Next test =
-      final rates (Nov-2026) and commercial/MA follow-through.'
+    falsifier: 'Per-test pricing falls under payer and competitive pressure, halting the margin inflection — trips if gross
+      margin falls below 65% (the FY25 level) for two consecutive quarters, or final CY2027 rates (Nov-2026) land below the
+      preliminary $8,455 for MI Cancer Seek or $5,250 for Caris Assure. First test survived: the preliminary schedule cut ~1,100
+      codes but held or raised both; Q2''26 gross margin 68%.'
   - vector: cornered_resource
     who: Tempus, Roche, Natera
-    falsifier: 'A rival assembles a comparable comprehensive-profiling dataset, commoditizing the data moat before scale and
-      network effects lock in. Tempus''s ~$1.5B Personalis deal (S-4 filed; closing late-2026/early-2027) consolidates the
-      MRD front, and on Sep-11-2026 Tempus launched a 100,000-whole-genome multimodal dataset effort (1M-genome goal) — the
-      first dated move at the core whole-genome/transcriptome moat. Not tripped: an effort is not a comparable dataset.'
+    falsifier: 'A rival assembles a comparable comprehensive-profiling dataset before Caris''s scale and network effects lock
+      in — trips when a rival reports a completed dataset of at least 100,000 multimodal whole genomes, Tempus''s first stated
+      milestone (effort launched Sep-11-2026; 1M-genome goal). Tempus''s ~$1.5B Personalis deal (S-4 filed) separately consolidates
+      the MRD front. Not tripped: an effort is not a dataset.'
   - vector: network_economies
     who: well-capitalized incumbents
     falsifier: 'Volume growth stalls below ~20% (Q2''26 printed +18%), so the data and scale flywheel never reaches the operating
@@ -667,13 +667,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Audit)
   deal: Open-market common — entry price weighed against the probability-weighted fair value (the ~-23% finding), then position-sized.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-09-23_04-12"
+  footer_version: "008"
+  footer_timestamp: "2026-09-26_00-13"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-09-23_04-12"
+  pdf_version: "008"
+  pdf_timestamp: "2026-09-26_00-13"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-09-23_04-12"
+    asOfDate: "2026-09-22"
+    spotPrice: 30.65
   - version: "006"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"
