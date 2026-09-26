@@ -426,6 +426,10 @@ def build_memo(ticker: str) -> dict:
                              for p in d["appendix"]["pushback"]],
                 "triggers": [{"label": t["label"], "body": collapse(t["body"])}
                              for t in d["appendix"]["triggers"]],
+                # Optional: which side the pushback argues ('bear' when the headline is
+                # positive, §3.5 B) — drives the section header; absent = legacy header.
+                **({"pushbackSide": d["appendix"]["pushback_side"]}
+                   if d["appendix"].get("pushback_side") else {}),
             },
             "glossary": [{"term": g["term"], "definition": collapse(g["definition"])}
                          for g in d["glossary"]],

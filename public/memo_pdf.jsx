@@ -3661,8 +3661,12 @@ function Page5BackMatter({ memo }) {
       <PageHeader memo={memo} suffix="supporting analysis · disclaimers · glossary"
                   label="the back matter" />
 
-      {/* PUSHBACK */}
-      <SectionHeader label="PUSHBACK  ·  WHY THE BASE CASE IS TOO HARSH"
+      {/* PUSHBACK — the header names the side the items argue (§3.5 B: pushback
+          opposes the headline). Data-gated: memos without appendix.pushback_side
+          keep the legacy header, byte-identical. */}
+      <SectionHeader label={appendix.pushbackSide === 'bear'
+                              ? "PUSHBACK  ·  WHY THE BASE CASE IS TOO GENEROUS"
+                              : "PUSHBACK  ·  WHY THE BASE CASE IS TOO HARSH"}
                      marginTop="10pt" marginBottom="8pt" />
       <ThreeColGrid
         items={appendix.pushback}

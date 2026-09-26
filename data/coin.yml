@@ -5,27 +5,28 @@ dcf_type: mature_company_sotp
 date: '2026-09-22'
 spot: 201.05
 market:
-  market_cap_billion: 52.96
-  shares_outstanding_million: 263.4
-  cash_billion: 10.2
-  net_debt_billion: 7.2
+  market_cap_billion: 53.04
+  shares_outstanding_million: 263.8
+  cash_billion: 8.6
+  net_debt_billion: 6.0
   extras:
-  - $7.2B converts/notes (~$3B net cash)
-  - ~17K BTC treasury (~$1.3B)
-  - Circle (CRCL) stake (~$1B)
+  - $6.0B converts/notes (~$2.6B net cash)
+  - ~17.2K BTC treasury (~$1.5B)
+  - Circle (CRCL) stake (≤~$0.8B)
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: High
   themes:
   - digital-assets-fintech-rails
   primary_theme: digital-assets-fintech-rails
-central_question: Is Coinbase the durable monopoly rail layer for crypto — $19B USDC float, the Deribit derivatives platform,
-  a regulator that surrendered — or a cycle stock whose Q1 2026 just printed a $394M loss?
-thesis: 'Coinbase trades at $182.25 ($48B mkt cap) on FY25 revenue $7.18B and adj EBITDA $2.81B, with a fortress balance sheet
-  (~$10.2B cash, $7.2B debt, ~$3.5B CRCL + BTC + crypto). FY25 was peak-cycle; Q1 2026 broke the spell: revenue $1.4B (-40%
-  from Q4), a $394M net loss as BTC slid $120K to $73K. Bull thesis is structural (SEC case dropped, GENIUS Act USDC moat,
-  Deribit derivatives leadership); bear is equally real (take-rate compression, persistent cycle exposure). Mature-Company
-  SOTP DCF, exit-multiple terminal; five scenarios; show your work.'
+central_question: Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit
+  derivatives platform, a regulator that surrendered — or a cycle stock that has now printed back-to-back quarterly losses?
+thesis: 'Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (-18.5% YoY) and a $360M GAAP loss, the
+  second straight, as BTC fell from above $120K (Oct 2025) to a $58K low before recovering to ~$87K. The structural case
+  firmed in the same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue
+  share renewed unchanged into 2029, on $8.6B cash vs $6.0B debt. The bear: cycle exposure plus new stablecoin rivals. Modal
+  case ~12% above the price; 30% of the probability sits below it. Mature-company SOTP DCF, exit-multiple terminal; five
+  scenarios.'
 chart_reference:
   history_years:
   - 2021
@@ -74,31 +75,26 @@ scenarios:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.08
-    expected_per_share: 30.41
+    expected_per_share: 27.96
     headline: Crypto winter + take-rate war.
     narrative:
-    - 'Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down 70%+ from
-      $120K peak to $35-40K) as ETF outflows compound and the post-halving liquidity wave fails to materialize. Transaction
-      revenue collapses from $4.0B FY25 to $1.5B by FY28 as both volume drops 60% AND take-rate compresses 30% under Robinhood/Hyperliquid
-      pressure. The GENIUS Act regime turns hostile in implementation — bank-issued stablecoins take share from USDC and the
-      discount-window asymmetry kills USDC''s runway.
-
-      '
-    - 'The Circle relationship inverts: Hyperliquid-style direct-USDC deals proliferate across DeFi, compressing Coinbase''s
-      50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating margin compresses from 40% (FY25) to
-      10% by FY28 as Coinbase spends defensively. FCF goes negative two years. The multiple collapses from ~15× FCF normalized
-      to 8× — crypto loses its narrative entirely. Exit-multiple SOTP: ~$52/share, a -71% tail. Mirrors the 2022 winter (COIN
-      traded to $33 from $381 IPO) on a more diversified business.
-
-      '
-    probability_rationale: 'Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style multi-year
-      bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood gains share AND Hyperliquid-style
-      USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per Coindesk May 2026); (c) GENIUS Act favors
-      bank-issued stablecoins, capping USDC at ~$50B float; (d) Deribit integration friction stalls the derivatives flywheel.
-      Each individually 20-30%; joint at 8%. Higher than ZM''s 8% ultra_bear because crypto-cycle volatility has a real historical
-      base rate (2022 was 14 months ago).
-
-      '
+    - 'Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down
+      70%+ from its $120K+ peak to $35-40K) as ETF outflows compound and the post-halving liquidity wave fails to
+      materialize. Transaction revenue collapses from $4.0B FY25 to $1.5B by FY28 as both volume drops 60% AND
+      take-rate compresses 30% under Robinhood/Hyperliquid pressure. The GENIUS Act regime turns hostile in
+      implementation — bank-issued stablecoins take share from USDC and the discount-window asymmetry kills USDC''s
+      runway.'
+    - 'The Circle relationship inverts at the 2029 renewal: Hyperliquid-style direct-USDC deals proliferate across
+      DeFi, compressing Coinbase''s 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating
+      margin compresses to ~10% by FY28 as Coinbase spends defensively, and FCF compresses to ~$0.3-0.4B. The multiple
+      collapses to an 8× FCF exit — crypto loses its narrative entirely. Mirrors the 2022 winter (COIN closed near
+      $33, from a $381 listing-day open) on a more diversified business.'
+    probability_rationale: 'Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style
+      multi-year bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood
+      gains share AND Hyperliquid-style USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per
+      Coindesk May 2026); (c) bank-issued stablecoins take share, shrinking Coinbase-held USDC below $15B; (d) Deribit
+      integration friction stalls the derivatives flywheel. Each individually 20-30%; joint at 8%. Same 8% as ZM''s
+      ultra_bear: crypto-cycle volatility has a real historical base rate (the 2022 winter).'
     dcf_metrics:
       cagr_5y: -13.1
       wacc: 0.13
@@ -131,8 +127,8 @@ scenarios:
       - 0.34
       - 0.29
       - 0.36
-      cash: 9.0
-      net_debt: 7.0
+      cash: 7.4
+      net_debt: 6.0
       special_assets: 1.5
       raise_total: 0.0
       dilution_pct: 0
@@ -148,8 +144,8 @@ scenarios:
       terminal_value: 2.88
       pv_terminal: 1.56
       op_ev: 3.95
-      total_equity: 7.45
-      dcf_per_share: 30.41
+      total_equity: 6.85
+      dcf_per_share: 27.96
     chart_data:
       ev_rev_multiple:
       - 4.5
@@ -167,29 +163,23 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.22
-    expected_per_share: 104.19
-    headline: Cycle bottoms; multiple resets to 18×.
+    expected_per_share: 102.65
+    headline: Cycle bottoms; multiple resets to 12×.
     narrative:
-    - 'Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years (a deeper, longer
-      correction than Q1 2026 priced). Transaction revenue runs $2.5-3.0B annually — below FY25''s $4.0B peak but above the
-      FY23 winter trough. Coinbase still gains share (regulatory wedge post-SEC dismissal) but on a smaller pie. The everything-exchange
-      thesis holds operationally, but the equity re-rates to 18-22× FCF — crypto stocks lose their growth premium when transaction
-      revenue stops growing.
-
-      '
-    - 'The subscription engine partially compensates. USDC float plateaus at $25-30B as the GENIUS Act ceiling caps growth
-      and bank-issued stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume
-      grows as Deribit integrates, but margin profile is structurally lower than spot. FCF cycles $1.5-2.5B/year. Exit-multiple
-      SOTP: ~$138/share, ~24% below spot — a real downside but not catastrophic. The cycle hurts; the platform survives.
-
-      '
-    probability_rationale: 'Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months (median
-      post-peak crypto correction); revenue stays $2.5-3.0B; take-rate compresses 15-20% as Robinhood gains retail share and
-      Hyperliquid-style deals nick institutional flows; USDC float plateaus under the GENIUS Act ceiling; multiple resets
-      from ~20× to 18× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018, 2022 — base
-      rate ~25% per 5-year window), and Q1 2026 already validated some of the cycle thesis.
-
-      '
+    - 'Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years, extending
+      the H1 2026 slide. Revenue settles at ~$5.5-6.1B a year — below FY25''s $7.18B peak but well above the FY23
+      winter trough ($3.1B). Coinbase still gains share (regulatory wedge post-SEC dismissal) but on a smaller pie.
+      The everything-exchange thesis holds operationally, but the equity re-rates to a ~12× FCF exit — crypto stocks
+      lose their growth premium when transaction revenue stops growing.'
+    - 'The subscription engine partially compensates. Coinbase-held USDC stalls near today''s ~$20B as bank-issued
+      stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume grows
+      as Deribit integrates, but its margin profile is structurally lower than spot. FCF runs $1.7-2.0B a year. A real
+      downside but not catastrophic: the cycle hurts; the platform survives.'
+    probability_rationale: 'Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months
+      (median post-peak crypto correction); revenue stays well below FY25; take-rate compresses 15-20% as Robinhood
+      gains retail share and Hyperliquid-style deals nick institutional flows; Coinbase-held USDC stalls; the exit
+      multiple resets to ~12× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018,
+      2022 — base rate ~25% per 5-year window), and the H1 2026 losses already validated some of the cycle thesis.'
     dcf_metrics:
       cagr_5y: -3.3
       wacc: 0.11
@@ -222,8 +212,8 @@ scenarios:
       - 1.74
       - 1.92
       - 2.02
-      cash: 10.0
-      net_debt: 7.2
+      cash: 8.4
+      net_debt: 6.0
       special_assets: 3.0
       raise_total: 0.0
       dilution_pct: 0
@@ -239,8 +229,8 @@ scenarios:
       terminal_value: 24.24
       pv_terminal: 14.39
       op_ev: 21.29
-      total_equity: 27.09
-      dcf_per_share: 104.19
+      total_equity: 26.69
+      dcf_per_share: 102.65
     chart_data:
       ev_rev_multiple:
       - 5.5
@@ -258,30 +248,24 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.47
-    expected_per_share: 226.16
+    expected_per_share: 224.59
     headline: Everything-exchange compounds.
     narrative:
-    - 'The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K (mid-cycle).
-      Transaction revenue runs $3.5-4.5B annually with cycle texture. Subscription & services becomes the structural growth
-      engine — USDC float compounds to $35-40B, stablecoin revenue grows to $1.5-2.0B, staking + custody + interest add another
-      $1.5B+. The Deribit acquisition delivers — derivatives volume grows 40%+ annually with margin converging toward spot
-      over time.
-
-      '
-    - 'The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Coinbase International
-      scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, removing the cycle floor on
-      engaged users. Operating margin holds 38-42%. Exit-multiple SOTP: ~$215/share, modest upside vs spot — what a great
-      mature platform offers when the moat is mostly priced. Revenue $7.18B → $10.5B by FY30 (~8% CAGR); FCF $2.55B → $4.0B;
-      multiple 22× sustained.
-
-      '
-    probability_rationale: 'Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is integrating,
-      Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution + cycle. Base assumes BTC
-      ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually but the volume base grows, USDC
-      float grows at a decelerating rate as the ceiling bites, and the multiple holds at 22× FCF. 47% reflects that the thesis
-      is well-priced but in motion — sequential execution, not heroic assumptions.
-
-      '
+    - 'The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K
+      (mid-cycle). Transaction revenue runs $3.5-4.5B annually with cycle texture. Subscription & services becomes the
+      structural growth engine — Coinbase-held USDC compounds to $35-40B, stablecoin revenue grows to $1.5-2.0B,
+      staking + custody + interest add another $1.5B+. The Deribit acquisition delivers — derivatives volume grows
+      40%+ annually with margin converging toward spot over time.'
+    - 'The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Deribit
+      scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, putting a floor under
+      engaged users. Operating margin rises to ~40%. Revenue reaches ~$9.5B by FY30 (5.8% CAGR off FY25''s $7.18B);
+      FCF $2.55B → ~$3.8B; ~15× FCF exit — what a great mature platform offers when the moat is mostly priced.'
+    probability_rationale: 'Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is
+      integrating, Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution +
+      cycle. Base assumes BTC ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually
+      but the volume base grows, Coinbase-held USDC grows at a decelerating rate, and the exit multiple settles at
+      ~15× FCF. 47% reflects that the thesis is well-priced but in motion — sequential execution, not heroic
+      assumptions.'
     dcf_metrics:
       cagr_5y: 5.8
       wacc: 0.09
@@ -314,8 +298,8 @@ scenarios:
       - 3.22
       - 3.55
       - 3.83
-      cash: 10.5
-      net_debt: 7.2
+      cash: 8.9
+      net_debt: 6.0
       special_assets: 5.0
       raise_total: 0.0
       dilution_pct: 0
@@ -331,8 +315,8 @@ scenarios:
       terminal_value: 57.45
       pv_terminal: 37.34
       op_ev: 49.37
-      total_equity: 57.67
-      dcf_per_share: 226.16
+      total_equity: 57.27
+      dcf_per_share: 224.59
     chart_data:
       ev_rev_multiple:
       - 7.0
@@ -350,30 +334,24 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.18
-    expected_per_share: 482.45
+    expected_per_share: 480.00
     headline: Derivatives flywheel + USDC rails.
     narrative:
-    - 'The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as institutional
-      ETF flows compound. Transaction revenue grows $4.0B → $7.0B by FY30 as volume compounds AND share gains hold. Deribit
-      integration succeeds beyond model — derivatives revenue crosses $1.5B by FY28 with options margin substantially better
-      than spot. Coinbase International captures 15-20% of offshore derivatives flows as US regulatory clarity attracts onshore
-      institutional volume back from Binance.
-
-      '
-    - 'The subscription engine inflects. USDC float compounds to $75-100B as the GENIUS Act establishes USDC as the de facto
-      regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30. Coinbase One reaches 4M subs at $30+ ARPU.
-      Operating margin expands to 45%. FCF reaches $6.5B by FY30. The multiple expands — the market recognizes COIN as crypto''s
-      Stripe-meets-Nasdaq, sustaining 30× FCF. Exit-multiple SOTP: ~$358/share, +97% from spot. Two engines (cycle-driven
-      transaction + subscription rails) both fire.
-
-      '
-    probability_rationale: 'Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth (conditional 35%);
-      (b) USDC float compounds to $75B+ driving the subscription engine (conditional 40%); (c) Deribit delivers and derivatives
-      crosses $1.5B revenue (conditional 50% on integration); (d) multiple sustains at 30× FCF (conditional 50%). Joint at
-      15-20%, weighted 18%. Higher than ZM bull because COIN''s bull has one cycle- dependent leg AND one secular leg — they
-      can succeed independently.
-
-      '
+    - 'The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as
+      institutional ETF flows compound. Transaction revenue grows $4.0B → $7.0B by FY30 as volume compounds AND share
+      gains hold. Deribit integration succeeds beyond model — derivatives revenue crosses $1.5B by FY28 with options
+      margin substantially better than spot. Deribit captures 15-20% of offshore derivatives flows as US regulatory
+      clarity attracts institutional volume back from Binance.'
+    - 'The subscription engine inflects. Coinbase-held USDC compounds past $50B (from a record $20B) as the GENIUS Act
+      establishes USDC as the de facto regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30.
+      Coinbase One reaches 4M subs at $30+ ARPU. Operating margin expands to 45%. FCF reaches ~$6.6B by FY30. The
+      market recognizes COIN as crypto''s Stripe-meets-Nasdaq, sustaining a 20× FCF exit. Two engines (cycle-driven
+      transaction + subscription rails) both fire.'
+    probability_rationale: 'Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth
+      (conditional 35%); (b) Coinbase-held USDC compounds past $50B driving the subscription engine (conditional 40%);
+      (c) Deribit delivers and derivatives crosses $1.5B revenue (conditional 50% on integration); (d) the market
+      sustains a ~20× FCF exit (conditional 50%). Joint at 15-20%, weighted 18%. Higher than ZM bull because COIN''s
+      bull has one cycle-dependent leg AND one secular leg — they can succeed independently.'
     dcf_metrics:
       cagr_5y: 13.9
       wacc: 0.085
@@ -406,8 +384,8 @@ scenarios:
       - 4.97
       - 6.07
       - 6.58
-      cash: 11.0
-      net_debt: 7.0
+      cash: 9.4
+      net_debt: 6.0
       special_assets: 8.0
       raise_total: 0.0
       dilution_pct: 0
@@ -423,8 +401,8 @@ scenarios:
       terminal_value: 131.6
       pv_terminal: 87.52
       op_ev: 106.2
-      total_equity: 118.2
-      dcf_per_share: 482.45
+      total_equity: 117.6
+      dcf_per_share: 480.00
     chart_data:
       ev_rev_multiple:
       - 8.5
@@ -442,29 +420,24 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 1062.68
-    headline: Crypto-as-rails; 38× re-rate.
+    expected_per_share: 1060.13
+    headline: Crypto-as-rails; 28× re-rate.
     narrative:
-    - 'The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US gateway.
-      BTC ranges $200-300K as sovereign treasury adoption institutionalizes. USDC float crosses $150B as GENIUS Act + EU MICA
-      make USDC the global regulated dollar — challenging SWIFT for cross-border. Coinbase International becomes the dominant
-      offshore venue as Binance''s regulatory squeeze opens institutional flows. Transaction revenue compounds to $10B+ by
-      FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin reaches 50%.
-
-      '
-    - 'The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech infrastructure
-      (Visa: 25× FCF; Stripe at private mark ~40×). COIN at 38× FCF on a $9B base. Exit-multiple SOTP: ~$610/share, +235%
-      from spot. The crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase
-      has the regulatory wedge, the float, the derivatives platform, and the cash to attempt all four.
-
-      '
-    probability_rationale: 'Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); USDC crosses $150B
-      as regulatory tailwind + EU MICA convert it to the global regulated dollar (25%); Coinbase International captures Binance''s
-      offshore institutional share post-regulatory squeeze (30%); multiple re-rates to fintech-infrastructure 35-40× FCF (30%).
-      Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the regulatory wedge, float, derivatives platform,
-      and cash to attempt all four.
-
-      '
+    - 'The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US
+      gateway. BTC ranges $200-300K as sovereign treasury adoption institutionalizes. Coinbase-held USDC crosses $100B
+      as the GENIUS Act + EU MiCA make USDC the global regulated dollar — challenging SWIFT for cross-border. Deribit
+      becomes the dominant offshore venue as Binance''s regulatory squeeze opens institutional flows. Transaction
+      revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin
+      reaches 50%.'
+    - 'The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech
+      infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN exits at 28× FCF on ~$10.7B of FY30 FCF. The
+      crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase has the
+      regulatory wedge, the float, the derivatives platform, and the cash to attempt all four.'
+    probability_rationale: 'Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); Coinbase-held
+      USDC crosses $100B as the regulatory tailwind + EU MiCA make USDC the global regulated dollar (25%); Deribit
+      captures Binance''s offshore institutional share post-regulatory squeeze (30%); the multiple re-rates to a
+      fintech-infrastructure ~28× FCF exit (30%). Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the
+      regulatory wedge, float, derivatives platform, and cash to attempt all four.'
     dcf_metrics:
       cagr_5y: 20.4
       wacc: 0.08
@@ -497,8 +470,8 @@ scenarios:
       - 7.05
       - 9.03
       - 10.65
-      cash: 12.0
-      net_debt: 7.0
+      cash: 10.4
+      net_debt: 6.0
       special_assets: 15.0
       raise_total: 0.0
       dilution_pct: 0
@@ -514,8 +487,8 @@ scenarios:
       terminal_value: 298.2
       pv_terminal: 202.95
       op_ev: 229.73
-      total_equity: 249.73
-      dcf_per_share: 1062.68
+      total_equity: 249.13
+      dcf_per_share: 1060.13
     chart_data:
       ev_rev_multiple:
       - 10.0
@@ -529,120 +502,149 @@ scenarios:
       - 37.0
       - 38.0
       - 38.0
-historical_prices:
+historical_prices:   # Yahoo daily closes; x = years before the 2026-09-21 spot close
   ipo_marker: Direct Listing Apr '21 @ $381
-  x_min: -5.2
+  x_min: -5.5
   points:
-  - - -5.13
-    - 328.0
-  - - -4.83
-    - 252.0
-  - - -4.58
-    - 251.0
-  - - -4.33
-    - 189.0
-  - - -4.08
-    - 70.0
-  - - -3.83
-    - 64.0
-  - - -3.58
-    - 35.0
-  - - -3.33
-    - 66.0
-  - - -3.08
-    - 60.0
-  - - -2.83
-    - 75.0
-  - - -2.58
-    - 175.0
-  - - -2.33
-    - 240.0
-  - - -2.08
-    - 230.0
-  - - -1.83
-    - 175.0
-  - - -1.58
-    - 275.0
-  - - -1.33
-    - 250.0
-  - - -1.08
-    - 260.0
-  - - -0.83
-    - 420.0
-  - - -0.58
-    - 380.0
-  - - -0.33
-    - 145.0
-  - - -0.17
-    - 175.0
+  - - -5.44
+    - 328.28
+  - - -5.25
+    - 222.6
+  - - -5.17
+    - 220.61
+  - - -5.0
+    - 238.46
+  - - -4.87
+    - 357.39
+  - - -4.75
+    - 247.69
+  - - -4.5
+    - 186.08
+  - - -4.25
+    - 51.91
+  - - -4.0
+    - 67.64
+  - - -3.73
+    - 32.53
+  - - -3.5
+    - 66.3
+  - - -3.25
+    - 57.49
+  - - -3.0
+    - 74.42
+  - - -2.75
+    - 175.48
+  - - -2.63
+    - 117.3
+  - - -2.5
+    - 255.51
+  - - -2.25
+    - 225.86
+  - - -2.0
+    - 170.09
+  - - -1.79
+    - 343.62
+  - - -1.75
+    - 278.71
+  - - -1.5
+    - 189.86
+  - - -1.45
+    - 151.47
+  - - -1.25
+    - 308.38
+  - - -1.18
+    - 419.78
+  - - -1.0
+    - 342.46
+  - - -0.76
+    - 245.12
+  - - -0.68
+    - 255.86
+  - - -0.61
+    - 141.09
+  - - -0.51
+    - 197.5
+  - - -0.32
+    - 182.25
+  - - -0.23
+    - 146.19
+  - - -0.12
+    - 153.6
+  - - -0.02
+    - 191.45
 weighting_rationale:
 - label: Ultra Bear 8%
   body: Crypto winter + take-rate compression + GENIUS hostility compound; multiple collapses to ~8× FCF.
 - label: Bear 22%
-  body: Cycle normalizes; transaction revenue stays sub-FY25; multiple resets to ~18× FCF on slower growth.
+  body: Cycle normalizes; transaction revenue stays sub-FY25; multiple resets to ~12× FCF on slower growth.
 - label: Base 47%
-  body: 'Modal: BTC ranges $80-130K; subscription engine compounds; USDC to $35B; ~15× FCF.'
+  body: 'Modal: BTC ranges $80-130K; subscription engine compounds; Coinbase-held USDC to $35B; ~15× FCF.'
 - label: Bull 18%
-  body: BTC $130-200K + USDC >$75B + Deribit delivers; two engines fire independently.
+  body: BTC $130-200K + Coinbase-held USDC >$50B + Deribit delivers; two engines fire independently.
 - label: Ultra Bull 5%
-  body: Crypto-as-rails; sovereign adoption; multiple re-rates to fintech-infrastructure ~38× FCF.
+  body: Crypto-as-rails; sovereign adoption; multiple re-rates to fintech-infrastructure ~28× FCF.
 page3:
-  subtitle: FY21–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q1 2026 10-Q/shareholder
-    letter, GENIUS Act, Deribit closing 8-K
-  sources: 'Sources: COIN 10-K FY25, Q1 2026 shareholder letter, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1, GENIUS Act
-    (S.1582), Coindesk Hyperliquid/Circle analysis May 2026.'
+  subtitle: FY21–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q2 2026 10-Q/shareholder
+    letter, Circle Q2 2026 results, GENIUS Act, Deribit closing 8-K
+  sources: 'Sources: COIN 10-K FY25, Q1 and Q2 2026 10-Qs/shareholder letters, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1
+    and Q2 2026 results, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026, Yahoo Finance prices.'
 appendix:
   pushback:
   - label: Subscription engine is structural.
-    body: Sub & services hit $584M Q1 2026 despite trading collapse — counter-cyclical USDC float kept revenue from imploding
-      like 2022. ~44% of net revenue.
+    body: Sub & services hit $555M in Q2 2026 (48% of net revenue) despite the trading slump, on a record $20B of Coinbase-held
+      USDC.
   - label: Regulatory moat is unprecedented.
-    body: SEC dismissed with prejudice Feb 2025; GENIUS Act passed; CFTC derivatives jurisdiction clear. The only fully-regulated
-      US large-scale exchange.
+    body: SEC case dropped 2025; GENIUS Act; 2026 SEC tokenized-securities exemption + UK FCA approval. The only fully-regulated
+      big US exchange.
   - label: Deribit makes COIN the global derivatives leader.
-    body: 'Acquisition closed Aug 2025 at $4.3B effective. #1 by options open interest and volume. Derivatives are higher-margin
-      and less cycle-correlated than spot.'
+    body: Closed Aug 2025 (~$4.3B); ~49% of crypto options (IBIT briefly topped its open interest, Apr 2026). Higher-margin,
+      less cyclical than spot.
   - label: Coinbase One is the cycle hedge.
     body: '>1M paid subs at $30/mo + premium tiers. Engagement floor regardless of BTC price. Higher trading volume + revenue
       per user vs free tier.'
   - label: Balance sheet absorbs cycle.
-    body: $10.2B cash + $1.3B BTC + ~$1B CRCL + ~$1.3B crypto = $13.8B liquid. Survives a 2022-style winter without distress.
+    body: $8.6B cash + ~$1.5B BTC + CRCL vs $6.0B debt, after repaying the 2026 converts in cash. Survives a 2022-style winter.
   triggers:
   - label: Bear validation
-    body: BTC < $60K sustained > 2 quarters  ·  transaction rev < $700M/qtr  ·  take-rate below 10 bps  ·  USDC float < $20B  ·  Hyperliquid-style
+    body: BTC < $60K sustained > 2 quarters  ·  transaction rev < $700M/qtr  ·  take-rate below 10 bps  ·  Coinbase-held USDC < $15B  ·  Hyperliquid-style
       deals proliferate
   - label: Bull validation
-    body: BTC > $150K sustained > 2 quarters  ·  derivatives rev > $400M/qtr  ·  USDC float > $50B  ·  Coinbase One > 2M subs  ·  international
+    body: BTC > $150K sustained > 2 quarters  ·  derivatives rev > $400M/qtr  ·  Coinbase-held USDC > $50B  ·  Coinbase One > 2M subs  ·  international
       flows > 25% of derivatives
   - label: Reframe needed
-    body: If banks (JPM, BoA) launch GENIUS-compliant stablecoins at scale taking >20% of USDC share, the rails thesis breaks.
-      Conversely, a major COIN acquisition (>$5B) broadens the thesis.
+    body: If bank-issued stablecoins (the 21-bank consortium coin, Open USD) scale and take >20% of USDC's share, the rails
+      thesis breaks. Conversely, a major COIN acquisition (>$5B) broadens the thesis.
 glossary:
 - term: USDC
-  definition: Circle-issued regulated dollar stablecoin. ~$60B circulating; $19B held within Coinbase products Q1 2026. Federally
-    regulated under the GENIUS Act.
+  definition: Circle-issued dollar stablecoin. ~$75B circulating (~24% of stablecoins, Sep 2026); a record ~$20B held in
+    Coinbase products (Q2 2026). GENIUS Act-regulated (effective by Jan 2027).
 - term: Transaction revenue
   definition: Fees on trading volume (spot + derivatives). $4.0B FY25 (56% of revenue). Cyclically tied to crypto prices/volatility;
     the main swing variable.
 - term: Subscription & services
-  definition: Non-transaction revenue — USDC interest, staking, custody, Coinbase One subs. $2.8B FY25; structurally growing.
+  definition: Non-transaction revenue — USDC interest, staking, custody, Coinbase One subs. $2.8B FY25; $555M in Q2 2026 (48%
+    of net revenue) as lower crypto prices and rates offset USDC growth.
 - term: Deribit
-  definition: 'Crypto-options exchange acquired Aug 2025 for $4.3B. Global #1 by options open interest. Made COIN the derivatives
-    leader.'
+  definition: Crypto-options exchange acquired Aug 2025 (~$2.9B announced, ~$4.3B at close). ~49% of crypto options (55% of
+    BTC); IBIT options briefly topped its open interest (Apr 2026).
 - term: GENIUS Act
   definition: US stablecoin law (2025). Defines permitted issuers; $10B ceiling for state-qualified ones. Federal moat for
     USDC.
 - term: Circle (CRCL) stake
-  definition: COIN holds ~8.4M CRCL shares from the 2023 Centre dissolution. ~$1B at $120/share (range $0.5-2.5B). Marked
-    as a strategic investment.
+  definition: CRCL shares received in the 2023 Centre dissolution; part sold Q1 2026. The remainder (≤~8.4M shares) is worth
+    ≤~$0.8B at ~$92 (Sep 2026). Marked as a strategic investment.
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "007"
+  footer_timestamp: "2026-09-26_04-14"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "007"
+  pdf_timestamp: "2026-09-26_04-14"
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 201.05
   - version: "005"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"
@@ -666,31 +668,34 @@ competitive:
     counter_positioning: { score: 1, note: "Hard to counter-position in a commoditizing exchange market." }
     switching_costs:     { score: 2, note: "Custody, staking, institutional integrations, fiat on-ramps." }
     branding:            { score: 3, note: "The trusted, regulated, public-company US crypto brand." }
-    cornered_resource:   { score: 2, note: "US regulatory licenses/compliance estate; Circle/USDC relationship; Base L2." }
+    cornered_resource:   { score: 2, note: "US regulatory licenses/compliance estate; Circle/USDC relationship (revenue share renewed unchanged into 2029); Base L2." }
     process_power:       { score: 2, note: "Compliance + security track record (no major custody hack)." }
   dominant_power: branding
   durability: medium
   rivals:
     - { name: "Binance", kind: private, note: "Largest global volume; regulatory overhang; offshore.", growth: 0.10, margin: 0.45, multiple: "private" }
-    - { name: "Robinhood", kind: public, note: "Low/zero-fee; gaining US crypto + equities share.", growth: 0.25, margin: 0.30, multiple: "~30x" }
-    - { name: "Spot ETFs (BlackRock/Fidelity)", kind: incumbent-division, note: "Disintermediate spot holding/custody for many.", growth: 0.40, margin: null, multiple: "n/a" }
-    - { name: "Kraken", kind: private, note: "Established US exchange; IPO-bound.", growth: 0.15, margin: null, multiple: "private" }
+    - { name: "Robinhood", kind: public, note: "Low/zero-fee; Q2 crypto revenue -38% YoY; prediction markets now out-earn crypto.", growth: 0.25, margin: 0.30, multiple: "~30x" }
+    - { name: "Spot ETFs (BlackRock/Fidelity)", kind: incumbent-division, note: "Disintermediate spot holding/custody; IBIT options open interest briefly topped Deribit's (Apr 2026).", growth: 0.40, margin: null, multiple: "n/a" }
+    - { name: "Kraken", kind: private, note: "Established US exchange; IPO paused Mar 2026; Q2 adj. revenue $508M (+17%).", growth: 0.15, margin: null, multiple: "private" }
   threats:
-    - { vector: scale_economies, who: "Robinhood / zero-fee entrants", falsifier: "Retail take-rate compresses below ~1% on a sustained basis as fee competition bites." }
+    - { vector: scale_economies, who: "Robinhood / zero-fee entrants", falsifier: "Consumer transaction revenue / consumer spot volume below 1.0% for two straight quarters (~1.75% in Q2 2026)." }
     - { vector: counter_positioning, who: "Spot ETFs + DEXs", falsifier: "Coinbase trading-volume share declines 2 consecutive quarters during a crypto bull market." }
+    - { vector: cornered_resource, who: "Bank-consortium stablecoin (21 banks) / Open USD", falsifier: "USDC share of stablecoin supply falls below 20% (24% in Sep 2026), or average USDC held in Coinbase products falls below $15B (record $20B, Q2 2026)." }
   takeaway: >
     A regulated-trust brand plus liquidity/USDC network with real compliance barriers,
-    underpinning the bull terminal value; fee compression and ETF/DEX disintermediation are
-    the durability falsifiers to watch.
+    underpinning the bull terminal value; fee compression, ETF/DEX disintermediation, and
+    bank / Open USD stablecoins taking USDC share are the durability falsifiers to watch.
 pocd:
   people:
     ceo: 'Brian Armstrong'
     founder_led: true
     tenure_years: 14
     insider_ownership_pct: 14.0
-    capital_allocation: 'M&A-led, not capital-return: a long string of bolt-ons (Xapo, Tagomi, Bison Trails,
-      FairX) culminating in Deribit (~$2.9B, 2025 — the largest crypto-industry deal), funded partly in stock.
-      Holds a long-term crypto treasury (~16,500 BTC). No buyback program — capital goes to M&A + crypto, not returns.'
+    capital_allocation: 'M&A-led with a growing capital return: bolt-ons (Xapo, Tagomi, Bison Trails, FairX)
+      culminating in Deribit (~$2.9B announced, ~$4.3B at the Aug-2025 close — the largest crypto-industry deal),
+      funded partly in stock. A $4.0B repurchase authorization ($1B Oct 2024 → $2B Oct 2025 → $4B Jan 2026, incl.
+      converts/notes) is half spent: $2.0B through Jun 30 2026, retiring ~10.1M Class A shares; the 2026 converts
+      were repaid in cash. Holds a long-term crypto treasury (~17,200 BTC, Jun 2026).'
     incentive_alignment: 'Alignment runs through the founder stake, not fresh pay: FY2024 was a $1M salary with
       $0 bonus and $0 new equity (the bulk of "other comp" ~$6.2M is personal security). But Armstrong is a
       steady seller — a 10b5-1 plan moved ~$550M (>1.5M shares, ~5% of his stake) over the past year.'
@@ -703,7 +708,8 @@ pocd:
     score: 3
     takeaway: 'Founder-CEO with ~14% economic but majority, non-dilutable voting control — outsiders cannot
       force a change. Aligned via the stake and a fully-independent committee structure, but the offsets stack:
-      majority control, a steady 10b5-1 sell-down, and capital flowing to M&A + a crypto treasury rather than returns.'
-  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (COIN 4.97)'
+      majority control and a steady 10b5-1 sell-down, with capital split across M&A, a crypto treasury and a $4B
+      buyback (half spent).'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +49% finding), then position-sized.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +34.2% finding), then position-sized.'
