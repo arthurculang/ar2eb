@@ -15,9 +15,15 @@ Per public ticker (dcf_type != private_prevaluation):
        market.market_cap_billion: -> shares-held-constant mcap
                                      (shares = old_mcap / old_spot)
        date:                      -> today (UTC)
+     historical_prices:         -> kept aligned with the new date (below)
      Nothing else in the file is touched — theses/scenarios are prose the
      mechanical pass must never edit (that's the quarterly re-underwrite's
      job, §15.3).
+     History alignment: chart points are stored as years BEFORE the memo's
+     date, so advancing `date:` by Δ must shift every point (and x_min) by −Δ
+     — otherwise the whole history drifts toward "today" by a month per
+     re-price. The outgoing spot is appended at t = −Δ (last month's "today"
+     becomes a real history point), so the line stays continuous.
   3. PIPELINE (unless --skip-render):
        validate.py (strict) -> rebuild_all.py --strict-layout
        -> portfolio/build_weights.py -> visual_hash.py (baseline regen)
@@ -129,6 +135,81 @@ def _decimals(num_str: str, floor: int = 2) -> int:
     return max(floor, len(frac))
 
 
+_T_BLOCK = re.compile(r"^(\s+- - )(-?\d+(?:\.\d+)?)(\s*(?:#.*)?)$")      # block pair: t line
+_T_FLOW = re.compile(r"^(\s+- \[\s*)(-?\d+(?:\.\d+)?)(\s*,.*)$")         # flow pair: [t, p]
+_X_MIN = re.compile(r"^(\s+x_min:\s*)(-?\d+(?:\.\d+)?)(.*)$")
+_ASOF_NOTE = re.compile(r"(years before the )\d{4}-\d{2}-\d{2}( as-of)")
+
+
+def shift_history(text: str, old_date: str, new_date: str, old_spot: str) -> str:
+    """Re-anchor historical_prices from old_date to new_date (see module doc).
+
+    Edits values IN PLACE line by line (comments/format survive), then
+    verifies against a YAML reload; raises rather than write anything else.
+    No-op when the date doesn't advance or the memo has no history block."""
+    delta = (dt.date.fromisoformat(new_date) - dt.date.fromisoformat(old_date)).days / 365.25
+    lines = text.split("\n")
+    starts = [i for i, l in enumerate(lines) if l.startswith("historical_prices:")]
+    if delta <= 0 or not starts:
+        return text
+    i = starts[0]; j = i + 1
+    while j < len(lines) and (lines[j].startswith(" ") or not lines[j].strip()):
+        j += 1
+    while j > i + 1 and not lines[j - 1].strip():            # trailing blanks belong outside
+        j -= 1
+    before = yaml.safe_load(text)["historical_prices"]
+    def shifted(num: str) -> str:
+        dec = max(2, len(num.split(".")[1]) if "." in num else 0)
+        return f"{float(num) - delta:.{dec}f}"
+    last_pt, style = None, None
+    for k in range(i + 1, j):
+        l = lines[k]
+        for rx, st in ((_T_BLOCK, "block"), (_T_FLOW, "flow")):
+            m = rx.match(l)
+            if m:
+                lines[k] = f"{m.group(1)}{shifted(m.group(2))}{m.group(3)}"
+                last_pt, style = k, st
+                break
+        else:
+            m = _X_MIN.match(l)
+            if m:
+                lines[k] = f"{m.group(1)}{shifted(m.group(2))}{m.group(3)}"
+            lines[k] = _ASOF_NOTE.sub(rf"\g<1>{new_date}\g<2>", lines[k])
+    if last_pt is None:
+        raise ValueError("historical_prices has no recognizable points")
+    # append the outgoing spot at t = -delta, unless the (shifted) last point is already there
+    last_t = before["points"][-1][0] - delta
+    append = abs(last_t - (-delta)) > 0.006
+    if append:
+        if style == "block":
+            ind = lines[last_pt][: len(lines[last_pt]) - len(lines[last_pt].lstrip())]
+            ins = [f"{ind}- - {-delta:.2f}", f"{ind}  - {old_spot}"]
+            at = last_pt + 2                                    # after the pair's price line
+        else:
+            ind = lines[last_pt][: len(lines[last_pt]) - len(lines[last_pt].lstrip())]
+            ins = [f"{ind}- [{-delta:.2f}, {old_spot}]   # {old_date} spot (prior as-of, reprice.py)"]
+            at = last_pt + 1
+        lines[at:at] = ins
+    new = "\n".join(lines)
+    # verify: exactly the intended history change, nothing else
+    after_doc, before_doc = yaml.safe_load(new), yaml.safe_load(text)
+    want = [[t - delta, p] for t, p in before["points"]]
+    if append:
+        want.append([-delta, float(old_spot)])
+    got = after_doc["historical_prices"]
+    tol = 0.0051                                              # rounding to >=2 decimals
+    ok = (len(got["points"]) == len(want)
+          and all(abs(g[0] - w[0]) <= tol and g[1] == w[1] for g, w in zip(got["points"], want))
+          and abs(got["x_min"] - (before["x_min"] - delta)) <= tol
+          and {k: v for k, v in got.items() if k not in ("points", "x_min")}
+              == {k: v for k, v in before.items() if k not in ("points", "x_min")}
+          and {k: v for k, v in after_doc.items() if k != "historical_prices"}
+              == {k: v for k, v in before_doc.items() if k != "historical_prices"})
+    if not ok:
+        raise ValueError("historical_prices shift failed verification — file left untouched")
+    return new
+
+
 def reprice_yml(ticker: str, new_px: float, today: str) -> dict:
     """Surgically rewrite spot / market.market_cap_billion / date in place.
     Returns the change record for the run report."""
@@ -150,6 +231,7 @@ def reprice_yml(ticker: str, new_px: float, today: str) -> dict:
     spot_str = f"{new_px:.{_decimals(m_spot.group(1))}f}"
     mcap_str = f"{new_mcap:.{_decimals(m_mcap.group(2))}f}"
     q = m_date.group(1) or "'"
+    old_date = m_date.group(2)
 
     text = text[:m_spot.start()] + f"spot: {spot_str}" + text[m_spot.end():]
     m_date = re.search(r"^date:\s*(['\"]?)([0-9-]+)\1\s*$", text, re.M)
@@ -157,6 +239,7 @@ def reprice_yml(ticker: str, new_px: float, today: str) -> dict:
     m_mcap = re.search(r"^(\s+market_cap_billion:\s*)([0-9.]+)", text, re.M)
     text = (text[:m_mcap.start()] + m_mcap.group(1) + mcap_str
             + text[m_mcap.end():])
+    text = shift_history(text, old_date, today, m_spot.group(1))
 
     path.write_text(text, encoding="utf-8")
     return {"ticker": ticker, "old_spot": old_spot, "new_spot": new_px,
