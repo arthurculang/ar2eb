@@ -445,26 +445,42 @@ scenarios:
       - 11.0
 historical_prices:
   ipo_marker: IPO Oct '18
-  x_min: -7.7
-  points:
-  - - -7.5
-    - 14.0
-  - - -5.5
-    - 50.0
-  - - -4.6
-    - 180.0
-  - - -3.5
-    - 60.0
-  - - -2.5
-    - 35.0
-  - - -1.5
-    - 25.0
-  - - -1.0
-    - 35.0
-  - - -0.5
-    - 68.0
-  - - -0.05
-    - 87.5
+  x_min: -8.01
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-7.89, 14.00]   # 2018-10-31
+  - [-7.73, 23.09]   # 2018-12-31
+  - [-7.49, 23.18]   # 2019-03-29
+  - [-7.24, 29.01]   # 2019-06-28
+  - [-6.98, 23.88]   # 2019-09-30
+  - [-6.73, 21.00]   # 2019-12-31
+  - [-6.48, 30.58]   # 2020-03-31
+  - [-6.23, 45.30]   # 2020-06-30
+  - [-5.98, 75.97]   # 2020-09-30
+  - [-5.72, 141.29]   # 2020-12-31
+  - [-5.48, 123.86]   # 2021-03-31
+  - [-5.23, 133.25]   # 2021-06-30
+  - [-4.98, 106.97]   # 2021-09-30
+  - [-4.73, 77.39]   # 2021-12-31
+  - [-4.48, 49.38]   # 2022-03-31
+  - [-4.23, 34.96]   # 2022-06-30
+  - [-3.98, 35.24]   # 2022-09-30
+  - [-3.73, 23.81]   # 2022-12-30
+  - [-3.48, 15.08]   # 2023-03-31
+  - [-3.23, 20.46]   # 2023-06-30
+  - [-2.98, 20.26]   # 2023-09-29
+  - [-2.73, 36.86]   # 2023-12-29
+  - [-2.49, 34.31]   # 2024-03-28
+  - [-2.23, 49.28]   # 2024-06-28
+  - [-1.98, 45.18]   # 2024-09-30
+  - [-1.72, 46.47]   # 2024-12-31
+  - [-1.48, 39.26]   # 2025-03-31
+  - [-1.23, 36.79]   # 2025-06-30
+  - [-0.98, 28.14]   # 2025-09-30
+  - [-0.73, 31.72]   # 2025-12-31
+  - [-0.48, 47.52]   # 2026-03-31
+  - [-0.23, 102.88]   # 2026-06-30
+  - [-0.15, 91.55]   # 2026-07-31
+  - [-0.06, 139.00]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
   body: Stall at ~7.6% growth; never durably profitable.
@@ -624,8 +640,7 @@ pocd:
       second co-founder still active, an institutionalized board, and a business past early stage (~$377M revenue).
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -49.8% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

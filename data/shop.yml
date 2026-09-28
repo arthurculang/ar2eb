@@ -455,24 +455,32 @@ scenarios:
       - 29.0
 historical_prices:
   ipo_marker: IPO May '15
-  x_min: -5.2
-  points:
-  - - -5.0
-    - 30
-  - - -4.2
-    - 170
-  - - -3.3
-    - 35
-  - - -2.5
-    - 60
-  - - -1.5
-    - 80
-  - - -0.8
-    - 120
-  - - -0.3
-    - 182
-  - - -0.05
-    - 108.24
+  x_min: -5.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.48, 110.65]   # 2021-03-31
+  - [-5.23, 146.10]   # 2021-06-30
+  - [-4.98, 135.58]   # 2021-09-30
+  - [-4.73, 137.74]   # 2021-12-31
+  - [-4.48, 67.60]   # 2022-03-31
+  - [-4.23, 31.24]   # 2022-06-30
+  - [-3.98, 26.94]   # 2022-09-30
+  - [-3.73, 34.71]   # 2022-12-30
+  - [-3.48, 47.94]   # 2023-03-31
+  - [-3.23, 64.60]   # 2023-06-30
+  - [-2.98, 54.57]   # 2023-09-29
+  - [-2.73, 77.90]   # 2023-12-29
+  - [-2.49, 77.17]   # 2024-03-28
+  - [-2.23, 66.05]   # 2024-06-28
+  - [-1.98, 80.14]   # 2024-09-30
+  - [-1.72, 106.33]   # 2024-12-31
+  - [-1.48, 95.48]   # 2025-03-31
+  - [-1.23, 115.35]   # 2025-06-30
+  - [-0.98, 148.61]   # 2025-09-30
+  - [-0.73, 160.97]   # 2025-12-31
+  - [-0.48, 118.62]   # 2026-03-31
+  - [-0.23, 114.18]   # 2026-06-30
+  - [-0.15, 117.15]   # 2026-07-31
+  - [-0.06, 147.37]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
   body: AI disintermediates the storefront; growth fades; ~$31 (-71%).
@@ -634,7 +642,7 @@ pocd:
       course-correction.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -15.1% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

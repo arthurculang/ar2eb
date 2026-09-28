@@ -163,84 +163,104 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 13 / Bear 17 / Base 55 / Bull 12 / Ultra Bull 3. Spot price reference: September 22, 2026 close.",
     "thesis": "Joby trades at ~$7.5B against $24M of Q1 2026 revenue and $700M annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise) provides ~3 years of runway. FAA certification entered Stage 5 (TIA) in March 2026 with the type certificate guided late 2026, Dubai exclusive operations begin in 2026, and the June 2026 Toyota manufacturing joint venture unlocks scale. Pre-revenue category-defining companies present a Damodaran problem: the standard 5-year DCF generates nonsense. The young-company framework asks what mature TAM share is plausible, what terminal margins look like at scale, and what probability of outright failure. Five scenarios, weighted; show your work.",
     "historicalPrices": {
-      "xMin": -5.0,
+      "xMin": -5.35,
       "ipoMarker": "IPO Aug '21",
       "points": [
         [
-          -4.67,
-          9.5
+          -5.32,
+          9.95
         ],
         [
-          -4.42,
-          8.0
+          -5.23,
+          9.98
         ],
         [
-          -4.17,
-          5.0
+          -4.98,
+          10.06
         ],
         [
-          -3.92,
-          3.5
+          -4.73,
+          7.3
         ],
         [
-          -3.67,
-          4.0
+          -4.48,
+          6.62
         ],
         [
-          -3.42,
-          3.0
+          -4.23,
+          4.91
         ],
         [
-          -3.17,
-          5.0
+          -3.98,
+          4.33
         ],
         [
-          -2.92,
-          9.0
+          -3.73,
+          3.35
         ],
         [
-          -2.67,
-          7.5
+          -3.48,
+          4.34
         ],
         [
-          -2.42,
-          6.0
+          -3.23,
+          10.26
         ],
         [
-          -2.17,
-          5.5
+          -2.98,
+          6.45
         ],
         [
-          -1.92,
-          5.5
+          -2.73,
+          6.65
         ],
         [
-          -1.67,
-          5.5
+          -2.49,
+          5.36
         ],
         [
-          -1.42,
-          9.0
+          -2.23,
+          5.1
         ],
         [
-          -1.17,
-          8.0
+          -1.98,
+          5.03
         ],
         [
-          -0.92,
-          7.0
+          -1.72,
+          8.13
         ],
         [
-          -0.67,
-          7.5
+          -1.48,
+          6.02
         ],
         [
-          -0.42,
-          9.5
+          -1.23,
+          10.55
         ],
         [
-          -0.17,
-          9.0
+          -0.98,
+          16.14
+        ],
+        [
+          -0.73,
+          13.2
+        ],
+        [
+          -0.48,
+          8.26
+        ],
+        [
+          -0.23,
+          8.92
+        ],
+        [
+          -0.15,
+          7.15
+        ],
+        [
+          -0.06,
+          6.84
         ]
       ]
     },
@@ -1457,80 +1477,104 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 20 / Base 50 / Bull 12 / Ultra Bull 3. Spot price reference: September 22, 2026 close.",
     "thesis": "Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M annualized cash burn. The $1.28B liquidity position needs replenishment by mid-2027 absent commercial conversion. Driverless commercial launch slipped from 2024 to now 2027; the Driver runs supervised highway pilots with PACCAR, Volvo, FedEx. Young-company DCF below: TAM share, terminal margin, P(failure). Five scenarios, weighted; show your work.",
     "historicalPrices": {
-      "xMin": -5.0,
+      "xMin": -5.35,
       "ipoMarker": "IPO Nov '21",
       "points": [
         [
-          -4.5,
-          10.0
+          -5.32,
+          9.79
         ],
         [
-          -4.25,
-          7.0
+          -5.23,
+          9.89
         ],
         [
-          -4.0,
-          4.0
+          -4.98,
+          9.93
         ],
         [
-          -3.75,
-          2.5
+          -4.73,
+          11.26
         ],
         [
-          -3.5,
-          1.5
+          -4.48,
+          5.59
         ],
         [
-          -3.25,
-          2.0
+          -4.23,
+          1.91
         ],
         [
-          -3.0,
-          3.5
+          -3.98,
+          2.21
         ],
         [
-          -2.75,
-          3.0
+          -3.73,
+          1.21
         ],
         [
-          -2.5,
-          2.5
+          -3.48,
+          1.39
         ],
         [
-          -2.25,
-          3.0
+          -3.23,
+          2.94
         ],
         [
-          -2.0,
-          4.5
+          -2.98,
+          2.35
         ],
         [
-          -1.75,
-          4.0
+          -2.73,
+          4.37
         ],
         [
-          -1.5,
-          5.5
+          -2.49,
+          2.82
         ],
         [
-          -1.25,
-          6.0
+          -2.23,
+          2.77
         ],
         [
-          -1.0,
-          4.5
+          -1.98,
+          5.92
         ],
         [
-          -0.75,
-          5.0
+          -1.72,
+          6.3
         ],
         [
-          -0.5,
-          6.5
+          -1.48,
+          6.72
         ],
         [
-          -0.25,
-          7.0
+          -1.23,
+          5.24
+        ],
+        [
+          -0.98,
+          5.39
+        ],
+        [
+          -0.73,
+          3.84
+        ],
+        [
+          -0.48,
+          4.12
+        ],
+        [
+          -0.23,
+          6.82
+        ],
+        [
+          -0.15,
+          6.45
+        ],
+        [
+          -0.06,
+          5.63
         ]
       ]
     },
@@ -2526,7 +2570,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +5.1% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -2745,84 +2789,96 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 8 / Bear 12 / Base 55 / Bull 20 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
     "thesis": "LTH trades at $40.04 ($8.9B mkt cap) on TTM revenue $3.0B and Adj EBITDA $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14 luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear: capital recycling unsustainable, leveraged real estate vehicle. Bull: luxury wellness category-of-one, SLB is smart financing. Today's price requires bull-case execution. Five scenarios, weighted; show your work.",
     "historicalPrices": {
-      "xMin": -5.0,
+      "xMin": -5.35,
       "ipoMarker": "IPO Oct '21",
       "points": [
         [
-          -4.58,
-          18.0
+          -4.9,
+          17.34
         ],
         [
-          -4.42,
-          14.0
+          -4.73,
+          17.21
         ],
         [
-          -4.17,
-          13.0
+          -4.48,
+          14.54
         ],
         [
-          -3.92,
-          14.5
+          -4.23,
+          12.88
         ],
         [
-          -3.67,
-          16.0
+          -3.98,
+          9.75
         ],
         [
-          -3.42,
-          13.0
+          -3.73,
+          11.96
         ],
         [
-          -3.17,
-          17.0
+          -3.48,
+          15.96
         ],
         [
-          -2.92,
-          16.5
+          -3.23,
+          19.67
         ],
         [
-          -2.67,
-          14.0
+          -2.98,
+          15.21
         ],
         [
-          -2.42,
-          15.5
+          -2.73,
+          15.08
         ],
         [
-          -2.17,
-          18.0
+          -2.49,
+          15.52
         ],
         [
-          -1.92,
-          17.0
+          -2.23,
+          18.83
         ],
         [
-          -1.67,
-          18.5
+          -1.98,
+          24.42
         ],
         [
-          -1.42,
-          26.0
+          -1.72,
+          22.12
         ],
         [
-          -1.17,
-          29.0
+          -1.48,
+          30.2
         ],
         [
-          -0.92,
-          28.5
+          -1.23,
+          30.33
         ],
         [
-          -0.67,
-          31.0
+          -0.98,
+          27.6
         ],
         [
-          -0.42,
-          32.5
+          -0.73,
+          26.58
         ],
         [
-          -0.17,
-          33.0
+          -0.48,
+          26.94
+        ],
+        [
+          -0.23,
+          40.84
+        ],
+        [
+          -0.15,
+          45.1
+        ],
+        [
+          -0.06,
+          42.02
         ]
       ]
     },
@@ -3424,7 +3480,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -46.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -3580,18 +3636,18 @@ const MEMOS = [
       "value": 5.03,
       "zone": "green"
     },
-    "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
+    "question": "Is Zoom a melting ice cube — or, with stock comp counted as a cost, still a stable cash machine sitting on a $7B Anthropic stake not yet marked by an IPO?",
     "scenarios": [
       {
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 8,
         "price": 28.7,
-        "headline": "Cisco-Webex moment; -54% tail.",
-        "why": "Joint conjunction of four independent fault lines: (a) Cisco-style displacement curve materializes (-10/-13/-19% YoY) — historical base rate of incumbent-SaaS displacement by hyperscaler bundles is real but not the median outcome; (b) Anthropic IPO disappoints below $400B (vs current $900B private mark) on AI-capex correction + Pentagon supply-chain risk + cheap-AI commoditization; (c) AI Companion Pro fails to monetize as Microsoft Copilot bundling collapses pricing power for collaboration AI; (d) Phone + Contact Center growth stalls below 15%, killing the diversification story. Each individually 15-30% probability conditional on macro; joint conjunction at 8%. Lower than bear's 22% because (i) Q1 FY27 just printed a beat with NDR ticking up to 99% and AI Companion MAUs +184% YoY, and (ii) compound conjunction requires all four to fire simultaneously over five years.",
+        "headline": "Cisco-Webex moment; -68% tail.",
+        "why": "Joint conjunction of four independent fault lines: (a) Cisco-style displacement curve materializes (-10/-13/-19% YoY) — historical base rate of incumbent-SaaS displacement by hyperscaler bundles is real but not the median outcome; (b) Anthropic IPO disappoints below $400B (vs current $900B private mark) on AI-capex correction + Pentagon supply-chain risk + cheap-AI commoditization; (c) AI Companion Pro fails to monetize as Microsoft Copilot bundling collapses pricing power for collaboration AI; (d) Phone + Contact Center growth stalls below 15%, killing the diversification story. Each individually 15-30% probability conditional on macro; joint conjunction at 8%. Lower than bear's 22% because (i) Q1 FY27 printed a beat with NDR ticking up to 99% and AI Companion MAUs +184% YoY, and (ii) compound conjunction requires all four to fire simultaneously over five years.",
         "what": [
-          "The ultra-bear is qualitatively different from bear's slow melt. It's the Cisco Webex collaboration trajectory — revenue prints -10%, then -13%, then -19% YoY as Teams reaches its tipping point. Four things compound: enterprise NDR breaks 95% as Teams Premium pricing collapses ZM's seat economics; AI Companion Pro fails to differentiate against Copilot/Gemini bundled into M365 and Workspace; Phone + Contact Center growth stalls below 15% (the diversification story dies); and Anthropic IPOs at &lt;$400B (Pentagon supply-chain risk + AI-capex moderation + cheap-AI commoditization), gutting the SOTP \"hidden asset\" narrative.",
-          "Revenue collapses from $4.87B to $3.6B over five years (-26%). Op margin compresses from 36% to 12% as ZM spends defensively to retain the enterprise base. Terminal growth turns negative (-2%, perpetual decline). Op EV: $5.7B. Cash drains from $7.9B to ~$5.5B as management runs $1.5B/yr buybacks for two years before halting when the flywheel breaks. Anthropic stake floors at $2B (sub-$400B IPO). SOTP equity: $13.2B ÷ 270M shares = ~$49/share — a -54% tail, mirroring ultra_bull's +293% asymmetry."
+          "The ultra-bear is qualitatively different from bear's slow melt. It's the Cisco Webex collaboration trajectory — revenue prints -10%, then -13%, then -19% YoY as Teams reaches its tipping point. Four things compound: enterprise NDR breaks 95% as Teams Premium pricing collapses ZM's seat economics; AI Companion Pro fails to differentiate against Copilot/Gemini bundled into M365 and Workspace; Phone + Contact Center growth stalls below 15% (the diversification story dies); and Anthropic IPOs below $400B (Pentagon supply-chain risk + AI-capex moderation + cheap-AI commoditization), gutting the SOTP \"hidden asset\" narrative.",
+          "Revenue collapses from $4.87B to $3.6B over five years (-26%). Operating margin after stock comp falls from ~20% to about −4% as ZM spends to defend the enterprise base, and owner FCF turns negative in year five. Terminal growth of -2% turns the terminal value negative, leaving Op EV at just $1.1B. Cash drains to ~$5.5B on buybacks that only offset dilution. Anthropic floors at $2B (sub-$400B IPO). SOTP equity: $8.6B ÷ 299.7M shares = ~$28.70/share — a -68% tail, against the ultra-bull's +154%."
         ]
       },
       {
@@ -3600,10 +3656,10 @@ const MEMOS = [
         "prob": 22,
         "price": 62.8,
         "headline": "Zoom without a core market.",
-        "why": "Bearish thesis is competitive commoditization: Teams (Microsoft's bundled play) and Google Meet (free for Workspace customers) continue to take seats from ZM's enterprise base; AI Companion Pro fails to differentiate or monetize meaningfully (Microsoft Copilot integration into Teams is the obvious competitive response); Phone seats stagnate; Contact Center fails to reach scale; Anthropic stake gets compressed if AI valuations correct or Anthropic does an underwhelming IPO. The 30% weight reflects that Teams/Workspace competition is real, ongoing, and structurally favored — but ZM has shown unexpected resilience through 2024-25 (stable revenue, growing FCF, $1B+ buyback program). Not bankruptcy risk; share-loss-with-margin-compression risk.",
+        "why": "Bearish thesis is competitive commoditization: Teams (Microsoft's bundled play) and Google Meet (free for Workspace customers) continue to take seats from ZM's enterprise base; AI Companion Pro fails to differentiate or monetize meaningfully (Microsoft Copilot integration into Teams is the obvious competitive response); Phone seats stagnate; Contact Center fails to reach scale; Anthropic stake gets compressed if AI valuations correct or Anthropic does an underwhelming IPO. The 22% weight (30% with the ultra-bear) reflects that Teams/Workspace competition is real, ongoing, and structurally favored — but ZM has shown unexpected resilience through 2024-25 (stable revenue, growing FCF, $1B+ buyback program). Not bankruptcy risk; share-loss-with-margin-compression risk.",
         "what": [
           "The pessimistic case is harsh and worth taking seriously: video conferencing has commoditized. Microsoft Teams ships with every E3 and E5 license — well north of 400M enterprise seats globally. Google Meet ships with Workspace. Webex, Slack Huddles, Discord, FaceTime — everyone has video. The product Zoom invented and dominated is now table stakes inside the productivity bundles customers are already paying for.",
-          "In this world Zoom's revenue stagnates and then declines. Enterprise renewals come at lower seat counts as IT teams quietly migrate to Teams. Online (consumer + SMB) erodes faster as free alternatives become good enough. Phone and Contact Center continue growing 20-25%+ but on too small a base to offset the core decline. Revenue drifts from $4.87B in FY26 to ~$4.7B by FY30. Margins compress as Zoom spends to defend."
+          "In this world Zoom's revenue stagnates and then declines. Enterprise renewals come at lower seat counts as IT teams quietly migrate to Teams. Online (consumer + SMB) erodes faster as free alternatives become good enough. Phone and Contact Center continue growing 20-25%+ but on too small a base to offset the core decline. Revenue drifts from $4.87B in FY26 to ~$4.7B by FY30. Margins compress as Zoom spends to defend: owner FCF margin, after stock comp, slides from 19% to 13%."
         ]
       },
       {
@@ -3612,10 +3668,10 @@ const MEMOS = [
         "prob": 50,
         "price": 101.3,
         "headline": "Stable cash machine with a visible kicker.",
-        "why": "Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27 guidance holds; AI Companion Pro is a meaningful contributor but not a category-defining product; Anthropic stake gets a public mark via Anthropic's IPO at $700B-1T valuation; ZM multiple expands modestly as the market gives credit for the Anthropic stake AND for stable cash generation. Buyback compounds shares-out reduction at attractive prices. The 50% weight reflects that this requires the least faith — sequential execution on plans already in motion.",
+        "why": "Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27 guidance holds; AI Companion Pro is a meaningful contributor but not a category-defining product; Anthropic stake gets a public mark via Anthropic's IPO at $700B-1T valuation; ZM multiple expands modestly as the market gives credit for the Anthropic stake AND for stable cash generation. Stock comp holds near 16% of revenue. The 50% weight reflects that this requires the least faith — sequential execution on plans already in motion.",
         "what": [
           "The middle path. Zoom continues as a stable mid-single-digit growth business. Enterprise revenue grows 6-7%, Online stays flat to slightly down, Phone and Contact Center add 25%+ on smaller bases. Blended revenue grows 3-4% — exactly what FY27 guidance is calling for and consistent with the last two years.",
-          "AI Companion stays bundled into paid plans and helps justify price increases at renewal. The strategic logic is right: make AI a feature of the bundle rather than try to monetize it as a separate SKU customers can decline. Margins hold in the mid-30s after a near-term CapEx step-up for the post-pandemic data center refresh. Cash builds at $1.7-1.9B/year. Some funds buybacks (current $1B+ authorization), some sits."
+          "AI Companion stays bundled into paid plans and helps justify price increases at renewal. The strategic logic is right: make AI a feature of the bundle rather than try to monetize it as a separate SKU customers can decline. After a near-term capex step-up for the post-pandemic data center refresh, owner FCF (after the ~16% of revenue paid in stock) holds a steady ~19% margin, ~$1.0-1.1B a year. Shares are held at today's ~300M, since buybacks spend cash already valued."
         ]
       },
       {
@@ -3624,10 +3680,10 @@ const MEMOS = [
         "prob": 15,
         "price": 146.15,
         "headline": "AI monetization + Anthropic re-rating.",
-        "why": "AI Companion Pro monetizes (per-seat add-on becomes meaningful contributor); Phone scales to 16M+ seats with margin expansion; Contact Center crosses $500M ARR and becomes a real third leg of growth; Anthropic IPOs at $1T+ with stake getting full mark (vs current discount carrying value); the operating business multiple expands AND the Anthropic stake appreciates. The 20% weight is higher than JOBY/AUR's bull weight because ZM's bull case is less compound — AI monetization and Anthropic appreciation are somewhat independent bets that can succeed without each other. But the conjunction still requires multiple things at once: product success on three new SKUs (Companion Pro, Phone scale, Contact Center scale) plus a favorable AI capital markets backdrop for Anthropic's IPO.",
+        "why": "AI Companion Pro monetizes (per-seat add-on becomes meaningful contributor); Phone scales to 16M+ seats with margin expansion; Contact Center crosses $500M ARR and becomes a real third leg of growth; Anthropic IPOs at $1T+ with stake getting full mark (vs current discount carrying value); the operating business multiple expands AND the Anthropic stake appreciates. The 15% weight reflects that the bull case is only partly compound — AI monetization and Anthropic appreciation are somewhat independent bets that can succeed without each other. But the conjunction still requires multiple things at once: product success on three new SKUs (Companion Pro, Phone scale, Contact Center scale) plus a favorable AI capital markets backdrop for Anthropic's IPO.",
         "what": [
           "The bull case requires Zoom to convert AI Companion into a meaningful per-seat upsell while Anthropic IPOs at $1T+. AI Companion Pro reaches material adoption — call it 15% attach on paid seats at $5-8/month uplift — adds ~$300M ARR by FY28. Phone scales to 16M seats with margin expansion. Contact Center crosses $500M ARR and becomes a real third leg of growth. Blended revenue growth re-accelerates to 5-8%.",
-          "FCF margin expands toward 40%+ as the AI Companion uplift drops to the bottom line at ~80% gross margin. Cash generation hits $2.2-2.5B/yr. Aggressive buybacks at $130-150 retire 70M+ shares over 5 years. SOTP math: $43.8B op EV + $7.8B cash + $9B Anthropic = $60.6B equity ÷ 240M FY30 shares = $253/share."
+          "Owner FCF margin (after the ~16% of revenue paid in stock) widens from 22% to 25% as the AI Companion uplift drops to the bottom line at ~80% gross margin; owner FCF reaches ~$1.7B/yr. Shares are held at today's ~300M, since buybacks spend cash already valued. SOTP math: $27.0B op EV + $7.8B cash + $9B Anthropic = $43.8B equity ÷ 299.7M shares = ~$146/share."
         ]
       },
       {
@@ -3636,141 +3692,161 @@ const MEMOS = [
         "prob": 5,
         "price": 231.26,
         "headline": "Anthropic $2T+; full re-rating.",
-        "why": "Joint conditional: Anthropic IPO above $2T (60% conditional on IPO) AND AI Companion crosses $1B ARR (40% conditional on existing trajectory) AND multiple re-rates from 15x to 30x P/FCF (50% conditional on growth + AI both firing). Joint at 5-7%, reflected here at 5%. This is the scenario where ZM stops being a 'value with AI optionality' name and becomes a growth-software name with an emerging-leader AI partner. Tail of tails.",
+        "why": "Joint conditional: Anthropic IPO above $2T (60% conditional on IPO) AND AI Companion crosses $1B ARR (40% conditional on existing trajectory) AND the multiple roughly doubles, ~23x to 50x+ price to owner FCF (~14x to 30x+ on headline FCF; 50% conditional on growth + AI both firing). Joint at 5-7%, reflected here at 5%. This is the scenario where ZM stops being a 'value with AI optionality' name and becomes a growth-software name with an emerging-leader AI partner. Tail of tails.",
         "what": [
           "The ultra-bull case is that the two engines BOTH fire and the market re-rates the equity to growth-software multiples. Anthropic IPOs at $2T+ valuation (vs $1T base bull), marking the Anthropic stake at $14-18B — 2× the bull-case carry value. Simultaneously, AI Companion Pro becomes a real revenue engine: 30%+ paid-seat attach at $8-12/mo, hitting $1B+ ARR by FY29 and reaccelerating core revenue growth to 8-10%. Phone, Contact Center, and Workvivo each become $500M+ ARR contributors.",
-          "Multiple expands from current 15x P/FCF to 30x+ as the growth story consolidates. SOTP math: $80B+ operating EV + $7.8B cash + $16B Anthropic (mid-case mark) = $103B equity ÷ 250M FY30 shares = $412/share. The ultra-bull is materially different from bull: not just AI works AND Anthropic works, but BOTH inflect AT THE SAME TIME and the market rerates accordingly."
+          "Owner FCF margin (after stock comp) widens from 25% to 31%, and the multiple roughly doubles as the growth story consolidates: ~23x to 50x+ price to owner FCF (~14x to 30x+ on headline FCF). SOTP math: $45.5B operating EV + $7.8B cash + $16B Anthropic (mid-case mark) = $69.3B equity ÷ 299.7M shares = ~$231/share. The ultra-bull is materially different from bull: not just AI works AND Anthropic works, but BOTH inflect AT THE SAME TIME and the market rerates accordingly."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 50 / Bull 15 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
-    "thesis": "Zoom trades at $105.64 ($32.5B mkt cap) on TTM revenue of ~$4.94B, $1.7B FCF, and $7.9B cash & marketable securities — roughly a quarter of market cap is just cash. Q1 FY27 confirmed the base case: revenue $1.24B (+5.5%, beat), FY27 guidance raised to $5.09B / $5.98 EPS, buyback expanded $1.0B — management returning capital while it waits for the Anthropic mark. On top sits an Anthropic equity stake carried at cost but worth $4-9B across scenarios, pending the IPO mark. The operating business is a stable cash machine (35-40% FCF margin) facing real but slow competition from Teams and Workspace. Mature-Company DCF with SOTP framing below. Three scenarios, weighted; show your work.",
+    "thesis": "Zoom trades at $90.90 ($27.2B market cap); $7.9B of cash covers 29% of that. FY26 revenue was $4.87B, and reported free cash flow of $1.92B adds back $0.76B of stock comp (15.6% of revenue). Net of that real cost, owner FCF is ~$1.16B and enterprise value is ~17× it (~10× headline FCF), or ~11× net of a $7B Anthropic value. That stake, carried near $1.5B, is valued at $2-16B across scenarios pending its IPO; the core faces real but slow competition from Teams and Workspace. Valued on owner FCF and today's ~300M diluted shares (buybacks spend cash already counted), the weighted value is ~$100, +10% vs the price. The most likely case (base, 50%) sits ~11% above the price; 30% of the probability sits below it.",
     "historicalPrices": {
-      "xMin": -7.5,
+      "xMin": -7.85,
       "ipoMarker": "IPO Apr '19",
       "points": [
         [
-          -7.08,
-          36.0
+          -7.4,
+          72.47
         ],
         [
-          -6.83,
-          85.0
+          -7.24,
+          88.79
         ],
         [
-          -6.58,
-          68.0
+          -6.98,
+          76.2
         ],
         [
-          -6.33,
-          160.0
+          -6.73,
+          68.04
         ],
         [
-          -6.08,
-          260.0
+          -6.48,
+          146.12
         ],
         [
-          -5.83,
-          500.0
+          -6.23,
+          253.54
         ],
         [
-          -5.58,
-          410.0
+          -5.98,
+          470.11
         ],
         [
-          -5.33,
-          320.0
+          -5.72,
+          337.32
         ],
         [
-          -5.08,
-          360.0
+          -5.48,
+          321.29
         ],
         [
-          -4.83,
-          270.0
+          -5.23,
+          387.03
         ],
         [
-          -4.58,
-          185.0
+          -4.98,
+          261.5
         ],
         [
-          -4.33,
-          110.0
+          -4.73,
+          183.91
         ],
         [
-          -4.08,
-          110.0
+          -4.48,
+          117.23
         ],
         [
-          -3.83,
-          78.0
+          -4.23,
+          107.97
         ],
         [
-          -3.58,
-          68.0
+          -3.98,
+          73.59
         ],
         [
-          -3.33,
-          77.0
+          -3.73,
+          67.74
         ],
         [
-          -3.08,
-          70.0
+          -3.48,
+          73.84
         ],
         [
-          -2.83,
-          70.0
+          -3.23,
+          67.88
         ],
         [
-          -2.58,
-          72.0
+          -2.98,
+          69.94
         ],
         [
-          -2.33,
-          64.0
+          -2.73,
+          71.91
         ],
         [
-          -2.08,
-          60.0
+          -2.49,
+          65.37
         ],
         [
-          -1.83,
-          65.0
+          -2.23,
+          59.19
         ],
         [
-          -1.58,
-          85.0
+          -1.98,
+          69.74
         ],
         [
-          -1.33,
-          76.0
+          -1.72,
+          81.61
         ],
         [
-          -1.08,
-          82.0
+          -1.48,
+          73.77
         ],
         [
-          -0.83,
-          85.0
+          -1.23,
+          77.98
         ],
         [
-          -0.58,
-          93.0
+          -0.98,
+          82.5
         ],
         [
-          -0.33,
-          95.0
+          -0.73,
+          86.29
+        ],
+        [
+          -0.48,
+          80.39
+        ],
+        [
+          -0.23,
+          86.31
+        ],
+        [
+          -0.15,
+          96.07
+        ],
+        [
+          -0.06,
+          96.68
         ]
       ]
     },
     "weightingRationale": [
       {
-        "label": "Bear 30%",
+        "label": "Ultra Bear 8%",
+        "body": "Cisco-Webex-style displacement; margin sinks below stock comp; Anthropic IPO under $400B."
+      },
+      {
+        "label": "Bear 22%",
         "body": "Teams/Workspace structurally favored; AI Companion fails to monetize; Anthropic stake compressed."
       },
       {
         "label": "Base 50%",
-        "body": "Modal outcome: stable mid-single-digit growth, Anthropic IPOs at $700B-1T, multiple modest expand."
+        "body": "Modal outcome: stable mid-single-digit growth, Anthropic IPOs at $700B-1T, multiple expands modestly."
       },
       {
         "label": "Bull 15%",
@@ -3782,8 +3858,8 @@ const MEMOS = [
       }
     ],
     "page3": {
-      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Jan 31 · 10-K FY26, Q1 2026 10-Q, Anthropic press releases",
-      "sources": "Sources: ZM 10-K FY26, Q1 2026 10-Q, Anthropic financial press, AI infrastructure peer set.",
+      "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Jan 31 · 10-K FY26, 10-Qs through Jul 2026, Anthropic press releases",
+      "sources": "Sources: ZM 10-K FY26 (FCF, stock comp), 10-Qs for the quarters ended Apr and Jul 2026 (diluted shares), Anthropic financial press, AI infrastructure peer set.",
       "chartReference": {
         "historyYears": [
           2021,
@@ -3863,11 +3939,11 @@ const MEMOS = [
               -0.06
             ],
             "op_margin": [
-              0.36,
-              0.3,
-              0.24,
-              0.18,
-              0.12
+              0.204,
+              0.144,
+              0.084,
+              0.024,
+              -0.036
             ],
             "wacc_path": [
               0.12,
@@ -3943,11 +4019,11 @@ const MEMOS = [
               -0.02
             ],
             "op_margin": [
-              0.385,
-              0.37,
-              0.355,
-              0.34,
-              0.32
+              0.229,
+              0.214,
+              0.199,
+              0.184,
+              0.164
             ],
             "wacc_path": [
               0.1,
@@ -4023,11 +4099,11 @@ const MEMOS = [
               0.025
             ],
             "op_margin": [
-              0.395,
-              0.395,
-              0.395,
-              0.395,
-              0.395
+              0.239,
+              0.239,
+              0.239,
+              0.239,
+              0.239
             ],
             "wacc_path": [
               0.085,
@@ -4103,11 +4179,11 @@ const MEMOS = [
               0.05
             ],
             "op_margin": [
-              0.38,
-              0.39,
-              0.4,
-              0.41,
-              0.41
+              0.224,
+              0.234,
+              0.244,
+              0.254,
+              0.254
             ],
             "wacc_path": [
               0.08,
@@ -4183,11 +4259,11 @@ const MEMOS = [
               0.08
             ],
             "op_margin": [
-              0.42,
-              0.43,
-              0.44,
-              0.45,
-              0.45
+              0.264,
+              0.274,
+              0.284,
+              0.294,
+              0.294
             ],
             "wacc_path": [
               0.075,
@@ -4333,7 +4409,7 @@ const MEMOS = [
           "founderLed": true,
           "tenureYears": 15,
           "insiderOwnershipPct": 8.0,
-          "capitalAllocation": "Net cash ~$7.7B, zero debt — now being returned: stacked buyback authorizations ($1.5B 2024 → +$1.2B → +$1.0B → +$1.0B 2026). The one big swing — the $14.7B all-stock Five9 bid (2021) — was terminated when Five9 holders rejected it; no overpriced deal got done.",
+          "capitalAllocation": "Net cash ~$7.7B, zero debt — now being returned: stacked buyback authorizations ($1.5B 2024 → +$1.2B → +$1.0B → +$1.0B 2026), though stock comp ($761M in FY26, 15.6% of revenue) means part of each buyback only offsets dilution. The one big swing — the $14.7B all-stock Five9 bid (2021) — was terminated when Five9 holders rejected it; no overpriced deal got done.",
           "incentiveAlignment": "Founder equity is the alignment: 2023 base salary cut to $10,000 (−98%) with bonus declined; no extra board pay. Comp is shifting from annual equity toward cash bonus (FY26–27).",
           "governanceFlags": [
             "super-voting dual-class (Class B = 10 votes) → ~25–30%+ founder voting control",
@@ -4342,11 +4418,11 @@ const MEMOS = [
           ],
           "keyPersonRisk": "high",
           "score": 4,
-          "takeaway": "Founder-owner-operator (~8% economic, $10k salary) returning the $7.7B cash hoard via buybacks, with a majority-independent board — disciplined and aligned; the offsets are super-voting control (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan."
+          "takeaway": "Founder-owner-operator (~8% economic, $10k salary) returning cash via buybacks, with a majority-independent board — disciplined and aligned; the offsets are heavy stock comp (15.6% of revenue), super-voting control (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan."
         },
-        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ZM 6.4)",
+        "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ZM 5.0)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +56% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -4360,7 +4436,7 @@ const MEMOS = [
           },
           {
             "label": "$7.8B cash is a real floor.",
-            "body": "25% of market cap is liquid. T-bills earn ~4%. Optionality for M&A, buybacks, or capital return. Hard to lose money against this."
+            "body": "~29% of market cap is cash (~$26/share), earning ~4% in T-bills — optionality for M&A or buybacks. Even the ultra-bear ($28.70) is above the $26."
           },
           {
             "label": "Anthropic stake is asymmetric.",
@@ -4368,17 +4444,17 @@ const MEMOS = [
           },
           {
             "label": "Capital allocation track record.",
-            "body": "$1B+ buyback authorization announced 2024. Avg buyback price below $80. Eric Yuan personally aligned (15%+ owner)."
+            "body": "$1B+ buyback authorization announced 2024. Avg buyback price below $80. Eric Yuan personally aligned (~8% economic owner)."
           }
         ],
         "triggers": [
           {
             "label": "Bear validation",
-            "body": "FY27 revenue declines · AI Companion attach < 5% on paid seats · Anthropic IPO marks stake below $5B · Phone seat growth < 15%"
+            "body": "FY27 revenue declines · AI Companion attach < 5% on paid seats · Anthropic IPO marks stake below $5B · Phone seat growth < 15% · stock comp > 18% of revenue"
           },
           {
             "label": "Bull validation",
-            "body": "FY27 revenue re-accelerates > 5% · AI Companion attach > 10% · Anthropic IPO at $1T+ · Contact Center crosses $500M ARR"
+            "body": "FY27 revenue re-accelerates > 5% · AI Companion attach > 10% · Anthropic IPO at $1T+ · Contact Center crosses $500M ARR · stock comp < 13% of revenue"
           },
           {
             "label": "Reframe needed",
@@ -4401,15 +4477,15 @@ const MEMOS = [
         },
         {
           "term": "Anthropic stake",
-          "definition": "ZM invested in Anthropic 2023. Carrying value disclosed at ~$1.5B; market value $4-9B across scenarios pending the IPO mark."
+          "definition": "ZM invested in Anthropic in 2023. Carrying value disclosed at ~$1.5B; valued at $2-16B across scenarios pending the IPO mark."
         },
         {
           "term": "SOTP",
           "definition": "Sum-of-the-parts: operating EV + cash + special assets - debt. Used when material balance-sheet value sits outside operations."
         },
         {
-          "term": "Buyback flywheel",
-          "definition": "ZM generates $1.7-2.4B FCF/yr. Buybacks at $1-1.5B/yr retire shares; lower share count compounds per-share value."
+          "term": "Owner FCF",
+          "definition": "Free cash flow after stock comp, a real cost that reported FCF adds back (15.6% of ZM's FY26 revenue). The basis valued here."
         }
       ],
       "stamp": {
@@ -4634,7 +4710,7 @@ const MEMOS = [
           2.99
         ],
         [
-          -2.48,
+          -2.49,
           2.94
         ],
         [
@@ -5695,7 +5771,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized. Tail-driven: ~93% of the expected value sits in the 13% bull/ultra-bull mass, 43% of the mass wipes to $0, and the modal case sits below the ~$1 stock."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized. Tail-driven: ~93% of the expected value sits in the 13% bull/ultra-bull mass, 43% of the mass wipes to $0, and the modal case sits below the share price."
       },
       "appendix": {
         "pushback": [
@@ -5926,60 +6002,104 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 6 / Bear 25 / Base 48 / Bull 16 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
     "thesis": "Intuitive trades at $345.74 ($122.7B cap) — down ~21% since May, including −14.1% on Jul 17: Q2 beat every line (revenue +19%, non-GAAP EPS +28%, procedures +16%, margin guide raised) yet guidance was steered to the midpoint, implying H2 deceleration. Still: ~78% recurring revenue, 11,710 systems, $8.63B cash, zero debt. But the bear is live: Hugo cleared US urology (Dec 2025), GS/GYN 510(k)s filed (Jun 2026); Ottava passed FORTE, FDA nod reported in July; GLP-1s shave bariatric volumes; a May 2026 Class I recall dented the record. Mature-Company DCF with exit-multiple terminal framing below; five scenarios, weighted; show your work.",
     "historicalPrices": {
-      "xMin": -5.0,
+      "xMin": -5.32,
       "ipoMarker": "IPO Jun '00",
       "points": [
         [
-          -4.92,
-          280.0
+          -5.32,
+          280.73
         ],
         [
-          -4.42,
-          310.0
+          -5.23,
+          306.55
         ],
         [
-          -3.92,
-          280.0
+          -4.98,
+          331.38
         ],
         [
-          -3.42,
-          220.0
+          -4.73,
+          359.3
         ],
         [
-          -2.92,
-          195.0
+          -4.48,
+          301.68
         ],
         [
-          -2.42,
-          245.0
+          -4.23,
+          200.71
         ],
         [
-          -1.92,
-          270.0
+          -3.98,
+          187.44
         ],
         [
-          -1.42,
-          340.0
+          -3.73,
+          265.35
         ],
         [
-          -1.08,
-          380.0
+          -3.48,
+          255.47
         ],
         [
-          -0.83,
-          425.0
+          -3.23,
+          341.94
         ],
         [
-          -0.58,
-          555.0
+          -2.98,
+          292.29
         ],
         [
-          -0.42,
-          510.0
+          -2.73,
+          337.36
         ],
         [
-          -0.17,
-          450.0
+          -2.49,
+          399.09
+        ],
+        [
+          -2.23,
+          444.85
+        ],
+        [
+          -1.98,
+          491.27
+        ],
+        [
+          -1.72,
+          521.96
+        ],
+        [
+          -1.48,
+          495.27
+        ],
+        [
+          -1.23,
+          543.41
+        ],
+        [
+          -0.98,
+          447.23
+        ],
+        [
+          -0.73,
+          566.36
+        ],
+        [
+          -0.48,
+          460.99
+        ],
+        [
+          -0.23,
+          397.68
+        ],
+        [
+          -0.15,
+          353.33
+        ],
+        [
+          -0.06,
+          376.86
         ]
       ]
     },
@@ -6586,7 +6706,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ISRG 13.8 — orange after the derating, no longer deep-red)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +46% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -6815,80 +6935,96 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 30 / Base 42 / Bull 15 / Ultra Bull 3. Spot price reference: September 22, 2026 close.",
     "thesis": "IonQ trades at ~$13B against a $260-270M FY26 guide — P/S ~50× after July's sector de-rating halved the quantum complex (no adverse IonQ filing). $2.39B cash + $470M RPO + the $1.8B SkyWater chip-fab deal (FTC review pending) is the optionality. Trapped-ion gives ~99.9%+ 2Q fidelity; AQ#64 hit three months early. But the competitive set is brutal: Quantinuum IPO'd at >$14B with better logical-qubit performance, Google's Willow demonstrated verifiable advantage on chemistry, and neutral-atom scaled past 1,200 qubits. Honest math: cash-feasible raise schedules force heavy dilution before commercial inflection. Five scenarios, weighted; show your work.",
     "historicalPrices": {
-      "xMin": -4.7,
+      "xMin": -5.02,
       "ipoMarker": "IPO Oct '21",
       "points": [
         [
-          -4.58,
-          10.5
+          -4.98,
+          10.4
         ],
         [
-          -4.33,
-          22.0
+          -4.73,
+          16.7
         ],
         [
-          -4.0,
-          14.0
+          -4.48,
+          12.76
         ],
         [
-          -3.67,
-          8.0
+          -4.23,
+          4.38
         ],
         [
-          -3.33,
-          5.0
+          -3.98,
+          5.07
         ],
         [
-          -3.0,
-          3.5
+          -3.73,
+          3.45
         ],
         [
-          -2.67,
-          4.5
+          -3.48,
+          6.15
         ],
         [
-          -2.33,
-          9.0
+          -3.23,
+          13.53
         ],
         [
-          -2.0,
-          14.0
+          -2.98,
+          14.88
         ],
         [
-          -1.67,
-          13.0
+          -2.73,
+          12.39
         ],
         [
-          -1.33,
-          7.5
+          -2.49,
+          9.99
         ],
         [
-          -1.0,
-          9.0
+          -2.23,
+          7.03
         ],
         [
-          -0.67,
-          18.0
+          -1.98,
+          8.74
         ],
         [
-          -0.5,
-          35.0
+          -1.72,
+          41.77
         ],
         [
-          -0.33,
-          50.0
+          -1.48,
+          22.07
         ],
         [
-          -0.17,
-          82.09
+          -1.23,
+          42.97
         ],
         [
-          -0.08,
-          60.0
+          -0.98,
+          61.5
         ],
         [
-          -0.04,
-          65.0
+          -0.73,
+          44.87
+        ],
+        [
+          -0.48,
+          28.83
+        ],
+        [
+          -0.23,
+          53.26
+        ],
+        [
+          -0.15,
+          36.44
+        ],
+        [
+          -0.06,
+          39.31
         ]
       ]
     },
@@ -7894,7 +8030,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -74.4% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -8057,7 +8193,7 @@ const MEMOS = [
       "value": 6.62,
       "zone": "yellow"
     },
-    "question": "Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock that has now printed back-to-back quarterly losses?",
+    "question": "Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock that has now printed three straight quarterly losses?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -8068,7 +8204,7 @@ const MEMOS = [
         "why": "Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style multi-year bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood gains share AND Hyperliquid-style USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per Coindesk May 2026); (c) bank-issued stablecoins take share, shrinking Coinbase-held USDC below $15B; (d) Deribit integration friction stalls the derivatives flywheel. Each individually 20-30%; joint at 8%. Same 8% as ZM's ultra_bear: crypto-cycle volatility has a real historical base rate (the 2022 winter).",
         "what": [
           "Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down 70%+ from its $120K+ peak to $35-40K) as ETF outflows compound and the post-halving liquidity wave fails to materialize. Transaction revenue collapses from $4.0B FY25 to $1.5B by FY28 as both volume drops 60% AND take-rate compresses 30% under Robinhood/Hyperliquid pressure. The GENIUS Act regime turns hostile in implementation — bank-issued stablecoins take share from USDC and the discount-window asymmetry kills USDC's runway.",
-          "The Circle relationship inverts at the 2029 renewal: Hyperliquid-style direct-USDC deals proliferate across DeFi, compressing Coinbase's 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating margin compresses to ~10% by FY28 as Coinbase spends defensively, and FCF compresses to ~$0.3-0.4B. The multiple collapses to an 8× FCF exit — crypto loses its narrative entirely. Mirrors the 2022 winter (COIN closed near $33, from a $381 listing-day open) on a more diversified business."
+          "The Circle relationship inverts at the 2029 renewal: Hyperliquid-style direct-USDC deals proliferate across DeFi, compressing Coinbase's 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating margin after stock comp falls to about zero by FY28 as Coinbase spends defensively, and free cash flow after stock comp turns slightly negative. The multiple collapses to 8× — crypto loses its narrative — but on negative cash flow that adds nothing: the operating business is worth ~$1.50 a share; ~$11 of the $12.49 is net cash plus the BTC and Circle holdings. Mirrors the 2022 winter (COIN closed near $33, from a $381 listing-day open) on a more diversified business."
         ]
       },
       {
@@ -8080,7 +8216,7 @@ const MEMOS = [
         "why": "Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months (median post-peak crypto correction); revenue stays well below FY25; take-rate compresses 15-20% as Robinhood gains retail share and Hyperliquid-style deals nick institutional flows; Coinbase-held USDC stalls; the exit multiple resets to ~12× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018, 2022 — base rate ~25% per 5-year window), and the H1 2026 losses already validated some of the cycle thesis.",
         "what": [
           "Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years, extending the H1 2026 slide. Revenue settles at ~$5.5-6.1B a year — below FY25's $7.18B peak but well above the FY23 winter trough ($3.1B). Coinbase still gains share (regulatory wedge post-SEC dismissal) but on a smaller pie. The everything-exchange thesis holds operationally, but the equity re-rates to a ~12× FCF exit — crypto stocks lose their growth premium when transaction revenue stops growing.",
-          "The subscription engine partially compensates. Coinbase-held USDC stalls near today's ~$20B as bank-issued stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume grows as Deribit integrates, but its margin profile is structurally lower than spot. FCF runs $1.7-2.0B a year. A real downside but not catastrophic: the cycle hurts; the platform survives."
+          "The subscription engine partially compensates. Coinbase-held USDC stalls near today's ~$20B as bank-issued stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume grows as Deribit integrates, but its margin profile is structurally lower than spot. Free cash flow after stock comp runs $1.1-1.3B a year. A real downside but not catastrophic: the cycle hurts; the platform survives."
         ]
       },
       {
@@ -8092,7 +8228,7 @@ const MEMOS = [
         "why": "Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is integrating, Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution + cycle. Base assumes BTC ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually but the volume base grows, Coinbase-held USDC grows at a decelerating rate, and the exit multiple settles at ~15× FCF. 47% reflects that the thesis is well-priced but in motion — sequential execution, not heroic assumptions.",
         "what": [
           "The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K (mid-cycle). Transaction revenue runs $3.5-4.5B annually with cycle texture. Subscription & services becomes the structural growth engine — Coinbase-held USDC compounds to $35-40B, stablecoin revenue grows to $1.5-2.0B, staking + custody + interest add another $1.5B+. The Deribit acquisition delivers — derivatives volume grows 40%+ annually with margin converging toward spot over time.",
-          "The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Deribit scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, putting a floor under engaged users. Operating margin rises to ~40%. Revenue reaches ~$9.5B by FY30 (5.8% CAGR off FY25's $7.18B); FCF $2.55B → ~$3.8B; ~15× FCF exit — what a great mature platform offers when the moat is mostly priced."
+          "The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Deribit scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, putting a floor under engaged users. Operating margin after stock comp rises to ~28%. Revenue reaches ~$9.5B by FY30 (5.8% CAGR off FY25's $7.18B); free cash flow after stock comp grows from ~$1.7B to ~$2.7B; a ~15× exit — what a great mature platform offers when the moat is mostly priced."
         ]
       },
       {
@@ -8104,7 +8240,7 @@ const MEMOS = [
         "why": "Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth (conditional 35%); (b) Coinbase-held USDC compounds past $50B driving the subscription engine (conditional 40%); (c) Deribit delivers and derivatives crosses $1.5B revenue (conditional 50% on integration); (d) the market sustains a ~20× FCF exit (conditional 50%). Joint at 15-20%, weighted 18%. Higher than ZM bull because COIN's bull has one cycle-dependent leg AND one secular leg — they can succeed independently.",
         "what": [
           "The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as institutional ETF flows compound. Transaction revenue grows $4.0B → $7.0B by FY30 as volume compounds AND share gains hold. Deribit integration succeeds beyond model — derivatives revenue crosses $1.5B by FY28 with options margin substantially better than spot. Deribit captures 15-20% of offshore derivatives flows as US regulatory clarity attracts institutional volume back from Binance.",
-          "The subscription engine inflects. Coinbase-held USDC compounds past $50B (from a record $20B) as the GENIUS Act establishes USDC as the de facto regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30. Coinbase One reaches 4M subs at $30+ ARPU. Operating margin expands to 45%. FCF reaches ~$6.6B by FY30. The market recognizes COIN as crypto's Stripe-meets-Nasdaq, sustaining a 20× FCF exit. Two engines (cycle-driven transaction + subscription rails) both fire."
+          "The subscription engine inflects. Coinbase-held USDC compounds past $50B (from a record $20B) as the GENIUS Act establishes USDC as the de facto regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30. Coinbase One reaches 4M subs at $30+ ARPU. Operating margin after stock comp expands to ~33%. Free cash flow after stock comp reaches ~$5.0B by FY30. The market recognizes COIN as crypto's Stripe-meets-Nasdaq, sustaining a 20× FCF exit. Two engines (cycle-driven transaction + subscription rails) both fire."
         ]
       },
       {
@@ -8115,155 +8251,119 @@ const MEMOS = [
         "headline": "Crypto-as-rails; 28× re-rate.",
         "why": "Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); Coinbase-held USDC crosses $100B as the regulatory tailwind + EU MiCA make USDC the global regulated dollar (25%); Deribit captures Binance's offshore institutional share post-regulatory squeeze (30%); the multiple re-rates to a fintech-infrastructure ~28× FCF exit (30%). Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the regulatory wedge, float, derivatives platform, and cash to attempt all four.",
         "what": [
-          "The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US gateway. BTC ranges $200-300K as sovereign treasury adoption institutionalizes. Coinbase-held USDC crosses $100B as the GENIUS Act + EU MiCA make USDC the global regulated dollar — challenging SWIFT for cross-border. Deribit becomes the dominant offshore venue as Binance's regulatory squeeze opens institutional flows. Transaction revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin reaches 50%.",
-          "The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN exits at 28× FCF on ~$10.7B of FY30 FCF. The crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase has the regulatory wedge, the float, the derivatives platform, and the cash to attempt all four."
+          "The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US gateway. BTC ranges $200-300K as sovereign treasury adoption institutionalizes. Coinbase-held USDC crosses $100B as the GENIUS Act + EU MiCA make USDC the global regulated dollar — challenging SWIFT for cross-border. Deribit becomes the dominant offshore venue as Binance's regulatory squeeze opens institutional flows. Transaction revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin after stock comp reaches ~38%.",
+          "The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN exits at 28× on ~$8.5B of FY30 free cash flow after stock comp. The crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase has the regulatory wedge, the float, the derivatives platform, and the cash to attempt all four."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 8 / Bear 22 / Base 47 / Bull 18 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
-    "thesis": "Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (-18.5% YoY) and a $360M GAAP loss, the second straight, as BTC fell from above $120K (Oct 2025) to a $58K low before recovering to ~$87K. The structural case firmed in the same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue share renewed unchanged into 2029, on $8.6B cash vs $6.0B debt. The bear: cycle exposure plus new stablecoin rivals. Modal case ~12% above the price; 30% of the probability sits below it. Mature-company SOTP DCF, exit-multiple terminal; five scenarios.",
+    "thesis": "Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (−18.5% YoY) and a $360M GAAP loss, the third straight, as BTC fell from above $120K to a $58K low before recovering to ~$87K. The structural case firmed in the same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue share renewed into 2029. Stock comp was 11.7% of FY25 revenue; net of it, enterprise value is ~29× FY25 free cash flow (~20× before it). On that basis the stock is roughly fair: the most likely case sits ~19% below the price and 77% of the probability below it, with most of the value in the upside tails.",
     "historicalPrices": {
       "xMin": -5.5,
       "ipoMarker": "Direct Listing Apr '21 @ $381",
       "points": [
         [
-          -5.44,
-          328.28
+          -5.4,
+          297.64
         ],
         [
-          -5.25,
-          222.6
+          -5.23,
+          253.3
         ],
         [
-          -5.17,
-          220.61
+          -4.98,
+          227.48
         ],
         [
-          -5.0,
-          238.46
+          -4.73,
+          252.37
         ],
         [
-          -4.87,
-          357.39
-        ],
-        [
-          -4.75,
-          247.69
-        ],
-        [
-          -4.5,
-          186.08
-        ],
-        [
-          -4.25,
-          51.91
-        ],
-        [
-          -4.0,
-          67.64
-        ],
-        [
-          -3.73,
-          32.53
-        ],
-        [
-          -3.5,
-          66.3
-        ],
-        [
-          -3.25,
-          57.49
-        ],
-        [
-          -3.0,
-          74.42
-        ],
-        [
-          -2.75,
-          175.48
-        ],
-        [
-          -2.63,
-          117.3
-        ],
-        [
-          -2.5,
-          255.51
-        ],
-        [
-          -2.25,
-          225.86
-        ],
-        [
-          -2.0,
-          170.09
-        ],
-        [
-          -1.79,
-          343.62
-        ],
-        [
-          -1.75,
-          278.71
-        ],
-        [
-          -1.5,
+          -4.48,
           189.86
         ],
         [
-          -1.45,
-          151.47
+          -4.23,
+          47.02
         ],
         [
-          -1.25,
-          308.38
+          -3.98,
+          64.49
         ],
         [
-          -1.18,
-          419.78
+          -3.73,
+          35.39
         ],
         [
-          -1.0,
-          342.46
+          -3.48,
+          67.57
         ],
         [
-          -0.76,
-          245.12
+          -3.23,
+          71.55
         ],
         [
-          -0.68,
-          255.86
+          -2.98,
+          75.08
         ],
         [
-          -0.61,
-          141.09
+          -2.73,
+          173.92
         ],
         [
-          -0.51,
-          197.5
+          -2.49,
+          265.12
         ],
         [
-          -0.32,
-          182.25
+          -2.23,
+          222.23
+        ],
+        [
+          -1.98,
+          178.17
+        ],
+        [
+          -1.72,
+          248.3
+        ],
+        [
+          -1.48,
+          172.23
+        ],
+        [
+          -1.23,
+          350.49
+        ],
+        [
+          -0.98,
+          337.49
+        ],
+        [
+          -0.73,
+          226.14
+        ],
+        [
+          -0.48,
+          174.61
         ],
         [
           -0.23,
           146.19
         ],
         [
-          -0.12,
-          153.6
+          -0.15,
+          146.26
         ],
         [
-          -0.02,
-          191.45
+          -0.06,
+          188.12
         ]
       ]
     },
     "weightingRationale": [
       {
         "label": "Ultra Bear 8%",
-        "body": "Crypto winter + take-rate compression + GENIUS hostility compound; multiple collapses to ~8× FCF."
+        "body": "Crypto winter + take-rate compression + GENIUS hostility compound; FCF after stock comp turns negative."
       },
       {
         "label": "Bear 22%",
@@ -8284,7 +8384,7 @@ const MEMOS = [
     ],
     "page3": {
       "subtitle": "FY21–FY25 history + FY26–FY30 scenario projections · fiscal years end Dec 31 · 10-K FY25, Q2 2026 10-Q/shareholder letter, Circle Q2 2026 results, GENIUS Act, Deribit closing 8-K",
-      "sources": "Sources: COIN 10-K FY25, Q1 and Q2 2026 10-Qs/shareholder letters, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1 and Q2 2026 results, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026, Yahoo Finance prices.",
+      "sources": "Sources: COIN 10-K FY25, Q1 and Q2 2026 10-Qs/shareholder letters, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1 and Q2 2026 results, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026, Yahoo Finance prices. FCF history is before stock comp; the valuation deducts it ($839M in FY25, 11.7% of revenue) and uses 263.4M diluted shares (Q2 2026 10-Q).",
       "chartReference": {
         "historyYears": [
           2021,
@@ -8373,11 +8473,11 @@ const MEMOS = [
               0.02
             ],
             "op_margin": [
-              0.25,
-              0.15,
-              0.1,
-              0.1,
-              0.12
+              0.133,
+              0.033,
+              -0.017,
+              -0.017,
+              0.003
             ],
             "wacc_path": [
               0.13,
@@ -8454,11 +8554,11 @@ const MEMOS = [
               0.05
             ],
             "op_margin": [
-              0.32,
-              0.3,
-              0.3,
-              0.32,
-              0.32
+              0.203,
+              0.183,
+              0.183,
+              0.203,
+              0.203
             ],
             "wacc_path": [
               0.11,
@@ -8535,11 +8635,11 @@ const MEMOS = [
               0.08
             ],
             "op_margin": [
-              0.36,
-              0.38,
-              0.4,
-              0.4,
-              0.4
+              0.243,
+              0.263,
+              0.283,
+              0.283,
+              0.283
             ],
             "wacc_path": [
               0.09,
@@ -8616,11 +8716,11 @@ const MEMOS = [
               0.12
             ],
             "op_margin": [
-              0.4,
-              0.42,
-              0.44,
-              0.45,
-              0.45
+              0.283,
+              0.303,
+              0.323,
+              0.333,
+              0.333
             ],
             "wacc_path": [
               0.085,
@@ -8697,11 +8797,11 @@ const MEMOS = [
               0.18
             ],
             "op_margin": [
-              0.42,
-              0.45,
-              0.48,
-              0.5,
-              0.5
+              0.303,
+              0.333,
+              0.363,
+              0.383,
+              0.383
             ],
             "wacc_path": [
               0.08,
@@ -8866,7 +8966,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +34.2% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -8887,8 +8987,8 @@ const MEMOS = [
             "body": ">1M paid subs at $30/mo + premium tiers. Engagement floor regardless of BTC price. Higher trading volume + revenue per user vs free tier."
           },
           {
-            "label": "Balance sheet absorbs cycle.",
-            "body": "$8.6B cash + ~$1.5B BTC + CRCL vs $6.0B debt, after repaying the 2026 converts in cash. Survives a 2022-style winter."
+            "label": "The base assumes the multiple halves.",
+            "body": "It exits at 15× FCF after stock comp vs ~29× today; a ~21× exit would put the base at the $201 price."
           }
         ],
         "triggers": [
@@ -9622,68 +9722,92 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 10 / Bear 25 / Base 35 / Bull 24 / Ultra Bull 6. Spot price reference: September 22, 2026 close.",
     "thesis": "Rocket Lab has halved to ~$41B at $71.55 — ~68x trailing sales, ~45x the ~$900M FY26 run-rate — while the business accelerated (Q1'26 revenue +64%, backlog >$2.2B). And the second act changed form: rather than originate a constellation, RKLB agreed to buy one — the pending ~$8B Iridium acquisition (mid-2027 close; $871M revenue, ~$495M operational EBITDA, 2.6M subscribers), funded by a $3.6B bridge plus up to ~44M collared shares. The DCF asks whether a halved price plus a leveraged, dilutive constellation purchase changes the answer. The finding: it narrows the gap, not the verdict — the weighted sits ~38% below spot; the market still prices near-certain success.",
     "historicalPrices": {
-      "xMin": -4.5,
+      "xMin": -4.81,
       "ipoMarker": "SPAC Aug '21",
       "points": [
         [
-          -4.4,
-          11.0
+          -4.73,
+          12.28
         ],
         [
-          -4.0,
-          9.0
+          -4.48,
+          8.05
         ],
         [
-          -3.5,
-          5.0
+          -4.23,
+          3.79
         ],
         [
-          -3.0,
-          4.0
+          -3.98,
+          4.07
         ],
         [
-          -2.5,
-          4.5
+          -3.73,
+          3.77
         ],
         [
-          -2.0,
+          -3.48,
+          4.04
+        ],
+        [
+          -3.23,
           6.0
         ],
         [
-          -1.5,
-          12.0
+          -2.98,
+          4.38
         ],
         [
-          -1.0,
-          24.0
+          -2.73,
+          5.53
         ],
         [
-          -0.75,
-          48.0
+          -2.49,
+          4.11
         ],
         [
-          -0.5,
-          70.0
+          -2.23,
+          4.8
         ],
         [
-          -0.25,
-          125.0
+          -1.98,
+          9.73
         ],
         [
-          -0.14,
-          142.0
+          -1.72,
+          25.47
         ],
         [
-          -0.07,
-          86.0
+          -1.48,
+          17.88
+        ],
+        [
+          -1.23,
+          35.77
+        ],
+        [
+          -0.98,
+          47.91
+        ],
+        [
+          -0.73,
+          69.76
+        ],
+        [
+          -0.48,
+          64.22
+        ],
+        [
+          -0.23,
+          101.65
+        ],
+        [
+          -0.15,
+          64.95
         ],
         [
           -0.06,
-          100.0
-        ],
-        [
-          -0.01,
-          66.0
+          63.92
         ]
       ]
     },
@@ -10679,7 +10803,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -38% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -10907,60 +11031,56 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 8 / Bear 27 / Base 34 / Bull 23 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Oklo trades at ~$8B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the first commercial advanced-fission site under construction). The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly, +298%) clears it — the capital-intensive base leaves the weighted ~-34%.",
     "historicalPrices": {
-      "xMin": -2.2,
+      "xMin": -2.51,
       "ipoMarker": "SPAC May '24",
       "points": [
         [
-          -2.05,
-          10.0
+          -2.49,
+          11.42
         ],
         [
-          -1.9,
-          9.0
+          -2.23,
+          8.47
         ],
         [
-          -1.7,
-          8.0
+          -1.98,
+          8.09
         ],
         [
-          -1.5,
-          11.0
+          -1.72,
+          21.23
         ],
         [
-          -1.25,
-          18.0
+          -1.48,
+          21.63
         ],
         [
-          -1.0,
-          26.0
+          -1.23,
+          55.99
         ],
         [
-          -0.8,
-          45.0
+          -0.98,
+          111.63
         ],
         [
-          -0.6,
-          90.0
+          -0.73,
+          71.76
         ],
         [
-          -0.45,
-          150.0
+          -0.48,
+          49.59
         ],
         [
-          -0.33,
-          190.0
+          -0.23,
+          52.33
         ],
         [
-          -0.22,
-          120.0
+          -0.15,
+          38.83
         ],
         [
-          -0.12,
-          85.0
-        ],
-        [
-          -0.05,
-          67.0
+          -0.06,
+          40.57
         ]
       ]
     },
@@ -11966,7 +12086,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -34.0% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -12183,60 +12303,100 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 12 / Bear 31 / Base 42 / Bull 11 / Ultra Bull 4. Spot price reference: September 22, 2026 close.",
     "thesis": "Archer trades at ~$5.4B (≈$6.81/sh) on $0 revenue — about half Joby's cap on a near-identical certification position, with $1.78B cash but a ~$727M/yr burn (≈2.4yr runway) and a defense wildcard (the Anduril autonomous-VTOL JV) Joby lacks. The young-company DCF asks what aircraft fleet, UAM-plus-defense revenue, and dilution are plausible over a decade. The finding: 85% of the probability sits well below spot — heavy dilution craters the bear/base outcomes — but Archer is cheap enough that the 15% cert-success-plus-defense tail (paying 4-13×) lifts the weighted expected modestly above today's price.",
     "historicalPrices": {
-      "xMin": -4.8,
+      "xMin": -5.11,
       "ipoMarker": "SPAC Sep '21",
       "points": [
         [
-          -4.6,
-          9.5
-        ],
-        [
-          -4.3,
-          6.0
-        ],
-        [
-          -4.0,
-          4.0
-        ],
-        [
-          -3.5,
-          2.5
-        ],
-        [
-          -3.0,
-          2.0
-        ],
-        [
-          -2.5,
-          3.0
-        ],
-        [
-          -2.0,
-          5.0
-        ],
-        [
-          -1.5,
-          9.0
-        ],
-        [
-          -1.0,
-          11.0
-        ],
-        [
-          -0.7,
-          14.0
-        ],
-        [
-          -0.4,
+          -5.06,
           10.0
         ],
         [
-          -0.2,
-          7.5
+          -4.98,
+          8.88
         ],
         [
-          -0.05,
-          6.81
+          -4.73,
+          6.04
+        ],
+        [
+          -4.48,
+          4.81
+        ],
+        [
+          -4.23,
+          3.08
+        ],
+        [
+          -3.98,
+          2.61
+        ],
+        [
+          -3.73,
+          1.87
+        ],
+        [
+          -3.48,
+          2.86
+        ],
+        [
+          -3.23,
+          4.12
+        ],
+        [
+          -2.98,
+          5.06
+        ],
+        [
+          -2.73,
+          6.14
+        ],
+        [
+          -2.49,
+          4.62
+        ],
+        [
+          -2.23,
+          3.52
+        ],
+        [
+          -1.98,
+          3.03
+        ],
+        [
+          -1.72,
+          9.75
+        ],
+        [
+          -1.48,
+          7.11
+        ],
+        [
+          -1.23,
+          10.85
+        ],
+        [
+          -0.98,
+          9.58
+        ],
+        [
+          -0.73,
+          7.52
+        ],
+        [
+          -0.48,
+          5.17
+        ],
+        [
+          -0.23,
+          4.73
+        ],
+        [
+          -0.15,
+          4.64
+        ],
+        [
+          -0.06,
+          5.78
         ]
       ]
     },
@@ -13241,7 +13401,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +17.7% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -13456,56 +13616,52 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 20 / Bear 28 / Base 34 / Bull 13 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
     "thesis": "GRAIL trades at ~$2.7B (≈$62/sh on just ~44M shares) on ~$147M FY25 revenue and ~$823M cash. Galleri — a blood test for 50+ cancers, self-pay today — is a multi-gate option: FDA PMA (filed Jan 2026, now accepted) → Medicare coverage (signed Feb 2026; ≥2028 at ~$509 parity) → broad adoption. The pivotal NHS-Galleri trial MISSED its primary endpoint (-50% stock), but the PMA rests on positive PATHFINDER 2 and the law passed — broken yet de-risked. Re-modeled on ~$509 parity (Abbott now backs Cancerguard), at $62 the market roughly prices the modal regulatory-success case — FDA-rejection downside and broad-adoption upside balanced.",
     "historicalPrices": {
-      "xMin": -2.05,
+      "xMin": -2.36,
       "ipoMarker": "Spin Jun '24",
       "points": [
         [
-          -1.95,
-          16.0
+          -2.23,
+          15.37
         ],
         [
-          -1.6,
-          13.0
+          -1.98,
+          13.76
         ],
         [
-          -1.2,
-          22.0
+          -1.72,
+          17.85
         ],
         [
-          -0.9,
-          45.0
+          -1.48,
+          25.54
         ],
         [
-          -0.6,
-          80.0
+          -1.23,
+          51.42
         ],
         [
-          -0.4,
-          110.0
+          -0.98,
+          59.13
         ],
         [
-          -0.32,
-          119.0
+          -0.73,
+          85.59
         ],
         [
-          -0.28,
-          72.0
+          -0.48,
+          51.68
+        ],
+        [
+          -0.23,
+          68.27
         ],
         [
           -0.15,
-          65.0
+          68.56
         ],
         [
-          -0.1,
-          73.0
-        ],
-        [
-          -0.04,
-          67.0
-        ],
-        [
-          -0.01,
-          62.0
+          -0.06,
+          79.37
         ]
       ]
     },
@@ -14502,7 +14658,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +6.4% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -14720,64 +14876,128 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 30 / Base 30 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "10x trades at ~$5.0B (≈$39/sh) — ~8x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools franchise: >7,900 instruments, ~85% recurring 70%-margin consumables, net-cash and cash-generative after a 17% opex cut. The mature DCF holds the flat core and asks whether the second act the market now pays for — a clinical-diagnostics pivot (CLIA lab targeted early-2027), a multiomic Proteintech expansion, and the Atera spatial launch — becomes a durable reimbursed platform. The finding: even crediting that optionality in the tail, the recent triple prices execution the ~3%-grind base doesn't support — the modal case sits ~55% below spot.",
     "historicalPrices": {
-      "xMin": -6.8,
+      "xMin": -7.11,
       "ipoMarker": "IPO Sep '19",
       "points": [
         [
-          -6.7,
-          55.0
+          -6.98,
+          50.4
         ],
         [
-          -6.0,
-          90.0
+          -6.73,
+          76.25
         ],
         [
-          -5.0,
-          150.0
+          -6.48,
+          62.32
         ],
         [
-          -4.5,
-          190.0
+          -6.23,
+          89.31
         ],
         [
-          -4.0,
-          120.0
+          -5.98,
+          124.68
         ],
         [
-          -3.5,
-          60.0
+          -5.72,
+          141.6
         ],
         [
-          -3.0,
-          45.0
+          -5.48,
+          181.0
         ],
         [
-          -2.5,
-          55.0
+          -5.23,
+          195.82
         ],
         [
-          -2.0,
-          40.0
+          -4.98,
+          145.58
         ],
         [
-          -1.5,
-          25.0
+          -4.73,
+          148.96
         ],
         [
-          -1.0,
-          15.0
+          -4.48,
+          76.07
         ],
         [
-          -0.6,
-          9.0
+          -4.23,
+          45.25
         ],
         [
-          -0.3,
-          18.0
+          -3.98,
+          28.48
         ],
         [
-          -0.05,
-          28.0
+          -3.73,
+          36.44
+        ],
+        [
+          -3.48,
+          55.79
+        ],
+        [
+          -3.23,
+          55.84
+        ],
+        [
+          -2.98,
+          41.25
+        ],
+        [
+          -2.73,
+          55.96
+        ],
+        [
+          -2.49,
+          37.53
+        ],
+        [
+          -2.23,
+          19.45
+        ],
+        [
+          -1.98,
+          22.58
+        ],
+        [
+          -1.72,
+          14.36
+        ],
+        [
+          -1.48,
+          8.73
+        ],
+        [
+          -1.23,
+          11.58
+        ],
+        [
+          -0.98,
+          11.69
+        ],
+        [
+          -0.73,
+          16.31
+        ],
+        [
+          -0.48,
+          21.23
+        ],
+        [
+          -0.23,
+          38.34
+        ],
+        [
+          -0.15,
+          47.27
+        ],
+        [
+          -0.06,
+          62.45
         ]
       ]
     },
@@ -15373,7 +15593,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -54.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -15591,52 +15811,124 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 45 / Bull 10 / Ultra Bull 3. Spot price reference: September 22, 2026 close.",
     "thesis": "Lululemon trades at ~$15B (≈$127/sh, down ~60% from $340) — ~10x FCF on $11.1B revenue, ~22% operating margins, net cash and a heavy buyback. Growth has decelerated hard (+42%→+5%, guided +2-4%): the US is shrinking (-1 to -3%) while China/international compound +20-29%. The mature DCF asks whether the brand stabilizes and defends margins, or whether dupes (Alo, Vuori) and stale product structurally impair it. The finding: even pricing real brand-impairment downside (ultra-bear -34%), the modal stabilization case at 10x FCF implies the de-rating overshot.",
     "historicalPrices": {
-      "xMin": -6.5,
+      "xMin": -6.81,
       "ipoMarker": "IPO Jul '07",
       "points": [
         [
-          -6.0,
-          200.0
+          -6.73,
+          231.67
         ],
         [
-          -5.0,
-          350.0
+          -6.48,
+          189.55
         ],
         [
-          -4.0,
-          485.0
+          -6.23,
+          312.01
         ],
         [
-          -3.5,
-          300.0
+          -5.98,
+          329.37
         ],
         [
-          -3.0,
-          380.0
+          -5.72,
+          348.03
         ],
         [
-          -2.0,
-          400.0
+          -5.48,
+          306.71
         ],
         [
-          -1.5,
-          340.0
+          -5.23,
+          364.97
         ],
         [
-          -1.0,
-          300.0
+          -4.98,
+          404.7
         ],
         [
-          -0.5,
-          200.0
+          -4.73,
+          391.45
         ],
         [
-          -0.25,
-          150.0
+          -4.48,
+          365.23
         ],
         [
-          -0.05,
-          127.0
+          -4.23,
+          272.61
+        ],
+        [
+          -3.98,
+          279.56
+        ],
+        [
+          -3.73,
+          320.38
+        ],
+        [
+          -3.48,
+          364.19
+        ],
+        [
+          -3.23,
+          378.5
+        ],
+        [
+          -2.98,
+          385.61
+        ],
+        [
+          -2.73,
+          511.29
+        ],
+        [
+          -2.49,
+          390.65
+        ],
+        [
+          -2.23,
+          298.7
+        ],
+        [
+          -1.98,
+          271.35
+        ],
+        [
+          -1.72,
+          382.41
+        ],
+        [
+          -1.48,
+          283.06
+        ],
+        [
+          -1.23,
+          237.58
+        ],
+        [
+          -0.98,
+          177.93
+        ],
+        [
+          -0.73,
+          207.81
+        ],
+        [
+          -0.48,
+          153.1
+        ],
+        [
+          -0.23,
+          114.18
+        ],
+        [
+          -0.15,
+          118.87
+        ],
+        [
+          -0.06,
+          120.26
         ]
       ]
     },
@@ -16229,7 +16521,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (LULU 1.95)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +65% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -16337,7 +16629,7 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$99.6B",
       "shares": "597M",
-      "cash": "$12B cash, $2.5B debt · ~$9.5B net cash; ~650M diluted shares; ~$3.8B/yr buyback offsets SBC; Revenue $12.24B FY25 (+10%, decel from +40%); 38% FCF margin, $4.6B FCF; High-teens EV/FCF; 2026 growth re-accelerated (+18%/+17% in Q1/Q2), guided at least mid-teens"
+      "cash": "$12B cash, $2.5B debt · ~$9.5B net cash; $1.59B stock comp (13% of revenue); ~$3.8B/yr buyback; Revenue $12.24B FY25 (+10%); FCF $4.6B (38%), $3.0B (25%) after stock comp; ~30× EV/FCF after stock comp (~20× reported); 2026 growth +18%/+17% in Q1/Q2"
     },
     "spot": {
       "price": 166.84,
@@ -16388,7 +16680,7 @@ const MEMOS = [
       "value": 8.0,
       "zone": "yellow"
     },
-    "question": "At a high-teens EV/FCF, is Airbnb's 2026 re-acceleration durable — or do fading currency and World Cup boosts, AI booking agents and regulation pull growth back to high-single digits?",
+    "question": "At ~30× FCF after stock comp, is Airbnb's 2026 re-acceleration durable — or do fading currency and World Cup boosts, AI booking agents and regulation pull growth back to high-single digits?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -16399,7 +16691,7 @@ const MEMOS = [
         "why": "Regulation is the structural bear: NYC listings fell ~92%, Spain fined Airbnb EUR65M. 12% weight on bans + maturation capping the network.",
         "what": [
           "City STR bans spread (Barcelona's 2028 phase-out as the template), growth decays toward GDP-plus, and Experiences/Services never monetizes. After the 2026 currency and World Cup lift, revenue grows only ~3%; the premium multiple de-rates toward Booking's.",
-          "DCF ~$114 (-32%) — a great FCF machine, but priced for the growth it has stopped delivering."
+          "DCF ~$85 (-49%) — still a cash machine at a ~23% FCF margin after stock comp, but priced for growth it has stopped delivering."
         ]
       },
       {
@@ -16410,8 +16702,8 @@ const MEMOS = [
         "headline": "Decelerates to high-single; regulation bites.",
         "why": "The law-of-large-numbers + Booking competition path. 25% weight — a very plausible 'matures gracefully' outcome.",
         "what": [
-          "After the 2026 lift, growth settles in the high-single digits as Booking out-executes in alternative accommodations and regulation nibbles supply; FCF margin holds ~37%.",
-          "DCF ~$144 (-14%) — below spot; the network defends the cash even as growth matures."
+          "After the 2026 lift, growth settles in the high-single digits as Booking out-executes in alternative accommodations and regulation nibbles supply; the FCF margin after stock comp holds at 24-25%.",
+          "DCF ~$108 (-35%) — well below spot; the network defends the cash even as growth matures."
         ]
       },
       {
@@ -16419,11 +16711,11 @@ const MEMOS = [
         "label": "BASE",
         "prob": 35,
         "price": 143.35,
-        "headline": "Low-mid-teens growth; Experiences ramps.",
+        "headline": "Mid-teens 2026, then ~10%; Experiences ramps.",
         "why": "Requires the guided mid-teens 2026 to settle near ~10% + modest Experiences/Services monetization. 35% as the central outcome — the network + brand are genuinely durable.",
         "what": [
-          "The modal path: revenue grows mid-teens in 2026 (the guide), then ~10% as the currency and World Cup lift fades; Experiences/Services begins to monetize, and international under-penetration carries the network at a 38-39% FCF margin.",
-          "DCF ~$190 (+14%). A verb-grade FCF machine at a high-teens FCF multiple is modestly mispriced if growth holds near 10%."
+          "The modal path: revenue grows mid-teens in 2026 (the guide), then ~10% as the currency and World Cup lift fades; Experiences/Services begins to monetize, and international under-penetration carries the network at a 25-26% FCF margin after stock comp (38-39% before it).",
+          "DCF ~$143 (-14%). At ~10% growth the business is worth ~25× FY25 FCF after stock comp, not the ~30× the price pays — the most likely case sits below spot."
         ]
       },
       {
@@ -16434,8 +16726,8 @@ const MEMOS = [
         "headline": "Experiences/Services + international re-accel.",
         "why": "Experiences/Services monetizes into a needle-mover + international compounds. ~20%; the relaunch is early but credible.",
         "what": [
-          "Experiences/Services becomes a real second leg, international scales, and AI-driven conversion lifts the take rate — revenue holds the mid-teens at a 40% FCF margin.",
-          "DCF ~$250 (+50%) — the optionality the relaunch is buying actually pays off."
+          "Experiences/Services becomes a real second leg, international scales, and AI-driven conversion lifts the take rate — revenue compounds ~13% a year and the FCF margin after stock comp widens from 25% to 27%.",
+          "DCF ~$189 (+13%) — the relaunch pays off; today's price sits about midway between this case and the base."
         ]
       },
       {
@@ -16446,80 +16738,144 @@ const MEMOS = [
         "headline": "End-to-end travel hub; AI concierge.",
         "why": "The full 'Airbnb everything' hub + AI concierge. ~8%, the asymmetric upside the Experiences/Services bet is really for.",
         "what": [
-          "Airbnb becomes an end-to-end travel/lifestyle platform (homes + services + experiences + AI concierge), expanding TAM well beyond rentals at peak network margins.",
-          "DCF ~$314 (+88%) — the platform vision fully realized; ~8% probability."
+          "Airbnb becomes an end-to-end travel/lifestyle platform (homes + services + experiences + AI concierge), expanding TAM well beyond rentals as the FCF margin after stock comp climbs from 26% to 28%.",
+          "DCF ~$238 (+43%) — the platform vision fully realized; ~8% probability."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 25 / Base 35 / Bull 20 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
-    "thesis": "Airbnb trades at a high-teens multiple of trailing FCF ($4.8B, a 37% margin before ~$1.8B/yr of stock comp) with ~$9.5B net cash. Growth re-accelerated in 2026 (+18% and +17% in Q1-Q2; guide raised twice to at least mid-teens, ~3 points of it currency) as nights outgrew Booking's rental business (+10% vs +4% in Q2) and a hotels line launched. The DCF asks whether that pace holds once currency and World Cup boosts fade, AI booking agents launch without Airbnb, and regulation caps city supply. Modal case ~14% above the price; 37% of the probability sits below it.",
+    "thesis": "Airbnb's reported FY25 FCF of $4.6B (38% of revenue) excludes $1.59B of stock comp (13%); net of it, FCF is ~$3.0B (25%), and the ~$90B enterprise value is ~30× that (~20× reported). Growth re-accelerated in 2026 (+18%/+17% in Q1-Q2; guide raised twice to at least mid-teens, ~3 points of it currency) as nights outgrew Booking's rental business (+10% vs +4% in Q2). The DCF asks whether that pace holds once currency and World Cup boosts fade, AI booking agents launch without Airbnb, and regulation caps city supply. Net of stock comp, the most likely case (growth near 10%) sits ~14% below the price; 72% of the probability sits below it.",
     "historicalPrices": {
-      "xMin": -5.5,
+      "xMin": -5.81,
       "ipoMarker": "IPO Dec '20",
       "points": [
         [
-          -5.4,
-          145.0
+          -5.72,
+          146.8
         ],
         [
-          -5.0,
-          210.0
+          -5.48,
+          187.94
         ],
         [
-          -4.0,
-          90.0
+          -5.23,
+          153.14
         ],
         [
-          -3.0,
-          130.0
+          -4.98,
+          167.75
         ],
         [
-          -2.0,
-          150.0
+          -4.73,
+          166.49
         ],
         [
-          -1.5,
-          160.0
+          -4.48,
+          171.76
         ],
         [
-          -1.0,
-          140.0
+          -4.23,
+          89.08
         ],
         [
-          -0.5,
-          120.0
+          -3.98,
+          105.04
         ],
         [
-          -0.05,
-          133.0
+          -3.73,
+          85.5
+        ],
+        [
+          -3.48,
+          124.4
+        ],
+        [
+          -3.23,
+          128.16
+        ],
+        [
+          -2.98,
+          137.21
+        ],
+        [
+          -2.73,
+          136.14
+        ],
+        [
+          -2.49,
+          164.96
+        ],
+        [
+          -2.23,
+          151.63
+        ],
+        [
+          -1.98,
+          126.81
+        ],
+        [
+          -1.72,
+          131.41
+        ],
+        [
+          -1.48,
+          119.46
+        ],
+        [
+          -1.23,
+          132.34
+        ],
+        [
+          -0.98,
+          121.42
+        ],
+        [
+          -0.73,
+          135.72
+        ],
+        [
+          -0.48,
+          126.28
+        ],
+        [
+          -0.23,
+          143.1
+        ],
+        [
+          -0.15,
+          151.52
+        ],
+        [
+          -0.06,
+          183.22
         ]
       ]
     },
     "weightingRationale": [
       {
         "label": "Ultra Bear 12%",
-        "body": "Regulation + maturation; ~$114 (-32%)."
+        "body": "Regulation + maturation; ~$85 (-49%)."
       },
       {
         "label": "Bear 25%",
-        "body": "High-single growth; regulation; ~$144 (-14%)."
+        "body": "High-single growth; regulation; ~$108 (-35%)."
       },
       {
         "label": "Base 35%",
-        "body": "Mid-teens 2026, then ~10%; ~$190 (+14%)."
+        "body": "Mid-teens 2026, then ~10%; ~$143 (-14%)."
       },
       {
         "label": "Bull 20%",
-        "body": "Experiences/intl re-accel; ~$250 (+50%)."
+        "body": "Experiences/intl re-accel; ~$189 (+13%)."
       },
       {
         "label": "Ultra Bull 8%",
-        "body": "End-to-end travel hub; ~$314 (+88%)."
+        "body": "End-to-end travel hub; ~$238 (+43%)."
       }
     ],
     "page3": {
       "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · calendar fiscal year · FY2025 10-K (Feb'26)",
-      "sources": "Sources: Airbnb FY2025 10-K (revenue $12.24B, FCF $4.6B/38%, ~$9.5B net cash, GBV $91.3B), Q1-Q2'26 8-K/10-Q (FY26 anchored to the raised at-least-mid-teens guide; $2.5B notes, $12.0B cash + ST investments). Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin (use ~38% structural, not the seasonal Q1 64%); Gordon terminal. EV/FCF vs Booking/Expedia.",
+      "sources": "Sources: Airbnb FY2025 10-K (revenue $12.24B, FCF $4.6B/38%, stock comp $1.59B/13%, ~$9.5B net cash, GBV $91.3B), Q1-Q2'26 8-K/10-Q (FY26 anchored to the raised at-least-mid-teens guide; $2.5B notes, $12.0B cash + ST investments; 597.0M diluted shares). Revenue as a growth-rate path off FY25; FCF = revenue x FCF margin after stock comp (23-28%; the FCF history bars are as reported); Gordon terminal. EV/FCF vs Booking/Expedia.",
       "chartReference": {
         "historyYears": [
           2021,
@@ -16983,7 +17339,7 @@ const MEMOS = [
         "powers": {
           "scaleEconomies": {
             "score": 2,
-            "note": "Fixed platform/trust-&-safety/marketing spread over $91B GBV -> best-in-class ~38% FCF margin."
+            "note": "Fixed platform/trust-&-safety/marketing spread over $91B GBV -> a 38% reported FCF margin (25% after stock comp)."
           },
           "networkEconomies": {
             "score": 3,
@@ -17063,7 +17419,7 @@ const MEMOS = [
             "falsifier": "A flagship metro structurally bans STRs, or registration regimes materially shrink supply."
           }
         ],
-        "takeaway": "Airbnb's network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided liquidity), and the ~38% FCF margin is best-in-class. The terminal-value debate is not a competitor out-networking them — it's regulation (dense-urban supply caps) + growth maturation. At a high-teens EV/FCF the cash flow is priced cheaply for the quality; the Experiences/Services relaunch is the unpaid-for optionality, and the sign hinges on whether growth holds in the teens or decays to GDP-plus."
+        "takeaway": "Airbnb's network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided liquidity), and the FCF margin is high — 38% as reported, 25% after stock comp. The terminal-value debate is not a competitor out-networking them — it's regulation (dense-urban supply caps) + growth maturation. At ~30× FCF after stock comp the price needs more than the most likely case (growth near 10%, ~14% below it): the Powers are real, but only the bull cases (teens growth held) clear it, and the Experiences/Services relaunch is the swing."
       },
       "pocd": {
         "people": {
@@ -17085,35 +17441,35 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +14.7% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
           {
-            "label": "High-teens EV/FCF, 37% FCF margin.",
-            "body": "A verb-grade two-sided network throwing off $4.8B FCF at a 37% margin — priced like a maturing OTA, not a durable platform."
+            "label": "2026 is running ahead of the base.",
+            "body": "Revenue grew +18%/+17% in Q1-Q2 (~3 points currency), yet the base fades growth to 11% in 2027 and 9% by 2029."
           },
           {
-            "label": "$9.5B net cash, working-capital-positive.",
-            "body": "Guest pre-payments fund the float -> structurally high FCF conversion; fortress balance sheet, ~$3.8B/yr buyback."
+            "label": "Stock comp is held at 13% of revenue.",
+            "body": "It grew +15% in 1H26, slower than revenue; if that persists, the modeled 25-26% margin after stock comp is too low (~$5 a share per point in the base)."
           },
           {
             "label": "Network economies + a verb brand.",
-            "body": "'Airbnb' is the default for alternative accommodations; direct traffic lowers CAC vs OTAs — the two-sided liquidity moat."
+            "body": "'Airbnb' is the default for alternative stays; direct traffic keeps acquisition costs below online travel agencies' — room for margins above the base."
           },
           {
-            "label": "Experiences/Services optionality is free.",
-            "body": "The 2025 relaunch expands TAM beyond rentals; unmonetized today, so any traction is upside the multiple doesn't pay for."
+            "label": "Experiences/Services is barely in the base.",
+            "body": "The 2025 relaunch and the 2026 hotels line widen the market beyond homes; the base credits only modest monetization, so real traction is upside to it."
           },
           {
-            "label": "International under-penetrated.",
-            "body": "Latin America / Asia-Pacific grow faster than core — a multi-year runway the US-centric view misses."
+            "label": "International is under-penetrated.",
+            "body": "Latin America / Asia-Pacific grow faster than core — a multi-year runway the base's 9% out-year growth may understate."
           }
         ],
         "triggers": [
           {
             "label": "Bull validation",
-            "body": "revenue re-accelerates to mid-teens · Experiences/Services monetizes into a reported needle-mover · take rate rises · international outgrows core"
+            "body": "revenue growth holds 13%+ in 2027 · stock comp under 11% of revenue · Experiences/Services becomes material · international outgrows core"
           },
           {
             "label": "Bear validation",
@@ -17121,7 +17477,7 @@ const MEMOS = [
           },
           {
             "label": "Reframe needed",
-            "body": "if a flagship market structurally bans STRs or Google disintermediates search, re-rate the network durability + terminal multiple"
+            "body": "if a flagship market structurally bans short-term rentals or Google disintermediates search, re-rate network durability and terminal growth"
           }
         ]
       },
@@ -17139,8 +17495,8 @@ const MEMOS = [
           "definition": "The 2025 relaunch (locally-hosted activities + in-stay services); the TAM-expanding optionality, unmonetized today."
         },
         {
-          "term": "FCF margin",
-          "definition": "Free cash flow / revenue (~38% structural; ignore the seasonal Q1 ~64% float build) — the mature-DCF lever."
+          "term": "FCF after stock comp",
+          "definition": "The FCF the DCF values: net of stock-based compensation (13% of FY25 revenue), 25% of revenue vs 38% reported."
         },
         {
           "term": "STR regulation",
@@ -17303,48 +17659,136 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: September 22, 2026 close.",
     "thesis": "Uber trades at ~$145B (≈$70/sh, down ~30% on AV fear) — ~14x EV/FCF on $9.76B FCF (growing 40%+), $193.5B gross bookings (+19%), net cash and a $20B buyback. The mature DCF asks whether the two-sided network + advertising (>$2B run-rate) + delivery-margin ramp compound, or whether Waymo/Tesla bypass the marketplace. The finding: at 14x FCF for a network compounding GB ~mid-teens with expanding margins, the modal case implies meaningful undervaluation — but a genuine AV-disruption ultra-bear is -44%, so the sign is a bet on Uber remaining the AV demand-aggregator.",
     "historicalPrices": {
-      "xMin": -7.2,
+      "xMin": -7.51,
       "ipoMarker": "IPO May '19",
       "points": [
         [
-          -7.0,
-          42.0
+          -7.31,
+          40.41
         ],
         [
-          -6.0,
-          30.0
+          -7.24,
+          46.38
         ],
         [
-          -5.0,
-          45.0
+          -6.98,
+          30.47
         ],
         [
-          -4.0,
-          25.0
+          -6.73,
+          29.74
         ],
         [
-          -3.0,
-          44.0
+          -6.48,
+          27.92
         ],
         [
-          -2.0,
-          62.0
+          -6.23,
+          31.08
         ],
         [
-          -1.0,
-          85.0
+          -5.98,
+          36.48
         ],
         [
-          -0.6,
-          102.0
+          -5.72,
+          51.0
         ],
         [
-          -0.3,
-          80.0
+          -5.48,
+          54.51
         ],
         [
-          -0.05,
-          70.4
+          -5.23,
+          50.12
+        ],
+        [
+          -4.98,
+          44.8
+        ],
+        [
+          -4.73,
+          41.93
+        ],
+        [
+          -4.48,
+          35.68
+        ],
+        [
+          -4.23,
+          20.46
+        ],
+        [
+          -3.98,
+          26.5
+        ],
+        [
+          -3.73,
+          24.73
+        ],
+        [
+          -3.48,
+          31.7
+        ],
+        [
+          -3.23,
+          43.17
+        ],
+        [
+          -2.98,
+          45.99
+        ],
+        [
+          -2.73,
+          61.57
+        ],
+        [
+          -2.49,
+          76.99
+        ],
+        [
+          -2.23,
+          72.68
+        ],
+        [
+          -1.98,
+          75.16
+        ],
+        [
+          -1.72,
+          60.32
+        ],
+        [
+          -1.48,
+          72.86
+        ],
+        [
+          -1.23,
+          93.3
+        ],
+        [
+          -0.98,
+          97.97
+        ],
+        [
+          -0.73,
+          81.71
+        ],
+        [
+          -0.48,
+          71.93
+        ],
+        [
+          -0.23,
+          72.16
+        ],
+        [
+          -0.15,
+          70.36
+        ],
+        [
+          -0.06,
+          75.65
         ]
       ]
     },
@@ -17938,7 +18382,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (UBER 4.72)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +48% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -18167,8 +18611,8 @@ const MEMOS = [
       "ipoMarker": "IPO Oct '18",
       "points": [
         [
-          -7.91,
-          18.0
+          -7.89,
+          15.93
         ],
         [
           -7.73,
@@ -18213,10 +18657,6 @@ const MEMOS = [
         [
           -5.23,
           91.82
-        ],
-        [
-          -5.06,
-          99.34
         ],
         [
           -4.98,
@@ -18295,10 +18735,6 @@ const MEMOS = [
           36.59
         ],
         [
-          -0.31,
-          47.38
-        ],
-        [
           -0.23,
           49.56
         ],
@@ -18307,24 +18743,8 @@ const MEMOS = [
           48.94
         ],
         [
-          -0.12,
-          52.68
-        ],
-        [
-          -0.112,
-          50.84
-        ],
-        [
-          -0.11,
-          45.47
-        ],
-        [
           -0.06,
           41.05
-        ],
-        [
-          -0.02,
-          39.39
         ]
       ]
     },
@@ -18919,7 +19339,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the ~+13% finding; the modal base ~18% above spot, 45% of the probability below it), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -19138,44 +19558,108 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: September 22, 2026 close.",
     "thesis": "DoorDash trades at ~$66B (≈$159/sh, down ~40% from $285) — ~33x EV/FCF on $1.8B FCF, but GOV is still compounding +27% ($102B) and adj-EBITDA hit $2.8B (~2.7% of GOV). The crash is a margin/SBC problem, not a growth one. The mature DCF asks whether advertising (~$1B run-rate) + New-Verticals (grocery) unit economics + international (Deliveroo/Wolt) inflect the 2.4%-of-GOV margin upward, against ~$1.3B/yr SBC dilution. The finding: roughly fair — the 20%+ growth + margin inflection are offset by the premium FCF multiple + dilution.",
     "historicalPrices": {
-      "xMin": -5.5,
+      "xMin": -5.81,
       "ipoMarker": "IPO Dec '20",
       "points": [
         [
-          -5.4,
-          180.0
+          -5.72,
+          142.75
         ],
         [
-          -5.0,
-          250.0
+          -5.48,
+          131.13
         ],
         [
-          -4.0,
-          75.0
+          -5.23,
+          178.33
         ],
         [
-          -3.0,
-          55.0
+          -4.98,
+          205.98
         ],
         [
-          -2.0,
-          110.0
+          -4.73,
+          148.9
         ],
         [
-          -1.0,
-          180.0
+          -4.48,
+          117.19
         ],
         [
-          -0.6,
-          285.0
+          -4.23,
+          64.17
         ],
         [
-          -0.3,
-          150.0
+          -3.98,
+          49.45
         ],
         [
-          -0.05,
-          159.0
+          -3.73,
+          48.82
+        ],
+        [
+          -3.48,
+          63.56
+        ],
+        [
+          -3.23,
+          76.42
+        ],
+        [
+          -2.98,
+          79.47
+        ],
+        [
+          -2.73,
+          98.89
+        ],
+        [
+          -2.49,
+          137.72
+        ],
+        [
+          -2.23,
+          108.78
+        ],
+        [
+          -1.98,
+          142.73
+        ],
+        [
+          -1.72,
+          167.75
+        ],
+        [
+          -1.48,
+          182.77
+        ],
+        [
+          -1.23,
+          246.51
+        ],
+        [
+          -0.98,
+          271.99
+        ],
+        [
+          -0.73,
+          226.48
+        ],
+        [
+          -0.48,
+          150.15
+        ],
+        [
+          -0.23,
+          184.53
+        ],
+        [
+          -0.15,
+          196.16
+        ],
+        [
+          -0.06,
+          231.74
         ]
       ]
     },
@@ -19769,7 +20253,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (DASH 6.48)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the −1% finding, fairly valued) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -19987,48 +20471,112 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 30 / Base 35 / Bull 18 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
     "thesis": "Illumina trades at ~$22B (≈$145/sh, up ~80% off the lows) — ~5x EV/sales, ~22x FCF on $4.34B revenue (flat for four years, Q1'26 +4.8%), ~70% gross margin, ~$1B FCF. The mature DCF asks whether the NovaSeq-X consumables pull-through + clinical mix (>65% of sequencing consumables, +20% ex-China) re-accelerate the franchise toward a ~26% margin, against low-cost entrants (Ultima/Element $100 genome), Roche's 2026 SBX re-entry, China decline, and NIH cuts. The finding: the rally has priced the re-acceleration — only the bull-or-better clears spot; the base (modest re-accel) sits ~27% below. The TXG mirror.",
     "historicalPrices": {
-      "xMin": -5.5,
+      "xMin": -5.81,
       "ipoMarker": "IPO Jul '00",
       "points": [
         [
-          -5.4,
-          400.0
+          -5.81,
+          313.32
         ],
         [
-          -5.0,
-          500.0
+          -5.72,
+          359.92
         ],
         [
-          -4.5,
-          300.0
+          -5.48,
+          373.6
         ],
         [
-          -4.0,
-          200.0
+          -5.23,
+          460.32
         ],
         [
-          -3.0,
-          180.0
+          -4.98,
+          394.56
         ],
         [
-          -2.0,
-          130.0
+          -4.73,
+          370.08
         ],
         [
-          -1.2,
-          80.0
+          -4.48,
+          339.88
         ],
         [
-          -0.7,
-          110.0
+          -4.23,
+          179.34
         ],
         [
-          -0.3,
-          150.0
+          -3.98,
+          185.59
         ],
         [
-          -0.05,
-          144.83
+          -3.73,
+          196.69
+        ],
+        [
+          -3.48,
+          226.22
+        ],
+        [
+          -3.23,
+          182.38
+        ],
+        [
+          -2.98,
+          133.54
+        ],
+        [
+          -2.73,
+          135.45
+        ],
+        [
+          -2.49,
+          133.58
+        ],
+        [
+          -2.23,
+          104.38
+        ],
+        [
+          -1.98,
+          130.41
+        ],
+        [
+          -1.72,
+          133.63
+        ],
+        [
+          -1.48,
+          79.34
+        ],
+        [
+          -1.23,
+          95.41
+        ],
+        [
+          -0.98,
+          94.97
+        ],
+        [
+          -0.73,
+          131.16
+        ],
+        [
+          -0.48,
+          123.26
+        ],
+        [
+          -0.23,
+          175.83
+        ],
+        [
+          -0.15,
+          205.1
+        ],
+        [
+          -0.06,
+          213.63
         ]
       ]
     },
@@ -20621,7 +21169,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator (ILMN 7.08)",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the −30% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -20836,56 +21384,204 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 30 / Base 33 / Bull 18 / Ultra Bull 7. Spot price reference: September 22, 2026 close.",
     "thesis": "Shake Shack trades at ~$2.34B (~$54.70, down ~55% YoY after a June-2026 guidance cut) — ~13x EV/EBITDA on $1.445B revenue growing ~15%, net cash, operating margin back to 4.3%, FCF positive (~$57M, ~4%). The bull is a 4x US unit runway (~373 -> 1,500), a sub-$2.0M build cost, a new CEO (Rob Lynch, ex-Wingstop); the bear is capital intensity keeping FCF thin while traffic is barely positive. The DCF asks whether the runway converts to free cash flow — the modal case lands ~fair (-9%), so the crash corrected the excess, not created a bargain.",
     "historicalPrices": {
-      "xMin": -11.6,
+      "xMin": -11.91,
       "ipoMarker": "IPO Jan '15",
       "points": [
         [
-          -11.4,
-          45.0
+          -11.64,
+          45.9
         ],
         [
-          -10.9,
-          92.0
+          -11.48,
+          50.05
         ],
         [
-          -9.0,
-          38.0
+          -11.23,
+          60.27
         ],
         [
-          -7.0,
-          50.0
+          -10.98,
+          47.4
         ],
         [
-          -6.2,
-          35.0
+          -10.73,
+          39.6
         ],
         [
-          -5.0,
-          138.0
+          -10.48,
+          37.32
         ],
         [
-          -3.7,
-          38.0
+          -10.23,
+          36.43
         ],
         [
-          -2.5,
-          80.0
+          -9.98,
+          34.67
         ],
         [
-          -1.5,
-          110.0
+          -9.73,
+          35.79
         ],
         [
-          -1.2,
-          144.0
+          -9.48,
+          33.4
         ],
         [
-          -0.5,
+          -9.23,
+          34.88
+        ],
+        [
+          -8.98,
+          33.23
+        ],
+        [
+          -8.73,
+          43.2
+        ],
+        [
+          -8.48,
+          41.63
+        ],
+        [
+          -8.23,
+          66.18
+        ],
+        [
+          -7.98,
+          63.01
+        ],
+        [
+          -7.73,
+          45.42
+        ],
+        [
+          -7.49,
+          59.15
+        ],
+        [
+          -7.24,
+          72.2
+        ],
+        [
+          -6.98,
+          98.04
+        ],
+        [
+          -6.73,
+          59.57
+        ],
+        [
+          -6.48,
+          37.74
+        ],
+        [
+          -6.23,
+          52.98
+        ],
+        [
+          -5.98,
+          64.48
+        ],
+        [
+          -5.72,
+          84.78
+        ],
+        [
+          -5.48,
+          112.77
+        ],
+        [
+          -5.23,
+          107.02
+        ],
+        [
+          -4.98,
+          78.46
+        ],
+        [
+          -4.73,
+          72.16
+        ],
+        [
+          -4.48,
+          67.9
+        ],
+        [
+          -4.23,
+          39.48
+        ],
+        [
+          -3.98,
+          44.98
+        ],
+        [
+          -3.73,
+          41.53
+        ],
+        [
+          -3.48,
+          55.49
+        ],
+        [
+          -3.23,
+          77.72
+        ],
+        [
+          -2.98,
+          58.07
+        ],
+        [
+          -2.73,
+          74.12
+        ],
+        [
+          -2.49,
+          104.03
+        ],
+        [
+          -2.23,
           90.0
         ],
         [
-          -0.05,
-          54.7
+          -1.98,
+          103.21
+        ],
+        [
+          -1.72,
+          129.8
+        ],
+        [
+          -1.48,
+          88.17
+        ],
+        [
+          -1.23,
+          140.6
+        ],
+        [
+          -0.98,
+          93.61
+        ],
+        [
+          -0.73,
+          81.17
+        ],
+        [
+          -0.48,
+          88.47
+        ],
+        [
+          -0.23,
+          56.02
+        ],
+        [
+          -0.15,
+          62.75
+        ],
+        [
+          -0.06,
+          68.89
         ]
       ]
     },
@@ -21480,7 +22176,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -10.0% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -21581,7 +22277,7 @@ const MEMOS = [
     "metrics": {
       "mktCap": "$1902.05B",
       "shares": "2.57B",
-      "cash": "$81.6B cash, $58.7B debt · Net cash +$22.9B ($81.6B cash vs $58.7B debt); ~2.52B shares; ~$26B buybacks + ~$5B dividends FY25; Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF ~$46.1B after capex stepping from ~$72B toward $125-145B; ~$567 mid-June 2026: +12.6% YTD but -18% TTM, off the $796 Aug-2025 high, bounced off the $520 Mar-2026 low"
+      "cash": "$81.6B cash, $58.7B debt · Net cash +$22.9B at YE25; FY25 buybacks ~$26B + dividends ~$5B, then no buybacks in H1'26; Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF $46.1B, or ~$25.7B after $20.4B of stock comp; capex ~$72B, guided to $130-145B; $741 at the Sep-21 close: +12% YTD, +30% since Aug 31 (+11% on Sep 21), ~7% below the $796 Aug-2025 high"
     },
     "spot": {
       "price": 741.25,
@@ -21631,7 +22327,7 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": null,
-    "question": "Does the ~$130B/yr AI capex earn its cost of capital - lifting ad growth and pricing faster than the D&A compresses Meta's 41% margins?",
+    "question": "Is the ~$130B/yr AI capex building a second act beyond ads — the only case that clears ~$1.9T once stock comp is charged as a cost?",
     "scenarios": [
       {
         "key": "ultra_bear",
@@ -21641,8 +22337,8 @@ const MEMOS = [
         "headline": "Capex burns; ad growth fades; margins compress.",
         "why": "The genuine bear: the market already flinched (-6% after-hours) on the capex raise, the ROI is unproven, and Reality Labs has lost ~$80B cumulatively. 12% weight on the spend failing to convert to durable ad gains.",
         "what": [
-          "The capex-ROI fear plays out: the $125-145B buildout lands as years of D&A ahead of return, AI ad efficiency plateaus, the ad cycle softens, and Reality Labs keeps bleeding ~$24B/yr. Revenue growth decelerates into the mid-single digits and FCF margin compresses toward ~18-20% as depreciation outruns the operating line.",
-          "An ad business growing slowly while spending ~2x prior year on uncertain-return compute earns a low-teens terminal multiple -> DCF ~$268 (-53%). Net cash sets a floor but cannot offset a buildout that does not earn its cost of capital."
+          "The capex-ROI fear plays out: the $130-145B buildout lands as years of D&A ahead of return, AI ad efficiency plateaus, the ad cycle softens, and Reality Labs keeps bleeding ~$24B/yr. Revenue growth decelerates into the mid-single digits and FCF after stock comp stays near ~8-10% of revenue as depreciation outruns the operating line.",
+          "An ad business growing slowly while spending ~2x prior year on uncertain-return compute earns a ~14x terminal multiple on FCF after stock comp: DCF ~$133 (-82%). Net cash of ~$9/share cannot offset a buildout that does not earn its cost of capital."
         ]
       },
       {
@@ -21653,8 +22349,8 @@ const MEMOS = [
         "headline": "Growth normalizes; D&A weighs on margins.",
         "why": "Share gains and pricing continue but the D&A from ~$130B/yr capex caps margin and free cash flow. 27% as the plausible 'grows but the spend weighs' path given the elevated-capex regime.",
         "what": [
-          "Ad growth normalizes off the +33% spike toward high-single/low-double-digit as the buildout's depreciation steps up, AI lifts pricing but only modestly, and Reality Labs stays a drag. Operating margin holds high-30s and FCF margin sits low-20s as capex stays elevated against a larger D&A base.",
-          "DCF ~$415 (-27%) - a still-dominant ad franchise, but one digesting a heavy buildout at a ~16x terminal FCF multiple is worth below today's price; the discount is warranted if the capex weighs on free cash flow longer than the ad engine compounds."
+          "Ad growth normalizes off the +33% spike toward high-single/low-double-digit as the buildout's depreciation steps up, AI lifts pricing but only modestly, and Reality Labs stays a drag. Operating margin holds high-30s and FCF after stock comp sits ~10-13% of revenue as capex stays elevated against a larger D&A base.",
+          "DCF ~$230 (-69%) - a still-dominant ad franchise, but one digesting a heavy buildout at a ~16x terminal multiple on FCF after stock comp is worth about a third of today's price; the gap is warranted if the capex weighs on free cash flow longer than the ad engine compounds."
         ]
       },
       {
@@ -21663,10 +22359,10 @@ const MEMOS = [
         "prob": 34,
         "price": 365.49,
         "headline": "AI lifts ads; margins hold ~41%; FCF compounds.",
-        "why": "Requires the AI capex to roughly earn its cost of capital while ad growth stays double-digit - consistent with the accelerating Q1'26 ad metrics and 41% margins, but not a step-change. 34% as the central, modestly-positive outcome.",
+        "why": "Requires the AI capex to roughly earn its cost of capital while ad growth stays double-digit - consistent with the accelerating Q1'26 ad metrics and 41% margins, but not a step-change. 34% as the central outcome, still ~51% below the price.",
         "what": [
-          "The modal path: AI-driven ad efficiency keeps lifting volume and price (the Q1'26 +33% is the first datapoint), revenue compounds low-double-digit toward ~$300B+, and operating margin holds ~41% as the buildout's returns roughly offset its D&A. FCF margin grinds back from the capex trough toward the mid-20s as capex moderates against a larger base.",
-          "DCF ~$614 (+8%) - the ad engine compounds and the capex earns roughly its cost of capital, so the modal case recovers to modestly above today's price at a ~20x terminal FCF multiple plus net cash; the cheapest mega-cap on normalized FCF re-rates only gently in the central outcome."
+          "The modal path: AI-driven ad efficiency keeps lifting volume and price (the Q1'26 +33% is the first datapoint), revenue compounds ~14% a year to ~$385B by FY30, and operating margin holds ~41% as the buildout's returns roughly offset its D&A. FCF after stock comp grinds from ~12% of revenue toward ~16% as capex moderates against a larger base.",
+          "DCF ~$365 (-51%) - the ad engine compounds and the capex earns roughly its cost of capital, yet at a ~19x terminal multiple on FCF after stock comp the modal case is worth about half of today's price; the price already assumes more than the central outcome."
         ]
       },
       {
@@ -21677,8 +22373,8 @@ const MEMOS = [
         "headline": "AI ad engine compounds; capex pays off.",
         "why": "Meta's own AI tools are already in the core ad stack and Q1'26 showed both volume and price accelerating; if that durability holds, the capex earns well above its cost. 20% weight on the buildout becoming a real ad-monetization engine.",
         "what": [
-          "The capex pays off: AI ad-creation (Muse Spark, adopters ~8M) and ranking durably lift impressions and price, the buildout's return outruns its D&A, and operating margin expands past 42% as the ad engine scales on the compute. Revenue compounds mid-teens early and FCF margin inflects toward ~30% as capex intensity peaks and rolls over.",
-          "DCF ~$997 (+76%) - if the AI spend converts to a structurally faster, higher-margin ad engine, the de-rated entry re-rates with the fundamentals at a high-20s terminal FCF multiple; this is the core of the bull and the fat right tail in the finding."
+          "The capex pays off: AI ad-creation (Muse Spark, adopters ~8M) and ranking durably lift impressions and price, the buildout's return outruns its D&A, and operating margin expands past 42% as the ad engine scales on the compute. Revenue compounds high-teens and FCF after stock comp climbs from ~14% of revenue toward ~20% as capex intensity peaks and rolls over.",
+          "DCF ~$636 (-14%) - even if the AI spend converts to a structurally faster, higher-margin ad engine, a ~23x terminal multiple on FCF after stock comp leaves the bull below today's price: the capex paying off is already in the stock."
         ]
       },
       {
@@ -21689,84 +22385,156 @@ const MEMOS = [
         "headline": "AI platform second act; FCF machine.",
         "why": "Everything works - AI lifts ads AND opens a messaging/agent revenue stream AND the compute becomes a platform asset, the AWS/datacenter-style second act. ~7%, the long-duration tail.",
         "what": [
-          "The full second act: AI compounds ad monetization across the 3B+ user graph, business-messaging and AI agents open a new revenue stream beyond the core ad TAM, and the compute buildout becomes an owned platform asset. Operating margin pushes mid-40s and FCF margin reaches the low-30s as the spend turns into durable, high-incremental-margin revenue.",
-          "DCF ~$1392 (+146%) - the buildout reclaims a platform multiple as AI becomes an earnings engine rather than a cost; ~7% probability, the asymmetric upside the de-rated entry is buying."
+          "The full second act: AI compounds ad monetization across the 3B+ user graph, business-messaging and AI agents open a new revenue stream beyond the core ad TAM, and the compute buildout becomes an owned platform asset. Operating margin pushes mid-40s and FCF after stock comp climbs toward ~23% of revenue as the spend turns into durable, high-incremental-margin revenue.",
+          "DCF ~$917 (+24%) - the buildout earns a platform multiple (~25x terminal FCF after stock comp) as AI becomes an earnings engine rather than a cost; at ~7% probability, the only scenario that clears today's price."
         ]
       }
     ],
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 27 / Base 34 / Bull 20 / Ultra Bull 7. Spot price reference: September 22, 2026 close.",
-    "thesis": "Meta trades at ~$1.43T (~$567, +12.6% YTD but -18% TTM, off the $796 high) - the cheapest mega-cap on normalized FCF at a high-teens EV/FCF, while Q1'26 ad growth accelerated to +33%. The fork is the capex: guidance jumped to $125-145B (~2x prior year) and the stock flinched on the ROI question, even as 41% margins fund the buildout. The DCF asks whether AI ad efficiency compounds revenue faster than D&A crushes margins: a weighted +14.6%, modal base ~+8%.",
+    "thesis": "Meta trades at ~$1.90T (~$741, +12% YTD, +30% since Aug 31). Revenue grew +33% in Q1'26 and +28% in Q2 while capex heads to $130-145B (~2× FY25). Reported FCF adds back stock comp ($20.4B, 10% of FY25 revenue); charged as the real cost it is, FY25 FCF falls from $46.1B to ~$26B, or ~73× EV/FCF vs ~41× reported. The probability-weighted value sits ~47% below spot and the base case ~51% below, with 93% of the probability at or below the price.",
     "historicalPrices": {
-      "xMin": -6.2,
+      "xMin": -6.51,
       "ipoMarker": "IPO May '12",
       "points": [
         [
-          -6.0,
-          200.0
+          -6.48,
+          166.8
         ],
         [
-          -5.0,
-          270.0
+          -6.23,
+          227.07
         ],
         [
-          -4.2,
-          380.0
+          -5.98,
+          261.9
         ],
         [
-          -3.5,
-          90.0
+          -5.72,
+          273.16
         ],
         [
-          -3.0,
-          200.0
+          -5.48,
+          294.53
         ],
         [
-          -2.0,
-          350.0
+          -5.23,
+          347.71
         ],
         [
-          -1.3,
-          600.0
+          -4.98,
+          339.39
         ],
         [
-          -0.8,
-          796.0
+          -4.73,
+          336.35
         ],
         [
-          -0.25,
-          520.0
+          -4.48,
+          222.36
         ],
         [
-          -0.05,
-          566.98
+          -4.23,
+          161.25
+        ],
+        [
+          -3.98,
+          135.68
+        ],
+        [
+          -3.73,
+          120.34
+        ],
+        [
+          -3.48,
+          211.94
+        ],
+        [
+          -3.23,
+          286.98
+        ],
+        [
+          -2.98,
+          300.21
+        ],
+        [
+          -2.73,
+          353.96
+        ],
+        [
+          -2.49,
+          485.58
+        ],
+        [
+          -2.23,
+          504.22
+        ],
+        [
+          -1.98,
+          572.44
+        ],
+        [
+          -1.72,
+          585.51
+        ],
+        [
+          -1.48,
+          576.36
+        ],
+        [
+          -1.23,
+          738.09
+        ],
+        [
+          -0.98,
+          734.38
+        ],
+        [
+          -0.73,
+          660.09
+        ],
+        [
+          -0.48,
+          572.13
+        ],
+        [
+          -0.23,
+          563.29
+        ],
+        [
+          -0.15,
+          556.71
+        ],
+        [
+          -0.06,
+          572.34
         ]
       ]
     },
     "weightingRationale": [
       {
         "label": "Ultra Bear 12%",
-        "body": "Capex burns; ad growth fades; margins compress; ~$268 (-53%)."
+        "body": "Capex burns; ad growth fades; margins compress; ~$133 (-82%)."
       },
       {
         "label": "Bear 27%",
-        "body": "Growth normalizes; D&A weighs on margins; ~$415 (-27%)."
+        "body": "Growth normalizes; D&A weighs on margins; ~$230 (-69%)."
       },
       {
         "label": "Base 34%",
-        "body": "AI lifts ads; margins hold ~41%; ~$614 (+8%)."
+        "body": "AI lifts ads; margins hold ~41%; ~$365 (-51%)."
       },
       {
         "label": "Bull 20%",
-        "body": "AI ad engine compounds; capex pays off; ~$997 (+76%)."
+        "body": "AI ad engine compounds; capex pays off; ~$636 (-14%)."
       },
       {
         "label": "Ultra Bull 7%",
-        "body": "AI platform second act; FCF machine; ~$1392 (+146%)."
+        "body": "AI platform second act; FCF machine; ~$917 (+24%)."
       }
     ],
     "page3": {
       "subtitle": "FY21-FY25 history + FY26-FY30 scenario projections · fiscal years end Dec · Q1 2026 (Apr'26) results",
-      "sources": "Sources: SEC XBRL company facts (CIK 1326801; revenue, GAAP operating income/margin, cash flow, debt), Meta Q1 2026 release (revenue $56.3B +33% YoY, ad revenue ~$55B with impressions +19% & price/ad +12%, operating income $22.9B at 41% margin, Reality Labs ~$6B/qtr loss; capex raised to $125-145B; FTC trial won Nov-2025, appeal Jan-2026). Revenue modeled as a growth path off FY25; FCF = revenue x FCF margin; Gordon terminal at scenario WACC.",
+      "sources": "Sources: SEC XBRL company facts (CIK 1326801; revenue, margins, cash flow, stock comp, debt), Meta Q1 2026 release (revenue $56.3B +33%, ads ~$55B, impressions +19%, price/ad +12%, 41% operating margin, Reality Labs ~$6B/qtr loss; FTC trial won Nov-2025, appeal Jan-2026), Q2 2026 release/10-Q (capex outlook $130-145B; 2,566M diluted shares). Revenue grows off FY25; FCF = revenue x FCF margin less stock comp (10.2% of FY25 revenue); Gordon terminal at scenario WACC.",
       "chartReference": {
         "historyYears": [
           2021,
@@ -22266,7 +23034,7 @@ const MEMOS = [
             "note": "The other ad duopolist - Search/YouTube + full AI stack; the scale/margin benchmark and direct ad-budget competitor.",
             "growth": 0.15,
             "margin": 0.32,
-            "multiple": "~26x EV/FCF"
+            "multiple": "~57x EV/FCF"
           },
           {
             "name": "Amazon (AMZN)",
@@ -22274,7 +23042,7 @@ const MEMOS = [
             "note": "Fastest-growing large ad platform (retail-media), taking share of performance budgets at the margin.",
             "growth": 0.13,
             "margin": 0.11,
-            "multiple": "~3x EV/sales"
+            "multiple": "~4x EV/sales"
           },
           {
             "name": "ByteDance / TikTok",
@@ -22310,7 +23078,7 @@ const MEMOS = [
             "falsifier": "EU 'pay or consent' / signal-loss erodes ad targeting and pricing, or the FTC appeal reopens the structural-separation risk."
           }
         ],
-        "takeaway": "Meta's network-economies Power is genuinely durable (high): the 3B+ social graph compounds, reinforced by scale across a ~$200B ad base and the Instagram/WhatsApp brands - and Q1'26's accelerating ads show the engine isn't decelerating. The Audit: network economies dominates, scale and branding reinforce it, and the live threats are TikTok's pull on attention, privacy regulation, and above all the ~$130B/yr AI-capex ROI. The market prices that capex fear - the cheapest mega-cap on normalized FCF at a high-teens EV/FCF - so the DCF tests whether AI lifts ads faster than the D&A weighs: a weighted +14.6%, base ~+8%, a fat right tail."
+        "takeaway": "Meta's network-economies Power is genuinely durable (high): the 3B+ social graph compounds, reinforced by scale across a ~$200B ad base and the Instagram/WhatsApp brands - and revenue growth of +33% in Q1'26 and +28% in Q2 shows the engine still growing fast. The Audit: network economies dominates, scale and branding reinforce it, and the live threats are TikTok's pull on attention, privacy regulation, and above all the ~$130B/yr AI-capex ROI. The Power does not rescue the price: at ~73x FCF after stock comp (~41x reported), the DCF lands a weighted -46.9%, the base ~51% below spot, and only the ultra-bull clears it."
       },
       "pocd": {
         "people": {
@@ -22318,7 +23086,7 @@ const MEMOS = [
           "founderLed": true,
           "tenureYears": 22,
           "insiderOwnershipPct": 14.0,
-          "capitalAllocation": "Turned shareholder-return on aggressively: a $50B buyback authorization (Feb 2024) on top of prior programs, with ~$29.75B of Class A repurchased in FY2024 (and ~$23B in H1 FY2025 alone), plus the first-ever dividend ($0.50/quarter, initiated Feb 2024; ~$5.07B FY2024 incl. dividend equivalents). M&A built the franchise (Instagram 2012, WhatsApp 2014, Oculus 2014); subsequent deals drew FTC/antitrust scrutiny. Heavy R&D/capex — large multi-year AI/datacenter spend and the Reality Labs segment running deep operating losses. SBC ~$16.7B FY2024 (+19% YoY).",
+          "capitalAllocation": "Turned shareholder-return on aggressively: a $50B buyback authorization (Feb 2024) on top of prior programs, with ~$29.75B of Class A repurchased in FY2024 and ~$26B in FY2025, then none in H1 FY2026 as capex stepped up; plus the first-ever dividend ($0.50/quarter, initiated Feb 2024; ~$5.07B FY2024 incl. dividend equivalents). M&A built the franchise (Instagram 2012, WhatsApp 2014, Oculus 2014); subsequent deals drew FTC/antitrust scrutiny. Heavy R&D/capex — large multi-year AI/datacenter spend and the Reality Labs segment running deep operating losses. Stock comp ~$20.4B FY2025 (10.2% of revenue; ~$16.7B FY2024).",
           "incentiveAlignment": "Pay is not the alignment lever — the founder stake is: FY2024 salary was $1 (by his request), $0 bonus, $0 new equity; reported other compensation (~$27.2M) is overwhelmingly personal security and aircraft costs, not incentive pay. No PSU/TSR program for the CEO (he takes no equity grants).",
           "governanceFlags": [
             "super-voting dual-class (Class B = 10 votes vs Class A = 1) → ~61% founder voting control on ~14% economics",
@@ -22329,25 +23097,25 @@ const MEMOS = [
           ],
           "keyPersonRisk": "high",
           "score": 2,
-          "takeaway": "Founder-Chair-CEO with ~14% economics but ~61% non-dilutable voting control via Class B (10:1) — outsiders cannot force change and every shareholder vote is pre-decided. Aligned through the stake (not pay: $1 salary, $0 equity) and aggressive returns (a $50B buyback + the 2024 first-ever dividend), but the governance offsets stack: super-voting control, combined Chair/CEO, and controlled-company status."
+          "takeaway": "Founder-Chair-CEO with ~14% economics but ~61% non-dilutable voting control via Class B (10:1) — outsiders cannot force change and every shareholder vote is pre-decided. Aligned through the stake (not pay: $1 salary, $0 equity) and heavy returns through FY2025 (a $50B buyback, with no repurchases in H1 2026, plus the 2024 first-ever dividend), but the governance offsets stack: super-voting control, combined Chair/CEO, and controlled-company status."
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +14.6% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
           {
-            "label": "Cheapest mega-cap on normalized FCF.",
-            "body": "-18% TTM to a high-teens EV/FCF while ad revenue accelerates to +33% - priced as if the ad engine were decelerating."
+            "label": "FY25 cash flow is a capex trough.",
+            "body": "FCF after stock comp was ~23% of revenue in FY24, before capex doubled; the base never climbs back above ~16%."
           },
           {
             "label": "The capex ROI is the whole question.",
-            "body": "~$130B/yr spend (~2x prior year) with uncertain return is the bear; Q1'26's accelerating volume AND price is the first datapoint."
+            "body": "~$130B/yr capex (~2x prior year) is the bear; volume AND price accelerated in Q1'26, and revenue still grew +28% in Q2."
           },
           {
-            "label": "41% margins self-fund the buildout.",
-            "body": "Meta pays for the AI capex out of operating cash flow at a 41% margin while still buying back ~$26B + paying ~$5B dividends."
+            "label": "Cash flow self-funds the buildout.",
+            "body": "Operating cash flow covered ~$70B of FY25 capex plus ~$26B of buybacks and ~$5B of dividends, and H1'26's $49B of capex."
           },
           {
             "label": "AI is already monetizing in the core ad stack.",
@@ -22361,11 +23129,11 @@ const MEMOS = [
         "triggers": [
           {
             "label": "Bull validation",
-            "body": "ad revenue stays >=20% with BOTH impressions and price/ad rising · operating margin holds >=40% through the D&A step-up · FCF margin inflects above ~25% as capex peaks · AI-ad adoption keeps compounding"
+            "body": "ad revenue stays >=20% with BOTH impressions and price/ad rising · operating margin holds >=40% through the D&A step-up · FCF after stock comp tops ~16% of revenue · AI-ad adoption keeps compounding"
           },
           {
             "label": "Bear validation",
-            "body": "ad growth decelerates into the mid-single digits · operating margin falls below ~38% as D&A outruns operating · FCF margin stuck near ~20% as capex keeps stepping up · Reality Labs loss widens beyond ~$24B/yr"
+            "body": "ad growth decelerates into the mid-single digits · operating margin falls below ~38% as D&A outgrows revenue · FCF after stock comp stuck near ~10% of revenue · Reality Labs loss widens beyond ~$24B/yr"
           },
           {
             "label": "Reframe needed",
@@ -22384,15 +23152,15 @@ const MEMOS = [
         },
         {
           "term": "AI capex / ROI",
-          "definition": "The $125-145B FY26 buildout (~2x the prior ~$72B) of AI compute; whether it earns its cost of capital via faster, higher-priced ads is the biggest swing."
+          "definition": "The $130-145B FY26 buildout (~2x the prior ~$72B) of AI compute; whether it earns its cost of capital via faster, higher-priced ads is the biggest swing."
         },
         {
           "term": "Impressions x price/ad",
           "definition": "The two ad-revenue drivers (Q1'26 +19% volume, +12% price); AI lifting both is the bull mechanism, a soft cycle the bear."
         },
         {
-          "term": "FCF margin",
-          "definition": "Free cash flow / revenue (~23% FY25, down from ~33% as capex stepped up); the swing factor - whether the buildout converts to FCF as D&A scales."
+          "term": "FCF after stock comp",
+          "definition": "Free cash flow less stock comp, which reported FCF adds back: ~13% of revenue in FY25, ~23% in FY24; the valuation's basis."
         }
       ],
       "stamp": {
@@ -22550,48 +23318,120 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 12 / Bear 26 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Amazon trades at ~$2.56T (~$238.55, +14% TTM, down ~10% in 30 days on capex fear) - but the FCF multiple is distorted: FY25 free cash flow was crushed to ~$7.7B (from ~$33B in FY24) by a ~$200B AI-data-center build. The DCF models FCF margin recovering off that trough as AWS reaccelerates (+28%) and retail/ads margins expand. The finding is roughly fair (-6.9%): the modal base ~-12% as depreciation lags monetization, a wide spread either way.",
     "historicalPrices": {
-      "xMin": -6.2,
+      "xMin": -6.51,
       "ipoMarker": "IPO May '97",
       "points": [
         [
-          -6.0,
-          95.0
+          -6.48,
+          97.49
         ],
         [
-          -5.0,
-          160.0
+          -6.23,
+          137.94
         ],
         [
-          -4.0,
-          170.0
+          -5.98,
+          157.44
         ],
         [
-          -3.3,
-          85.0
+          -5.72,
+          162.85
         ],
         [
-          -2.5,
-          130.0
+          -5.48,
+          154.7
         ],
         [
-          -1.5,
-          180.0
+          -5.23,
+          172.01
         ],
         [
-          -0.8,
-          230.0
+          -4.98,
+          164.25
         ],
         [
-          -0.3,
-          196.0
+          -4.73,
+          166.72
         ],
         [
-          -0.1,
-          278.0
+          -4.48,
+          163.0
         ],
         [
-          -0.02,
-          238.55
+          -4.23,
+          106.21
+        ],
+        [
+          -3.98,
+          113.0
+        ],
+        [
+          -3.73,
+          84.0
+        ],
+        [
+          -3.48,
+          103.29
+        ],
+        [
+          -3.23,
+          130.36
+        ],
+        [
+          -2.98,
+          127.12
+        ],
+        [
+          -2.73,
+          151.94
+        ],
+        [
+          -2.49,
+          180.38
+        ],
+        [
+          -2.23,
+          193.25
+        ],
+        [
+          -1.98,
+          186.33
+        ],
+        [
+          -1.72,
+          219.39
+        ],
+        [
+          -1.48,
+          190.26
+        ],
+        [
+          -1.23,
+          219.39
+        ],
+        [
+          -0.98,
+          219.57
+        ],
+        [
+          -0.73,
+          230.82
+        ],
+        [
+          -0.48,
+          208.27
+        ],
+        [
+          -0.23,
+          238.34
+        ],
+        [
+          -0.15,
+          271.58
+        ],
+        [
+          -0.06,
+          259.77
         ]
       ]
     },
@@ -23185,7 +24025,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -6.9% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -23402,44 +24242,120 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 25 / Base 34 / Bull 20 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Alphabet trades at ~$4.35T (~$360, +28% YTD and ~130-160% TTM) - roughly 60x EV/FCF on $402.8B revenue growing ~15%, 32% operating margins, net cash, $73.3B FCF before a capex ramp to ~$190B. Cloud just re-accelerated to +63% with a ~$462B backlog and the AI stack re-rated the name, but Search is still ~60%+ of revenue and the price embeds the win. The DCF asks whether Search holds its economics through the generative-AI shift while Cloud compounds. The finding lands -21.4% (weighted ~$286): the modal base sits right at spot, so the run priced in the franchise and then some.",
     "historicalPrices": {
-      "xMin": -6.2,
+      "xMin": -6.51,
       "ipoMarker": "IPO Aug '04",
       "points": [
         [
-          -6.0,
-          70.0
+          -6.48,
+          58.1
         ],
         [
-          -5.0,
-          145.0
+          -6.23,
+          70.9
         ],
         [
-          -4.0,
-          90.0
+          -5.98,
+          73.28
         ],
         [
-          -3.0,
-          100.0
+          -5.72,
+          87.63
         ],
         [
-          -2.0,
-          140.0
+          -5.48,
+          103.13
         ],
         [
-          -1.0,
-          200.0
+          -5.23,
+          122.09
         ],
         [
-          -0.5,
-          280.0
+          -4.98,
+          133.68
         ],
         [
-          -0.1,
-          402.0
+          -4.73,
+          144.85
         ],
         [
-          -0.02,
-          359.68
+          -4.48,
+          139.07
+        ],
+        [
+          -4.23,
+          108.96
+        ],
+        [
+          -3.98,
+          95.65
+        ],
+        [
+          -3.73,
+          88.23
+        ],
+        [
+          -3.48,
+          103.73
+        ],
+        [
+          -3.23,
+          119.7
+        ],
+        [
+          -2.98,
+          130.86
+        ],
+        [
+          -2.73,
+          139.69
+        ],
+        [
+          -2.49,
+          150.93
+        ],
+        [
+          -2.23,
+          182.15
+        ],
+        [
+          -1.98,
+          165.85
+        ],
+        [
+          -1.72,
+          189.3
+        ],
+        [
+          -1.48,
+          154.64
+        ],
+        [
+          -1.23,
+          176.23
+        ],
+        [
+          -0.98,
+          243.1
+        ],
+        [
+          -0.73,
+          313.0
+        ],
+        [
+          -0.48,
+          287.56
+        ],
+        [
+          -0.23,
+          357.37
+        ],
+        [
+          -0.15,
+          356.13
+        ],
+        [
+          -0.06,
+          339.35
         ]
       ]
     },
@@ -24033,7 +24949,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -21.4% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -24250,44 +25166,120 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 19 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Apple trades at ~$4.30T (~$291/sh, +56% TTM) - about 43x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B net debt. Services compounds mid-teens at ~70%+ gross margin, but iPhone is still ~50% of revenue, AI is outsourced to Gemini, and the ~$20B/yr Google search payment faces a DOJ rebid. The DCF resolves whether quality justifies the multiple: weighted -34.5%, modal ~$188 (-35%).",
     "historicalPrices": {
-      "xMin": -6.2,
+      "xMin": -6.51,
       "ipoMarker": "IPO Dec '80",
       "points": [
         [
-          -6.0,
-          75.0
+          -6.48,
+          63.57
         ],
         [
-          -5.0,
-          130.0
+          -6.23,
+          91.2
         ],
         [
-          -4.0,
-          180.0
+          -5.98,
+          115.81
         ],
         [
-          -3.3,
-          130.0
+          -5.72,
+          132.69
         ],
         [
-          -2.5,
-          190.0
+          -5.48,
+          122.15
         ],
         [
-          -1.5,
-          230.0
+          -5.23,
+          136.96
         ],
         [
-          -0.5,
-          250.0
+          -4.98,
+          141.5
         ],
         [
-          -0.1,
-          315.0
+          -4.73,
+          177.57
         ],
         [
-          -0.02,
-          291.13
+          -4.48,
+          174.61
+        ],
+        [
+          -4.23,
+          136.72
+        ],
+        [
+          -3.98,
+          138.2
+        ],
+        [
+          -3.73,
+          129.93
+        ],
+        [
+          -3.48,
+          164.9
+        ],
+        [
+          -3.23,
+          193.97
+        ],
+        [
+          -2.98,
+          171.21
+        ],
+        [
+          -2.73,
+          192.53
+        ],
+        [
+          -2.49,
+          171.48
+        ],
+        [
+          -2.23,
+          210.62
+        ],
+        [
+          -1.98,
+          233.0
+        ],
+        [
+          -1.72,
+          250.42
+        ],
+        [
+          -1.48,
+          222.13
+        ],
+        [
+          -1.23,
+          205.17
+        ],
+        [
+          -0.98,
+          254.63
+        ],
+        [
+          -0.73,
+          271.86
+        ],
+        [
+          -0.48,
+          253.79
+        ],
+        [
+          -0.23,
+          289.36
+        ],
+        [
+          -0.15,
+          308.91
+        ],
+        [
+          -0.06,
+          316.85
         ]
       ]
     },
@@ -24882,7 +25874,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -34.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -25097,40 +26089,104 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 25 / Base 32 / Bull 20 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "NVIDIA trades at ~$4,986B (~$205/sh, ~+45% TTM) - ~50x FCF on $215.9B revenue (+65%), ~60% operating margins, ~$2B net cash. Data Center is ~88% of revenue and grew +92% last quarter at a mid-70s% gross margin. The DCF asks whether hyperscaler + sovereign AI capex keeps compounding or pauses; even at huge growth the modal can't justify ~$5T - weighted -25% (ultra-bear -80% to ultra-bull +73%).",
     "historicalPrices": {
-      "xMin": -5.2,
+      "xMin": -5.51,
       "ipoMarker": "IPO Jan '99",
       "points": [
         [
-          -5.0,
-          13.0
+          -5.48,
+          13.35
         ],
         [
-          -4.3,
-          33.0
+          -5.23,
+          20.0
         ],
         [
-          -3.5,
-          15.0
+          -4.98,
+          20.72
         ],
         [
-          -2.5,
-          50.0
+          -4.73,
+          29.41
         ],
         [
-          -1.5,
-          135.0
+          -4.48,
+          27.29
         ],
         [
-          -0.8,
-          140.0
+          -4.23,
+          15.16
         ],
         [
-          -0.1,
-          235.0
+          -3.98,
+          12.14
         ],
         [
-          -0.02,
-          205.19
+          -3.73,
+          14.61
+        ],
+        [
+          -3.48,
+          27.78
+        ],
+        [
+          -3.23,
+          42.3
+        ],
+        [
+          -2.98,
+          43.5
+        ],
+        [
+          -2.73,
+          49.52
+        ],
+        [
+          -2.49,
+          90.36
+        ],
+        [
+          -2.23,
+          123.54
+        ],
+        [
+          -1.98,
+          121.44
+        ],
+        [
+          -1.72,
+          134.29
+        ],
+        [
+          -1.48,
+          108.38
+        ],
+        [
+          -1.23,
+          157.99
+        ],
+        [
+          -0.98,
+          186.58
+        ],
+        [
+          -0.73,
+          186.5
+        ],
+        [
+          -0.48,
+          174.4
+        ],
+        [
+          -0.23,
+          200.09
+        ],
+        [
+          -0.15,
+          200.75
+        ],
+        [
+          -0.06,
+          220.78
         ]
       ]
     },
@@ -25724,7 +26780,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -25.2% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -25941,44 +26997,112 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 18 / Bear 30 / Base 30 / Bull 14 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Tesla trades at ~$1.5T (~$406, +27% TTM) - ~16x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight delivery decline (1.64M, -8.6%), with GAAP operating margin compressed to 4.6% from 16.8% in 2022. The DCF underwrites only the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-75%). The robotaxi/FSD/Optimus optionality is real but lives entirely in the ultra-bull second act, and even that lands -6%. What you pay above ~$100 is the autonomy/robot option, not the car business - the modal case, an auto maker re-rating toward an auto multiple, is deeply negative.",
     "historicalPrices": {
-      "xMin": -5.7,
+      "xMin": -6.01,
       "ipoMarker": "IPO Jun '10",
       "points": [
         [
-          -5.5,
-          80.0
+          -5.98,
+          143.0
         ],
         [
-          -5.0,
-          240.0
+          -5.72,
+          235.22
         ],
         [
-          -4.2,
-          410.0
+          -5.48,
+          222.64
         ],
         [
-          -3.3,
-          108.0
+          -5.23,
+          226.57
         ],
         [
-          -2.5,
-          250.0
+          -4.98,
+          258.49
         ],
         [
-          -1.5,
-          250.0
+          -4.73,
+          352.26
         ],
         [
-          -0.8,
-          460.0
+          -4.48,
+          359.2
         ],
         [
-          -0.3,
-          420.0
+          -4.23,
+          224.47
         ],
         [
-          -0.05,
-          406.43
+          -3.98,
+          265.25
+        ],
+        [
+          -3.73,
+          123.18
+        ],
+        [
+          -3.48,
+          207.46
+        ],
+        [
+          -3.23,
+          261.77
+        ],
+        [
+          -2.98,
+          250.22
+        ],
+        [
+          -2.73,
+          248.48
+        ],
+        [
+          -2.49,
+          175.79
+        ],
+        [
+          -2.23,
+          197.88
+        ],
+        [
+          -1.98,
+          261.63
+        ],
+        [
+          -1.72,
+          403.84
+        ],
+        [
+          -1.48,
+          259.16
+        ],
+        [
+          -1.23,
+          317.66
+        ],
+        [
+          -0.98,
+          444.72
+        ],
+        [
+          -0.73,
+          449.72
+        ],
+        [
+          -0.48,
+          371.75
+        ],
+        [
+          -0.23,
+          420.6
+        ],
+        [
+          -0.15,
+          311.21
+        ],
+        [
+          -0.06,
+          367.95
         ]
       ]
     },
@@ -26574,7 +27698,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, with the robotaxi, FSD and Optimus optionality priced explicitly in the ultra-bull second act, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -26789,44 +27913,120 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Disney trades at ~$178.6B equity (~$100, down ~9% YTD) — ~22x EV/FCF on $94.4B revenue, an 18.6% and rising operating margin, ~$10.1B FCF against ~$36B net debt. Streaming (DTC) operating income just crossed 10% (+88% YoY, guided to keep scaling), Experiences is a record cash engine (~$2.6B quarterly OI) with a $60B capex runway, and the CEO succession overhang is resolved. The DCF asks whether DTC margin scales toward mid-teens before linear TV erodes the base. The modal case lands +14% — the cheap-turnaround read, with the secular cable decline as the live drag.",
     "historicalPrices": {
-      "xMin": -6.2,
+      "xMin": -6.51,
       "ipoMarker": "NYSE since '57",
       "points": [
         [
-          -6.0,
-          110.0
+          -6.48,
+          96.6
         ],
         [
-          -5.0,
-          150.0
+          -6.23,
+          111.51
         ],
         [
-          -4.2,
-          200.0
+          -5.98,
+          124.08
         ],
         [
-          -3.3,
-          90.0
+          -5.72,
+          181.18
         ],
         [
-          -2.5,
-          85.0
+          -5.48,
+          184.52
         ],
         [
-          -1.5,
-          110.0
+          -5.23,
+          175.77
         ],
         [
-          -0.8,
-          120.0
+          -4.98,
+          169.17
         ],
         [
-          -0.3,
-          92.0
+          -4.73,
+          154.89
         ],
         [
-          -0.05,
-          100.04
+          -4.48,
+          137.16
+        ],
+        [
+          -4.23,
+          94.4
+        ],
+        [
+          -3.98,
+          94.33
+        ],
+        [
+          -3.73,
+          86.88
+        ],
+        [
+          -3.48,
+          100.13
+        ],
+        [
+          -3.23,
+          89.28
+        ],
+        [
+          -2.98,
+          81.05
+        ],
+        [
+          -2.73,
+          90.29
+        ],
+        [
+          -2.49,
+          122.36
+        ],
+        [
+          -2.23,
+          99.29
+        ],
+        [
+          -1.98,
+          96.19
+        ],
+        [
+          -1.72,
+          111.35
+        ],
+        [
+          -1.48,
+          98.7
+        ],
+        [
+          -1.23,
+          124.01
+        ],
+        [
+          -0.98,
+          114.5
+        ],
+        [
+          -0.73,
+          113.77
+        ],
+        [
+          -0.48,
+          96.38
+        ],
+        [
+          -0.23,
+          96.25
+        ],
+        [
+          -0.15,
+          96.19
+        ],
+        [
+          -0.06,
+          107.55
         ]
       ]
     },
@@ -27421,7 +28621,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +10.3% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -27636,36 +28836,104 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Chipotle trades at ~$41.96B (~$32.23, down ~14% YTD / ~36% TTM, near the 52-week low) — ~30x FCF on $11.93B revenue, net cash, GAAP op margin 16.2% off a 16.9% peak. Q1'26 comps just turned positive (+0.5%, traffic-led, no price), but restaurant-level margin fell 250bps as management declines to fully price mid-single-digit inflation to defend value. The bull is the unit runway (~4,100 -> 7,000 NA) plus throughput/automation; the bear is a maturing concept with structurally low-single-digit same-store growth at a premium multiple. The weighted DCF lands -4.8% — the modal base (-5.5%) only reaches about today's price; the runway is real, the multiple already pays for it.",
     "historicalPrices": {
-      "xMin": -5.2,
+      "xMin": -5.51,
       "ipoMarker": "IPO Jan '06",
       "points": [
         [
-          -5.0,
-          13.0
+          -5.48,
+          28.42
         ],
         [
-          -4.0,
-          20.0
+          -5.23,
+          31.01
         ],
         [
-          -3.0,
-          28.0
+          -4.98,
+          36.35
         ],
         [
-          -2.0,
-          45.0
+          -4.73,
+          34.97
         ],
         [
-          -1.2,
-          58.0
+          -4.48,
+          31.64
         ],
         [
-          -0.5,
-          42.0
+          -4.23,
+          26.15
         ],
         [
-          -0.05,
-          32.23
+          -3.98,
+          30.06
+        ],
+        [
+          -3.73,
+          27.75
+        ],
+        [
+          -3.48,
+          34.17
+        ],
+        [
+          -3.23,
+          42.78
+        ],
+        [
+          -2.98,
+          36.64
+        ],
+        [
+          -2.73,
+          45.74
+        ],
+        [
+          -2.49,
+          58.14
+        ],
+        [
+          -2.23,
+          62.65
+        ],
+        [
+          -1.98,
+          57.62
+        ],
+        [
+          -1.72,
+          60.3
+        ],
+        [
+          -1.48,
+          50.21
+        ],
+        [
+          -1.23,
+          56.15
+        ],
+        [
+          -0.98,
+          39.19
+        ],
+        [
+          -0.73,
+          37.0
+        ],
+        [
+          -0.48,
+          32.01
+        ],
+        [
+          -0.23,
+          34.0
+        ],
+        [
+          -0.15,
+          37.22
+        ],
+        [
+          -0.06,
+          38.03
         ]
       ]
     },
@@ -28260,7 +29528,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -4.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -28475,48 +29743,112 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 16 / Bear 28 / Base 33 / Bull 15 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Delta trades at ~$54.25B equity (~$83.06, ~+79% TTM) -> ~14x FCF on $63.4B GAAP revenue, ~9.2% operating margin, ~$3.8B FCF, but ~$9B net debt drags the equity. The bull is the premium-cabin + SkyMiles-Amex loyalty annuity (premium revenue +14%, Amex remuneration >$2B toward $10B) re-rating earnings toward a lower-beta consumer/payments mix; the bear is reversion to fuel-and-cycle economics with a K-shaped main cabin. The modal case lands ~fair (-3%) - cheap-on-FCF is offset by cyclicality and the debt bridge.",
     "historicalPrices": {
-      "xMin": -5.5,
+      "xMin": -5.81,
       "ipoMarker": "NYSE since '07",
       "points": [
         [
-          -5.5,
-          30.0
+          -5.81,
+          40.25
         ],
         [
-          -5.0,
-          40.0
+          -5.72,
+          40.21
         ],
         [
-          -4.2,
-          45.0
+          -5.48,
+          48.28
         ],
         [
-          -3.3,
-          28.0
+          -5.23,
+          43.26
         ],
         [
-          -2.5,
-          40.0
+          -4.98,
+          42.61
         ],
         [
-          -1.5,
-          50.0
+          -4.73,
+          39.08
         ],
         [
-          -0.8,
-          68.0
+          -4.48,
+          39.57
         ],
         [
-          -0.3,
-          60.0
+          -4.23,
+          28.97
         ],
         [
-          -0.1,
-          83.0
+          -3.98,
+          28.06
         ],
         [
-          -0.05,
-          83.06
+          -3.73,
+          32.86
+        ],
+        [
+          -3.48,
+          34.92
+        ],
+        [
+          -3.23,
+          47.54
+        ],
+        [
+          -2.98,
+          37.0
+        ],
+        [
+          -2.73,
+          40.23
+        ],
+        [
+          -2.49,
+          47.87
+        ],
+        [
+          -2.23,
+          47.44
+        ],
+        [
+          -1.98,
+          50.79
+        ],
+        [
+          -1.72,
+          60.5
+        ],
+        [
+          -1.48,
+          43.6
+        ],
+        [
+          -1.23,
+          49.18
+        ],
+        [
+          -0.98,
+          56.75
+        ],
+        [
+          -0.73,
+          69.4
+        ],
+        [
+          -0.48,
+          66.48
+        ],
+        [
+          -0.23,
+          93.66
+        ],
+        [
+          -0.15,
+          87.44
+        ],
+        [
+          -0.06,
+          78.0
         ]
       ]
     },
@@ -29111,7 +30443,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -8.1% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -29326,44 +30658,100 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 32 / Bull 18 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Robinhood trades at ~$82.8B (~$93, down ~27% YTD after a ~280% 2025 rally) — ~52x FCF on $4.473B revenue growing ~49%, ~50% adj-EBITDA margin, net cash, share count rising (SBC-dilutive). Roughly a third of revenue is rate-sensitive net interest (~$40M/qtr per 25bp Fed cut) and transaction revenue is crypto/rate-cyclical (crypto -47% last quarter). The DCF asks whether events/futures/options/Gold make HOOD a durable platform or it reverts to a transaction broker. The finding: even the bull lands -40%, and only the ultra-bull (-14%) approaches fair — the price embeds a hyper-growth platform the modal case (-59%) doesn't deliver.",
     "historicalPrices": {
-      "xMin": -5.0,
+      "xMin": -5.31,
       "ipoMarker": "IPO Jul '21",
       "points": [
         [
-          -5.0,
-          38.0
+          -5.15,
+          35.15
         ],
         [
-          -4.5,
-          8.0
+          -4.98,
+          42.08
         ],
         [
-          -3.5,
-          9.0
+          -4.73,
+          17.76
         ],
         [
-          -2.5,
-          12.0
+          -4.48,
+          13.51
         ],
         [
-          -1.5,
-          25.0
+          -4.23,
+          8.22
         ],
         [
-          -0.8,
-          60.0
+          -3.98,
+          10.1
         ],
         [
-          -0.3,
-          154.0
+          -3.73,
+          8.14
         ],
         [
-          -0.1,
-          100.0
+          -3.48,
+          9.71
         ],
         [
-          -0.05,
-          93.19
+          -3.23,
+          9.98
+        ],
+        [
+          -2.98,
+          9.81
+        ],
+        [
+          -2.73,
+          12.74
+        ],
+        [
+          -2.49,
+          20.13
+        ],
+        [
+          -2.23,
+          22.71
+        ],
+        [
+          -1.98,
+          23.42
+        ],
+        [
+          -1.72,
+          37.26
+        ],
+        [
+          -1.48,
+          41.62
+        ],
+        [
+          -1.23,
+          93.63
+        ],
+        [
+          -0.98,
+          143.18
+        ],
+        [
+          -0.73,
+          113.1
+        ],
+        [
+          -0.48,
+          69.3
+        ],
+        [
+          -0.23,
+          100.28
+        ],
+        [
+          -0.15,
+          86.56
+        ],
+        [
+          -0.06,
+          104.81
         ]
       ]
     },
@@ -29960,7 +31348,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -57.7% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -30177,48 +31565,112 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Deere trades at ~$156B (~$577, +10.5% YTD into the cycle low) — ~26x trough FCF on $45.7B revenue down 12% in the third year of an ag down-cycle, GAAP operating margin compressed to 14.0%, FCF ~$6.1B. The DCF asks whether the recovery is already priced: the modal case says largely yes (base -23%) — a full multiple on trough earnings already discounts the upturn. The bull is the cycle turning plus precision ag de-cyclicalizing margins. The finding: -21.8%, quality bought rich near a trough.",
     "historicalPrices": {
-      "xMin": -5.5,
+      "xMin": -5.81,
       "ipoMarker": "NYSE listed",
       "points": [
         [
-          -5.5,
-          170.0
+          -5.81,
+          261.62
         ],
         [
-          -5.0,
-          300.0
+          -5.72,
+          269.05
         ],
         [
-          -4.2,
-          360.0
+          -5.48,
+          374.14
         ],
         [
-          -3.3,
-          290.0
+          -5.23,
+          352.71
         ],
         [
-          -2.5,
-          420.0
+          -4.98,
+          335.07
         ],
         [
-          -1.5,
-          400.0
+          -4.73,
+          342.89
         ],
         [
-          -0.8,
-          480.0
+          -4.48,
+          415.46
         ],
         [
-          -0.3,
-          660.0
+          -4.23,
+          299.47
         ],
         [
-          -0.1,
-          577.0
+          -3.98,
+          333.89
         ],
         [
-          -0.05,
-          577.48
+          -3.73,
+          428.76
+        ],
+        [
+          -3.48,
+          412.88
+        ],
+        [
+          -3.23,
+          405.19
+        ],
+        [
+          -2.98,
+          377.38
+        ],
+        [
+          -2.73,
+          399.87
+        ],
+        [
+          -2.49,
+          410.74
+        ],
+        [
+          -2.23,
+          373.63
+        ],
+        [
+          -1.98,
+          417.33
+        ],
+        [
+          -1.72,
+          423.7
+        ],
+        [
+          -1.48,
+          469.35
+        ],
+        [
+          -1.23,
+          508.49
+        ],
+        [
+          -0.98,
+          457.26
+        ],
+        [
+          -0.73,
+          465.57
+        ],
+        [
+          -0.48,
+          563.3
+        ],
+        [
+          -0.23,
+          634.33
+        ],
+        [
+          -0.15,
+          592.67
+        ],
+        [
+          -0.06,
+          654.91
         ]
       ]
     },
@@ -30813,7 +32265,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -21.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -31028,44 +32480,112 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Align trades at ~$12.5B (~$174.84, deeply de-rated from the 2021 ~$700 peak to ~$175) - ~25x FCF on $4.04B revenue growing low-single-digit, ~70% gross margin, net cash and a buyback. It is the category-defining clear-aligner brand (Invisalign + iTero) in a market still only ~15-20% penetrated, but growth has flat-lined (+1%) as discretionary demand softens and Angelalign/at-home rivals pressure ASPs (-1 to -2% guided). The DCF asks whether category penetration plus the teen/Palatal-Expander TAM outrun price/share erosion. The finding lands ~fair (-1.5%): the modal case is +1%, de-rated but not cheap.",
     "historicalPrices": {
-      "xMin": -5.5,
+      "xMin": -5.81,
       "ipoMarker": "IPO Jan '01",
       "points": [
         [
-          -5.5,
-          300.0
+          -5.81,
+          481.29
         ],
         [
-          -5.0,
-          550.0
+          -5.72,
+          534.38
         ],
         [
-          -4.2,
-          650.0
+          -5.48,
+          541.53
         ],
         [
-          -3.3,
-          200.0
+          -5.23,
+          611.0
         ],
         [
-          -2.5,
-          300.0
+          -4.98,
+          665.43
         ],
         [
-          -1.5,
-          250.0
+          -4.73,
+          657.18
         ],
         [
-          -0.8,
-          200.0
+          -4.48,
+          436.0
         ],
         [
-          -0.3,
-          170.0
+          -4.23,
+          236.67
         ],
         [
-          -0.05,
-          174.84
+          -3.98,
+          207.11
+        ],
+        [
+          -3.73,
+          210.9
+        ],
+        [
+          -3.48,
+          334.14
+        ],
+        [
+          -3.23,
+          353.64
+        ],
+        [
+          -2.98,
+          305.32
+        ],
+        [
+          -2.73,
+          274.0
+        ],
+        [
+          -2.49,
+          327.92
+        ],
+        [
+          -2.23,
+          241.43
+        ],
+        [
+          -1.98,
+          254.32
+        ],
+        [
+          -1.72,
+          208.51
+        ],
+        [
+          -1.48,
+          158.86
+        ],
+        [
+          -1.23,
+          189.33
+        ],
+        [
+          -0.98,
+          125.22
+        ],
+        [
+          -0.73,
+          156.15
+        ],
+        [
+          -0.48,
+          171.43
+        ],
+        [
+          -0.23,
+          168.66
+        ],
+        [
+          -0.15,
+          169.16
+        ],
+        [
+          -0.06,
+          159.79
         ]
       ]
     },
@@ -31660,7 +33180,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -1.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -31875,48 +33395,112 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 26 / Base 34 / Bull 19 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Autodesk trades at ~$41.9B (~$198, down ~31% YTD near the 52-week low) — ~17x FCF on $7.21B revenue, a ~98%-recurring CAD/design franchise, roughly net-cash-neutral. The +18% as-reported growth is flattered by an agency->direct billing change; underlying (cc-adjusted) growth is nearer ~8-12%. The bull is durable switching-cost lock-in plus a Starboard-forced lift toward ~45% operating margin by FY28; the bear is maturing growth and activist/execution noise. The finding is +53.6%: even the bear is +9% and the modal case +53% on the lower underlying growth.",
     "historicalPrices": {
-      "xMin": -5.5,
+      "xMin": -5.81,
       "ipoMarker": "IPO '85",
       "points": [
         [
-          -5.5,
-          280.0
+          -5.81,
+          280.23
         ],
         [
-          -5.0,
-          300.0
+          -5.72,
+          305.34
         ],
         [
-          -4.2,
-          200.0
+          -5.48,
+          277.15
         ],
         [
-          -3.3,
-          180.0
+          -5.23,
+          291.9
         ],
         [
-          -2.5,
-          200.0
+          -4.98,
+          285.17
         ],
         [
-          -1.5,
-          250.0
+          -4.73,
+          281.19
         ],
         [
-          -0.8,
-          290.0
+          -4.48,
+          214.35
         ],
         [
-          -0.3,
-          329.0
+          -4.23,
+          171.96
         ],
         [
-          -0.1,
-          205.0
+          -3.98,
+          186.8
         ],
         [
-          -0.05,
-          198.43
+          -3.73,
+          186.87
+        ],
+        [
+          -3.48,
+          208.16
+        ],
+        [
+          -3.23,
+          204.61
+        ],
+        [
+          -2.98,
+          206.91
+        ],
+        [
+          -2.73,
+          243.48
+        ],
+        [
+          -2.49,
+          260.42
+        ],
+        [
+          -2.23,
+          247.45
+        ],
+        [
+          -1.98,
+          275.48
+        ],
+        [
+          -1.72,
+          295.57
+        ],
+        [
+          -1.48,
+          261.8
+        ],
+        [
+          -1.23,
+          309.57
+        ],
+        [
+          -0.98,
+          317.67
+        ],
+        [
+          -0.73,
+          296.01
+        ],
+        [
+          -0.48,
+          239.4
+        ],
+        [
+          -0.23,
+          194.42
+        ],
+        [
+          -0.15,
+          234.2
+        ],
+        [
+          -0.06,
+          258.53
         ]
       ]
     },
@@ -32511,7 +34095,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +53.6% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -32726,40 +34310,64 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 34 / Bull 18 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Instacart trades at ~$9.9B (~$41.25, ~-5% YTD) — ~11x reported FCF and ~2.7x EV/sales on $3.74B revenue (+11%), net cash, GAAP operating margin scaling 12.3->17.9%. The engine is ~80%-margin advertising compounding on a $10B+ GTV base, with a $3.5B buyback (~35% of the cap) offsetting SBC dilution so shares stay flat. The DCF asks whether high-margin ad revenue keeps scaling against DoorDash/Uber/Amazon/Walmart and a ~7% take rate. The finding: even pricing the competitive bear (-28%), the modal flywheel lands +57%, on reported FCF discounted to ~15-19% ex-SBC owner margin.",
     "historicalPrices": {
-      "xMin": -2.7,
+      "xMin": -3.01,
       "ipoMarker": "IPO Sep '23",
       "points": [
         [
-          -2.7,
-          30.0
+          -2.98,
+          29.69
         ],
         [
-          -2.3,
-          24.0
+          -2.73,
+          23.47
         ],
         [
-          -1.8,
-          35.0
+          -2.49,
+          37.29
         ],
         [
-          -1.2,
-          48.0
+          -2.23,
+          32.14
         ],
         [
-          -0.8,
-          53.0
+          -1.98,
+          40.74
         ],
         [
-          -0.4,
-          40.0
+          -1.72,
+          41.42
         ],
         [
-          -0.1,
-          33.0
+          -1.48,
+          39.89
         ],
         [
-          -0.05,
-          41.25
+          -1.23,
+          45.24
+        ],
+        [
+          -0.98,
+          36.76
+        ],
+        [
+          -0.73,
+          44.98
+        ],
+        [
+          -0.48,
+          37.46
+        ],
+        [
+          -0.23,
+          47.35
+        ],
+        [
+          -0.15,
+          44.6
+        ],
+        [
+          -0.06,
+          50.52
         ]
       ]
     },
@@ -33354,7 +34962,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +57.7% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -33571,48 +35179,112 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 18 / Bear 28 / Base 30 / Bull 16 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Unity trades at ~$11.8B (~$27, down ~58% YTD) — ~30x FCF on $1.85B revenue, but the FCF flatters a still-GAAP-loss business: shares are up ~56% in five years on stock comp and ~$2.2B convertibles (Nov-2026) sit against ~$2.15B cash. This is a turnaround bet on the Vector AI ad engine (Grow +24%, Vector +80%, ~$1B ARR targeted), not an FCF compounder. The base models a lower ex-SBC FCF margin AND a growing share count, so dilution is the core mechanism. Across a wide distribution the weighted finding is -56.5% — the modal case is still well below spot.",
     "historicalPrices": {
-      "xMin": -5.7,
+      "xMin": -6.01,
       "ipoMarker": "IPO Sep '20",
       "points": [
         [
-          -5.7,
-          52.0
+          -5.98,
+          87.28
         ],
         [
-          -5.0,
-          180.0
+          -5.72,
+          153.47
         ],
         [
-          -4.2,
-          120.0
+          -5.48,
+          100.31
         ],
         [
-          -3.3,
-          30.0
+          -5.23,
+          109.83
         ],
         [
-          -2.5,
-          40.0
+          -4.98,
+          126.25
         ],
         [
-          -1.5,
-          25.0
+          -4.73,
+          142.99
         ],
         [
-          -0.8,
-          52.0
+          -4.48,
+          99.21
         ],
         [
-          -0.3,
-          18.0
+          -4.23,
+          36.82
         ],
         [
-          -0.1,
-          27.0
+          -3.98,
+          31.86
         ],
         [
-          -0.05,
-          27.24
+          -3.73,
+          28.59
+        ],
+        [
+          -3.48,
+          32.44
+        ],
+        [
+          -3.23,
+          43.42
+        ],
+        [
+          -2.98,
+          31.39
+        ],
+        [
+          -2.73,
+          40.89
+        ],
+        [
+          -2.49,
+          26.7
+        ],
+        [
+          -2.23,
+          16.26
+        ],
+        [
+          -1.98,
+          22.62
+        ],
+        [
+          -1.72,
+          22.47
+        ],
+        [
+          -1.48,
+          19.59
+        ],
+        [
+          -1.23,
+          24.2
+        ],
+        [
+          -0.98,
+          40.04
+        ],
+        [
+          -0.73,
+          44.17
+        ],
+        [
+          -0.48,
+          21.94
+        ],
+        [
+          -0.23,
+          28.58
+        ],
+        [
+          -0.15,
+          31.71
+        ],
+        [
+          -0.06,
+          42.1
         ]
       ]
     },
@@ -34207,7 +35879,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -56.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -34422,40 +36094,104 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Crocs trades at ~$6.26B (~$124.71, +45% YTD) — ~9x EV/FCF on $4.04B revenue that is ~flat because HEYDUDE (-12%) offsets a still-growing core (+1%, international +7%). The TTM GAAP P/E is distorted by a $737M non-cash HEYDUDE impairment; adjusted operating margin is ~22%. The bull is the core compounding on international while the written-down HEYDUDE de-risks the downside; the bear is the fad fading plus more HEYDUDE value destruction. On normalized FCF the modal case is ~+61%.",
     "historicalPrices": {
-      "xMin": -5.2,
+      "xMin": -5.51,
       "ipoMarker": "IPO Feb '06",
       "points": [
         [
-          -5.0,
-          50.0
+          -5.48,
+          80.45
         ],
         [
-          -4.0,
-          90.0
+          -5.23,
+          116.52
         ],
         [
-          -3.2,
-          110.0
+          -4.98,
+          143.48
         ],
         [
-          -2.5,
-          140.0
+          -4.73,
+          128.22
         ],
         [
-          -1.5,
-          90.0
+          -4.48,
+          76.4
         ],
         [
-          -0.8,
-          100.0
+          -4.23,
+          48.67
         ],
         [
-          -0.3,
-          73.0
+          -3.98,
+          68.66
         ],
         [
-          -0.05,
-          124.71
+          -3.73,
+          108.43
+        ],
+        [
+          -3.48,
+          126.44
+        ],
+        [
+          -3.23,
+          112.44
+        ],
+        [
+          -2.98,
+          88.23
+        ],
+        [
+          -2.73,
+          93.41
+        ],
+        [
+          -2.49,
+          143.8
+        ],
+        [
+          -2.23,
+          145.94
+        ],
+        [
+          -1.98,
+          144.81
+        ],
+        [
+          -1.72,
+          109.53
+        ],
+        [
+          -1.48,
+          106.2
+        ],
+        [
+          -1.23,
+          101.28
+        ],
+        [
+          -0.98,
+          83.55
+        ],
+        [
+          -0.73,
+          85.52
+        ],
+        [
+          -0.48,
+          83.02
+        ],
+        [
+          -0.23,
+          120.64
+        ],
+        [
+          -0.15,
+          128.01
+        ],
+        [
+          -0.06,
+          120.38
         ]
       ]
     },
@@ -35049,7 +36785,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +55.5% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -35264,36 +37000,56 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 16 / Bear 27 / Base 32 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Reddit trades at ~$30.2B (~$162, down ~28% YTD) — ~43x headline FCF on $2.20B revenue growing ~62% at ~91% gross margin, net cash, GAAP-profitable. The bull is a deeply under-monetized ad engine (ARPU far below Meta) plus high-margin data-licensing/AI deals (Google, OpenAI); the bear is existential — ~40-50% of traffic comes from Google, and AI-search answer-boxes can disintermediate that discovery (a Q4-2025 change already dented growth). On ex-SBC owner FCF, the modal case lands ~-23%: priced for perfection.",
     "historicalPrices": {
-      "xMin": -2.3,
+      "xMin": -2.61,
       "ipoMarker": "IPO Mar '24",
       "points": [
         [
-          -2.2,
-          34.0
+          -2.49,
+          49.32
         ],
         [
-          -1.8,
-          60.0
+          -2.23,
+          63.89
         ],
         [
-          -1.3,
-          160.0
+          -1.98,
+          65.92
         ],
         [
-          -0.9,
-          230.0
+          -1.72,
+          163.44
         ],
         [
-          -0.5,
-          180.0
+          -1.48,
+          104.9
         ],
         [
-          -0.2,
-          106.0
+          -1.23,
+          150.57
         ],
         [
-          -0.05,
-          162.1
+          -0.98,
+          229.99
+        ],
+        [
+          -0.73,
+          229.87
+        ],
+        [
+          -0.48,
+          134.65
+        ],
+        [
+          -0.23,
+          173.58
+        ],
+        [
+          -0.15,
+          140.67
+        ],
+        [
+          -0.06,
+          147.81
         ]
       ]
     },
@@ -35890,7 +37646,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -20.2% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -36107,40 +37863,92 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Toast trades at ~$14.4B (~$24.82, down ~40% TTM, near the 52-week low) — ~2.1x EV/sales on $6.15B revenue growing ~23%, net cash, with a proven margin inflection (GAAP op margin -7% -> 0.3% -> 4.7%, and 21% last quarter). The bull is durable ~20% location growth (171k of 875k+ US restaurants) plus attach (Capital, marketing) lifting ARPU and take rate; the bear is payments take-rate compression and SMB cyclicality against Block/Square, Olo and Shift4. The modal case lands +24%, so the de-rate looks like it overshot a real inflection.",
     "historicalPrices": {
-      "xMin": -4.5,
+      "xMin": -4.81,
       "ipoMarker": "IPO Sep '21",
       "points": [
         [
-          -4.5,
-          40.0
+          -4.73,
+          34.71
         ],
         [
-          -4.0,
-          20.0
+          -4.48,
+          21.73
         ],
         [
-          -3.3,
-          14.0
+          -4.23,
+          12.94
         ],
         [
-          -2.5,
-          22.0
+          -3.98,
+          16.72
         ],
         [
-          -1.5,
-          38.0
+          -3.73,
+          18.03
         ],
         [
-          -0.8,
-          46.0
+          -3.48,
+          17.75
         ],
         [
-          -0.3,
-          30.0
+          -3.23,
+          22.57
         ],
         [
-          -0.05,
-          24.82
+          -2.98,
+          18.73
+        ],
+        [
+          -2.73,
+          18.26
+        ],
+        [
+          -2.49,
+          24.92
+        ],
+        [
+          -2.23,
+          25.77
+        ],
+        [
+          -1.98,
+          28.31
+        ],
+        [
+          -1.72,
+          36.45
+        ],
+        [
+          -1.48,
+          33.17
+        ],
+        [
+          -1.23,
+          44.29
+        ],
+        [
+          -0.98,
+          36.51
+        ],
+        [
+          -0.73,
+          35.51
+        ],
+        [
+          -0.48,
+          26.51
+        ],
+        [
+          -0.23,
+          27.82
+        ],
+        [
+          -0.15,
+          32.27
+        ],
+        [
+          -0.06,
+          34.09
         ]
       ]
     },
@@ -36735,7 +38543,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +25.5% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -36950,44 +38758,92 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Warby Parker trades at ~$3.25B (~$26.46, up ~13-16% YTD) — ~3x sales on $872M revenue growing ~13%, net cash, but only a ~12% adj-EBITDA margin and razor-thin GAAP profit. The bull is store-led operating leverage finally lifting EBITDA toward high-teens/20% as the unit base scales from 323 toward ~900-1,000+, plus a Google AI-smart-glasses call-option outside guidance; the bear is decelerating customer growth (+4.8%), gross-margin compression, and the inflection never arriving. At ~3x sales the price already embeds the ramp, so the weighted finding is -42.1% and the modal case lands -43%.",
     "historicalPrices": {
-      "xMin": -4.5,
+      "xMin": -4.81,
       "ipoMarker": "Direct list Sep '21",
       "points": [
         [
-          -4.5,
-          40.0
+          -4.73,
+          46.56
         ],
         [
-          -4.0,
-          18.0
+          -4.48,
+          33.81
         ],
         [
-          -3.3,
-          9.0
+          -4.23,
+          11.26
         ],
         [
-          -2.5,
-          13.0
+          -3.98,
+          13.34
         ],
         [
-          -1.5,
-          18.0
+          -3.73,
+          13.49
         ],
         [
-          -0.8,
-          22.0
+          -3.48,
+          10.59
         ],
         [
-          -0.4,
-          15.0
+          -3.23,
+          11.69
         ],
         [
-          -0.1,
-          29.0
+          -2.98,
+          13.16
         ],
         [
-          -0.05,
-          26.46
+          -2.73,
+          14.1
+        ],
+        [
+          -2.49,
+          13.61
+        ],
+        [
+          -2.23,
+          16.06
+        ],
+        [
+          -1.98,
+          16.33
+        ],
+        [
+          -1.72,
+          24.21
+        ],
+        [
+          -1.48,
+          18.23
+        ],
+        [
+          -1.23,
+          21.93
+        ],
+        [
+          -0.98,
+          27.58
+        ],
+        [
+          -0.73,
+          21.79
+        ],
+        [
+          -0.48,
+          21.07
+        ],
+        [
+          -0.23,
+          30.34
+        ],
+        [
+          -0.15,
+          26.69
+        ],
+        [
+          -0.06,
+          24.6
         ]
       ]
     },
@@ -37582,7 +39438,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -42.1% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -37797,40 +39653,96 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 27 / Base 34 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Clear Secure trades at ~$4.77B (~$50.25, up ~55% YTD / ~41% TTM) — about 13x EV/FCF on $0.901B revenue growing ~20%, with a deferred-revenue membership model that throws off a ~30% FCF margin, net cash ~$0.80B and no debt; capital return is aggressive. The fork the DCF resolves: airport CLEAR Plus saturating against a US frequent-flyer ceiling (with TSA's own free touchless ID commoditizing the lane) versus the identity platform — TSA PreCheck enrollment, biometric eGates, enterprise verification — extending the network. The modal case lands ~+40%, so the distribution leans to cheap quality.",
     "historicalPrices": {
-      "xMin": -4.7,
+      "xMin": -5.01,
       "ipoMarker": "IPO Jun '21",
       "points": [
         [
-          -4.7,
-          31.0
+          -4.98,
+          41.05
         ],
         [
-          -4.0,
-          40.0
+          -4.73,
+          31.37
         ],
         [
-          -3.3,
-          18.0
+          -4.48,
+          26.88
         ],
         [
-          -2.5,
-          15.0
+          -4.23,
+          20.0
         ],
         [
-          -1.5,
-          30.0
+          -3.98,
+          22.86
         ],
         [
-          -0.8,
-          40.0
+          -3.73,
+          27.43
         ],
         [
-          -0.3,
-          62.0
+          -3.48,
+          26.17
         ],
         [
-          -0.05,
-          50.25
+          -3.23,
+          23.17
+        ],
+        [
+          -2.98,
+          19.04
+        ],
+        [
+          -2.73,
+          20.65
+        ],
+        [
+          -2.49,
+          21.27
+        ],
+        [
+          -2.23,
+          18.71
+        ],
+        [
+          -1.98,
+          33.14
+        ],
+        [
+          -1.72,
+          26.64
+        ],
+        [
+          -1.48,
+          25.91
+        ],
+        [
+          -1.23,
+          27.76
+        ],
+        [
+          -0.98,
+          33.38
+        ],
+        [
+          -0.73,
+          35.08
+        ],
+        [
+          -0.48,
+          48.41
+        ],
+        [
+          -0.23,
+          55.73
+        ],
+        [
+          -0.15,
+          55.24
+        ],
+        [
+          -0.06,
+          44.15
         ]
       ]
     },
@@ -38425,7 +40337,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +38.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -38640,40 +40552,104 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 15 / Bear 27 / Base 32 / Bull 18 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Shopify trades at ~$140.6B (~$108.24, down ~30% YTD off the $182 high) — ~30x forward / ~67x trailing FCF on revenue and GMV growing ~34-35%, net cash ~$5.8B, FCF ~$2.0B (~17%). The headline GAAP net loss is a non-cash equity-investment mark; ex-that, earnings are ~$360M. The bull is durable 30%+ GMV compounding, take-rate expansion (Payments at 67% of GMV), and agentic commerce making Shopify the rails for AI shopping agents; the bear is AI disintermediating the storefront plus macro cyclicality on GMV. The weighted DCF lands -15.1% (~$92): a great franchise, de-rated but still priced for the win.",
     "historicalPrices": {
-      "xMin": -5.2,
+      "xMin": -5.51,
       "ipoMarker": "IPO May '15",
       "points": [
         [
-          -5.0,
-          30.0
+          -5.48,
+          110.65
         ],
         [
-          -4.2,
-          170.0
+          -5.23,
+          146.1
         ],
         [
-          -3.3,
-          35.0
+          -4.98,
+          135.58
         ],
         [
-          -2.5,
-          60.0
+          -4.73,
+          137.74
         ],
         [
-          -1.5,
-          80.0
+          -4.48,
+          67.6
         ],
         [
-          -0.8,
-          120.0
+          -4.23,
+          31.24
         ],
         [
-          -0.3,
-          182.0
+          -3.98,
+          26.94
         ],
         [
-          -0.05,
-          108.24
+          -3.73,
+          34.71
+        ],
+        [
+          -3.48,
+          47.94
+        ],
+        [
+          -3.23,
+          64.6
+        ],
+        [
+          -2.98,
+          54.57
+        ],
+        [
+          -2.73,
+          77.9
+        ],
+        [
+          -2.49,
+          77.17
+        ],
+        [
+          -2.23,
+          66.05
+        ],
+        [
+          -1.98,
+          80.14
+        ],
+        [
+          -1.72,
+          106.33
+        ],
+        [
+          -1.48,
+          95.48
+        ],
+        [
+          -1.23,
+          115.35
+        ],
+        [
+          -0.98,
+          148.61
+        ],
+        [
+          -0.73,
+          160.97
+        ],
+        [
+          -0.48,
+          118.62
+        ],
+        [
+          -0.23,
+          114.18
+        ],
+        [
+          -0.15,
+          117.15
+        ],
+        [
+          -0.06,
+          147.37
         ]
       ]
     },
@@ -39267,7 +41243,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -15.1% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -39489,44 +41465,104 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 30 / Base 32 / Bull 15 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.02 (~$1.54B cap), down ~40% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early 2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful approved drug. Weighted fair value is $3.85, +28% above spot — but the modal base sits below the price, so the answer rides the right tail.",
     "historicalPrices": {
-      "xMin": -5.2,
+      "xMin": -5.47,
       "ipoMarker": "IPO Apr '21",
       "points": [
         [
-          -5.0,
-          18.0
+          -5.4,
+          33.4
         ],
         [
-          -4.5,
-          12.0
+          -5.23,
+          36.5
         ],
         [
-          -4.0,
-          7.0
+          -4.98,
+          23.01
         ],
         [
-          -3.0,
-          9.0
+          -4.73,
+          17.13
         ],
         [
-          -2.5,
-          15.0
+          -4.48,
+          7.16
         ],
         [
-          -2.0,
-          8.0
+          -4.23,
+          8.14
         ],
         [
-          -1.0,
-          6.0
+          -3.98,
+          10.64
         ],
         [
-          -0.5,
-          5.0
+          -3.73,
+          7.71
         ],
         [
-          -0.05,
-          3.15
+          -3.48,
+          6.67
+        ],
+        [
+          -3.23,
+          7.47
+        ],
+        [
+          -2.98,
+          7.65
+        ],
+        [
+          -2.73,
+          9.86
+        ],
+        [
+          -2.49,
+          9.97
+        ],
+        [
+          -2.23,
+          7.5
+        ],
+        [
+          -1.98,
+          6.59
+        ],
+        [
+          -1.72,
+          6.76
+        ],
+        [
+          -1.48,
+          5.29
+        ],
+        [
+          -1.23,
+          5.06
+        ],
+        [
+          -0.98,
+          4.88
+        ],
+        [
+          -0.73,
+          4.09
+        ],
+        [
+          -0.48,
+          3.07
+        ],
+        [
+          -0.23,
+          3.67
+        ],
+        [
+          -0.15,
+          3.0
+        ],
+        [
+          -0.06,
+          3.4
         ]
       ]
     },
@@ -40523,7 +42559,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +27.6% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -40742,44 +42778,124 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 16 / Bear 29 / Base 32 / Bull 15 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Beam is a pre-product, clinical-stage base-editing biotech — it precisely rewrites a single DNA base with no double-strand cut. Revenue is lumpy collaboration income ($139.7M FY25); the op loss runs ~$400M/yr. The asset that matters is $1.21B cash (~$11.75/share, runway to mid-2029) plus a pipeline: risto-cel SCD (BLA as early as YE2026) and BEAM-302, the first in-vivo corrective editor, on an FDA-aligned accelerated path. The DCF asks whether the leads reach market before dilution erodes the equity. Weighted fair value is $39.38 vs $30 spot, +31% — asymmetric: the cash raises the floor, the de-risked data builds the right tail, clinical failure is the risk.",
     "historicalPrices": {
-      "xMin": -6.3,
+      "xMin": -6.57,
       "ipoMarker": "IPO Feb '20",
       "points": [
         [
-          -6.0,
-          17.0
+          -6.57,
+          22.49
         ],
         [
-          -5.0,
-          80.0
+          -6.48,
+          18.0
         ],
         [
-          -4.5,
-          120.0
-        ],
-        [
-          -4.0,
-          40.0
-        ],
-        [
-          -3.0,
-          30.0
-        ],
-        [
-          -2.0,
-          25.0
-        ],
-        [
-          -1.0,
+          -6.23,
           28.0
         ],
         [
-          -0.4,
-          36.0
+          -5.98,
+          24.62
         ],
         [
-          -0.05,
-          30.0
+          -5.72,
+          81.64
+        ],
+        [
+          -5.48,
+          80.04
+        ],
+        [
+          -5.23,
+          128.71
+        ],
+        [
+          -4.98,
+          87.01
+        ],
+        [
+          -4.73,
+          79.69
+        ],
+        [
+          -4.48,
+          57.3
+        ],
+        [
+          -4.23,
+          38.71
+        ],
+        [
+          -3.98,
+          47.64
+        ],
+        [
+          -3.73,
+          39.11
+        ],
+        [
+          -3.48,
+          30.62
+        ],
+        [
+          -3.23,
+          31.93
+        ],
+        [
+          -2.98,
+          24.05
+        ],
+        [
+          -2.73,
+          27.22
+        ],
+        [
+          -2.49,
+          33.04
+        ],
+        [
+          -2.23,
+          23.43
+        ],
+        [
+          -1.98,
+          24.5
+        ],
+        [
+          -1.72,
+          24.8
+        ],
+        [
+          -1.48,
+          19.53
+        ],
+        [
+          -1.23,
+          17.01
+        ],
+        [
+          -0.98,
+          24.27
+        ],
+        [
+          -0.73,
+          27.72
+        ],
+        [
+          -0.48,
+          23.83
+        ],
+        [
+          -0.23,
+          34.32
+        ],
+        [
+          -0.15,
+          25.52
+        ],
+        [
+          -0.06,
+          29.43
         ]
       ]
     },
@@ -41776,7 +43892,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +31.3% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -41995,44 +44111,104 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 18 / Bear 34 / Base 30 / Bull 13 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
     "thesis": "Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on them — the #3 behind Illumina's short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered setup. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; nearly all the value sits in the ~18% long-read-wins tail. Weighted $1.72 vs spot $1.32 (+31%) — a cheap levered option, not a value stock.",
     "historicalPrices": {
-      "xMin": -5.2,
+      "xMin": -5.47,
       "ipoMarker": "IPO '10",
       "points": [
         [
-          -5.0,
-          22.0
+          -5.4,
+          29.85
         ],
         [
-          -4.5,
-          15.0
+          -5.23,
+          34.97
         ],
         [
-          -4.0,
-          8.0
+          -4.98,
+          25.55
         ],
         [
-          -3.0,
-          5.0
+          -4.73,
+          20.46
         ],
         [
-          -2.5,
-          3.0
+          -4.48,
+          9.1
         ],
         [
-          -2.0,
-          2.0
+          -4.23,
+          4.42
         ],
         [
-          -1.0,
-          1.5
+          -3.98,
+          5.81
         ],
         [
-          -0.5,
-          1.8
+          -3.73,
+          8.18
         ],
         [
-          -0.05,
+          -3.48,
+          11.58
+        ],
+        [
+          -3.23,
+          13.3
+        ],
+        [
+          -2.98,
+          8.35
+        ],
+        [
+          -2.73,
+          9.81
+        ],
+        [
+          -2.49,
+          3.75
+        ],
+        [
+          -2.23,
+          1.37
+        ],
+        [
+          -1.98,
+          1.7
+        ],
+        [
+          -1.72,
+          1.83
+        ],
+        [
+          -1.48,
+          1.18
+        ],
+        [
+          -1.23,
+          1.24
+        ],
+        [
+          -0.98,
+          1.28
+        ],
+        [
+          -0.73,
+          1.87
+        ],
+        [
+          -0.48,
           1.32
+        ],
+        [
+          -0.23,
+          1.68
+        ],
+        [
+          -0.15,
+          1.4
+        ],
+        [
+          -0.06,
+          1.36
         ]
       ]
     },
@@ -43020,7 +45196,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +30.6% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -43246,36 +45422,52 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Tempus AI is AI-precision-oncology diagnostics plus a multimodal health-data flywheel. Revenue is $1.3B, growing 25-36%, adj-EBITDA just inflected positive (FY26 guide ~$65M). But SBC runs ~$136M/yr — more than 10% of revenue and larger than that adj-EBITDA — so true owner free cash flow is still negative. In July 2026 Tempus agreed to buy the rest of Personalis for ~$1.5B, mostly stock — entering MRD via NeXT Personal, but a ~15% share issuance dilutes the modal case. At $46.93 the modal DCF is $26.43, ~44% below spot; only the bull case clears the price. You are paying for hypergrowth and an unproven margin turn.",
     "historicalPrices": {
-      "xMin": -2.0,
+      "xMin": -2.31,
       "ipoMarker": "IPO Jun '24",
       "points": [
         [
-          -1.9,
-          37.0
+          -2.23,
+          35.0
         ],
         [
-          -1.5,
-          55.0
+          -1.98,
+          56.6
         ],
         [
-          -1.0,
-          70.0
+          -1.72,
+          33.76
         ],
         [
-          -0.7,
-          103.0
+          -1.48,
+          48.24
         ],
         [
-          -0.5,
-          60.0
+          -1.23,
+          63.54
         ],
         [
-          -0.3,
-          50.0
+          -0.98,
+          80.71
         ],
         [
-          -0.05,
-          46.93
+          -0.73,
+          59.05
+        ],
+        [
+          -0.48,
+          45.22
+        ],
+        [
+          -0.23,
+          57.93
+        ],
+        [
+          -0.15,
+          43.87
+        ],
+        [
+          -0.06,
+          63.05
         ]
       ]
     },
@@ -43859,7 +46051,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -37% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -44085,40 +46277,56 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 15 / Bear 33 / Base 30 / Bull 17 / Ultra Bull 5. Spot price reference: September 22, 2026 close.",
     "thesis": "Serve Robotics runs autonomous sidewalk delivery robots, spun out of Uber/Postmates and Nvidia-backed. It trades at $5.37 (~$414M cap), down ~43% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter burn — a pre-scale company with ~$197M of liquidity and ~1.2 years of runway. The build is done: ~2,050 robots sit across 44 cities, but only ~812 are daily-active — the question is utilization, not fleet size. Uber Eats (up-to-2,000-robot deal) and DoorDash demand exists to fill it, though no longer exclusively — Uber Eats now also routes to a rival fleet in Miami. The DCF weighted fair value is $6.77, +26% above spot — but the modal base sits ~62% below the price, so the answer rides the right tail, paid for with relentless dilution.",
     "historicalPrices": {
-      "xMin": -2.6,
+      "xMin": -2.87,
       "ipoMarker": "Uplisted '24",
       "points": [
         [
-          -2.4,
-          4.0
+          -2.49,
+          5.15
         ],
         [
-          -2.0,
-          3.0
+          -2.23,
+          1.95
         ],
         [
-          -1.6,
-          5.0
+          -1.98,
+          7.95
         ],
         [
-          -1.2,
-          20.0
+          -1.72,
+          13.5
         ],
         [
-          -0.9,
-          14.0
+          -1.48,
+          5.75
         ],
         [
-          -0.6,
-          10.0
+          -1.23,
+          11.44
         ],
         [
-          -0.3,
-          8.5
+          -0.98,
+          11.63
         ],
         [
-          -0.05,
-          7.22
+          -0.73,
+          10.38
+        ],
+        [
+          -0.48,
+          8.44
+        ],
+        [
+          -0.23,
+          6.58
+        ],
+        [
+          -0.15,
+          4.78
+        ],
+        [
+          -0.06,
+          4.87
         ]
       ]
     },
@@ -45123,7 +47331,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +26.1% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -45349,40 +47557,80 @@ const MEMOS = [
     "methodology": "DCF framework: Young-Company DCF (Damodaran). Probability weighting: Ultra Bear 16 / Bear 30 / Base 30 / Bull 16 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Prime Medicine is a clinical-stage prime-editing biotech — the precise 'search-and-replace' gene edit, David Liu's sister tech to BEAM's base editing. Pre-revenue at $3.12 (~$564M cap), it proved the first-ever clinical prime edit (PM359, NEJM Dec 2025). Cash is ~$149M (~9 months), the FY2025 10-K flags going-concern doubt, and a $200M ATM means severe dilution at a ~$3 stock; a May 2025 restructuring refocused it on in-vivo liver (Wilson's, AATD). Since then authorizations have accrued — first in-vivo CTA, AATD arbitration win, PM359 RMAT — but not efficacy data, and the financing constraint is unchanged, so the scenario set holds. The DCF asks whether the platform tail can outrun forced dilution. Weighted fair value $3.39 vs $3.12 — roughly fair.",
     "historicalPrices": {
-      "xMin": -3.7,
+      "xMin": -3.97,
       "ipoMarker": "IPO Oct '22",
       "points": [
         [
-          -3.6,
-          17.0
+          -3.89,
+          18.82
         ],
         [
-          -3.0,
-          9.0
+          -3.73,
+          18.58
         ],
         [
-          -2.2,
-          5.0
+          -3.48,
+          12.3
         ],
         [
-          -1.5,
-          3.5
+          -3.23,
+          14.65
         ],
         [
-          -1.0,
-          2.2
+          -2.98,
+          9.54
         ],
         [
-          -0.5,
-          5.5
+          -2.73,
+          8.86
         ],
         [
-          -0.25,
-          4.0
+          -2.49,
+          7.0
         ],
         [
-          -0.05,
-          3.16
+          -2.23,
+          5.14
+        ],
+        [
+          -1.98,
+          3.87
+        ],
+        [
+          -1.72,
+          2.92
+        ],
+        [
+          -1.48,
+          1.99
+        ],
+        [
+          -1.23,
+          2.47
+        ],
+        [
+          -0.98,
+          5.54
+        ],
+        [
+          -0.73,
+          3.47
+        ],
+        [
+          -0.48,
+          3.48
+        ],
+        [
+          -0.23,
+          3.69
+        ],
+        [
+          -0.15,
+          2.92
+        ],
+        [
+          -0.06,
+          3.59
         ]
       ]
     },
@@ -46379,7 +48627,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot",
         "contextRef": "The 7 Powers analysis (Power Origination)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the roughly-fair +8.6% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -46598,44 +48846,144 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: September 22, 2026 close.",
     "thesis": "Twist Bioscience runs a silicon-based DNA-synthesis platform — miniaturized, high-throughput DNA writing — selling into SynBio and NGS. FY2025 revenue was $377M (+20%), gross margin 50.7%, adj-EBITDA -$46.9M and improving; management guides adj-EBITDA breakeven for Q4 FY2026 as the new Wilsonville factory ramps margins. At ~$87.5 (~$5.4B cap, net cash) the stock has run ~150% over a year to ~14x sales while still losing money, and SBC keeps owner-FCF below the adj-EBITDA headline. The DCF asks whether 16-24% growth and the margin ramp grow into that price. Weighted fair value $43.95, ~50% below spot — only the bull and ultra-bull clear the quote.",
     "historicalPrices": {
-      "xMin": -7.7,
+      "xMin": -8.01,
       "ipoMarker": "IPO Oct '18",
       "points": [
         [
-          -7.5,
+          -7.89,
           14.0
         ],
         [
-          -5.5,
-          50.0
+          -7.73,
+          23.09
         ],
         [
-          -4.6,
-          180.0
+          -7.49,
+          23.18
         ],
         [
-          -3.5,
-          60.0
+          -7.24,
+          29.01
         ],
         [
-          -2.5,
-          35.0
+          -6.98,
+          23.88
         ],
         [
-          -1.5,
-          25.0
+          -6.73,
+          21.0
         ],
         [
-          -1.0,
-          35.0
+          -6.48,
+          30.58
         ],
         [
-          -0.5,
-          68.0
+          -6.23,
+          45.3
         ],
         [
-          -0.05,
-          87.5
+          -5.98,
+          75.97
+        ],
+        [
+          -5.72,
+          141.29
+        ],
+        [
+          -5.48,
+          123.86
+        ],
+        [
+          -5.23,
+          133.25
+        ],
+        [
+          -4.98,
+          106.97
+        ],
+        [
+          -4.73,
+          77.39
+        ],
+        [
+          -4.48,
+          49.38
+        ],
+        [
+          -4.23,
+          34.96
+        ],
+        [
+          -3.98,
+          35.24
+        ],
+        [
+          -3.73,
+          23.81
+        ],
+        [
+          -3.48,
+          15.08
+        ],
+        [
+          -3.23,
+          20.46
+        ],
+        [
+          -2.98,
+          20.26
+        ],
+        [
+          -2.73,
+          36.86
+        ],
+        [
+          -2.49,
+          34.31
+        ],
+        [
+          -2.23,
+          49.28
+        ],
+        [
+          -1.98,
+          45.18
+        ],
+        [
+          -1.72,
+          46.47
+        ],
+        [
+          -1.48,
+          39.26
+        ],
+        [
+          -1.23,
+          36.79
+        ],
+        [
+          -0.98,
+          28.14
+        ],
+        [
+          -0.73,
+          31.72
+        ],
+        [
+          -0.48,
+          47.52
+        ],
+        [
+          -0.23,
+          102.88
+        ],
+        [
+          -0.15,
+          91.55
+        ],
+        [
+          -0.06,
+          139.0
         ]
       ]
     },
@@ -47219,7 +49567,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -49.8% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -47438,36 +49786,84 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 13 / Bear 27 / Base 33 / Bull 18 / Ultra Bull 9. Spot price reference: September 22, 2026 close.",
     "thesis": "Symbotic sells AI-powered warehouse-automation systems, installed and Walmart-anchored (>84% of FY25 revenue). Revenue is $2.25B (+26%), backlog ~$22.5B, net cash ~$1.2B, and Q2 FY26 turned GAAP-positive. But the $867M operating cash flow is customer-funded milestone billings (working capital), not owner cash; SBC of $184M exceeds the $147M adj-EBITDA, so ex-SBC owner FCF is roughly zero. At $41.63 (~591M Up-C units) the market pays a software multiple for a thin-margin integrator. The DCF asks whether margins inflect; weighted fair value $13.32, −68% to spot.",
     "historicalPrices": {
-      "xMin": -4.0,
+      "xMin": -4.31,
       "ipoMarker": "SPAC Jun '22",
       "points": [
         [
-          -3.9,
-          10.0
+          -4.23,
+          10.97
         ],
         [
-          -3.0,
-          20.0
+          -3.98,
+          11.5
         ],
         [
-          -2.0,
+          -3.73,
+          11.94
+        ],
+        [
+          -3.48,
+          22.84
+        ],
+        [
+          -3.23,
+          42.81
+        ],
+        [
+          -2.98,
+          33.43
+        ],
+        [
+          -2.73,
+          51.33
+        ],
+        [
+          -2.49,
           45.0
         ],
         [
-          -1.5,
-          60.0
+          -2.23,
+          35.16
         ],
         [
-          -1.0,
-          88.0
+          -1.98,
+          24.39
         ],
         [
-          -0.5,
-          50.0
+          -1.72,
+          23.71
         ],
         [
-          -0.05,
-          41.63
+          -1.48,
+          20.21
+        ],
+        [
+          -1.23,
+          38.85
+        ],
+        [
+          -0.98,
+          53.9
+        ],
+        [
+          -0.73,
+          59.5
+        ],
+        [
+          -0.48,
+          53.2
+        ],
+        [
+          -0.23,
+          44.95
+        ],
+        [
+          -0.15,
+          43.05
+        ],
+        [
+          -0.06,
+          39.67
         ]
       ]
     },
@@ -48051,7 +50447,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the -68.0% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -48270,48 +50666,192 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF. Probability weighting: Ultra Bear 14 / Bear 28 / Base 33 / Bull 17 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "NovoCure sells Tumor Treating Fields (TTFields), a wearable oncology device anchored by Optune Gio in glioblastoma. FY2025 revenue was $655M (+8%) at a 78% gross margin, yet it posted a $136M GAAP loss — funded by ~$0.47B net cash, not insolvency risk. At $14.33 the stock is cheap on sales; the upside lives in new FDA-approved indications (Optune Lua/lung, Pax/pancreatic, METIS) multiplying the TAM beyond GBM. Weighted fair value $14.97, ~4.5% above spot — fair, with the June 2026 TRIDENT miss capping the GBM leg.",
     "historicalPrices": {
-      "xMin": -10.7,
+      "xMin": -11.01,
       "ipoMarker": "IPO Oct '15",
       "points": [
         [
-          -10.5,
-          22.0
+          -10.9,
+          22.47
         ],
         [
-          -8.0,
-          35.0
+          -10.73,
+          22.36
         ],
         [
-          -5.0,
-          100.0
+          -10.48,
+          14.48
         ],
         [
-          -4.5,
-          200.0
+          -10.23,
+          11.67
         ],
         [
-          -3.5,
-          70.0
+          -9.98,
+          8.54
         ],
         [
-          -2.5,
-          15.0
+          -9.73,
+          7.85
         ],
         [
-          -1.5,
-          14.0
+          -9.48,
+          8.1
         ],
         [
-          -1.0,
-          19.0
+          -9.23,
+          17.3
         ],
         [
-          -0.4,
-          16.0
+          -8.98,
+          19.85
         ],
         [
-          -0.05,
-          14.33
+          -8.73,
+          20.2
+        ],
+        [
+          -8.48,
+          21.8
+        ],
+        [
+          -8.23,
+          31.3
+        ],
+        [
+          -7.98,
+          52.4
+        ],
+        [
+          -7.73,
+          33.48
+        ],
+        [
+          -7.49,
+          48.17
+        ],
+        [
+          -7.24,
+          63.23
+        ],
+        [
+          -6.98,
+          74.78
+        ],
+        [
+          -6.73,
+          84.27
+        ],
+        [
+          -6.48,
+          67.34
+        ],
+        [
+          -6.23,
+          59.3
+        ],
+        [
+          -5.98,
+          111.31
+        ],
+        [
+          -5.72,
+          173.04
+        ],
+        [
+          -5.48,
+          132.18
+        ],
+        [
+          -5.23,
+          221.82
+        ],
+        [
+          -4.98,
+          116.17
+        ],
+        [
+          -4.73,
+          75.08
+        ],
+        [
+          -4.48,
+          82.85
+        ],
+        [
+          -4.23,
+          69.5
+        ],
+        [
+          -3.98,
+          75.98
+        ],
+        [
+          -3.73,
+          73.35
+        ],
+        [
+          -3.48,
+          60.14
+        ],
+        [
+          -3.23,
+          41.5
+        ],
+        [
+          -2.98,
+          16.15
+        ],
+        [
+          -2.73,
+          14.93
+        ],
+        [
+          -2.49,
+          15.63
+        ],
+        [
+          -2.23,
+          17.13
+        ],
+        [
+          -1.98,
+          15.63
+        ],
+        [
+          -1.72,
+          29.8
+        ],
+        [
+          -1.48,
+          17.82
+        ],
+        [
+          -1.23,
+          17.8
+        ],
+        [
+          -0.98,
+          12.92
+        ],
+        [
+          -0.73,
+          12.93
+        ],
+        [
+          -0.48,
+          10.9
+        ],
+        [
+          -0.23,
+          15.15
+        ],
+        [
+          -0.15,
+          14.84
+        ],
+        [
+          -0.06,
+          17.65
         ]
       ]
     },
@@ -48894,7 +51434,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the +4.5% finding) + position sizing."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value + position sizing."
       },
       "appendix": {
         "pushback": [
@@ -49138,52 +51678,32 @@ const MEMOS = [
       "ipoMarker": "IPO Jun '25",
       "points": [
         [
-          -1.26,
-          21.0
+          -1.23,
+          26.72
         ],
         [
-          -1.08,
-          42.5
+          -0.98,
+          30.25
         ],
         [
-          -0.85,
-          30.0
+          -0.73,
+          26.98
         ],
         [
-          -0.65,
-          22.0
+          -0.48,
+          17.88
         ],
         [
-          -0.45,
-          16.0
+          -0.23,
+          17.82
         ],
         [
-          -0.3,
-          17.0
+          -0.15,
+          15.67
         ],
         [
-          -0.22,
-          18.75
-        ],
-        [
-          -0.17,
-          15.38
-        ],
-        [
-          -0.13,
-          16.45
-        ],
-        [
-          -0.09,
-          26.27
-        ],
-        [
-          -0.05,
-          25.07
-        ],
-        [
-          -0.02,
-          29.0
+          -0.06,
+          25.49
         ]
       ]
     },
@@ -49768,7 +52288,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution · the business snapshot · the Arthur Indicator",
         "contextRef": "The 7 Powers analysis (Power Audit)",
-        "deal": "Open-market common — entry price weighed against the probability-weighted fair value (the ~-23% finding), then position-sized."
+        "deal": "Open-market common — entry price weighed against the probability-weighted fair value, then position-sized."
       },
       "appendix": {
         "pushback": [
@@ -49987,100 +52507,116 @@ const MEMOS = [
     "methodology": "DCF framework: Mature-Company DCF · SOTP. Probability weighting: Ultra Bear 10 / Bear 22 / Base 40 / Bull 20 / Ultra Bull 8. Spot price reference: September 22, 2026 close.",
     "thesis": "Howard Hughes trades at $66.86 (~$4.0B market cap) — roughly book (~$63/sh) but a ~37% discount to the company's own $104/share sum-of-the-parts NAV (~80% irreplaceable master-planned-community land + operating assets, ~20% the new Vantage insurer). The land bank monetizes at records — FY2025 MPC EBT a record $476M, NOI a record $276M. The hard floor: Pershing Square (Ackman, ~47%, Executive Chairman) paid $900M for stock at $100 — a 48% premium — in May 2025, then closed Vantage ($2.1B insurer, Jun-2026) to start a Buffett-style float engine. The bear is the fifteen-year-old one: an illiquid land bank the market won't pay NAV for, plus rate, concentration, fee, and governance risks. Sum-of-the-parts below; five scenarios, weighted.",
     "historicalPrices": {
-      "xMin": -6.0,
+      "xMin": -6.25,
       "ipoMarker": "HHC→HHH '23",
       "points": [
         [
-          -5.75,
-          78.0
+          -6.23,
+          49.52
         ],
         [
-          -5.5,
-          95.0
+          -5.98,
+          54.91
         ],
         [
-          -5.25,
-          84.0
+          -5.72,
+          75.24
         ],
         [
-          -5.0,
-          64.0
+          -5.48,
+          90.69
         ],
         [
-          -4.75,
-          92.0
+          -5.23,
+          92.91
         ],
         [
-          -4.5,
-          98.0
+          -4.98,
+          83.71
         ],
         [
-          -4.25,
-          76.0
+          -4.73,
+          97.03
         ],
         [
-          -4.0,
-          58.0
+          -4.48,
+          98.77
         ],
         [
-          -3.75,
-          72.0
+          -4.23,
+          64.87
         ],
         [
-          -3.5,
-          88.0
+          -3.98,
+          52.8
         ],
         [
-          -3.25,
-          70.0
+          -3.73,
+          72.85
         ],
         [
-          -3.0,
-          54.0
+          -3.48,
+          76.26
         ],
         [
-          -2.75,
-          76.0
+          -3.23,
+          75.23
         ],
         [
-          -2.5,
-          82.0
+          -2.98,
+          70.67
         ],
         [
-          -2.25,
-          64.0
+          -2.73,
+          81.55
         ],
         [
-          -2.0,
-          78.0
+          -2.49,
+          69.23
         ],
         [
-          -1.75,
-          85.0
+          -2.23,
+          61.79
         ],
         [
-          -1.5,
-          80.0
+          -1.98,
+          77.43
         ],
         [
-          -1.25,
-          67.0
+          -1.72,
+          76.92
         ],
         [
-          -1.0,
-          72.0
+          -1.48,
+          74.08
         ],
         [
-          -0.75,
-          91.0
+          -1.23,
+          67.5
         ],
         [
-          -0.5,
-          78.0
+          -0.98,
+          82.17
         ],
         [
-          -0.25,
-          70.0
+          -0.73,
+          79.77
+        ],
+        [
+          -0.48,
+          63.26
+        ],
+        [
+          -0.23,
+          71.49
+        ],
+        [
+          -0.15,
+          63.92
+        ],
+        [
+          -0.06,
+          64.13
         ]
       ]
     },
@@ -50662,7 +53198,7 @@ const MEMOS = [
         },
         "opportunityRef": "The scenario distribution (+41%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI",
         "contextRef": "The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion",
-        "deal": "Open-market purchase at a ~37% discount to NAV vs. the scenario distribution + position sizing. (Ackman's own entry: $100/share, a 48% premium.)"
+        "deal": "Open-market purchase below the company's own ~$104/share NAV estimate, weighed against the scenario distribution + position sizing. (Ackman's own entry: $100/share, a 48% premium to the market at the time.)"
       },
       "appendix": {
         "pushback": [

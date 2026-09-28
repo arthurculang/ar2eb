@@ -15,8 +15,15 @@ Three factors, transparent and separable:
         (profitable names; pre-revenue moonshots get a neutral 1.0). It's a
         validated-OOS cheapness screen that refines — not dominates — the DCF.
 
-Each name is capped at CAP (water-filled — capped excess redistributes to the
-uncapped names; whatever can't be placed falls to cash). Negative-EV names get
+Each name is capped at the SMALLER of CAP (15%) and HALF-KELLY — half the growth-
+optimal fraction for that name's own scenario distribution (outcomes = each
+scenario's expected value / spot, weighted by its probability). The mean-upside
+score can't see a distribution's shape: a wipeout-heavy name whose value lives in
+a thin tail can post a huge mean and hit the 15% cap, although its full-Kelly bet
+is no bigger than that and the tail odds are the least reliable inputs. Half-Kelly
+keeps ~75% of full-Kelly growth at a fraction of the variance, and it binds only on
+tail-concentrated names (owner decision, 2026-09-28). Capped excess is water-filled
+to names still under their own cap; whatever can't be placed falls to cash. Negative-EV names get
 zero (this is a long-only book). Reads data/<ticker>.yml; writes portfolio/weights.yml
 with the full per-name calculation so the portfolio page can render it transparently.
 
@@ -26,6 +33,7 @@ This is the deterministic rule the monthly rebuild (§15) calls; run by hand any
 from __future__ import annotations
 import sys
 import datetime as dt
+import math
 from pathlib import Path
 import yaml
 
@@ -59,19 +67,45 @@ def upside(d: dict) -> float | None:
     return (weighted_dcf(d) / spot - 1.0) if spot > 0 else None
 
 
-def water_fill(raw: dict[str, float], cap: float) -> dict[str, float]:
-    """Cap each weight at `cap`, redistributing the capped excess proportionally
-    among the names still under the cap. Excess that can't be placed (all names
-    capped) is left unallocated → it becomes cash in main()."""
+def kelly_fraction(d: dict) -> float:
+    """Full-Kelly fraction for a long position in the name, from its own scenario
+    distribution: maximize E[log(1 + f·(X − 1))] over f in [0, 0.999], X = scenario
+    expected value / spot. Golden-section search (the objective is concave).
+    Mirrored exactly by kellyFraction() in public/pages.jsx — keep them in step."""
+    spot = float(d.get("spot") or 0)
+    if spot <= 0:
+        return 0.0
+    X = [(s["probability"], s["expected_per_share"] / spot) for s in d["scenarios"].values()]
+    if sum(p * x for p, x in X) <= 1.0:
+        return 0.0                                   # non-positive edge: no bet
+    def g(f: float) -> float:
+        return sum(p * math.log(max(1e-12, 1.0 + f * (x - 1.0))) for p, x in X)
+    lo, hi = 0.0, 0.999
+    for _ in range(200):
+        a = lo + (hi - lo) * 0.382
+        b = lo + (hi - lo) * 0.618
+        if g(a) < g(b):
+            lo = a
+        else:
+            hi = b
+    return (lo + hi) / 2
+
+
+def water_fill(raw: dict[str, float], cap) -> dict[str, float]:
+    """Cap each weight at its cap (a float for all names, or a {name: cap} dict),
+    redistributing the capped excess proportionally among the names still under
+    their cap. Excess that can't be placed (all names capped) is left unallocated
+    → it becomes cash in main()."""
     w = dict(raw)
+    caps = cap if isinstance(cap, dict) else {t: cap for t in w}
     for _ in range(100):
-        over = {t: v for t, v in w.items() if v > cap + 1e-12}
+        over = {t: v for t, v in w.items() if v > caps[t] + 1e-12}
         if not over:
             break
-        excess = sum(v - cap for v in over.values())
+        excess = sum(v - caps[t] for t, v in over.items())
         for t in over:
-            w[t] = cap
-        room = {t: v for t, v in w.items() if v < cap - 1e-12}
+            w[t] = caps[t]
+        room = {t: v for t, v in w.items() if v < caps[t] - 1e-12}
         tot = sum(room.values())
         if tot <= 0:
             break
@@ -117,12 +151,15 @@ def main() -> int:
                        "ai": round(ai, 2) if ai is not None else None,
                        "ai_zone": ai_zone(ai),
                        "ai_mult": ai_mult,
-                       "raw_score": round(raw, 4)}
+                       "raw_score": round(raw, 4),
+                       "half_kelly": round(kelly_fraction(d) / 2, 4)}
+        findings[t]["cap"] = round(min(CAP, findings[t]["half_kelly"]), 4)
 
     pos = {t: fv["raw_score"] for t, fv in findings.items()}
     s = sum(pos.values())
     weights = {t: round(w, 4) for t, w in water_fill(
-        {t: v / s for t, v in pos.items() if v > 0}, CAP).items()} if s > 0 else {}
+        {t: v / s for t, v in pos.items() if v > 0},
+        {t: findings[t]["cap"] for t, v in pos.items() if v > 0}).items()} if s > 0 else {}
     cash = round(1.0 - sum(weights.values()), 4)
     for t, fv in findings.items():
         fv["weight"] = weights.get(t, 0.0)
@@ -131,7 +168,7 @@ def main() -> int:
         "as_of": dt.date.today().isoformat(),
         "epoch": EPOCH,
         "rule": (f"weight ∝ max(0, weighted_DCF/spot - 1) × conviction_mult × arthur_indicator_mult × category_mult, "
-                 f"cap {CAP:.0%}/name, cash residual (spec §12 / §15 D1). "
+                 f"cap per name = min({CAP:.0%}, half-Kelly of its scenario distribution), cash residual (spec §12 / §15 D1). "
                  f"conviction: High 2.0 · Med-High 1.5 · Med 1.0 · Med-Low 0.6 · Low 0.35. "
                  f"indicator zone: green 1.25 · yellow 1.10 · orange 0.90 · red 0.70 · n/a 1.0. "
                  f"category: fun-speculative 0.5 · competitors 0.3 · crypto 0.5 · core 1.0."),

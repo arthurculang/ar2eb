@@ -444,30 +444,37 @@ scenarios:
       - 18.0
 historical_prices:
   ipo_marker: IPO Jul '07
-  x_min: -6.5
-  points:
-  - - -6.0
-    - 200.0
-  - - -5.0
-    - 350.0
-  - - -4.0
-    - 485.0
-  - - -3.5
-    - 300.0
-  - - -3.0
-    - 380.0
-  - - -2.0
-    - 400.0
-  - - -1.5
-    - 340.0
-  - - -1.0
-    - 300.0
-  - - -0.5
-    - 200.0
-  - - -0.25
-    - 150.0
-  - - -0.05
-    - 127.0
+  x_min: -6.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.73, 231.67]   # 2019-12-31
+  - [-6.48, 189.55]   # 2020-03-31
+  - [-6.23, 312.01]   # 2020-06-30
+  - [-5.98, 329.37]   # 2020-09-30
+  - [-5.72, 348.03]   # 2020-12-31
+  - [-5.48, 306.71]   # 2021-03-31
+  - [-5.23, 364.97]   # 2021-06-30
+  - [-4.98, 404.70]   # 2021-09-30
+  - [-4.73, 391.45]   # 2021-12-31
+  - [-4.48, 365.23]   # 2022-03-31
+  - [-4.23, 272.61]   # 2022-06-30
+  - [-3.98, 279.56]   # 2022-09-30
+  - [-3.73, 320.38]   # 2022-12-30
+  - [-3.48, 364.19]   # 2023-03-31
+  - [-3.23, 378.50]   # 2023-06-30
+  - [-2.98, 385.61]   # 2023-09-29
+  - [-2.73, 511.29]   # 2023-12-29
+  - [-2.49, 390.65]   # 2024-03-28
+  - [-2.23, 298.70]   # 2024-06-28
+  - [-1.98, 271.35]   # 2024-09-30
+  - [-1.72, 382.41]   # 2024-12-31
+  - [-1.48, 283.06]   # 2025-03-31
+  - [-1.23, 237.58]   # 2025-06-30
+  - [-0.98, 177.93]   # 2025-09-30
+  - [-0.73, 207.81]   # 2025-12-31
+  - [-0.48, 153.10]   # 2026-03-31
+  - [-0.23, 114.18]   # 2026-06-30
+  - [-0.15, 118.87]   # 2026-07-31
+  - [-0.06, 120.26]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Brand impairment; US decline; ~$85 (-34%).
@@ -623,4 +630,4 @@ pocd:
       and slipping say-on-pay support.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (LULU 1.95)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +65% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.

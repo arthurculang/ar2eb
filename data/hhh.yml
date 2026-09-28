@@ -354,31 +354,35 @@ scenarios:
 # ── Historical price data ───────────────────────────────────────────────────
 historical_prices:
   ipo_marker: "HHC→HHH '23"
-  x_min: -6.0
-  points:
-    - [-5.75, 78.0]
-    - [-5.50, 95.0]
-    - [-5.25, 84.0]
-    - [-5.00, 64.0]
-    - [-4.75, 92.0]
-    - [-4.50, 98.0]
-    - [-4.25, 76.0]
-    - [-4.00, 58.0]
-    - [-3.75, 72.0]
-    - [-3.50, 88.0]
-    - [-3.25, 70.0]
-    - [-3.00, 54.0]
-    - [-2.75, 76.0]
-    - [-2.50, 82.0]
-    - [-2.25, 64.0]
-    - [-2.00, 78.0]
-    - [-1.75, 85.0]
-    - [-1.50, 80.0]
-    - [-1.25, 67.0]
-    - [-1.00, 72.0]
-    - [-0.75, 91.0]
-    - [-0.50, 78.0]
-    - [-0.25, 70.0]
+  x_min: -6.25
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.23, 49.52]   # 2020-06-30
+  - [-5.98, 54.91]   # 2020-09-30
+  - [-5.72, 75.24]   # 2020-12-31
+  - [-5.48, 90.69]   # 2021-03-31
+  - [-5.23, 92.91]   # 2021-06-30
+  - [-4.98, 83.71]   # 2021-09-30
+  - [-4.73, 97.03]   # 2021-12-31
+  - [-4.48, 98.77]   # 2022-03-31
+  - [-4.23, 64.87]   # 2022-06-30
+  - [-3.98, 52.80]   # 2022-09-30
+  - [-3.73, 72.85]   # 2022-12-30
+  - [-3.48, 76.26]   # 2023-03-31
+  - [-3.23, 75.23]   # 2023-06-30
+  - [-2.98, 70.67]   # 2023-09-29
+  - [-2.73, 81.55]   # 2023-12-29
+  - [-2.49, 69.23]   # 2024-03-28
+  - [-2.23, 61.79]   # 2024-06-28
+  - [-1.98, 77.43]   # 2024-09-30
+  - [-1.72, 76.92]   # 2024-12-31
+  - [-1.48, 74.08]   # 2025-03-31
+  - [-1.23, 67.50]   # 2025-06-30
+  - [-0.98, 82.17]   # 2025-09-30
+  - [-0.73, 79.77]   # 2025-12-31
+  - [-0.48, 63.26]   # 2026-03-31
+  - [-0.23, 71.49]   # 2026-06-30
+  - [-0.15, 63.92]   # 2026-07-31
+  - [-0.06, 64.13]   # 2026-08-31
 
 # ── Page 1 weighting rationale (grouped buckets) ────────────────────────────
 weighting_rationale:
@@ -516,4 +520,5 @@ pocd:
       manager), a permanent fee, and a Delaware suit alleging the control transfer paid minorities no premium.'
   opportunity_ref: 'The scenario distribution (+41%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI'
   context_ref: 'The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion'
-  deal: 'Open-market purchase at a ~37% discount to NAV vs. the scenario distribution + position sizing. (Ackman''s own entry: $100/share, a 48% premium.)'
+  deal: 'Open-market purchase below the company''s own ~$104/share NAV estimate, weighed against the scenario distribution +
+    position sizing. (Ackman''s own entry: $100/share, a 48% premium to the market at the time.)'

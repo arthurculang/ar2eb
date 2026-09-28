@@ -866,44 +866,30 @@ scenarios:
       tam_competitor_share: 40.0
 historical_prices:
   ipo_marker: IPO Oct '21
-  x_min: -4.7
-  points:
-  - - -4.58
-    - 10.5
-  - - -4.33
-    - 22.0
-  - - -4.0
-    - 14.0
-  - - -3.67
-    - 8.0
-  - - -3.33
-    - 5.0
-  - - -3.0
-    - 3.5
-  - - -2.67
-    - 4.5
-  - - -2.33
-    - 9.0
-  - - -2.0
-    - 14.0
-  - - -1.67
-    - 13.0
-  - - -1.33
-    - 7.5
-  - - -1.0
-    - 9.0
-  - - -0.67
-    - 18.0
-  - - -0.5
-    - 35.0
-  - - -0.33
-    - 50.0
-  - - -0.17
-    - 82.09
-  - - -0.08
-    - 60.0
-  - - -0.04
-    - 65.0
+  x_min: -5.02
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-4.98, 10.40]   # 2021-09-30
+  - [-4.73, 16.70]   # 2021-12-31
+  - [-4.48, 12.76]   # 2022-03-31
+  - [-4.23, 4.38]   # 2022-06-30
+  - [-3.98, 5.07]   # 2022-09-30
+  - [-3.73, 3.45]   # 2022-12-30
+  - [-3.48, 6.15]   # 2023-03-31
+  - [-3.23, 13.53]   # 2023-06-30
+  - [-2.98, 14.88]   # 2023-09-29
+  - [-2.73, 12.39]   # 2023-12-29
+  - [-2.49, 9.99]   # 2024-03-28
+  - [-2.23, 7.03]   # 2024-06-28
+  - [-1.98, 8.74]   # 2024-09-30
+  - [-1.72, 41.77]   # 2024-12-31
+  - [-1.48, 22.07]   # 2025-03-31
+  - [-1.23, 42.97]   # 2025-06-30
+  - [-0.98, 61.50]   # 2025-09-30
+  - [-0.73, 44.87]   # 2025-12-31
+  - [-0.48, 28.83]   # 2026-03-31
+  - [-0.23, 53.26]   # 2026-06-30
+  - [-0.15, 36.44]   # 2026-07-31
+  - [-0.06, 39.31]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 10%
   body: Trapped-ion scaling wall + Quantinuum dominance + commercial quantum advantage delayed past 2030; equity wipes via
@@ -1002,8 +988,7 @@ pocd:
       that is the bigger flag.'
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -74.4% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "008"
   footer_timestamp: "2026-09-22_13-16"

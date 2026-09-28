@@ -796,24 +796,20 @@ scenarios:
       tam_competitor_share: 25.0
 historical_prices:
   ipo_marker: Uplisted '24
-  x_min: -2.6
-  points:
-  - - -2.4
-    - 4.0
-  - - -2.0
-    - 3.0
-  - - -1.6
-    - 5.0
-  - - -1.2
-    - 20.0
-  - - -0.9
-    - 14.0
-  - - -0.6
-    - 10.0
-  - - -0.3
-    - 8.5
-  - - -0.05
-    - 7.22
+  x_min: -2.87
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-2.49, 5.15]   # 2024-03-28
+  - [-2.23, 1.95]   # 2024-06-28
+  - [-1.98, 7.95]   # 2024-09-30
+  - [-1.72, 13.50]   # 2024-12-31
+  - [-1.48, 5.75]   # 2025-03-31
+  - [-1.23, 11.44]   # 2025-06-30
+  - [-0.98, 11.63]   # 2025-09-30
+  - [-0.73, 10.38]   # 2025-12-31
+  - [-0.48, 8.44]   # 2026-03-31
+  - [-0.23, 6.58]   # 2026-06-30
+  - [-0.15, 4.78]   # 2026-07-31
+  - [-0.06, 4.87]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Utilization never improves; unit economics fail; dilutive grind toward the distress floor.
@@ -975,7 +971,7 @@ pocd:
     takeaway: 'A clean single-class one-vote register and a heavily equity-aligned founder-CEO are the positives. Held to a 3 by a combined Chair/CEO, a classified board, high key-person dependence on Kashani, the relentless dilution of a pre-scale cash-burner, customer/manufacturing concentration (Uber, Magna), and a going-concern history - the profile of an early, vision-driven company still proving its model.'
   opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +26.1% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
   footer_version: "006"
   footer_timestamp: "2026-09-22_13-16"

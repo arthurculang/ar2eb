@@ -459,24 +459,29 @@ scenarios:
       - 24.0
 historical_prices:
   ipo_marker: IPO Sep '21
-  x_min: -4.5
-  points:
-  - - -4.5
-    - 40
-  - - -4.0
-    - 20
-  - - -3.3
-    - 14
-  - - -2.5
-    - 22
-  - - -1.5
-    - 38
-  - - -0.8
-    - 46
-  - - -0.3
-    - 30
-  - - -0.05
-    - 24.82
+  x_min: -4.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-4.73, 34.71]   # 2021-12-31
+  - [-4.48, 21.73]   # 2022-03-31
+  - [-4.23, 12.94]   # 2022-06-30
+  - [-3.98, 16.72]   # 2022-09-30
+  - [-3.73, 18.03]   # 2022-12-30
+  - [-3.48, 17.75]   # 2023-03-31
+  - [-3.23, 22.57]   # 2023-06-30
+  - [-2.98, 18.73]   # 2023-09-29
+  - [-2.73, 18.26]   # 2023-12-29
+  - [-2.49, 24.92]   # 2024-03-28
+  - [-2.23, 25.77]   # 2024-06-28
+  - [-1.98, 28.31]   # 2024-09-30
+  - [-1.72, 36.45]   # 2024-12-31
+  - [-1.48, 33.17]   # 2025-03-31
+  - [-1.23, 44.29]   # 2025-06-30
+  - [-0.98, 36.51]   # 2025-09-30
+  - [-0.73, 35.51]   # 2025-12-31
+  - [-0.48, 26.51]   # 2026-03-31
+  - [-0.23, 27.82]   # 2026-06-30
+  - [-0.15, 32.27]   # 2026-07-31
+  - [-0.06, 34.09]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 14%
   body: Take-rate compresses, growth stalls; ~$10 (-58%).
@@ -628,7 +633,7 @@ pocd:
     takeaway: 'Founder-CEO (Narang) with two co-founders still operating (President, CTO), heavily equity-aligned, on a net-cash balance sheet with a disciplined buyback and declining SBC, under a separate independent Chair - a solid founder-led profile. Held at 3 by the 10x super-voting dual-class (sub-majority ~40.6% of votes, though sunsetting in 2028), a classified board, and the unresolved 2023 fee-reversal securities investigations.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +25.5% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

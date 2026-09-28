@@ -445,22 +445,19 @@ scenarios:
       - 15.0
 historical_prices:
   ipo_marker: IPO Jun '24
-  x_min: -2.0
-  points:
-  - - -1.9
-    - 37.0
-  - - -1.5
-    - 55.0
-  - - -1.0
-    - 70.0
-  - - -0.7
-    - 103.0
-  - - -0.5
-    - 60.0
-  - - -0.3
-    - 50.0
-  - - -0.05
-    - 46.93
+  x_min: -2.31
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-2.23, 35.00]   # 2024-06-28
+  - [-1.98, 56.60]   # 2024-09-30
+  - [-1.72, 33.76]   # 2024-12-31
+  - [-1.48, 48.24]   # 2025-03-31
+  - [-1.23, 63.54]   # 2025-06-30
+  - [-0.98, 80.71]   # 2025-09-30
+  - [-0.73, 59.05]   # 2025-12-31
+  - [-0.48, 45.22]   # 2026-03-31
+  - [-0.23, 57.93]   # 2026-06-30
+  - [-0.15, 43.87]   # 2026-07-31
+  - [-0.06, 63.05]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 14%
   body: Growth fades to ~8%, margin tops out ~5%, distressed re-rate; DCF $3.00.
@@ -633,8 +630,7 @@ pocd:
       Key-person risk is high.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -37% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "006"
   footer_timestamp: "2026-09-22_13-16"

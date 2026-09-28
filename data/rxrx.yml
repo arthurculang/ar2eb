@@ -789,26 +789,32 @@ scenarios:
       tam_competitor_share: 30.0
 historical_prices:
   ipo_marker: IPO Apr '21
-  x_min: -5.2
-  points:
-  - - -5.0
-    - 18.0
-  - - -4.5
-    - 12.0
-  - - -4.0
-    - 7.0
-  - - -3.0
-    - 9.0
-  - - -2.5
-    - 15.0
-  - - -2.0
-    - 8.0
-  - - -1.0
-    - 6.0
-  - - -0.5
-    - 5.0
-  - - -0.05
-    - 3.15
+  x_min: -5.47
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.4, 33.40]   # 2021-04-30
+  - [-5.23, 36.50]   # 2021-06-30
+  - [-4.98, 23.01]   # 2021-09-30
+  - [-4.73, 17.13]   # 2021-12-31
+  - [-4.48, 7.16]   # 2022-03-31
+  - [-4.23, 8.14]   # 2022-06-30
+  - [-3.98, 10.64]   # 2022-09-30
+  - [-3.73, 7.71]   # 2022-12-30
+  - [-3.48, 6.67]   # 2023-03-31
+  - [-3.23, 7.47]   # 2023-06-30
+  - [-2.98, 7.65]   # 2023-09-29
+  - [-2.73, 9.86]   # 2023-12-29
+  - [-2.49, 9.97]   # 2024-03-28
+  - [-2.23, 7.50]   # 2024-06-28
+  - [-1.98, 6.59]   # 2024-09-30
+  - [-1.72, 6.76]   # 2024-12-31
+  - [-1.48, 5.29]   # 2025-03-31
+  - [-1.23, 5.06]   # 2025-06-30
+  - [-0.98, 4.88]   # 2025-09-30
+  - [-0.73, 4.09]   # 2025-12-31
+  - [-0.48, 3.07]   # 2026-03-31
+  - [-0.23, 3.67]   # 2026-06-30
+  - [-0.15, 3.00]   # 2026-07-31
+  - [-0.06, 3.40]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Platform never delivers; milestone-only revenue, heavy dilution toward the cash floor.
@@ -981,8 +987,7 @@ pocd:
       rather than high.'
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +27.6% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "006"
   footer_timestamp: "2026-09-22_13-16"

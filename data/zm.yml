@@ -40,21 +40,16 @@ market:
 # ── Page 1 narrative content ────────────────────────────────────────────────
 
 central_question: >
-  Is Zoom a melting ice cube with locked-up optionality — or a stable cash
-  machine sitting on a $7B Anthropic stake the market hasn't yet marked to
-  public?
+  Is Zoom a melting ice cube — or, with stock comp counted as a cost, still a
+  stable cash machine sitting on a $7B Anthropic stake not yet marked by an
+  IPO?
 
-thesis: >
-  Zoom trades at $105.64 ($32.5B mkt cap) on TTM revenue of ~$4.94B, $1.7B
-  FCF, and $7.9B cash & marketable securities — roughly a quarter of market
-  cap is just cash. Q1 FY27 confirmed the base case: revenue $1.24B (+5.5%,
-  beat), FY27 guidance raised to $5.09B / $5.98 EPS, buyback expanded $1.0B
-  — management returning capital while it waits for the Anthropic mark. On
-  top sits an Anthropic equity stake carried at cost but worth $4-9B across
-  scenarios, pending the IPO mark. The operating business is a stable cash
-  machine (35-40% FCF margin) facing real but slow competition from Teams
-  and Workspace. Mature-Company DCF with SOTP framing below. Three
-  scenarios, weighted; show your work.
+thesis: Zoom trades at $90.90 ($27.2B market cap); $7.9B of cash covers 29% of that. FY26 revenue was $4.87B, and reported
+  free cash flow of $1.92B adds back $0.76B of stock comp (15.6% of revenue). Net of that real cost, owner FCF is ~$1.16B
+  and enterprise value is ~17× it (~10× headline FCF), or ~11× net of a $7B Anthropic value. That stake, carried near $1.5B,
+  is valued at $2-16B across scenarios pending its IPO; the core faces real but slow competition from Teams and Workspace.
+  Valued on owner FCF and today's ~300M diluted shares (buybacks spend cash already counted), the weighted value is ~$100,
+  +10% vs the price. The most likely case (base, 50%) sits ~11% above the price; 30% of the probability sits below it.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:
@@ -99,7 +94,7 @@ scenarios:
     short_label: UltBear
     probability: 0.08
     expected_per_share: 28.70
-    headline: "Cisco-Webex moment; -54% tail."
+    headline: "Cisco-Webex moment; -68% tail."
     narrative:
       - >
         The ultra-bear is qualitatively different from bear's slow melt. It's
@@ -109,18 +104,15 @@ scenarios:
         ZM's seat economics; AI Companion Pro fails to differentiate against
         Copilot/Gemini bundled into M365 and Workspace; Phone + Contact Center
         growth stalls below 15% (the diversification story dies); and
-        Anthropic IPOs at &lt;$400B (Pentagon supply-chain risk + AI-capex
+        Anthropic IPOs below $400B (Pentagon supply-chain risk + AI-capex
         moderation + cheap-AI commoditization), gutting the SOTP "hidden
         asset" narrative.
       - >
-        Revenue collapses from $4.87B to $3.6B over five years (-26%). Op
-        margin compresses from 36% to 12% as ZM spends defensively to retain
-        the enterprise base. Terminal growth turns negative (-2%, perpetual
-        decline). Op EV: $5.7B. Cash drains from $7.9B to ~$5.5B as
-        management runs $1.5B/yr buybacks for two years before halting when
-        the flywheel breaks. Anthropic stake floors at $2B (sub-$400B IPO).
-        SOTP equity: $13.2B ÷ 270M shares = ~$49/share — a -54% tail,
-        mirroring ultra_bull's +293% asymmetry.
+        Revenue collapses from $4.87B to $3.6B over five years (-26%). Operating margin after stock comp falls from ~20% to about −4% as ZM spends to defend the enterprise base, and owner FCF turns negative in year five. Terminal growth of -2% turns the terminal
+        value negative, leaving Op EV at just $1.1B. Cash drains to ~$5.5B on
+        buybacks that only offset dilution. Anthropic floors at $2B (sub-$400B
+        IPO). SOTP equity: $8.6B ÷ 299.7M shares =
+        ~$28.70/share — a -68% tail, against the ultra-bull's +154%.
     probability_rationale: >
       Joint conjunction of four independent fault lines: (a) Cisco-style
       displacement curve materializes (-10/-13/-19% YoY) — historical base
@@ -132,7 +124,7 @@ scenarios:
       power for collaboration AI; (d) Phone + Contact Center growth stalls
       below 15%, killing the diversification story. Each individually 15-30%
       probability conditional on macro; joint conjunction at 8%. Lower than
-      bear's 22% because (i) Q1 FY27 just printed a beat with NDR ticking up
+      bear's 22% because (i) Q1 FY27 printed a beat with NDR ticking up
       to 99% and AI Companion MAUs +184% YoY, and (ii) compound conjunction
       requires all four to fire simultaneously over five years.
 
@@ -147,7 +139,7 @@ scenarios:
     dcf_path:
       rev_b: 4.87                                  # starting revenue ($B FY25 actual)
       rev_path:    [-0.02, -0.05, -0.08, -0.08, -0.06] # declining growth rates
-      op_margin:   [0.360, 0.300, 0.240, 0.180, 0.120] # defensive-spend margin crush
+      op_margin:   [0.204, 0.144, 0.084, 0.024, -0.036] # defensive-spend margin crush
       wacc_path:   [0.120, 0.120, 0.120, 0.120, 0.120]
       fcf:         [0.971, 0.652, 0.349, 0.091, -0.131]
       pv_fcf:      [0.867, 0.520, 0.248, 0.058, -0.074]
@@ -193,15 +185,15 @@ scenarios:
         become good enough. Phone and Contact Center continue growing 20-25%+
         but on too small a base to offset the core decline. Revenue drifts
         from $4.87B in FY26 to ~$4.7B by FY30. Margins compress as Zoom
-        spends to defend.
+        spends to defend: owner FCF margin, after stock comp, slides from 19%
+        to 13%.
       - >
         Even Anthropic disappoints: the AI capex cycle moderates, IPO prices
         at the low end, and the stake marks closer to $4B than $9B. SOTP math
-        still gives some floor — $14.4B op EV + $7.8B cash + $4B Anthropic =
-        $26.2B equity, ~$92/share. Below today's $100 spot but not
-        catastrophically — the cash + stake provide a real downside cushion.
-        Bear isn't bankruptcy; it's structural erosion of the operating
-        business.
+        still gives some floor — $7.0B op EV + $7.8B cash + $4B Anthropic =
+        $18.8B equity ÷ 299.7M shares = ~$62.80/share, 31% below today's
+        $90.90; the cash + stake (~$39/share) cushion the loss. Bear isn't
+        bankruptcy; it's structural erosion of the operating business.
     probability_rationale: >
       Bearish thesis is competitive commoditization: Teams (Microsoft's
       bundled play) and Google Meet (free for Workspace customers) continue
@@ -210,7 +202,8 @@ scenarios:
       into Teams is the obvious competitive response); Phone seats stagnate;
       Contact Center fails to reach scale; Anthropic stake gets compressed
       if AI valuations correct or Anthropic does an underwhelming IPO. The
-      30% weight reflects that Teams/Workspace competition is real, ongoing,
+      22% weight (30% with the ultra-bear) reflects that Teams/Workspace
+      competition is real, ongoing,
       and structurally favored — but ZM has shown unexpected resilience
       through 2024-25 (stable revenue, growing FCF, $1B+ buyback program).
       Not bankruptcy risk; share-loss-with-margin-compression risk.
@@ -225,7 +218,7 @@ scenarios:
     dcf_path:
       rev_b: 4.87                                  # starting revenue ($B FY25 actual)
       rev_path:    [0.01, 0.00, -0.01, -0.02, -0.02]    # growth rates per year
-      op_margin:   [0.385, 0.370, 0.355, 0.340, 0.320]  # operating margin
+      op_margin:   [0.229, 0.214, 0.199, 0.184, 0.164]  # operating margin after stock comp
       wacc_path:   [0.100, 0.100, 0.100, 0.100, 0.100]
       fcf:         [0.953, 0.903, 0.846, 0.733, 0.625]
       pv_fcf:      [0.866, 0.746, 0.636, 0.501, 0.388]
@@ -268,26 +261,27 @@ scenarios:
         AI Companion stays bundled into paid plans and helps justify price
         increases at renewal. The strategic logic is right: make AI a feature
         of the bundle rather than try to monetize it as a separate SKU
-        customers can decline. Margins hold in the mid-30s after a near-term
-        CapEx step-up for the post-pandemic data center refresh. Cash builds
-        at $1.7-1.9B/year. Some funds buybacks (current $1B+ authorization),
-        some sits.
+        customers can decline. After a near-term capex step-up for the
+        post-pandemic data center refresh, owner FCF (after the ~16% of
+        revenue paid in stock) holds a steady ~19% margin, ~$1.0-1.1B a year.
+        Shares are held at today's ~300M, since buybacks spend cash already valued.
       - >
         The big mid-term catalyst lands: Anthropic IPOs in late 2026 at
         $700B-1T and Zoom's stake gets marked publicly for the first time.
         The hidden asset on Zoom's balance sheet becomes visible to every
-        screener. SOTP math: $28.1B op EV + $7.8B cash + $7B Anthropic =
-        $42.9B equity ÷ 263M FY30 shares = $163/share. Multiple expands
-        from ~10x FCF on the core business to ~13-15x as the cash and
-        Anthropic carry stop being discounted heuristically.
+        screener. SOTP math: $15.6B op EV + $7.8B cash + $7B Anthropic =
+        $30.4B equity ÷ 299.7M shares = ~$101/share. The core's multiple
+        expands from ~11x owner FCF (net of cash and a $7B Anthropic value)
+        to ~13x as the cash and Anthropic carry stop being discounted
+        heuristically.
     probability_rationale: >
       Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27
       guidance holds; AI Companion Pro is a meaningful contributor but not
       a category-defining product; Anthropic stake gets a public mark via
       Anthropic's IPO at $700B-1T valuation; ZM multiple expands modestly
       as the market gives credit for the Anthropic stake AND for stable
-      cash generation. Buyback compounds shares-out reduction at attractive
-      prices. The 50% weight reflects that this requires the least faith —
+      cash generation. Stock comp holds near 16% of revenue. The 50% weight
+      reflects that this requires the least faith —
       sequential execution on plans already in motion.
 
     dcf_metrics:
@@ -298,7 +292,7 @@ scenarios:
     dcf_path:
       rev_b: 4.87
       rev_path:    [0.04, 0.035, 0.03, 0.025, 0.025]
-      op_margin:   [0.395, 0.395, 0.395, 0.395, 0.395]
+      op_margin:   [0.239, 0.239, 0.239, 0.239, 0.239]
       wacc_path:   [0.085, 0.085, 0.085, 0.085, 0.085]
       fcf:         [0.982, 1.016, 1.046, 1.072, 1.099]
       pv_fcf:      [0.905, 0.863, 0.819, 0.774, 0.731]
@@ -338,17 +332,18 @@ scenarios:
         becomes a real third leg of growth. Blended revenue growth
         re-accelerates to 5-8%.
       - >
-        FCF margin expands toward 40%+ as the AI Companion uplift drops to
-        the bottom line at ~80% gross margin. Cash generation hits
-        $2.2-2.5B/yr. Aggressive buybacks at $130-150 retire 70M+ shares
-        over 5 years. SOTP math: $43.8B op EV + $7.8B cash + $9B Anthropic
-        = $60.6B equity ÷ 240M FY30 shares = $253/share.
+        Owner FCF margin (after the ~16% of revenue paid in stock) widens
+        from 22% to 25% as the AI Companion uplift drops to the bottom line
+        at ~80% gross margin; owner FCF reaches ~$1.7B/yr. Shares are held at
+        today's ~300M, since buybacks spend cash already valued. SOTP math:
+        $27.0B op EV + $7.8B cash + $9B Anthropic = $43.8B equity ÷ 299.7M
+        shares = ~$146/share.
       - >
         The two engines run independently. AI monetization is one bet;
         Anthropic appreciation is another. They can both succeed without
         each other. Bull doesn't require Zoom to become Salesforce or
         Anthropic to become OpenAI — it requires both to perform reasonably
-        well in their categories. The 20% probability weight reflects that
+        well in their categories. The 15% probability weight reflects that
         this is a real possibility, not the modal outcome.
     probability_rationale: >
       AI Companion Pro monetizes (per-seat add-on becomes meaningful
@@ -356,8 +351,8 @@ scenarios:
       Contact Center crosses $500M ARR and becomes a real third leg of
       growth; Anthropic IPOs at $1T+ with stake getting full mark (vs
       current discount carrying value); the operating business multiple
-      expands AND the Anthropic stake appreciates. The 20% weight is higher
-      than JOBY/AUR's bull weight because ZM's bull case is less compound —
+      expands AND the Anthropic stake appreciates. The 15% weight reflects
+      that the bull case is only partly compound —
       AI monetization and Anthropic appreciation are somewhat independent
       bets that can succeed without each other. But the conjunction still
       requires multiple things at once: product success on three new SKUs
@@ -372,7 +367,7 @@ scenarios:
     dcf_path:
       rev_b: 4.87
       rev_path:    [0.05, 0.07, 0.08, 0.07, 0.05]
-      op_margin:   [0.380, 0.390, 0.400, 0.410, 0.410]
+      op_margin:   [0.224, 0.234, 0.244, 0.254, 0.254]
       wacc_path:   [0.080, 0.080, 0.080, 0.080, 0.080]
       fcf:         [1.144, 1.279, 1.441, 1.604, 1.685]
       pv_fcf:      [1.059, 1.097, 1.144, 1.179, 1.147]
@@ -413,17 +408,20 @@ scenarios:
         8-10%. Phone, Contact Center, and Workvivo each become $500M+ ARR
         contributors.
       - >
-        Multiple expands from current 15x P/FCF to 30x+ as the growth story
-        consolidates. SOTP math: $80B+ operating EV + $7.8B cash + $16B
-        Anthropic (mid-case mark) = $103B equity ÷ 250M FY30 shares =
-        $412/share. The ultra-bull is materially different from bull: not
-        just AI works AND Anthropic works, but BOTH inflect AT THE SAME
-        TIME and the market rerates accordingly.
+        Owner FCF margin (after stock comp) widens from 25% to 31%, and the
+        multiple roughly doubles as the growth story consolidates: ~23x to
+        50x+ price to owner FCF (~14x to 30x+ on headline FCF). SOTP math:
+        $45.5B operating EV + $7.8B cash + $16B Anthropic (mid-case mark) =
+        $69.3B equity ÷ 299.7M shares = ~$231/share. The ultra-bull is
+        materially different from bull: not just AI works AND Anthropic
+        works, but BOTH inflect AT THE SAME TIME and the market rerates
+        accordingly.
     probability_rationale: >
       Joint conditional: Anthropic IPO above $2T (60% conditional on IPO)
       AND AI Companion crosses $1B ARR (40% conditional on existing
-      trajectory) AND multiple re-rates from 15x to 30x P/FCF (50%
-      conditional on growth + AI both firing). Joint at 5-7%, reflected
+      trajectory) AND the multiple roughly doubles, ~23x to 50x+ price to
+      owner FCF (~14x to 30x+ on headline FCF; 50% conditional on growth +
+      AI both firing). Joint at 5-7%, reflected
       here at 5%. This is the scenario where ZM stops being a 'value with
       AI optionality' name and becomes a growth-software name with an
       emerging-leader AI partner. Tail of tails.
@@ -436,7 +434,7 @@ scenarios:
     dcf_path:
       rev_b: 4.87
       rev_path:    [0.08, 0.10, 0.12, 0.10, 0.08]
-      op_margin:   [0.420, 0.430, 0.440, 0.450, 0.450]
+      op_margin:   [0.264, 0.274, 0.284, 0.294, 0.294]
       wacc_path:   [0.075, 0.075, 0.075, 0.075, 0.075]
       fcf:         [1.321, 1.660, 2.007, 2.236, 2.377]
       pv_fcf:      [1.229, 1.436, 1.616, 1.674, 1.656]
@@ -454,9 +452,6 @@ scenarios:
       final_shares: 299.7
       dcf_per_share: 231.26
       distress: 0.0
-      # Note: expected_per_share ($400.00) ≠ dcf_per_share ($412.00) — manual
-      # rounding to a cleaner number for display. Generator should use
-      # expected_per_share for weighted math; dcf_per_share is informational.
 
     chart_data:
       ev_rev_multiple: [6.0, 7.5, 9.0, 10.0, 11.0]
@@ -467,43 +462,49 @@ scenarios:
 # x = years offset from today (negative = past).
 historical_prices:
   ipo_marker: "IPO Apr '19"
-  x_min: -7.5            # years of history to show in chart
-  points:
-    - [-7.08, 36.0]
-    - [-6.83, 85.0]
-    - [-6.58, 68.0]
-    - [-6.33, 160.0]
-    - [-6.08, 260.0]
-    - [-5.83, 500.0]
-    - [-5.58, 410.0]
-    - [-5.33, 320.0]
-    - [-5.08, 360.0]
-    - [-4.83, 270.0]
-    - [-4.58, 185.0]
-    - [-4.33, 110.0]
-    - [-4.08, 110.0]
-    - [-3.83, 78.0]
-    - [-3.58, 68.0]
-    - [-3.33, 77.0]
-    - [-3.08, 70.0]
-    - [-2.83, 70.0]
-    - [-2.58, 72.0]
-    - [-2.33, 64.0]
-    - [-2.08, 60.0]
-    - [-1.83, 65.0]
-    - [-1.58, 85.0]
-    - [-1.33, 76.0]
-    - [-1.08, 82.0]
-    - [-0.83, 85.0]
-    - [-0.58, 93.0]
-    - [-0.33, 95.0]
+  x_min: -7.85            # years of history to show in chart
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-7.4, 72.47]   # 2019-04-30
+  - [-7.24, 88.79]   # 2019-06-28
+  - [-6.98, 76.20]   # 2019-09-30
+  - [-6.73, 68.04]   # 2019-12-31
+  - [-6.48, 146.12]   # 2020-03-31
+  - [-6.23, 253.54]   # 2020-06-30
+  - [-5.98, 470.11]   # 2020-09-30
+  - [-5.72, 337.32]   # 2020-12-31
+  - [-5.48, 321.29]   # 2021-03-31
+  - [-5.23, 387.03]   # 2021-06-30
+  - [-4.98, 261.50]   # 2021-09-30
+  - [-4.73, 183.91]   # 2021-12-31
+  - [-4.48, 117.23]   # 2022-03-31
+  - [-4.23, 107.97]   # 2022-06-30
+  - [-3.98, 73.59]   # 2022-09-30
+  - [-3.73, 67.74]   # 2022-12-30
+  - [-3.48, 73.84]   # 2023-03-31
+  - [-3.23, 67.88]   # 2023-06-30
+  - [-2.98, 69.94]   # 2023-09-29
+  - [-2.73, 71.91]   # 2023-12-29
+  - [-2.49, 65.37]   # 2024-03-28
+  - [-2.23, 59.19]   # 2024-06-28
+  - [-1.98, 69.74]   # 2024-09-30
+  - [-1.72, 81.61]   # 2024-12-31
+  - [-1.48, 73.77]   # 2025-03-31
+  - [-1.23, 77.98]   # 2025-06-30
+  - [-0.98, 82.50]   # 2025-09-30
+  - [-0.73, 86.29]   # 2025-12-31
+  - [-0.48, 80.39]   # 2026-03-31
+  - [-0.23, 86.31]   # 2026-06-30
+  - [-0.15, 96.07]   # 2026-07-31
+  - [-0.06, 96.68]   # 2026-08-31
 
-# ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
+# ── Page 1 weighting rationale (one short line per scenario) ────────────────
 weighting_rationale:
-  - label: "Bear 30%"
+  - label: "Ultra Bear 8%"
+    body: "Cisco-Webex-style displacement; margin sinks below stock comp; Anthropic IPO under $400B."
+  - label: "Bear 22%"
     body: "Teams/Workspace structurally favored; AI Companion fails to monetize; Anthropic stake compressed."
   - label: "Base 50%"
-    body: "Modal outcome: stable mid-single-digit growth, Anthropic IPOs at $700B-1T, multiple modest expand."
+    body: "Modal outcome: stable mid-single-digit growth, Anthropic IPOs at $700B-1T, multiple expands modestly."
   - label: "Bull 15%"
     body: "AI Companion monetizes + Anthropic at $1T+; two engines succeed independently."
   - label: "Ultra Bull 5%"
@@ -511,8 +512,8 @@ weighting_rationale:
 
 # ── Page 3 / Page 4 ticker-specific text ────────────────────────────────────
 page3:
-  subtitle: "FY21–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Jan 31  ·  10-K FY26, Q1 2026 10-Q, Anthropic press releases"
-  sources:  "Sources: ZM 10-K FY26, Q1 2026 10-Q, Anthropic financial press, AI infrastructure peer set. "
+  subtitle: "FY21–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Jan 31  ·  10-K FY26, 10-Qs through Jul 2026, Anthropic press releases"
+  sources:  "Sources: ZM 10-K FY26 (FCF, stock comp), 10-Qs for the quarters ended Apr and Jul 2026 (diluted shares), Anthropic financial press, AI infrastructure peer set. "
 
 # ── Page 4 appendix sections ────────────────────────────────────────────────
 appendix:
@@ -522,16 +523,16 @@ appendix:
     - label: "AI Companion strategy is right."
       body: "Bundle AI into existing plans rather than separate SKU. Microsoft Copilot's $30/seat model is the cautionary tale — adoption underwhelmed."
     - label: "$7.8B cash is a real floor."
-      body: "25% of market cap is liquid. T-bills earn ~4%. Optionality for M&A, buybacks, or capital return. Hard to lose money against this."
+      body: "~29% of market cap is cash (~$26/share), earning ~4% in T-bills — optionality for M&A or buybacks. Even the ultra-bear ($28.70) is above the $26."
     - label: "Anthropic stake is asymmetric."
       body: "Carried at cost ($1.5B); worth $4-9B today; could mark to $15B+ post-IPO. Hidden asset most screeners ignore."
     - label: "Capital allocation track record."
-      body: "$1B+ buyback authorization announced 2024. Avg buyback price below $80. Eric Yuan personally aligned (15%+ owner)."
+      body: "$1B+ buyback authorization announced 2024. Avg buyback price below $80. Eric Yuan personally aligned (~8% economic owner)."
   triggers:
     - label: "Bear validation"
-      body: "FY27 revenue declines  ·  AI Companion attach < 5% on paid seats  ·  Anthropic IPO marks stake below $5B  ·  Phone seat growth < 15%"
+      body: "FY27 revenue declines  ·  AI Companion attach < 5% on paid seats  ·  Anthropic IPO marks stake below $5B  ·  Phone seat growth < 15%  ·  stock comp > 18% of revenue"
     - label: "Bull validation"
-      body: "FY27 revenue re-accelerates > 5%  ·  AI Companion attach > 10%  ·  Anthropic IPO at $1T+  ·  Contact Center crosses $500M ARR"
+      body: "FY27 revenue re-accelerates > 5%  ·  AI Companion attach > 10%  ·  Anthropic IPO at $1T+  ·  Contact Center crosses $500M ARR  ·  stock comp < 13% of revenue"
     - label: "Reframe needed"
       body: "If Eric Yuan executes major M&A (>$3B deal) — repurposing cash from optionality to platform expansion; both bear and bull theses get rewritten"
 
@@ -570,11 +571,11 @@ glossary:
 - term: Contact Center
   definition: ZM's CCaaS product (cloud-based customer service). ~$200M ARR currently, growing fast; bull case crosses $500M ARR.
 - term: Anthropic stake
-  definition: ZM invested in Anthropic 2023. Carrying value disclosed at ~$1.5B; market value $4-9B across scenarios pending the IPO mark.
+  definition: "ZM invested in Anthropic in 2023. Carrying value disclosed at ~$1.5B; valued at $2-16B across scenarios pending the IPO mark."
 - term: SOTP
   definition: 'Sum-of-the-parts: operating EV + cash + special assets - debt. Used when material balance-sheet value sits outside operations.'
-- term: Buyback flywheel
-  definition: ZM generates $1.7-2.4B FCF/yr. Buybacks at $1-1.5B/yr retire shares; lower share count compounds per-share value.
+- term: Owner FCF
+  definition: "Free cash flow after stock comp, a real cost that reported FCF adds back (15.6% of ZM's FY26 revenue). The basis valued here."
 
 # ═════════════════════════════════════════════════════════════════════════════
 # Page 4 — Competitive landscape (§6d). Power Audit lens (mature_company_sotp).
@@ -614,7 +615,8 @@ pocd:
     tenure_years: 15
     insider_ownership_pct: 8.0
     capital_allocation: 'Net cash ~$7.7B, zero debt — now being returned: stacked buyback authorizations
-      ($1.5B 2024 → +$1.2B → +$1.0B → +$1.0B 2026). The one big swing — the $14.7B all-stock Five9 bid
+      ($1.5B 2024 → +$1.2B → +$1.0B → +$1.0B 2026), though stock comp ($761M in FY26, 15.6% of revenue)
+      means part of each buyback only offsets dilution. The one big swing — the $14.7B all-stock Five9 bid
       (2021) — was terminated when Five9 holders rejected it; no overpriced deal got done.'
     incentive_alignment: 'Founder equity is the alignment: 2023 base salary cut to $10,000 (−98%) with bonus
       declined; no extra board pay. Comp is shifting from annual equity toward cash bonus (FY26–27).'
@@ -624,9 +626,10 @@ pocd:
       - 'lead independent director; ~9 of 10 directors independent'
     key_person_risk: high
     score: 4
-    takeaway: 'Founder-owner-operator (~8% economic, $10k salary) returning the $7.7B cash hoard via buybacks,
-      with a majority-independent board — disciplined and aligned; the offsets are super-voting control
-      (~25–30%+ of votes), a combined CEO/Chair, and high key-person concentration on Yuan.'
-  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (ZM 6.4)'
+    takeaway: 'Founder-owner-operator (~8% economic, $10k salary) returning cash via buybacks, with a
+      majority-independent board — disciplined and aligned; the offsets are heavy stock comp (15.6% of
+      revenue), super-voting control (~25–30%+ of votes), a combined CEO/Chair, and high key-person
+      concentration on Yuan.'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (ZM 5.0)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +56% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.

@@ -457,28 +457,36 @@ scenarios:
       - 27.0
 historical_prices:
   ipo_marker: IPO May '97
-  x_min: -6.2
-  points:
-  - - -6.0
-    - 95
-  - - -5.0
-    - 160
-  - - -4.0
-    - 170
-  - - -3.3
-    - 85
-  - - -2.5
-    - 130
-  - - -1.5
-    - 180
-  - - -0.8
-    - 230
-  - - -0.3
-    - 196
-  - - -0.1
-    - 278
-  - - -0.02
-    - 238.55
+  x_min: -6.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.48, 97.49]   # 2020-03-31
+  - [-6.23, 137.94]   # 2020-06-30
+  - [-5.98, 157.44]   # 2020-09-30
+  - [-5.72, 162.85]   # 2020-12-31
+  - [-5.48, 154.70]   # 2021-03-31
+  - [-5.23, 172.01]   # 2021-06-30
+  - [-4.98, 164.25]   # 2021-09-30
+  - [-4.73, 166.72]   # 2021-12-31
+  - [-4.48, 163.00]   # 2022-03-31
+  - [-4.23, 106.21]   # 2022-06-30
+  - [-3.98, 113.00]   # 2022-09-30
+  - [-3.73, 84.00]   # 2022-12-30
+  - [-3.48, 103.29]   # 2023-03-31
+  - [-3.23, 130.36]   # 2023-06-30
+  - [-2.98, 127.12]   # 2023-09-29
+  - [-2.73, 151.94]   # 2023-12-29
+  - [-2.49, 180.38]   # 2024-03-28
+  - [-2.23, 193.25]   # 2024-06-28
+  - [-1.98, 186.33]   # 2024-09-30
+  - [-1.72, 219.39]   # 2024-12-31
+  - [-1.48, 190.26]   # 2025-03-31
+  - [-1.23, 219.39]   # 2025-06-30
+  - [-0.98, 219.57]   # 2025-09-30
+  - [-0.73, 230.82]   # 2025-12-31
+  - [-0.48, 208.27]   # 2026-03-31
+  - [-0.23, 238.34]   # 2026-06-30
+  - [-0.15, 271.58]   # 2026-07-31
+  - [-0.06, 259.77]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 12%
   body: AI overbuild; FCF stays trough-bound; ~$59 (-75%).
@@ -641,7 +649,7 @@ pocd:
       return — no dividend and a largely-unused buyback.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -6.9% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

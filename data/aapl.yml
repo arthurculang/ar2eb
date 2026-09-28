@@ -455,26 +455,36 @@ scenarios:
       - 31.0
 historical_prices:
   ipo_marker: IPO Dec '80
-  x_min: -6.2
-  points:
-  - - -6.0
-    - 75
-  - - -5.0
-    - 130
-  - - -4.0
-    - 180
-  - - -3.3
-    - 130
-  - - -2.5
-    - 190
-  - - -1.5
-    - 230
-  - - -0.5
-    - 250
-  - - -0.1
-    - 315
-  - - -0.02
-    - 291.13
+  x_min: -6.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.48, 63.57]   # 2020-03-31
+  - [-6.23, 91.20]   # 2020-06-30
+  - [-5.98, 115.81]   # 2020-09-30
+  - [-5.72, 132.69]   # 2020-12-31
+  - [-5.48, 122.15]   # 2021-03-31
+  - [-5.23, 136.96]   # 2021-06-30
+  - [-4.98, 141.50]   # 2021-09-30
+  - [-4.73, 177.57]   # 2021-12-31
+  - [-4.48, 174.61]   # 2022-03-31
+  - [-4.23, 136.72]   # 2022-06-30
+  - [-3.98, 138.20]   # 2022-09-30
+  - [-3.73, 129.93]   # 2022-12-30
+  - [-3.48, 164.90]   # 2023-03-31
+  - [-3.23, 193.97]   # 2023-06-30
+  - [-2.98, 171.21]   # 2023-09-29
+  - [-2.73, 192.53]   # 2023-12-29
+  - [-2.49, 171.48]   # 2024-03-28
+  - [-2.23, 210.62]   # 2024-06-28
+  - [-1.98, 233.00]   # 2024-09-30
+  - [-1.72, 250.42]   # 2024-12-31
+  - [-1.48, 222.13]   # 2025-03-31
+  - [-1.23, 205.17]   # 2025-06-30
+  - [-0.98, 254.63]   # 2025-09-30
+  - [-0.73, 271.86]   # 2025-12-31
+  - [-0.48, 253.79]   # 2026-03-31
+  - [-0.23, 289.36]   # 2026-06-30
+  - [-0.15, 308.91]   # 2026-07-31
+  - [-0.06, 316.85]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
   body: iPhone stalls and the Services tails crystallize; ~$89 (-69%).
@@ -640,8 +650,7 @@ pocd:
       watch is that the chair becomes a non-independent Executive Chairman (Cook) in September 2026.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -34.5% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

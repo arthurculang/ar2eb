@@ -454,24 +454,30 @@ scenarios:
       - 19.0
 historical_prices:
   ipo_marker: IPO Jun '21
-  x_min: -4.7
-  points:
-  - - -4.7
-    - 31
-  - - -4.0
-    - 40
-  - - -3.3
-    - 18
-  - - -2.5
-    - 15
-  - - -1.5
-    - 30
-  - - -0.8
-    - 40
-  - - -0.3
-    - 62
-  - - -0.05
-    - 50.25
+  x_min: -5.01
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-4.98, 41.05]   # 2021-09-30
+  - [-4.73, 31.37]   # 2021-12-31
+  - [-4.48, 26.88]   # 2022-03-31
+  - [-4.23, 20.00]   # 2022-06-30
+  - [-3.98, 22.86]   # 2022-09-30
+  - [-3.73, 27.43]   # 2022-12-30
+  - [-3.48, 26.17]   # 2023-03-31
+  - [-3.23, 23.17]   # 2023-06-30
+  - [-2.98, 19.04]   # 2023-09-29
+  - [-2.73, 20.65]   # 2023-12-29
+  - [-2.49, 21.27]   # 2024-03-28
+  - [-2.23, 18.71]   # 2024-06-28
+  - [-1.98, 33.14]   # 2024-09-30
+  - [-1.72, 26.64]   # 2024-12-31
+  - [-1.48, 25.91]   # 2025-03-31
+  - [-1.23, 27.76]   # 2025-06-30
+  - [-0.98, 33.38]   # 2025-09-30
+  - [-0.73, 35.08]   # 2025-12-31
+  - [-0.48, 48.41]   # 2026-03-31
+  - [-0.23, 55.73]   # 2026-06-30
+  - [-0.15, 55.24]   # 2026-07-31
+  - [-0.06, 44.15]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 14%
   body: Airport saturates; TSA commoditizes; ~$39 (-22%).
@@ -640,8 +646,7 @@ pocd:
       combined. The vote/economics decoupling, not the operator quality, drives the score.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +38.8% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-17"

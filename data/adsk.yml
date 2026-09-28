@@ -456,28 +456,34 @@ scenarios:
       - 27.0
 historical_prices:
   ipo_marker: IPO '85
-  x_min: -5.5
-  points:
-  - - -5.5
-    - 280
-  - - -5.0
-    - 300
-  - - -4.2
-    - 200
-  - - -3.3
-    - 180
-  - - -2.5
-    - 200
-  - - -1.5
-    - 250
-  - - -0.8
-    - 290
-  - - -0.3
-    - 329
-  - - -0.1
-    - 205
-  - - -0.05
-    - 198.43
+  x_min: -5.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.81, 280.23]   # 2020-11-30
+  - [-5.72, 305.34]   # 2020-12-31
+  - [-5.48, 277.15]   # 2021-03-31
+  - [-5.23, 291.90]   # 2021-06-30
+  - [-4.98, 285.17]   # 2021-09-30
+  - [-4.73, 281.19]   # 2021-12-31
+  - [-4.48, 214.35]   # 2022-03-31
+  - [-4.23, 171.96]   # 2022-06-30
+  - [-3.98, 186.80]   # 2022-09-30
+  - [-3.73, 186.87]   # 2022-12-30
+  - [-3.48, 208.16]   # 2023-03-31
+  - [-3.23, 204.61]   # 2023-06-30
+  - [-2.98, 206.91]   # 2023-09-29
+  - [-2.73, 243.48]   # 2023-12-29
+  - [-2.49, 260.42]   # 2024-03-28
+  - [-2.23, 247.45]   # 2024-06-28
+  - [-1.98, 275.48]   # 2024-09-30
+  - [-1.72, 295.57]   # 2024-12-31
+  - [-1.48, 261.80]   # 2025-03-31
+  - [-1.23, 309.57]   # 2025-06-30
+  - [-0.98, 317.67]   # 2025-09-30
+  - [-0.73, 296.01]   # 2025-12-31
+  - [-0.48, 239.40]   # 2026-03-31
+  - [-0.23, 194.42]   # 2026-06-30
+  - [-0.15, 234.20]   # 2026-07-31
+  - [-0.06, 258.53]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
   body: Growth stalls; activist fizzles; ~$149 (-25%).
@@ -629,7 +635,7 @@ pocd:
     takeaway: 'Structurally clean governance - single-class one-vote, an independent Chair split from a long-tenured professional CEO, a ~91%-independent declassified board, and buyback discipline that shrinks the share count. Held to a 3 by the FY2024 free-cash-flow / non-GAAP-margin reporting investigation (no restatement, but a real control-environment flag), the CFO turnover around it, and the Starboard campaign that had to force accountability.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +53.6% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

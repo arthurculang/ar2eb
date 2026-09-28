@@ -459,26 +459,34 @@ scenarios:
       - 23.0
 historical_prices:
   ipo_marker: IPO Jun '10
-  x_min: -5.7
-  points:
-  - - -5.5
-    - 80
-  - - -5.0
-    - 240
-  - - -4.2
-    - 410
-  - - -3.3
-    - 108
-  - - -2.5
-    - 250
-  - - -1.5
-    - 250
-  - - -0.8
-    - 460
-  - - -0.3
-    - 420
-  - - -0.05
-    - 406.43
+  x_min: -6.01
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.98, 143.00]   # 2020-09-30
+  - [-5.72, 235.22]   # 2020-12-31
+  - [-5.48, 222.64]   # 2021-03-31
+  - [-5.23, 226.57]   # 2021-06-30
+  - [-4.98, 258.49]   # 2021-09-30
+  - [-4.73, 352.26]   # 2021-12-31
+  - [-4.48, 359.20]   # 2022-03-31
+  - [-4.23, 224.47]   # 2022-06-30
+  - [-3.98, 265.25]   # 2022-09-30
+  - [-3.73, 123.18]   # 2022-12-30
+  - [-3.48, 207.46]   # 2023-03-31
+  - [-3.23, 261.77]   # 2023-06-30
+  - [-2.98, 250.22]   # 2023-09-29
+  - [-2.73, 248.48]   # 2023-12-29
+  - [-2.49, 175.79]   # 2024-03-28
+  - [-2.23, 197.88]   # 2024-06-28
+  - [-1.98, 261.63]   # 2024-09-30
+  - [-1.72, 403.84]   # 2024-12-31
+  - [-1.48, 259.16]   # 2025-03-31
+  - [-1.23, 317.66]   # 2025-06-30
+  - [-0.98, 444.72]   # 2025-09-30
+  - [-0.73, 449.72]   # 2025-12-31
+  - [-0.48, 371.75]   # 2026-03-31
+  - [-0.23, 420.60]   # 2026-06-30
+  - [-0.15, 311.21]   # 2026-07-31
+  - [-0.06, 367.95]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 18%
   body: Deliveries keep falling; pure auto multiple; ~$26 (-93%).
@@ -644,7 +652,8 @@ pocd:
       related-party transaction web across his companies, and attention divided over xAI/SpaceX/X.'
   opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -75.0% finding — the robotaxi/FSD/Optimus optionality above ~$100 is priced explicitly, living in the ultra-bull second act) + position sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, with the robotaxi, FSD and Optimus
+    optionality priced explicitly in the ultra-bull second act, then position-sized.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

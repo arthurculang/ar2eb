@@ -789,34 +789,31 @@ scenarios:
       tam_competitor_share: 75.0
 historical_prices:
   ipo_marker: SPAC Sep '21
-  x_min: -4.8
-  points:
-  - - -4.6
-    - 9.5
-  - - -4.3
-    - 6.0
-  - - -4.0
-    - 4.0
-  - - -3.5
-    - 2.5
-  - - -3.0
-    - 2.0
-  - - -2.5
-    - 3.0
-  - - -2.0
-    - 5.0
-  - - -1.5
-    - 9.0
-  - - -1.0
-    - 11.0
-  - - -0.7
-    - 14.0
-  - - -0.4
-    - 10.0
-  - - -0.2
-    - 7.5
-  - - -0.05
-    - 6.81
+  x_min: -5.11
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.06, 10.00]   # 2021-08-31
+  - [-4.98, 8.88]   # 2021-09-30
+  - [-4.73, 6.04]   # 2021-12-31
+  - [-4.48, 4.81]   # 2022-03-31
+  - [-4.23, 3.08]   # 2022-06-30
+  - [-3.98, 2.61]   # 2022-09-30
+  - [-3.73, 1.87]   # 2022-12-30
+  - [-3.48, 2.86]   # 2023-03-31
+  - [-3.23, 4.12]   # 2023-06-30
+  - [-2.98, 5.06]   # 2023-09-29
+  - [-2.73, 6.14]   # 2023-12-29
+  - [-2.49, 4.62]   # 2024-03-28
+  - [-2.23, 3.52]   # 2024-06-28
+  - [-1.98, 3.03]   # 2024-09-30
+  - [-1.72, 9.75]   # 2024-12-31
+  - [-1.48, 7.11]   # 2025-03-31
+  - [-1.23, 10.85]   # 2025-06-30
+  - [-0.98, 9.58]   # 2025-09-30
+  - [-0.73, 7.52]   # 2025-12-31
+  - [-0.48, 5.17]   # 2026-03-31
+  - [-0.23, 4.73]   # 2026-06-30
+  - [-0.15, 4.64]   # 2026-07-31
+  - [-0.06, 5.78]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 12%
   body: TC fails (Lilium-style); cash burns; near-total loss.
@@ -973,8 +970,7 @@ pocd:
       after the other co-founder left in 2022.
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +17.7% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

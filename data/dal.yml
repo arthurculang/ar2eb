@@ -456,28 +456,34 @@ scenarios:
       - 18.0
 historical_prices:
   ipo_marker: NYSE since '07
-  x_min: -5.5
-  points:
-  - - -5.5
-    - 30
-  - - -5.0
-    - 40
-  - - -4.2
-    - 45
-  - - -3.3
-    - 28
-  - - -2.5
-    - 40
-  - - -1.5
-    - 50
-  - - -0.8
-    - 68
-  - - -0.3
-    - 60
-  - - -0.1
-    - 83
-  - - -0.05
-    - 83.06
+  x_min: -5.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.81, 40.25]   # 2020-11-30
+  - [-5.72, 40.21]   # 2020-12-31
+  - [-5.48, 48.28]   # 2021-03-31
+  - [-5.23, 43.26]   # 2021-06-30
+  - [-4.98, 42.61]   # 2021-09-30
+  - [-4.73, 39.08]   # 2021-12-31
+  - [-4.48, 39.57]   # 2022-03-31
+  - [-4.23, 28.97]   # 2022-06-30
+  - [-3.98, 28.06]   # 2022-09-30
+  - [-3.73, 32.86]   # 2022-12-30
+  - [-3.48, 34.92]   # 2023-03-31
+  - [-3.23, 47.54]   # 2023-06-30
+  - [-2.98, 37.00]   # 2023-09-29
+  - [-2.73, 40.23]   # 2023-12-29
+  - [-2.49, 47.87]   # 2024-03-28
+  - [-2.23, 47.44]   # 2024-06-28
+  - [-1.98, 50.79]   # 2024-09-30
+  - [-1.72, 60.50]   # 2024-12-31
+  - [-1.48, 43.60]   # 2025-03-31
+  - [-1.23, 49.18]   # 2025-06-30
+  - [-0.98, 56.75]   # 2025-09-30
+  - [-0.73, 69.40]   # 2025-12-31
+  - [-0.48, 66.48]   # 2026-03-31
+  - [-0.23, 93.66]   # 2026-06-30
+  - [-0.15, 87.44]   # 2026-07-31
+  - [-0.06, 78.00]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 16%
   body: Recession air-pocket; cyclical reversion + debt drag; ~$14 (-83%).
@@ -643,8 +649,7 @@ pocd:
       The watch-items are financial (airline debt, cyclicality), not governance.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -8.1% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

@@ -801,34 +801,20 @@ scenarios:
       tam_competitor_share: 70.0
 historical_prices:
   ipo_marker: SPAC May '24
-  x_min: -2.2
-  points:
-  - - -2.05
-    - 10.0
-  - - -1.9
-    - 9.0
-  - - -1.7
-    - 8.0
-  - - -1.5
-    - 11.0
-  - - -1.25
-    - 18.0
-  - - -1.0
-    - 26.0
-  - - -0.8
-    - 45.0
-  - - -0.6
-    - 90.0
-  - - -0.45
-    - 150.0
-  - - -0.33
-    - 190.0
-  - - -0.22
-    - 120.0
-  - - -0.12
-    - 85.0
-  - - -0.05
-    - 67.0
+  x_min: -2.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-2.49, 11.42]   # 2024-03-28
+  - [-2.23, 8.47]   # 2024-06-28
+  - [-1.98, 8.09]   # 2024-09-30
+  - [-1.72, 21.23]   # 2024-12-31
+  - [-1.48, 21.63]   # 2025-03-31
+  - [-1.23, 55.99]   # 2025-06-30
+  - [-0.98, 111.63]   # 2025-09-30
+  - [-0.73, 71.76]   # 2025-12-31
+  - [-0.48, 49.59]   # 2026-03-31
+  - [-0.23, 52.33]   # 2026-06-30
+  - [-0.15, 38.83]   # 2026-07-31
+  - [-0.06, 40.57]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 8%
   body: Aurora fails / NRC re-denial; cash shell.
@@ -1002,8 +988,7 @@ pocd:
       board exit removed a high-profile but conflicted chair.
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -34.0% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
   footer_version: "006"
   footer_timestamp: "2026-09-22_13-16"

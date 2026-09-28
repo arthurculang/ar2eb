@@ -460,24 +460,32 @@ scenarios:
       - 25.0
 historical_prices:
   ipo_marker: IPO Jan '99
-  x_min: -5.2
-  points:
-  - - -5.0
-    - 13
-  - - -4.3
-    - 33
-  - - -3.5
-    - 15
-  - - -2.5
-    - 50
-  - - -1.5
-    - 135
-  - - -0.8
-    - 140
-  - - -0.1
-    - 235
-  - - -0.02
-    - 205.19
+  x_min: -5.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.48, 13.35]   # 2021-03-31
+  - [-5.23, 20.00]   # 2021-06-30
+  - [-4.98, 20.72]   # 2021-09-30
+  - [-4.73, 29.41]   # 2021-12-31
+  - [-4.48, 27.29]   # 2022-03-31
+  - [-4.23, 15.16]   # 2022-06-30
+  - [-3.98, 12.14]   # 2022-09-30
+  - [-3.73, 14.61]   # 2022-12-30
+  - [-3.48, 27.78]   # 2023-03-31
+  - [-3.23, 42.30]   # 2023-06-30
+  - [-2.98, 43.50]   # 2023-09-29
+  - [-2.73, 49.52]   # 2023-12-29
+  - [-2.49, 90.36]   # 2024-03-28
+  - [-2.23, 123.54]   # 2024-06-28
+  - [-1.98, 121.44]   # 2024-09-30
+  - [-1.72, 134.29]   # 2024-12-31
+  - [-1.48, 108.38]   # 2025-03-31
+  - [-1.23, 157.99]   # 2025-06-30
+  - [-0.98, 186.58]   # 2025-09-30
+  - [-0.73, 186.50]   # 2025-12-31
+  - [-0.48, 174.40]   # 2026-03-31
+  - [-0.23, 200.09]   # 2026-06-30
+  - [-0.15, 200.75]   # 2026-07-31
+  - [-0.06, 220.78]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Capex air-pocket; revenue contracts; ~$40 (-80%).
@@ -637,7 +645,7 @@ pocd:
       face of strategy, so key-person concentration is high.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -25.2% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
   footer_version: "005"
   footer_timestamp: "2026-09-22_13-16"

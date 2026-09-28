@@ -442,8 +442,8 @@ scenarios:
 historical_prices:
   ipo_marker: IPO Oct '18
   x_min: -8.0
-  points:   # Yahoo chart API: quarter-end closes + recent daily anchors; x = years before the 2026-09-22 as-of
-  - [-7.91, 18.00]   # IPO price, Oct 25 2018
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-7.89, 15.93]   # 2018-10-31
   - [-7.73, 14.84]   # 2018-12-31
   - [-7.49, 30.25]   # 2019-03-29
   - [-7.24, 28.95]   # 2019-06-28
@@ -455,7 +455,6 @@ historical_prices:
   - [-5.72, 68.47]   # 2020-12-31
   - [-5.48, 72.21]   # 2021-03-31
   - [-5.23, 91.82]   # 2021-06-30
-  - [-5.06, 99.34]   # 2021-08-31 (monthly-close peak)
   - [-4.98, 85.69]   # 2021-09-30
   - [-4.73, 82.83]   # 2021-12-31
   - [-4.48, 59.98]   # 2022-03-31
@@ -475,14 +474,9 @@ historical_prices:
   - [-0.98, 33.18]   # 2025-09-30
   - [-0.73, 44.17]   # 2025-12-31
   - [-0.48, 36.59]   # 2026-03-31
-  - [-0.31, 47.38]   # 2026-06-01
   - [-0.23, 49.56]   # 2026-06-30
   - [-0.15, 48.94]   # 2026-07-31
-  - [-0.12, 52.68]   # 2026-08-10 (52-wk closing high)
-  - [-0.112, 50.84]   # 2026-08-12 (pre-Q2 print)
-  - [-0.110, 45.47]   # 2026-08-13 (Q2 print)
   - [-0.06, 41.05]   # 2026-08-31
-  - [-0.02, 39.39]   # 2026-09-15 (Sep low)
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Fad fades; dupes win; ~$22 (-49%).
@@ -634,7 +628,7 @@ pocd:
       it now stacks on a classified board; the deep brand expertise still sits with the now-absent founders.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the ~+13% finding; the modal base ~18% above spot, 45% of the probability below it), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
   footer_version: "006"
   footer_timestamp: "2026-09-26_04-14"
