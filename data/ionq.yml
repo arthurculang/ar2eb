@@ -19,11 +19,11 @@ taxonomy:
   - quantum-computing
   primary_theme: quantum-computing
 central_question: 'Can IonQ capture meaningful share of a $50B global quantum TAM by 2036 with its
-  trapped-ion stack — or is a $13B market cap pricing certainty Quantinuum, Google, and
+  trapped-ion stack — or is a $15B market cap pricing certainty Quantinuum, Google, and
   neutral-atom don''t support?
 
   '
-thesis: 'IonQ trades at ~$13B against a $260-270M FY26 guide — P/S ~50× after July''s sector
+thesis: 'IonQ trades at ~$15B against a $260-270M FY26 guide — P/S ~57× after July''s sector
   de-rating halved the quantum complex (no adverse IonQ filing). $2.39B cash + $470M RPO + the
   $1.8B SkyWater chip-fab deal (FTC review pending) is the optionality. Trapped-ion gives
   ~99.9%+ 2Q fidelity; AQ#64 hit three months early. But the competitive set is brutal:
@@ -83,7 +83,7 @@ scenarios:
     - 'Revenue ramps to ~$1.4B FY36 — strong absolute growth but tiny vs bull-deck $5B+. Without the fab, IonQ rents
       external foundry capacity and the margin ceiling drops. Operating margin matures around 8% — better
       than legacy services but well below cloud-software economics the current multiple implies. Cash burn averages $300-400M
-      through FY29; two raises ($400M + $1.0B) at $30-20 prices — cash-feasible from a $35 stock — add ~58M shares. Final
+      through FY29; two raises ($400M + $1.0B) at $30-20 prices — cash-feasible from a $41 stock — add ~58M shares. Final
       ~432M. With 18% within-scenario p_fail, DCF/share ~$0.93; expected ~$0.85.
 
       '
@@ -243,9 +243,9 @@ scenarios:
     - 'By FY36 IonQ does ~$3.8B revenue (~7.6% of $50B TAM) at 17% mature operating margin — better than legacy hardware but
       below cloud-SaaS. SkyWater fab supplies internal demand plus third-party defense- electronics revenue. RPO converts
       steadily; multi-product customer share rises 35% → 60%+. Cash burn troughs at ~$350M in FY28; a $2.5B raise programme
-      across years 1-7 at $35-65 — starting at spot, recovering as milestones land — keeps cash≥0. SkyWater stock-portion
+      across years 1-7 at $35-65 — starting below spot, recovering as milestones land — keeps cash≥0. SkyWater stock-portion
       dilution (~25M) folded in. Final shares ~451M. DCF/share
-      ~$2.55; with 12% within-scenario p_fail, expected ~$2.42 — well below today''s ~$35 spot.
+      ~$2.55; with 12% within-scenario p_fail, expected ~$2.42 — well below today''s ~$41.
 
       '
     probability_rationale: 'Highest single bucket because the base requires no breakthrough — sequential execution on plans
@@ -866,44 +866,30 @@ scenarios:
       tam_competitor_share: 40.0
 historical_prices:
   ipo_marker: IPO Oct '21
-  x_min: -4.7
-  points:
-  - - -4.58
-    - 10.5
-  - - -4.33
-    - 22.0
-  - - -4.0
-    - 14.0
-  - - -3.67
-    - 8.0
-  - - -3.33
-    - 5.0
-  - - -3.0
-    - 3.5
-  - - -2.67
-    - 4.5
-  - - -2.33
-    - 9.0
-  - - -2.0
-    - 14.0
-  - - -1.67
-    - 13.0
-  - - -1.33
-    - 7.5
-  - - -1.0
-    - 9.0
-  - - -0.67
-    - 18.0
-  - - -0.5
-    - 35.0
-  - - -0.33
-    - 50.0
-  - - -0.17
-    - 82.09
-  - - -0.08
-    - 60.0
-  - - -0.04
-    - 65.0
+  x_min: -5.02
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-4.98, 10.40]   # 2021-09-30
+  - [-4.73, 16.70]   # 2021-12-31
+  - [-4.48, 12.76]   # 2022-03-31
+  - [-4.23, 4.38]   # 2022-06-30
+  - [-3.98, 5.07]   # 2022-09-30
+  - [-3.73, 3.45]   # 2022-12-30
+  - [-3.48, 6.15]   # 2023-03-31
+  - [-3.23, 13.53]   # 2023-06-30
+  - [-2.98, 14.88]   # 2023-09-29
+  - [-2.73, 12.39]   # 2023-12-29
+  - [-2.49, 9.99]   # 2024-03-28
+  - [-2.23, 7.03]   # 2024-06-28
+  - [-1.98, 8.74]   # 2024-09-30
+  - [-1.72, 41.77]   # 2024-12-31
+  - [-1.48, 22.07]   # 2025-03-31
+  - [-1.23, 42.97]   # 2025-06-30
+  - [-0.98, 61.50]   # 2025-09-30
+  - [-0.73, 44.87]   # 2025-12-31
+  - [-0.48, 28.83]   # 2026-03-31
+  - [-0.23, 53.26]   # 2026-06-30
+  - [-0.15, 36.44]   # 2026-07-31
+  - [-0.06, 39.31]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 10%
   body: Trapped-ion scaling wall + Quantinuum dominance + commercial quantum advantage delayed past 2030; equity wipes via
@@ -957,8 +943,7 @@ glossary:
   definition: Quantum solving a problem faster/cheaper than classical. Google's Willow demonstrated verifiable advantage on
     chemistry Oct 2025; no commercial advantage verified yet.
 - term: Quantinuum
-  definition: Honeywell-backed full-stack trapped-ion competitor. IPO'd Jun 2026 at $60 above range (>$14B; trades as QNT,
-    below issue); better logical-qubit performance (48 logical at 99.92%).
+  definition: Honeywell-backed full-stack trapped-ion competitor. IPO'd Jun 2026 at $60 above range (>$14B; trades as QNT); better logical-qubit performance (48 logical at 99.92%).
 - term: SkyWater
   definition: US semiconductor foundry IonQ agreed to acquire (~$1.8B; FTC 2nd Request Apr 2026, unclosed as of Jul 2026).
     Domestic chip fab — the base/bull 200K-qubit-chip path rests on it.
@@ -1002,17 +987,20 @@ pocd:
       that is the bigger flag.'
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -74.4% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "008"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "009"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "008"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "009"
+  pdf_timestamp: "2026-09-28_18-52"
 
 
   prior_versions:
+  - version: "008"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 40.51
   - version: "007"
     timestamp: "2026-07-24_09-15"
     asOfDate: "2026-07-22"

@@ -48,13 +48,13 @@ market:
 
 central_question: >
   Intuitive's soft-tissue near-monopoly — 11,710 da Vinci systems, ~78%
-  recurring revenue — now trades at ~38× forward P/FCF after the market
+  recurring revenue — now trades at ~45× forward P/FCF after the market
   priced in part of the bear's compression. Does that multiple
   over-discount erosion (Hugo, Ottava, GLP-1s) that Q2 actuals don't yet
   show, or is the compression only beginning?
 
 thesis: >
-  Intuitive trades at $345.74 ($122.7B cap) — down ~21% since May, including
+  Intuitive trades at $401.65 ($142.5B cap) — down ~29% YTD, including
   −14.1% on Jul 17: Q2 beat every line (revenue +19%, non-GAAP EPS +28%,
   procedures +16%, margin guide raised) yet guidance was steered to the
   midpoint, implying H2 deceleration. Still: ~78% recurring revenue, 11,710
@@ -124,7 +124,7 @@ scenarios:
         Operating margin compresses from 29% to 22% on defensive spend.
         The multiple resets toward 28× FCF as the "monopoly
         compounder" narrative breaks. Exit-multiple SOTP: $42B op EV +
-        $8.63B cash = $51B equity ÷ 358M shares = ~$142/share — a -59% tail.
+        $8.63B cash = $51B equity ÷ 358M shares = ~$142/share — a -65% tail.
     probability_rationale: >
       Joint conjunction of four largely independent risks: (a) GLP-1
       bariatric drag at the high end — this scenario needs ~30-40% volume
@@ -199,7 +199,7 @@ scenarios:
         Exit-multiple SOTP: $88B op EV + $8.63B cash = $96B equity ÷ 350M
         shares = ~$275/share on the model. Bear isn't existential — it's the
         "growth-software-loses-its-premium" trajectory. ISRG remains a great
-        business at $275 (still ~27× FCF) — from $346 a real but bounded −21%.
+        business at $275 (still ~27× FCF) — from $402 a real but bounded −32%.
     probability_rationale: >
       The competitive landscape genuinely shifted: Hugo's Dec-2025 urology
       clearance was followed six months later by GS + GYN 510(k) filings
@@ -274,8 +274,8 @@ scenarios:
         from 29% to 32% on Norcross + Mexicali manufacturing scale. FCF: $2.5B
         → ~$4.9B. The multiple compresses modestly toward ~45× FCF as
         growth decelerates. Exit-multiple SOTP: $165B op EV + $8.63B cash =
-        $173B equity ÷ 352M shares = ~$492/share — +42% from spot; the −21%
-        derating moved the modal case from roughly-priced to well above the
+        $173B equity ÷ 352M shares = ~$492/share — +23% from spot; the −29% YTD
+        derating moved the modal case from roughly-priced to above the
         price.
     probability_rationale: >
       Modal outcome. Q2 2026 beat every line — revenue $2.89B +19%, non-GAAP
@@ -344,7 +344,7 @@ scenarios:
         reaches ~$6.9B by FY30. The market doesn't compress the multiple
         because growth re-accelerates — ~52× FCF sustains. Exit-multiple
         SOTP: $269B op EV + $8.63B cash = $278B equity ÷ 348M shares =
-        ~$798/share. +131% from spot.
+        ~$798/share. +99% from spot.
       - >
         The bull doesn't require Hugo to fail — it requires da Vinci 5 to be
         meaningfully better than Hugo at general surgery, which is what
@@ -420,7 +420,7 @@ scenarios:
         margin reaches 36-37% as 90%+-gross-margin software/AI blends in.
         FCF: $2.5B → ~$9B. The market re-rates to growth-software multiples:
         ~62× FCF on a $9B base. Exit-multiple SOTP: $425B op EV + $8.63B
-        cash = $434B equity ÷ 345M shares = ~$1,257/share. +264% from spot.
+        cash = $434B equity ÷ 345M shares = ~$1,257/share. +213% from spot.
         This is the scenario where ISRG stops being "great mature medtech"
         and becomes "the SaaS-like platform for procedures."
     probability_rationale: >
@@ -471,21 +471,32 @@ scenarios:
 # point. x = years offset from today (negative = past).
 historical_prices:
   ipo_marker: "IPO Jun '00"
-  x_min: -5.0
-  points:
-    - [-4.92, 280]
-    - [-4.42, 310]
-    - [-3.92, 280]
-    - [-3.42, 220]
-    - [-2.92, 195]
-    - [-2.42, 245]
-    - [-1.92, 270]
-    - [-1.42, 340]
-    - [-1.08, 380]
-    - [-0.83, 425]
-    - [-0.58, 555]
-    - [-0.42, 510]
-    - [-0.17, 450]
+  x_min: -5.32
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.32, 280.73]   # 2021-05-28
+  - [-5.23, 306.55]   # 2021-06-30
+  - [-4.98, 331.38]   # 2021-09-30
+  - [-4.73, 359.30]   # 2021-12-31
+  - [-4.48, 301.68]   # 2022-03-31
+  - [-4.23, 200.71]   # 2022-06-30
+  - [-3.98, 187.44]   # 2022-09-30
+  - [-3.73, 265.35]   # 2022-12-30
+  - [-3.48, 255.47]   # 2023-03-31
+  - [-3.23, 341.94]   # 2023-06-30
+  - [-2.98, 292.29]   # 2023-09-29
+  - [-2.73, 337.36]   # 2023-12-29
+  - [-2.49, 399.09]   # 2024-03-28
+  - [-2.23, 444.85]   # 2024-06-28
+  - [-1.98, 491.27]   # 2024-09-30
+  - [-1.72, 521.96]   # 2024-12-31
+  - [-1.48, 495.27]   # 2025-03-31
+  - [-1.23, 543.41]   # 2025-06-30
+  - [-0.98, 447.23]   # 2025-09-30
+  - [-0.73, 566.36]   # 2025-12-31
+  - [-0.48, 460.99]   # 2026-03-31
+  - [-0.23, 397.68]   # 2026-06-30
+  - [-0.15, 353.33]   # 2026-07-31
+  - [-0.06, 376.86]   # 2026-08-31
 
 # ── Page 1 weighting rationale (one line per scenario) ──────────────────────
 weighting_rationale:
@@ -539,13 +550,17 @@ taxonomy:
   primary_theme: medical-devices
 
 stamp:
-  footer_version: "009"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "010"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "009"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "010"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "009"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 401.65
   - version: "008"
     timestamp: "2026-07-24_09-15"
     asOfDate: "2026-07-22"
@@ -626,6 +641,6 @@ pocd:
       say-on-pay, performance-weighted equity, net-cash discipline, and an orderly internal CEO handoff (Rosa)
       — institutionalized, not person-dependent. Mild demerits: low insider skin-in-the-game and a now
       non-independent (Executive) chair.'
-  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (ISRG 13.8 — orange after the derating, no longer deep-red)'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (ISRG 16.2 — red again, though no longer deep-red)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +46% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.

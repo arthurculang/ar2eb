@@ -11,7 +11,7 @@ market:
   net_debt_billion: 0.0
   extras:
   - $377M revenue FY25 (+20%, GM 50.7%); FY26 guide $442-447M; adj-EBITDA breakeven guided Q4 FY26
-  - Rallied ~+150% over 52wk to ~14x sales while still adj-EBITDA-negative; SBC-heavy (owner-FCF below the headline)
+  - Rallied ~+490% over 52wk to ~27x sales while still adj-EBITDA-negative; SBC-heavy (owner-FCF below the headline)
   - ~$172M net cash; Atlas (DNA data storage) spun out May'25 -> external call option
 taxonomy:
   watchlist: asymmetrical-moonshots
@@ -19,14 +19,12 @@ taxonomy:
   themes:
   - omics-life-science-infrastructure
   primary_theme: omics-life-science-infrastructure
-central_question: Twist tripled over 52 weeks to ~14x sales while still adj-EBITDA-negative — does the platform grow into
+central_question: Twist rose ~6x in 52 weeks to ~27x sales while still adj-EBITDA-negative — does the platform grow into
   the price, or has the multiple run past the fundamentals?
 thesis: Twist Bioscience runs a silicon-based DNA-synthesis platform — miniaturized, high-throughput DNA writing — selling
   into SynBio and NGS. FY2025 revenue was $377M (+20%), gross margin 50.7%, adj-EBITDA -$46.9M and improving; management guides
-  adj-EBITDA breakeven for Q4 FY2026 as the new Wilsonville factory ramps margins. At ~$87.5 (~$5.4B cap, net cash) the stock
-  has run ~150% over a year to ~14x sales while still losing money, and SBC keeps owner-FCF below the adj-EBITDA headline.
-  The DCF asks whether 16-24% growth and the margin ramp grow into that price. Weighted fair value $43.95, ~50% below spot
-  — only the bull and ultra-bull clear the quote.
+  adj-EBITDA breakeven for Q4 FY2026 as the new Wilsonville factory ramps margins. At ~$166 (~$10.3B cap, net cash) the stock has run ~490% over a year to ~27x sales while still losing money, and SBC keeps owner-FCF below the adj-EBITDA headline.
+  The DCF asks whether 16-24% growth and the margin ramp grow into that price. Weighted fair value $43.95, ~74% below spot — even the ultra-bull falls short of the quote.
 chart_reference:
   history_years:
   - 2023
@@ -74,7 +72,7 @@ scenarios:
       and biotech-funding softness slows orders. The factory's margin ramp arrives but is competed away, so owner-FCF starts
       negative and barely crosses into positive late in the window.
     - Owner-FCF margin grinds from about -8% to 8% — real but thin. At a ~7.6% grower that never builds durable platform economics,
-      the DCF supports $7.50, roughly 91% below spot. The 14x-sales multiple was pricing an outcome the business does not
+      the DCF supports $7.50, roughly 95% below spot. The 27x-sales multiple was pricing an outcome the business does not
       reach.
     probability_rationale: 13% — assumes commoditization plus a funding winter that stalls the synthesis franchise. Possible
       given well-capitalized rivals, but cuts against 13 straight sequential-growth quarters.
@@ -147,10 +145,9 @@ scenarios:
     headline: Decelerates; multiple ran ahead
     narrative:
     - Growth slows to ~12.2% as the easy share gains mature and competitive pricing pressures the ramp. The Wilsonville factory
-      still drives real gross-margin gains and the company reaches breakeven, but the second-derivative disappoints relative
-      to what ~14x sales embedded.
+      still drives real gross-margin gains and the company reaches breakeven, but the second-derivative disappoints relative to what ~27x sales embedded.
     - Owner-FCF margin climbs from about -3% to 15%, generating genuine cash flow over time. But a low-teens grower at that
-      terminal margin is worth $19.55 on the DCF, roughly 78% below spot — the business executes, the entry multiple does
+      terminal margin is worth $19.55 on the DCF, roughly 88% below spot — the business executes, the entry multiple does
       not survive contact with decelerating growth.
     probability_rationale: 27% — the natural deceleration path as a 20% grower matures into a low-teens grower against capable
       competition. The single most defensible outcome alongside the base.
@@ -226,7 +223,7 @@ scenarios:
       across SynBio and NGS and the Factory of the Future delivers its designed margin step. Adj-EBITDA breakeven in Q4 FY2026
       converts into sustained, growing operating leverage.
     - Owner-FCF margin ramps from roughly 0% to 21%, so the platform finally throws off real cash. Yet the modal value is
-      $37.12, about 58% below spot. This is the crux — even the company executing its plan well leaves a wide gap, because
+      $37.12, about 78% below spot. This is the crux — even the company executing its plan well leaves a wide gap, because
       the price already capitalized the success and then some.
     probability_rationale: '33% — the modal path: 13 sequential growth quarters, the guided breakeven, and a factory built
       to lift margins. Carries the most weight precisely because it is the management plan working.'
@@ -302,10 +299,9 @@ scenarios:
       of higher-cost methods. NGS Applications scales and Protein Solutions adds a higher-value mix, pulling gross margin
       and operating leverage up together past breakeven into clear profitability.
     - Owner-FCF margin reaches about 29% as fixed factory costs lever across a much larger revenue base. A durable 20% grower
-      with platform margins supports $73.69, still ~16% below spot — the bull case nearly justifies the quote but does not
-      fully clear it.
+      with platform margins supports $73.69, still ~56% below spot — even the bull case falls far short of the quote.
     probability_rationale: 18% — requires growth to hold at 20%+ AND the factory to convert into 29% owner-FCF margins. A
-      demanding but coherent cost-leader outcome; the steelman the price needs.
+      demanding but coherent cost-leader outcome, yet still short of the price.
     dcf_metrics:
       cagr_5y: 20.1
       wacc: 0.09
@@ -377,8 +373,7 @@ scenarios:
     - Twist becomes the default DNA-synthesis utility — the silicon platform's cost and throughput advantage compounds into
       share dominance across research and applied markets, with platform-grade margins. Growth compounds ~24.1% and the Atlas
       Data Storage equity stake, spun out in May 2025, commercializes into a real call-option windfall.
-    - Owner-FCF margin reaches ~35% as a dominant utility with pricing power. This combination supports $135.31, about 55%
-      above spot — the only scenario that materially beats the price, and it requires both the utility outcome and the data-storage
+    - Owner-FCF margin reaches ~35% as a dominant utility with pricing power. This combination supports $135.31, still ~18% below spot — no scenario reaches the price, even with both the utility outcome and the data-storage
       option paying off.
     probability_rationale: 9% — stacks utility-grade dominance, 24% growth, and an Atlas commercialization that is currently
       an external option Twist only holds equity in. Low-probability by construction; the right tail, not the expectation.
@@ -445,37 +440,53 @@ scenarios:
       - 11.0
 historical_prices:
   ipo_marker: IPO Oct '18
-  x_min: -7.7
-  points:
-  - - -7.5
-    - 14.0
-  - - -5.5
-    - 50.0
-  - - -4.6
-    - 180.0
-  - - -3.5
-    - 60.0
-  - - -2.5
-    - 35.0
-  - - -1.5
-    - 25.0
-  - - -1.0
-    - 35.0
-  - - -0.5
-    - 68.0
-  - - -0.05
-    - 87.5
+  x_min: -8.01
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-7.89, 14.00]   # 2018-10-31
+  - [-7.73, 23.09]   # 2018-12-31
+  - [-7.49, 23.18]   # 2019-03-29
+  - [-7.24, 29.01]   # 2019-06-28
+  - [-6.98, 23.88]   # 2019-09-30
+  - [-6.73, 21.00]   # 2019-12-31
+  - [-6.48, 30.58]   # 2020-03-31
+  - [-6.23, 45.30]   # 2020-06-30
+  - [-5.98, 75.97]   # 2020-09-30
+  - [-5.72, 141.29]   # 2020-12-31
+  - [-5.48, 123.86]   # 2021-03-31
+  - [-5.23, 133.25]   # 2021-06-30
+  - [-4.98, 106.97]   # 2021-09-30
+  - [-4.73, 77.39]   # 2021-12-31
+  - [-4.48, 49.38]   # 2022-03-31
+  - [-4.23, 34.96]   # 2022-06-30
+  - [-3.98, 35.24]   # 2022-09-30
+  - [-3.73, 23.81]   # 2022-12-30
+  - [-3.48, 15.08]   # 2023-03-31
+  - [-3.23, 20.46]   # 2023-06-30
+  - [-2.98, 20.26]   # 2023-09-29
+  - [-2.73, 36.86]   # 2023-12-29
+  - [-2.49, 34.31]   # 2024-03-28
+  - [-2.23, 49.28]   # 2024-06-28
+  - [-1.98, 45.18]   # 2024-09-30
+  - [-1.72, 46.47]   # 2024-12-31
+  - [-1.48, 39.26]   # 2025-03-31
+  - [-1.23, 36.79]   # 2025-06-30
+  - [-0.98, 28.14]   # 2025-09-30
+  - [-0.73, 31.72]   # 2025-12-31
+  - [-0.48, 47.52]   # 2026-03-31
+  - [-0.23, 102.88]   # 2026-06-30
+  - [-0.15, 91.55]   # 2026-07-31
+  - [-0.06, 139.00]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
   body: Stall at ~7.6% growth; never durably profitable.
 - label: Bear 27%
   body: Decelerate to ~12%; margins up but multiple ran ahead.
 - label: Base 33%
-  body: ~16% growth + factory margin ramp; modal, ~58% below spot.
+  body: ~16% growth + factory margin ramp; modal, ~78% below spot.
 - label: Bull 18%
   body: Hold ~20% growth; cost-leader operating leverage.
 - label: Ultra Bull 9%
-  body: Dominant utility + Atlas; the only case above spot.
+  body: Dominant utility + Atlas; still ~18% below spot.
 appendix:
   pushback:
   - label: Cost-leader picks-and-shovels
@@ -486,7 +497,7 @@ appendix:
   - label: Free Atlas optionality
     body: Data storage spun out as Atlas in May 2025; Twist holds equity, so any commercialization is upside the DCF ignores.
   - label: Multiple, not the business
-    body: The bear case is about price, not execution — at ~14x sales even a well-run 16% grower is worth far less than spot.
+    body: The bear case is about price, not execution — at ~27x sales even a well-run 16% grower is worth far less than spot.
   - label: SBC gap to owner-FCF
     body: 'Adj-EBITDA flatters: heavy stock comp keeps owner-FCF below the headline, so ''breakeven'' precedes positive owner
       cash flow.'
@@ -624,16 +635,19 @@ pocd:
       second co-founder still active, an institutionalized board, and a business past early stage (~$377M revenue).
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -49.8% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 165.83
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

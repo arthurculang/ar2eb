@@ -33,11 +33,11 @@ market:
 
 central_question: >
   Will Joby capture meaningful share of a $250B global UAM TAM by 2036 —
-  or is today's ~$7.5B market cap pricing certainty that competitive eVTOL
+  or is today's ~$6.3B market cap pricing certainty that competitive eVTOL
   economics don't support?
 
 thesis: >
-  Joby trades at ~$7.5B against $24M of Q1 2026 revenue and $700M
+  Joby trades at ~$6.3B against $24M of Q1 2026 revenue and $700M
   annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise)
   provides ~3 years of runway. FAA certification entered Stage 5 (TIA) in
   March 2026 with the type certificate guided late 2026, Dubai exclusive
@@ -67,7 +67,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 3
   valn_anchor_text: "Mature aerospace P/S ~2-4×"
-  valn_caption: "Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×)."
+  valn_caption: "Bear=very stretched (4.2×), base=full (0.9×), bull=cheap (0.3×)."
   tam_title: "$250B global UAM TAM (FY36) — Joby share"
   tam_legend: ["JOBY", "Competitors", "Other UAM (cargo, etc.)"]
 
@@ -428,27 +428,32 @@ scenarios:
 # x = years offset from today (negative = past).
 historical_prices:
   ipo_marker: "IPO Aug '21"
-  x_min: -5.0            # years of history to show in chart
-  points:
-    - [-4.67, 9.5]
-    - [-4.42, 8.0]
-    - [-4.17, 5.0]
-    - [-3.92, 3.5]
-    - [-3.67, 4.0]
-    - [-3.42, 3.0]
-    - [-3.17, 5.0]
-    - [-2.92, 9.0]
-    - [-2.67, 7.5]
-    - [-2.42, 6.0]
-    - [-2.17, 5.5]
-    - [-1.92, 5.5]
-    - [-1.67, 5.5]
-    - [-1.42, 9.0]
-    - [-1.17, 8.0]
-    - [-0.92, 7.0]
-    - [-0.67, 7.5]
-    - [-0.42, 9.5]
-    - [-0.17, 9.0]
+  x_min: -5.35            # years of history to show in chart
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.32, 9.95]   # 2021-05-28
+  - [-5.23, 9.98]   # 2021-06-30
+  - [-4.98, 10.06]   # 2021-09-30
+  - [-4.73, 7.30]   # 2021-12-31
+  - [-4.48, 6.62]   # 2022-03-31
+  - [-4.23, 4.91]   # 2022-06-30
+  - [-3.98, 4.33]   # 2022-09-30
+  - [-3.73, 3.35]   # 2022-12-30
+  - [-3.48, 4.34]   # 2023-03-31
+  - [-3.23, 10.26]   # 2023-06-30
+  - [-2.98, 6.45]   # 2023-09-29
+  - [-2.73, 6.65]   # 2023-12-29
+  - [-2.49, 5.36]   # 2024-03-28
+  - [-2.23, 5.10]   # 2024-06-28
+  - [-1.98, 5.03]   # 2024-09-30
+  - [-1.72, 8.13]   # 2024-12-31
+  - [-1.48, 6.02]   # 2025-03-31
+  - [-1.23, 10.55]   # 2025-06-30
+  - [-0.98, 16.14]   # 2025-09-30
+  - [-0.73, 13.20]   # 2025-12-31
+  - [-0.48, 8.26]   # 2026-03-31
+  - [-0.23, 8.92]   # 2026-06-30
+  - [-0.15, 7.15]   # 2026-07-31
+  - [-0.06, 6.84]   # 2026-08-31
 
 # ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
 weighting_rationale:
@@ -542,13 +547,17 @@ pocd:
   deal: 'Open-market common — entry price weighed against the probability-weighted fair value of the scenario set + position
     sizing.'
 stamp:
-  footer_version: "036"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "037"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "036"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "037"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "036"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 6.41
   - version: "035"
     timestamp: "2026-07-24_06-57"
     asOfDate: "2026-07-22"

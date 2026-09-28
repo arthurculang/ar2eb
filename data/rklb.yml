@@ -19,14 +19,14 @@ taxonomy:
   themes:
   - space-launch-infrastructure
   primary_theme: space-launch-infrastructure
-central_question: 'Does ~$41B (~45x FY26E revenue) — plus a pending ~$8B debt-and-stock purchase of Iridium''s constellation
+central_question: 'Does ~$40B (~44x FY26E revenue) — plus a pending ~$8B debt-and-stock purchase of Iridium''s constellation
   — price a realistic path to a space prime when the second act is bought, not originated?'
-thesis: 'Rocket Lab has halved to ~$41B at $71.55 — ~68x trailing sales, ~45x the ~$900M FY26 run-rate — while the business
+thesis: 'Rocket Lab has halved to ~$40B at $69.89 — ~66x trailing sales, ~44x the ~$900M FY26 run-rate — while the business
   accelerated (Q1''26 revenue +64%, backlog >$2.2B). And the second act changed form: rather than originate a constellation,
   RKLB agreed to buy one — the pending ~$8B Iridium acquisition (mid-2027 close; $871M revenue, ~$495M operational EBITDA,
   2.6M subscribers), funded by a $3.6B bridge plus up to ~44M collared shares. The DCF asks whether a halved price plus a
   leveraged, dilutive constellation purchase changes the answer. The finding: it narrows the gap, not the verdict — the weighted
-  sits ~38% below spot; the market still prices near-certain success.'
+  sits ~37% below spot; the market still prices near-certain success.'
 chart_reference:
   tam_billion: 120
   history_years:
@@ -49,7 +49,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 3
   valn_anchor_text: Mature aero/defense P/S ~2-4x
-  valn_caption: At ~68x trailing sales (~45x FY26E), every scenario implies massive multiple compression.
+  valn_caption: At ~66x trailing sales (~44x FY26E), every scenario implies massive multiple compression.
   tam_title: $120B FY35 launch + space-systems TAM — RKLB share
   tam_legend:
   - RKLB
@@ -191,7 +191,7 @@ scenarios:
       on top — ~$7.0B combined.'
     - At ~16x operational EBITDA funded with debt and depressed stock, the purchase is roughly value-neutral in this world
       — its cash stream about pays for its debt and dilution. DCF ~$12.30. Even this constructive base sits ~83% below today's
-      $71.55 — the market is paying for a far larger outcome than a successful-but-rational base delivers.
+      $69.89 — the market is paying for a far larger outcome than a successful-but-rational base delivers.
     probability_rationale: 'Requires the least faith: Neutron works (not dominates), Space Systems keeps compounding, margins
       reach an aerospace-prime ~18%, and a well-telegraphed merger closes. No SpaceX-toppling assumption. 5% failure probability
       given $1.48B cash, >$2.2B backlog, and revenue diversification. 35% weight as the central outcome.'
@@ -247,7 +247,7 @@ scenarios:
       and licensed L-band spectrum, modernized and expanded, make recurring service revenue real from the close. Revenue compounds
       toward ~$16.5B by FY35 at a ~32% blended margin.'
     - One conjunctive leg is bought rather than built, conditional only on the close; the offsets are ~$5B of deal debt and
-      ~33M collared shares. DCF ~$79 — barely above today's $71.55. Even the bull is roughly fully priced, which is the entry-price
+      ~33M collared shares. DCF ~$79 — barely above today's $69.89. Even the bull is roughly fully priced, which is the entry-price
       story in one line.
     probability_rationale: 'A chain: Neutron reusability works AND captures share AND Space Systems scales — with the constellation
       leg de-risked from ''build one'' to ''integrate the one just bought'' (conditional on close, not on invention). That
@@ -354,38 +354,29 @@ scenarios:
       tam_competitor_share: 66.0
 historical_prices:
   ipo_marker: SPAC Aug '21
-  x_min: -4.5
-  points:
-  - - -4.4
-    - 11.0
-  - - -4.0
-    - 9.0
-  - - -3.5
-    - 5.0
-  - - -3.0
-    - 4.0
-  - - -2.5
-    - 4.5
-  - - -2.0
-    - 6.0
-  - - -1.5
-    - 12.0
-  - - -1.0
-    - 24.0
-  - - -0.75
-    - 48.0
-  - - -0.5
-    - 70.0
-  - - -0.25
-    - 125.0
-  - - -0.14
-    - 142.0
-  - - -0.07
-    - 86.0
-  - - -0.06
-    - 100.0
-  - - -0.01
-    - 66.0
+  x_min: -4.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-4.73, 12.28]   # 2021-12-31
+  - [-4.48, 8.05]   # 2022-03-31
+  - [-4.23, 3.79]   # 2022-06-30
+  - [-3.98, 4.07]   # 2022-09-30
+  - [-3.73, 3.77]   # 2022-12-30
+  - [-3.48, 4.04]   # 2023-03-31
+  - [-3.23, 6.00]   # 2023-06-30
+  - [-2.98, 4.38]   # 2023-09-29
+  - [-2.73, 5.53]   # 2023-12-29
+  - [-2.49, 4.11]   # 2024-03-28
+  - [-2.23, 4.80]   # 2024-06-28
+  - [-1.98, 9.73]   # 2024-09-30
+  - [-1.72, 25.47]   # 2024-12-31
+  - [-1.48, 17.88]   # 2025-03-31
+  - [-1.23, 35.77]   # 2025-06-30
+  - [-0.98, 47.91]   # 2025-09-30
+  - [-0.73, 69.76]   # 2025-12-31
+  - [-0.48, 64.22]   # 2026-03-31
+  - [-0.23, 101.65]   # 2026-06-30
+  - [-0.15, 64.95]   # 2026-07-31
+  - [-0.06, 63.92]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 10%
   body: Neutron fails; Iridium deal breaks; defensive dilution.
@@ -543,15 +534,19 @@ pocd:
       right behind the Iridium announcement.'
   opportunity_ref: 'The scenario distribution · the business snapshot'
   context_ref: 'The 7 Powers analysis (Power Origination)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -38% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "008"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "008"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 69.89
   - version: "006"
     timestamp: "2026-07-24_06-57"
     asOfDate: "2026-07-22"

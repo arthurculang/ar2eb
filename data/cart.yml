@@ -10,9 +10,9 @@ market:
   cash_billion: 0.69
   net_debt_billion: 0.0
   extras:
-  - Net cash +$0.69B, no debt; ~241M shares held ~flat as a $3.5B buyback (~35% of the market cap) offsets SBC dilution
+  - Net cash +$0.69B, no debt; ~241M shares held ~flat as a $3.5B buyback (~32% of the market cap) offsets SBC dilution
   - Revenue $3.74B FY25 (+11%); GAAP op margin 13.3% (12.3->17.9% latest quarter); reported FCF ~$0.9B (heavy SBC add-back)
-  - Down ~5% YTD/TTM at ~$41 (52-wk $32.73-$53.50); screens ~11x reported FCF, ~2.7x EV/sales
+  - Up ~1% YTD, +24% TTM at ~$46; screens ~12x reported FCF, ~2.7x EV/sales
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: Med
@@ -21,11 +21,11 @@ taxonomy:
   primary_theme: platform-marketplace-tech
 central_question: Does Instacart's high-margin advertising flywheel keep compounding on a $10B+ GTV base, or does the delivery
   field and a low take rate cap the marketplace?
-thesis: 'Instacart trades at ~$9.9B (~$41.25, ~-5% YTD) — ~11x reported FCF and ~2.7x EV/sales on $3.74B revenue (+11%), net
+thesis: 'Instacart trades at ~$11B (~$45.56, ~+1% YTD) — ~12x reported FCF and ~2.7x EV/sales on $3.74B revenue (+11%), net
   cash, GAAP operating margin scaling 12.3->17.9%. The engine is ~80%-margin advertising compounding on a $10B+ GTV base,
-  with a $3.5B buyback (~35% of the cap) offsetting SBC dilution so shares stay flat. The DCF asks whether high-margin ad
+  with a $3.5B buyback (~32% of the cap) offsetting SBC dilution so shares stay flat. The DCF asks whether high-margin ad
   revenue keeps scaling against DoorDash/Uber/Amazon/Walmart and a ~7% take rate. The finding: even pricing the competitive
-  bear (-28%), the modal flywheel lands +57%, on reported FCF discounted to ~15-19% ex-SBC owner margin.'
+  bear (-35%), the modal flywheel lands +42%, on reported FCF discounted to ~15-19% ex-SBC owner margin.'
 chart_reference:
   history_years:
   - 2021
@@ -86,7 +86,7 @@ scenarios:
       advertising growth fades from its decelerating guide toward low-single-digit. Orders are already trailing GTV (+10%
       vs +13%), signalling a maturing, low-frequency marketplace; the ~80%-margin ad flywheel stops scaling and operating
       margin stalls in the low-teens.'
-    - A marketplace whose high-margin engine stops compounding earns a low terminal multiple -> DCF ~$29.71 (-28%). Net cash
+    - A marketplace whose high-margin engine stops compounding earns a low terminal multiple — DCF ~$29.71 (-35%). Net cash
       and the buyback set a floor but cannot offset a stalled flywheel.
     probability_rationale: 'The genuine bear: the FY ad guide of 11-14% is a sharp deceleration from the 27% (2023) / 34%
       (2022) era, the field is deep-pocketed, and orders trail GTV. 13% weight on the flywheel failing on a contested base.'
@@ -161,7 +161,7 @@ scenarios:
     - 'GTV keeps growing low-to-mid-single-digit but advertising decelerates as guided and the take rate stays structurally
       low, so the margin flywheel turns slowly: revenue compounds ~5% to ~$4.7B at a mid-teens ex-SBC FCF margin. The category
       lead holds, but the deep competitive set and a ~7% take rate cap the marketplace economics.'
-    - DCF ~$42.64 (+3%) - roughly fair. A leader whose high-margin engine grinds rather than compounds is worth about today's
+    - DCF ~$42.64 (-6%) - roughly fair. A leader whose high-margin engine grinds rather than compounds is worth about today's
       price; the cheap multiple is warranted if advertising only decelerates.
     probability_rationale: Share holds but the guided ad deceleration plus take-rate pressure cap the re-rate. 27% as the
       plausible 'leads but doesn't compound' path, given the 11-14% ad guide and orders trailing GTV.
@@ -237,8 +237,8 @@ scenarios:
       guide as enterprise (Carrot, Caper smart carts) and retail-media density build, and the ~80%-margin ad mix lifts operating
       margin from ~13% toward the mid-20s. Ex-SBC owner FCF margin grinds from ~15% toward ~19% while the $3.5B buyback offsets
       SBC dilution and shares stay flat. Revenue compounds ~10% to ~$5.7B.'
-    - DCF ~$64.58 (+57%) - the high-margin advertising engine compounding on a durable GTV base re-rates the franchise off
-      ~11x reported FCF; the core of the thesis. The cash bridge adds net cash and the modal terminal multiple does the rest.
+    - DCF ~$64.58 (+42%) - the high-margin advertising engine compounding on a durable GTV base re-rates the franchise off
+      ~12x reported FCF; the core of the thesis. The cash bridge adds net cash and the modal terminal multiple does the rest.
     probability_rationale: Requires advertising to keep scaling (and modestly re-accelerate) on a growing GTV base while operating
       leverage continues - consistent with Q1's +16% ad growth and the 12.3->17.9% margin move, but ahead of the 11-14% guide.
       34% as the central outcome.
@@ -313,7 +313,7 @@ scenarios:
     - 'Advertising re-accelerates decisively: Instacart becomes a retail-media platform where ~80%-margin ad dollars compound
       faster than GTV, enterprise tech (Carrot, Caper, ALDI-type partnerships) widens the moat, and operating margin inflects
       toward ~28% with ex-SBC FCF margin toward ~22%. Revenue compounds ~13% to ~$6.6B.'
-    - DCF ~$97.69 (+137%) - if the flywheel converts the GTV base into a durable high-margin ad annuity, the de-rated entry
+    - DCF ~$97.69 (+114%) - if the flywheel converts the GTV base into a durable high-margin ad annuity, the de-rated entry
       re-rates with the fundamentals; this is the core of the bull.
     probability_rationale: The purchase-data ad engine plus enterprise integrations make a genuine advertising re-acceleration
       credible. ~18% weight on the retail-media inflection landing.
@@ -388,7 +388,7 @@ scenarios:
     - 'The full second act: advertising scales into a dominant retail-media network, enterprise/Carrot tech becomes a category
       standard, and the ~80%-margin ad annuity compounds GTV into a true FCF machine at a ~24% ex-SBC margin and ~31% operating
       margin. The buyback keeps shrinking the float against flat SBC. Revenue compounds ~15% to ~$7.5B.'
-    - DCF ~$126.65 (+207%) - the franchise reclaims a platform compounder multiple; ~8% probability, the asymmetric upside
+    - DCF ~$126.65 (+178%) - the franchise reclaims a platform compounder multiple; ~8% probability, the asymmetric upside
       the depressed entry is buying.
     probability_rationale: Everything works - GTV AND ad re-acceleration AND enterprise AND a multiple re-rate, the retail-media-platform
       outcome. ~8%, the long-duration tail.
@@ -455,46 +455,44 @@ scenarios:
       - 20.0
 historical_prices:
   ipo_marker: IPO Sep '23
-  x_min: -2.7
-  points:
-  - - -2.7
-    - 30
-  - - -2.3
-    - 24
-  - - -1.8
-    - 35
-  - - -1.2
-    - 48
-  - - -0.8
-    - 53
-  - - -0.4
-    - 40
-  - - -0.1
-    - 33
-  - - -0.05
-    - 41.25
+  x_min: -3.01
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-2.98, 29.69]   # 2023-09-29
+  - [-2.73, 23.47]   # 2023-12-29
+  - [-2.49, 37.29]   # 2024-03-28
+  - [-2.23, 32.14]   # 2024-06-28
+  - [-1.98, 40.74]   # 2024-09-30
+  - [-1.72, 41.42]   # 2024-12-31
+  - [-1.48, 39.89]   # 2025-03-31
+  - [-1.23, 45.24]   # 2025-06-30
+  - [-0.98, 36.76]   # 2025-09-30
+  - [-0.73, 44.98]   # 2025-12-31
+  - [-0.48, 37.46]   # 2026-03-31
+  - [-0.23, 47.35]   # 2026-06-30
+  - [-0.15, 44.60]   # 2026-07-31
+  - [-0.06, 50.52]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
-  body: Ad growth stalls; delivery field wins; ~$29.71 (-28%).
+  body: Ad growth stalls; delivery field wins; ~$29.71 (-35%).
 - label: Bear 27%
-  body: GTV grows but take-rate caps upside; ~$42.64 (+3%).
+  body: GTV grows but take-rate caps upside; ~$42.64 (-6%).
 - label: Base 34%
-  body: Ad flywheel scales; FCF margin to ~19%; ~$64.58 (+57%).
+  body: Ad flywheel scales; FCF margin to ~19%; ~$64.58 (+42%).
 - label: Bull 18%
-  body: Retail-media platform; margin inflects; ~$97.69 (+137%).
+  body: Retail-media platform; margin inflects; ~$97.69 (+114%).
 - label: Ultra Bull 8%
-  body: Ad annuity compounds; FCF machine; ~$126.65 (+207%).
+  body: Ad annuity compounds; FCF machine; ~$126.65 (+178%).
 appendix:
   pushback:
-  - label: ~11x FCF for an 80%-margin ad engine on a $10B+ GTV base.
+  - label: ~12x FCF for an 80%-margin ad engine on a $10B+ GTV base.
     body: Net-cash, op margin scaling 12.3->17.9%, advertising +16% - priced like a delivery app, not a retail-media platform;
-      the modal DCF is +57%.
-  - label: The buyback is worth ~35% of the market cap.
+      the modal DCF is +42%.
+  - label: The buyback is worth ~32% of the market cap.
     body: $3.5B authorized, $349M repurchased in Q1; it offsets SBC dilution so shares stay flat and ex-SBC owner FCF accrues
       per-share.
   - label: Reported FCF flatters the picture.
     body: ~$0.9B reported FCF includes a heavy SBC add-back (~$93M/qtr); the base models ex-SBC owner FCF at ~15-19%, not the
-      headline ~11x.
+      headline ~12x.
   - label: Advertising is the whole thesis - and it is decelerating.
     body: ~80%-margin ad revenue grew +16% in Q1 but is guided to 11-14%; whether it re-accelerates on the GTV base is the bull/bear
       fork.
@@ -606,9 +604,9 @@ competitive:
     retailer/shopper marketplace that feeds a nascent cornered resource (first-party purchase data -> an ~80%-margin ad engine)
     and is stickied by enterprise integrations (Carrot, Caper). But the field is the deepest-pocketed in retail - DoorDash,
     Uber, Amazon, Walmart - and the ~7% take rate plus a guided ad deceleration (11-14% vs the 27%/34% era) are the live threats.
-    The Audit: network_economies is durable but contestable (medium), the ad-data cornered resource is the real prize if it
+    The Audit: network economies is durable but contestable (medium), the ad-data cornered resource is the real prize if it
     compounds, and the swing factor is whether high-margin advertising keeps scaling on the GTV base. The DCF tests exactly
-    that - and even the competitive ultra-bear is -28% while the modal flywheel lands +57%, with reported FCF honestly discounted
+    that - and even the competitive ultra-bear is -35% while the modal flywheel lands +42%, with reported FCF honestly discounted
     to ~15-19% ex-SBC owner margin and the $3.5B buyback offsetting dilution.'
 pocd:
   people:
@@ -636,15 +634,19 @@ pocd:
       board influence; founder Mehta is fully gone (~8.8%, passive).'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +57.7% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 45.56
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

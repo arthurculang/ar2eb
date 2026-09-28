@@ -427,8 +427,11 @@ function NotFoundPage() {
 //                        where the Indicator is undefined (pre-revenue names).
 //
 // Then: hurdle gate, raw = score/Σscore, iterative cap with proportional
-// redistribution, residual = cash. Mirrors portfolio/build_weights.py (the
-// tracked book); the cap/hurdle sliders make this the interactive explorer.
+// redistribution, residual = cash. Each name's cap is the SMALLER of the
+// slider's position limit and HALF-KELLY for its own scenario distribution
+// (kellyFraction below) — binds only on tail-concentrated names. Mirrors
+// portfolio/build_weights.py (the tracked book); the cap/hurdle sliders make
+// this the interactive explorer.
 // ────────────────────────────────────────────────────────────────────
 const CONVICTION_MULT = { 'High': 2.0, 'Med-High': 1.5, 'Med': 1.0, 'Med-Low': 0.6, 'Low': 0.35 };
 const AI_ZONE_MULT = { green: 1.25, yellow: 1.10, orange: 0.90, red: 0.70 };
@@ -441,6 +444,26 @@ const CATEGORY_MULT = { 'fun-speculative': 0.5, 'competitors': 0.3, 'crypto': 0.
 function allocColor(i, n) {
   const f = n <= 1 ? 0 : i / (n - 1);
   return `hsl(234, ${(50 - f * 16).toFixed(1)}%, ${(48 + f * 37).toFixed(1)}%)`;
+}
+
+// Full-Kelly fraction for a long position, from the memo's own scenario
+// distribution: maximize E[log(1 + f·(X − 1))] over f in [0, 0.999], with
+// X = scenario expected value / spot. Golden-section search — mirrors
+// kelly_fraction() in portfolio/build_weights.py exactly (same bounds, same
+// 200 iterations). Null when a row has no scenario distribution (crypto).
+function kellyFraction(m) {
+  const spot = m.spot && m.spot.price;
+  const scn = m.print && m.print.scenarios;
+  if (!spot || !scn) return null;
+  const X = Object.values(scn).map(s => [s.probability, s.expectedPerShare / spot]);
+  if (X.reduce((a, [p, x]) => a + p * x, 0) <= 1) return 0;   // no edge, no bet
+  const g = f => X.reduce((a, [p, x]) => a + p * Math.log(Math.max(1e-12, 1 + f * (x - 1))), 0);
+  let lo = 0, hi = 0.999;
+  for (let i = 0; i < 200; i++) {
+    const a = lo + (hi - lo) * 0.382, b = lo + (hi - lo) * 0.618;
+    if (g(a) < g(b)) lo = a; else hi = b;
+  }
+  return (lo + hi) / 2;
 }
 
 function computePortfolio(memos, opts = {}) {
@@ -458,9 +481,13 @@ function computePortfolio(memos, opts = {}) {
     const ai = m.ai || null;                                   // {value, zone} | null
     const aiMult = ai ? (AI_ZONE_MULT[ai.zone] != null ? AI_ZONE_MULT[ai.zone] : 1.0) : 1.0;
     const score = (passesHurdle && upsidePct > 0) ? upsidePct * convMult * aiMult * catMult : 0;
+    const k = kellyFraction(m);
+    const halfKelly = k == null ? null : k / 2;
+    const cap = halfKelly == null ? maxPosition : Math.min(maxPosition, halfKelly);
     return {
       ticker: m.ticker, slug: m.slug, company: m.company, crypto: !!m.crypto,
       spot, expected, upsidePct, tier, convMult, wl, catMult, ai, aiMult, score,
+      halfKelly, cap, kellyBinds: halfKelly != null && halfKelly < maxPosition,
       passesHurdle, rawWeight: 0, weight: 0,
     };
   });
@@ -474,12 +501,12 @@ function computePortfolio(memos, opts = {}) {
   // Iterative cap with proportional redistribution.
   let weights = rows.map(r => r.rawWeight);
   const capped = rows.map(() => false);
-  for (let iter = 0; iter < 20; iter++) {
+  for (let iter = 0; iter < 100; iter++) {   // same bound as build_weights.water_fill
     let excess = 0;
     weights.forEach((w, i) => {
-      if (!capped[i] && w > maxPosition) {
-        excess += w - maxPosition;
-        weights[i] = maxPosition;
+      if (!capped[i] && w > rows[i].cap) {
+        excess += w - rows[i].cap;
+        weights[i] = rows[i].cap;
         capped[i] = true;
       }
     });
@@ -737,8 +764,11 @@ function PortfolioPage() {
           <p className="lead">
             One portfolio. Each position sized by four transparent factors —
             the memo's quantitative upside, the operator's conviction, the
-            Arthur Indicator, and a category tilt — with a hurdle and per-name
-            cap. The full calculation is shown in the table below.
+            Arthur Indicator, and a category tilt — with a hurdle and a per-name
+            cap: the smaller of the position limit and half the Kelly bet, the
+            size that maximizes long-run growth for that name's range of
+            outcomes, halved because the odds of rare outcomes are the least
+            reliable inputs. The full calculation is shown in the table below.
           </p>
         </div>
       </section>
@@ -886,6 +916,7 @@ function PortfolioPage() {
                 <th className="col-tertiary">Indicator <span className="muted">(quant)</span></th>
                 <th className="col-secondary">Category</th>
                 <th className="num col-secondary">Raw</th>
+                <th className="num col-secondary">Cap</th>
                 <th className="num">Weight</th>
               </tr>
             </thead>
@@ -906,13 +937,16 @@ function PortfolioPage() {
                   <td className="mono col-tertiary">{r.ai ? `${r.ai.zone} ${r.ai.value.toFixed(1)}` : 'n/a'} <span className="muted">×{r.aiMult.toFixed(2)}</span></td>
                   <td className="mono col-secondary">{(r.wl && WL_SHORT[r.wl]) || r.wl || '—'} <span className="muted">×{r.catMult.toFixed(2)}</span></td>
                   <td className="num mono col-secondary">{r.score > 0 ? (r.rawWeight * 100).toFixed(1) + '%' : '—'}</td>
+                  <td className="num mono col-secondary">{r.score > 0
+                    ? <>{(r.cap * 100).toFixed(1)}%{r.kellyBinds && <span className="muted"> ½-Kelly</span>}</>
+                    : '—'}</td>
                   <td className="num mono"><b>{r.weight > 0 ? (r.weight * 100).toFixed(1) + '%' : '—'}</b></td>
                 </tr>
               ))}
               {portfolio.cashWeight > 0.001 && (
                 <tr className="row-cash">
                   <td>Cash</td>
-                  <td colSpan="6" className="num">unallocated (hurdle fail / cap residual)</td>
+                  <td colSpan="8" className="num">unallocated (hurdle fail / cap residual)</td>
                   <td className="num mono"><b>{(portfolio.cashWeight * 100).toFixed(1)}%</b></td>
                 </tr>
               )}

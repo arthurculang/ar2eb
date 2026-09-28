@@ -12,7 +12,7 @@ market:
   extras:
   - $2.60B cash vs $2.50B debt — roughly net-cash-neutral (~$0.1B net cash); ~211M shares; ~$448M buyback in Q1 FY27
   - Revenue $7.21B FY26 (+18% as-reported); GAAP op margin ~21.9%, non-GAAP ~39%; FCF $2.4B; ~98% subscription/recurring
-  - Down ~31% YTD to ~$198, near the 52-week low (~$205-$329 range); Starboard (~$500M, proxy fight) pushing margins
+  - Down ~26% YTD to ~$219; Starboard (~$500M, proxy fight) pushing margins
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: Low
@@ -21,11 +21,11 @@ taxonomy:
   primary_theme: creator-design-software
 central_question: Does mission-critical CAD lock-in plus a Starboard-forced margin expansion to ~45% offset a maturing top
   line — or has growth matured into the price?
-thesis: 'Autodesk trades at ~$41.9B (~$198, down ~31% YTD near the 52-week low) — ~17x FCF on $7.21B revenue, a ~98%-recurring
+thesis: 'Autodesk trades at ~$46.2B (~$219, down ~26% YTD) — ~19x FCF on $7.21B revenue, a ~98%-recurring
   CAD/design franchise, roughly net-cash-neutral. The +18% as-reported growth is flattered by an agency->direct billing change;
   underlying (cc-adjusted) growth is nearer ~8-12%. The bull is durable switching-cost lock-in plus a Starboard-forced lift
-  toward ~45% operating margin by FY28; the bear is maturing growth and activist/execution noise. The finding is +53.6%: even
-  the bear is +9% and the modal case +53% on the lower underlying growth.'
+  toward ~45% operating margin by FY28; the bear is maturing growth and activist/execution noise. The finding is +39.3%:
+  the bear is ~flat (-1%) and the modal case +39% on the lower underlying growth.'
 chart_reference:
   history_years:
   - 2022
@@ -85,7 +85,7 @@ scenarios:
     - 'Underlying growth keeps fading toward ~4% as construction/manufacturing softens and the model-transition tailwind rolls
       off, while the Starboard campaign stalls: margins inch up but never approach the ~45% target. The franchise holds but
       compounds slowly off a flat top line.'
-    - A slow-growth, ~mid-20s% FCF-margin software franchise de-rates to a ~15x terminal FCF multiple -> DCF ~$149 (-25%).
+    - A slow-growth, ~mid-20s% FCF-margin software franchise de-rates to a ~15x terminal FCF multiple — DCF ~$149 (-32%).
       The recurring base and near-net-cash balance sheet set the floor, but a stalled catalyst caps the value below today's
       price.
     probability_rationale: 'The genuine bear: growth is already maturing (decelerating mid-teens before the billing flatter),
@@ -162,7 +162,7 @@ scenarios:
     - Underlying growth settles around ~6% as AEC and cloud (Forma/Fusion) only partly offset a maturing core, and Starboard
       wins a partial cost program — operating margin grinds from low-20s toward ~27%, well short of ~45%. FCF margin firms
       toward ~30% but the re-rate is muted.
-    - DCF ~$216 (+9%) — even a 'matures but defends, margins only partly improve' path clears today's price modestly. The
+    - DCF ~$216 (-1%) — a 'matures but defends, margins only partly improve' path lands roughly at today's price. The
       switching-cost lock-in keeps the multiple from collapsing; the upside is capped without the full margin program.
     probability_rationale: Lock-in holds and Starboard extracts some efficiency, but growth deceleration and execution noise
       keep the lift partial. 26% as the plausible 'defends but under-delivers the activist plan' path.
@@ -237,7 +237,7 @@ scenarios:
     - 'The modal path: underlying (cc, model-adjusted) growth holds ~8-12% as AEC/construction and cloud/AI (Fusion, Forma,
       agentic AI) compound on a mission-critical, ~98%-recurring base, while Starboard-driven cost discipline lifts operating
       margin from ~22% toward the mid-30s en route to the ~45% goal. FCF margin expands toward ~34%.'
-    - DCF ~$304 (+53%) — durable lock-in plus a credible margin program at ~21x terminal FCF re-rates the de-rated entry.
+    - DCF ~$304 (+39%) — durable lock-in plus a credible margin program at ~21x terminal FCF re-rates the de-rated entry.
       On the lower underlying growth (not the +18% headline) the modal case still recovers well above spot; this is the core
       of the finding.
     probability_rationale: Requires lock-in to hold ~8-12% underlying growth AND Starboard to push margins materially higher
@@ -314,7 +314,7 @@ scenarios:
     - 'Starboard''s program lands close to plan: operating margin marches toward ~38% by FY30 (the ~45% adjusted target on
       a non-GAAP basis) on sales-optimization, headcount, and capital return, while AEC/construction + cloud/AI keep underlying
       growth low-teens. FCF margin inflects toward ~37%.'
-    - DCF ~$437 (+120%) - if the under-earned margin gap closes against a still-growing, locked-in franchise, the entry re-rates
+    - DCF ~$437 (+100%) - if the under-earned margin gap closes against a still-growing, locked-in franchise, the entry re-rates
       to a high-quality compounder multiple. This is the activist-success core of the bull.
     probability_rationale: Starboard's record plus a genuinely under-earned margin structure make a large lift credible; lock-in
       protects growth while costs are cut. ~19% weight on the activist plan substantially landing.
@@ -389,7 +389,7 @@ scenarios:
     - 'The full second act: Starboard''s ~45% operating margin is reached, AI/cloud (Fusion, Forma, agentic design) re-accelerate
       underlying growth into the low-to-mid-teens, and Autodesk compounds as both a margin and a platform story. FCF margin
       reaches ~40%.'
-    - DCF ~$537 (+171%) - the franchise re-rates to a premium design-platform multiple as growth AND margins both inflect;
+    - DCF ~$537 (+146%) - the franchise re-rates to a premium design-platform multiple as growth AND margins both inflect;
       ~8% probability, the long-duration tail the depressed entry is buying.
     probability_rationale: Everything works - the full activist margin target AND an AI/cloud growth re-acceleration AND a
       multiple re-rate. ~8%, the asymmetric upside.
@@ -456,44 +456,50 @@ scenarios:
       - 27.0
 historical_prices:
   ipo_marker: IPO '85
-  x_min: -5.5
-  points:
-  - - -5.5
-    - 280
-  - - -5.0
-    - 300
-  - - -4.2
-    - 200
-  - - -3.3
-    - 180
-  - - -2.5
-    - 200
-  - - -1.5
-    - 250
-  - - -0.8
-    - 290
-  - - -0.3
-    - 329
-  - - -0.1
-    - 205
-  - - -0.05
-    - 198.43
+  x_min: -5.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.81, 280.23]   # 2020-11-30
+  - [-5.72, 305.34]   # 2020-12-31
+  - [-5.48, 277.15]   # 2021-03-31
+  - [-5.23, 291.90]   # 2021-06-30
+  - [-4.98, 285.17]   # 2021-09-30
+  - [-4.73, 281.19]   # 2021-12-31
+  - [-4.48, 214.35]   # 2022-03-31
+  - [-4.23, 171.96]   # 2022-06-30
+  - [-3.98, 186.80]   # 2022-09-30
+  - [-3.73, 186.87]   # 2022-12-30
+  - [-3.48, 208.16]   # 2023-03-31
+  - [-3.23, 204.61]   # 2023-06-30
+  - [-2.98, 206.91]   # 2023-09-29
+  - [-2.73, 243.48]   # 2023-12-29
+  - [-2.49, 260.42]   # 2024-03-28
+  - [-2.23, 247.45]   # 2024-06-28
+  - [-1.98, 275.48]   # 2024-09-30
+  - [-1.72, 295.57]   # 2024-12-31
+  - [-1.48, 261.80]   # 2025-03-31
+  - [-1.23, 309.57]   # 2025-06-30
+  - [-0.98, 317.67]   # 2025-09-30
+  - [-0.73, 296.01]   # 2025-12-31
+  - [-0.48, 239.40]   # 2026-03-31
+  - [-0.23, 194.42]   # 2026-06-30
+  - [-0.15, 234.20]   # 2026-07-31
+  - [-0.06, 258.53]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
-  body: Growth stalls; activist fizzles; ~$149 (-25%).
+  body: Growth stalls; activist fizzles; ~$149 (-32%).
 - label: Bear 26%
-  body: Underlying ~6%; partial margin lift; ~$216 (+9%).
+  body: Underlying ~6%; partial margin lift; ~$216 (-1%).
 - label: Base 34%
-  body: Underlying ~8-12%; margins to mid-30s; ~$304 (+53%).
+  body: Underlying ~8-12%; margins to mid-30s; ~$304 (+39%).
 - label: Bull 19%
-  body: Activist delivers; margins near 45%; ~$437 (+120%).
+  body: Activist delivers; margins near 45%; ~$437 (+100%).
 - label: Ultra Bull 8%
-  body: ~45% margin + AI/cloud re-accel; ~$537 (+171%).
+  body: ~45% margin + AI/cloud re-accel; ~$537 (+146%).
 appendix:
   pushback:
   - label: The +18% growth is a billing-model mirage.
     body: The agency->direct model inflates as-reported revenue/billings/FCF; the base uses the lower underlying ~8-12%, and
-      still lands +53%.
+      still lands +39%.
   - label: Switching costs are the real moat.
     body: CAD/file-format lock-in (.dwg/.rvt, trained workforces, BIM mandates) makes Autodesk mission-critical - the durability,
       not the growth rate.
@@ -501,9 +507,9 @@ appendix:
     body: A ~$500M stake + proxy fight pushing ~45% operating margin by FY28 against ~22% today is the explicit margin catalyst,
       not a growth bet.
   - label: Maturing growth is the live risk.
-    body: Decelerating mid-teens (before the billing flatter), cyclical end-markets, and execution/CEO noise keep the bear (+9%)
-      and ultra-bear (-25%) in play.
-  - label: Roughly net-cash-neutral, p_fail ~0.
+    body: Decelerating mid-teens (before the billing flatter), cyclical end-markets, and execution/CEO noise keep the bear (-1%)
+      and ultra-bear (-32%) in play.
+  - label: Roughly net-cash-neutral; no solvency risk.
     body: $2.60B cash vs $2.50B debt (~$0.1B net cash) on $2.4B FCF — no solvency risk; the downside is multiple/margin execution.
   triggers:
   - label: Bull validation
@@ -607,8 +613,8 @@ competitive:
     stack on top of it: a maturing top line (the +18% as-reported figure is flattered by the billing change; underlying is
     ~8-12%) and a Starboard-forced lift toward ~45% operating margin, a process-power catalyst that is unproven at target.
     The threats are a cloud-CAD/open-format challenge to lock-in, a construction/manufacturing cycle, and the activist program
-    stalling. The ~31% de-rate to ~17x FCF prices maturing growth heavily; the DCF tests lock-in plus the margin catalyst,
-    and even the bear is +9% with the modal case +53% on the lower underlying growth — cheap quality with a catalyst, with
+    stalling. The ~26% de-rate to ~19x FCF prices maturing growth heavily; the DCF tests lock-in plus the margin catalyst,
+    and the bear is ~flat (-1%), the modal case +39% on the lower underlying growth — cheap quality with a catalyst, with
     activist/execution noise the watch-out.'
 pocd:
   people:
@@ -629,15 +635,19 @@ pocd:
     takeaway: 'Structurally clean governance - single-class one-vote, an independent Chair split from a long-tenured professional CEO, a ~91%-independent declassified board, and buyback discipline that shrinks the share count. Held to a 3 by the FY2024 free-cash-flow / non-GAAP-margin reporting investigation (no restatement, but a real control-environment flag), the CFO turnover around it, and the Starboard campaign that had to force accountability.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +53.6% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 218.85
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

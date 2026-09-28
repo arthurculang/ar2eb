@@ -12,7 +12,7 @@ market:
   extras:
   - $123B cash vs ~$54B net cash after lease/debt; ~10.73B shares; no dividend, capital is plowed into capex not buyback
   - Revenue $716.9B FY25 (+12%); GAAP op margin 11.2% (record); FCF crushed to ~$7.7B (~1%) by the ~$200B AI capex surge
-  - ~$238.55, +14% TTM, down ~10% over 30 days on capex fears; 52-wk range $196-$279
+  - ~$258.45, +18% TTM, +12% YTD
 taxonomy:
   watchlist: fcf-megacap
   tier: High
@@ -22,10 +22,10 @@ taxonomy:
   primary_theme: platform-marketplace-tech
 central_question: Does Amazon's ~$200B/yr AI-infrastructure capex earn its cost of capital as AWS reaccelerates — or compress
   returns into an overbuild before FCF recovers off the FY25 trough?
-thesis: 'Amazon trades at ~$2.56T (~$238.55, +14% TTM, down ~10% in 30 days on capex fear) - but the FCF multiple is distorted:
+thesis: 'Amazon trades at ~$2.77T (~$258.45, +18% TTM) - but the FCF multiple is distorted:
   FY25 free cash flow was crushed to ~$7.7B (from ~$33B in FY24) by a ~$200B AI-data-center build. The DCF models FCF margin
-  recovering off that trough as AWS reaccelerates (+28%) and retail/ads margins expand. The finding is roughly fair (-6.9%):
-  the modal base ~-12% as depreciation lags monetization, a wide spread either way.'
+  recovering off that trough as AWS reaccelerates (+28%) and retail/ads margins expand. The finding is modestly rich (-14.1%):
+  the modal base ~-19% as depreciation lags monetization, a wide spread either way.'
 chart_reference:
   history_years:
   - 2021
@@ -86,7 +86,7 @@ scenarios:
       teens, depreciation outruns monetization, and an FTC/EU overhang drags. FCF margin barely lifts off the ~1% FY25 trough
       toward 5% as the build keeps absorbing cash. Revenue still compounds ~6% on retail/ads but operating margin stalls near
       10%.'
-    - An overbuilt hyperscaler whose capital doesn't convert earns a low-growth ~15x terminal FCF multiple -> DCF ~$59 (-75%).
+    - An overbuilt hyperscaler whose capital doesn't convert earns a low-growth ~15x terminal FCF multiple — DCF ~$59 (-77%).
       The net cash sets a floor, but a stranded-asset AI build cannot be discounted away.
     probability_rationale: 'The structural-overbuild case: capex jumped +77% YoY with a 6-24 month monetization lag, the FTC
       Buy-Box trial opens Oct 2026, and International OI is already declining. 12% weight on the build failing to earn its
@@ -162,7 +162,7 @@ scenarios:
     - AWS grows but decelerates off the +28% print, capex stays elevated for several years, and depreciation keeps a lid on
       margins, so FCF margin claws only partway back toward 8%. Retail and advertising keep expanding but can't fully offset
       the AI-infrastructure drag. Revenue compounds ~9% to ~$1.1T at a still-suppressed FCF margin.
-    - DCF ~$119 (-50%) - a hyperscaler whose free cash flow lags its revenue while it digests a multi-year build is worth
+    - DCF ~$119 (-54%) - a hyperscaler whose free cash flow lags its revenue while it digests a multi-year build is worth
       well below today's price; the market's capex worry is warranted if FCF recovers only slowly.
     probability_rationale: AWS keeps share but the capex digestion period drags FCF recovery, with the antitrust and International-margin
       overhangs intact. 26% as the plausible 'grows but cash conversion lags' path.
@@ -237,12 +237,12 @@ scenarios:
     - 'The modal path: AWS sustains high-20s% growth on AI demand, Trainium economics defend its ~38% margin, the capex wave
       peaks and FCF margin normalizes off the trough toward ~11% as the build monetizes, while retail margins (NA 9.0%) and
       ~$70B advertising scale. Revenue compounds ~11% to ~$1.2T.'
-    - DCF ~$209 (-12%) - roughly fair-to-slightly-rich. AWS reacceleration and a normalizing FCF margin are genuinely valuable,
-      but at the modal recovery and a ~21x terminal FCF multiple the model lands just below today's price; the capex still
+    - DCF ~$209 (-19%) - moderately rich. AWS reacceleration and a normalizing FCF margin are genuinely valuable,
+      but at the modal recovery and a ~21x terminal FCF multiple the model lands below today's price; the capex still
       has to earn its return for spot to be fair.
     probability_rationale: Requires AWS to hold high-20s% growth and FCF to normalize off the trough as the build monetizes
       - consistent with the +28% print, Trainium sold-out demand, and the capex peaking, but not a step-change. 34% as the
-      central, near-fair outcome.
+      central outcome.
     dcf_metrics:
       cagr_5y: 11.6
       wacc: 0.085
@@ -314,7 +314,7 @@ scenarios:
     - 'The AI capex earns a high return: AWS holds high-teens-to-20s% growth with triple-digit AI revenue, Trainium vertical
       integration lifts AWS margins above 38%, retail/ads operating leverage compounds, and FCF margin inflects toward ~14%
       as monetization catches the depreciation. Revenue compounds ~14% to ~$1.4T.'
-    - DCF ~$370 (+55%) - if the ~$200B build clearly earns its cost of capital, the FCF normalization plus an AI-platform
+    - DCF ~$370 (+43%) - if the ~$200B build clearly earns its cost of capital, the FCF normalization plus an AI-platform
       margin re-rate carry the stock well above spot; this is the core of the bull.
     probability_rationale: AWS AI demand sustains the growth, Trainium defends/expands margins, and the capex converts to
       high-ROIC capacity rather than overbuild - the demonstrated AWS franchise plus custom silicon make it credible. 20%
@@ -390,7 +390,7 @@ scenarios:
     - 'The full second act: AWS becomes the dominant AI-compute platform on Trainium economics, advertising scales into a
       third profit engine, retail margins keep climbing, and Amazon re-rates to a high-FCF-margin platform at ~16% margin.
       Revenue compounds ~16% to ~$1.5T.'
-    - DCF ~$487 (+104%) - the AI-infrastructure bet pays off in full and the FCF machine re-rates to a platform multiple;
+    - DCF ~$487 (+89%) - the AI-infrastructure bet pays off in full and the FCF machine re-rates to a platform multiple;
       ~8% probability, the asymmetric upside the trough FCF is masking.
     probability_rationale: Everything works - AWS AI platform leadership AND Trainium margin expansion AND advertising AND
       retail leverage AND a multiple re-rate, the AWS/Starlink-class compounding outcome. ~8%, the long-duration tail.
@@ -457,39 +457,47 @@ scenarios:
       - 27.0
 historical_prices:
   ipo_marker: IPO May '97
-  x_min: -6.2
-  points:
-  - - -6.0
-    - 95
-  - - -5.0
-    - 160
-  - - -4.0
-    - 170
-  - - -3.3
-    - 85
-  - - -2.5
-    - 130
-  - - -1.5
-    - 180
-  - - -0.8
-    - 230
-  - - -0.3
-    - 196
-  - - -0.1
-    - 278
-  - - -0.02
-    - 238.55
+  x_min: -6.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.48, 97.49]   # 2020-03-31
+  - [-6.23, 137.94]   # 2020-06-30
+  - [-5.98, 157.44]   # 2020-09-30
+  - [-5.72, 162.85]   # 2020-12-31
+  - [-5.48, 154.70]   # 2021-03-31
+  - [-5.23, 172.01]   # 2021-06-30
+  - [-4.98, 164.25]   # 2021-09-30
+  - [-4.73, 166.72]   # 2021-12-31
+  - [-4.48, 163.00]   # 2022-03-31
+  - [-4.23, 106.21]   # 2022-06-30
+  - [-3.98, 113.00]   # 2022-09-30
+  - [-3.73, 84.00]   # 2022-12-30
+  - [-3.48, 103.29]   # 2023-03-31
+  - [-3.23, 130.36]   # 2023-06-30
+  - [-2.98, 127.12]   # 2023-09-29
+  - [-2.73, 151.94]   # 2023-12-29
+  - [-2.49, 180.38]   # 2024-03-28
+  - [-2.23, 193.25]   # 2024-06-28
+  - [-1.98, 186.33]   # 2024-09-30
+  - [-1.72, 219.39]   # 2024-12-31
+  - [-1.48, 190.26]   # 2025-03-31
+  - [-1.23, 219.39]   # 2025-06-30
+  - [-0.98, 219.57]   # 2025-09-30
+  - [-0.73, 230.82]   # 2025-12-31
+  - [-0.48, 208.27]   # 2026-03-31
+  - [-0.23, 238.34]   # 2026-06-30
+  - [-0.15, 271.58]   # 2026-07-31
+  - [-0.06, 259.77]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 12%
-  body: AI overbuild; FCF stays trough-bound; ~$59 (-75%).
+  body: AI overbuild; FCF stays trough-bound; ~$59 (-77%).
 - label: Bear 26%
-  body: AWS holds but FCF recovers slowly; ~$119 (-50%).
+  body: AWS holds but FCF recovers slowly; ~$119 (-54%).
 - label: Base 34%
-  body: AWS reaccelerates; FCF normalizes to ~11%; ~$209 (-12%).
+  body: AWS reaccelerates; FCF normalizes to ~11%; ~$209 (-19%).
 - label: Bull 20%
-  body: AI ROIC compounds; margin re-rates; ~$370 (+55%).
+  body: AI ROIC compounds; margin re-rates; ~$370 (+43%).
 - label: Ultra Bull 8%
-  body: AWS AI platform; full re-rate; ~$487 (+104%).
+  body: AWS AI platform; full re-rate; ~$487 (+89%).
 appendix:
   pushback:
   - label: The FCF multiple is distorted by the capex trough.
@@ -606,11 +614,11 @@ competitive:
     falsifier: FCF fails to recover off the trough for 2+ years, or the Oct-2026 FTC Buy-Box trial forces structural marketplace
       changes that dent unit economics.
   takeaway: 'Amazon''s Powers are genuine and durable: AWS switching costs (data gravity, committed spend) are the stickiest,
-    layered on scale (AWS infrastructure + Trainium, fulfillment) and a self-reinforcing marketplace network. The Audit: switching_costs
+    layered on scale (AWS infrastructure + Trainium, fulfillment) and a self-reinforcing marketplace network. The Audit: switching costs
     is the dominant, high-durability Power - hard for Azure/GCP to dislodge - but the live threat is the ~$200B AI-capex bet
     and whether AWS AI demand earns its cost of capital before rivals erode growth. That squares with the DCF: the franchise
-    isn''t in question, the return on the build is, and the modal case lands ~-12% (roughly fair) because spot already assumes
-    the capex monetizes and FCF normalizes off the FY25 trough.'
+    isn''t in question, the return on the build is, and the modal case lands ~-19% (moderately rich) because spot already assumes
+    the capex monetizes and FCF normalizes off the trough.'
 pocd:
   people:
     ceo: 'Andy Jassy'
@@ -641,15 +649,19 @@ pocd:
       return — no dividend and a largely-unused buyback.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -6.9% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 258.45
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

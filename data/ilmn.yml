@@ -12,20 +12,20 @@ market:
   extras:
   - ~$0.83B net debt; ~151M shares; ~$700M/yr buyback (no dividend)
   - Revenue $4.34B FY25 (~flat 4yrs; Q1'26 +4.8% re-accel); ~23% non-GAAP op margin, ~70% gross, ~$0.9-1.0B FCF
-  - Rallied ~80% off lows on the clinical/NovaSeq-X turnaround; ~5x EV/sales, ~22x FCF
+  - Tripled off lows on the clinical/NovaSeq-X turnaround; ~8.5x EV/sales, ~36x FCF
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: High
   themes:
   - omics-life-science-infrastructure
   primary_theme: omics-life-science-infrastructure
-central_question: Is Illumina's ~80% rally + ~5x EV/sales pricing a durable clinical/NovaSeq-X re-acceleration — or is flat
+central_question: Is Illumina's tripling + ~8.5x EV/sales pricing a durable clinical/NovaSeq-X re-acceleration — or is flat
   revenue + low-cost-entrant (Ultima/Element) + Roche erosion the reality?
-thesis: 'Illumina trades at ~$22B (≈$145/sh, up ~80% off the lows) — ~5x EV/sales, ~22x FCF on $4.34B revenue (flat for four
+thesis: 'Illumina trades at ~$36B (≈$239/sh, up ~200% off the lows) — ~8.5x EV/sales, ~36x FCF on $4.34B revenue (flat for four
   years, Q1''26 +4.8%), ~70% gross margin, ~$1B FCF. The mature DCF asks whether the NovaSeq-X consumables pull-through +
   clinical mix (>65% of sequencing consumables, +20% ex-China) re-accelerate the franchise toward a ~26% margin, against low-cost
   entrants (Ultima/Element $100 genome), Roche''s 2026 SBX re-entry, China decline, and NIH cuts. The finding: the rally has
-  priced the re-acceleration — only the bull-or-better clears spot; the base (modest re-accel) sits ~27% below. The TXG mirror.'
+  priced past the re-acceleration — no scenario clears spot; the base (modest re-accel) sits ~55% below. The TXG mirror.'
 chart_reference:
   history_years:
   - 2021
@@ -84,7 +84,7 @@ scenarios:
     narrative:
     - Ultima/Element ($100 genome) compress consumables pricing/share, Roche's SBX re-entry bites, China keeps declining,
       and NIH cuts freeze research demand. Revenue declines and the consumables annuity erodes.
-    - DCF ~$40 (-73%) — a shrinking franchise losing its pricing Power earns a distressed multiple.
+    - DCF ~$40 (-83%) — a shrinking franchise losing its pricing Power earns a distressed multiple.
     probability_rationale: 'The bear: the SBS patent estate ages, low-cost entrants design around it, and the academic base
       shrinks. 12% weight on real erosion.'
     dcf_metrics:
@@ -157,7 +157,7 @@ scenarios:
     narrative:
     - Clinical growth roughly offsets China + entrant erosion, leaving revenue ~flat at a recovering margin; the franchise
       is dominant but ex-growth.
-    - DCF ~$92 (-37%) — well below the rallied price; flat revenue doesn't justify ~5x sales.
+    - DCF ~$63 (-74%) — well below the rallied price; flat revenue can't justify ~8.5x sales.
     probability_rationale: Flat revenue (the FY22-25 reality) with clinical offsetting erosion. 30% weight — the rally priced
       more than this.
     dcf_metrics:
@@ -230,7 +230,7 @@ scenarios:
     narrative:
     - 'The modal path: the NovaSeq-X installed base matures into a consumables acceleration, clinical compounds, and the margin
       marches to ~26% (management''s 2027 target). Revenue grows ~4-5%.'
-    - DCF ~$106 (-27%) — even a successful modest re-acceleration doesn't justify the ~80% rally; the entry has run ahead
+    - DCF ~$106 (-55%) — even a successful modest re-acceleration can't justify the ~200% rally; the entry has run ahead
       of the fundamentals.
     probability_rationale: NovaSeq-X pull-through + clinical + the ~26% margin target, consistent with Q1'26's +4.8% and raised
       guide. 35% as the central outcome — but priced in.
@@ -304,9 +304,9 @@ scenarios:
     narrative:
     - Clinical sequencing compounds high-single-digits, multiomics/proteomics (SomaLogic) cross-sells, and the margin pushes
       past 26% as NovaSeq-X pull-through accelerates in 2H'26+.
-    - DCF ~$162 (+12%) — the durable re-acceleration the rally is pricing actually materializes.
-    probability_rationale: The clinical-led re-acceleration is durable + multiomics adds growth. ~18%; the bull the rally
-      is discounting in.
+    - DCF ~$162 (-32%) — the durable re-acceleration materializes, yet still well below spot.
+    probability_rationale: The clinical-led re-acceleration is durable + multiomics adds growth. ~18%; the rally prices
+      even more than this.
     dcf_metrics:
       cagr_5y: 7.2
       wacc: 0.085
@@ -377,8 +377,8 @@ scenarios:
     narrative:
     - A genomics super-cycle (clinical at scale + multiomics) re-accelerates ILMN to low-double-digits at ~30% margins, defending
       its ~80% share against entrants.
-    - DCF ~$230 (+59%) — the dominant-platform-re-rates outcome; ~5% probability.
-    probability_rationale: Sequencing super-cycle + ILMN defends its Power. ~5%, the asymmetric upside.
+    - DCF ~$230 (-4%) — the dominant-platform-re-rates outcome; ~5% probability.
+    probability_rationale: Sequencing super-cycle + ILMN defends its Power. ~5%, and still below spot.
     dcf_metrics:
       cagr_5y: 10.0
       wacc: 0.08
@@ -442,39 +442,45 @@ scenarios:
       - 19.0
 historical_prices:
   ipo_marker: IPO Jul '00
-  x_min: -5.5
-  points:
-  - - -5.4
-    - 400.0
-  - - -5.0
-    - 500.0
-  - - -4.5
-    - 300.0
-  - - -4.0
-    - 200.0
-  - - -3.0
-    - 180.0
-  - - -2.0
-    - 130.0
-  - - -1.2
-    - 80.0
-  - - -0.7
-    - 110.0
-  - - -0.3
-    - 150.0
-  - - -0.05
-    - 144.83
+  x_min: -5.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.81, 313.32]   # 2020-11-30
+  - [-5.72, 359.92]   # 2020-12-31
+  - [-5.48, 373.60]   # 2021-03-31
+  - [-5.23, 460.32]   # 2021-06-30
+  - [-4.98, 394.56]   # 2021-09-30
+  - [-4.73, 370.08]   # 2021-12-31
+  - [-4.48, 339.88]   # 2022-03-31
+  - [-4.23, 179.34]   # 2022-06-30
+  - [-3.98, 185.59]   # 2022-09-30
+  - [-3.73, 196.69]   # 2022-12-30
+  - [-3.48, 226.22]   # 2023-03-31
+  - [-3.23, 182.38]   # 2023-06-30
+  - [-2.98, 133.54]   # 2023-09-29
+  - [-2.73, 135.45]   # 2023-12-29
+  - [-2.49, 133.58]   # 2024-03-28
+  - [-2.23, 104.38]   # 2024-06-28
+  - [-1.98, 130.41]   # 2024-09-30
+  - [-1.72, 133.63]   # 2024-12-31
+  - [-1.48, 79.34]   # 2025-03-31
+  - [-1.23, 95.41]   # 2025-06-30
+  - [-0.98, 94.97]   # 2025-09-30
+  - [-0.73, 131.16]   # 2025-12-31
+  - [-0.48, 123.26]   # 2026-03-31
+  - [-0.23, 175.83]   # 2026-06-30
+  - [-0.15, 205.10]   # 2026-07-31
+  - [-0.06, 213.63]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 12%
-  body: Entrants + China + NIH crush; ~$40 (-73%).
+  body: Entrants + China + NIH crush; ~$40 (-83%).
 - label: Bear 30%
-  body: Flat; clinical offsets; ~$92 (-37%).
+  body: Flat; clinical offsets; ~$63 (-74%).
 - label: Base 35%
-  body: Modest re-accel; ~26% margin; ~$106 (-27%).
+  body: Modest re-accel; ~26% margin; ~$106 (-55%).
 - label: Bull 18%
-  body: Clinical compounds; multiomics; ~$162 (+12%).
+  body: Clinical compounds; multiomics; ~$162 (-32%).
 - label: Ultra Bull 5%
-  body: Sequencing super-cycle; ~$230 (+59%).
+  body: Sequencing super-cycle; ~$230 (-4%).
 appendix:
   pushback:
   - label: ~80% share, >90% of clinical genomics.
@@ -580,17 +586,21 @@ competitive:
   takeaway: 'Illumina''s scale + switching-cost Power is genuine and durable — ~80% share, >90% of clinical genomics, a ~70%-margin
     consumables annuity, and clinical labs that won''t cheaply re-validate. But the Power is being audited: revenue was flat
     for four years, China collapsed, NIH froze research demand, low-cost entrants (Ultima/Element $100 genome) attack pricing,
-    and Roche''s SBX re-enters in 2026. The ~80% rally to ~5x EV/sales has priced the NovaSeq-X/clinical re-acceleration;
-    only the bull-or-better clears spot, and the modal base sits ~27% below — the entry, not the franchise, is the problem
+    and Roche''s SBX re-enters in 2026. The ~200% rally to ~8.5x EV/sales has priced past the NovaSeq-X/clinical re-acceleration;
+    no scenario clears spot, and the modal base sits ~55% below — the entry, not the franchise, is the problem
     (the TXG mirror).'
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 238.82
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"
@@ -622,6 +632,6 @@ pocd:
       $8B deal without clearance (forced unwind, ~$4B impairment, an EU fine), failed say-on-pay (2023), and
       lost a proxy seat to Icahn. Being repaired — new CEO, independent chair, redesigned TSR-linked pay,
       say-on-pay recovered, activist oversight — but the track record is the observable flag.'
-  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (ILMN 7.08)'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (ILMN 11.5)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the −30% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.

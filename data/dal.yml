@@ -13,7 +13,7 @@ market:
   - $4.31B cash vs $13.31B gross debt+leases -> ~$9.0B net debt (adjusted net debt below 2019, investment-grade at all 3 agencies);
     ~653M shares
   - Revenue $63.4B FY25 (GAAP, grossed up by third-party refinery sales); GAAP op margin ~9.2%; FCF ~$3.8B
-  - Down ~6% YTD, up ~79% TTM (52-wk $45.28-$83.83); FY26 guide EPS $6.50-7.50 (+20%), FCF $3-4B
+  - Up ~19% YTD, ~45% TTM; FY26 guide EPS $6.50-7.50 (+20%), FCF $3-4B
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: Med
@@ -22,10 +22,10 @@ taxonomy:
   primary_theme: travel-mobility-services
 central_question: Does the premium-cabin + Amex loyalty mix durably de-cyclicalize Delta toward a higher-margin consumer/payments
   business, or does it revert to fuel-and-cycle airline economics?
-thesis: Delta trades at ~$54.25B equity (~$83.06, ~+79% TTM) -> ~14x FCF on $63.4B GAAP revenue, ~9.2% operating margin, ~$3.8B
+thesis: Delta trades at ~$53.88B equity (~$82.50, ~+45% TTM) — ~14x FCF on $63.4B GAAP revenue, ~9.2% operating margin, ~$3.8B
   FCF, but ~$9B net debt drags the equity. The bull is the premium-cabin + SkyMiles-Amex loyalty annuity (premium revenue
   +14%, Amex remuneration >$2B toward $10B) re-rating earnings toward a lower-beta consumer/payments mix; the bear is reversion
-  to fuel-and-cycle economics with a K-shaped main cabin. The modal case lands ~fair (-3%) - cheap-on-FCF is offset by cyclicality
+  to fuel-and-cycle economics with a K-shaped main cabin. The modal case lands ~fair (-2%) - cheap-on-FCF is offset by cyclicality
   and the debt bridge.
 chart_reference:
   history_years:
@@ -162,7 +162,7 @@ scenarios:
     narrative:
     - 'No recession, but the main cabin stays soft (K-shaped demand) and the premium/loyalty re-rate stalls: revenue grows
       ~3% while fuel and labor hold operating margin near 7-8% - solidly airline, not consumer. FCF margin sits ~5%.'
-    - DCF ~$52 (-38%) - a cyclical carrier whose earnings haven't de-cyclicalized is worth meaningfully below today's price
+    - DCF ~$52 (-37%) - a cyclical carrier whose earnings haven't de-cyclicalized is worth meaningfully below today's price
       once ~$9B net debt is netted; the market's airline discount is warranted if the mix doesn't shift.
     probability_rationale: Capacity discipline holds the floor but the premium/Amex annuity doesn't durably lift the blended
       margin; soft main-cabin traffic + fuel keep it cyclical. 28% as the plausible 'stays an airline' path.
@@ -237,7 +237,7 @@ scenarios:
     - 'The modal path: premium revenue and Amex remuneration keep growing toward the $10B target, capacity stays disciplined,
       and the blended operating margin grinds from ~9% toward ~9.5% as the higher-margin mix partly offsets a flat main cabin.
       Revenue compounds ~4% to ~$77B at ~6% FCF margin.'
-    - DCF ~$80 (-3%) - roughly fair. The loyalty/premium annuity is genuinely valuable, but at a ~14x FCF multiple and with
+    - DCF ~$80 (-2%) - roughly fair. The loyalty/premium annuity is genuinely valuable, but at a ~14x FCF multiple and with
       ~$9B net debt the modal case only recovers to about today's price; cheap-on-FCF is offset by the cycle and the debt
       bridge.
     probability_rationale: Requires the premium/loyalty mix to hold and margins to grind up modestly without a recession -
@@ -313,7 +313,7 @@ scenarios:
     - 'The de-cyclicalization lands: premium + SkyMiles-Amex grow into a durable, higher-margin earnings core, falling rates
       cut interest expense on the deleveraging balance sheet, and operating margin steps up toward ~11% with FCF margin ~8%.
       The market starts valuing Delta partly as a consumer/payments annuity rather than a pure carrier, lifting the multiple.'
-    - DCF ~$128 (+54%) - if a real chunk of earnings re-rates toward a lower-beta loyalty/premium business, the airline discount
+    - DCF ~$128 (+55%) - if a real chunk of earnings re-rates toward a lower-beta loyalty/premium business, the airline discount
       narrows and the de-rated entry re-rates with the fundamentals; this is the core of the bull.
     probability_rationale: Premium revenue already ~ main cabin and Amex remuneration >$2B/+10% toward $10B; an investment-grade,
       deleveraging balance sheet supports the re-rate. ~15% weight on the loyalty/premium mix durably shifting the multiple.
@@ -389,7 +389,7 @@ scenarios:
       is a stable utility beneath it, operating margin reaches ~13% at ~10% FCF margin, and the balance sheet de-levers through
       the cycle. Delta re-rates toward a higher-margin consumer/payments multiple rather than a carrier multiple. Revenue
       compounds ~5% to ~$80B.'
-    - DCF ~$174 (+109%) - the structural re-rate from 'airline' to 'travel/payments annuity'; ~8% probability, the asymmetric
+    - DCF ~$174 (+110%) - the structural re-rate from 'airline' to 'travel/payments annuity'; ~8% probability, the asymmetric
       upside the de-cyclicalization thesis is buying.
     probability_rationale: Everything works - premium AND loyalty/Amex AND deleveraging AND a multiple shift toward consumer/payments,
       the durable lower-beta outcome. ~8%, the long-duration tail on the mix winning.
@@ -456,42 +456,48 @@ scenarios:
       - 18.0
 historical_prices:
   ipo_marker: NYSE since '07
-  x_min: -5.5
-  points:
-  - - -5.5
-    - 30
-  - - -5.0
-    - 40
-  - - -4.2
-    - 45
-  - - -3.3
-    - 28
-  - - -2.5
-    - 40
-  - - -1.5
-    - 50
-  - - -0.8
-    - 68
-  - - -0.3
-    - 60
-  - - -0.1
-    - 83
-  - - -0.05
-    - 83.06
+  x_min: -5.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.81, 40.25]   # 2020-11-30
+  - [-5.72, 40.21]   # 2020-12-31
+  - [-5.48, 48.28]   # 2021-03-31
+  - [-5.23, 43.26]   # 2021-06-30
+  - [-4.98, 42.61]   # 2021-09-30
+  - [-4.73, 39.08]   # 2021-12-31
+  - [-4.48, 39.57]   # 2022-03-31
+  - [-4.23, 28.97]   # 2022-06-30
+  - [-3.98, 28.06]   # 2022-09-30
+  - [-3.73, 32.86]   # 2022-12-30
+  - [-3.48, 34.92]   # 2023-03-31
+  - [-3.23, 47.54]   # 2023-06-30
+  - [-2.98, 37.00]   # 2023-09-29
+  - [-2.73, 40.23]   # 2023-12-29
+  - [-2.49, 47.87]   # 2024-03-28
+  - [-2.23, 47.44]   # 2024-06-28
+  - [-1.98, 50.79]   # 2024-09-30
+  - [-1.72, 60.50]   # 2024-12-31
+  - [-1.48, 43.60]   # 2025-03-31
+  - [-1.23, 49.18]   # 2025-06-30
+  - [-0.98, 56.75]   # 2025-09-30
+  - [-0.73, 69.40]   # 2025-12-31
+  - [-0.48, 66.48]   # 2026-03-31
+  - [-0.23, 93.66]   # 2026-06-30
+  - [-0.15, 87.44]   # 2026-07-31
+  - [-0.06, 78.00]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 16%
   body: Recession air-pocket; cyclical reversion + debt drag; ~$14 (-83%).
 - label: Bear 28%
-  body: K-shaped softness; stays airline-like; ~$52 (-38%).
+  body: K-shaped softness; stays airline-like; ~$52 (-37%).
 - label: Base 33%
-  body: Premium/loyalty hold; margins grind up; ~$80 (-3%).
+  body: Premium/loyalty hold; margins grind up; ~$80 (-2%).
 - label: Bull 15%
-  body: Loyalty annuity de-cyclicalizes earnings; ~$128 (+54%).
+  body: Loyalty annuity de-cyclicalizes earnings; ~$128 (+55%).
 - label: Ultra Bull 8%
-  body: Consumer/payments re-rate; ~$174 (+109%).
+  body: Consumer/payments re-rate; ~$174 (+110%).
 appendix:
   pushback:
-  - label: ~14x FCF looks cheap, but the modal DCF is still ~-3%.
+  - label: ~14x FCF looks cheap, but the modal DCF is still ~-2%.
     body: Cyclicality + ~$9B net debt, not the multiple, hold it to roughly fair.
   - label: GAAP revenue is grossed up by the refinery.
     body: Refinery third-party fuel sales inflate GAAP revenue; cash flow is what matters, not the ratio.
@@ -609,7 +615,7 @@ competitive:
     stream (>$2B/quarter toward $10B) that, with the growing premium cabin, could de-cyclicalize the earnings toward a consumer/payments
     business. The Audit: scale economies are durable (medium), but the loyalty re-rate is the live, unproven swing factor,
     and the threats are cyclicality/fuel + a soft, K-shaped main cabin - all amplified by ~$9B net debt. That tension is exactly
-    the DCF finding: cheap at ~14x FCF, but the modal case lands ~-3% (fair) because the cycle and the debt bridge offset
+    the DCF finding: cheap at ~14x FCF, but the modal case lands ~-2% (fair) because the cycle and the debt bridge offset
     the multiple until the mix durably shifts.'
 pocd:
   people:
@@ -643,16 +649,19 @@ pocd:
       The watch-items are financial (airline debt, cyclicality), not governance.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -8.1% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 82.50
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

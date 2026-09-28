@@ -19,13 +19,13 @@ taxonomy:
   themes:
   - real-economy-hard-assets
   primary_theme: real-economy-hard-assets
-central_question: Is a 19%-gross-margin systems integrator priced at ~11x sales worth that multiple on owner cash flow, or
+central_question: Is a 19%-gross-margin systems integrator priced at ~12x sales worth that multiple on owner cash flow, or
   only with a software-margin transformation?
 thesis: Symbotic sells AI-powered warehouse-automation systems, installed and Walmart-anchored (>84% of FY25 revenue). Revenue
   is $2.25B (+26%), backlog ~$22.5B, net cash ~$1.2B, and Q2 FY26 turned GAAP-positive. But the $867M operating cash flow
   is customer-funded milestone billings (working capital), not owner cash; SBC of $184M exceeds the $147M adj-EBITDA, so ex-SBC
-  owner FCF is roughly zero. At $41.63 (~591M Up-C units) the market pays a software multiple for a thin-margin integrator.
-  The DCF asks whether margins inflect; weighted fair value $13.32, −68% to spot.
+  owner FCF is roughly zero. At $43.96 (~591M Up-C units) the market pays a software multiple for a thin-margin integrator.
+  The DCF asks whether margins inflect; weighted fair value $13.32, −70% to spot.
 chart_reference:
   history_years:
   - 2023
@@ -147,7 +147,7 @@ scenarios:
     - Revenue compounds ~10% as backlog converts on a slow cadence, but gross margin stays in the high teens and only modest
       operating leverage appears. SBC continues to absorb most of the gain, so owner FCF inches up but stays thin.
     - Walmart remains the overwhelming customer and GreenBox adds little recurring economics within the window. A slow-converting,
-      low-margin integrator discounts to $5.79 per share, ~86% below spot.
+      low-margin integrator discounts to $5.79 per share, ~87% below spot.
     probability_rationale: The path if execution is fine but the economics never improve. The labor-automation tailwind and
       visible backlog support double-digit growth; the thin margin and concentration cap the value.
     dcf_metrics:
@@ -221,7 +221,7 @@ scenarios:
     - Revenue compounds ~14.5% as the $22.5B backlog converts on schedule and modest scale lifts the owner-FCF margin toward
       10% by FY30. GreenBox begins contributing recurring warehouse-as-a-service revenue alongside the systems business.
     - This is solid operational execution, but a ~19%-gross-margin systems business compounding in the mid-teens is worth
-      far less than ~11x sales on owner cash flow. The DCF settles at $11.09 per share, ~73% below spot.
+      far less than ~12x sales on owner cash flow. The DCF settles at $11.09 per share, ~75% below spot.
     probability_rationale: 'The modal case: backlog converts, the labor tailwind holds, GreenBox helps at the margin. It carries
       the most weight because the contracted backlog makes mid-teens growth the central expectation.'
     dcf_metrics:
@@ -295,7 +295,7 @@ scenarios:
     - Revenue compounds ~18.7% and the owner-FCF margin climbs toward 15% as systems standardize, software content rises,
       and GreenBox shifts the mix toward recurring WaaS economics. Operating leverage finally outruns SBC.
     - The labor-automation demand is structural and the backlog funds the ramp, so a genuine margin inflection becomes visible.
-      At a richer terminal margin the equity is worth $22.02 per share, still ~47% below spot.
+      At a richer terminal margin the equity is worth $22.02 per share, still ~50% below spot.
     probability_rationale: Requires margins to begin the transformation, not just revenue to grow. Plausible given backlog
       visibility and rising recurring mix, but it asks the integrator economics to start behaving like a platform.
     dcf_metrics:
@@ -369,7 +369,7 @@ scenarios:
     - Revenue compounds ~22.6% and gross margin expands from ~19% toward 30%+ as Symbotic becomes the standard warehouse-automation
       platform, with high-margin software and recurring GreenBox WaaS dominating the mix. The owner-FCF margin reaches ~20%.
     - 'This is a full economic transformation, not just scale: the systems integrator turns into a software-economics platform.
-      Only this outcome justifies the price, reaching $41.78 per share, ~flat to spot.'
+      Only this outcome nears the price, reaching $41.78 per share, ~5% below spot.'
     probability_rationale: The lowest-weight tail because it requires gross margin to roughly double from a systems base.
       The structural tailwind and backlog make platform scale conceivable, but software-like margins are unproven here.
     dcf_metrics:
@@ -435,22 +435,27 @@ scenarios:
       - 12.0
 historical_prices:
   ipo_marker: SPAC Jun '22
-  x_min: -4.0
-  points:
-  - - -3.9
-    - 10.0
-  - - -3.0
-    - 20.0
-  - - -2.0
-    - 45.0
-  - - -1.5
-    - 60.0
-  - - -1.0
-    - 88.0
-  - - -0.5
-    - 50.0
-  - - -0.05
-    - 41.63
+  x_min: -4.31
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-4.23, 10.97]   # 2022-06-30
+  - [-3.98, 11.50]   # 2022-09-30
+  - [-3.73, 11.94]   # 2022-12-30
+  - [-3.48, 22.84]   # 2023-03-31
+  - [-3.23, 42.81]   # 2023-06-30
+  - [-2.98, 33.43]   # 2023-09-29
+  - [-2.73, 51.33]   # 2023-12-29
+  - [-2.49, 45.00]   # 2024-03-28
+  - [-2.23, 35.16]   # 2024-06-28
+  - [-1.98, 24.39]   # 2024-09-30
+  - [-1.72, 23.71]   # 2024-12-31
+  - [-1.48, 20.21]   # 2025-03-31
+  - [-1.23, 38.85]   # 2025-06-30
+  - [-0.98, 53.90]   # 2025-09-30
+  - [-0.73, 59.50]   # 2025-12-31
+  - [-0.48, 53.20]   # 2026-03-31
+  - [-0.23, 44.95]   # 2026-06-30
+  - [-0.15, 43.05]   # 2026-07-31
+  - [-0.06, 39.67]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
   body: Margin never inflects; Walmart bites.
@@ -618,16 +623,19 @@ pocd:
       takes $0 pay), but near-total vote control combined with an unremediated material weakness makes SYM the one name in the book where governance integrity, not merely entrenchment, is in question — which is why it sits at 1, the floor. Key-person risk is high.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -68.0% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 43.96
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

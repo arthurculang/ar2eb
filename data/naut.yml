@@ -494,30 +494,30 @@ scenarios:
 historical_prices:
   ipo_marker: "IPO Jun '21"
   x_min: -5.3
-  points:
-    - [-5.23, 10.10]   # 2021-06-30
-    - [-4.98, 6.14]   # 2021-09-30
-    - [-4.73, 5.18]   # 2021-12-31
-    - [-4.48, 4.34]   # 2022-03-31
-    - [-4.23, 2.69]   # 2022-06-30
-    - [-3.98, 2.12]   # 2022-09-30
-    - [-3.73, 1.80]   # 2022-12-31
-    - [-3.48, 2.77]   # 2023-03-31
-    - [-3.23, 3.87]   # 2023-06-30
-    - [-2.98, 3.16]   # 2023-09-30
-    - [-2.73, 2.99]   # 2023-12-31
-    - [-2.48, 2.94]   # 2024-03-31
-    - [-2.23, 2.34]   # 2024-06-30
-    - [-1.98, 2.85]   # 2024-09-30
-    - [-1.72, 1.68]   # 2024-12-31
-    - [-1.48, 0.86]   # 2025-03-31
-    - [-1.23, 0.73]   # 2025-06-30
-    - [-0.98, 0.85]   # 2025-09-30
-    - [-0.73, 1.95]   # 2025-12-31
-    - [-0.48, 3.88]   # 2026-03-31
-    - [-0.23, 1.87]   # 2026-06-30
-    - [-0.15, 0.98]   # 2026-07-31
-    - [-0.06, 0.97]   # 2026-08-31
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.23, 10.10]   # 2021-06-30
+  - [-4.98, 6.14]   # 2021-09-30
+  - [-4.73, 5.18]   # 2021-12-31
+  - [-4.48, 4.34]   # 2022-03-31
+  - [-4.23, 2.69]   # 2022-06-30
+  - [-3.98, 2.12]   # 2022-09-30
+  - [-3.73, 1.80]   # 2022-12-30
+  - [-3.48, 2.77]   # 2023-03-31
+  - [-3.23, 3.87]   # 2023-06-30
+  - [-2.98, 3.16]   # 2023-09-29
+  - [-2.73, 2.99]   # 2023-12-29
+  - [-2.49, 2.94]   # 2024-03-28
+  - [-2.23, 2.34]   # 2024-06-28
+  - [-1.98, 2.85]   # 2024-09-30
+  - [-1.72, 1.68]   # 2024-12-31
+  - [-1.48, 0.86]   # 2025-03-31
+  - [-1.23, 0.73]   # 2025-06-30
+  - [-0.98, 0.85]   # 2025-09-30
+  - [-0.73, 1.95]   # 2025-12-31
+  - [-0.48, 3.88]   # 2026-03-31
+  - [-0.23, 1.87]   # 2026-06-30
+  - [-0.15, 0.98]   # 2026-07-31
+  - [-0.06, 0.97]   # 2026-08-31
 
 # ── Page 1 weighting rationale (5 short lines, one per scenario) ────────────
 weighting_rationale:
@@ -590,15 +590,21 @@ pocd:
     takeaway: Founder-owner-operator (~14.8%, with open-market buying in 2025) under a single-class one-share-one-vote structure, an independent Chair, and a 7-of-9 independent board — clean alignment and governance for a SPAC-origin name; the offsets are acute key-person concentration (Patel + co-founder Mallick are the platform) and a structural dilution path — the burn is equity-funded, now formalized by a raise planned by mid-2027 and an armed at-market program.
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value, then position-sized. Tail-driven: ~93% of the expected value sits in the 13% bull/ultra-bull mass, 43% of the mass wipes to $0, and the modal case sits below the ~$1 stock.'
+  deal: 'Open-market common — entry price weighed against the probability-weighted fair value, then position-sized. Tail-driven:
+    ~93% of the expected value sits in the 13% bull/ultra-bull mass, 43% of the mass wipes to $0, and the modal case sits below
+    the share price.'
 stamp:
-  footer_version: "012"
-  footer_timestamp: "2026-09-26_00-13"
+  footer_version: "013"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "012"
-  pdf_timestamp: "2026-09-26_00-13"
+  pdf_version: "013"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "012"
+    timestamp: "2026-09-26_00-13"
+    asOfDate: "2026-09-22"
+    spotPrice: 0.95
   - version: "011"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"

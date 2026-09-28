@@ -5,8 +5,8 @@ dcf_type: mature_company_sotp
 date: '2026-09-22'
 spot: 201.05
 market:
-  market_cap_billion: 53.04
-  shares_outstanding_million: 263.8
+  market_cap_billion: 52.96
+  shares_outstanding_million: 263.4
   cash_billion: 8.6
   net_debt_billion: 6.0
   extras:
@@ -20,13 +20,13 @@ taxonomy:
   - digital-assets-fintech-rails
   primary_theme: digital-assets-fintech-rails
 central_question: Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit
-  derivatives platform, a regulator that surrendered — or a cycle stock that has now printed back-to-back quarterly losses?
-thesis: 'Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (-18.5% YoY) and a $360M GAAP loss, the
-  second straight, as BTC fell from above $120K (Oct 2025) to a $58K low before recovering to ~$87K. The structural case
-  firmed in the same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue
-  share renewed unchanged into 2029, on $8.6B cash vs $6.0B debt. The bear: cycle exposure plus new stablecoin rivals. Modal
-  case ~12% above the price; 30% of the probability sits below it. Mature-company SOTP DCF, exit-multiple terminal; five
-  scenarios.'
+  derivatives platform, a regulator that surrendered — or a cycle stock that has now printed three straight quarterly losses?
+thesis: 'Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (−18.5% YoY) and a $360M GAAP loss, the
+  third straight, as BTC fell from above $120K to a $58K low before recovering to ~$87K. The structural case firmed in the
+  same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue share renewed
+  into 2029. Stock comp was 11.7% of FY25 revenue; net of it, enterprise value is ~29× FY25 free cash flow (~20× before
+  it). On that basis the stock is roughly fair: the most likely case sits ~19% below the price and 77% of the probability
+  below it, with most of the value in the upside tails.'
 chart_reference:
   history_years:
   - 2021
@@ -70,12 +70,16 @@ page3_chart_config:
   chart6_title: SOTP equity (Op EV + cash + CRCL + BTC)
   chart6_footer: Op EV  ·  cash  ·  special assets
   chart6_type: zmSotp
+# Valuation basis (book-wide stock-comp rule, >~8% of revenue): every dcf_path.fcf is FCF AFTER stock comp —
+# FY25 stock comp $839M / revenue $7.18B = 11.7% (10-K), deducted as 11.7% of each year's
+# revenue in every scenario — and per-share values divide by 263.4M shares (Q2-2026 diluted
+# weighted average, 10-Q; no credit for future buybacks). history_fcf stays BEFORE stock comp.
 scenarios:
   ultra_bear:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.08
-    expected_per_share: 27.96
+    expected_per_share: 12.49
     headline: Crypto winter + take-rate war.
     narrative:
     - 'Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down
@@ -85,10 +89,11 @@ scenarios:
       implementation — bank-issued stablecoins take share from USDC and the discount-window asymmetry kills USDC''s
       runway.'
     - 'The Circle relationship inverts at the 2029 renewal: Hyperliquid-style direct-USDC deals proliferate across
-      DeFi, compressing Coinbase''s 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating
-      margin compresses to ~10% by FY28 as Coinbase spends defensively, and FCF compresses to ~$0.3-0.4B. The multiple
-      collapses to an 8× FCF exit — crypto loses its narrative entirely. Mirrors the 2022 winter (COIN closed near
-      $33, from a $381 listing-day open) on a more diversified business.'
+      DeFi, compressing Coinbase''s 50% revenue share to 30% on a smaller pie. Coinbase One churn spikes. Operating margin after stock comp falls to about zero by FY28 as Coinbase spends defensively, and free cash flow after
+      stock comp turns slightly negative. The multiple collapses to 8× — crypto loses its narrative — but on negative
+      cash flow that adds nothing: the operating business is worth ~$1.50 a share; ~$11 of the $12.49 is net cash
+      plus the BTC and Circle holdings. Mirrors the 2022 winter (COIN closed near $33, from a $381 listing-day open)
+      on a more diversified business.'
     probability_rationale: 'Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style
       multi-year bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood
       gains share AND Hyperliquid-style USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per
@@ -109,11 +114,11 @@ scenarios:
       - -0.05
       - 0.02
       op_margin:
-      - 0.25
-      - 0.15
-      - 0.1
-      - 0.1
-      - 0.12
+      - 0.133
+      - 0.033
+      - -0.017
+      - -0.017
+      - 0.003
       wacc_path:
       - 0.13
       - 0.13
@@ -121,31 +126,21 @@ scenarios:
       - 0.13
       - 0.13
       term_g: -0.02
-      fcf:
-      - 1.44
-      - 0.65
-      - 0.34
-      - 0.29
-      - 0.36
+      fcf: [0.769, 0.146, -0.088, -0.117, -0.055]
       cash: 7.4
       net_debt: 6.0
       special_assets: 1.5
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 245
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 1.274
-      - 0.509
-      - 0.236
-      - 0.178
-      - 0.195
-      sum_pv_fcf: 2.39
-      terminal_value: 2.88
-      pv_terminal: 1.56
-      op_ev: 3.95
-      total_equity: 6.85
-      dcf_per_share: 27.96
+      pv_fcf: [0.681, 0.114, -0.061, -0.072, -0.030]
+      sum_pv_fcf: 0.63
+      terminal_value: -0.44
+      pv_terminal: -0.24
+      op_ev: 0.39
+      total_equity: 3.29
+      dcf_per_share: 12.49
     chart_data:
       ev_rev_multiple:
       - 4.5
@@ -163,7 +158,7 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.22
-    expected_per_share: 102.65
+    expected_per_share: 72.70
     headline: Cycle bottoms; multiple resets to 12×.
     narrative:
     - 'Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years, extending
@@ -173,8 +168,8 @@ scenarios:
       lose their growth premium when transaction revenue stops growing.'
     - 'The subscription engine partially compensates. Coinbase-held USDC stalls near today''s ~$20B as bank-issued
       stablecoins take 30-40% of new issuance. Stablecoin revenue holds $1.0-1.2B annually. Derivatives volume grows
-      as Deribit integrates, but its margin profile is structurally lower than spot. FCF runs $1.7-2.0B a year. A real
-      downside but not catastrophic: the cycle hurts; the platform survives.'
+      as Deribit integrates, but its margin profile is structurally lower than spot. Free cash flow after stock comp runs
+      $1.1-1.3B a year. A real downside but not catastrophic: the cycle hurts; the platform survives.'
     probability_rationale: 'Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months
       (median post-peak crypto correction); revenue stays well below FY25; take-rate compresses 15-20% as Robinhood
       gains retail share and Hyperliquid-style deals nick institutional flows; Coinbase-held USDC stalls; the exit
@@ -194,11 +189,11 @@ scenarios:
       - 0.05
       - 0.05
       op_margin:
-      - 0.32
-      - 0.3
-      - 0.3
-      - 0.32
-      - 0.32
+      - 0.203
+      - 0.183
+      - 0.183
+      - 0.203
+      - 0.203
       wacc_path:
       - 0.11
       - 0.11
@@ -206,31 +201,21 @@ scenarios:
       - 0.11
       - 0.11
       term_g: 0.01
-      fcf:
-      - 1.95
-      - 1.74
-      - 1.74
-      - 1.92
-      - 2.02
+      fcf: [1.237, 1.098, 1.098, 1.246, 1.312]
       cash: 8.4
       net_debt: 6.0
       special_assets: 3.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 260
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 1.757
-      - 1.412
-      - 1.272
-      - 1.265
-      - 1.199
-      sum_pv_fcf: 6.9
-      terminal_value: 24.24
-      pv_terminal: 14.39
-      op_ev: 21.29
-      total_equity: 26.69
-      dcf_per_share: 102.65
+      pv_fcf: [1.114, 0.891, 0.803, 0.821, 0.779]
+      sum_pv_fcf: 4.41
+      terminal_value: 15.74
+      pv_terminal: 9.34
+      op_ev: 13.75
+      total_equity: 19.15
+      dcf_per_share: 72.70
     chart_data:
       ev_rev_multiple:
       - 5.5
@@ -248,7 +233,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.47
-    expected_per_share: 224.59
+    expected_per_share: 162.45
     headline: Everything-exchange compounds.
     narrative:
     - 'The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K
@@ -258,8 +243,9 @@ scenarios:
       40%+ annually with margin converging toward spot over time.'
     - 'The regulatory tailwind is priced but structurally favorable. GENIUS Act gives USDC durable clarity. Deribit
       scales as offshore derivatives institutionalize. Coinbase One reaches 2.5M subs by FY30, putting a floor under
-      engaged users. Operating margin rises to ~40%. Revenue reaches ~$9.5B by FY30 (5.8% CAGR off FY25''s $7.18B);
-      FCF $2.55B → ~$3.8B; ~15× FCF exit — what a great mature platform offers when the moat is mostly priced.'
+      engaged users. Operating margin after stock comp rises to ~28%. Revenue reaches ~$9.5B by FY30 (5.8% CAGR off
+      FY25''s $7.18B); free cash flow after stock comp grows from ~$1.7B to ~$2.7B; a ~15× exit — what a great mature
+      platform offers when the moat is mostly priced.'
     probability_rationale: 'Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is
       integrating, Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution +
       cycle. Base assumes BTC ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually
@@ -280,11 +266,11 @@ scenarios:
       - 0.1
       - 0.08
       op_margin:
-      - 0.36
-      - 0.38
-      - 0.4
-      - 0.4
-      - 0.4
+      - 0.243
+      - 0.263
+      - 0.283
+      - 0.283
+      - 0.283
       wacc_path:
       - 0.09
       - 0.09
@@ -292,31 +278,21 @@ scenarios:
       - 0.09
       - 0.09
       term_g: 0.02
-      fcf:
-      - 2.46
-      - 2.71
-      - 3.22
-      - 3.55
-      - 3.83
+      fcf: [1.663, 1.873, 2.282, 2.519, 2.716]
       cash: 8.9
       net_debt: 6.0
       special_assets: 5.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 255
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 2.257
-      - 2.281
-      - 2.486
-      - 2.515
-      - 2.489
-      sum_pv_fcf: 12.03
-      terminal_value: 57.45
-      pv_terminal: 37.34
-      op_ev: 49.37
-      total_equity: 57.27
-      dcf_per_share: 224.59
+      pv_fcf: [1.526, 1.576, 1.762, 1.785, 1.765]
+      sum_pv_fcf: 8.41
+      terminal_value: 40.74
+      pv_terminal: 26.48
+      op_ev: 34.89
+      total_equity: 42.79
+      dcf_per_share: 162.45
     chart_data:
       ev_rev_multiple:
       - 7.0
@@ -334,7 +310,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.18
-    expected_per_share: 480.00
+    expected_per_share: 347.23
     headline: Derivatives flywheel + USDC rails.
     narrative:
     - 'The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as
@@ -344,9 +320,9 @@ scenarios:
       clarity attracts institutional volume back from Binance.'
     - 'The subscription engine inflects. Coinbase-held USDC compounds past $50B (from a record $20B) as the GENIUS Act
       establishes USDC as the de facto regulated dollar stablecoin. Stablecoin revenue grows $1.2B → $4-5B by FY30.
-      Coinbase One reaches 4M subs at $30+ ARPU. Operating margin expands to 45%. FCF reaches ~$6.6B by FY30. The
-      market recognizes COIN as crypto''s Stripe-meets-Nasdaq, sustaining a 20× FCF exit. Two engines (cycle-driven
-      transaction + subscription rails) both fire.'
+      Coinbase One reaches 4M subs at $30+ ARPU. Operating margin after stock comp expands to ~33%. Free cash flow
+      after stock comp reaches ~$5.0B by FY30. The market recognizes COIN as crypto''s Stripe-meets-Nasdaq, sustaining
+      a 20× FCF exit. Two engines (cycle-driven transaction + subscription rails) both fire.'
     probability_rationale: 'Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth
       (conditional 35%); (b) Coinbase-held USDC compounds past $50B driving the subscription engine (conditional 40%);
       (c) Deribit delivers and derivatives crosses $1.5B revenue (conditional 50% on integration); (d) the market
@@ -366,11 +342,11 @@ scenarios:
       - 0.15
       - 0.12
       op_margin:
-      - 0.4
-      - 0.42
-      - 0.44
-      - 0.45
-      - 0.45
+      - 0.283
+      - 0.303
+      - 0.323
+      - 0.333
+      - 0.333
       wacc_path:
       - 0.085
       - 0.085
@@ -378,31 +354,21 @@ scenarios:
       - 0.085
       - 0.085
       term_g: 0.025
-      fcf:
-      - 3.02
-      - 3.83
-      - 4.97
-      - 6.07
-      - 6.58
+      fcf: [2.139, 2.790, 3.722, 4.635, 4.973]
       cash: 9.4
       net_debt: 6.0
       special_assets: 8.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 245
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 2.783
-      - 3.253
-      - 3.891
-      - 4.38
-      - 4.376
-      sum_pv_fcf: 18.68
-      terminal_value: 131.6
-      pv_terminal: 87.52
-      op_ev: 106.2
-      total_equity: 117.6
-      dcf_per_share: 480.00
+      pv_fcf: [1.971, 2.370, 2.914, 3.344, 3.307]
+      sum_pv_fcf: 13.91
+      terminal_value: 99.46
+      pv_terminal: 66.15
+      op_ev: 80.06
+      total_equity: 91.46
+      dcf_per_share: 347.23
     chart_data:
       ev_rev_multiple:
       - 8.5
@@ -420,19 +386,18 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 1060.13
+    expected_per_share: 770.01
     headline: Crypto-as-rails; 28× re-rate.
     narrative:
     - 'The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US
       gateway. BTC ranges $200-300K as sovereign treasury adoption institutionalizes. Coinbase-held USDC crosses $100B
       as the GENIUS Act + EU MiCA make USDC the global regulated dollar — challenging SWIFT for cross-border. Deribit
       becomes the dominant offshore venue as Binance''s regulatory squeeze opens institutional flows. Transaction
-      revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin
-      reaches 50%.'
+      revenue compounds to $10B+ by FY30; subscription crosses $8B; derivatives is a $3B+ line. Operating margin after stock comp reaches ~38%.'
     - 'The multiple re-rates fundamentally. Crypto stocks stop trading as cycle stocks and start trading as fintech
-      infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN exits at 28× FCF on ~$10.7B of FY30 FCF. The
-      crypto-as-rails scenario requires multiple independent inflections to fire simultaneously, but Coinbase has the
-      regulatory wedge, the float, the derivatives platform, and the cash to attempt all four.'
+      infrastructure (Visa: 25× FCF; Stripe at private mark ~40×). COIN exits at 28× on ~$8.5B of FY30 free cash flow
+      after stock comp. The crypto-as-rails scenario requires multiple independent inflections to fire simultaneously,
+      but Coinbase has the regulatory wedge, the float, the derivatives platform, and the cash to attempt all four.'
     probability_rationale: 'Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); Coinbase-held
       USDC crosses $100B as the regulatory tailwind + EU MiCA make USDC the global regulated dollar (25%); Deribit
       captures Binance''s offshore institutional share post-regulatory squeeze (30%); the multiple re-rates to a
@@ -452,11 +417,11 @@ scenarios:
       - 0.22
       - 0.18
       op_margin:
-      - 0.42
-      - 0.45
-      - 0.48
-      - 0.5
-      - 0.5
+      - 0.303
+      - 0.333
+      - 0.363
+      - 0.383
+      - 0.383
       wacc_path:
       - 0.08
       - 0.08
@@ -464,31 +429,21 @@ scenarios:
       - 0.08
       - 0.08
       term_g: 0.03
-      fcf:
-      - 3.32
-      - 4.93
-      - 7.05
-      - 9.03
-      - 10.65
+      fcf: [2.397, 3.776, 5.573, 7.228, 8.524]
       cash: 10.4
       net_debt: 6.0
       special_assets: 15.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 235
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 3.074
-      - 4.227
-      - 5.597
-      - 6.637
-      - 7.248
-      sum_pv_fcf: 26.78
-      terminal_value: 298.2
-      pv_terminal: 202.95
-      op_ev: 229.73
-      total_equity: 249.13
-      dcf_per_share: 1060.13
+      pv_fcf: [2.219, 3.237, 4.424, 5.313, 5.801]
+      sum_pv_fcf: 20.99
+      terminal_value: 238.67
+      pv_terminal: 162.43
+      op_ev: 183.42
+      total_equity: 202.82
+      dcf_per_share: 770.01
     chart_data:
       ev_rev_multiple:
       - 10.0
@@ -505,76 +460,34 @@ scenarios:
 historical_prices:   # Yahoo daily closes; x = years before the 2026-09-21 spot close
   ipo_marker: Direct Listing Apr '21 @ $381
   x_min: -5.5
-  points:
-  - - -5.44
-    - 328.28
-  - - -5.25
-    - 222.6
-  - - -5.17
-    - 220.61
-  - - -5.0
-    - 238.46
-  - - -4.87
-    - 357.39
-  - - -4.75
-    - 247.69
-  - - -4.5
-    - 186.08
-  - - -4.25
-    - 51.91
-  - - -4.0
-    - 67.64
-  - - -3.73
-    - 32.53
-  - - -3.5
-    - 66.3
-  - - -3.25
-    - 57.49
-  - - -3.0
-    - 74.42
-  - - -2.75
-    - 175.48
-  - - -2.63
-    - 117.3
-  - - -2.5
-    - 255.51
-  - - -2.25
-    - 225.86
-  - - -2.0
-    - 170.09
-  - - -1.79
-    - 343.62
-  - - -1.75
-    - 278.71
-  - - -1.5
-    - 189.86
-  - - -1.45
-    - 151.47
-  - - -1.25
-    - 308.38
-  - - -1.18
-    - 419.78
-  - - -1.0
-    - 342.46
-  - - -0.76
-    - 245.12
-  - - -0.68
-    - 255.86
-  - - -0.61
-    - 141.09
-  - - -0.51
-    - 197.5
-  - - -0.32
-    - 182.25
-  - - -0.23
-    - 146.19
-  - - -0.12
-    - 153.6
-  - - -0.02
-    - 191.45
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.4, 297.64]   # 2021-04-30
+  - [-5.23, 253.30]   # 2021-06-30
+  - [-4.98, 227.48]   # 2021-09-30
+  - [-4.73, 252.37]   # 2021-12-31
+  - [-4.48, 189.86]   # 2022-03-31
+  - [-4.23, 47.02]   # 2022-06-30
+  - [-3.98, 64.49]   # 2022-09-30
+  - [-3.73, 35.39]   # 2022-12-30
+  - [-3.48, 67.57]   # 2023-03-31
+  - [-3.23, 71.55]   # 2023-06-30
+  - [-2.98, 75.08]   # 2023-09-29
+  - [-2.73, 173.92]   # 2023-12-29
+  - [-2.49, 265.12]   # 2024-03-28
+  - [-2.23, 222.23]   # 2024-06-28
+  - [-1.98, 178.17]   # 2024-09-30
+  - [-1.72, 248.30]   # 2024-12-31
+  - [-1.48, 172.23]   # 2025-03-31
+  - [-1.23, 350.49]   # 2025-06-30
+  - [-0.98, 337.49]   # 2025-09-30
+  - [-0.73, 226.14]   # 2025-12-31
+  - [-0.48, 174.61]   # 2026-03-31
+  - [-0.23, 146.19]   # 2026-06-30
+  - [-0.15, 146.26]   # 2026-07-31
+  - [-0.06, 188.12]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 8%
-  body: Crypto winter + take-rate compression + GENIUS hostility compound; multiple collapses to ~8× FCF.
+  body: Crypto winter + take-rate compression + GENIUS hostility compound; FCF after stock comp turns negative.
 - label: Bear 22%
   body: Cycle normalizes; transaction revenue stays sub-FY25; multiple resets to ~12× FCF on slower growth.
 - label: Base 47%
@@ -587,7 +500,9 @@ page3:
   subtitle: FY21–FY25 history + FY26–FY30 scenario projections  ·  fiscal years end Dec 31  ·  10-K FY25, Q2 2026 10-Q/shareholder
     letter, Circle Q2 2026 results, GENIUS Act, Deribit closing 8-K
   sources: 'Sources: COIN 10-K FY25, Q1 and Q2 2026 10-Qs/shareholder letters, Deribit closing 8-K Aug 2025, Circle (CRCL) S-1
-    and Q2 2026 results, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026, Yahoo Finance prices.'
+    and Q2 2026 results, GENIUS Act (S.1582), Coindesk Hyperliquid/Circle analysis May 2026, Yahoo Finance prices. FCF history
+    is before stock comp; the valuation deducts it ($839M in FY25, 11.7% of revenue) and uses 263.4M diluted shares (Q2 2026
+    10-Q).'
 appendix:
   pushback:
   - label: Subscription engine is structural.
@@ -602,8 +517,8 @@ appendix:
   - label: Coinbase One is the cycle hedge.
     body: '>1M paid subs at $30/mo + premium tiers. Engagement floor regardless of BTC price. Higher trading volume + revenue
       per user vs free tier.'
-  - label: Balance sheet absorbs cycle.
-    body: $8.6B cash + ~$1.5B BTC + CRCL vs $6.0B debt, after repaying the 2026 converts in cash. Survives a 2022-style winter.
+  - label: The base assumes the multiple halves.
+    body: 'It exits at 15× FCF after stock comp vs ~29× today; a ~21× exit would put the base at the $201 price.'
   triggers:
   - label: Bear validation
     body: BTC < $60K sustained > 2 quarters  ·  transaction rev < $700M/qtr  ·  take-rate below 10 bps  ·  Coinbase-held USDC < $15B  ·  Hyperliquid-style
@@ -634,13 +549,17 @@ glossary:
   definition: CRCL shares received in the 2023 Centre dissolution; part sold Q1 2026. The remainder (≤~8.4M shares) is worth
     ≤~$0.8B at ~$92 (Sep 2026). Marked as a strategic investment.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-09-26_04-14"
+  footer_version: "008"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-09-26_04-14"
+  pdf_version: "008"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-09-26_04-14"
+    asOfDate: "2026-09-22"
+    spotPrice: 201.05
   - version: "006"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"
@@ -712,4 +631,4 @@ pocd:
       buyback (half spent).'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +34.2% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.

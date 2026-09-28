@@ -10,7 +10,7 @@ market:
   cash_billion: 0.276
   net_debt_billion: 0.644
   extras:
-  - $0.276B cash vs ~$0.644B convertible notes (due 2029/2030) → ~$0.368B net debt > the equity cap
+  - $0.276B cash vs ~$0.644B converts (due 2029/2030), so ~$0.368B net debt, near the equity cap
   - 'FY25 revenue $160M (+4%): consumables $82M (+16%), instruments $53.8M (-18%)'
   - Cash-flow-positive targeted 2027; FY26 opex guided $220-225M; ~310M shares, no reverse split
 taxonomy:
@@ -19,14 +19,14 @@ taxonomy:
   themes:
   - omics-life-science-infrastructure
   primary_theme: omics-life-science-infrastructure
-central_question: At $1.32, can long-read consumables reach cash-flow breakeven before the ~$644M of converts mature in 2029/2030
+central_question: At $1.36, can long-read consumables reach cash-flow breakeven before the ~$644M of converts mature in 2029/2030
   — or does the net debt swamp the equity first?
 thesis: 'Pacific Biosciences sells long-read HiFi DNA sequencers (Revio, Vega) and the high-margin consumables that run on
-  them — the #3 behind Illumina''s short-read scale and Oxford Nanopore in long-read. The $1.32 sticker hides the setup: $0.276B
-  cash against ~$0.644B of convertible notes is ~$0.368B net debt, larger than the $410M equity cap — a financially-levered
+  them — the #3 behind Illumina''s short-read scale and Oxford Nanopore in long-read. The $1.36 sticker hides the setup: $0.276B
+  cash against ~$0.644B of convertible notes is ~$0.368B net debt, close to the $420M equity cap — a financially-levered
   setup. The DCF asks whether ~16%-growing consumable pull-through reaches cash-flow positive (targeted 2027) before the
   converts mature. Roughly half the probability mass is worth ~$0 because the debt outranks the equity; nearly all the value
-  sits in the ~18% long-read-wins tail. Weighted $1.72 vs spot $1.32 (+31%) — a cheap levered option, not a value stock.'
+  sits in the ~18% long-read-wins tail. Weighted $1.72 vs spot $1.36 (+27%) — a cheap levered option, not a value stock.'
 chart_reference:
   tam_billion: 8
   history_years:
@@ -49,7 +49,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 4
   valn_anchor_text: Profitable sequencing EV/sales ~4-6x
-  valn_caption: At $1.32 the equity looks cheap, but ~$368M net debt means the converts, not revenue, set the value.
+  valn_caption: At $1.36 the equity looks cheap, but ~$368M net debt means the converts, not revenue, set the value.
   tam_title: $8B long-read sequencing — PACB share
   tam_legend:
   - PACB
@@ -72,10 +72,10 @@ scenarios:
       margin. Pull-through never funds the cost base, and burn forces small dilutive raises that add shares at a low price
       while the value migrates to the noteholders.
     - With a 50% failure probability the ~$0.644B of converts outrank a tiny equity stub, so common is worth ~$0 in restructuring
-      (distress $0.30/share). DCF -$1.06; probability-weighted contribution rounds to $0. The debt, not the business, sets
+      (distress $0.30/share). DCF -$0.69; probability-weighted contribution rounds to $0. The debt, not the business, sets
       the floor.
     probability_rationale: 'The razor/blade pivot is real but unproven at scale, and a 50% p_fail reflects a sub-scale #3
-      carrying net debt above its equity cap into a 2029/2030 maturity wall — plausible but not the modal path.'
+      carrying net debt near its equity cap into a 2029/2030 maturity wall — plausible but not the modal path.'
     dcf_metrics:
       tam_share: 3.0
       p_fail: 50
@@ -216,7 +216,7 @@ scenarios:
     - Consumables grow modestly to ~$0.49B FY35 revenue at a 19% margin, but the ramp is too slow to cover the converts before
       they mature. The business limps toward breakeven while the installed base compounds only gradually and instruments stay
       soft.
-    - At 35% p_fail the equity barely exists once ~$0.644B of debt is serviced or refinanced into dilution; DCF -$0.35, weighted
+    - At 35% p_fail the equity barely exists once ~$0.644B of debt is serviced or refinanced into dilution; DCF -$0.31, weighted
       contribution ~$0. A workable product that simply can't out-run its own balance sheet in time.
     probability_rationale: The largest single bucket. Reflects the central tension — real but unspectacular long-read uptake
       against a fixed debt wall — where survival is likely but equity value is not, given how little cushion sits above the
@@ -361,9 +361,9 @@ scenarios:
     - Steady long-read adoption plus the FY26 cost cuts (opex $220-225M, headcount -16%) reach cash-flow breakeven around
       2027. FY35 revenue ~$0.62B at a 21% margin as Revio pull-through (~$229K annualized) and a growing Vega base compound
       high-margin consumables.
-    - At 22% p_fail the equity barely clears the ~$0.644B of converts rather than being consumed by them; DCF $0.62, weighted
-      contribution $0.55. The modal case is survival with thin positive equity — close to today's price, which is why the
-      headline lands near fair.
+    - At 22% p_fail the equity barely clears the ~$0.644B of converts rather than being consumed by them; DCF $0.68, weighted
+      contribution $0.60. The base case is survival with thin positive equity — ~56% below today's price; the upside
+      lives in the long-read tail.
     probability_rationale: Requires the consumables flywheel to fund operations on roughly the guided timeline and the converts
       to be covered or refinanced cleanly. A demanding but reachable path given the restructuring already underway and the
       2027 breakeven target.
@@ -788,26 +788,32 @@ scenarios:
       tam_competitor_share: 5.0
 historical_prices:
   ipo_marker: IPO '10
-  x_min: -5.2
-  points:
-  - - -5.0
-    - 22.0
-  - - -4.5
-    - 15.0
-  - - -4.0
-    - 8.0
-  - - -3.0
-    - 5.0
-  - - -2.5
-    - 3.0
-  - - -2.0
-    - 2.0
-  - - -1.0
-    - 1.5
-  - - -0.5
-    - 1.8
-  - - -0.05
-    - 1.32
+  x_min: -5.47
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.4, 29.85]   # 2021-04-30
+  - [-5.23, 34.97]   # 2021-06-30
+  - [-4.98, 25.55]   # 2021-09-30
+  - [-4.73, 20.46]   # 2021-12-31
+  - [-4.48, 9.10]   # 2022-03-31
+  - [-4.23, 4.42]   # 2022-06-30
+  - [-3.98, 5.81]   # 2022-09-30
+  - [-3.73, 8.18]   # 2022-12-30
+  - [-3.48, 11.58]   # 2023-03-31
+  - [-3.23, 13.30]   # 2023-06-30
+  - [-2.98, 8.35]   # 2023-09-29
+  - [-2.73, 9.81]   # 2023-12-29
+  - [-2.49, 3.75]   # 2024-03-28
+  - [-2.23, 1.37]   # 2024-06-28
+  - [-1.98, 1.70]   # 2024-09-30
+  - [-1.72, 1.83]   # 2024-12-31
+  - [-1.48, 1.18]   # 2025-03-31
+  - [-1.23, 1.24]   # 2025-06-30
+  - [-0.98, 1.28]   # 2025-09-30
+  - [-0.73, 1.87]   # 2025-12-31
+  - [-0.48, 1.32]   # 2026-03-31
+  - [-0.23, 1.68]   # 2026-06-30
+  - [-0.15, 1.40]   # 2026-07-31
+  - [-0.06, 1.36]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 18%
   body: Long-read stalls; converts wipe out equity.
@@ -822,7 +828,7 @@ weighting_rationale:
 appendix:
   pushback:
   - label: Converts were already refinanced
-    body: The 2028 SoftBank wall was pushed to 2029/2030, buying runway — but ~$644M still outranks a $410M equity cap and
+    body: The 2028 SoftBank wall was pushed to 2029/2030, buying runway — but ~$644M still outranks a $420M equity cap and
       must be cleared.
   - label: Consumables are inflecting now
     body: Consumables grew +16% to $82M while instruments fell -18% — the razor/blade pivot is visibly underway, the bull's
@@ -834,7 +840,7 @@ appendix:
     body: 'HiFi reads solve problems short-read can''t; if whole-genome sequencing shifts to long-read, the #3 still captures
       a growing consumables annuity.'
   - label: It is a barbell, not sticker-cheap
-    body: The $1.32 looks cheap, but net debt above the equity cap means ~half the mass is ~$0 — the price reflects leverage,
+    body: The $1.36 looks cheap, but net debt near the equity cap means ~half the mass is ~$0 — the price reflects leverage,
       not a bargain.
   triggers:
   - label: Bull validation
@@ -862,7 +868,7 @@ glossary:
     and instruments shrink.
 - term: p_fail
   definition: Modeled probability the equity is wiped out (distress ~$0.30/share) before the scenario's terminal year — elevated
-    here by net debt above the equity cap.
+    here by net debt near the equity cap.
 competitive:
   arena: Long-read DNA sequencing within the broader sequencing market — PACB (HiFi/SMRT) versus Illumina's dominant short-read
     scale and Oxford Nanopore in direct long-read.
@@ -921,7 +927,7 @@ competitive:
     best_rival: Illumina
     verdict: lagging
   - metric: Balance-sheet strength
-    company: Net debt above equity cap
+    company: Net debt near equity cap
     best_rival: Illumina
     verdict: lagging
   takeaway: A Power is being attempted, not yet originated. PACB is trying to convert HiFi/SMRT accuracy into a cornered-resource
@@ -958,16 +964,19 @@ pocd:
       is institutionalized, so key-person risk is low.
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +30.6% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 1.36
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

@@ -911,6 +911,46 @@ function ribbonMetrics(scnPrint, dcfType) {
   return [cagrCell, waccCell, thirdCell, probCell];
 }
 
+// §6b companion statistic (v048): the most likely scenario vs spot and the
+// probability mass at or below spot, so a tail-driven EV can't hide a likely
+// loss. Ties go to base, then bear, bull, ultra bear, ultra bull.
+const MODAL_TIEBREAK = ['base', 'bear', 'bull', 'ultra_bear', 'ultra_bull'];
+function companionStat(memo) {
+  const spot = memo.spot.price;
+  const scn = memo.print.scenarios;
+  const keys = MODAL_TIEBREAK.filter(k => scn[k]);
+  let modal = keys[0];
+  for (const k of keys) {
+    if (scn[k].probability > scn[modal].probability + 1e-9) modal = k;
+  }
+  const pBelow = keys.reduce(
+    (a, k) => a + (scn[k].expectedPerShare <= spot ? scn[k].probability : 0), 0);
+  return {
+    label: scn[modal].label.toLowerCase(),
+    modalPct: (scn[modal].expectedPerShare / spot - 1) * 100,
+    pBelow: Math.round(pBelow * 100),
+  };
+}
+
+// Years until the forward-weighted value (each scenario compounded at its
+// terminal WACC, as in the forward chart) reaches spot: 0 when it already
+// exceeds spot, null when it stays below through +20y. Replaces a hardcoded
+// "+5y to +10y" caption that was wrong for most memos.
+function spotCrossingYears(memo) {
+  const spot = memo.spot.price;
+  const scns = Object.values(memo.print.scenarios);
+  const pw = T => scns.reduce((a, s) => a + s.probability * s.expectedPerShare
+    * Math.pow(1 + s.dcfPath.wacc_path[s.dcfPath.wacc_path.length - 1], T), 0);
+  if (pw(0) >= spot) return 0;
+  if (pw(20) < spot) return null;
+  let lo = 0, hi = 20;
+  for (let i = 0; i < 60; i++) {
+    const mid = (lo + hi) / 2;
+    if (pw(mid) >= spot) hi = mid; else lo = mid;
+  }
+  return hi;
+}
+
 function Page1Headline({ memo }) {
   const NEG = '#b91c1c';
   const POS = '#15803d';
@@ -940,6 +980,12 @@ function Page1Headline({ memo }) {
   const combinedPct = bullPct + ultraPct;
   const spotVsPw = Math.abs((spot / w.expected - 1) * 100);
   const spotPosition = spot > w.expected ? 'above' : 'below';
+  const cs = isPriv ? null : companionStat(memo);
+  const cross = isPriv ? null : spotCrossingYears(memo);
+  const crossClause = cross === 0 ? '.'
+    : cross === null ? '; the forward-weighted value stays below spot beyond +20y.'
+    : cross < 1 ? '; the forward-weighted value reaches spot within a year.'
+    : `; the forward-weighted value reaches spot in about ${Math.round(cross)} year${Math.round(cross) === 1 ? '' : 's'}.`;
   const insight = isPriv
     ? `${memo.print.scenarios.bull.label} (${bullPct}%) + ${memo.print.scenarios.ultra_bull.label} (${ultraPct}%) `
       + `contribute $${tailContrib.toFixed(0)} — ${tailPct.toFixed(0)}% of the $${w.expected.toFixed(0)} weighted PV `
@@ -949,8 +995,8 @@ function Page1Headline({ memo }) {
     : `Bull (${bullPct}%) + Ultra Bull (${ultraPct}%) together contribute `
       + `$${tailContrib.toFixed(2)} — ${tailPct.toFixed(0)}% of the $${w.expected.toFixed(2)} expected value `
       + `despite ${combinedPct}% combined probability. `
-      + `Today's spot ($${spot.toFixed(2)}) sits ${spotVsPw.toFixed(0)}% ${spotPosition} the weighted expected; `
-      + `forward-weighted value crosses spot between +5y and +10y.`;
+      + `Today's spot ($${spot.toFixed(2)}) sits ${spotVsPw.toFixed(0)}% ${spotPosition} the weighted expected`
+      + crossClause;
 
   return (
     <div className="memo-page">
@@ -1052,8 +1098,24 @@ function Page1Headline({ memo }) {
             {memo.thesis}
           </div>
 
-          <div style={{ marginTop: '10pt' }}>
+          {/* The companion sits absolutely on the eyebrow row so it adds zero
+              height (a mixed sans/mono line box grew the row ~3-5px and
+              pushed tight page-1 memos into the footer band). */}
+          <div style={{ marginTop: '10pt', position: 'relative' }}>
             <Eyebrow>PROBABILITY-WEIGHTED EXPECTED VALUE</Eyebrow>
+            {cs && (
+              <div style={{
+                position: 'absolute', right: 0, bottom: 0, lineHeight: 1,
+                fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.muted,
+                whiteSpace: 'nowrap',
+              }}>
+                most likely case ({cs.label}){' '}
+                <span style={{ fontFamily: FONT_MONO, color: cs.modalPct >= 0 ? POS : NEG }}>
+                  {cs.modalPct >= 0 ? '+' : ''}{cs.modalPct.toFixed(1)}%
+                </span>
+                {'  ·  '}{cs.pBelow}% at or below spot
+              </div>
+            )}
           </div>
 
           <div style={{
@@ -3600,7 +3662,15 @@ function PagePOCD({ memo }) {
           </div>
           <PocdLeg label="Opportunity" body={pocd.opportunityRef} />
           <PocdLeg label="Context" body={pocd.contextRef} />
-          <PocdLeg label="Deal" body={pocd.deal} />
+          {/* The Deal leg's number is rendered live, not restated in prose:
+              a hardcoded "(the X% finding)" went stale on every re-price. */}
+          <PocdLeg label="Deal" body={pocd.deal && <>
+            {pocd.deal}{' '}
+            <span style={{ fontFamily: FONT_MONO, whiteSpace: 'nowrap',
+                           color: memo.print.weighted.upsidePct >= 0 ? '#15803d' : '#b91c1c' }}>
+              {memo.print.weighted.upsidePct >= 0 ? '+' : ''}{memo.print.weighted.upsidePct.toFixed(1)}% vs spot ${memo.spot.price.toFixed(2)}
+            </span>
+          </>} />
         </div>
       </div>
 

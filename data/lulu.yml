@@ -12,20 +12,20 @@ market:
   extras:
   - $1.8B cash, no debt; ~114M shares; heavy buyback, no dividend
   - Revenue $11.1B FY25 (+5%, decelerating from +42%); ~22% op margin, ~$1.58B FCF
-  - Down ~60% from the $340 high; US declining, China/international +20-29%
+  - Down ~70% from the $340 high; US declining, China/international +20-29%
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: High
   themes:
   - premium-consumer-brands
   primary_theme: premium-consumer-brands
-central_question: Is lululemon's ~60% de-rating to ~10x FCF an overshoot on a still-profitable premium brand — or the early
+central_question: Is lululemon's ~70% de-rating to ~8x FCF an overshoot on a still-profitable premium brand — or the early
   innings of structural brand impairment (US decline, Alo/Vuori share loss)?
-thesis: 'Lululemon trades at ~$15B (≈$127/sh, down ~60% from $340) — ~10x FCF on $11.1B revenue, ~22% operating margins, net
+thesis: 'Lululemon trades at ~$12B (≈$101/sh, down ~70% from $340) — ~8x FCF on $11.1B revenue, ~22% operating margins, net
   cash and a heavy buyback. Growth has decelerated hard (+42%→+5%, guided +2-4%): the US is shrinking (-1 to -3%) while China/international
   compound +20-29%. The mature DCF asks whether the brand stabilizes and defends margins, or whether dupes (Alo, Vuori) and
-  stale product structurally impair it. The finding: even pricing real brand-impairment downside (ultra-bear -34%), the modal
-  stabilization case at 10x FCF implies the de-rating overshot.'
+  stale product structurally impair it. The finding: even pricing real brand-impairment downside (ultra-bear -17%), the modal
+  stabilization case at 8x FCF implies the de-rating overshot.'
 chart_reference:
   history_years:
   - 2021
@@ -83,7 +83,7 @@ scenarios:
     narrative:
     - 'Brand heat fades like Under Armour''s: US revenue keeps declining, Alo/Vuori and dupes take share, and the full-price
       model erodes into promotions. Revenue falls ~4%/yr; operating margins compress toward single digits.'
-    - A shrinking premium brand earns a distressed multiple — DCF ~$85, ~33% below spot. The net cash and buyback cushion
+    - A shrinking premium brand earns a distressed multiple — DCF ~$85, ~17% below spot. The net cash and buyback cushion
       the floor but can't offset structural impairment.
     probability_rationale: 'The genuine bear: the founder himself called the product stale, US (50%+ of sales) is already
       declining, and DTC share fell 30%->24% in a year. 15% weight on real brand impairment.'
@@ -157,9 +157,9 @@ scenarios:
     narrative:
     - The US stays soft and international decelerates; lululemon holds its position but doesn't grow, and tariffs/promotions
       keep margins below the historical peak. Revenue roughly flat, low-teens FCF margin.
-    - DCF ~$158 (+24%) — even a 'dominant but ex-growth' brand at ~11x FCF is worth more than today's price; the de-rating
+    - DCF ~$158 (+56%) — even a 'dominant but ex-growth' brand at ~11x FCF is worth more than today's price; the de-rating
       already prices worse.
-    probability_rationale: Share loss continues and the dupe pressure caps the multiple, but the brand doesn't break. 32%
+    probability_rationale: Share loss continues and the dupe pressure caps the multiple, but the brand doesn't break. 27%
       weight as the plausible 'stalls but survives' path given the bearish US momentum.
     dcf_metrics:
       cagr_5y: 1.0
@@ -231,10 +231,10 @@ scenarios:
     narrative:
     - 'The modal path: the US stabilizes under new CEO Heidi O''Neill (ex-Nike) while China/international keep compounding
       ~20%, blending to ~4% total growth at a defended ~22% operating margin.'
-    - DCF ~$236 (+85%). A stabilizing premium brand at 10x FCF with a long international runway is simply mispriced if the
+    - DCF ~$236 (+132%). A stabilizing premium brand at 8x FCF with a long international runway is simply mispriced if the
       modal case plays out — the core of the thesis.
     probability_rationale: Requires US stabilization (not re-acceleration) plus continued international compounding — consistent
-      with FY26 guidance. 33% as the central outcome; the brand's cornered-resource fabrics + community don't vanish.
+      with FY26 guidance. 45% as the central outcome; the brand's cornered-resource fabrics + community don't vanish.
     dcf_metrics:
       cagr_5y: 4.2
       wacc: 0.095
@@ -305,9 +305,9 @@ scenarios:
     narrative:
     - 'The turnaround lands: product newness re-accelerates the US, international/China stay hot, footwear/men''s scale, and
       margins recover toward 24%. Revenue compounds ~7%.'
-    - DCF ~$324 (+155%) — back toward the old growth-compounder valuation as the brand re-rates with the fundamentals.
+    - DCF ~$324 (+220%) — back toward the old growth-compounder valuation as the brand re-rates with the fundamentals.
     probability_rationale: O'Neill's product fix works and the US re-accelerates while international compounds — a real turnaround.
-      ~15% weight; lululemon has done it before.
+      ~10% weight; lululemon has done it before.
     dcf_metrics:
       cagr_5y: 6.6
       wacc: 0.09
@@ -378,8 +378,8 @@ scenarios:
     narrative:
     - 'The full turnaround: China becomes a second home market, footwear/men''s/international all compound, and lululemon
       re-rates to a premium growth multiple. Revenue ~10% CAGR at peak margins.'
-    - DCF ~$409 (+222%) — the brand reclaims its compounder status; ~5% probability.
-    probability_rationale: Everything works — US turnaround AND China AND categories AND a multiple re-rating. ~5%, the asymmetric
+    - DCF ~$409 (+304%) — the brand reclaims its compounder status; ~3% probability.
+    probability_rationale: Everything works — US turnaround AND China AND categories AND a multiple re-rating. ~3%, the asymmetric
       upside the depressed entry is buying.
     dcf_metrics:
       cagr_5y: 9.2
@@ -444,51 +444,58 @@ scenarios:
       - 18.0
 historical_prices:
   ipo_marker: IPO Jul '07
-  x_min: -6.5
-  points:
-  - - -6.0
-    - 200.0
-  - - -5.0
-    - 350.0
-  - - -4.0
-    - 485.0
-  - - -3.5
-    - 300.0
-  - - -3.0
-    - 380.0
-  - - -2.0
-    - 400.0
-  - - -1.5
-    - 340.0
-  - - -1.0
-    - 300.0
-  - - -0.5
-    - 200.0
-  - - -0.25
-    - 150.0
-  - - -0.05
-    - 127.0
+  x_min: -6.81
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.73, 231.67]   # 2019-12-31
+  - [-6.48, 189.55]   # 2020-03-31
+  - [-6.23, 312.01]   # 2020-06-30
+  - [-5.98, 329.37]   # 2020-09-30
+  - [-5.72, 348.03]   # 2020-12-31
+  - [-5.48, 306.71]   # 2021-03-31
+  - [-5.23, 364.97]   # 2021-06-30
+  - [-4.98, 404.70]   # 2021-09-30
+  - [-4.73, 391.45]   # 2021-12-31
+  - [-4.48, 365.23]   # 2022-03-31
+  - [-4.23, 272.61]   # 2022-06-30
+  - [-3.98, 279.56]   # 2022-09-30
+  - [-3.73, 320.38]   # 2022-12-30
+  - [-3.48, 364.19]   # 2023-03-31
+  - [-3.23, 378.50]   # 2023-06-30
+  - [-2.98, 385.61]   # 2023-09-29
+  - [-2.73, 511.29]   # 2023-12-29
+  - [-2.49, 390.65]   # 2024-03-28
+  - [-2.23, 298.70]   # 2024-06-28
+  - [-1.98, 271.35]   # 2024-09-30
+  - [-1.72, 382.41]   # 2024-12-31
+  - [-1.48, 283.06]   # 2025-03-31
+  - [-1.23, 237.58]   # 2025-06-30
+  - [-0.98, 177.93]   # 2025-09-30
+  - [-0.73, 207.81]   # 2025-12-31
+  - [-0.48, 153.10]   # 2026-03-31
+  - [-0.23, 114.18]   # 2026-06-30
+  - [-0.15, 118.87]   # 2026-07-31
+  - [-0.06, 120.26]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: Brand impairment; US decline; ~$85 (-34%).
-- label: Bear 32%
-  body: Share loss; US shrinks; ex-growth; ~$158 (+24%).
-- label: Base 33%
-  body: US stabilizes + China/intl; ~$236 (+85%).
-- label: Bull 15%
-  body: New-CEO turnaround; ~$324 (+155%).
-- label: Ultra Bull 5%
-  body: Full re-rate + China; ~$409 (+222%).
+  body: Brand impairment; US decline; ~$85 (-17%).
+- label: Bear 27%
+  body: Share loss; US shrinks; ex-growth; ~$158 (+56%).
+- label: Base 45%
+  body: US steadies + China/intl; ~$236 (+132%).
+- label: Bull 10%
+  body: New-CEO turnaround; ~$324 (+220%).
+- label: Ultra Bull 3%
+  body: Full re-rate + China; ~$409 (+304%).
 appendix:
   pushback:
-  - label: ~10x FCF for a 22%-margin brand.
+  - label: ~8x FCF for a 22%-margin brand.
     body: Net-cash, $1.58B FCF, ~22% operating margin — priced like a terminal-decline retailer, not a premium brand.
   - label: Cornered-resource fabrics.
     body: Proprietary Nulu/Luxtreme/Everlux blends + fit/quality are the hardest thing for Alo/Vuori/dupes to replicate.
   - label: Huge international runway.
     body: China +29%, international +22%, only ~16% of revenue — a multi-year growth engine the US weakness masks.
   - label: Heavy buyback at the lows.
-    body: No dividend; ~$1.6B authorization remaining, retiring shares at ~10x FCF — accretive.
+    body: No dividend; ~$1.6B authorization remaining, retiring shares at ~8x FCF — accretive.
   - label: New CEO from Nike.
     body: Heidi O'Neill (ex-Nike) + a settled founder proxy fight = fresh product/turnaround optionality.
   triggers:
@@ -580,17 +587,21 @@ competitive:
     falsifier: International growth decelerates below 10% while the US keeps shrinking.
   takeaway: lululemon's brand Power is genuinely durable internationally (China +29%, only 16% of revenue) and underpinned
     by cornered-resource fabrics, but it is eroding in the saturated US where Alo/Vuori and dupes are taking DTC share and
-    the founder calls the product stale. The ~60% de-rating to ~10x FCF prices structural impairment; the DCF tests whether
-    the brand stabilizes — and even a real-impairment ultra-bear is only -34%, while the modal stabilization implies the sell-off
+    the founder calls the product stale. The ~70% de-rating to ~8x FCF prices structural impairment; the DCF tests whether
+    the brand stabilizes — and even a real-impairment ultra-bear is only -17%, while the modal stabilization implies the sell-off
     overshot.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 101.30
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"
@@ -621,6 +632,6 @@ pocd:
       governance moment: CEO Calvin McDonald is out (Jan 2026; interim co-CEOs + external search), a founder
       proxy fight just settled (Chip Wilson ~8.7%, two board seats), a classified board, the failed Mirror deal,
       and slipping say-on-pay support.'
-  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (LULU 1.95)'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (LULU 1.42)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +65% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.

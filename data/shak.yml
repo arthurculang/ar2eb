@@ -12,20 +12,20 @@ market:
   extras:
   - Net cash +$64M ($314M cash vs $250M 0% convert, out-of-the-money); ~42.8M fully-diluted shares
   - Revenue $1.445B FY25 (+15%); GAAP op margin back to 4.3%; FCF +$57M (~4%); capex ~11.5% of revenue
-  - Down ~55% YoY, near the 52-week low after the June-2026 guidance cut
+  - Down ~39% YoY, near the 52-week low after the June-2026 guidance cut
 taxonomy:
   watchlist: fun-speculative
   tier: Med-Low
   themes:
   - premium-consumer-brands
   primary_theme: premium-consumer-brands
-central_question: Did Shake Shack's ~55% crash to ~13x EV/EBITDA correct an excess to fair value — or overshoot a long-runway,
+central_question: Did Shake Shack's ~39% crash to ~14x EV/EBITDA correct an excess to fair value — or overshoot a long-runway,
   new-CEO unit-growth compounder?
-thesis: Shake Shack trades at ~$2.34B (~$54.70, down ~55% YoY after a June-2026 guidance cut) — ~13x EV/EBITDA on $1.445B
+thesis: Shake Shack trades at ~$2.44B (~$56.96, down ~39% YoY after a June-2026 guidance cut) — ~14x EV/EBITDA on $1.445B
   revenue growing ~15%, net cash, operating margin back to 4.3%, FCF positive (~$57M, ~4%). The bull is a 4x US unit runway
-  (~373 -> 1,500), a sub-$2.0M build cost, a new CEO (Rob Lynch, ex-Wingstop); the bear is capital intensity keeping FCF thin
-  while traffic is barely positive. The DCF asks whether the runway converts to free cash flow — the modal case lands ~fair
-  (-9%), so the crash corrected the excess, not created a bargain.
+  (~373 -> 1,500), a sub-$2.0M build cost, a new CEO (Rob Lynch, ex-Papa John's); the bear is capital intensity keeping FCF thin
+  while traffic is barely positive. The DCF asks whether the runway converts to FCF — the modal case lands below spot
+  (-13%), so the crash corrected the excess, not created a bargain.
 chart_reference:
   history_years:
   - 2021
@@ -87,7 +87,7 @@ scenarios:
       peak, and the accelerating build pace (55-60 units/yr) keeps capex ahead of operating cash. FCF margin stays stuck near
       3-4% as a soft top line de-levers the restaurant P&L.'
     - A capital-intensive restaurant that isn't compounding FCF earns a low-single-digit-growth, ~9x terminal multiple ->
-      DCF ~$13 (-76%). Net cash sets a floor but can't offset a stalled unit machine.
+      DCF ~$13 (-77%). Net cash sets a floor but can't offset a stalled unit machine.
     probability_rationale: 'The genuine bear: traffic is already barely positive (FY26 SSS guided +2.5-3.0%, mostly price),
       beef inflation just forced a margin cut, and management missed its own FY25 EBITDA. 12% weight on the runway failing
       to convert.'
@@ -162,7 +162,7 @@ scenarios:
     - Units keep opening but same-Shack sales stay low-single-digit and price-led, while heavy growth capex (~11-12% of revenue)
       holds FCF margin near 5%. The unit runway is real but the cash conversion isn't — revenue compounds ~7% to ~$2.0B at
       a still-thin ~5.5% FCF margin.
-    - DCF ~$25 (-54%) — a capital-hungry grower whose free cash flow lags its revenue is worth well below today's price; the
+    - DCF ~$25 (-56%) — a capital-hungry grower whose free cash flow lags its revenue is worth well below today's price; the
       market's discount is warranted if FCF doesn't inflect.
     probability_rationale: Share gains continue but the capital intensity + soft urban/tourism traffic keep FCF suppressed.
       30% as the plausible 'grows but doesn't convert' path, given the guidance cut and the FY25 miss.
@@ -237,10 +237,10 @@ scenarios:
     - 'The modal path: company-operated units keep compounding low-double-digit toward the 1,500 target, SSS runs low-single-digit,
       and FCF margin grinds from ~4% toward ~8% as growth capex moderates against a larger base. Revenue compounds ~11% to
       ~$2.4B.'
-    - DCF ~$50 (-9%) — roughly fair. A 4x unit runway is genuinely valuable, but at ~8% terminal FCF margin and a ~14x multiple
-      the modal case only recovers to about today's price; the crash corrected the prior excess rather than overshooting it.
+    - DCF ~$50 (-13%) — modestly rich. A 4x unit runway is genuinely valuable, but at ~8% terminal FCF margin and a ~14x multiple
+      the modal case falls short of today's price; the crash corrected the prior excess rather than overshooting it.
     probability_rationale: Requires the unit runway to continue and FCF to improve as builds scale — consistent with management's
-      plan and the build-cost reduction, but not a step-change. 33% as the central, near-fair outcome.
+      plan and the build-cost reduction, but not a step-change. 33% as the central case, below spot.
     dcf_metrics:
       cagr_5y: 11.0
       wacc: 0.095
@@ -309,12 +309,12 @@ scenarios:
     expected_per_share: 85.23
     headline: Lynch delivers; FCF inflects to ~11%.
     narrative:
-    - 'Rob Lynch runs the Wingstop playbook: drive-thru/format expansion enlarges the addressable real estate, digital throughput
+    - 'Rob Lynch''s plan works: drive-thru/format expansion enlarges the addressable real estate, digital throughput
       and operational discipline lift restaurant margins, and FCF margin inflects toward ~11% as build cost stays below $2.0M.
       Revenue compounds ~13% to ~$2.7B.'
-    - DCF ~$85 (+56%) - if the unit runway converts to real free cash flow, the de-rated entry re-rates with the fundamentals;
+    - DCF ~$85 (+50%) - if the unit runway converts to real free cash flow, the de-rated entry re-rates with the fundamentals;
       this is the core of the bull.
-    probability_rationale: Lynch's Wingstop record (elite unit-growth/digital/franchise compounder) plus the build-cost cut
+    probability_rationale: Lynch's record leading Papa John's turnaround (digital and franchise-led) plus the build-cost cut
       make a genuine FCF inflection credible. ~18% weight on the operational turnaround landing.
     dcf_metrics:
       cagr_5y: 13.0
@@ -387,7 +387,7 @@ scenarios:
     - 'The full second act: company units march toward 1,500, capital-light international licensing scales the brand globally,
       digital/AI (''Project Catalyst'') lifts throughput and margins, and Shake Shack becomes a true FCF machine at ~13% margin.
       Revenue compounds ~15% to ~$2.9B.'
-    - DCF ~$121 (+121%) - the brand reclaims a premium fast-casual compounder multiple; ~7% probability, the asymmetric upside
+    - DCF ~$121 (+112%) - the brand reclaims a premium fast-casual compounder multiple; ~7% probability, the asymmetric upside
       the depressed entry is buying.
     probability_rationale: Everything works - units AND margins AND international licensing AND a multiple re-rate, the Wingstop/Chipotle
       outcome under Lynch. ~7%, the long-duration tail.
@@ -454,47 +454,72 @@ scenarios:
       - 18.0
 historical_prices:
   ipo_marker: IPO Jan '15
-  x_min: -11.6
-  points:
-  - - -11.4
-    - 45.0
-  - - -10.9
-    - 92.0
-  - - -9.0
-    - 38.0
-  - - -7.0
-    - 50.0
-  - - -6.2
-    - 35.0
-  - - -5.0
-    - 138.0
-  - - -3.7
-    - 38.0
-  - - -2.5
-    - 80.0
-  - - -1.5
-    - 110.0
-  - - -1.2
-    - 144.0
-  - - -0.5
-    - 90.0
-  - - -0.05
-    - 54.7
+  x_min: -11.91
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-11.64, 45.90]   # 2015-01-30
+  - [-11.48, 50.05]   # 2015-03-31
+  - [-11.23, 60.27]   # 2015-06-30
+  - [-10.98, 47.40]   # 2015-09-30
+  - [-10.73, 39.60]   # 2015-12-31
+  - [-10.48, 37.32]   # 2016-03-31
+  - [-10.23, 36.43]   # 2016-06-30
+  - [-9.98, 34.67]   # 2016-09-30
+  - [-9.73, 35.79]   # 2016-12-30
+  - [-9.48, 33.40]   # 2017-03-31
+  - [-9.23, 34.88]   # 2017-06-30
+  - [-8.98, 33.23]   # 2017-09-29
+  - [-8.73, 43.20]   # 2017-12-29
+  - [-8.48, 41.63]   # 2018-03-29
+  - [-8.23, 66.18]   # 2018-06-29
+  - [-7.98, 63.01]   # 2018-09-28
+  - [-7.73, 45.42]   # 2018-12-31
+  - [-7.49, 59.15]   # 2019-03-29
+  - [-7.24, 72.20]   # 2019-06-28
+  - [-6.98, 98.04]   # 2019-09-30
+  - [-6.73, 59.57]   # 2019-12-31
+  - [-6.48, 37.74]   # 2020-03-31
+  - [-6.23, 52.98]   # 2020-06-30
+  - [-5.98, 64.48]   # 2020-09-30
+  - [-5.72, 84.78]   # 2020-12-31
+  - [-5.48, 112.77]   # 2021-03-31
+  - [-5.23, 107.02]   # 2021-06-30
+  - [-4.98, 78.46]   # 2021-09-30
+  - [-4.73, 72.16]   # 2021-12-31
+  - [-4.48, 67.90]   # 2022-03-31
+  - [-4.23, 39.48]   # 2022-06-30
+  - [-3.98, 44.98]   # 2022-09-30
+  - [-3.73, 41.53]   # 2022-12-30
+  - [-3.48, 55.49]   # 2023-03-31
+  - [-3.23, 77.72]   # 2023-06-30
+  - [-2.98, 58.07]   # 2023-09-29
+  - [-2.73, 74.12]   # 2023-12-29
+  - [-2.49, 104.03]   # 2024-03-28
+  - [-2.23, 90.00]   # 2024-06-28
+  - [-1.98, 103.21]   # 2024-09-30
+  - [-1.72, 129.80]   # 2024-12-31
+  - [-1.48, 88.17]   # 2025-03-31
+  - [-1.23, 140.60]   # 2025-06-30
+  - [-0.98, 93.61]   # 2025-09-30
+  - [-0.73, 81.17]   # 2025-12-31
+  - [-0.48, 88.47]   # 2026-03-31
+  - [-0.23, 56.02]   # 2026-06-30
+  - [-0.15, 62.75]   # 2026-07-31
+  - [-0.06, 68.89]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 12%
-  body: Traffic stalls; FCF never inflects; ~$13 (-76%).
+  body: Traffic stalls; FCF never inflects; ~$13 (-77%).
 - label: Bear 30%
-  body: Units grow but FCF stays thin; ~$25 (-54%).
+  body: Units grow but FCF stays thin; ~$25 (-56%).
 - label: Base 33%
-  body: Runway continues; FCF grinds to 8%; ~$50 (-9%).
+  body: Runway holds; FCF grinds to 8%; ~$50 (-13%).
 - label: Bull 18%
-  body: Lynch delivers FCF inflection; ~$85 (+56%).
+  body: Lynch delivers FCF inflection; ~$85 (+50%).
 - label: Ultra Bull 7%
-  body: Wingstop-style compounder; ~$121 (+121%).
+  body: Wingstop-style compounder; ~$121 (+112%).
 appendix:
   pushback:
   - label: The de-rate corrected an excess, it didn't create a bargain.
-    body: ~13x EV/EBITDA is cheap vs CAVA (~46x) / WING (~37x) but the modal DCF is still ~-9% — thin capital-intensive FCF,
+    body: ~14x EV/EBITDA is cheap vs CAVA (~46x) / WING (~37x) but the modal DCF is still -13% — thin capital-intensive FCF,
       not the multiple, is the constraint.
   - label: FCF conversion is the whole question.
     body: ~$57M FCF on $1.445B revenue (~4%) while capex runs ~11-12%; the gap between 'units grow' and 'free cash flow grows'
@@ -502,10 +527,10 @@ appendix:
   - label: Build cost below $2.0M is the real improvement.
     body: A ~20% build-cost cut directly lifts new-unit cash-on-cash (~$0.9M restaurant profit on <$2.0M invested) and self-funds
       more of the runway.
-  - label: New CEO from an elite compounder.
-    body: Rob Lynch built Wingstop into a unit-growth/digital/franchise machine; the drive-thru format + 'Project Catalyst'
+  - label: Proven turnaround CEO.
+    body: Rob Lynch led Papa John's post-2019 turnaround; the drive-thru format + 'Project Catalyst'
       digital backbone are his levers here.
-  - label: Net cash, p_fail ~0.
+  - label: Net cash; no solvency risk.
     body: $314M cash vs a single $250M 0% convert (OTM, due 2028) — no solvency risk; the downside is multiple/FCF, not survival.
   triggers:
   - label: Bull validation
@@ -603,9 +628,9 @@ competitive:
   takeaway: 'Shake Shack''s brand Power is genuine — a premium ''fine casual'' name with ~$4.0M AUV well above QSR and real
     pricing power — but a brand doesn''t convert to free cash flow while capex runs 11-12% of revenue to fund a 4x unit runway.
     The Audit: branding is durable (medium), process_power is the emerging swing factor under Lynch (build-cost cut, drive-thru,
-    digital), and the threats are capital intensity + a soft, value-seeking consumer. The ~55% de-rate to ~13x EBITDA corrected
-    the prior excess to roughly fair; the DCF tests whether the runway converts to FCF, and the modal case lands ~-9% — cheap-looking
-    on the multiple, fair on the cash.'
+    digital), and the threats are capital intensity + a soft, value-seeking consumer. The ~39% de-rate to ~14x EBITDA corrected
+    most of the prior excess; the DCF tests whether the runway converts to FCF, and the modal case lands -13% — cheap-looking
+    on the multiple, a bit rich on the cash.'
 pocd:
   people:
     ceo: Rob Lynch
@@ -640,16 +665,19 @@ pocd:
       moderate, leaning low.
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -10.0% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 56.96
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

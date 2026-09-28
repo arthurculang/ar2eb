@@ -10,7 +10,7 @@ market:
   cash_billion: 1.21
   net_debt_billion: 0.1
   extras:
-  - $1.21B cash (Q1'26) vs ~$0.10B debt → net cash ~$11.75/share; runway to mid-2029
+  - $1.21B cash (Q1'26) vs ~$0.10B debt → cash ~$11.75/share; runway to mid-2029
   - Pre-product base editing; FY25 collaboration revenue $139.7M; R&D burn ~$400M/yr
   - risto-cel SCD BLA as early as YE2026; BEAM-302 (AATD) pivotal cohort H2 2026
 taxonomy:
@@ -19,13 +19,13 @@ taxonomy:
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology
-central_question: At ~$30 with ~$11.75/share of net cash, do the de-risked BEAM-302 (AATD) and risto-cel SCD programs make
+central_question: At ~$25 with ~$11.75/share of cash, do the de-risked BEAM-302 (AATD) and risto-cel SCD programs make
   base editing a cheap option, or is clinical failure the likelier outcome?
 thesis: 'Beam is a pre-product, clinical-stage base-editing biotech — it precisely rewrites a single DNA base with no double-strand
   cut. Revenue is lumpy collaboration income ($139.7M FY25); the op loss runs ~$400M/yr. The asset that matters is $1.21B
   cash (~$11.75/share, runway to mid-2029) plus a pipeline: risto-cel SCD (BLA as early as YE2026) and BEAM-302, the first
   in-vivo corrective editor, on an FDA-aligned accelerated path. The DCF asks whether the leads reach market before dilution
-  erodes the equity. Weighted fair value is $39.38 vs $30 spot, +31% — asymmetric: the cash raises the floor, the de-risked
+  erodes the equity. Weighted fair value $39.38 vs $25.26 spot, +56% — asymmetric: the cash raises the floor, the de-risked
   data builds the right tail, clinical failure is the risk.'
 chart_reference:
   tam_billion: 30
@@ -792,26 +792,37 @@ scenarios:
       tam_competitor_share: 18.0
 historical_prices:
   ipo_marker: IPO Feb '20
-  x_min: -6.3
-  points:
-  - - -6.0
-    - 17.0
-  - - -5.0
-    - 80.0
-  - - -4.5
-    - 120.0
-  - - -4.0
-    - 40.0
-  - - -3.0
-    - 30.0
-  - - -2.0
-    - 25.0
-  - - -1.0
-    - 28.0
-  - - -0.4
-    - 36.0
-  - - -0.05
-    - 30.0
+  x_min: -6.57
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.57, 22.49]   # 2020-02-28
+  - [-6.48, 18.00]   # 2020-03-31
+  - [-6.23, 28.00]   # 2020-06-30
+  - [-5.98, 24.62]   # 2020-09-30
+  - [-5.72, 81.64]   # 2020-12-31
+  - [-5.48, 80.04]   # 2021-03-31
+  - [-5.23, 128.71]   # 2021-06-30
+  - [-4.98, 87.01]   # 2021-09-30
+  - [-4.73, 79.69]   # 2021-12-31
+  - [-4.48, 57.30]   # 2022-03-31
+  - [-4.23, 38.71]   # 2022-06-30
+  - [-3.98, 47.64]   # 2022-09-30
+  - [-3.73, 39.11]   # 2022-12-30
+  - [-3.48, 30.62]   # 2023-03-31
+  - [-3.23, 31.93]   # 2023-06-30
+  - [-2.98, 24.05]   # 2023-09-29
+  - [-2.73, 27.22]   # 2023-12-29
+  - [-2.49, 33.04]   # 2024-03-28
+  - [-2.23, 23.43]   # 2024-06-28
+  - [-1.98, 24.50]   # 2024-09-30
+  - [-1.72, 24.80]   # 2024-12-31
+  - [-1.48, 19.53]   # 2025-03-31
+  - [-1.23, 17.01]   # 2025-06-30
+  - [-0.98, 24.27]   # 2025-09-30
+  - [-0.73, 27.72]   # 2025-12-31
+  - [-0.48, 23.83]   # 2026-03-31
+  - [-0.23, 34.32]   # 2026-06-30
+  - [-0.15, 25.52]   # 2026-07-31
+  - [-0.06, 29.43]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 16%
   body: Leads fail; reverts to the ~$8 cash floor.
@@ -959,15 +970,19 @@ pocd:
     takeaway: 'Clean single-class one-vote register, an independent Chair (Cooper) split from a long-tenured professional CEO (Evans, since 2017), and a ~88%-independent fully-independent-committee board on a well-funded balance sheet (cash to mid-2029). Held at 3 by thin insider alignment (low ownership, sell-only Form 4s), a classified board, and the Broad/Harvard base-editing IP + scientific-founder related-party concentration. The platform depends on the founders'' science (reputational) but none run day-to-day.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +31.3% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 25.26
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

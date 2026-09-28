@@ -12,7 +12,7 @@ market:
   extras:
   - $126.8B cash vs $48.5B debt (~$78.3B net cash); ~12.09B shares (Class A+B+C), buyback + a small dividend
   - Revenue $402.8B FY25 (+15%); GAAP op margin 32.0%; FCF $73.3B; capex ~$91B and guided to ~$190B in FY26
-  - Up ~28% YTD and ~130-160% TTM to ~$360 / ~$4.35T cap; ATH close $402.38 (May-2026), re-rated on owning the full AI stack
+  - Up ~13% YTD and ~46% TTM to ~$355 / ~$4.29T cap; ATH close $402.38 (May-2026), re-rated on owning the full AI stack
 taxonomy:
   watchlist: fcf-megacap
   tier: High
@@ -22,11 +22,11 @@ taxonomy:
   primary_theme: platform-marketplace-tech
 central_question: Does Alphabet's full AI stack (TPUs->Gemini->Cloud->apps) defend and monetize Search faster than generative-AI
   assistants erode its query and ad economics?
-thesis: 'Alphabet trades at ~$4.35T (~$360, +28% YTD and ~130-160% TTM) - roughly 60x EV/FCF on $402.8B revenue growing ~15%,
+thesis: 'Alphabet trades at ~$4.29T (~$355, +13% YTD and ~46% TTM) - roughly 60x EV/FCF on $402.8B revenue growing ~15%,
   32% operating margins, net cash, $73.3B FCF before a capex ramp to ~$190B. Cloud just re-accelerated to +63% with a ~$462B
   backlog and the AI stack re-rated the name, but Search is still ~60%+ of revenue and the price embeds the win. The DCF asks
-  whether Search holds its economics through the generative-AI shift while Cloud compounds. The finding lands -21.4% (weighted
-  ~$286): the modal base sits right at spot, so the run priced in the franchise and then some.'
+  whether Search holds its economics through the generative-AI shift while Cloud compounds. The finding lands -20.4% (weighted
+  ~$283): the modal base sits ~19% below spot, so the run priced in the franchise and then some.'
 chart_reference:
   history_years:
   - 2021
@@ -236,11 +236,11 @@ scenarios:
     - 'The modal path: Search defends and monetizes the AI transition at roughly parity (Q1''26''s +19% argues defense is
       winning), Cloud keeps compounding off the ~$462B backlog with expanding margins, and FCF margin recovers from the capex
       trough toward ~24% as the ~$190B spend builds capacity that fills. Revenue compounds low-double-digit to ~$680B.'
-    - DCF ~$286 (-20%) - the modal case lands right at spot. A franchise growing low-double-digit at a recovering ~24% FCF
-      margin and a ~23x multiple is worth about today's price; the 2026 run priced the franchise in, leaving little margin
+    - DCF ~$286 (-19%) - the modal case lands below spot. A franchise growing low-double-digit at a recovering ~24% FCF
+      margin and a ~23x multiple is worth less than today's price; the 2026 run priced the franchise in, leaving no margin
       of safety at the modal outcome.
     probability_rationale: Requires Search to monetize AI at near-parity and Cloud to keep compounding while capex stays productive
-      - consistent with Q1'26 (Search +19%, Cloud +63%, margin doubling). 34% as the central, near-spot outcome.
+      - consistent with Q1'26 (Search +19%, Cloud +63%, margin doubling). 34% as the central case, below spot.
     dcf_metrics:
       cagr_5y: 13.4
       wacc: 0.08
@@ -312,7 +312,7 @@ scenarios:
     - 'The full stack pays off: TPUs lower the cost of serving Gemini, Cloud sustains hyper-growth and operating leverage
       off the backlog, AI Mode/Overviews lift Search monetization above legacy rates, and FCF margin climbs toward ~27% once
       the capex wave is absorbed. Revenue compounds mid-teens to ~$730B.'
-    - DCF ~$423 (+18%) - if Search not only defends but Cloud + the AI stack compound into a second profit engine, the franchise
+    - DCF ~$423 (+19%) - if Search not only defends but Cloud + the AI stack compound into a second profit engine, the franchise
       is worth meaningfully above spot at a ~27x multiple; this is the bull the re-rating is paying for.
     probability_rationale: Cloud's +63% and doubling margin plus a defended, AI-monetized Search make a genuine compounding
       case credible. 20% weight on the full AI stack delivering on both legs.
@@ -387,7 +387,7 @@ scenarios:
     - 'Everything compounds: Gemini + AI Mode expand Search economics, Cloud becomes a durable second franchise at scale,
       Waymo and the model/TPU stack add optionality, and FCF margin reaches ~29% as the capex cycle turns into high-return
       capacity. Revenue compounds high-teens to ~$790B.'
-    - DCF ~$553 (+54%) - Alphabet re-rates as the broadest full-stack AI platform; ~8% probability, the asymmetric upside
+    - DCF ~$553 (+56%) - Alphabet re-rates as the broadest full-stack AI platform; ~8% probability, the asymmetric upside
       that owning chips through apps could deliver.
     probability_rationale: Everything works - Search monetizes AI above parity AND Cloud compounds AND TPUs/Gemini/Waymo add
       value AND the multiple holds. ~8%, the long-duration tail.
@@ -454,42 +454,52 @@ scenarios:
       - 30.0
 historical_prices:
   ipo_marker: IPO Aug '04
-  x_min: -6.2
-  points:
-  - - -6.0
-    - 70
-  - - -5.0
-    - 145
-  - - -4.0
-    - 90
-  - - -3.0
-    - 100
-  - - -2.0
-    - 140
-  - - -1.0
-    - 200
-  - - -0.5
-    - 280
-  - - -0.1
-    - 402
-  - - -0.02
-    - 359.68
+  x_min: -6.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.48, 58.10]   # 2020-03-31
+  - [-6.23, 70.90]   # 2020-06-30
+  - [-5.98, 73.28]   # 2020-09-30
+  - [-5.72, 87.63]   # 2020-12-31
+  - [-5.48, 103.13]   # 2021-03-31
+  - [-5.23, 122.09]   # 2021-06-30
+  - [-4.98, 133.68]   # 2021-09-30
+  - [-4.73, 144.85]   # 2021-12-31
+  - [-4.48, 139.07]   # 2022-03-31
+  - [-4.23, 108.96]   # 2022-06-30
+  - [-3.98, 95.65]   # 2022-09-30
+  - [-3.73, 88.23]   # 2022-12-30
+  - [-3.48, 103.73]   # 2023-03-31
+  - [-3.23, 119.70]   # 2023-06-30
+  - [-2.98, 130.86]   # 2023-09-29
+  - [-2.73, 139.69]   # 2023-12-29
+  - [-2.49, 150.93]   # 2024-03-28
+  - [-2.23, 182.15]   # 2024-06-28
+  - [-1.98, 165.85]   # 2024-09-30
+  - [-1.72, 189.30]   # 2024-12-31
+  - [-1.48, 154.64]   # 2025-03-31
+  - [-1.23, 176.23]   # 2025-06-30
+  - [-0.98, 243.10]   # 2025-09-30
+  - [-0.73, 313.00]   # 2025-12-31
+  - [-0.48, 287.56]   # 2026-03-31
+  - [-0.23, 357.37]   # 2026-06-30
+  - [-0.15, 356.13]   # 2026-07-31
+  - [-0.06, 339.35]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
   body: AI assistants erode Search economics; ~$104 (-71%).
 - label: Bear 25%
   body: Search slows; capex caps returns; ~$171 (-52%).
 - label: Base 34%
-  body: Search defends; Cloud compounds; ~$286 (-20%).
+  body: Search defends; Cloud compounds; ~$286 (-19%).
 - label: Bull 20%
-  body: AI stack compounds; Cloud re-rates; ~$423 (+18%).
+  body: AI stack compounds; Cloud re-rates; ~$423 (+19%).
 - label: Ultra Bull 8%
-  body: Full-stack AI platform re-rates; ~$553 (+54%).
+  body: Full-stack AI platform re-rates; ~$553 (+56%).
 appendix:
   pushback:
   - label: The run priced the franchise in.
-    body: After +28% YTD / ~130-160% TTM the name is ~60x EV/FCF and the modal DCF is ~-20% - the AI stack is real, but the
-      price already embeds the win, leaving thin margin of safety.
+    body: After +13% YTD / ~46% TTM the name is ~60x EV/FCF and the modal DCF is ~-19% - the AI stack is real, but the
+      price already embeds the win, leaving no margin of safety.
   - label: Cloud at +63% with doubling margins is the new engine.
     body: Cloud hit $20.0B/+63% at 32.9% operating margin (from 17.8%) with a ~$462B backlog ~2x QoQ - a credible second franchise
       that the bull/ultra-bull cases lean on.
@@ -599,10 +609,10 @@ competitive:
     falsifier: An adverse ad-tech ruling forces an AdX/DFP divestiture or default-distribution bans dent Search's scale and
       reach.
   takeaway: 'Alphabet''s network and scale Powers are deeply entrenched - a two-sided Search/advertiser loop, YouTube''s flywheel,
-    and a cornered-resource stack (index, query data, custom TPUs, Gemini) few rivals can replicate. The Audit: network_economies
-    is durable (high); the live threats are generative-AI assistants substituting for ~60%+-of-revenue Search and an antitrust
+    and a cornered-resource stack (index, query data, custom TPUs, Gemini) few rivals can replicate. The Audit: network economies
+    are durable (high); the live threats are generative-AI assistants substituting for ~60%+-of-revenue Search and an antitrust
     overhang (DOJ search appeal, a pending ad-tech divestiture) the DCF doesn''t price. Q1''26 (Search +19%, Cloud +63%) says
-    the defense is winning - but the ~28% YTD run re-rated the name to ~60x EV/FCF, so the modal case lands at spot: -21.4%,
+    the defense is winning - but the ~46% TTM run re-rated it to ~60x EV/FCF, so the modal case lands below spot: -20.4%,
     a durable franchise priced for the win.'
 pocd:
   people:
@@ -630,15 +640,19 @@ pocd:
       return is ramping (first dividend 2024, repeated $70B buybacks) against a record AI capex build.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -21.4% finding), then position-sized.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 354.97
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

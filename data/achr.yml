@@ -20,13 +20,13 @@ taxonomy:
   - evtol-advanced-air-mobility
   - defense-tech-autonomous-defense
   primary_theme: evtol-advanced-air-mobility
-central_question: Is Archer's ~half-Joby price enough discount to make the eVTOL-plus-defense lottery ticket positive-EV —
-  despite being the certification follower?
-thesis: 'Archer trades at ~$5.4B (≈$6.81/sh) on $0 revenue — about half Joby''s cap on a near-identical certification position,
+central_question: Is Archer's ~two-thirds-Joby price enough discount to make the eVTOL-plus-defense lottery ticket positive-EV —
+  despite being the cert follower?
+thesis: 'Archer trades at ~$4.3B (≈$5.43/sh) on $0 revenue — about two-thirds of Joby''s cap on a near-identical cert position,
   with $1.78B cash but a ~$727M/yr burn (≈2.4yr runway) and a defense wildcard (the Anduril autonomous-VTOL JV) Joby lacks.
   The young-company DCF asks what aircraft fleet, UAM-plus-defense revenue, and dilution are plausible over a decade. The
   finding: 85% of the probability sits well below spot — heavy dilution craters the bear/base outcomes — but Archer is cheap
-  enough that the 15% cert-success-plus-defense tail (paying 4-13×) lifts the weighted expected modestly above today''s price.'
+  enough that the 15% cert-success-plus-defense tail (paying 5-17×) lifts the weighted expected ~48% above today''s price.'
 chart_reference:
   tam_billion: 250.0
   history_years:
@@ -73,7 +73,7 @@ scenarios:
       the under-capitalized. Archer dilutes desperately at collapsing prices, then restructures; the residual is defense scraps
       plus whatever cash survives the attempt.
     - With a 45% within-scenario failure probability and the share count ballooning past 1.4B on sub-$4 raises, the expected
-      per-share collapses toward the distress floor — a near-total loss from today's $6.81.
+      per-share collapses toward the distress floor — a near-total loss from today's $5.43.
     probability_rationale: The category's base rate is unforgiving — no one holds an FAA Type Certificate yet, and Lilium
       (raised $1.4B, failed) proves under-capitalization is fatal. Archer is the cert-follower with ≈2.4yr of runway; 45%
       within-scenario failure reflects real first-of-a-kind certification + funding risk. 12% scenario weight.
@@ -363,7 +363,7 @@ scenarios:
       US and UAE, and converts part of the Anduril defense relationship into recurring revenue — ~$5.6B combined by 2035 at
       a low-teens operating margin. A real, profitable transport-tech business.'
     - But ~$3.4B of dilutive raises to fund the buildout balloon the share count past 1.2B, and most of the fleet's value
-      sits beyond the 10-year window. DCF ~$2.25/share — ~67% below spot, the dilution tax on a successful-but-capital-hungry
+      sits beyond the 10-year window. DCF ~$2.25/share — ~59% below spot, the dilution tax on a successful-but-capital-hungry
       ramp.
     probability_rationale: Requires cert on roughly schedule and a mid-scale UAM-plus-defense ramp — no category dominance.
       18% failure probability given $1.78B cash, Stellantis manufacturing, and the USAF/Anduril defense anchor. 42% weight
@@ -508,7 +508,7 @@ scenarios:
     - 'The bull: Archer certifies, the Covington/Stellantis line ramps toward high volume, the UAM network scales across multiple
       metros, AND the Anduril partnership converts into a DoD program of record — ~$16B combined revenue by 2035 at a ~28%
       operating margin. The defense leg is the differentiator Joby lacks.'
-    - Self-funding arrives mid-decade; dilution turns value-accretive. DCF ~$32/share — ~5× today's price. This is the scenario
+    - Self-funding arrives mid-decade; dilution turns value-accretive. DCF ~$32/share — ~6× today's price. This is the scenario
       the cheap entry is really buying.
     probability_rationale: 'A chain: cert clears AND manufacturing ramps AND UAM scales AND the Anduril relationship becomes
       a DoD program of record. Each plausible at 50-70%; jointly ~11%. The defense leg is Archer''s distinctive second shot
@@ -653,10 +653,10 @@ scenarios:
     - 'The tail: Archer becomes a US UAM leader AND lands a major multi-service defense program — the autonomous hybrid-VTOL
       scales into a real DoD platform — for ~$24B combined revenue by 2035 at a ~34% operating margin and a premium platform
       terminal.'
-    - DCF ~$95/share — ~14× spot. A genuine 'eVTOL + defense prime' outcome; each leg is individually plausible at 40-60%,
+    - DCF ~$95/share — ~18× spot. A genuine 'eVTOL + defense prime' outcome; each leg is individually plausible at 40-60%,
       jointly ~4%. The asymmetric upside that makes the cheap entry positive-EV.
     probability_rationale: 'Tail of tails: UAM leadership AND a major multi-service defense program AND a premium platform
-      terminal. Individually 40-60%; jointly ~4%. The asymmetric upside that the half-Joby price is really buying.'
+      terminal. Individually 40-60%; jointly ~4%. The asymmetric upside that the cheap entry is really buying.'
     dcf_metrics:
       tam_share: 9.6
       p_fail: 4
@@ -789,34 +789,31 @@ scenarios:
       tam_competitor_share: 75.0
 historical_prices:
   ipo_marker: SPAC Sep '21
-  x_min: -4.8
-  points:
-  - - -4.6
-    - 9.5
-  - - -4.3
-    - 6.0
-  - - -4.0
-    - 4.0
-  - - -3.5
-    - 2.5
-  - - -3.0
-    - 2.0
-  - - -2.5
-    - 3.0
-  - - -2.0
-    - 5.0
-  - - -1.5
-    - 9.0
-  - - -1.0
-    - 11.0
-  - - -0.7
-    - 14.0
-  - - -0.4
-    - 10.0
-  - - -0.2
-    - 7.5
-  - - -0.05
-    - 6.81
+  x_min: -5.11
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-5.06, 10.00]   # 2021-08-31
+  - [-4.98, 8.88]   # 2021-09-30
+  - [-4.73, 6.04]   # 2021-12-31
+  - [-4.48, 4.81]   # 2022-03-31
+  - [-4.23, 3.08]   # 2022-06-30
+  - [-3.98, 2.61]   # 2022-09-30
+  - [-3.73, 1.87]   # 2022-12-30
+  - [-3.48, 2.86]   # 2023-03-31
+  - [-3.23, 4.12]   # 2023-06-30
+  - [-2.98, 5.06]   # 2023-09-29
+  - [-2.73, 6.14]   # 2023-12-29
+  - [-2.49, 4.62]   # 2024-03-28
+  - [-2.23, 3.52]   # 2024-06-28
+  - [-1.98, 3.03]   # 2024-09-30
+  - [-1.72, 9.75]   # 2024-12-31
+  - [-1.48, 7.11]   # 2025-03-31
+  - [-1.23, 10.85]   # 2025-06-30
+  - [-0.98, 9.58]   # 2025-09-30
+  - [-0.73, 7.52]   # 2025-12-31
+  - [-0.48, 5.17]   # 2026-03-31
+  - [-0.23, 4.73]   # 2026-06-30
+  - [-0.15, 4.64]   # 2026-07-31
+  - [-0.06, 5.78]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 12%
   body: TC fails (Lilium-style); cash burns; near-total loss.
@@ -825,13 +822,13 @@ weighting_rationale:
 - label: Base 42%
   body: Cert ~2027; mid-scale UAM + defense; diluted.
 - label: Bull 11%
-  body: Cert + DoD program of record; ~5× spot.
+  body: Cert + DoD program of record; ~5.5×.
 - label: Ultra Bull 4%
-  body: UAM leader + major defense program; ~14×.
+  body: UAM leader + major defense program; ~17×.
 appendix:
   pushback:
-  - label: Half of Joby's price, similar cert position.
-    body: ~$5.4B cap vs Joby's ~$11B on a near-identical TC stage — the cheaper entry is the whole thesis.
+  - label: Two-thirds Joby's price, similar cert stage.
+    body: ~$4.3B cap vs Joby's $6.3B on a near-identical TC stage — the cheaper entry is the whole thesis.
   - label: Defense optionality Joby lacks.
     body: Anduril autonomous-VTOL JV + $142M USAF AFWERX + EDGE/Omen powertrain — a second revenue leg and a DoD-program-of-record
       call option.
@@ -938,7 +935,7 @@ competitive:
     best_rival: Joby ~$2.5B
     verdict: lagging
   takeaway: 'Archer is originating a credible #2 eVTOL position plus a distinctive defense dual-use leg (Anduril) that Joby
-    lacks — at roughly half Joby''s market cap. But it lags Joby on the one Power that matters first (FAA certification —
+    lacks — at roughly two-thirds Joby''s cap. But it lags Joby on the one Power that matters first (FAA certification —
     Joby has flown conforming aircraft for TIA; Archer hasn''t), and on cash/runway; the category just killed the under-capitalized
     Lilium. The window is open as the close #2 with a defense call option, but certification and the ~$727M/yr burn are the
     falsifiers the whole bull case must clear.'
@@ -973,16 +970,19 @@ pocd:
       after the other co-founder left in 2022.
   opportunity_ref: The scenario distribution · the business snapshot
   context_ref: The 7 Powers analysis (Power Origination)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the +17.7% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 5.43
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

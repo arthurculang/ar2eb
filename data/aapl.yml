@@ -12,7 +12,7 @@ market:
   extras:
   - Net debt ~$36B ($54.7B cash vs ~$90.7B total debt); ~14.78B shares, shrinking on a fresh $100B buyback + dividend raise
   - Revenue $416B FY25 (+6%); GAAP op margin ~32%; FCF ~$99B; Services ~$31B/quarter at ~70%+ gross margin
-  - ~$291 (Jun 2026), +56% TTM, near the ~$315 ATH; iPhone ~50% of revenue, Greater China reaccelerating (+28%)
+  - ~$339 (Sep 2026), +33% TTM, +25% YTD; iPhone ~50% of revenue, Greater China reaccelerating (+28%)
 taxonomy:
   watchlist: fcf-megacap
   tier: High
@@ -20,12 +20,12 @@ taxonomy:
   - premium-consumer-brands
   - consumer-experience
   primary_theme: premium-consumer-brands
-central_question: Does a mid-single-digit grower at ~43x FCF, with AI outsourced to Gemini and a ~$20B/yr Google-payment cliff,
+central_question: Does a mid-single-digit grower at ~50x FCF, with AI outsourced to Gemini and a ~$20B/yr Google-payment cliff,
   justify a premium the modal can't underwrite?
-thesis: 'Apple trades at ~$4.30T (~$291/sh, +56% TTM) - about 43x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B
+thesis: 'Apple trades at ~$5.01T (~$339/sh, +33% TTM) - about 50x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B
   net debt. Services compounds mid-teens at ~70%+ gross margin, but iPhone is still ~50% of revenue, AI is outsourced to Gemini,
   and the ~$20B/yr Google search payment faces a DOJ rebid. The DCF resolves whether quality justifies the multiple: weighted
-  -34.5%, modal ~$188 (-35%).'
+  -43.8%, modal ~$188 (-45%).'
 chart_reference:
   history_years:
   - 2021
@@ -86,7 +86,7 @@ scenarios:
       pays back, the ~$20B/yr Google search payment is cut or competed away, and EU/US App Store fee erosion bites high-margin
       Services. Revenue grows ~2%/yr and FCF margin compresses toward ~20% as the mix shifts away from the most profitable
       dollars.'
-    - A flat hardware franchise losing its richest Services rents re-rates to a mid-teens FCF multiple -> DCF ~$89 (-69%).
+    - A flat hardware franchise losing its richest Services rents re-rates to a mid-teens FCF multiple — DCF ~$89 (-74%).
       Net debt offers no cushion here; the de-rate is the multiple meeting the growth.
     probability_rationale: 'The genuine bear: iPhone is ~50% of revenue and partly pulled forward, the search payment must
       be rebid annually under the DOJ ruling, and App Store fees face regulatory pressure on two continents. 13% weight on
@@ -162,7 +162,7 @@ scenarios:
     - 'Apple keeps the ecosystem but the growth stays muted: iPhone replacement cycles lengthen, Services compounds but off
       a base partly funded by the at-risk search payment, and tariff/India cost drag (~5-8% premium) trims gross margin. Revenue
       compounds ~4% at a ~23% FCF margin.'
-    - DCF ~$129 (-55%) — a durable but slow-growing franchise at ~19x terminal FCF is worth well below 43x; the gap between
+    - DCF ~$129 (-62%) — a durable but slow-growing franchise at ~19x terminal FCF is worth well below 50x; the gap between
       today's multiple and mid-single-digit growth is the whole bear.
     probability_rationale: Share and ecosystem hold, but mid-single-digit growth can't carry a premium multiple while the
       search-payment and fee tails hang over Services. 27% as the plausible 'durable but slow' path.
@@ -237,8 +237,8 @@ scenarios:
     - 'The modal path: Services compounds mid-teens at ~70%+ gross margin on a 2.5B+ installed base, the iPhone 17 cycle and
       China reacceleration keep hardware steady, and the Gemini-powered Siri keeps users locked in. Revenue compounds ~6%
       to ~$555B at a ~25% FCF margin, with buybacks shrinking the share count.'
-    - DCF ~$188 (-35%) — even crediting durable Services growth and a defended ecosystem, a ~23x terminal FCF multiple lands
-      well below the ~43x paid today; the modal case says the price embeds quality and safety beyond what the cash flows underwrite.
+    - DCF ~$188 (-45%) — even crediting durable Services growth and a defended ecosystem, a ~23x terminal FCF multiple lands
+      well below the ~50x paid today; the modal case says the price embeds quality and safety beyond what the cash flows underwrite.
     probability_rationale: Requires Services to keep compounding and the iPhone base to stay sticky through the AI-platform
       shift — consistent with FQ2's record Services and China rebound, but not a re-acceleration. 33% as the central, still-rich
       outcome.
@@ -313,8 +313,8 @@ scenarios:
     - 'The ecosystem wins the AI era on someone else''s model: the Gemini-powered Apple Intelligence raises engagement and
       Services attach, the search payment survives the rebid intact, and the installed base feeds a higher-margin Services
       mix. Revenue compounds ~8% to ~$600B and FCF margin lifts toward ~27%.'
-    - DCF ~$279 (-4%) — even the bull only reaches roughly today's price; an upper-single-digit grower at a sustained high-20s
-      FCF multiple essentially validates spot rather than beating it.
+    - DCF ~$279 (-18%) — even the bull falls short of today's price; an upper-single-digit grower at a sustained high-20s
+      FCF multiple is worth less than spot, not more.
     probability_rationale: Services + the AI-era ecosystem stay sticky, the search payment holds, and China momentum continues
       — the FQ2 trends extended. ~19% weight on the franchise compounding without the tails biting.
     dcf_metrics:
@@ -388,8 +388,8 @@ scenarios:
     - 'The full upside: Services reaccelerates on AI features and new monetization, hardware finds a fresh wedge (wearables,
       new categories), gross margin holds near 49%, and the ~$100B buyback compounds FCF/share on a shrinking count. Revenue
       compounds ~10% to ~$640B at a ~30% FCF margin.'
-    - DCF ~$362 (+25%) — the only scenario that clears spot, and only if Services takes a genuine step-change and the multiple
-      stays in the low-30s. ~8% probability, the asymmetric upside the premium is paying for.
+    - DCF ~$362 (+7%) — the only scenario that clears spot, and only if Services takes a genuine step-change and the multiple
+      stays in the low-30s. ~8% probability, the thin upside the premium is paying for.
     probability_rationale: Everything compounds — Services AND margins AND buyback leverage AND no regulatory hit — the quality-compounder
       outcome. ~8%, the long-duration tail that justifies the premium if it lands.
     dcf_metrics:
@@ -455,42 +455,52 @@ scenarios:
       - 31.0
 historical_prices:
   ipo_marker: IPO Dec '80
-  x_min: -6.2
-  points:
-  - - -6.0
-    - 75
-  - - -5.0
-    - 130
-  - - -4.0
-    - 180
-  - - -3.3
-    - 130
-  - - -2.5
-    - 190
-  - - -1.5
-    - 230
-  - - -0.5
-    - 250
-  - - -0.1
-    - 315
-  - - -0.02
-    - 291.13
+  x_min: -6.51
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
+  - [-6.48, 63.57]   # 2020-03-31
+  - [-6.23, 91.20]   # 2020-06-30
+  - [-5.98, 115.81]   # 2020-09-30
+  - [-5.72, 132.69]   # 2020-12-31
+  - [-5.48, 122.15]   # 2021-03-31
+  - [-5.23, 136.96]   # 2021-06-30
+  - [-4.98, 141.50]   # 2021-09-30
+  - [-4.73, 177.57]   # 2021-12-31
+  - [-4.48, 174.61]   # 2022-03-31
+  - [-4.23, 136.72]   # 2022-06-30
+  - [-3.98, 138.20]   # 2022-09-30
+  - [-3.73, 129.93]   # 2022-12-30
+  - [-3.48, 164.90]   # 2023-03-31
+  - [-3.23, 193.97]   # 2023-06-30
+  - [-2.98, 171.21]   # 2023-09-29
+  - [-2.73, 192.53]   # 2023-12-29
+  - [-2.49, 171.48]   # 2024-03-28
+  - [-2.23, 210.62]   # 2024-06-28
+  - [-1.98, 233.00]   # 2024-09-30
+  - [-1.72, 250.42]   # 2024-12-31
+  - [-1.48, 222.13]   # 2025-03-31
+  - [-1.23, 205.17]   # 2025-06-30
+  - [-0.98, 254.63]   # 2025-09-30
+  - [-0.73, 271.86]   # 2025-12-31
+  - [-0.48, 253.79]   # 2026-03-31
+  - [-0.23, 289.36]   # 2026-06-30
+  - [-0.15, 308.91]   # 2026-07-31
+  - [-0.06, 316.85]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 13%
-  body: iPhone stalls and the Services tails crystallize; ~$89 (-69%).
+  body: iPhone stalls and the Services tails crystallize; ~$89 (-74%).
 - label: Bear 27%
-  body: Low-single-digit growth; the multiple compresses; ~$129 (-55%).
+  body: Low-single-digit growth; the multiple compresses; ~$129 (-62%).
 - label: Base 33%
-  body: Services compounds, iPhone steady, but still rich; ~$188 (-35%).
+  body: Services compounds, iPhone steady, but still rich; ~$188 (-45%).
 - label: Bull 19%
-  body: AI-era ecosystem deepens and search risk fades; ~$279 (-4%).
+  body: AI-era ecosystem deepens, search risk fades; ~$279 (-18%).
 - label: Ultra Bull 8%
-  body: Services step-change; FCF/share compounds; ~$362 (+25%).
+  body: Services step-change; FCF/share compounds; ~$362 (+7%).
 appendix:
   pushback:
   - label: The de-rate is the multiple, not the franchise.
-    body: Apple is a genuine quality compounder, but a mid-single-digit grower at ~43x FCF prices safety beyond growth — even
-      the bull only reaches ~$279 (-4%).
+    body: Apple is a genuine quality compounder, but a mid-single-digit grower at ~50x FCF prices safety beyond growth — even
+      the bull stops at ~$279 (-18%).
   - label: The ~$20B Google payment is a discrete cliff.
     body: It is near-pure-margin Services that must be rebid annually under the DOJ ruling; losing it directly cuts the highest-quality
       earnings, and the bear/ultra-bear weight it.
@@ -605,8 +615,8 @@ competitive:
     and pricing power - reinforced by deep ecosystem switching costs and immense scale; durability is high. But the live threat
     is the AI-platform shift: with Apple Intelligence outsourced to Gemini, the next interface may run on someone else''s
     model, and that same counterparty anchors a ~$20B/yr search payment now exposed to a DOJ rebid. The Powers are durable;
-    the question the DCF presses is price, not moat. A mid-single-digit grower at ~43x FCF carries a premium even the bull
-    (~$279, -4%) barely justifies, and the modal case lands ~$188 (-35%).'
+    the question the DCF presses is price, not moat. A mid-single-digit grower at ~50x FCF carries a premium even the bull
+    (~$279, -18%) can''t justify, and the modal case lands ~$188 (-45%).'
 pocd:
   people:
     ceo: Tim Cook
@@ -640,16 +650,19 @@ pocd:
       watch is that the chair becomes a non-independent Executive Chairman (Cook) in September 2026.'
   opportunity_ref: The scenario distribution · the business snapshot · the Arthur Indicator
   context_ref: The 7 Powers analysis (Power Audit)
-  deal: 'Open-market common — entry price weighed against the probability-weighted fair value (the -34.5% finding) + position
-    sizing.'
+  deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 338.98
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

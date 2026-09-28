@@ -1,4 +1,4 @@
-# Routines — the three scheduled jobs run from Claude (spec §15, v037/v047)
+# Routines — the three scheduled jobs run from Claude (spec §15, v037/v047/v048)
 
 The §15 cadence runs on **Claude Code Routines** (cloud), not GitHub Actions.
 A Routine is a saved prompt + repo + schedule that Claude runs **unattended on
@@ -10,6 +10,9 @@ Routine's commit.)
 > **Status: all three Routines created by the owner (1–2 on 2026-06-07; the
 > quarterly re-underwrite on 2026-07-22).** This file remains the reference
 > config — if you change a routine in the UI, mirror the change here.
+> **v048 (2026-09-28): re-paste the Routine 2 and Routine 3 prompts below into
+> the UI.** The monthly now self-merges, and the quarterly enforces the
+> book-wide spec checks.
 
 ## Why Routines (and why this clears your old setup chores)
 
@@ -37,7 +40,7 @@ them once yourself:
    interactive Claude Code session, run `/schedule`).
 2. **Connect the repo** `arthurculang/ar2eb` as the routine's source (same
    GitHub connection Claude Code on the web already uses).
-3. Create **two** routines using the configs below — paste the prompt, set the
+3. Create the routines using the configs below — paste the prompt, set the
    schedule, pick the model, leave env vars empty (feeds are keyless).
 4. Save. They activate immediately; the daily one **no-ops until the launch
    epoch** (`epoch: 2026-07-01` in `weights.yml`), so it's safe to create now.
@@ -89,10 +92,15 @@ analytical judgment — this is a deterministic data append.
 
 ---
 
-## Routine 2 — `ar2eb monthly rebuild`
+## Routine 2 — `ar2eb monthly rebuild` *(v048: self-merging)*
 
-Agentic (D2) — the refresh carries judgment (re-price + flag theses that look
-stale enough to warrant human re-research). Opens a PR; does **not** self-merge.
+Agentic (D2), but mechanical at its core: the re-price is one deterministic
+command (`scripts/reprice.py`), and the job's judgment is limited to edge cases
+and to **flagging** (never rewriting) memos whose finding moved enough to
+deserve the next quarterly re-underwrite. **Self-merges once every gate passes**
+(owner decision 2026-09-28). The August PR (#87) sat unmerged for 31 days and
+froze the site's findings from Jul 24 to Sep 22, and a human gate on a
+mechanical job adds delay, not analysis. The PR stays the audit record.
 
 | Field | Value |
 |---|---|
@@ -102,50 +110,73 @@ stale enough to warrant human re-research). Opens a PR; does **not** self-merge.
 | **Schedule** | The 22nd, mid-morning ET. Custom cron: `0 13 22 * *` (13:00 UTC; date-driven, not market-time-sensitive). |
 | **Env vars** | none |
 
-**Prompt** (paste verbatim):
+**Prompt** (paste verbatim — replaces the pre-v048 PR-gated prompt):
 
 ```
-Monthly ar2eb rebuild (spec §15, conviction-neutral §3.5 B). Open a PR titled
-"Monthly rebuild <YYYY-MM>" containing, in order:
+Monthly ar2eb rebuild (spec §15, v048): a mechanical re-price of every public
+memo, shipped autonomously. Open a PR titled "Monthly rebuild <YYYY-MM>" and
+squash-merge it yourself once every gate in step 3 passes. Conviction-neutral
+(§3.5 B): never touch conviction tiers, categories, the §12 sizing rule, or any
+thesis argument, scenario value, or probability.
 
-1. BUMP = ARCHIVE — for each public data/<ticker>.yml (skip
-   private_prevaluation names), run `python scripts/bump_pdf_version.py
-   <ticker>`. This IS the archive step: the bump snapshots the OUTGOING stamp
-   (version, timestamp, as-of date, spot) into stamp.prior_versions and
-   increments the version, so the prior PDF stays in public/memos/ as immutable
-   history AND the memo page's "Prior versions (N)" download panel gains one
-   entry. Do NOT move PDFs into an archive/ directory — the prior_versions panel
-   IS the on-site archive; a move would pull old PDFs out of public/memos/ and
-   build_site_data.py would then drop those entries (it 404-guards each prior
-   entry against disk).
+0. SETUP. Read CLAUDE.md first. Install: `pip install playwright pyyaml`,
+   `npm install`, `apt-get update && apt-get install -y poppler-utils`. If an
+   earlier "Monthly rebuild" PR is still open, close it with a comment that
+   this run supersedes it.
 
-2. MECHANICAL RE-PRICE (judgment only on edge cases) — for those same tickers,
-   refresh `spot` and `market.market_cap_billion` (= current price × shares)
-   from current Yahoo prices, and advance the top-level `date:` to today so each
-   archived version carries its true as-of date. SURGICALLY edit only those
-   numeric lines — do NOT reformat the file or touch the theses/scenarios.
-   (Order matters: BUMP before RE-PRICE — the bump files the outgoing spot/date
-   under the old version; the new spot/date belong to the new version.) Then
-   re-render via the pipeline: validate.py → build_site_data.py →
-   `node build.js` → `python scripts/rebuild_all.py --strict-layout`
-   (STRICT_LAYOUT=1; every ticker was bumped, so each renders to its new
-   versioned filename).
+1. RE-PRICE. Run `python scripts/reprice.py`. In one pass it bumps every public
+   memo (the archive step), refreshes spot, market cap and date from Yahoo,
+   keeps the price-history charts aligned, re-renders everything STRICT,
+   re-weights the book, and regenerates the visual baseline. If it aborts:
+   - on a failed price fetch: retry once; if it still fails, re-run with
+     `--partial-ok` and list the skipped tickers as stragglers;
+   - on a stock split since a memo's date: do not guess. Re-run with
+     `--partial-ok` (the split name is skipped) and flag it for the quarterly
+     re-underwrite to rescale shares and per-share fields.
 
-3. RE-WEIGHT — run `python portfolio/build_weights.py` to refresh
-   portfolio/weights.yml from the new findings.
+2. PROSE NUMBER SYNC (mechanical). A re-price leaves hardcoded numbers in
+   rendered prose stale (the page-1 companion line and the Deal leg's figure
+   render live and need nothing). Run `python scripts/stale_prose.py` for
+   candidates, then read each memo's rendered prose yourself: central
+   question, thesis, masthead extras, scenario headlines and narratives,
+   weighting rationale, pushback and triggers. Update numbers that restate
+   the OLD spot price or market cap, a price-based multiple (rescale by the
+   price change), a price move (recompute from the memo's own price-history
+   points, or delete it), the headline result, or a scenario's value vs spot,
+   plus any fair/cheap/rich wording that follows directly from them. Keep
+   each field no longer than before. Change nothing else: no argument,
+   scenario value or probability. Never write a capitalized word followed by
+   colon-space inside an unquoted YAML value. Then, for the edited memos:
+   `python scripts/validate.py`, `python scripts/build_site_data.py`,
+   `node build.js`, `MEMO_FORCE=1 python scripts/rebuild_all.py --strict-layout <tickers>`,
+   `python scripts/visual_hash.py <tickers>`.
 
-4. JUDGMENT PASS (why this job is agentic, not a cron script): list, in the PR
-   description, any ticker whose entry-price-vs-distribution finding has moved
-   enough that a full human RE-RESEARCH looks warranted. DO NOT rewrite theses —
-   only flag them.
+3. GATES. All must pass before merging:
+   - `python scripts/validate.py` reports no ERROR;
+   - every render is STRICT-clean (no page overflow, no clipped chart text);
+   - `python scripts/visual_hash.py --check` is clean;
+   - `public/data.js` is in sync (re-running build_site_data.py leaves no diff).
+   If a page overflows, trim that memo's OWN prose (see "Authoring gotchas" in
+   CLAUDE.md), never the shared layout. If a ticker still fails after honest
+   fixes, revert it to main (`git checkout origin/main -- data/<t>.yml` and
+   delete its new PDF), re-run build_site_data.py,
+   `python scripts/visual_hash.py <t>` and the gates, and list it as a
+   straggler.
 
-Keep everything observable/fundamentals-only. Leave the PR for review; do not
-self-merge.
+4. JUDGMENT PASS (flag, never rewrite). In the PR description, list every
+   ticker whose finding flipped sign or moved 15+ points, with old -> new
+   finding and the price move behind it; these are inputs for the next
+   quarterly re-underwrite. Also list any stragglers and why.
+
+5. SHIP. Commit to a branch named `monthly/<YYYY-MM>`, push, open the PR with
+   that description, then squash-merge it. If a gate cannot be made to pass
+   for the book as a whole, do not merge: leave the PR open and make the
+   blocking reason the first line of its description.
 ```
 
 ---
 
-## Routine 3 — `ar2eb quarterly re-underwrite` *(v047)*
+## Routine 3 — `ar2eb quarterly re-underwrite` *(v047; spec checks v048)*
 
 The holistic pass the monthly deliberately is not: a **full qualitative
 re-underwrite** of every public memo — thesis, scenario values and narratives,
@@ -183,7 +214,9 @@ for young_company, the mature engine for mature/SOTP) so the validator's
 equity-bridge identities tie to the cent. Never fabricate value to make a
 model work; if evidence is ambiguous, leave the memo unchanged and say why.
 Respect the YAML-safety and page-trim gotchas in CLAUDE.md. The site is
-public-facing: no internal spec jargon in any rendered field.
+public-facing: no internal spec jargon in any rendered field. If CLAUDE.md's
+"Current state" lists flagged inputs for this quarterly, handle each one
+explicitly and report its outcome in the PR description.
 
 Per public ticker (every data/*.yml except dcf_type private_prevaluation),
 in batches of ~6 parallel research subagents:
@@ -203,19 +236,51 @@ in batches of ~6 parallel research subagents:
    through the bridge?). Apply only what survives. Re-run
    scripts/validate.py after each ticker's edits.
 
+2b. SPEC CHECKS — on EVERY memo, CONFIRM verdicts included (these are the
+   rules a re-underwrite does not reliably enforce on its own):
+   - PUSHBACK OPPOSES THE HEADLINE (§3.5 B). Bullish finding: the pushback
+     steelmans the bear case and `appendix.pushback_side: bear` is set.
+     Bearish finding: it argues the bull case and the field is omitted. A
+     sign flip flips the required side.
+   - NUMERIC FALSIFIERS (§6d). Every `competitive.threats[].falsifier` states
+     a measurable threshold, ideally with a date.
+   - STOCK COMP (§4, v048). Where latest-FY stock comp exceeds ~8% of
+     revenue, the model values FCF after stock comp on today's diluted share
+     count (or models the dilution explicitly — never both). In a loss
+     quarter the reported diluted count equals basic: add unvested awards and
+     in-the-money options by the treasury method (converts carried as debt
+     stay out) — COIN first. Projected operating margins must sit on the same
+     after-stock-comp basis as the history chart. Re-model through the engine
+     if not; re-check names near the line (ISRG, DASH).
+   - COMPANION STATISTIC (§6b). Page 1 now renders "most likely case vs spot
+     · chance at or below spot" automatically; confirm it reads correctly, and
+     keep any thesis sentence that restates it in sync.
+   - STALE PROSE. After your edits, every `python scripts/stale_prose.py`
+     hit is either fixed or confirmed a false positive (it is a heuristic).
+   - PRICE HISTORY. `reprice.py` keeps charts aligned; if a memo's page-1
+     price history is visibly wrong, rebuild it with
+     `python scripts/rebuild_history.py <ticker>`.
+
 3. MECHANICAL REFRESH — after all qualitative edits land, run
    `python scripts/reprice.py` (installs: pip install playwright pyyaml;
    npm install; apt-get install -y poppler-utils). It bumps every public
    memo (the quarterly archive), refreshes spot/market-cap/date from Yahoo,
    re-renders everything STRICT, re-weights the book, and regenerates the
-   visual baseline — the qualitative edits ride the same bump.
+   visual baseline — the qualitative edits ride the same bump. The re-price
+   moves spot again, so then repeat the monthly's PROSE NUMBER SYNC
+   (portfolio/ROUTINES.md, Routine 2, step 2) on every memo and re-render the
+   ones you edit.
 
 4. SHIP — commit to a feature branch, push, open a PR titled "Quarterly
    re-underwrite <YYYY-Qn>" whose description lists per ticker: verdict,
    changes made with their evidence, and finding old → new — then MERGE it
    (squash). If a ticker's render or validation cannot be fixed after honest
    attempts, revert that ticker, ship the rest, and list the stragglers in
-   the PR description.
+   the PR description. AUDIT INTEGRITY: if the run was resumed, the
+   pressure-test round may have been regenerated with new proposal IDs. Build
+   the PR's audit record only from the round that actually applied (the
+   applied proposals' own IDs, their skeptic verdicts), never from an earlier
+   round.
 ```
 
 ---
