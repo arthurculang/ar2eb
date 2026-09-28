@@ -21,7 +21,7 @@ taxonomy:
   primary_theme: travel-mobility-services
 central_question: Is Uber a dominant FCF-inflecting mobility/delivery network at ~14x EV/FCF — or does autonomy commoditize
   its driver-marketplace and erode the network toll?
-thesis: 'Uber trades at ~$145B (≈$70/sh, down ~30% on AV fear) — ~14x EV/FCF on $9.76B FCF (growing 40%+), $193.5B gross bookings
+thesis: 'Uber trades at ~$144B (≈$71/sh, down ~30% on AV fear) — ~14x EV/FCF on $9.76B FCF (growing 40%+), $193.5B gross bookings
   (+19%), net cash and a $20B buyback. The mature DCF asks whether the two-sided network + advertising (>$2B run-rate) + delivery-margin
   ramp compound, or whether Waymo/Tesla bypass the marketplace. The finding: at 14x FCF for a network compounding GB ~mid-teens
   with expanding margins, the modal case implies meaningful undervaluation — but a genuine AV-disruption ultra-bear is -44%,
@@ -303,7 +303,7 @@ scenarios:
     narrative:
     - The network power holds, AV partnerships prove accretive (cheaper rides expand the TAM), advertising + Uber One drive
       a software-like margin mix, and GB compounds mid-teens.
-    - DCF ~$155 (+120%) — the FCF machine re-rates as the AV fear proves overblown.
+    - DCF ~$155 (+119%) — the FCF machine re-rates as the AV fear proves overblown.
     probability_rationale: AV becomes a tailwind (Uber as the aggregator for cheaper AV rides) + ads scale. ~18%; the productivity
       data hints at it.
     dcf_metrics:
@@ -376,7 +376,7 @@ scenarios:
     narrative:
     - Uber becomes the indispensable demand/marketplace layer for the entire AV ecosystem plus a >$10B advertising platform,
       compounding GB high-teens at peak margins.
-    - DCF ~$202 (+187%) — the platform-for-all-autonomy outcome; ~7% probability.
+    - DCF ~$202 (+185%) — the platform-for-all-autonomy outcome; ~7% probability.
     probability_rationale: Uber is the demand layer every AV fleet needs + a major ad platform. ~7%, the asymmetric upside
       the AV-discounted entry is buying.
     dcf_metrics:
@@ -484,9 +484,9 @@ weighting_rationale:
 - label: Base 33%
   body: Stays AV aggregator; ads + delivery; ~$110 (+55%).
 - label: Bull 18%
-  body: Network holds; AV accretive; ~$155 (+120%).
+  body: Network holds; AV accretive; ~$155 (+119%).
 - label: Ultra Bull 7%
-  body: The AV demand layer; ~$202 (+187%).
+  body: The AV demand layer; ~$202 (+185%).
 appendix:
   pushback:
   - label: ~14x EV/FCF on $9.76B FCF growing 40%+.
@@ -633,6 +633,6 @@ pocd:
       $20B buyback regime, on a clean single-class register with an independent chair and no controller — the
       structural opposite of a founder-control name. The only real demerits: low insider skin-in-the-game and
       some execution-continuity tied to Dara.'
-  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (UBER 4.72)'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (UBER 4.69)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.

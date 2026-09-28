@@ -14,7 +14,7 @@ market:
     on SBC
   - Revenue $1.85B FY25 (+3%); GAAP op margin still -25.9% (loss); FCF +$0.4B (~22%) but ex-SBC FCF far thinner; adj EBITDA
     ~27%
-  - ~$27, down ~58% YTD (52-wk ~$15-$52); IPO'd Sep-2020 at $52 — a GAAP-loss turnaround, the most speculative name in this
+  - ~$43, down ~2% YTD; IPO'd Sep-2020 at $52 — a GAAP-loss turnaround, the most speculative name in this
     batch
 taxonomy:
   watchlist: fcf-plus-plus-growth
@@ -25,11 +25,11 @@ taxonomy:
   primary_theme: creator-design-software
 central_question: Does Vector turn Unity into a durable, profitable ad-and-engine platform — or do engine-share erosion, SBC
   dilution and the convertibles keep it loss-making?
-thesis: 'Unity trades at ~$11.8B (~$27, down ~58% YTD) — ~30x FCF on $1.85B revenue, but the FCF flatters a still-GAAP-loss
+thesis: 'Unity trades at ~$18.7B (~$43, down ~2% YTD) — ~47x FCF on $1.85B revenue, but the FCF flatters a still-GAAP-loss
   business: shares are up ~56% in five years on stock comp and ~$2.2B convertibles (Nov-2026) sit against ~$2.15B cash. This
   is a turnaround bet on the Vector AI ad engine (Grow +24%, Vector +80%, ~$1B ARR targeted), not an FCF compounder. The base
   models a lower ex-SBC FCF margin AND a growing share count, so dilution is the core mechanism. Across a wide distribution
-  the weighted finding is -56.5% — the modal case is still well below spot.'
+  the weighted finding is -72.6% — the modal case is still well below spot.'
 chart_reference:
   history_years:
   - 2021
@@ -90,7 +90,7 @@ scenarios:
       revenue barely grows, and GAAP stays in the red. Ex-SBC free cash flow stays near 2-8% while the share count keeps climbing
       past 520M on stock comp.
     - A barely-growing, loss-making engine whose cash flow is consumed by dilution earns a distressed ~10x terminal multiple
-      net of the convertibles -> DCF ~$2.02 (-93%). The ~$2.2B notes maturing into ~$2.15B cash leave no cushion if FCF doesn't
+      net of the convertibles — DCF ~$2.02 (-95%). The ~$2.2B notes maturing into ~$2.15B cash leave no cushion if FCF doesn't
       inflect.
     probability_rationale: 'The genuine bear: GAAP losses persist, the ironSource sunset forced a $279M charge, soft gaming
       demand pressures Grow, and SBC has diluted holders ~56% in five years. 18% on Vector failing and dilution dominating.'
@@ -164,7 +164,7 @@ scenarios:
     narrative:
     - Vector grows but decelerates as easy comps lapse and Create stabilizes only slowly; revenue compounds mid-single-digit,
       GAAP operating margin crosses zero late, and ex-SBC FCF margin grinds to ~12% against a still-rising ~500M share count.
-    - DCF ~$5.44 (-80%) — a low-growth software business whose free cash flow is split with dilutive stock comp, net of the
+    - DCF ~$5.44 (-87%) — a low-growth software business whose free cash flow is split with dilutive stock comp, net of the
       convertibles, is worth a fraction of today's price; the market is pricing more of the turnaround than this path delivers.
     probability_rationale: Vector helps but doesn't compound, engine-share leakage caps Create, and dilution keeps per-share
       cash flow thin. 28% as the plausible 'turns but doesn't compound' path given the GAAP losses and competition.
@@ -239,7 +239,7 @@ scenarios:
     - 'The modal path: Vector hits ~$1B ARR and keeps gaining mobile-ad share, Grow compounds low-double-digit, Create stabilizes,
       and GAAP operating margin turns positive and climbs toward ~15%. But ex-SBC FCF margin only reaches ~16% and the share
       count still drifts up toward ~485M, so per-share cash flow lags the headline.'
-    - DCF ~$10.78 (-60%) — even with Vector working and GAAP turning, a ~14x terminal multiple on diluted, ex-SBC free cash
+    - DCF ~$10.78 (-75%) — even with Vector working and GAAP turning, a ~14x terminal multiple on diluted, ex-SBC free cash
       flow net of the ~$2.2B convertibles lands well below spot. The modal case still says the price embeds more than the
       fundamentals underwrite.
     probability_rationale: Requires Vector to sustain ad-share gains and GAAP to inflect while dilution continues - consistent
@@ -315,8 +315,7 @@ scenarios:
     - Vector sustains its ad-share gains and extends beyond mobile gaming into new verticals, adj EBITDA margin keeps expanding
       past 27%, ex-SBC FCF margin inflects toward ~22%, and SBC moderates so the share count nearly stabilizes near ~470M.
       Revenue compounds high-teens.
-    - DCF ~$22.13 (-19%) - if Vector becomes a durable cross-vertical ad platform and dilution slows, the de-rated entry closes
-      most of the gap to spot; this is the core of the bull.
+    - DCF ~$22.13 (-49%) - even if Vector becomes a durable cross-vertical ad platform and dilution slows, value reaches only about half of spot; this is the core of the bull.
     probability_rationale: Vector durably wins ad share beyond gaming while cost discipline lifts margins and curbs dilution
       - the turnaround landing. ~16% weight on Vector becoming a real platform.
     dcf_metrics:
@@ -390,8 +389,8 @@ scenarios:
     - 'The full second act: Vector becomes the default cross-vertical AI ad engine, Create re-accelerates on AI tooling, Unity
       turns durably GAAP-profitable, ex-SBC FCF margin reaches high-20s%, and dilution falls away so per-share cash flow finally
       compounds. Revenue compounds ~20%+.'
-    - DCF ~$39.96 (+47%) - the only path that prices Unity as a profitable platform compounder rather than a dilutive turnaround;
-      ~8% probability, the asymmetric upside the depressed, speculative entry is buying.
+    - DCF ~$39.96 (-8%) - the only path that prices Unity as a profitable platform compounder rather than a dilutive turnaround;
+      ~8% probability, and even it sits below today's price.
     probability_rationale: Everything works - Vector platformizes AND Create recovers AND GAAP profitability AND dilution
       stops. ~8%, the long-duration tail on a name with a very wide distribution.
     dcf_metrics:
@@ -487,18 +486,18 @@ historical_prices:
   - [-0.06, 42.10]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 18%
-  body: Vector stalls; engine bleeds; dilution wins; ~$2.02 (-93%).
+  body: Vector stalls; engine bleeds; dilution wins; ~$2.02 (-95%).
 - label: Bear 28%
-  body: Modest growth; FCF thin; GAAP barely turns; ~$5.44 (-80%).
+  body: Modest growth; FCF thin; GAAP barely turns; ~$5.44 (-87%).
 - label: Base 30%
-  body: Vector scales; GAAP turns; dilution persists; ~$10.78 (-60%).
+  body: Vector scales; GAAP turns; dilution persists; ~$10.78 (-75%).
 - label: Bull 16%
-  body: Vector beyond gaming; margins inflect; ~$22.13 (-19%).
+  body: Vector beyond gaming; margins inflect; ~$22.13 (-49%).
 - label: Ultra Bull 8%
-  body: Vector platform; profitable compounder; ~$39.96 (+47%).
+  body: Vector platform; profitable compounder; ~$39.96 (-8%).
 appendix:
   pushback:
-  - label: FCF is positive — why a -60% modal case?
+  - label: FCF is positive — why a -75% modal case?
     body: ~$0.4B FCF (~22%) flatters a GAAP-loss business; the base models the ex-SBC margin AND a growing share count, so per-share
       cash is far thinner.
   - label: Vector is genuinely re-accelerating ads.
@@ -615,8 +614,8 @@ competitive:
     fee and is eroding to Godot and Unreal. The Audit: the dominant Power is the contested ad-data/install-base resource (durability
     low), the live threats are engine-share erosion plus a developer exodus and ~56%-in-five-years SBC dilution, and ~$2.2B
     convertibles mature into ~$2.15B cash in Nov-2026. That squares with the DCF: even with Vector working and GAAP turning,
-    the base lands -60% because the model carries a thinner ex-SBC margin and a growing share count - this is the most speculative
-    name in the batch, a turnaround bet on Vector with a very wide -93% to +47% distribution, not an FCF compounder.'
+    the base lands -75% because the model carries a thinner ex-SBC margin and a growing share count - this is the most speculative
+    name in the batch, a turnaround bet on Vector with a very wide -95% to -8% distribution, not an FCF compounder.'
 pocd:
   people:
     ceo: Matthew Bromberg

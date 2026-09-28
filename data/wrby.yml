@@ -12,7 +12,7 @@ market:
   extras:
   - Net cash +$286M (no debt); ~122.7M shares; SBC ~5% of revenue (~$12M/qtr), a live dilution drag
   - Revenue $872M FY25 (+13%); GAAP op margin -0.6% (still a small loss); FCF +$30M (~3%); adj EBITDA ~12.2%
-  - ~$26, up ~13-16% YTD, 52-wk $14.96-$31.00; added to S&P SmallCap 600 (Jun 2026); ~3x sales
+  - ~$23, up ~7% YTD; added to S&P SmallCap 600 (Jun 2026); ~3x sales
 taxonomy:
   watchlist: fun-speculative
   tier: Med
@@ -21,11 +21,11 @@ taxonomy:
   primary_theme: premium-consumer-brands
 central_question: Does store-led scale finally drive Warby Parker's EBITDA margin from ~12% toward high-teens/20% with durable
   GAAP profit and FCF — or stay a thin-margin, decelerating brand priced for an inflection?
-thesis: Warby Parker trades at ~$3.25B (~$26.46, up ~13-16% YTD) — ~3x sales on $872M revenue growing ~13%, net cash, but
+thesis: Warby Parker trades at ~$2.85B (~$23.25, up ~7% YTD) — ~3x sales on $872M revenue growing ~13%, net cash, but
   only a ~12% adj-EBITDA margin and razor-thin GAAP profit. The bull is store-led operating leverage finally lifting EBITDA
   toward high-teens/20% as the unit base scales from 323 toward ~900-1,000+, plus a Google AI-smart-glasses call-option outside
   guidance; the bear is decelerating customer growth (+4.8%), gross-margin compression, and the inflection never arriving.
-  At ~3x sales the price already embeds the ramp, so the weighted finding is -42.1% and the modal case lands -43%.
+  At ~3x sales the price already embeds the ramp, so the weighted finding is -34.1% and the modal case lands -35%.
 chart_reference:
   history_years:
   - 2021
@@ -86,8 +86,7 @@ scenarios:
     - 'Customer growth keeps decelerating below ~+5%, the model leans on price not new buyers, gross margin compresses further
       from 54%, and the operating leverage never arrives: EBITDA stays mired near ~12% while GAAP stays at a small loss/breakeven
       and FCF margin crawls 2-5%. SBC dilution offsets what little cash is generated.'
-    - A decelerating, thin-margin brand that never inflects earns ~2x sales and a low-double-digit EBITDA multiple -> DCF
-      ~$5.98 (-77%). Net cash sets a floor, but at ~3x sales today the downside if the inflection fails is severe.
+    - A decelerating, thin-margin brand that never inflects earns ~2x sales and a low-double-digit EBITDA multiple — DCF ~$5.98 (-74%). Net cash sets a floor, but at ~3x sales today the downside if the inflection fails is severe.
     probability_rationale: 'The genuine bear: active-customer growth is already only +4.8% TTM, gross margin slipped to 54.0%
       from 56.3%, and GAAP profit is a few million dollars that easily flips negative. 15% on the inflection never showing
       up.'
@@ -162,7 +161,7 @@ scenarios:
     - 'Stores keep opening (~50/yr) and revenue compounds ~7% toward ~$1.2B, but operating leverage is grudging: EBITDA inches
       up while gross-margin pressure and SBC keep GAAP profit thin and FCF margin near 7%. The unit runway is real; the margin
       step-change is not.'
-    - DCF ~$9.84 (-63%) — a single-digit grower whose EBITDA only crawls toward the mid-teens is worth well below ~3x sales;
+    - DCF ~$9.84 (-58%) — a single-digit grower whose EBITDA only crawls toward the mid-teens is worth well below ~3x sales;
       the market's premium assumes a faster inflection than this path delivers.
     probability_rationale: Units and revenue grow but the capital and SBC intensity keep margins suppressed — the plausible
       'grows but doesn't lever' path given the customer-growth deceleration. 27% weight.
@@ -237,12 +236,11 @@ scenarios:
     - 'The modal path: the store base compounds low-double-digit toward ~900-1,000 units, holistic vision (eye exams, insurance/HSA,
       contacts) lifts revenue/customer, and operating margin grinds from ~0% toward ~11% with FCF margin reaching ~10% as
       new-store cohorts mature. Revenue compounds ~10% to ~$1.4B.'
-    - DCF ~$15.20 (-43%) — a genuine unit runway and a real margin grind, but at ~3x sales today the price already embeds
+    - DCF ~$15.20 (-35%) — a genuine unit runway and a real margin grind, but at ~3x sales today the price already embeds
       that ramp; the modal case at a ~16x EBITDA multiple lands well below spot. The market is paying for the inflection in
       advance.
     probability_rationale: Requires the store-led leverage to show up and FCF to scale as cohorts mature — consistent with
-      the FY26 ~12% EBITDA guide and the new-store economics, but not a step-change. 33% as the central outcome, still -43%
-      from a price that pre-pays the ramp.
+      the FY26 ~12% EBITDA guide and the new-store economics, but not a step-change. 33% as the central outcome, still -35% from a price that pre-pays the ramp.
     dcf_metrics:
       cagr_5y: 9.8
       wacc: 0.1
@@ -315,8 +313,7 @@ scenarios:
       stabilizes, GAAP profit turns durable and FCF margin reaches ~13% — and the Google Android XR / Gemini AI-smart-glasses
       program (a free, $150M-committed call-option outside guidance) starts to read as a credible Meta-Ray-Ban competitor.
       Revenue compounds ~12% to ~$1.5B.'
-    - DCF ~$24.03 (-9%) — if the margin inflection arrives, the de-rate-to-fair math nearly closes the gap to spot; this is
-      the core of the bull, and it still does not clear today's price on the fundamentals alone.
+    - DCF ~$24.03 (+3%) — if the margin inflection arrives, the de-rate-to-fair math just clears spot; this is the core of the bull, roughly fair value on the fundamentals alone.
     probability_rationale: The Wingstop-style 'leverage finally shows up' path plus a maturing store base make a real EBITDA
       inflection credible; the glasses add free optionality. ~17% weight on the inflection landing.
     dcf_metrics:
@@ -390,7 +387,7 @@ scenarios:
     - 'Everything works: the unit machine marches toward multi-thousand US TAM, operating margin reaches ~18% with FCF margin
       ~16%, holistic vision compounds revenue/customer, and the Google AI-glasses partnership becomes a real second revenue
       stream rather than a call-option. Revenue compounds ~14% to ~$1.6B at a premium-brand multiple.'
-    - 'DCF ~$33.41 (+26%) — the only scenario that clears spot: a true margin inflection plus the glasses second act re-rate
+    - 'DCF ~$33.41 (+44%) — the only scenario well above spot: a true margin inflection plus the glasses second act re-rate
       the brand. ~8% probability, the asymmetric upside the rich entry is buying.'
     probability_rationale: Margins AND units AND revenue/customer AND the glasses optionality all land — the long-duration
       tail where the price's embedded inflection actually arrives and then some. ~8%.
@@ -482,20 +479,19 @@ historical_prices:
   - [-0.06, 24.60]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: Growth stalls; margin never inflects; ~$5.98 (-77%).
+  body: Growth stalls; margin never inflects; ~$5.98 (-74%).
 - label: Bear 27%
-  body: Stores grow but leverage crawls; ~$9.84 (-63%).
+  body: Stores grow but leverage crawls; ~$9.84 (-58%).
 - label: Base 33%
-  body: Runway continues; margin grinds to ~11%; ~$15.20 (-43%).
+  body: Runway continues; margin grinds to ~11%; ~$15.20 (-35%).
 - label: Bull 17%
-  body: Leverage inflects + glasses optionality; ~$24.03 (-9%).
+  body: Leverage inflects + glasses optionality; ~$24.03 (+3%).
 - label: Ultra Bull 8%
-  body: Full inflection + glasses second act; ~$33.41 (+26%).
+  body: Full inflection + glasses second act; ~$33.41 (+44%).
 appendix:
   pushback:
   - label: At ~3x sales the price already embeds the margin ramp.
-    body: The weighted DCF is -42.1% and the modal base is -43% — only the ultra-bull (+26%) clears spot; the inflection is
-      pre-paid, not a free upside.
+    body: The weighted DCF is -34.1% and the modal base is -35% — only the bull (+3%) and ultra-bull (+44%) clear spot; the inflection is pre-paid.
   - label: The Google glasses are a genuine free call-option.
     body: $150M committed, Android XR + Gemini, NOT in 2026 guidance — credible optionality, but it lives only in the bull/ultra-bull.
   - label: Stores are the engine and the economics work.
@@ -608,11 +604,10 @@ competitive:
   takeaway: 'Warby Parker''s brand Power is genuine — a premium, vertically-integrated DTC eyewear name with real pricing
     power and a nascent process edge from in-house design/lens labs/optometry — but a brand does not convert to free cash
     flow while the adjusted-EBITDA margin sits near ~12% and GAAP profit flips between a few million dollars and breakeven.
-    The Audit: branding is durable (medium), process_power (store-led vertical integration) is the emerging swing factor,
+    The Audit: branding is durable (medium), process power (store-led vertical integration) is the emerging swing factor,
     and the live threats are capital/SBC intensity capping the margin inflection plus price-led share loss to Zenni/value
     optical; the Google AI-glasses program is upside optionality, not the base, and it chases a Meta-EssilorLuxottica leader.
-    At ~3x sales the price already embeds the margin ramp and some of the glasses optionality, so the weighted DCF is -42.1%
-    and the modal case lands -43% — only the ultra-bull''s full inflection-plus-second-act clears spot.'
+    At ~3x sales the price already embeds the margin ramp and some of the glasses optionality, so the weighted DCF is -34.1% and the modal case lands -35% — only the bull (+3%) and ultra-bull (+44%) clear spot.'
 pocd:
   people:
     ceo: Neil Blumenthal & Dave Gilboa (co-CEOs)
