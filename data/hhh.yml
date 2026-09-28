@@ -75,7 +75,7 @@ scenarios:
     short_label: UltBear
     probability: 0.10
     expected_per_share: 50.74
-    headline: "Value trap confirmed; NAV marks down; −23%."
+    headline: "Value trap confirmed; NAV marks down."
     narrative:
       - >
         The fifteen-year discount is fifteen years old for a reason. In the
@@ -136,7 +136,7 @@ scenarios:
     short_label: Bear
     probability: 0.22
     expected_per_share: 71.77
-    headline: "The discount simply persists; +9%."
+    headline: "The discount simply persists."
     narrative:
       - >
         The base-rate bear for a discount-to-NAV holding company: nothing breaks,
@@ -194,7 +194,7 @@ scenarios:
     short_label: Base
     probability: 0.40
     expected_per_share: 90.40
-    headline: "Partial re-rating; the gap halves; +38%."
+    headline: "Partial re-rating; the gap halves."
     narrative:
       - >
         The modal case. The Ackman catalyst is genuinely new — control, an
@@ -250,7 +250,7 @@ scenarios:
     short_label: Bull
     probability: 0.20
     expected_per_share: 118.80
-    headline: "Discount closes toward NAV; +81%."
+    headline: "Discount closes toward NAV."
     narrative:
       - >
         Vantage's float compounds, MPC land keeps hitting records, Ward Village
@@ -304,7 +304,7 @@ scenarios:
     short_label: UltBull
     probability: 0.08
     expected_per_share: 169.10
-    headline: "The modern-day Berkshire; +158%."
+    headline: "The modern-day Berkshire."
     narrative:
       - >
         The full flywheel. Vantage float funds accretive acquisitions, the land
@@ -387,7 +387,7 @@ historical_prices:
 # ── Page 1 weighting rationale (grouped buckets) ────────────────────────────
 weighting_rationale:
   - label: "Ultra Bear 10%"
-    body: "Value trap confirmed: a rate/housing shock marks the land down and the discount stays wide."
+    body: "Value trap: a rate/housing shock marks the land down; the discount stays wide."
   - label: "Bear 22%"
     body: "The discount simply persists; cushioned by the land bank + Ackman's $100 basis."
   - label: "Base 40%"
@@ -431,14 +431,18 @@ taxonomy:
   primary_theme: real-economy-hard-assets
 
 stamp:
-  footer_version: "005"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "006"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "005"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "006"
+  pdf_timestamp: "2026-09-28_18-52"
 
 
   prior_versions:
+  - version: "005"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 65.60
   - version: "004"
     timestamp: "2026-07-22_15-02"
     asOfDate: "2026-07-22"

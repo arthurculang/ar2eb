@@ -539,13 +539,17 @@ competitive:
     needs more than the most likely case (growth near 10%, ~14% below it): the Powers are real, but only the bull cases (teens
     growth held) clear it, and the Experiences/Services relaunch is the swing.'
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-26_04-14"
+  footer_version: "007"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-26_04-14"
+  pdf_version: "007"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-26_04-14"
+    asOfDate: "2026-09-22"
+    spotPrice: 166.84
   - version: "005"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"

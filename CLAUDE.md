@@ -121,13 +121,43 @@ Present decisions as a **table** so I can approve in bulk. Columns:
   - **Renderer:** page-1 companion statistic, computed spot-crossing caption, and a live finding on the POCD Deal leg.
   - **One-time prose sync** of stale prices and findings across the book.
   - **Monthly self-merge**, and the quarterly now names its spec checks.
-- **Inputs for the Oct-15 quarterly re-underwrite (flagged in v048; handle them explicitly):**
-  - **COIN:** the loss-quarter share count (263.4M is basic; add treasury-method awards; likely −3% → ~−9%). FY26 stock comp is also running ~18% of H1 revenue vs the 11.7% modeled.
-  - **META:** FY26 owner FCF is likely negative on the H1 run-rate (H1 FCF $15.0B vs $13.7B stock comp), vs the model's +$18–39B FY1. Stock comp is 11.7% of H1 revenue vs 10.2% modeled, and the op-margin <38% bear trigger may have fired (H1 GAAP 35.6%).
-  - **ZM:** POCD People score 4 despite dual-class super-voting (rubric → 3); ABNB has the same question. ZM's projection-year labels are off by one (the FY26 base is labelled as projection year 1).
-  - **Pushback side:** bullish memos still arguing the bull case (ZM, LULU, CROX and others) need the bear steelman + `pushback_side: bear`.
-  - **Falsifiers:** ABNB (2) and ZM (1) are non-numeric.
-  - **Decision #10 (stock-comp trigger on share of FCF)** is the owner's; don't pre-empt it.
+- **Inputs for the Oct-15 quarterly re-underwrite (flagged in v048; handle each explicitly and report the outcome):**
+  1. **Re-research first — price moves the model never saw.** Find the news before trusting the finding.
+     - TWST (~6× in 52 wks) and TXG (~7×): no scenario reaches spot now.
+     - TEM (+66% since Jul): the bull is now below spot.
+     - ILMN (+65%): even the ultra-bull is below spot.
+     - GRAL (+74%): the headline sign flipped.
+     - U (+48%): the whole distribution is below spot.
+     - DE (+47% YTD): the bull is now below spot.
+     - YOU (−29% since Jul): the ultra-bear equals spot.
+     - ALGN (−16%): now cheap at +17%; check Q2 and the Elliott stake.
+  2. **Arguments the price now contradicts.** v048 restated these minimally; the argument itself needs re-underwriting.
+     - DASH: fair → rich.
+     - TOST: the inflection-bargain thesis → roughly fair.
+     - RXRX: the cheap-option framing → roughly fair.
+     - NVCR: the headline sign flipped.
+     - HOOD and SYM: no scenario reaches spot.
+     - ADSK: the bear now sits at the price.
+     - ACHR: the Joby discount narrowed.
+     - WRBY: the bull now clears spot.
+  3. **Pushback on the wrong side.**
+     - Bullish headline with bull-side pushback (needs the bear steelman + `pushback_side: bear`): ZM, LULU, CROX, SERV, TOST, PACB, PRME; NVDA and RDDT partly.
+     - Bearish headline arguing the bear: WRBY. NVCR's flip left two items on the headline's side.
+  4. **Model/prose mismatches.**
+     - LTH: the bear narrative must be re-read against its $0 model bear.
+     - OKLO: the bear trigger "ATM draws below ~$45" is met on price; check Q3 at-the-market usage.
+     - RKLB and SERV: event references now in the past.
+     - TEM: the Personalis deal value is quoted at July prices.
+     - ISRG: the Indicator is back to red.
+     - Rival multiples in the competitive tables are still at old prices.
+  5. **Stock comp.**
+     - COIN: 263.4M is the basic count; add treasury-method awards (likely −3% → ~−9%). FY26 stock comp is running ~18% of H1 revenue vs 11.7% modeled.
+     - META: FY26 owner FCF is likely negative on the H1 run-rate (FCF $15.0B vs $13.7B stock comp), and the op-margin <38% bear trigger may have fired (H1 GAAP 35.6%).
+     - Decision #10 (stock-comp trigger on share of FCF) is the owner's; don't pre-empt it.
+  6. **Governance and labels.** ZM and ABNB carry POCD 4 despite dual-class super-voting (the rubric says 3). ZM's projection-year labels are off by one. Falsifiers are non-numeric in ABNB (2) and ZM (1).
+  7. **Polish.**
+     - `p_fail` is still used in young-company narratives: undefined in IONQ, JOBY, NAUT and AUR ("failure probability"); BEAM, PACB, PRME, RXRX and SERV define it in the glossary.
+     - U calls itself "the most speculative name in this batch" (authoring language).
 - **The cadence now has three layers (spec §15, v047):** daily perf (mechanical) · monthly rebuild (mechanical re-price + prose-number sync, self-merging since v048) · **quarterly re-underwrite (§15.3 — full-book qualitative pressure-test, AUTONOMOUS/self-merging; Routine 3 in `ROUTINES.md`, LIVE — created 2026-07-22, fires the 15th of Jan/Apr/Jul/Oct; first scheduled fire 2026-10-15).** `scripts/reprice.py` is the shared mechanical re-price all layers call.
 - **poppler IS installable here** (`apt-get update && apt-get install -y poppler-utils`) — the June "no-poppler → site-only, can't touch the baseline" caveat class is **DEAD**. Every PDF + `visual_baseline.json` was regenerated at the July-1 flip and in each fix wave since; the on-disk set is current. **Ignore the "site-only / poppler caveat" phrasing in the older build-log bullets below.**
 - **Memo/ticker count: derive from `ls data/*.yml`** (currently 56 memos) — the TICKERS lists in validate/rebuild_all/visual_hash derive from it (PR #81); never hardcode a count.
@@ -187,7 +217,14 @@ Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status note
     - the page-1 companion line ("most likely case (base) ±X% · P% at or below spot"; PACB and SERV are bear-modal);
     - the spot-crossing caption, now computed (the hardcoded "+5y to +10y" was true for 6/52);
     - a live finding on the POCD Deal leg, with the hardcoded "(the X% finding)" stripped from 51 deal texts.
-  - **Prose:** `scripts/stale_prose.py` plus a one-time six-agent sync of 45 memos. GRAL/RXRX/NVCR/ALGN had contradicted their own headline's sign.
+  - **Prose:** `scripts/stale_prose.py` plus a one-time six-agent sync of 45 memos. GRAL/RXRX/NVCR/ALGN had contradicted their own headline's sign. Also fixed:
+    - SHAK's CEO record (Papa John's, not Wingstop);
+    - SHOP's 2026 buyback (~$1.9B in H1);
+    - BEAM's gross-vs-net cash;
+    - five-row weighting tables for AUR, HHH and LTH, which had never split out the ultra-bear;
+    - LULU's weighting labels, never updated after the July reweight;
+    - PACB/PRME/ILMN narrative DCF figures, which never matched the model;
+    - public `p_fail ~0` labels.
   - **Routines:** monthly self-merge plus a prose-sync step; the quarterly names its spec checks, the loss-quarter share count and the op-margin basis.
   - One archive event: all 52 bumped, re-rendered STRICT, baseline regenerated.
   - **Flags for the Oct-15 quarterly:**

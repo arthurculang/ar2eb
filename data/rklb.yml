@@ -536,13 +536,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-09-22_13-16"
+  footer_version: "008"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-09-22_13-16"
+  pdf_version: "008"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-09-22_13-16"
+    asOfDate: "2026-09-22"
+    spotPrice: 69.89
   - version: "006"
     timestamp: "2026-07-24_06-57"
     asOfDate: "2026-07-22"

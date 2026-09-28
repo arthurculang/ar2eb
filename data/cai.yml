@@ -650,13 +650,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Audit)
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "008"
-  footer_timestamp: "2026-09-26_00-13"
+  footer_version: "009"
+  footer_timestamp: "2026-09-28_18-52"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "008"
-  pdf_timestamp: "2026-09-26_00-13"
+  pdf_version: "009"
+  pdf_timestamp: "2026-09-28_18-52"
 
   prior_versions:
+  - version: "008"
+    timestamp: "2026-09-26_00-13"
+    asOfDate: "2026-09-22"
+    spotPrice: 30.65
   - version: "007"
     timestamp: "2026-09-23_04-12"
     asOfDate: "2026-09-22"

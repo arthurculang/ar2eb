@@ -1098,13 +1098,14 @@ function Page1Headline({ memo }) {
             {memo.thesis}
           </div>
 
-          <div style={{
-            marginTop: '10pt',
-            display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-          }}>
+          {/* The companion sits absolutely on the eyebrow row so it adds zero
+              height (a mixed sans/mono line box grew the row ~3-5px and
+              pushed tight page-1 memos into the footer band). */}
+          <div style={{ marginTop: '10pt', position: 'relative' }}>
             <Eyebrow>PROBABILITY-WEIGHTED EXPECTED VALUE</Eyebrow>
             {cs && (
               <div style={{
+                position: 'absolute', right: 0, bottom: 0, lineHeight: 1,
                 fontFamily: FONT_SANS, fontSize: '7pt', color: PALETTE.muted,
                 whiteSpace: 'nowrap',
               }}>
