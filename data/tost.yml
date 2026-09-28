@@ -12,7 +12,7 @@ market:
   extras:
   - Net cash +$1.35B ($1.353B cash, no debt); ~582M shares; SBC ~11% of recurring gross profit is the dilution to watch
   - Revenue $6.15B FY25 (+23%); GAAP op margin inflected to 4.7% (21% in Q1'26); FCF ~$0.6B; net income $342M (vs $19M FY24)
-  - ~$25, down ~29% YTD / ~40% TTM, near the 52-week low ($22.26-$49.66)
+  - ~$30, down ~16% YTD / ~18% TTM
 taxonomy:
   watchlist: fun-speculative
   tier: Med
@@ -20,13 +20,13 @@ taxonomy:
   - platform-marketplace-tech
   - digital-assets-fintech-rails
   primary_theme: platform-marketplace-tech
-central_question: Did Toast's ~40% de-rate near the lows misprice a proven operating-leverage inflection — or is it priced
+central_question: Did Toast's ~18% de-rate misprice a proven operating-leverage inflection — or is it priced
   for location growth and a payments take-rate that competition compresses?
-thesis: Toast trades at ~$14.4B (~$24.82, down ~40% TTM, near the 52-week low) — ~2.1x EV/sales on $6.15B revenue growing
+thesis: Toast trades at ~$17.3B (~$29.80, down ~18% TTM) — ~2.6x EV/sales on $6.15B revenue growing
   ~23%, net cash, with a proven margin inflection (GAAP op margin -7% -> 0.3% -> 4.7%, and 21% last quarter). The bull is
   durable ~20% location growth (171k of 875k+ US restaurants) plus attach (Capital, marketing) lifting ARPU and take rate;
   the bear is payments take-rate compression and SMB cyclicality against Block/Square, Olo and Shift4. The modal case lands
-  +24%, so the de-rate looks like it overshot a real inflection.
+  +3%, so the price looks roughly fair for a real inflection.
 chart_reference:
   history_years:
   - 2021
@@ -87,7 +87,7 @@ scenarios:
       and SMB churn rises through a restaurant-spending downturn. Location adds decelerate toward mid-single-digit, the margin
       inflection stalls near today''s level, and revenue compounds only ~4-5%.'
     - A payments-heavy platform whose take rate erodes while growth fades earns a low EV/sales (~1.0-1.5x) and a ~13x terminal
-      FCF multiple -> DCF ~$10 (-58%). Net cash sets a floor; a compressed, slowing fintech book can't support more.
+      FCF multiple -> DCF ~$10 (-65%). Net cash sets a floor; a compressed, slowing fintech book can't support more.
     probability_rationale: 'The genuine bear: payments is ~80% of revenue and the take rate is the contested battleground
       (Block/Square, Clover, Shift4), restaurants are cyclical SMBs, and the ~37x P/E left little safety margin before the
       de-rate. 14% on take-rate compression plus a soft cycle.'
@@ -162,7 +162,7 @@ scenarios:
     - Locations keep growing but adds slow to ~8-10% as the easy US share is taken and enterprise/international ramps gradually;
       the take rate holds but doesn't expand, and operating margin grinds up from the mid-single digits rather than stepping.
       Revenue compounds ~8% to ~$9B at a still-modest FCF margin.
-    - DCF ~$18 (-27%) - a real franchise that grows but whose cash conversion lags its top line is worth below today's price;
+    - DCF ~$18 (-39%) - a real franchise that grows but whose cash conversion lags its top line is worth below today's price;
       the market's discount is warranted if the inflection plateaus.
     probability_rationale: Share gains continue but competition caps the take rate and the cycle softens SMB demand, so margins
       improve modestly rather than re-rating. 27% as the plausible 'grows but converts slowly' path.
@@ -237,9 +237,9 @@ scenarios:
     - 'The modal path: locations keep compounding low-double-digit toward a long US runway (171k of 875k+) with enterprise/international
       adding, the take rate holds as attach (Capital, marketing, ToastIQ) lifts ARPU, and operating leverage carries GAAP
       op margin from ~5% toward ~15%. Revenue compounds ~13% to ~$11B.'
-    - DCF ~$31 (+24%) - the proven inflection continues at a moderating pace and the de-rated entry re-rates with the fundamentals;
-      the modal case clears today's price, so the crash looks like it overshot a real inflection rather than correcting an
-      excess.
+    - DCF ~$31 (+3%) - the proven inflection continues at a moderating pace and the de-rated entry re-rates with the fundamentals;
+      the modal case only just clears today's price, which looks roughly fair for a real
+      inflection.
     probability_rationale: Requires the location runway to continue and the demonstrated operating leverage to keep flowing
       through - consistent with the -7%->21% margin trajectory and the attach flywheel, not a step-change. 34% as the central
       outcome.
@@ -315,7 +315,7 @@ scenarios:
       enterprise bookings already exceeded the prior-year customer count), Toast Capital and marketing/ads lift the take rate
       and ARPU, and operating margin inflects toward ~20% as SaaS (81% gross margin) carries the mix. Revenue compounds ~15%
       to ~$12.5B.'
-    - DCF ~$52 (+108%) - if the location runway, take rate and attach all compound, the de-rated entry re-rates hard with
+    - DCF ~$52 (+73%) - if the location runway, take rate and attach all compound, the de-rated entry re-rates hard with
       the fundamentals; this is the core of the bull.
     probability_rationale: Toast's switching-cost Power (the embedded POS/payments operating system) plus the attach flywheel
       and a long location runway make a compounding-take-rate outcome credible. ~17% weight on adds and take rate compounding
@@ -392,7 +392,7 @@ scenarios:
       the US TAM and internationally, fintech attach (Capital, marketing, data/ToastIQ) compounds the take rate, and a nascent
       network/data effect widens the moat as operating margin marches toward ~23%. Revenue compounds ~18% to ~$14B and free
       cash flow scales.'
-    - DCF ~$69 (+180%) - the platform earns a software-and-payments compounder multiple; ~8% probability, the asymmetric upside
+    - DCF ~$69 (+133%) - the platform earns a software-and-payments compounder multiple; ~8% probability, the asymmetric upside
       the depressed entry is buying.
     probability_rationale: Everything works - locations AND take rate AND attach AND international AND a data/network flywheel,
       the embedded-OS outcome. ~8%, the long-duration tail.
@@ -484,19 +484,19 @@ historical_prices:
   - [-0.06, 34.09]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 14%
-  body: Take-rate compresses, growth stalls; ~$10 (-58%).
+  body: Take-rate compresses, growth stalls; ~$10 (-65%).
 - label: Bear 27%
-  body: Locations grow but margins inflect slowly; ~$18 (-27%).
+  body: Locations grow but margins inflect slowly; ~$18 (-39%).
 - label: Base 34%
-  body: Runway + leverage compound to ~15%; ~$31 (+24%).
+  body: Runway + leverage compound to ~15%; ~$31 (+3%).
 - label: Bull 17%
-  body: Adds + take-rate + attach all compound; ~$52 (+108%).
+  body: Adds + take-rate + attach all compound; ~$52 (+73%).
 - label: Ultra Bull 8%
-  body: Restaurant OS, platform FCF machine; ~$69 (+180%).
+  body: Restaurant OS, platform FCF machine; ~$69 (+133%).
 appendix:
   pushback:
   - label: The de-rate met a proven inflection, not a story.
-    body: GAAP op margin went -7% -> 0.3% -> 4.7% and adj EBITDA doubled FY25 - the leverage is real, so the ~40% drop re-priced
+    body: GAAP op margin went -7% -> 0.3% -> 4.7% and adj EBITDA doubled FY25 - the leverage is real, so the ~18% drop re-priced
       a real business.
   - label: Payments is ~80% of revenue, so FCF margin reads low.
     body: On TOTAL payments-heavy revenue FCF margin looks ~6-11%; read ex-SBC owner FCF on recurring gross profit - the take
@@ -507,7 +507,7 @@ appendix:
   - label: Location runway is long but the easy share thins.
     body: 171k of 875k+ US restaurants leaves a long runway, but US SMB adds get harder; enterprise/international is the next
       leg the bull needs.
-  - label: Net cash, p_fail ~0.
+  - label: Net cash; no solvency risk.
     body: $1.35B cash, no debt, GAAP-profitable (net income $342M FY25) - no solvency risk; the downside is take-rate/multiple,
       not survival.
   triggers:
@@ -612,7 +612,7 @@ competitive:
     model rides on, supported by real scale (171k locations, $51B+ GPV). The Audit: switching_costs is durable (high), scale_economies
     funded a demonstrated margin inflection (-7% -> 21% GAAP op margin), and a network/data leg (ToastIQ) is nascent; the
     live threat is payments take-rate competition from Block/Square, Clover and Shift4 against an ~80%-payments revenue base.
-    The ~40% TTM de-rate met that proven inflection, and the modal DCF lands +24% - the distribution says the sell-off overshot
+    The ~18% TTM de-rate met that proven inflection, and the modal DCF lands +3% - the distribution says the price is ~fair for
     a real operating-leverage story, gated on the take rate holding as Toast scales.'
 pocd:
   people:

@@ -39,7 +39,7 @@ central_question: >
   $400M/year sale-leasebacks?
 
 thesis: >
-  LTH trades at $40.04 ($8.9B mkt cap) on TTM revenue $3.0B and Adj EBITDA
+  LTH trades at $39.91 ($8.9B mkt cap) on TTM revenue $3.0B and Adj EBITDA
   $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14
   luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback
   proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear:
@@ -100,7 +100,7 @@ scenarios:
       - >
         With ~$1.3B of financial net debt (plus $2.5B+ of capitalized leases)
         sitting against a declining ~$0.6B operating EV, the equity is deeply
-        underwater — a notional -$2/share. Expected per-share floors at $0.00: a
+        underwater — a notional -$3/share. Expected per-share floors at $0.00: a
         markedly deeper wipeout than the bear, where the business at least holds
         flat. This is the tail where the leveraged structure, not the brand,
         decides the outcome.
@@ -174,7 +174,7 @@ scenarios:
         liabilities. Total enterprise obligations near $4B. If macro slows
         and luxury fitness spending compresses, FCF margin drops to 2-3%,
         undoing the recent S&P upgrade. Net debt builds back. Stock works
-        to $20-25 as the market re-applies a higher discount rate to the
+        to ~$0 as the market re-applies a higher discount rate to the
         operating business.
     probability_rationale: >
       Bearish thesis is structurally coherent: LTH's headline FCF is
@@ -183,7 +183,7 @@ scenarios:
       remaining); each SLB trades one-time cash for permanent rent increase.
       Net debt + capitalized lease obligations near $4B. If macro slows and
       luxury fitness spend compresses, FCF margin drops, stock works to
-      $20-25. The 12% weight reflects that this thesis bumps against LTH's
+      ~$0. The 12% weight reflects that this thesis bumps against LTH's
       actual track record: FY24/25 execution strong, recent S&P upgrade
       validates the credit story, and new luxury club economics ($25-35M
       revenue vs $15-20M legacy) genuinely change the unit math.
@@ -246,8 +246,8 @@ scenarios:
         SLB cadence holds at $300-400M for 2-3 years then tapers. Net debt
         leverage stays in the 1.5-2.0x EBITDA target.
       - >
-        The math: $4.39B op EV + $0.23B cash − $1.29B net debt = $3.33B
-        equity ÷ 222M sh = $13.96/share. Materially below today's $40.04 —
+        The math: $4.39B op EV + $0.23B cash − $1.52B debt = $3.10B
+        equity ÷ 222M sh = $13.96/share. Materially below today's $39.91 —
         meaning the current price requires bull-case assumptions. The base
         case is well-run but priced for steady-state execution. Modest
         upside requires the bull narrative to convert.
@@ -318,9 +318,9 @@ scenarios:
       - >
         EBITDA margin expands toward 30%+ as new-club mix shifts to
         higher-revenue luxury formats. Operating FCF ex-SLB turns
-        meaningfully positive by FY28. Stock works to $46+ as the market
+        meaningfully positive by FY28. Stock works to $45+ as the market
         gives LTH credit for a premium consumer franchise, re-rating from
-        ~15x P/E toward 22-25x.
+        ~18x P/E toward 22-25x.
     probability_rationale: >
       Multi-decade luxury wellness platform compounding. LTH is genuinely a
       category-of-one — no other US operator at premium luxury athletic
@@ -331,7 +331,7 @@ scenarios:
       margin expands toward 30%+ as new-club mix shifts to higher-revenue
       luxury formats. The SLB flywheel sustains: 12-14 new luxury clubs/year
       become future SLB inventory 5-7 years later. The 25% weight reflects
-      that multiple expansion (15x P/E to 22-25x) is plausible but requires
+      that multiple expansion (18x P/E to 22-25x) is plausible but requires
       both execution AND market re-rating — the conjunction is demanding.
 
     dcf_metrics:
@@ -382,9 +382,9 @@ scenarios:
         self-funds at 6% cap rate with bank financing. EBITDA grows to
         $1.5B+ by 2030.
       - >
-        Multiple expands from 9x EV/EBITDA (current) to 15x as growth story
-        consolidates and capital structure de-risks. Result: $22.5B EV -
-        $1.3B net debt = $21.2B equity ÷ 235M FY30 shares = $90/share. The
+        Multiple expands from 10x EV/EBITDA (today) to 15x as growth story
+        consolidates and capital structure de-risks. Result: $23.7B EV -
+        $1.3B net debt = $22.4B equity ÷ 235M FY30 shares = $95/share. The
         ultra-bull case requires BOTH operational excellence AND multiple
         re-rating — most LTH bulls only price one of these.
     probability_rationale: >
@@ -459,7 +459,9 @@ historical_prices:
 
 # ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
 weighting_rationale:
-  - label: "Bear 20%"
+  - label: "Ultra Bear 8%"
+    body: "Recession plus leverage: revenue declines and the sale-leaseback engine reverses."
+  - label: "Bear 12%"
     body: "SLB-as-capital-recycling thesis structurally coherent but lacks traction vs FY24/25 execution."
   - label: "Base 55%"
     body: "Modal outcome: LTH executes guidance, leverage stays in target."

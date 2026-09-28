@@ -12,19 +12,19 @@ market:
   extras:
   - $10.6B cash vs ~$8.5B debt (~$2B net cash); ~24.3B shares; +$80B buyback authorized, $0.25/quarter dividend
   - Revenue $215.9B FY26 (+65%); GAAP op margin ~60%; FCF ~$96.7B (~45%); Data Center now ~88% of revenue
-  - World's largest company at ~$5.0T; ATH ~$235 (May), ~$205 now (~+45% TTM); slid post-earnings despite the beat
+  - World's largest company at ~$5.5T; ATH ~$235 (May), ~$227 now (~+22% TTM); slid post-earnings despite the beat
 taxonomy:
   watchlist: fcf-megacap
   tier: High
   themes:
   - ai-compute
   primary_theme: ai-compute
-central_question: Can datacenter AI capex compound for years at high-70s% gross margin to justify ~$5T and ~50x FCF, or does
+central_question: Can datacenter AI capex compound for years at high-70s% gross margin to justify ~$5.5T (~55x FCF), or does
   a digestion/air-pocket hit a stock priced for perfection?
-thesis: 'NVIDIA trades at ~$4,986B (~$205/sh, ~+45% TTM) - ~50x FCF on $215.9B revenue (+65%), ~60% operating margins, ~$2B
+thesis: 'NVIDIA trades at ~$5.5T (~$227/sh, ~+22% TTM) - ~55x FCF on $215.9B revenue (+65%), ~60% operating margins, ~$2B
   net cash. Data Center is ~88% of revenue and grew +92% last quarter at a mid-70s% gross margin. The DCF asks whether hyperscaler
-  + sovereign AI capex keeps compounding or pauses; even at huge growth the modal can''t justify ~$5T - weighted -25% (ultra-bear
-  -80% to ultra-bull +73%).'
+  + sovereign AI capex keeps compounding or pauses; even at huge growth the modal can''t justify ~$5.5T - weighted -32% (ultra-bear
+  -82% to ultra-bull +56%).'
 chart_reference:
   history_years:
   - 2022
@@ -86,8 +86,8 @@ scenarios:
     - 'The AI capex cycle hits a digestion air-pocket: hyperscalers pause after over-building, Data Center revenue contracts
       (-10% then -5%), and custom ASICs plus AMD''s H2-2026 launches take share at the margin so gross margin compresses toward
       the low-70s. China stays a structural $0. The compute giant cyclically resets to a slower-growth, lower-margin base.'
-    - A cyclical semiconductor whose growth has rolled over earns a mid-teens terminal multiple -> DCF ~$40 (-80%). Net cash
-      is immaterial against a ~$5T cap; this is what a priced-for-perfection name does when perfection breaks.
+    - A cyclical semiconductor whose growth has rolled over earns a mid-teens terminal multiple (DCF ~$40, -82%). Net cash is
+      immaterial against a ~$5.5T cap; this is what a priced-for-perfection name does when perfection breaks.
     probability_rationale: 'The genuine bear: the entire thesis rides on hyperscaler capex holding, custom silicon (OpenAI-Broadcom
       10GW) + AMD (Meta ~$100B, OpenAI 6GW) all land H2-2026, and the stock already slid at $5T despite a +85% quarter. 15%
       weight on a real digestion/share-loss break.'
@@ -162,8 +162,8 @@ scenarios:
     - 'Demand keeps growing but decelerates fast as the first wave of build-out matures: +12% then high-single-digit as custom
       ASICs and AMD chip away GPU share and pricing, holding gross margin in the high-50s/low-60s operating. The annual cadence
       ships but each generation no longer doubles the installed base; sovereign + diversified demand cushions, not offsets.'
-    - DCF ~$77 (-63%) - a still-large, still-profitable franchise whose hyper-growth has normalized is worth far below a $5T
-      price; the market's premium assumes years of compounding the bear doesn't deliver.
+    - DCF ~$77 (-66%) - a still-large, still-profitable franchise whose hyper-growth has normalized is worth far below a $5.5T
+      cap; the market's premium assumes years of compounding the bear doesn't deliver.
     probability_rationale: Growth deceleration plus custom-silicon/AMD share loss is the central pull on a name lapping +65%
       FY26 revenue; even mid-teens forward growth at high margins leaves the price stretched. 25% as the plausible 'grows
       but normalizes' path.
@@ -239,11 +239,11 @@ scenarios:
       compounds (+40% then decelerating) at a defended ~60% operating margin while networking (+199% last quarter) extends
       the full-rack systems franchise. Revenue roughly doubles over the window; China remains $0. A genuinely dominant, fast-growing
       compute platform - but already priced for it.'
-    - DCF ~$159 (-23%) - even with capex holding and the cadence intact, ~50x FCF and a ~19x terminal multiple on a company
+    - DCF ~$159 (-30%) - even with capex holding and the cadence intact, ~55x FCF and a ~19x terminal multiple on a company
       this size leaves the modal case below today's price; the franchise is excellent and the entry is rich.
     probability_rationale: Requires hyperscaler + sovereign capex to keep compounding and the cadence to ship without a share
       break - consistent with a sold-out backlog and FQ2 guide ~$91B, but not a step-change beyond it. 32% as the central,
-      still-negative outcome at a $5T cap.
+      still-negative outcome at $5.5T.
     dcf_metrics:
       cagr_5y: 20.1
       wacc: 0.09
@@ -316,7 +316,7 @@ scenarios:
       compound the moat beyond the GPU, sovereign deployments (Saudi HUMAIN ~$20B, UAE) and diversified AI clouds (~50% of
       Data Center) add a durable second leg, and gross margin stays mid-70s. Demand keeps outrunning supply; CUDA + the developer
       ecosystem hold share against ASICs and AMD.'
-    - DCF ~$246 (+20%) - if capex holds and the cadence extends, the franchise grows into and past the multiple; this is the
+    - DCF ~$246 (+8%) - if capex holds and the cadence extends, the franchise grows into and past the multiple; this is the
       core of the bull and where the price is defensible.
     probability_rationale: Demand outrunning supply, +92% Data Center, +199% networking and a sold-out Blackwell Ultra backlog
       make sustained compounding credible if the capex cycle doesn't pause. 20% weight on capex holding and Rubin extending
@@ -393,7 +393,7 @@ scenarios:
       stays the platform standard through Rubin and beyond, networking + software + the CUDA ecosystem entrench an end-to-end
       systems moat, and gross margin holds low-to-mid-70s as supply scales. Revenue more than doubles at peak margins with
       no meaningful share loss.'
-    - DCF ~$355 (+73%) - the build-out runs and NVIDIA captures it as the standard platform; ~8% probability, the asymmetric
+    - DCF ~$355 (+56%) - the build-out runs and NVIDIA captures it as the standard platform; ~8% probability, the asymmetric
       upside the price embeds beyond the modal case.
     probability_rationale: Everything works - capex compounds for years AND the cadence holds AND CUDA/networking entrench
       the platform AND ASICs/AMD stay marginal. ~8%, the long-duration AI-infrastructure tail.
@@ -488,23 +488,23 @@ historical_prices:
   - [-0.06, 220.78]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: Capex air-pocket; revenue contracts; ~$40 (-80%).
+  body: Capex air-pocket; revenue contracts; ~$40 (-82%).
 - label: Bear 25%
-  body: Growth decelerates hard; share erodes; ~$77 (-63%).
+  body: Growth decelerates hard; share erodes; ~$77 (-66%).
 - label: Base 32%
-  body: Capex holds; cadence extends; still rich; ~$159 (-23%).
+  body: Capex holds; cadence extends; still rich; ~$159 (-30%).
 - label: Bull 20%
-  body: Capex holds; Rubin extends cadence; ~$246 (+20%).
+  body: Capex holds; Rubin extends cadence; ~$246 (+8%).
 - label: Ultra Bull 8%
-  body: AI build-out runs for years; ~$355 (+73%).
+  body: AI build-out runs for years; ~$355 (+56%).
 appendix:
   pushback:
-  - label: ~50x FCF on the world's largest company.
-    body: ~$96.7B FCF and ~60% operating margins, but at a ~$5T cap the modal DCF is still ~-23% - the price, not the business,
+  - label: ~55x FCF on the world's largest company.
+    body: ~$96.7B FCF and ~60% operating margins, but at ~$5.5T the modal DCF is still ~-30% - the price, not the business,
       is the constraint; the distribution does the talking.
   - label: The single swing factor is datacenter capex.
     body: The whole valuation hinges on hyperscaler + sovereign AI spend compounding for years; capex holding is the bull
-      (+20%), a digestion/air-pocket is the ultra-bear (-80%).
+      (+8%), a digestion/air-pocket is the ultra-bear (-82%).
   - label: China datacenter is a structural $0.
     body: Results and guidance assume ~no China; Beijing steered firms away and Huawei is entrenching - a permanently lost
       ~$15-50B/yr TAM already out of the numbers, not a future risk.
@@ -617,8 +617,8 @@ competitive:
     by switching costs, scale and a developer-ecosystem network - and it''s durable (high). The live threat is the H2-2026
     wave: AMD''s MI450 and the OpenAI-Broadcom custom ASICs erode GPU share at the margin even if NVIDIA stays the standard,
     and China datacenter is a permanent $0. The Audit squares with the DCF: the Power is real, but the swing factor is whether
-    datacenter AI capex holds or hits an air-pocket, and at ~50x FCF on ~$5T even the modal capex-holds case lands ~-23% -
-    the distribution is the finding, weighted -25%.'
+    datacenter AI capex holds or hits an air-pocket, and at ~55x FCF on $5.5T even the modal capex-holds case lands -30% -
+    the distribution is the finding, weighted -32%.'
 pocd:
   people:
     ceo: 'Jensen Huang'

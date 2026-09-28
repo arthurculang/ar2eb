@@ -8,11 +8,12 @@ candidates for the monthly's prose-sync step (and the quarterly's checks):
 
   1. an EARLIER spot price (from stamp.prior_versions) quoted in prose;
   2. a finding-like percentage ("weighted … −25%", "the finding is +12%",
-     "(+31%)" after "vs spot") that differs from the current finding by > 2 pts.
+     "(+31%)" after "vs spot") that matches NEITHER the current finding NOR any
+     scenario's current value vs spot (within 2 pts) — so a correctly synced
+     "the bull lands −55%" is not flagged.
 
 It is a heuristic helper, not a gate: it can miss a stale number phrased
-differently, and it flags a scenario percentage that merely sits near the word
-"finding". Read every hit in context before editing. Private memos are skipped.
+differently. Read every hit in context before editing. Private memos are skipped.
 
 Usage:
     python scripts/stale_prose.py            # all public memos
@@ -68,6 +69,8 @@ def scan(ticker: str) -> list[str]:
     sc = d["scenarios"]
     weighted = sum(s["probability"] * s["expected_per_share"] for s in sc.values())
     finding = (weighted / spot - 1) * 100
+    valid = [finding] + [(s["expected_per_share"] / spot - 1) * 100 for s in sc.values()]
+    stale = lambda v: all(abs(v - x) > 2.0 for x in valid)
     priors = {float(pv["spot"]) for pv in (d["stamp"].get("prior_versions") or [])
               if pv.get("spot")}
     hits = []
@@ -80,12 +83,12 @@ def scan(ticker: str) -> list[str]:
                     hits.append(f"{path}: earlier spot {fmt} (now ${spot:.2f})")
         for m in re.finditer(r"(weighted|finding|expected)[^.;]{0,60}?([+\-−]\d+(?:\.\d)?)%", text, re.I):
             v = float(m.group(2).replace("−", "-"))
-            if abs(v - finding) > 2.0:
+            if stale(v):
                 hits.append(f"{path}: finding-like {m.group(2)}% (now {finding:+.1f}%) — …{m.group(0)[:70]}")
         for m in re.finditer(r"\(([+\-−]\d+(?:\.\d)?)%\)", text):
             v = float(m.group(1).replace("−", "-"))
             ctx = text[max(0, m.start() - 60):m.start()]
-            if abs(v - finding) > 2.0 and re.search(r"weighted|vs spot|vs the price", ctx, re.I):
+            if stale(v) and re.search(r"weighted|vs spot|vs the price", ctx, re.I):
                 hits.append(f"{path}: ({m.group(1)}%) after '{ctx[-30:]}' (now {finding:+.1f}%)")
     return hits
 

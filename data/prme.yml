@@ -22,12 +22,12 @@ taxonomy:
 central_question: PRME proved the first-in-human prime edit, but holds only ~9 months of cash against a going-concern flag
   and a $200M ATM — does the platform tail survive the dilution before it pays off?
 thesis: Prime Medicine is a clinical-stage prime-editing biotech — the precise 'search-and-replace' gene edit, David Liu's
-  sister tech to BEAM's base editing. Pre-revenue at $3.12 (~$564M cap), it proved the first-ever clinical prime edit (PM359,
+  sister tech to BEAM's base editing. Pre-revenue at $3.19 (~$577M cap), it proved the first-ever clinical prime edit (PM359,
   NEJM Dec 2025). Cash is ~$149M (~9 months), the FY2025 10-K flags going-concern doubt, and a $200M ATM means severe dilution
   at a ~$3 stock; a May 2025 restructuring refocused it on in-vivo liver (Wilson's, AATD). Since then authorizations have
   accrued — first in-vivo CTA, AATD arbitration win, PM359 RMAT — but not efficacy data, and the financing constraint is
   unchanged, so the scenario set holds. The DCF asks whether the platform tail can outrun forced dilution. Weighted fair
-  value $3.39 vs $3.12 — roughly fair.
+  value $3.39 vs $3.19 — roughly fair.
 chart_reference:
   tam_billion: 30
   history_years:
@@ -50,7 +50,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 5
   valn_anchor_text: Commercial biotech P/S ~4-6x
-  valn_caption: 'Pre-product: the ~$585M cap is pipeline value over a thin $149M cash floor.'
+  valn_caption: 'Pre-product: the ~$577M cap is pipeline value over a thin $149M cash floor.'
   tam_title: $30B genetic-disease therapeutics — PRME share
   tam_legend:
   - PRME
@@ -360,7 +360,7 @@ scenarios:
     - A Wilson's or AATD in-vivo program reaches market and BMS milestones (>$3.5B potential) start landing, validating prime
       editing as a real modality. The business survives and generates revenue at ~37% drug margins.
     - But getting there costs ~$0.9B of dilutive raises at depressed prices, nearly tripling the share count to ~500M. FY35
-      revenue ~$0.50B; p_fail 55%. DCF $0.84, expected ~$0.60 — per-share value lands just below spot because dilution claims
+      revenue ~$0.50B; p_fail 55%. DCF $0.84, expected ~$0.60 — per-share value lands ~81% below spot because dilution claims
       the upside.
     probability_rationale: '30% — co-equal modal case: clinical proof exists (PM359) and the liver targets are credible, but
       the model auto-sizes the raises needed to fund them, and that dilution is the binding constraint on per-share value.'
@@ -828,7 +828,7 @@ appendix:
     body: BMS ($55M upfront, $55M equity, >$3.5B milestones) and CFF (up to $39M) offset some burn — not every dollar of progress
       must come from the ATM.
   - label: The de-rating prices the distress
-    body: At $3.12, down from a $6.94 high, much of the going-concern risk is already in the stock; the platform tail is being
+    body: At $3.19, down from a $6.94 high, much of the going-concern risk is already in the stock; the platform tail is being
       bought cheaply.
   - label: David Liu lineage
     body: The Broad-Institute prime-editing IP and scientific lead are a genuine cornered resource that a partner or acquirer

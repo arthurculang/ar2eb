@@ -19,13 +19,13 @@ taxonomy:
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology
-central_question: At ~6.6x sales and near-breakeven, is the market paying for proven cash economics, or for a data-moat plus
+central_question: At ~11x sales and near-breakeven, is the market paying for proven cash economics, or for a data-moat plus
   a margin inflection that SBC currently swamps and the modal case doesn't deliver?
 thesis: Tempus AI is AI-precision-oncology diagnostics plus a multimodal health-data flywheel. Revenue is $1.3B, growing 25-36%,
   adj-EBITDA just inflected positive (FY26 guide ~$65M). But SBC runs ~$136M/yr — more than 10% of revenue and larger than
   that adj-EBITDA — so true owner free cash flow is still negative. In July 2026 Tempus agreed to buy the rest of Personalis
-  for ~$1.5B, mostly stock — entering MRD via NeXT Personal, but a ~15% share issuance dilutes the modal case. At $46.93 the
-  modal DCF is $26.43, ~44% below spot; only the bull case clears the price. You are paying for hypergrowth and an unproven
+  for ~$1.5B, mostly stock — entering MRD via NeXT Personal, but a ~15% share issuance dilutes the modal case. At $78.03 the
+  modal DCF is $26.43, ~66% below spot; only the ultra-bull clears spot. You are paying for hypergrowth and an unproven
   margin turn.
 chart_reference:
   history_years:
@@ -73,7 +73,7 @@ scenarios:
     - Revenue growth fades toward ~8% as oncology test volume saturates and the data-licensing pipeline stalls. The margin
       path inches from −8% to only 5% — operating leverage never arrives because SBC and clinical-lab costs scale with revenue.
     - The company de-rates to a distressed multiple as the market stops paying for a moat that did not compound. Dilution
-      from continued stock comp erodes per-share value. The DCF lands at $3.00, roughly 94% below spot.
+      from continued stock comp erodes per-share value. The DCF lands at $3.00, roughly 96% below spot.
     probability_rationale: A ~14% tail. Requires both the diagnostics franchise to stall and Data and Applications to stop
       scaling — possible if pharma budgets tighten and foundation-model rivals commoditize the data, but it contradicts the
       +40%+ data-licensing trend now in evidence.
@@ -149,7 +149,7 @@ scenarios:
       test; Natera's Signatera leads the MRD race Tempus just bought into. The data flywheel keeps compounding but cannot
       offset a maturing core diagnostics line.
     - Margins climb from −4% to ~11% — positive, but far short of software economics, because SBC and lab infrastructure stay
-      heavy and the Personalis integration adds near-term losses. The DCF is $11.73, about 75% below spot. The market re-rates
+      heavy and the Personalis integration adds near-term losses. The DCF is $11.73, about 85% below spot. The market re-rates
       toward a mid-teens-growth diagnostics comp.
     probability_rationale: A ~28% weight, the second-likeliest outcome. This is the world where TEM is a good but ordinary
       diagnostics-plus-data business — real growth, real competition, no durable software margin. Pricing pressure is the
@@ -226,8 +226,8 @@ scenarios:
       line. The AstraZeneca-Pathos deal type repeats, and the 7.3M-record library keeps feeding both segments.
     - Margins ramp from −2% to ~17% as the data mix lifts the blend and the May-2026 FDA tumor-only xT CDx approval adds an
       estimated ~$200-per-test ASP uplift from 2027, but SBC keeps owner-FCF modest early. The DCF is $26.43 — a healthy
-      business, about 44% below spot once the ~15% Personalis share issuance is absorbed. The modal case simply does not
-      support $46.93.
+      business, about 66% below spot once the ~15% Personalis share issuance is absorbed. The modal case simply does not
+      support $78.03.
     probability_rationale: The single most-likely path at ~33%. It assumes the current trajectory broadly holds — mid-teens
       growth, a scaling data line, gradual margin gains — without the step-change in operating leverage the bull requires.
       It is the honest anchor for the finding.
@@ -303,10 +303,10 @@ scenarios:
       the mix. The multimodal library proves hard to replicate, NeXT Personal scales Tempus into MRD, and pharma standardizes
       on Tempus for oncology data.
     - 'Operating leverage finally clears SBC: margins ramp from 2% to ~23%, aided by the xT CDx ASP uplift, reaching a durable-profit
-      inflection. The DCF is $53.43, about 14% above spot even after the Personalis dilution. This is the lowest scenario that
-      justifies today''s price.'
+      inflection. The DCF is $53.43, about 32% below spot after the Personalis dilution. Even this scenario falls short of
+      today''s price.'
     probability_rationale: A ~17% weight. Requires two things at once — sustained high growth AND a genuine terminal margin,
-      not just adj-EBITDA. Plausible if the data moat re-rates the whole company, but it is the entry hurdle, not the expected
+      not just adj-EBITDA. Plausible if the data moat re-rates the whole company, but it is below spot and not the expected
       case.
     dcf_metrics:
       cagr_5y: 20.6
@@ -379,7 +379,7 @@ scenarios:
     - 'TEM wins the platform: the multimodal library becomes the default substrate for oncology drug development and clinical
       decisioning. Revenue compounds ~25%, with Data and Applications the growth engine at software gross margins.'
     - Margins ramp from 5% to ~29% as the high-margin data mix dominates and scale economics compound. The DCF reaches $102.66,
-      about 119% above spot — a platform-winner outcome, not a diagnostics multiple.
+      about 32% above spot — a platform-winner outcome, not a diagnostics multiple.
     probability_rationale: 'An ~8% tail. The data-moat optionality the price already embeds, paid off in full: a network-and-scale
       flywheel that no rival replicates. Low probability, but it is the asymmetric reason a long position is debated at all.'
     dcf_metrics:
@@ -466,7 +466,7 @@ weighting_rationale:
 - label: Base 33%
   body: ~16% growth, data line scales, margins ~17%; DCF $26.43 — below spot.
 - label: Bull 17%
-  body: ~21% growth plus a ~23% terminal margin; DCF $53.43 — clears spot.
+  body: ~21% growth plus a ~23% terminal margin; DCF $53.43 — below spot.
 - label: Ultra Bull 8%
   body: ~25% growth, software margins, data standard; DCF $102.66.
 appendix:

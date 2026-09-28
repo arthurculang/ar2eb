@@ -10,7 +10,7 @@ market:
   cash_billion: 1.03
   net_debt_billion: 0.56
   extras:
-  - $655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH (p_fail~0)
+  - $655M revenue FY25 (+8%, ~78% GM); GAAP net loss -$136M, adj-EBITDA -$34M; ~$0.47B NET CASH
   - '4 FDA-approved/filed indications: Optune Gio (GBM), Lua (NSCLC, early), Pax (pancreatic), METIS (brain mets)'
   - 'FRESH NEGATIVE: Jun-18-2026 Phase-3 TRIDENT (newly-dx GBM) MISSED -> -18%; SBC ~$100M+/yr'
 taxonomy:
@@ -19,13 +19,13 @@ taxonomy:
   themes:
   - medical-devices
   primary_theme: medical-devices
-central_question: NovoCure trades at ~2.5x sales with net cash and an unproven new-indication tail — does the optionality
+central_question: NovoCure trades at ~2.7x sales with net cash and an unproven new-indication tail — does the optionality
   beyond glioblastoma justify the price, or does it stay a loss-making device story?
 thesis: NovoCure sells Tumor Treating Fields (TTFields), a wearable oncology device anchored by Optune Gio in glioblastoma.
   FY2025 revenue was $655M (+8%) at a 78% gross margin, yet it posted a $136M GAAP loss — funded by ~$0.47B net cash, not
-  insolvency risk. At $14.33 the stock is cheap on sales; the upside lives in new FDA-approved indications (Optune Lua/lung,
-  Pax/pancreatic, METIS) multiplying the TAM beyond GBM. Weighted fair value $14.97, ~4.5% above spot — fair, with the June
-  2026 TRIDENT miss capping the GBM leg.
+  insolvency risk. At $16.53 the stock is cheap on sales; the upside lives in new FDA-approved indications (Optune Lua/lung,
+  Pax/pancreatic, METIS) multiplying the TAM beyond GBM. Weighted fair value $14.97, ~9% below spot — modestly rich; the June
+  2026 TRIDENT miss caps the GBM leg.
 chart_reference:
   history_years:
   - 2023
@@ -73,7 +73,7 @@ scenarios:
       Active patients stall near today's ~4,800, and continuous-wear compliance keeps real-world uptake well below the approved
       population.
     - Owner-FCF margin starts at -10% and crawls to 2% — the operating leverage never arrives after a decade of losses. At
-      ~1.8% growth and a barely-positive terminal margin the DCF is $4.20, ~71% below spot. Net cash prevents distress, but
+      ~1.8% growth and a barely-positive terminal margin the DCF is $4.20, ~75% below spot. Net cash prevents distress, but
       the equity is worth little if TTFields stays a single-indication niche.
     probability_rationale: Roughly one-in-seven. Requires both the GBM franchise softening after TRIDENT and the new indications
       stalling, while the gross margin never translates into operating profit — plausible given the long loss history, but
@@ -150,7 +150,7 @@ scenarios:
       and radiation pathways. Revenue compounds ~4% as new indications add patients but oncologist and patient inertia caps
       the pace.'
     - 'The owner-FCF margin moves from -5% to 7% — positive eventually, but thin, because SBC over $100M a year keeps true
-      owner cash well below the adj-EBITDA headline. The DCF lands at $9.19, ~36% below spot: a real, funded business that
+      owner cash well below the adj-EBITDA headline. The DCF lands at $9.19, ~44% below spot: a real, funded business that
       simply doesn''t earn enough to support the current price.'
     probability_rationale: About 28%. The modal disappointment path — labels exist but real-world wear, reimbursement gating,
       and heavy stock comp blunt the margin inflection. Consistent with a company that has grown revenue but never produced
@@ -227,7 +227,7 @@ scenarios:
       indication after its PMA filing. Active-patient growth continues at roughly the current single-digit pace across a widening
       label set.
     - The owner-FCF margin inflects from -2% toward 10% as the 78% gross margin starts to cover a more fixed cost base. That
-      yields a $14.00 DCF, ~2% below spot — essentially fair value. The market is paying for moderate multi-indication adoption
+      yields a $14.00 DCF, ~15% below spot — the price asks for more than moderate multi-indication adoption
       and a believable, if late, path to profitability.
     probability_rationale: The plurality outcome at ~33%. New indications adopt at a moderate, not heroic, rate and the long-promised
       operating leverage finally shows up around 10% — neither the post-TRIDENT erosion nor a platform breakout, just steady
@@ -304,7 +304,7 @@ scenarios:
       climb materially as TTFields becomes a routine option in multiple tumor types rather than a GBM-only therapy, with reimbursement
       coverage broadening alongside the labels.
     - 'Operating leverage finally arrives: the owner-FCF margin runs from 1% to 14% as the high gross margin drops through
-      a stable cost base. The DCF is $23.58, ~65% above spot. This requires the device-adoption gap (labels outrunning real
+      a stable cost base. The DCF is $23.58, ~43% above spot. This requires the device-adoption gap (labels outrunning real
       prescriptions) to close, which it has not yet across the newer indications.'
     probability_rationale: About 17%. Needs genuine commercial traction in the new indications plus the first durable operating
       profit in the company's history — both observable in active-patient counts and segment revenue, neither yet demonstrated
@@ -381,9 +381,9 @@ scenarios:
       beyond today's labels. Revenue compounds ~10.8% as the addressable population multiplies and continuous-wear devices
       become a routine part of oncology protocols.
     - 'The owner-FCF margin scales from 3% to 18% as a unique, patented modality earns device-like economics on a much larger
-      base. The DCF reaches $39.81, ~178% above spot. This is the platform outcome: the IP and clinical-evidence moat compounding
+      base. The DCF reaches $39.81, ~141% above spot. This is the platform outcome: the IP and clinical-evidence moat compounding
       across indications rather than defending a single one.'
-    probability_rationale: About 9%. The full platform thesis — TTFields as a multi-tumor standard of care with proven leverage.
+    probability_rationale: About 8%. The full platform thesis — TTFields as a multi-tumor standard of care with proven leverage.
       The low weight reflects unproven leverage and the fresh TRIDENT miss, not the absence of a plausible mechanism.
     dcf_metrics:
       cagr_5y: 10.8
@@ -502,15 +502,15 @@ weighting_rationale:
 - label: Bear 28%
   body: Slow adoption, thin leverage; small owner-FCF; $9.19.
 - label: Base 33%
-  body: Moderate new-indication ramp; margin ~10%; ~fair, $14.00.
+  body: Moderate new-indication ramp; margin ~10%; $14.00 (-15%).
 - label: Bull 17%
   body: Lua and Pax adopt, the 78% margin levers to 14%; $23.58.
-- label: Ultra Bull 9%
+- label: Ultra Bull 8%
   body: TTFields a multi-indication standard; $39.81.
 appendix:
   pushback:
   - label: Cheap with a bounded floor
-    body: At ~2.5x sales, net cash, 78% GM — the downside is capped, no insolvency risk even in the bear.
+    body: At ~2.7x sales, net cash, 78% GM — the downside is capped, no insolvency risk even in the bear.
   - label: Multiple shots on goal
     body: GBM, lung, pancreatic, brain-mets are four approved/filed indications; one real ramp re-rates the thesis.
   - label: First pancreatic therapy in ~30 years

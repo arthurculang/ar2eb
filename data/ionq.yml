@@ -19,11 +19,11 @@ taxonomy:
   - quantum-computing
   primary_theme: quantum-computing
 central_question: 'Can IonQ capture meaningful share of a $50B global quantum TAM by 2036 with its
-  trapped-ion stack — or is a $13B market cap pricing certainty Quantinuum, Google, and
+  trapped-ion stack — or is a $15B market cap pricing certainty Quantinuum, Google, and
   neutral-atom don''t support?
 
   '
-thesis: 'IonQ trades at ~$13B against a $260-270M FY26 guide — P/S ~50× after July''s sector
+thesis: 'IonQ trades at ~$15B against a $260-270M FY26 guide — P/S ~57× after July''s sector
   de-rating halved the quantum complex (no adverse IonQ filing). $2.39B cash + $470M RPO + the
   $1.8B SkyWater chip-fab deal (FTC review pending) is the optionality. Trapped-ion gives
   ~99.9%+ 2Q fidelity; AQ#64 hit three months early. But the competitive set is brutal:
@@ -83,7 +83,7 @@ scenarios:
     - 'Revenue ramps to ~$1.4B FY36 — strong absolute growth but tiny vs bull-deck $5B+. Without the fab, IonQ rents
       external foundry capacity and the margin ceiling drops. Operating margin matures around 8% — better
       than legacy services but well below cloud-software economics the current multiple implies. Cash burn averages $300-400M
-      through FY29; two raises ($400M + $1.0B) at $30-20 prices — cash-feasible from a $35 stock — add ~58M shares. Final
+      through FY29; two raises ($400M + $1.0B) at $30-20 prices — cash-feasible from a $41 stock — add ~58M shares. Final
       ~432M. With 18% within-scenario p_fail, DCF/share ~$0.93; expected ~$0.85.
 
       '
@@ -243,9 +243,9 @@ scenarios:
     - 'By FY36 IonQ does ~$3.8B revenue (~7.6% of $50B TAM) at 17% mature operating margin — better than legacy hardware but
       below cloud-SaaS. SkyWater fab supplies internal demand plus third-party defense- electronics revenue. RPO converts
       steadily; multi-product customer share rises 35% → 60%+. Cash burn troughs at ~$350M in FY28; a $2.5B raise programme
-      across years 1-7 at $35-65 — starting at spot, recovering as milestones land — keeps cash≥0. SkyWater stock-portion
+      across years 1-7 at $35-65 — starting below spot, recovering as milestones land — keeps cash≥0. SkyWater stock-portion
       dilution (~25M) folded in. Final shares ~451M. DCF/share
-      ~$2.55; with 12% within-scenario p_fail, expected ~$2.42 — well below today''s ~$35 spot.
+      ~$2.55; with 12% within-scenario p_fail, expected ~$2.42 — well below today''s ~$41.
 
       '
     probability_rationale: 'Highest single bucket because the base requires no breakthrough — sequential execution on plans
@@ -943,8 +943,7 @@ glossary:
   definition: Quantum solving a problem faster/cheaper than classical. Google's Willow demonstrated verifiable advantage on
     chemistry Oct 2025; no commercial advantage verified yet.
 - term: Quantinuum
-  definition: Honeywell-backed full-stack trapped-ion competitor. IPO'd Jun 2026 at $60 above range (>$14B; trades as QNT,
-    below issue); better logical-qubit performance (48 logical at 99.92%).
+  definition: Honeywell-backed full-stack trapped-ion competitor. IPO'd Jun 2026 at $60 above range (>$14B; trades as QNT); better logical-qubit performance (48 logical at 99.92%).
 - term: SkyWater
   definition: US semiconductor foundry IonQ agreed to acquire (~$1.8B; FTC 2nd Request Apr 2026, unclosed as of Jul 2026).
     Domestic chip fab — the base/bull 200K-qubit-chip path rests on it.

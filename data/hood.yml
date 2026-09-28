@@ -10,23 +10,23 @@ market:
   cash_billion: 4.26
   net_debt_billion: 0.0
   extras:
-  - Net cash ~$4.3B, no debt; ~888.5M shares and growing (SBC-dilutive); ~$82.8B market cap
+  - Net cash ~$4.3B, no debt; ~888.5M shares and growing (SBC-dilutive); ~$110B market cap
   - Revenue $4.473B FY25 (+49%); ~50% adj-EBITDA margin in Q1'26 ($534M); FCF positive (~$1.6B), but capital-light and cyclical
-  - Down ~27% YTD to ~$93 (52-wk $63.52-$153.86), giving back part of a ~280% 2025 rally
+  - Up ~9% YTD to ~$123 (52-wk $63.52-$153.86), after a ~200% 2025 rally
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: Med
   themes:
   - digital-assets-fintech-rails
   primary_theme: digital-assets-fintech-rails
-central_question: Has Robinhood diversified beyond crypto and rates into a durable platform worth ~52x FCF — or is it still
+central_question: Has Robinhood diversified beyond crypto and rates into a durable platform worth ~68x FCF — or is it still
   a transaction broker levered to the crypto and rate cycle?
-thesis: 'Robinhood trades at ~$82.8B (~$93, down ~27% YTD after a ~280% 2025 rally) — ~52x FCF on $4.473B revenue growing
+thesis: 'Robinhood trades at ~$110B (~$123, up ~9% YTD after a ~200% 2025 rally) — ~68x FCF on $4.473B revenue growing
   ~49%, ~50% adj-EBITDA margin, net cash, share count rising (SBC-dilutive). Roughly a third of revenue is rate-sensitive
   net interest (~$40M/qtr per 25bp Fed cut) and transaction revenue is crypto/rate-cyclical (crypto -47% last quarter). The
   DCF asks whether events/futures/options/Gold make HOOD a durable platform or it reverts to a transaction broker. The finding:
-  even the bull lands -40%, and only the ultra-bull (-14%) approaches fair — the price embeds a hyper-growth platform the modal
-  case (-59%) doesn''t deliver.'
+  even the bull lands -55%, and the ultra-bull (-35%) still falls short — the price embeds a hyper-growth platform the modal
+  case (-69%) doesn''t deliver.'
 chart_reference:
   history_years:
   - 2021
@@ -86,8 +86,8 @@ scenarios:
     - 'The cyclical case turns: crypto extends its slide (transaction already -47% there last quarter), the Fed cuts and ~$40M/qtr
       per 25bp drains net interest, and the events/futures push doesn''t scale fast enough to offset. Revenue dips then crawls
       back low-single-digit as a transaction broker, not a platform.'
-    - A cyclical broker whose growth has reversed earns a low-teens FCF multiple -> DCF ~$20 (-79%). Net cash sets a floor,
-      but at ~52x FCF entry the de-rate to a cyclical multiple is most of the loss.
+    - A cyclical broker whose growth has reversed earns a low-teens FCF multiple -> DCF ~$20 (-84%). Net cash sets a floor,
+      but at ~68x FCF entry the de-rate to a cyclical multiple is most of the loss.
     probability_rationale: 'The genuine bear: crypto revenue already fell 47% in a single quarter and ~32% of revenue rides
       net interest into a cutting cycle. 15% weight on the cycle turning before diversification matures.'
     dcf_metrics:
@@ -161,7 +161,7 @@ scenarios:
     - Events/options/Gold grow but the crypto and rate cyclicality keep the top line lumpy; revenue normalizes to mid-single-digit
       as the hyper-growth fades and the SBC-driven share count keeps creeping. Robinhood is a good diversified broker, not
       a compounding platform.
-    - DCF ~$28 (-69%) - a ~30%-FCF-margin broker growing mid-single-digit is worth a mid-teens multiple, well below ~52x;
+    - DCF ~$28 (-77%) - a ~30%-FCF-margin broker growing mid-single-digit is worth a mid-teens multiple, well below ~68x;
       the market's premium unwinds as growth normalizes.
     probability_rationale: Diversification is real but partial, and the rate/crypto cycle caps the multiple. 27% as the plausible
       'diversifies but stays cyclical' path given the Q1 mix shift.
@@ -236,8 +236,8 @@ scenarios:
     - 'The modal path: event contracts (+320% off a small base), futures (MIAXdx JV), options, Gold (4.3M subs/+36%) and banking/credit
       broaden the mix enough to keep ~30%+ FCF margins and double-digit-fading-to-high-single growth, but the crypto and rate
       cyclicality stays in the model. Revenue compounds toward ~$7B.'
-    - DCF ~$38 (-59%) - even crediting durable diversification at a ~16x FCF terminal, the modal case sits well below spot;
-      ~52x FCF prices a faster, less cyclical platform than the base delivers.
+    - DCF ~$38 (-69%) - even crediting durable diversification at a ~16x FCF terminal, the modal case sits well below spot;
+      ~68x FCF prices a faster, less cyclical platform than the base delivers.
     probability_rationale: Requires the new lines to keep scaling while crypto/rates stay choppy - consistent with the Q1
       diversification but not a step-change. 32% as the central outcome.
     dcf_metrics:
@@ -311,7 +311,7 @@ scenarios:
     - 'The diversification thesis lands: prediction markets, futures, options and the Gold/banking ecosystem compound into
       a durable platform, deposit growth (~20%) cushions rate cuts, and Robinhood out-grows the cycle at a ~35% FCF margin.
       Revenue compounds high-teens early then high-single as the base scales.'
-    - DCF ~$56 (-40%) - a genuine platform re-rate, yet still below spot; even crediting the bull case, ~52x FCF starts above
+    - DCF ~$56 (-55%) - a genuine platform re-rate, yet still below spot; even crediting the bull case, ~68x FCF starts above
       where durable diversification gets you.
     probability_rationale: Robinhood's ~50% EBITDA margin, 36% Gold-sub growth and 320% event-contract growth make a platform
       path credible. ~18% weight on the diversification compounding.
@@ -386,7 +386,7 @@ scenarios:
     - 'The full second act: prediction markets become a major venue, futures/tokenized assets/Bitstamp scale globally, banking/credit
       deepen the relationship, and the revenue base diversifies enough that the crypto/rate cycle stops driving it - a true
       fintech platform at a high-30s% FCF margin. Revenue compounds ~20%+ early.'
-    - DCF ~$80 (-14%) - the only path that approaches today's price, and it requires nearly everything to work; ~8% probability,
+    - DCF ~$80 (-35%) - the best path, yet well short of today's price, and it needs nearly everything to work; ~8% probability,
       the asymmetric outcome the rich entry is paying for.
     probability_rationale: Everything compounds - events AND futures AND Gold AND banking AND a multiple that holds - the
       durable-platform outcome. ~8%, the long-duration tail.
@@ -480,20 +480,20 @@ historical_prices:
   - [-0.06, 104.81]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: Crypto rolls over; rate cuts bite; ~$20 (-79%).
+  body: Crypto rolls over; rate cuts bite; ~$20 (-84%).
 - label: Bear 27%
-  body: Diversifies slowly; growth normalizes; ~$28 (-69%).
+  body: Diversifies slowly; growth normalizes; ~$28 (-77%).
 - label: Base 32%
-  body: Diversification holds; growth fades to high-single; ~$38 (-59%).
+  body: Diversification holds; growth fades to high-single; ~$38 (-69%).
 - label: Bull 18%
-  body: Platform scales on events/futures/Gold; ~$56 (-40%).
+  body: Platform scales on events/futures/Gold; ~$56 (-55%).
 - label: Ultra Bull 8%
-  body: Full fintech platform; cyclicality fades; ~$80 (-14%).
+  body: Full fintech platform; cyclicality fades; ~$80 (-35%).
 appendix:
   pushback:
-  - label: ~52x FCF prices a platform, not a broker.
+  - label: ~68x FCF prices a platform, not a broker.
     body: ~50% EBITDA margin and +49% revenue look elite, but ~32% is rate-sensitive net interest and transaction is crypto-cyclical
-      - even the bull is -40%.
+      - even the bull is -55%.
   - label: Crypto -47% is the cyclicality, in the open.
     body: Crypto transaction revenue fell 47% in a quarter; the offset (events +320%, options) proves the top line still swings
       with the trade.
@@ -602,13 +602,13 @@ competitive:
     who: Regulatory action (EU tokenized equities, prediction markets)
     falsifier: A regulatory curb on tokenized equities or event contracts caps the diversification lines the bull depends
       on.
-  takeaway: 'Robinhood''s Power is scale_economies - 27.4M funded customers and ~$4.5B revenue across fixed tech/clearing
+  takeaway: 'Robinhood''s Power is scale economies - 27.4M funded customers and ~$4.5B revenue across fixed tech/clearing
     cost throw off a ~50% EBITDA margin and the FCF that supports the case - plus a nascent network/branding edge in the app
     and Gold ecosystem. But the moat is weak: switching costs are near zero (ACATS portability), the zero-commission counter-positioning
     has been copied, and the live threat is the transaction/rate cycle itself (crypto -47% last quarter, ~$40M/qtr per 25bp
     rate cut) plus bigger brokers. The Audit: the scale Power is medium-durable, diversification is genuine but early, and
-    that squares with a DCF where ~52x FCF prices a durable platform the modal case (-59%) doesn''t deliver - only the ultra-bull
-    (-14%), where the cyclicality truly fades, approaches today''s price.'
+    that squares with a DCF where ~68x FCF prices a durable platform the modal case (-69%) doesn''t deliver - even the ultra-bull
+    (-35%), where the cyclicality fades, falls short of today''s price.'
 pocd:
   people:
     ceo: Vlad Tenev

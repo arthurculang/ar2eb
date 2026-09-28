@@ -12,20 +12,20 @@ market:
   extras:
   - Net cash +$954M ($954M cash, no debt); ~186.4M shares, but ~12%-of-revenue SBC keeps diluting the count
   - Revenue $2.20B FY25 (+62%); GAAP op margin turned positive to ~20%; FCF ~$0.70B headline (~32%), but ~half is SBC
-  - ~$162, down ~28% YTD; hit ~$300 in 2025 then ~halved; 52-wk ~$106-$283 — extremely volatile post-IPO
+  - ~$159, down ~31% YTD; hit ~$300 in 2025 then ~halved — extremely volatile post-IPO
 taxonomy:
   watchlist: fun-speculative
   tier: Med
   themes:
   - platform-marketplace-tech
   primary_theme: platform-marketplace-tech
-central_question: Does Reddit's under-monetized ad engine plus a scarce AI-training corpus outgrow its ~43x FCF price, or
+central_question: Does Reddit's under-monetized ad engine plus a scarce AI-training corpus outgrow its ~42x FCF price, or
   does Google/AI-search erode the traffic it rests on?
-thesis: 'Reddit trades at ~$30.2B (~$162, down ~28% YTD) — ~43x headline FCF on $2.20B revenue growing ~62% at ~91% gross
+thesis: 'Reddit trades at ~$29.6B (~$159, down ~31% YTD) — ~42x headline FCF on $2.20B revenue growing ~62% at ~91% gross
   margin, net cash, GAAP-profitable. The bull is a deeply under-monetized ad engine (ARPU far below Meta) plus high-margin
   data-licensing/AI deals (Google, OpenAI); the bear is existential — ~40-50% of traffic comes from Google, and AI-search
   answer-boxes can disintermediate that discovery (a Q4-2025 change already dented growth). On ex-SBC owner FCF, the modal
-  case lands ~-23%: priced for perfection.'
+  case lands ~-21%: priced for perfection.'
 chart_reference:
   history_years:
   - 2021
@@ -84,7 +84,7 @@ scenarios:
     - 'The existential bear lands: AI-search answer-boxes cannibalize the ~40-50% of traffic that arrives via Google, sessions
       and ad inventory shrink together, and growth collapses to ~10% then ~5%. Reddit Answers and data-licensing can''t backfill
       a structurally smaller front door, and a once-rich growth story de-rates hard to a low-teens FCF multiple.'
-    - Ex-SBC FCF margin holds ~18-24% but on a shrinking base; DCF ~$41 (-75%). When the source of discovery is disintermediated,
+    - Ex-SBC FCF margin holds ~18-24% but on a shrinking base; DCF ~$41 (-74%). When the source of discovery is disintermediated,
       a 91%-gross-margin model still re-rates to a fraction of a price that assumed durable traffic.
     probability_rationale: The Q4-2025 Google-algorithm change already dented user growth and dropped the stock ~15%; AI-answer
       cannibalization is the live, asymmetric tail. 16% weight on the traffic dependency turning structural.
@@ -159,7 +159,7 @@ scenarios:
     - 'Growth fades faster than the bulls hope: user adds keep decelerating off +17%, Google referral softens (not collapses),
       and ad ARPU gains slow as the inventory stops compounding. Revenue still grows but ~25% then into the teens, and the
       scarcity premium on the data-licensing corpus gets competed down.'
-    - DCF ~$70 (-57%) — a decelerating, traffic-dependent platform at a mid-teens FCF multiple is worth well under today's
+    - DCF ~$70 (-56%) — a decelerating, traffic-dependent platform at a mid-teens FCF multiple is worth well under today's
       price. The market's high-growth premium is unwarranted if the front door is even slowly narrowing.
     probability_rationale: Deceleration plus Google-algorithm sensitivity is the plausible 'grows but the engine cools' path;
       SBC dilution and ad-cyclicality compound it. 27% as the realistic soft outcome.
@@ -234,7 +234,7 @@ scenarios:
     - 'The modal path: Google referral holds, the under-monetized ad engine keeps lifting ARPU toward peers, international
       scales, and data-licensing/AI-training deals (Google ~$60M/yr, OpenAI ~$70M/yr) compound as a high-margin offset. Revenue
       compounds ~40% then normalizes toward ~10%, ex-SBC FCF margin grinds to ~30%.'
-    - DCF ~$125 (-23%) — even with the ad engine working and traffic intact, an ~18x terminal FCF multiple on the honest ex-SBC
+    - DCF ~$125 (-21%) — even with the ad engine working and traffic intact, an ~18x terminal FCF multiple on the honest ex-SBC
       cash leaves the modal case below spot. The price embeds the bull, not the base.
     probability_rationale: Requires traffic to hold and monetization to keep climbing — credible given +44% ARPU and the licensing
       optionality, but it is priced in. 32% as the central, still-negative outcome.
@@ -309,7 +309,7 @@ scenarios:
     - 'The ad engine and the corpus both compound: ARPU closes more of the gap to Meta, international monetization inflects,
       and the scarce human-generated corpus becomes a recurring high-margin AI-training annuity as more labs license it. Revenue
       compounds ~55% then sustains mid-teens, ex-SBC FCF margin reaches ~33%.'
-    - DCF ~$215 (+32%) — if monetization and data-licensing both inflect while traffic holds, the de-rated entry re-rates
+    - DCF ~$215 (+35%) — if monetization and data-licensing both inflect while traffic holds, the de-rated entry re-rates
       with the fundamentals; this is the core of the bull and the only path that clears spot comfortably.
     probability_rationale: Under-monetization vs peers leaves real ARPU runway, and the licensing deals show the corpus has
       scarce, payable value. ~17% weight on both engines firing.
@@ -384,7 +384,7 @@ scenarios:
     - 'The full second act: Reddit becomes the default monetized discussion graph, ad ARPU rivals the majors, and the human-generated
       corpus turns into a durable, escalating AI-training annuity across the major labs — a high-margin stream that grows
       with AI demand rather than being cannibalized by it. Revenue compounds ~70% early, ex-SBC FCF margin reaches ~36%.'
-    - DCF ~$343 (+112%) — both Powers fully monetize and the multiple re-rates to a scarce-platform premium; ~8% probability,
+    - DCF ~$343 (+116%) — both Powers fully monetize and the multiple re-rates to a scarce-platform premium; ~8% probability,
       the asymmetric upside the volatile entry is buying.
     probability_rationale: Everything works — monetization AND the corpus annuity AND a multiple re-rate, with AI demand making
       the data more valuable, not less. ~8%, the long-duration tail.
@@ -467,19 +467,19 @@ historical_prices:
   - [-0.06, 147.81]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 16%
-  body: Google/AI-search erodes traffic; the model de-rates; ~$41 (-75%).
+  body: Google/AI-search erodes traffic; the model de-rates; ~$41 (-74%).
 - label: Bear 27%
-  body: Growth decelerates under AI-search pressure; ~$70 (-57%).
+  body: Growth decelerates under AI-search pressure; ~$70 (-56%).
 - label: Base 32%
-  body: Ad engine compounds, traffic holds, still priced in; ~$125 (-23%).
+  body: Ad engine compounds, traffic holds, still priced in; ~$125 (-21%).
 - label: Bull 17%
-  body: Monetization plus data-licensing inflect; ~$215 (+32%).
+  body: Monetization plus data-licensing inflect; ~$215 (+35%).
 - label: Ultra Bull 8%
-  body: Platform plus AI-corpus annuity compound; ~$343 (+112%).
+  body: Platform plus AI-corpus annuity compound; ~$343 (+116%).
 appendix:
   pushback:
   - label: ~91% gross margin and +62% growth is rare — why is the modal case negative?
-    body: Quality isn't the issue; price is. At ~43x headline FCF even strong execution lands the base at ~-23% — the price
+    body: Quality isn't the issue; price is. At ~42x headline FCF even strong execution lands the base at ~-21% — the price
       already embeds the bull.
   - label: Headline FCF overstates the cash.
     body: FCF was ~$0.70B (~32% of revenue) but SBC runs ~$300M+/yr; ex-SBC owner FCF is ~a quarter lower and dilutes — the
@@ -490,7 +490,7 @@ appendix:
   - label: The Google dependency is the whole thesis.
     body: ~40-50% of traffic arrives via Google; AI-search answer-boxes that satisfy queries without a click are the threat,
       already denting growth in Q4-2025.
-  - label: Net cash, p_fail ~0.
+  - label: Net cash; no solvency risk.
     body: ~$954M cash and no debt — no solvency risk; the entire downside is multiple/growth/traffic, not survival.
   triggers:
   - label: Bull validation
@@ -600,7 +600,7 @@ competitive:
     mostly through Google: ~40-50% of traffic is referral, so AI-search answer-boxes can disintermediate the front door even
     as the data itself gets more valuable (the Q4-2025 algorithm change already dented user growth). Durability is medium,
     not high — the graph compounds but its discovery layer is rented from a counterparty that is also a competitor. That squares
-    with the DCF: a 91%-gross-margin, +62%-growth franchise priced at ~43x FCF lands the modal case at ~-23%, because the
+    with the DCF: a 91%-gross-margin, +62%-growth franchise priced at ~42x FCF lands the modal case at ~-21%, because the
     price embeds the bull''s monetization-plus-licensing inflection while carrying an existential, observable traffic risk
     the distribution puts real weight on.'
 pocd:

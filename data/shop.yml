@@ -12,7 +12,7 @@ market:
   extras:
   - Net cash ~$5.8B, no debt; ~1.30B fully-diluted shares; a $2B buyback underway
   - Revenue $11.56B FY25 (+34%); GAAP op margin 12.7%; FCF ~$2.0B (~17%); ex-SBC owner FCF is the cash signal (SBC ~4-5%)
-  - ~$108, down ~30% YTD off the $182 high (TTM ~flat); 52-wk $94-$182; GMV $100.7B/+35% in Q1, Payments 67% of GMV
+  - ~$138, down ~14% YTD, ~24% off the $182 high (TTM ~-7%); GMV $100.7B/+35% in Q1, Payments 67% of GMV
 taxonomy:
   watchlist: fun-speculative
   tier: Med
@@ -21,11 +21,11 @@ taxonomy:
   primary_theme: platform-marketplace-tech
 central_question: Does agentic-AI commerce make Shopify the merchant rails for AI shopping agents, or disintermediate the
   storefront it sells?
-thesis: 'Shopify trades at ~$140.6B (~$108.24, down ~30% YTD off the $182 high) — ~30x forward / ~67x trailing FCF on revenue
+thesis: 'Shopify trades at ~$179.2B (~$137.92, ~24% off the $182 high) — ~39x forward / ~86x trailing FCF on revenue
   and GMV growing ~34-35%, net cash ~$5.8B, FCF ~$2.0B (~17%). The headline GAAP net loss is a non-cash equity-investment
   mark; ex-that, earnings are ~$360M. The bull is durable 30%+ GMV compounding, take-rate expansion (Payments at 67% of GMV),
   and agentic commerce making Shopify the rails for AI shopping agents; the bear is AI disintermediating the storefront plus
-  macro cyclicality on GMV. The weighted DCF lands -15.1% (~$92): a great franchise, de-rated but still priced for the win.'
+  macro cyclicality on GMV. The weighted DCF lands -33.4% (~$92): a great franchise, de-rated but still priced for the win.'
 chart_reference:
   history_years:
   - 2021
@@ -86,7 +86,7 @@ scenarios:
       GMV growth halves toward low-double then mid-single digits, and take-rate gains stall as Shopify becomes a commoditized
       back-end. A consumer/macro downturn compounds the GMV hit; revenue compounds ~7% as the platform de-rates.'
     - A decelerating platform losing its distribution edge earns a compressed ~3.8-4x sales / ~14x FCF terminal -> DCF ~$31
-      (-71%). Net cash sets a floor, but a richly-priced growth name re-rates hard when the growth and the moat both fade.
+      (-77%). Net cash sets a floor, but a richly-priced growth name re-rates hard when the growth and the moat both fade.
     probability_rationale: 'The genuine bear, sharpened by the June-2026 software-sector AI-disruption selloff: if agents
       disintermediate storefronts, the whole premium unwinds. 15% on the swing factor breaking against Shopify.'
     dcf_metrics:
@@ -160,7 +160,7 @@ scenarios:
     - GMV keeps compounding but decelerates faster than the bulls expect as the law of large numbers and a soft consumer bite;
       take-rate expansion continues (Payments penetration) but operating leverage is gradual. Revenue compounds ~12% to the
       high-$20Bs at a ~22% FCF margin — solid, but not enough to support today's multiple.
-    - DCF ~$55 (-49%) — a high-quality but maturing platform re-rates toward ~6x sales / ~18x FCF; the market's premium is
+    - DCF ~$55 (-60%) — a high-quality but maturing platform re-rates toward ~6x sales / ~18x FCF; the market's premium is
       unwarranted if growth normalizes without an AI-driven second leg.
     probability_rationale: Deceleration at scale plus multiple compression is the base-rate path for a richly-valued grower.
       27% as the plausible 'still grows, but the premium leaks out' outcome.
@@ -235,12 +235,12 @@ scenarios:
     - 'The modal path: GMV keeps compounding ~20%+ decelerating to mid-teens, Payments penetration and attach (Installments,
       Tax, Capital) lift take-rate, and operating leverage carries FCF margin toward ~26%. Agentic commerce is a tailwind,
       not a step-change. Revenue compounds ~17% to ~$25B.'
-    - DCF ~$88 (-18%) — even durable high-teens growth and FCF inflection only support roughly ~8x sales / ~22x FCF, modestly
+    - DCF ~$88 (-36%) — even durable high-teens growth and FCF inflection only support roughly ~8x sales / ~22x FCF, well
       below today's price. The de-rate corrected some of the excess; the modal case still prices the win, so it lands short
       of fair.
     probability_rationale: Requires GMV to keep compounding and FCF margin to inflect on operating leverage — consistent with
       four straight mid-teens-FCF-margin quarters and the take-rate runway, but not a re-acceleration. 32% as the central,
-      modestly-negative outcome.
+      clearly negative outcome.
     dcf_metrics:
       cagr_5y: 17.5
       wacc: 0.09
@@ -313,7 +313,7 @@ scenarios:
       Markets, offline POS) widens take-rate, Plus/enterprise and international keep mix premium, and agentic commerce makes
       Shopify the default rails for AI shopping agents (AI traffic +8x, AI orders +15x YoY). FCF margin inflects toward ~31%
       on operating leverage. Revenue compounds ~21% to the low-$30Bs.'
-    - DCF ~$150 (+39%) - if take-rate expansion and an AI-distribution second leg both land, the franchise re-rates with the
+    - DCF ~$150 (+9%) - if take-rate expansion and an AI-distribution second leg both land, the franchise re-rates with the
       fundamentals; this is the core of the bull.
     probability_rationale: Shopify's GMV compounding, take-rate runway, and early agentic-commerce traction make a durable
       second leg credible. ~18% weight on the swing factor breaking Shopify's way.
@@ -388,7 +388,7 @@ scenarios:
     - 'The full second act: Shopify becomes the indispensable merchant infrastructure for the agentic-commerce era — the rails
       every AI shopping agent transacts through — while Payments, capital-markets, and enterprise penetration push take-rate
       and FCF margin to ~34%. GMV compounds ~30%+ for longer than the base assumes; revenue compounds ~26% to the mid-$30Bs.'
-    - DCF ~$212 (+96%) - the platform reclaims and extends a premium compounder multiple; ~8% probability, the asymmetric
+    - DCF ~$212 (+54%) - the platform reclaims and extends a premium compounder multiple; ~8% probability, the asymmetric
       upside the de-rated entry is buying.
     probability_rationale: Everything works - GMV AND take-rate AND agentic distribution AND a multiple re-rate, the platform-second-act
       outcome. ~8%, the long-duration tail.
@@ -483,19 +483,19 @@ historical_prices:
   - [-0.06, 147.37]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: AI disintermediates the storefront; growth fades; ~$31 (-71%).
+  body: AI disintermediates the storefront; growth fades; ~$31 (-77%).
 - label: Bear 27%
-  body: Growth decelerates and the multiple compresses; ~$55 (-49%).
+  body: Growth decelerates and the multiple compresses; ~$55 (-60%).
 - label: Base 32%
-  body: 30%+ GMV grinds to ~$25B revenue but stays rich; ~$88 (-18%).
+  body: 30%+ GMV grinds to ~$25B revenue but stays rich; ~$88 (-36%).
 - label: Bull 18%
-  body: Take-rate + agentic rails compound; ~$150 (+39%).
+  body: Take-rate + agentic rails compound; ~$150 (+9%).
 - label: Ultra Bull 8%
-  body: The commerce OS for AI shopping; ~$212 (+96%).
+  body: The commerce OS for AI shopping; ~$212 (+54%).
 appendix:
   pushback:
   - label: The de-rate corrected an excess, it didn't create a bargain.
-    body: Down ~30% YTD, but ~30x forward / ~67x trailing FCF still prices the win — the modal DCF is ~-18%; the premium on
+    body: Down ~14% YTD, but ~39x forward / ~86x trailing FCF still prices the win — the modal DCF is ~-36%; the premium on
       34% growth is the constraint.
   - label: The GAAP net loss is not the earnings signal.
     body: The -$581M Q1 net loss is a $1,061M non-cash mark on equity investments; ex-that, net income is ~$360M and FCF was
@@ -506,7 +506,7 @@ appendix:
   - label: Agentic commerce is the same variable for the bull and the bear.
     body: 'AI traffic +8x and AI orders +15x YoY could make Shopify the merchant rails for AI agents (bull) or route around
       the storefront (bear) — opposite signs.'
-  - label: Net cash, p_fail ~0.
+  - label: Net cash; no solvency risk.
     body: ~$5.8B cash, no debt, ~$2.0B FCF and a $2B buyback — no solvency risk; the downside is the multiple and the AI-distribution
       question, not survival.
   triggers:
@@ -613,16 +613,16 @@ competitive:
     is durable (high). The live threat is the same agentic-AI variable that drives the scenarios: AI shopping agents either
     transact through Shopify''s rails (deepening the network) or route around the storefront (disintermediating it), with
     AI traffic +8x / orders +15x YoY the early, unresolved signal. That single swing factor - expand-distribution vs disintermediate
-    - is why the bull (+39%) and the ultra-bear (-71%) span such a wide range on the same fact. The Audit: a genuinely strong,
-    durable Power, but priced for the win - the ~30% YTD de-rate to ~30x forward FCF still embeds a premium that the modal
-    case (-18%) doesn''t quite support, so the weighted finding lands -15.1%.'
+    - is why the bull (+9%) and the ultra-bear (-77%) span such a wide range on the same fact. The Audit: a genuinely strong,
+    durable Power, but priced for the win - the ~14% YTD de-rate to ~39x forward FCF still embeds a premium that the modal
+    case (-36%) doesn''t support, so the weighted finding lands -33.4%.'
 pocd:
   people:
     ceo: 'Tobi Lütke'
     founder_led: true
     tenure_years: 20
     insider_ownership_pct: 6.1
-    capital_allocation: 'No dividend, no buyback — has never returned capital; cash funds R&D, marketable
+    capital_allocation: 'No dividend; a first buyback began in 2026 (~$1.9B repurchased in H1 per the 10-Qs); cash also funds R&D, marketable
       securities, and equity/merchant-lending investments. The notable observable course-correction: the 2022
       ~$2.1B Deliverr acquisition (its largest ever) was reversed in 2023, selling Shopify Logistics to Flexport
       for a ~13% Flexport equity stake. SBC ~$546M in FY2024 (down ~30% YoY).'
@@ -637,8 +637,7 @@ pocd:
     key_person_risk: high
     score: 3
     takeaway: 'Founder-CEO holding ~6.1% economic but ~40% of the vote via Class B multiple-voting shares plus the
-      2022 founder share (which floors his voting control near 40% regardless of dilution); $1 salary, equity-paid,
-      no dividend or buyback, with the 2023 Flexport logistics divestiture as the observable capital-allocation
+      2022 founder share (which floors his voting control near 40% regardless of dilution); $1 salary, equity-paid, no dividend (a first buyback in 2026), with the 2023 Flexport logistics divestiture as the observable capital-allocation
       course-correction.'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'

@@ -12,7 +12,7 @@ market:
   extras:
   - ~$0.13B cash vs ~$1.34B total debt -> ~$1.2B net debt (deleveraging the HEYDUDE deal); ~50.2M shares
   - Revenue $4.04B FY25 (~flat); GAAP op margin 3.7% but adjusted ~22% (the $737M non-cash HEYDUDE impairment); FCF ~$0.7-0.9B
-  - ~$125, near the 52-week high ($73-$129), +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)
+  - ~$124, +45% YTD; ~9x EV/FCF on a heavy buyback (~$2.97B/56M shares done, $747M left)
 taxonomy:
   watchlist: fun-speculative
   tier: High
@@ -21,10 +21,10 @@ taxonomy:
   primary_theme: premium-consumer-brands
 central_question: Does the Crocs core brand (~83% of revenue) sustain mid-single-digit international-led growth — or does
   the N.A. fad fade while HEYDUDE bleeds?
-thesis: Crocs trades at ~$6.26B (~$124.71, +45% YTD) — ~9x EV/FCF on $4.04B revenue that is ~flat because HEYDUDE (-12%)
+thesis: Crocs trades at ~$6.20B (~$123.69, +45% YTD) — ~9x EV/FCF on $4.04B revenue that is ~flat because HEYDUDE (-12%)
   offsets a still-growing core (+1%, international +7%). The TTM GAAP P/E is distorted by a $737M non-cash HEYDUDE impairment;
   adjusted operating margin is ~22%. The bull is the core compounding on international while the written-down HEYDUDE de-risks
-  the downside; the bear is the fad fading plus more HEYDUDE value destruction. On normalized FCF the modal case is ~+61%.
+  the downside; the bear is the fad fading plus more HEYDUDE value destruction. On normalized FCF the modal case is ~+60%.
 chart_reference:
   history_years:
   - 2021
@@ -161,7 +161,7 @@ scenarios:
       consolidated revenue is roughly flat for years. Margin holds in the high-teens/low-20s as tariffs and mix cap operating
       leverage; the buyback does much of the per-share work.
     - DCF ~$131.52 (+6%) — even a flat, HEYDUDE-dragged Crocs at ~10x terminal FCF is modestly above today's price; ~9x entry
-      plus net-cash-funded repurchases provide a floor without a re-rate.
+      plus FCF-funded repurchases provide a floor without a re-rate.
     probability_rationale: 'The plausible ''decelerates but doesn''t break'' path: Crocs muddles low-single-digit, HEYDUDE
       stays a drag, margins are tariff-capped. 27% as the realistic muddle-through.'
     dcf_metrics:
@@ -235,7 +235,7 @@ scenarios:
     - 'The modal path: the Crocs brand sustains mid-single-digit growth led by international and DTC, HEYDUDE stabilizes near
       its written-down level rather than recovering, and consolidated revenue compounds low-single-digit (~3%). Adjusted operating
       margin holds ~20-22% as scale offsets tariffs, and FCF margin runs ~16-18%.'
-    - DCF ~$197.95 (+59%) — a still-growing core brand throwing off ~$0.7-0.9B FCF, valued at ~12x terminal FCF after the
+    - DCF ~$197.95 (+60%) — a still-growing core brand throwing off ~$0.7-0.9B FCF, valued at ~12x terminal FCF after the
       ~$1.2B net-debt bridge, prices well above ~9x today; the buyback compounds the per-share math. The flat consolidated
       optics, not the cash, are what the market is discounting.
     probability_rationale: Requires Crocs international + DTC to keep the brand growing while a de-risked HEYDUDE merely holds
@@ -311,7 +311,7 @@ scenarios:
     - 'The Crocs brand proves it is a durable global footwear platform, not a N.A. fad: international compounds mid-to-high-single-digit,
       DTC and Jibbitz personalization lift margin, and HEYDUDE quietly returns to flat-to-positive off its low base. Revenue
       compounds ~4-5% at a ~23-24% operating margin and FCF margin near 20%.'
-    - DCF ~$289.05 (+133%) — if the market re-rates Crocs toward a branded-compounder multiple (~14x terminal FCF) and the
+    - DCF ~$289.05 (+134%) — if the market re-rates Crocs toward a branded-compounder multiple (~14x terminal FCF) and the
       aggressive buyback keeps shrinking the float, the de-rated ~9x entry re-rates hard with the fundamentals.
     probability_rationale: Crocs international +7% with white space, ~83%-of-revenue cash engine, and a buyback ~$0.75B remaining
       make a re-rate credible if N.A. fad-fear proves wrong. 17% on the brand durability case landing.
@@ -386,7 +386,7 @@ scenarios:
     - 'The full second act: Crocs becomes an enduring global brand machine — international and DTC compound high-single-digit,
       Jibbitz/personalization and collaborations entrench pricing power, HEYDUDE turns into a contributor, and margin pushes
       toward 25%. Revenue compounds ~6% at a ~25% operating margin, FCF margin ~21%.'
-    - DCF ~$362.25 (+192%) — the asymmetric tail where a fad re-rates into a compounder at ~15x terminal FCF while a buyback
+    - DCF ~$362.25 (+193%) — the asymmetric tail where a fad re-rates into a compounder at ~15x terminal FCF while a buyback
       retires a large share of the float; ~8% probability, the long-duration upside the ~9x entry is buying.
     probability_rationale: Everything works — durable international growth AND margin expansion AND a HEYDUDE recovery AND
       a multiple re-rate, the brand-platform outcome. 8%, the upside tail.
@@ -485,11 +485,11 @@ weighting_rationale:
 - label: Bear 27%
   body: Flat top line, HEYDUDE a lasting drag; ~$131.52 (+6%).
 - label: Base 34%
-  body: Crocs core compounds, HEYDUDE stabilizes; ~$197.95 (+59%).
+  body: Crocs core compounds, HEYDUDE stabilizes; ~$197.95 (+60%).
 - label: Bull 17%
-  body: International runway; the brand re-rates; ~$289.05 (+133%).
+  body: International runway; the brand re-rates; ~$289.05 (+134%).
 - label: Ultra Bull 8%
-  body: Global brand machine, full re-rate; ~$362.25 (+192%).
+  body: Global brand machine, full re-rate; ~$362.25 (+193%).
 appendix:
   pushback:
   - label: Consolidated revenue is flat — why is this cheap?
@@ -608,7 +608,7 @@ competitive:
     FCF). The Audit: branding is durable but rated medium, not high, because it is concentrated in a single silhouette exposed
     to fad risk and bolted to a structurally declining HEYDUDE. The live threats are a N.A. taste shift (already -6%) and
     further HEYDUDE value destruction — but HEYDUDE is already impaired ($737M taken) and international is +7%, which is why
-    the downside is de-risked and the brand re-rate is the upside. That squares with the +55.5% finding: at ~9x EV/FCF the
+    the downside is de-risked and the brand re-rate is the upside. That squares with the +56.1% finding: at ~9x EV/FCF the
     market prices a fading business, while the normalized cash flow of a still-growing core brand underwrites materially more
     — the flat consolidated optics, not the cash, are the discount.'
 pocd:

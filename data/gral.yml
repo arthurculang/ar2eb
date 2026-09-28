@@ -19,14 +19,14 @@ taxonomy:
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology
-central_question: Does ~$2.7B / ~18x sales price GRAIL's multi-gate regulatory option fairly — after the NHS-Galleri miss,
+central_question: Does ~$4.8B / ~32x sales price GRAIL's multi-gate regulatory option fairly — after the NHS-Galleri miss,
   but with the FDA filing accepted and the Medicare law in hand?
-thesis: 'GRAIL trades at ~$2.7B (≈$62/sh on just ~44M shares) on ~$147M FY25 revenue and ~$823M cash. Galleri — a blood test
-  for 50+ cancers, self-pay today — is a multi-gate option: FDA PMA (filed Jan 2026, now accepted) → Medicare coverage (signed
-  Feb 2026; ≥2028 at ~$509 parity) → broad adoption. The pivotal NHS-Galleri trial MISSED its primary endpoint (-50% stock),
+thesis: 'GRAIL trades at ~$4.8B (≈$108/sh on just ~44M shares) on ~$147M FY25 revenue and ~$823M cash. Galleri — a blood test
+  for 50+ cancers, self-pay today — is a multi-gate option: FDA PMA (filed Jan 2026, now accepted), then Medicare coverage (signed
+  Feb 2026; ≥2028 at ~$509 parity), then broad adoption. The pivotal NHS-Galleri trial MISSED its primary endpoint (-50% stock),
   but the PMA rests on positive PATHFINDER 2 and the law passed — broken yet de-risked. Re-modeled on ~$509 parity (Abbott now
-  backs Cancerguard), at $62 the market roughly prices the modal regulatory-success case — FDA-rejection downside and broad-adoption
-  upside balanced.'
+  backs Cancerguard), at ~$108 the market prices well above the modal regulatory-success case — it needs the broad-adoption
+  upside.'
 chart_reference:
   tam_billion: 25.0
   history_years:
@@ -49,7 +49,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 8
   valn_anchor_text: Mature dx P/S ~5-10x
-  valn_caption: At ~18x sales today, every scenario implies the multiple resolves only as reimbursed test volume arrives.
+  valn_caption: At ~32x sales today, every scenario implies the multiple resolves only as reimbursed test volume arrives.
   tam_title: $25B FY35 MCED screening TAM — GRAIL share
   tam_legend:
   - GRAIL
@@ -74,7 +74,7 @@ scenarios:
       FDA/USPSTF skepticism about clinical utility, and Galleri stays a self-pay LDT niche. Test volume plateaus, the Medicare
       benefit never activates (it is gated on FDA approval), and GRAIL burns its ~$823M cash defending the franchise.
     - With a 40% within-scenario failure probability and revenue stalled near $0.3B, the equity collapses toward the cash-and-distress
-      floor — a near-total loss from today's $62.
+      floor — a near-total loss vs today's $108.
     probability_rationale: The NHS-Galleri miss is a real, fired datapoint — the only RCT of any MCED failed its stage-shift
       primary endpoint, hardening FDA and payer skepticism. 40% within-scenario failure reflects genuine PMA-rejection risk.
       20% scenario weight.
@@ -362,7 +362,7 @@ scenarios:
     - 'The modal path: the FDA approves Galleri (~2027) on the PATHFINDER 2 evidence, Medicare coverage activates (~2028),
       and broad private coverage follows — Galleri becomes the leading reimbursed MCED test at ~$2.05B revenue by 2035 (~8%
       of a ~$25B screening market) at ~30% operating margins, blended ASP settling toward the ~$509 Medicare parity rate.'
-    - DCF ~$65/share — modestly above today's $62. The market is pricing this modal regulatory-success case; the small ~50M
+    - DCF ~$65/share — well below today's ~$108. The market prices above this modal regulatory-success case; the small ~50M
       share count makes the per-share value swing hard on each gate.
     probability_rationale: Requires FDA approval (on PATHFINDER 2, which was positive) + Medicare activation (the law is already
       signed) + broad coverage — the machinery is in motion. 12% failure probability. 34% weight as the central, modal outcome.
@@ -506,7 +506,7 @@ scenarios:
     - 'The bull: FDA + Medicare clear cleanly, broad private coverage and annual-repeat screening take hold, and GRAIL extends
       its first-mover, broadest-test, only-RCT-dataset lead — ~$3.6B revenue by 2035 at ~36% operating margins. The screening
       category compounds and GRAIL leads it even as ASP holds near parity.'
-    - DCF ~$193/share — ~3× today's price. This is the scenario the regulatory machinery (PMA accepted + Medicare law) keeps
+    - DCF ~$193/share — ~1.8× spot. This is the scenario the regulatory machinery (PMA accepted + Medicare law) keeps
       alive despite the NHS miss.
     probability_rationale: 'A chain: clean FDA + Medicare + broad private coverage + annual-repeat adoption + category leadership.
       Each plausible at 50-70%; jointly ~13%. GRAIL''s breadth and only-RCT dataset are the edge.'
@@ -649,7 +649,7 @@ scenarios:
     narrative:
     - 'The tail: MCED becomes standard of care, the extended NHS follow-up eventually shows a mortality benefit, and GRAIL
       is the dominant platform — ~$5.6B revenue by 2035 at ~40% margins with a premium terminal.'
-    - DCF ~$381/share — ~6× spot. The asymmetric upside the low share count amplifies; individually each gate is plausible,
+    - DCF $381/share — 3.5× spot. The asymmetric upside the low share count amplifies; individually each gate is plausible,
       jointly ~5%.
     probability_rationale: 'Tail of tails: MCED standard of care + eventual mortality proof + GRAIL dominance + premium terminal.
       Individually 40-60%; jointly ~5%. The asymmetric upside the ~43M share count amplifies.'
@@ -804,11 +804,11 @@ weighting_rationale:
 - label: Bear 28%
   body: FDA late; Medicare narrow; sub-scale; low teens.
 - label: Base 34%
-  body: FDA 2027 + Medicare 2028; leader; ≈ spot.
+  body: FDA 2027 + Medicare 2028; leader; -46%.
 - label: Bull 13%
-  body: Broad adoption; category leader; ~3×.
+  body: Broad adoption; category lead; ~1.7×.
 - label: Ultra Bull 5%
-  body: MCED standard of care; dominant; ~6×.
+  body: MCED standard of care; dominant; >3×.
 appendix:
   pushback:
   - label: Only randomized MCED dataset.
@@ -930,7 +930,7 @@ pocd:
     tenure_years: 0
     insider_ownership_pct: 1.8
     capital_allocation: 'GRAIL is pre-profit and cash-burning. It was spun out of Illumina in June 2024 (Illumina had paid
-      ~$8B in 2021; the public market now values GRAIL near ~$2.7B — heavy value destruction under prior ownership, pre-spin).
+      ~$8B in 2021; the public market now values GRAIL near ~$4.8B — heavy value destruction under prior ownership, pre-spin).
       Current management has roughly halved the cash burn to ~$300M/yr and holds ~$823M cash with no debt, funding the company
       into the ~2028 Medicare window without an imminent raise. FY25 revenue $147M (+17%). No dividend or buyback — appropriate
       for a pre-scale development-stage screener.'

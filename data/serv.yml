@@ -22,11 +22,11 @@ taxonomy:
 central_question: With a fleet of ~2,000 robots already built but fewer than half daily-active, is SERV a cheap option on
   utilization inflecting to profitable unit economics, or a dilutive grind where the modal case loses money?
 thesis: 'Serve Robotics runs autonomous sidewalk delivery robots, spun out of Uber/Postmates and Nvidia-backed. It trades
-  at $5.37 (~$414M cap), down ~43% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter burn — a pre-scale company
+  at $4.44 (~$342M cap), down ~57% YTD, on FY25 revenue of just $2.7M against a ~$41M/quarter burn — a pre-scale company
   with ~$197M of liquidity and ~1.2 years of runway. The build is done: ~2,050 robots sit across 44 cities, but only ~812
   are daily-active — the question is utilization, not fleet size. Uber Eats (up-to-2,000-robot deal) and DoorDash demand
   exists to fill it, though no longer exclusively — Uber Eats now also routes to a rival fleet in Miami. The DCF weighted
-  fair value is $6.77, +26% above spot — but the modal base sits ~62% below the price, so the answer rides the right tail,
+  fair value is $6.77, +52% above spot — but the base case sits ~54% below the price, so the answer rides the right tail,
   paid for with relentless dilution.'
 chart_reference:
   tam_billion: 50
@@ -50,7 +50,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 2
   valn_anchor_text: Mature logistics P/S ~1-3x
-  valn_caption: At ~150x sales on a pre-scale fleet, the price is utilization optionality, not fundamentals.
+  valn_caption: At ~125x sales on a pre-scale fleet, the price is utilization optionality, not fundamentals.
   tam_title: $50B last-mile delivery automation — SERV share
   tam_legend:
   - SERV
@@ -366,8 +366,8 @@ scenarios:
       $0.70B by FY35 at a 15% operating margin as the network earns operating leverage on hardware that is already in the
       ground.
     - Growth still outpaces internal funding, so the company raises through the decade and shares drift toward ~146M. The
-      DCF is $2.32 and the expected value $2.03 — both well under spot. The modal outcome validates the operating model yet
-      leaves the equity worth roughly a third of today's price, because the dilution caps the per-share value.
+      DCF is $2.32 and the expected value $2.03 — both well under spot. The base outcome validates the operating model yet
+      leaves the equity worth under half of today's price, because the dilution caps the per-share value.
     probability_rationale: A 35% p_fail assumes the operating model works within the decade — supported by the demonstrated
       +578% revenue growth and the shift to utilization metrics — but still a coin-flip-plus that profitable unit economics
       arrive before dilution does the damage.
@@ -512,7 +512,7 @@ scenarios:
       and Nvidia compute stack drives hardware cost down, and the Uber Eats and DoorDash channels compound volume. Revenue
       reaches about $1.50B by FY35 at a 20% operating margin as operating leverage on the built network finally shows.
     - Internal cash funds more of the growth, so dilution eases and shares settle near ~118M. The DCF is $16.89 and the expected
-      value $14.58 — roughly two and three-quarters times spot. This is the first scenario where the value of the network
+      value $14.58 — roughly three and a quarter times spot. This is the first scenario where the value of the network
       clearly exceeds the price paid plus the dilution to get there.
     probability_rationale: A 15% p_fail. Requires utilized-fleet unit economics to turn durably profitable and the deployment
       to broaden regionally — anchored to the FY26 utilization and cost-per-delivery targets, which would be the first hard
@@ -658,7 +658,7 @@ scenarios:
       robotics layer for the food and goods platforms. Revenue reaches about $2.80B by FY35 at a 24% operating margin as network
       density and a first-mover fleet originate genuine scale economies.
     - Self-funding largely replaces dilution and shares settle near ~100M. The DCF is $71.44 and the expected value $65.84
-      — roughly twelve times spot. This tail is where the bulk of the weighted value lives, and it depends on the fleet cornering
+      — about fifteen times spot. This tail is where the bulk of the weighted value lives, and it depends on the fleet cornering
       last-mile delivery before rivals or the platforms' own autonomy close in.
     probability_rationale: A 5% read, trimmed from 8% in Jul 2026. The tail assumes the first-mover fleet plus Uber/DoorDash
       demand harden into a winner-take-most scale-economies Power later entrants cannot match — a gate that now has dated
@@ -833,17 +833,16 @@ appendix:
     body: Revenue grew +578% YoY in Q1'26 and FY26 is guided to ~$26M (~9x FY25); management now reports utilization, not
       fleet size.
   - label: De-rated price, fat right tail
-    body: Down ~43% YTD, the equity is a cheap option — roughly 85% of the expected value sits in the bull and ultra-bull,
+    body: Down ~57% YTD, the equity is a cheap option — roughly 85% of the expected value sits in the bull and ultra-bull,
       priced lightly versus spot.
   - label: A vertically-integrated stack
     body: Magna manufacturing, Nvidia compute, and the Diligent Robotics acquisition build a hardware-and-autonomy stack rivals
       must assemble from scratch.
   triggers:
   - label: Bull validation
-    body: Daily-active robots climb toward the ~2,050 deployed; cost-per-delivery falls through $1 (next checkpoint the Aug-6
-      Q2 print); Uber Eats scales toward the 2,000-robot commitment; raises shrink as revenue funds the burn.
+    body: Daily-active robots climb toward the ~2,050 deployed; cost-per-delivery falls through $1 (next checkpoint the Q3 report); Uber Eats scales toward the 2,000-robot commitment; raises shrink as revenue funds the burn.
   - label: Bear validation
-    body: Utilization still below half the fleet at the Aug-6 Q2 print; the FY26 ~$26M guide slips; a weak-terms raise (none
+    body: Utilization still below half the fleet at the Q3 report; the FY26 ~$26M guide slips; a weak-terms raise (none
       filed through Jul 2026); a second Serve city shares volume with a rival fleet (Miami first) or Avride tops 1,000 robots.
   - label: Reframe needed
     body: Utilized-fleet unit economics turn durably profitable and self-funding, shifting the story from option-on-fleet

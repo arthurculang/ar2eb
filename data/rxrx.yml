@@ -12,20 +12,20 @@ market:
   extras:
   - $0.665B cash (Q1'26); runway into early 2028; burn ~$340M/yr
   - FY25 revenue $74.7M (+27%) — all collaboration/milestone, no product sales
-  - Down ~40% YTD to ~$3.02; ~510M shares post-Exscientia merger + ATM
+  - Down ~3% YTD to ~$3.97; ~510M shares post-Exscientia merger + ATM
 taxonomy:
   watchlist: asymmetrical-moonshots
   tier: Low
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology
-central_question: At a ~40%-de-rated $3.02 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation,
+central_question: At $3.97 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation,
   or a platform that funds itself toward dilutive stagnation?
 thesis: Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps
-  cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.02 (~$1.54B
-  cap), down ~40% YTD, on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early
+  cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.97
+  (~$2.02B cap) on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early
   2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful
-  approved drug. Weighted fair value is $3.85, +28% above spot — but the modal base sits below the price, so the answer rides
+  approved drug. Weighted fair value is $3.85, ~3% below spot — roughly fair; the modal base sits below the price, so the answer rides
   the right tail.
 chart_reference:
   tam_billion: 50
@@ -49,7 +49,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 5
   valn_anchor_text: Mature biopharma P/S ~4-6x
-  valn_caption: At ~21x sales on milestone-only revenue, the price is platform optionality, not fundamentals.
+  valn_caption: At ~26x sales on milestone-only revenue, the price is platform optionality, not fundamentals.
   tam_title: $50B AI-enabled drug-discovery value — RXRX share
   tam_legend:
   - RXRX
@@ -507,7 +507,7 @@ scenarios:
       and successors), plus royalty and platform-licensing income. Revenue reaches about $2.50B by FY35 at a 35% operating
       margin as the Phenomap flywheel compounds into repeatable output.
     - Milestones and royalties fund more of the spend, so dilution eases and shares settle near 616M. The DCF is $7.03 and
-      the expected value $6.10 — more than double spot. This is the first scenario where platform value clearly exceeds the
+      the expected value $6.10 — ~54% above spot. This is the first scenario where platform value clearly exceeds the
       price paid.
     probability_rationale: A 15% read. Requires the data flywheel to translate into repeated approvals — a 15% p_fail. Anchored
       to the combo and registrational readouts due 2026-2027, which would be the first hard evidence the engine produces drugs.
@@ -652,7 +652,7 @@ scenarios:
       generating a major pharma-scale outcome. Revenue reaches about $5.20B by FY35 at a 40% operating margin as platform
       economics, not single drugs, drive the model.
     - Self-funding largely replaces dilution and the equity compounds toward roughly $19B. The DCF is $33.75 and the expected
-      value $31.11 — roughly ten times spot. This tail is where the bulk of the weighted value lives, and it depends on the
+      value $31.11 — about eight times spot. This tail is where the bulk of the weighted value lives, and it depends on the
       platform cornering the discovery resource.
     probability_rationale: 'An 8% read. The lowest-probability, highest-payoff outcome: an 8% p_fail and a winner-take-most
       platform result. It assumes the Phenomap data advantage becomes a durable cornered resource the rest of AI-bio cannot
@@ -835,7 +835,7 @@ appendix:
     body: Roche/Genentech ($213M received), Sanofi ($134M, fifth milestone Feb 2026) and Bayer validate that pharma will pay
       for the platform.
   - label: De-rated price, fat right tail
-    body: Down ~40% YTD, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced
+    body: Down ~19% TTM, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced
       lightly.
   - label: Compute-scale advantage
     body: BioHive-2 plus automated Phenomaps generate proprietary phenotypic data at a scale rivals cannot easily match —

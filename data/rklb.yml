@@ -19,14 +19,14 @@ taxonomy:
   themes:
   - space-launch-infrastructure
   primary_theme: space-launch-infrastructure
-central_question: 'Does ~$41B (~45x FY26E revenue) — plus a pending ~$8B debt-and-stock purchase of Iridium''s constellation
+central_question: 'Does ~$40B (~44x FY26E revenue) — plus a pending ~$8B debt-and-stock purchase of Iridium''s constellation
   — price a realistic path to a space prime when the second act is bought, not originated?'
-thesis: 'Rocket Lab has halved to ~$41B at $71.55 — ~68x trailing sales, ~45x the ~$900M FY26 run-rate — while the business
+thesis: 'Rocket Lab has halved to ~$40B at $69.89 — ~66x trailing sales, ~44x the ~$900M FY26 run-rate — while the business
   accelerated (Q1''26 revenue +64%, backlog >$2.2B). And the second act changed form: rather than originate a constellation,
   RKLB agreed to buy one — the pending ~$8B Iridium acquisition (mid-2027 close; $871M revenue, ~$495M operational EBITDA,
   2.6M subscribers), funded by a $3.6B bridge plus up to ~44M collared shares. The DCF asks whether a halved price plus a
   leveraged, dilutive constellation purchase changes the answer. The finding: it narrows the gap, not the verdict — the weighted
-  sits ~38% below spot; the market still prices near-certain success.'
+  sits ~37% below spot; the market still prices near-certain success.'
 chart_reference:
   tam_billion: 120
   history_years:
@@ -49,7 +49,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 3
   valn_anchor_text: Mature aero/defense P/S ~2-4x
-  valn_caption: At ~68x trailing sales (~45x FY26E), every scenario implies massive multiple compression.
+  valn_caption: At ~66x trailing sales (~44x FY26E), every scenario implies massive multiple compression.
   tam_title: $120B FY35 launch + space-systems TAM — RKLB share
   tam_legend:
   - RKLB
@@ -191,7 +191,7 @@ scenarios:
       on top — ~$7.0B combined.'
     - At ~16x operational EBITDA funded with debt and depressed stock, the purchase is roughly value-neutral in this world
       — its cash stream about pays for its debt and dilution. DCF ~$12.30. Even this constructive base sits ~83% below today's
-      $71.55 — the market is paying for a far larger outcome than a successful-but-rational base delivers.
+      $69.89 — the market is paying for a far larger outcome than a successful-but-rational base delivers.
     probability_rationale: 'Requires the least faith: Neutron works (not dominates), Space Systems keeps compounding, margins
       reach an aerospace-prime ~18%, and a well-telegraphed merger closes. No SpaceX-toppling assumption. 5% failure probability
       given $1.48B cash, >$2.2B backlog, and revenue diversification. 35% weight as the central outcome.'
@@ -247,7 +247,7 @@ scenarios:
       and licensed L-band spectrum, modernized and expanded, make recurring service revenue real from the close. Revenue compounds
       toward ~$16.5B by FY35 at a ~32% blended margin.'
     - One conjunctive leg is bought rather than built, conditional only on the close; the offsets are ~$5B of deal debt and
-      ~33M collared shares. DCF ~$79 — barely above today's $71.55. Even the bull is roughly fully priced, which is the entry-price
+      ~33M collared shares. DCF ~$79 — barely above today's $69.89. Even the bull is roughly fully priced, which is the entry-price
       story in one line.
     probability_rationale: 'A chain: Neutron reusability works AND captures share AND Space Systems scales — with the constellation
       leg de-risked from ''build one'' to ''integrate the one just bought'' (conditional on close, not on invention). That

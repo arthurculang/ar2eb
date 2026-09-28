@@ -20,13 +20,13 @@ taxonomy:
   - nuclear-fission-smr
   - ai-compute
   primary_theme: nuclear-fission-smr
-central_question: Does ~$8B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power
+central_question: Does ~$7B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power
   outcome a decade of fundamentals can't reach?
-thesis: 'Oklo trades at ~$8B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate
+thesis: 'Oklo trades at ~$7B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate
   nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the first commercial advanced-fission site under construction).
   The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible
   over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly,
-  +298%) clears it — the capital-intensive base leaves the weighted ~-34%.'
+  +338%) clears it — the capital-intensive base leaves the weighted ~-26%.'
 chart_reference:
   tam_billion: 120.0
   history_years:
@@ -77,7 +77,7 @@ scenarios:
       and services shell.
     - The $2.54B cash is the floor — but dilutive flailing raises and a decade of opex erode it, and a 38% within-scenario
       probability of restructuring pulls the expected toward the distress floor. Revenue stalls near $0.1B; the equity is
-      worth a fraction of today's ~$8B.
+      worth a fraction of today's ~$7B.
     probability_rationale: 'The compound bear: a fast-reactor FOAK failure plus HALEU-fuel scarcity. DOE approved the Aurora-INL
       safety case (June 2026), so outright regulatory failure now requires the NRC to block the commercial fleet beyond INL
       — a narrower kill-path than at authoring, trimming this tail to 8%. 38% within-scenario failure reflects that Oklo,
@@ -371,7 +371,7 @@ scenarios:
       margins — genuine IPP economics. FY30 revenue ~$0.42B sits near the (thin) analyst consensus, compounding as reactors
       come online.'
     - The buildout is capital-intensive (~$2B/GW, ~$5.7B cumulative reinvestment) funded by ~$2.9B of dilutive raises on top
-      of the $2.54B cash. DCF ~$15/share — ~66% below spot, a measure of how much the market is paying for a fleet larger
+      of the $2.54B cash. DCF ~$15/share — ~63% below spot, a measure of how much the market is paying for a fleet larger
       and faster than a successful-but-rational base implies.
     probability_rationale: Requires Aurora to work (not dominate) and the build-own-operate model to scale to a few GW — no
       full-pipeline conversion, no SpaceX-style runaway. 10% failure probability given the cash, DOE/INL momentum, and NRC
@@ -517,7 +517,7 @@ scenarios:
       Oklo converts a real slice of its pipeline — ~7 GW deployed by 2034, powering AI data centers under long-dated PPAs
       at scale, with fuel-recycling and radioisotope verticals adding optionality. Revenue compounds toward ~$4.8B at a ~58%
       operating margin.'
-    - Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$34/share — and still ~25% below
+    - Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$34/share — and still ~17% below
       spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you must
       extend the horizon or believe a richer terminal.
     probability_rationale: 'A chain: Aurora works AND factory-cost economics materialize AND NRC clears AND the pipeline converts
@@ -664,10 +664,10 @@ scenarios:
       monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center
       load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource
       Power.'
-    - 'DCF ~$180/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +298%
+    - 'DCF ~$180/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +338%
       above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn''t capture.'
     probability_rationale: 'Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling
-      monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~3%. The fuel monopoly
+      monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~8%. The fuel monopoly
       (a cornered resource) is the Power-gated second act; HALEU-supply scarcity is the falsifier that could make or break it.'
     dcf_metrics:
       tam_share: 14.42
@@ -825,7 +825,7 @@ weighting_rationale:
 - label: Bull 23%
   body: Factory economics work; ~7 GW AI-power scale.
 - label: Ultra Bull 8%
-  body: 13 GW + HALEU fuel monopoly; +298%, clears spot.
+  body: 13 GW + HALEU fuel monopoly; +338%, clears spot.
 appendix:
   pushback:
   - label: Best-capitalized advanced-nuclear name.
@@ -904,7 +904,7 @@ competitive:
   rivals:
   - name: NuScale
     kind: public
-    note: Only NRC-approved SMR design (LWR, 77 MWe VOYGR); deploys ~2030; Q1 2026 revenue $565K (-96% YoY); ~83% off peak.
+    note: Only NRC-approved SMR design (LWR, 77 MWe VOYGR); deploys ~2030; Q1 2026 revenue $565K (-96% YoY).
     share_now: 0.0
     share_terminal: 0.2
     capital: public; Fluor / ENTRA1

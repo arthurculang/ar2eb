@@ -500,7 +500,7 @@ appendix:
   - label: Gross-margin compression is the watch-item.
     body: Gross margin fell to 54.0% from 56.3% and GAAP profit is a few million dollars; thin profitability plus SBC dilution
       is what 'never inflects' looks like.
-  - label: Net cash, p_fail ~0.
+  - label: Net cash; no solvency risk.
     body: $286M cash, no debt — no solvency risk; the downside here is multiple/margin (the inflection failing), not survival.
   triggers:
   - label: Bull validation

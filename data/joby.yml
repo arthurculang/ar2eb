@@ -33,11 +33,11 @@ market:
 
 central_question: >
   Will Joby capture meaningful share of a $250B global UAM TAM by 2036 —
-  or is today's ~$7.5B market cap pricing certainty that competitive eVTOL
+  or is today's ~$6.3B market cap pricing certainty that competitive eVTOL
   economics don't support?
 
 thesis: >
-  Joby trades at ~$7.5B against $24M of Q1 2026 revenue and $700M
+  Joby trades at ~$6.3B against $24M of Q1 2026 revenue and $700M
   annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise)
   provides ~3 years of runway. FAA certification entered Stage 5 (TIA) in
   March 2026 with the type certificate guided late 2026, Dubai exclusive
@@ -67,7 +67,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 3
   valn_anchor_text: "Mature aerospace P/S ~2-4×"
-  valn_caption: "Bear=very stretched (6.9×), base=full (1.5×), bull=cheap (0.5×)."
+  valn_caption: "Bear=very stretched (4.2×), base=full (0.9×), bull=cheap (0.3×)."
   tam_title: "$250B global UAM TAM (FY36) — Joby share"
   tam_legend: ["JOBY", "Competitors", "Other UAM (cargo, etc.)"]
 

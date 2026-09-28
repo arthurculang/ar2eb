@@ -32,7 +32,7 @@ central_question: >
   closes a fifteen-year discount on this land bank, or a value trap with a new fee?
 
 thesis: >
-  Howard Hughes trades at $66.86 (~$4.0B market cap) — roughly book (~$63/sh) but a
+  Howard Hughes trades at $65.60 (~$3.9B market cap) — roughly book (~$63/sh) but a
   ~37% discount to the company's own $104/share sum-of-the-parts NAV (~80%
   irreplaceable master-planned-community land + operating assets, ~20% the new
   Vantage insurer). The land bank monetizes at records — FY2025 MPC EBT a record
@@ -75,7 +75,7 @@ scenarios:
     short_label: UltBear
     probability: 0.10
     expected_per_share: 50.74
-    headline: "Value trap confirmed; NAV marks down; −24%."
+    headline: "Value trap confirmed; NAV marks down; −23%."
     narrative:
       - >
         The fifteen-year discount is fifteen years old for a reason. In the
@@ -90,7 +90,7 @@ scenarios:
         Meanwhile the Pershing management fee accrues against a shrinking equity
         base and the governance overhang (the Delaware control-premium suit)
         deters the marginal buyer. The market keeps a ~40% discount on a now-lower
-        NAV → ~$51/share, a −24% tail. This is a drawdown, not an impairment: the
+        NAV → ~$51/share, a −23% tail. This is a drawdown, not an impairment: the
         land does not go to zero, and Ackman's $100 cost basis sits far above it —
         but conviction in the catalyst would be tested.
     probability_rationale: >
@@ -136,7 +136,7 @@ scenarios:
     short_label: Bear
     probability: 0.22
     expected_per_share: 71.77
-    headline: "The discount simply persists; +7%."
+    headline: "The discount simply persists; +9%."
     narrative:
       - >
         The base-rate bear for a discount-to-NAV holding company: nothing breaks,
@@ -194,7 +194,7 @@ scenarios:
     short_label: Base
     probability: 0.40
     expected_per_share: 90.40
-    headline: "Partial re-rating; the gap halves; +35%."
+    headline: "Partial re-rating; the gap halves; +38%."
     narrative:
       - >
         The modal case. The Ackman catalyst is genuinely new — control, an
@@ -250,7 +250,7 @@ scenarios:
     short_label: Bull
     probability: 0.20
     expected_per_share: 118.80
-    headline: "Discount closes toward NAV; +78%."
+    headline: "Discount closes toward NAV; +81%."
     narrative:
       - >
         Vantage's float compounds, MPC land keeps hitting records, Ward Village
@@ -304,7 +304,7 @@ scenarios:
     short_label: UltBull
     probability: 0.08
     expected_per_share: 169.10
-    headline: "The modern-day Berkshire; +153%."
+    headline: "The modern-day Berkshire; +158%."
     narrative:
       - >
         The full flywheel. Vantage float funds accretive acquisitions, the land
@@ -386,8 +386,10 @@ historical_prices:
 
 # ── Page 1 weighting rationale (grouped buckets) ────────────────────────────
 weighting_rationale:
-  - label: "Bear 32%"
-    body: "Discount persists or NAV marks down on a rate/housing shock; cushioned by the land bank + Ackman's $100 basis."
+  - label: "Ultra Bear 10%"
+    body: "Value trap confirmed: a rate/housing shock marks the land down and the discount stays wide."
+  - label: "Bear 22%"
+    body: "The discount simply persists; cushioned by the land bank + Ackman's $100 basis."
   - label: "Base 40%"
     body: "Partial re-rating to a ~20% discount — lands at ~$90, the sell-side consensus."
   - label: "Bull 20%"
@@ -412,7 +414,7 @@ appendix:
     - label: "The discount is structural, but the catalyst is new."
       body: "Fifteen years of discount — but never with Pershing at ~47%, Ackman as Executive Chairman, and an insurer to deploy float. The setup changed."
     - label: "Trades near book, deep discount to NAV."
-      body: "At $66.86 the stock is ~1.05× book (~$63), but land is carried at decades-old cost; the SOTP marks it to ~$104–118."
+      body: "At $65.60 the stock is ~1.04× book (~$63), but land is carried at decades-old cost; the SOTP marks it to ~$104–118."
   triggers:
     - label: "Bear validation"
       body: "MPC EBT / NOI roll over  ·  superpad pricing reverts to bulk levels  ·  Vantage posts underwriting losses  ·  the discount stays > 30%  ·  the fee + Delaware suit weigh"
@@ -518,7 +520,7 @@ pocd:
       Berkshire-style conversion, paired with a capable operator (O''Reilly) posting record MPC EBT and NOI — strong
       alignment and execution. The offsets are material: Ackman''s tri-hatted conflict (owner + Chairman + fee-earning
       manager), a permanent fee, and a Delaware suit alleging the control transfer paid minorities no premium.'
-  opportunity_ref: 'The scenario distribution (+41%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI'
+  opportunity_ref: 'The scenario distribution (+44%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI'
   context_ref: 'The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion'
   deal: 'Open-market purchase below the company''s own ~$104/share NAV estimate, weighed against the scenario distribution +
     position sizing. (Ackman''s own entry: $100/share, a 48% premium to the market at the time.)'

@@ -27,11 +27,11 @@ market:
 
 central_question: >
   Will Aurora capture meaningful share of a $160B US autonomous trucking TAM
-  by 2036 — or is today's $13B market cap pricing certainty about driverless
+  by 2036 — or is today's $11B market cap pricing certainty about driverless
   commercial economics that hasn't been proven?
 
 thesis: >
-  Aurora trades at ~$13.2B against $11M of Q1 2026 revenue and $640M
+  Aurora trades at ~$11.1B against $11M of Q1 2026 revenue and $640M
   annualized cash burn. The $1.28B liquidity position needs replenishment by
   mid-2027 absent commercial conversion. Driverless commercial launch slipped
   from 2024 to now 2027; the Driver runs supervised highway pilots with
@@ -149,11 +149,9 @@ scenarios:
       before commercial validation; dilution at falling prices accelerates as
       capital needs persist; competitive losses to Kodiak (cargo-focused,
       well-funded) and Waabi (smaller but capital-efficient). Within-scenario
-      45% p_fail captures Aurora-specific failure; the 35% scenario weight
-      reflects category-level risk — autonomous trucking economics may not
+      45% p_fail captures Aurora-specific failure; the 20% scenario weight reflects category-level risk — autonomous trucking economics may not
       scale for Western operators. Waymo Via's 2023 shutdown was a credible
-      signal of category difficulty. The 15% weight is slightly above JOBY's
-      30% bear because AUR is earlier-stage (pre-commercial), more
+      signal of category difficulty. The 35% downside weight (with the ultra-bear) tops JOBY's 30% because AUR is earlier-stage (pre-commercial), more
       capital-dependent, and faces more direct competition.
 
     dcf_metrics:
@@ -213,7 +211,7 @@ scenarios:
       - >
         The math: $8.3B operating EV + $1.3B cash, divided by 2.48B FY36
         fully-diluted shares (27% dilution). Apply 25% failure haircut.
-        Expected per-share $3.03 — materially below today's $7.74. The model
+        Expected per-share $3.03 — materially below today's $6.51. The model
         says the current price requires bull-case assumptions to hold; the
         base case implies meaningful downside.
     probability_rationale: >
@@ -285,8 +283,8 @@ scenarios:
         reaches 35% — similar to Mobileye's ADAS economics.
       - >
         The math: $89.4B operating EV, $1.3B cash, 2.14B FY36 shares (10%
-        dilution only). DCF $42.26 per share. With 12% failure probability,
-        expected per-share $37.31. The bull case implies today's $7.74 is
+        dilution only). DCF $42.28 per share. With 12% failure probability,
+        expected per-share $37.32. The bull case implies today's $6.51 is
         significantly undervaluing the trajectory — but only if you assign
         meaningful probability to the dominant-platform outcome.
     probability_rationale: >
@@ -439,7 +437,9 @@ historical_prices:
 
 # ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
 weighting_rationale:
-  - label: "Bear 35%"
+  - label: "Ultra Bear 15%"
+    body: "Autonomy economics never close; the equity is wiped out."
+  - label: "Bear 20%"
     body: "Autonomous trucking unproven at scale; Waymo Via shutdown signal still recent."
   - label: "Base 50%"
     body: "Modal outcome: Aurora is one of 2-3 winners, 7-8% TAM share, tech-auto blend margins."

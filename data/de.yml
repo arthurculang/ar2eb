@@ -12,7 +12,7 @@ market:
   extras:
   - $8.28B cash; ~$13.8B modeled equipment-ops debt (excludes the ~$45B captive lender; see pushback); ~270M shares
   - Revenue $45.7B FY25 (-12%, third down-year off the FY23 $61.3B peak); GAAP op margin 14.0% (trough); FCF ~$6.1B (~13%)
-  - ~$577, YTD ~+10.5%, TTM ~+19%; 52-week $433-$674 (ATH $660 Feb 2026), ~26x trough FCF
+  - ~$685, YTD ~+47%, TTM ~+50%; ~31x trough FCF
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: Med
@@ -21,11 +21,11 @@ taxonomy:
   - robotics-automation
   primary_theme: real-economy-hard-assets
 central_question: Has Deere's stock already priced the ag-cycle recovery off the trough, or does the precision-ag recurring-revenue
-  mix structurally lift mid-cycle margins beyond what ~26x trough FCF embeds?
-thesis: 'Deere trades at ~$156B (~$577, +10.5% YTD into the cycle low) — ~26x trough FCF on $45.7B revenue down 12% in the
+  mix structurally lift mid-cycle margins beyond what ~31x trough FCF embeds?
+thesis: 'Deere trades at ~$185B (~$685, +47% YTD into the cycle low) — ~31x trough FCF on $45.7B revenue down 12% in the
   third year of an ag down-cycle, GAAP operating margin compressed to 14.0%, FCF ~$6.1B. The DCF asks
-  whether the recovery is already priced: the modal case says largely yes (base -23%) — a full multiple on trough earnings
-  already discounts the upturn. The bull is the cycle turning plus precision ag de-cyclicalizing margins. The finding: -21.8%,
+  whether the recovery is already priced: the modal case says largely yes (base -35%) — a full multiple on trough earnings
+  already discounts the upturn. The bull is the cycle turning plus precision ag de-cyclicalizing margins. The finding: -34.1%,
   quality bought rich near a trough.'
 chart_reference:
   history_years:
@@ -88,8 +88,8 @@ scenarios:
       as farm income stays depressed, used-equipment inventories overhang new sales, and tariffs (~$1.2B FY) compound the
       squeeze. Revenue declines again before a shallow late-decade recovery; operating margin troughs near 10-13% and the
       recurring-revenue mix is too small to cushion the drop.'
-    - A capital-goods cyclical caught a year early in a worse-than-feared recession earns a low-teens trough multiple -> DCF
-      ~$219 (-62%). The captive-lender complexity and a richer-than-peer starting valuation amplify the downside.
+    - A capital-goods cyclical caught a year early in a worse-than-feared recession earns a low-teens trough multiple — DCF
+      ~$219 (-68%). The captive-lender complexity and a richer-than-peer starting valuation amplify the downside.
     probability_rationale: 'The genuine bear: large-ag is already guided -15-20% with weak farm income, the FY26 net-income
       guide ($4.5-5.0B) is roughly half the peak, and a full multiple on trough earnings has no cushion if the trough deepens.
       14% weight on a deeper/longer recession.'
@@ -164,7 +164,7 @@ scenarios:
     - 'The cycle bottoms but the recovery is muted: large-ag stabilizes rather than snaps back, Construction & Forestry and
       small-ag carry the early upturn, and net price discipline holds, but tariffs and a soft farm economy keep operating
       margin in the mid-teens. Precision ag grows but stays a small share. Revenue recovers low-single-digit to ~$56B by FY30.'
-    - DCF ~$342 (-41%) — a slow, margin-capped recovery doesn't support a full multiple on trough FCF; the de-rate toward
+    - DCF ~$342 (-50%) — a slow, margin-capped recovery doesn't support a full multiple on trough FCF; the de-rate toward
       a normal mid-cycle valuation is warranted if the mix doesn't shift.
     probability_rationale: The cycle turns but a weak farm economy + the ~$1.2B tariff drag keep margins near trough levels
       and the precision-ag mix immaterial. 27% as the plausible 'recovers but slowly' path given the maintained-but-halved
@@ -240,7 +240,7 @@ scenarios:
     - 'The modal path: 2026 is the bottom (per CEO John May), the ag cycle recovers along its normal arc, and structurally
       higher trough margins plus a growing precision-ag recurring-revenue stream (See & Spray, autonomy, JDLink ARR) lift
       operating margin back toward 17-18% by FY30. Revenue compounds mid-single-digit off the trough to ~$60B.'
-    - DCF ~$447 (-23%) — the recovery the bull narrates is largely what today's price already embeds; at a full multiple on
+    - DCF ~$447 (-35%) — the recovery the bull narrates is largely what today's price already embeds; at a full multiple on
       trough FCF the modal mid-cycle outcome lands below spot. Roughly the expected normalization, already priced.
     probability_rationale: Requires the cycle to recover on a normal timeline with the mix nudging mid-cycle margins higher
       - consistent with management calling 2026 the bottom and the C&F/small-ag recovery already underway. 34% as the central
@@ -316,8 +316,8 @@ scenarios:
     - 'The cycle inflects with operating leverage and the precision-ag thesis lands: See & Spray, autonomous tractors and
       JDLink convert into a meaningful recurring software/ARR stream that lifts structural margins and dampens the boom-bust
       swing. Operating margin reaches ~20% on a faster recovery; revenue compounds high-single-digit.'
-    - DCF ~$655 (+13.5%) - if recurring precision-ag revenue genuinely de-cyclicalizes the mix and the cycle turns with leverage,
-      the full multiple is justified and the stock re-rates above spot. The core of the bull.
+    - DCF ~$655 (-4.3%) - if recurring precision-ag revenue genuinely de-cyclicalizes the mix and the cycle turns with leverage,
+      the full multiple is justified, yet value lands just below spot. The core of the bull.
     probability_rationale: The cycle bottom + operating leverage on recovery + a precision-ag recurring-revenue mix structurally
       lifting mid-cycle margins - the swing factor playing out. ~17% weight on the de-cyclicalization being real.
     dcf_metrics:
@@ -391,7 +391,7 @@ scenarios:
     - 'The full second act: autonomy and a See & Spray / JDLink software platform scale into a high-margin recurring layer
       large enough that the market re-rates Deere from a cyclical toward a precision-agriculture technology compounder, while
       a strong cycle recovery adds leverage on top. Operating margin pushes past 22%.'
-    - DCF ~$810 (+40%) - the platform mix earns a premium multiple and the cyclicality discount compresses; ~8% probability,
+    - DCF ~$810 (+18%) - the platform mix earns a premium multiple and the cyclicality discount compresses; ~8% probability,
       the asymmetric upside above a justified full price.
     - An equipment cyclical that becomes a recurring-revenue ag-tech platform escapes the trough-multiple trap entirely -
       the long-duration tail.
@@ -490,23 +490,23 @@ historical_prices:
   - [-0.06, 654.91]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 14%
-  body: Deeper, longer ag recession; trough deepens; ~$219 (-62%).
+  body: Deeper, longer ag recession; trough deepens; ~$219 (-68%).
 - label: Bear 27%
-  body: Recovery is slow; trough margins stick; ~$342 (-41%).
+  body: Recovery is slow; trough margins stick; ~$342 (-50%).
 - label: Base 34%
-  body: Cycle recovers as priced; mix nudges margins; ~$447 (-23%).
+  body: Cycle recovers as priced; mix nudges margins; ~$447 (-35%).
 - label: Bull 17%
-  body: Cycle turns + precision ag de-cyclicalizes; ~$655 (+13.5%).
+  body: Cycle turns + precision ag de-cyclicalizes; ~$655 (-4.3%).
 - label: Ultra Bull 8%
-  body: Precision-ag platform re-rates the cycle away; ~$810 (+40%).
+  body: Precision-ag platform re-rates the cycle away; ~$810 (+18%).
 appendix:
   pushback:
   - label: Modeled debt EXCLUDES the ~$45B captive lender.
     body: The DCF carries only ~$13.8B equipment-ops debt; Deere Capital's ~$45B (offset by finance receivables) is left out,
       so the equity bridge is approximate.
   - label: A full multiple on trough earnings already prices the recovery.
-    body: ~26x trough FCF (~17x near the bottom) embeds the upturn; buying the trough is right, but paying full leaves the modal
-      at -23%.
+    body: ~31x trough FCF (~20x near the bottom) embeds the upturn; buying the trough is right, but paying full leaves the modal
+      at -35%.
   - label: Precision ag is the de-cyclicalizing bull, not yet the base.
     body: See & Spray / autonomy / JDLink build recurring ARR, but the mix is still small (PPA -39%) - it shifts margins only
       if it scales.
@@ -615,8 +615,8 @@ competitive:
     installed base, and real switching costs from fleets and JDLink data; the structurally higher trough margins this cycle
     are evidence the moat is widening. The Audit: the live threats are the ag cycle itself plus ~$1.2B of tariffs (which compress
     margins regardless of moat), and the contest over whether precision ag (See & Spray, autonomy) scales into a recurring-revenue
-    layer that de-cyclicalizes the mix - or whether rivals (CNH PTx, AGCO) split that prize. That squares with the -21.8%
-    finding: the franchise is excellent, but bought at ~26x trough FCF the modal recovery is already priced, and only the
+    layer that de-cyclicalizes the mix - or whether rivals (CNH PTx, AGCO) split that prize. That squares with the -34.1%
+    finding: the franchise is excellent, but bought at ~31x trough FCF the modal recovery is already priced, and only the
     bull''s de-cyclicalization (or a strong cycle turn) justifies the full multiple.'
 pocd:
   people:

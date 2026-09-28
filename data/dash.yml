@@ -12,20 +12,20 @@ market:
   extras:
   - ~$5.5B net cash; ~415M basic / ~442M diluted shares (SBC dilutes ~$1.3B/yr)
   - GOV $102B / revenue $13.72B FY25 (+27% GOV); $1.8B FCF; first +FY GAAP income 2024
-  - Down ~40% from highs; advertising ~$1B run-rate, Deliveroo+Wolt international, ~33x EV/FCF
+  - Down ~29% TTM; advertising ~$1B run-rate, Deliveroo+Wolt international, ~41x EV/FCF
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: High
   themes:
   - platform-marketplace-tech
   primary_theme: platform-marketplace-tech
-central_question: Is DoorDash a dominant local-commerce network whose profitability is about to inflect — or a high-SBC, ~33x-FCF
+central_question: Is DoorDash a dominant local-commerce network whose profitability is about to inflect — or a high-SBC, ~41x-FCF
   delivery business punished for spending ahead of returns?
-thesis: 'DoorDash trades at ~$66B (≈$159/sh, down ~40% from $285) — ~33x EV/FCF on $1.8B FCF, but GOV is still compounding
+thesis: 'DoorDash trades at ~$80B (≈$194/sh, down ~29% TTM) — ~41x EV/FCF on $1.8B FCF, but GOV is still compounding
   +27% ($102B) and adj-EBITDA hit $2.8B (~2.7% of GOV). The crash is a margin/SBC problem, not a growth one. The mature DCF
   asks whether advertising (~$1B run-rate) + New-Verticals (grocery) unit economics + international (Deliveroo/Wolt) inflect
-  the 2.4%-of-GOV margin upward, against ~$1.3B/yr SBC dilution. The finding: roughly fair — the 20%+ growth + margin inflection
-  are offset by the premium FCF multiple + dilution.'
+  the 2.4%-of-GOV margin upward, against ~$1.3B/yr SBC dilution. The finding: rich — the 20%+ growth + margin inflection
+  are outweighed by the premium FCF multiple + dilution.'
 chart_reference:
   history_years:
   - 2021
@@ -83,7 +83,7 @@ scenarios:
     narrative:
     - US restaurant delivery saturates, New Verticals stay margin-dilutive, Uber Eats presses, and ~$1.3B/yr SBC keeps diluting.
       GOV growth decays toward high-single while the 2.4%-of-GOV margin stalls.
-    - DCF ~$67 (-58%) — a no-margin-inflection, SBC-heavy delivery business at a premium multiple de-rates hard.
+    - DCF ~$67 (-65%) — a no-margin-inflection, SBC-heavy delivery business at a premium multiple de-rates hard.
     probability_rationale: 'The bear: the margin inflection stalls and SBC dilution + Uber competition cap returns. 15% weight
       on spending-ahead-of-returns persisting.'
     dcf_metrics:
@@ -156,7 +156,7 @@ scenarios:
     narrative:
     - GOV decelerates to low-double-digits and the margin inflects only modestly as ads scale but New Verticals stay competitive;
       SBC dilution continues.
-    - DCF ~$103 (-35%) — still below spot; the premium FCF multiple isn't covered by a modest inflection.
+    - DCF ~$103 (-47%) — still below spot; the premium FCF multiple isn't covered by a modest inflection.
     probability_rationale: Growth decelerates and the margin ramp is slower than the bull case. 27% weight — a plausible 'grows
       but stays expensive' path.
     dcf_metrics:
@@ -229,9 +229,8 @@ scenarios:
     narrative:
     - 'The modal path: advertising scales past $1B, New-Verticals (grocery) unit economics turn positive in 2H''26, and the
       network compounds GOV mid-teens — lifting the FCF margin toward 20%.'
-    - DCF ~$158 (-1%) — roughly fair; the 20%+ growth + margin inflection just cover the ~33x FCF entry after the de-rate.
-    probability_rationale: Requires the guided 2H'26 margin inflection + ads scaling + mid-teens GOV. 33% as the central,
-      near-spot outcome — but SBC caps the per-share.
+    - DCF ~$158 (-18%) — rich; the 20%+ growth + margin inflection fall short of the ~41x FCF entry.
+    probability_rationale: Requires the guided 2H'26 margin inflection + ads scaling + mid-teens GOV. 33% as the central outcome, below spot — SBC caps the per-share.
     dcf_metrics:
       cagr_5y: 12.4
       wacc: 0.095
@@ -302,7 +301,7 @@ scenarios:
     narrative:
     - Advertising + grocery + international (Deliveroo/Wolt) drive the GOV margin toward 4-5%, GOV compounds high-teens, and
       SBC moderates as a share of revenue.
-    - DCF ~$238 (+50%) — the local-commerce network re-rates as the margin inflection proves durable.
+    - DCF ~$238 (+23%) — the local-commerce network re-rates as the margin inflection proves durable.
     probability_rationale: The margin inflection compounds (ads + grocery + international) and growth stays high-teens. ~18%;
       the bull the de-rate is discounting away.
     dcf_metrics:
@@ -375,7 +374,7 @@ scenarios:
     narrative:
     - DoorDash becomes the dominant local-commerce platform (restaurants + grocery + retail + ads + autonomy optionality)
       compounding GOV ~20% at peak network margins.
-    - DCF ~$338 (+113%) — the local-commerce 'everything' platform; ~7% probability.
+    - DCF ~$338 (+75%) — the local-commerce 'everything' platform; ~7% probability.
     probability_rationale: Full local-commerce dominance + a high-margin ad/autonomy mix. ~7%, the asymmetric upside.
     dcf_metrics:
       cagr_5y: 18.0
@@ -469,19 +468,19 @@ historical_prices:
   - [-0.06, 231.74]   # 2026-08-31
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: Growth slows; margin stalls; SBC; ~$67 (-58%).
+  body: Growth slows; margin stalls; SBC; ~$67 (-65%).
 - label: Bear 27%
-  body: Decel; modest inflection; ~$103 (-35%).
+  body: Decel; modest inflection; ~$103 (-47%).
 - label: Base 33%
-  body: Margin inflects; ads scale; ~$158 (-1%).
+  body: Margin inflects; ads scale; $158 (-18%).
 - label: Bull 18%
-  body: Ads+grocery scale; ~$238 (+50%).
+  body: Ads+grocery scale; ~$238 (+23%).
 - label: Ultra Bull 7%
-  body: Dominant local-commerce platform; ~$338 (+113%).
+  body: Dominant local-commerce platform; ~$338 (+75%).
 appendix:
   pushback:
   - label: GOV still compounding +27%.
-    body: Down 40% on a margin/SBC concern, not a growth one — GOV $102B (+27%), Q1'26 +37%; the network keeps scaling.
+    body: Down 29% on a margin/SBC concern, not a growth one — GOV $102B (+27%), Q1'26 +37%; the network keeps scaling.
   - label: 'US #1 with network + scale density.'
     body: ~60% US restaurant share, >2x Uber Eats; logistics density is a genuine cost moat.
   - label: Advertising is the high-margin lever.
@@ -576,9 +575,9 @@ competitive:
     who: Gig-worker regulation
     falsifier: A major-state reclassification ruling structurally raises the Dasher cost base.
   takeaway: DoorDash's network-economies + scale (logistics density) are dominant and durable in US restaurants (~60% share,
-    >2x Uber Eats), and GOV is still compounding +27% — the 40% drawdown is a margin/SBC story, not a growth one. The terminal
+    >2x Uber Eats), and GOV is still compounding +27% — the drawdown is a margin/SBC story, not a growth one. The terminal
     multiple hinges on whether advertising + New-Verticals scale lift the 2.4%-of-GOV margin without a price war, net of ~$1.3B/yr
-    SBC dilution. At ~33x EV/FCF the 20%+ growth + margin inflection roughly cover the entry — fair, with the sign on the
+    SBC dilution. At ~41x EV/FCF the 20%+ growth + margin inflection fall short of the entry — rich, with the upside on the
     2H'26 inflection.
 stamp:
   footer_version: "005"
@@ -619,6 +618,6 @@ pocd:
     takeaway: 'Founder-CEO paid only on escalating price hurdles ($0 vested when unmet) and not leaning on the
       controlled-company exemptions — but the ~54% founder vote is concentrated in one person via an irrevocable
       proxy, buyback intent has outrun execution, and growth has been bought with dilutive stock.'
-  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (DASH 6.48)'
+  opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator (DASH 8.03)'
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
