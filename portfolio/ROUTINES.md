@@ -135,13 +135,18 @@ thesis argument, scenario value, or probability.
      re-underwrite to rescale shares and per-share fields.
 
 2. PROSE NUMBER SYNC (mechanical). A re-price leaves hardcoded numbers in
-   rendered prose stale. In each memo's thesis, weighting_rationale,
-   central_question and pocd deal text, update numbers that restate the OLD
-   spot price, market cap, or headline result (probability-weighted value vs
-   spot, most likely case vs spot, chance of ending at or below spot) to the
-   new values. Change nothing else: no argument, scenario value or
-   probability. Never write a capitalized word followed by colon-space inside
-   an unquoted YAML value. Then, for the edited memos:
+   rendered prose stale (the page-1 companion line and the Deal leg's figure
+   render live and need nothing). Run `python scripts/stale_prose.py` for
+   candidates, then read each memo's rendered prose yourself: central
+   question, thesis, masthead extras, scenario headlines and narratives,
+   weighting rationale, pushback and triggers. Update numbers that restate
+   the OLD spot price or market cap, a price-based multiple (rescale by the
+   price change), a price move (recompute from the memo's own price-history
+   points, or delete it), the headline result, or a scenario's value vs spot,
+   plus any fair/cheap/rich wording that follows directly from them. Keep
+   each field no longer than before. Change nothing else: no argument,
+   scenario value or probability. Never write a capitalized word followed by
+   colon-space inside an unquoted YAML value. Then, for the edited memos:
    `python scripts/validate.py`, `python scripts/build_site_data.py`,
    `node build.js`, `MEMO_FORCE=1 python scripts/rebuild_all.py --strict-layout <tickers>`,
    `python scripts/visual_hash.py <tickers>`.
@@ -171,7 +176,7 @@ thesis argument, scenario value, or probability.
 
 ---
 
-## Routine 3 — `ar2eb quarterly re-underwrite` *(v047)*
+## Routine 3 — `ar2eb quarterly re-underwrite` *(v047; spec checks v048)*
 
 The holistic pass the monthly deliberately is not: a **full qualitative
 re-underwrite** of every public memo — thesis, scenario values and narratives,
@@ -209,7 +214,9 @@ for young_company, the mature engine for mature/SOTP) so the validator's
 equity-bridge identities tie to the cent. Never fabricate value to make a
 model work; if evidence is ambiguous, leave the memo unchanged and say why.
 Respect the YAML-safety and page-trim gotchas in CLAUDE.md. The site is
-public-facing: no internal spec jargon in any rendered field.
+public-facing: no internal spec jargon in any rendered field. If CLAUDE.md's
+"Current state" lists flagged inputs for this quarterly, handle each one
+explicitly and report its outcome in the PR description.
 
 Per public ticker (every data/*.yml except dcf_type private_prevaluation),
 in batches of ~6 parallel research subagents:
@@ -239,11 +246,17 @@ in batches of ~6 parallel research subagents:
      a measurable threshold, ideally with a date.
    - STOCK COMP (§4, v048). Where latest-FY stock comp exceeds ~8% of
      revenue, the model values FCF after stock comp on today's diluted share
-     count (or models the dilution explicitly — never both). Re-model through
-     the engine if not; re-check names near the line (ISRG, DASH).
+     count (or models the dilution explicitly — never both). In a loss
+     quarter the reported diluted count equals basic: add unvested awards and
+     in-the-money options by the treasury method (converts carried as debt
+     stay out) — COIN first. Projected operating margins must sit on the same
+     after-stock-comp basis as the history chart. Re-model through the engine
+     if not; re-check names near the line (ISRG, DASH).
    - COMPANION STATISTIC (§6b). Page 1 now renders "most likely case vs spot
      · chance at or below spot" automatically; confirm it reads correctly, and
      keep any thesis sentence that restates it in sync.
+   - STALE PROSE. After your edits, every `python scripts/stale_prose.py`
+     hit is either fixed or confirmed a false positive (it is a heuristic).
    - PRICE HISTORY. `reprice.py` keeps charts aligned; if a memo's page-1
      price history is visibly wrong, rebuild it with
      `python scripts/rebuild_history.py <ticker>`.
@@ -253,7 +266,10 @@ in batches of ~6 parallel research subagents:
    npm install; apt-get install -y poppler-utils). It bumps every public
    memo (the quarterly archive), refreshes spot/market-cap/date from Yahoo,
    re-renders everything STRICT, re-weights the book, and regenerates the
-   visual baseline — the qualitative edits ride the same bump.
+   visual baseline — the qualitative edits ride the same bump. The re-price
+   moves spot again, so then repeat the monthly's PROSE NUMBER SYNC
+   (portfolio/ROUTINES.md, Routine 2, step 2) on every memo and re-render the
+   ones you edit.
 
 4. SHIP — commit to a feature branch, push, open a PR titled "Quarterly
    re-underwrite <YYYY-Qn>" whose description lists per ticker: verdict,

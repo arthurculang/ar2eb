@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec.md` (the methodology spec, changelog-driven —
-currently at logical **v047**) are the source of truth. The **top of the spec's
+currently at logical **v048**) are the source of truth. The **top of the spec's
 in-file changelog is the version of record** (the filename is stable now — the
 old `__v023`/`__v020` versioned names were retired 2026-07-05).
 
@@ -112,12 +112,26 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 
 > **Read this header first; everything under "Build log" below is dated history (newest first), not live state.**
 
-### Current state (2026-09-26)
-- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Routines: *daily perf* commits nightly; *monthly rebuild* runs via `reprice.py` and opens a PR — **the Aug-22 PR (#87) sat unmerged 31 days**, freezing the site's findings Jul 24 → Sep 22 (closed; #88 Sep re-price merged instead). *Quarterly re-underwrite* Routine live (first fire Oct 15). **September out-of-cycle re-underwrite** of the monthly's flags: CAI #89 (+54% → −23%), NAUT #90 (+592% → +370%, fired Broadscale trigger; page-1 price history was 3–5× too high for 2025 — fixed), ABNB/COIN/YETI (next PR). Site deploy-gated by CI.
-- **The cadence now has three layers (spec §15, v047):** daily perf (mechanical) · monthly rebuild (mechanical re-price, PR-gated) · **quarterly re-underwrite (§15.3 — full-book qualitative pressure-test, AUTONOMOUS/self-merging; Routine 3 in `ROUTINES.md`, LIVE — created 2026-07-22, fires the 15th of Jan/Apr/Jul/Oct; first scheduled fire 2026-10-15).** `scripts/reprice.py` is the shared mechanical re-price all layers call.
+### Current state (2026-09-28)
+- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Routines: *daily perf* commits nightly; *monthly rebuild* runs via `reprice.py` — **self-merging since v048** (its gates: validator, STRICT, baseline `--check`, data sync) because **the Aug-22 PR (#87) sat unmerged 31 days**, freezing the site's findings Jul 24 → Sep 22. **Owner must re-paste the Routine 2 + 3 prompts from `ROUTINES.md` (v048).** *Quarterly re-underwrite* Routine live (first fire Oct 15). **September out-of-cycle re-underwrite** of the monthly's flags: CAI #89 (+54% → −23%), NAUT #90 (+592% → +370%, fired Broadscale trigger; page-1 price history was 3–5× too high for 2025 — fixed), ABNB/COIN/YETI #91. Site deploy-gated by CI.
+- **v048 (2026-09-28, Arthur's bulk go):**
+  - **Half-Kelly per-name cap** (`min(15%, ½·Kelly)`): trims NAUT, JOBY and AUR; SERV stops at its own half-Kelly.
+  - **Stock-comp rule:** above ~8% of revenue, value FCF after stock comp on today's diluted count. ZM +81%→+10%, ABNB +15%→−14%, COIN +34%→−3%, META −12%→−47%. COIN and ABNB exit the book; ZM ~1%.
+  - **All 52 price-history charts rebuilt** from Yahoo (`scripts/rebuild_history.py`).
+  - **Renderer:** page-1 companion statistic, computed spot-crossing caption, and a live finding on the POCD Deal leg.
+  - **One-time prose sync** of stale prices and findings across the book.
+  - **Monthly self-merge**, and the quarterly now names its spec checks.
+- **Inputs for the Oct-15 quarterly re-underwrite (flagged in v048; handle them explicitly):**
+  - **COIN:** the loss-quarter share count (263.4M is basic; add treasury-method awards; likely −3% → ~−9%). FY26 stock comp is also running ~18% of H1 revenue vs the 11.7% modeled.
+  - **META:** FY26 owner FCF is likely negative on the H1 run-rate (H1 FCF $15.0B vs $13.7B stock comp), vs the model's +$18–39B FY1. Stock comp is 11.7% of H1 revenue vs 10.2% modeled, and the op-margin <38% bear trigger may have fired (H1 GAAP 35.6%).
+  - **ZM:** POCD People score 4 despite dual-class super-voting (rubric → 3); ABNB has the same question. ZM's projection-year labels are off by one (the FY26 base is labelled as projection year 1).
+  - **Pushback side:** bullish memos still arguing the bull case (ZM, LULU, CROX and others) need the bear steelman + `pushback_side: bear`.
+  - **Falsifiers:** ABNB (2) and ZM (1) are non-numeric.
+  - **Decision #10 (stock-comp trigger on share of FCF)** is the owner's; don't pre-empt it.
+- **The cadence now has three layers (spec §15, v047):** daily perf (mechanical) · monthly rebuild (mechanical re-price + prose-number sync, self-merging since v048) · **quarterly re-underwrite (§15.3 — full-book qualitative pressure-test, AUTONOMOUS/self-merging; Routine 3 in `ROUTINES.md`, LIVE — created 2026-07-22, fires the 15th of Jan/Apr/Jul/Oct; first scheduled fire 2026-10-15).** `scripts/reprice.py` is the shared mechanical re-price all layers call.
 - **poppler IS installable here** (`apt-get update && apt-get install -y poppler-utils`) — the June "no-poppler → site-only, can't touch the baseline" caveat class is **DEAD**. Every PDF + `visual_baseline.json` was regenerated at the July-1 flip and in each fix wave since; the on-disk set is current. **Ignore the "site-only / poppler caveat" phrasing in the older build-log bullets below.**
 - **Memo/ticker count: derive from `ls data/*.yml`** (currently 56 memos) — the TICKERS lists in validate/rebuild_all/visual_hash derive from it (PR #81); never hardcode a count.
-- Newest waves: **PR #81** (22-defect full-review fix wave), **Wave B** (TXG second-act re-model → −54.5%; NAUT a16z/dilution flags), **Wave C** (site design system + this restructure).
+- Newest waves: **v048** (above), the **September re-underwrite** (#89–#92), **PR #81** (22-defect full-review fix wave), **Waves B/C/D** (July).
 
 ### Open decisions
 Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status noted.
@@ -129,25 +143,59 @@ Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status note
 | 4 | NAUT null-partition (bear & ultra_bear both $0) | ✅ **Kept $0 floor** — modeling showed a positive stub isn't honestly supportable (ramp-burn > cash + niche terminal), consistent with §6c.18. Differentiated in narrative only. |
 | 5 | LULU probability skew | ✅ **Reweighted** base 33→45%, trimmed bear + upside tail; finding +80% → **+77%**. |
 | 6 | Spec filename convention | ✅ **Renamed** to `spec/memo-spec.md`; in-file changelog top = version of record (v046). |
-| 7 | Tail-EV companion statistic on Page 1 | ◑ **Spec rule added (§6b, v046)**; the Page-1 companion-line *renderer* is a tracked follow-up. |
+| 7 | Tail-EV companion statistic on Page 1 | ✅ **Renderer shipped (v048)** — every public memo, computed live. |
 | 8 | SYM as the first POCD "1" | ✅ **Set to 1** (near-total vote control + an unremediated 2024 material weakness = the one integrity flag in the book). |
+| 9 | v048 bulk go (2026-09-28): half-Kelly cap · monthly self-merge · history rebuild · stock-comp rule · companion renderer + quarterly checks | ✅ **All five shipped** (spec v048). |
+| 10 | **Stock-comp trigger on share of FCF, not just revenue?** | ⏳ **Open (recommended yes).** The ~8%-of-revenue line misses high-margin megacaps where stock comp is still a large slice of FCF: GOOGL 6% of revenue but ~⅓ of FCF; UBER ~19%; AAPL ~13%; AMZN a multiple of its capex-crushed FCF. |
 
-**Deferred to a later polish batch (from the four-lens analysis; non-blocking):** young-company theses in formula-shorthand → prose parity; NAUT page-3 TAM-legend / cash-axis chart collisions; SOTP page-3 archetype grid (two uninformative cells) + footer branch; masthead `extras` that now duplicate the derived net position; the §6b Page-1 companion-line renderer.
+**Deferred to a later polish batch (from the four-lens analysis; non-blocking):** young-company theses in formula-shorthand → prose parity; NAUT page-3 TAM-legend / cash-axis chart collisions; SOTP page-3 archetype grid (two uninformative cells) + footer branch; masthead `extras` that now duplicate the derived net position. *(The §6b companion-line renderer shipped in v048.)*
 
 ### Authoring gotchas (durable — promoted from scattered batch bullets; do NOT re-derive)
 - **Page-1 5-scenario overflow is prose-driven** — trim the ticker's OWN central_question / thesis / scenario-card headlines toward ~RKLB length, never the shared layout. Diagnose by which trim moves the px (STRICT reports the overflow px).
 - **`tam_competitor_share` is absolute $B (must be < `tam_billion`), NOT a %** — the GRAL/IONQ/PACB TAM-chart clip class. `validate.py` now WARNs on `≥ tam`.
 - **Never write `Capitalizedword: ` in an unquoted YAML value** (the CROX `Bull:` bug → `build_site_data` aborts → renderer runs on stale `data.js`). Build POCD/pocd blocks via `yaml.dump`.
 - **Back-matter (Page 6/7) and Page-1 are stretched-row CSS grids** — row height = tallest cell; trim the TALLEST cell in the binding row, not a short one.
-- **A mechanical re-price leaves prose STALE** — after any `spot`/`market_cap` change, grep the memo's `thesis` / `weighting_rationale` / `pocd.deal` for hardcoded `$`/`%` and sync them (the recurring "stale thesis vs re-priced finding" bug — hit on PACB #74, TXG Wave B).
-- **Three spec checks the re-underwrite does NOT reliably enforce — the quarterly must check EVERY memo (Sep-2026 survey):** (1) **pushback argues AGAINST the headline** (§3.5 B) — bearish memos comply (bull case), but most BULLISH memos list bull points instead of steelmanning the bear case (e.g. LULU/ZM/CROX/ABNB); when converting, set `appendix.pushback_side: bear` so the renderer titles the section '…WHY THE BASE CASE IS TOO GENEROUS' (YETI, first user; absent = legacy '…TOO HARSH'); a headline sign flip also flips which side is required (CAI #89 shipped a stale bear item → fixed #90). (2) **every `threats[].falsifier` is numeric** (§6d) — only 53/113 contained a number. (3) **the §6b companion statistic** (modal vs spot + P(≤spot)) — 46/52 memos qualify; until the page-1 renderer ships, carry it in the thesis (done: CAI, NAUT).
+- **A mechanical re-price leaves prose STALE.** After any `spot` or `market_cap` change, run `python scripts/stale_prose.py`, then read the rendered prose and sync restated prices, multiples, moves, findings and scenario-vs-spot %.
+  - This is the recurring "stale thesis vs re-priced finding" bug. At v048, 35/52 memos restated a finding their own headline contradicted, some with the opposite sign; a one-time sync fixed them.
+  - **Never hardcode the finding where the renderer can show it live.** The POCD Deal leg, the page-1 companion line and the page-1 crossing caption are all computed at render time (v048).
+- **Three spec checks the re-underwrite does NOT reliably enforce — the quarterly must check EVERY memo (Sep-2026 survey):** (1) **pushback argues AGAINST the headline** (§3.5 B) — bearish memos comply (bull case), but most BULLISH memos list bull points instead of steelmanning the bear case (e.g. LULU/ZM/CROX/ABNB); when converting, set `appendix.pushback_side: bear` so the renderer titles the section '…WHY THE BASE CASE IS TOO GENEROUS' (YETI, first user; absent = legacy '…TOO HARSH'); a headline sign flip also flips which side is required (CAI #89 shipped a stale bear item → fixed #90). (2) **every `threats[].falsifier` is numeric** (§6d) — only 53/113 contained a number. (3) **the §6b companion statistic** (modal vs spot + P(≤spot)) — now rendered automatically on page 1 (v048); prose restatements (CAI, NAUT, ABNB, COIN, YETI, ZM, META) must stay in sync. **v048: these checks, plus stock comp, stale prose and history repair, are now named explicitly in the quarterly prompt.**
 - **Re-underwrite workflow resumes can REGENERATE the pressure-test** (new proposal IDs) after a usage-limit stop or container restart — build the audit record ONLY from the round that applied (the apply result's own IDs → the matching pressure result + skeptic verdicts), never from earlier journal rounds (the #89 mis-attribution, corrected in place).
-- **`reprice.py` keeps price history aligned (Sep-2026 fix):** `historical_prices` points are years BEFORE the memo's `date:`, so every re-price must shift points and `x_min` by −Δ (it now does, appending the outgoing spot at t = −Δ). Before the fix every monthly re-price left the points in place, drifting each chart toward "today": as of 2026-09-26, **48/52 live charts are 2–4 months drifted** (39 by ~4); only CAI/COIN/NAUT/YETI (rebuilt from Yahoo) are aligned. Hand-authored series can also be plain wrong (NAUT's 2025 was 3–5× too high) — the repair is a Yahoo rebuild, not a shift (pending owner go).
+- **`reprice.py` keeps price history aligned (Sep-2026 fix):** `historical_prices` points are years BEFORE the memo's `date:`, so every re-price must shift points and `x_min` by −Δ (it now does, appending the outgoing spot at t = −Δ). Before the fix every monthly re-price left the points in place, drifting each chart toward "today": at 2026-09-26, 48/52 charts had drifted 2–4 months. Hand-authored series can also be plain wrong (NAUT's 2025 was 3–5× too high).
+  - **v048: all 52 were rebuilt from Yahoo with `scripts/rebuild_history.py <tickers> [--x-min-from json]`**, with the original window starts restored from git history.
+  - The rebuild takes month-end closes of **complete** months from **daily** bars, keeping quarter-ends and the last three months.
+  - Yahoo pitfalls it avoids: monthly bars are stamped at the month's START but carry the month-END close (plus a live partial month), and `range=max` monthly requests sometimes return WEEKLY bars.
 - **`reprice.py` split guard:** a split since a memo's `date:` aborts the run (holding shares constant across a split corrupts mcap and every per-share value — a sub-$1 name's 1:10 reverse split would read as a 10× rally). Rescale shares/per-share fields first; `--partial-ok` reprices the rest.
 - **`final_shares` must reconcile with `shares0 + Σ(raise/price)`** or the validator WARNs — use scalar avg raise-prices and set `final_shares` to the implied diluted count.
+- **Stock-comp rule (spec §4, v048).** Above ~8% of revenue, model **owner FCF** (FCF − latest-FY stock-comp % × revenue, every year and scenario) on **today's diluted count** with no buyback credit, or model the dilution explicitly — never both.
+  - In a **loss quarter**, the reported diluted count equals basic: add unvested awards by the treasury method, and keep converts in debt. COIN is pending, for the Oct quarterly.
+  - Keep **projected op margins on the same after-stock-comp basis as the history chart**. ZM and COIN were shifted in v048.
+  - Precedent: CART.
+  - **Never re-apply the rule to an already-adjusted memo:** it would charge stock comp twice.
+- **Half-Kelly cap lives in TWO places kept in lockstep:** `portfolio/build_weights.py` (`kelly_fraction`, `water_fill` with per-name caps) and `public/pages.jsx` (`kellyFraction`, `computePortfolio`).
+  - Same bounds, same 200 golden-section iterations, same 100 water-fill passes.
+  - After touching either, run the Node parity check: evaluate `computePortfolio` against `data.js` and diff it with `weights.yml`. v048 matched on all 21 names.
 
 ### Build log (historical — newest first; superseded phrasing above wins)
 
+- **v048 — five-row bulk go SHIPPED (2026-09-28).**
+  - **Half-Kelly cap** (build_weights + pages.jsx, parity-checked). Kelly is solved on each memo's own scenario multiples; it binds on NAUT 15%→7.6%, JOBY 7.6%→3.7%, AUR 6.0%→2.7%, and SERV stops at 5.1%.
+  - **Stock-comp rule (§4):** the survey found 14 memos above 8% of revenue, 10 already compliant.
+    - ZM, ABNB, COIN and META were re-modeled through the engine: bottom-up `sbc_apply`, formula-derived terminals, today's diluted counts.
+    - Four prose agents synced their memos. ZM/COIN projected op margins were moved to the after-stock-comp basis so page 3 stops showing a fake margin leap.
+  - **History:** `scripts/rebuild_history.py` rebuilt all 52 charts.
+  - **Renderer:**
+    - the page-1 companion line ("most likely case (base) ±X% · P% at or below spot"; PACB and SERV are bear-modal);
+    - the spot-crossing caption, now computed (the hardcoded "+5y to +10y" was true for 6/52);
+    - a live finding on the POCD Deal leg, with the hardcoded "(the X% finding)" stripped from 51 deal texts.
+  - **Prose:** `scripts/stale_prose.py` plus a one-time six-agent sync of 45 memos. GRAL/RXRX/NVCR/ALGN had contradicted their own headline's sign.
+  - **Routines:** monthly self-merge plus a prose-sync step; the quarterly names its spec checks, the loss-quarter share count and the op-margin basis.
+  - One archive event: all 52 bumped, re-rendered STRICT, baseline regenerated.
+  - **Flags for the Oct-15 quarterly:**
+    - COIN's loss-quarter share count (likely −3% → ~−9%);
+    - META's FY26 owner FCF likely negative on H1 run-rate, and its op-margin bear trigger may have fired;
+    - COIN FY26 stock comp running above the model;
+    - ZM's POCD 4 despite dual-class (rubric says 3), and ZM's FY labels off by one;
+    - ABNB's two non-numeric falsifiers.
 - **Full analysis + optimization (four-lens) — Waves B/C/D SHIPPED (2026-07-05; spec v046).** Two Fable workflows: a 6-agent re-research of the
   monthly's flagged movers, and a 9-agent four-lens analysis (memory / content / memo-format / site / net-debt → 47 findings + synthesis).
   **Wave B (PR #82, re-research):** TXG re-modeled with a Power-gated clinical-diagnostics + multiomic second act (the +39%/mo rally IS real news —
