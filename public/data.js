@@ -3527,8 +3527,8 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$28B",
-      "shares": "308M",
+      "mktCap": "$27.24B",
+      "shares": "300M",
       "cash": "$7.9B cash, zero debt · Anthropic stake (carried)"
     },
     "spot": {
@@ -3536,29 +3536,29 @@ const MEMOS = [
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 164.39,
-      "deltaPct": 80.8
+      "fair": 100.25,
+      "deltaPct": 10.3
     },
     "compound": [
       {
         "y": 5,
-        "value": 247.65,
-        "mult": 2.72
+        "value": 151.27,
+        "mult": 1.66
       },
       {
         "y": 10,
-        "value": 373.71,
-        "mult": 4.11
+        "value": 228.65,
+        "mult": 2.52
       },
       {
         "y": 15,
-        "value": 564.97,
-        "mult": 6.22
+        "value": 346.23,
+        "mult": 3.81
       },
       {
         "y": 20,
-        "value": 855.81,
-        "mult": 9.41
+        "value": 525.32,
+        "mult": 5.78
       }
     ],
     "taxonomy": {
@@ -3577,7 +3577,7 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": {
-      "value": 5.22,
+      "value": 5.03,
       "zone": "green"
     },
     "question": "Is Zoom a melting ice cube with locked-up optionality — or a stable cash machine sitting on a $7B Anthropic stake the market hasn't yet marked to public?",
@@ -3586,7 +3586,7 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 8,
-        "price": 49.0,
+        "price": 28.7,
         "headline": "Cisco-Webex moment; -54% tail.",
         "why": "Joint conjunction of four independent fault lines: (a) Cisco-style displacement curve materializes (-10/-13/-19% YoY) — historical base rate of incumbent-SaaS displacement by hyperscaler bundles is real but not the median outcome; (b) Anthropic IPO disappoints below $400B (vs current $900B private mark) on AI-capex correction + Pentagon supply-chain risk + cheap-AI commoditization; (c) AI Companion Pro fails to monetize as Microsoft Copilot bundling collapses pricing power for collaboration AI; (d) Phone + Contact Center growth stalls below 15%, killing the diversification story. Each individually 15-30% probability conditional on macro; joint conjunction at 8%. Lower than bear's 22% because (i) Q1 FY27 just printed a beat with NDR ticking up to 99% and AI Companion MAUs +184% YoY, and (ii) compound conjunction requires all four to fire simultaneously over five years.",
         "what": [
@@ -3598,7 +3598,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 22,
-        "price": 92.04,
+        "price": 62.8,
         "headline": "Zoom without a core market.",
         "why": "Bearish thesis is competitive commoditization: Teams (Microsoft's bundled play) and Google Meet (free for Workspace customers) continue to take seats from ZM's enterprise base; AI Companion Pro fails to differentiate or monetize meaningfully (Microsoft Copilot integration into Teams is the obvious competitive response); Phone seats stagnate; Contact Center fails to reach scale; Anthropic stake gets compressed if AI valuations correct or Anthropic does an underwhelming IPO. The 30% weight reflects that Teams/Workspace competition is real, ongoing, and structurally favored — but ZM has shown unexpected resilience through 2024-25 (stable revenue, growing FCF, $1B+ buyback program). Not bankruptcy risk; share-loss-with-margin-compression risk.",
         "what": [
@@ -3610,7 +3610,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 50,
-        "price": 163.16,
+        "price": 101.3,
         "headline": "Stable cash machine with a visible kicker.",
         "why": "Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27 guidance holds; AI Companion Pro is a meaningful contributor but not a category-defining product; Anthropic stake gets a public mark via Anthropic's IPO at $700B-1T valuation; ZM multiple expands modestly as the market gives credit for the Anthropic stake AND for stable cash generation. Buyback compounds shares-out reduction at attractive prices. The 50% weight reflects that this requires the least faith — sequential execution on plans already in motion.",
         "what": [
@@ -3622,7 +3622,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 15,
-        "price": 252.46,
+        "price": 146.15,
         "headline": "AI monetization + Anthropic re-rating.",
         "why": "AI Companion Pro monetizes (per-seat add-on becomes meaningful contributor); Phone scales to 16M+ seats with margin expansion; Contact Center crosses $500M ARR and becomes a real third leg of growth; Anthropic IPOs at $1T+ with stake getting full mark (vs current discount carrying value); the operating business multiple expands AND the Anthropic stake appreciates. The 20% weight is higher than JOBY/AUR's bull weight because ZM's bull case is less compound — AI monetization and Anthropic appreciation are somewhat independent bets that can succeed without each other. But the conjunction still requires multiple things at once: product success on three new SKUs (Companion Pro, Phone scale, Contact Center scale) plus a favorable AI capital markets backdrop for Anthropic's IPO.",
         "what": [
@@ -3634,7 +3634,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 415.4,
+        "price": 231.26,
         "headline": "Anthropic $2T+; full re-rating.",
         "why": "Joint conditional: Anthropic IPO above $2T (60% conditional on IPO) AND AI Companion crosses $1B ARR (40% conditional on existing trajectory) AND multiple re-rates from 15x to 30x P/FCF (50% conditional on growth + AI both firing). Joint at 5-7%, reflected here at 5%. This is the scenario where ZM stops being a 'value with AI optionality' name and becomes a growth-software name with an emerging-leader AI partner. Tail of tails.",
         "what": [
@@ -3833,19 +3833,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 164.39,
-        "upsidePct": 80.8
+        "expected": 100.25,
+        "upsidePct": 10.3
       },
       "market": {
-        "marketCapBillion": 28.0,
-        "sharesOutstandingMillion": 308.0,
+        "marketCapBillion": 27.24,
+        "sharesOutstandingMillion": 299.7,
         "cashBillion": 7.9,
         "netDebtBillion": 0.0
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.08,
-          "expectedPerShare": 49.0,
+          "expectedPerShare": 28.7,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -3877,32 +3877,32 @@ const MEMOS = [
               0.12
             ],
             "fcf": [
-              1.717,
-              1.36,
-              1.001,
-              0.691,
-              0.433
+              0.971,
+              0.652,
+              0.349,
+              0.091,
+              -0.131
             ],
             "pv_fcf": [
-              1.533,
-              1.084,
-              0.713,
-              0.439,
-              0.246
+              0.867,
+              0.52,
+              0.248,
+              0.058,
+              -0.074
             ],
             "term_g": -0.02,
-            "sum_pv_fcf": 4.02,
-            "terminal_value": 3.03,
-            "pv_terminal": 1.72,
-            "op_ev": 5.74,
+            "sum_pv_fcf": 1.62,
+            "terminal_value": -0.92,
+            "pv_terminal": -0.52,
+            "op_ev": 1.1,
             "cash": 5.5,
             "net_debt": 0.0,
             "special_assets": 2.0,
-            "total_equity": 13.24,
+            "total_equity": 8.6,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 270,
-            "dcf_per_share": 49.04,
+            "final_shares": 299.7,
+            "dcf_per_share": 28.7,
             "distress": 0.0
           },
           "chartData": {
@@ -3925,7 +3925,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.22,
-          "expectedPerShare": 92.04,
+          "expectedPerShare": 62.8,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -3957,32 +3957,32 @@ const MEMOS = [
               0.1
             ],
             "fcf": [
-              1.722,
-              1.672,
-              1.607,
-              1.479,
-              1.356
+              0.953,
+              0.903,
+              0.846,
+              0.733,
+              0.625
             ],
             "pv_fcf": [
-              1.566,
-              1.382,
-              1.207,
-              1.01,
-              0.842
+              0.866,
+              0.746,
+              0.636,
+              0.501,
+              0.388
             ],
             "term_g": 0.0,
-            "sum_pv_fcf": 6.01,
-            "terminal_value": 13.56,
-            "pv_terminal": 8.42,
-            "op_ev": 14.43,
+            "sum_pv_fcf": 3.14,
+            "terminal_value": 6.25,
+            "pv_terminal": 3.88,
+            "op_ev": 7.02,
             "cash": 7.8,
             "net_debt": 0.0,
             "special_assets": 4.0,
-            "total_equity": 26.23,
+            "total_equity": 18.82,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 285,
-            "dcf_per_share": 92.04,
+            "final_shares": 299.7,
+            "dcf_per_share": 62.8,
             "distress": 0.0
           },
           "chartData": {
@@ -4005,7 +4005,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.5,
-          "expectedPerShare": 163.16,
+          "expectedPerShare": 101.3,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -4037,32 +4037,32 @@ const MEMOS = [
               0.085
             ],
             "fcf": [
-              1.773,
-              1.835,
-              1.89,
-              1.937,
-              1.985
+              0.982,
+              1.016,
+              1.046,
+              1.072,
+              1.099
             ],
             "pv_fcf": [
-              1.634,
-              1.56,
-              1.482,
-              1.401,
-              1.323
+              0.905,
+              0.863,
+              0.819,
+              0.774,
+              0.731
             ],
             "term_g": 0.02,
-            "sum_pv_fcf": 7.39,
-            "terminal_value": 31.16,
-            "pv_terminal": 20.72,
-            "op_ev": 28.11,
+            "sum_pv_fcf": 4.09,
+            "terminal_value": 17.25,
+            "pv_terminal": 11.47,
+            "op_ev": 15.56,
             "cash": 7.8,
             "net_debt": 0.0,
             "special_assets": 7.0,
-            "total_equity": 42.91,
+            "total_equity": 30.36,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 263,
-            "dcf_per_share": 163.16,
+            "final_shares": 299.7,
+            "dcf_per_share": 101.3,
             "distress": 0.0
           },
           "chartData": {
@@ -4085,7 +4085,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.15,
-          "expectedPerShare": 252.46,
+          "expectedPerShare": 146.15,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -4117,32 +4117,32 @@ const MEMOS = [
               0.08
             ],
             "fcf": [
-              1.943,
-              2.134,
-              2.364,
-              2.592,
-              2.722
+              1.144,
+              1.279,
+              1.441,
+              1.604,
+              1.685
             ],
             "pv_fcf": [
-              1.799,
-              1.829,
-              1.877,
-              1.905,
-              1.852
+              1.059,
+              1.097,
+              1.144,
+              1.179,
+              1.147
             ],
             "term_g": 0.025,
-            "sum_pv_fcf": 9.26,
-            "terminal_value": 50.72,
-            "pv_terminal": 34.52,
-            "op_ev": 43.79,
+            "sum_pv_fcf": 5.63,
+            "terminal_value": 31.4,
+            "pv_terminal": 21.37,
+            "op_ev": 27.0,
             "cash": 7.8,
             "net_debt": 0.0,
             "special_assets": 9.0,
-            "total_equity": 60.59,
+            "total_equity": 43.8,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 240,
-            "dcf_per_share": 252.46,
+            "final_shares": 299.7,
+            "dcf_per_share": 146.15,
             "distress": 0.0
           },
           "chartData": {
@@ -4165,7 +4165,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 415.4,
+          "expectedPerShare": 231.26,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -4197,32 +4197,32 @@ const MEMOS = [
               0.075
             ],
             "fcf": [
-              2.143,
-              2.564,
-              3.02,
-              3.35,
-              3.58
+              1.321,
+              1.66,
+              2.007,
+              2.236,
+              2.377
             ],
             "pv_fcf": [
-              1.994,
-              2.213,
-              2.42,
-              2.498,
-              2.481
+              1.229,
+              1.436,
+              1.616,
+              1.674,
+              1.656
             ],
             "term_g": 0.03,
-            "sum_pv_fcf": 11.61,
-            "terminal_value": 91.0,
-            "pv_terminal": 68.44,
-            "op_ev": 80.05,
+            "sum_pv_fcf": 7.61,
+            "terminal_value": 54.41,
+            "pv_terminal": 37.9,
+            "op_ev": 45.51,
             "cash": 7.8,
             "net_debt": 0.0,
             "special_assets": 16.0,
-            "total_equity": 103.85,
+            "total_equity": 69.31,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 250,
-            "dcf_per_share": 415.4,
+            "final_shares": 299.7,
+            "dcf_per_share": 231.26,
             "distress": 0.0
           },
           "chartData": {
@@ -8004,8 +8004,8 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$53.04B",
-      "shares": "264M",
+      "mktCap": "$52.96B",
+      "shares": "263M",
       "cash": "$8.6B cash, $6B debt · $6.0B converts/notes (~$2.6B net cash); ~17.2K BTC treasury (~$1.5B); Circle (CRCL) stake (≤~$0.8B)"
     },
     "spot": {
@@ -8013,29 +8013,29 @@ const MEMOS = [
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 269.78,
-      "deltaPct": 34.2
+      "fair": 194.35,
+      "deltaPct": -3.3
     },
     "compound": [
       {
         "y": 5,
-        "value": 412.39,
-        "mult": 2.05
+        "value": 296.82,
+        "mult": 1.48
       },
       {
         "y": 10,
-        "value": 631.39,
-        "mult": 3.14
+        "value": 453.99,
+        "mult": 2.26
       },
       {
         "y": 15,
-        "value": 968.41,
-        "mult": 4.82
+        "value": 695.5,
+        "mult": 3.46
       },
       {
         "y": 20,
-        "value": 1488.17,
-        "mult": 7.4
+        "value": 1067.33,
+        "mult": 5.31
       }
     ],
     "taxonomy": {
@@ -8054,7 +8054,7 @@ const MEMOS = [
       "umbrellaName": "Digital & Platforms"
     },
     "ai": {
-      "value": 6.63,
+      "value": 6.62,
       "zone": "yellow"
     },
     "question": "Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit derivatives platform, a regulator that surrendered — or a cycle stock that has now printed back-to-back quarterly losses?",
@@ -8063,7 +8063,7 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 8,
-        "price": 27.96,
+        "price": 12.49,
         "headline": "Crypto winter + take-rate war.",
         "why": "Joint conjunction of four largely independent fault lines: (a) BTC enters a 2022-style multi-year bear (~30% in any 3-year window post-halving); (b) take-rate compression accelerates as Robinhood gains share AND Hyperliquid-style USDC deals proliferate ($80M annualized EBITDA drag from Hyperliquid alone per Coindesk May 2026); (c) bank-issued stablecoins take share, shrinking Coinbase-held USDC below $15B; (d) Deribit integration friction stalls the derivatives flywheel. Each individually 20-30%; joint at 8%. Same 8% as ZM's ultra_bear: crypto-cycle volatility has a real historical base rate (the 2022 winter).",
         "what": [
@@ -8075,7 +8075,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 22,
-        "price": 102.65,
+        "price": 72.7,
         "headline": "Cycle bottoms; multiple resets to 12×.",
         "why": "Cycle-normalization plus competitive compression: BTC range-bound $50-80K for 18-24 months (median post-peak crypto correction); revenue stays well below FY25; take-rate compresses 15-20% as Robinhood gains retail share and Hyperliquid-style deals nick institutional flows; Coinbase-held USDC stalls; the exit multiple resets to ~12× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018, 2022 — base rate ~25% per 5-year window), and the H1 2026 losses already validated some of the cycle thesis.",
         "what": [
@@ -8087,7 +8087,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 47,
-        "price": 224.59,
+        "price": 162.45,
         "headline": "Everything-exchange compounds.",
         "why": "Modal outcome. SEC dropped its case, GENIUS Act gave USDC clarity, Deribit closed and is integrating, Coinbase One crossed 1M paid subs — the structural picture is set. What remains is execution + cycle. Base assumes BTC ranges $80-130K (most common 5-year outcome post-peak), take-rate compresses gradually but the volume base grows, Coinbase-held USDC grows at a decelerating rate, and the exit multiple settles at ~15× FCF. 47% reflects that the thesis is well-priced but in motion — sequential execution, not heroic assumptions.",
         "what": [
@@ -8099,7 +8099,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 18,
-        "price": 480.0,
+        "price": 347.23,
         "headline": "Derivatives flywheel + USDC rails.",
         "why": "Two engines fire: (a) BTC sustains $130-200K driving transaction revenue growth (conditional 35%); (b) Coinbase-held USDC compounds past $50B driving the subscription engine (conditional 40%); (c) Deribit delivers and derivatives crosses $1.5B revenue (conditional 50% on integration); (d) the market sustains a ~20× FCF exit (conditional 50%). Joint at 15-20%, weighted 18%. Higher than ZM bull because COIN's bull has one cycle-dependent leg AND one secular leg — they can succeed independently.",
         "what": [
@@ -8111,7 +8111,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 5,
-        "price": 1060.13,
+        "price": 770.01,
         "headline": "Crypto-as-rails; 28× re-rate.",
         "why": "Joint conditional: BTC sustains $200K+ on sovereign treasury adoption (15%); Coinbase-held USDC crosses $100B as the regulatory tailwind + EU MiCA make USDC the global regulated dollar (25%); Deribit captures Binance's offshore institutional share post-regulatory squeeze (30%); the multiple re-rates to a fintech-infrastructure ~28× FCF exit (30%). Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the regulatory wedge, float, derivatives platform, and cash to attempt all four.",
         "what": [
@@ -8342,19 +8342,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 269.78,
-        "upsidePct": 34.2
+        "expected": 194.35,
+        "upsidePct": -3.3
       },
       "market": {
-        "marketCapBillion": 53.04,
-        "sharesOutstandingMillion": 263.8,
+        "marketCapBillion": 52.96,
+        "sharesOutstandingMillion": 263.4,
         "cashBillion": 8.6,
         "netDebtBillion": 6.0
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.08,
-          "expectedPerShare": 27.96,
+          "expectedPerShare": 12.49,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -8388,32 +8388,32 @@ const MEMOS = [
             ],
             "term_g": -0.02,
             "fcf": [
-              1.44,
-              0.65,
-              0.34,
-              0.29,
-              0.36
+              0.769,
+              0.146,
+              -0.088,
+              -0.117,
+              -0.055
             ],
             "cash": 7.4,
             "net_debt": 6.0,
             "special_assets": 1.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 245,
+            "final_shares": 263.4,
             "distress": 0.0,
             "pv_fcf": [
-              1.274,
-              0.509,
-              0.236,
-              0.178,
-              0.195
+              0.681,
+              0.114,
+              -0.061,
+              -0.072,
+              -0.03
             ],
-            "sum_pv_fcf": 2.39,
-            "terminal_value": 2.88,
-            "pv_terminal": 1.56,
-            "op_ev": 3.95,
-            "total_equity": 6.85,
-            "dcf_per_share": 27.96
+            "sum_pv_fcf": 0.63,
+            "terminal_value": -0.44,
+            "pv_terminal": -0.24,
+            "op_ev": 0.39,
+            "total_equity": 3.29,
+            "dcf_per_share": 12.49
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8435,7 +8435,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.22,
-          "expectedPerShare": 102.65,
+          "expectedPerShare": 72.7,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -8469,32 +8469,32 @@ const MEMOS = [
             ],
             "term_g": 0.01,
             "fcf": [
-              1.95,
-              1.74,
-              1.74,
-              1.92,
-              2.02
+              1.237,
+              1.098,
+              1.098,
+              1.246,
+              1.312
             ],
             "cash": 8.4,
             "net_debt": 6.0,
             "special_assets": 3.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 260,
+            "final_shares": 263.4,
             "distress": 0.0,
             "pv_fcf": [
-              1.757,
-              1.412,
-              1.272,
-              1.265,
-              1.199
+              1.114,
+              0.891,
+              0.803,
+              0.821,
+              0.779
             ],
-            "sum_pv_fcf": 6.9,
-            "terminal_value": 24.24,
-            "pv_terminal": 14.39,
-            "op_ev": 21.29,
-            "total_equity": 26.69,
-            "dcf_per_share": 102.65
+            "sum_pv_fcf": 4.41,
+            "terminal_value": 15.74,
+            "pv_terminal": 9.34,
+            "op_ev": 13.75,
+            "total_equity": 19.15,
+            "dcf_per_share": 72.7
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8516,7 +8516,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.47,
-          "expectedPerShare": 224.59,
+          "expectedPerShare": 162.45,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -8550,32 +8550,32 @@ const MEMOS = [
             ],
             "term_g": 0.02,
             "fcf": [
-              2.46,
-              2.71,
-              3.22,
-              3.55,
-              3.83
+              1.663,
+              1.873,
+              2.282,
+              2.519,
+              2.716
             ],
             "cash": 8.9,
             "net_debt": 6.0,
             "special_assets": 5.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 255,
+            "final_shares": 263.4,
             "distress": 0.0,
             "pv_fcf": [
-              2.257,
-              2.281,
-              2.486,
-              2.515,
-              2.489
+              1.526,
+              1.576,
+              1.762,
+              1.785,
+              1.765
             ],
-            "sum_pv_fcf": 12.03,
-            "terminal_value": 57.45,
-            "pv_terminal": 37.34,
-            "op_ev": 49.37,
-            "total_equity": 57.27,
-            "dcf_per_share": 224.59
+            "sum_pv_fcf": 8.41,
+            "terminal_value": 40.74,
+            "pv_terminal": 26.48,
+            "op_ev": 34.89,
+            "total_equity": 42.79,
+            "dcf_per_share": 162.45
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8597,7 +8597,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.18,
-          "expectedPerShare": 480.0,
+          "expectedPerShare": 347.23,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -8631,32 +8631,32 @@ const MEMOS = [
             ],
             "term_g": 0.025,
             "fcf": [
-              3.02,
-              3.83,
-              4.97,
-              6.07,
-              6.58
+              2.139,
+              2.79,
+              3.722,
+              4.635,
+              4.973
             ],
             "cash": 9.4,
             "net_debt": 6.0,
             "special_assets": 8.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 245,
+            "final_shares": 263.4,
             "distress": 0.0,
             "pv_fcf": [
-              2.783,
-              3.253,
-              3.891,
-              4.38,
-              4.376
+              1.971,
+              2.37,
+              2.914,
+              3.344,
+              3.307
             ],
-            "sum_pv_fcf": 18.68,
-            "terminal_value": 131.6,
-            "pv_terminal": 87.52,
-            "op_ev": 106.2,
-            "total_equity": 117.6,
-            "dcf_per_share": 480.0
+            "sum_pv_fcf": 13.91,
+            "terminal_value": 99.46,
+            "pv_terminal": 66.15,
+            "op_ev": 80.06,
+            "total_equity": 91.46,
+            "dcf_per_share": 347.23
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -8678,7 +8678,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.05,
-          "expectedPerShare": 1060.13,
+          "expectedPerShare": 770.01,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -8712,32 +8712,32 @@ const MEMOS = [
             ],
             "term_g": 0.03,
             "fcf": [
-              3.32,
-              4.93,
-              7.05,
-              9.03,
-              10.65
+              2.397,
+              3.776,
+              5.573,
+              7.228,
+              8.524
             ],
             "cash": 10.4,
             "net_debt": 6.0,
             "special_assets": 15.0,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 235,
+            "final_shares": 263.4,
             "distress": 0.0,
             "pv_fcf": [
-              3.074,
-              4.227,
-              5.597,
-              6.637,
-              7.248
+              2.219,
+              3.237,
+              4.424,
+              5.313,
+              5.801
             ],
-            "sum_pv_fcf": 26.78,
-            "terminal_value": 298.2,
-            "pv_terminal": 202.95,
-            "op_ev": 229.73,
-            "total_equity": 249.13,
-            "dcf_per_share": 1060.13
+            "sum_pv_fcf": 20.99,
+            "terminal_value": 238.67,
+            "pv_terminal": 162.43,
+            "op_ev": 183.42,
+            "total_equity": 202.82,
+            "dcf_per_share": 770.01
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16335,8 +16335,8 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$108.44B",
-      "shares": "650M",
+      "mktCap": "$99.6B",
+      "shares": "597M",
       "cash": "$12B cash, $2.5B debt · ~$9.5B net cash; ~650M diluted shares; ~$3.8B/yr buyback offsets SBC; Revenue $12.24B FY25 (+10%, decel from +40%); 38% FCF margin, $4.6B FCF; High-teens EV/FCF; 2026 growth re-accelerated (+18%/+17% in Q1/Q2), guided at least mid-teens"
     },
     "spot": {
@@ -16344,29 +16344,29 @@ const MEMOS = [
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 191.44,
-      "deltaPct": 14.7
+      "fair": 144.24,
+      "deltaPct": -13.5
     },
     "compound": [
       {
         "y": 5,
-        "value": 293.32,
-        "mult": 1.76
+        "value": 220.99,
+        "mult": 1.32
       },
       {
         "y": 10,
-        "value": 449.71,
-        "mult": 2.7
+        "value": 338.78,
+        "mult": 2.03
       },
       {
         "y": 15,
-        "value": 689.93,
-        "mult": 4.14
+        "value": 519.7,
+        "mult": 3.11
       },
       {
         "y": 20,
-        "value": 1059.16,
-        "mult": 6.35
+        "value": 797.75,
+        "mult": 4.78
       }
     ],
     "taxonomy": {
@@ -16385,7 +16385,7 @@ const MEMOS = [
       "umbrellaName": "Consumer & Real Economy"
     },
     "ai": {
-      "value": 8.79,
+      "value": 8.0,
       "zone": "yellow"
     },
     "question": "At a high-teens EV/FCF, is Airbnb's 2026 re-acceleration durable — or do fading currency and World Cup boosts, AI booking agents and regulation pull growth back to high-single digits?",
@@ -16394,7 +16394,7 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 12,
-        "price": 113.54,
+        "price": 84.71,
         "headline": "Regulation + maturation; growth stalls.",
         "why": "Regulation is the structural bear: NYC listings fell ~92%, Spain fined Airbnb EUR65M. 12% weight on bans + maturation capping the network.",
         "what": [
@@ -16406,7 +16406,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 25,
-        "price": 143.83,
+        "price": 108.22,
         "headline": "Decelerates to high-single; regulation bites.",
         "why": "The law-of-large-numbers + Booking competition path. 25% weight — a very plausible 'matures gracefully' outcome.",
         "what": [
@@ -16418,7 +16418,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 35,
-        "price": 190.45,
+        "price": 143.35,
         "headline": "Low-mid-teens growth; Experiences ramps.",
         "why": "Requires the guided mid-teens 2026 to settle near ~10% + modest Experiences/Services monetization. 35% as the central outcome — the network + brand are genuinely durable.",
         "what": [
@@ -16430,7 +16430,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 20,
-        "price": 250.38,
+        "price": 188.93,
         "headline": "Experiences/Services + international re-accel.",
         "why": "Experiences/Services monetizes into a needle-mover + international compounds. ~20%; the relaunch is early but credible.",
         "what": [
@@ -16442,7 +16442,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 8,
-        "price": 314.03,
+        "price": 238.29,
         "headline": "End-to-end travel hub; AI concierge.",
         "why": "The full 'Airbnb everything' hub + AI concierge. ~8%, the asymmetric upside the Experiences/Services bet is really for.",
         "what": [
@@ -16576,19 +16576,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 191.44,
-        "upsidePct": 14.7
+        "expected": 144.24,
+        "upsidePct": -13.5
       },
       "market": {
-        "marketCapBillion": 108.44,
-        "sharesOutstandingMillion": 650.0,
+        "marketCapBillion": 99.6,
+        "sharesOutstandingMillion": 597.0,
         "cashBillion": 12.0,
         "netDebtBillion": 2.5
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.12,
-          "expectedPerShare": 113.54,
+          "expectedPerShare": 84.71,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -16620,31 +16620,31 @@ const MEMOS = [
             ],
             "term_g": 0.02,
             "fcf": [
-              4.935,
-              5.133,
-              5.287,
-              5.445,
-              5.608
+              3.152,
+              3.279,
+              3.377,
+              3.478,
+              3.582
             ],
             "cash": 12.0,
             "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 650,
+            "final_shares": 597.0,
             "distress": 0.0,
             "pv_fcf": [
-              4.486,
-              4.242,
-              3.972,
-              3.719,
-              3.482
+              2.865,
+              2.71,
+              2.537,
+              2.376,
+              2.224
             ],
-            "sum_pv_fcf": 19.9,
-            "terminal_value": 71.5,
-            "pv_terminal": 44.4,
-            "op_ev": 64.3,
-            "total_equity": 73.8,
-            "dcf_per_share": 113.54
+            "sum_pv_fcf": 12.71,
+            "terminal_value": 45.67,
+            "pv_terminal": 28.36,
+            "op_ev": 41.07,
+            "total_equity": 50.57,
+            "dcf_per_share": 84.71
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16666,7 +16666,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.25,
-          "expectedPerShare": 143.83,
+          "expectedPerShare": 108.22,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -16698,31 +16698,31 @@ const MEMOS = [
             ],
             "term_g": 0.025,
             "fcf": [
-              5.117,
-              5.476,
-              5.804,
-              6.319,
-              6.635
+              3.318,
+              3.551,
+              3.764,
+              4.156,
+              4.364
             ],
             "cash": 12.0,
             "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 650,
+            "final_shares": 597.0,
             "distress": 0.0,
             "pv_fcf": [
-              4.673,
-              4.567,
-              4.421,
-              4.395,
-              4.215
+              3.03,
+              2.962,
+              2.867,
+              2.891,
+              2.772
             ],
-            "sum_pv_fcf": 22.27,
-            "terminal_value": 97.16,
-            "pv_terminal": 61.72,
-            "op_ev": 83.99,
-            "total_equity": 93.49,
-            "dcf_per_share": 143.83
+            "sum_pv_fcf": 14.52,
+            "terminal_value": 63.9,
+            "pv_terminal": 40.59,
+            "op_ev": 55.11,
+            "total_equity": 64.61,
+            "dcf_per_share": 108.22
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16744,7 +16744,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.35,
-          "expectedPerShare": 190.45,
+          "expectedPerShare": 143.35,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -16776,31 +16776,31 @@ const MEMOS = [
             ],
             "term_g": 0.03,
             "fcf": [
-              5.349,
-              5.937,
-              6.703,
-              7.306,
-              7.964
+              3.518,
+              3.905,
+              4.468,
+              4.87,
+              5.308
             ],
             "cash": 12.0,
             "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 650,
+            "final_shares": 597.0,
             "distress": 0.0,
             "pv_fcf": [
-              4.907,
-              4.997,
-              5.176,
-              5.176,
-              5.176
+              3.228,
+              3.287,
+              3.45,
+              3.45,
+              3.45
             ],
-            "sum_pv_fcf": 25.43,
-            "terminal_value": 136.72,
-            "pv_terminal": 88.86,
-            "op_ev": 114.29,
-            "total_equity": 123.79,
-            "dcf_per_share": 190.45
+            "sum_pv_fcf": 16.86,
+            "terminal_value": 91.12,
+            "pv_terminal": 59.22,
+            "op_ev": 76.08,
+            "total_equity": 85.58,
+            "dcf_per_share": 143.35
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16822,7 +16822,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.2,
-          "expectedPerShare": 250.38,
+          "expectedPerShare": 188.93,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -16854,31 +16854,31 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "fcf": [
-              5.395,
-              6.313,
-              7.316,
-              8.194,
-              9.096
+              3.548,
+              4.208,
+              4.937,
+              5.53,
+              6.139
             ],
             "cash": 12.0,
             "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 650,
+            "final_shares": 597.0,
             "distress": 0.0,
             "pv_fcf": [
-              4.972,
-              5.363,
-              5.728,
-              5.913,
-              6.049
+              3.27,
+              3.575,
+              3.865,
+              3.99,
+              4.083
             ],
-            "sum_pv_fcf": 28.03,
-            "terminal_value": 188.29,
-            "pv_terminal": 125.22,
-            "op_ev": 153.25,
-            "total_equity": 162.75,
-            "dcf_per_share": 250.38
+            "sum_pv_fcf": 18.78,
+            "terminal_value": 127.08,
+            "pv_terminal": 84.51,
+            "op_ev": 103.29,
+            "total_equity": 112.79,
+            "dcf_per_share": 188.93
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -16900,7 +16900,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.08,
-          "expectedPerShare": 314.03,
+          "expectedPerShare": 238.29,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -16932,31 +16932,31 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "fcf": [
-              5.585,
-              6.702,
-              7.969,
-              9.164,
-              10.447
+              3.723,
+              4.523,
+              5.441,
+              6.257,
+              7.133
             ],
             "cash": 12.0,
             "net_debt": 2.5,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 650,
+            "final_shares": 597.0,
             "distress": 0.0,
             "pv_fcf": [
-              5.171,
-              5.746,
-              6.326,
-              6.736,
-              7.11
+              3.447,
+              3.878,
+              4.319,
+              4.599,
+              4.855
             ],
-            "sum_pv_fcf": 31.09,
-            "terminal_value": 240.28,
-            "pv_terminal": 163.53,
-            "op_ev": 194.62,
-            "total_equity": 204.12,
-            "dcf_per_share": 314.03
+            "sum_pv_fcf": 21.1,
+            "terminal_value": 164.06,
+            "pv_terminal": 111.66,
+            "op_ev": 132.76,
+            "total_equity": 142.26,
+            "dcf_per_share": 238.29
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -21579,8 +21579,8 @@ const MEMOS = [
       ]
     },
     "metrics": {
-      "mktCap": "$1868.62B",
-      "shares": "2.52B",
+      "mktCap": "$1902.05B",
+      "shares": "2.57B",
       "cash": "$81.6B cash, $58.7B debt · Net cash +$22.9B ($81.6B cash vs $58.7B debt); ~2.52B shares; ~$26B buybacks + ~$5B dividends FY25; Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF ~$46.1B after capex stepping from ~$72B toward $125-145B; ~$567 mid-June 2026: +12.6% YTD but -18% TTM, off the $796 Aug-2025 high, bounced off the $520 Mar-2026 low"
     },
     "spot": {
@@ -21588,29 +21588,29 @@ const MEMOS = [
       "asOf": "September 22, 2026 close"
     },
     "expected": {
-      "fair": 649.72,
-      "deltaPct": -12.3
+      "fair": 393.65,
+      "deltaPct": -46.9
     },
     "compound": [
       {
         "y": 5,
-        "value": 993.57,
-        "mult": 1.34
+        "value": 601.02,
+        "mult": 0.81
       },
       {
         "y": 10,
-        "value": 1520.2,
-        "mult": 2.05
+        "value": 918.08,
+        "mult": 1.24
       },
       {
         "y": 15,
-        "value": 2327.2,
-        "mult": 3.14
+        "value": 1403.13,
+        "mult": 1.89
       },
       {
         "y": 20,
-        "value": 3564.49,
-        "mult": 4.81
+        "value": 2145.53,
+        "mult": 2.89
       }
     ],
     "taxonomy": {
@@ -21637,7 +21637,7 @@ const MEMOS = [
         "key": "ultra_bear",
         "label": "ULTRA BEAR",
         "prob": 12,
-        "price": 267.55,
+        "price": 133.3,
         "headline": "Capex burns; ad growth fades; margins compress.",
         "why": "The genuine bear: the market already flinched (-6% after-hours) on the capex raise, the ROI is unproven, and Reality Labs has lost ~$80B cumulatively. 12% weight on the spend failing to convert to durable ad gains.",
         "what": [
@@ -21649,7 +21649,7 @@ const MEMOS = [
         "key": "bear",
         "label": "BEAR",
         "prob": 27,
-        "price": 414.94,
+        "price": 229.6,
         "headline": "Growth normalizes; D&A weighs on margins.",
         "why": "Share gains and pricing continue but the D&A from ~$130B/yr capex caps margin and free cash flow. 27% as the plausible 'grows but the spend weighs' path given the elevated-capex regime.",
         "what": [
@@ -21661,7 +21661,7 @@ const MEMOS = [
         "key": "base",
         "label": "BASE",
         "prob": 34,
-        "price": 613.68,
+        "price": 365.49,
         "headline": "AI lifts ads; margins hold ~41%; FCF compounds.",
         "why": "Requires the AI capex to roughly earn its cost of capital while ad growth stays double-digit - consistent with the accelerating Q1'26 ad metrics and 41% margins, but not a step-change. 34% as the central, modestly-positive outcome.",
         "what": [
@@ -21673,7 +21673,7 @@ const MEMOS = [
         "key": "bull",
         "label": "BULL",
         "prob": 20,
-        "price": 997.31,
+        "price": 635.98,
         "headline": "AI ad engine compounds; capex pays off.",
         "why": "Meta's own AI tools are already in the core ad stack and Q1'26 showed both volume and price accelerating; if that durability holds, the capex earns well above its cost. 20% weight on the buildout becoming a real ad-monetization engine.",
         "what": [
@@ -21685,7 +21685,7 @@ const MEMOS = [
         "key": "ultra",
         "label": "ULTRA BULL",
         "prob": 7,
-        "price": 1392.36,
+        "price": 917.14,
         "headline": "AI platform second act; FCF machine.",
         "why": "Everything works - AI lifts ads AND opens a messaging/agent revenue stream AND the compute becomes a platform asset, the AWS/datacenter-style second act. ~7%, the long-duration tail.",
         "what": [
@@ -21823,19 +21823,19 @@ const MEMOS = [
       "dcfPeriodYears": 5,
       "tamBillion": null,
       "weighted": {
-        "expected": 649.72,
-        "upsidePct": -12.3
+        "expected": 393.65,
+        "upsidePct": -46.9
       },
       "market": {
-        "marketCapBillion": 1868.62,
-        "sharesOutstandingMillion": 2521.0,
+        "marketCapBillion": 1902.05,
+        "sharesOutstandingMillion": 2566.0,
         "cashBillion": 81.6,
         "netDebtBillion": 58.7
       },
       "scenarios": {
         "ultra_bear": {
           "probability": 0.12,
-          "expectedPerShare": 267.55,
+          "expectedPerShare": 133.3,
           "label": "Ultra Bear",
           "shortLabel": "UltBear",
           "dcfMetrics": {
@@ -21867,31 +21867,31 @@ const MEMOS = [
             ],
             "term_g": 0.025,
             "fcf": [
-              40.522,
-              43.763,
-              48.966,
-              54.121,
-              56.285
+              17.64,
+              19.05,
+              22.771,
+              26.616,
+              27.68
             ],
             "cash": 81.6,
             "net_debt": 58.7,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 2550,
+            "final_shares": 2566.0,
             "distress": 0.0,
             "pv_fcf": [
-              36.838,
-              36.168,
-              36.789,
-              36.965,
-              34.949
+              16.036,
+              15.744,
+              17.108,
+              18.179,
+              17.187
             ],
-            "sum_pv_fcf": 181.71,
-            "terminal_value": 769.23,
-            "pv_terminal": 477.63,
-            "op_ev": 659.34,
-            "total_equity": 682.24,
-            "dcf_per_share": 267.55
+            "sum_pv_fcf": 84.25,
+            "terminal_value": 378.29,
+            "pv_terminal": 234.89,
+            "op_ev": 319.14,
+            "total_equity": 342.04,
+            "dcf_per_share": 133.3
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -21913,7 +21913,7 @@ const MEMOS = [
         },
         "bear": {
           "probability": 0.27,
-          "expectedPerShare": 414.94,
+          "expectedPerShare": 229.6,
           "label": "Bear",
           "shortLabel": "Bear",
           "dcfMetrics": {
@@ -21945,31 +21945,31 @@ const MEMOS = [
             ],
             "term_g": 0.03,
             "fcf": [
-              47.436,
-              56.283,
-              64.859,
-              70.048,
-              78.358
+              23.328,
+              29.041,
+              34.893,
+              37.685,
+              43.729
             ],
             "cash": 81.6,
             "net_debt": 58.7,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 2530,
+            "final_shares": 2566.0,
             "distress": 0.0,
             "pv_fcf": [
-              43.321,
-              46.941,
-              49.4,
-              48.724,
-              49.775
+              21.304,
+              24.221,
+              26.576,
+              26.213,
+              27.778
             ],
-            "sum_pv_fcf": 238.16,
-            "terminal_value": 1241.67,
-            "pv_terminal": 788.74,
-            "op_ev": 1026.9,
-            "total_equity": 1049.8,
-            "dcf_per_share": 414.94
+            "sum_pv_fcf": 126.09,
+            "terminal_value": 692.94,
+            "pv_terminal": 440.17,
+            "op_ev": 566.26,
+            "total_equity": 589.16,
+            "dcf_per_share": 229.6
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -21991,7 +21991,7 @@ const MEMOS = [
         },
         "base": {
           "probability": 0.34,
-          "expectedPerShare": 613.68,
+          "expectedPerShare": 365.49,
           "label": "Base",
           "shortLabel": "Base",
           "dcfMetrics": {
@@ -22023,31 +22023,31 @@ const MEMOS = [
             ],
             "term_g": 0.035,
             "fcf": [
-              53.948,
-              65.425,
-              77.144,
-              88.394,
-              100.204
+              29.023,
+              36.512,
+              44.472,
+              52.455,
+              61.03
             ],
             "cash": 81.6,
             "net_debt": 58.7,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 2510,
+            "final_shares": 2566.0,
             "distress": 0.0,
             "pv_fcf": [
-              49.494,
-              55.067,
-              59.569,
-              62.621,
-              65.126
+              26.627,
+              30.731,
+              34.341,
+              37.16,
+              39.665
             ],
-            "sum_pv_fcf": 291.88,
-            "terminal_value": 1885.66,
-            "pv_terminal": 1225.55,
-            "op_ev": 1517.43,
-            "total_equity": 1540.33,
-            "dcf_per_share": 613.68
+            "sum_pv_fcf": 168.52,
+            "terminal_value": 1148.47,
+            "pv_terminal": 746.43,
+            "op_ev": 914.95,
+            "total_equity": 937.85,
+            "dcf_per_share": 365.49
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -22069,7 +22069,7 @@ const MEMOS = [
         },
         "bull": {
           "probability": 0.2,
-          "expectedPerShare": 997.31,
+          "expectedPerShare": 635.98,
           "label": "Bull",
           "shortLabel": "Bull",
           "dcfMetrics": {
@@ -22101,31 +22101,31 @@ const MEMOS = [
             ],
             "term_g": 0.04,
             "fcf": [
-              60.782,
-              79.676,
-              100.391,
-              117.493,
-              134.915
+              35.04,
+              48.528,
+              63.948,
+              76.312,
+              89.204
             ],
             "cash": 81.6,
             "net_debt": 58.7,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 2480,
+            "final_shares": 2566.0,
             "distress": 0.0,
             "pv_fcf": [
-              56.02,
-              67.681,
-              78.597,
-              84.78,
-              89.725
+              32.295,
+              41.222,
+              50.065,
+              55.065,
+              59.325
             ],
-            "sum_pv_fcf": 376.8,
-            "terminal_value": 3118.04,
-            "pv_terminal": 2073.64,
-            "op_ev": 2450.44,
-            "total_equity": 2473.34,
-            "dcf_per_share": 997.31
+            "sum_pv_fcf": 237.97,
+            "terminal_value": 2061.6,
+            "pv_terminal": 1371.06,
+            "op_ev": 1609.03,
+            "total_equity": 1631.93,
+            "dcf_per_share": 635.98
           },
           "chartData": {
             "ev_rev_multiple": [
@@ -22147,7 +22147,7 @@ const MEMOS = [
         },
         "ultra_bull": {
           "probability": 0.07,
-          "expectedPerShare": 1392.36,
+          "expectedPerShare": 917.14,
           "label": "Ultra Bull",
           "shortLabel": "UltBull",
           "dcfMetrics": {
@@ -22179,31 +22179,31 @@ const MEMOS = [
             ],
             "term_g": 0.04,
             "fcf": [
-              65.325,
-              92.187,
-              119.513,
-              149.153,
-              175.348
+              38.765,
+              58.722,
+              79.02,
+              101.776,
+              121.339
             ],
             "cash": 81.6,
             "net_debt": 58.7,
             "raise_total": 0.0,
             "dilution_pct": 0,
-            "final_shares": 2450,
+            "final_shares": 2566.0,
             "distress": 0.0,
             "pv_fcf": [
-              60.374,
-              78.744,
-              94.348,
-              108.824,
-              118.24
+              35.827,
+              50.159,
+              62.381,
+              74.257,
+              81.821
             ],
-            "sum_pv_fcf": 460.53,
-            "terminal_value": 4341.95,
-            "pv_terminal": 2927.85,
-            "op_ev": 3388.38,
-            "total_equity": 3411.28,
-            "dcf_per_share": 1392.36
+            "sum_pv_fcf": 304.44,
+            "terminal_value": 3004.58,
+            "pv_terminal": 2026.04,
+            "op_ev": 2330.48,
+            "total_equity": 2353.38,
+            "dcf_per_share": 917.14
           },
           "chartData": {
             "ev_rev_multiple": [

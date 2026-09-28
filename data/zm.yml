@@ -30,8 +30,8 @@ date: '2026-09-22'
 spot: 90.90
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 28.00
-  shares_outstanding_million: 308
+  market_cap_billion: 27.24
+  shares_outstanding_million: 299.7
   cash_billion: 7.9           # ZM cash & marketable securities (post-Q1 FY27)
   net_debt_billion: 0.0
   extras:
@@ -98,7 +98,7 @@ scenarios:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.08
-    expected_per_share: 49.00
+    expected_per_share: 28.70
     headline: "Cisco-Webex moment; -54% tail."
     narrative:
       - >
@@ -149,21 +149,21 @@ scenarios:
       rev_path:    [-0.02, -0.05, -0.08, -0.08, -0.06] # declining growth rates
       op_margin:   [0.360, 0.300, 0.240, 0.180, 0.120] # defensive-spend margin crush
       wacc_path:   [0.120, 0.120, 0.120, 0.120, 0.120]
-      fcf:         [1.717, 1.360, 1.001, 0.691, 0.433] # $B (= rev × margin)
-      pv_fcf:      [1.533, 1.084, 0.713, 0.439, 0.246]
+      fcf:         [0.971, 0.652, 0.349, 0.091, -0.131]
+      pv_fcf:      [0.867, 0.520, 0.248, 0.058, -0.074]
       term_g: -0.02                                 # perpetual decline, not zero
-      sum_pv_fcf: 4.02
-      terminal_value: 3.03                          # fcf × (1+g) / (wacc-g)
-      pv_terminal: 1.72                             # discounted 5y at 12%
-      op_ev: 5.74                                   # sum_pv_fcf + pv_terminal
+      sum_pv_fcf: 1.62
+      terminal_value: -0.92
+      pv_terminal: -0.52
+      op_ev: 1.10
       cash: 5.5                                     # drained from $7.9B by defensive buybacks
       net_debt: 0.0
       special_assets: 2.0                           # Anthropic stake $B at low IPO floor
-      total_equity: 13.24                           # = op_ev + cash + special - debt
+      total_equity: 8.60
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 270                             # modest reduction from buybacks before halt
-      dcf_per_share: 49.04                          # 13.24 / 270
+      final_shares: 299.7
+      dcf_per_share: 28.70
       distress: 0.0
 
     chart_data:
@@ -175,7 +175,7 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.22
-    expected_per_share: 92.04
+    expected_per_share: 62.80
     headline: "Zoom without a core market."
     narrative:
       - >
@@ -227,21 +227,21 @@ scenarios:
       rev_path:    [0.01, 0.00, -0.01, -0.02, -0.02]    # growth rates per year
       op_margin:   [0.385, 0.370, 0.355, 0.340, 0.320]  # operating margin
       wacc_path:   [0.100, 0.100, 0.100, 0.100, 0.100]
-      fcf:         [1.722, 1.672, 1.607, 1.479, 1.356]  # $B
-      pv_fcf:      [1.566, 1.382, 1.207, 1.010, 0.842]
+      fcf:         [0.953, 0.903, 0.846, 0.733, 0.625]
+      pv_fcf:      [0.866, 0.746, 0.636, 0.501, 0.388]
       term_g: 0.0
-      sum_pv_fcf: 6.01
-      terminal_value: 13.56
-      pv_terminal: 8.42
-      op_ev: 14.43
+      sum_pv_fcf: 3.14
+      terminal_value: 6.25
+      pv_terminal: 3.88
+      op_ev: 7.02
       cash: 7.8
       net_debt: 0.0
       special_assets: 4.0      # Anthropic stake $B contribution to SOTP equity
-      total_equity: 26.23      # = op_ev + cash - net_debt + special_assets
+      total_equity: 18.82
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 285
-      dcf_per_share: 92.04
+      final_shares: 299.7
+      dcf_per_share: 62.80
       distress: 0.0
 
     chart_data:
@@ -255,7 +255,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.50
-    expected_per_share: 163.16
+    expected_per_share: 101.30
     headline: "Stable cash machine with a visible kicker."
     narrative:
       - >
@@ -300,21 +300,21 @@ scenarios:
       rev_path:    [0.04, 0.035, 0.03, 0.025, 0.025]
       op_margin:   [0.395, 0.395, 0.395, 0.395, 0.395]
       wacc_path:   [0.085, 0.085, 0.085, 0.085, 0.085]
-      fcf:         [1.773, 1.835, 1.890, 1.937, 1.985]
-      pv_fcf:      [1.634, 1.560, 1.482, 1.401, 1.323]
+      fcf:         [0.982, 1.016, 1.046, 1.072, 1.099]
+      pv_fcf:      [0.905, 0.863, 0.819, 0.774, 0.731]
       term_g: 0.02
-      sum_pv_fcf: 7.39
-      terminal_value: 31.16
-      pv_terminal: 20.72
-      op_ev: 28.11
+      sum_pv_fcf: 4.09
+      terminal_value: 17.25
+      pv_terminal: 11.47
+      op_ev: 15.56
       cash: 7.8
       net_debt: 0.0
       special_assets: 7.0
-      total_equity: 42.91
+      total_equity: 30.36
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 263
-      dcf_per_share: 163.16
+      final_shares: 299.7
+      dcf_per_share: 101.30
       distress: 0.0
 
     chart_data:
@@ -326,7 +326,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.15   # reduced from 0.20 to make room for ultra_bull (15+5=20)
-    expected_per_share: 252.46
+    expected_per_share: 146.15
     headline: "AI monetization + Anthropic re-rating."
     narrative:
       - >
@@ -374,21 +374,21 @@ scenarios:
       rev_path:    [0.05, 0.07, 0.08, 0.07, 0.05]
       op_margin:   [0.380, 0.390, 0.400, 0.410, 0.410]
       wacc_path:   [0.080, 0.080, 0.080, 0.080, 0.080]
-      fcf:         [1.943, 2.134, 2.364, 2.592, 2.722]
-      pv_fcf:      [1.799, 1.829, 1.877, 1.905, 1.852]
+      fcf:         [1.144, 1.279, 1.441, 1.604, 1.685]
+      pv_fcf:      [1.059, 1.097, 1.144, 1.179, 1.147]
       term_g: 0.025
-      sum_pv_fcf: 9.26
-      terminal_value: 50.72
-      pv_terminal: 34.52
-      op_ev: 43.79
+      sum_pv_fcf: 5.63
+      terminal_value: 31.40
+      pv_terminal: 21.37
+      op_ev: 27.00
       cash: 7.8
       net_debt: 0.0
       special_assets: 9.0
-      total_equity: 60.59
+      total_equity: 43.80
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 240
-      dcf_per_share: 252.46
+      final_shares: 299.7
+      dcf_per_share: 146.15
       distress: 0.0
 
     chart_data:
@@ -400,7 +400,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 415.40
+    expected_per_share: 231.26
     headline: "Anthropic $2T+; full re-rating."
     narrative:
       - >
@@ -438,21 +438,21 @@ scenarios:
       rev_path:    [0.08, 0.10, 0.12, 0.10, 0.08]
       op_margin:   [0.420, 0.430, 0.440, 0.450, 0.450]
       wacc_path:   [0.075, 0.075, 0.075, 0.075, 0.075]
-      fcf:         [2.143, 2.564, 3.020, 3.350, 3.580]
-      pv_fcf:      [1.994, 2.213, 2.420, 2.498, 2.481]
+      fcf:         [1.321, 1.660, 2.007, 2.236, 2.377]
+      pv_fcf:      [1.229, 1.436, 1.616, 1.674, 1.656]
       term_g: 0.030
-      sum_pv_fcf: 11.61
-      terminal_value: 91.0
-      pv_terminal: 68.44          # bumped 63.40 → 68.44 so op_ev = sum_pv_fcf + pv_terminal (80.05 = 11.61 + 68.44)
-      op_ev: 80.05
+      sum_pv_fcf: 7.61
+      terminal_value: 54.41
+      pv_terminal: 37.90
+      op_ev: 45.51
       cash: 7.8
       net_debt: 0.0
       special_assets: 16.0
-      total_equity: 103.85
+      total_equity: 69.31
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 250
-      dcf_per_share: 415.40      # raw DCF
+      final_shares: 299.7
+      dcf_per_share: 231.26
       distress: 0.0
       # Note: expected_per_share ($400.00) ≠ dcf_per_share ($412.00) — manual
       # rounding to a cleaner number for display. Generator should use

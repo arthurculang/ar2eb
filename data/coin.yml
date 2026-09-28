@@ -5,8 +5,8 @@ dcf_type: mature_company_sotp
 date: '2026-09-22'
 spot: 201.05
 market:
-  market_cap_billion: 53.04
-  shares_outstanding_million: 263.8
+  market_cap_billion: 52.96
+  shares_outstanding_million: 263.4
   cash_billion: 8.6
   net_debt_billion: 6.0
   extras:
@@ -75,7 +75,7 @@ scenarios:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.08
-    expected_per_share: 27.96
+    expected_per_share: 12.49
     headline: Crypto winter + take-rate war.
     narrative:
     - 'Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down
@@ -121,31 +121,21 @@ scenarios:
       - 0.13
       - 0.13
       term_g: -0.02
-      fcf:
-      - 1.44
-      - 0.65
-      - 0.34
-      - 0.29
-      - 0.36
+      fcf: [0.769, 0.146, -0.088, -0.117, -0.055]
       cash: 7.4
       net_debt: 6.0
       special_assets: 1.5
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 245
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 1.274
-      - 0.509
-      - 0.236
-      - 0.178
-      - 0.195
-      sum_pv_fcf: 2.39
-      terminal_value: 2.88
-      pv_terminal: 1.56
-      op_ev: 3.95
-      total_equity: 6.85
-      dcf_per_share: 27.96
+      pv_fcf: [0.681, 0.114, -0.061, -0.072, -0.030]
+      sum_pv_fcf: 0.63
+      terminal_value: -0.44
+      pv_terminal: -0.24
+      op_ev: 0.39
+      total_equity: 3.29
+      dcf_per_share: 12.49
     chart_data:
       ev_rev_multiple:
       - 4.5
@@ -163,7 +153,7 @@ scenarios:
     label: Bear
     short_label: Bear
     probability: 0.22
-    expected_per_share: 102.65
+    expected_per_share: 72.70
     headline: Cycle bottoms; multiple resets to 12×.
     narrative:
     - 'Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years, extending
@@ -206,31 +196,21 @@ scenarios:
       - 0.11
       - 0.11
       term_g: 0.01
-      fcf:
-      - 1.95
-      - 1.74
-      - 1.74
-      - 1.92
-      - 2.02
+      fcf: [1.237, 1.098, 1.098, 1.246, 1.312]
       cash: 8.4
       net_debt: 6.0
       special_assets: 3.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 260
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 1.757
-      - 1.412
-      - 1.272
-      - 1.265
-      - 1.199
-      sum_pv_fcf: 6.9
-      terminal_value: 24.24
-      pv_terminal: 14.39
-      op_ev: 21.29
-      total_equity: 26.69
-      dcf_per_share: 102.65
+      pv_fcf: [1.114, 0.891, 0.803, 0.821, 0.779]
+      sum_pv_fcf: 4.41
+      terminal_value: 15.74
+      pv_terminal: 9.34
+      op_ev: 13.75
+      total_equity: 19.15
+      dcf_per_share: 72.70
     chart_data:
       ev_rev_multiple:
       - 5.5
@@ -248,7 +228,7 @@ scenarios:
     label: Base
     short_label: Base
     probability: 0.47
-    expected_per_share: 224.59
+    expected_per_share: 162.45
     headline: Everything-exchange compounds.
     narrative:
     - 'The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K
@@ -292,31 +272,21 @@ scenarios:
       - 0.09
       - 0.09
       term_g: 0.02
-      fcf:
-      - 2.46
-      - 2.71
-      - 3.22
-      - 3.55
-      - 3.83
+      fcf: [1.663, 1.873, 2.282, 2.519, 2.716]
       cash: 8.9
       net_debt: 6.0
       special_assets: 5.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 255
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 2.257
-      - 2.281
-      - 2.486
-      - 2.515
-      - 2.489
-      sum_pv_fcf: 12.03
-      terminal_value: 57.45
-      pv_terminal: 37.34
-      op_ev: 49.37
-      total_equity: 57.27
-      dcf_per_share: 224.59
+      pv_fcf: [1.526, 1.576, 1.762, 1.785, 1.765]
+      sum_pv_fcf: 8.41
+      terminal_value: 40.74
+      pv_terminal: 26.48
+      op_ev: 34.89
+      total_equity: 42.79
+      dcf_per_share: 162.45
     chart_data:
       ev_rev_multiple:
       - 7.0
@@ -334,7 +304,7 @@ scenarios:
     label: Bull
     short_label: Bull
     probability: 0.18
-    expected_per_share: 480.00
+    expected_per_share: 347.23
     headline: Derivatives flywheel + USDC rails.
     narrative:
     - 'The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as
@@ -378,31 +348,21 @@ scenarios:
       - 0.085
       - 0.085
       term_g: 0.025
-      fcf:
-      - 3.02
-      - 3.83
-      - 4.97
-      - 6.07
-      - 6.58
+      fcf: [2.139, 2.790, 3.722, 4.635, 4.973]
       cash: 9.4
       net_debt: 6.0
       special_assets: 8.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 245
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 2.783
-      - 3.253
-      - 3.891
-      - 4.38
-      - 4.376
-      sum_pv_fcf: 18.68
-      terminal_value: 131.6
-      pv_terminal: 87.52
-      op_ev: 106.2
-      total_equity: 117.6
-      dcf_per_share: 480.00
+      pv_fcf: [1.971, 2.370, 2.914, 3.344, 3.307]
+      sum_pv_fcf: 13.91
+      terminal_value: 99.46
+      pv_terminal: 66.15
+      op_ev: 80.06
+      total_equity: 91.46
+      dcf_per_share: 347.23
     chart_data:
       ev_rev_multiple:
       - 8.5
@@ -420,7 +380,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 1060.13
+    expected_per_share: 770.01
     headline: Crypto-as-rails; 28× re-rate.
     narrative:
     - 'The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US
@@ -464,31 +424,21 @@ scenarios:
       - 0.08
       - 0.08
       term_g: 0.03
-      fcf:
-      - 3.32
-      - 4.93
-      - 7.05
-      - 9.03
-      - 10.65
+      fcf: [2.397, 3.776, 5.573, 7.228, 8.524]
       cash: 10.4
       net_debt: 6.0
       special_assets: 15.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 235
+      final_shares: 263.4
       distress: 0.0
-      pv_fcf:
-      - 3.074
-      - 4.227
-      - 5.597
-      - 6.637
-      - 7.248
-      sum_pv_fcf: 26.78
-      terminal_value: 298.2
-      pv_terminal: 202.95
-      op_ev: 229.73
-      total_equity: 249.13
-      dcf_per_share: 1060.13
+      pv_fcf: [2.219, 3.237, 4.424, 5.313, 5.801]
+      sum_pv_fcf: 20.99
+      terminal_value: 238.67
+      pv_terminal: 162.43
+      op_ev: 183.42
+      total_equity: 202.82
+      dcf_per_share: 770.01
     chart_data:
       ev_rev_multiple:
       - 10.0
