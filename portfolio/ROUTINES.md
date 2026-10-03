@@ -10,9 +10,13 @@ Routine's commit.)
 > **Status: all three Routines created by the owner (1–2 on 2026-06-07; the
 > quarterly re-underwrite on 2026-07-22).** This file remains the reference
 > config — if you change a routine in the UI, mirror the change here.
-> **v048 (2026-09-28): re-paste the Routine 2 and Routine 3 prompts below into
-> the UI.** The monthly now self-merges, and the quarterly enforces the
-> book-wide spec checks.
+> **v048/v049: paste the Routine 2 and Routine 3 prompts below into the UI.**
+> The monthly now self-merges; the quarterly enforces the book-wide spec checks
+> and the universal stock-comp rule. Checked via the Routines API on 2026-10-03:
+> the stored prompts are still the pre-v048 ones, and agents cannot edit
+> owner-created Routines — paste at
+> https://claude.ai/code/routines/trig_01MTyPoACT1eq1hT3ageksB3 (monthly) and
+> https://claude.ai/code/routines/trig_01UEc9mgF3skFTpx5E5WEWXQ (quarterly).
 
 ## Why Routines (and why this clears your old setup chores)
 
@@ -176,7 +180,7 @@ thesis argument, scenario value, or probability.
 
 ---
 
-## Routine 3 — `ar2eb quarterly re-underwrite` *(v047; spec checks v048)*
+## Routine 3 — `ar2eb quarterly re-underwrite` *(v047; spec checks v048; stock comp v049)*
 
 The holistic pass the monthly deliberately is not: a **full qualitative
 re-underwrite** of every public memo — thesis, scenario values and narratives,
@@ -191,7 +195,7 @@ logical or methodological error.
 | **Name** | `ar2eb quarterly re-underwrite` |
 | **Repository** | `arthurculang/ar2eb` |
 | **Model** | Opus (deep agentic research + judgment) |
-| **Schedule** | The 15th of Jan/Apr/Jul/Oct (a week ahead of the monthly's 22nd, so the monthly then re-prices the freshly re-underwritten book). **As created (2026-07-22): 1:00 PM PT = `0 20 15 1,4,7,10 *`** — the runbook had proposed 13:00 UTC; the created time stands (date-driven job, hour immaterial). |
+| **Schedule** | The 15th of Jan/Apr/Jul/Oct (a week ahead of the monthly's 22nd, so the monthly then re-prices the freshly re-underwritten book). **As stored in the Routine: `0 13 15 1,4,7,10 *` (13:00 UTC)** — verified via the Routines API 2026-10-03 (an earlier note here said 1:00 PM PT; that was wrong). |
 | **Env vars** | none |
 
 **Prompt** (paste verbatim):
@@ -244,14 +248,20 @@ in batches of ~6 parallel research subagents:
      sign flip flips the required side.
    - NUMERIC FALSIFIERS (§6d). Every `competitive.threats[].falsifier` states
      a measurable threshold, ideally with a date.
-   - STOCK COMP (§4, v048). Where latest-FY stock comp exceeds ~8% of
-     revenue, the model values FCF after stock comp on today's diluted share
-     count (or models the dilution explicitly — never both). In a loss
-     quarter the reported diluted count equals basic: add unvested awards and
-     in-the-money options by the treasury method (converts carried as debt
-     stay out) — COIN first. Projected operating margins must sit on the same
-     after-stock-comp basis as the history chart. Re-model through the engine
-     if not; re-check names near the line (ISRG, DASH).
+   - STOCK COMP (§4, v049). EVERY mature memo values FCF after stock comp on
+     today's diluted share count with no buyback credit (or models the
+     dilution explicitly — never both). Use scripts/stock_comp.py: `--audit`
+     first (it ranks the evidence and names the action per memo), `--fetch
+     <ticker>` for SEC inputs, then apply with `--sbc-pct` / `--shares` /
+     `--shift-op-margin` / `--mark` — it re-derives the bridge, writes a
+     `stock_comp:` marker and refuses to charge twice. Memos that already
+     deduct stock comp but grow the share count get a shares-only reset. In a
+     loss quarter the reported diluted count equals basic: add unvested awards
+     and in-the-money options by the treasury method (converts carried as debt
+     stay out) — COIN first. Apply it LAST in a memo's model edits; if an
+     engine re-model rewrites a marked memo's FCF, delete its `stock_comp:`
+     block and re-apply. Re-state the memo's prose on the owner-FCF basis
+     (FCF figures, multiples, findings), as v048 did for ZM/ABNB/COIN/META.
    - COMPANION STATISTIC (§6b). Page 1 now renders "most likely case vs spot
      · chance at or below spot" automatically; confirm it reads correctly, and
      keep any thesis sentence that restates it in sync.

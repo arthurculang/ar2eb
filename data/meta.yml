@@ -622,3 +622,12 @@ stamp:
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
     spotPrice: 612.91
+
+stock_comp:
+  basis: owner_fcf
+  sbc_pct_of_revenue: 0.1016
+  diluted_shares_million: 2566.0
+  steps: mark
+  source: 'v048 re-model (PR #93): 10-K FY2025 stock comp $20,427M / revenue $200,966M; latest 10-Q diluted WASO
+    2,566M'
+  applied: '2026-10-03'
