@@ -632,3 +632,12 @@ pocd:
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
+
+stock_comp:
+  basis: owner_fcf
+  sbc_pct_of_revenue: 0.1169
+  diluted_shares_million: 263.4
+  steps: mark
+  source: 'v048 re-model (PR #93): 10-K FY2025 stock comp $839.4M / revenue $7,181.3M; Q2-2026 10-Q diluted WASO
+    263.4M = basic (loss quarter) — treasury-method awards pending'
+  applied: '2026-10-03'
