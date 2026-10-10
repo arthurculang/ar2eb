@@ -3,7 +3,7 @@
 Context for any Claude session on this repo. Threads here hit length limits and
 get restarted often, so the durable context lives in the repo, not the thread:
 this file + `spec/memo-spec.md` (the methodology spec, changelog-driven —
-currently at logical **v048**) are the source of truth. The **top of the spec's
+currently at logical **v049**) are the source of truth. The **top of the spec's
 in-file changelog is the version of record** (the filename is stable now — the
 old `__v023`/`__v020` versioned names were retired 2026-07-05).
 
@@ -112,8 +112,8 @@ Present decisions as a **table** so I can approve in bulk. Columns:
 
 > **Read this header first; everything under "Build log" below is dated history (newest first), not live state.**
 
-### Current state (2026-10-03)
-- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Routines: *daily perf* commits nightly; *monthly rebuild* runs via `reprice.py` — **self-merging since v048** (its gates: validator, STRICT, baseline `--check`, data sync) because **the Aug-22 PR (#87) sat unmerged 31 days**, freezing the site's findings Jul 24 → Sep 22. **The stored Routine 2 + 3 prompts are still the pre-v048 ones** (verified via the Routines API 2026-10-03: quarterly 3,036 chars = v047; monthly = the old PR-gated text, without `reprice.py`). Agents can't edit owner-created Routines, so **the owner must paste them from `ROUTINES.md`**: quarterly https://claude.ai/code/routines/trig_01UEc9mgF3skFTpx5E5WEWXQ · monthly https://claude.ai/code/routines/trig_01MTyPoACT1eq1hT3ageksB3. *Quarterly re-underwrite* Routine live (first fire Oct 15). **September out-of-cycle re-underwrite** of the monthly's flags: CAI #89 (+54% → −23%), NAUT #90 (+592% → +370%, fired Broadscale trigger; page-1 price history was 3–5× too high for 2025 — fixed), ABNB/COIN/YETI #91. Site deploy-gated by CI.
+### Current state (2026-10-10)
+- **LAUNCHED** — ar2eb.com live on the official set (t₀ = 2026-07-01). Routines: *daily perf* commits nightly; *monthly rebuild* runs via `reprice.py` — **self-merging since v048** (its gates: validator, STRICT, baseline `--check`, data sync) because **the Aug-22 PR (#87) sat unmerged 31 days**, freezing the site's findings Jul 24 → Sep 22. **Both stored Routine prompts are current**: the owner pasted the v048 monthly and v049 quarterly on 2026-10-10, verified via the Routines API against `ROUTINES.md`. Agents can't edit owner-created Routines; any future prompt change must be pasted by the owner (quarterly https://claude.ai/code/routines/trig_01UEc9mgF3skFTpx5E5WEWXQ · monthly https://claude.ai/code/routines/trig_01MTyPoACT1eq1hT3ageksB3). *Quarterly re-underwrite* Routine live (first fire Oct 15). **September out-of-cycle re-underwrite** of the monthly's flags: CAI #89 (+54% → −23%), NAUT #90 (+592% → +370%, fired Broadscale trigger; page-1 price history was 3–5× too high for 2025 — fixed), ABNB/COIN/YETI #91. Site deploy-gated by CI.
 - **v048 (2026-09-28, Arthur's bulk go):**
   - **Half-Kelly per-name cap** (`min(15%, ½·Kelly)`): trims NAUT, JOBY and AUR; SERV stops at its own half-Kelly.
   - **Stock-comp rule:** above ~8% of revenue, value FCF after stock comp on today's diluted count. ZM +81%→+10%, ABNB +15%→−14%, COIN +34%→−3%, META −12%→−47%. COIN and ABNB exit the book; ZM ~1%.
@@ -129,8 +129,13 @@ Present decisions as a **table** so I can approve in bulk. Columns:
     - apply / `--mark` writes a `stock_comp:` marker and refuses to charge twice;
     - `--selftest` reproduces v048 exactly.
   - ZM, ABNB, COIN and META are marked.
+  - **2026-10-10 pre-flight for the quarterly:**
+    - The owner confirmed the share-count leg (decision #11).
+    - Each memo's authored basis now sits in `scripts/_models/stock_comp_survey.json` (from this build log) and outranks the margin heuristic. That fixed ADSK, which would otherwise have been charged twice (+39% → −7%).
+    - The reproduction tolerance is max($0.25, 1%), so rounding differences pass.
+    - A dry run over all 35 unmarked mature memos completes with no refusals.
 - **Inputs for the Oct-15 quarterly re-underwrite (flagged in v048/v049; handle each explicitly and report the outcome):**
-  0. **Run the v048/v049 spec checks even if this run started from an older stored prompt.** They are in `portfolio/ROUTINES.md`, Routine 3, step 2b: pushback side, numeric falsifiers, universal stock comp, companion statistic, stale prose, price history. They add to that prompt and contradict nothing in it. Also repeat the prose-number sync after `reprice.py`.
+  0. The stored prompt is the current v049 one (pasted 2026-10-10), and its step 2b carries every spec check.
   1. **Re-research first — price moves the model never saw.** Find the news before trusting the finding.
      - TWST (~6× in 52 wks) and TXG (~7×): no scenario reaches spot now.
      - TEM (+66% since Jul): the bull is now below spot.
@@ -170,6 +175,22 @@ Present decisions as a **table** so I can approve in bulk. Columns:
        - Use fresh `--fetch` inputs, with the treasury method in loss quarters.
        - Expect findings to fall on reported-FCF names (dry run: AAPL −44% → −53%; UBER, ISRG, ALGN and YETI likely leave the book) and to rise slightly on the double-counted ones (U −73% → −70%).
        - Re-state each re-modeled memo's prose on the owner-FCF basis.
+       - **Pre-flight results (2026-10-10 dry run; masthead counts, so fresh `--fetch` counts will move these a little):**
+         - **Findings that change materially:**
+           - ALGN +17% → −20%
+           - ISRG +26% → −9%
+           - UBER +47% → +16%
+           - CROX +56% → +27%
+           - YOU +78% → +53%
+           - YETI +13% → −11%
+           - LULU +103% → +80%
+           - AMZN −14% → −35%
+           - GOOGL −20% → −41%
+           - DIS +6% → −9%
+         - **Book preview before any other quarterly change:** HHH 15%, LULU 15%, CART 12.5%, UBER 11.7%, CROX 8.2%. ISRG, YETI, ALGN and DIS leave.
+         - **LTH:** the ultra-bull terminal value is hand-set at 30.0, where the Gordon formula gives 28.46. Use `--allow-formula-reset`; the formula value is the honest one (−$4.50 in a 5% scenario).
+         - **TXG:** genuinely unclear. Its notes say "FCF = revenue × FCF margin, no dilution", and its first-year margin sits near reported FCF, so it is probably on reported FCF. Stock comp is 17% of revenue, so holding that ratio constant would take TXG from −78% to ≈ −93%. Check for a dated, observable plan to cut stock comp before holding 17%.
+         - **DASH** is authored on explicit dilution: leave it unless decision #12 is adopted.
   6. **Governance and labels.** ZM and ABNB carry POCD 4 despite dual-class super-voting (the rubric says 3). ZM's projection-year labels are off by one. Falsifiers are non-numeric in ABNB (2) and ZM (1).
   7. **Polish.**
      - `p_fail` is still used in young-company narratives: undefined in IONQ, JOBY, NAUT and AUR ("failure probability"); BEAM, PACB, PRME, RXRX and SERV define it in the glossary.
@@ -193,6 +214,8 @@ Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status note
 | 8 | SYM as the first POCD "1" | ✅ **Set to 1** (near-total vote control + an unremediated 2024 material weakness = the one integrity flag in the book). |
 | 9 | v048 bulk go (2026-09-28): half-Kelly cap · monthly self-merge · history rebuild · stock-comp rule · companion renderer + quarterly checks | ✅ **All five shipped** (spec v048). |
 | 10 | Stock-comp rule for every mature memo, not just above 8% of revenue? | ✅ **Adopted 2026-10-03 (v049)**, applied at the Oct-15 quarterly with `scripts/stock_comp.py`. It covers the share-count leg too (no buyback credit). |
+| 11 | Remove buyback credits from every memo's share count (the rule's share-count leg)? | ✅ **Confirmed 2026-10-10.** Trims CROX (up to −20% per share), LULU, UBER and AAPL at the quarterly. |
+| 12 | Value DASH on FCF after stock comp, retiring explicit dilution for mature memos? | ⏳ **Open (recommended yes).** DASH's modeled dilution stops at year 5, so its terminal value — most of the value — ignores stock comp: −19% → ≈ −42% (zero weight either way). **If still open at the quarterly, leave DASH as authored.** |
 
 **Deferred to a later polish batch (from the four-lens analysis; non-blocking):** young-company theses in formula-shorthand → prose parity; NAUT page-3 TAM-legend / cash-axis chart collisions; SOTP page-3 archetype grid (two uninformative cells) + footer branch; masthead `extras` that now duplicate the derived net position. *(The §6b companion-line renderer shipped in v048.)*
 
@@ -214,6 +237,7 @@ Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status note
 - **`final_shares` must reconcile with `shares0 + Σ(raise/price)`** or the validator WARNs — use scalar avg raise-prices and set `final_shares` to the implied diluted count.
 - **Stock-comp rule (spec §4, v048 → universal in v049).** Every mature memo models **owner FCF** (FCF − latest-FY stock-comp % × revenue, every year and scenario) on **today's diluted count** with no buyback credit, or models the dilution explicitly — never both.
   - **Use `scripts/stock_comp.py`, never hand edits.** Run `--audit` → `--fetch <t>` → apply.
+  - Evidence ranks the marker first, then the survey's authored basis (from this build log), then generator notes, then margins. Margins can't see stock comp below about 2% of revenue.
   - The `stock_comp:` marker blocks a second charge.
   - An engine re-model that rewrites a marked memo's FCF must drop the marker and re-apply.
   - `--selftest` must stay green.

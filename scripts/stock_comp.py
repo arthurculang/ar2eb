@@ -122,7 +122,8 @@ def plan(d: dict, sbc_pct=None, shares=None, shift=False, allow_reset=False) -> 
         new = {}
         if sbc_pct is not None:
             repro = bridge(dp, dp["fcf"], dp["final_shares"], em)["dcf_per_share"]
-            if abs(repro - dp["dcf_per_share"]) > 0.05 and not allow_reset:
+            # engines round intermediate fields differently: tolerate rounding, catch hand-tuning
+            if abs(repro - dp["dcf_per_share"]) > max(0.25, 0.01 * abs(dp["dcf_per_share"])) and not allow_reset:
                 raise SystemExit(f"{k}: the standard bridge gives ${repro} vs the memo's "
                                  f"${dp['dcf_per_share']} (a hand-tuned or non-standard value). Re-model "
                                  "through its own engine, or pass --allow-formula-reset to replace it "
@@ -298,11 +299,15 @@ def generator_says_owner(t: str) -> bool:
 
 def evidence(t: str, d: dict, pct) -> tuple[str, str]:
     """(verdict, detail) on whether the memo's FCF is already after stock comp.
-    Ranked: marker > generator notes > margins (only when stock comp is large
-    enough to see — below ~2% of revenue the margin gap is model noise)."""
+    Ranked: marker > authored basis (survey, from the build log) > generator
+    notes > margins (only when stock comp is large enough to see — below ~2% of
+    revenue the margin gap is model noise)."""
     mk = d.get("stock_comp") or {}
     if mk:
         return mk.get("basis", "owner_fcf"), f"marker ({mk.get('applied')})"
+    ab = (survey().get(t) or {}).get("authored_basis")
+    if ab in ("owner_fcf", "reported_fcf", "explicit_dilution"):
+        return ab, "authored basis (build log)"
     if generator_says_owner(t):
         return "owner_fcf", "generator notes say ex-SBC"
     hint, gap = margin_hint(d, pct)
@@ -349,8 +354,15 @@ def audit(tickers: list[str]) -> None:
         elif verdict == "owner_fcf":
             action = "--mark --basis owner_fcf" if sh.startswith("≈") else "--shares N + --mark"
         elif verdict == "reported_fcf":
+            authored = detail.startswith("authored")
             action = ("explicit dilution? confirm vs net issuance, else --sbc-pct + --shares"
-                      if sh.startswith("adds") else "--sbc-pct + --shares")
+                      if sh.startswith("adds") and not authored else "--sbc-pct + --shares")
+            try:                                                # will the standard bridge reproduce it?
+                plan(d, pct or 0.0, None)
+            except SystemExit:
+                action += " (+ --allow-formula-reset: a hand-set value)"
+        elif verdict == "explicit_dilution":
+            action = "leave as authored unless decision #12 retires explicit dilution (CLAUDE.md)"
         else:
             action = "judge from the generator notes / filings"
         print(f"{t:6} {(f'{pct:.1%}' if pct is not None else 'n/a'):>10}  "
@@ -416,7 +428,9 @@ def apply(ticker: str, sbc_pct, shares, shift: bool, source: str, dry: bool,
     if sbc_pct is not None and prior.get("basis") == "owner_fcf":
         raise SystemExit(f"{ticker}: stock comp was already charged ({prior.get('applied')}); "
                          "charging again would count it twice")
-    if sbc_pct is not None and prior.get("basis") == "explicit_dilution" and shares is None:
+    explicit = prior.get("basis") == "explicit_dilution" or (
+        not prior and evidence(ticker, d, sbc_pct)[0] == "explicit_dilution")
+    if sbc_pct is not None and explicit and shares is None:
         raise SystemExit(f"{ticker}: on explicit dilution — switching to owner FCF needs --shares too")
     if sbc_pct is not None and not prior and not mark and raw_override is None:
         verdict, detail = evidence(ticker, d, sbc_pct)

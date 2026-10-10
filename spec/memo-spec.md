@@ -20,6 +20,11 @@ An investment memo is a single-investor analytical product: six landscape pages,
   - Dry runs show the direction: AAPL −43.8% → −53.3%; U −72.6% → −69.8% once its double-counted dilution is removed.
   - §15.3's cron corrected to the stored `0 13 15 1,4,7,10 *`.
   - No memo is re-modeled in this version beyond the four markers.
+  - **Addendum 2026-10-10:**
+    - The owner confirmed the share-count leg (no buyback credit anywhere).
+    - Each memo's authored basis, taken from the build log, is recorded in `scripts/_models/stock_comp_survey.json`. It outranks the margin heuristic, which cannot see stock comp below ~2% of revenue and misread ADSK.
+    - Reproduction tolerance: max($0.25, 1%).
+    - **Open:** retiring explicit dilution for mature memos (DASH). Its five-year dilution leaves the terminal value without any stock-comp cost.
 - **v048** (2026-09-28, memo-spec series) — **Five methodology/automation decisions adopted in bulk (owner "go", 2026-09-28).**
   1. **Half-Kelly position ceiling (§12 step 6, D1).** Each name's cap is `min(15%, ½·Kelly)`, where the Kelly fraction is computed from the memo's own scenario distribution (outcome multiple = scenario EV / spot). The mean-upside score cannot see shape, so a wipeout-heavy name with a thin fat tail was reaching the 15% cap on a bet its growth-optimal size didn't support. It binds only on tail-concentrated names: on the same findings, NAUT 15.0% → 7.6%, JOBY 7.6% → 3.7%, AUR 6.0% → 2.7%, and SERV stops at 5.1%. `build_weights.py` and the site's `computePortfolio` are mirrored, and the Math table gains a Cap column.
   2. **Monthly re-price self-merges (§15, D2).** It runs `scripts/reprice.py` and squash-merges once validator, STRICT, baseline and data-sync gates pass. Failing tickers are reverted and listed; the judgment pass flags but never rewrites. This closes the #87 failure mode, a PR that sat 31 days and froze the site's findings.
