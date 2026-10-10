@@ -134,8 +134,9 @@ Present decisions as a **table** so I can approve in bulk. Columns:
     - Each memo's authored basis now sits in `scripts/_models/stock_comp_survey.json` (from this build log) and outranks the margin heuristic. That fixed ADSK, which would otherwise have been charged twice (+39% → −7%).
     - The reproduction tolerance is max($0.25, 1%), so rounding differences pass.
     - A dry run over all 35 unmarked mature memos completes with no refusals.
+  - **Decision #12 (adopted 2026-10-10):** explicit dilution is retired for mature memos, so owner FCF is the only treatment. DASH, the one memo on it, switches at the quarterly. The tool refuses to `--mark` a memo as explicit dilution. It also refuses a shares-only reset on a memo whose FCF is still before stock comp; such a reset would have written an owner-FCF marker without charging anything.
 - **Inputs for the Oct-15 quarterly re-underwrite (flagged in v048/v049; handle each explicitly and report the outcome):**
-  0. The stored prompt is the current v049 one (pasted 2026-10-10), and its step 2b carries every spec check.
+  0. The stored prompt is the current v049 one (pasted 2026-10-10), and its step 2b carries every spec check. Decision #12 supersedes one phrase in it: "or models the dilution explicitly". The tool enforces owner FCF, so no re-paste is needed.
   1. **Re-research first — price moves the model never saw.** Find the news before trusting the finding.
      - TWST (~6× in 52 wks) and TXG (~7×): no scenario reaches spot now.
      - TEM (+66% since Jul): the bull is now below spot.
@@ -187,10 +188,14 @@ Present decisions as a **table** so I can approve in bulk. Columns:
            - AMZN −14% → −35%
            - GOOGL −20% → −41%
            - DIS +6% → −9%
+           - DASH −19% → −45% (decision #12; fresh SEC count)
          - **Book preview before any other quarterly change:** HHH 15%, LULU 15%, CART 12.5%, UBER 11.7%, CROX 8.2%. ISRG, YETI, ALGN and DIS leave.
          - **LTH:** the ultra-bull terminal value is hand-set at 30.0, where the Gordon formula gives 28.46. Use `--allow-formula-reset`; the formula value is the honest one (−$4.50 in a 5% scenario).
          - **TXG:** genuinely unclear. Its notes say "FCF = revenue × FCF margin, no dilution", and its first-year margin sits near reported FCF, so it is probably on reported FCF. Stock comp is 17% of revenue, so holding that ratio constant would take TXG from −78% to ≈ −93%. Check for a dated, observable plan to cut stock comp before holding 17%.
-         - **DASH** is authored on explicit dilution: leave it unless decision #12 is adopted.
+         - **DASH (decision #12, adopted 2026-10-10): switch it to owner FCF.**
+           - Run `--fetch dash`, then `--sbc-pct` plus `--shares` (2026-10-10 inputs: 0.0766 and 439.3M diluted, Q2-2026). The dry run goes from −19% to −45%.
+           - Re-state its prose on the owner-FCF basis. Four places describe a rising share count: the masthead extras, the thesis, the page-3 sources line ("SBC modeled via rising final_shares") and the glossary's "SBC dilution" entry.
+           - The prose says stock comp runs ~$1.3–1.4B a year; the FY2025 10-K cash-flow add-back is $1.051B. Reconcile the figures.
   6. **Governance and labels.** ZM and ABNB carry POCD 4 despite dual-class super-voting (the rubric says 3). ZM's projection-year labels are off by one. Falsifiers are non-numeric in ABNB (2) and ZM (1).
   7. **Polish.**
      - `p_fail` is still used in young-company narratives: undefined in IONQ, JOBY, NAUT and AUR ("failure probability"); BEAM, PACB, PRME, RXRX and SERV define it in the glossary.
@@ -215,7 +220,7 @@ Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status note
 | 9 | v048 bulk go (2026-09-28): half-Kelly cap · monthly self-merge · history rebuild · stock-comp rule · companion renderer + quarterly checks | ✅ **All five shipped** (spec v048). |
 | 10 | Stock-comp rule for every mature memo, not just above 8% of revenue? | ✅ **Adopted 2026-10-03 (v049)**, applied at the Oct-15 quarterly with `scripts/stock_comp.py`. It covers the share-count leg too (no buyback credit). |
 | 11 | Remove buyback credits from every memo's share count (the rule's share-count leg)? | ✅ **Confirmed 2026-10-10.** Trims CROX (up to −20% per share), LULU, UBER and AAPL at the quarterly. |
-| 12 | Value DASH on FCF after stock comp, retiring explicit dilution for mature memos? | ⏳ **Open (recommended yes).** DASH's modeled dilution stops at year 5, so its terminal value — most of the value — ignores stock comp: −19% → ≈ −42% (zero weight either way). **If still open at the quarterly, leave DASH as authored.** |
+| 12 | Value DASH on FCF after stock comp, retiring explicit dilution for mature memos? | ✅ **Adopted 2026-10-10**, applied at the Oct-15 quarterly. DASH's modeled dilution stopped at year 5, so its terminal value (79% of its value) carried no stock-comp cost: −19% → ≈ −45% on fresh SEC inputs (zero weight either way). `stock_comp.py` now refuses explicit dilution for mature memos. |
 
 **Deferred to a later polish batch (from the four-lens analysis; non-blocking):** young-company theses in formula-shorthand → prose parity; NAUT page-3 TAM-legend / cash-axis chart collisions; SOTP page-3 archetype grid (two uninformative cells) + footer branch; masthead `extras` that now duplicate the derived net position. *(The §6b companion-line renderer shipped in v048.)*
 
@@ -235,7 +240,8 @@ Wave D (2026-07-05) resolved most of these on Arthur's bulk "go" — status note
   - Yahoo pitfalls it avoids: monthly bars are stamped at the month's START but carry the month-END close (plus a live partial month), and `range=max` monthly requests sometimes return WEEKLY bars.
 - **`reprice.py` split guard:** a split since a memo's `date:` aborts the run (holding shares constant across a split corrupts mcap and every per-share value — a sub-$1 name's 1:10 reverse split would read as a 10× rally). Rescale shares/per-share fields first; `--partial-ok` reprices the rest.
 - **`final_shares` must reconcile with `shares0 + Σ(raise/price)`** or the validator WARNs — use scalar avg raise-prices and set `final_shares` to the implied diluted count.
-- **Stock-comp rule (spec §4, v048 → universal in v049).** Every mature memo models **owner FCF** (FCF − latest-FY stock-comp % × revenue, every year and scenario) on **today's diluted count** with no buyback credit, or models the dilution explicitly — never both.
+- **Stock-comp rule (spec §4, v048 → universal in v049; owner FCF only since decision #12).** Every mature memo models **owner FCF** (FCF − latest-FY stock-comp % × revenue, every year and scenario) on **today's diluted count** with no buyback credit.
+  - Explicit dilution is retired for mature memos: its share growth stops at the explicit horizon, so the terminal value carries no stock-comp cost. Young-company DCFs keep explicit dilution: there it funds cash burn over the full horizon.
   - **Use `scripts/stock_comp.py`, never hand edits.** Run `--audit` → `--fetch <t>` → apply.
   - Evidence ranks the marker first, then the survey's authored basis (from this build log), then generator notes, then margins. Margins can't see stock comp below about 2% of revenue.
   - The `stock_comp:` marker blocks a second charge.

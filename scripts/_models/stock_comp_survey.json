@@ -112,7 +112,7 @@
   "pct": 0.07662025224174382,
   "cik": 1792789,
   "authored_basis": "explicit_dilution",
-  "basis_note": "batch B: reported FCF with SBC dilution in the share count (stops at year 5)"
+  "basis_note": "batch B: reported FCF with SBC dilution in the share count (stops at year 5). Decision #12 (2026-10-10) retires explicit dilution for mature memos: switch with --sbc-pct + --shares"
  },
  "de": {
   "fy": 2025,

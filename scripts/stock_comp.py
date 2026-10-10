@@ -4,14 +4,16 @@ diluted share count.
 
 Reported FCF adds stock comp back as non-cash, so a DCF on it divided by today's
 share count ignores the cost entirely. The rule charges it exactly once:
-  - OWNER FCF: FCF − (latest-FY stock comp ÷ revenue) × revenue, every year and
-    every scenario, divided by TODAY's diluted share count with no credit for
-    future buybacks (buybacks are paid from FCF already in the value; a buyback
-    at fair value creates none); or
-  - EXPLICIT DILUTION: reported FCF with the share count grown at the observed
-    net issuance rate (DASH).
-Never both. v048 applied it above ~8% of revenue; v049 extends it to every
-mature memo. Young-company DCFs comply by construction.
+OWNER FCF: FCF − (latest-FY stock comp ÷ revenue) × revenue, every year and
+every scenario, divided by TODAY's diluted share count with no credit for future
+buybacks (buybacks are paid from FCF already in the value; a buyback at fair
+value creates none). v048 applied it above ~8% of revenue; v049 extends it to
+every mature memo. Decision #12 (2026-10-10) retires the old alternative,
+EXPLICIT DILUTION (reported FCF with a share count grown at the observed net
+issuance rate): a mature DCF's modeled dilution stops at the explicit horizon,
+so the terminal value — most of the value — carried no stock-comp cost. DASH,
+the one memo on it, switches with --sbc-pct + --shares. Young-company DCFs
+comply by construction.
 
 Operations (each re-derives the bridge bottom-up — pv_fcf → Σ → terminal → op EV
 → equity → per-share → expected — edits ONLY those lines, and verifies by reload
@@ -23,7 +25,8 @@ that nothing else in the file changed):
                      market cap) to today's diluted count, N million.
   --shift-op-margin  with --sbc-pct: move projected op margins to the same
                      after-stock-comp basis as the history chart (display only).
-  --mark --basis B   record a memo already compliant (owner_fcf | explicit_dilution).
+  --mark --basis B   record a memo already compliant (owner_fcf; explicit_dilution
+                     is legacy — retired for mature memos by decision #12).
   --allow-formula-reset  proceed when a scenario's stored DCF doesn't reproduce with
                      the standard bridge (a hand-tuned value), replacing it with the
                      formula value; recorded in the marker.
@@ -362,7 +365,7 @@ def audit(tickers: list[str]) -> None:
             except SystemExit:
                 action += " (+ --allow-formula-reset: a hand-set value)"
         elif verdict == "explicit_dilution":
-            action = "leave as authored unless decision #12 retires explicit dilution (CLAUDE.md)"
+            action = "--sbc-pct + --shares (decision #12 retired explicit dilution)"
         else:
             action = "judge from the generator notes / filings"
         print(f"{t:6} {(f'{pct:.1%}' if pct is not None else 'n/a'):>10}  "
@@ -438,6 +441,16 @@ def apply(ticker: str, sbc_pct, shares, shift: bool, source: str, dry: bool,
             raise SystemExit(f"{ticker}: evidence says the FCF is already after stock comp ({detail}); "
                              "charging again would count it twice. Use --shares / --mark, or set "
                              "STOCK_COMP_OVERRIDE_HINT=1 if you have checked it isn't.")
+    if (sbc_pct is None and raw_override is None and prior.get("basis") != "owner_fcf"
+            and not os.environ.get("STOCK_COMP_OVERRIDE_HINT")):
+        verdict, detail = evidence(ticker, d, (survey().get(ticker) or {}).get("pct"))
+        if verdict == "explicit_dilution":
+            raise SystemExit(f"{ticker}: on explicit dilution, retired for mature memos (decision #12). "
+                             "A shares-only reset or --mark would leave stock comp uncharged; pass --sbc-pct too.")
+        if verdict == "reported_fcf":
+            raise SystemExit(f"{ticker}: FCF is on the reported basis ({detail}). A shares-only reset or "
+                             "--mark would leave stock comp uncharged; pass --sbc-pct too, or set "
+                             "STOCK_COMP_OVERRIDE_HINT=1 if you have checked it is already after stock comp.")
     if shift and sbc_pct is None:
         raise SystemExit("--shift-op-margin needs --sbc-pct")
     if mark:
@@ -527,7 +540,7 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--shares", type=float)
     ap.add_argument("--shift-op-margin", action="store_true")
     ap.add_argument("--mark", action="store_true")
-    ap.add_argument("--basis", choices=["owner_fcf", "explicit_dilution"])
+    ap.add_argument("--basis", choices=["owner_fcf"])      # explicit_dilution retired (decision #12)
     ap.add_argument("--source", default="")
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--allow-formula-reset", action="store_true")

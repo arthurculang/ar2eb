@@ -291,6 +291,17 @@ in batches of ~6 parallel research subagents:
    round.
 ```
 
+> **Decision #12 (2026-10-10) supersedes one phrase in the stored prompt.**
+> In step 2b, "(or models the dilution explicitly — never both)" no longer
+> applies: owner FCF is now the only treatment for mature memos. The quarterly
+> still lands correctly without a re-paste, for three reasons:
+> - `stock_comp.py --audit` names the switch for DASH;
+> - the tool refuses explicit dilution;
+> - CLAUDE.md lists DASH as a flagged input.
+>
+> Fix the wording at the next prompt change. The block above matches the
+> stored prompt verbatim.
+
 ---
 
 ## Launch (1 July 2026)
