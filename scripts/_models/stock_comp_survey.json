@@ -3,279 +3,358 @@
   "what": "Latest-FY stock-based compensation (cash-flow add-back) as a share of revenue, per mature memo",
   "source": "SEC XBRL companyfacts: ShareBasedCompensation (fallback AllocatedShareBasedCompensationExpense) / revenue (RevenueFromContractWithCustomer..., Revenues)",
   "as_of": "2026-09-28",
-  "refresh": "python scripts/stock_comp.py --fetch <ticker>"
+  "refresh": "python scripts/stock_comp.py --fetch <ticker>",
+  "authored_basis": "From the CLAUDE.md build log: which batches modeled FCF after stock comp. Ranked below a stock_comp: marker, above generator notes and margins."
  },
  "aapl": {
   "fy": 2025,
   "stock_comp_usd": 12863000000.0,
   "revenue_usd": 416161000000.0,
   "pct": 0.030908710811440764,
-  "cik": 320193
+  "cik": 320193,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "abnb": {
   "fy": 2025,
   "stock_comp_usd": 1592000000.0,
   "revenue_usd": 12241000000.0,
   "pct": 0.1300547340903521,
-  "cik": 1559720
+  "cik": 1559720,
+  "authored_basis": "owner_fcf",
+  "basis_note": "v048 re-model"
  },
  "adsk": {
   "fy": 2026,
   "stock_comp_usd": 788000000.0,
   "revenue_usd": 7206000000.0,
   "pct": 0.10935331668054399,
-  "cik": 769397
+  "cik": 769397,
+  "authored_basis": "owner_fcf",
+  "basis_note": "FCF+ batch (Jun 2026): ex-SBC owner FCF"
  },
  "algn": {
   "fy": 2025,
   "stock_comp_usd": 185870000.0,
   "revenue_usd": 4034964000.0,
   "pct": 0.046064847170879344,
-  "cik": 1097149
+  "cik": 1097149,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "amzn": {
   "fy": 2025,
   "stock_comp_usd": 19467000000.0,
   "revenue_usd": 716924000000.0,
   "pct": 0.027153505810936725,
-  "cik": 1018724
+  "cik": 1018724,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "cai": {
   "fy": 2025,
   "stock_comp_usd": 70006000.0,
   "revenue_usd": 812033000.0,
   "pct": 0.08621078207412752,
-  "cik": 2019410
+  "cik": 2019410,
+  "authored_basis": "owner_fcf",
+  "basis_note": "finishing pair: SBC-adjusted ex-SBC"
  },
  "cart": {
   "fy": 2025,
   "stock_comp_usd": 352000000.0,
   "revenue_usd": 3742000000.0,
   "pct": 0.09406734366648851,
-  "cik": 1579091
+  "cik": 1579091,
+  "authored_basis": "owner_fcf",
+  "basis_note": "FCF+ batch (Jun 2026): ex-SBC owner FCF"
  },
  "cmg": {
   "fy": 2025,
   "stock_comp_usd": 119543000.0,
   "revenue_usd": 11925601000.0,
   "pct": 0.010024065034542074,
-  "cik": 1058090
+  "cik": 1058090,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "coin": {
   "fy": 2025,
   "stock_comp_usd": 839440000.0,
   "revenue_usd": 7181325000.0,
   "pct": 0.11689207771546337,
-  "cik": 1679788
+  "cik": 1679788,
+  "authored_basis": "owner_fcf",
+  "basis_note": "v048 re-model"
  },
  "crox": {
   "fy": 2025,
   "stock_comp_usd": 36701000.0,
   "revenue_usd": 4040647000.0,
   "pct": 0.009082951319429784,
-  "cik": 1334036
+  "cik": 1334036,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "dal": {
   "fy": 2025,
   "stock_comp_usd": 313000000.0,
   "revenue_usd": 63364000000.0,
   "pct": 0.004939713401931696,
-  "cik": 27904
+  "cik": 27904,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "dash": {
   "fy": 2025,
   "stock_comp_usd": 1051000000.0,
   "revenue_usd": 13717000000.0,
   "pct": 0.07662025224174382,
-  "cik": 1792789
+  "cik": 1792789,
+  "authored_basis": "explicit_dilution",
+  "basis_note": "batch B: reported FCF with SBC dilution in the share count (stops at year 5)"
  },
  "de": {
   "fy": 2025,
   "stock_comp_usd": 151000000.0,
   "revenue_usd": 45684000000.0,
   "pct": 0.0033053147710358113,
-  "cik": 315189
+  "cik": 315189,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "dis": {
   "fy": 2025,
   "stock_comp_usd": 1363000000.0,
   "revenue_usd": 94425000000.0,
   "pct": 0.014434736563410114,
-  "cik": 1744489
+  "cik": 1744489,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "googl": {
   "fy": 2025,
   "stock_comp_usd": 24953000000.0,
   "revenue_usd": 402836000000.0,
   "pct": 0.06194332184809699,
-  "cik": 1652044
+  "cik": 1652044,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "hhh": {
   "fy": 2025,
   "stock_comp_usd": 19802000.0,
   "revenue_usd": 1474892000.0,
   "pct": 0.013426067806998749,
-  "cik": 1981792
+  "cik": 1981792,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "hood": {
   "fy": 2025,
   "stock_comp_usd": 305000000.0,
   "revenue_usd": 4473000000.0,
   "pct": 0.06818689917281466,
-  "cik": 1783879
+  "cik": 1783879,
+  "authored_basis": "owner_fcf",
+  "basis_note": "FCF+ batch (Jun 2026): ex-SBC owner FCF"
  },
  "ilmn": {
   "fy": 2025,
   "stock_comp_usd": 275000000.0,
   "revenue_usd": 4343000000.0,
   "pct": 0.06332028551692379,
-  "cik": 1110803
+  "cik": 1110803,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "isrg": {
   "fy": 2025,
   "stock_comp_usd": 788200000.0,
   "revenue_usd": 10064700000.0,
   "pct": 0.07831331286575854,
-  "cik": 1035267
+  "cik": 1035267,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "lth": {
   "fy": 2025,
   "stock_comp_usd": 51750000.0,
   "revenue_usd": 2995255000.0,
   "pct": 0.01727732697216097,
-  "cik": 1869198
+  "cik": 1869198,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "lulu": {
   "fy": 2026,
   "stock_comp_usd": 62203000.0,
   "revenue_usd": 11102600000.0,
   "pct": 0.005602561562156612,
-  "cik": 1397187
+  "cik": 1397187,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "meta": {
   "fy": 2025,
   "stock_comp_usd": 20427000000.0,
   "revenue_usd": 200966000000.0,
   "pct": 0.10164405919409253,
-  "cik": 1326801
+  "cik": 1326801,
+  "authored_basis": "owner_fcf",
+  "basis_note": "v048 re-model"
  },
  "nvcr": {
   "fy": 2025,
   "stock_comp_usd": 104832000.0,
   "revenue_usd": 655353000.0,
   "pct": 0.15996264608539215,
-  "cik": 1645113
+  "cik": 1645113,
+  "authored_basis": "owner_fcf",
+  "basis_note": "finishing pair: SBC-adjusted ex-SBC"
  },
  "nvda": {
   "fy": 2026,
   "stock_comp_usd": 6386000000.0,
   "revenue_usd": 215938000000.0,
   "pct": 0.029573303448211987,
-  "cik": 1045810
+  "cik": 1045810,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "rddt": {
   "fy": 2025,
   "stock_comp_usd": 343180000.0,
   "revenue_usd": 2202506000.0,
   "pct": 0.15581342343675794,
-  "cik": 1713445
+  "cik": 1713445,
+  "authored_basis": "owner_fcf",
+  "basis_note": "fun-speculative batch (Jun 2026): ex-SBC owner FCF + dilution"
  },
  "shak": {
   "fy": 2025,
   "stock_comp_usd": 19503000.0,
   "revenue_usd": 1445306000.0,
   "pct": 0.013494028254224365,
-  "cik": 1620533
+  "cik": 1620533,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "shop": {
   "fy": 2025,
   "stock_comp_usd": 449000000.0,
   "revenue_usd": 11556000000.0,
   "pct": 0.03885427483558325,
-  "cik": 1594805
+  "cik": 1594805,
+  "authored_basis": "owner_fcf",
+  "basis_note": "fun-speculative batch: ex-SBC owner FCF"
  },
  "sym": {
   "fy": 2025,
   "stock_comp_usd": 183936000.0,
   "revenue_usd": 2246922000.0,
   "pct": 0.08186131961857154,
-  "cik": 1837240
+  "cik": 1837240,
+  "authored_basis": "owner_fcf",
+  "basis_note": "moonshot batch: SBC-adjusted"
  },
  "tem": {
   "fy": 2025,
   "stock_comp_usd": 124747000.0,
   "revenue_usd": 1271789000.0,
   "pct": 0.09808781173606629,
-  "cik": 1717115
+  "cik": 1717115,
+  "authored_basis": "owner_fcf",
+  "basis_note": "AI-bio batch: SBC-adjusted (owner FCF negative)"
  },
  "tost": {
   "fy": 2025,
   "stock_comp_usd": 242000000.0,
   "revenue_usd": 6153000000.0,
   "pct": 0.03933040793109052,
-  "cik": 1650164
+  "cik": 1650164,
+  "authored_basis": "owner_fcf",
+  "basis_note": "fun-speculative batch: ex-SBC owner FCF"
  },
  "tsla": {
   "fy": 2025,
   "stock_comp_usd": 2825000000.0,
   "revenue_usd": 94827000000.0,
   "pct": 0.029791093254031027,
-  "cik": 1318605
+  "cik": 1318605,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "twst": {
   "fy": 2025,
   "stock_comp_usd": 64459000.0,
   "revenue_usd": 376572000.0,
   "pct": 0.1711731089937648,
-  "cik": 1581280
+  "cik": 1581280,
+  "authored_basis": "owner_fcf",
+  "basis_note": "moonshot batch: SBC-adjusted"
  },
  "txg": {
   "fy": 2025,
   "stock_comp_usd": 109118000.0,
   "revenue_usd": 642823000.0,
   "pct": 0.16974812662272507,
-  "cik": 1770787
+  "cik": 1770787,
+  "authored_basis": "unclear",
+  "basis_note": "'FCF = revenue x FCF margin (no dilution)'; FY1 margin ~ reported FCF; stock comp 17% of revenue \u2014 judge, check for a dated plan to cut it"
  },
  "u": {
   "fy": 2025,
   "stock_comp_usd": 385214000.0,
   "revenue_usd": 1849648000.0,
   "pct": 0.20826341011911456,
-  "cik": 1810806
+  "cik": 1810806,
+  "authored_basis": "owner_fcf",
+  "basis_note": "FCF+ batch (Jun 2026): ex-SBC owner FCF + growing share count"
  },
  "uber": {
   "fy": 2025,
   "stock_comp_usd": 1826000000.0,
   "revenue_usd": 52017000000.0,
   "pct": 0.03510390833765884,
-  "cik": 1543151
+  "cik": 1543151,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "wrby": {
   "fy": 2025,
   "stock_comp_usd": 34536000.0,
   "revenue_usd": 871905000.0,
   "pct": 0.03960981987716552,
-  "cik": 1504776
+  "cik": 1504776,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "yeti": {
   "fy": 2026,
   "stock_comp_usd": 47688000.0,
   "revenue_usd": 1868494000.0,
   "pct": 0.02552215848699541,
-  "cik": 1670592
+  "cik": 1670592,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "you": {
   "fy": 2025,
   "stock_comp_usd": 38932000.0,
   "revenue_usd": 900779000.0,
   "pct": 0.04322036814801411,
-  "cik": 1856314
+  "cik": 1856314,
+  "authored_basis": "reported_fcf",
+  "basis_note": "authored on reported FCF (no stock-comp adjustment in its batch)"
  },
  "zm": {
   "fy": 2026,
   "stock_comp_usd": 760776000.0,
   "revenue_usd": 4868769000.0,
   "pct": 0.15625633502020736,
-  "cik": 1585521
+  "cik": 1585521,
+  "authored_basis": "owner_fcf",
+  "basis_note": "v048 re-model"
  }
 }

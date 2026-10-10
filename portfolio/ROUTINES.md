@@ -10,11 +10,9 @@ Routine's commit.)
 > **Status: all three Routines created by the owner (1–2 on 2026-06-07; the
 > quarterly re-underwrite on 2026-07-22).** This file remains the reference
 > config — if you change a routine in the UI, mirror the change here.
-> **v048/v049: paste the Routine 2 and Routine 3 prompts below into the UI.**
-> The monthly now self-merges; the quarterly enforces the book-wide spec checks
-> and the universal stock-comp rule. Checked via the Routines API on 2026-10-03:
-> the stored prompts are still the pre-v048 ones, and agents cannot edit
-> owner-created Routines — paste at
+> **Current as of 2026-10-10:** the owner pasted the v048 monthly and v049
+> quarterly prompts below; verified via the Routines API. Agents cannot edit
+> owner-created Routines, so any later prompt change must be pasted at
 > https://claude.ai/code/routines/trig_01MTyPoACT1eq1hT3ageksB3 (monthly) and
 > https://claude.ai/code/routines/trig_01UEc9mgF3skFTpx5E5WEWXQ (quarterly).
 
