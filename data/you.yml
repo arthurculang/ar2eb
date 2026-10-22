@@ -2,10 +2,10 @@ ticker: YOU
 company: Clear Secure
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-09-22'
-spot: 39.26
+date: '2026-10-22'
+spot: 45.14
 market:
-  market_cap_billion: 3.73
+  market_cap_billion: 4.29
   shares_outstanding_million: 95.0
   cash_billion: 0.8
   net_debt_billion: 0.0
@@ -451,30 +451,31 @@ scenarios:
       - 19.0
 historical_prices:
   ipo_marker: IPO Jun '21
-  x_min: -5.01
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-4.98, 41.05]   # 2021-09-30
-  - [-4.73, 31.37]   # 2021-12-31
-  - [-4.48, 26.88]   # 2022-03-31
-  - [-4.23, 20.00]   # 2022-06-30
-  - [-3.98, 22.86]   # 2022-09-30
-  - [-3.73, 27.43]   # 2022-12-30
-  - [-3.48, 26.17]   # 2023-03-31
-  - [-3.23, 23.17]   # 2023-06-30
-  - [-2.98, 19.04]   # 2023-09-29
-  - [-2.73, 20.65]   # 2023-12-29
-  - [-2.49, 21.27]   # 2024-03-28
-  - [-2.23, 18.71]   # 2024-06-28
-  - [-1.98, 33.14]   # 2024-09-30
-  - [-1.72, 26.64]   # 2024-12-31
-  - [-1.48, 25.91]   # 2025-03-31
-  - [-1.23, 27.76]   # 2025-06-30
-  - [-0.98, 33.38]   # 2025-09-30
-  - [-0.73, 35.08]   # 2025-12-31
-  - [-0.48, 48.41]   # 2026-03-31
-  - [-0.23, 55.73]   # 2026-06-30
-  - [-0.15, 55.24]   # 2026-07-31
-  - [-0.06, 44.15]   # 2026-08-31
+  x_min: -5.09
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-5.06, 41.05]   # 2021-09-30
+  - [-4.81, 31.37]   # 2021-12-31
+  - [-4.56, 26.88]   # 2022-03-31
+  - [-4.31, 20.00]   # 2022-06-30
+  - [-4.06, 22.86]   # 2022-09-30
+  - [-3.81, 27.43]   # 2022-12-30
+  - [-3.56, 26.17]   # 2023-03-31
+  - [-3.31, 23.17]   # 2023-06-30
+  - [-3.06, 19.04]   # 2023-09-29
+  - [-2.81, 20.65]   # 2023-12-29
+  - [-2.57, 21.27]   # 2024-03-28
+  - [-2.31, 18.71]   # 2024-06-28
+  - [-2.06, 33.14]   # 2024-09-30
+  - [-1.80, 26.64]   # 2024-12-31
+  - [-1.56, 25.91]   # 2025-03-31
+  - [-1.31, 27.76]   # 2025-06-30
+  - [-1.06, 33.38]   # 2025-09-30
+  - [-0.81, 35.08]   # 2025-12-31
+  - [-0.56, 48.41]   # 2026-03-31
+  - [-0.31, 55.73]   # 2026-06-30
+  - [-0.23, 55.24]   # 2026-07-31
+  - [-0.14, 44.15]   # 2026-08-31
+  - [-0.08, 39.26]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 14%
   body: Airport saturates; TSA commoditizes; ~$39 (0%).
@@ -645,13 +646,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Audit)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "007"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "007"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 39.26
   - version: "005"
     timestamp: "2026-09-22_13-17"
     asOfDate: "2026-09-22"

@@ -2,10 +2,10 @@ ticker: RDDT
 company: Reddit, Inc.
 exchange: NYSE
 dcf_type: mature_company
-date: '2026-09-22'
-spot: 158.73
+date: '2026-10-22'
+spot: 153.28
 market:
-  market_cap_billion: 29.59
+  market_cap_billion: 28.57
   shares_outstanding_million: 186.4
   cash_billion: 0.954
   net_debt_billion: 0.0
@@ -451,20 +451,21 @@ scenarios:
       - 24.0
 historical_prices:
   ipo_marker: IPO Mar '24
-  x_min: -2.61
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-2.49, 49.32]   # 2024-03-28
-  - [-2.23, 63.89]   # 2024-06-28
-  - [-1.98, 65.92]   # 2024-09-30
-  - [-1.72, 163.44]   # 2024-12-31
-  - [-1.48, 104.90]   # 2025-03-31
-  - [-1.23, 150.57]   # 2025-06-30
-  - [-0.98, 229.99]   # 2025-09-30
-  - [-0.73, 229.87]   # 2025-12-31
-  - [-0.48, 134.65]   # 2026-03-31
-  - [-0.23, 173.58]   # 2026-06-30
-  - [-0.15, 140.67]   # 2026-07-31
-  - [-0.06, 147.81]   # 2026-08-31
+  x_min: -2.69
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-2.57, 49.32]   # 2024-03-28
+  - [-2.31, 63.89]   # 2024-06-28
+  - [-2.06, 65.92]   # 2024-09-30
+  - [-1.80, 163.44]   # 2024-12-31
+  - [-1.56, 104.90]   # 2025-03-31
+  - [-1.31, 150.57]   # 2025-06-30
+  - [-1.06, 229.99]   # 2025-09-30
+  - [-0.81, 229.87]   # 2025-12-31
+  - [-0.56, 134.65]   # 2026-03-31
+  - [-0.31, 173.58]   # 2026-06-30
+  - [-0.23, 140.67]   # 2026-07-31
+  - [-0.14, 147.81]   # 2026-08-31
+  - [-0.08, 158.73]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 16%
   body: Google/AI-search erodes traffic; the model de-rates; ~$41 (-74%).
@@ -642,13 +643,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Audit)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "007"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "007"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 158.73
   - version: "005"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"

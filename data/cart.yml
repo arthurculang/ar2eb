@@ -2,10 +2,10 @@ ticker: CART
 company: Instacart (Maplebear)
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-09-22'
-spot: 45.56
+date: '2026-10-22'
+spot: 50.31
 market:
-  market_cap_billion: 10.97
+  market_cap_billion: 12.11
   shares_outstanding_million: 240.6
   cash_billion: 0.69
   net_debt_billion: 0.0
@@ -455,22 +455,23 @@ scenarios:
       - 20.0
 historical_prices:
   ipo_marker: IPO Sep '23
-  x_min: -3.01
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-2.98, 29.69]   # 2023-09-29
-  - [-2.73, 23.47]   # 2023-12-29
-  - [-2.49, 37.29]   # 2024-03-28
-  - [-2.23, 32.14]   # 2024-06-28
-  - [-1.98, 40.74]   # 2024-09-30
-  - [-1.72, 41.42]   # 2024-12-31
-  - [-1.48, 39.89]   # 2025-03-31
-  - [-1.23, 45.24]   # 2025-06-30
-  - [-0.98, 36.76]   # 2025-09-30
-  - [-0.73, 44.98]   # 2025-12-31
-  - [-0.48, 37.46]   # 2026-03-31
-  - [-0.23, 47.35]   # 2026-06-30
-  - [-0.15, 44.60]   # 2026-07-31
-  - [-0.06, 50.52]   # 2026-08-31
+  x_min: -3.09
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-3.06, 29.69]   # 2023-09-29
+  - [-2.81, 23.47]   # 2023-12-29
+  - [-2.57, 37.29]   # 2024-03-28
+  - [-2.31, 32.14]   # 2024-06-28
+  - [-2.06, 40.74]   # 2024-09-30
+  - [-1.80, 41.42]   # 2024-12-31
+  - [-1.56, 39.89]   # 2025-03-31
+  - [-1.31, 45.24]   # 2025-06-30
+  - [-1.06, 36.76]   # 2025-09-30
+  - [-0.81, 44.98]   # 2025-12-31
+  - [-0.56, 37.46]   # 2026-03-31
+  - [-0.31, 47.35]   # 2026-06-30
+  - [-0.23, 44.60]   # 2026-07-31
+  - [-0.14, 50.52]   # 2026-08-31
+  - [-0.08, 45.56]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 13%
   body: Ad growth stalls; delivery field wins; ~$29.71 (-35%).
@@ -636,13 +637,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "007"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "007"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 45.56
   - version: "005"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"
