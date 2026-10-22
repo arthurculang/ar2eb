@@ -2,10 +2,10 @@ ticker: COIN
 company: Coinbase Global
 exchange: NASDAQ
 dcf_type: mature_company_sotp
-date: '2026-09-22'
-spot: 201.05
+date: '2026-10-22'
+spot: 177.08
 market:
-  market_cap_billion: 52.96
+  market_cap_billion: 46.65
   shares_outstanding_million: 263.4
   cash_billion: 8.6
   net_debt_billion: 6.0
@@ -21,11 +21,10 @@ taxonomy:
   primary_theme: digital-assets-fintech-rails
 central_question: Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit
   derivatives platform, a regulator that surrendered — or a cycle stock that has now printed three straight quarterly losses?
-thesis: 'Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (−18.5% YoY) and a $360M GAAP loss, the
+thesis: 'Coinbase trades at $177 (~$47B) after a cyclical 2026: Q2 revenue $1.22B (−18.5% YoY) and a $360M GAAP loss, the
   third straight, as BTC fell from above $120K to a $58K low before recovering to ~$87K. The structural case firmed in the
   same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue share renewed
-  into 2029. Stock comp was 11.7% of FY25 revenue; net of it, enterprise value is ~29× FY25 free cash flow (~20× before
-  it). On that basis the stock is roughly fair: the most likely case sits ~19% below the price and 77% of the probability
+  into 2029. Stock comp was 11.7% of FY25 revenue; net of it, enterprise value is ~25× FY25 free cash flow (~18× before it). On that basis the stock is roughly fair: the most likely case sits ~8% below the price and 77% of the probability
   below it, with most of the value in the upside tails.'
 chart_reference:
   history_years:
@@ -459,32 +458,33 @@ scenarios:
       - 38.0
 historical_prices:   # Yahoo daily closes; x = years before the 2026-09-21 spot close
   ipo_marker: Direct Listing Apr '21 @ $381
-  x_min: -5.5
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-5.4, 297.64]   # 2021-04-30
-  - [-5.23, 253.30]   # 2021-06-30
-  - [-4.98, 227.48]   # 2021-09-30
-  - [-4.73, 252.37]   # 2021-12-31
-  - [-4.48, 189.86]   # 2022-03-31
-  - [-4.23, 47.02]   # 2022-06-30
-  - [-3.98, 64.49]   # 2022-09-30
-  - [-3.73, 35.39]   # 2022-12-30
-  - [-3.48, 67.57]   # 2023-03-31
-  - [-3.23, 71.55]   # 2023-06-30
-  - [-2.98, 75.08]   # 2023-09-29
-  - [-2.73, 173.92]   # 2023-12-29
-  - [-2.49, 265.12]   # 2024-03-28
-  - [-2.23, 222.23]   # 2024-06-28
-  - [-1.98, 178.17]   # 2024-09-30
-  - [-1.72, 248.30]   # 2024-12-31
-  - [-1.48, 172.23]   # 2025-03-31
-  - [-1.23, 350.49]   # 2025-06-30
-  - [-0.98, 337.49]   # 2025-09-30
-  - [-0.73, 226.14]   # 2025-12-31
-  - [-0.48, 174.61]   # 2026-03-31
-  - [-0.23, 146.19]   # 2026-06-30
-  - [-0.15, 146.26]   # 2026-07-31
-  - [-0.06, 188.12]   # 2026-08-31
+  x_min: -5.58
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-5.48, 297.64]   # 2021-04-30
+  - [-5.31, 253.30]   # 2021-06-30
+  - [-5.06, 227.48]   # 2021-09-30
+  - [-4.81, 252.37]   # 2021-12-31
+  - [-4.56, 189.86]   # 2022-03-31
+  - [-4.31, 47.02]   # 2022-06-30
+  - [-4.06, 64.49]   # 2022-09-30
+  - [-3.81, 35.39]   # 2022-12-30
+  - [-3.56, 67.57]   # 2023-03-31
+  - [-3.31, 71.55]   # 2023-06-30
+  - [-3.06, 75.08]   # 2023-09-29
+  - [-2.81, 173.92]   # 2023-12-29
+  - [-2.57, 265.12]   # 2024-03-28
+  - [-2.31, 222.23]   # 2024-06-28
+  - [-2.06, 178.17]   # 2024-09-30
+  - [-1.80, 248.30]   # 2024-12-31
+  - [-1.56, 172.23]   # 2025-03-31
+  - [-1.31, 350.49]   # 2025-06-30
+  - [-1.06, 337.49]   # 2025-09-30
+  - [-0.81, 226.14]   # 2025-12-31
+  - [-0.56, 174.61]   # 2026-03-31
+  - [-0.31, 146.19]   # 2026-06-30
+  - [-0.23, 146.26]   # 2026-07-31
+  - [-0.14, 188.12]   # 2026-08-31
+  - [-0.08, 201.05]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 8%
   body: Crypto winter + take-rate compression + GENIUS hostility compound; FCF after stock comp turns negative.
@@ -518,7 +518,7 @@ appendix:
     body: '>1M paid subs at $30/mo + premium tiers. Engagement floor regardless of BTC price. Higher trading volume + revenue
       per user vs free tier.'
   - label: The base assumes the multiple halves.
-    body: 'It exits at 15× FCF after stock comp vs ~29× today; a ~21× exit would put the base at the $201 price.'
+    body: 'It exits at 15× FCF after stock comp vs ~25× today; a ~17× exit would put the base at the $177 price.'
   triggers:
   - label: Bear validation
     body: BTC < $60K sustained > 2 quarters  ·  transaction rev < $700M/qtr  ·  take-rate below 10 bps  ·  Coinbase-held USDC < $15B  ·  Hyperliquid-style
@@ -549,13 +549,17 @@ glossary:
   definition: CRCL shares received in the 2023 Centre dissolution; part sold Q1 2026. The remainder (≤~8.4M shares) is worth
     ≤~$0.8B at ~$92 (Sep 2026). Marked as a strategic investment.
 stamp:
-  footer_version: "008"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "009"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "008"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "009"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "008"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 201.05
   - version: "007"
     timestamp: "2026-09-26_04-14"
     asOfDate: "2026-09-22"

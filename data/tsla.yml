@@ -2,17 +2,17 @@ ticker: TSLA
 company: Tesla
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-09-22'
-spot: 375.30
+date: '2026-10-22'
+spot: 386.47
 market:
-  market_cap_billion: 1408.28
+  market_cap_billion: 1450.19
   shares_outstanding_million: 3752.4
   cash_billion: 44.1
   net_debt_billion: 1.6
   extras:
   - $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares
   - Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B
-  - ~$375 (down ~17% YTD, -16% TTM); ~$1.4T market cap trades on the autonomy/robot narrative, not auto fundamentals
+  - ~$386 (down ~14% YTD); ~$1.4T market cap trades on the autonomy/robot narrative, not auto fundamentals
 taxonomy:
   watchlist: fcf-megacap
   tier: High
@@ -22,10 +22,10 @@ taxonomy:
   primary_theme: autonomous-vehicles-systems
 central_question: At ~$1.4T on a declining ~$95B auto base earning 4.6% margins, does the price hold on auto+energy fundamentals,
   or only if unsupervised autonomy and Optimus ship into real revenue?
-thesis: Tesla trades at ~$1.4T (~$375, -16% TTM) - ~14x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight
+thesis: Tesla trades at ~$1.4T (~$386, -14% YTD) - ~15x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight
   delivery decline (1.64M, -8.6%), with GAAP operating margin compressed to 4.6% from 16.8% in 2022. The DCF underwrites only
-  the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-73%). The robotaxi/FSD/Optimus optionality
-  is real but lives entirely in the ultra-bull second act, and even that lands +2%. What you pay above ~$100 is the autonomy/robot
+  the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-74%). The robotaxi/FSD/Optimus optionality
+  is real but lives entirely in the ultra-bull second act, and even that lands -1%. What you pay above ~$100 is the autonomy/robot
   option, not the car business - the modal case, an auto maker re-rating toward an auto multiple, is deeply negative.
 chart_reference:
   history_years:
@@ -315,7 +315,7 @@ scenarios:
     - Unsupervised FSD clears regulators and ships, the robotaxi fleet scales out of pilot into real ride-hail revenue, and
       high-margin software/licensing lifts blended operating margin toward 20% on >20% revenue growth - the platform repricing
       the autonomy bulls underwrite. Optimus and energy add to a real second revenue stream.
-    - DCF ~$194 (-48%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers,
+    - DCF ~$194 (-50%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers,
       yet the entry price still embeds more than this delivers; the autonomy win is necessary but, at ~$1.4T, not sufficient.
     probability_rationale: 'The Power-gated second act: durable FSD-data process power plus the robotaxi/licensing model,
       if autonomy actually ships and scales. Real but every 2026 datapoint shows it slipping. 14% weight on the platform thesis
@@ -391,8 +391,8 @@ scenarios:
     - 'The full second act: unsupervised autonomy scales nationally into a high-margin ride-hail + FSD-licensing business,
       Optimus reaches volume as a non-auto TAM, and energy compounds - revenue grows ~30% at platform margins toward the mid-20s,
       the AI/robotics company the narrative prices.'
-    - 'DCF ~$383 (+2%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple
-      does the model reach today''s price. That this best case only just clears spot is the finding: ~$1.4T fully
+    - 'DCF ~$383 (-1%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple
+      does the model reach today''s price. That this best case lands just below spot is the finding: ~$1.4T fully
       prices the moonshots succeeding.'
     probability_rationale: Everything ships and scales - robotaxi AND Optimus AND energy AND a platform re-rate, the autonomy
       bull's complete thesis. ~8%, the long-duration tail that the current price already embeds.
@@ -459,34 +459,35 @@ scenarios:
       - 23.0
 historical_prices:
   ipo_marker: IPO Jun '10
-  x_min: -6.01
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-5.98, 143.00]   # 2020-09-30
-  - [-5.72, 235.22]   # 2020-12-31
-  - [-5.48, 222.64]   # 2021-03-31
-  - [-5.23, 226.57]   # 2021-06-30
-  - [-4.98, 258.49]   # 2021-09-30
-  - [-4.73, 352.26]   # 2021-12-31
-  - [-4.48, 359.20]   # 2022-03-31
-  - [-4.23, 224.47]   # 2022-06-30
-  - [-3.98, 265.25]   # 2022-09-30
-  - [-3.73, 123.18]   # 2022-12-30
-  - [-3.48, 207.46]   # 2023-03-31
-  - [-3.23, 261.77]   # 2023-06-30
-  - [-2.98, 250.22]   # 2023-09-29
-  - [-2.73, 248.48]   # 2023-12-29
-  - [-2.49, 175.79]   # 2024-03-28
-  - [-2.23, 197.88]   # 2024-06-28
-  - [-1.98, 261.63]   # 2024-09-30
-  - [-1.72, 403.84]   # 2024-12-31
-  - [-1.48, 259.16]   # 2025-03-31
-  - [-1.23, 317.66]   # 2025-06-30
-  - [-0.98, 444.72]   # 2025-09-30
-  - [-0.73, 449.72]   # 2025-12-31
-  - [-0.48, 371.75]   # 2026-03-31
-  - [-0.23, 420.60]   # 2026-06-30
-  - [-0.15, 311.21]   # 2026-07-31
-  - [-0.06, 367.95]   # 2026-08-31
+  x_min: -6.09
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-6.06, 143.00]   # 2020-09-30
+  - [-5.80, 235.22]   # 2020-12-31
+  - [-5.56, 222.64]   # 2021-03-31
+  - [-5.31, 226.57]   # 2021-06-30
+  - [-5.06, 258.49]   # 2021-09-30
+  - [-4.81, 352.26]   # 2021-12-31
+  - [-4.56, 359.20]   # 2022-03-31
+  - [-4.31, 224.47]   # 2022-06-30
+  - [-4.06, 265.25]   # 2022-09-30
+  - [-3.81, 123.18]   # 2022-12-30
+  - [-3.56, 207.46]   # 2023-03-31
+  - [-3.31, 261.77]   # 2023-06-30
+  - [-3.06, 250.22]   # 2023-09-29
+  - [-2.81, 248.48]   # 2023-12-29
+  - [-2.57, 175.79]   # 2024-03-28
+  - [-2.31, 197.88]   # 2024-06-28
+  - [-2.06, 261.63]   # 2024-09-30
+  - [-1.80, 403.84]   # 2024-12-31
+  - [-1.56, 259.16]   # 2025-03-31
+  - [-1.31, 317.66]   # 2025-06-30
+  - [-1.06, 444.72]   # 2025-09-30
+  - [-0.81, 449.72]   # 2025-12-31
+  - [-0.56, 371.75]   # 2026-03-31
+  - [-0.31, 420.60]   # 2026-06-30
+  - [-0.23, 311.21]   # 2026-07-31
+  - [-0.14, 367.95]   # 2026-08-31
+  - [-0.08, 375.30]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 18%
   body: Deliveries keep falling; pure auto multiple; ~$26 (-93%).
@@ -495,9 +496,9 @@ weighting_rationale:
 - label: Base 30%
   body: Growth resumes, margins heal, autonomy begins; ~$83 (-78%).
 - label: Bull 14%
-  body: FSD ships, robotaxi scales, software margins; ~$194 (-48%).
+  body: FSD ships, robotaxi scales, software margins; ~$194 (-50%).
 - label: Ultra Bull 8%
-  body: Robotaxi + Optimus + energy compound into a platform; ~$383 (+2%).
+  body: Robotaxi + Optimus + energy compound into a platform; ~$383 (-1%).
 appendix:
   pushback:
   - label: The DCF ignores robotaxi/FSD/Optimus.
@@ -617,8 +618,8 @@ competitive:
     eroding in Europe, volume now trails BYD, and on the auto+energy fundamentals operating margin has compressed to 4.6%
     across two straight delivery declines. The Audit: branding is durable (medium) and process_power is the live swing factor
     (the autonomy flywheel), but the threat that dominates the cash flows is auto-multiple compression. The DCF underwrites
-    only those fundamentals and lands ~-73%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
-    and even full platform success lands +2% - so the ~$1.4T price embeds the moonshots succeeding, not the car business.'
+    only those fundamentals and lands ~-74%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
+    and even full platform success lands -1% - so the ~$1.4T price embeds the moonshots succeeding, not the car business.'
 pocd:
   people:
     ceo: 'Elon Musk'
@@ -655,13 +656,17 @@ pocd:
   deal: Open-market common — entry price weighed against the probability-weighted fair value, with the robotaxi, FSD and Optimus
     optionality priced explicitly in the ultra-bull second act, then position-sized.
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "007"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "007"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 375.30
   - version: "005"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"

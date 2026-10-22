@@ -2,10 +2,10 @@ ticker: OKLO
 company: Oklo
 exchange: NYSE
 dcf_type: young_company
-date: '2026-09-22'
-spot: 40.18
+date: '2026-10-22'
+spot: 27.73
 market:
-  market_cap_billion: 7.23
+  market_cap_billion: 4.99
   shares_outstanding_million: 180.0
   cash_billion: 2.54
   net_debt_billion: 0.0
@@ -20,13 +20,12 @@ taxonomy:
   - nuclear-fission-smr
   - ai-compute
   primary_theme: nuclear-fission-smr
-central_question: Does ~$7B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power
+central_question: Does ~$5B on zero revenue price a realistic path to a build-own-operate nuclear prime — or an AI-baseload-power
   outcome a decade of fundamentals can't reach?
-thesis: 'Oklo trades at ~$7B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate
+thesis: 'Oklo trades at ~$5B on $0 revenue, against $2.54B cash and a ~14 GW (mostly non-binding) pipeline — a build-own-operate
   nuclear IPP (Aurora fast reactors sold as power; first power 2027-28; the first commercial advanced-fission site under construction).
   The DCF asks what deployed-GW scale, IPP margins, and — in the ultra-bull — a HALEU fuel-monopoly second act are plausible
-  over a decade. The finding: base (~3 GW) and bull (~7 GW) sit below spot; only the ~8% ultra-bull (13 GW + fuel monopoly,
-  +338%) clears it — the capital-intensive base leaves the weighted ~-26%.'
+  over a decade. The finding: the base (~3 GW) sits below spot; the bull (~7 GW, +21%) and the ~8% ultra-bull (13 GW + fuel monopoly, +534%) clear it — the weighted lands ~+8%.'
 chart_reference:
   tam_billion: 120.0
   history_years:
@@ -77,7 +76,7 @@ scenarios:
       and services shell.
     - The $2.54B cash is the floor — but dilutive flailing raises and a decade of opex erode it, and a 38% within-scenario
       probability of restructuring pulls the expected toward the distress floor. Revenue stalls near $0.1B; the equity is
-      worth a fraction of today's ~$7B.
+      worth a fraction of today's ~$5B.
     probability_rationale: 'The compound bear: a fast-reactor FOAK failure plus HALEU-fuel scarcity. DOE approved the Aurora-INL
       safety case (June 2026), so outright regulatory failure now requires the NRC to block the commercial fleet beyond INL
       — a narrower kill-path than at authoring, trimming this tail to 8%. 38% within-scenario failure reflects that Oklo,
@@ -371,7 +370,7 @@ scenarios:
       margins — genuine IPP economics. FY30 revenue ~$0.42B sits near the (thin) analyst consensus, compounding as reactors
       come online.'
     - The buildout is capital-intensive (~$2B/GW, ~$5.7B cumulative reinvestment) funded by ~$2.9B of dilutive raises on top
-      of the $2.54B cash. DCF ~$15/share — ~63% below spot, a measure of how much the market is paying for a fleet larger
+      of the $2.54B cash. DCF ~$15/share — ~46% below spot, a measure of how much the market is paying for a fleet larger
       and faster than a successful-but-rational base implies.
     probability_rationale: Requires Aurora to work (not dominate) and the build-own-operate model to scale to a few GW — no
       full-pipeline conversion, no SpaceX-style runaway. 10% failure probability given the cash, DOE/INL momentum, and NRC
@@ -517,9 +516,7 @@ scenarios:
       Oklo converts a real slice of its pipeline — ~7 GW deployed by 2034, powering AI data centers under long-dated PPAs
       at scale, with fuel-recycling and radioisotope verticals adding optionality. Revenue compounds toward ~$4.8B at a ~58%
       operating margin.'
-    - Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$34/share — and still ~17% below
-      spot. The bull case is genuinely good and still doesn't reach today's price on a 10-year fundamental basis; you must
-      extend the horizon or believe a richer terminal.
+    - Heavy but value-accretive raises fund the buildout; the business self-funds late. DCF ~$34/share — ~21% above spot. The bull case is genuinely good and clears today's price on a 10-year fundamental basis.
     probability_rationale: 'A chain: Aurora works AND factory-cost economics materialize AND NRC clears AND the pipeline converts
       to binding PPAs at scale. Each plausible at 50-70%; jointly ~23%. A real, fundable trajectory — Oklo has the cash, the
       site, and the AI-power demand backdrop — but it is conjunctive.'
@@ -664,7 +661,7 @@ scenarios:
       monopoly — supplying fuel to the whole advanced-nuclear industry — AND moves up the stack into owning the data-center
       load. Revenue reaches ~$17.3B by FY35 at ~68% blended margins, with a platform terminal reflecting the originated cornered-resource
       Power.'
-    - 'DCF ~$180/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +338%
+    - 'DCF ~$180/share — equity ~$43B (a dominant AI-power IPP + fuel monopoly; ~2.5x sales). The exponential tail, +534%
       above spot: the fuel monopoly and owns-the-load economics are the second act the power-IPP base case doesn''t capture.'
     probability_rationale: 'Tail of tails: the build-own-operate model scales to ~13 GW AND Oklo originates a HALEU fuel-recycling
       monopoly AND integrates into the data-center load. Individually plausible at 30-50%; jointly ~8%. The fuel monopoly
@@ -801,20 +798,21 @@ scenarios:
       tam_competitor_share: 70.0
 historical_prices:
   ipo_marker: SPAC May '24
-  x_min: -2.51
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-2.49, 11.42]   # 2024-03-28
-  - [-2.23, 8.47]   # 2024-06-28
-  - [-1.98, 8.09]   # 2024-09-30
-  - [-1.72, 21.23]   # 2024-12-31
-  - [-1.48, 21.63]   # 2025-03-31
-  - [-1.23, 55.99]   # 2025-06-30
-  - [-0.98, 111.63]   # 2025-09-30
-  - [-0.73, 71.76]   # 2025-12-31
-  - [-0.48, 49.59]   # 2026-03-31
-  - [-0.23, 52.33]   # 2026-06-30
-  - [-0.15, 38.83]   # 2026-07-31
-  - [-0.06, 40.57]   # 2026-08-31
+  x_min: -2.59
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-2.57, 11.42]   # 2024-03-28
+  - [-2.31, 8.47]   # 2024-06-28
+  - [-2.06, 8.09]   # 2024-09-30
+  - [-1.80, 21.23]   # 2024-12-31
+  - [-1.56, 21.63]   # 2025-03-31
+  - [-1.31, 55.99]   # 2025-06-30
+  - [-1.06, 111.63]   # 2025-09-30
+  - [-0.81, 71.76]   # 2025-12-31
+  - [-0.56, 49.59]   # 2026-03-31
+  - [-0.31, 52.33]   # 2026-06-30
+  - [-0.23, 38.83]   # 2026-07-31
+  - [-0.14, 40.57]   # 2026-08-31
+  - [-0.08, 40.18]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 8%
   body: Aurora fails / NRC re-denial; cash shell.
@@ -825,7 +823,7 @@ weighting_rationale:
 - label: Bull 23%
   body: Factory economics work; ~7 GW AI-power scale.
 - label: Ultra Bull 8%
-  body: 13 GW + HALEU fuel monopoly; +338%, clears spot.
+  body: 13 GW + HALEU fuel monopoly; +534%, clears spot.
 appendix:
   pushback:
   - label: Best-capitalized advanced-nuclear name.
@@ -990,13 +988,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Origination)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "008"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "008"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 40.18
   - version: "006"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"

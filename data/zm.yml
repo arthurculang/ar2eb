@@ -26,11 +26,11 @@ ticker: ZM
 company: Zoom Communications
 exchange: NASDAQ
 dcf_type: mature_company_sotp   # young_company | mature_company | mature_company_sotp
-date: '2026-09-22'
-spot: 90.90
+date: '2026-10-22'
+spot: 99.44
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 27.24
+  market_cap_billion: 29.80
   shares_outstanding_million: 299.7
   cash_billion: 7.9           # ZM cash & marketable securities (post-Q1 FY27)
   net_debt_billion: 0.0
@@ -44,12 +44,12 @@ central_question: >
   stable cash machine sitting on a $7B Anthropic stake not yet marked by an
   IPO?
 
-thesis: Zoom trades at $90.90 ($27.2B market cap); $7.9B of cash covers 29% of that. FY26 revenue was $4.87B, and reported
+thesis: Zoom trades at $99.44 ($29.8B market cap); $7.9B of cash covers 27% of that. FY26 revenue was $4.87B, and reported
   free cash flow of $1.92B adds back $0.76B of stock comp (15.6% of revenue). Net of that real cost, owner FCF is ~$1.16B
-  and enterprise value is ~17× it (~10× headline FCF), or ~11× net of a $7B Anthropic value. That stake, carried near $1.5B,
+  and enterprise value is ~19× it (~11× headline FCF), or ~13× net of a $7B Anthropic value. That stake, carried near $1.5B,
   is valued at $2-16B across scenarios pending its IPO; the core faces real but slow competition from Teams and Workspace.
   Valued on owner FCF and today's ~300M diluted shares (buybacks spend cash already counted), the weighted value is ~$100,
-  +10% vs the price. The most likely case (base, 50%) sits ~11% above the price; 30% of the probability sits below it.
+  +1% vs the price. The most likely case (base, 50%) sits ~2% above the price; 30% of the probability sits below it.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:
@@ -112,7 +112,7 @@ scenarios:
         value negative, leaving Op EV at just $1.1B. Cash drains to ~$5.5B on
         buybacks that only offset dilution. Anthropic floors at $2B (sub-$400B
         IPO). SOTP equity: $8.6B ÷ 299.7M shares =
-        ~$28.70/share — a -68% tail, against the ultra-bull's +154%.
+        ~$28.70/share — a -71% tail, against the ultra-bull's +133%.
     probability_rationale: >
       Joint conjunction of four independent fault lines: (a) Cisco-style
       displacement curve materializes (-10/-13/-19% YoY) — historical base
@@ -191,8 +191,7 @@ scenarios:
         Even Anthropic disappoints: the AI capex cycle moderates, IPO prices
         at the low end, and the stake marks closer to $4B than $9B. SOTP math
         still gives some floor — $7.0B op EV + $7.8B cash + $4B Anthropic =
-        $18.8B equity ÷ 299.7M shares = ~$62.80/share, 31% below today's
-        $90.90; the cash + stake (~$39/share) cushion the loss. Bear isn't
+        $18.8B equity ÷ 299.7M shares = ~$62.80/share, 37% below today's $99.44; the cash + stake (~$39/share) cushion the loss. Bear isn't
         bankruptcy; it's structural erosion of the operating business.
     probability_rationale: >
       Bearish thesis is competitive commoditization: Teams (Microsoft's
@@ -270,9 +269,7 @@ scenarios:
         $700B-1T and Zoom's stake gets marked publicly for the first time.
         The hidden asset on Zoom's balance sheet becomes visible to every
         screener. SOTP math: $15.6B op EV + $7.8B cash + $7B Anthropic =
-        $30.4B equity ÷ 299.7M shares = ~$101/share. The core's multiple
-        expands from ~11x owner FCF (net of cash and a $7B Anthropic value)
-        to ~13x as the cash and Anthropic carry stop being discounted
+        $30.4B equity ÷ 299.7M shares = ~$101/share. The core's multiple, ~13x owner FCF today (net of cash and a $7B Anthropic value), holds as the cash and Anthropic carry stop being discounted
         heuristically.
     probability_rationale: >
       Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27
@@ -409,8 +406,7 @@ scenarios:
         contributors.
       - >
         Owner FCF margin (after stock comp) widens from 25% to 31%, and the
-        multiple roughly doubles as the growth story consolidates: ~23x to
-        50x+ price to owner FCF (~14x to 30x+ on headline FCF). SOTP math:
+        multiple roughly doubles as the growth story consolidates: ~26x to 50x+ price to owner FCF (~16x to 30x+ on headline FCF). SOTP math:
         $45.5B operating EV + $7.8B cash + $16B Anthropic (mid-case mark) =
         $69.3B equity ÷ 299.7M shares = ~$231/share. The ultra-bull is
         materially different from bull: not just AI works AND Anthropic
@@ -419,8 +415,7 @@ scenarios:
     probability_rationale: >
       Joint conditional: Anthropic IPO above $2T (60% conditional on IPO)
       AND AI Companion crosses $1B ARR (40% conditional on existing
-      trajectory) AND the multiple roughly doubles, ~23x to 50x+ price to
-      owner FCF (~14x to 30x+ on headline FCF; 50% conditional on growth +
+      trajectory) AND the multiple roughly doubles, ~26x to 50x+ price to owner FCF (~16x to 30x+ on headline FCF; 50% conditional on growth +
       AI both firing). Joint at 5-7%, reflected
       here at 5%. This is the scenario where ZM stops being a 'value with
       AI optionality' name and becomes a growth-software name with an
@@ -462,40 +457,41 @@ scenarios:
 # x = years offset from today (negative = past).
 historical_prices:
   ipo_marker: "IPO Apr '19"
-  x_min: -7.85            # years of history to show in chart
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-7.4, 72.47]   # 2019-04-30
-  - [-7.24, 88.79]   # 2019-06-28
-  - [-6.98, 76.20]   # 2019-09-30
-  - [-6.73, 68.04]   # 2019-12-31
-  - [-6.48, 146.12]   # 2020-03-31
-  - [-6.23, 253.54]   # 2020-06-30
-  - [-5.98, 470.11]   # 2020-09-30
-  - [-5.72, 337.32]   # 2020-12-31
-  - [-5.48, 321.29]   # 2021-03-31
-  - [-5.23, 387.03]   # 2021-06-30
-  - [-4.98, 261.50]   # 2021-09-30
-  - [-4.73, 183.91]   # 2021-12-31
-  - [-4.48, 117.23]   # 2022-03-31
-  - [-4.23, 107.97]   # 2022-06-30
-  - [-3.98, 73.59]   # 2022-09-30
-  - [-3.73, 67.74]   # 2022-12-30
-  - [-3.48, 73.84]   # 2023-03-31
-  - [-3.23, 67.88]   # 2023-06-30
-  - [-2.98, 69.94]   # 2023-09-29
-  - [-2.73, 71.91]   # 2023-12-29
-  - [-2.49, 65.37]   # 2024-03-28
-  - [-2.23, 59.19]   # 2024-06-28
-  - [-1.98, 69.74]   # 2024-09-30
-  - [-1.72, 81.61]   # 2024-12-31
-  - [-1.48, 73.77]   # 2025-03-31
-  - [-1.23, 77.98]   # 2025-06-30
-  - [-0.98, 82.50]   # 2025-09-30
-  - [-0.73, 86.29]   # 2025-12-31
-  - [-0.48, 80.39]   # 2026-03-31
-  - [-0.23, 86.31]   # 2026-06-30
-  - [-0.15, 96.07]   # 2026-07-31
-  - [-0.06, 96.68]   # 2026-08-31
+  x_min: -7.93            # years of history to show in chart
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-7.48, 72.47]   # 2019-04-30
+  - [-7.32, 88.79]   # 2019-06-28
+  - [-7.06, 76.20]   # 2019-09-30
+  - [-6.81, 68.04]   # 2019-12-31
+  - [-6.56, 146.12]   # 2020-03-31
+  - [-6.31, 253.54]   # 2020-06-30
+  - [-6.06, 470.11]   # 2020-09-30
+  - [-5.80, 337.32]   # 2020-12-31
+  - [-5.56, 321.29]   # 2021-03-31
+  - [-5.31, 387.03]   # 2021-06-30
+  - [-5.06, 261.50]   # 2021-09-30
+  - [-4.81, 183.91]   # 2021-12-31
+  - [-4.56, 117.23]   # 2022-03-31
+  - [-4.31, 107.97]   # 2022-06-30
+  - [-4.06, 73.59]   # 2022-09-30
+  - [-3.81, 67.74]   # 2022-12-30
+  - [-3.56, 73.84]   # 2023-03-31
+  - [-3.31, 67.88]   # 2023-06-30
+  - [-3.06, 69.94]   # 2023-09-29
+  - [-2.81, 71.91]   # 2023-12-29
+  - [-2.57, 65.37]   # 2024-03-28
+  - [-2.31, 59.19]   # 2024-06-28
+  - [-2.06, 69.74]   # 2024-09-30
+  - [-1.80, 81.61]   # 2024-12-31
+  - [-1.56, 73.77]   # 2025-03-31
+  - [-1.31, 77.98]   # 2025-06-30
+  - [-1.06, 82.50]   # 2025-09-30
+  - [-0.81, 86.29]   # 2025-12-31
+  - [-0.56, 80.39]   # 2026-03-31
+  - [-0.31, 86.31]   # 2026-06-30
+  - [-0.23, 96.07]   # 2026-07-31
+  - [-0.14, 96.68]   # 2026-08-31
+  - [-0.08, 90.90]   # 2026-09-22 spot (prior as-of, reprice.py)
 
 # ── Page 1 weighting rationale (one short line per scenario) ────────────────
 weighting_rationale:
@@ -523,7 +519,7 @@ appendix:
     - label: "AI Companion strategy is right."
       body: "Bundle AI into existing plans rather than separate SKU. Microsoft Copilot's $30/seat model is the cautionary tale — adoption underwhelmed."
     - label: "$7.8B cash is a real floor."
-      body: "~29% of market cap is cash (~$26/share), earning ~4% in T-bills — optionality for M&A or buybacks. Even the ultra-bear ($28.70) is above the $26."
+      body: "~26% of market cap is cash (~$26/share), earning ~4% in T-bills — optionality for M&A or buybacks. Even the ultra-bear ($28.70) is above the $26."
     - label: "Anthropic stake is asymmetric."
       body: "Carried at cost ($1.5B); worth $4-9B today; could mark to $15B+ post-IPO. Hidden asset most screeners ignore."
     - label: "Capital allocation track record."
@@ -548,13 +544,17 @@ taxonomy:
   primary_theme: platform-marketplace-tech
 
 stamp:
-  footer_version: "029"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "030"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "029"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "030"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "029"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 90.90
   - version: "028"
     timestamp: "2026-09-22_13-17"
     asOfDate: "2026-09-22"

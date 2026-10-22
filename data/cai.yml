@@ -2,16 +2,16 @@ ticker: CAI
 company: Caris Life Sciences
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-09-22'
-spot: 30.65
+date: '2026-10-22'
+spot: 32.35
 market:
-  market_cap_billion: 8.66
+  market_cap_billion: 9.14
   shares_outstanding_million: 282.6
   cash_billion: 0.8
   net_debt_billion: 0.4
   extras:
   - FY25 revenue $812M (+97%!); GM 47%->65%, 68% in Q2'26; adj-EBITDA +$138M; FCF-positive
-  - IPO Jun-2025 @ $21, now $30.65 (+46%); FY26 guide raised $1.03-1.04B (+27-28%); ~$0.4B net cash
+  - IPO Jun-2025 @ $21, now $32.35 (+54%); FY26 guide raised $1.03-1.04B (+27-28%); ~$0.4B net cash
   - Halbert ~44% vote; SBC ~$70M flatters adj-EBITDA; ~$33M of FY25 rev was reimbursement true-ups
 taxonomy:
   watchlist: asymmetrical-moonshots
@@ -19,14 +19,13 @@ taxonomy:
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology
-central_question: 'After doubling on a beat-and-raise, Caris trades ~8x sales — level with Tempus — with the base case ~37%
+central_question: 'After doubling on a beat-and-raise, Caris trades ~8x sales — above Tempus — with the base case ~40%
   below the price: is the market right to pay now for Caris Detect and the data platform before either shows revenue?'
 thesis: Caris Life Sciences is an AI precision-oncology diagnostics company — whole-exome/transcriptome tumor profiling plus
-  blood-based testing — that IPO'd June 2025 at $21.00 and now trades $30.65 after doubling since July on a beat-and-raise
+  blood-based testing — that IPO'd June 2025 at $21.00 and now trades $32.35 after doubling since July on a beat-and-raise
   (Q2'26 revenue +45%, gross margin 68%, FY26 guide raised to $1.03-1.04B) and favorable preliminary 2027 Medicare rates.
-  At ~8x sales it is priced level with Tempus, while owner free cash flow runs ~zero this year as it builds out Caris Detect,
-  a cash-pay screening test with no revenue yet. Weighted fair value $23.62, ~23% below spot; the base case ($19.35) sits
-  ~37% below, with ~73% of the probability mass at or below the price.
+  At ~8x sales it is priced above Tempus, while owner free cash flow runs ~zero this year as it builds out Caris Detect,
+  a cash-pay screening test with no revenue yet. Weighted fair value $23.62, ~27% below spot; the base case ($19.35) sits ~40% below, with ~73% of the probability mass at or below the price.
 chart_reference:
   history_years:
   - 2023
@@ -77,7 +76,7 @@ scenarios:
       alone make the H2'26 comparison optically weak, and the reported growth rate is exposed as flattered.
     - Margins barely move off the floor — owner-FCF ~0% this year and only ~10% by FY30 — as price competition from Tempus,
       Guardant and Foundation erodes the gross-margin gains. The ~8x sales multiple compresses hard against a decelerating,
-      low-margin base. DCF lands at $5.10, down 83%.
+      low-margin base. DCF lands at $5.10, down 84%.
     probability_rationale: Requires the volume engine to stall from Q4 onward and the true-up to be a one-off rather than
       a recurring feature of payer settlements. With H1'26 booked at +59% a 2026 collapse is arithmetically foreclosed, so
       the stall must arrive from FY27 — a longer conjunction than in July. Trimmed from 13% to 10%, the three points to the
@@ -154,7 +153,7 @@ scenarios:
       as the H2'25 true-up comps and per-test pricing pressure bite and the easy share gains slow. The margin inflection partly
       holds, reaching mid-teens owner-FCF, but not fast enough to outrun a contracting multiple.
     - The market re-rates an ~8x-sales name toward something closer to a low-double-digit grower, and the post-rally premium
-      unwinds. At a 0%-to-15% owner-FCF path the DCF is $9.97, down 67%. The setup is a quality business priced ahead of its
+      unwinds. At a 0%-to-15% owner-FCF path the DCF is $9.97, down 69%. The setup is a quality business priced ahead of its
       delivery.
     probability_rationale: 'The honest deceleration case — the +27-28% guide is still a steep step-down from +97%, and a further
       slide plus pricing pressure is plausible. Held at 27% because the evidence is mixed: the guide was raised and the preliminary
@@ -232,8 +231,7 @@ scenarios:
     - Revenue compounds ~17.4% off the raised $1.03-1.04B FY26 guide as clinical test volume grows ~20% and Caris Assure,
       MI Cancer Seek and the MolDX-covered ChromoSeq myeloid assay (May-2026) add incremental lives. Gross margin already
       reached 68% in Q2'26; owner-FCF is ~1% this year under the Detect build-out, then leverages toward 21% by FY30.
-    - This is the modal outcome — a real growth-plus-margin story that delivers, not a moonshot. At $19.35 the DCF sits ~37%
-      below the $30.65 price — executing the plan no longer clears spot; the market has moved past the base case.
+    - This is the modal outcome — a real growth-plus-margin story that delivers, not a moonshot. At $19.35 the DCF sits ~40% below the $32.35 price — executing the plan no longer clears spot; the market has moved past the base case.
     probability_rationale: Centered on management hitting the raised FY26 guide and sustaining the volume KPI while margins
       keep inflecting — the continuation of what the last two years and H1'26 already showed. Raised from 33% to 36% with
       the points the ultra bear released as a 2026 collapse became foreclosed; still below the 45-55% modal norm because the
@@ -309,7 +307,7 @@ scenarios:
     - Revenue compounds ~22% as the proprietary whole-exome/transcriptome data asset and the ADAPT platform drive both test
       volume and pharma partnership revenue, while comprehensive profiling takes share from narrower NGS panels.
     - Operating leverage on a fixed data and lab base pushes owner-FCF from ~2% this year toward 29%, software-like for diagnostics.
-      The market rewards durable hypergrowth plus a widening margin with an expanded multiple. DCF reaches $38.69, up 26%,
+      The market rewards durable hypergrowth plus a widening margin with an expanded multiple. DCF reaches $38.69, up 20%,
       as the data-moat thesis starts to show in the financials.
     probability_rationale: Needs growth to stay above 20% well past the raised guide and the gross-margin gains to keep compounding
       into operating leverage. No FY27 guide exists and Caris Detect has no disclosed revenue, so the condition is not yet
@@ -388,7 +386,7 @@ scenarios:
       tripled to ~$3B, demand ahead of plan; ACHIEVE-1 stage I-II sensitivity 61%, specificity 95%) is unpriced optionality
       on top — no FDA filing, so outside the 2028 Medicare MCED pathway — narrated here, not modeled.'
     - Owner-FCF margins reach ~35%, approaching software economics as the data and AI layer scales near-zero-marginal-cost.
-      At $72.05 the DCF is ~2.4x the price. This is the platform outcome where the cornered data resource and scale economics
+      At $72.05 the DCF is ~2.2x the price. This is the platform outcome where the cornered data resource and scale economics
       fully express.
     probability_rationale: The full platform win — durable hypergrowth, a true data-network effect, and software-like margins
       together. Each is individually demanding and the combination is a tail, so it carries 9% — meaningful upside optionality,
@@ -456,31 +454,31 @@ scenarios:
       - 12.0
 historical_prices:
   ipo_marker: IPO Jun '25
-  x_min: -1.3
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-1.23, 26.72]   # 2025-06-30
-  - [-0.98, 30.25]   # 2025-09-30
-  - [-0.73, 26.98]   # 2025-12-31
-  - [-0.48, 17.88]   # 2026-03-31
-  - [-0.23, 17.82]   # 2026-06-30
-  - [-0.15, 15.67]   # 2026-07-31
-  - [-0.06, 25.49]   # 2026-08-31
+  x_min: -1.38
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-1.31, 26.72]   # 2025-06-30
+  - [-1.06, 30.25]   # 2025-09-30
+  - [-0.81, 26.98]   # 2025-12-31
+  - [-0.56, 17.88]   # 2026-03-31
+  - [-0.31, 17.82]   # 2026-06-30
+  - [-0.23, 15.67]   # 2026-07-31
+  - [-0.14, 25.49]   # 2026-08-31
+  - [-0.08, 30.65]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 10%
   body: Q4 stumble then stall, growth ~6.6%, the true-up reverses, margins near zero — DCF $5.10.
 - label: Bear 27%
   body: Modest guide miss, decelerates to ~12%, the multiple re-rates down — DCF $9.97.
 - label: Base 36%
-  body: ~17.4% growth, margin inflection holds to 21% owner-FCF — DCF $19.35, ~37% below spot.
+  body: ~17.4% growth, margin inflection holds to 21% owner-FCF — DCF $19.35, ~40% below spot.
 - label: Bull 18%
   body: ~22% hypergrowth, the data moat drives operating leverage — DCF $38.69.
 - label: Ultra Bull 9%
   body: ~27% growth, oncology-data standard, software-like 35% margins — DCF $72.05.
 appendix:
   pushback:
-  - label: Still cheaper than Tempus
-    body: At ~8.0x the FY26 guide vs Tempus at ~8.7x, Caris is marginally cheaper and already FCF-positive where Tempus is
-      not — but the July discount has closed.
+  - label: Priced near Tempus
+    body: At ~8.4x the FY26 guide vs Tempus at ~7.6x, Caris is slightly richer but already FCF-positive where Tempus is not — the July discount has closed.
   - label: The margin inflection is real
     body: Gross margin went 47%->65% in FY25 and 68% in Q2'26, with ~+$27M of GAAP operating income in the quarter — observed
       leverage, not promised.
@@ -650,13 +648,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Audit)
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "009"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "010"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "009"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "010"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "009"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 30.65
   - version: "008"
     timestamp: "2026-09-26_00-13"
     asOfDate: "2026-09-22"

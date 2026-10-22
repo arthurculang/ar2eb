@@ -13,27 +13,26 @@ ticker: HHH
 company: Howard Hughes Holdings
 exchange: NYSE
 dcf_type: mature_company_sotp   # young_company | mature_company | mature_company_sotp
-date: '2026-09-22'
-spot: 65.60
+date: '2026-10-22'
+spot: 68.68
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 3.91       # 59.63M sh × $72.53
+  market_cap_billion: 4.09       # 59.63M sh × $72.53
   shares_outstanding_million: 59.63   # Q1'26 10-Q (Mar-31-2026)
   cash_billion: 1.84             # cash & equivalents (Q1'26)
   net_debt_billion: 5.79         # total debt $5.79B − cash $1.84B
   extras:
-    - "~37% discount to $104 NAV"   # the structural story; SOTP non-operating context
+    - "~34% discount to $104 NAV"   # the structural story; SOTP non-operating context
 
 # ── Page 1 narrative content ────────────────────────────────────────────────
 
 central_question: >
-  Howard Hughes trades at a ~37% discount to its own $104 sum-of-the-parts NAV — is
+  Howard Hughes trades at a ~34% discount to its own $104 sum-of-the-parts NAV — is
   Bill Ackman's Berkshire-style holding-company conversion the catalyst that finally
   closes a fifteen-year discount on this land bank, or a value trap with a new fee?
 
 thesis: >
-  Howard Hughes trades at $65.60 (~$3.9B market cap) — roughly book (~$63/sh) but a
-  ~37% discount to the company's own $104/share sum-of-the-parts NAV (~80%
+  Howard Hughes trades at $68.68 (~$4.1B market cap) — roughly book (~$63/sh) but a ~34% discount to the company's own $104/share sum-of-the-parts NAV (~80%
   irreplaceable master-planned-community land + operating assets, ~20% the new
   Vantage insurer). The land bank monetizes at records — FY2025 MPC EBT a record
   $476M, NOI a record $276M. The hard floor: Pershing Square (Ackman, ~47%,
@@ -90,7 +89,7 @@ scenarios:
         Meanwhile the Pershing management fee accrues against a shrinking equity
         base and the governance overhang (the Delaware control-premium suit)
         deters the marginal buyer. The market keeps a ~40% discount on a now-lower
-        NAV → ~$51/share, a −23% tail. This is a drawdown, not an impairment: the
+        NAV → ~$51/share, a −26% tail. This is a drawdown, not an impairment: the
         land does not go to zero, and Ackman's $100 cost basis sits far above it —
         but conviction in the catalyst would be tested.
     probability_rationale: >
@@ -201,14 +200,13 @@ scenarios:
         Executive-Chairman seat, and a live insurance float engine — and it earns a
         partial re-rating that the prior fifteen years never had. NAV compounds to
         ~$113/share on record land pricing, growing NOI, the Ward Village backlog,
-        and a contributing Vantage; and the discount narrows from ~37% toward ~20%
+        and a contributing Vantage; and the discount narrows from ~34% toward ~20%
         as the holding-company story gets credit.
       - >
         That lands at ~$90/share — almost exactly the sell-side consensus (~$90;
         Piper Sandler and BMO at $95, JPMorgan at $89). Not full NAV: the market
         still discounts a land bank and a thin near-term cash yield. But the gap
-        roughly halves, and you are paid the difference between buying at a ~37%
-        discount and exiting at ~20%.
+        roughly halves, and you are paid the difference between buying at a ~34% discount and exiting at ~20%.
     probability_rationale: >
       The most likely single outcome at 40%. The catalyst is real and datable
       (unlike the prior fifteen years of inertia), and a halving of the discount to
@@ -354,35 +352,36 @@ scenarios:
 # ── Historical price data ───────────────────────────────────────────────────
 historical_prices:
   ipo_marker: "HHC→HHH '23"
-  x_min: -6.25
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-6.23, 49.52]   # 2020-06-30
-  - [-5.98, 54.91]   # 2020-09-30
-  - [-5.72, 75.24]   # 2020-12-31
-  - [-5.48, 90.69]   # 2021-03-31
-  - [-5.23, 92.91]   # 2021-06-30
-  - [-4.98, 83.71]   # 2021-09-30
-  - [-4.73, 97.03]   # 2021-12-31
-  - [-4.48, 98.77]   # 2022-03-31
-  - [-4.23, 64.87]   # 2022-06-30
-  - [-3.98, 52.80]   # 2022-09-30
-  - [-3.73, 72.85]   # 2022-12-30
-  - [-3.48, 76.26]   # 2023-03-31
-  - [-3.23, 75.23]   # 2023-06-30
-  - [-2.98, 70.67]   # 2023-09-29
-  - [-2.73, 81.55]   # 2023-12-29
-  - [-2.49, 69.23]   # 2024-03-28
-  - [-2.23, 61.79]   # 2024-06-28
-  - [-1.98, 77.43]   # 2024-09-30
-  - [-1.72, 76.92]   # 2024-12-31
-  - [-1.48, 74.08]   # 2025-03-31
-  - [-1.23, 67.50]   # 2025-06-30
-  - [-0.98, 82.17]   # 2025-09-30
-  - [-0.73, 79.77]   # 2025-12-31
-  - [-0.48, 63.26]   # 2026-03-31
-  - [-0.23, 71.49]   # 2026-06-30
-  - [-0.15, 63.92]   # 2026-07-31
-  - [-0.06, 64.13]   # 2026-08-31
+  x_min: -6.33
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-6.31, 49.52]   # 2020-06-30
+  - [-6.06, 54.91]   # 2020-09-30
+  - [-5.80, 75.24]   # 2020-12-31
+  - [-5.56, 90.69]   # 2021-03-31
+  - [-5.31, 92.91]   # 2021-06-30
+  - [-5.06, 83.71]   # 2021-09-30
+  - [-4.81, 97.03]   # 2021-12-31
+  - [-4.56, 98.77]   # 2022-03-31
+  - [-4.31, 64.87]   # 2022-06-30
+  - [-4.06, 52.80]   # 2022-09-30
+  - [-3.81, 72.85]   # 2022-12-30
+  - [-3.56, 76.26]   # 2023-03-31
+  - [-3.31, 75.23]   # 2023-06-30
+  - [-3.06, 70.67]   # 2023-09-29
+  - [-2.81, 81.55]   # 2023-12-29
+  - [-2.57, 69.23]   # 2024-03-28
+  - [-2.31, 61.79]   # 2024-06-28
+  - [-2.06, 77.43]   # 2024-09-30
+  - [-1.80, 76.92]   # 2024-12-31
+  - [-1.56, 74.08]   # 2025-03-31
+  - [-1.31, 67.50]   # 2025-06-30
+  - [-1.06, 82.17]   # 2025-09-30
+  - [-0.81, 79.77]   # 2025-12-31
+  - [-0.56, 63.26]   # 2026-03-31
+  - [-0.31, 71.49]   # 2026-06-30
+  - [-0.23, 63.92]   # 2026-07-31
+  - [-0.14, 64.13]   # 2026-08-31
+  - [-0.08, 65.60]   # 2026-09-22 spot (prior as-of, reprice.py)
 
 # ── Page 1 weighting rationale (grouped buckets) ────────────────────────────
 weighting_rationale:
@@ -414,7 +413,7 @@ appendix:
     - label: "The discount is structural, but the catalyst is new."
       body: "Fifteen years of discount — but never with Pershing at ~47%, Ackman as Executive Chairman, and an insurer to deploy float. The setup changed."
     - label: "Trades near book, deep discount to NAV."
-      body: "At $65.60 the stock is ~1.04× book (~$63), but land is carried at decades-old cost; the SOTP marks it to ~$104–118."
+      body: "At $68.68 the stock is ~1.09× book (~$63), but land is carried at decades-old cost; the SOTP marks it to ~$104–118."
   triggers:
     - label: "Bear validation"
       body: "MPC EBT / NOI roll over  ·  superpad pricing reverts to bulk levels  ·  Vantage posts underwriting losses  ·  the discount stays > 30%  ·  the fee + Delaware suit weigh"
@@ -431,14 +430,18 @@ taxonomy:
   primary_theme: real-economy-hard-assets
 
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "007"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "007"
+  pdf_timestamp: "2026-10-22_13-24"
 
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 65.60
   - version: "005"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"
@@ -524,7 +527,7 @@ pocd:
       Berkshire-style conversion, paired with a capable operator (O''Reilly) posting record MPC EBT and NOI — strong
       alignment and execution. The offsets are material: Ackman''s tri-hatted conflict (owner + Chairman + fee-earning
       manager), a permanent fee, and a Delaware suit alleging the control transfer paid minorities no premium.'
-  opportunity_ref: 'The scenario distribution (+44%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI'
+  opportunity_ref: 'The scenario distribution (+37%) · the ~34% discount to the $104 NAV · record MPC EBT/NOI'
   context_ref: 'The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion'
   deal: 'Open-market purchase below the company''s own ~$104/share NAV estimate, weighed against the scenario distribution +
     position sizing. (Ackman''s own entry: $100/share, a 48% premium to the market at the time.)'

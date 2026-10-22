@@ -2,29 +2,29 @@ ticker: ABNB
 company: Airbnb
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-09-22'
-spot: 166.84
+date: '2026-10-22'
+spot: 173.69
 market:
-  market_cap_billion: 99.60
+  market_cap_billion: 103.69
   shares_outstanding_million: 597.0
   cash_billion: 12.0
   net_debt_billion: 2.5
   extras:
   - ~$9.5B net cash; $1.59B stock comp (13% of revenue); ~$3.8B/yr buyback
   - Revenue $12.24B FY25 (+10%); FCF $4.6B (38%), $3.0B (25%) after stock comp
-  - ~30× EV/FCF after stock comp (~20× reported); 2026 growth +18%/+17% in Q1/Q2
+  - ~31× EV/FCF after stock comp (~20× reported); 2026 growth +18%/+17% in Q1/Q2
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: High
   themes:
   - travel-mobility-services
   primary_theme: travel-mobility-services
-central_question: At ~30× FCF after stock comp, is Airbnb's 2026 re-acceleration durable — or do fading currency and World Cup boosts, AI booking agents and regulation pull growth back to high-single digits?
+central_question: At ~31× FCF after stock comp, is Airbnb's 2026 re-acceleration durable — or do fading currency and World Cup boosts, AI booking agents and regulation pull growth back to high-single digits?
 thesis: Airbnb's reported FY25 FCF of $4.6B (38% of revenue) excludes $1.59B of stock comp (13%); net of it, FCF is ~$3.0B (25%),
-  and the ~$90B enterprise value is ~30× that (~20× reported). Growth re-accelerated in 2026 (+18%/+17% in Q1-Q2; guide raised
+  and the ~$94B enterprise value is ~31× that (~20× reported). Growth re-accelerated in 2026 (+18%/+17% in Q1-Q2; guide raised
   twice to at least mid-teens, ~3 points of it currency) as nights outgrew Booking's rental business (+10% vs +4% in Q2). The DCF
   asks whether that pace holds once currency and World Cup boosts fade, AI booking agents launch without Airbnb, and regulation caps
-  city supply. Net of stock comp, the most likely case (growth near 10%) sits ~14% below the price; 72% of the probability sits
+  city supply. Net of stock comp, the most likely case (growth near 10%) sits ~17% below the price; 72% of the probability sits
   below it.
 chart_reference:
   history_years:
@@ -84,7 +84,7 @@ scenarios:
     narrative:
     - City STR bans spread (Barcelona's 2028 phase-out as the template), growth decays toward GDP-plus, and Experiences/Services
       never monetizes. After the 2026 currency and World Cup lift, revenue grows only ~3%; the premium multiple de-rates toward Booking's.
-    - DCF ~$85 (-49%) — still a cash machine at a ~23% FCF margin after stock comp, but priced for growth it has stopped delivering.
+    - DCF ~$85 (-51%) — still a cash machine at a ~23% FCF margin after stock comp, but priced for growth it has stopped delivering.
     probability_rationale: 'Regulation is the structural bear: NYC listings fell ~92%, Spain fined Airbnb EUR65M. 12% weight
       on bans + maturation capping the network.'
     dcf_metrics:
@@ -147,7 +147,7 @@ scenarios:
     narrative:
     - After the 2026 lift, growth settles in the high-single digits as Booking out-executes in alternative accommodations and regulation nibbles
       supply; the FCF margin after stock comp holds at 24-25%.
-    - DCF ~$108 (-35%) — well below spot; the network defends the cash even as growth matures.
+    - DCF ~$108 (-38%) — well below spot; the network defends the cash even as growth matures.
     probability_rationale: The law-of-large-numbers + Booking competition path. 25% weight — a very plausible 'matures gracefully'
       outcome.
     dcf_metrics:
@@ -210,7 +210,7 @@ scenarios:
     narrative:
     - 'The modal path: revenue grows mid-teens in 2026 (the guide), then ~10% as the currency and World Cup lift fades; Experiences/Services begins to monetize, and international
       under-penetration carries the network at a 25-26% FCF margin after stock comp (38-39% before it).'
-    - DCF ~$143 (-14%). At ~10% growth the business is worth ~25× FY25 FCF after stock comp, not the ~30× the price pays — the
+    - DCF ~$143 (-17%). At ~10% growth the business is worth ~25× FY25 FCF after stock comp, not the ~31× the price pays — the
       most likely case sits below spot.
     probability_rationale: Requires the guided mid-teens 2026 to settle near ~10% + modest Experiences/Services monetization. 35% as the
       central outcome — the network + brand are genuinely durable.
@@ -274,7 +274,7 @@ scenarios:
     narrative:
     - Experiences/Services becomes a real second leg, international scales, and AI-driven conversion lifts the take rate —
       revenue compounds ~13% a year and the FCF margin after stock comp widens from 25% to 27%.
-    - DCF ~$189 (+13%) — the relaunch pays off; today's price sits about midway between this case and the base.
+    - DCF ~$189 (+9%) — the relaunch pays off; today's price sits closer to this case than to the base.
     probability_rationale: Experiences/Services monetizes into a needle-mover + international compounds. ~20%; the relaunch
       is early but credible.
     dcf_metrics:
@@ -337,7 +337,7 @@ scenarios:
     narrative:
     - Airbnb becomes an end-to-end travel/lifestyle platform (homes + services + experiences + AI concierge), expanding TAM
       well beyond rentals as the FCF margin after stock comp climbs from 26% to 28%.
-    - DCF ~$238 (+43%) — the platform vision fully realized; ~8% probability.
+    - DCF ~$238 (+37%) — the platform vision fully realized; ~8% probability.
     probability_rationale: The full 'Airbnb everything' hub + AI concierge. ~8%, the asymmetric upside the Experiences/Services
       bet is really for.
     dcf_metrics:
@@ -393,44 +393,45 @@ scenarios:
       - 22.0
 historical_prices:
   ipo_marker: IPO Dec '20
-  x_min: -5.81
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-5.72, 146.80]   # 2020-12-31
-  - [-5.48, 187.94]   # 2021-03-31
-  - [-5.23, 153.14]   # 2021-06-30
-  - [-4.98, 167.75]   # 2021-09-30
-  - [-4.73, 166.49]   # 2021-12-31
-  - [-4.48, 171.76]   # 2022-03-31
-  - [-4.23, 89.08]   # 2022-06-30
-  - [-3.98, 105.04]   # 2022-09-30
-  - [-3.73, 85.50]   # 2022-12-30
-  - [-3.48, 124.40]   # 2023-03-31
-  - [-3.23, 128.16]   # 2023-06-30
-  - [-2.98, 137.21]   # 2023-09-29
-  - [-2.73, 136.14]   # 2023-12-29
-  - [-2.49, 164.96]   # 2024-03-28
-  - [-2.23, 151.63]   # 2024-06-28
-  - [-1.98, 126.81]   # 2024-09-30
-  - [-1.72, 131.41]   # 2024-12-31
-  - [-1.48, 119.46]   # 2025-03-31
-  - [-1.23, 132.34]   # 2025-06-30
-  - [-0.98, 121.42]   # 2025-09-30
-  - [-0.73, 135.72]   # 2025-12-31
-  - [-0.48, 126.28]   # 2026-03-31
-  - [-0.23, 143.10]   # 2026-06-30
-  - [-0.15, 151.52]   # 2026-07-31
-  - [-0.06, 183.22]   # 2026-08-31
+  x_min: -5.89
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-5.80, 146.80]   # 2020-12-31
+  - [-5.56, 187.94]   # 2021-03-31
+  - [-5.31, 153.14]   # 2021-06-30
+  - [-5.06, 167.75]   # 2021-09-30
+  - [-4.81, 166.49]   # 2021-12-31
+  - [-4.56, 171.76]   # 2022-03-31
+  - [-4.31, 89.08]   # 2022-06-30
+  - [-4.06, 105.04]   # 2022-09-30
+  - [-3.81, 85.50]   # 2022-12-30
+  - [-3.56, 124.40]   # 2023-03-31
+  - [-3.31, 128.16]   # 2023-06-30
+  - [-3.06, 137.21]   # 2023-09-29
+  - [-2.81, 136.14]   # 2023-12-29
+  - [-2.57, 164.96]   # 2024-03-28
+  - [-2.31, 151.63]   # 2024-06-28
+  - [-2.06, 126.81]   # 2024-09-30
+  - [-1.80, 131.41]   # 2024-12-31
+  - [-1.56, 119.46]   # 2025-03-31
+  - [-1.31, 132.34]   # 2025-06-30
+  - [-1.06, 121.42]   # 2025-09-30
+  - [-0.81, 135.72]   # 2025-12-31
+  - [-0.56, 126.28]   # 2026-03-31
+  - [-0.31, 143.10]   # 2026-06-30
+  - [-0.23, 151.52]   # 2026-07-31
+  - [-0.14, 183.22]   # 2026-08-31
+  - [-0.08, 166.84]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 12%
-  body: Regulation + maturation; ~$85 (-49%).
+  body: Regulation + maturation; ~$85 (-51%).
 - label: Bear 25%
-  body: High-single growth; regulation; ~$108 (-35%).
+  body: High-single growth; regulation; ~$108 (-38%).
 - label: Base 35%
-  body: Mid-teens 2026, then ~10%; ~$143 (-14%).
+  body: Mid-teens 2026, then ~10%; ~$143 (-17%).
 - label: Bull 20%
-  body: Experiences/intl re-accel; ~$189 (+13%).
+  body: Experiences/intl re-accel; ~$189 (+9%).
 - label: Ultra Bull 8%
-  body: End-to-end travel hub; ~$238 (+43%).
+  body: End-to-end travel hub; ~$238 (+37%).
 appendix:
   pushback:
   - label: 2026 is running ahead of the base.
@@ -535,17 +536,21 @@ competitive:
     falsifier: A flagship metro structurally bans STRs, or registration regimes materially shrink supply.
   takeaway: 'Airbnb''s network-economies + verb-grade brand are genuinely durable on the demand side (direct traffic, two-sided
     liquidity), and the FCF margin is high — 38% as reported, 25% after stock comp. The terminal-value debate is not a competitor
-    out-networking them — it''s regulation (dense-urban supply caps) + growth maturation. At ~30× FCF after stock comp the price
-    needs more than the most likely case (growth near 10%, ~14% below it): the Powers are real, but only the bull cases (teens
+    out-networking them — it''s regulation (dense-urban supply caps) + growth maturation. At ~31× FCF after stock comp the price
+    needs more than the most likely case (growth near 10%, ~17% below it): the Powers are real, but only the bull cases (teens
     growth held) clear it, and the Experiences/Services relaunch is the swing.'
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "008"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "008"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 166.84
   - version: "006"
     timestamp: "2026-09-26_04-14"
     asOfDate: "2026-09-22"

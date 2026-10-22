@@ -2,10 +2,10 @@ ticker: META
 company: Meta Platforms
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-09-22'
-spot: 741.25
+date: '2026-10-22'
+spot: 697.52
 market:
-  market_cap_billion: 1902.05
+  market_cap_billion: 1789.84
   shares_outstanding_million: 2566.0
   cash_billion: 81.6
   net_debt_billion: 58.7
@@ -13,7 +13,7 @@ market:
   - Net cash +$22.9B at YE25; FY25 buybacks ~$26B + dividends ~$5B, then no buybacks in H1'26
   - Revenue $201B FY25 (+22%); GAAP op margin 41.4%; FCF $46.1B, or ~$25.7B after $20.4B of stock comp; capex ~$72B, guided
     to $130-145B
-  - '$741 at the Sep-21 close: +12% YTD, +30% since Aug 31 (+11% on Sep 21), ~7% below the $796 Aug-2025 high'
+  - '$698 at the Oct-21 close: +6% YTD, +22% since Aug 31, ~12% below the $796 Aug-2025 high'
 taxonomy:
   watchlist: fcf-megacap
   tier: Med
@@ -21,12 +21,11 @@ taxonomy:
   - platform-marketplace-tech
   - ai-compute
   primary_theme: platform-marketplace-tech
-central_question: Is the ~$130B/yr AI capex building a second act beyond ads — the only case that clears ~$1.9T once stock
+central_question: Is the ~$130B/yr AI capex building a second act beyond ads — the only case that clears ~$1.8T once stock
   comp is charged as a cost?
-thesis: Meta trades at ~$1.90T (~$741, +12% YTD, +30% since Aug 31). Revenue grew +33% in Q1'26 and +28% in Q2 while capex
+thesis: Meta trades at ~$1.79T (~$698, +6% YTD, +22% since Aug 31). Revenue grew +33% in Q1'26 and +28% in Q2 while capex
   heads to $130-145B (~2× FY25). Reported FCF adds back stock comp ($20.4B, 10% of FY25 revenue); charged as the real cost
-  it is, FY25 FCF falls from $46.1B to ~$26B, or ~73× EV/FCF vs ~41× reported. The probability-weighted value sits ~47% below
-  spot and the base case ~51% below, with 93% of the probability at or below the price.
+  it is, FY25 FCF falls from $46.1B to ~$26B, or ~69× EV/FCF vs ~38× reported. The probability-weighted value sits ~44% below spot and the base case ~48% below, with 93% of the probability at or below the price.
 chart_reference:
   history_years:
   - 2021
@@ -87,7 +86,7 @@ scenarios:
       the ad cycle softens, and Reality Labs keeps bleeding ~$24B/yr. Revenue growth decelerates into the mid-single digits
       and FCF after stock comp stays near ~8-10% of revenue as depreciation outruns the operating line.'
     - 'An ad business growing slowly while spending ~2x prior year on uncertain-return compute earns a ~14x terminal multiple
-      on FCF after stock comp: DCF ~$133 (-82%). Net cash of ~$9/share cannot offset a buildout that does not earn its cost
+      on FCF after stock comp: DCF ~$133 (-81%). Net cash of ~$9/share cannot offset a buildout that does not earn its cost
       of capital.'
     probability_rationale: 'The genuine bear: the market already flinched (-6% after-hours) on the capex raise, the ROI is
       unproven, and Reality Labs has lost ~$80B cumulatively. 12% weight on the spend failing to convert to durable ad gains.'
@@ -152,7 +151,7 @@ scenarios:
     - Ad growth normalizes off the +33% spike toward high-single/low-double-digit as the buildout's depreciation steps up,
       AI lifts pricing but only modestly, and Reality Labs stays a drag. Operating margin holds high-30s and FCF after stock
       comp sits ~10-13% of revenue as capex stays elevated against a larger D&A base.
-    - DCF ~$230 (-69%) - a still-dominant ad franchise, but one digesting a heavy buildout at a ~16x terminal multiple on
+    - DCF ~$230 (-67%) - a still-dominant ad franchise, but one digesting a heavy buildout at a ~16x terminal multiple on
       FCF after stock comp is worth about a third of today's price; the gap is warranted if the capex weighs on free cash
       flow longer than the ad engine compounds.
     probability_rationale: Share gains and pricing continue but the D&A from ~$130B/yr capex caps margin and free cash flow.
@@ -218,12 +217,12 @@ scenarios:
     - 'The modal path: AI-driven ad efficiency keeps lifting volume and price (the Q1''26 +33% is the first datapoint), revenue
       compounds ~14% a year to ~$385B by FY30, and operating margin holds ~41% as the buildout''s returns roughly offset its
       D&A. FCF after stock comp grinds from ~12% of revenue toward ~16% as capex moderates against a larger base.'
-    - DCF ~$365 (-51%) - the ad engine compounds and the capex earns roughly its cost of capital, yet at a ~19x terminal multiple
+    - DCF ~$365 (-48%) - the ad engine compounds and the capex earns roughly its cost of capital, yet at a ~19x terminal multiple
       on FCF after stock comp the modal case is worth about half of today's price; the price already assumes more than the
       central outcome.
     probability_rationale: Requires the AI capex to roughly earn its cost of capital while ad growth stays double-digit -
       consistent with the accelerating Q1'26 ad metrics and 41% margins, but not a step-change. 34% as the central outcome,
-      still ~51% below the price.
+      still ~48% below the price.
     dcf_metrics:
       cagr_5y: 13.9
       wacc: 0.09
@@ -285,7 +284,7 @@ scenarios:
     - 'The capex pays off: AI ad-creation (Muse Spark, adopters ~8M) and ranking durably lift impressions and price, the buildout''s
       return outruns its D&A, and operating margin expands past 42% as the ad engine scales on the compute. Revenue compounds
       high-teens and FCF after stock comp climbs from ~14% of revenue toward ~20% as capex intensity peaks and rolls over.'
-    - 'DCF ~$636 (-14%) - even if the AI spend converts to a structurally faster, higher-margin ad engine, a ~23x terminal
+    - 'DCF ~$636 (-9%) - even if the AI spend converts to a structurally faster, higher-margin ad engine, a ~23x terminal
       multiple on FCF after stock comp leaves the bull below today''s price: the capex paying off is already in the stock.'
     probability_rationale: Meta's own AI tools are already in the core ad stack and Q1'26 showed both volume and price accelerating;
       if that durability holds, the capex earns well above its cost. 20% weight on the buildout becoming a real ad-monetization
@@ -352,7 +351,7 @@ scenarios:
       a new revenue stream beyond the core ad TAM, and the compute buildout becomes an owned platform asset. Operating margin
       pushes mid-40s and FCF after stock comp climbs toward ~23% of revenue as the spend turns into durable, high-incremental-margin
       revenue.'
-    - DCF ~$917 (+24%) - the buildout earns a platform multiple (~25x terminal FCF after stock comp) as AI becomes an earnings
+    - DCF ~$917 (+31%) - the buildout earns a platform multiple (~25x terminal FCF after stock comp) as AI becomes an earnings
       engine rather than a cost; at ~7% probability, the only scenario that clears today's price.
     probability_rationale: Everything works - AI lifts ads AND opens a messaging/agent revenue stream AND the compute becomes
       a platform asset, the AWS/datacenter-style second act. ~7%, the long-duration tail.
@@ -409,47 +408,48 @@ scenarios:
       - 25.0
 historical_prices:
   ipo_marker: IPO May '12
-  x_min: -6.51
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-6.48, 166.80]   # 2020-03-31
-  - [-6.23, 227.07]   # 2020-06-30
-  - [-5.98, 261.90]   # 2020-09-30
-  - [-5.72, 273.16]   # 2020-12-31
-  - [-5.48, 294.53]   # 2021-03-31
-  - [-5.23, 347.71]   # 2021-06-30
-  - [-4.98, 339.39]   # 2021-09-30
-  - [-4.73, 336.35]   # 2021-12-31
-  - [-4.48, 222.36]   # 2022-03-31
-  - [-4.23, 161.25]   # 2022-06-30
-  - [-3.98, 135.68]   # 2022-09-30
-  - [-3.73, 120.34]   # 2022-12-30
-  - [-3.48, 211.94]   # 2023-03-31
-  - [-3.23, 286.98]   # 2023-06-30
-  - [-2.98, 300.21]   # 2023-09-29
-  - [-2.73, 353.96]   # 2023-12-29
-  - [-2.49, 485.58]   # 2024-03-28
-  - [-2.23, 504.22]   # 2024-06-28
-  - [-1.98, 572.44]   # 2024-09-30
-  - [-1.72, 585.51]   # 2024-12-31
-  - [-1.48, 576.36]   # 2025-03-31
-  - [-1.23, 738.09]   # 2025-06-30
-  - [-0.98, 734.38]   # 2025-09-30
-  - [-0.73, 660.09]   # 2025-12-31
-  - [-0.48, 572.13]   # 2026-03-31
-  - [-0.23, 563.29]   # 2026-06-30
-  - [-0.15, 556.71]   # 2026-07-31
-  - [-0.06, 572.34]   # 2026-08-31
+  x_min: -6.59
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-6.56, 166.80]   # 2020-03-31
+  - [-6.31, 227.07]   # 2020-06-30
+  - [-6.06, 261.90]   # 2020-09-30
+  - [-5.80, 273.16]   # 2020-12-31
+  - [-5.56, 294.53]   # 2021-03-31
+  - [-5.31, 347.71]   # 2021-06-30
+  - [-5.06, 339.39]   # 2021-09-30
+  - [-4.81, 336.35]   # 2021-12-31
+  - [-4.56, 222.36]   # 2022-03-31
+  - [-4.31, 161.25]   # 2022-06-30
+  - [-4.06, 135.68]   # 2022-09-30
+  - [-3.81, 120.34]   # 2022-12-30
+  - [-3.56, 211.94]   # 2023-03-31
+  - [-3.31, 286.98]   # 2023-06-30
+  - [-3.06, 300.21]   # 2023-09-29
+  - [-2.81, 353.96]   # 2023-12-29
+  - [-2.57, 485.58]   # 2024-03-28
+  - [-2.31, 504.22]   # 2024-06-28
+  - [-2.06, 572.44]   # 2024-09-30
+  - [-1.80, 585.51]   # 2024-12-31
+  - [-1.56, 576.36]   # 2025-03-31
+  - [-1.31, 738.09]   # 2025-06-30
+  - [-1.06, 734.38]   # 2025-09-30
+  - [-0.81, 660.09]   # 2025-12-31
+  - [-0.56, 572.13]   # 2026-03-31
+  - [-0.31, 563.29]   # 2026-06-30
+  - [-0.23, 556.71]   # 2026-07-31
+  - [-0.14, 572.34]   # 2026-08-31
+  - [-0.08, 741.25]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 12%
-  body: Capex burns; ad growth fades; margins compress; ~$133 (-82%).
+  body: Capex burns; ad growth fades; margins compress; ~$133 (-81%).
 - label: Bear 27%
-  body: Growth normalizes; D&A weighs on margins; ~$230 (-69%).
+  body: Growth normalizes; D&A weighs on margins; ~$230 (-67%).
 - label: Base 34%
-  body: AI lifts ads; margins hold ~41%; ~$365 (-51%).
+  body: AI lifts ads; margins hold ~41%; ~$365 (-48%).
 - label: Bull 20%
-  body: AI ad engine compounds; capex pays off; ~$636 (-14%).
+  body: AI ad engine compounds; capex pays off; ~$636 (-9%).
 - label: Ultra Bull 7%
-  body: AI platform second act; FCF machine; ~$917 (+24%).
+  body: AI platform second act; FCF machine; ~$917 (+31%).
 appendix:
   pushback:
   - label: FY25 cash flow is a capex trough.
@@ -570,7 +570,7 @@ competitive:
     across a ~$200B ad base and the Instagram/WhatsApp brands - and revenue growth of +33% in Q1''26 and +28% in Q2 shows
     the engine still growing fast. The Audit: network economies dominates, scale and branding reinforce it, and the live threats
     are TikTok''s pull on attention, privacy regulation, and above all the ~$130B/yr AI-capex ROI. The Power does not rescue
-    the price: at ~73x FCF after stock comp (~41x reported), the DCF lands a weighted -46.9%, the base ~51% below spot, and
+    the price: at ~69x FCF after stock comp (~38x reported), the DCF lands a weighted -43.6%, the base ~48% below spot, and
     only the ultra-bull clears it.'
 pocd:
   people:
@@ -603,13 +603,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "006"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "007"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "006"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "007"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "006"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 741.25
   - version: "005"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"

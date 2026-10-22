@@ -2,30 +2,29 @@ ticker: RXRX
 company: Recursion Pharmaceuticals
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-09-22'
-spot: 3.97
+date: '2026-10-22'
+spot: 3.64
 market:
-  market_cap_billion: 2.02
+  market_cap_billion: 1.85
   shares_outstanding_million: 510.0
   cash_billion: 0.665
   net_debt_billion: 0.0
   extras:
   - $0.665B cash (Q1'26); runway into early 2028; burn ~$340M/yr
   - FY25 revenue $74.7M (+27%) — all collaboration/milestone, no product sales
-  - Down ~3% YTD to ~$3.97; ~510M shares post-Exscientia merger + ATM
+  - Down ~11% YTD to $3.64; ~510M shares post-Exscientia merger + ATM
 taxonomy:
   watchlist: asymmetrical-moonshots
   tier: Low
   themes:
   - precision-medicine-oncology
   primary_theme: precision-medicine-oncology
-central_question: At $3.97 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation,
+central_question: At $3.64 with ~$1.3/share of net cash, is RXRX a cheap option on AI-drug-discovery validation,
   or a platform that funds itself toward dilutive stagnation?
 thesis: Recursion runs an AI-drug-discovery platform — automated wet-lab Phenomaps plus an NVIDIA supercomputer — that maps
-  cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.97
-  (~$2.02B cap) on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early
+  cellular phenotypes to find drug candidates. After the Exscientia merger doubled the share count, it trades at $3.64 (~$1.85B cap) on FY25 revenue of $74.7M that is entirely collaboration income — no approved drug. Funded into early
   2028, the near-term risk is dilution, not insolvency. The DCF asks whether the platform ever yields an economically-meaningful
-  approved drug. Weighted fair value is $3.85, ~3% below spot — roughly fair; the modal base sits below the price, so the answer rides
+  approved drug. Weighted fair value is $3.85, ~6% above spot — roughly fair; the modal base sits below the price, so the answer rides
   the right tail.
 chart_reference:
   tam_billion: 50
@@ -49,7 +48,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 5
   valn_anchor_text: Mature biopharma P/S ~4-6x
-  valn_caption: At ~26x sales on milestone-only revenue, the price is platform optionality, not fundamentals.
+  valn_caption: At ~24x sales on milestone-only revenue, the price is platform optionality, not fundamentals.
   tam_title: $50B AI-enabled drug-discovery value — RXRX share
   tam_legend:
   - RXRX
@@ -507,7 +506,7 @@ scenarios:
       and successors), plus royalty and platform-licensing income. Revenue reaches about $2.50B by FY35 at a 35% operating
       margin as the Phenomap flywheel compounds into repeatable output.
     - Milestones and royalties fund more of the spend, so dilution eases and shares settle near 616M. The DCF is $7.03 and
-      the expected value $6.10 — ~54% above spot. This is the first scenario where platform value clearly exceeds the
+      the expected value $6.10 — ~68% above spot. This is the first scenario where platform value clearly exceeds the
       price paid.
     probability_rationale: A 15% read. Requires the data flywheel to translate into repeated approvals — a 15% p_fail. Anchored
       to the combo and registrational readouts due 2026-2027, which would be the first hard evidence the engine produces drugs.
@@ -789,32 +788,33 @@ scenarios:
       tam_competitor_share: 30.0
 historical_prices:
   ipo_marker: IPO Apr '21
-  x_min: -5.47
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-09-22 as-of
-  - [-5.4, 33.40]   # 2021-04-30
-  - [-5.23, 36.50]   # 2021-06-30
-  - [-4.98, 23.01]   # 2021-09-30
-  - [-4.73, 17.13]   # 2021-12-31
-  - [-4.48, 7.16]   # 2022-03-31
-  - [-4.23, 8.14]   # 2022-06-30
-  - [-3.98, 10.64]   # 2022-09-30
-  - [-3.73, 7.71]   # 2022-12-30
-  - [-3.48, 6.67]   # 2023-03-31
-  - [-3.23, 7.47]   # 2023-06-30
-  - [-2.98, 7.65]   # 2023-09-29
-  - [-2.73, 9.86]   # 2023-12-29
-  - [-2.49, 9.97]   # 2024-03-28
-  - [-2.23, 7.50]   # 2024-06-28
-  - [-1.98, 6.59]   # 2024-09-30
-  - [-1.72, 6.76]   # 2024-12-31
-  - [-1.48, 5.29]   # 2025-03-31
-  - [-1.23, 5.06]   # 2025-06-30
-  - [-0.98, 4.88]   # 2025-09-30
-  - [-0.73, 4.09]   # 2025-12-31
-  - [-0.48, 3.07]   # 2026-03-31
-  - [-0.23, 3.67]   # 2026-06-30
-  - [-0.15, 3.00]   # 2026-07-31
-  - [-0.06, 3.40]   # 2026-08-31
+  x_min: -5.55
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
+  - [-5.48, 33.40]   # 2021-04-30
+  - [-5.31, 36.50]   # 2021-06-30
+  - [-5.06, 23.01]   # 2021-09-30
+  - [-4.81, 17.13]   # 2021-12-31
+  - [-4.56, 7.16]   # 2022-03-31
+  - [-4.31, 8.14]   # 2022-06-30
+  - [-4.06, 10.64]   # 2022-09-30
+  - [-3.81, 7.71]   # 2022-12-30
+  - [-3.56, 6.67]   # 2023-03-31
+  - [-3.31, 7.47]   # 2023-06-30
+  - [-3.06, 7.65]   # 2023-09-29
+  - [-2.81, 9.86]   # 2023-12-29
+  - [-2.57, 9.97]   # 2024-03-28
+  - [-2.31, 7.50]   # 2024-06-28
+  - [-2.06, 6.59]   # 2024-09-30
+  - [-1.80, 6.76]   # 2024-12-31
+  - [-1.56, 5.29]   # 2025-03-31
+  - [-1.31, 5.06]   # 2025-06-30
+  - [-1.06, 4.88]   # 2025-09-30
+  - [-0.81, 4.09]   # 2025-12-31
+  - [-0.56, 3.07]   # 2026-03-31
+  - [-0.31, 3.67]   # 2026-06-30
+  - [-0.23, 3.00]   # 2026-07-31
+  - [-0.14, 3.40]   # 2026-08-31
+  - [-0.08, 3.97]   # 2026-09-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Platform never delivers; milestone-only revenue, heavy dilution toward the cash floor.
@@ -835,7 +835,7 @@ appendix:
     body: Roche/Genentech ($213M received), Sanofi ($134M, fifth milestone Feb 2026) and Bayer validate that pharma will pay
       for the platform.
   - label: De-rated price, fat right tail
-    body: Down ~19% TTM, the equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced
+    body: The equity is a cheap option — ~88% of the expected value sits in the bull and ultra-bull, priced
       lightly.
   - label: Compute-scale advantage
     body: BioHive-2 plus automated Phenomaps generate proprietary phenotypic data at a scale rivals cannot easily match —
@@ -989,13 +989,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Origination)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-09-28_18-52"
+  footer_version: "008"
+  footer_timestamp: "2026-10-22_13-24"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-09-28_18-52"
+  pdf_version: "008"
+  pdf_timestamp: "2026-10-22_13-24"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-09-28_18-52"
+    asOfDate: "2026-09-22"
+    spotPrice: 3.97
   - version: "006"
     timestamp: "2026-09-22_13-16"
     asOfDate: "2026-09-22"
