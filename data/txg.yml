@@ -19,12 +19,12 @@ taxonomy:
   themes:
   - omics-life-science-infrastructure
   primary_theme: omics-life-science-infrastructure
-central_question: Is the market paying a spatial-plus-clinical multiple (~16x EV/sales) for a flat-to-declining single-cell core — or correctly pricing a margin inflection and a genuine diagnostics second act?
-thesis: '10x trades at ~$10B (≈$79/sh) — ~16x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools
+central_question: Is the market paying a spatial-plus-clinical multiple (~15x EV/sales) for a flat-to-declining single-cell core — or correctly pricing a margin inflection and a genuine diagnostics second act?
+thesis: '10x trades at ~$9.6B (≈$76/sh) — ~15x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools
   franchise: >7,900 instruments, ~85% recurring 70%-margin consumables, net-cash and cash-generative after a 17% opex cut.
   The mature DCF holds the flat core and asks whether the second act the market now pays for — a clinical-diagnostics pivot
   (CLIA lab targeted early-2027), a multiomic Proteintech expansion, and the Atera spatial launch — becomes a durable reimbursed
-  platform. The finding: even crediting that optionality in the tail, the recent ~7x run prices execution the ~3%-grind base
+  platform. The finding: even crediting that optionality in the tail, the ~6.5x run prices execution the ~3%-grind base
   doesn''t support — the modal case is ~82% below spot.'
 chart_reference:
   history_years:
@@ -234,7 +234,7 @@ scenarios:
       plus modest top-line growth converts the 70% gross margin toward a low-teens FCF margin — revenue ~$0.68B by FY30 at
       ~3% CAGR.'
     - DCF ~$14/share, ~82% below spot. The franchise is real and finally profitable, but a 3%-grower at a low-teens FCF margin
-      doesn't support ~16x EV/sales. The market is paying for a re-acceleration the base case doesn't deliver.
+      doesn't support ~15x EV/sales. The market is paying for a re-acceleration the base case doesn't deliver.
     probability_rationale: Guidance holds (0-4%), cost discipline converts to FCF, spatial roughly offsets single-cell. 30%
       as the central, modal outcome — consistent with consensus ~3.8% CAGR.
     dcf_metrics:
@@ -384,7 +384,7 @@ scenarios:
     - 'The tail: the clinical-diagnostics and multiomic second act inflects into a durable reimbursed platform on top of the
       spatial franchise — 10x''s installed-base and IP moat compound, and revenue reaches ~14% CAGR (~$1.14B by FY30) at
       platform margins (~28% FCF).'
-    - DCF ~$63/share — ~20% below spot. The genuine 'research tools become a diagnostics platform' outcome; ~8% probability,
+    - DCF ~$63/share — ~16% below spot. The genuine 'research tools become a diagnostics platform' outcome; ~8% probability,
       trimmed from the base and sized modestly given a pivot that is early, unproven, and ~a year out.
     probability_rationale: 'Tail: the clinical/multiomic second act becomes a durable reimbursed platform at peak margins.
       ~8% — the platform thesis fully realized, held modest because the pivot is early and unproven.'
@@ -492,9 +492,9 @@ weighting_rationale:
 - label: Base 30%
   body: Slow ~3% grind; margins recover; ~$14 (≈-82%).
 - label: Bull 17%
-  body: Core to ~10% + clinical second act begins; ~$32 (≈-60%).
+  body: Core to ~10% + clinical second act begins; ~$32 (≈-58%).
 - label: Ultra Bull 8%
-  body: Diagnostics platform inflection (~14%); ~$63 (≈-20%).
+  body: Diagnostics platform inflection (~14%); ~$63 (≈-16%).
 appendix:
   pushback:
   - label: Razor/blade annuity is the moat.
@@ -605,7 +605,7 @@ competitive:
   takeaway: '10x''s Scale-Economies Power — a >7,900-instrument installed base throwing off ~85% recurring, 70%-margin consumables
     — is real and durable, and its IP estate bankrupted NanoString. But the Power is being audited in real time: single-cell
     consumables are declining, instrument placements are frozen by the NIH funding shock, and instrument-free entrants (Parse
-    — and 10x''s own ScaleBio acquisition) attack the razor model the annuity depends on. The market pays ~16x EV/sales for a spatial re-acceleration the base doesn''t yet support; the durability of the consumables annuity through the academic-funding
+    — and 10x''s own ScaleBio acquisition) attack the razor model the annuity depends on. The market pays ~15x EV/sales for a spatial re-acceleration the base doesn''t yet support; the durability of the consumables annuity through the academic-funding
     shock is the falsifier the valuation rests on.'
 pocd:
   people:

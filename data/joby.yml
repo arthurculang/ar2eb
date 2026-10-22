@@ -33,11 +33,11 @@ market:
 
 central_question: >
   Will Joby capture meaningful share of a $250B global UAM TAM by 2036 —
-  or is today's ~$6.3B market cap pricing certainty that competitive eVTOL
+  or is today's ~$4.6B market cap pricing certainty that competitive eVTOL
   economics don't support?
 
 thesis: >
-  Joby trades at ~$6.3B against $24M of Q1 2026 revenue and $700M
+  Joby trades at ~$4.6B against $24M of Q1 2026 revenue and $700M
   annualized cash burn. The $2.5B cash position (post Feb 2026 $1.2B raise)
   provides ~3 years of runway. FAA certification entered Stage 5 (TIA) in
   March 2026 with the type certificate guided late 2026, Dubai exclusive
@@ -67,7 +67,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 3
   valn_anchor_text: "Mature aerospace P/S ~2-4×"
-  valn_caption: "Bear=very stretched (4.2×), base=full (0.9×), bull=cheap (0.3×)."
+  valn_caption: "Bear=very stretched (3.0×), base=full (0.7×), bull=cheap (0.2×)."
   tam_title: "$250B global UAM TAM (FY36) — Joby share"
   tam_legend: ["JOBY", "Competitors", "Other UAM (cargo, etc.)"]
 
@@ -234,8 +234,7 @@ scenarios:
       - >
         The math: $3.1B operating EV, $2.5B cash, 1.28B FY36 fully-diluted
         shares (31% dilution from $3.75B raises). DCF $4.34 per share. With 18%
-        failure probability, expected per-share $3.65 — well below today's
-        price. The base case alone does not carry the valuation; the upper
+        failure probability, expected per-share $3.65 — ~21% below today's price. The base case alone does not carry the valuation; the upper
         scenarios do.
     probability_rationale: >
       Modal outcome given de-risking factors already in place. FAA Type Cert

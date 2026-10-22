@@ -21,11 +21,10 @@ taxonomy:
   primary_theme: digital-assets-fintech-rails
 central_question: Is Coinbase the durable monopoly rail layer for crypto — a record $20B of Coinbase-held USDC, the Deribit
   derivatives platform, a regulator that surrendered — or a cycle stock that has now printed three straight quarterly losses?
-thesis: 'Coinbase trades at $201 (~$53B) after a cyclical 2026: Q2 revenue $1.22B (−18.5% YoY) and a $360M GAAP loss, the
+thesis: 'Coinbase trades at $177 (~$47B) after a cyclical 2026: Q2 revenue $1.22B (−18.5% YoY) and a $360M GAAP loss, the
   third straight, as BTC fell from above $120K to a $58K low before recovering to ~$87K. The structural case firmed in the
   same quarter: a record 10.3% volume share, a record $20B of USDC in Coinbase products, and the Circle revenue share renewed
-  into 2029. Stock comp was 11.7% of FY25 revenue; net of it, enterprise value is ~29× FY25 free cash flow (~20× before
-  it). On that basis the stock is roughly fair: the most likely case sits ~19% below the price and 77% of the probability
+  into 2029. Stock comp was 11.7% of FY25 revenue; net of it, enterprise value is ~25× FY25 free cash flow (~18× before it). On that basis the stock is roughly fair: the most likely case sits ~8% below the price and 77% of the probability
   below it, with most of the value in the upside tails.'
 chart_reference:
   history_years:
@@ -519,7 +518,7 @@ appendix:
     body: '>1M paid subs at $30/mo + premium tiers. Engagement floor regardless of BTC price. Higher trading volume + revenue
       per user vs free tier.'
   - label: The base assumes the multiple halves.
-    body: 'It exits at 15× FCF after stock comp vs ~29× today; a ~21× exit would put the base at the $201 price.'
+    body: 'It exits at 15× FCF after stock comp vs ~25× today; a ~17× exit would put the base at the $177 price.'
   triggers:
   - label: Bear validation
     body: BTC < $60K sustained > 2 quarters  ·  transaction rev < $700M/qtr  ·  take-rate below 10 bps  ·  Coinbase-held USDC < $15B  ·  Hyperliquid-style

@@ -12,7 +12,7 @@ market:
   extras:
   - $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares
   - Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B
-  - ~$375 (down ~17% YTD, -16% TTM); ~$1.4T market cap trades on the autonomy/robot narrative, not auto fundamentals
+  - ~$386 (down ~14% YTD); ~$1.4T market cap trades on the autonomy/robot narrative, not auto fundamentals
 taxonomy:
   watchlist: fcf-megacap
   tier: High
@@ -22,10 +22,10 @@ taxonomy:
   primary_theme: autonomous-vehicles-systems
 central_question: At ~$1.4T on a declining ~$95B auto base earning 4.6% margins, does the price hold on auto+energy fundamentals,
   or only if unsupervised autonomy and Optimus ship into real revenue?
-thesis: Tesla trades at ~$1.4T (~$375, -16% TTM) - ~14x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight
+thesis: Tesla trades at ~$1.4T (~$386, -14% YTD) - ~15x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight
   delivery decline (1.64M, -8.6%), with GAAP operating margin compressed to 4.6% from 16.8% in 2022. The DCF underwrites only
-  the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-73%). The robotaxi/FSD/Optimus optionality
-  is real but lives entirely in the ultra-bull second act, and even that lands +2%. What you pay above ~$100 is the autonomy/robot
+  the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-74%). The robotaxi/FSD/Optimus optionality
+  is real but lives entirely in the ultra-bull second act, and even that lands -1%. What you pay above ~$100 is the autonomy/robot
   option, not the car business - the modal case, an auto maker re-rating toward an auto multiple, is deeply negative.
 chart_reference:
   history_years:
@@ -315,7 +315,7 @@ scenarios:
     - Unsupervised FSD clears regulators and ships, the robotaxi fleet scales out of pilot into real ride-hail revenue, and
       high-margin software/licensing lifts blended operating margin toward 20% on >20% revenue growth - the platform repricing
       the autonomy bulls underwrite. Optimus and energy add to a real second revenue stream.
-    - DCF ~$194 (-48%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers,
+    - DCF ~$194 (-50%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers,
       yet the entry price still embeds more than this delivers; the autonomy win is necessary but, at ~$1.4T, not sufficient.
     probability_rationale: 'The Power-gated second act: durable FSD-data process power plus the robotaxi/licensing model,
       if autonomy actually ships and scales. Real but every 2026 datapoint shows it slipping. 14% weight on the platform thesis
@@ -391,8 +391,8 @@ scenarios:
     - 'The full second act: unsupervised autonomy scales nationally into a high-margin ride-hail + FSD-licensing business,
       Optimus reaches volume as a non-auto TAM, and energy compounds - revenue grows ~30% at platform margins toward the mid-20s,
       the AI/robotics company the narrative prices.'
-    - 'DCF ~$383 (+2%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple
-      does the model reach today''s price. That this best case only just clears spot is the finding: ~$1.4T fully
+    - 'DCF ~$383 (-1%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple
+      does the model reach today''s price. That this best case lands just below spot is the finding: ~$1.4T fully
       prices the moonshots succeeding.'
     probability_rationale: Everything ships and scales - robotaxi AND Optimus AND energy AND a platform re-rate, the autonomy
       bull's complete thesis. ~8%, the long-duration tail that the current price already embeds.
@@ -496,9 +496,9 @@ weighting_rationale:
 - label: Base 30%
   body: Growth resumes, margins heal, autonomy begins; ~$83 (-78%).
 - label: Bull 14%
-  body: FSD ships, robotaxi scales, software margins; ~$194 (-48%).
+  body: FSD ships, robotaxi scales, software margins; ~$194 (-50%).
 - label: Ultra Bull 8%
-  body: Robotaxi + Optimus + energy compound into a platform; ~$383 (+2%).
+  body: Robotaxi + Optimus + energy compound into a platform; ~$383 (-1%).
 appendix:
   pushback:
   - label: The DCF ignores robotaxi/FSD/Optimus.
@@ -618,8 +618,8 @@ competitive:
     eroding in Europe, volume now trails BYD, and on the auto+energy fundamentals operating margin has compressed to 4.6%
     across two straight delivery declines. The Audit: branding is durable (medium) and process_power is the live swing factor
     (the autonomy flywheel), but the threat that dominates the cash flows is auto-multiple compression. The DCF underwrites
-    only those fundamentals and lands ~-73%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
-    and even full platform success lands +2% - so the ~$1.4T price embeds the moonshots succeeding, not the car business.'
+    only those fundamentals and lands ~-74%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
+    and even full platform success lands -1% - so the ~$1.4T price embeds the moonshots succeeding, not the car business.'
 pocd:
   people:
     ceo: 'Elon Musk'

@@ -22,18 +22,17 @@ market:
   cash_billion: 1.84             # cash & equivalents (Q1'26)
   net_debt_billion: 5.79         # total debt $5.79B − cash $1.84B
   extras:
-    - "~37% discount to $104 NAV"   # the structural story; SOTP non-operating context
+    - "~34% discount to $104 NAV"   # the structural story; SOTP non-operating context
 
 # ── Page 1 narrative content ────────────────────────────────────────────────
 
 central_question: >
-  Howard Hughes trades at a ~37% discount to its own $104 sum-of-the-parts NAV — is
+  Howard Hughes trades at a ~34% discount to its own $104 sum-of-the-parts NAV — is
   Bill Ackman's Berkshire-style holding-company conversion the catalyst that finally
   closes a fifteen-year discount on this land bank, or a value trap with a new fee?
 
 thesis: >
-  Howard Hughes trades at $65.60 (~$3.9B market cap) — roughly book (~$63/sh) but a
-  ~37% discount to the company's own $104/share sum-of-the-parts NAV (~80%
+  Howard Hughes trades at $68.68 (~$4.1B market cap) — roughly book (~$63/sh) but a ~34% discount to the company's own $104/share sum-of-the-parts NAV (~80%
   irreplaceable master-planned-community land + operating assets, ~20% the new
   Vantage insurer). The land bank monetizes at records — FY2025 MPC EBT a record
   $476M, NOI a record $276M. The hard floor: Pershing Square (Ackman, ~47%,
@@ -90,7 +89,7 @@ scenarios:
         Meanwhile the Pershing management fee accrues against a shrinking equity
         base and the governance overhang (the Delaware control-premium suit)
         deters the marginal buyer. The market keeps a ~40% discount on a now-lower
-        NAV → ~$51/share, a −23% tail. This is a drawdown, not an impairment: the
+        NAV → ~$51/share, a −26% tail. This is a drawdown, not an impairment: the
         land does not go to zero, and Ackman's $100 cost basis sits far above it —
         but conviction in the catalyst would be tested.
     probability_rationale: >
@@ -201,14 +200,13 @@ scenarios:
         Executive-Chairman seat, and a live insurance float engine — and it earns a
         partial re-rating that the prior fifteen years never had. NAV compounds to
         ~$113/share on record land pricing, growing NOI, the Ward Village backlog,
-        and a contributing Vantage; and the discount narrows from ~37% toward ~20%
+        and a contributing Vantage; and the discount narrows from ~34% toward ~20%
         as the holding-company story gets credit.
       - >
         That lands at ~$90/share — almost exactly the sell-side consensus (~$90;
         Piper Sandler and BMO at $95, JPMorgan at $89). Not full NAV: the market
         still discounts a land bank and a thin near-term cash yield. But the gap
-        roughly halves, and you are paid the difference between buying at a ~37%
-        discount and exiting at ~20%.
+        roughly halves, and you are paid the difference between buying at a ~34% discount and exiting at ~20%.
     probability_rationale: >
       The most likely single outcome at 40%. The catalyst is real and datable
       (unlike the prior fifteen years of inertia), and a halving of the discount to
@@ -415,7 +413,7 @@ appendix:
     - label: "The discount is structural, but the catalyst is new."
       body: "Fifteen years of discount — but never with Pershing at ~47%, Ackman as Executive Chairman, and an insurer to deploy float. The setup changed."
     - label: "Trades near book, deep discount to NAV."
-      body: "At $65.60 the stock is ~1.04× book (~$63), but land is carried at decades-old cost; the SOTP marks it to ~$104–118."
+      body: "At $68.68 the stock is ~1.09× book (~$63), but land is carried at decades-old cost; the SOTP marks it to ~$104–118."
   triggers:
     - label: "Bear validation"
       body: "MPC EBT / NOI roll over  ·  superpad pricing reverts to bulk levels  ·  Vantage posts underwriting losses  ·  the discount stays > 30%  ·  the fee + Delaware suit weigh"
@@ -529,7 +527,7 @@ pocd:
       Berkshire-style conversion, paired with a capable operator (O''Reilly) posting record MPC EBT and NOI — strong
       alignment and execution. The offsets are material: Ackman''s tri-hatted conflict (owner + Chairman + fee-earning
       manager), a permanent fee, and a Delaware suit alleging the control transfer paid minorities no premium.'
-  opportunity_ref: 'The scenario distribution (+44%) · the ~37% discount to the $104 NAV · record MPC EBT/NOI'
+  opportunity_ref: 'The scenario distribution (+37%) · the ~34% discount to the $104 NAV · record MPC EBT/NOI'
   context_ref: 'The 7 Powers analysis (cornered-resource land bank) · the Berkshire-model conversion'
   deal: 'Open-market purchase below the company''s own ~$104/share NAV estimate, weighed against the scenario distribution +
     position sizing. (Ackman''s own entry: $100/share, a 48% premium to the market at the time.)'

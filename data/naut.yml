@@ -35,14 +35,13 @@ market:
 
 central_question: >
   Will Nautilus turn a peer-reviewed proteoform method into a shipping Voyager
-  (mid-2027) and meaningful share of a $130B proteomics TAM by 2036 — or will a
-  ~$1 stock and an armed at-market equity program force the dilution the bear
+  (mid-2027) and meaningful share of a $130B proteomics TAM by 2036 — or will an armed at-market equity program force the dilution the bear
   cases model before revenue scales?
 
-thesis: 'NAUT''s ~$1 stock values it at about its last-reported $129M of cash (Jun 30 2026), which a ~$13-14M quarterly burn erodes;
+thesis: 'NAUT''s ~$2.71 stock values it at ~2.7× its reported $129M of cash (Jun 30 2026), which a ~$13-14M quarterly burn erodes;
   first revenue was $0.19M. Q2 2026 reset the plan: Voyager ships mid-2027; Broadscale missed spec, undated. Runway into Q1 2028;
   a debt and/or equity raise is planned by mid-2027, with a $125M at-market equity program filed. Shipping peers — Olink (Thermo),
-  SomaScan (Illumina), Alamar — anchor margins and TAM. Modal case ~30% below the price; 87% of the probability sits at or below it
+  SomaScan (Illumina), Alamar — anchor margins and TAM. Modal case ~76% below the price; 87% of the probability sits at or below it
   (43% at $0), so the value is in a 13% tail.'
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
@@ -171,8 +170,7 @@ scenarios:
         curiosity.
       - >
         To maintain solvency through commercial launch, NAUT raises
-        ~$1.1B cumulatively at $0.40-0.95/share — the first round by
-        mid-2027 near today's price, then successive dilutive rounds
+        ~$1.1B cumulatively at $0.40-0.95/share — first round by mid-2027 below today's price, then successive dilutive rounds
         at falling prices as the equity story deteriorates. Share
         count balloons from 127M to ~1.87B (93% dilution). By FY36
         NAUT reaches just 0.5% of the $130B proteomics TAM — $600M
@@ -257,8 +255,7 @@ scenarios:
         Through 2028-2030, the installed base grows from ~100
         instruments to ~500 at $250-400K/yr each (instrument +
         consumables + assays). NAUT raises ~$1.08B at
-        $1.10-2.00/share, the first tranche by mid-2027 at today's
-        price regime, lifting share count to ~864M (85% dilution;
+        $1.10-2.00/share, the first tranche by mid-2027 below today's price, lifting share count to ~864M (85% dilution;
         modeled all-equity, the conservative reading of a planned
         debt-and-equity mix). Operating margin crosses zero by 2030
         and reaches 16% by 2036.
@@ -266,10 +263,7 @@ scenarios:
         The math: FY36 $1.55B revenue (1.2% of $130B TAM) at 16% op
         margin. Terminal value $3.1B at 9% WACC. PV terminal $1.12B,
         op_ev $0.51B, total equity $0.64B. DCF $0.74/share. With 18%
-        within-scenario p_fail and $0.30 distress: $0.66 expected,
-        roughly 30% below today's ~$1 stock — even the modal case
-        implies downside, because the dilution needed to reach scale
-        is priced near today's level. NAUT becomes a smaller
+        within-scenario p_fail and $0.30 distress: $0.66 expected, 76% below today's $2.71 stock — even the modal case implies downside, because the dilution needed to reach scale is priced below today's level. NAUT becomes a smaller
         Olink/SomaScan-style peer, acquired or independent.
     probability_rationale: >
       Modal outcome. Voyager ships on the reset schedule (pre-orders
@@ -278,7 +272,7 @@ scenarios:
       ~1-2% of the $130B FY36 proteomics TAM. Mature operating margin
       ~15-18%, between commodity tools (~10%) and specialty diagnostics
       (~25%). Dilution from ~$1.08B of 2027-2034 raises at
-      $1.10-2.00/share lands at ~85%, priced at the observed ~$1 regime
+      $1.10-2.00/share lands at ~85%, priced at the Jul-Sep ~$1 regime
       and stepping up no faster than young peers' raise schedules. 44%
       weight, cut from 50% because the Q2 2026 reset contradicted this
       case's launch timing, its Broadscale leg and its no-raise-
@@ -350,7 +344,7 @@ scenarios:
         total equity $4.21B. Cumulative $0.75B raised at $1.75-22/share (the
         first tranche by mid-2027) to ~244M shares (48% dilution). DCF
         $17.25/share. With 8% within-scenario p_fail and $1.50 distress: $15.99
-        expected. The bull case implies today's ~$1 stock materially
+        expected. The bull implies today's $2.71 stock materially
         undervalues the trajectory — but only with meaningful probability
         weight on dominance.
     probability_rationale: >
@@ -525,7 +519,7 @@ weighting_rationale:
   - label: "Ultra Bear 20%"
     body: "Deepest tail: single-molecule never validates commercially; equity wiped under full dilution."
   - label: "Bear 23%"
-    body: "Research niche under entrenched affinity rivals; the Broadscale trigger tripped and near-$1 raises are armed."
+    body: "Research niche under entrenched affinity rivals; the Broadscale trigger tripped; at-market raises armed."
   - label: "Base 44%"
     body: "Modal: Voyager ships mid-2027, ~1% FY36 TAM share — but raising near $1-2 leaves it below spot."
   - label: "Bull 10%"
@@ -549,8 +543,8 @@ appendix:
     body: Quantum-Si (sequencing) slipped to Q2 2027; affinity platforms (Olink/SomaScan/Alamar) read ensembles, not proteoforms.
   - label: Tau strategic positioning.
     body: Alzheimer's biomarker market $10B+; proteoform-resolved tau reads deeper than Alamar's shipping tau immunoassay. ~20 assays targeted by mid-2028.
-  - label: Cash ≈ market cap.
-    body: '$129M cash (Jun 2026) less a ~$13-14M quarterly burn: a ~$1 stock prices the platform near zero. Offset: a $125M at-market program.'
+  - label: Cash ≈ 0.4× cap.
+    body: '$129M cash (Jun 2026) less a ~$13-14M/qtr burn: a $2.71 stock values the platform at ~$0.2B. Offset: a $125M at-market program.'
   triggers:
   - label: Bear validation
     body: 'Broadscale trigger MET Jul 28 2026. Next: shipments slip past mid-2027  ·  pre-orders < $5M by mid-2027  ·  equity sold below $1 (base models ~$1.10)'
@@ -573,7 +567,7 @@ pocd:
     founder_led: true
     tenure_years: 5
     insider_ownership_pct: 14.8
-    capital_allocation: 'First revenue Q2 2026 ($0.19M: MJFF alpha-synuclein grant + first Iterative Mapping Early Access customer); opex $15.9M (−7% YoY), net loss $14.5M, 1H26 operating cash outflow $26.8M. Cash + investments $129.2M at 6/30/26 (roughly the market cap at a ~$1 stock); runway guided into Q1 2028, with management anticipating a debt and/or equity raise by mid-2027 and a new $125M at-market program / $300M shelf in place (Sep 2026). Q2 2026 pivot funded by reallocation: Broadscale team halved, proteoform headcount ~tripled. No dividend or buyback; SPAC/PIPE-funded ($350M, 2021).'
+    capital_allocation: 'First revenue Q2 2026 ($0.19M: MJFF alpha-synuclein grant + first Iterative Mapping Early Access customer); opex $15.9M (−7% YoY), net loss $14.5M, 1H26 operating cash outflow $26.8M. Cash + investments $129.2M at 6/30/26 (about 37% of the market cap at $2.71); runway guided into Q1 2028, with management anticipating a debt and/or equity raise by mid-2027 and a new $125M at-market program / $300M shelf in place (Sep 2026). Q2 2026 pivot funded by reallocation: Broadscale team halved, proteoform headcount ~tripled. No dividend or buyback; SPAC/PIPE-funded ($350M, 2021).'
     incentive_alignment: Founder-CEO holds ~14.8% beneficial economic stake (10.34M direct + 1.81M via the Sujal Patel 2020 Children's Trust + 5.28M via PFV I, LLC); bought 200,000 shares open-market Sept 2025. FY2025 total compensation ~$1.96M, equity-weighted (~27% salary). Specific PSU/TSR vs. time-based equity terms not separately disclosed in accessible sources.
     governance_flags:
     - SPAC origin (ARYA Sciences Acquisition Corp III; closed Jun 2021)
@@ -583,7 +577,7 @@ pocd:
     - classified board — three staggered classes (an anti-takeover structure)
     - insiders own ~29% of shares in aggregate
     - 'a16z cut its stake from ~14% to ~4.9% during 2026: two June secondary blocks (5.0M at $2.35, 3.59M at $2.00) then open-market sales at ~$0.90–1.12 through Sep 9 (13D/A Nos. 3–4), now below the 5% reporting line; Perceptive (2021 PIPE lead) trimmed to 9.1% (13D/A Aug 14 2026) — secondary supply, no control change'
-    - $125M at-the-market program (TD Cowen, Sep 11 2026) + $300M universal shelf effective Sep 18 — at ~$1 the program alone equals ~100% of shares outstanding; no sales disclosed as of Sep 22
+    - $125M at-the-market program (TD Cowen, Sep 11 2026) + $300M universal shelf effective Sep 18 — at $2.71 the program equals ~36% of shares outstanding; no sales disclosed as of Sep 22
     - 'Nasdaq $1 minimum-bid exposure: 25 consecutive sub-$1 closes Aug 4–Sep 8 (trigger 30); the 2025 deficiency was cured Nov 2025 without a reverse split; no reverse-split authorization on the Jun 2026 ballot'
     - no insider open-market purchases disclosed since the CEO's 200,000-share buy at $0.65–0.71 (Sep 2025); no Form 4s after the Jun 22 2026 director grants
     key_person_risk: high

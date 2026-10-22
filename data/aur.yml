@@ -27,11 +27,11 @@ market:
 
 central_question: >
   Will Aurora capture meaningful share of a $160B US autonomous trucking TAM
-  by 2036 — or is today's $11B market cap pricing certainty about driverless
+  by 2036 — or is today's $9B market cap pricing certainty about driverless
   commercial economics that hasn't been proven?
 
 thesis: >
-  Aurora trades at ~$11.1B against $11M of Q1 2026 revenue and $640M
+  Aurora trades at ~$8.6B against $11M of Q1 2026 revenue and $640M
   annualized cash burn. The $1.28B liquidity position needs replenishment by
   mid-2027 absent commercial conversion. Driverless commercial launch slipped
   from 2024 to now 2027; the Driver runs supervised highway pilots with
@@ -211,7 +211,7 @@ scenarios:
       - >
         The math: $8.3B operating EV + $1.3B cash, divided by 2.48B FY36
         fully-diluted shares (27% dilution). Apply 25% failure haircut.
-        Expected per-share $3.03 — materially below today's $6.51. The model
+        Expected per-share $3.03 — materially below today's $5.01. The model
         says the current price requires bull-case assumptions to hold; the
         base case implies meaningful downside.
     probability_rationale: >
@@ -284,7 +284,7 @@ scenarios:
       - >
         The math: $89.4B operating EV, $1.3B cash, 2.14B FY36 shares (10%
         dilution only). DCF $42.28 per share. With 12% failure probability,
-        expected per-share $37.32. The bull case implies today's $6.51 is
+        expected per-share $37.32. The bull case implies today's $5.01 is
         significantly undervaluing the trajectory — but only if you assign
         meaningful probability to the dominant-platform outcome.
     probability_rationale: >

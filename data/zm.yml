@@ -44,12 +44,12 @@ central_question: >
   stable cash machine sitting on a $7B Anthropic stake not yet marked by an
   IPO?
 
-thesis: Zoom trades at $90.90 ($27.2B market cap); $7.9B of cash covers 29% of that. FY26 revenue was $4.87B, and reported
+thesis: Zoom trades at $99.44 ($29.8B market cap); $7.9B of cash covers 27% of that. FY26 revenue was $4.87B, and reported
   free cash flow of $1.92B adds back $0.76B of stock comp (15.6% of revenue). Net of that real cost, owner FCF is ~$1.16B
-  and enterprise value is ~17× it (~10× headline FCF), or ~11× net of a $7B Anthropic value. That stake, carried near $1.5B,
+  and enterprise value is ~19× it (~11× headline FCF), or ~13× net of a $7B Anthropic value. That stake, carried near $1.5B,
   is valued at $2-16B across scenarios pending its IPO; the core faces real but slow competition from Teams and Workspace.
   Valued on owner FCF and today's ~300M diluted shares (buybacks spend cash already counted), the weighted value is ~$100,
-  +10% vs the price. The most likely case (base, 50%) sits ~11% above the price; 30% of the probability sits below it.
+  +1% vs the price. The most likely case (base, 50%) sits ~2% above the price; 30% of the probability sits below it.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:
@@ -112,7 +112,7 @@ scenarios:
         value negative, leaving Op EV at just $1.1B. Cash drains to ~$5.5B on
         buybacks that only offset dilution. Anthropic floors at $2B (sub-$400B
         IPO). SOTP equity: $8.6B ÷ 299.7M shares =
-        ~$28.70/share — a -68% tail, against the ultra-bull's +154%.
+        ~$28.70/share — a -71% tail, against the ultra-bull's +133%.
     probability_rationale: >
       Joint conjunction of four independent fault lines: (a) Cisco-style
       displacement curve materializes (-10/-13/-19% YoY) — historical base
@@ -191,8 +191,7 @@ scenarios:
         Even Anthropic disappoints: the AI capex cycle moderates, IPO prices
         at the low end, and the stake marks closer to $4B than $9B. SOTP math
         still gives some floor — $7.0B op EV + $7.8B cash + $4B Anthropic =
-        $18.8B equity ÷ 299.7M shares = ~$62.80/share, 31% below today's
-        $90.90; the cash + stake (~$39/share) cushion the loss. Bear isn't
+        $18.8B equity ÷ 299.7M shares = ~$62.80/share, 37% below today's $99.44; the cash + stake (~$39/share) cushion the loss. Bear isn't
         bankruptcy; it's structural erosion of the operating business.
     probability_rationale: >
       Bearish thesis is competitive commoditization: Teams (Microsoft's
@@ -270,9 +269,7 @@ scenarios:
         $700B-1T and Zoom's stake gets marked publicly for the first time.
         The hidden asset on Zoom's balance sheet becomes visible to every
         screener. SOTP math: $15.6B op EV + $7.8B cash + $7B Anthropic =
-        $30.4B equity ÷ 299.7M shares = ~$101/share. The core's multiple
-        expands from ~11x owner FCF (net of cash and a $7B Anthropic value)
-        to ~13x as the cash and Anthropic carry stop being discounted
+        $30.4B equity ÷ 299.7M shares = ~$101/share. The core's multiple, ~13x owner FCF today (net of cash and a $7B Anthropic value), holds as the cash and Anthropic carry stop being discounted
         heuristically.
     probability_rationale: >
       Modal outcome. ZM stabilizes at mid-single-digit revenue growth; FY27
@@ -409,8 +406,7 @@ scenarios:
         contributors.
       - >
         Owner FCF margin (after stock comp) widens from 25% to 31%, and the
-        multiple roughly doubles as the growth story consolidates: ~23x to
-        50x+ price to owner FCF (~14x to 30x+ on headline FCF). SOTP math:
+        multiple roughly doubles as the growth story consolidates: ~26x to 50x+ price to owner FCF (~16x to 30x+ on headline FCF). SOTP math:
         $45.5B operating EV + $7.8B cash + $16B Anthropic (mid-case mark) =
         $69.3B equity ÷ 299.7M shares = ~$231/share. The ultra-bull is
         materially different from bull: not just AI works AND Anthropic
@@ -419,8 +415,7 @@ scenarios:
     probability_rationale: >
       Joint conditional: Anthropic IPO above $2T (60% conditional on IPO)
       AND AI Companion crosses $1B ARR (40% conditional on existing
-      trajectory) AND the multiple roughly doubles, ~23x to 50x+ price to
-      owner FCF (~14x to 30x+ on headline FCF; 50% conditional on growth +
+      trajectory) AND the multiple roughly doubles, ~26x to 50x+ price to owner FCF (~16x to 30x+ on headline FCF; 50% conditional on growth +
       AI both firing). Joint at 5-7%, reflected
       here at 5%. This is the scenario where ZM stops being a 'value with
       AI optionality' name and becomes a growth-software name with an
@@ -524,7 +519,7 @@ appendix:
     - label: "AI Companion strategy is right."
       body: "Bundle AI into existing plans rather than separate SKU. Microsoft Copilot's $30/seat model is the cautionary tale — adoption underwhelmed."
     - label: "$7.8B cash is a real floor."
-      body: "~29% of market cap is cash (~$26/share), earning ~4% in T-bills — optionality for M&A or buybacks. Even the ultra-bear ($28.70) is above the $26."
+      body: "~26% of market cap is cash (~$26/share), earning ~4% in T-bills — optionality for M&A or buybacks. Even the ultra-bear ($28.70) is above the $26."
     - label: "Anthropic stake is asymmetric."
       body: "Carried at cost ($1.5B); worth $4-9B today; could mark to $15B+ post-IPO. Hidden asset most screeners ignore."
     - label: "Capital allocation track record."

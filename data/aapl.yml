@@ -12,7 +12,7 @@ market:
   extras:
   - Net debt ~$36B ($54.7B cash vs ~$90.7B total debt); ~14.78B shares, shrinking on a fresh $100B buyback + dividend raise
   - Revenue $416B FY25 (+6%); GAAP op margin ~32%; FCF ~$99B; Services ~$31B/quarter at ~70%+ gross margin
-  - ~$339 (Sep 2026), +33% TTM, +25% YTD; iPhone ~50% of revenue, Greater China reaccelerating (+28%)
+  - ~$344 (Oct 2026), +27% YTD; iPhone ~50% of revenue, Greater China reaccelerating (+28%)
 taxonomy:
   watchlist: fcf-megacap
   tier: High
@@ -22,10 +22,9 @@ taxonomy:
   primary_theme: premium-consumer-brands
 central_question: Does a mid-single-digit grower at ~50x FCF, with AI outsourced to Gemini and a ~$20B/yr Google-payment cliff,
   justify a premium the modal can't underwrite?
-thesis: 'Apple trades at ~$5.01T (~$339/sh, +33% TTM) - about 50x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B
+thesis: 'Apple trades at ~$5.08T (~$344/sh, +27% YTD) - about 50x ~$99B FCF on $416B mid-single-digit revenue, with ~$36B
   net debt. Services compounds mid-teens at ~70%+ gross margin, but iPhone is still ~50% of revenue, AI is outsourced to Gemini,
-  and the ~$20B/yr Google search payment faces a DOJ rebid. The DCF resolves whether quality justifies the multiple: weighted
-  -43.8%, modal ~$188 (-45%).'
+  and the ~$20B/yr Google search payment faces a DOJ rebid. The DCF resolves whether quality justifies the multiple: weighted -44.6%, modal ~$188 (-45%).'
 chart_reference:
   history_years:
   - 2021
@@ -313,7 +312,7 @@ scenarios:
     - 'The ecosystem wins the AI era on someone else''s model: the Gemini-powered Apple Intelligence raises engagement and
       Services attach, the search payment survives the rebid intact, and the installed base feeds a higher-margin Services
       mix. Revenue compounds ~8% to ~$600B and FCF margin lifts toward ~27%.'
-    - DCF ~$279 (-18%) — even the bull falls short of today's price; an upper-single-digit grower at a sustained high-20s
+    - DCF ~$279 (-19%) — even the bull falls short of today's price; an upper-single-digit grower at a sustained high-20s
       FCF multiple is worth less than spot, not more.
     probability_rationale: Services + the AI-era ecosystem stay sticky, the search payment holds, and China momentum continues
       — the FQ2 trends extended. ~19% weight on the franchise compounding without the tails biting.
@@ -388,7 +387,7 @@ scenarios:
     - 'The full upside: Services reaccelerates on AI features and new monetization, hardware finds a fresh wedge (wearables,
       new categories), gross margin holds near 49%, and the ~$100B buyback compounds FCF/share on a shrinking count. Revenue
       compounds ~10% to ~$640B at a ~30% FCF margin.'
-    - DCF ~$362 (+7%) — the only scenario that clears spot, and only if Services takes a genuine step-change and the multiple
+    - DCF ~$362 (+5%) — the only scenario that clears spot, and only if Services takes a genuine step-change and the multiple
       stays in the low-30s. ~8% probability, the thin upside the premium is paying for.
     probability_rationale: Everything compounds — Services AND margins AND buyback leverage AND no regulatory hit — the quality-compounder
       outcome. ~8%, the long-duration tail that justifies the premium if it lands.
@@ -494,14 +493,13 @@ weighting_rationale:
 - label: Base 33%
   body: Services compounds, iPhone steady, but still rich; ~$188 (-45%).
 - label: Bull 19%
-  body: AI-era ecosystem deepens, search risk fades; ~$279 (-18%).
+  body: AI-era ecosystem deepens, search risk fades; ~$279 (-19%).
 - label: Ultra Bull 8%
-  body: Services step-change; FCF/share compounds; ~$362 (+7%).
+  body: Services step-change; FCF/share compounds; ~$362 (+5%).
 appendix:
   pushback:
   - label: The de-rate is the multiple, not the franchise.
-    body: Apple is a genuine quality compounder, but a mid-single-digit grower at ~50x FCF prices safety beyond growth — even
-      the bull stops at ~$279 (-18%).
+    body: Apple is a genuine quality compounder, but a mid-single-digit grower at ~50x FCF prices safety beyond growth — even the bull stops at ~$279 (-19%).
   - label: The ~$20B Google payment is a discrete cliff.
     body: It is near-pure-margin Services that must be rebid annually under the DOJ ruling; losing it directly cuts the highest-quality
       earnings, and the bear/ultra-bear weight it.
@@ -616,8 +614,7 @@ competitive:
     and pricing power - reinforced by deep ecosystem switching costs and immense scale; durability is high. But the live threat
     is the AI-platform shift: with Apple Intelligence outsourced to Gemini, the next interface may run on someone else''s
     model, and that same counterparty anchors a ~$20B/yr search payment now exposed to a DOJ rebid. The Powers are durable;
-    the question the DCF presses is price, not moat. A mid-single-digit grower at ~50x FCF carries a premium even the bull
-    (~$279, -18%) can''t justify, and the modal case lands ~$188 (-45%).'
+    the question the DCF presses is price, not moat. A mid-single-digit grower at ~50x FCF carries a premium even the bull (~$279, -19%) can''t justify, and the modal case lands ~$188 (-45%).'
 pocd:
   people:
     ceo: Tim Cook
