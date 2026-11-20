@@ -35,7 +35,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
-UA = "Mozilla/5.0 (compatible; ar2eb-reprice; arthurculang@gmail.com)"   # reprice.py's feed identity
+UA = "Mozilla/5.0 (compatible; ar2eb-reprice)"   # reprice.py's feed identity
 
 
 def month_end_closes(ticker: str, memo_date: dt.date, x_min: float) -> list[tuple[dt.date, float]]:

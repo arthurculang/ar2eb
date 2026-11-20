@@ -61,7 +61,7 @@ import yaml
 
 REPO = Path(__file__).resolve().parent.parent
 DATA = REPO / "data"
-UA = "Mozilla/5.0 (compatible; ar2eb-reprice; arthurculang@gmail.com)"
+UA = "Mozilla/5.0 (compatible; ar2eb-reprice)"
 RETRIES = 4          # per-ticker fetch attempts
 BACKOFF = 2.0        # seconds, doubles per retry
 

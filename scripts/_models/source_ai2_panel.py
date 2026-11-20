@@ -316,7 +316,7 @@ def shares_at_fye(facts: dict, fyes: dict[int, date]) -> dict[int, float]:
 # the split events (close × Π split-ratios that took effect AFTER the bar's date).
 # Default source is Yahoo's keyless v8 chart JSON; set AI2_PRICE_SRC=stooq to use
 # stooq instead (needs a stooq apikey appended — see stooq_closes).
-YAHOO_UA = "Mozilla/5.0 (compatible; ar2eb-research; arthurculang@gmail.com)"
+YAHOO_UA = "Mozilla/5.0 (compatible; ar2eb-research)"
 
 
 def _split_events(res: dict) -> list[tuple[date, float]]:
