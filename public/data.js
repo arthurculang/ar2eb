@@ -24751,7 +24751,7 @@ const MEMOS = [
     "publishedLabel": "November 22, 2026",
     "pdf": {
       "file": "googl-memo__v008__2026-11-22_14-07.pdf",
-      "size": "210 KB",
+      "size": "209 KB",
       "priorVersions": [
         {
           "version": "007",
@@ -27593,7 +27593,7 @@ const MEMOS = [
     "publishedLabel": "November 22, 2026",
     "pdf": {
       "file": "tsla-memo__v008__2026-11-22_14-07.pdf",
-      "size": "214 KB",
+      "size": "215 KB",
       "priorVersions": [
         {
           "version": "007",
@@ -28540,7 +28540,7 @@ const MEMOS = [
     "publishedLabel": "November 22, 2026",
     "pdf": {
       "file": "dis-memo__v008__2026-11-22_14-07.pdf",
-      "size": "213 KB",
+      "size": "212 KB",
       "priorVersions": [
         {
           "version": "007",
@@ -29492,7 +29492,7 @@ const MEMOS = [
     "publishedLabel": "November 22, 2026",
     "pdf": {
       "file": "cmg-memo__v008__2026-11-22_14-07.pdf",
-      "size": "209 KB",
+      "size": "208 KB",
       "priorVersions": [
         {
           "version": "007",
@@ -40657,7 +40657,7 @@ const MEMOS = [
     "publishedLabel": "November 22, 2026",
     "pdf": {
       "file": "you-memo__v008__2026-11-22_14-07.pdf",
-      "size": "213 KB",
+      "size": "212 KB",
       "priorVersions": [
         {
           "version": "007",
@@ -41585,7 +41585,7 @@ const MEMOS = [
     "publishedLabel": "November 22, 2026",
     "pdf": {
       "file": "shop-memo__v008__2026-11-22_14-07.pdf",
-      "size": "213 KB",
+      "size": "214 KB",
       "priorVersions": [
         {
           "version": "007",
@@ -42520,7 +42520,7 @@ const MEMOS = [
     "publishedLabel": "November 22, 2026",
     "pdf": {
       "file": "rxrx-memo__v009__2026-11-22_14-07.pdf",
-      "size": "287 KB",
+      "size": "286 KB",
       "priorVersions": [
         {
           "version": "008",
