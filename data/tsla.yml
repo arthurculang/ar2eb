@@ -2,17 +2,17 @@ ticker: TSLA
 company: Tesla
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-10-22'
-spot: 386.47
+date: '2026-11-22'
+spot: 345.82
 market:
-  market_cap_billion: 1450.19
+  market_cap_billion: 1297.65
   shares_outstanding_million: 3752.4
   cash_billion: 44.1
   net_debt_billion: 1.6
   extras:
   - $44.1B cash vs ~$1.6B debt (~$42.5B net cash); ~3,752M shares
   - Revenue $94.8B FY25 (-3%, second down year); GAAP op margin compressed to 4.6% (from 16.8% in 2022); FCF ~$6.2B
-  - ~$386 (down ~14% YTD); ~$1.4T market cap trades on the autonomy/robot narrative, not auto fundamentals
+  - ~$346 (down ~23% YTD); ~$1.3T market cap trades on the autonomy/robot narrative, not auto fundamentals
 taxonomy:
   watchlist: fcf-megacap
   tier: High
@@ -20,12 +20,12 @@ taxonomy:
   - autonomous-vehicles-systems
   - humanoid-robotics-physical-ai
   primary_theme: autonomous-vehicles-systems
-central_question: At ~$1.4T on a declining ~$95B auto base earning 4.6% margins, does the price hold on auto+energy fundamentals,
+central_question: At ~$1.3T on a declining ~$95B auto base earning 4.6% margins, does the price hold on auto+energy fundamentals,
   or only if unsupervised autonomy and Optimus ship into real revenue?
-thesis: Tesla trades at ~$1.4T (~$386, -14% YTD) - ~15x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight
+thesis: Tesla trades at ~$1.3T (~$346, -23% YTD) - ~13x EV/sales on $94.8B revenue that fell ~3% in FY25, the second straight
   delivery decline (1.64M, -8.6%), with GAAP operating margin compressed to 4.6% from 16.8% in 2022. The DCF underwrites only
-  the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-74%). The robotaxi/FSD/Optimus optionality
-  is real but lives entirely in the ultra-bull second act, and even that lands -1%. What you pay above ~$100 is the autonomy/robot
+  the auto+energy cash flows; on those fundamentals the weighted finding is ~$101 (-71%). The robotaxi/FSD/Optimus optionality
+  is real but lives entirely in the ultra-bull second act, and only that tops spot. What you pay above ~$100 is the autonomy/robot
   option, not the car business - the modal case, an auto maker re-rating toward an auto multiple, is deeply negative.
 chart_reference:
   history_years:
@@ -87,7 +87,7 @@ scenarios:
       -17%, 13th straight monthly decline), the affordable Model Q slips further, and price cuts hold operating margin near
       the depressed 4.6%. None of robotaxi, unsupervised FSD, or Optimus reaches material revenue inside the window.'
     - A shrinking car maker with single-digit margins earns a low-double-digit FCF / mid-single EV/sales multiple - DCF ~$26
-      (-93%). Even ~$42.5B net cash is immaterial against a ~$1.4T price built on optionality that doesn't arrive.
+      (-92%). Even ~$42.5B net cash is immaterial against a ~$1.3T price built on optionality that doesn't arrive.
     probability_rationale: 'The fundamentals-only floor: two straight delivery declines, Q1''26 FCF negative, beats leaning
       on warranty true-downs and tariff relief, and the moonshots still slipping. 18% weight on the auto franchise simply
       re-rating to an auto multiple.'
@@ -162,7 +162,7 @@ scenarios:
     - Deliveries stop falling and resume mid-single-digit growth as the Model Q finally ships, energy storage keeps compounding
       (+25% YoY, high-margin), and operating margin recovers toward 9% - a respectable car-plus-energy business, but FSD stays
       supervised and robotaxi stays a ~20-34-vehicle pilot, so no autonomy revenue enters the model.
-    - DCF ~$46 (-88%) - even a healthier auto+energy franchise at a premium auto multiple (~14-16x FCF) is worth a fraction
+    - DCF ~$46 (-87%) - even a healthier auto+energy franchise at a premium auto multiple (~14-16x FCF) is worth a fraction
       of today's price; the gap is the un-modeled optionality, not the car business.
     probability_rationale: 'The plausible ''auto recovers, robots don''t ship in time'' path: energy is genuinely compounding
       and margins can heal, but autonomy keeps slipping (v15 to summer, unsupervised FSD to Q4 at earliest). 30% as the central
@@ -238,9 +238,9 @@ scenarios:
     - Volume re-accelerates to low-teens as the affordable model expands the addressable market and energy scales, lifting
       operating margin back toward the mid-teens; FSD monetization and an early robotaxi ramp begin to contribute, so the
       business carries a richer-than-auto multiple - but the second act is just starting, not at scale.
-    - DCF ~$83 (-78%) - the modal case. A re-accelerating Tesla with healing margins and the first autonomy dollars is worth
-      far more than the bear, yet still ~four-fifths below spot, because even this constructive fundamentals path doesn't
-      justify ~$1.4T.
+    - DCF ~$83 (-76%) - the modal case. A re-accelerating Tesla with healing margins and the first autonomy dollars is worth
+      far more than the bear, yet still ~76% below spot, because even this constructive fundamentals path doesn't
+      justify ~$1.3T.
     probability_rationale: Requires the auto base to inflect AND margins to recover AND early autonomy revenue - credible
       given the product pipeline and FSD-data flywheel, but each leg is currently slipping. 30% as the central, still-deeply-negative
       outcome.
@@ -315,8 +315,8 @@ scenarios:
     - Unsupervised FSD clears regulators and ships, the robotaxi fleet scales out of pilot into real ride-hail revenue, and
       high-margin software/licensing lifts blended operating margin toward 20% on >20% revenue growth - the platform repricing
       the autonomy bulls underwrite. Optimus and energy add to a real second revenue stream.
-    - DCF ~$194 (-50%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers,
-      yet the entry price still embeds more than this delivers; the autonomy win is necessary but, at ~$1.4T, not sufficient.
+    - DCF ~$194 (-44%) - the first scenario where a genuine software/autonomy platform multiple (~19-24x FCF) is in the numbers,
+      yet the entry price still embeds more than this delivers; the autonomy win is necessary but, at ~$1.3T, not sufficient.
     probability_rationale: 'The Power-gated second act: durable FSD-data process power plus the robotaxi/licensing model,
       if autonomy actually ships and scales. Real but every 2026 datapoint shows it slipping. 14% weight on the platform thesis
       landing within the window.'
@@ -391,8 +391,8 @@ scenarios:
     - 'The full second act: unsupervised autonomy scales nationally into a high-margin ride-hail + FSD-licensing business,
       Optimus reaches volume as a non-auto TAM, and energy compounds - revenue grows ~30% at platform margins toward the mid-20s,
       the AI/robotics company the narrative prices.'
-    - 'DCF ~$383 (-1%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple
-      does the model reach today''s price. That this best case lands just below spot is the finding: ~$1.4T fully
+    - 'DCF ~$383 (+11%) - only when ALL of robotaxi, Optimus, and energy compound into a true platform at a ~23-28x FCF multiple
+      does the model top today''s price. That this best case lands just above spot is the finding: ~$1.3T fully
       prices the moonshots succeeding.'
     probability_rationale: Everything ships and scales - robotaxi AND Optimus AND energy AND a platform re-rate, the autonomy
       bull's complete thesis. ~8%, the long-duration tail that the current price already embeds.
@@ -459,46 +459,47 @@ scenarios:
       - 23.0
 historical_prices:
   ipo_marker: IPO Jun '10
-  x_min: -6.09
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-6.06, 143.00]   # 2020-09-30
-  - [-5.80, 235.22]   # 2020-12-31
-  - [-5.56, 222.64]   # 2021-03-31
-  - [-5.31, 226.57]   # 2021-06-30
-  - [-5.06, 258.49]   # 2021-09-30
-  - [-4.81, 352.26]   # 2021-12-31
-  - [-4.56, 359.20]   # 2022-03-31
-  - [-4.31, 224.47]   # 2022-06-30
-  - [-4.06, 265.25]   # 2022-09-30
-  - [-3.81, 123.18]   # 2022-12-30
-  - [-3.56, 207.46]   # 2023-03-31
-  - [-3.31, 261.77]   # 2023-06-30
-  - [-3.06, 250.22]   # 2023-09-29
-  - [-2.81, 248.48]   # 2023-12-29
-  - [-2.57, 175.79]   # 2024-03-28
-  - [-2.31, 197.88]   # 2024-06-28
-  - [-2.06, 261.63]   # 2024-09-30
-  - [-1.80, 403.84]   # 2024-12-31
-  - [-1.56, 259.16]   # 2025-03-31
-  - [-1.31, 317.66]   # 2025-06-30
-  - [-1.06, 444.72]   # 2025-09-30
-  - [-0.81, 449.72]   # 2025-12-31
-  - [-0.56, 371.75]   # 2026-03-31
-  - [-0.31, 420.60]   # 2026-06-30
-  - [-0.23, 311.21]   # 2026-07-31
-  - [-0.14, 367.95]   # 2026-08-31
-  - [-0.08, 375.30]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -6.17
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-6.14, 143.00]   # 2020-09-30
+  - [-5.88, 235.22]   # 2020-12-31
+  - [-5.64, 222.64]   # 2021-03-31
+  - [-5.39, 226.57]   # 2021-06-30
+  - [-5.14, 258.49]   # 2021-09-30
+  - [-4.89, 352.26]   # 2021-12-31
+  - [-4.64, 359.20]   # 2022-03-31
+  - [-4.39, 224.47]   # 2022-06-30
+  - [-4.14, 265.25]   # 2022-09-30
+  - [-3.89, 123.18]   # 2022-12-30
+  - [-3.64, 207.46]   # 2023-03-31
+  - [-3.39, 261.77]   # 2023-06-30
+  - [-3.14, 250.22]   # 2023-09-29
+  - [-2.89, 248.48]   # 2023-12-29
+  - [-2.65, 175.79]   # 2024-03-28
+  - [-2.39, 197.88]   # 2024-06-28
+  - [-2.14, 261.63]   # 2024-09-30
+  - [-1.88, 403.84]   # 2024-12-31
+  - [-1.64, 259.16]   # 2025-03-31
+  - [-1.39, 317.66]   # 2025-06-30
+  - [-1.14, 444.72]   # 2025-09-30
+  - [-0.89, 449.72]   # 2025-12-31
+  - [-0.64, 371.75]   # 2026-03-31
+  - [-0.39, 420.60]   # 2026-06-30
+  - [-0.31, 311.21]   # 2026-07-31
+  - [-0.22, 367.95]   # 2026-08-31
+  - [-0.16, 375.30]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 386.47]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 18%
-  body: Deliveries keep falling; pure auto multiple; ~$26 (-93%).
+  body: Deliveries keep falling; pure auto multiple; ~$26 (-92%).
 - label: Bear 30%
-  body: Auto stabilizes, energy grows, no autonomy revenue; ~$46 (-88%).
+  body: Auto stabilizes, energy grows, no autonomy revenue; ~$46 (-87%).
 - label: Base 30%
-  body: Growth resumes, margins heal, autonomy begins; ~$83 (-78%).
+  body: Growth resumes, margins heal, autonomy begins; ~$83 (-76%).
 - label: Bull 14%
-  body: FSD ships, robotaxi scales, software margins; ~$194 (-50%).
+  body: FSD ships, robotaxi scales, software margins; ~$194 (-44%).
 - label: Ultra Bull 8%
-  body: Robotaxi + Optimus + energy compound into a platform; ~$383 (-1%).
+  body: Robotaxi + Optimus + energy compound into platform; ~$383 (+11%).
 appendix:
   pushback:
   - label: The DCF ignores robotaxi/FSD/Optimus.
@@ -506,7 +507,7 @@ appendix:
       second act; what you pay above ~$100 IS that optionality, priced explicitly.
   - label: Energy storage is real and compounding.
     body: +25% YoY and high-margin, and it is in the model (the Energy + Services segment) - but at ~26% of revenue it can't
-      carry a ~$1.4T cap; even the bear builds energy in and lands -88%.
+      carry a ~$1.3T cap; even the bear builds energy in and lands -87%.
   - label: Margins recovered to ~19% ex-credits in Q1'26.
     body: Auto GM ex-credits did recover, but the Q1'26 beat leaned on ~$230M warranty true-downs and tariff relief while
       FCF turned negative - margin quality, not just level, is the question.
@@ -514,7 +515,7 @@ appendix:
     body: Granted - fleet-scale driving data is a genuine, hard-to-copy edge, which is why the bull/ultra-bull carry a platform
       multiple; the issue is timing, as unsupervised FSD slipped to Q4 2026 at earliest.
   - label: Net cash, no solvency risk.
-    body: $44.1B cash vs ~$1.6B debt (~$42.5B net cash) - immaterial against a ~$1.4T price; the downside is multiple/fundamentals,
+    body: $44.1B cash vs ~$1.6B debt (~$42.5B net cash) - immaterial against a ~$1.3T price; the downside is multiple/fundamentals,
       not survival; this is a valuation-vs-optionality memo, not a distress one.
   triggers:
   - label: Bull validation
@@ -525,7 +526,7 @@ appendix:
       2027  ·  operating margin stays below ~8% as price cuts continue
   - label: Reframe needed
     body: if autonomy/Optimus ship and scale into material revenue, re-underwrite as a software/robotics platform (origination
-      lens), not a mature auto maker - that is the only path that closes the gap to ~$1.4T
+      lens), not a mature auto maker - that is the only path that closes the gap to ~$1.3T
 glossary:
 - term: Robotaxi / FSD
   definition: Tesla's autonomous ride-hail (~20-34-vehicle pilot) and Full Self-Driving (unsupervised Q4'26+) - the auto-model
@@ -618,8 +619,8 @@ competitive:
     eroding in Europe, volume now trails BYD, and on the auto+energy fundamentals operating margin has compressed to 4.6%
     across two straight delivery declines. The Audit: branding is durable (medium) and process_power is the live swing factor
     (the autonomy flywheel), but the threat that dominates the cash flows is auto-multiple compression. The DCF underwrites
-    only those fundamentals and lands ~-74%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
-    and even full platform success lands -1% - so the ~$1.4T price embeds the moonshots succeeding, not the car business.'
+    only those fundamentals and lands ~-71%; the robotaxi/FSD/Optimus optionality sits entirely in the ultra-bull second act,
+    and only full platform success tops spot - so the ~$1.3T price embeds the moonshots succeeding, not the car business.'
 pocd:
   people:
     ceo: 'Elon Musk'
@@ -656,13 +657,17 @@ pocd:
   deal: Open-market common — entry price weighed against the probability-weighted fair value, with the robotaxi, FSD and Optimus
     optionality priced explicitly in the ultra-bull second act, then position-sized.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "008"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "008"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 386.47
   - version: "006"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

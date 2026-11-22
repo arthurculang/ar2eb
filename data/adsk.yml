@@ -2,17 +2,17 @@ ticker: ADSK
 company: Autodesk
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-10-22'
-spot: 244.84
+date: '2026-11-22'
+spot: 244.48
 market:
-  market_cap_billion: 51.66
+  market_cap_billion: 51.58
   shares_outstanding_million: 211.0
   cash_billion: 2.6
   net_debt_billion: 2.5
   extras:
   - $2.60B cash vs $2.50B debt — roughly net-cash-neutral (~$0.1B net cash); ~211M shares; ~$448M buyback in Q1 FY27
   - Revenue $7.21B FY26 (+18% as-reported); GAAP op margin ~21.9%, non-GAAP ~39%; FCF $2.4B; ~98% subscription/recurring
-  - Down ~17% YTD to ~$245; Starboard (~$500M, proxy fight) pushing margins
+  - Down ~17% YTD to ~$244; Starboard (~$500M, proxy fight) pushing margins
 taxonomy:
   watchlist: fcf-plus-plus-growth
   tier: Low
@@ -21,10 +21,10 @@ taxonomy:
   primary_theme: creator-design-software
 central_question: Does mission-critical CAD lock-in plus a Starboard-forced margin expansion to ~45% offset a maturing top
   line — or has growth matured into the price?
-thesis: 'Autodesk trades at ~$51.7B (~$245, down ~17% YTD) — ~21x FCF on $7.21B revenue, a ~98%-recurring
+thesis: 'Autodesk trades at ~$51.6B (~$244, down ~17% YTD) — ~21x FCF on $7.21B revenue, a ~98%-recurring
   CAD/design franchise, roughly net-cash-neutral. The +18% as-reported growth is flattered by an agency->direct billing change;
   underlying (cc-adjusted) growth is nearer ~8-12%. The bull is durable switching-cost lock-in plus a Starboard-forced lift
-  toward ~45% operating margin by FY28; the bear is maturing growth and activist/execution noise. The finding is +24.5%: the bear sits -12% and the modal case +24% on the lower underlying growth.'
+  toward ~45% operating margin by FY28; the bear is maturing growth and activist/execution noise. The finding is +24.7%: the bear sits -12% and the modal case +24% on the lower underlying growth.'
 chart_reference:
   history_years:
   - 2022
@@ -313,7 +313,7 @@ scenarios:
     - 'Starboard''s program lands close to plan: operating margin marches toward ~38% by FY30 (the ~45% adjusted target on
       a non-GAAP basis) on sales-optimization, headcount, and capital return, while AEC/construction + cloud/AI keep underlying
       growth low-teens. FCF margin inflects toward ~37%.'
-    - DCF ~$437 (+78%) - if the under-earned margin gap closes against a still-growing, locked-in franchise, the entry re-rates
+    - DCF ~$437 (+79%) - if the under-earned margin gap closes against a still-growing, locked-in franchise, the entry re-rates
       to a high-quality compounder multiple. This is the activist-success core of the bull.
     probability_rationale: Starboard's record plus a genuinely under-earned margin structure make a large lift credible; lock-in
       protects growth while costs are cut. ~19% weight on the activist plan substantially landing.
@@ -388,7 +388,7 @@ scenarios:
     - 'The full second act: Starboard''s ~45% operating margin is reached, AI/cloud (Fusion, Forma, agentic design) re-accelerate
       underlying growth into the low-to-mid-teens, and Autodesk compounds as both a margin and a platform story. FCF margin
       reaches ~40%.'
-    - DCF ~$537 (+119%) - the franchise re-rates to a premium design-platform multiple as growth AND margins both inflect;
+    - DCF ~$537 (+120%) - the franchise re-rates to a premium design-platform multiple as growth AND margins both inflect;
       ~8% probability, the long-duration tail the depressed entry is buying.
     probability_rationale: Everything works - the full activist margin target AND an AI/cloud growth re-acceleration AND a
       multiple re-rate. ~8%, the asymmetric upside.
@@ -455,35 +455,36 @@ scenarios:
       - 27.0
 historical_prices:
   ipo_marker: IPO '85
-  x_min: -5.89
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-5.89, 280.23]   # 2020-11-30
-  - [-5.80, 305.34]   # 2020-12-31
-  - [-5.56, 277.15]   # 2021-03-31
-  - [-5.31, 291.90]   # 2021-06-30
-  - [-5.06, 285.17]   # 2021-09-30
-  - [-4.81, 281.19]   # 2021-12-31
-  - [-4.56, 214.35]   # 2022-03-31
-  - [-4.31, 171.96]   # 2022-06-30
-  - [-4.06, 186.80]   # 2022-09-30
-  - [-3.81, 186.87]   # 2022-12-30
-  - [-3.56, 208.16]   # 2023-03-31
-  - [-3.31, 204.61]   # 2023-06-30
-  - [-3.06, 206.91]   # 2023-09-29
-  - [-2.81, 243.48]   # 2023-12-29
-  - [-2.57, 260.42]   # 2024-03-28
-  - [-2.31, 247.45]   # 2024-06-28
-  - [-2.06, 275.48]   # 2024-09-30
-  - [-1.80, 295.57]   # 2024-12-31
-  - [-1.56, 261.80]   # 2025-03-31
-  - [-1.31, 309.57]   # 2025-06-30
-  - [-1.06, 317.67]   # 2025-09-30
-  - [-0.81, 296.01]   # 2025-12-31
-  - [-0.56, 239.40]   # 2026-03-31
-  - [-0.31, 194.42]   # 2026-06-30
-  - [-0.23, 234.20]   # 2026-07-31
-  - [-0.14, 258.53]   # 2026-08-31
-  - [-0.08, 218.85]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -5.97
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-5.97, 280.23]   # 2020-11-30
+  - [-5.88, 305.34]   # 2020-12-31
+  - [-5.64, 277.15]   # 2021-03-31
+  - [-5.39, 291.90]   # 2021-06-30
+  - [-5.14, 285.17]   # 2021-09-30
+  - [-4.89, 281.19]   # 2021-12-31
+  - [-4.64, 214.35]   # 2022-03-31
+  - [-4.39, 171.96]   # 2022-06-30
+  - [-4.14, 186.80]   # 2022-09-30
+  - [-3.89, 186.87]   # 2022-12-30
+  - [-3.64, 208.16]   # 2023-03-31
+  - [-3.39, 204.61]   # 2023-06-30
+  - [-3.14, 206.91]   # 2023-09-29
+  - [-2.89, 243.48]   # 2023-12-29
+  - [-2.65, 260.42]   # 2024-03-28
+  - [-2.39, 247.45]   # 2024-06-28
+  - [-2.14, 275.48]   # 2024-09-30
+  - [-1.88, 295.57]   # 2024-12-31
+  - [-1.64, 261.80]   # 2025-03-31
+  - [-1.39, 309.57]   # 2025-06-30
+  - [-1.14, 317.67]   # 2025-09-30
+  - [-0.89, 296.01]   # 2025-12-31
+  - [-0.64, 239.40]   # 2026-03-31
+  - [-0.39, 194.42]   # 2026-06-30
+  - [-0.31, 234.20]   # 2026-07-31
+  - [-0.22, 258.53]   # 2026-08-31
+  - [-0.16, 218.85]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 244.84]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 13%
   body: Growth stalls; activist fizzles; ~$149 (-39%).
@@ -492,9 +493,9 @@ weighting_rationale:
 - label: Base 34%
   body: Underlying ~8-12%; margins to mid-30s; ~$304 (+24%).
 - label: Bull 19%
-  body: Activist delivers; margins near 45%; ~$437 (+78%).
+  body: Activist delivers; margins near 45%; ~$437 (+79%).
 - label: Ultra Bull 8%
-  body: ~45% margin + AI/cloud re-accel; ~$537 (+119%).
+  body: ~45% margin + AI/cloud re-accel; ~$537 (+120%).
 appendix:
   pushback:
   - label: The +18% growth is a billing-model mirage.
@@ -635,13 +636,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "008"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "008"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 244.84
   - version: "006"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

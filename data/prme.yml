@@ -2,10 +2,10 @@ ticker: PRME
 company: Prime Medicine
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-10-22'
-spot: 3.81
+date: '2026-11-22'
+spot: 3.55
 market:
-  market_cap_billion: 0.689
+  market_cap_billion: 0.642
   shares_outstanding_million: 180.6
   cash_billion: 0.149
   net_debt_billion: 0.0
@@ -22,12 +22,12 @@ taxonomy:
 central_question: PRME proved the first-in-human prime edit, but holds only ~9 months of cash against a going-concern flag
   and a $200M ATM — does the platform tail survive the dilution before it pays off?
 thesis: Prime Medicine is a clinical-stage prime-editing biotech — the precise 'search-and-replace' gene edit, David Liu's
-  sister tech to BEAM's base editing. Pre-revenue at $3.81 ($689M cap), it proved the first-ever clinical prime edit (PM359,
+  sister tech to BEAM's base editing. Pre-revenue at $3.55 ($642M cap), it proved the first-ever clinical prime edit (PM359,
   NEJM Dec 2025). Cash is ~$149M (~9 months), the FY2025 10-K flags going-concern doubt, and a $200M ATM means severe dilution
   at a ~$4 stock; a May 2025 restructuring refocused it on in-vivo liver (Wilson's, AATD). Since then authorizations have
   accrued — first in-vivo CTA, AATD arbitration win, PM359 RMAT — but not efficacy data, and the financing constraint is
   unchanged, so the scenario set holds. The DCF asks whether the platform tail can outrun forced dilution. Weighted fair
-  value $3.39 vs $3.81 — modestly rich.
+  value $3.39 vs $3.55 — modestly rich.
 chart_reference:
   tam_billion: 30
   history_years:
@@ -50,7 +50,7 @@ page3_chart_config:
   fleet_reference: null
   valn_anchor_y: 5
   valn_anchor_text: Commercial biotech P/S ~4-6x
-  valn_caption: 'Pre-product: the ~$689M cap is pipeline value over a thin $149M cash floor.'
+  valn_caption: 'Pre-product: the ~$642M cap is pipeline value over a thin $149M cash floor.'
   tam_title: $30B genetic-disease therapeutics — PRME share
   tam_legend:
   - PRME
@@ -360,7 +360,7 @@ scenarios:
     - A Wilson's or AATD in-vivo program reaches market and BMS milestones (>$3.5B potential) start landing, validating prime
       editing as a real modality. The business survives and generates revenue at ~37% drug margins.
     - But getting there costs ~$0.9B of dilutive raises at depressed prices, nearly tripling the share count to ~500M. FY35
-      revenue ~$0.50B; p_fail 55%. DCF $0.84, expected ~$0.60 — per-share value lands ~84% below spot because dilution claims
+      revenue ~$0.50B; p_fail 55%. DCF $0.84, expected ~$0.60 — per-share value lands ~83% below spot because dilution claims
       the upside.
     probability_rationale: '30% — co-equal modal case: clinical proof exists (PM359) and the liver targets are credible, but
       the model auto-sizes the raises needed to fund them, and that dilution is the binding constraint on per-share value.'
@@ -785,27 +785,28 @@ scenarios:
       tam_competitor_share: 15.0
 historical_prices:
   ipo_marker: IPO Oct '22
-  x_min: -4.05
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-3.97, 18.82]   # 2022-10-31
-  - [-3.81, 18.58]   # 2022-12-30
-  - [-3.56, 12.30]   # 2023-03-31
-  - [-3.31, 14.65]   # 2023-06-30
-  - [-3.06, 9.54]   # 2023-09-29
-  - [-2.81, 8.86]   # 2023-12-29
-  - [-2.57, 7.00]   # 2024-03-28
-  - [-2.31, 5.14]   # 2024-06-28
-  - [-2.06, 3.87]   # 2024-09-30
-  - [-1.80, 2.92]   # 2024-12-31
-  - [-1.56, 1.99]   # 2025-03-31
-  - [-1.31, 2.47]   # 2025-06-30
-  - [-1.06, 5.54]   # 2025-09-30
-  - [-0.81, 3.47]   # 2025-12-31
-  - [-0.56, 3.48]   # 2026-03-31
-  - [-0.31, 3.69]   # 2026-06-30
-  - [-0.23, 2.92]   # 2026-07-31
-  - [-0.14, 3.59]   # 2026-08-31
-  - [-0.08, 3.19]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -4.13
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-4.05, 18.82]   # 2022-10-31
+  - [-3.89, 18.58]   # 2022-12-30
+  - [-3.64, 12.30]   # 2023-03-31
+  - [-3.39, 14.65]   # 2023-06-30
+  - [-3.14, 9.54]   # 2023-09-29
+  - [-2.89, 8.86]   # 2023-12-29
+  - [-2.65, 7.00]   # 2024-03-28
+  - [-2.39, 5.14]   # 2024-06-28
+  - [-2.14, 3.87]   # 2024-09-30
+  - [-1.88, 2.92]   # 2024-12-31
+  - [-1.64, 1.99]   # 2025-03-31
+  - [-1.39, 2.47]   # 2025-06-30
+  - [-1.14, 5.54]   # 2025-09-30
+  - [-0.89, 3.47]   # 2025-12-31
+  - [-0.64, 3.48]   # 2026-03-31
+  - [-0.39, 3.69]   # 2026-06-30
+  - [-0.31, 2.92]   # 2026-07-31
+  - [-0.22, 3.59]   # 2026-08-31
+  - [-0.16, 3.19]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 3.81]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 16%
   body: Programs fail or cash runs out; ATM dilutes to the $0.40 floor.
@@ -829,7 +830,7 @@ appendix:
     body: BMS ($55M upfront, $55M equity, >$3.5B milestones) and CFF (up to $39M) offset some burn — not every dollar of progress
       must come from the ATM.
   - label: The de-rating prices the distress
-    body: At $3.81, down from a $6.94 high, much of the going-concern risk is already in the stock; the platform tail is being
+    body: At $3.55, down from a $6.94 high, much of the going-concern risk is already in the stock; the platform tail is being
       bought cheaply.
   - label: David Liu lineage
     body: The Broad-Institute prime-editing IP and scientific lead are a genuine cornered resource that a partner or acquirer
@@ -970,13 +971,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Origination)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "008"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "009"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "008"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "009"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "008"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 3.81
   - version: "007"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

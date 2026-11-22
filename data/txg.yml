@@ -2,10 +2,10 @@ ticker: TXG
 company: 10x Genomics
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-10-22'
-spot: 75.59
+date: '2026-11-22'
+spot: 51.80
 market:
-  market_cap_billion: 9.59
+  market_cap_billion: 6.57
   shares_outstanding_million: 127.0
   cash_billion: 0.54
   net_debt_billion: 0.0
@@ -19,13 +19,13 @@ taxonomy:
   themes:
   - omics-life-science-infrastructure
   primary_theme: omics-life-science-infrastructure
-central_question: Is the market paying a spatial-plus-clinical multiple (~15x EV/sales) for a flat-to-declining single-cell core — or correctly pricing a margin inflection and a genuine diagnostics second act?
-thesis: '10x trades at ~$9.6B (≈$76/sh) — ~15x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools
+central_question: Is the market paying a spatial-plus-clinical multiple (~10x EV/sales) for a flat-to-declining single-cell core — or correctly pricing a margin inflection and a genuine diagnostics second act?
+thesis: '10x trades at ~$6.6B (≈$52/sh) — ~10x EV/sales on ~$600M revenue flat-to-declining for three years. A dominant tools
   franchise: >7,900 instruments, ~85% recurring 70%-margin consumables, net-cash and cash-generative after a 17% opex cut.
   The mature DCF holds the flat core and asks whether the second act the market now pays for — a clinical-diagnostics pivot
   (CLIA lab targeted early-2027), a multiomic Proteintech expansion, and the Atera spatial launch — becomes a durable reimbursed
-  platform. The finding: even crediting that optionality in the tail, the ~6.5x run prices execution the ~3%-grind base
-  doesn''t support — the modal case is ~82% below spot.'
+  platform. The finding: even crediting that optionality in the tail, the ~4.5x run prices execution the ~3%-grind base
+  doesn''t support — the modal case is ~73% below spot.'
 chart_reference:
   history_years:
   - 2021
@@ -85,7 +85,7 @@ scenarios:
     - The NIH / academic funding shock deepens — the proposed ~40% NIH cut sticks, instrument placements stay frozen, and
       the single-cell consumables decline accelerates faster than spatial can offset. Revenue falls ~4%/yr toward ~$0.50B
       by FY30; the franchise shrinks.
-    - Even net-cash and debt-free, a declining-revenue tools business earns a distressed multiple — the DCF lands near $4, ~94% below spot. The recurring consumables annuity erodes with the shrinking installed base.
+    - Even net-cash and debt-free, a declining-revenue tools business earns a distressed multiple — the DCF lands near $4, ~92% below spot. The recurring consumables annuity erodes with the shrinking installed base.
     probability_rationale: The NIH funding shock is the dominant risk — ~25% of revenue is NIH-tied, instruments already fell
       39%, and the academic market could shrink for years. 15% weight on a sustained decline.
     dcf_metrics:
@@ -233,8 +233,8 @@ scenarios:
     - 'The modal path: FY26 guidance holds (0-4% growth), spatial roughly offsets single-cell decline, and the 17% opex cut
       plus modest top-line growth converts the 70% gross margin toward a low-teens FCF margin — revenue ~$0.68B by FY30 at
       ~3% CAGR.'
-    - DCF ~$14/share, ~82% below spot. The franchise is real and finally profitable, but a 3%-grower at a low-teens FCF margin
-      doesn't support ~15x EV/sales. The market is paying for a re-acceleration the base case doesn't deliver.
+    - DCF ~$14/share, ~73% below spot. The franchise is real and finally profitable, but a 3%-grower at a low-teens FCF margin
+      doesn't support ~10x EV/sales. The market is paying for a re-acceleration the base case doesn't deliver.
     probability_rationale: Guidance holds (0-4%), cost discipline converts to FCF, spatial roughly offsets single-cell. 30%
       as the central, modal outcome — consistent with consensus ~3.8% CAGR.
     dcf_metrics:
@@ -384,7 +384,7 @@ scenarios:
     - 'The tail: the clinical-diagnostics and multiomic second act inflects into a durable reimbursed platform on top of the
       spatial franchise — 10x''s installed-base and IP moat compound, and revenue reaches ~14% CAGR (~$1.14B by FY30) at
       platform margins (~28% FCF).'
-    - DCF ~$63/share — ~16% below spot. The genuine 'research tools become a diagnostics platform' outcome; ~8% probability,
+    - DCF ~$63/share — ~22% above spot. The genuine 'research tools become a diagnostics platform' outcome; ~8% probability,
       trimmed from the base and sized modestly given a pivot that is early, unproven, and ~a year out.
     probability_rationale: 'Tail: the clinical/multiomic second act becomes a durable reimbursed platform at peak margins.
       ~8% — the platform thesis fully realized, held modest because the pivot is early and unproven.'
@@ -451,50 +451,51 @@ scenarios:
       - 17.0
 historical_prices:
   ipo_marker: IPO Sep '19
-  x_min: -7.19
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-7.06, 50.40]   # 2019-09-30
-  - [-6.81, 76.25]   # 2019-12-31
-  - [-6.56, 62.32]   # 2020-03-31
-  - [-6.31, 89.31]   # 2020-06-30
-  - [-6.06, 124.68]   # 2020-09-30
-  - [-5.80, 141.60]   # 2020-12-31
-  - [-5.56, 181.00]   # 2021-03-31
-  - [-5.31, 195.82]   # 2021-06-30
-  - [-5.06, 145.58]   # 2021-09-30
-  - [-4.81, 148.96]   # 2021-12-31
-  - [-4.56, 76.07]   # 2022-03-31
-  - [-4.31, 45.25]   # 2022-06-30
-  - [-4.06, 28.48]   # 2022-09-30
-  - [-3.81, 36.44]   # 2022-12-30
-  - [-3.56, 55.79]   # 2023-03-31
-  - [-3.31, 55.84]   # 2023-06-30
-  - [-3.06, 41.25]   # 2023-09-29
-  - [-2.81, 55.96]   # 2023-12-29
-  - [-2.57, 37.53]   # 2024-03-28
-  - [-2.31, 19.45]   # 2024-06-28
-  - [-2.06, 22.58]   # 2024-09-30
-  - [-1.80, 14.36]   # 2024-12-31
-  - [-1.56, 8.73]   # 2025-03-31
-  - [-1.31, 11.58]   # 2025-06-30
-  - [-1.06, 11.69]   # 2025-09-30
-  - [-0.81, 16.31]   # 2025-12-31
-  - [-0.56, 21.23]   # 2026-03-31
-  - [-0.31, 38.34]   # 2026-06-30
-  - [-0.23, 47.27]   # 2026-07-31
-  - [-0.14, 62.45]   # 2026-08-31
-  - [-0.08, 79.10]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -7.27
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-7.14, 50.40]   # 2019-09-30
+  - [-6.89, 76.25]   # 2019-12-31
+  - [-6.64, 62.32]   # 2020-03-31
+  - [-6.39, 89.31]   # 2020-06-30
+  - [-6.14, 124.68]   # 2020-09-30
+  - [-5.88, 141.60]   # 2020-12-31
+  - [-5.64, 181.00]   # 2021-03-31
+  - [-5.39, 195.82]   # 2021-06-30
+  - [-5.14, 145.58]   # 2021-09-30
+  - [-4.89, 148.96]   # 2021-12-31
+  - [-4.64, 76.07]   # 2022-03-31
+  - [-4.39, 45.25]   # 2022-06-30
+  - [-4.14, 28.48]   # 2022-09-30
+  - [-3.89, 36.44]   # 2022-12-30
+  - [-3.64, 55.79]   # 2023-03-31
+  - [-3.39, 55.84]   # 2023-06-30
+  - [-3.14, 41.25]   # 2023-09-29
+  - [-2.89, 55.96]   # 2023-12-29
+  - [-2.65, 37.53]   # 2024-03-28
+  - [-2.39, 19.45]   # 2024-06-28
+  - [-2.14, 22.58]   # 2024-09-30
+  - [-1.88, 14.36]   # 2024-12-31
+  - [-1.64, 8.73]   # 2025-03-31
+  - [-1.39, 11.58]   # 2025-06-30
+  - [-1.14, 11.69]   # 2025-09-30
+  - [-0.89, 16.31]   # 2025-12-31
+  - [-0.64, 21.23]   # 2026-03-31
+  - [-0.39, 38.34]   # 2026-06-30
+  - [-0.31, 47.27]   # 2026-07-31
+  - [-0.22, 62.45]   # 2026-08-31
+  - [-0.16, 79.10]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 75.59]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 15%
   body: NIH cuts crush demand; revenue declines; ~$4.
 - label: Bear 30%
   body: Flat revenue, thin margins; dominant ex-growth; ~$8.
 - label: Base 30%
-  body: Slow ~3% grind; margins recover; ~$14 (≈-82%).
+  body: Slow ~3% grind; margins recover; ~$14 (≈-73%).
 - label: Bull 17%
-  body: Core to ~10% + clinical second act begins; ~$32 (≈-58%).
+  body: Core to ~10% + clinical second act begins; ~$32 (≈-38%).
 - label: Ultra Bull 8%
-  body: Diagnostics platform inflection (~14%); ~$63 (≈-16%).
+  body: Diagnostics platform inflection (~14%); ~$63 (≈+22%).
 appendix:
   pushback:
   - label: Razor/blade annuity is the moat.
@@ -605,7 +606,7 @@ competitive:
   takeaway: '10x''s Scale-Economies Power — a >7,900-instrument installed base throwing off ~85% recurring, 70%-margin consumables
     — is real and durable, and its IP estate bankrupted NanoString. But the Power is being audited in real time: single-cell
     consumables are declining, instrument placements are frozen by the NIH funding shock, and instrument-free entrants (Parse
-    — and 10x''s own ScaleBio acquisition) attack the razor model the annuity depends on. The market pays ~15x EV/sales for a spatial re-acceleration the base doesn''t yet support; the durability of the consumables annuity through the academic-funding
+    — and 10x''s own ScaleBio acquisition) attack the razor model the annuity depends on. The market pays ~10x EV/sales for a spatial re-acceleration the base doesn''t yet support; the durability of the consumables annuity through the academic-funding
     shock is the falsifier the valuation rests on.'
 pocd:
   people:
@@ -643,13 +644,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Audit)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "008"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "008"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 75.59
   - version: "006"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"
