@@ -50,7 +50,7 @@ RISKFREE_TICKER = "BIL"   # 1-3mo T-bill ETF — realized risk-free proxy for th
 ANN = 252                 # trading days/yr for annualization
 SQRT2 = math.sqrt(2.0)    # Schwager's adjustment factor (makes the ratio Sharpe-comparable)
 SORTINO_BENCH = {"SPY": "S&P 500", "QQQ": "NASDAQ-100"}   # the head-to-head comparison set
-UA = "Mozilla/5.0 (compatible; ar2eb-perf; arthurculang@gmail.com)"
+UA = "Mozilla/5.0 (compatible; ar2eb-perf)"
 
 
 def adjclose(ticker: str, start: dt.date) -> dict[dt.date, float]:
