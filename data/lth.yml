@@ -39,13 +39,13 @@ central_question: >
   $400M/year sale-leasebacks?
 
 thesis: >
-  LTH trades at $40.76 ($9.1B mkt cap) on TTM revenue $3.0B and Adj EBITDA
+  LTH trades at $46.33 ($10.3B cap) on TTM revenue $3.0B and Adj EBITDA
   $824M (27.5% margin). 190+ premium athletic clubs, 891K members, 12-14
   luxury openings/yr. But FY25 FCF $206M required $400M of sale-leaseback
   proceeds offsetting $870M capex — ex-SLB, operating FCF is zero. Bear:
   capital recycling unsustainable, leveraged real estate vehicle. Bull:
   luxury wellness category-of-one, SLB is smart financing. Today's price
-  requires bull-case execution. Five scenarios, weighted; show your work.
+  exceeds even the bull case. Five scenarios, weighted; show your work.
 
 # ── Page 3 chart-level reference data ───────────────────────────────────────
 chart_reference:
@@ -247,10 +247,10 @@ scenarios:
         leverage stays in the 1.5-2.0x EBITDA target.
       - >
         The math: $4.39B op EV + $0.23B cash − $1.52B debt = $3.10B
-        equity ÷ 222M sh = $13.96/share. Materially below today's $40.76 —
-        meaning the current price requires bull-case assumptions. The base
-        case is well-run but priced for steady-state execution. Modest
-        upside requires the bull narrative to convert.
+        equity ÷ 222M sh = $13.96/share. Materially below today's $46.33 —
+        the current price sits above even the bull case. The base
+        case is well-run but priced for steady-state execution. Upside
+        requires the ultra-bull narrative.
     probability_rationale: >
       Modal outcome. LTH executes guidance: revenue grows 11% FY26,
       decelerating to mid-single-digits. EBITDA margin holds 28-30% (top
@@ -320,7 +320,7 @@ scenarios:
         higher-revenue luxury formats. Operating FCF ex-SLB turns
         meaningfully positive by FY28. Stock works to $45+ as the market
         gives LTH credit for a premium consumer franchise, re-rating from
-        ~18x P/E toward 22-25x.
+        ~20x P/E toward 22-25x.
     probability_rationale: >
       Multi-decade luxury wellness platform compounding. LTH is genuinely a
       category-of-one — no other US operator at premium luxury athletic
@@ -331,7 +331,7 @@ scenarios:
       margin expands toward 30%+ as new-club mix shifts to higher-revenue
       luxury formats. The SLB flywheel sustains: 12-14 new luxury clubs/year
       become future SLB inventory 5-7 years later. The 25% weight reflects
-      that multiple expansion (18x P/E to 22-25x) is plausible but requires
+      that multiple expansion (20x P/E to 22-25x) is plausible but requires
       both execution AND market re-rating — the conjunction is demanding.
 
     dcf_metrics:
@@ -382,7 +382,7 @@ scenarios:
         self-funds at 6% cap rate with bank financing. EBITDA grows to
         $1.5B+ by 2030.
       - >
-        Multiple expands from 10x EV/EBITDA (today) to 15x as growth story
+        Multiple expands from 11x EV/EBITDA (today) to 15x as growth story
         consolidates and capital structure de-risks. Result: $23.7B EV -
         $1.3B net debt = $22.4B equity ÷ 235M FY30 shares = $95/share. The
         ultra-bull case requires BOTH operational excellence AND multiple
@@ -494,7 +494,7 @@ appendix:
     - label: "Bear validation"
       body: "FY27 revenue growth < 5%  ·  SLB cadence < $300M/yr  ·  Net debt / EBITDA > 2.5x  ·  Credit rating downgraded below BB-"
     - label: "Bull validation"
-      body: "FY27 revenue growth > 9%  ·  EBITDA margin > 30%  ·  In-center revenue per member > $1,250  ·  P/E multiple expands above 18x"
+      body: "FY27 revenue growth > 9%  ·  EBITDA margin > 30%  ·  In-center revenue per member > $1,250  ·  P/E multiple expands above 20x"
     - label: "Reframe needed"
       body: "If Equinox or comparable luxury operator IPOs at premium multiple — establishes valuation comparable for LTH multiple expansion"
 
