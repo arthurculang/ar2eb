@@ -2,10 +2,10 @@ ticker: TSLA
 company: Tesla
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-10-22'
-spot: 386.47
+date: '2026-11-22'
+spot: 345.82
 market:
-  market_cap_billion: 1450.19
+  market_cap_billion: 1297.65
   shares_outstanding_million: 3752.4
   cash_billion: 44.1
   net_debt_billion: 1.6
@@ -459,35 +459,36 @@ scenarios:
       - 23.0
 historical_prices:
   ipo_marker: IPO Jun '10
-  x_min: -6.09
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-6.06, 143.00]   # 2020-09-30
-  - [-5.80, 235.22]   # 2020-12-31
-  - [-5.56, 222.64]   # 2021-03-31
-  - [-5.31, 226.57]   # 2021-06-30
-  - [-5.06, 258.49]   # 2021-09-30
-  - [-4.81, 352.26]   # 2021-12-31
-  - [-4.56, 359.20]   # 2022-03-31
-  - [-4.31, 224.47]   # 2022-06-30
-  - [-4.06, 265.25]   # 2022-09-30
-  - [-3.81, 123.18]   # 2022-12-30
-  - [-3.56, 207.46]   # 2023-03-31
-  - [-3.31, 261.77]   # 2023-06-30
-  - [-3.06, 250.22]   # 2023-09-29
-  - [-2.81, 248.48]   # 2023-12-29
-  - [-2.57, 175.79]   # 2024-03-28
-  - [-2.31, 197.88]   # 2024-06-28
-  - [-2.06, 261.63]   # 2024-09-30
-  - [-1.80, 403.84]   # 2024-12-31
-  - [-1.56, 259.16]   # 2025-03-31
-  - [-1.31, 317.66]   # 2025-06-30
-  - [-1.06, 444.72]   # 2025-09-30
-  - [-0.81, 449.72]   # 2025-12-31
-  - [-0.56, 371.75]   # 2026-03-31
-  - [-0.31, 420.60]   # 2026-06-30
-  - [-0.23, 311.21]   # 2026-07-31
-  - [-0.14, 367.95]   # 2026-08-31
-  - [-0.08, 375.30]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -6.17
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-6.14, 143.00]   # 2020-09-30
+  - [-5.88, 235.22]   # 2020-12-31
+  - [-5.64, 222.64]   # 2021-03-31
+  - [-5.39, 226.57]   # 2021-06-30
+  - [-5.14, 258.49]   # 2021-09-30
+  - [-4.89, 352.26]   # 2021-12-31
+  - [-4.64, 359.20]   # 2022-03-31
+  - [-4.39, 224.47]   # 2022-06-30
+  - [-4.14, 265.25]   # 2022-09-30
+  - [-3.89, 123.18]   # 2022-12-30
+  - [-3.64, 207.46]   # 2023-03-31
+  - [-3.39, 261.77]   # 2023-06-30
+  - [-3.14, 250.22]   # 2023-09-29
+  - [-2.89, 248.48]   # 2023-12-29
+  - [-2.65, 175.79]   # 2024-03-28
+  - [-2.39, 197.88]   # 2024-06-28
+  - [-2.14, 261.63]   # 2024-09-30
+  - [-1.88, 403.84]   # 2024-12-31
+  - [-1.64, 259.16]   # 2025-03-31
+  - [-1.39, 317.66]   # 2025-06-30
+  - [-1.14, 444.72]   # 2025-09-30
+  - [-0.89, 449.72]   # 2025-12-31
+  - [-0.64, 371.75]   # 2026-03-31
+  - [-0.39, 420.60]   # 2026-06-30
+  - [-0.31, 311.21]   # 2026-07-31
+  - [-0.22, 367.95]   # 2026-08-31
+  - [-0.16, 375.30]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 386.47]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 18%
   body: Deliveries keep falling; pure auto multiple; ~$26 (-93%).
@@ -656,13 +657,17 @@ pocd:
   deal: Open-market common — entry price weighed against the probability-weighted fair value, with the robotaxi, FSD and Optimus
     optionality priced explicitly in the ultra-bull second act, then position-sized.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "008"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "008"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 386.47
   - version: "006"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

@@ -2,10 +2,10 @@ ticker: SHOP
 company: Shopify Inc.
 exchange: NASDAQ
 dcf_type: mature_company
-date: '2026-10-22'
-spot: 174.29
+date: '2026-11-22'
+spot: 123.72
 market:
-  market_cap_billion: 226.41
+  market_cap_billion: 160.72
   shares_outstanding_million: 1299.0
   cash_billion: 5.778
   net_debt_billion: 0.0
@@ -454,33 +454,34 @@ scenarios:
       - 29.0
 historical_prices:
   ipo_marker: IPO May '15
-  x_min: -5.59
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-5.56, 110.65]   # 2021-03-31
-  - [-5.31, 146.10]   # 2021-06-30
-  - [-5.06, 135.58]   # 2021-09-30
-  - [-4.81, 137.74]   # 2021-12-31
-  - [-4.56, 67.60]   # 2022-03-31
-  - [-4.31, 31.24]   # 2022-06-30
-  - [-4.06, 26.94]   # 2022-09-30
-  - [-3.81, 34.71]   # 2022-12-30
-  - [-3.56, 47.94]   # 2023-03-31
-  - [-3.31, 64.60]   # 2023-06-30
-  - [-3.06, 54.57]   # 2023-09-29
-  - [-2.81, 77.90]   # 2023-12-29
-  - [-2.57, 77.17]   # 2024-03-28
-  - [-2.31, 66.05]   # 2024-06-28
-  - [-2.06, 80.14]   # 2024-09-30
-  - [-1.80, 106.33]   # 2024-12-31
-  - [-1.56, 95.48]   # 2025-03-31
-  - [-1.31, 115.35]   # 2025-06-30
-  - [-1.06, 148.61]   # 2025-09-30
-  - [-0.81, 160.97]   # 2025-12-31
-  - [-0.56, 118.62]   # 2026-03-31
-  - [-0.31, 114.18]   # 2026-06-30
-  - [-0.23, 117.15]   # 2026-07-31
-  - [-0.14, 147.37]   # 2026-08-31
-  - [-0.08, 137.92]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -5.67
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-5.64, 110.65]   # 2021-03-31
+  - [-5.39, 146.10]   # 2021-06-30
+  - [-5.14, 135.58]   # 2021-09-30
+  - [-4.89, 137.74]   # 2021-12-31
+  - [-4.64, 67.60]   # 2022-03-31
+  - [-4.39, 31.24]   # 2022-06-30
+  - [-4.14, 26.94]   # 2022-09-30
+  - [-3.89, 34.71]   # 2022-12-30
+  - [-3.64, 47.94]   # 2023-03-31
+  - [-3.39, 64.60]   # 2023-06-30
+  - [-3.14, 54.57]   # 2023-09-29
+  - [-2.89, 77.90]   # 2023-12-29
+  - [-2.65, 77.17]   # 2024-03-28
+  - [-2.39, 66.05]   # 2024-06-28
+  - [-2.14, 80.14]   # 2024-09-30
+  - [-1.88, 106.33]   # 2024-12-31
+  - [-1.64, 95.48]   # 2025-03-31
+  - [-1.39, 115.35]   # 2025-06-30
+  - [-1.14, 148.61]   # 2025-09-30
+  - [-0.89, 160.97]   # 2025-12-31
+  - [-0.64, 118.62]   # 2026-03-31
+  - [-0.39, 114.18]   # 2026-06-30
+  - [-0.31, 117.15]   # 2026-07-31
+  - [-0.22, 147.37]   # 2026-08-31
+  - [-0.16, 137.92]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 174.29]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 15%
   body: AI disintermediates the storefront; growth fades; ~$31 (-82%).
@@ -643,13 +644,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "007"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "008"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "007"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "008"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "007"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 174.29
   - version: "006"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

@@ -2,10 +2,10 @@ ticker: OKLO
 company: Oklo
 exchange: NYSE
 dcf_type: young_company
-date: '2026-10-22'
-spot: 27.73
+date: '2026-11-22'
+spot: 19.85
 market:
-  market_cap_billion: 4.99
+  market_cap_billion: 3.57
   shares_outstanding_million: 180.0
   cash_billion: 2.54
   net_debt_billion: 0.0
@@ -798,21 +798,22 @@ scenarios:
       tam_competitor_share: 70.0
 historical_prices:
   ipo_marker: SPAC May '24
-  x_min: -2.59
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-2.57, 11.42]   # 2024-03-28
-  - [-2.31, 8.47]   # 2024-06-28
-  - [-2.06, 8.09]   # 2024-09-30
-  - [-1.80, 21.23]   # 2024-12-31
-  - [-1.56, 21.63]   # 2025-03-31
-  - [-1.31, 55.99]   # 2025-06-30
-  - [-1.06, 111.63]   # 2025-09-30
-  - [-0.81, 71.76]   # 2025-12-31
-  - [-0.56, 49.59]   # 2026-03-31
-  - [-0.31, 52.33]   # 2026-06-30
-  - [-0.23, 38.83]   # 2026-07-31
-  - [-0.14, 40.57]   # 2026-08-31
-  - [-0.08, 40.18]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -2.67
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-2.65, 11.42]   # 2024-03-28
+  - [-2.39, 8.47]   # 2024-06-28
+  - [-2.14, 8.09]   # 2024-09-30
+  - [-1.88, 21.23]   # 2024-12-31
+  - [-1.64, 21.63]   # 2025-03-31
+  - [-1.39, 55.99]   # 2025-06-30
+  - [-1.14, 111.63]   # 2025-09-30
+  - [-0.89, 71.76]   # 2025-12-31
+  - [-0.64, 49.59]   # 2026-03-31
+  - [-0.39, 52.33]   # 2026-06-30
+  - [-0.31, 38.83]   # 2026-07-31
+  - [-0.22, 40.57]   # 2026-08-31
+  - [-0.16, 40.18]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 27.73]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 8%
   body: Aurora fails / NRC re-denial; cash shell.
@@ -988,13 +989,17 @@ pocd:
   context_ref: The 7 Powers analysis (Power Origination)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "008"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "009"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "008"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "009"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "008"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 27.73
   - version: "007"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

@@ -13,11 +13,11 @@ ticker: AUR
 company: Aurora Innovation
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-10-22'
-spot: 5.01
+date: '2026-11-22'
+spot: 3.50
 # ── Market data ─────────────────────────────────────────────────────────────
 market:
-  market_cap_billion: 8.57
+  market_cap_billion: 6.00
   shares_outstanding_million: 1710        # 1.71B sh
   cash_billion: 1.28
   net_debt_billion: 0.0                   # ~$0 funded debt (Q1'26 10-Q); the $1B 0% convertible is Uber's exchangeable note, not Aurora's
@@ -408,33 +408,34 @@ scenarios:
 # x = years offset from today (negative = past).
 historical_prices:
   ipo_marker: "IPO Nov '21"
-  x_min: -5.43            # years of history to show in chart
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-5.40, 9.79]   # 2021-05-28
-  - [-5.31, 9.89]   # 2021-06-30
-  - [-5.06, 9.93]   # 2021-09-30
-  - [-4.81, 11.26]   # 2021-12-31
-  - [-4.56, 5.59]   # 2022-03-31
-  - [-4.31, 1.91]   # 2022-06-30
-  - [-4.06, 2.21]   # 2022-09-30
-  - [-3.81, 1.21]   # 2022-12-30
-  - [-3.56, 1.39]   # 2023-03-31
-  - [-3.31, 2.94]   # 2023-06-30
-  - [-3.06, 2.35]   # 2023-09-29
-  - [-2.81, 4.37]   # 2023-12-29
-  - [-2.57, 2.82]   # 2024-03-28
-  - [-2.31, 2.77]   # 2024-06-28
-  - [-2.06, 5.92]   # 2024-09-30
-  - [-1.80, 6.30]   # 2024-12-31
-  - [-1.56, 6.72]   # 2025-03-31
-  - [-1.31, 5.24]   # 2025-06-30
-  - [-1.06, 5.39]   # 2025-09-30
-  - [-0.81, 3.84]   # 2025-12-31
-  - [-0.56, 4.12]   # 2026-03-31
-  - [-0.31, 6.82]   # 2026-06-30
-  - [-0.23, 6.45]   # 2026-07-31
-  - [-0.14, 5.63]   # 2026-08-31
-  - [-0.08, 6.51]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -5.51            # years of history to show in chart
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-5.48, 9.79]   # 2021-05-28
+  - [-5.39, 9.89]   # 2021-06-30
+  - [-5.14, 9.93]   # 2021-09-30
+  - [-4.89, 11.26]   # 2021-12-31
+  - [-4.64, 5.59]   # 2022-03-31
+  - [-4.39, 1.91]   # 2022-06-30
+  - [-4.14, 2.21]   # 2022-09-30
+  - [-3.89, 1.21]   # 2022-12-30
+  - [-3.64, 1.39]   # 2023-03-31
+  - [-3.39, 2.94]   # 2023-06-30
+  - [-3.14, 2.35]   # 2023-09-29
+  - [-2.89, 4.37]   # 2023-12-29
+  - [-2.65, 2.82]   # 2024-03-28
+  - [-2.39, 2.77]   # 2024-06-28
+  - [-2.14, 5.92]   # 2024-09-30
+  - [-1.88, 6.30]   # 2024-12-31
+  - [-1.64, 6.72]   # 2025-03-31
+  - [-1.39, 5.24]   # 2025-06-30
+  - [-1.14, 5.39]   # 2025-09-30
+  - [-0.89, 3.84]   # 2025-12-31
+  - [-0.64, 4.12]   # 2026-03-31
+  - [-0.39, 6.82]   # 2026-06-30
+  - [-0.31, 6.45]   # 2026-07-31
+  - [-0.22, 5.63]   # 2026-08-31
+  - [-0.16, 6.51]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 5.01]   # 2026-10-22 spot (prior as-of, reprice.py)
 
 # ── Page 1 weighting rationale (4 short lines, one per scenario) ────────────
 weighting_rationale:
@@ -504,13 +505,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "030"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "031"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: "public/memo_pdf.jsx"
-  pdf_version: "030"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "031"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "030"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 5.01
   - version: "029"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

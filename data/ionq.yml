@@ -2,10 +2,10 @@ ticker: IONQ
 company: IonQ
 exchange: NYSE
 dcf_type: young_company
-date: '2026-10-22'
-spot: 32.28
+date: '2026-11-22'
+spot: 20.72
 market:
-  market_cap_billion: 12.05
+  market_cap_billion: 7.73
   shares_outstanding_million: 373.2
   cash_billion: 2.39
   net_debt_billion: 0.0
@@ -866,31 +866,32 @@ scenarios:
       tam_competitor_share: 40.0
 historical_prices:
   ipo_marker: IPO Oct '21
-  x_min: -5.10
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-5.06, 10.40]   # 2021-09-30
-  - [-4.81, 16.70]   # 2021-12-31
-  - [-4.56, 12.76]   # 2022-03-31
-  - [-4.31, 4.38]   # 2022-06-30
-  - [-4.06, 5.07]   # 2022-09-30
-  - [-3.81, 3.45]   # 2022-12-30
-  - [-3.56, 6.15]   # 2023-03-31
-  - [-3.31, 13.53]   # 2023-06-30
-  - [-3.06, 14.88]   # 2023-09-29
-  - [-2.81, 12.39]   # 2023-12-29
-  - [-2.57, 9.99]   # 2024-03-28
-  - [-2.31, 7.03]   # 2024-06-28
-  - [-2.06, 8.74]   # 2024-09-30
-  - [-1.80, 41.77]   # 2024-12-31
-  - [-1.56, 22.07]   # 2025-03-31
-  - [-1.31, 42.97]   # 2025-06-30
-  - [-1.06, 61.50]   # 2025-09-30
-  - [-0.81, 44.87]   # 2025-12-31
-  - [-0.56, 28.83]   # 2026-03-31
-  - [-0.31, 53.26]   # 2026-06-30
-  - [-0.23, 36.44]   # 2026-07-31
-  - [-0.14, 39.31]   # 2026-08-31
-  - [-0.08, 40.51]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -5.18
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-5.14, 10.40]   # 2021-09-30
+  - [-4.89, 16.70]   # 2021-12-31
+  - [-4.64, 12.76]   # 2022-03-31
+  - [-4.39, 4.38]   # 2022-06-30
+  - [-4.14, 5.07]   # 2022-09-30
+  - [-3.89, 3.45]   # 2022-12-30
+  - [-3.64, 6.15]   # 2023-03-31
+  - [-3.39, 13.53]   # 2023-06-30
+  - [-3.14, 14.88]   # 2023-09-29
+  - [-2.89, 12.39]   # 2023-12-29
+  - [-2.65, 9.99]   # 2024-03-28
+  - [-2.39, 7.03]   # 2024-06-28
+  - [-2.14, 8.74]   # 2024-09-30
+  - [-1.88, 41.77]   # 2024-12-31
+  - [-1.64, 22.07]   # 2025-03-31
+  - [-1.39, 42.97]   # 2025-06-30
+  - [-1.14, 61.50]   # 2025-09-30
+  - [-0.89, 44.87]   # 2025-12-31
+  - [-0.64, 28.83]   # 2026-03-31
+  - [-0.39, 53.26]   # 2026-06-30
+  - [-0.31, 36.44]   # 2026-07-31
+  - [-0.22, 39.31]   # 2026-08-31
+  - [-0.16, 40.51]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 32.28]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 10%
   body: Trapped-ion scaling wall + Quantinuum dominance + commercial quantum advantage delayed past 2030; equity wipes via
@@ -990,14 +991,18 @@ pocd:
   context_ref: The 7 Powers analysis (Power Origination)
   deal: Open-market common — entry price weighed against the probability-weighted fair value + position sizing.
 stamp:
-  footer_version: "010"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "011"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "010"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "011"
+  pdf_timestamp: "2026-11-22_14-07"
 
 
   prior_versions:
+  - version: "010"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 32.28
   - version: "009"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"

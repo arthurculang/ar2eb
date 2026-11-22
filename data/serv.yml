@@ -2,10 +2,10 @@ ticker: SERV
 company: Serve Robotics
 exchange: NASDAQ
 dcf_type: young_company
-date: '2026-10-22'
-spot: 3.06
+date: '2026-11-22'
+spot: 2.04
 market:
-  market_cap_billion: 0.236
+  market_cap_billion: 0.157
   shares_outstanding_million: 77.0
   cash_billion: 0.197
   net_debt_billion: 0.0
@@ -796,21 +796,22 @@ scenarios:
       tam_competitor_share: 25.0
 historical_prices:
   ipo_marker: Uplisted '24
-  x_min: -2.95
-  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-10-22 as-of
-  - [-2.57, 5.15]   # 2024-03-28
-  - [-2.31, 1.95]   # 2024-06-28
-  - [-2.06, 7.95]   # 2024-09-30
-  - [-1.80, 13.50]   # 2024-12-31
-  - [-1.56, 5.75]   # 2025-03-31
-  - [-1.31, 11.44]   # 2025-06-30
-  - [-1.06, 11.63]   # 2025-09-30
-  - [-0.81, 10.38]   # 2025-12-31
-  - [-0.56, 8.44]   # 2026-03-31
-  - [-0.31, 6.58]   # 2026-06-30
-  - [-0.23, 4.78]   # 2026-07-31
-  - [-0.14, 4.87]   # 2026-08-31
-  - [-0.08, 4.44]   # 2026-09-22 spot (prior as-of, reprice.py)
+  x_min: -3.03
+  points:   # Yahoo month-end closes (quarter-ends + last 3 months); x = years before the 2026-11-22 as-of
+  - [-2.65, 5.15]   # 2024-03-28
+  - [-2.39, 1.95]   # 2024-06-28
+  - [-2.14, 7.95]   # 2024-09-30
+  - [-1.88, 13.50]   # 2024-12-31
+  - [-1.64, 5.75]   # 2025-03-31
+  - [-1.39, 11.44]   # 2025-06-30
+  - [-1.14, 11.63]   # 2025-09-30
+  - [-0.89, 10.38]   # 2025-12-31
+  - [-0.64, 8.44]   # 2026-03-31
+  - [-0.39, 6.58]   # 2026-06-30
+  - [-0.31, 4.78]   # 2026-07-31
+  - [-0.22, 4.87]   # 2026-08-31
+  - [-0.16, 4.44]   # 2026-09-22 spot (prior as-of, reprice.py)
+  - [-0.08, 3.06]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 15%
   body: Utilization never improves; unit economics fail; dilutive grind toward the distress floor.
@@ -973,13 +974,17 @@ pocd:
   context_ref: 'The 7 Powers analysis (Power Origination)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
 stamp:
-  footer_version: "008"
-  footer_timestamp: "2026-10-22_13-24"
+  footer_version: "009"
+  footer_timestamp: "2026-11-22_14-07"
   canonical_jsx: public/memo_pdf.jsx
-  pdf_version: "008"
-  pdf_timestamp: "2026-10-22_13-24"
+  pdf_version: "009"
+  pdf_timestamp: "2026-11-22_14-07"
 
   prior_versions:
+  - version: "008"
+    timestamp: "2026-10-22_13-24"
+    asOfDate: "2026-10-22"
+    spotPrice: 3.06
   - version: "007"
     timestamp: "2026-09-28_18-52"
     asOfDate: "2026-09-22"
