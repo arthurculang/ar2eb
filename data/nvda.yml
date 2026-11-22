@@ -10,21 +10,17 @@ market:
   cash_billion: 53.5
   net_debt_billion: 32.4
   extras:
-  - $10.6B cash vs ~$8.5B debt (~$2B net cash); ~24.3B shares; +$80B buyback authorized, $0.25/quarter dividend
-  - Revenue $215.9B FY26 (+65%); GAAP op margin ~60%; FCF ~$96.7B (~45%); Data Center now ~88% of revenue
-  - ~$3.1T market cap; ATH ~$235 (May), ~$126 now (~-33% TTM); slid post-earnings despite the beat
+  - '$53.5B cash vs $32.4B debt (~$21B net cash); ~24.3B diluted shares; $227B buyback left, $0.25/qtr dividend'
+  - 'FY27 revenue ~$424B (+96%) on the Q4 guide; Q3 op margin 67%; 9-mo FCF $114B (39%); Data Center ~93%'
+  - '~$3.0T market cap; ~$126 now (~-33% TTM); CEO resigned Nov 12, SEC probe reported Nov 20'
 taxonomy:
   watchlist: fcf-megacap
   tier: High
   themes:
   - ai-compute
   primary_theme: ai-compute
-central_question: Can datacenter AI capex compound for years at high-70s% gross margin to justify ~$3.1T (~31x FCF), or does
-  a digestion/air-pocket hit a stock priced for growth?
-thesis: 'NVIDIA trades at ~$3.1T (~$126/sh, ~-33% TTM) - ~31x FCF on $215.9B revenue (+65%), ~60% operating margins, ~$2B
-  net cash. Data Center is ~88% of revenue and grew +92% last quarter at a mid-70s% gross margin. The DCF asks whether hyperscaler
-  + sovereign AI capex keeps compounding or pauses; at huge growth the modal clears ~$3.1T - weighted +22% (ultra-bear
-  -68% to ultra-bull +183%).'
+central_question: 'Does AI capex keep compounding after revenue doubled in a year, or is ~$3.0T (~7x sales) rightly pricing a cyclical peak plus leadership and accounting risk?'
+thesis: 'NVIDIA trades at ~$3.0T (~$126/sh, ~-33% TTM), ~7x FY27''s ~$424B revenue (+96%), after its founder-CEO''s Nov-12 exit and a reported SEC accounting probe. Revenue and the ~+75% FY28 outlook run far ahead of the old scenarios; the DCF asks if this is the peak. A cyclical round trip is -37%, the modal +75%; weighted +48% (-76% to +275%).'
 chart_reference:
   history_years:
   - 2022
@@ -68,29 +64,19 @@ page3_chart_config:
   chart6_title: Equity build (Op EV + net cash)
   chart6_type: matureEquityBuild
 page3:
-  subtitle: FY22-FY26 history + FY27-FY31 scenario projections  ·  fiscal years end late January  ·  FQ1 FY2027 (rep. May
-    2026) results
-  sources: 'Sources: SEC XBRL company facts (CIK 1045810; revenue, GAAP operating income/margin, cash flow, debt), NVIDIA
-    FQ1 FY2027 release (revenue $81.6B +85% YoY, Data Center $75.2B +92% with compute $60.4B / networking $14.8B +199%, non-GAAP
-    gross margin 75.0%, FQ2 guide ~$91B, zero China datacenter revenue), Blackwell Ultra (GB300) sold out through mid-2026.
-    Revenue modeled as a growth path off FY26; FCF = revenue x FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF
-    vs peers.'
+  subtitle: 'FY22-FY26 history + FY27-FY31 scenario projections  ·  fiscal years end late January  ·  FQ3 FY2027 (rep. Nov 2026) results'
+  sources: 'Sources: SEC XBRL company facts (CIK 1045810), NVIDIA FQ3 FY2027 release and CFO commentary (Nov 17 2026: revenue $115.8B +103%, Data Center $107.6B, GAAP op income $77.5B, 9-mo FCF $113.7B, Q4 guide $130B with 71-72% gross margin, no China DC compute; FY28 outlook ~+75%), CEO-transition release (Nov 12), Reuters on the SEC probe (Nov 20). Owner FCF = FCF less stock comp (3.0% of FY26 revenue); Gordon terminal.'
 scenarios:
   ultra_bear:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.18
     expected_per_share: 30.40
-    headline: Capex air-pocket; revenue contracts.
+    headline: 'Capex air-pocket; revenue halves.'
     narrative:
-    - 'The AI capex cycle hits a digestion air-pocket: hyperscalers pause after over-building, Data Center revenue contracts
-      (-10% then -5%), and custom ASICs plus AMD''s H2-2026 launches take share at the margin so gross margin compresses toward
-      the low-70s. China stays a structural $0. The compute giant cyclically resets to a slower-growth, lower-margin base.'
-    - A cyclical semiconductor whose growth has rolled over earns a mid-teens terminal multiple (DCF ~$40, -68%). Net cash is
-      immaterial against a ~$3.1T cap; this is what a premium-priced name does when perfection breaks.
-    probability_rationale: 'The genuine bear: the entire thesis rides on hyperscaler capex holding, custom silicon (OpenAI-Broadcom
-      10GW) + AMD (Meta ~$100B, OpenAI 6GW) all land H2-2026, and the stock already slid at $5T despite a +85% quarter. 15%
-      weight on a real digestion/share-loss break.'
+    - 'FY27 lands at the low end of guidance (~$420B), then the build-out digests: hyperscalers pause after over-building, the accounting probe exposes revenue tied to NVIDIA''s own stakes in customers, and AMD plus custom ASICs take share. Revenue falls back to the FY26 level (~$210B) by FY30 and operating margin drops to ~40%.'
+    - 'A cyclical semiconductor at the bottom of its cycle earns a ~13x terminal multiple on owner FCF (DCF ~$30, -76%): a real franchise priced off a peak that does not recur.'
+    probability_rationale: 'The market''s ~7x sales already prices much of this. 18% (from 15%): the reported SEC accounting probe (Nov 20) and the CEO''s exit (Nov 12) add named revenue-quality and execution channels to the cyclical risk.'
     dcf_metrics:
       cagr_5y: -0.1
       wacc: 0.105
@@ -122,16 +108,11 @@ scenarios:
     short_label: Bear
     probability: 0.27
     expected_per_share: 78.56
-    headline: Growth decelerates hard; share erodes.
+    headline: 'FY28 grows, then a two-year digestion.'
     narrative:
-    - 'Demand keeps growing but decelerates fast as the first wave of build-out matures: +12% then high-single-digit as custom
-      ASICs and AMD chip away GPU share and pricing, holding gross margin in the high-50s/low-60s operating. The annual cadence
-      ships but each generation no longer doubles the installed base; sovereign + diversified demand cushions, not offsets.'
-    - DCF ~$77 (-39%) - a still-large, still-profitable franchise whose hyper-growth has normalized is worth below a $3.1T
-      cap; the market's premium assumes years of compounding the bear doesn't deliver.
-    probability_rationale: Growth deceleration plus custom-silicon/AMD share loss is the central pull on a name lapping +65%
-      FY26 revenue; even mid-teens forward growth at high margins leaves the price stretched. 25% as the plausible 'grows
-      but normalizes' path.
+    - 'Orders hold into FY28 but far below the outlook (+25%, the low end of sell-side skeptics), then a digestion year (-20%) as hyperscalers absorb capacity and AMD''s Helios and custom ASICs win the next tranche. Revenue settles near ~$410B, FY27''s level, and operating margin normalizes to ~55% with gross margin near the 71-72% trough.'
+    - 'DCF ~$79 (-37%) - a large, profitable franchise that peaked in FY28 is worth below today''s price; the cycle, not the moat, sets the value.'
+    probability_rationale: 'Capex cycles have always digested, and revenue just doubled in a year. 27% (from 25%) for the round trip a ~7x sales multiple implies, raised for the Q4 gross-margin trough and the leadership transition.'
     dcf_metrics:
       cagr_5y: 13.8
       wacc: 0.095
@@ -163,17 +144,11 @@ scenarios:
     short_label: Base
     probability: 0.3
     expected_per_share: 219.57
-    headline: Capex holds; cadence extends; still rich.
+    headline: 'Outlook mostly met; growth then fades.'
     narrative:
-    - 'The modal path: datacenter AI capex holds, Blackwell Ultra ramps into Rubin on the annual cadence, and Data Center
-      compounds (+40% then decelerating) at a defended ~60% operating margin while networking (+199% last quarter) extends
-      the full-rack systems franchise. Revenue roughly doubles over the window; China remains $0. A genuinely dominant, fast-growing
-      compute platform - and not yet priced for it.'
-    - DCF ~$159 (+26%) - with capex holding and the cadence intact, ~31x FCF and a ~19x terminal multiple on a company
-      this size leaves the modal case above today's price; the franchise is excellent and the entry is fair.
-    probability_rationale: Requires hyperscaler + sovereign capex to keep compounding and the cadence to ship without a share
-      break - consistent with a sold-out backlog and FQ2 guide ~$91B, but not a step-change beyond it. 32% as the central
-      outcome, positive at $3.1T.
+    - 'The modal path: FY27 closes at ~$424B (+96%) on the Q4 guide, FY28 grows +65% (below the ~+75% outlook, near the ~+69% consensus), then growth fades to +10% and low single digits as the build-out matures. Gross margin recovers toward the 72-73% FY28 guide, operating margin holds ~62%, and China stays $0.'
+    - 'DCF ~$220 (+75%) on owner FCF and a ~19x terminal multiple. Even with growth fading to ~3% by FY31, the reported run-rate and the FY28 outlook leave the modal case well above a price that assumes a peak.'
+    probability_rationale: 'Requires only that FY28 lands below management''s raised outlook and growth then decays - consistent with the $130B Q4 guide and rising 2027 capex plans at Alphabet and Microsoft. 30% (from 32%), trimmed for the interim leadership.'
     dcf_metrics:
       cagr_5y: 30.7
       wacc: 0.09
@@ -205,17 +180,11 @@ scenarios:
     short_label: Bull
     probability: 0.18
     expected_per_share: 333.27
-    headline: Capex holds; Rubin extends the cadence.
+    headline: 'Outlook met; Rubin extends the cadence.'
     narrative:
-    - 'Hyperscaler capex holds and broadens: the Rubin generation extends the annual cadence, networking and full-rack systems
-      compound the moat beyond the GPU, sovereign deployments (Saudi HUMAIN ~$20B, UAE) and diversified AI clouds (~50% of
-      Data Center) add a durable second leg, and gross margin stays mid-70s. Demand keeps outrunning supply; CUDA + the developer
-      ecosystem hold share against ASICs and AMD.'
-    - DCF $246 (+96%) - if capex holds and the cadence extends, the franchise grows into and past the multiple; this is the
-      core of the bull and where the price is defensible.
-    probability_rationale: Demand outrunning supply, +92% Data Center, +199% networking and a sold-out Blackwell Ultra backlog
-      make sustained compounding credible if the capex cycle doesn't pause. 20% weight on capex holding and Rubin extending
-      the run.
+    - 'FY28 delivers the ~+75% outlook (~$750B) as Vera Rubin (~$20B in its first production quarter, the fastest ramp in company history) extends the annual cadence; sovereign and AI-cloud demand broaden the base. Growth then slows to +18% and high single digits, and operating margin holds ~64% as price increases offset memory costs.'
+    - 'DCF ~$333 (+166%) - if the outlook is met and growth decays gradually, revenue reaches ~$1T by FY31 and today''s price is a deep discount.'
+    probability_rationale: 'Management has beaten every guide this cycle and raised the FY28 outlook on Nov 17, after the CEO''s exit. 18% (from 20%), trimmed for the accounting overhang and a new team executing the ramp.'
     dcf_metrics:
       cagr_5y: 35.9
       wacc: 0.085
@@ -249,14 +218,9 @@ scenarios:
     expected_per_share: 471.07
     headline: AI build-out runs for years; full platform.
     narrative:
-    - 'The full second act: AI infrastructure spend compounds for years across hyperscale, sovereign and enterprise, NVIDIA
-      stays the platform standard through Rubin and beyond, networking + software + the CUDA ecosystem entrench an end-to-end
-      systems moat, and gross margin holds low-to-mid-70s as supply scales. Revenue more than doubles at peak margins with
-      no meaningful share loss.'
-    - DCF $355 (+183%) - the build-out runs and NVIDIA captures it as the standard platform; ~8% probability, the asymmetric
-      upside the price embeds beyond the modal case.
-    probability_rationale: Everything works - capex compounds for years AND the cadence holds AND CUDA/networking entrench
-      the platform AND ASICs/AMD stay marginal. ~8%, the long-duration AI-infrastructure tail.
+    - 'The full second act: AI infrastructure spend compounds for years across hyperscale, sovereign and enterprise; FY28 beats the outlook (+85%), NVIDIA stays the platform standard through Rubin and beyond, and networking, software and CUDA entrench a systems moat. Revenue passes ~$1.3T by FY31 at ~66% operating margin with no meaningful share loss.'
+    - 'DCF ~$471 (+275%) - the build-out runs and NVIDIA captures it as the standard platform; at 7% probability, the asymmetric upside a peak-cycle price ignores.'
+    probability_rationale: 'Everything works - capex compounds for years AND the cadence holds AND the accounting review clears AND ASICs/AMD stay marginal. 7% (from 8%), the long-duration AI-infrastructure tail.'
     dcf_metrics:
       cagr_5y: 42.8
       wacc: 0.082
@@ -314,56 +278,48 @@ historical_prices:
   - [-0.16, 227.38]   # 2026-09-22 spot (prior as-of, reprice.py)
   - [-0.08, 221.97]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
-- label: Ultra Bear 15%
-  body: Capex air-pocket; revenue contracts; ~$40 (-68%).
-- label: Bear 25%
-  body: Growth decelerates hard; share erodes; ~$77 (-39%).
-- label: Base 32%
-  body: Capex holds; cadence extends; ~$159 (+26%).
-- label: Bull 20%
-  body: Capex holds; Rubin extends cadence; $246 (+96%).
-- label: Ultra Bull 8%
-  body: AI build-out runs for years; $355 (+183%).
+- label: 'Ultra Bear 18%'
+  body: 'Capex air-pocket; revenue halves; ~$30 (-76%).'
+- label: 'Bear 27%'
+  body: 'FY28 grows, then digests; ~$79 (-37%).'
+- label: 'Base 30%'
+  body: 'Outlook mostly met; fades; ~$220 (+75%).'
+- label: 'Bull 18%'
+  body: 'Outlook met; Rubin cadence; ~$333 (+166%).'
+- label: 'Ultra Bull 7%'
+  body: 'AI build-out runs for years; $471 (+275%).'
 appendix:
+  pushback_side: bear
   pushback:
-  - label: ~31x FCF on a ~$3.1T company.
-    body: ~$96.7B FCF and ~60% operating margins, but at ~$3.1T the modal DCF is only ~+26% - 40% of the weight
-      still sits below the price; the distribution does the talking.
-  - label: The single swing factor is datacenter capex.
-    body: The valuation hinges on hyperscaler + sovereign AI spend compounding for years; capex holding is the bull
-      (+96%), a digestion/air-pocket is the ultra-bear (-68%).
-  - label: China datacenter is a structural $0.
-    body: Results and guidance assume ~no China; Beijing steered firms away and Huawei is entrenching - a permanently lost
-      ~$15-50B/yr TAM already out of the numbers, not a future risk.
-  - label: Competition all lands H2-2026.
-    body: AMD MI450/Helios (OpenAI 6GW, Meta ~$100B) and OpenAI-Broadcom 10GW custom ASICs ship H2-2026; the GPU monopoly
-      erodes at the margin even if NVIDIA stays the leader.
-  - label: The systems moat is more than the GPU.
-    body: Networking +199% and CUDA + the developer ecosystem make the full-rack platform stickier than a chip - the durability
-      case for the bull/ultra-bull, only partly in the price.
+  - label: 'Peak revenue priced as durable.'
+    body: 'Revenue doubled in a year and chip cycles always digest. Even a modal +65% FY28 that then fades capitalizes a peak; 45% of the weight sits below the price.'
+  - label: 'The probe goes to revenue quality.'
+    body: 'Reuters (Nov 20) reports SEC staff examining NVIDIA''s accounting; with $65.5B of private stakes, some in its own customers, part of the demand may be self-funded.'
+  - label: 'The founder left at the peak.'
+    body: 'Huang resigned Nov 12; an interim CEO who is also CFO now runs the Rubin ramp, the ASIC defence and the probe response at once - risk the DCF only partly prices.'
+  - label: 'Margins have peaked.'
+    body: 'Q4 gross margin is guided to a 71-72% trough on memory costs; price increases must offset it while AMD''s Helios ships to Meta (6GW) and custom ASICs scale.'
+  - label: 'China is a structural $0.'
+    body: 'Guidance assumes no China datacenter compute (only $2.4B of older Hopper shipped there in Q3); Huawei entrenches in a market once worth ~$15-50B a year.'
   triggers:
   - label: Bull validation
-    body: hyperscaler capex guidance keeps rising  ·  Rubin samples Q4-2026 / volumes Q1-2027 on cadence  ·  Data Center +
-      networking stay strong  ·  gross margin holds mid-70s
+    body: 'Q4 FY27 revenue >= $130B at >= 71% gross margin  ·  FY28 outlook held at ~+75%  ·  2027 hyperscaler capex guides rise  ·  SEC review closes with no restatement'
   - label: Bear validation
-    body: a major hyperscaler cuts or pauses AI capex  ·  custom ASICs / AMD take visible Data Center share  ·  gross margin
-      slips toward low-70s  ·  backlog/booking commentary softens
+    body: 'Q4 revenue < $126B (below the guide range)  ·  FY28 outlook cut  ·  a top-4 hyperscaler cuts 2027 capex  ·  a restatement or formal SEC action  ·  gross margin < 70%'
   - label: Reframe needed
-    body: if datacenter AI capex hits a sustained air-pocket or custom silicon structurally takes share, re-rate the terminal
-      toward a cyclical-semiconductor multiple
+    body: 'if the probe forces a restatement of revenue tied to NVIDIA''s own investments, or FY28 revenue falls below ~$530B, re-rate to the bear''s cyclical multiple'
 glossary:
 - term: Data Center
-  definition: NVIDIA's dominant segment (~88% of revenue, +92% last quarter) - GPUs + networking; the thesis rides on its
-    growth.
+  definition: 'NVIDIA''s dominant segment (~93% of revenue, +110% YoY) - GPUs + networking; the thesis rides on its growth.'
 - term: Hyperscaler capex
   definition: Cloud-provider (Microsoft/Amazon/Google/Meta) AI-infrastructure spending - the demand source and biggest swing.
 - term: Annual cadence (Blackwell -> Rubin)
-  definition: NVIDIA's once-a-year architecture rhythm (Blackwell -> Ultra/GB300 -> Rubin); how it stays ahead of ASICs.
+  definition: 'NVIDIA''s yearly architecture rhythm (Blackwell -> Ultra -> Rubin, now shipping); how it stays ahead of ASICs.'
 - term: Custom ASICs
   definition: Purpose-built AI chips (OpenAI-Broadcom, hyperscaler in-house) fragmenting GPU procurement; the live threat
     at the margin.
 - term: FCF margin
-  definition: Free cash flow / revenue (~45% FY26); the cash-conversion swing factor.
+  definition: 'FCF / revenue (~39% FY27 to date), valued after ~3% stock comp.'
 competitive:
   arena: 'AI accelerators / datacenter compute - NVIDIA (GPUs + networking + the CUDA software platform, ~88% Data Center)
     vs AMD, the hyperscaler custom-ASIC programs (OpenAI-Broadcom, in-house silicon), and Broadcom; auditing a cornered-resource
@@ -372,8 +328,7 @@ competitive:
   powers:
     scale_economies:
       score: 4
-      note: Massive R&D and supply scale at $215.9B revenue funds a once-a-year architecture cadence rivals struggle to match;
-        the leader's volume self-reinforces.
+      note: 'Massive R&D and supply scale at ~$424B revenue funds a once-a-year architecture cadence rivals struggle to match; the leader''s volume self-reinforces.'
     network_economies:
       score: 4
       note: The CUDA developer ecosystem - millions of developers, libraries, frameworks tuned to NVIDIA - is a genuine two-sided
@@ -402,10 +357,10 @@ competitive:
   rivals:
   - name: AMD
     kind: public
-    note: 'The credible #2; MI450/Helios ships H2-2026 with OpenAI (6GW) and Meta (~$100B) commitments - the direct GPU challenger.'
+    note: 'The credible #2; MI450/Helios began shipping late 2026 on Meta (6GW) and OpenAI (6GW) deals - the direct GPU challenger.'
     growth: 0.3
     margin: 0.25
-    multiple: ~30x EV/FCF
+    multiple: '66x fwd P/E'
   - name: Custom ASICs (hyperscalers)
     kind: public
     note: In-house AI silicon (Google TPU, plus new programs) fragmenting GPU procurement; reduces NVIDIA's wallet share at
@@ -430,46 +385,31 @@ competitive:
   threats:
   - vector: cornered_resource
     who: Custom ASICs (OpenAI-Broadcom, hyperscaler in-house silicon)
-    falsifier: Custom-silicon deployments take visible Data Center share and slow NVIDIA's growth/pricing as buyers re-platform
-      off CUDA.
+    falsifier: 'Custom silicon wins >20% of a top-4 hyperscaler''s 2027 accelerator spend, or Data Center growth drops below +25% YoY in an FY28 quarter.'
   - vector: switching_costs
     who: AMD (MI450/Helios, H2-2026)
-    falsifier: Major accounts (OpenAI, Meta) shift meaningful training/inference to AMD, proving the CUDA lock-in is breachable
-      at scale.
+    falsifier: 'AMD''s data-center GPU revenue tops 15% of NVIDIA''s Data Center revenue in any CY2027 quarter.'
   - vector: scale_economies
     who: A datacenter AI capex digestion/air-pocket
-    falsifier: Hyperscaler capex pauses, the annual cadence stops compounding the installed base, and the scale advantage
-      stops self-reinforcing.
-  takeaway: 'NVIDIA''s dominant Power is a cornered resource - CUDA plus the integrated GPU/networking/software stack, reinforced
-    by switching costs, scale and a developer-ecosystem network - and it''s durable (high). The live threat is the H2-2026
-    wave: AMD''s MI450 and the OpenAI-Broadcom custom ASICs erode GPU share at the margin even if NVIDIA stays the standard,
-    and China datacenter is a permanent $0. The Audit squares with the DCF: the Power is real, but the swing factor is whether
-    datacenter AI capex holds or hits an air-pocket, and at ~31x FCF on $3.1T the modal capex-holds case lands +26% -
-    the distribution is the finding, weighted +22%.'
+    falsifier: 'The big-4 hyperscalers guide 2027 capex below their ~$730B 2026 total, or NVIDIA guides a sequential revenue decline in an FY28 quarter.'
+  takeaway: 'NVIDIA''s dominant Power is a cornered resource - CUDA plus the integrated GPU/networking/software stack, reinforced by switching costs, scale and a developer network - and it''s durable (high). The live threats are AMD''s Helios, now shipping to Meta, and custom ASICs at the margin; China is a permanent $0. The Power did not break this month; the price did, on the founder''s exit and a reported accounting probe. The Audit squares with the DCF: the swing factor is whether AI capex digests after a doubling year, and at ~7x sales the modal case lands +75% - weighted +48%.'
 pocd:
   people:
-    ceo: 'Jensen Huang'
-    founder_led: true
-    tenure_years: 33
-    insider_ownership_pct: 3.77
-    capital_allocation: 'Buyback-led: a $50.0B authorization (Aug 2024) then an additional $60.0B (Aug 2025),
-      both no-expiration; token quarterly dividend of $0.01/share (post-10:1 split); R&D-intensive (FY2025 R&D up
-      sharply on more compute/infra and new-product engineering); SBC $4.74B in FY2025 (+33% YoY); M&A record
-      mixed — Mellanox ($6.9B, closed 2020) completed, the $40B Arm acquisition abandoned 2022 on antitrust opposition.'
-    incentive_alignment: 'FY2025 total comp $49.9M: base salary $1.5M (first raise in 10 years), non-equity
-      incentive $6.0M, stock awards $38.8M, ~$3.5M other (security, driver, vehicle). Equity granted as RSUs plus
-      PSUs tied to corporate financial-performance targets and market-condition (TSR) PSUs.'
+    ceo: 'Colette Kress (interim)'
+    founder_led: false
+    tenure_years: 0
+    insider_ownership_pct: 0.36
+    capital_allocation: 'Buyback-led: $50.0B (Aug 2024), $60.0B (Aug 2025) and $150B (Sep 2026) authorizations, $227.3B left at Oct 2026; Q3 FY27 returned $28.1B ($22.1B buybacks, $6.0B dividends), ~64% of FCF. Also $65.5B of non-marketable stakes, some in customers. M&A: Mellanox ($6.9B, 2020) closed; Arm ($40B) abandoned 2022.'
+    incentive_alignment: 'Executive equity is RSUs plus PSUs tied to financial targets and relative TSR. The interim CEO''s pay for the dual role is not yet disclosed; the prior CEO''s FY2025 total comp was $49.9M, ~78% in stock awards.'
     governance_flags:
       - 'single class of common stock, one vote per share; no preferred outstanding; no cumulative voting'
-      - 'Huang ~3.77% economic stake (~923M of ~24.46B shares, Mar 2025) — control rests on the operating role, not super-voting shares'
-      - 'no separate independent Chair; Huang is President & CEO and the only non-independent director — mitigated by a designated Lead Independent Director running executive sessions without the CEO'
-      - 'board of 13 with 12 independent directors'
+      - 'founder-CEO Jensen Huang resigned as CEO and director on Nov 12 2026; the successor search is internal and external'
+      - 'CFO Colette Kress is also interim CEO until a permanent successor is named'
+      - 'Reuters (Nov 20 2026): SEC enforcement staff are examining the accounting; no formal action disclosed'
+      - 'all remaining directors independent, Harvey C. Jones the first independent chair; insiders ~0.36% (3.94% less Huang''s 3.58%, 2026 proxy)'
     key_person_risk: high
-    score: 4
-    takeaway: 'Founder-CEO since 1993 (~33-year tenure) with a ~3.77% economic stake under a clean single-class
-      one-share-one-vote structure and a 12-of-13 independent board with a Lead Independent Director; capital
-      return is buyback-led ($110B authorized across 2024-2025) with a token dividend, and Huang is the singular
-      face of strategy, so key-person concentration is high.'
+    score: 3
+    takeaway: 'Clean single-class structure and a now fully independent board under its first independent chair, but founder-CEO Huang resigned on Nov 12 2026 after 33 years, the CFO is also interim CEO during the search, and a reported SEC accounting probe is unresolved; capital return stays buyback-led ($227B authorized).'
   opportunity_ref: 'The scenario distribution · the business snapshot · the Arthur Indicator'
   context_ref: 'The 7 Powers analysis (Power Audit)'
   deal: Open-market common — entry price weighed against the probability-weighted fair value, then position-sized.
