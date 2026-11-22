@@ -21,11 +21,11 @@ taxonomy:
   primary_theme: premium-consumer-brands
 central_question: Is YETI a durable premium brand re-accelerating via international + new categories — or a saturated, fad-cyclical
   US drinkware brand whose +2% trough caps the multiple?
-thesis: 'YETI trades at ~$3.1B (≈$42.8/sh), ~15x FY25 free cash flow on $1.87B revenue. Growth troughed at +2% in
+thesis: 'YETI trades at ~$2.6B (≈$36.1/sh), ~13x FY25 free cash flow on $1.87B revenue. Growth troughed at +2% in
   FY2025 and re-accelerated to +8.4% in H1''26 on wholesale + international. In August management held its +7-8% FY26
   sales outlook while reporting flat US drinkware (three trend SKUs cycling out); Q2 margins carried a one-time ~$43M
   tariff-refund credit. The DCF asks whether international + new categories + margin recovery offset the saturating core.
-  Weighted fair value ~$48 sits ~13% above spot and the modal base ~18% above, with 45% of the probability below the price.'
+  Weighted fair value ~$48 sits ~34% above spot and the modal base ~40% above, with 15% of the probability below the price.'
 chart_reference:
   history_years:
   - 2021
@@ -84,7 +84,7 @@ scenarios:
     narrative:
     - The viral tumbler trend rotates away (Stanley->Owala->next), RTIC/private-label dupes arbitrage the premium, and the
       international/category bets don't offset a shrinking US core. Revenue declines; margins stay tariff-pressured.
-    - DCF ~$22 (-49%) — a fad-exposed brand losing its core earns a distressed multiple.
+    - DCF ~$22 (-40%) — a fad-exposed brand losing its core earns a distressed multiple.
     probability_rationale: 'The fad-cyclical bear: drinkware is ~58% of sales and brand heat rotates fast. 15% weight on the
       trend turning against YETI.'
     dcf_metrics:
@@ -157,7 +157,7 @@ scenarios:
     narrative:
     - The US core stays saturated and tariffs keep margins below peak; international + categories grow but only enough to
       keep the total roughly flat-to-low.
-    - DCF ~$37 (-14%) — a dominant-but-stalled brand at ~11x FCF, below today's price.
+    - DCF ~$37 (+2%) — a dominant-but-stalled brand at ~11x FCF, near today's price.
     probability_rationale: US drinkware stays saturated and the trend doesn't reverse. 30% weight — the plausible 'stalls'
       path given the +2% trough.
     dcf_metrics:
@@ -230,7 +230,7 @@ scenarios:
     narrative:
     - 'The modal path: international (toward 25% of revenue) + bags/cookware offset a stabilizing US core, and margins recover
       as tariffs annualize and China-sourcing exits. Revenue compounds ~5%.'
-    - DCF ~$50 (+18%) — modestly above today's price; the growth/margin recovery H1'26's +8.4% hints at.
+    - DCF ~$50 (+40%) — well above today's price; the growth/margin recovery H1'26's +8.4% hints at.
     probability_rationale: Requires international + new categories + margin recovery, consistent with H1'26's +8.4% and China
       <5% of COGS. 33% as the central outcome.
     dcf_metrics:
@@ -303,7 +303,7 @@ scenarios:
     narrative:
     - International scales past 25%, Mystery Ranch bags + cookware become real categories, and margins recover toward mid-teens
       — the brand proves durable beyond fad-cyclical drinkware.
-    - DCF ~$74 (+72%) — category + geographic diversification re-rates the brand.
+    - DCF $74 (+104%) — category + geographic diversification re-rates the brand.
     probability_rationale: International + new categories deliver and margins recover. ~17%; the diversification strategy
       is credible but unproven at scale.
     dcf_metrics:
@@ -376,7 +376,7 @@ scenarios:
     narrative:
     - YETI becomes a durable multi-category premium-outdoor brand (drinkware + coolers + bags + cookware) with international
       as a second engine, compounding ~10% at recovered margins.
-    - DCF ~$96 (+124%) — the brand transcends the drinkware fad; ~5% probability.
+    - DCF ~$96 (+166%) — the brand transcends the drinkware fad; ~5% probability.
     probability_rationale: Full category + geographic diversification works and the brand de-fads. ~5%, the asymmetric upside.
     dcf_metrics:
       cagr_5y: 9.4
@@ -481,15 +481,15 @@ historical_prices:
   - [-0.08, 42.77]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: Fad fades; dupes win; ~$22 (-49%).
+  body: Fad fades; dupes win; ~$22 (-40%).
 - label: Bear 30%
-  body: US saturated; tariff drag; ~$37 (-14%).
+  body: US saturated; tariff drag; ~$37 (+2%).
 - label: Base 33%
-  body: Intl + categories offset US; ~$50 (+18%).
+  body: Intl + categories offset US; ~$50 (+40%).
 - label: Bull 17%
-  body: Intl ramps; bags/cookware; ~$74 (+72%).
+  body: Intl ramp; bags/cookware; ~$74 (+104%).
 - label: Ultra Bull 5%
-  body: Durable multi-category global brand; ~$96 (+124%).
+  body: Durable multi-category global brand; ~$96 (+166%).
 appendix:
   pushback_side: bear
   pushback:
@@ -596,8 +596,8 @@ competitive:
     falsifier: Sustained price competition forces YETI off its full-price model.
   takeaway: YETI's brand Power is durable in coolers/outdoor gear but genuinely contestable in its fad-cyclical drinkware
     core (~58% of sales), where viral heat rotates (Stanley->Owala) and dupes arbitrage the premium. International (toward
-    25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~15x FY25
-    FCF the modal path sits ~18% above spot; the sign hinges on whether growth holds ~5% a year after FY26 (the low end of
+    25%) + new categories (bags/cookware) + margin recovery (China <5% of COGS) are the diversification offsets. At ~13x FY25
+    FCF the modal path sits ~40% above spot; the sign hinges on whether growth holds ~5% a year after FY26 (the low end of
     management's FY26-30 framework) as US drinkware re-baselines.
 pocd:
   people:

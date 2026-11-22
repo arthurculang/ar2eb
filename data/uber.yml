@@ -11,20 +11,20 @@ market:
   net_debt_billion: 0.0
   extras:
   - ~$2.7B net cash; ~2.04B shares; $20B buyback authorization (2025)
-  - Revenue $52B / gross bookings $193.5B FY25 (+19% GB); $9.76B FCF (+40% YoY), ~14x EV/FCF
-  - Down ~33% from highs on AV fear; ads >$2B run-rate, Uber One ~50M members
+  - Revenue $52B / gross bookings $193.5B FY25 (+19% GB); $9.76B FCF (+40% YoY), ~13x EV/FCF
+  - Down ~35% from highs on AV fear; ads >$2B run-rate, Uber One ~50M members
 taxonomy:
   watchlist: fcf-megacap
   tier: High
   themes:
   - travel-mobility-services
   primary_theme: travel-mobility-services
-central_question: Is Uber a dominant FCF-inflecting mobility/delivery network at ~14x EV/FCF — or does autonomy commoditize
+central_question: Is Uber a dominant FCF-inflecting mobility/delivery network at ~13x EV/FCF — or does autonomy commoditize
   its driver-marketplace and erode the network toll?
-thesis: 'Uber trades at ~$138B (≈$68/sh, down ~33% on AV fear) — ~14x EV/FCF on $9.76B FCF (growing 40%+), $193.5B gross bookings
+thesis: 'Uber trades at ~$129B (≈$63/sh, down ~35% on AV fear) — ~13x EV/FCF on $9.76B FCF (growing 40%+), $193.5B gross bookings
   (+19%), net cash and a $20B buyback. The mature DCF asks whether the two-sided network + advertising (>$2B run-rate) + delivery-margin
-  ramp compound, or whether Waymo/Tesla bypass the marketplace. The finding: at 14x FCF for a network compounding GB ~mid-teens
-  with expanding margins, the modal case implies meaningful undervaluation — but a genuine AV-disruption ultra-bear is -41%, so the sign is a bet on Uber remaining the AV demand-aggregator.'
+  ramp compound, or whether Waymo/Tesla bypass the marketplace. The finding: at 13x FCF for a network compounding GB ~mid-teens
+  with expanding margins, the modal case implies meaningful undervaluation — but a genuine AV-disruption ultra-bear is -37%, so the sign is a bet on Uber remaining the AV demand-aggregator.'
 chart_reference:
   history_years:
   - 2021
@@ -82,7 +82,7 @@ scenarios:
     narrative:
     - Waymo/Tesla scale direct-to-consumer robotaxi fleets that don't need Uber's demand layer, and driver reclassification
       raises the labor-cost base. Gross bookings stall and the take-rate toll compresses.
-    - DCF ~$40 (-41%) — the network's value collapses if it's disintermediated from the supply side.
+    - DCF ~$40 (-37%) — the network's value collapses if it's disintermediated from the supply side.
     probability_rationale: 'The autonomy paradox bear: Uber''s biggest hedge (platform for all AVs) is its biggest vulnerability
       if a winning fleet goes direct. 15% weight on real disruption.'
     dcf_metrics:
@@ -155,7 +155,7 @@ scenarios:
     narrative:
     - AV uncertainty and competition slow GB to mid-single digits and cap margin expansion; Uber stays profitable but the
       network thesis is contested.
-    - DCF $75 (+11%) — roughly fair; the FCF defends the floor while the AV question hangs over the multiple.
+    - DCF $75 (+18%) — mildly cheap; the FCF defends the floor while the AV question hangs over the multiple.
     probability_rationale: AV pressure + regulation + competition decelerate the network without breaking it. 27% weight as
       the 'contested but intact' path.
     dcf_metrics:
@@ -228,7 +228,7 @@ scenarios:
     narrative:
     - 'The modal path: Uber remains the demand aggregator for AV fleets, advertising scales past $3B, delivery margins converge
       toward mobility''s, and GB compounds low-double-digits at a rising FCF margin.'
-    - DCF ~$110 (+62%). At 14x FCF the market over-discounts the AV threat relative to the network's durability and the FCF
+    - DCF ~$110 (+73%). At 13x FCF the market over-discounts the AV threat relative to the network's durability and the FCF
       ramp.
     probability_rationale: Uber stays the AV demand layer (Waymo productivity data supports it) and ads/delivery margins compound.
       33% as the central outcome.
@@ -302,7 +302,7 @@ scenarios:
     narrative:
     - The network power holds, AV partnerships prove accretive (cheaper rides expand the TAM), advertising + Uber One drive
       a software-like margin mix, and GB compounds mid-teens.
-    - DCF ~$155 (+129%) — the FCF machine re-rates as the AV fear proves overblown.
+    - DCF ~$155 (+144%) — the FCF machine re-rates as the AV fear proves overblown.
     probability_rationale: AV becomes a tailwind (Uber as the aggregator for cheaper AV rides) + ads scale. ~18%; the productivity
       data hints at it.
     dcf_metrics:
@@ -375,7 +375,7 @@ scenarios:
     narrative:
     - Uber becomes the indispensable demand/marketplace layer for the entire AV ecosystem plus a >$10B advertising platform,
       compounding GB high-teens at peak margins.
-    - DCF ~$202 (+198%) — the platform-for-all-autonomy outcome; ~7% probability.
+    - DCF ~$202 (+218%) — the platform-for-all-autonomy outcome; ~7% probability.
     probability_rationale: Uber is the demand layer every AV fleet needs + a major ad platform. ~7%, the asymmetric upside
       the AV-discounted entry is buying.
     dcf_metrics:
@@ -479,18 +479,18 @@ historical_prices:
   - [-0.08, 67.62]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
 - label: Ultra Bear 15%
-  body: AV bypasses marketplace; ~$40 (-41%).
+  body: AV bypasses marketplace; ~$40 (-37%).
 - label: Bear 27%
-  body: AV pressure; decel; $75 (+11%).
+  body: AV pressure; decel; $75 (+18%).
 - label: Base 33%
-  body: Stays AV aggregator; ads + delivery; ~$110 (+62%).
+  body: Stays AV aggregator; ads + delivery; ~$110 (+73%).
 - label: Bull 18%
-  body: Network holds; AV accretive; ~$155 (+129%).
+  body: Network holds; AV accretive; ~$155 (+144%).
 - label: Ultra Bull 7%
-  body: The AV demand layer; ~$202 (+198%).
+  body: The AV demand layer; ~$202 (+218%).
 appendix:
   pushback:
-  - label: ~14x EV/FCF on $9.76B FCF growing 40%+.
+  - label: ~13x EV/FCF on $9.76B FCF growing 40%+.
     body: A dominant two-sided network priced at a mid-teens FCF multiple while FCF is still inflecting steeply — the AV fear
       is doing the discounting.
   - label: Advertising is the hidden high-margin lever.
@@ -502,7 +502,7 @@ appendix:
     body: Waymo on Uber outproduced 99% of human drivers; Uber's aggregator strategy + ~$10B AV commitments position it as
       the demand layer.
   - label: $20B buyback, net cash.
-    body: ~7% FCF yield funding a large buyback at a depressed multiple — accretive.
+    body: ~8% FCF yield funding a large buyback at a depressed multiple — accretive.
   triggers:
   - label: Bull validation
     body: autonomous trips scale on Uber's network profitably  ·  advertising passes $3B run-rate  ·  delivery margin converges
@@ -591,8 +591,8 @@ competitive:
     falsifier: DoorDash extends its delivery lead or Lyft regains rides share, compressing take rate.
   takeaway: 'Uber''s network economies + scale are genuinely dominant — the deepest two-sided marketplace, now throwing off
     ~$10B FCF with advertising and delivery margins still ramping. The entire terminal-value debate is the autonomy paradox:
-    the network power is durable only if Uber remains the demand aggregator for AV fleets. At ~14x EV/FCF the market is pricing
-    meaningful AV-disruption risk; the sign of the memo hinges on whether autonomy commoditizes the driver-supply side (ultra-bear -41%) or Uber tolls the cheaper AV rides (base +62%).'
+    the network power is durable only if Uber remains the demand aggregator for AV fleets. At ~13x EV/FCF the market is pricing
+    meaningful AV-disruption risk; the sign of the memo hinges on whether autonomy commoditizes the driver-supply side (ultra-bear -37%) or Uber tolls the cheaper AV rides (base +73%).'
 stamp:
   footer_version: "008"
   footer_timestamp: "2026-11-22_14-07"

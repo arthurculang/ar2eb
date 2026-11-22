@@ -506,7 +506,7 @@ scenarios:
       and successors), plus royalty and platform-licensing income. Revenue reaches about $2.50B by FY35 at a 35% operating
       margin as the Phenomap flywheel compounds into repeatable output.
     - Milestones and royalties fund more of the spend, so dilution eases and shares settle near 616M. The DCF is $7.03 and
-      the expected value $6.10 — ~68% above spot. This is the first scenario where platform value clearly exceeds the
+      the expected value $6.10 — ~2.5× spot. This is the first scenario where platform value clearly exceeds the
       price paid.
     probability_rationale: A 15% read. Requires the data flywheel to translate into repeated approvals — a 15% p_fail. Anchored
       to the combo and registrational readouts due 2026-2027, which would be the first hard evidence the engine produces drugs.
@@ -651,7 +651,7 @@ scenarios:
       generating a major pharma-scale outcome. Revenue reaches about $5.20B by FY35 at a 40% operating margin as platform
       economics, not single drugs, drive the model.
     - Self-funding largely replaces dilution and the equity compounds toward roughly $19B. The DCF is $33.75 and the expected
-      value $31.11 — about eight times spot. This tail is where the bulk of the weighted value lives, and it depends on the
+      value $31.11 — about 13 times spot. This tail is where the bulk of the weighted value lives, and it depends on the
       platform cornering the discovery resource.
     probability_rationale: 'An 8% read. The lowest-probability, highest-payoff outcome: an 8% p_fail and a winner-take-most
       platform result. It assumes the Phenomap data advantage becomes a durable cornered resource the rest of AI-bio cannot
