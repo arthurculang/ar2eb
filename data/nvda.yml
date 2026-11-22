@@ -5,10 +5,10 @@ dcf_type: mature_company
 date: '2026-11-22'
 spot: 125.53
 market:
-  market_cap_billion: 3050.38
-  shares_outstanding_million: 24300.0
-  cash_billion: 10.6
-  net_debt_billion: 8.5
+  market_cap_billion: 3048.50
+  shares_outstanding_million: 24285
+  cash_billion: 53.5
+  net_debt_billion: 32.4
   extras:
   - $10.6B cash vs ~$8.5B debt (~$2B net cash); ~24.3B shares; +$80B buyback authorized, $0.25/quarter dividend
   - Revenue $215.9B FY26 (+65%); GAAP op margin ~60%; FCF ~$96.7B (~45%); Data Center now ~88% of revenue
@@ -79,8 +79,8 @@ scenarios:
   ultra_bear:
     label: Ultra Bear
     short_label: UltBear
-    probability: 0.15
-    expected_per_share: 40.37
+    probability: 0.18
+    expected_per_share: 30.40
     headline: Capex air-pocket; revenue contracts.
     narrative:
     - 'The AI capex cycle hits a digestion air-pocket: hyperscalers pause after over-building, Data Center revenue contracts
@@ -92,71 +92,36 @@ scenarios:
       10GW) + AMD (Meta ~$100B, OpenAI 6GW) all land H2-2026, and the stock already slid at $5T despite a +85% quarter. 15%
       weight on a real digestion/share-loss break.'
     dcf_metrics:
-      cagr_5y: -0.6
+      cagr_5y: -0.1
       wacc: 0.105
     dcf_path:
       rev_b: 215.9
-      rev_path:
-      - -0.1
-      - -0.05
-      - 0.03
-      - 0.05
-      - 0.05
-      op_margin:
-      - 0.48
-      - 0.48
-      - 0.5
-      - 0.51
-      - 0.51
-      wacc_path:
-      - 0.105
-      - 0.105
-      - 0.105
-      - 0.105
-      - 0.105
+      rev_path: [0.944, -0.100, -0.350, -0.150, 0.030]
+      op_margin: [0.620, 0.520, 0.420, 0.400, 0.400]
+      wacc_path: [0.105, 0.105, 0.105, 0.105, 0.105]
       term_g: 0.025
-      fcf:
-      - 77.724
-      - 73.838
-      - 77.954
-      - 83.848
-      - 88.041
-      cash: 10.6
-      net_debt: 8.5
+      fcf: [147.067, 113.473, 59.025, 48.084, 49.527]
+      cash: 53.5
+      net_debt: 32.4
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 24400
+      final_shares: 24285
       distress: 0.0
-      pv_fcf:
-      - 70.338
-      - 60.472
-      - 57.777
-      - 56.24
-      - 53.441
-      sum_pv_fcf: 298.27
-      terminal_value: 1128.03
-      pv_terminal: 684.71
-      op_ev: 982.98
-      total_equity: 985.08
-      dcf_per_share: 40.37
+      pv_fcf: [133.092, 92.933, 43.747, 32.252, 30.063]
+      sum_pv_fcf: 332.09
+      terminal_value: 634.56
+      pv_terminal: 385.18
+      op_ev: 717.27
+      total_equity: 738.37
+      dcf_per_share: 30.40
     chart_data:
-      ev_rev_multiple:
-      - 8.0
-      - 6.0
-      - 5.0
-      - 4.5
-      - 4.0
-      ev_fcf_multiple:
-      - 14.0
-      - 13.0
-      - 13.0
-      - 13.0
-      - 13.0
+      ev_rev_multiple: [7.1, 5.2, 3.7, 3.3, 3.3]
+      ev_fcf_multiple: [18.8, 15.8, 13.8, 12.8, 12.8]
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.25
-    expected_per_share: 76.59
+    probability: 0.27
+    expected_per_share: 78.56
     headline: Growth decelerates hard; share erodes.
     narrative:
     - 'Demand keeps growing but decelerates fast as the first wave of build-out matures: +12% then high-single-digit as custom
@@ -168,71 +133,36 @@ scenarios:
       FY26 revenue; even mid-teens forward growth at high margins leaves the price stretched. 25% as the plausible 'grows
       but normalizes' path.
     dcf_metrics:
-      cagr_5y: 7.6
+      cagr_5y: 13.8
       wacc: 0.095
     dcf_path:
       rev_b: 215.9
-      rev_path:
-      - 0.12
-      - 0.08
-      - 0.06
-      - 0.06
-      - 0.06
-      op_margin:
-      - 0.55
-      - 0.56
-      - 0.57
-      - 0.57
-      - 0.58
-      wacc_path:
-      - 0.095
-      - 0.095
-      - 0.095
-      - 0.095
-      - 0.095
+      rev_path: [0.950, 0.250, -0.200, -0.050, 0.030]
+      op_margin: [0.640, 0.600, 0.550, 0.550, 0.550]
+      wacc_path: [0.095, 0.095, 0.095, 0.095, 0.095]
       term_g: 0.03
-      fcf:
-      - 101.559
-      - 112.296
-      - 121.802
-      - 129.11
-      - 139.967
-      cash: 10.6
-      net_debt: 8.5
+      fcf: [147.520, 184.400, 130.680, 124.146, 131.990]
+      cash: 53.5
+      net_debt: 32.4
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 24400
+      final_shares: 24285
       distress: 0.0
-      pv_fcf:
-      - 92.748
-      - 93.656
-      - 92.771
-      - 89.806
-      - 88.911
-      sum_pv_fcf: 457.89
-      terminal_value: 2217.94
-      pv_terminal: 1408.9
-      op_ev: 1866.79
-      total_equity: 1868.89
-      dcf_per_share: 76.59
+      pv_fcf: [134.721, 153.792, 99.533, 86.353, 83.844]
+      sum_pv_fcf: 558.24
+      terminal_value: 2091.53
+      pv_terminal: 1328.60
+      op_ev: 1886.84
+      total_equity: 1907.94
+      dcf_per_share: 78.56
     chart_data:
-      ev_rev_multiple:
-      - 12.0
-      - 10.0
-      - 8.0
-      - 7.0
-      - 6.5
-      ev_fcf_multiple:
-      - 18.0
-      - 17.0
-      - 16.0
-      - 16.0
-      - 16.0
+      ev_rev_multiple: [8.3, 7.1, 5.7, 5.4, 5.5]
+      ev_fcf_multiple: [21.8, 18.8, 16.8, 15.8, 15.8]
   base:
     label: Base
     short_label: Base
-    probability: 0.32
-    expected_per_share: 158.65
+    probability: 0.3
+    expected_per_share: 219.57
     headline: Capex holds; cadence extends; still rich.
     narrative:
     - 'The modal path: datacenter AI capex holds, Blackwell Ultra ramps into Rubin on the annual cadence, and Data Center
@@ -245,71 +175,36 @@ scenarios:
       break - consistent with a sold-out backlog and FQ2 guide ~$91B, but not a step-change beyond it. 32% as the central
       outcome, positive at $3.1T.
     dcf_metrics:
-      cagr_5y: 20.1
+      cagr_5y: 30.7
       wacc: 0.09
     dcf_path:
       rev_b: 215.9
-      rev_path:
-      - 0.4
-      - 0.25
-      - 0.16
-      - 0.12
-      - 0.1
-      op_margin:
-      - 0.58
-      - 0.59
-      - 0.6
-      - 0.6
-      - 0.6
-      wacc_path:
-      - 0.09
-      - 0.09
-      - 0.09
-      - 0.09
-      - 0.09
+      rev_path: [0.962, 0.650, 0.100, 0.040, 0.030]
+      op_margin: [0.650, 0.620, 0.620, 0.620, 0.620]
+      wacc_path: [0.090, 0.090, 0.090, 0.090, 0.090]
       term_g: 0.035
-      fcf:
-      - 132.994
-      - 170.021
-      - 201.607
-      - 230.709
-      - 253.78
-      cash: 10.6
-      net_debt: 8.5
+      fcf: [152.664, 272.864, 315.526, 336.143, 346.227]
+      cash: 53.5
+      net_debt: 32.4
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 24300
+      final_shares: 24285
       distress: 0.0
-      pv_fcf:
-      - 122.013
-      - 143.103
-      - 155.678
-      - 163.44
-      - 164.94
-      sum_pv_fcf: 749.17
-      terminal_value: 4775.68
-      pv_terminal: 3103.86
-      op_ev: 3853.03
-      total_equity: 3855.13
-      dcf_per_share: 158.65
+      pv_fcf: [140.059, 229.664, 243.644, 238.132, 225.024]
+      sum_pv_fcf: 1076.52
+      terminal_value: 6515.36
+      pv_terminal: 4234.54
+      op_ev: 5311.06
+      total_equity: 5332.16
+      dcf_per_share: 219.57
     chart_data:
-      ev_rev_multiple:
-      - 16.0
-      - 13.0
-      - 11.0
-      - 10.0
-      - 9.5
-      ev_fcf_multiple:
-      - 22.0
-      - 20.0
-      - 19.0
-      - 19.0
-      - 19.0
+      ev_rev_multiple: [9.7, 9.2, 8.7, 8.5, 8.5]
+      ev_fcf_multiple: [24.8, 21.8, 19.8, 18.8, 18.8]
   bull:
     label: Bull
     short_label: Bull
-    probability: 0.2
-    expected_per_share: 245.72
+    probability: 0.18
+    expected_per_share: 333.27
     headline: Capex holds; Rubin extends the cadence.
     narrative:
     - 'Hyperscaler capex holds and broadens: the Rubin generation extends the annual cadence, networking and full-rack systems
@@ -322,71 +217,36 @@ scenarios:
       make sustained compounding credible if the capex cycle doesn't pause. 20% weight on capex holding and Rubin extending
       the run.
     dcf_metrics:
-      cagr_5y: 25.3
+      cagr_5y: 35.9
       wacc: 0.085
     dcf_path:
       rev_b: 215.9
-      rev_path:
-      - 0.5
-      - 0.32
-      - 0.21
-      - 0.15
-      - 0.12
-      op_margin:
-      - 0.6
-      - 0.61
-      - 0.62
-      - 0.62
-      - 0.62
-      wacc_path:
-      - 0.085
-      - 0.085
-      - 0.085
-      - 0.085
-      - 0.085
+      rev_path: [0.980, 0.750, 0.180, 0.080, 0.050]
+      op_margin: [0.660, 0.640, 0.640, 0.640, 0.640]
+      wacc_path: [0.085, 0.085, 0.085, 0.085, 0.085]
       term_g: 0.04
-      fcf:
-      - 145.733
-      - 200.917
-      - 248.281
-      - 291.472
-      - 326.449
-      cash: 10.6
-      net_debt: 8.5
+      fcf: [154.065, 307.017, 379.936, 419.864, 440.857]
+      cash: 53.5
+      net_debt: 32.4
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 24200
+      final_shares: 24285
       distress: 0.0
-      pv_fcf:
-      - 134.316
-      - 170.67
-      - 194.381
-      - 210.319
-      - 217.103
-      sum_pv_fcf: 926.79
-      terminal_value: 7544.6
-      pv_terminal: 5017.5
-      op_ev: 5944.29
-      total_equity: 5946.39
-      dcf_per_share: 245.72
+      pv_fcf: [141.995, 260.797, 297.455, 302.963, 293.190]
+      sum_pv_fcf: 1296.40
+      terminal_value: 10188.70
+      pv_terminal: 6775.95
+      op_ev: 8072.35
+      total_equity: 8093.45
+      dcf_per_share: 333.27
     chart_data:
-      ev_rev_multiple:
-      - 20.0
-      - 16.0
-      - 14.0
-      - 12.0
-      - 11.0
-      ev_fcf_multiple:
-      - 26.0
-      - 24.0
-      - 23.0
-      - 23.0
-      - 23.0
+      ev_rev_multiple: [11.3, 11.5, 11.1, 10.9, 10.9]
+      ev_fcf_multiple: [29.1, 26.1, 24.1, 23.1, 23.1]
   ultra_bull:
     label: Ultra Bull
     short_label: UltBull
-    probability: 0.08
-    expected_per_share: 355.27
+    probability: 0.07
+    expected_per_share: 471.07
     headline: AI build-out runs for years; full platform.
     narrative:
     - 'The full second act: AI infrastructure spend compounds for years across hyperscale, sovereign and enterprise, NVIDIA
@@ -398,66 +258,31 @@ scenarios:
     probability_rationale: Everything works - capex compounds for years AND the cadence holds AND CUDA/networking entrench
       the platform AND ASICs/AMD stay marginal. ~8%, the long-duration AI-infrastructure tail.
     dcf_metrics:
-      cagr_5y: 32.0
+      cagr_5y: 42.8
       wacc: 0.082
     dcf_path:
       rev_b: 215.9
-      rev_path:
-      - 0.58
-      - 0.4
-      - 0.28
-      - 0.21
-      - 0.17
-      op_margin:
-      - 0.61
-      - 0.62
-      - 0.63
-      - 0.63
-      - 0.63
-      wacc_path:
-      - 0.082
-      - 0.082
-      - 0.082
-      - 0.082
-      - 0.082
+      rev_path: [0.980, 0.850, 0.280, 0.150, 0.100]
+      op_margin: [0.660, 0.650, 0.660, 0.660, 0.660]
+      wacc_path: [0.082, 0.082, 0.082, 0.082, 0.082]
       term_g: 0.04
-      fcf:
-      - 156.916
-      - 229.234
-      - 305.646
-      - 377.228
-      - 441.356
-      cash: 10.6
-      net_debt: 8.5
+      fcf: [154.065, 332.470, 455.930, 535.960, 589.556]
+      cash: 53.5
+      net_debt: 32.4
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 24000
+      final_shares: 24285
       distress: 0.0
-      pv_fcf:
-      - 145.024
-      - 195.805
-      - 241.289
-      - 275.229
-      - 297.614
-      sum_pv_fcf: 1154.96
-      terminal_value: 10928.82
-      pv_terminal: 7369.48
-      op_ev: 8524.44
-      total_equity: 8526.54
-      dcf_per_share: 355.27
+      pv_fcf: [142.389, 283.987, 359.929, 391.042, 397.547]
+      sum_pv_fcf: 1574.89
+      terminal_value: 14598.53
+      pv_terminal: 9844.03
+      op_ev: 11418.92
+      total_equity: 11440.02
+      dcf_per_share: 471.07
     chart_data:
-      ev_rev_multiple:
-      - 24.0
-      - 20.0
-      - 17.0
-      - 15.0
-      - 14.0
-      ev_fcf_multiple:
-      - 28.0
-      - 26.0
-      - 25.0
-      - 25.0
-      - 25.0
+      ev_rev_multiple: [12.0, 12.5, 12.4, 12.2, 12.2]
+      ev_fcf_multiple: [30.8, 27.8, 25.8, 24.8, 24.8]
 historical_prices:
   ipo_marker: IPO Jan '99
   x_min: -5.67
@@ -676,3 +501,11 @@ stamp:
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
     spotPrice: 197.58
+
+stock_comp:
+  basis: owner_fcf
+  sbc_pct_of_revenue: 0.0296
+  diluted_shares_million: 24285.0
+  steps: charge_stock_comp, set_diluted_shares
+  source: 10-K FY2026; 10-Q 2026-07-26 diluted WASO
+  applied: '2026-11-22'

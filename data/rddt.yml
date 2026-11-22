@@ -5,27 +5,22 @@ dcf_type: mature_company
 date: '2026-11-22'
 spot: 85.33
 market:
-  market_cap_billion: 15.90
-  shares_outstanding_million: 186.4
-  cash_billion: 0.954
+  market_cap_billion: 17.23
+  shares_outstanding_million: 201.9
+  cash_billion: 3.033
   net_debt_billion: 0.0
   extras:
-  - Net cash +$954M ($954M cash, no debt); ~186.4M shares, but ~12%-of-revenue SBC keeps diluting the count
-  - Revenue $2.20B FY25 (+62%); GAAP op margin turned positive to ~20%; FCF ~$0.70B headline (~32%), but ~half is SBC
-  - ~$85, down ~63% YTD; hit ~$300 in 2025, now ~-72% — extremely volatile post-IPO
+  - "Net cash $3.03B (cash + securities, no debt); 201.9M diluted shares; stock comp ~16% of FY25 revenue"
+  - "Q3-26 revenue $895M (+53%), Q4 guide ~+40%; GAAP op margin ~29%; FCF ~40% headline, ~24% after stock comp"
+  - "~$85: -63% YTD, -44% in a month on falling Google referrals; ~$300 peak (2025)"
 taxonomy:
   watchlist: fun-speculative
   tier: Med
   themes:
   - platform-marketplace-tech
   primary_theme: platform-marketplace-tech
-central_question: Does Reddit's under-monetized ad engine plus a scarce AI-training corpus outgrow its ~23x FCF price, or
-  does Google/AI-search erode the traffic it rests on?
-thesis: 'Reddit trades at ~$15.9B (~$85, down ~63% YTD) — ~23x headline FCF on $2.20B revenue growing ~62% at ~91% gross
-  margin, net cash, GAAP-profitable. The bull is a deeply under-monetized ad engine (ARPU far below Meta) plus high-margin
-  data-licensing/AI deals (Google, OpenAI); the bear is existential — ~40-50% of traffic comes from Google, and AI-search
-  answer-boxes can disintermediate that discovery (a Q4-2025 change already dented growth). On ex-SBC owner FCF, the modal
-  case lands ~+46%: priced below the base.'
+central_question: "Can Reddit's ad engine and scarce AI-training corpus outgrow a ~17x owner-FCF price as Google's AI search shrinks the traffic it rests on?"
+thesis: "Reddit trades at ~$17.2B (~$85, down ~63% YTD), ~$14.2B net of $3.0B cash: ~17x FY26 FCF after stock comp on ~$3.4B revenue growing ~53% at ~91% gross margin. The bear is now visible: Google referrals fell over 1M a week in October, US daily uniques fell 2%, and management warned Q4 users could drop by a low double-digit percent. The bull is monetization: ARPU rose 36%, and logged-in users, who earn over 80% of revenue, bore less of the hit. Even so, the base lands ~+56%; the bear sits at spot."
 chart_reference:
   history_years:
   - 2021
@@ -69,42 +64,26 @@ page3_chart_config:
   chart6_title: Equity build (Op EV + net cash)
   chart6_type: matureEquityBuild
 page3:
-  subtitle: FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q1 FY2026 results
-  sources: 'Sources: SEC XBRL company facts (CIK 1713445), Reddit Q1 FY2026 release (revenue $663M/+69%; advertising $625M/+74%;
-    data-licensing & other $39M/+15%; daily active uniques 126.8M/+17%; ARPU $5.23/+44%; FCF $311M/~47%; SBC ~12% of revenue).
-    FCF = revenue x ex-SBC owner FCF margin; Gordon terminal at scenario WACC. EV/sales & EV/FCF vs Meta/Pinterest/Snap.'
+  subtitle: "FY21-FY25 history + FY26-FY30 scenario projections  ·  fiscal years end Dec  ·  Q3 FY2026 results"
+  sources: "Sources: SEC XBRL company facts (CIK 1713445), Reddit Q3 FY2026 release and 10-Q (revenue $895M/+53%; Q4 guide $1.00-1.03B; daily active uniques 130.3M/+12%, US -2%; ARPU $6.87/+36%; 9M FCF $934M; stock comp 15.6% of FY25 revenue; cash + securities $3.03B). FCF = revenue x owner FCF margin; Gordon terminal at scenario WACC."
 scenarios:
   ultra_bear:
     label: Ultra Bear
     short_label: UltBear
-    probability: 0.16
-    expected_per_share: 40.87
+    probability: 0.2
+    expected_per_share: 45.42
     headline: Google/AI traffic erodes the model.
     narrative:
-    - 'The existential bear lands: AI-search answer-boxes cannibalize the ~40-50% of traffic that arrives via Google, sessions
-      and ad inventory shrink together, and growth collapses to ~10% then ~5%. Reddit Answers and data-licensing can''t backfill
-      a structurally smaller front door, and a once-rich growth story de-rates hard to a low-teens FCF multiple.'
-    - Ex-SBC FCF margin holds ~18-24% but on a shrinking base; DCF ~$41 (-52%). When the source of discovery is disintermediated,
-      a 91%-gross-margin model still re-rates to a fraction of a price that assumed durable traffic.
-    probability_rationale: The Q4-2025 Google-algorithm change already dented user growth and dropped the stock ~15%; AI-answer
-      cannibalization is the live, asymmetric tail. 16% weight on the traffic dependency turning structural.
+    - "The existential bear lands: October's referral losses prove structural, AI answers in Google and ChatGPT keep replacing the click, and daily uniques shrink for years. The Google licence lapses at its early-2027 renewal, logged-in growth can't refill a narrower front door, and revenue stalls near FY26's ~$3.4B through 2030."
+    - "Owner FCF margin falls from ~24% to ~15-17% as a fixed cost base meets flat revenue; at a ~12x terminal multiple the DCF is ~$45 (-47%). The cash, ~$15 a share, is the floor."
+    probability_rationale: "Management has already warned Q4 users could fall by a low double-digit percent, and Similarweb shows visits down 13% in a year. 20% (up from 16%) on that decline becoming permanent."
     dcf_metrics:
-      cagr_5y: 6.0
+      cagr_5y: 8.3
       wacc: 0.115
     dcf_path:
       rev_b: 2.203
-      rev_path:
-      - 0.1
-      - 0.05
-      - 0.05
-      - 0.05
-      - 0.05
-      op_margin:
-      - 0.15
-      - 0.17
-      - 0.19
-      - 0.2
-      - 0.21
+      rev_path: [0.525, 0, -0.05, 0, 0.03]
+      op_margin: [0.285, 0.2, 0.16, 0.17, 0.18]
       wacc_path:
       - 0.115
       - 0.115
@@ -112,30 +91,20 @@ scenarios:
       - 0.115
       - 0.115
       term_g: 0.03
-      fcf:
-      - 0.436
-      - 0.509
-      - 0.588
-      - 0.645
-      - 0.707
-      cash: 0.954
+      fcf: [0.806, 0.605, 0.479, 0.511, 0.559]
+      cash: 3.033
       net_debt: 0.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 195
+      final_shares: 201.9
       distress: 0.0
-      pv_fcf:
-      - 0.391
-      - 0.409
-      - 0.424
-      - 0.417
-      - 0.41
-      sum_pv_fcf: 2.05
-      terminal_value: 8.57
-      pv_terminal: 4.97
-      op_ev: 7.02
-      total_equity: 7.97
-      dcf_per_share: 40.87
+      pv_fcf: [0.723, 0.487, 0.346, 0.331, 0.324]
+      sum_pv_fcf: 2.21
+      terminal_value: 6.77
+      pv_terminal: 3.93
+      op_ev: 6.14
+      total_equity: 9.17
+      dcf_per_share: 45.42
     chart_data:
       ev_rev_multiple:
       - 8.0
@@ -152,34 +121,20 @@ scenarios:
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.27
-    expected_per_share: 70.1
+    probability: 0.3
+    expected_per_share: 81.87
     headline: Growth decelerates; AI-search pressure caps it.
     narrative:
-    - 'Growth fades faster than the bulls hope: user adds keep decelerating off +17%, Google referral softens (not collapses),
-      and ad ARPU gains slow as the inventory stops compounding. Revenue still grows but ~25% then into the teens, and the
-      scarcity premium on the data-licensing corpus gets competed down.'
-    - DCF ~$70 (-18%) — a decelerating, traffic-dependent platform at a mid-teens FCF multiple is worth under today's
-      price. The market's high-growth premium is unwarranted if the front door is even slowly narrowing.
-    probability_rationale: Deceleration plus Google-algorithm sensitivity is the plausible 'grows but the engine cools' path;
-      SBC dilution and ad-cyclicality compound it. 27% as the realistic soft outcome.
+    - "Traffic keeps falling through 2027 and ARPU gains only partly offset it: revenue growth drops from ~53% in FY26 to ~12% in FY27, then to mid-single digits. The Google licence renews on weaker terms, and the margin after stock comp stalls near ~24% as Reddit spends to rebuild logged-in reach."
+    - "DCF ~$82 (-4%): a shrinking-traffic platform at a ~15x terminal multiple is worth roughly today's price. The market is pricing this world, not the base."
+    probability_rationale: "The October referral trend, users flat quarter on quarter and the strained Google renewal make this the live alternative to the base. 30% (up from 27%)."
     dcf_metrics:
-      cagr_5y: 12.8
+      cagr_5y: 16
       wacc: 0.105
     dcf_path:
       rev_b: 2.203
-      rev_path:
-      - 0.25
-      - 0.15
-      - 0.1
-      - 0.08
-      - 0.07
-      op_margin:
-      - 0.2
-      - 0.22
-      - 0.24
-      - 0.25
-      - 0.25
+      rev_path: [0.53, 0.12, 0.08, 0.07, 0.06]
+      op_margin: [0.29, 0.26, 0.25, 0.25, 0.25]
       wacc_path:
       - 0.105
       - 0.105
@@ -187,30 +142,20 @@ scenarios:
       - 0.105
       - 0.105
       term_g: 0.035
-      fcf:
-      - 0.606
-      - 0.76
-      - 0.871
-      - 0.978
-      - 1.047
-      cash: 0.954
+      fcf: [0.809, 0.868, 0.978, 1.047, 1.11]
+      cash: 3.033
       net_debt: 0.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 192
+      final_shares: 201.9
       distress: 0.0
-      pv_fcf:
-      - 0.548
-      - 0.622
-      - 0.646
-      - 0.656
-      - 0.636
-      sum_pv_fcf: 3.11
-      terminal_value: 15.48
-      pv_terminal: 9.4
-      op_ev: 12.51
-      total_equity: 13.46
-      dcf_per_share: 70.1
+      pv_fcf: [0.732, 0.711, 0.725, 0.702, 0.674]
+      sum_pv_fcf: 3.54
+      terminal_value: 16.41
+      pv_terminal: 9.96
+      op_ev: 13.5
+      total_equity: 16.53
+      dcf_per_share: 81.87
     chart_data:
       ev_rev_multiple:
       - 11.0
@@ -227,34 +172,20 @@ scenarios:
   base:
     label: Base
     short_label: Base
-    probability: 0.32
-    expected_per_share: 124.95
-    headline: Ad engine compounds; traffic holds.
+    probability: 0.3
+    expected_per_share: 133.04
+    headline: "Ad engine outgrows a traffic dip."
     narrative:
-    - 'The modal path: Google referral holds, the under-monetized ad engine keeps lifting ARPU toward peers, international
-      scales, and data-licensing/AI-training deals (Google ~$60M/yr, OpenAI ~$70M/yr) compound as a high-margin offset. Revenue
-      compounds ~40% then normalizes toward ~10%, ex-SBC FCF margin grinds to ~30%.'
-    - DCF ~$125 (+46%) — with the ad engine working and traffic intact, an ~18x terminal FCF multiple on the honest ex-SBC
-      cash leaves the modal case above spot. The price embeds less than the base.
-    probability_rationale: Requires traffic to hold and monetization to keep climbing — credible given +44% ARPU and the licensing
-      optionality, yet not priced in. 32% as the central, positive outcome.
+    - "The modal path: October's referral loss is a one-time step-down, not a slide. Users dip in Q4 2026, then stabilize on a logged-in base; ARPU keeps climbing (+36% in Q3) and international grows. Revenue rises ~53% in FY26 and ~22% in FY27, then fades to ~10%; owner FCF margin grinds from ~24% to ~30%."
+    - "DCF ~$133 (+56%): even after the traffic hit, a ~17x terminal multiple on cash after stock comp clears spot. The price assumes the bear's decline, not a step-down."
+    probability_rationale: "Q3 revenue (+53%) and a ~29% GAAP margin show the ad engine working through the referral loss. 30% (down from 32%) now that the traffic risk is observed."
     dcf_metrics:
-      cagr_5y: 20.7
+      cagr_5y: 21.8
       wacc: 0.1
     dcf_path:
       rev_b: 2.203
-      rev_path:
-      - 0.4
-      - 0.25
-      - 0.18
-      - 0.13
-      - 0.1
-      op_margin:
-      - 0.22
-      - 0.25
-      - 0.27
-      - 0.29
-      - 0.3
+      rev_path: [0.535, 0.22, 0.16, 0.12, 0.1]
+      op_margin: [0.29, 0.29, 0.3, 0.31, 0.31]
       wacc_path:
       - 0.1
       - 0.1
@@ -262,30 +193,20 @@ scenarios:
       - 0.1
       - 0.1
       term_g: 0.04
-      fcf:
-      - 0.74
-      - 1.002
-      - 1.274
-      - 1.491
-      - 1.697
-      cash: 0.954
+      fcf: [0.812, 1.073, 1.34, 1.554, 1.769]
+      cash: 3.033
       net_debt: 0.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 190
+      final_shares: 201.9
       distress: 0.0
-      pv_fcf:
-      - 0.673
-      - 0.828
-      - 0.957
-      - 1.018
-      - 1.054
-      sum_pv_fcf: 4.53
-      terminal_value: 29.41
-      pv_terminal: 18.26
-      op_ev: 22.79
-      total_equity: 23.74
-      dcf_per_share: 124.95
+      pv_fcf: [0.738, 0.887, 1.007, 1.061, 1.098]
+      sum_pv_fcf: 4.79
+      terminal_value: 30.66
+      pv_terminal: 19.04
+      op_ev: 23.83
+      total_equity: 26.86
+      dcf_per_share: 133.04
     chart_data:
       ev_rev_multiple:
       - 13.0
@@ -302,34 +223,20 @@ scenarios:
   bull:
     label: Bull
     short_label: Bull
-    probability: 0.17
-    expected_per_share: 214.52
+    probability: 0.14
+    expected_per_share: 197.13
     headline: Monetization plus data-licensing inflect.
     narrative:
-    - 'The ad engine and the corpus both compound: ARPU closes more of the gap to Meta, international monetization inflects,
-      and the scarce human-generated corpus becomes a recurring high-margin AI-training annuity as more labs license it. Revenue
-      compounds ~55% then sustains mid-teens, ex-SBC FCF margin reaches ~33%.'
-    - DCF $215 (+151%) — if monetization and data-licensing both inflect while traffic holds, the de-rated entry re-rates
-      with the fundamentals; this is the core of the bull and clears spot comfortably.
-    probability_rationale: Under-monetization vs peers leaves real ARPU runway, and the licensing deals show the corpus has
-      scarce, payable value. ~17% weight on both engines firing.
+    - "Logged-in users and international more than replace lost search traffic, ARPU closes more of the gap to Meta, and AI labs renew and widen data licences on usage-based terms. Revenue compounds ~30% in FY27, sustains the mid-teens, and owner FCF margin reaches ~33%."
+    - "DCF ~$197 (+131%): if monetization outruns the traffic loss, the de-rated entry re-rates with the fundamentals."
+    probability_rationale: "The ARPU runway and the corpus's proven value support it, but it needs traffic to recover. 14% (down from 17%) after the referral warning."
     dcf_metrics:
-      cagr_5y: 28.0
+      cagr_5y: 26.2
       wacc: 0.095
     dcf_path:
       rev_b: 2.203
-      rev_path:
-      - 0.55
-      - 0.35
-      - 0.24
-      - 0.17
-      - 0.13
-      op_margin:
-      - 0.25
-      - 0.28
-      - 0.31
-      - 0.33
-      - 0.34
+      rev_path: [0.54, 0.3, 0.22, 0.16, 0.13]
+      op_margin: [0.29, 0.31, 0.33, 0.34, 0.35]
       wacc_path:
       - 0.095
       - 0.095
@@ -337,30 +244,20 @@ scenarios:
       - 0.095
       - 0.095
       term_g: 0.045
-      fcf:
-      - 0.888
-      - 1.291
-      - 1.715
-      - 2.14
-      - 2.494
-      cash: 0.954
+      fcf: [0.831, 1.235, 1.614, 1.997, 2.327]
+      cash: 3.033
       net_debt: 0.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 188
+      final_shares: 201.9
       distress: 0.0
-      pv_fcf:
-      - 0.811
-      - 1.077
-      - 1.306
-      - 1.489
-      - 1.584
-      sum_pv_fcf: 6.27
-      terminal_value: 52.12
-      pv_terminal: 33.11
-      op_ev: 39.38
-      total_equity: 40.33
-      dcf_per_share: 214.52
+      pv_fcf: [0.759, 1.03, 1.229, 1.389, 1.478]
+      sum_pv_fcf: 5.88
+      terminal_value: 48.63
+      pv_terminal: 30.89
+      op_ev: 36.77
+      total_equity: 39.8
+      dcf_per_share: 197.13
     chart_data:
       ev_rev_multiple:
       - 16.0
@@ -377,34 +274,20 @@ scenarios:
   ultra_bull:
     label: Ultra Bull
     short_label: UltBull
-    probability: 0.08
-    expected_per_share: 343.49
+    probability: 0.06
+    expected_per_share: 278.16
     headline: Platform plus AI-corpus annuity compound.
     narrative:
-    - 'The full second act: Reddit becomes the default monetized discussion graph, ad ARPU rivals the majors, and the human-generated
-      corpus turns into a durable, escalating AI-training annuity across the major labs — a high-margin stream that grows
-      with AI demand rather than being cannibalized by it. Revenue compounds ~70% early, ex-SBC FCF margin reaches ~36%.'
-    - DCF ~$343 (+303%) — both Powers fully monetize and the multiple re-rates to a scarce-platform premium; ~8% probability,
-      the asymmetric upside the volatile entry is buying.
-    probability_rationale: Everything works — monetization AND the corpus annuity AND a multiple re-rate, with AI demand making
-      the data more valuable, not less. ~8%, the long-duration tail.
+    - "The full second act: Reddit becomes the default discussion graph inside AI answers, paid by usage rather than by clicks; ad ARPU nears the majors' and logged-in growth outruns the search loss. Revenue compounds ~38% in FY27 and ~28% in FY28, and owner FCF margin reaches ~36%."
+    - "DCF ~$278 (+226%): both Powers fully monetize and the multiple re-rates to a scarce-platform premium, the asymmetric tail at this entry."
+    probability_rationale: "Everything works: monetization, a usage-priced corpus annuity and a re-rate. 6% (down from 8%): the referral data cut against it."
     dcf_metrics:
-      cagr_5y: 35.3
+      cagr_5y: 30.8
       wacc: 0.09
     dcf_path:
       rev_b: 2.203
-      rev_path:
-      - 0.7
-      - 0.45
-      - 0.3
-      - 0.22
-      - 0.16
-      op_margin:
-      - 0.27
-      - 0.31
-      - 0.34
-      - 0.36
-      - 0.37
+      rev_path: [0.545, 0.38, 0.28, 0.21, 0.16]
+      op_margin: [0.295, 0.32, 0.35, 0.36, 0.37]
       wacc_path:
       - 0.09
       - 0.09
@@ -412,30 +295,20 @@ scenarios:
       - 0.09
       - 0.09
       term_g: 0.045
-      fcf:
-      - 1.049
-      - 1.683
-      - 2.33
-      - 3.015
-      - 3.597
-      cash: 0.954
+      fcf: [0.851, 1.409, 1.984, 2.546, 3.038]
+      cash: 3.033
       net_debt: 0.0
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 186
+      final_shares: 201.9
       distress: 0.0
-      pv_fcf:
-      - 0.962
-      - 1.417
-      - 1.799
-      - 2.136
-      - 2.338
-      sum_pv_fcf: 8.65
-      terminal_value: 83.53
-      pv_terminal: 54.29
-      op_ev: 62.94
-      total_equity: 63.89
-      dcf_per_share: 343.49
+      pv_fcf: [0.781, 1.186, 1.532, 1.804, 1.974]
+      sum_pv_fcf: 7.28
+      terminal_value: 70.55
+      pv_terminal: 45.85
+      op_ev: 53.13
+      total_equity: 56.16
+      dcf_per_share: 278.16
     chart_data:
       ev_rev_multiple:
       - 19.0
@@ -468,68 +341,56 @@ historical_prices:
   - [-0.16, 158.73]   # 2026-09-22 spot (prior as-of, reprice.py)
   - [-0.08, 153.28]   # 2026-10-22 spot (prior as-of, reprice.py)
 weighting_rationale:
-- label: Ultra Bear 16%
-  body: Google/AI-search erodes traffic; the model de-rates; ~$41 (-52%).
-- label: Bear 27%
-  body: Growth decelerates under AI-search pressure; ~$70 (-18%).
-- label: Base 32%
-  body: Ad engine compounds, traffic holds, not priced in; ~$125 (+46%).
-- label: Bull 17%
-  body: Monetization plus data-licensing inflect; $215 (+151%).
-- label: Ultra Bull 8%
-  body: Platform plus AI-corpus annuity compound; ~$343 (+303%).
+- label: "Ultra Bear 20%"
+  body: "Google/AI-search erodes traffic for years; ~$45 (-47%)."
+- label: "Bear 30%"
+  body: "Traffic keeps falling, growth fades to ~12%; ~$82 (-4%)."
+- label: "Base 30%"
+  body: "Traffic steps down once, ARPU carries; ~$133 (+56%)."
+- label: "Bull 14%"
+  body: "Monetization outruns the traffic loss; ~$197 (+131%)."
+- label: "Ultra Bull 6%"
+  body: "Platform plus AI-corpus annuity compound; ~$278 (+226%)."
 appendix:
+  pushback_side: bear
   pushback:
-  - label: ~91% gross margin and +62% growth is rare — why does the base clear spot?
-    body: Quality isn't the issue; traffic is. At ~23x headline FCF strong execution lands the base at ~+46% — the market
-      fears traffic risk.
+  - label: "Management's own warning is the bear case."
+    body: "Q4 users could fall by a low double-digit percent; the base assumes a one-time step, and nothing yet shows the decline stopping."
   - label: Headline FCF overstates the cash.
-    body: FCF was ~$0.70B (~32% of revenue) but SBC runs ~$300M+/yr; ex-SBC owner FCF is ~a quarter lower and dilutes — the
-      model uses it.
-  - label: Data-licensing is the offsetting wildcard.
-    body: Google (~$60M/yr) and OpenAI (~$70M/yr) deals are ~6% of revenue but high-margin and scaling — a scarce corpus,
-      partly hedging traffic risk.
-  - label: The Google dependency is the whole thesis.
-    body: ~40-50% of traffic arrives via Google; AI-search answer-boxes that satisfy queries without a click are the threat,
-      already denting growth in Q4-2025.
-  - label: Net cash; no solvency risk.
-    body: ~$954M cash and no debt — no solvency risk; the entire downside is multiple/growth/traffic, not survival.
+    body: "FCF ran ~40% of revenue in 2026, but stock comp was 15.6% of FY25 revenue; the model charges it and holds 201.9M diluted shares."
+  - label: "Licensing can cut both ways."
+    body: "Google's ~$60M-a-year licence is due early 2027 and talks were strained in July; the same buyer's AI answers divert the traffic."
+  - label: "Search was the front door."
+    body: "Search also re-engages logged-in users, so the loss leaks into the base that earns 80% of revenue; Similarweb shows visits down 13% in a year."
+  - label: "Cheap only if traffic stabilizes."
+    body: "At ~17x FCF after stock comp the price fits the bear (~$82); value needs FY27 growth near 22%, not 12%."
   triggers:
   - label: Bull validation
-    body: ARPU keeps climbing toward peer levels (+40%+)  ·  daily uniques hold despite AI-search  ·  data-licensing scales
-      beyond ~6% of revenue
+    body: "Q4 daily uniques fall less than 10% and stabilize in H1 2027  ·  ARPU growth stays above +25%  ·  Google licence renewed at ≥$60M/yr"
   - label: Bear validation
-    body: daily-unique growth stalls for 2+ quarters  ·  Google referral share visibly falls  ·  another algorithm change
-      dents traffic
+    body: "DAUq below ~117M for two quarters  ·  US DAUq still falling year over year  ·  FY27 revenue growth guided below 15%"
   - label: Reframe needed
-    body: if AI-search clearly disintermediates Google-sourced discovery, re-rate the terminal toward a shrinking platform —
-      ultra-bear becomes the base
+    body: "if logged-in users also shrink year over year, the decline has reached the paying base: treat the ultra-bear as the base"
 glossary:
 - term: Daily active uniques (DAUq)
-  definition: Unique logged-in + logged-out daily users (~126.8M, +17%) — the traffic base; its deceleration and Google-algorithm
-    sensitivity are the central bear signal.
+  definition: "Unique logged-in + logged-out daily users (~130.3M, +12%; US -2%) — the traffic base; Google referral losses hit logged-out users first and hardest."
 - term: ARPU
-  definition: Average revenue per user (~$5.23, +44%) — far below Meta, so the gap is the bull's monetization runway, the
-    lever that lifts ad revenue without more users.
+  definition: "Average revenue per unique (~$6.87, +36%) — still far below Meta; the gap is the monetization runway that must offset falling traffic."
 - term: Data licensing
-  definition: High-margin revenue from licensing Reddit's corpus for AI training (Google ~$60M/yr, OpenAI ~$70M/yr; ~6% of
-    revenue) — a scarce-resource annuity, the wildcard to traffic risk.
+  definition: "Revenue from licensing Reddit's corpus for AI training (Google ~$60M/yr, due for renewal early 2027; OpenAI ~$70M/yr): scarce, high-margin, the wildcard."
 - term: AI-search cannibalization
-  definition: AI answer-boxes (Google AI Overviews, ChatGPT) satisfying queries without a click-through to Reddit — the threat
-    to the ~40-50% of traffic that arrives via Google.
+  definition: "AI answer-boxes (Google AI Overviews and AI Mode, ChatGPT) satisfying queries without a click to Reddit — the threat now visible in October's referral losses."
 - term: FCF margin
-  definition: Free cash flow / revenue, modeled ex-SBC (owner FCF, not the ~32% headline); SBC ~12% of revenue is a ~25%
-    haircut to headline plus ongoing dilution.
+  definition: "Free cash flow / revenue, modeled after stock comp (owner FCF, ~24% in FY26 vs ~40% headline); stock comp ran 15.6% of FY25 revenue."
 competitive:
-  arena: Digital advertising and the AI-training-data market — Reddit (the community/UGC discussion graph, ~126.8M daily uniques,
+  arena: Digital advertising and the AI-training-data market — Reddit (the community/UGC discussion graph, ~130.3M daily uniques,
     under-monetized ad engine) vs Meta, Pinterest, Snap for ad dollars and the AI labs (Google, OpenAI) as data-licensing
     buyers; auditing a network-economies Power against AI-search disintermediation.
   lens: power_audit
   powers:
     scale_economies:
       score: 2
-      note: Some ad-infrastructure and content-moderation leverage at ~$2.2B revenue, but small vs Meta/Google; ad-tech scale
-        is years away.
+      note: "Some ad-infrastructure and content-moderation leverage at ~$3.4B revenue, but small vs Meta/Google; ad-tech scale is years away."
     network_economies:
       score: 4
       note: 'The dominant Power: a self-reinforcing community/UGC graph — more users and subreddits make the content more
@@ -587,35 +448,21 @@ competitive:
   threats:
   - vector: network_economies
     who: Google / OpenAI AI-search
-    falsifier: Daily-unique growth turns negative as AI answer-boxes satisfy queries without sending traffic to Reddit — the
-      graph stops compounding.
+    falsifier: "Total DAUq stays below 117M (10% under Q3-2026's 130.3M) for two quarters in 2027, with US users still falling year over year."
   - vector: cornered_resource
     who: AI labs / synthetic data / open scraping
-    falsifier: Labs route around paid licensing (open crawls, synthetic data) and the data-licensing premium gets competed
-      down toward zero.
+    falsifier: "Other revenue (mostly licensing) falls below $35M a quarter, or Google's licence lapses in 2027 with no ~$60M/yr replacement."
   - vector: scale_economies
     who: Meta / Google ad-tech
-    falsifier: ARPU gains stall well below peers as Reddit can't match the majors' targeting/ad-tech, capping the monetization
-      runway.
-  takeaway: 'Reddit''s network-economies Power is real — a self-reinforcing community/UGC graph and a scarce human-generated
-    corpus (cornered_resource) that AI labs pay to train on. But the Audit''s tension is that the same corpus is discovered
-    mostly through Google: ~40-50% of traffic is referral, so AI-search answer-boxes can disintermediate the front door even
-    as the data itself gets more valuable (the Q4-2025 algorithm change already dented user growth). Durability is medium,
-    not high — the graph compounds but its discovery layer is rented from a counterparty that is also a competitor. That squares
-    with the DCF: a 91%-gross-margin, +62%-growth franchise priced at ~23x FCF lands the modal case at ~+46%, because the
-    price discounts an existential, observable traffic risk more heavily than
-    the distribution does.'
+    falsifier: "ARPU growth slows below +15% year over year for two quarters by end-2027 (Q3 2026: +36%), well short of peers."
+  takeaway: "Reddit's network-economies Power is real — a self-reinforcing community/UGC graph and a scarce human-generated corpus (cornered_resource) that AI labs pay to train on. But the Audit's tension is that the same corpus is discovered mostly through Google, and that front door is now narrowing: referrals fell over 1M a week in October and management warned Q4 users could fall by a low double-digit percent. Durability is medium, not high — the graph compounds but its discovery layer is rented from a counterparty that is also a competitor. That squares with the DCF: at ~17x FCF after stock comp the price sits on the bear (-4%), so the step-down base lands ~+56% and the weighted value ~+38%, with half the probability at or below spot."
 pocd:
   people:
     ceo: Steve Huffman
     founder_led: true
     tenure_years: 11
     insider_ownership_pct: 3.3
-    capital_allocation: 'Co-founder Steve Huffman has been CEO since returning in 2015 (co-founded 2005); co-founder
-      Alexis Ohanian left the board in 2020. The company turned GAAP-profitable in FY2025 (revenue ~$2.2B, +69%; net
-      income ~$530M) and is net cash (~$2.8B, ~zero debt). Capital allocation is early: a first $1B buyback authorized
-      February 2026 (barely begun), no dividend. AI data-licensing (Google ~$60M/year, OpenAI ~$70M/year) is a high-margin
-      revenue stream — and a strategic dependence.'
+    capital_allocation: "Co-founder Steve Huffman has been CEO since returning in 2015 (co-founded 2005); co-founder Alexis Ohanian left the board in 2020. The company turned GAAP-profitable in FY2025 (revenue ~$2.2B, +69%; net income ~$530M) and holds $3.0B of net cash (September 2026, no debt). A first $1B buyback (February 2026) had used ~$340M by September; no dividend. AI data-licensing (Google ~$60M/year, OpenAI ~$70M/year) is a high-margin revenue stream — and a strategic dependence."
     incentive_alignment: Huffman’s ~$193M 2023 equity award drew public backlash; it is price-hurdle-vesting ($45/$60/$90)
       through ~2028. His 2025 base is ~$569K with a 150%-of-salary target bonus. He owns only ~3% economically yet
       controls ~70.7% of the vote (his super-voting Class B plus an irrevocable proxy over Advance Publications’ shares)
@@ -671,3 +518,10 @@ stamp:
     timestamp: "2026-07-02_15-17"
     asOfDate: "2026-07-02"
     spotPrice: 197.76
+
+stock_comp:
+  basis: owner_fcf
+  diluted_shares_million: 201.9
+  steps: set_diluted_shares
+  source: 10-K FY2025 (stock comp 15.6% of revenue, already in owner FCF); 10-Q 2026-09-30 diluted WASO 201.9M
+  applied: '2026-11-22'

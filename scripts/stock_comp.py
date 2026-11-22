@@ -498,9 +498,13 @@ def apply(ticker: str, sbc_pct, shares, shift: bool, source: str, dry: bool,
     return new_raw, p
 
 
+V048_SHIPPED = "f99239e"   # v048 merge commit (#93)
+
+
 def selftest() -> int:
     """Reproduce v048's re-model of ZM/ABNB/COIN/META from their pre-v048
-    files (git 5e3166a): every model field must match the shipped memo."""
+    files (git 5e3166a): every model field must match the memo as shipped in
+    v048 (git f99239e)."""
     sv = survey()
     cases = {"zm": (299.7, True), "abnb": (597.0, False), "coin": (263.4, True),
              "meta": (2566.0, False)}
@@ -511,7 +515,13 @@ def selftest() -> int:
                              capture_output=True, text=True, check=True).stdout
         new_raw, _ = apply(t, sv[t]["pct"], sh, shift, "selftest", True, False, None,
                            raw_override=old, check_validator=False, allow_reset=True)
-        got, ref = yaml.safe_load(new_raw), yaml.safe_load((DATA / f"{t}.yml").read_text())
+        # Reference = the memo AS v048 SHIPPED it (f99239e), not the live file:
+        # every later re-price moves spot/mcap and any re-underwrite rewrites
+        # the model, so comparing against the live memo fails for reasons
+        # that have nothing to do with this tool.
+        shipped = subprocess.run(["git", "show", f"{V048_SHIPPED}:data/{t}.yml"], cwd=REPO,
+                                 capture_output=True, text=True, check=True).stdout
+        got, ref = yaml.safe_load(new_raw), yaml.safe_load(shipped)
         diffs = []
         for k in ref["scenarios"]:
             a, b = got["scenarios"][k], ref["scenarios"][k]

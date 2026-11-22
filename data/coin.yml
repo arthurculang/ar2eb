@@ -5,8 +5,8 @@ dcf_type: mature_company_sotp
 date: '2026-11-22'
 spot: 101.97
 market:
-  market_cap_billion: 26.86
-  shares_outstanding_million: 263.4
+  market_cap_billion: 28.26
+  shares_outstanding_million: 277.1
   cash_billion: 8.6
   net_debt_billion: 6.0
   extras:
@@ -78,7 +78,7 @@ scenarios:
     label: Ultra Bear
     short_label: UltBear
     probability: 0.08
-    expected_per_share: 12.49
+    expected_per_share: 8.81
     headline: Crypto winter + take-rate war.
     narrative:
     - 'Not slow cycle — a coordinated four-front collapse. BTC enters a multi-year bear market mirroring 2022 (down
@@ -100,24 +100,19 @@ scenarios:
       integration friction stalls the derivatives flywheel. Each individually 20-30%; joint at 8%. Same 8% as ZM''s
       ultra_bear: crypto-cycle volatility has a real historical base rate (the 2022 winter).'
     dcf_metrics:
-      cagr_5y: -13.1
+      cagr_5y: -14.8
       wacc: 0.13
       take_rate_basis: 8
       exit_fcf_multiple: 8
     dcf_path:
       rev_b: 7.18
       rev_path:
+      - -0.32
       - -0.2
-      - -0.25
       - -0.15
       - -0.05
       - 0.02
-      op_margin:
-      - 0.133
-      - 0.033
-      - -0.017
-      - -0.017
-      - 0.003
+      op_margin: [-0.020, 0.033, -0.017, -0.017, 0.003]
       wacc_path:
       - 0.13
       - 0.13
@@ -125,21 +120,21 @@ scenarios:
       - 0.13
       - 0.13
       term_g: -0.02
-      fcf: [0.769, 0.146, -0.088, -0.117, -0.055]
+      fcf: [-0.098, 0.128, -0.056, -0.054, 0.010]
       cash: 7.4
       net_debt: 6.0
-      special_assets: 1.5
+      special_assets: 1.05
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 263.4
+      final_shares: 277.1
       distress: 0.0
-      pv_fcf: [0.681, 0.114, -0.061, -0.072, -0.030]
-      sum_pv_fcf: 0.63
-      terminal_value: -0.44
-      pv_terminal: -0.24
-      op_ev: 0.39
-      total_equity: 3.29
-      dcf_per_share: 12.49
+      pv_fcf: [-0.087, 0.100, -0.039, -0.033, 0.005]
+      sum_pv_fcf: -0.05
+      terminal_value: 0.08
+      pv_terminal: 0.04
+      op_ev: -0.01
+      total_equity: 2.44
+      dcf_per_share: 8.81
     chart_data:
       ev_rev_multiple:
       - 4.5
@@ -156,8 +151,8 @@ scenarios:
   bear:
     label: Bear
     short_label: Bear
-    probability: 0.22
-    expected_per_share: 72.70
+    probability: 0.28
+    expected_per_share: 37.50
     headline: Cycle bottoms; multiple resets to 12×.
     narrative:
     - 'Not existential — the cycle normalizing and the market repricing. BTC trades $50-80K for two years, extending
@@ -175,24 +170,19 @@ scenarios:
       multiple resets to ~12× FCF. The 22% weight reflects that crypto cycles are real and historically common (2018,
       2022 — base rate ~25% per 5-year window), and the H1 2026 losses already validated some of the cycle thesis.'
     dcf_metrics:
-      cagr_5y: -3.3
+      cagr_5y: -5.3
       wacc: 0.11
       take_rate_basis: 11
       exit_fcf_multiple: 12
     dcf_path:
       rev_b: 7.18
       rev_path:
-      - -0.15
-      - -0.1
-      - 0.0
+      - -0.31
+      - 0
+      - 0
       - 0.05
       - 0.05
-      op_margin:
-      - 0.203
-      - 0.183
-      - 0.183
-      - 0.203
-      - 0.203
+      op_margin: [-0.010, 0.063, 0.063, 0.093, 0.122]
       wacc_path:
       - 0.11
       - 0.11
@@ -200,21 +190,21 @@ scenarios:
       - 0.11
       - 0.11
       term_g: 0.01
-      fcf: [1.237, 1.098, 1.098, 1.246, 1.312]
+      fcf: [-0.049, 0.312, 0.312, 0.484, 0.666]
       cash: 8.4
       net_debt: 6.0
-      special_assets: 3.0
+      special_assets: 2.1
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 263.4
+      final_shares: 277.1
       distress: 0.0
-      pv_fcf: [1.114, 0.891, 0.803, 0.821, 0.779]
-      sum_pv_fcf: 4.41
-      terminal_value: 15.74
-      pv_terminal: 9.34
-      op_ev: 13.75
-      total_equity: 19.15
-      dcf_per_share: 72.70
+      pv_fcf: [-0.044, 0.253, 0.228, 0.319, 0.395]
+      sum_pv_fcf: 1.15
+      terminal_value: 7.99
+      pv_terminal: 4.74
+      op_ev: 5.89
+      total_equity: 10.39
+      dcf_per_share: 37.50
     chart_data:
       ev_rev_multiple:
       - 5.5
@@ -231,8 +221,8 @@ scenarios:
   base:
     label: Base
     short_label: Base
-    probability: 0.47
-    expected_per_share: 162.45
+    probability: 0.43
+    expected_per_share: 121.18
     headline: Everything-exchange compounds.
     narrative:
     - 'The middle path: Coinbase builds the regulated, vertically-integrated everything-exchange. BTC ranges $80-130K
@@ -252,24 +242,19 @@ scenarios:
       ~15× FCF. 47% reflects that the thesis is well-priced but in motion — sequential execution, not heroic
       assumptions.'
     dcf_metrics:
-      cagr_5y: 5.8
+      cagr_5y: 2.2
       wacc: 0.09
       take_rate_basis: 13
       exit_fcf_multiple: 15
     dcf_path:
       rev_b: 7.18
       rev_path:
-      - -0.05
-      - 0.05
+      - -0.3
+      - 0.2
       - 0.12
       - 0.1
       - 0.08
-      op_margin:
-      - 0.243
-      - 0.263
-      - 0.283
-      - 0.283
-      - 0.283
+      op_margin: [0.000, 0.177, 0.233, 0.275, 0.283]
       wacc_path:
       - 0.09
       - 0.09
@@ -277,21 +262,21 @@ scenarios:
       - 0.09
       - 0.09
       term_g: 0.02
-      fcf: [1.663, 1.873, 2.282, 2.519, 2.716]
+      fcf: [0.000, 1.068, 1.574, 2.043, 2.271]
       cash: 8.9
       net_debt: 6.0
-      special_assets: 5.0
+      special_assets: 3.5
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 263.4
+      final_shares: 277.1
       distress: 0.0
-      pv_fcf: [1.526, 1.576, 1.762, 1.785, 1.765]
-      sum_pv_fcf: 8.41
-      terminal_value: 40.74
-      pv_terminal: 26.48
-      op_ev: 34.89
-      total_equity: 42.79
-      dcf_per_share: 162.45
+      pv_fcf: [0.000, 0.899, 1.215, 1.447, 1.476]
+      sum_pv_fcf: 5.04
+      terminal_value: 34.06
+      pv_terminal: 22.14
+      op_ev: 27.18
+      total_equity: 33.58
+      dcf_per_share: 121.18
     chart_data:
       ev_rev_multiple:
       - 7.0
@@ -308,8 +293,8 @@ scenarios:
   bull:
     label: Bull
     short_label: Bull
-    probability: 0.18
-    expected_per_share: 347.23
+    probability: 0.16
+    expected_per_share: 247.49
     headline: Derivatives flywheel + USDC rails.
     narrative:
     - 'The everything-exchange thesis inflects, not just plays out. BTC enters a sustained $130-200K range as
@@ -328,24 +313,19 @@ scenarios:
       sustains a ~20× FCF exit (conditional 50%). Joint at 15-20%, weighted 18%. Higher than ZM bull because COIN''s
       bull has one cycle-dependent leg AND one secular leg — they can succeed independently.'
     dcf_metrics:
-      cagr_5y: 13.9
+      cagr_5y: 9.7
       wacc: 0.085
       take_rate_basis: 13
       exit_fcf_multiple: 20
     dcf_path:
       rev_b: 7.18
       rev_path:
-      - 0.05
-      - 0.18
+      - -0.29
+      - 0.45
       - 0.2
       - 0.15
       - 0.12
-      op_margin:
-      - 0.283
-      - 0.303
-      - 0.323
-      - 0.333
-      - 0.333
+      op_margin: [0.010, 0.273, 0.323, 0.333, 0.333]
       wacc_path:
       - 0.085
       - 0.085
@@ -353,21 +333,21 @@ scenarios:
       - 0.085
       - 0.085
       term_g: 0.025
-      fcf: [2.139, 2.790, 3.722, 4.635, 4.973]
+      fcf: [0.051, 2.018, 2.865, 3.397, 3.804]
       cash: 9.4
       net_debt: 6.0
-      special_assets: 8.0
+      special_assets: 5.6
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 263.4
+      final_shares: 277.1
       distress: 0.0
-      pv_fcf: [1.971, 2.370, 2.914, 3.344, 3.307]
-      sum_pv_fcf: 13.91
-      terminal_value: 99.46
-      pv_terminal: 66.15
-      op_ev: 80.06
-      total_equity: 91.46
-      dcf_per_share: 347.23
+      pv_fcf: [0.047, 1.714, 2.243, 2.451, 2.530]
+      sum_pv_fcf: 8.98
+      terminal_value: 76.08
+      pv_terminal: 50.60
+      op_ev: 59.58
+      total_equity: 68.58
+      dcf_per_share: 247.49
     chart_data:
       ev_rev_multiple:
       - 8.5
@@ -385,7 +365,7 @@ scenarios:
     label: Ultra Bull
     short_label: UltBull
     probability: 0.05
-    expected_per_share: 770.01
+    expected_per_share: 502.13
     headline: Crypto-as-rails; 28× re-rate.
     narrative:
     - 'The scenario where crypto stops being a cycle and becomes a settlement layer — and COIN is the regulated US
@@ -403,24 +383,19 @@ scenarios:
       fintech-infrastructure ~28× FCF exit (30%). Joint at 5-7%, reflected at 5%. Tail of tails — but Coinbase has the
       regulatory wedge, float, derivatives platform, and cash to attempt all four.'
     dcf_metrics:
-      cagr_5y: 20.4
+      cagr_5y: 16.2
       wacc: 0.08
       take_rate_basis: 14
       exit_fcf_multiple: 28
     dcf_path:
       rev_b: 7.18
       rev_path:
-      - 0.1
-      - 0.25
+      - -0.28
+      - 0.6
       - 0.28
       - 0.22
       - 0.18
-      op_margin:
-      - 0.303
-      - 0.333
-      - 0.363
-      - 0.383
-      - 0.383
+      op_margin: [0.020, 0.318, 0.363, 0.383, 0.383]
       wacc_path:
       - 0.08
       - 0.08
@@ -428,21 +403,21 @@ scenarios:
       - 0.08
       - 0.08
       term_g: 0.03
-      fcf: [2.397, 3.776, 5.573, 7.228, 8.524]
+      fcf: [0.104, 2.630, 3.843, 4.947, 5.837]
       cash: 10.4
       net_debt: 6.0
-      special_assets: 15.0
+      special_assets: 10.5
       raise_total: 0.0
       dilution_pct: 0
-      final_shares: 263.4
+      final_shares: 277.1
       distress: 0.0
-      pv_fcf: [2.219, 3.237, 4.424, 5.313, 5.801]
-      sum_pv_fcf: 20.99
-      terminal_value: 238.67
-      pv_terminal: 162.43
-      op_ev: 183.42
-      total_equity: 202.82
-      dcf_per_share: 770.01
+      pv_fcf: [0.096, 2.255, 3.051, 3.636, 3.973]
+      sum_pv_fcf: 13.01
+      terminal_value: 163.44
+      pv_terminal: 111.23
+      op_ev: 124.24
+      total_equity: 139.14
+      dcf_per_share: 502.13
     chart_data:
       ev_rev_multiple:
       - 10.0
@@ -645,8 +620,9 @@ pocd:
 stock_comp:
   basis: owner_fcf
   sbc_pct_of_revenue: 0.1169
-  diluted_shares_million: 263.4
-  steps: mark
-  source: 'v048 re-model (PR #93): 10-K FY2025 stock comp $839.4M / revenue $7,181.3M; Q2-2026 10-Q diluted WASO
-    263.4M = basic (loss quarter) — treasury-method awards pending'
-  applied: '2026-10-03'
+  diluted_shares_million: 277.1
+  steps: charge_stock_comp, set_diluted_shares, shift_op_margin
+  source: 'Nov-2026 re-underwrite (scripts/_models/reunderwrite_coin.py): FCF re-modeled, then re-charged at the
+    10-K FY2025 ratio (stock comp $839.4M / revenue $7,181.3M); shares = Q3-2026 10-Q diluted WASO 287.98M less
+    10.89M if-converted convert shares (converts stay in debt); includes 13.3M treasury-method awards'
+  applied: '2026-11-22'
